@@ -1,0 +1,12 @@
+schema: spec-driven
+
+context: |
+  sword-led is a new single-player PC browser forging game, provisionally titled 锤下求生.
+  Canonical request and goal workflow: goal-1/input.md, plan.md, tasks.md.
+  Game rules: docs/game-design.md. Proposed architecture: docs/architecture.md.
+  Implementation requires explicit user confirmation of the implementation documents.
+  Final art and full UI require the user's selection of one of three imagegen concepts.
+  Both decisions are currently pending; document preparation and concept generation are authorized.
+  Use TypeScript and Vite, DOM/CSS UI and Canvas 2D scenes, a pure deterministic rules module,
+  versioned local storage, Vitest and Playwright. Keep runtime dependencies minimal.
+  Never present a mockup, test result or Git push as proof of complete gameplay acceptance.
