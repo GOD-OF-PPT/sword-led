@@ -4,7 +4,7 @@
 
 ## 本地与 npm 元数据
 
-通过本机只读命令与 npm 官方 registry 包元数据核实：
+通过本机只读命令与 npm 官方 registry 包元数据核实。最初命令使用本机默认 `https://registry.yarnpkg.com/`；随后对下表每个包显式加 `--registry=https://registry.npmjs.org/` 再次复核，版本/engines 结果一致，未改动用户全局 registry 设置。
 
 | 项目 | 当前核实结果 | 方案含义 |
 | --- | --- | --- |
@@ -19,7 +19,7 @@
 
 这些是本次查询结果，不是未来永远有效的版本推荐。T04 安装前重新读取 engines 与可用补丁，记录最终选用版本并提交锁文件；变更版本须执行兼容性验证，不静默跟随 latest。生产运行时不包含这些测试工具，也没有框架、存储或音频运行依赖。
 
-复核元数据的命令：`npm view vite version engines --json`、`npm view typescript version engines --json`、`npm view vitest version engines peerDependencies --json`、`npm view @playwright/test version engines --json`。执行 shell 时遵循 RTK 前缀。
+复核元数据的命令：`npm view vite version engines --json --registry=https://registry.npmjs.org/`、`npm view typescript version engines --json --registry=https://registry.npmjs.org/`、`npm view vitest version engines peerDependencies --json --registry=https://registry.npmjs.org/`、`npm view @playwright/test version engines --json --registry=https://registry.npmjs.org/`。类型包另用相同 registry 查询 `@types/node@22.20.5`。执行 shell 时遵循 RTK 前缀。
 
 ## 官方依据及对项目的影响
 

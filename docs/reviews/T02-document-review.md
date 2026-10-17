@@ -16,6 +16,7 @@
 - 三图共用样例的配额缺口、价值/下阶值、热度/应力和精准风险公式：算术核对通过，未声称实际 RNG 回放已运行。
 - 原始 input SHA256 保持 `b961f5c651df51121659687138cfe5edf125e25dadda11642136dfc6aaca852b`；业务 TS/JS/HTML 文件数 0，无 package.json、无依赖安装、无代码实施。
 - 核对本机 Node 22.12.0、npm 10.9.0、OpenSpec 1.3.1，读取 npm 包 engines/peer 元数据及官方工具/浏览器文档；保存版本与链接。尚未安装或验证项目工具链运行。
+- 发现本机 npm 默认源为 Yarn registry 后，显式指定 `https://registry.npmjs.org/` 复查四个工具及 Node 类型包，版本与 engines 一致；来源记录与复核命令已补正，未改用户全局配置。
 
 ## 自我质疑发现并修正的缺口
 

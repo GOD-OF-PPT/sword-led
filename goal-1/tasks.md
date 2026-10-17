@@ -14,14 +14,14 @@
 
 ## T02 — 实施方案与架构提案
 
-- [ ] 完成
+- [x] 完成（2026-10-17）
 - 前置：T01。
 - 范围：核对工具链官方文档；写 UI 信息结构、纯内核接口/数据、状态机、存档/随机/计时策略、分层架构、实施与验收矩阵；创建并验证 OpenSpec 提案。
 - 独立验证：每项玩法对应模块/验收场景；实现路径可执行；美术与内核解耦；确认材料具体可审阅；无代码实施。
-- 执行记录：
-- 验证与修复：
-- [杠精审查]：
-- 提交与远程证据：
+- 执行记录：交付 `docs/implementation-plan.md`、`architecture.md`、`ui-design.md`、`acceptance-matrix.md`、`technical-sources.md` 与 `docs/reviews/T02-document-review.md`；初始化项目 OpenSpec，建立 `add-forging-game` 的 proposal/design/tasks 与 forge-loop、contract-economy、game-session、desktop-interface 四能力规格，21 条 Requirement / 45 条 Scenario。方案采用 TypeScript+Vite、纯确定性规则与 DOM/CSS+Canvas 2D；定义 runId/revision、双随机流、整数时机、单写存档与全流程 UI。更新游戏设计 v0.2 和 README。图稿、实施确认及主界面选择仍待 T03，未写业务代码或安装依赖。
+- 验证与修复：OpenSpec 1.3.1 strict/no-interactive 验证通过；19 篇 Markdown / 34 个本地链接、代码块、44 项验收编号、所有能力映射与 UI 样例算术检查通过；input hash 未变；TS/JS/HTML 文件数 0。核实 Node 22.12.0/npm 10.9.0 与官方工具文档；显式 npm 官方源复核 Vite 8.3.4、TS 7.0.2、Vitest 5.0.5、Playwright 1.64.1 等元数据。修正暂停冻结/取消歧义、换锤法偷换参数、旧会话异步反馈、教学覆盖正式档、日终历史双计账目、种子规范化分散及 registry 来源记录。
+- [杠精审查]：通过。方案可沿小 Interface 实施和独立验证，所有状态有出口；每项玩法有任务与验收；明确阶段和用户决策，不把命令合同/数值目标/strict 文档校验称为代码或真人验收。图稿将在下一任务真正生成，未提前勾选实施清单。
+- 提交与远程证据：主要文档提交 `51a022e55fdc2d14857c284a42636819ec24550c` 已推送 main；来源复核、最终检查和任务记录随后一并提交。最终本地/远程 SHA 与干净工作区在本轮最后再次核对，最新提交以 Git 历史为准。
 
 ## T03 — 三套主界面候选与全面检查 R1
 
