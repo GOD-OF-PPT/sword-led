@@ -1,6 +1,8 @@
 # 代码架构与玩法内核约定
 
-版本：v0.1，2026-10-17。状态：拟实施，尚未创建业务代码。玩法依据：[游戏设计](game-design.md)；交付顺序：[实施方案](implementation-plan.md)。
+版本：v0.1，2026-10-17。状态：用户已确认方案并选择 B；T04 纯锻造/轮次内核已实现，经营/存档与界面按后续任务实施。玩法依据：[游戏设计](game-design.md)；交付顺序：[实施方案](implementation-plan.md)。
+
+本文件描述完整目标架构。当前正式运行入口为 createRun/applyCommand/getRunView；validateRun 和商人购买在 T05 添加，未以占位函数伪装存在。T04 通过 Vite library mode 构建同一内核，网页入口在 T08 添加，见 [T04 证据](reviews/T04-kernel-validation.md)。
 
 ## 1. 架构决策
 

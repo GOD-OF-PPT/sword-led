@@ -1,0 +1,36 @@
+{
+  "source": "https://gist.github.com/tommyettinger/46a874533244883189143505d203312c",
+  "method": "Compiled the C reference with cc -std=c11; tests compare TypeScript outputs to these frozen uint32 vectors.",
+  "cases": [
+    {
+      "seed": 0,
+      "uint32": [
+        1144304738,
+        1416247,
+        958946056,
+        627933444,
+        2007157716
+      ]
+    },
+    {
+      "seed": 1,
+      "uint32": [
+        2693262067,
+        11749833,
+        2265367787,
+        4213581821,
+        4159151403
+      ]
+    },
+    {
+      "seed": 4294967295,
+      "uint32": [
+        3850105811,
+        813802916,
+        3073704848,
+        4054706436,
+        3630262831
+      ]
+    }
+  ]
+}

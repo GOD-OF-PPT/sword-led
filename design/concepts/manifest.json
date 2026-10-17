@@ -5,8 +5,19 @@
   "mode": "built-in",
   "model": "not exposed by built-in tool",
   "purpose": "main gameplay concept selection; not runtime assets",
-  "selected_by_user": null,
-  "implementation_approval": null,
+  "selected_by_user": {
+    "concept": "B",
+    "version": 3,
+    "date": "2026-10-17",
+    "answer": "B 行会手账",
+    "source": "docs/decisions/2026-10-17-user-approval.json"
+  },
+  "implementation_approval": {
+    "version": "v0.2",
+    "date": "2026-10-17",
+    "answer": "确认 v0.2，开始玩法内核",
+    "source": "docs/decisions/2026-10-17-user-approval.json"
+  },
   "final_versions": {
     "A": 3,
     "B": 3,

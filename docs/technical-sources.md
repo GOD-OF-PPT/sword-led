@@ -38,3 +38,9 @@
 | [MDN Web Audio](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Best_practices) | 自动播放限制与用户手势创建/恢复 context、用户控制 | 首次操作启用音效，静音/音量可控，失败不阻断玩法 |
 
 架构使用这些能力是项目设计判断，并非来源已经验证本项目实现。浏览器兼容性、性能、存储异常、音频实际效果均要在相应任务运行后报告。
+
+## T04 实际落地
+
+使用 Node 22.12.0 / npm 10.9.0，实际锁定 Vite 8.3.4、TypeScript 7.0.2、Vitest 5.0.5、@types/node 22.20.5；Playwright 在后续真实界面验证时添加。本轮无运行时依赖。`npm ci --registry=https://registry.npmjs.org/` 和 `npm run check` 已执行通过，完整结果见 T04 报告。
+
+内核先按 [Vite library mode](https://vite.dev/guide/build#library-mode) 构建独立 ESM，网页入口在 T08 添加。随机算法核对 [Tommy Ettinger 的原始 C 实现](https://gist.github.com/tommyettinger/46a874533244883189143505d203312c) 与 [FNV 文档](https://www.ietf.org/archive/id/draft-eastlake-fnv-25.html)；C 参考输出向量保存在 tests/fixtures，TypeScript 与其逐项对照。保留约定算法用于本地可重放，不宣称其为密码学随机或已证明整局概率平衡。

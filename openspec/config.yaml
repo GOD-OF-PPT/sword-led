@@ -6,7 +6,8 @@ context: |
   Game rules: docs/game-design.md. Proposed architecture: docs/architecture.md.
   Implementation requires explicit user confirmation of the implementation documents.
   Final art and full UI require the user's selection of one of three imagegen concepts.
-  Both decisions are currently pending; document preparation and concept generation are authorized.
+  On 2026-10-17 the user explicitly approved implementation plan v0.2 and selected concept B.
+  Both decisions are satisfied; see docs/decision-record.md for the original human answers.
   Use TypeScript and Vite, DOM/CSS UI and Canvas 2D scenes, a pure deterministic rules module,
   versioned local storage, Vitest and Playwright. Keep runtime dependencies minimal.
   Never present a mockup, test result or Git push as proof of complete gameplay acceptance.

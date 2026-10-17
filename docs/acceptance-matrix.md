@@ -1,6 +1,6 @@
 # 需求到验收的映射
 
-版本 v0.2 / 2026-10-17。下表为验收合同；当前已有原始输入、设计/提案、AC28 概念图、AC43 初始远程仓库与 AC44/R1 的文档/图稿证据，**规则测试、整局模拟与浏览器业务验收尚未实施/运行**。实际结果见 [R1](reviews/R1-design-and-concepts.md)。OpenSpec 位于 [提案](../openspec/changes/add-forging-game/proposal.md)，引用的 F/E/S/U 编号是稳定的能力标识。
+版本 v0.2 / 2026-10-17。下表为验收合同；当前有原始输入、设计/提案、概念与 R1，以及 [T04 纯内核规则验证](reviews/T04-kernel-validation.md)。T04 的规则层已执行；**经营/存档、完整局策略模拟和浏览器业务验收尚待对应任务**。历史资料见 [R1](reviews/R1-design-and-concepts.md)。OpenSpec 位于 [提案](../openspec/changes/add-forging-game/proposal.md)，引用的 F/E/S/U 编号是稳定的能力标识。
 
 证据层级：D 文档核对；K 正式纯内核/存档测试；M 调用正式内核的策略模拟；B 浏览器实际行为；V 实际渲染截图/视觉检查；H 人类选择或试玩反馈。某一层通过不能自动代表其他层通过。
 
