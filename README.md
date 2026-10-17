@@ -13,6 +13,7 @@
 - [界面与风格](docs/ui-design.md)：完整页面、信息结构与三图共同状态。
 - [验收矩阵](docs/acceptance-matrix.md)：44 项场景及对应任务与证据要求，业务测试/模拟/浏览器验收尚待执行。
 - [首次全面复核 R1](docs/reviews/R1-design-and-concepts.md)：规则闭环、架构、图稿检查、修正与后续验证责任。
+- [确认记录](docs/decision-record.md)：实施与主界面两项决定分开记录，当前均已请求、待用户答复。
 - [OpenSpec 提案](openspec/changes/add-forging-game/proposal.md)：四项新能力，待确认后实施。
 - [原始输入](goal-1/input.md)：用户需求逐字保存。
 - [执行计划](goal-1/plan.md)：实施顺序、验证、风险和回滚。
