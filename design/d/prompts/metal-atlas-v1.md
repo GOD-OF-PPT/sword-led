@@ -1,0 +1,5 @@
+Use case: stylized-concept
+Asset type: one metal texture atlas for dynamically shaped game swords; wide 3:1.
+Input images: Image 1 is approved D 行脚灯炉 brushwork reference only.
+Primary request: A single flat texture sheet divided into THREE equally wide vertical panels, no gaps or borders: LEFT cool grey wrought IRON, CENTER pale blue polished STEEL, RIGHT deep violet-blue METEORIC IRON with sparse silver flecks. Each panel is an abstract close-up flat metal surface filling its entire area, irregular hand-painted hammer facets and many fine angular chisel strokes, thick expressive gouache style, dark values with small desaturated highlights. Darker at the top, lighter along bottom. The metal should feel made by hand like the reference's hammer.
+Constraints: NO objects, sword silhouettes, handles, text, labels, frames, symbols, UI, perspective or watermark. OPAQUE texture, not a scene. Three panels equal width and full height. Moderate contrast and small-scale facets so it can be clipped inside a long blade.

@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import { applyCommand, createRun, getCollection, previewQuench, previewStrike, validateRun } from '../../src/core-v2/index.js';
+import { applyCommand, createRun, getCollection, getRunView, previewQuench, previewStrike, validateRun } from '../../src/core-v2/index.js';
 import type { Action, RunState, Technique } from '../../src/core-v2/index.js';
 import { MATERIALS, TECHNIQUES } from '../../src/core-v2/rules.js';
 import { simulateV2 } from '../../scripts/v2/policy.js';
@@ -33,12 +33,12 @@ test('full slots require an atomic paid replacement, preserving the exact old bu
   expect(applyCommand(state,command)).toMatchObject({ok:false,error:'replacement_required',state});
   expect(applyCommand(state,{...command,action:{type:'buy',productId:id,replaceId:id}})).toMatchObject({ok:false,error:'invalid_replacement',state});
   const next=step(state,{type:'buy',productId:id,replaceId:old});expect(next.techniques).toHaveLength(3);expect(next.techniques).toContain(id);expect(next.techniques).not.toContain(old);
-  expect(next.coins).toBe(state.coins-TECHNIQUES[id].coins);expect(next.scrap).toBe(state.scrap-TECHNIQUES[id].scrap);expect(next.purchases.at(-1)?.replaced).toBe(old);expect(validateRun(next).ok).toBe(true);
+  expect(next.coins).toBe(state.coins-TECHNIQUES[id].coins);expect(next.scrap).toBe(state.scrap-TECHNIQUES[id].scrap);expect(next.purchases.at(-1)?.replaced).toBe(old);expect(getRunView(next).techniques.find(t=>t.id===id)).toMatchObject({short:'下轮生效'});expect(validateRun(next).ok).toBe(true);
 },15000);
 
 test('warm tongs count only two real heavy strikes and publish both their saving and stress cost',()=>{
   let state=acquire('warmTongs');const pieceId=state.pieces[0]?.id;if(!pieceId)throw Error('piece');
-  for(let i=0;i<3;i++){const p=state.pieces[0];if(!p)throw Error('piece');const outcome=previewStrike(state,p,i,'heavy','precise');expect(outcome.allowed).toBe(true);expect(outcome.heatCost).toBe(i<2?20:24);expect(outcome.stressAdded).toBe(10+(i<2?2:0)+(state.condition.kind==='brightFire'?2:0));state=step(state,{type:'strike',pieceId,node:i,mode:'heavy',timingMark:5000});}
+  for(let i=0;i<3;i++){expect(getRunView(state).techniques.find(t=>t.id==='warmTongs')?.short).toBe(`余${Math.max(0,2-i)}次`);const p=state.pieces[0];if(!p)throw Error('piece');const outcome=previewStrike(state,p,i,'heavy','precise');expect(outcome.allowed).toBe(true);expect(outcome.heatCost).toBe(i<2?20:24);expect(outcome.stressAdded).toBe(10+(i<2?2:0)+(state.condition.kind==='brightFire'?2:0));state=step(state,{type:'strike',pieceId,node:i,mode:'heavy',timingMark:5000});}
   expect(state.pieces[0]?.heavyStrikes).toBe(3);expect(validateRun(state).ok).toBe(true);
 },15000);
 
@@ -46,7 +46,7 @@ test('balance weight checks the pre-quench spread and cannot be applied twice',(
   let state=acquire('balanceWeight');const piece=state.pieces[0];if(!piece)throw Error('piece');
   const min=Object.entries(piece.ratings).sort((a,b)=>a[1]-b[1])[0]?.[0],node=min==='edge'?0:min==='toughness'?5:2;
   state=step(state,{type:'strike',pieceId:piece.id,node,mode:'light',timingMark:5000});const before=state.pieces[0];if(!before)throw Error('piece');expect(Math.max(...Object.values(before.ratings))-Math.min(...Object.values(before.ratings))).toBeLessThanOrEqual(4);
-  const preview=previewQuench(state,before,'oil');expect(preview.piece.ratings.balance).toBe(before.ratings.balance+3);state=step(state,{type:'quench',pieceId:piece.id,medium:'oil'});expect(state.pieces[0]).toEqual(preview.piece);expect(validateRun(state).ok).toBe(true);
+  expect(getRunView(state).techniques.find(t=>t.id==='balanceWeight')).toMatchObject({short:'油淬+3衡'});const preview=previewQuench(state,before,'oil');expect(preview.piece.ratings.balance).toBe(before.ratings.balance+3);state=step(state,{type:'quench',pieceId:piece.id,medium:'oil'});expect(state.pieces[0]).toEqual(preview.piece);expect(validateRun(state).ok).toBe(true);
   expect(applyCommand(state,{runId:state.runId,expectedRevision:state.revision,action:{type:'quench',pieceId:piece.id,medium:'oil'}})).toMatchObject({ok:false,error:'already_quenched'});
 },15000);
 
@@ -58,5 +58,5 @@ test('the first actual broken sword pays the shard-box recovery instead of order
     if(o.allowed)state=step(state,{type:'strike',pieceId:id,node,mode:'heavy',timingMark:0});
   }
   if(state.pieces[0]?.status==='active')state=step(state,{type:'quench',pieceId:id,medium:'water'});
-  expect(state.pieces[0]).toMatchObject({status:'broken',recoveredScrap:5,paidValue:0});expect(state.scrap).toBe(initialScrap+5);expect(state.roundBreaks).toBe(1);expect(validateRun(state).ok).toBe(true);
+  expect(state.pieces[0]).toMatchObject({status:'broken',recoveredScrap:5,paidValue:0});expect(state.scrap).toBe(initialScrap+5);expect(state.roundBreaks).toBe(1);expect(getRunView(state).techniques.find(t=>t.id==='shardBox')).toMatchObject({short:'本轮已用'});expect(validateRun(state).ok).toBe(true);
 },15000);

@@ -1,0 +1,456 @@
+{
+  "config": {
+    "argv": [
+      "/Users/gordon/.nvm/versions/node/v22.12.0/bin/node",
+      "/Users/gordon/githome/sword-led/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "playwright.ui.config.ts",
+      "tests/e2e/v2-d-flow.spec.ts"
+    ],
+    "configFile": "/Users/gordon/githome/sword-led/playwright.ui.config.ts",
+    "rootDir": "/Users/gordon/githome/sword-led/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/ui",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-game",
+        "name": "chromium-game",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/ui",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chromium-game",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4180",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "launchOptions": {
+            "args": [
+              "--no-proxy-server"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium-game"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/ui-report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 4180 --strictPort",
+      "url": "http://127.0.0.1:4180",
+      "timeout": 30000,
+      "reuseExistingServer": false,
+      "env": {
+        "NO_PROXY": "127.0.0.1,localhost",
+        "no_proxy": "127.0.0.1,localhost"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "v2-d-flow.spec.ts",
+      "file": "v2-d-flow.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "D keyboard-only twelve-round campaign reaches all three merchants, keeps exact rules and reloads victory",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 480000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-game",
+              "projectName": "chromium-game",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 158029,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.sword-record')\nExpected: \u001b[32m36\u001b[39m\nReceived: \u001b[31m39\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('.sword-record') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.sword-record')\u001b[22m\n\u001b[2m    14 × locator resolved to 39 elements\u001b[22m\n\u001b[2m       - unexpected value \"39\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.sword-record')\nExpected: \u001b[32m36\u001b[39m\nReceived: \u001b[31m39\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('.sword-record') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.sword-record')\u001b[22m\n\u001b[2m    14 × locator resolved to 39 elements\u001b[22m\n\u001b[2m       - unexpected value \"39\"\u001b[22m\n\n    at /Users/gordon/githome/sword-led/tests/e2e/v2-d-flow.spec.ts:41:109",
+                    "location": {
+                      "file": "/Users/gordon/githome/sword-led/tests/e2e/v2-d-flow.spec.ts",
+                      "column": 109,
+                      "line": 41
+                    },
+                    "snippet": "  39 |   expect(visited).toEqual([3,6,9]);expect(expected).toMatchObject({phase:'victory',round:12,seals:3,coins:5258});expect(expected.journal).toHaveLength(301);expect(await page.evaluate(()=>Reflect.get(window,'dPointerCount'))).toBe(0);\n  40 |   await shot(page,info,'d-keyboard-victory');await page.reload();await keyActivate(page,'#v2-continue');await expect(page.locator('#v2-phase-title')).toHaveText('十二轮，炉火仍在');expect(await state(page)).toEqual(expected);\n> 41 |   await keyActivate(page,'#v2-phase-actions button:last-child');await expect(page.locator('.sword-record')).toHaveCount(36);const raw=await page.evaluate(()=>localStorage.getItem('sword-led.save.v2'));await page.keyboard.press('Escape');expect(await page.evaluate(()=>localStorage.getItem('sword-led.save.v2'))).toBe(raw);\n     |                                                                                                             ^\n  42 |   await info.attach('d-keyboard-campaign',{body:Buffer.from(JSON.stringify({pointerEvents:0,visited,state:expected},null,2)),contentType:'application/json'});\n  43 | });\n  44 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v2-d-flow.spec.ts",
+                        "column": 109,
+                        "line": 41
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.sword-record')\nExpected: \u001b[32m36\u001b[39m\nReceived: \u001b[31m39\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('.sword-record') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.sword-record')\u001b[22m\n\u001b[2m    14 × locator resolved to 39 elements\u001b[22m\n\u001b[2m       - unexpected value \"39\"\u001b[22m\n\n\n  39 |   expect(visited).toEqual([3,6,9]);expect(expected).toMatchObject({phase:'victory',round:12,seals:3,coins:5258});expect(expected.journal).toHaveLength(301);expect(await page.evaluate(()=>Reflect.get(window,'dPointerCount'))).toBe(0);\n  40 |   await shot(page,info,'d-keyboard-victory');await page.reload();await keyActivate(page,'#v2-continue');await expect(page.locator('#v2-phase-title')).toHaveText('十二轮，炉火仍在');expect(await state(page)).toEqual(expected);\n> 41 |   await keyActivate(page,'#v2-phase-actions button:last-child');await expect(page.locator('.sword-record')).toHaveCount(36);const raw=await page.evaluate(()=>localStorage.getItem('sword-led.save.v2'));await page.keyboard.press('Escape');expect(await page.evaluate(()=>localStorage.getItem('sword-led.save.v2'))).toBe(raw);\n     |                                                                                                             ^\n  42 |   await info.attach('d-keyboard-campaign',{body:Buffer.from(JSON.stringify({pointerEvents:0,visited,state:expected},null,2)),contentType:'application/json'});\n  43 | });\n  44 |\n    at /Users/gordon/githome/sword-led/tests/e2e/v2-d-flow.spec.ts:41:109"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T18:40:26.128Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "d-keyboard-merchant-3",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/test-results/ui/v2-d-flow-D-keyboard-only--7ff22-t-rules-and-reloads-victory-chromium-game/attachments/d-keyboard-merchant-3-0b3dc875270a5f59f9c6559be0005d9f5eefc95e.png"
+                    },
+                    {
+                      "name": "d-three-techniques-720",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/test-results/ui/v2-d-flow-D-keyboard-only--7ff22-t-rules-and-reloads-victory-chromium-game/attachments/d-three-techniques-720-6b8ccceae4d67e353634754514d6f32022f1d4ed.png"
+                    },
+                    {
+                      "name": "d-keyboard-merchant-6",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/test-results/ui/v2-d-flow-D-keyboard-only--7ff22-t-rules-and-reloads-victory-chromium-game/attachments/d-keyboard-merchant-6-bd9b274fda2abe2fea7a1f5740826a62f135e242.png"
+                    },
+                    {
+                      "name": "d-keyboard-merchant-9",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/test-results/ui/v2-d-flow-D-keyboard-only--7ff22-t-rules-and-reloads-victory-chromium-game/attachments/d-keyboard-merchant-9-d1c37013b55bab57ab5980ae07392274f1441d0e.png"
+                    },
+                    {
+                      "name": "d-keyboard-victory",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/test-results/ui/v2-d-flow-D-keyboard-only--7ff22-t-rules-and-reloads-victory-chromium-game/attachments/d-keyboard-victory-2bc3e0963b9b60ffc80210216173dcd6fe197371.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/test-results/ui/v2-d-flow-D-keyboard-only--7ff22-t-rules-and-reloads-victory-chromium-game/test-failed-1.png"
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/test-results/ui/v2-d-flow-D-keyboard-only--7ff22-t-rules-and-reloads-victory-chromium-game/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/test-results/ui/v2-d-flow-D-keyboard-only--7ff22-t-rules-and-reloads-victory-chromium-game/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/gordon/githome/sword-led/tests/e2e/v2-d-flow.spec.ts",
+                    "column": 109,
+                    "line": 41
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "900f0d18f8e4e9037dca-3ae0045242cfb7f8210d",
+          "file": "v2-d-flow.spec.ts",
+          "line": 29,
+          "column": 1
+        },
+        {
+          "title": "D real failed contract has three receipts per round, no terminal merchant and an explicit restart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-game",
+              "projectName": "chromium-game",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3387,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T18:43:31.200Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "d-real-defeat",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/test-results/ui/v2-d-flow-D-real-failed-co-57063-ant-and-an-explicit-restart-chromium-game/attachments/d-real-defeat-defe29fabf57af62625089f0d4fd11ce0b70e95b.png"
+                    },
+                    {
+                      "name": "d-failed-contract",
+                      "contentType": "application/json",
+                      "body": "ewogICJydWxlc1ZlcnNpb24iOiAiZm9yZ2UtdjIiLAogICJydW5JZCI6ICJmMTNjMjVhMS01N2MzLTQ0OTgtOTkyYS0zNDQ2MDA0NzQ5M2QiLAogICJzZWVkIjogImQtcmVhbC1kZWZlYXQiLAogICJyZXZpc2lvbiI6IDksCiAgInBoYXNlIjogImRlZmVhdCIsCiAgInJvdW5kIjogMywKICAiY29pbnMiOiAwLAogICJzY3JhcCI6IDMyLAogICJjb2FsIjogMiwKICAic2VhbHMiOiAwLAogICJzdGFydGVyQ2hvc2VuIjogdHJ1ZSwKICAidGVjaG5pcXVlcyI6IFsKICAgICJlZGdlVG9vdGgiCiAgXSwKICAicGllY2VzIjogWwogICAgewogICAgICAiaWQiOiAiMzoxIiwKICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAiYmFzZVZhbHVlIjogMTgsCiAgICAgICJ0ZW1wZXJlZEJvbnVzIjogMCwKICAgICAgInRocmVzaG9sZCI6IDQwLAogICAgICAibWF4SW50ZWdyaXR5IjogNCwKICAgICAgImludGVncml0eSI6IDQsCiAgICAgICJoZWF0IjogMTAwLAogICAgICAic3RyZXNzIjogMCwKICAgICAgInJhdGluZ3MiOiB7CiAgICAgICAgImVkZ2UiOiAwLAogICAgICAgICJ0b3VnaG5lc3MiOiAyLAogICAgICAgICJiYWxhbmNlIjogMAogICAgICB9LAogICAgICAibm9kZXMiOiBbCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMAogICAgICBdLAogICAgICAiY2hhaW4iOiBbXSwKICAgICAgInBhdHRlcm5zIjogW10sCiAgICAgICJ0cmFjZXMiOiBbXSwKICAgICAgInN0cmlrZXMiOiAwLAogICAgICAiaGVhdnlTdHJpa2VzIjogMCwKICAgICAgInJlaGVhdHMiOiAwLAogICAgICAiYnJpZGdlVXNlZCI6IGZhbHNlLAogICAgICAicXVlbmNoIjogbnVsbCwKICAgICAgInN0YXR1cyI6ICJyZWN5Y2xlZCIsCiAgICAgICJwYWlkVmFsdWUiOiAwLAogICAgICAicmVjb3ZlcmVkU2NyYXAiOiAzCiAgICB9LAogICAgewogICAgICAiaWQiOiAiMzoyIiwKICAgICAgIm1hdGVyaWFsIjogInN0ZWVsIiwKICAgICAgImJhc2VWYWx1ZSI6IDIyLAogICAgICAidGVtcGVyZWRCb251cyI6IDAsCiAgICAgICJ0aHJlc2hvbGQiOiAzNiwKICAgICAgIm1heEludGVncml0eSI6IDMsCiAgICAgICJpbnRlZ3JpdHkiOiAzLAogICAgICAiaGVhdCI6IDEwMCwKICAgICAgInN0cmVzcyI6IDAsCiAgICAgICJyYXRpbmdzIjogewogICAgICAgICJlZGdlIjogMiwKICAgICAgICAidG91Z2huZXNzIjogMCwKICAgICAgICAiYmFsYW5jZSI6IDAKICAgICAgfSwKICAgICAgIm5vZGVzIjogWwogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAKICAgICAgXSwKICAgICAgImNoYWluIjogW10sCiAgICAgICJwYXR0ZXJucyI6IFtdLAogICAgICAidHJhY2VzIjogW10sCiAgICAgICJzdHJpa2VzIjogMCwKICAgICAgImhlYXZ5U3RyaWtlcyI6IDAsCiAgICAgICJyZWhlYXRzIjogMCwKICAgICAgImJyaWRnZVVzZWQiOiBmYWxzZSwKICAgICAgInF1ZW5jaCI6IG51bGwsCiAgICAgICJzdGF0dXMiOiAicmVjeWNsZWQiLAogICAgICAicGFpZFZhbHVlIjogMCwKICAgICAgInJlY292ZXJlZFNjcmFwIjogNAogICAgfSwKICAgIHsKICAgICAgImlkIjogIjM6MyIsCiAgICAgICJtYXRlcmlhbCI6ICJzdGVlbCIsCiAgICAgICJiYXNlVmFsdWUiOiAyMiwKICAgICAgInRlbXBlcmVkQm9udXMiOiAwLAogICAgICAidGhyZXNob2xkIjogMzYsCiAgICAgICJtYXhJbnRlZ3JpdHkiOiAzLAogICAgICAiaW50ZWdyaXR5IjogMywKICAgICAgImhlYXQiOiAxMDAsCiAgICAgICJzdHJlc3MiOiAwLAogICAgICAicmF0aW5ncyI6IHsKICAgICAgICAiZWRnZSI6IDIsCiAgICAgICAgInRvdWdobmVzcyI6IDAsCiAgICAgICAgImJhbGFuY2UiOiAwCiAgICAgIH0sCiAgICAgICJub2RlcyI6IFsKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAwLAogICAgICAgIDAsCiAgICAgICAgMCwKICAgICAgICAwCiAgICAgIF0sCiAgICAgICJjaGFpbiI6IFtdLAogICAgICAicGF0dGVybnMiOiBbXSwKICAgICAgInRyYWNlcyI6IFtdLAogICAgICAic3RyaWtlcyI6IDAsCiAgICAgICJoZWF2eVN0cmlrZXMiOiAwLAogICAgICAicmVoZWF0cyI6IDAsCiAgICAgICJicmlkZ2VVc2VkIjogZmFsc2UsCiAgICAgICJxdWVuY2giOiBudWxsLAogICAgICAic3RhdHVzIjogInJlY3ljbGVkIiwKICAgICAgInBhaWRWYWx1ZSI6IDAsCiAgICAgICJyZWNvdmVyZWRTY3JhcCI6IDQKICAgIH0KICBdLAogICJjb25kaXRpb24iOiB7CiAgICAia2luZCI6ICJzdGVhZHkiLAogICAgInN0YXQiOiBudWxsLAogICAgInBhdHRlcm4iOiBudWxsCiAgfSwKICAiY3JlZGl0IjogMCwKICAicGVuZGluZ0NyZWRpdCI6IDAsCiAgInJlcXVlc3RzIjogWwogICAgewogICAgICAiaWQiOiAiMzpodW50ZXIiLAogICAgICAia2luZCI6ICJodW50ZXIiLAogICAgICAibGFiZWwiOiAi54yO5omL55qE5byA6Lev5YmRIiwKICAgICAgIm5lZWRzIjogWwogICAgICAgIHsKICAgICAgICAgICJzdGF0IjogImVkZ2UiLAogICAgICAgICAgIm1pbmltdW0iOiA4CiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAic3RhdCI6ICJiYWxhbmNlIiwKICAgICAgICAgICJtaW5pbXVtIjogMwogICAgICAgIH0KICAgICAgXSwKICAgICAgInBhdHRlcm5zIjogW10KICAgIH0sCiAgICB7CiAgICAgICJpZCI6ICIzOnByb3RlY3RvciIsCiAgICAgICJraW5kIjogInByb3RlY3RvciIsCiAgICAgICJsYWJlbCI6ICLmiqTljavnmoTmjKHlh7vliZEiLAogICAgICAibmVlZHMiOiBbCiAgICAgICAgewogICAgICAgICAgInN0YXQiOiAidG91Z2huZXNzIiwKICAgICAgICAgICJtaW5pbXVtIjogOAogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgInN0YXQiOiAiYmFsYW5jZSIsCiAgICAgICAgICAibWluaW11bSI6IDMKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJwYXR0ZXJucyI6IFtdCiAgICB9CiAgXSwKICAicmVxdWVzdERlY2lkZWQiOiB0cnVlLAogICJhY2NlcHRlZFJlcXVlc3RJZCI6IG51bGwsCiAgImZ1bGZpbGxlZFJlcXVlc3RJZCI6IG51bGwsCiAgInJldHVybnMiOiBbXSwKICAicm91bmRCcmVha3MiOiAwLAogICJtZXJjaGFudCI6IFtdLAogICJwdXJjaGFzZXMiOiBbXSwKICAiaGlzdG9yeSI6IFsKICAgIHsKICAgICAgInJvdW5kIjogMSwKICAgICAgInF1b3RhIjogMTUwLAogICAgICAiZGVsaXZlcmVkIjogMCwKICAgICAgImNyZWRpdCI6IDAsCiAgICAgICJtZXQiOiBmYWxzZSwKICAgICAgInNlYWxzQmVmb3JlIjogMywKICAgICAgInNlYWxzQWZ0ZXIiOiAyLAogICAgICAibmV4dENyZWRpdCI6IDAsCiAgICAgICJwaWVjZXMiOiBbCiAgICAgICAgewogICAgICAgICAgImlkIjogIjE6MSIsCiAgICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgICAiYmFzZVZhbHVlIjogMTgsCiAgICAgICAgICAidGVtcGVyZWRCb251cyI6IDAsCiAgICAgICAgICAidGhyZXNob2xkIjogNDAsCiAgICAgICAgICAibWF4SW50ZWdyaXR5IjogNCwKICAgICAgICAgICJpbnRlZ3JpdHkiOiA0LAogICAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAgICJyYXRpbmdzIjogewogICAgICAgICAgICAiZWRnZSI6IDAsCiAgICAgICAgICAgICJ0b3VnaG5lc3MiOiAyLAogICAgICAgICAgICAiYmFsYW5jZSI6IDAKICAgICAgICAgIH0sCiAgICAgICAgICAibm9kZXMiOiBbCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAKICAgICAgICAgIF0sCiAgICAgICAgICAiY2hhaW4iOiBbXSwKICAgICAgICAgICJwYXR0ZXJucyI6IFtdLAogICAgICAgICAgInRyYWNlcyI6IFtdLAogICAgICAgICAgInN0cmlrZXMiOiAwLAogICAgICAgICAgImhlYXZ5U3RyaWtlcyI6IDAsCiAgICAgICAgICAicmVoZWF0cyI6IDAsCiAgICAgICAgICAiYnJpZGdlVXNlZCI6IGZhbHNlLAogICAgICAgICAgInF1ZW5jaCI6IG51bGwsCiAgICAgICAgICAic3RhdHVzIjogInJlY3ljbGVkIiwKICAgICAgICAgICJwYWlkVmFsdWUiOiAwLAogICAgICAgICAgInJlY292ZXJlZFNjcmFwIjogMwogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgImlkIjogIjE6MiIsCiAgICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgICAiYmFzZVZhbHVlIjogMTgsCiAgICAgICAgICAidGVtcGVyZWRCb251cyI6IDAsCiAgICAgICAgICAidGhyZXNob2xkIjogNDAsCiAgICAgICAgICAibWF4SW50ZWdyaXR5IjogNCwKICAgICAgICAgICJpbnRlZ3JpdHkiOiA0LAogICAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAgICJyYXRpbmdzIjogewogICAgICAgICAgICAiZWRnZSI6IDAsCiAgICAgICAgICAgICJ0b3VnaG5lc3MiOiAyLAogICAgICAgICAgICAiYmFsYW5jZSI6IDAKICAgICAgICAgIH0sCiAgICAgICAgICAibm9kZXMiOiBbCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAKICAgICAgICAgIF0sCiAgICAgICAgICAiY2hhaW4iOiBbXSwKICAgICAgICAgICJwYXR0ZXJucyI6IFtdLAogICAgICAgICAgInRyYWNlcyI6IFtdLAogICAgICAgICAgInN0cmlrZXMiOiAwLAogICAgICAgICAgImhlYXZ5U3RyaWtlcyI6IDAsCiAgICAgICAgICAicmVoZWF0cyI6IDAsCiAgICAgICAgICAiYnJpZGdlVXNlZCI6IGZhbHNlLAogICAgICAgICAgInF1ZW5jaCI6IG51bGwsCiAgICAgICAgICAic3RhdHVzIjogInJlY3ljbGVkIiwKICAgICAgICAgICJwYWlkVmFsdWUiOiAwLAogICAgICAgICAgInJlY292ZXJlZFNjcmFwIjogMwogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgImlkIjogIjE6MyIsCiAgICAgICAgICAibWF0ZXJpYWwiOiAic3RlZWwiLAogICAgICAgICAgImJhc2VWYWx1ZSI6IDIyLAogICAgICAgICAgInRlbXBlcmVkQm9udXMiOiAwLAogICAgICAgICAgInRocmVzaG9sZCI6IDM2LAogICAgICAgICAgIm1heEludGVncml0eSI6IDMsCiAgICAgICAgICAiaW50ZWdyaXR5IjogMywKICAgICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgICAicmF0aW5ncyI6IHsKICAgICAgICAgICAgImVkZ2UiOiAyLAogICAgICAgICAgICAidG91Z2huZXNzIjogMCwKICAgICAgICAgICAgImJhbGFuY2UiOiAwCiAgICAgICAgICB9LAogICAgICAgICAgIm5vZGVzIjogWwogICAgICAgICAgICAwLAogICAgICAgICAgICAwLAogICAgICAgICAgICAwLAogICAgICAgICAgICAwLAogICAgICAgICAgICAwLAogICAgICAgICAgICAwLAogICAgICAgICAgICAwLAogICAgICAgICAgICAwLAogICAgICAgICAgICAwLAogICAgICAgICAgICAwCiAgICAgICAgICBdLAogICAgICAgICAgImNoYWluIjogW10sCiAgICAgICAgICAicGF0dGVybnMiOiBbXSwKICAgICAgICAgICJ0cmFjZXMiOiBbXSwKICAgICAgICAgICJzdHJpa2VzIjogMCwKICAgICAgICAgICJoZWF2eVN0cmlrZXMiOiAwLAogICAgICAgICAgInJlaGVhdHMiOiAwLAogICAgICAgICAgImJyaWRnZVVzZWQiOiBmYWxzZSwKICAgICAgICAgICJxdWVuY2giOiBudWxsLAogICAgICAgICAgInN0YXR1cyI6ICJyZWN5Y2xlZCIsCiAgICAgICAgICAicGFpZFZhbHVlIjogMCwKICAgICAgICAgICJyZWNvdmVyZWRTY3JhcCI6IDQKICAgICAgICB9CiAgICAgIF0sCiAgICAgICJjb25kaXRpb24iOiB7CiAgICAgICAgImtpbmQiOiAic3RlYWR5IiwKICAgICAgICAic3RhdCI6IG51bGwsCiAgICAgICAgInBhdHRlcm4iOiBudWxsCiAgICAgIH0sCiAgICAgICJyZXF1ZXN0IjogbnVsbAogICAgfSwKICAgIHsKICAgICAgInJvdW5kIjogMiwKICAgICAgInF1b3RhIjogMTgwLAogICAgICAiZGVsaXZlcmVkIjogMCwKICAgICAgImNyZWRpdCI6IDAsCiAgICAgICJtZXQiOiBmYWxzZSwKICAgICAgInNlYWxzQmVmb3JlIjogMiwKICAgICAgInNlYWxzQWZ0ZXIiOiAxLAogICAgICAibmV4dENyZWRpdCI6IDAsCiAgICAgICJwaWVjZXMiOiBbCiAgICAgICAgewogICAgICAgICAgImlkIjogIjI6MSIsCiAgICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgICAiYmFzZVZhbHVlIjogMTgsCiAgICAgICAgICAidGVtcGVyZWRCb251cyI6IDAsCiAgICAgICAgICAidGhyZXNob2xkIjogNDAsCiAgICAgICAgICAibWF4SW50ZWdyaXR5IjogNCwKICAgICAgICAgICJpbnRlZ3JpdHkiOiA0LAogICAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAgICJyYXRpbmdzIjogewogICAgICAgICAgICAiZWRnZSI6IDAsCiAgICAgICAgICAgICJ0b3VnaG5lc3MiOiAyLAogICAgICAgICAgICAiYmFsYW5jZSI6IDAKICAgICAgICAgIH0sCiAgICAgICAgICAibm9kZXMiOiBbCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAKICAgICAgICAgIF0sCiAgICAgICAgICAiY2hhaW4iOiBbXSwKICAgICAgICAgICJwYXR0ZXJucyI6IFtdLAogICAgICAgICAgInRyYWNlcyI6IFtdLAogICAgICAgICAgInN0cmlrZXMiOiAwLAogICAgICAgICAgImhlYXZ5U3RyaWtlcyI6IDAsCiAgICAgICAgICAicmVoZWF0cyI6IDAsCiAgICAgICAgICAiYnJpZGdlVXNlZCI6IGZhbHNlLAogICAgICAgICAgInF1ZW5jaCI6IG51bGwsCiAgICAgICAgICAic3RhdHVzIjogInJlY3ljbGVkIiwKICAgICAgICAgICJwYWlkVmFsdWUiOiAwLAogICAgICAgICAgInJlY292ZXJlZFNjcmFwIjogMwogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgImlkIjogIjI6MiIsCiAgICAgICAgICAibWF0ZXJpYWwiOiAic3RlZWwiLAogICAgICAgICAgImJhc2VWYWx1ZSI6IDIyLAogICAgICAgICAgInRlbXBlcmVkQm9udXMiOiAwLAogICAgICAgICAgInRocmVzaG9sZCI6IDM2LAogICAgICAgICAgIm1heEludGVncml0eSI6IDMsCiAgICAgICAgICAiaW50ZWdyaXR5IjogMywKICAgICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgICAicmF0aW5ncyI6IHsKICAgICAgICAgICAgImVkZ2UiOiAyLAogICAgICAgICAgICAidG91Z2huZXNzIjogMCwKICAgICAgICAgICAgImJhbGFuY2UiOiAwCiAgICAgICAgICB9LAogICAgICAgICAgIm5vZGVzIjogWwogICAgICAgICAgICAwLAogICAgICAgICAgICAwLAogICAgICAgICAgICAwLAogICAgICAgICAgICAwLAogICAgICAgICAgICAwLAogICAgICAgICAgICAwLAogICAgICAgICAgICAwLAogICAgICAgICAgICAwLAogICAgICAgICAgICAwLAogICAgICAgICAgICAwCiAgICAgICAgICBdLAogICAgICAgICAgImNoYWluIjogW10sCiAgICAgICAgICAicGF0dGVybnMiOiBbXSwKICAgICAgICAgICJ0cmFjZXMiOiBbXSwKICAgICAgICAgICJzdHJpa2VzIjogMCwKICAgICAgICAgICJoZWF2eVN0cmlrZXMiOiAwLAogICAgICAgICAgInJlaGVhdHMiOiAwLAogICAgICAgICAgImJyaWRnZVVzZWQiOiBmYWxzZSwKICAgICAgICAgICJxdWVuY2giOiBudWxsLAogICAgICAgICAgInN0YXR1cyI6ICJyZWN5Y2xlZCIsCiAgICAgICAgICAicGFpZFZhbHVlIjogMCwKICAgICAgICAgICJyZWNvdmVyZWRTY3JhcCI6IDQKICAgICAgICB9LAogICAgICAgIHsKICAgICAgICAgICJpZCI6ICIyOjMiLAogICAgICAgICAgIm1hdGVyaWFsIjogInN0ZWVsIiwKICAgICAgICAgICJiYXNlVmFsdWUiOiAyMiwKICAgICAgICAgICJ0ZW1wZXJlZEJvbnVzIjogMCwKICAgICAgICAgICJ0aHJlc2hvbGQiOiAzNiwKICAgICAgICAgICJtYXhJbnRlZ3JpdHkiOiAzLAogICAgICAgICAgImludGVncml0eSI6IDMsCiAgICAgICAgICAiaGVhdCI6IDEwMCwKICAgICAgICAgICJzdHJlc3MiOiAwLAogICAgICAgICAgInJhdGluZ3MiOiB7CiAgICAgICAgICAgICJlZGdlIjogMiwKICAgICAgICAgICAgInRvdWdobmVzcyI6IDAsCiAgICAgICAgICAgICJiYWxhbmNlIjogMAogICAgICAgICAgfSwKICAgICAgICAgICJub2RlcyI6IFsKICAgICAgICAgICAgMCwKICAgICAgICAgICAgMCwKICAgICAgICAgICAgMCwKICAgICAgICAgICAgMCwKICAgICAgICAgICAgMCwKICAgICAgICAgICAgMCwKICAgICAgICAgICAgMCwKICAgICAgICAgICAgMCwKICAgICAgICAgICAgMCwKICAgICAgICAgICAgMAogICAgICAgICAgXSwKICAgICAgICAgICJjaGFpbiI6IFtdLAogICAgICAgICAgInBhdHRlcm5zIjogW10sCiAgICAgICAgICAidHJhY2VzIjogW10sCiAgICAgICAgICAic3RyaWtlcyI6IDAsCiAgICAgICAgICAiaGVhdnlTdHJpa2VzIjogMCwKICAgICAgICAgICJyZWhlYXRzIjogMCwKICAgICAgICAgICJicmlkZ2VVc2VkIjogZmFsc2UsCiAgICAgICAgICAicXVlbmNoIjogbnVsbCwKICAgICAgICAgICJzdGF0dXMiOiAicmVjeWNsZWQiLAogICAgICAgICAgInBhaWRWYWx1ZSI6IDAsCiAgICAgICAgICAicmVjb3ZlcmVkU2NyYXAiOiA0CiAgICAgICAgfQogICAgICBdLAogICAgICAiY29uZGl0aW9uIjogewogICAgICAgICJraW5kIjogInN0ZWFkeSIsCiAgICAgICAgInN0YXQiOiBudWxsLAogICAgICAgICJwYXR0ZXJuIjogbnVsbAogICAgICB9LAogICAgICAicmVxdWVzdCI6IG51bGwKICAgIH0sCiAgICB7CiAgICAgICJyb3VuZCI6IDMsCiAgICAgICJxdW90YSI6IDIxMCwKICAgICAgImRlbGl2ZXJlZCI6IDAsCiAgICAgICJjcmVkaXQiOiAwLAogICAgICAibWV0IjogZmFsc2UsCiAgICAgICJzZWFsc0JlZm9yZSI6IDEsCiAgICAgICJzZWFsc0FmdGVyIjogMCwKICAgICAgIm5leHRDcmVkaXQiOiAwLAogICAgICAicGllY2VzIjogWwogICAgICAgIHsKICAgICAgICAgICJpZCI6ICIzOjEiLAogICAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICAgImJhc2VWYWx1ZSI6IDE4LAogICAgICAgICAgInRlbXBlcmVkQm9udXMiOiAwLAogICAgICAgICAgInRocmVzaG9sZCI6IDQwLAogICAgICAgICAgIm1heEludGVncml0eSI6IDQsCiAgICAgICAgICAiaW50ZWdyaXR5IjogNCwKICAgICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgICAicmF0aW5ncyI6IHsKICAgICAgICAgICAgImVkZ2UiOiAwLAogICAgICAgICAgICAidG91Z2huZXNzIjogMiwKICAgICAgICAgICAgImJhbGFuY2UiOiAwCiAgICAgICAgICB9LAogICAgICAgICAgIm5vZGVzIjogWwogICAgICAgICAgICAwLAogICAgICAgICAgICAwLAogICAgICAgICAgICAwLAogICAgICAgICAgICAwLAogICAgICAgICAgICAwLAogICAgICAgICAgICAwLAogICAgICAgICAgICAwLAogICAgICAgICAgICAwLAogICAgICAgICAgICAwLAogICAgICAgICAgICAwCiAgICAgICAgICBdLAogICAgICAgICAgImNoYWluIjogW10sCiAgICAgICAgICAicGF0dGVybnMiOiBbXSwKICAgICAgICAgICJ0cmFjZXMiOiBbXSwKICAgICAgICAgICJzdHJpa2VzIjogMCwKICAgICAgICAgICJoZWF2eVN0cmlrZXMiOiAwLAogICAgICAgICAgInJlaGVhdHMiOiAwLAogICAgICAgICAgImJyaWRnZVVzZWQiOiBmYWxzZSwKICAgICAgICAgICJxdWVuY2giOiBudWxsLAogICAgICAgICAgInN0YXR1cyI6ICJyZWN5Y2xlZCIsCiAgICAgICAgICAicGFpZFZhbHVlIjogMCwKICAgICAgICAgICJyZWNvdmVyZWRTY3JhcCI6IDMKICAgICAgICB9LAogICAgICAgIHsKICAgICAgICAgICJpZCI6ICIzOjIiLAogICAgICAgICAgIm1hdGVyaWFsIjogInN0ZWVsIiwKICAgICAgICAgICJiYXNlVmFsdWUiOiAyMiwKICAgICAgICAgICJ0ZW1wZXJlZEJvbnVzIjogMCwKICAgICAgICAgICJ0aHJlc2hvbGQiOiAzNiwKICAgICAgICAgICJtYXhJbnRlZ3JpdHkiOiAzLAogICAgICAgICAgImludGVncml0eSI6IDMsCiAgICAgICAgICAiaGVhdCI6IDEwMCwKICAgICAgICAgICJzdHJlc3MiOiAwLAogICAgICAgICAgInJhdGluZ3MiOiB7CiAgICAgICAgICAgICJlZGdlIjogMiwKICAgICAgICAgICAgInRvdWdobmVzcyI6IDAsCiAgICAgICAgICAgICJiYWxhbmNlIjogMAogICAgICAgICAgfSwKICAgICAgICAgICJub2RlcyI6IFsKICAgICAgICAgICAgMCwKICAgICAgICAgICAgMCwKICAgICAgICAgICAgMCwKICAgICAgICAgICAgMCwKICAgICAgICAgICAgMCwKICAgICAgICAgICAgMCwKICAgICAgICAgICAgMCwKICAgICAgICAgICAgMCwKICAgICAgICAgICAgMCwKICAgICAgICAgICAgMAogICAgICAgICAgXSwKICAgICAgICAgICJjaGFpbiI6IFtdLAogICAgICAgICAgInBhdHRlcm5zIjogW10sCiAgICAgICAgICAidHJhY2VzIjogW10sCiAgICAgICAgICAic3RyaWtlcyI6IDAsCiAgICAgICAgICAiaGVhdnlTdHJpa2VzIjogMCwKICAgICAgICAgICJyZWhlYXRzIjogMCwKICAgICAgICAgICJicmlkZ2VVc2VkIjogZmFsc2UsCiAgICAgICAgICAicXVlbmNoIjogbnVsbCwKICAgICAgICAgICJzdGF0dXMiOiAicmVjeWNsZWQiLAogICAgICAgICAgInBhaWRWYWx1ZSI6IDAsCiAgICAgICAgICAicmVjb3ZlcmVkU2NyYXAiOiA0CiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAiaWQiOiAiMzozIiwKICAgICAgICAgICJtYXRlcmlhbCI6ICJzdGVlbCIsCiAgICAgICAgICAiYmFzZVZhbHVlIjogMjIsCiAgICAgICAgICAidGVtcGVyZWRCb251cyI6IDAsCiAgICAgICAgICAidGhyZXNob2xkIjogMzYsCiAgICAgICAgICAibWF4SW50ZWdyaXR5IjogMywKICAgICAgICAgICJpbnRlZ3JpdHkiOiAzLAogICAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAgICJyYXRpbmdzIjogewogICAgICAgICAgICAiZWRnZSI6IDIsCiAgICAgICAgICAgICJ0b3VnaG5lc3MiOiAwLAogICAgICAgICAgICAiYmFsYW5jZSI6IDAKICAgICAgICAgIH0sCiAgICAgICAgICAibm9kZXMiOiBbCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAsCiAgICAgICAgICAgIDAKICAgICAgICAgIF0sCiAgICAgICAgICAiY2hhaW4iOiBbXSwKICAgICAgICAgICJwYXR0ZXJucyI6IFtdLAogICAgICAgICAgInRyYWNlcyI6IFtdLAogICAgICAgICAgInN0cmlrZXMiOiAwLAogICAgICAgICAgImhlYXZ5U3RyaWtlcyI6IDAsCiAgICAgICAgICAicmVoZWF0cyI6IDAsCiAgICAgICAgICAiYnJpZGdlVXNlZCI6IGZhbHNlLAogICAgICAgICAgInF1ZW5jaCI6IG51bGwsCiAgICAgICAgICAic3RhdHVzIjogInJlY3ljbGVkIiwKICAgICAgICAgICJwYWlkVmFsdWUiOiAwLAogICAgICAgICAgInJlY292ZXJlZFNjcmFwIjogNAogICAgICAgIH0KICAgICAgXSwKICAgICAgImNvbmRpdGlvbiI6IHsKICAgICAgICAia2luZCI6ICJzdGVhZHkiLAogICAgICAgICJzdGF0IjogbnVsbCwKICAgICAgICAicGF0dGVybiI6IG51bGwKICAgICAgfSwKICAgICAgInJlcXVlc3QiOiBudWxsCiAgICB9CiAgXSwKICAicm5nIjogewogICAgInN0b2NrIjogewogICAgICAic3RhdGUiOiAzMzczMDE2OTc4LAogICAgICAiZHJhd3MiOiAyCiAgICB9LAogICAgInJlcXVlc3RzIjogewogICAgICAic3RhdGUiOiAzODg4NTUzNTU2LAogICAgICAiZHJhd3MiOiA0CiAgICB9LAogICAgImNvbmRpdGlvbnMiOiB7CiAgICAgICJzdGF0ZSI6IDY2NDU4NDgwOCwKICAgICAgImRyYXdzIjogMAogICAgfSwKICAgICJtZXJjaGFudCI6IHsKICAgICAgInN0YXRlIjogMzU4ODUyNDczMCwKICAgICAgImRyYXdzIjogMAogICAgfQogIH0sCiAgImpvdXJuYWwiOiBbCiAgICB7CiAgICAgICJ0eXBlIjogImNob29zZVRlY2huaXF1ZSIsCiAgICAgICJ0ZWNobmlxdWVJZCI6ICJlZGdlVG9vdGgiCiAgICB9LAogICAgewogICAgICAidHlwZSI6ICJjaG9vc2VSZXF1ZXN0IiwKICAgICAgInJlcXVlc3RJZCI6IG51bGwKICAgIH0sCiAgICB7CiAgICAgICJ0eXBlIjogInNldHRsZVJvdW5kIiwKICAgICAgInJlY3ljbGVSZW1haW5pbmciOiB0cnVlCiAgICB9LAogICAgewogICAgICAidHlwZSI6ICJhZHZhbmNlU3VtbWFyeSIKICAgIH0sCiAgICB7CiAgICAgICJ0eXBlIjogImNob29zZVJlcXVlc3QiLAogICAgICAicmVxdWVzdElkIjogbnVsbAogICAgfSwKICAgIHsKICAgICAgInR5cGUiOiAic2V0dGxlUm91bmQiLAogICAgICAicmVjeWNsZVJlbWFpbmluZyI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJ0eXBlIjogImFkdmFuY2VTdW1tYXJ5IgogICAgfSwKICAgIHsKICAgICAgInR5cGUiOiAiY2hvb3NlUmVxdWVzdCIsCiAgICAgICJyZXF1ZXN0SWQiOiBudWxsCiAgICB9LAogICAgewogICAgICAidHlwZSI6ICJzZXR0bGVSb3VuZCIsCiAgICAgICJyZWN5Y2xlUmVtYWluaW5nIjogdHJ1ZQogICAgfQogIF0KfQ=="
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "900f0d18f8e4e9037dca-f63c01536721f92f0abf",
+          "file": "v2-d-flow.spec.ts",
+          "line": 45,
+          "column": 1
+        },
+        {
+          "title": "D private practice really forges, quenches and delivers without touching an existing formal contract",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-game",
+              "projectName": "chromium-game",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30507,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v2-d-flow.spec.ts",
+                        "column": 206,
+                        "line": 54
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '练习左一刃落点', exact: true })\u001b[22m\n\n\n  52 | test('D private practice really forges, quenches and delivers without touching an existing formal contract',async({page},info)=>{\n  53 |   await boot(page,'keep-my-real-contract');await page.locator('#v2-starters button:first-child').click();await page.locator('#v2-decline').click();await page.locator('#v2-menu-button').click();const raw=await page.evaluate(()=>localStorage.getItem('sword-led.save.v2'));\n> 54 |   await page.locator('#v2-tutorial').click();for(const node of[0,1,2,7,8,9]){const label=['左一','左二','正中','右二','右一'][node%5];await page.getByRole('button',{name:`练习${label}${node<5?'刃':'脊'}落点`,exact:true}).click();await page.keyboard.down('Space');await page.clock.runFor(350);await page.keyboard.up('Space');}\n     |                                                                                                                                                                                                              ^\n  55 |   await expect(page.locator('#v2-lesson-hint')).toContainText('两种锻纹完成');await shot(page,info,'d-private-practice');await page.locator('#v2-lesson-oil').click();await expect(page.locator('#v2-lesson')).toContainText('试剑：');await page.locator('#v2-lesson-deliver').click();await expect(page.locator('#v2-lesson-hint')).toContainText('练习完成');\n  56 |   expect(await page.evaluate(()=>localStorage.getItem('sword-led.save.v2'))).toBe(raw);await page.keyboard.press('Escape');await expect(page.locator('#v2-dialog')).not.toBeVisible();await page.keyboard.up('Space');expect(await page.evaluate(()=>localStorage.getItem('sword-led.save.v2'))).toBe(raw);await page.locator('#v2-continue').click();expect(await page.evaluate(()=>localStorage.getItem('sword-led.save.v2'))).toBe(raw);\n  57 | });\n    at /Users/gordon/githome/sword-led/tests/e2e/v2-d-flow.spec.ts:54:206"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T18:43:35.184Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/test-results/ui/v2-d-flow-D-private-practi-0a1be-an-existing-formal-contract-chromium-game/test-failed-1.png"
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/test-results/ui/v2-d-flow-D-private-practi-0a1be-an-existing-formal-contract-chromium-game/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/test-results/ui/v2-d-flow-D-private-practi-0a1be-an-existing-formal-contract-chromium-game/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "900f0d18f8e4e9037dca-dbe3d8305cae12658d81",
+          "file": "v2-d-flow.spec.ts",
+          "line": 52,
+          "column": 1
+        },
+        {
+          "title": "D actual target and hammer motion cancel cleanly and reduced motion leaves only accepted results",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-game",
+              "projectName": "chromium-game",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2796,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T18:44:07.038Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "d-hammer-preparing",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/test-results/ui/v2-d-flow-D-actual-target--e536c-eaves-only-accepted-results-chromium-game/attachments/d-hammer-preparing-188a1ca00db92ad2ea62300ccdf54b15ebe02743.png"
+                    },
+                    {
+                      "name": "d-reduced-motion",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/test-results/ui/v2-d-flow-D-actual-target--e536c-eaves-only-accepted-results-chromium-game/attachments/d-reduced-motion-c36096b46a89b68104d2e32fbb558566af6a2632.png"
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "900f0d18f8e4e9037dca-0e449ca61dd265f3d0bf",
+          "file": "v2-d-flow.spec.ts",
+          "line": 59,
+          "column": 1
+        },
+        {
+          "title": "D unavailable artwork and unavailable audio have real visible exits while forging remains usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-game",
+              "projectName": "chromium-game",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1217,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T18:44:10.165Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFsKICAgICJGYWlsZWQgdG8gbG9hZCByZXNvdXJjZTogdGhlIHNlcnZlciByZXNwb25kZWQgd2l0aCBhIHN0YXR1cyBvZiA1MDMgKFNlcnZpY2UgVW5hdmFpbGFibGUpIiwKICAgICJGYWlsZWQgdG8gbG9hZCByZXNvdXJjZTogdGhlIHNlcnZlciByZXNwb25kZWQgd2l0aCBhIHN0YXR1cyBvZiA1MDMgKFNlcnZpY2UgVW5hdmFpbGFibGUpIgogIF0sCiAgImh0dHAiOiBbCiAgICB7CiAgICAgICJzdGF0dXMiOiA1MDMsCiAgICAgICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTgwL2Fzc2V0cy9kL21ldGFsLWF0bGFzLXYxLndlYnAiCiAgICB9LAogICAgewogICAgICAic3RhdHVzIjogNTAzLAogICAgICAidXJsIjogImh0dHA6Ly8xMjcuMC4wLjE6NDE4MC9hc3NldHMvZC9tZXRhbC1hdGxhcy12MS53ZWJwIgogICAgfQogIF0sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbCiAgICA1MDMKICBdCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "900f0d18f8e4e9037dca-d5efb93b933e101d017c",
+          "file": "v2-d-flow.spec.ts",
+          "line": 67,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-18T18:40:22.444Z",
+    "duration": 228926.263,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

@@ -15,6 +15,14 @@ function sample(medium:'water'|'oil'){
 }
 
 describe('forge-v2 actual public-command contract',()=>{
+  test('read-only technique status follows real per-sword activations without changing an existing save',()=>{
+    let edge=fresh('status','edgeTooth');expect(getRunView(edge).techniques[0]).toMatchObject({short:'待巡锋'});
+    for(const node of[0,1,2])edge=strike(edge,node);expect(getRunView(edge).techniques[0]).toMatchObject({short:'已生效'});
+    let bridge=fresh('status','bridgeClip');for(const node of[0,5,6])bridge=strike(bridge,node);expect(getRunView(bridge).techniques[0]).toMatchObject({short:'保护就绪'});
+    bridge=step(bridge,{type:'quench',pieceId:'1:1',medium:'water'});expect(getRunView(bridge).techniques[0]).toMatchObject({short:'已使用'});
+    let sand=fresh('status','reheatSand');expect(getRunView(sand).techniques[0]).toMatchObject({short:'余1次'});sand=strike(sand,0);sand=step(sand,{type:'reheat',pieceId:'1:1'});expect(getRunView(sand).techniques[0]).toMatchObject({short:'已使用'});
+    const raw=JSON.stringify(sand);getRunView(sand);expect(JSON.stringify(sand)).toBe(raw);expect(validateRun(sand)).toMatchObject({ok:true});
+  });
   test('creation normalises once, freezes owned data and requires both explicit decisions',()=>{
     const input={runId:'valid',seed:'  e\u0301  '},created=createRun(input);expect(input.seed).toBe('  e\u0301  ');if(!created.ok)throw Error('creation');
     expect(created.state.seed).toBe('é');expect(created.state.pieces.map(p=>p.material)).toEqual(['iron','iron','steel']);expect(Object.isFrozen(created.state.pieces[0]?.nodes)).toBe(true);

@@ -19,7 +19,7 @@ async function begin(page:Page,seed='ui-v2'){
 }
 async function confirm(page:Page){await expect(page.locator('#v2-dialog')).toBeVisible();await page.locator('#v2-dialog').getByRole('button',{name:'确认',exact:true}).click();}
 async function forge(page:Page,nodes:readonly number[]=[0,1,2,7,8,9]){
-  for(const node of nodes){await page.locator(`#v2-node-${node}`).click();await page.locator('#v2-strike').focus();await page.keyboard.down('Space');await page.clock.runFor(350);await page.keyboard.up('Space');}
+  for(const node of nodes){await page.locator(`#v2-node-${node}`).click();await expect(page.locator('#v2-strike')).toBeFocused();await page.keyboard.down('Space');await page.clock.runFor(350);await page.keyboard.up('Space');}
 }
 async function quenchAndDeliver(page:Page){await page.locator('#v2-oil').click();await confirm(page);await page.locator('#v2-deliver').click();await confirm(page);}
 async function settle(page:Page){await page.locator('#v2-settle').click();await confirm(page);}
@@ -67,9 +67,9 @@ test('a held v2 strike is cancelled by a real target change and risky outcomes s
   await page.setViewportSize({width:1280,height:720});await begin(page,'critical-v2');
   const initial=await readV2(page);await page.locator('#v2-strike').focus();await page.keyboard.down('Space');await page.clock.runFor(250);await page.keyboard.press('ArrowRight');await page.keyboard.up('Space');expect(await readV2(page)).toEqual(initial);
   await page.locator('#v2-mode-heavy').click();
-  for(const node of[0,1,2,3]){await page.locator(`#v2-node-${node}`).click();await page.locator('#v2-strike').focus();await page.keyboard.down('Space');await page.keyboard.up('Space');}
+  for(const node of[0,1,2,3]){await page.locator(`#v2-node-${node}`).click();await expect(page.locator('#v2-strike')).toBeFocused();await page.keyboard.down('Space');await page.keyboard.up('Space');}
   await page.locator('#v2-reheat').click();await confirm(page);
-  for(const node of[4,9,8]){await page.locator(`#v2-node-${node}`).click();await page.locator('#v2-strike').focus();await page.keyboard.down('Space');await page.keyboard.up('Space');}
+  for(const node of[4,9,8]){await page.locator(`#v2-node-${node}`).click();await expect(page.locator('#v2-strike')).toBeFocused();await page.keyboard.down('Space');await page.keyboard.up('Space');}
   await page.locator('#v2-node-7').click();const critical=await readV2(page);expect(critical.pieces[0]).toMatchObject({integrity:1,stress:26,heat:28});
   await expect(page.locator('#v2-outcomes')).toContainText('将破碎');for(const selector of['#v2-node-0','#v2-node-9','#v2-deliver','#v2-strike','#v2-outcomes','#v2-price-preview'])await expect(page.locator(selector)).toBeInViewport({ratio:.95});
   const path=info.outputPath('v2-critical-720.png');await page.screenshot({path});await info.attach('v2-critical-720',{path,contentType:'image/png'});

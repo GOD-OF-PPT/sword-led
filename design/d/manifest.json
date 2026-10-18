@@ -1,0 +1,512 @@
+{
+  "task": "T11.3",
+  "direction": "D 行脚灯炉",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "model": "not exposed by tool",
+  "encoding": {
+    "tool": "cwebp",
+    "version": "1.6.0\nlibsharpyuv: 0.4.2",
+    "arguments": [
+      "-q",
+      "90",
+      "-m",
+      "6",
+      "-alpha_q",
+      "100",
+      "-exact"
+    ],
+    "purpose": "format export only, no creative image edits"
+  },
+  "images": [
+    {
+      "name": "forge-backdrop-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-9d64e6ca-e034-4640-9fe8-2f68bdb82899.png",
+      "kind": "background",
+      "selected": true,
+      "references": [
+        "design/v03/concepts/main-d-v1.png"
+      ],
+      "width": 1672,
+      "height": 941,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "alphaSha256": "01d47491cbeb600913ad9b969c467a20eee08ef528805ef7ff455d14d0b926e6",
+      "transparentFraction": 0.0,
+      "visibleBounds": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "path": "design/d/originals/forge-backdrop-v1.png",
+      "sha256": "ff54f34e5be55bfc7eb69c07f6d8b09aebfa681c5e246e2a6c4832e472a72105",
+      "bytes": 2348417,
+      "prompt": "design/d/prompts/forge-backdrop-v1.md",
+      "promptSha256": "6730536599bcd2d59076c2b30b67c63b981b0e71647a28828696ca5bef7b4d37",
+      "referenceHashes": {
+        "design/v03/concepts/main-d-v1.png": "e500a4607f1d3bf8b137038a8ca887d7c6ab28a12e7f76cd38386f55530d8701"
+      }
+    },
+    {
+      "name": "hammer-light-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-1a285db4-cd4d-48e4-9538-62f160d3db6b.png",
+      "kind": "hammer",
+      "selected": true,
+      "references": [
+        "design/v03/concepts/main-d-v1.png"
+      ],
+      "width": 1254,
+      "height": 1254,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "alphaSha256": "02774658e006565d6afbd2652e7f352a995a41d0852d309aa78df8a8cb805411",
+      "transparentFraction": 0.7523910726504531,
+      "visibleBounds": [
+        89,
+        113,
+        1175,
+        1173
+      ],
+      "path": "design/d/originals/hammer-light-v1.png",
+      "sha256": "3845780cc19d164adb3c266d1b2c3d26a7a5ef8f7cff9da9eb5220bd14a25977",
+      "bytes": 925763,
+      "prompt": "design/d/prompts/hammer-light-v1.md",
+      "promptSha256": "68a088aa5be47fc3c0f46e9d812a9805f95e37a2151c387f5af112d6546ef442",
+      "referenceHashes": {
+        "design/v03/concepts/main-d-v1.png": "e500a4607f1d3bf8b137038a8ca887d7c6ab28a12e7f76cd38386f55530d8701"
+      }
+    },
+    {
+      "name": "hammer-standard-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-d30bfa72-530c-4313-a08e-68c6a5f4d157.png",
+      "kind": "hammer",
+      "selected": true,
+      "references": [
+        "design/v03/concepts/main-d-v1.png"
+      ],
+      "width": 1254,
+      "height": 1254,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "alphaSha256": "c2fa79ecec675cff6b7c0a5f47de0fa789581a71626c67aec892357b5fd194a3",
+      "transparentFraction": 0.7523560968537045,
+      "visibleBounds": [
+        89,
+        63,
+        1166,
+        1199
+      ],
+      "path": "design/d/originals/hammer-standard-v1.png",
+      "sha256": "66516fe3c4cd0ef6be0edf920ceb285bbe8a8ea3406915126a92354487282a1e",
+      "bytes": 924691,
+      "prompt": "design/d/prompts/hammer-standard-v1.md",
+      "promptSha256": "554b7839094268259cfdc5eb240232a6e95f5c7273e102795d7ebd8e8ac150e0",
+      "referenceHashes": {
+        "design/v03/concepts/main-d-v1.png": "e500a4607f1d3bf8b137038a8ca887d7c6ab28a12e7f76cd38386f55530d8701"
+      }
+    },
+    {
+      "name": "hammer-heavy-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-8fe77bee-932b-4886-a6a5-bdc4db98e646.png",
+      "kind": "hammer",
+      "selected": true,
+      "references": [
+        "design/v03/concepts/main-d-v1.png"
+      ],
+      "width": 1254,
+      "height": 1254,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "alphaSha256": "a440a08a405bd5dcc9de2aa517956c33028c531375720bbc38a1badf82ab20a4",
+      "transparentFraction": 0.689705541946791,
+      "visibleBounds": [
+        43,
+        59,
+        1209,
+        1206
+      ],
+      "path": "design/d/originals/hammer-heavy-v1.png",
+      "sha256": "0c9f72734f49a3ae31fe3f9cdd41a7da627d8f9435a719f9e06f526aa9404507",
+      "bytes": 1181592,
+      "prompt": "design/d/prompts/hammer-heavy-v1.md",
+      "promptSha256": "5aebd334235623df2acdfece96c2c3dc1ae38bb0330f0f4290e9be8d549cc4a2",
+      "referenceHashes": {
+        "design/v03/concepts/main-d-v1.png": "e500a4607f1d3bf8b137038a8ca887d7c6ab28a12e7f76cd38386f55530d8701"
+      }
+    },
+    {
+      "name": "portraits-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-4646aade-e9d9-4021-8d1c-0978ca1d130b.png",
+      "kind": "portraits",
+      "selected": true,
+      "references": [
+        "design/v03/concepts/main-d-v1.png"
+      ],
+      "width": 1254,
+      "height": 1254,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "alphaSha256": "e8250a0949a4aceb3e015498f42cf1fb719604b454e13aaf252ea571ea80e519",
+      "transparentFraction": 0.3183261728338535,
+      "visibleBounds": [
+        14,
+        12,
+        1243,
+        1240
+      ],
+      "path": "design/d/originals/portraits-v1.png",
+      "sha256": "b2c0816d919c571fb6b67f80caa9a59b2e92d6b1185a23936c2cd6df8b50e4d2",
+      "bytes": 2454849,
+      "prompt": "design/d/prompts/portraits-v1.md",
+      "promptSha256": "5931b044dcbde866d6e5508c6d255a5db5d0d506894fdafa17ce4c15b32f7bde",
+      "referenceHashes": {
+        "design/v03/concepts/main-d-v1.png": "e500a4607f1d3bf8b137038a8ca887d7c6ab28a12e7f76cd38386f55530d8701"
+      }
+    },
+    {
+      "name": "props-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-98f734ff-418b-430f-8f43-a0cc12904ac2.png",
+      "kind": "props",
+      "selected": false,
+      "references": [
+        "design/v03/concepts/main-d-v1.png"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "alphaSha256": "a829f3735106d8037c73db4d0e33593c7d95be1a734b621d663b848bd36201ac",
+      "transparentFraction": 0.5001169840494791,
+      "visibleBounds": [
+        61,
+        48,
+        1483,
+        991
+      ],
+      "path": "design/d/originals/props-v1.png",
+      "sha256": "7be02cabfc2a6e254fd66ef3a3c1f47d7db3d76ebb8731da78908dcce5ad2b70",
+      "bytes": 2413029,
+      "prompt": "design/d/prompts/props-v1.md",
+      "promptSha256": "0dc2910c2b1e60e49de3a00cfb9a996b4631ccba7b2df818ee3c2a287e9569bb",
+      "referenceHashes": {
+        "design/v03/concepts/main-d-v1.png": "e500a4607f1d3bf8b137038a8ca887d7c6ab28a12e7f76cd38386f55530d8701"
+      }
+    },
+    {
+      "name": "props-v2",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-66a19d01-4f9c-45b1-b3cd-fe4a9e4185d8.png",
+      "kind": "props",
+      "selected": false,
+      "references": [
+        "design/d/originals/props-v1.png"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "alphaSha256": "3acad483840b2c150cc1696c590d4ca82ef41da2486ba83c15a7dd0f00eff33a",
+      "transparentFraction": 0.4337164560953776,
+      "visibleBounds": [
+        31,
+        24,
+        1505,
+        989
+      ],
+      "path": "design/d/originals/props-v2.png",
+      "sha256": "57ab34bbf5171a612eecd25f832edc479596ae74e571220c54c416d049a9807e",
+      "bytes": 2531395,
+      "prompt": "design/d/prompts/props-v2.md",
+      "promptSha256": "2d719594e4a766d73a18486526599bfd588122cba40a95234e2c20295dbd3c51",
+      "referenceHashes": {
+        "design/d/originals/props-v1.png": "7be02cabfc2a6e254fd66ef3a3c1f47d7db3d76ebb8731da78908dcce5ad2b70"
+      }
+    },
+    {
+      "name": "water-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-aecfa905-56fa-489f-9c62-6a205d704034.png",
+      "kind": "prop",
+      "selected": true,
+      "references": [
+        "design/v03/concepts/main-d-v1.png"
+      ],
+      "width": 1254,
+      "height": 1254,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "alphaSha256": "ea74531d5c2d58b6ce1bb644548e429bda5923c099daa78847bd857432756d8a",
+      "transparentFraction": 0.49570751585357475,
+      "visibleBounds": [
+        123,
+        169,
+        1134,
+        1157
+      ],
+      "path": "design/d/originals/water-v1.png",
+      "sha256": "f8d23a9347c4caeef98541fc708d646e26d671b686cb1ae4ed25822562af2ba9",
+      "bytes": 1520285,
+      "prompt": "design/d/prompts/water-v1.md",
+      "promptSha256": "4512daa78bceab34ca32e21f3fb995d02f076f0ce0cb00a76b8c9c407fc069fb",
+      "referenceHashes": {
+        "design/v03/concepts/main-d-v1.png": "e500a4607f1d3bf8b137038a8ca887d7c6ab28a12e7f76cd38386f55530d8701"
+      }
+    },
+    {
+      "name": "oil-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-4927e1a9-8172-4807-80c2-3425448c6103.png",
+      "kind": "prop",
+      "selected": true,
+      "references": [
+        "design/v03/concepts/main-d-v1.png"
+      ],
+      "width": 1254,
+      "height": 1254,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "alphaSha256": "d26e96f584645f6efe24413370a16bb48f4a55ff2061e93c0b61a1a24ebf4391",
+      "transparentFraction": 0.5405401280495715,
+      "visibleBounds": [
+        70,
+        216,
+        1183,
+        1067
+      ],
+      "path": "design/d/originals/oil-v1.png",
+      "sha256": "9c7e4d8bb301b66a32ff351923db689b3c6a012adc5e51f2944e958e492d434f",
+      "bytes": 1387483,
+      "prompt": "design/d/prompts/oil-v1.md",
+      "promptSha256": "3072c426486e69803d781208967dbc579362602ff0480413d7c695b930d4a6f8",
+      "referenceHashes": {
+        "design/v03/concepts/main-d-v1.png": "e500a4607f1d3bf8b137038a8ca887d7c6ab28a12e7f76cd38386f55530d8701"
+      }
+    },
+    {
+      "name": "metal-atlas-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-f3cc58b6-3391-4750-97d2-771b6658ca15.png",
+      "kind": "texture",
+      "selected": true,
+      "references": [
+        "design/v03/concepts/main-d-v1.png"
+      ],
+      "width": 2172,
+      "height": 724,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "alphaSha256": "706f8888dffeb04f0db53dc097bb28291933bdd7bf809c1cc65ddc74683aa409",
+      "transparentFraction": 0.0,
+      "visibleBounds": [
+        0,
+        0,
+        2172,
+        724
+      ],
+      "path": "design/d/originals/metal-atlas-v1.png",
+      "sha256": "268bba2935dd5e649db66f4142dcd97cc7d57efc68225a58c24cd0a8ac38e13b",
+      "bytes": 2843615,
+      "prompt": "design/d/prompts/metal-atlas-v1.md",
+      "promptSha256": "5858aac3698eb7b6c05888a98e1e60d97d98252ded6e769bc9e12c9cf04657de",
+      "referenceHashes": {
+        "design/v03/concepts/main-d-v1.png": "e500a4607f1d3bf8b137038a8ca887d7c6ab28a12e7f76cd38386f55530d8701"
+      }
+    }
+  ],
+  "runtime": [
+    {
+      "name": "forge-backdrop-v1",
+      "kind": "background",
+      "src": "/assets/d/forge-backdrop-v1.webp",
+      "width": 1672,
+      "height": 941,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "alphaSha256": "01d47491cbeb600913ad9b969c467a20eee08ef528805ef7ff455d14d0b926e6",
+      "transparentFraction": 0.0,
+      "visibleBounds": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "sha256": "af03aec23b63729c2dc0e05abaaaa6004d2c692d233fcafdbf446166676896eb",
+      "bytes": 326918,
+      "alphaMatchesOriginal": true
+    },
+    {
+      "name": "hammer-light-v1",
+      "kind": "hammer",
+      "src": "/assets/d/hammer-light-v1.webp",
+      "width": 1254,
+      "height": 1254,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "alphaSha256": "02774658e006565d6afbd2652e7f352a995a41d0852d309aa78df8a8cb805411",
+      "transparentFraction": 0.7523910726504531,
+      "visibleBounds": [
+        89,
+        113,
+        1175,
+        1173
+      ],
+      "sha256": "bb2f802ef48756af9ac0051c31194d5d8e32d8be11ed83e20d180cb973da4234",
+      "bytes": 181090,
+      "alphaMatchesOriginal": true
+    },
+    {
+      "name": "hammer-standard-v1",
+      "kind": "hammer",
+      "src": "/assets/d/hammer-standard-v1.webp",
+      "width": 1254,
+      "height": 1254,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "alphaSha256": "c2fa79ecec675cff6b7c0a5f47de0fa789581a71626c67aec892357b5fd194a3",
+      "transparentFraction": 0.7523560968537045,
+      "visibleBounds": [
+        89,
+        63,
+        1166,
+        1199
+      ],
+      "sha256": "30c2ab0bb57383aad563dcb78abf9b96d56d63c6665b3f945240f8ab27ff71e5",
+      "bytes": 173226,
+      "alphaMatchesOriginal": true
+    },
+    {
+      "name": "hammer-heavy-v1",
+      "kind": "hammer",
+      "src": "/assets/d/hammer-heavy-v1.webp",
+      "width": 1254,
+      "height": 1254,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "alphaSha256": "a440a08a405bd5dcc9de2aa517956c33028c531375720bbc38a1badf82ab20a4",
+      "transparentFraction": 0.689705541946791,
+      "visibleBounds": [
+        43,
+        59,
+        1209,
+        1206
+      ],
+      "sha256": "5609cf65ecc2a887f580d76be907d5c5196e202f500e9aa3806c20b39f883dd3",
+      "bytes": 239784,
+      "alphaMatchesOriginal": true
+    },
+    {
+      "name": "portraits-v1",
+      "kind": "portraits",
+      "src": "/assets/d/portraits-v1.webp",
+      "width": 1254,
+      "height": 1254,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "alphaSha256": "e8250a0949a4aceb3e015498f42cf1fb719604b454e13aaf252ea571ea80e519",
+      "transparentFraction": 0.3183261728338535,
+      "visibleBounds": [
+        14,
+        12,
+        1243,
+        1240
+      ],
+      "sha256": "fe52ff958203125c4e40a8a7566e536e7f1b5488c51b6ecc7088e43fb9e42ec3",
+      "bytes": 566448,
+      "alphaMatchesOriginal": true
+    },
+    {
+      "name": "water-v1",
+      "kind": "prop",
+      "src": "/assets/d/water-v1.webp",
+      "width": 1254,
+      "height": 1254,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "alphaSha256": "ea74531d5c2d58b6ce1bb644548e429bda5923c099daa78847bd857432756d8a",
+      "transparentFraction": 0.49570751585357475,
+      "visibleBounds": [
+        123,
+        169,
+        1134,
+        1157
+      ],
+      "sha256": "a0db1b1b4c9ee96d4ecc25f569b929aeda3e811bd457e5ad9f3792d1fff60c03",
+      "bytes": 266286,
+      "alphaMatchesOriginal": true
+    },
+    {
+      "name": "oil-v1",
+      "kind": "prop",
+      "src": "/assets/d/oil-v1.webp",
+      "width": 1254,
+      "height": 1254,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "alphaSha256": "d26e96f584645f6efe24413370a16bb48f4a55ff2061e93c0b61a1a24ebf4391",
+      "transparentFraction": 0.5405401280495715,
+      "visibleBounds": [
+        70,
+        216,
+        1183,
+        1067
+      ],
+      "sha256": "cabe57bfa72e6d064cc8d31a4fe5f4b10ef1b9521d4a340905e3f48d4b7198c9",
+      "bytes": 244050,
+      "alphaMatchesOriginal": true
+    },
+    {
+      "name": "metal-atlas-v1",
+      "kind": "texture",
+      "src": "/assets/d/metal-atlas-v1.webp",
+      "width": 2172,
+      "height": 724,
+      "alphaRange": [
+        255,
+        255
+      ],
+      "alphaSha256": "706f8888dffeb04f0db53dc097bb28291933bdd7bf809c1cc65ddc74683aa409",
+      "transparentFraction": 0.0,
+      "visibleBounds": [
+        0,
+        0,
+        2172,
+        724
+      ],
+      "sha256": "d50d096a3951cf5a609fc0c81e48a38eb9eee0a97c3c05c47a674a5505d7dd67",
+      "bytes": 337260,
+      "alphaMatchesOriginal": true
+    }
+  ],
+  "totalRuntimeImageBytes": 2335062
+}
