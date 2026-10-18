@@ -1,0 +1,2588 @@
+{
+  "numTotalTestSuites": 29,
+  "numPassedTestSuites": 29,
+  "numFailedTestSuites": 0,
+  "numPendingTestSuites": 0,
+  "numTotalTests": 188,
+  "numPassedTests": 188,
+  "numFailedTests": 0,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "snapshot": {
+    "added": 0,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0,
+    "didUpdate": false
+  },
+  "startTime": 1792313946581,
+  "success": true,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [],
+          "fullName": "reaches the exact B concept state through 102 official commands",
+          "status": "passed",
+          "title": "reaches the exact B concept state through 102 official commands",
+          "duration": 93.27831200000003,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1792313947950,
+      "endTime": 1792313948043.2783,
+      "status": "passed",
+      "message": "",
+      "name": "/Users/gordon/githome/sword-led/tests/core/concept.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "quota, closing and history"
+          ],
+          "fullName": "quota, closing and history rejects premature normal settlement without recycling or consuming resources",
+          "status": "passed",
+          "title": "rejects premature normal settlement without recycling or consuming resources",
+          "duration": 7.838268999999968,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "quota, closing and history"
+          ],
+          "fullName": "quota, closing and history closes early as one revision, recycling all remaining pieces before a single penalty",
+          "status": "passed",
+          "title": "closes early as one revision, recycling all remaining pieces before a single penalty",
+          "duration": 11.54083700000001,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "quota, closing and history"
+          ],
+          "fullName": "quota, closing and history waits for settlement after all pieces are disposed and never counts bank coins as quota",
+          "status": "passed",
+          "title": "waits for settlement after all pieces are disposed and never counts bank coins as quota",
+          "duration": 10.255738000000008,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "quota, closing and history"
+          ],
+          "fullName": "quota, closing and history preserves a locked-in 136 delivery when the remaining steel is recycled",
+          "status": "passed",
+          "title": "preserves a locked-in 136 delivery when the remaining steel is recycled",
+          "duration": 9.13288799999998,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "quota, closing and history"
+          ],
+          "fullName": "quota, closing and history treats an exact 150 delivery as success and a 119/120 delivery as a breach",
+          "status": "passed",
+          "title": "treats an exact 150 delivery as success and a 119/120 delivery as a breach",
+          "duration": 3.574634000000003,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "round schedule and terminal priority"
+          ],
+          "fullName": "round schedule and terminal priority uses supply roll from C-reference seed 0 for iron",
+          "status": "passed",
+          "title": "uses supply roll from C-reference seed 0 for iron",
+          "duration": 1.6797369999999887,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "round schedule and terminal priority"
+          ],
+          "fullName": "round schedule and terminal priority uses supply roll from C-reference seed 1 for steel",
+          "status": "passed",
+          "title": "uses supply roll from C-reference seed 1 for steel",
+          "duration": 1.347658000000024,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "round schedule and terminal priority"
+          ],
+          "fullName": "round schedule and terminal priority uses supply roll from C-reference seed 4294967295 for meteorite",
+          "status": "passed",
+          "title": "uses supply roll from C-reference seed 4294967295 for meteorite",
+          "duration": 6.830196999999998,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "round schedule and terminal priority"
+          ],
+          "fullName": "round schedule and terminal priority enters a merchant only after surviving round 3 and leaves exactly once",
+          "status": "passed",
+          "title": "enters a merchant only after surviving round 3 and leaves exactly once",
+          "duration": 7.345605999999975,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "round schedule and terminal priority"
+          ],
+          "fullName": "round schedule and terminal priority enters a merchant only after surviving round 6 and leaves exactly once",
+          "status": "passed",
+          "title": "enters a merchant only after surviving round 6 and leaves exactly once",
+          "duration": 2.2739649999999756,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "round schedule and terminal priority"
+          ],
+          "fullName": "round schedule and terminal priority enters a merchant only after surviving round 9 and leaves exactly once",
+          "status": "passed",
+          "title": "enters a merchant only after surviving round 9 and leaves exactly once",
+          "duration": 3.3174280000000067,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "round schedule and terminal priority"
+          ],
+          "fullName": "round schedule and terminal priority resets coal and stock instead of carrying leftover heat or accumulating coal",
+          "status": "passed",
+          "title": "resets coal and stock instead of carrying leftover heat or accumulating coal",
+          "duration": 1.2281199999999899,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "round schedule and terminal priority"
+          ],
+          "fullName": "round schedule and terminal priority defeat takes priority on round 3 when the last seal is lost",
+          "status": "passed",
+          "title": "defeat takes priority on round 3 when the last seal is lost",
+          "duration": 4.233759999999961,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "round schedule and terminal priority"
+          ],
+          "fullName": "round schedule and terminal priority defeat takes priority on round 6 when the last seal is lost",
+          "status": "passed",
+          "title": "defeat takes priority on round 6 when the last seal is lost",
+          "duration": 2.1650470000000155,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "round schedule and terminal priority"
+          ],
+          "fullName": "round schedule and terminal priority defeat takes priority on round 9 when the last seal is lost",
+          "status": "passed",
+          "title": "defeat takes priority on round 9 when the last seal is lost",
+          "duration": 1.024554999999964,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "round schedule and terminal priority"
+          ],
+          "fullName": "round schedule and terminal priority defeat takes priority on round 12 when the last seal is lost",
+          "status": "passed",
+          "title": "defeat takes priority on round 12 when the last seal is lost",
+          "duration": 0.8536799999999971,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "round schedule and terminal priority"
+          ],
+          "fullName": "round schedule and terminal priority completes round 12 with a remaining seal and reports a final breach honestly",
+          "status": "passed",
+          "title": "completes round 12 with a remaining seal and reports a final breach honestly",
+          "duration": 2.017916000000014,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "actual command sequences and bounded invariants"
+          ],
+          "fullName": "actual command sequences and bounded invariants plays a real three-round failure without injecting state or opening a merchant after defeat",
+          "status": "passed",
+          "title": "plays a real three-round failure without injecting state or opening a merchant after defeat",
+          "duration": 2.648982999999987,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "actual command sequences and bounded invariants"
+          ],
+          "fullName": "actual command sequences and bounded invariants keeps supply independent from how many strikes were used, and known-state copies replay identically",
+          "status": "passed",
+          "title": "keeps supply independent from how many strikes were used, and known-state copies replay identically",
+          "duration": 7.291300999999976,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "actual command sequences and bounded invariants"
+          ],
+          "fullName": "actual command sequences and bounded invariants preserves nonnegative resources, one-time terminal pieces and pure old states across 50 seeds",
+          "status": "passed",
+          "title": "preserves nonnegative resources, one-time terminal pieces and pure old states across 50 seeds",
+          "duration": 3361.736031,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1792313947143,
+      "endTime": 1792313950592.736,
+      "status": "passed",
+      "message": "",
+      "name": "/Users/gordon/githome/sword-led/tests/core/contract.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "new run and immutable commands"
+          ],
+          "fullName": "new run and immutable commands starts with exactly three fixed pieces, zero wallet and independent full stock",
+          "status": "passed",
+          "title": "starts with exactly three fixed pieces, zero wallet and independent full stock",
+          "duration": 6.878543999999977,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "new run and immutable commands"
+          ],
+          "fullName": "new run and immutable commands normalizes NFC/trim in the core and validates seed/run identity",
+          "status": "passed",
+          "title": "normalizes NFC/trim in the core and validates seed/run identity",
+          "duration": 3.845185000000015,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "new run and immutable commands"
+          ],
+          "fullName": "new run and immutable commands rejects malformed envelopes: null",
+          "status": "passed",
+          "title": "rejects malformed envelopes: null",
+          "duration": 1.2818340000000035,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "new run and immutable commands"
+          ],
+          "fullName": "new run and immutable commands rejects malformed envelopes: undefined",
+          "status": "passed",
+          "title": "rejects malformed envelopes: undefined",
+          "duration": 0.9337189999999964,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "new run and immutable commands"
+          ],
+          "fullName": "new run and immutable commands rejects malformed envelopes: {}",
+          "status": "passed",
+          "title": "rejects malformed envelopes: {}",
+          "duration": 0.6516650000000368,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "new run and immutable commands"
+          ],
+          "fullName": "new run and immutable commands rejects malformed envelopes: \"strike\"",
+          "status": "passed",
+          "title": "rejects malformed envelopes: \"strike\"",
+          "duration": 0.5162149999999883,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "new run and immutable commands"
+          ],
+          "fullName": "new run and immutable commands rejects malformed envelopes: {\"runId\":\"test-run\",\"expectedRevision\":null,\"action\":{}}",
+          "status": "passed",
+          "title": "rejects malformed envelopes: {\"runId\":\"test-run\",\"expectedRevision\":null,\"action\":{}}",
+          "duration": 0.7573280000000295,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "new run and immutable commands"
+          ],
+          "fullName": "new run and immutable commands rejects malformed envelopes: {\"runId\":\"test-run\",\"expectedRevision\":0.5,\"action\":{}}",
+          "status": "passed",
+          "title": "rejects malformed envelopes: {\"runId\":\"test-run\",\"expectedRevision\":0.5,\"action\":{}}",
+          "duration": 0.6081109999999512,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "new run and immutable commands"
+          ],
+          "fullName": "new run and immutable commands rejects foreign, stale and replayed commands without effects",
+          "status": "passed",
+          "title": "rejects foreign, stale and replayed commands without effects",
+          "duration": 4.486418000000015,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "new run and immutable commands"
+          ],
+          "fullName": "new run and immutable commands rejects invalid action input without spending or drawing: {\"type\":\"strike\",\"pieceId\":\"1:1\",\"mode\":\"toString\",\"timingMark\":5000}",
+          "status": "passed",
+          "title": "rejects invalid action input without spending or drawing: {\"type\":\"strike\",\"pieceId\":\"1:1\",\"mode\":\"toString\",\"timingMark\":5000}",
+          "duration": 0.9113219999999842,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "new run and immutable commands"
+          ],
+          "fullName": "new run and immutable commands rejects invalid action input without spending or drawing: {\"type\":\"strike\",\"pieceId\":\"1:1\",\"mode\":\"standard\",\"timingMark\":-1}",
+          "status": "passed",
+          "title": "rejects invalid action input without spending or drawing: {\"type\":\"strike\",\"pieceId\":\"1:1\",\"mode\":\"standard\",\"timingMark\":-1}",
+          "duration": 0.66631000000001,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "new run and immutable commands"
+          ],
+          "fullName": "new run and immutable commands rejects invalid action input without spending or drawing: {\"type\":\"strike\",\"pieceId\":\"1:1\",\"mode\":\"standard\",\"timingMark\":10001}",
+          "status": "passed",
+          "title": "rejects invalid action input without spending or drawing: {\"type\":\"strike\",\"pieceId\":\"1:1\",\"mode\":\"standard\",\"timingMark\":10001}",
+          "duration": 0.48162999999999556,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "new run and immutable commands"
+          ],
+          "fullName": "new run and immutable commands rejects invalid action input without spending or drawing: {\"type\":\"strike\",\"pieceId\":\"1:1\",\"mode\":\"standard\",\"timingMark\":1.5}",
+          "status": "passed",
+          "title": "rejects invalid action input without spending or drawing: {\"type\":\"strike\",\"pieceId\":\"1:1\",\"mode\":\"standard\",\"timingMark\":1.5}",
+          "duration": 0.36586099999999533,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "new run and immutable commands"
+          ],
+          "fullName": "new run and immutable commands rejects invalid action input without spending or drawing: {\"type\":\"strike\",\"pieceId\":\"1:1\",\"mode\":\"standard\",\"timingMark\":null}",
+          "status": "passed",
+          "title": "rejects invalid action input without spending or drawing: {\"type\":\"strike\",\"pieceId\":\"1:1\",\"mode\":\"standard\",\"timingMark\":null}",
+          "duration": 0.35093999999998005,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "new run and immutable commands"
+          ],
+          "fullName": "new run and immutable commands rejects invalid action input without spending or drawing: {\"type\":\"strike\",\"pieceId\":\"1:1\",\"mode\":\"standard\",\"timingMark\":null}",
+          "status": "passed",
+          "title": "rejects invalid action input without spending or drawing: {\"type\":\"strike\",\"pieceId\":\"1:1\",\"mode\":\"standard\",\"timingMark\":null}",
+          "duration": 0.506719999999973,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "new run and immutable commands"
+          ],
+          "fullName": "new run and immutable commands rejects invalid action input without spending or drawing: {\"type\":\"strike\",\"mode\":\"light\",\"timingMark\":5000}",
+          "status": "passed",
+          "title": "rejects invalid action input without spending or drawing: {\"type\":\"strike\",\"mode\":\"light\",\"timingMark\":5000}",
+          "duration": 0.47000600000001214,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "new run and immutable commands"
+          ],
+          "fullName": "new run and immutable commands rejects invalid action input without spending or drawing: {\"type\":\"settleRound\"}",
+          "status": "passed",
+          "title": "rejects invalid action input without spending or drawing: {\"type\":\"settleRound\"}",
+          "duration": 0.43029200000000856,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "new run and immutable commands"
+          ],
+          "fullName": "new run and immutable commands rejects invalid action input without spending or drawing: {\"type\":\"buy\",\"productId\":\"anvil\"}",
+          "status": "passed",
+          "title": "rejects invalid action input without spending or drawing: {\"type\":\"buy\",\"productId\":\"anvil\"}",
+          "duration": 0.9359949999999913,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage light precise strike uses configured gain, heat and stress",
+          "status": "passed",
+          "title": "light precise strike uses configured gain, heat and stress",
+          "duration": 10.13093200000003,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage standard precise strike uses configured gain, heat and stress",
+          "status": "passed",
+          "title": "standard precise strike uses configured gain, heat and stress",
+          "duration": 0.9181560000000104,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage heavy precise strike uses configured gain, heat and stress",
+          "status": "passed",
+          "title": "heavy precise strike uses configured gain, heat and stress",
+          "duration": 2.3436640000000466,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage light gives no precise bonus on ordinary or mishit successes",
+          "status": "passed",
+          "title": "light gives no precise bonus on ordinary or mishit successes",
+          "duration": 4.233028999999988,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage standard gives no precise bonus on ordinary or mishit successes",
+          "status": "passed",
+          "title": "standard gives no precise bonus on ordinary or mishit successes",
+          "duration": 4.174970999999971,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage heavy gives no precise bonus on ordinary or mishit successes",
+          "status": "passed",
+          "title": "heavy gives no precise bonus on ordinary or mishit successes",
+          "duration": 2.758583999999985,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage classifies exact integer mark 0 as mishit",
+          "status": "passed",
+          "title": "classifies exact integer mark 0 as mishit",
+          "duration": 3.8832850000000008,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage classifies exact integer mark 2999 as mishit",
+          "status": "passed",
+          "title": "classifies exact integer mark 2999 as mishit",
+          "duration": 0.9831399999999917,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage classifies exact integer mark 3000 as ordinary",
+          "status": "passed",
+          "title": "classifies exact integer mark 3000 as ordinary",
+          "duration": 0.48899000000000115,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage classifies exact integer mark 4399 as ordinary",
+          "status": "passed",
+          "title": "classifies exact integer mark 4399 as ordinary",
+          "duration": 0.7317279999999755,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage classifies exact integer mark 4400 as precise",
+          "status": "passed",
+          "title": "classifies exact integer mark 4400 as precise",
+          "duration": 2.5676690000000235,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage classifies exact integer mark 5000 as precise",
+          "status": "passed",
+          "title": "classifies exact integer mark 5000 as precise",
+          "duration": 0.5015040000000113,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage classifies exact integer mark 5600 as precise",
+          "status": "passed",
+          "title": "classifies exact integer mark 5600 as precise",
+          "duration": 0.4774360000000115,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage classifies exact integer mark 5601 as ordinary",
+          "status": "passed",
+          "title": "classifies exact integer mark 5601 as ordinary",
+          "duration": 0.9821880000000078,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage classifies exact integer mark 7000 as ordinary",
+          "status": "passed",
+          "title": "classifies exact integer mark 7000 as ordinary",
+          "duration": 1.2711759999999686,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage classifies exact integer mark 7001 as mishit",
+          "status": "passed",
+          "title": "classifies exact integer mark 7001 as mishit",
+          "duration": 0.4915659999999775,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage classifies exact integer mark 10000 as mishit",
+          "status": "passed",
+          "title": "classifies exact integer mark 10000 as mishit",
+          "duration": 4.14064099999996,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage widens precise half-window at handle level 1 without widening ordinary",
+          "status": "passed",
+          "title": "widens precise half-window at handle level 1 without widening ordinary",
+          "duration": 13.28666800000002,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage widens precise half-window at handle level 2 without widening ordinary",
+          "status": "passed",
+          "title": "widens precise half-window at handle level 2 without widening ordinary",
+          "duration": 2.141038999999978,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage uses the published pre-strike steel example and distinguishes break chance",
+          "status": "passed",
+          "title": "uses the published pre-strike steel example and distinguishes break chance",
+          "duration": 4.087544999999977,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage adds cold risk from heat 40 using ceil",
+          "status": "passed",
+          "title": "adds cold risk from heat 40 using ceil",
+          "duration": 1.3376010000000633,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage adds cold risk from heat 39 using ceil",
+          "status": "passed",
+          "title": "adds cold risk from heat 39 using ceil",
+          "duration": 0.6091380000000299,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage adds cold risk from heat 30 using ceil",
+          "status": "passed",
+          "title": "adds cold risk from heat 30 using ceil",
+          "duration": 0.5450079999999389,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage adds cold risk from heat 29 using ceil",
+          "status": "passed",
+          "title": "adds cold risk from heat 29 using ceil",
+          "duration": 1.0946360000000368,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage adds cold risk from heat 1 using ceil",
+          "status": "passed",
+          "title": "adds cold risk from heat 1 using ceil",
+          "duration": 1.2279490000000806,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage steps stress risk at 20-point boundaries and applies each anvil level",
+          "status": "passed",
+          "title": "steps stress risk at 20-point boundaries and applies each anvil level",
+          "duration": 19.011297000000013,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage quotes all material/tier prices from the published integer value table",
+          "status": "passed",
+          "title": "quotes all material/tier prices from the published integer value table",
+          "duration": 17.679219999999987,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage crosses multiple tiers, retains overflow and caps progress exactly",
+          "status": "passed",
+          "title": "crosses multiple tiers, retains overflow and caps progress exactly",
+          "duration": 1.8210540000000037,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "timing, gain and damage"
+          ],
+          "fullName": "timing, gain and damage damages then breaks once, preserving progress and reporting the lost value",
+          "status": "passed",
+          "title": "damages then breaks once, preserving progress and reporting the lost value",
+          "duration": 2.819908000000055,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "heat and irreversible disposal"
+          ],
+          "fullName": "heat and irreversible disposal never spends coal on full heat or without coal; reheating cannot heal",
+          "status": "passed",
+          "title": "never spends coal on full heat or without coal; reheating cannot heal",
+          "duration": 6.837838999999917,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "heat and irreversible disposal"
+          ],
+          "fullName": "heat and irreversible disposal delivers only actual value, whereas recycling never contributes to quota",
+          "status": "passed",
+          "title": "delivers only actual value, whereas recycling never contributes to quota",
+          "duration": 11.567082000000028,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "heat and irreversible disposal"
+          ],
+          "fullName": "heat and irreversible disposal keeps preview pure and exposes the same allowed actions as execution",
+          "status": "passed",
+          "title": "keeps preview pure and exposes the same allowed actions as execution",
+          "duration": 11.411438999999973,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "heat and irreversible disposal"
+          ],
+          "fullName": "heat and irreversible disposal never freezes caller-owned mutable copies while returning immutable views/results",
+          "status": "passed",
+          "title": "never freezes caller-owned mutable copies while returning immutable views/results",
+          "duration": 4.869431000000077,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1792313947959,
+      "endTime": 1792313948127.8694,
+      "status": "passed",
+      "message": "",
+      "name": "/Users/gordon/githome/sword-led/tests/core/forging.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "game presentation session"
+          ],
+          "fullName": "game presentation session accepts and saves before animation; locks one strike and ignores early/old completion",
+          "status": "passed",
+          "title": "accepts and saves before animation; locks one strike and ignores early/old completion",
+          "duration": 44.68756100000002,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "game presentation session"
+          ],
+          "fullName": "game presentation session pause skips presentation without undoing an accepted strike or allowing old completion into a new run",
+          "status": "passed",
+          "title": "pause skips presentation without undoing an accepted strike or allowing old completion into a new run",
+          "duration": 38.58772499999998,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "game presentation session"
+          ],
+          "fullName": "game presentation session a captured release cannot follow a target/mode/route change",
+          "status": "passed",
+          "title": "a captured release cannot follow a target/mode/route change",
+          "duration": 4.838274000000013,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "game presentation session"
+          ],
+          "fullName": "game presentation session practice and the real cracked sample never touch the formal slot, stats or random streams",
+          "status": "passed",
+          "title": "practice and the real cracked sample never touch the formal slot, stats or random streams",
+          "duration": 18.455895999999996,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "game presentation session"
+          ],
+          "fullName": "game presentation session rejects stale confirmation tickets and retains the existing save",
+          "status": "passed",
+          "title": "rejects stale confirmation tickets and retains the existing save",
+          "duration": 2.0811429999999973,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "game presentation session"
+          ],
+          "fullName": "game presentation session re-activation immediately suspends new input before the asynchronous lease/read completes",
+          "status": "passed",
+          "title": "re-activation immediately suspends new input before the asynchronous lease/read completes",
+          "duration": 13.113878999999997,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "game presentation session"
+          ],
+          "fullName": "game presentation session menu continuation preserves an accepted dirty working copy; only explicit reload may discard it",
+          "status": "passed",
+          "title": "menu continuation preserves an accepted dirty working copy; only explicit reload may discard it",
+          "duration": 17.20521199999996,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "game presentation session"
+          ],
+          "fullName": "game presentation session second writer is view-only but may use isolated practice",
+          "status": "passed",
+          "title": "second writer is view-only but may use isolated practice",
+          "duration": 3.2127909999999247,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "game presentation session"
+          ],
+          "fullName": "game presentation session announces settlement before automatic recycling and cannot replay the old confirmation",
+          "status": "passed",
+          "title": "announces settlement before automatic recycling and cannot replay the old confirmation",
+          "duration": 9.714874000000009,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "game presentation session"
+          ],
+          "fullName": "game presentation session emits only new accepted effects, never read/animation/menu/settings replays",
+          "status": "passed",
+          "title": "emits only new accepted effects, never read/animation/menu/settings replays",
+          "duration": 30.693137999999976,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "game presentation session"
+          ],
+          "fullName": "game presentation session carries dirty accepted memory forward without replacing the saved slot or rerolling its result",
+          "status": "passed",
+          "title": "carries dirty accepted memory forward without replacing the saved slot or rerolling its result",
+          "duration": 5.419261000000006,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "pins a reachable lesson recipe rather than an assigned integrity fixture",
+          "status": "passed",
+          "title": "pins a reachable lesson recipe rather than an assigned integrity fixture",
+          "duration": 2.7261869999999817,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1792313947178,
+      "endTime": 1792313947370.726,
+      "status": "passed",
+      "message": "",
+      "name": "/Users/gordon/githome/sword-led/tests/core/game-session.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "single timing attempt"
+          ],
+          "fullName": "single timing attempt uses one frame-independent triangle for period 1200",
+          "status": "passed",
+          "title": "uses one frame-independent triangle for period 1200",
+          "duration": 12.132256999999981,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "single timing attempt"
+          ],
+          "fullName": "single timing attempt uses one frame-independent triangle for period 1400",
+          "status": "passed",
+          "title": "uses one frame-independent triangle for period 1400",
+          "duration": 0.7748259999999618,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "single timing attempt"
+          ],
+          "fullName": "single timing attempt uses one frame-independent triangle for period 1600",
+          "status": "passed",
+          "title": "uses one frame-independent triangle for period 1600",
+          "duration": 1.5394259999999917,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "single timing attempt"
+          ],
+          "fullName": "single timing attempt uses one frame-independent triangle for period 1800",
+          "status": "passed",
+          "title": "uses one frame-independent triangle for period 1800",
+          "duration": 1.1156050000000164,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "single timing attempt"
+          ],
+          "fullName": "single timing attempt uses one frame-independent triangle for period 2100",
+          "status": "passed",
+          "title": "uses one frame-independent triangle for period 2100",
+          "duration": 0.4589690000000246,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "single timing attempt"
+          ],
+          "fullName": "single timing attempt uses one frame-independent triangle for period 2400",
+          "status": "passed",
+          "title": "uses one frame-independent triangle for period 2400",
+          "duration": 0.4706649999999968,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "single timing attempt"
+          ],
+          "fullName": "single timing attempt judges release time even when the last rendered frame was far earlier",
+          "status": "passed",
+          "title": "judges release time even when the last rendered frame was far earlier",
+          "duration": 1.6427300000000287,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "single timing attempt"
+          ],
+          "fullName": "single timing attempt rejects repeat/mixed starts and foreign releases without stealing the owner",
+          "status": "passed",
+          "title": "rejects repeat/mixed starts and foreign releases without stealing the owner",
+          "duration": 0.7114869999999769,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "single timing attempt"
+          ],
+          "fullName": "single timing attempt invalidates a changed captured identity: {\"runId\":\"new-run\"}",
+          "status": "passed",
+          "title": "invalidates a changed captured identity: {\"runId\":\"new-run\"}",
+          "duration": 2.042110999999977,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "single timing attempt"
+          ],
+          "fullName": "single timing attempt invalidates a changed captured identity: {\"revision\":5}",
+          "status": "passed",
+          "title": "invalidates a changed captured identity: {\"revision\":5}",
+          "duration": 1.0170120000000225,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "single timing attempt"
+          ],
+          "fullName": "single timing attempt invalidates a changed captured identity: {\"generation\":3}",
+          "status": "passed",
+          "title": "invalidates a changed captured identity: {\"generation\":3}",
+          "duration": 8.902041999999994,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "single timing attempt"
+          ],
+          "fullName": "single timing attempt invalidates a changed captured identity: {\"epoch\":9}",
+          "status": "passed",
+          "title": "invalidates a changed captured identity: {\"epoch\":9}",
+          "duration": 2.1177880000000187,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "single timing attempt"
+          ],
+          "fullName": "single timing attempt invalidates a changed captured identity: {\"pieceId\":\"1:3\"}",
+          "status": "passed",
+          "title": "invalidates a changed captured identity: {\"pieceId\":\"1:3\"}",
+          "duration": 0.22805199999999104,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "single timing attempt"
+          ],
+          "fullName": "single timing attempt invalidates a changed captured identity: {\"mode\":\"heavy\"}",
+          "status": "passed",
+          "title": "invalidates a changed captured identity: {\"mode\":\"heavy\"}",
+          "duration": 0.2036200000000008,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "single timing attempt"
+          ],
+          "fullName": "single timing attempt invalidates a changed captured identity: {\"periodMs\":2100}",
+          "status": "passed",
+          "title": "invalidates a changed captured identity: {\"periodMs\":2100}",
+          "duration": 0.29661500000003116,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "single timing attempt"
+          ],
+          "fullName": "single timing attempt cancelled inputs, missing contexts and invalid timestamps produce no release",
+          "status": "passed",
+          "title": "cancelled inputs, missing contexts and invalid timestamps produce no release",
+          "duration": 0.44691100000000006,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1792313948141,
+      "endTime": 1792313948176.447,
+      "status": "passed",
+      "message": "",
+      "name": "/Users/gordon/githome/sword-led/tests/core/input.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "receipts of reachable runs"
+          ],
+          "fullName": "receipts of reachable runs accounts for all twelve rounds without awarding a second copy of revenue or scrap",
+          "status": "passed",
+          "title": "accounts for all twelve rounds without awarding a second copy of revenue or scrap",
+          "duration": 108.20652999999999,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "receipts of reachable runs"
+          ],
+          "fullName": "receipts of reachable runs keeps broken estimated value separate from delivery revenue and returns only one scrap",
+          "status": "passed",
+          "title": "keeps broken estimated value separate from delivery revenue and returns only one scrap",
+          "duration": 72.59889400000003,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "receipts of reachable runs"
+          ],
+          "fullName": "receipts of reachable runs retains all three genuine failed rounds and the last penalty on a terminal contract",
+          "status": "passed",
+          "title": "retains all three genuine failed rounds and the last penalty on a terminal contract",
+          "duration": 8.098406999999952,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1792313947130,
+      "endTime": 1792313947320.0984,
+      "status": "passed",
+      "message": "",
+      "name": "/Users/gordon/githome/sword-led/tests/core/ledger.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "real merchant transactions"
+          ],
+          "fullName": "real merchant transactions reaches a funded merchant using legitimate commands, with a replay-valid journal",
+          "status": "passed",
+          "title": "reaches a funded merchant using legitimate commands, with a replay-valid journal",
+          "duration": 47.046874,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "real merchant transactions"
+          ],
+          "fullName": "real merchant transactions buys handle once, spends both currencies atomically and never draws randomness",
+          "status": "passed",
+          "title": "buys handle once, spends both currencies atomically and never draws randomness",
+          "duration": 16.42127800000003,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "real merchant transactions"
+          ],
+          "fullName": "real merchant transactions buys bellows once, spends both currencies atomically and never draws randomness",
+          "status": "passed",
+          "title": "buys bellows once, spends both currencies atomically and never draws randomness",
+          "duration": 27.28226200000006,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "real merchant transactions"
+          ],
+          "fullName": "real merchant transactions buys anvil once, spends both currencies atomically and never draws randomness",
+          "status": "passed",
+          "title": "buys anvil once, spends both currencies atomically and never draws randomness",
+          "duration": 18.437174000000027,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "real merchant transactions"
+          ],
+          "fullName": "real merchant transactions buys repair once, spends both currencies atomically and never draws randomness",
+          "status": "passed",
+          "title": "buys repair once, spends both currencies atomically and never draws randomness",
+          "duration": 25.296464000000014,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "real merchant transactions"
+          ],
+          "fullName": "real merchant transactions applies each upgrade to the next workshop and caps repairs at three",
+          "status": "passed",
+          "title": "applies each upgrade to the next workshop and caps repairs at three",
+          "duration": 13.441389999999956,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "real merchant transactions"
+          ],
+          "fullName": "real merchant transactions rejects missing coins with no partial spend",
+          "status": "passed",
+          "title": "rejects missing coins with no partial spend",
+          "duration": 1.2908019999999851,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "real merchant transactions"
+          ],
+          "fullName": "real merchant transactions rejects missing scrap with no partial spend",
+          "status": "passed",
+          "title": "rejects missing scrap with no partial spend",
+          "duration": 0.6831540000000587,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "real merchant transactions"
+          ],
+          "fullName": "real merchant transactions refuses full-seal repairs, invalid product names, nonmerchant and terminal trades",
+          "status": "passed",
+          "title": "refuses full-seal repairs, invalid product names, nonmerchant and terminal trades",
+          "duration": 6.193351000000007,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "real merchant transactions"
+          ],
+          "fullName": "real merchant transactions prices second-level handle correctly and never creates a third level",
+          "status": "passed",
+          "title": "prices second-level handle correctly and never creates a third level",
+          "duration": 63.050396999999975,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "real merchant transactions"
+          ],
+          "fullName": "real merchant transactions prices second-level bellows correctly and never creates a third level",
+          "status": "passed",
+          "title": "prices second-level bellows correctly and never creates a third level",
+          "duration": 71.72430900000006,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "real merchant transactions"
+          ],
+          "fullName": "real merchant transactions prices second-level anvil correctly and never creates a third level",
+          "status": "passed",
+          "title": "prices second-level anvil correctly and never creates a third level",
+          "duration": 55.65455700000007,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1792313947228,
+      "endTime": 1792313947575.6545,
+      "status": "passed",
+      "message": "",
+      "name": "/Users/gordon/githome/sword-led/tests/core/merchant.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "fixed random algorithm"
+          ],
+          "fullName": "fixed random algorithm matches separately compiled C reference for seed 0",
+          "status": "passed",
+          "title": "matches separately compiled C reference for seed 0",
+          "duration": 15.506719000000032,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "fixed random algorithm"
+          ],
+          "fullName": "fixed random algorithm matches separately compiled C reference for seed 1",
+          "status": "passed",
+          "title": "matches separately compiled C reference for seed 1",
+          "duration": 0.9295190000000275,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "fixed random algorithm"
+          ],
+          "fullName": "fixed random algorithm matches separately compiled C reference for seed 4294967295",
+          "status": "passed",
+          "title": "matches separately compiled C reference for seed 4294967295",
+          "duration": 0.5433100000000195,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "fixed random algorithm"
+          ],
+          "fullName": "fixed random algorithm uses known FNV-1a vectors and UTF-8 bytes",
+          "status": "passed",
+          "title": "uses known FNV-1a vectors and UTF-8 bytes",
+          "duration": 1.137537000000009,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "fixed random algorithm"
+          ],
+          "fullName": "fixed random algorithm keeps zero valid, wraps uint32 and never mutates an input stream",
+          "status": "passed",
+          "title": "keeps zero valid, wraps uint32 and never mutates an input stream",
+          "duration": 0.6579920000000357,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "fixed random algorithm"
+          ],
+          "fullName": "fixed random algorithm separates supply and strike streams without a wall clock",
+          "status": "passed",
+          "title": "separates supply and strike streams without a wall clock",
+          "duration": 0.7938990000000103,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1792313948160,
+      "endTime": 1792313948179.794,
+      "status": "passed",
+      "message": "",
+      "name": "/Users/gordon/githome/sword-led/tests/core/random.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "protected persistent game session"
+          ],
+          "fullName": "protected persistent game session autosaves a legitimate merchant purchase sequence and restores purchase limits and repaired seals",
+          "status": "passed",
+          "title": "autosaves a legitimate merchant purchase sequence and restores purchase limits and repaired seals",
+          "duration": 224.21166200000005,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "protected persistent game session"
+          ],
+          "fullName": "protected persistent game session loads/saves accepted commands, rejects duplicates without writes, and resumes without reward events",
+          "status": "passed",
+          "title": "loads/saves accepted commands, rejects duplicates without writes, and resumes without reward events",
+          "duration": 16.768580999999926,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "protected persistent game session"
+          ],
+          "fullName": "protected persistent game session keeps an accepted failed-save state dirty and retries the exact state without rerolling",
+          "status": "passed",
+          "title": "keeps an accepted failed-save state dirty and retries the exact state without rerolling",
+          "duration": 3.0600279999999884,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "protected persistent game session"
+          ],
+          "fullName": "protected persistent game session requires replacement confirmation and keeps cancelled games/invalid input unchanged",
+          "status": "passed",
+          "title": "requires replacement confirmation and keeps cancelled games/invalid input unchanged",
+          "duration": 3.1962590000000546,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "protected persistent game session"
+          ],
+          "fullName": "protected persistent game session recovers only an explicitly selected valid backup, without overwriting it with corrupt data",
+          "status": "passed",
+          "title": "recovers only an explicitly selected valid backup, without overwriting it with corrupt data",
+          "duration": 7.709294999999997,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "protected persistent game session"
+          ],
+          "fullName": "protected persistent game session protects one writer, rereads after handoff, and rejects pre-suspend generations",
+          "status": "passed",
+          "title": "protects one writer, rereads after handoff, and rejects pre-suspend generations",
+          "duration": 5.073552999999947,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "protected persistent game session"
+          ],
+          "fullName": "protected persistent game session preserves dirty memory across suspension, then detects a changed disk instead of overwriting it",
+          "status": "passed",
+          "title": "preserves dirty memory across suspension, then detects a changed disk instead of overwriting it",
+          "duration": 16.11434799999995,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "protected persistent game session"
+          ],
+          "fullName": "protected persistent game session finishes activation when a queued storage update arrives during lock reacquisition",
+          "status": "passed",
+          "title": "finishes activation when a queued storage update arrives during lock reacquisition",
+          "duration": 2.813130000000001,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "protected persistent game session"
+          ],
+          "fullName": "protected persistent game session rejects gameplay while authoritative activation is pending instead of discarding an accepted unsaved action",
+          "status": "passed",
+          "title": "rejects gameplay while authoritative activation is pending instead of discarding an accepted unsaved action",
+          "duration": 1.8682070000000977,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "protected persistent game session"
+          ],
+          "fullName": "protected persistent game session offers explicit memory play when locks are unsupported and never pretends it saved",
+          "status": "passed",
+          "title": "offers explicit memory play when locks are unsupported and never pretends it saved",
+          "duration": 1.577207000000044,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "protected persistent game session"
+          ],
+          "fullName": "protected persistent game session does not adopt a changed baseline and then overwrite it with old memory after a failed resume",
+          "status": "passed",
+          "title": "does not adopt a changed baseline and then overwrite it with old memory after a failed resume",
+          "duration": 1.549886000000015,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "protected persistent game session"
+          ],
+          "fullName": "protected persistent game session keeps the working-copy base attached to memory after a failed recovery and later reactivation",
+          "status": "passed",
+          "title": "keeps the working-copy base attached to memory after a failed recovery and later reactivation",
+          "duration": 3.940140000000042,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "protected persistent game session"
+          ],
+          "fullName": "protected persistent game session handles rapid cancellation/disposal and isolates observer errors from accepted writes",
+          "status": "passed",
+          "title": "handles rapid cancellation/disposal and isolates observer errors from accepted writes",
+          "duration": 0.9676630000000159,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1792313947165,
+      "endTime": 1792313947454.9678,
+      "status": "passed",
+      "message": "",
+      "name": "/Users/gordon/githome/sword-led/tests/core/session.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "independent preferences"
+          ],
+          "fullName": "independent preferences reads defaults without creating or changing any storage entry",
+          "status": "passed",
+          "title": "reads defaults without creating or changing any storage entry",
+          "duration": 6.504397999999981,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "independent preferences"
+          ],
+          "fullName": "independent preferences round-trips all settings and never writes the contract or backup",
+          "status": "passed",
+          "title": "round-trips all settings and never writes the contract or backup",
+          "duration": 2.0496840000000134,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "independent preferences"
+          ],
+          "fullName": "independent preferences rejects wrong schema, fields, ranges and oversized data without replacing the original",
+          "status": "passed",
+          "title": "rejects wrong schema, fields, ranges and oversized data without replacing the original",
+          "duration": 2.6414530000000127,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "independent preferences"
+          ],
+          "fullName": "independent preferences uses the same pending value after a failed write and a later retry",
+          "status": "passed",
+          "title": "uses the same pending value after a failed write and a later retry",
+          "duration": 1.754199999999969,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "independent preferences"
+          ],
+          "fullName": "independent preferences recovers denied storage without blocking preference use or touching a game",
+          "status": "passed",
+          "title": "recovers denied storage without blocking preference use or touching a game",
+          "duration": 0.9452650000000062,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "independent preferences"
+          ],
+          "fullName": "independent preferences adopts a clean external change and stops notifying after unsubscribe",
+          "status": "passed",
+          "title": "adopts a clean external change and stops notifying after unsubscribe",
+          "duration": 0.7862129999999752,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "independent preferences"
+          ],
+          "fullName": "independent preferences does not lose a known mute choice after a transient reread failure",
+          "status": "passed",
+          "title": "does not lose a known mute choice after a transient reread failure",
+          "duration": 0.6537360000000376,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1792313948551,
+      "endTime": 1792313948566.6538,
+      "status": "passed",
+      "message": "",
+      "name": "/Users/gordon/githome/sword-led/tests/core/settings.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "reproducible complete-run simulation"
+          ],
+          "fullName": "reproducible complete-run simulation has unique coverage of strategies, hammer choices, skill, routes, assistance, and abuse",
+          "status": "passed",
+          "title": "has unique coverage of strategies, hammer choices, skill, routes, assistance, and abuse",
+          "duration": 9.492473000000018,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "reproducible complete-run simulation"
+          ],
+          "fullName": "reproducible complete-run simulation uses a deterministic timing error stream; handle width and slower motion improve precision",
+          "status": "passed",
+          "title": "uses a deterministic timing error stream; handle width and slower motion improve precision",
+          "duration": 266.82346200000006,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "reproducible complete-run simulation"
+          ],
+          "fullName": "reproducible complete-run simulation replays actual accepted commands and rejects terminal inputs",
+          "status": "passed",
+          "title": "replays actual accepted commands and rejects terminal inputs",
+          "duration": 824.743414,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "reproducible complete-run simulation"
+          ],
+          "fullName": "reproducible complete-run simulation duplicate spam has exactly the clean state and no additional rewards or random draws",
+          "status": "passed",
+          "title": "duplicate spam has exactly the clean state and no additional rewards or random draws",
+          "duration": 322.267963,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "reproducible complete-run simulation"
+          ],
+          "fullName": "reproducible complete-run simulation raw cannot advance to a free victory",
+          "status": "passed",
+          "title": "raw cannot advance to a free victory",
+          "duration": 3.195946999999933,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "reproducible complete-run simulation"
+          ],
+          "fullName": "reproducible complete-run simulation recycle cannot advance to a free victory",
+          "status": "passed",
+          "title": "recycle cannot advance to a free victory",
+          "duration": 2.4113710000001447,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "reproducible complete-run simulation"
+          ],
+          "fullName": "reproducible complete-run simulation idle cannot advance to a free victory",
+          "status": "passed",
+          "title": "idle cannot advance to a free victory",
+          "duration": 2.875682000000097,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "reproducible complete-run simulation"
+          ],
+          "fullName": "reproducible complete-run simulation policy imports visible projection types without state, RNG, validation, or rule internals",
+          "status": "passed",
+          "title": "policy imports visible projection types without state, RNG, validation, or rule internals",
+          "duration": 0.6458789999999226,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1792313947161,
+      "endTime": 1792313948594.646,
+      "status": "passed",
+      "message": "",
+      "name": "/Users/gordon/githome/sword-led/tests/core/simulation.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "versioned save repository"
+          ],
+          "fullName": "versioned save repository saves canonical state and keeps a previous valid primary as an explicit backup",
+          "status": "passed",
+          "title": "saves canonical state and keeps a previous valid primary as an explicit backup",
+          "duration": 19.018039000000044,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "versioned save repository"
+          ],
+          "fullName": "versioned save repository cannot write without a loaded baseline or after another writer changed the slot",
+          "status": "passed",
+          "title": "cannot write without a loaded baseline or after another writer changed the slot",
+          "duration": 17.92974099999998,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "versioned save repository"
+          ],
+          "fullName": "versioned save repository checks the explicit working-copy base even after a later read adopted another primary",
+          "status": "passed",
+          "title": "checks the explicit working-copy base even after a later read adopted another primary",
+          "duration": 3.452229999999986,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "versioned save repository"
+          ],
+          "fullName": "versioned save repository never replaces a good backup with malformed primary data",
+          "status": "passed",
+          "title": "never replaces a good backup with malformed primary data",
+          "duration": 5.855915999999979,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "versioned save repository"
+          ],
+          "fullName": "versioned save repository reports backup failure separately from primary success, and primary failure never appears saved",
+          "status": "passed",
+          "title": "reports backup failure separately from primary success, and primary failure never appears saved",
+          "duration": 1.8744449999999802,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "versioned save repository"
+          ],
+          "fullName": "versioned save repository catches denied storage getters, read failures, bad clocks and oversized saves",
+          "status": "passed",
+          "title": "catches denied storage getters, read failures, bad clocks and oversized saves",
+          "duration": 2.370256999999981,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "versioned save repository"
+          ],
+          "fullName": "versioned save repository rejects bad envelope { with invalid_json",
+          "status": "passed",
+          "title": "rejects bad envelope { with invalid_json",
+          "duration": 1.618990999999994,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "versioned save repository"
+          ],
+          "fullName": "versioned save repository rejects bad envelope {\"schemaVersion\":2} with unsupported_schema",
+          "status": "passed",
+          "title": "rejects bad envelope {\"schemaVersion\":2} with unsupported_schema",
+          "duration": 1.2522159999999758,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "versioned save repository"
+          ],
+          "fullName": "versioned save repository rejects bad envelope {\"schemaVersion\":1,\"rulesVersion\":\"other\",\"savedAt\":\"2026-10-18T02:00:00.000Z\",\"state\":{}} with unsupported_rules",
+          "status": "passed",
+          "title": "rejects bad envelope {\"schemaVersion\":1,\"rulesVersion\":\"other\",\"savedAt\":\"2026-10-18T02:00:00.000Z\",\"state\":{}} with unsupported_rules",
+          "duration": 1.3243350000000191,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "versioned save repository"
+          ],
+          "fullName": "versioned save repository rejects bad envelope {\"schemaVersion\":1,\"rulesVersion\":\"forge-v1\",\"savedAt\":\"yesterday\",\"state\":{}} with invalid_timestamp",
+          "status": "passed",
+          "title": "rejects bad envelope {\"schemaVersion\":1,\"rulesVersion\":\"forge-v1\",\"savedAt\":\"yesterday\",\"state\":{}} with invalid_timestamp",
+          "duration": 1.7701109999999858,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "versioned save repository"
+          ],
+          "fullName": "versioned save repository rejects bad envelope {\"schemaVersion\":1,\"rulesVersion\":\"forge-v1\",\"savedAt\":\"2026-10-18T02:00:00.000Z\",\"state\":{}} with invalid_state",
+          "status": "passed",
+          "title": "rejects bad envelope {\"schemaVersion\":1,\"rulesVersion\":\"forge-v1\",\"savedAt\":\"2026-10-18T02:00:00.000Z\",\"state\":{}} with invalid_state",
+          "duration": 1.1389540000000125,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1792313948073,
+      "endTime": 1792313948131.139,
+      "status": "passed",
+      "message": "",
+      "name": "/Users/gordon/githome/sword-led/tests/core/storage.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rebuilds immutable canonical state from mutable JSON, without freezing or trusting input",
+          "status": "passed",
+          "title": "rebuilds immutable canonical state from mutable JSON, without freezing or trusting input",
+          "duration": 48.486688999999956,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation restores purchasing limits and the exact next random outcome",
+          "status": "passed",
+          "title": "restores purchasing limits and the exact next random outcome",
+          "duration": 15.67655000000002,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rejects invalid shape or rules: null",
+          "status": "passed",
+          "title": "rejects invalid shape or rules: null",
+          "duration": 0.7490159999999833,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rejects invalid shape or rules: undefined",
+          "status": "passed",
+          "title": "rejects invalid shape or rules: undefined",
+          "duration": 1.6738900000000285,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rejects invalid shape or rules: 1",
+          "status": "passed",
+          "title": "rejects invalid shape or rules: 1",
+          "duration": 4.77184299999999,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rejects invalid shape or rules: \"state\"",
+          "status": "passed",
+          "title": "rejects invalid shape or rules: \"state\"",
+          "duration": 0.46840800000006766,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rejects invalid shape or rules: undefined",
+          "status": "passed",
+          "title": "rejects invalid shape or rules: undefined",
+          "duration": 0.3680769999999711,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rejects invalid shape or rules: \"2026-10-18T08:59:07.136Z\"",
+          "status": "passed",
+          "title": "rejects invalid shape or rules: \"2026-10-18T08:59:07.136Z\"",
+          "duration": 0.19254399999999805,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rejects invalid shape or rules: {\"rulesVersion\":\"legacy\"}",
+          "status": "passed",
+          "title": "rejects invalid shape or rules: {\"rulesVersion\":\"legacy\"}",
+          "duration": 2.5111140000000205,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rejects inconsistent snapshot fields: {\"coins\":-1}",
+          "status": "passed",
+          "title": "rejects inconsistent snapshot fields: {\"coins\":-1}",
+          "duration": 16.594249999999988,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rejects inconsistent snapshot fields: {\"coins\":99999}",
+          "status": "passed",
+          "title": "rejects inconsistent snapshot fields: {\"coins\":99999}",
+          "duration": 22.467724999999973,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rejects inconsistent snapshot fields: {\"scrap\":-1}",
+          "status": "passed",
+          "title": "rejects inconsistent snapshot fields: {\"scrap\":-1}",
+          "duration": 22.88450899999998,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rejects inconsistent snapshot fields: {\"coal\":999}",
+          "status": "passed",
+          "title": "rejects inconsistent snapshot fields: {\"coal\":999}",
+          "duration": 11.347510000000057,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rejects inconsistent snapshot fields: {\"seals\":0}",
+          "status": "passed",
+          "title": "rejects inconsistent snapshot fields: {\"seals\":0}",
+          "duration": 10.045615999999995,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rejects inconsistent snapshot fields: {\"revision\":-1}",
+          "status": "passed",
+          "title": "rejects inconsistent snapshot fields: {\"revision\":-1}",
+          "duration": 8.549444999999992,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rejects inconsistent snapshot fields: {\"phase\":\"victory\"}",
+          "status": "passed",
+          "title": "rejects inconsistent snapshot fields: {\"phase\":\"victory\"}",
+          "duration": 13.775679999999966,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rejects inconsistent snapshot fields: {\"phase\":\"missing\"}",
+          "status": "passed",
+          "title": "rejects inconsistent snapshot fields: {\"phase\":\"missing\"}",
+          "duration": 9.91387999999995,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rejects inconsistent snapshot fields: {\"round\":13}",
+          "status": "passed",
+          "title": "rejects inconsistent snapshot fields: {\"round\":13}",
+          "duration": 13.500098999999977,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rejects inconsistent snapshot fields: {\"upgrades\":{\"handle\":5,\"bellows\":0,\"anvil\":0}}",
+          "status": "passed",
+          "title": "rejects inconsistent snapshot fields: {\"upgrades\":{\"handle\":5,\"bellows\":0,\"anvil\":0}}",
+          "duration": 8.812219000000027,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rejects inconsistent snapshot fields: {\"stats\":{}}",
+          "status": "passed",
+          "title": "rejects inconsistent snapshot fields: {\"stats\":{}}",
+          "duration": 8.86255899999992,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rejects inconsistent snapshot fields: {\"history\":[]}",
+          "status": "passed",
+          "title": "rejects inconsistent snapshot fields: {\"history\":[]}",
+          "duration": 15.68145800000002,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rejects inconsistent snapshot fields: {\"purchases\":[{\"afterRound\":3,\"product\":\"handle\",\"level\":1,\"coins\":100,\"scrap\":3}]}",
+          "status": "passed",
+          "title": "rejects inconsistent snapshot fields: {\"purchases\":[{\"afterRound\":3,\"product\":\"handle\",\"level\":1,\"coins\":100,\"scrap\":3}]}",
+          "duration": 10.115942999999902,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rejects inconsistent snapshot fields: {\"rng\":{}}",
+          "status": "passed",
+          "title": "rejects inconsistent snapshot fields: {\"rng\":{}}",
+          "duration": 11.721427999999946,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rejects inconsistent snapshot fields: {\"extra\":\"unknown\"}",
+          "status": "passed",
+          "title": "rejects inconsistent snapshot fields: {\"extra\":\"unknown\"}",
+          "duration": 9.33010200000001,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rejects inconsistent snapshot fields: {\"journal\":[]}",
+          "status": "passed",
+          "title": "rejects inconsistent snapshot fields: {\"journal\":[]}",
+          "duration": 0.5513670000000275,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rejects forged piece states, random state, history and successful-looking duplicate journals",
+          "status": "passed",
+          "title": "rejects forged piece states, random state, history and successful-looking duplicate journals",
+          "duration": 63.53479900000002,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation rejects unsafe JSON values, oversized/deep/cyclic data and accessors without calling them",
+          "status": "passed",
+          "title": "rejects unsafe JSON values, oversized/deep/cyclic data and accessors without calling them",
+          "duration": 7.517492999999945,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        },
+        {
+          "ancestorTitles": [
+            "unknown save-state validation"
+          ],
+          "fullName": "unknown save-state validation accepts reordered object keys but refuses an unsupported installed rules version",
+          "status": "passed",
+          "title": "accepts reordered object keys but refuses an unsupported installed rules version",
+          "duration": 2.842243000000053,
+          "failureMessages": [],
+          "meta": {},
+          "tags": [],
+          "benchmarks": []
+        }
+      ],
+      "startTime": 1792313947227,
+      "endTime": 1792313947573.8423,
+      "status": "passed",
+      "message": "",
+      "name": "/Users/gordon/githome/sword-led/tests/core/validation.test.ts"
+    }
+  ]
+}

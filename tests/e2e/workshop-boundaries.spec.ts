@@ -147,3 +147,18 @@ test('explicit memory play never writes and never presents a later contract as s
   await page.locator('#menu-logo').click();await expect(page.locator('#new-game')).toHaveText('另开试玩');await page.locator('#new-game').click();
   await expect(page.getByRole('button', { name: '开始不保存试玩', exact: true })).toBeVisible();await page.getByRole('button', { name: '取消', exact: true }).click();
 });
+
+test('modified browser shortcuts are not consumed as game commands and cancel a modified Space release',async({page})=>{
+  await openGame(page);await startGame(page);const before=await readRun(page);
+  const prevented=await page.locator('#strike').evaluate(button=>{
+    const result:boolean[]=[];
+    for(const modifier of ['ctrlKey','metaKey','altKey'] as const)for(const [key,code]of [['e','KeyE'],['3','Digit3'],[' ','Space']] as const){
+      const event=new KeyboardEvent('keydown',{bubbles:true,cancelable:true,key,code,[modifier]:true});button.dispatchEvent(event);result.push(event.defaultPrevented);
+    }
+    return result;
+  });
+  expect(prevented).toEqual(Array(9).fill(false));expect(await readRun(page)).toEqual(before);await expect(page.locator('#mode-standard')).toHaveAttribute('aria-pressed','true');
+  await page.locator('#strike').focus();await page.keyboard.down('Space');await page.clock.runFor(350);
+  await page.evaluate(()=>window.dispatchEvent(new KeyboardEvent('keyup',{key:' ',code:'Space',ctrlKey:true,bubbles:true,cancelable:true})));
+  await page.keyboard.up('Space');await page.clock.runFor(500);expect(await readRun(page)).toEqual(before);
+});

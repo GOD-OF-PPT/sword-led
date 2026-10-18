@@ -1,6 +1,6 @@
 # 界面流程与三套风格设计约定
 
-版本v0.2 / 2026-10-18（规则不变）。状态：用户已选B，[T07素材](../design/b/README.md)、[T08工坊](reviews/T08-workshop-validation.md)与[T09经营/结算/终局](contract-flow.md)已接入；实际整局与版式证据见[R3](reviews/R3-full-contract-flow.md)。音效/设置持久化及完整品质按T10继续。
+版本v0.2 / 2026-10-18（规则不变）。状态：用户已选B，[T07素材](../design/b/README.md)、[T08工坊](reviews/T08-workshop-validation.md)、[T09完整流程](contract-flow.md)与[T10设置/音效/恢复](settings-and-audio.md)已接入；实际结果见[R3](reviews/R3-full-contract-flow.md)和[T10](reviews/T10-quality-validation.md)。更广浏览器、真人体验与最终审查按T11–T12继续。
 
 ## 1. 画面服务的核心决定
 

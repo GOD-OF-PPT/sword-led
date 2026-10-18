@@ -17,6 +17,10 @@ export interface Feedback {
   readonly before: PieceView | null; readonly after: PieceView | null; readonly mode: HammerMode;
   readonly events: readonly DomainEvent[]; readonly text: string;
 }
+export interface AcceptedAction {
+  readonly id: number; readonly route: Route; readonly runId: string; readonly revision: number;
+  readonly events: readonly DomainEvent[];
+}
 export interface GameSnapshot {
   readonly route: Route; readonly epoch: number; readonly paused: boolean; readonly busy: boolean;
   readonly slow: boolean; readonly reducedMotion: boolean; readonly mode: HammerMode;
@@ -73,6 +77,7 @@ export function createGameSession(port: PersistentSession, clock: Clock, identit
   let lesson: Lesson | null = null, feedback: Feedback | null = null, note = '';
   let currentPort = port.getSnapshot();
   const listeners = new Set<(snapshot: GameSnapshot) => void>();
+  const acceptedListeners = new Set<(action: AcceptedAction) => void>();let acceptedSerial = 0;
   const state = () => route === 'lesson' ? lesson?.state ?? null : currentPort.state;
   const selected = () => route === 'lesson' ? lessonSelection : selection;
   const selectedMode = () => route === 'lesson' ? lessonMode : mode;
@@ -129,11 +134,14 @@ export function createGameSession(port: PersistentSession, clock: Clock, identit
       feedback = Object.freeze({ id: ++feedbackSerial, startedAt: clock.now(), duration: reducedMotion ? 120 : 450,
         action: action.type, before, after: view()?.selected ?? null, mode: selectedMode(), events: result.events, text: note });
     } else { locked = false;epoch++;chooseFirst(); }
+    const accepted: AcceptedAction = Object.freeze({ id: ++acceptedSerial, route, runId: result.state.runId, revision: result.state.revision, events: result.events });
+    for (const listener of acceptedListeners) { try { listener(accepted); } catch { /* Presentation cannot undo an accepted rule/save result. */ } }
     return true;
   });
   const api = {
     getSnapshot, capture, inputContext, command,
     subscribe(listener: (snapshot: GameSnapshot) => void) { listeners.add(listener);listener(getSnapshot());return () => { listeners.delete(listener); }; },
+    subscribeAccepted(listener: (action: AcceptedAction) => void) { acceptedListeners.add(listener);return () => { acceptedListeners.delete(listener); }; },
     async activate() {
       if (disposed) return getSnapshot();
       const token = ++activation;
@@ -170,6 +178,13 @@ export function createGameSession(port: PersistentSession, clock: Clock, identit
       });
     },
     retrySave() { return transact(() => { const result = port.retrySave(currentPort.generation);if (!result.ok) return fail(result.error);note = '当前进度已保存。';return true; }); },
+    keepInMemory(ticket: Ticket) {
+      return transact(() => {
+        if (!matches(ticket) || route === 'lesson') return fail('stale_session');
+        const result = port.useMemory(null, { generation: ticket.generation, confirmed: true });if (!result.ok) return fail(result.error);
+        invalidate();routeEpoch++;route = 'game';paused = false;chooseFirst();note = '已保留当前进度继续试玩；后续不保存，本机契约没有改动。';return true;
+      });
+    },
     strike(attempt: ReleasedAttempt): boolean {
       if (!sameInput(attempt.identity, inputContext())) return transact(() => fail('stale_session'));
       return command({ type: 'strike', pieceId: attempt.identity.pieceId, mode: attempt.identity.mode, timingMark: attempt.timingMark }, capture());
@@ -180,7 +195,7 @@ export function createGameSession(port: PersistentSession, clock: Clock, identit
     },
     selectPiece(id: string) { if (locked || disposed || !state()?.pieces.some(piece => piece.id === id)) return;invalidate();if (route === 'lesson') lessonSelection = id;else selection = id;note = '';publish(); },
     selectMode(next: HammerMode) { if (locked || disposed) return;invalidate();if (route === 'lesson') lessonMode = next;else mode = next;publish(); },
-    setSlow(next: boolean) { invalidate();if (route === 'lesson') lessonSlow = next;else slow = next;publish(); },
+    setSlow(next: boolean) { invalidate();slow = next;lessonSlow = next;publish(); },
     setReducedMotion(next: boolean) { invalidate();reducedMotion = next;publish(); },
     pause() { if (route === 'menu' || paused || disposed) return;invalidate();paused = true;routeEpoch++;publish(); },
     resume() { if (disposed) return;invalidate();paused = false;publish(); },
@@ -191,7 +206,7 @@ export function createGameSession(port: PersistentSession, clock: Clock, identit
       lessonSelection = lesson.selected;lessonMode = 'standard';paused = false;note = '';publish(); },
     endLesson() { if (disposed || route !== 'lesson') return;invalidate();routeEpoch++;route = returnRoute === 'game' && currentPort.state ? 'game' : 'menu';
       lesson = null;paused = false;chooseFirst();note = '练习不会写入正式契约。';publish(); },
-    dispose() { disposed = true;invalidate();unsubscribe();listeners.clear();const released = port.dispose();currentPort = port.getSnapshot();return released; },
+    dispose() { disposed = true;invalidate();unsubscribe();listeners.clear();acceptedListeners.clear();const released = port.dispose();currentPort = port.getSnapshot();return released; },
   };
   return api;
 }

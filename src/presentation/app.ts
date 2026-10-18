@@ -11,6 +11,10 @@ import { ForgeScene } from './scene.js';
 import type { SceneModel } from './scene.js';
 import { APP_TEMPLATE } from './template.js';
 import { renderPhase } from './phases.js';
+import { createPreferences, DEFAULT_PREFERENCES, SETTINGS_KEY } from '../platform/settings.js';
+import type { Preferences, PreferencesSnapshot } from '../platform/settings.js';
+import { createForgeAudio } from '../platform/audio.js';
+import type { SaveError } from '../platform/storage.js';
 
 const MODES: readonly HammerMode[] = ['light', 'standard', 'heavy'];
 const STATUS = { active: '加工中', delivered: '已交货', recycled: '已回收', broken: '已破碎' } as const;
@@ -27,41 +31,59 @@ export function mountGame(root: HTMLElement, port: PersistentSession) {
   const shell = required('.app-shell');
   const dialog = required<HTMLDialogElement>('#dialog'), strike = button('#strike');
   const game = createGameSession(port, { now: () => performance.now() }, newIdentity);
+  const preferences = createPreferences(() => window.localStorage), audio = createForgeAudio();
+  let preferencesSnapshot = preferences.getSnapshot(), appliedPreferences: Preferences | null = null;
   let snapshot = game.getSnapshot(), art: ArtBundle | null = null, scene: ForgeScene | null = null, menuScene: ForgeScene | null = null;
   let disposed = false, portReady = false, loadEpoch = 0, modalSequence = 0, feedbackFrame = 0, feedbackId = 0;
   let disposal: Promise<void> | null = null;
-  let inputVisual: InputVisual = { preparing: false, mark: 0 }, userReduced = false;
+  let feedbackFocus: { runId: string; revision: number; generation: number; epoch: number } | null = null;
+  let inputVisual: InputVisual = { preparing: false, mark: 0 };
   const motionQuery = matchMedia('(prefers-reduced-motion: reduce)');
   const thumbnailKeys = new Map<string, string>();
   type Modal = { readonly id: number; readonly kind: string; readonly trigger: Element | null; readonly cancel: (() => void) | undefined };
   let modal: Modal | null = null;
   const input = bindStrikeInput(strike, {
     context: () => dialog.open || document.hidden ? null : game.inputContext(),
-    release: attempt => { game.strike(attempt); },
+    release: attempt => { const focused = document.activeElement === strike;if (game.strike(attempt) && focused) retainFeedbackFocus(); },
     visual: visual => { inputVisual = visual;paintTiming();paintScene(); },
   });
 
   function restoreFocus(previous: Element | null) {
     queueMicrotask(() => {
       if (disposed || modal) return;
+      if (feedbackFocus && snapshot.busy) return;
       if (previous instanceof HTMLElement && previous.isConnected && previous.getClientRects().length
         && previous.matches('button,input,select,textarea,a[href],[tabindex]')
         && !(previous instanceof HTMLButtonElement && previous.disabled)) previous.focus({ preventScroll: true });
       else if (snapshot.route !== 'menu' && snapshot.view?.phase === 'workshop' && !strike.disabled) strike.focus({ preventScroll: true });
-      else if (snapshot.route === 'menu') button('#new-game').focus({ preventScroll: true });
+      else if (snapshot.route === 'menu') (root.querySelector<HTMLElement>('#menu button:not([hidden]):not(:disabled)') ?? button('#practice')).focus({ preventScroll: true });
       else if (snapshot.view?.phase !== 'workshop') required('#phase-title').focus({ preventScroll: true });
       else button('#pause').focus({ preventScroll: true });
     });
   }
+  function retainFeedbackFocus() {
+    const current = game.getSnapshot();if (!current.feedback || !current.view) return;
+    feedbackFocus = { runId: current.view.runId, revision: current.view.revision, generation: current.port.generation, epoch: current.epoch };
+  }
+  function finishFeedbackFocus(next: GameSnapshot) {
+    const pending = feedbackFocus;if (!pending) return;
+    if (!next.view || next.view.runId !== pending.runId || next.view.revision !== pending.revision || next.epoch !== pending.epoch
+      || next.port.generation !== pending.generation || next.route === 'menu' || next.paused || document.hidden) { feedbackFocus = null;return; }
+    if (next.busy) return;feedbackFocus = null;
+    if (dialog.open || (document.activeElement !== document.body && document.activeElement !== strike)) return;
+    const target = !strike.disabled ? strike : !button('#deliver-button').disabled ? button('#deliver-button') : button('#settle-button');
+    if (!target.disabled) target.focus({ preventScroll: true });
+  }
   function closeDialog(cancel = true) {
     const previous = modal;modal = null;if (dialog.open) dialog.close();
     if (cancel) previous?.cancel?.();
+    syncAudioMode();
     queueMicrotask(() => { if (!disposed && !modal) render(game.getSnapshot()); });
     restoreFocus(previous?.trigger ?? null);
   }
   function showDialog(kind: string, title: string, body: Node | string,
     actions: readonly { label: string; primary?: boolean; run: () => void }[], cancel?: () => void) {
-    input.cancel();if (modal) closeDialog(false);
+    input.cancel();audio.silence();if (modal) closeDialog(false);
     const id = ++modalSequence;modal = { id, kind, trigger: document.activeElement, cancel };
     text('#dialog-title', title);required('#dialog-body').replaceChildren(typeof body === 'string' ? element('p', body) : body);
     const buttons = actions.map(action => {
@@ -69,7 +91,8 @@ export function mountGame(root: HTMLElement, port: PersistentSession) {
       node.addEventListener('click', () => { if (modal?.id === id) action.run(); });return node;
     });
     required('#dialog-actions').replaceChildren(...buttons);dialog.showModal();
-    const field = dialog.querySelector<HTMLInputElement>('input[type=text]');
+    syncAudioMode();paintAudio();
+    const field = dialog.querySelector<HTMLElement>('input:not([disabled]),button:not([disabled])');
     if (field) field.focus();else buttons[0]?.focus();
   }
   function confirm(title: string, message: string, label: string, run: () => void) {
@@ -112,11 +135,70 @@ export function mountGame(root: HTMLElement, port: PersistentSession) {
     const slowLabel = element('label', undefined, 'check'), slow = element('input');slow.type = 'checkbox';slow.id = 'slow-setting';slow.checked = snapshot.slow;
     slowLabel.append(slow, document.createTextNode('慢速游标 ×1.5（收益不变）'));
     const reduceLabel = element('label', undefined, 'check'), reduce = element('input');reduce.type = 'checkbox';reduce.id = 'motion-setting';reduce.checked = snapshot.reducedMotion;reduce.disabled = motionQuery.matches;
-    reduceLabel.append(reduce, document.createTextNode(motionQuery.matches ? '系统已启用减弱动效' : '减弱动效'));
-    body.append(slowLabel, reduceLabel, element('p', '空格只在击打区获得焦点时蓄锤。数字 1/2/3 选来料，Q/W/E 换锤，Esc 暂停。'));
-    slow.addEventListener('change', () => game.setSlow(slow.checked));
-    reduce.addEventListener('change', () => { userReduced = reduce.checked;game.setReducedMotion(userReduced || motionQuery.matches); });
+    const motionDescription = element('span', motionQuery.matches ? '系统已启用减弱动效' : '减弱动效');motionDescription.id = 'motion-description';reduceLabel.append(reduce, motionDescription);
+    const muteLabel = element('label', undefined, 'check'), mute = element('input');mute.type = 'checkbox';mute.id = 'mute-setting';mute.checked = preferencesSnapshot.value.muted;
+    muteLabel.append(mute, document.createTextNode('静音'));
+    const volumeLabel = element('label', '音量', 'volume-control'), volume = element('input'), value = element('output');
+    volume.type = 'range';volume.min = '0';volume.max = '100';volume.step = '1';volume.id = 'volume-setting';volume.value = String(preferencesSnapshot.value.volume);value.id = 'volume-value';value.htmlFor = volume.id;
+    volumeLabel.append(volume, value);
+    const testSound = element('button', '试听锤声');testSound.type = 'button';testSound.id = 'sound-test';testSound.addEventListener('click', () => { void audio.preview(); });
+    const soundStatus = element('p', '', 'small');soundStatus.id = 'sound-status';soundStatus.setAttribute('role', 'status');
+    const settingsStatus = element('p', '', 'small');settingsStatus.id = 'settings-status';settingsStatus.setAttribute('role', 'status');
+    const retry = element('button', '重试保存设置');retry.id = 'settings-retry';retry.type = 'button';retry.addEventListener('click', () => preferences.retry());
+    const reset = element('button', '恢复默认设置');reset.type = 'button';reset.addEventListener('click', () => { if (preferencesSnapshot.value.slow === DEFAULT_PREFERENCES.slow) game.setSlow(DEFAULT_PREFERENCES.slow);preferences.update(DEFAULT_PREFERENCES); });
+    body.append(slowLabel, reduceLabel, muteLabel, volumeLabel, testSound, soundStatus, settingsStatus, retry, reset,
+      element('p', '空格只在击打区获得焦点时蓄锤。数字 1/2/3 选来料，Q/W/E 换锤，Esc 暂停。'));
+    slow.addEventListener('change', () => { if (slow.checked === preferencesSnapshot.value.slow) game.setSlow(slow.checked);preferences.update({ slow: slow.checked }); });
+    reduce.addEventListener('change', () => preferences.update({ reducedMotion: reduce.checked }));
+    mute.addEventListener('change', () => preferences.update({ muted: mute.checked }));
+    volume.addEventListener('input', () => preferences.update({ volume: Number(volume.value) }));
     showDialog('options', '操作设置', body, [{ label: fromPause ? '返回暂停' : '完成', primary: true, run: () => { closeDialog(false);if (fromPause) pauseDialog(); } }], () => { if (fromPause) pauseDialog(); });
+  }
+  function settingsMessage() {
+    return preferencesSnapshot.problem === 'write_failed' ? '设置尚未保存；本页已生效，可重试。'
+      : preferencesSnapshot.problem === 'read_failed' ? '暂时无法读取设置，先使用当前选项；不影响契约进度。'
+      : preferencesSnapshot.problem === 'invalid' ? '原设置无法读取，先使用当前选项；原数据保留，改动后可保存。'
+      : preferencesSnapshot.persisted ? '设置已保存' : '当前使用默认设置；改动会自动保存。';
+  }
+  function paintAudio() {
+    if (disposed) return;
+    const value = preferencesSnapshot.value, message = settingsMessage();
+    const unavailable = ['blocked', 'unavailable'].includes(audio.getStatus());
+    button('#mute').setAttribute('aria-pressed', String(value.muted));text('#mute', value.muted ? '静音' : value.volume === 0 ? '音量0' : unavailable ? '无声' : '音效开');
+    button('#mute').title = unavailable ? '声音暂不可用，操作设置中可重试试听。' : `${value.muted ? '取消静音' : '静音'} · ${value.volume}%`;
+    for (const [id, checked] of [['#mute-setting', value.muted], ['#slow-setting', snapshot.slow], ['#motion-setting', snapshot.reducedMotion]] as const) {
+      const field = root.querySelector<HTMLInputElement>(id);if (field) field.checked = checked;
+    }
+    const range = root.querySelector<HTMLInputElement>('#volume-setting');if (range) { range.value = String(value.volume);range.setAttribute('aria-valuetext', `${value.volume}%`); }
+    const motionDescription = root.querySelector<HTMLElement>('#motion-description');if (motionDescription) motionDescription.textContent = motionQuery.matches ? '系统已启用减弱动效' : '减弱动效';
+    const output = root.querySelector<HTMLOutputElement>('#volume-value');if (output) output.textContent = `${value.volume}%`;
+    const status = root.querySelector<HTMLElement>('#sound-status');if (status) status.textContent = value.muted ? '已静音；全部结果仍有文字与图形提示。' : value.volume === 0 ? '音量为0，可调高后试听。'
+      : { waiting: '点击试听或开始操作以启用声音。', ready: '音效已就绪；暂停与后台会停止声音。', muted: '已静音。', blocked: '声音暂未启用，可重试试听；可继续无声游玩。', unavailable: '声音暂不可用；可继续无声游玩。' }[audio.getStatus()];
+    const test = root.querySelector<HTMLButtonElement>('#sound-test');if (test) test.disabled = value.muted || value.volume === 0;
+    const saved = root.querySelector<HTMLElement>('#settings-status');if (saved) saved.textContent = message;
+    const retry = root.querySelector<HTMLButtonElement>('#settings-retry');
+    if (retry) {
+      const hidingFocused = document.activeElement === retry && preferencesSnapshot.problem !== 'write_failed';retry.hidden = preferencesSnapshot.problem !== 'write_failed';
+      if (hidingFocused && dialog.open) dialog.querySelector<HTMLButtonElement>('#dialog-actions button')?.focus();
+    }
+    text('#menu-settings-notice', message);required('#menu-settings-notice').hidden = preferencesSnapshot.problem === null;
+  }
+  function syncAudioMode() {
+    audio.identify(`${snapshot.route}/${snapshot.view?.runId ?? ''}/${snapshot.port.generation}`);
+    audio.setMode(document.hidden ? 'silent' : modal?.kind === 'options' ? 'preview' : snapshot.route !== 'menu' && !snapshot.paused
+      && (snapshot.route === 'lesson' || (snapshot.port.active && !snapshot.port.conflict && ['writer', 'memory'].includes(snapshot.port.mode))) ? 'game' : 'silent');
+  }
+  function applyPreferences(next: PreferencesSnapshot) {
+    preferencesSnapshot = next;const previous = appliedPreferences;appliedPreferences = next.value;
+    audio.configure(next.value);
+    if (!previous || previous.slow !== next.value.slow) game.setSlow(next.value.slow);
+    if (!previous || previous.reducedMotion !== next.value.reducedMotion) game.setReducedMotion(next.value.reducedMotion || motionQuery.matches);
+    render(game.getSnapshot());paintAudio();
+  }
+  function keepMemory() {
+    const current = snapshot.port;if (!current.state || current.mode === 'memory') return;
+    const ticket = game.capture();confirm('保留当前进度，不保存续玩', `继续当前第 ${current.state.round} 轮，保留已经接受的结果。\n后续不会保存，关闭或刷新页面将失去这份试玩进度。本机磁盘契约保持原样。`,
+      '保留进度并继续试玩', () => game.keepInMemory(ticket));
   }
   function pauseDialog() {
     showDialog('pause', '稍歇片刻', '准备中的落锤已取消。已接受的锻造结果会保留，暂停不扣资源。', [
@@ -125,7 +207,9 @@ export function mountGame(root: HTMLElement, port: PersistentSession) {
       { label: '返回菜单', run: () => { closeDialog(false);game.menu(); } },
     ], () => game.resume());
   }
-  function act(action: Action, ticket: Ticket = game.capture()) { game.command(action, ticket); }
+  function act(action: Action, ticket: Ticket = game.capture()) {
+    if (game.command(action, ticket) && ['heat','deliver','recycle'].includes(action.type)) retainFeedbackFocus();
+  }
   function disposePiece(type: 'deliver' | 'recycle') {
     const view = snapshot.view, selected = view?.selected;if (!view || !selected || !snapshot.canOperate) return;
     const ticket = game.capture();
@@ -150,9 +234,12 @@ export function mountGame(root: HTMLElement, port: PersistentSession) {
     if (s.port.conflict) return '暂时无法确认本机契约，请重新读取后再操作。';
     if (s.port.mode === 'readonly') return '另一窗口正在锻造，本窗口只可查看。';
     if (s.port.mode === 'unsupported') return '当前环境不能保护本机存档，可选择不保存试玩。';
-    if (s.port.lastSave?.ok && !s.port.dirty && s.port.active) return '已保存';
+    if (s.port.lastSave?.ok && !s.port.dirty && s.port.active) return s.port.lastSave.backupWarning ? '进度已保存，备份未更新。' : '已保存';
     if (s.port.dirty && s.port.mode === 'writer' && s.port.active) return '有进度尚未保存，请重试保存。';
-    if (s.port.load?.main.status === 'invalid') return '本机主档未能通过校验，可尝试备份或另开契约。';
+    if (s.port.load?.main.status === 'invalid') {
+      const reasons: Partial<Record<SaveError, string>> = { unsupported_schema: '这是其他版本的契约，当前无法继续。', unsupported_rules: '这是其他规则版本的契约，当前无法继续。', invalid_json: '本机契约内容损坏，未能读取。', save_too_large: '本机契约内容过大，未能读取。' };
+      return `${reasons[s.port.load.main.error] ?? '本机契约未能通过校验。'}原档保留，可尝试备份或另开契约。`;
+    }
     if (s.port.load?.main.status === 'unavailable' || s.port.mode === 'error') return '本机存档暂时无法读取，可重试或选择不保存试玩。';
     if (!s.port.active) return '正在重新读取契约…';
     if (s.port.dirty) return '有进度尚未保存，请重试保存。';
@@ -248,24 +335,31 @@ export function mountGame(root: HTMLElement, port: PersistentSession) {
   }
   let lastPhaseKey = '';
   let focusPhaseKey = '';
+  let renderedRoute: GameSnapshot['route'] = 'menu';
   function render(next: GameSnapshot) {
     if (disposed) return;snapshot = next;input.refresh();
+    syncAudioMode();
     if (next.route === 'menu') focusPhaseKey = '';
     const ready = art !== null && portReady;required('#loading').hidden = ready;required('#menu').hidden = !ready || next.route !== 'menu';required('#game-route').hidden = !ready || next.route === 'menu';
     root.dataset.route = next.route;root.dataset.phase = next.view?.phase ?? 'none';root.dataset.revision = String(next.view?.revision ?? 0);
     required('#game-route').classList.toggle('lesson-running', next.route === 'lesson');
     if (!ready) return;
+    if (next.route === 'menu' && renderedRoute !== 'menu' && !dialog.open && !document.hidden) restoreFocus(null);
+    renderedRoute = next.route;
     const savedAt = next.port.lastSave?.ok ? next.port.lastSave.savedAt : next.port.load?.main.status === 'valid' ? next.port.load.main.savedAt : null;
     const savedTime = savedAt ? new Intl.DateTimeFormat('zh-CN', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' }).format(new Date(savedAt)) : '尚未保存';
     const emptyPreview = next.port.load?.main.status === 'invalid' || next.port.load?.main.status === 'unavailable'
       ? '检测到本机契约，但暂时无法读取。原档会保留，可重试、恢复备份或另开契约。'
       : next.port.load?.backup.status === 'valid' ? '主档为空，可以从保存的备份恢复。' : '还没有开始契约。先练两锤，或领下今天的来料。';
     text('#save-preview', next.port.state ? `当前契约 · 第 ${next.port.state.round} / 12 轮\n金币 ${next.port.state.coins} · 印记 ${next.port.state.seals} / 3\n${next.port.mode === 'memory' ? '不保存试玩' : savedAt ? `上次保存：${savedTime}` : '尚未保存'}\n种子：${next.port.state.seed}` : emptyPreview);
-    button('#continue').hidden = next.port.state === null;button('#new-game').disabled = !next.port.active || !['writer', 'memory'].includes(next.port.mode);
+    button('#continue').hidden = next.port.state === null;button('#new-game').disabled = !next.port.active || !['writer', 'memory'].includes(next.port.mode)
+      || (next.port.mode !== 'memory' && next.port.load?.main.status === 'unavailable');
     text('#new-game', next.port.mode === 'memory' ? '另开试玩' : '新契约');text('#reconnect', next.port.mode === 'memory' ? '返回本机存档' : '重新读取契约');button('#memory-game').hidden = next.port.mode === 'memory';
     text('#continue', next.port.mode === 'readonly' ? '查看本机契约' : next.port.mode === 'memory' ? '继续不保存试玩' : '继续契约');
     text('#menu-storage', storageMessage(next) === '已保存' ? '' : storageMessage(next));button('#recover').hidden = next.port.mode === 'memory' || next.port.load?.backup.status !== 'valid' || next.port.load.main.status === 'valid' || Boolean(next.port.lastSave?.ok);
     button('#recover').disabled = !next.port.active || next.port.mode !== 'writer';
+    const canKeepMemory = Boolean(next.port.state) && next.port.mode !== 'memory' && (next.port.dirty || next.port.conflict || ['readonly', 'unsupported', 'error'].includes(next.port.mode));
+    button('#menu-keep-memory').hidden = !canKeepMemory;button('#keep-memory').hidden = !canKeepMemory;
     const view = next.view;
     if (next.route !== 'menu' && view) {
       text('#round', next.route === 'lesson' ? '独立练习' : `第 ${view.round} / ${view.totalRounds} 轮`);
@@ -300,9 +394,10 @@ export function mountGame(root: HTMLElement, port: PersistentSession) {
       if (stageKey !== focusPhaseKey && !dialog.open && !document.hidden) {
         focusPhaseKey = stageKey;
         if (view.phase !== 'workshop') required('#phase-title').focus({ preventScroll: true });
+        else if (!next.paused) (next.route === 'lesson' ? button('#lesson-next') : strike.disabled ? button('#settle-button') : strike).focus({ preventScroll: true });
       }
     }
-    text('#game-note', next.note);paintScene();updateFeedbackLoop();
+    finishFeedbackFocus(next);text('#game-note', `${next.note}${preferencesSnapshot.problem ? `${next.note ? ' · ' : ''}${settingsMessage()}` : ''}`);paintScene();updateFeedbackLoop();paintAudio();
     if (next.paused && next.route !== 'menu' && modal?.kind !== 'pause' && modal?.kind !== 'options') { if (modal) closeDialog(false);if (!document.hidden) pauseDialog(); }
     else if (!next.paused && modal?.kind === 'pause') closeDialog(false);
   }
@@ -324,7 +419,13 @@ export function mountGame(root: HTMLElement, port: PersistentSession) {
     } else void game.activate();
   });
   button('#retry-save').addEventListener('click', () => game.retrySave());
-  button('#recover').addEventListener('click', () => { const ticket = game.capture();confirm('恢复备份', '这会回到备份时的进度并替换当前主档。', '恢复备份', () => game.recover(ticket)); });
+  button('#mute').addEventListener('click', () => preferences.update({ muted: !preferencesSnapshot.value.muted }));
+  for (const id of ['#keep-memory', '#menu-keep-memory']) button(id).addEventListener('click', keepMemory);
+  button('#recover').addEventListener('click', () => {
+    const ticket = game.capture(), backup = snapshot.port.load?.backup;
+    const details = backup?.status === 'valid' ? `第 ${backup.state.round} / 12 轮，保存于 ${new Date(backup.savedAt).toLocaleString('zh-CN')}。\n` : '';
+    confirm('恢复备份', `${details}这会回到备份时的进度并替换当前主档。`, '恢复备份', () => game.recover(ticket));
+  });
   const onCancel = (event: Event) => { event.preventDefault();closeDialog();render(game.getSnapshot()); };
   dialog.addEventListener('cancel', onCancel);
   const onDialogKey = (event: KeyboardEvent) => {
@@ -333,7 +434,7 @@ export function mountGame(root: HTMLElement, port: PersistentSession) {
   dialog.addEventListener('keydown', onDialogKey);
   const onKey = (event: KeyboardEvent) => {
     if (event.repeat && event.key === 'Enter' && !(event.target instanceof HTMLTextAreaElement)) { event.preventDefault();return; }
-    if (dialog.open || event.repeat) return;
+    if (dialog.open || event.repeat || event.ctrlKey || event.metaKey || event.altKey) return;
     if (event.key === 'Escape' && snapshot.route !== 'menu') { event.preventDefault();game.pause();return; }
     if (snapshot.route === 'menu' || snapshot.paused || snapshot.view?.phase !== 'workshop') return;
     const target = event.target;
@@ -343,9 +444,14 @@ export function mountGame(root: HTMLElement, port: PersistentSession) {
     if (mode >= 0) { event.preventDefault();const selected = MODES[mode];if (selected) game.selectMode(selected); }
   };
   const onBlur = () => game.pause();const onHidden = () => { if (document.hidden) game.pause();else render(game.getSnapshot()); };
-  const onMotion = () => game.setReducedMotion(userReduced || motionQuery.matches);
+  const onMotion = () => { game.setReducedMotion(preferencesSnapshot.value.reducedMotion || motionQuery.matches);const field = root.querySelector<HTMLInputElement>('#motion-setting');if (field) field.disabled = motionQuery.matches;paintAudio(); };
+  const onGesture = (event: Event) => { if (event.isTrusted && !(event instanceof KeyboardEvent && event.repeat)) void audio.gesture(); };
+  const onSettingsStorage = (event: StorageEvent) => { if (event.key === SETTINGS_KEY || event.key === null) preferences.reload(); };
+  root.addEventListener('pointerdown', onGesture, true);root.addEventListener('keydown', onGesture, true);window.addEventListener('storage', onSettingsStorage);
   window.addEventListener('keydown', onKey);window.addEventListener('blur', onBlur);document.addEventListener('visibilitychange', onHidden);motionQuery.addEventListener('change', onMotion);
   const resize = new ResizeObserver(() => { thumbnailKeys.clear();render(game.getSnapshot()); });resize.observe(root);
+  const unsubscribeAccepted = game.subscribeAccepted(action => audio.accepted(action.events));
+  const unsubscribeAudio = audio.subscribe(paintAudio), unsubscribePreferences = preferences.subscribe(applyPreferences);
   const unsubscribe = game.subscribe(render);onMotion();
   function paintModeIcons() {
     if (!art) return;
@@ -369,7 +475,8 @@ export function mountGame(root: HTMLElement, port: PersistentSession) {
   button('#retry-art').addEventListener('click', () => { void loadAssets(); });
   void game.activate().then(() => { if (!disposed) { portReady = true;render(game.getSnapshot()); } });
   void loadAssets();
-  return { dispose(): Promise<void> { if (disposal) return disposal;disposed = true;loadEpoch++;cancelAnimationFrame(feedbackFrame);input.dispose();unsubscribe();resize.disconnect();scene?.dispose();menuScene?.dispose();
+  return { dispose(): Promise<void> { if (disposal) return disposal;disposed = true;loadEpoch++;cancelAnimationFrame(feedbackFrame);input.dispose();unsubscribe();unsubscribeAccepted();unsubscribeAudio();unsubscribePreferences();resize.disconnect();scene?.dispose();menuScene?.dispose();
+    root.removeEventListener('pointerdown', onGesture, true);root.removeEventListener('keydown', onGesture, true);window.removeEventListener('storage', onSettingsStorage);
     window.removeEventListener('keydown', onKey);window.removeEventListener('blur', onBlur);document.removeEventListener('visibilitychange', onHidden);motionQuery.removeEventListener('change', onMotion);dialog.removeEventListener('cancel', onCancel);dialog.removeEventListener('keydown', onDialogKey);
-    if (dialog.open) dialog.close();shell.remove();disposal = game.dispose();return disposal; } };
+    if (dialog.open) dialog.close();shell.remove();disposal = Promise.allSettled([audio.dispose(), game.dispose()]).then(() => undefined);return disposal; } };
 }

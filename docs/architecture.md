@@ -1,6 +1,6 @@
 # 代码架构与玩法内核约定
 
-版本：v0.2，2026-10-18。状态：用户已确认方案并选择B；纯规则/存档/R2/B美术、[T08工坊](reviews/T08-workshop-validation.md)及[T09经营/结算/终局](contract-flow.md)已接线；R3验证见实际报告，T10–T12继续品质与最终验收。玩法依据：[游戏设计](game-design.md)；交付顺序：[实施方案](implementation-plan.md)。
+版本：v0.2，2026-10-18。状态：用户已确认方案并选择B；纯规则/存档/R2/B美术、[T08工坊](reviews/T08-workshop-validation.md)、[T09经营/终局](contract-flow.md)及[T10设置/音效/恢复](settings-and-audio.md)已接线；实际结果见对应报告，T11–T12继续更广验收与最大审查。玩法依据：[游戏设计](game-design.md)；交付顺序：[实施方案](implementation-plan.md)。
 
 本文件描述完整目标架构。规则入口为createRun/applyCommand/getRunView/validateRun，T09增加只读getRunLedger；T08已加入index.html与主装配。构建先生成网页，再用独立vite.sdk.config.ts保留core/session SDK及共享chunk，不把设计预览或测试入口打进页面。见[T04](reviews/T04-kernel-validation.md)、[T05](reviews/T05-persistence-validation.md)、[持久化合同](persistence-and-merchant.md)、[工坊合同](workshop-implementation.md)与[经营接线](contract-flow.md)。
 
@@ -40,7 +40,7 @@ flowchart TD
 
 ## 3. 拟建文件布局
 
-以下为目标布局；core、持久化/存储、模拟、美术及应用/输入/场景/教学/阶段渲染已实现。design/b/preview仅作设计校验；T09新增core/ledger.ts和presentation/phases.ts，声音等按T10推进，以实际仓库为准。
+以下为目标布局；core、持久化/存储、模拟、美术、应用/输入/场景/教学/阶段及设置/音效已实现。design/b/preview仅作设计校验，实际路径以仓库为准。
 
 ```text
 src/
@@ -61,7 +61,8 @@ src/
     browser-session.ts    # Window 生命周期接线
     input.ts              # 单一键鼠所有者/捕获/取消
     timing.ts             # 纯三角波与attempt身份
-    audio.ts              # 原生 Web Audio 声音
+    audio.ts              # 已实现：短音效/手势/音量/限流/异步生命周期
+    settings.ts           # 已实现：独立偏好、结构校验、dirty/重试与跨窗采纳
   presentation/
     app.ts                # 已实现：稳定根节点、菜单/工坊/阶段路由与弹窗
     phases.ts             # 已实现：日终/商人/终局DOM与确认意图
@@ -180,6 +181,8 @@ T05 已落实：会话唯一持有工作副本；对外 generation 使旧输入�
 ## 10. 表现、资源与安全
 
 DOM 根与关键按钮稳定，局部更新文本和属性，不每帧重建页面或重绑监听；所有监听、rAF、音频节点和订阅均有 dispose。重要结果通过 `aria-live=polite` 宣读，每帧游标不宣读。Canvas 提供等价文字状态，实际操作在 DOM 可访问区域。
+
+T10应用另提供subscribeAccepted，不在订阅时或恢复时补发历史；事件含路线/局/修订身份，声音只消费新结果。音频绑定route/runId/generation，并以本地epoch取消旧resume/试听，普通revision增加不取消刚接受的短音。最多4组/12振荡源，静音/零音量/暂停/隐藏/菜单/销毁停止断开。设置模块只写sword-led.settings.v1，不碰主档/备份。反馈按钮暂时disabled造成的原生焦点丢失由局/修订/generation/epoch守护恢复，主动Tab选择不被抢回；修饰键不当作游戏快捷键。具体合同与验证见设置/音效文档。
 
 场景资源统一用清单加载，初次加载失败有重试和具体文件提示；界面仍能保留已读档状态。Canvas 采用实际容器尺寸，DPR 上限 2；粒子池封顶 96，隐藏/暂停停止循环。锤击位姿与粒子动画不修改规则。
 

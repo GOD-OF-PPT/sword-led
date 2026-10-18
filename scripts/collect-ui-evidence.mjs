@@ -8,10 +8,10 @@ import assert from 'node:assert/strict';
 const argv = process.argv.slice(2);
 const options = {};
 for (let i = 0; i < argv.length; i += 2) {
-  if (!['--out', '--stage'].includes(argv[i]) || !argv[i + 1] || options[argv[i]]) throw new Error('Use --out <new directory> [--stage T08|T09]');
+  if (!['--out', '--stage'].includes(argv[i]) || !argv[i + 1] || options[argv[i]]) throw new Error('Use --out <new directory> [--stage T08|T09|T10]');
   options[argv[i]] = argv[i + 1];
 }
-const stage = options['--stage'] ?? 'T08';assert.ok(['T08', 'T09'].includes(stage));
+const stage = options['--stage'] ?? 'T08';assert.ok(['T08', 'T09', 'T10'].includes(stage));
 const out = resolve(options['--out'] ?? `docs/evidence/${stage}`);
 const sha = value => createHash('sha256').update(value).digest('hex');
 const readJSON = async path => JSON.parse(await readFile(path, 'utf8'));
@@ -78,7 +78,7 @@ async function builds(dir) {
 await builds('dist');
 const buildFiles = Object.fromEntries(await Promise.all(built.sort().map(async file => {
   const bytes = await readFile(file);
-  if (file.endsWith('.js')) for (const forbidden of ['artPreview', 'uiSaveFault', 'nativeInputProbe', 'forceVictory']) assert.ok(!bytes.toString().includes(forbidden), `${forbidden} leaked into production`);
+  if (file.endsWith('.js')) for (const forbidden of ['artPreview', 'uiSaveFault', 'nativeInputProbe', 'forceVictory', 'audioTestProbe', 'settingsFail', 'carryFail', 'frameTestProbe', 'keyboardPointerCount']) assert.ok(!bytes.toString().includes(forbidden), `${forbidden} leaked into production`);
   return [relative('dist', file), { bytes: bytes.length, sha256: sha(bytes), ...(/\.(js|css)$/.test(file) ? { gzipBytes: gzipSync(bytes).length } : {}) }];
 })));
 const previousSDK = (await readJSON('docs/evidence/T06/native-bfcache.json')).buildSha256;
@@ -89,6 +89,9 @@ const nativeEvidence = attachments['storage/native-bfcache-evidence'];assert.ok(
 const currentSDK = (await readJSON(join(out, nativeEvidence.file))).buildSha256;
 for (const [name, hash] of Object.entries(currentSDK)) assert.equal(buildFiles[name]?.sha256, hash);
 assert.ok(Object.keys(currentSDK).length >= 3);
+const t09 = stage === 'T10' ? (await readJSON('docs/evidence/T09/summary.json')).buildFiles : null;
+const sdkMatchesT09 = t09 ? Object.keys(currentSDK).every(name => t09[name]?.sha256 === buildFiles[name]?.sha256) : null;
+if (stage === 'T10') assert.equal(sdkMatchesT09, true);
 const art = await readJSON('public/assets/b/manifest.json');
 assert.equal(buildFiles['assets/b/manifest.json']?.sha256, sha(await readFile('public/assets/b/manifest.json')));
 assert.equal(buildFiles['assets/b/tokens.css']?.sha256, sha(await readFile('public/assets/b/tokens.css')));
@@ -96,8 +99,8 @@ const runtimeImageBytes = art.assets.reduce((sum, asset) => sum + asset.bytes, 0
 assert.ok(runtimeImageBytes <= 3 * 1024 * 1024);
 for (const asset of art.assets) assert.equal(buildFiles[asset.src.slice(1)]?.sha256, asset.sha256);
 await save('summary.json', { recordedAt: new Date().toISOString(), node: process.version, platform: `${process.platform}/${process.arch}`,
-  rulesVersion: 'forge-v1', stage: stage === 'T09' ? 'T09 full contract flow and R3; audio/settings and final acceptance remain T10–T12' : 'T08 workshop and entry; full business/ending review remains T09',
+  rulesVersion: 'forge-v1', stage: stage === 'T10' ? 'T10 audio, settings, recovery, keyboard and measured callback budget; broad browser/H/R4 acceptance remains T11–T12' : stage === 'T09' ? 'T09 full contract flow and R3; audio/settings and final acceptance remain T10–T12' : 'T08 workshop and entry; full business/ending review remains T09',
   units: { files: units.testResults.length, passed: units.numPassedTests },
   ui: { passed: cases.ui.length, cases: cases.ui }, storage: { passed: cases.storage.length, cases: cases.storage },
-  sdkMatchesT06, sdkVerifiedCurrent: true, runtimeImages: art.assets.length, runtimeImageBytes, attachments, sourceHashes, buildFiles });
+  sdkMatchesT06, sdkMatchesT09, sdkVerifiedCurrent: true, runtimeImages: art.assets.length, runtimeImageBytes, attachments, sourceHashes, buildFiles });
 console.log(JSON.stringify({ out, unitPassed: units.numPassedTests, uiPassed: cases.ui.length, storagePassed: cases.storage.length, attachments: Object.keys(attachments).length, sdkMatchesT06 }));

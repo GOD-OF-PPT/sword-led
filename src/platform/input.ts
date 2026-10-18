@@ -52,13 +52,14 @@ export function bindStrikeInput(button: HTMLButtonElement, host: InputHost) {
   const pointerCancelled = (event: PointerEvent) => { if (attempt.current?.owner === `pointer:${event.pointerId}`) cancel(); };
   const keyDown = (event: KeyboardEvent) => {
     if (event.code !== 'Space' && event.key !== ' ') return;
+    if (event.ctrlKey || event.metaKey || event.altKey) { cancel();return; }
     event.preventDefault();
     if (event.repeat || suppressed.has('Space') || button.disabled || document.activeElement !== button) return;
     suppressed.add('Space');begin('key:Space', event);
   };
   const keyUp = (event: KeyboardEvent) => {
     if (event.code !== 'Space' && event.key !== ' ') return;
-    if (suppressed.delete('Space')) { event.preventDefault();finish('key:Space', event); }
+    if (suppressed.delete('Space')) { event.preventDefault();if (event.ctrlKey || event.metaKey || event.altKey) cancel();else finish('key:Space', event); }
   };
   const blur = () => { cancel();suppressed.clear(); };
   const hidden = () => { if (document.hidden) blur(); };

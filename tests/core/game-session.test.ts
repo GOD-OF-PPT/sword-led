@@ -5,6 +5,7 @@ import { createLesson } from '../../src/tutorial/lesson.js';
 import { validateRun } from '../../src/core/index.js';
 import { MemoryStorage, session, TestLocks } from './persistence-fixtures';
 import { SAVE_KEY } from '../../src/platform/storage.js';
+import { cueFor } from '../../src/platform/audio.js';
 
 async function fixture() {
   const storage = new MemoryStorage(), port = session(storage);
@@ -108,6 +109,24 @@ describe('game presentation session', () => {
     expect(f.game.command({ type: 'advanceSummary' }, f.game.capture())).toBe(true);
     expect(f.game.getSnapshot().note).toBe('第 2 轮开炉：三件新来料，配额 150，配给 1 煤。');
     await f.game.dispose();
+  });
+  it('emits only new accepted effects, never read/animation/menu/settings replays', async () => {
+    const f = await fixture();const received: { revision: number; cue: string | null }[] = [];
+    const unsubscribe = f.game.subscribeAccepted(action => received.push({ revision: action.revision, cue: cueFor(action.events) }));
+    expect(received).toEqual([]);f.hit();expect(received).toEqual([{ revision: 1, cue: 'standard' }]);
+    f.advance(500);const feedback = f.game.getSnapshot().feedback;if (feedback) f.game.finishFeedback(feedback.id);
+    f.game.setSlow(true);f.game.setReducedMotion(true);f.game.menu();f.game.continueRun(f.game.capture());
+    expect(received).toHaveLength(1);f.game.command({ type: 'settleRound', recycleRemaining: true }, f.game.capture());
+    expect(received.at(-1)).toEqual({ revision: 2, cue: 'missed' });
+    unsubscribe();f.game.command({ type: 'advanceSummary' }, f.game.capture());expect(received).toHaveLength(2);await f.game.dispose();
+  });
+  it('carries dirty accepted memory forward without replacing the saved slot or rerolling its result', async () => {
+    const f = await fixture(), raw = f.storage.getItem(SAVE_KEY);f.storage.failMain = true;f.hit();
+    const accepted = f.port.getSnapshot().state, old = f.game.capture();expect(f.port.getSnapshot().dirty).toBe(true);
+    expect(f.game.keepInMemory(old)).toBe(true);expect(f.port.getSnapshot()).toMatchObject({ mode: 'memory', state: accepted });
+    expect(f.storage.getItem(SAVE_KEY)).toBe(raw);expect(f.game.command({ type: 'heat', pieceId: '1:1' }, old)).toBe(false);
+    expect(f.hit()).toBe(true);expect(f.port.getSnapshot().state?.revision).toBe(2);expect(f.port.getSnapshot().state?.rng.strike.draws).toBe(2);
+    expect(f.storage.getItem(SAVE_KEY)).toBe(raw);await f.game.dispose();expect(f.storage.getItem(SAVE_KEY)).toBe(raw);
   });
 });
 

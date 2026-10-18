@@ -10,7 +10,9 @@ export const APP_TEMPLATE = `
       <button id="continue" class="primary">继续契约</button><button id="new-game">新契约</button>
       <div class="menu-pair"><button id="practice">先练两锤</button><button id="options">操作设置</button></div>
       <div id="menu-storage" class="storage-message"></div>
+      <p id="menu-settings-notice" class="small storage-message" hidden></p>
       <div class="menu-pair"><button id="reconnect">重新读取契约</button><button id="recover" hidden>从备份恢复</button></div>
+      <button id="menu-keep-memory" hidden>保留当前进度，不保存续玩</button>
       <button id="memory-game" class="quiet">不保存试玩</button>
       <p class="small">鼠标或空格按住蓄锤，松开落锤。没有现实时间倒计时，随时暂停。</p>
     </article>
@@ -22,8 +24,9 @@ export const APP_TEMPLATE = `
       <div class="seal-counter" aria-label="契约印记"><span class="contract-token" aria-hidden="true">契</span><span>契约印记<strong id="seals">3 / 3</strong></span></div>
       <div class="wallet"><span>金币<strong id="coins">0</strong></span><span>废料<strong id="scrap">0</strong></span><span>煤<strong id="coal">1</strong></span></div>
       <button id="pause" class="pause-button" aria-label="暂停">Ⅱ</button>
+      <button id="mute" class="mute-button" aria-label="静音" aria-pressed="false">音效开</button>
     </header>
-    <div id="storage-banner" class="storage-banner" hidden><span id="storage-text"></span><button id="retry-save">重试保存</button><button id="refresh-slot">读取最新契约</button></div>
+    <div id="storage-banner" class="storage-banner" hidden><span id="storage-text"></span><button id="retry-save">重试保存</button><button id="refresh-slot">读取最新契约</button><button id="keep-memory">保留进度，不保存续玩</button></div>
     <aside id="lesson-banner" class="lesson-banner paper" hidden><div><b id="lesson-title"></b><span id="lesson-text"></span><small id="lesson-hint"></small></div><button id="lesson-reset">重练本课</button><button id="lesson-next" class="primary">下一课</button><button id="lesson-exit">返回契约</button></aside>
     <main id="workshop" class="workshop">
       <section class="scene-panel" aria-label="锻造工坊"><canvas id="forge-scene" aria-label="铁锤、砧台与当前铁件"></canvas>

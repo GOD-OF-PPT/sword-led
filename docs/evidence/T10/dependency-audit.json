@@ -1,0 +1,14 @@
+{
+  "command": "npm audit --json --registry=https://registry.npmjs.org/",
+  "exitCode": 0,
+  "observedVulnerabilities": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "dependencyTreeCount": 86,
+  "packageLockSha256": "fb6298f489290886a8b47e266b4205a94acf9763086af45b1cc2992a01d8a73f"
+}

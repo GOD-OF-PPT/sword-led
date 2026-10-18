@@ -1,0 +1,33 @@
+{
+  "injection": "native context suspended at creation; first resume completion held by test only",
+  "stale": {
+    "contexts": 1,
+    "constructors": 1,
+    "states": [
+      "suspended"
+    ],
+    "active": 0,
+    "starts": 0,
+    "stops": 0,
+    "maxActive": 0,
+    "frequencies": [],
+    "peak": 0
+  },
+  "fresh": {
+    "contexts": 1,
+    "constructors": 1,
+    "states": [
+      "running"
+    ],
+    "active": 3,
+    "starts": 3,
+    "stops": 3,
+    "maxActive": 3,
+    "frequencies": [
+      719,
+      1193,
+      1777
+    ],
+    "peak": 0.005641675554215908
+  }
+}

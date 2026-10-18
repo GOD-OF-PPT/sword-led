@@ -1,6 +1,6 @@
 # 游戏实施方案与确认范围
 
-版本v0.2（2026-10-17确认；2026-10-18更新进度）。状态：T04–T08内核、存档、R2、美术和工坊已有独立证据；T09已接完整经营/结算/终局，实际结果见[确认记录](decision-record.md)、[R2](reviews/R2-kernel-and-balance.md)、[T08](reviews/T08-workshop-validation.md)与[R3](reviews/R3-full-contract-flow.md)。之后继续T10声音/设置与品质，不重开确认门槛。
+版本v0.2（2026-10-17确认；2026-10-18更新进度）。状态：T04–T09规则、存档、美术、完整UI/R3已有证据；T10已接声音/设置与品质，实际结果见[确认记录](decision-record.md)、[R3](reviews/R3-full-contract-flow.md)及[T10报告](reviews/T10-quality-validation.md)。继续T11–T12，不重开确认门槛。
 
 ## 1. 本次要做成什么
 
