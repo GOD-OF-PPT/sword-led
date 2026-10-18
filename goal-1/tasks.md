@@ -47,14 +47,14 @@
 
 ## T05 — 商人、进阶与可靠存档
 
-- [ ] 完成
+- [x] 完成（2026-10-18）
 - 前置：T04。
 - 范围：商人限购、升级、日程与轮次奖励；版本化存档验证/恢复；无美术依赖的完整局接口。
 - 独立验证：购买不透支/不重复/不额外加铁坯；重载保存随机状态；损坏存档回退；商人日程、终局拒绝后续交易测试。
-- 执行记录：
-- 验证与修复：
-- [杠精审查]：
-- 提交与远程证据：
+- 执行记录：正式 buy/四商品报价、原子双货币扣款、两级/每访限购、修补、复盘与下轮配给；新增 Accepted journal、validateRun 回放/全快照校验、schema v1 主档/备份、dirty/重试/显式覆盖恢复、Web Locks writer lease、唯一持久化会话与 Window 生命周期接线。区分规则 runId/revision、旧输入 generation、activationEpoch 和工作副本 workingBase；SDK 构建为 core/session 两入口及共享 chunk，零运行时依赖。合同 `docs/persistence-and-merchant.md`、完整报告 `docs/reviews/T05-persistence-validation.md`、原生证据 `docs/evidence/T05/native-bfcache.json` 已交付。B 选型和 v0.2 确认保持，未进入美术/页面任务。
+- 验证与修复：干净 npm ci 退出0、43包/44审计/0 vulnerabilities；npm run check 退出0，7文件/141测试、双配置 strict/构建通过；对当前产物跑8浏览器集成全部通过。实际97命令到第三轮商人784金币/22废料/2印记，继续到第六轮验证二级升级；完整会话保存并恢复交易限购和修补后印记。原生 Chrome156/macOS管道验证真正BFCache/旧heap/最新档/旧代号拒绝，证据hash匹配当前三份bundle；真实localStorage配额耗尽、破碎后刷新、备份恢复、双窗口/dirty冲突均验证。修复通知错误采纳基准、通知取消激活、激活中接受操作、失败读污染工作副本基准四条链，均先有回归失败再复验通过；临时DEBUG/对照页已清理。Node导入构建SDK完成保存/校验/销毁，lease释放；测试服务器停止。35篇Markdown/87本地链接、原始input/9图/prompt hash、B确认、依赖/凭证/隔离/无占位与生产无测试钩子检查、OpenSpec strict通过。
+- [杠精审查]：通过。交易、回放、写盘错误、恢复与真正浏览器生命周期均有实现与证据；没有用赋值钱包或伪造pageshow证明流程。141单测/8浏览器夹具不代表完整玩家界面或高可玩性通过；商人/恢复/错误的实际页面接线仍由T08–T10复验，T06整局平衡与R2、T07美术和最终交付保持未完成。
+- 提交与远程证据：主交付 `d58ccfdd1ac3d757293def2643944fdd00a01e0b` 已推送 origin/main；任务/检查清单与边界记录另作后续提交。最后再核对本地HEAD=远程main、工作区干净，最新SHA以Git历史为准。
 
 ## T06 — 整局策略验证与全面检查 R2
 
