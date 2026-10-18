@@ -1,5 +1,5 @@
 {
-  "status": "browser-technical-verification-passed-pending-git-receipt",
+  "status": "browser-technical-verification-complete",
   "recordedAt": "2026-10-18T22:28:32.575Z",
   "currentMatrix": {
     "session": 39776,
@@ -197,5 +197,19 @@
     "snapshot": "tmp/previews/T11-4",
     "smoke": "preview-smoke.json",
     "exitCode": 0
+  },
+  "gitWhitespace": {
+    "scope": "Diff from 0f3867d through delivery commit 3b95a4e, excluding only generated case-*/*-error-context.md under T11-4",
+    "exitCode": 0,
+    "rawDiagnosticContext": "Playwright generated code-context blank-line echoes include trailing spaces. Their original bytes/hashes are deliberately retained; full git show --check reports those generated contexts, no source or handwritten-document whitespace errors."
+  },
+  "gitDelivery": {
+    "commit": "3b95a4e93e9b73fc18e31ec437ddfeae7420dccd",
+    "pushSession": 62271,
+    "pushExitCode": 0,
+    "remoteReadSession": 40867,
+    "remoteReadExitCode": 0,
+    "remoteMainMatches": true,
+    "note": "Task receipt follows in a separate documentation commit; final HEAD/remote/clean check is performed after pushing it, outside its own circular hash."
   }
 }

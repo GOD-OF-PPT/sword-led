@@ -93,7 +93,7 @@ npm run simulate -- --replay docs/evidence/T06/verify-v1.medium-victory.json
 
 默认53场景，每个最终状态都完整回放；输出统计JSON、逐局CSV.gz与胜负witness。已有输出不会覆盖；参数、输入误差假设和指标边界见模拟合同。T06 实测批次约18分钟，速度取决于设备，模型输入秒数不等于脚本耗时或真人整局时长。
 
-正式入口为根路径`/`；开发服务还提供`/design/b/preview/index.html`美术校验页。`test:art`核对9张生产图片、alpha、288姿态、24材料帧和设计组件；它与正式页面测试分别记录。机器证据归档工具为`node scripts/collect-ui-evidence.mjs --stage T10 --out <新的证据目录>`，已有证据不覆盖；归档前需生成最新unit/UI/storage报告。
+旧版入口为`/`，新版为`/v2.html`；开发服务还提供`/design/b/preview/index.html`美术校验页。`test:art`核对B风格的9张图片、alpha、288姿态、24材料帧和设计组件；D素材在新版UI/alpha规格中核对，两者证据分别记录。旧阶段机器证据归档工具为`node scripts/collect-ui-evidence.mjs --stage T10 --out <新的证据目录>`，已有证据不覆盖；归档前需生成最新unit/UI/storage报告。新版完整矩阵使用贡献说明中的v2 collector。
 
 构建后可在 Node 中调用同一个正式内核：
 

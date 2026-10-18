@@ -20,7 +20,7 @@ npm run test:art
 
 保留有意义的红测、原因和修复，证据说明代码/构建身份、测试过滤条件和实际结果。归档评论时仅提交索引/有限摘要与来源，不复制长评全文或把旧评论当今日已验证缺陷；[采集脚本](scripts/research/steam-reviews.mjs)拒绝覆盖既有证据，复采指定新的输出目录。
 
-v2核心开发可先执行`npm run verify:v2 -- --seeds 1 --out tmp/v2-new-smoke`，完整记录为29组合×32种子。结果只代表定义的策略与合成输入误差；数值/核心逻辑变化后重新验证，不能拿旧规则数据证明新版。归档当前单测/UI/新SDK报告可用`node scripts/collect-ui-evidence.mjs --stage T11.3 --out <新的目录>`；跨引擎v2子集使用独立collector，输出目录不覆盖。不要在页面测试运行中重新构建同一个dist。D素材原图/提示词/编码合同见[美术维护](design/d/README.md)，`scripts/art/prepare-d.py`仅做格式导出与alpha/hash验证。
+v2核心开发可先执行`npm run verify:v2 -- --seeds 1 --out tmp/v2-new-smoke`，当前阶段记录为29组合×32种子，不代表原1000种子最终规模已覆盖。结果只代表定义的策略与合成输入误差；数值/核心逻辑变化后重新验证，不能拿旧规则数据证明新版。归档当前单测/UI/新SDK报告可用`node scripts/collect-ui-evidence.mjs --stage T11.3 --out <新的目录>`；跨引擎v2子集使用独立collector，输出目录不覆盖。不要在页面测试运行中重新构建同一个dist。D素材原图/提示词/编码合同见[美术维护](design/d/README.md)，`scripts/art/prepare-d.py`仅做格式导出与alpha/hash验证。
 
 新版完整报告用`node scripts/collect-v2-cross.mjs --report test-results/v2-release-report.json --out <新目录> --expected 212 --projects 7 --purpose <本次范围>`归档；会拒绝跳过、重试、失败或不匹配的数量，并用当前构建SDK回放附件状态、记录源/产物指纹。原始失败报告另存诊断目录，不伪装成绿报告。高DPR截图可在测试全部结束后用可选维护脚本`scripts/encode-browser-evidence.py --report <原报告> --out <新临时目录>`无损换容器，需要Pillow/cwebp，不是游戏或测试运行依赖。它逐图验证完整解码RGBA/尺寸及ICC/Exif，保留原PNG和原始报告于忽略临时目录、记录原/归档hash；再将生成的report.json交给collector。压缩不裁切/重画，原图稿PNG仍原样提交。不要在原生性能测试同时编码截图。
 
