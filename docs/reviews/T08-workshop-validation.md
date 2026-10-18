@@ -49,6 +49,8 @@
 
 原生Chrome测试是隔离的自动化浏览器输入，不代替真人试玩。受控测试使用Playwright Clock或测试侧DOM事件时间戳；生产没有强制成功、设置钱包/终局或测试时钟入口。Clock覆盖performance、Event.timeStamp及rAF的行为见[官方说明](https://playwright.dev/docs/clock)，并另有非受控原生输入验证。
 
+证据时点分别保留：先串行运行页面/SDK；后续只改页面文案/布局/应用编排后，在最终网页构建另复跑26项并归档。未改的SDK源与三份产物SHA一致，沿用已通过的8项回归；没有把较早网页截图替代最终页面检查。
+
 截图：[主菜单](../evidence/T08/ui/main-menu.png)、[720工坊](../evidence/T08/ui/workshop-1280.png)、[1080工坊](../evidence/T08/ui/workshop-1920.png)、[临界精钢](../evidence/T08/ui/critical-steel.png)、[教学](../evidence/T08/ui/tutorial-crack.png)、[暂停](../evidence/T08/ui/paused-workshop.png)。临界精钢由critical-steel-0正常UI五次重锤偏击得到，进度9/热10/应力72/完整1，三风险37/43/55全部与正式视图一致，正余热仍允许最后一击。
 
 ## 本机预览与后续
