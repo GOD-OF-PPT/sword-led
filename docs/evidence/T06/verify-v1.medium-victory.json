@@ -1,0 +1,2458 @@
+{
+  "scenario": {
+    "id": "balanced-adaptive-medium-heat-normal-clean",
+    "strategy": "balanced",
+    "hammer": "adaptive",
+    "skill": "medium",
+    "upgrades": "heat",
+    "slow": false,
+    "duplicateSpam": false
+  },
+  "state": {
+    "rulesVersion": "forge-v1",
+    "runId": "simulation",
+    "seed": "verify-v1-0001",
+    "revision": 336,
+    "phase": "victory",
+    "round": 12,
+    "coins": 3268,
+    "scrap": 3,
+    "coal": 0,
+    "seals": 1,
+    "upgrades": {
+      "handle": 0,
+      "bellows": 2,
+      "anvil": 2
+    },
+    "pieces": [
+      {
+        "id": "12:1",
+        "material": "iron",
+        "progress": 35,
+        "heat": 56,
+        "stress": 100,
+        "integrity": 2,
+        "status": "delivered"
+      },
+      {
+        "id": "12:2",
+        "material": "steel",
+        "progress": 26,
+        "heat": 22,
+        "stress": 100,
+        "integrity": 1,
+        "status": "delivered"
+      },
+      {
+        "id": "12:3",
+        "material": "steel",
+        "progress": 15,
+        "heat": 12,
+        "stress": 55,
+        "integrity": 1,
+        "status": "delivered"
+      }
+    ],
+    "rng": {
+      "stock": {
+        "state": 1910100235,
+        "draws": 11
+      },
+      "strike": {
+        "state": 2625750370,
+        "draws": 258
+      }
+    },
+    "history": [
+      {
+        "round": 1,
+        "quota": 120,
+        "delivered": 136,
+        "deficit": 0,
+        "metQuota": true,
+        "sealsBefore": 3,
+        "sealsAfter": 3,
+        "coalRemaining": 1,
+        "pieces": [
+          {
+            "id": "1:1",
+            "material": "iron",
+            "progress": 9,
+            "heat": 22,
+            "stress": 62,
+            "integrity": 2,
+            "status": "delivered"
+          },
+          {
+            "id": "1:2",
+            "material": "iron",
+            "progress": 10,
+            "heat": 52,
+            "stress": 28,
+            "integrity": 4,
+            "status": "delivered"
+          },
+          {
+            "id": "1:3",
+            "material": "steel",
+            "progress": 6,
+            "heat": 76,
+            "stress": 14,
+            "integrity": 3,
+            "status": "recycled"
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "quota": 150,
+        "delivered": 155,
+        "deficit": 0,
+        "metQuota": true,
+        "sealsBefore": 3,
+        "sealsAfter": 3,
+        "coalRemaining": 1,
+        "pieces": [
+          {
+            "id": "2:1",
+            "material": "iron",
+            "progress": 15,
+            "heat": 16,
+            "stress": 55,
+            "integrity": 3,
+            "status": "delivered"
+          },
+          {
+            "id": "2:2",
+            "material": "steel",
+            "progress": 5,
+            "heat": 76,
+            "stress": 14,
+            "integrity": 3,
+            "status": "delivered"
+          },
+          {
+            "id": "2:3",
+            "material": "steel",
+            "progress": 6,
+            "heat": 76,
+            "stress": 14,
+            "integrity": 3,
+            "status": "recycled"
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "quota": 180,
+        "delivered": 206,
+        "deficit": 0,
+        "metQuota": true,
+        "sealsBefore": 3,
+        "sealsAfter": 3,
+        "coalRemaining": 1,
+        "pieces": [
+          {
+            "id": "3:1",
+            "material": "iron",
+            "progress": 16,
+            "heat": 28,
+            "stress": 42,
+            "integrity": 4,
+            "status": "delivered"
+          },
+          {
+            "id": "3:2",
+            "material": "steel",
+            "progress": 6,
+            "heat": 40,
+            "stress": 53,
+            "integrity": 0,
+            "status": "broken"
+          },
+          {
+            "id": "3:3",
+            "material": "meteorite",
+            "progress": 9,
+            "heat": 42,
+            "stress": 38,
+            "integrity": 1,
+            "status": "delivered"
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "quota": 210,
+        "delivered": 227,
+        "deficit": 0,
+        "metQuota": true,
+        "sealsBefore": 3,
+        "sealsAfter": 3,
+        "coalRemaining": 1,
+        "pieces": [
+          {
+            "id": "4:1",
+            "material": "iron",
+            "progress": 20,
+            "heat": 64,
+            "stress": 74,
+            "integrity": 3,
+            "status": "delivered"
+          },
+          {
+            "id": "4:2",
+            "material": "steel",
+            "progress": 9,
+            "heat": 52,
+            "stress": 28,
+            "integrity": 3,
+            "status": "delivered"
+          },
+          {
+            "id": "4:3",
+            "material": "steel",
+            "progress": 5,
+            "heat": 76,
+            "stress": 14,
+            "integrity": 3,
+            "status": "recycled"
+          }
+        ]
+      },
+      {
+        "round": 5,
+        "quota": 250,
+        "delivered": 267,
+        "deficit": 0,
+        "metQuota": true,
+        "sealsBefore": 3,
+        "sealsAfter": 3,
+        "coalRemaining": 1,
+        "pieces": [
+          {
+            "id": "5:1",
+            "material": "iron",
+            "progress": 20,
+            "heat": 76,
+            "stress": 61,
+            "integrity": 4,
+            "status": "delivered"
+          },
+          {
+            "id": "5:2",
+            "material": "steel",
+            "progress": 14,
+            "heat": 16,
+            "stress": 55,
+            "integrity": 2,
+            "status": "delivered"
+          },
+          {
+            "id": "5:3",
+            "material": "steel",
+            "progress": 7,
+            "heat": 64,
+            "stress": 21,
+            "integrity": 3,
+            "status": "recycled"
+          }
+        ]
+      },
+      {
+        "round": 6,
+        "quota": 290,
+        "delivered": 290,
+        "deficit": 0,
+        "metQuota": true,
+        "sealsBefore": 3,
+        "sealsAfter": 3,
+        "coalRemaining": 1,
+        "pieces": [
+          {
+            "id": "6:1",
+            "material": "iron",
+            "progress": 29,
+            "heat": 34,
+            "stress": 87,
+            "integrity": 4,
+            "status": "delivered"
+          },
+          {
+            "id": "6:2",
+            "material": "steel",
+            "progress": 10,
+            "heat": 52,
+            "stress": 28,
+            "integrity": 3,
+            "status": "delivered"
+          },
+          {
+            "id": "6:3",
+            "material": "steel",
+            "progress": 6,
+            "heat": 76,
+            "stress": 14,
+            "integrity": 3,
+            "status": "recycled"
+          }
+        ]
+      },
+      {
+        "round": 7,
+        "quota": 340,
+        "delivered": 350,
+        "deficit": 0,
+        "metQuota": true,
+        "sealsBefore": 3,
+        "sealsAfter": 3,
+        "coalRemaining": 2,
+        "pieces": [
+          {
+            "id": "7:1",
+            "material": "iron",
+            "progress": 20,
+            "heat": 40,
+            "stress": 95,
+            "integrity": 1,
+            "status": "delivered"
+          },
+          {
+            "id": "7:2",
+            "material": "steel",
+            "progress": 14,
+            "heat": 40,
+            "stress": 35,
+            "integrity": 3,
+            "status": "delivered"
+          },
+          {
+            "id": "7:3",
+            "material": "steel",
+            "progress": 10,
+            "heat": 28,
+            "stress": 51,
+            "integrity": 2,
+            "status": "delivered"
+          }
+        ]
+      },
+      {
+        "round": 8,
+        "quota": 390,
+        "delivered": 390,
+        "deficit": 0,
+        "metQuota": true,
+        "sealsBefore": 3,
+        "sealsAfter": 3,
+        "coalRemaining": 2,
+        "pieces": [
+          {
+            "id": "8:1",
+            "material": "iron",
+            "progress": 20,
+            "heat": 46,
+            "stress": 92,
+            "integrity": 2,
+            "status": "delivered"
+          },
+          {
+            "id": "8:2",
+            "material": "steel",
+            "progress": 14,
+            "heat": 34,
+            "stress": 40,
+            "integrity": 3,
+            "status": "delivered"
+          },
+          {
+            "id": "8:3",
+            "material": "steel",
+            "progress": 14,
+            "heat": 40,
+            "stress": 35,
+            "integrity": 3,
+            "status": "delivered"
+          }
+        ]
+      },
+      {
+        "round": 9,
+        "quota": 450,
+        "delivered": 453,
+        "deficit": 0,
+        "metQuota": true,
+        "sealsBefore": 3,
+        "sealsAfter": 3,
+        "coalRemaining": 2,
+        "pieces": [
+          {
+            "id": "9:1",
+            "material": "iron",
+            "progress": 29,
+            "heat": 28,
+            "stress": 89,
+            "integrity": 4,
+            "status": "delivered"
+          },
+          {
+            "id": "9:2",
+            "material": "steel",
+            "progress": 16,
+            "heat": 0,
+            "stress": 70,
+            "integrity": 2,
+            "status": "delivered"
+          },
+          {
+            "id": "9:3",
+            "material": "steel",
+            "progress": 14,
+            "heat": 34,
+            "stress": 40,
+            "integrity": 3,
+            "status": "delivered"
+          }
+        ]
+      },
+      {
+        "round": 10,
+        "quota": 520,
+        "delivered": 351,
+        "deficit": 169,
+        "metQuota": false,
+        "sealsBefore": 3,
+        "sealsAfter": 2,
+        "coalRemaining": 0,
+        "pieces": [
+          {
+            "id": "10:1",
+            "material": "iron",
+            "progress": 26,
+            "heat": 22,
+            "stress": 100,
+            "integrity": 1,
+            "status": "delivered"
+          },
+          {
+            "id": "10:2",
+            "material": "steel",
+            "progress": 21,
+            "heat": 44,
+            "stress": 96,
+            "integrity": 0,
+            "status": "broken"
+          },
+          {
+            "id": "10:3",
+            "material": "iron",
+            "progress": 34,
+            "heat": 0,
+            "stress": 100,
+            "integrity": 2,
+            "status": "delivered"
+          }
+        ]
+      },
+      {
+        "round": 11,
+        "quota": 600,
+        "delivered": 616,
+        "deficit": 0,
+        "metQuota": true,
+        "sealsBefore": 2,
+        "sealsAfter": 2,
+        "coalRemaining": 1,
+        "pieces": [
+          {
+            "id": "11:1",
+            "material": "iron",
+            "progress": 28,
+            "heat": 16,
+            "stress": 100,
+            "integrity": 3,
+            "status": "delivered"
+          },
+          {
+            "id": "11:2",
+            "material": "steel",
+            "progress": 27,
+            "heat": 46,
+            "stress": 80,
+            "integrity": 3,
+            "status": "delivered"
+          },
+          {
+            "id": "11:3",
+            "material": "meteorite",
+            "progress": 14,
+            "heat": 14,
+            "stress": 56,
+            "integrity": 1,
+            "status": "delivered"
+          }
+        ]
+      },
+      {
+        "round": 12,
+        "quota": 700,
+        "delivered": 587,
+        "deficit": 113,
+        "metQuota": false,
+        "sealsBefore": 2,
+        "sealsAfter": 1,
+        "coalRemaining": 0,
+        "pieces": [
+          {
+            "id": "12:1",
+            "material": "iron",
+            "progress": 35,
+            "heat": 56,
+            "stress": 100,
+            "integrity": 2,
+            "status": "delivered"
+          },
+          {
+            "id": "12:2",
+            "material": "steel",
+            "progress": 26,
+            "heat": 22,
+            "stress": 100,
+            "integrity": 1,
+            "status": "delivered"
+          },
+          {
+            "id": "12:3",
+            "material": "steel",
+            "progress": 15,
+            "heat": 12,
+            "stress": 55,
+            "integrity": 1,
+            "status": "delivered"
+          }
+        ]
+      }
+    ],
+    "purchases": [
+      {
+        "afterRound": 3,
+        "product": "bellows",
+        "level": 1,
+        "coins": 120,
+        "scrap": 4
+      },
+      {
+        "afterRound": 3,
+        "product": "anvil",
+        "level": 1,
+        "coins": 160,
+        "scrap": 6
+      },
+      {
+        "afterRound": 6,
+        "product": "bellows",
+        "level": 2,
+        "coins": 220,
+        "scrap": 6
+      },
+      {
+        "afterRound": 6,
+        "product": "anvil",
+        "level": 2,
+        "coins": 260,
+        "scrap": 8
+      }
+    ],
+    "stats": {
+      "strikes": 258,
+      "successfulStrikes": 226,
+      "damagedStrikes": 32,
+      "heats": 14,
+      "deliveredPieces": 29,
+      "recycledPieces": 5,
+      "brokenPieces": 2,
+      "highestTier": 7,
+      "coinsEarned": 4028,
+      "coinsSpent": 760,
+      "scrapEarned": 27,
+      "scrapSpent": 24,
+      "roundsMet": 10,
+      "roundsMissed": 2
+    },
+    "journal": [
+      {
+        "type": "strike",
+        "pieceId": "1:1",
+        "mode": "standard",
+        "timingMark": 5646
+      },
+      {
+        "type": "strike",
+        "pieceId": "1:1",
+        "mode": "standard",
+        "timingMark": 4520
+      },
+      {
+        "type": "strike",
+        "pieceId": "1:1",
+        "mode": "heavy",
+        "timingMark": 5066
+      },
+      {
+        "type": "strike",
+        "pieceId": "1:1",
+        "mode": "heavy",
+        "timingMark": 4820
+      },
+      {
+        "type": "strike",
+        "pieceId": "1:1",
+        "mode": "heavy",
+        "timingMark": 4891
+      },
+      {
+        "type": "deliver",
+        "pieceId": "1:1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "1:2",
+        "mode": "standard",
+        "timingMark": 4786
+      },
+      {
+        "type": "strike",
+        "pieceId": "1:2",
+        "mode": "standard",
+        "timingMark": 5286
+      },
+      {
+        "type": "strike",
+        "pieceId": "1:2",
+        "mode": "standard",
+        "timingMark": 4355
+      },
+      {
+        "type": "strike",
+        "pieceId": "1:2",
+        "mode": "standard",
+        "timingMark": 4268
+      },
+      {
+        "type": "deliver",
+        "pieceId": "1:2"
+      },
+      {
+        "type": "strike",
+        "pieceId": "1:3",
+        "mode": "standard",
+        "timingMark": 4715
+      },
+      {
+        "type": "strike",
+        "pieceId": "1:3",
+        "mode": "standard",
+        "timingMark": 5057
+      },
+      {
+        "type": "recycle",
+        "pieceId": "1:3"
+      },
+      {
+        "type": "settleRound",
+        "recycleRemaining": false
+      },
+      {
+        "type": "advanceSummary"
+      },
+      {
+        "type": "strike",
+        "pieceId": "2:1",
+        "mode": "standard",
+        "timingMark": 5066
+      },
+      {
+        "type": "strike",
+        "pieceId": "2:1",
+        "mode": "standard",
+        "timingMark": 3724
+      },
+      {
+        "type": "strike",
+        "pieceId": "2:1",
+        "mode": "standard",
+        "timingMark": 6569
+      },
+      {
+        "type": "strike",
+        "pieceId": "2:1",
+        "mode": "standard",
+        "timingMark": 6319
+      },
+      {
+        "type": "strike",
+        "pieceId": "2:1",
+        "mode": "standard",
+        "timingMark": 5583
+      },
+      {
+        "type": "strike",
+        "pieceId": "2:1",
+        "mode": "standard",
+        "timingMark": 4582
+      },
+      {
+        "type": "strike",
+        "pieceId": "2:1",
+        "mode": "standard",
+        "timingMark": 4441
+      },
+      {
+        "type": "deliver",
+        "pieceId": "2:1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "2:2",
+        "mode": "standard",
+        "timingMark": 4635
+      },
+      {
+        "type": "strike",
+        "pieceId": "2:2",
+        "mode": "standard",
+        "timingMark": 6778
+      },
+      {
+        "type": "deliver",
+        "pieceId": "2:2"
+      },
+      {
+        "type": "strike",
+        "pieceId": "2:3",
+        "mode": "standard",
+        "timingMark": 4821
+      },
+      {
+        "type": "strike",
+        "pieceId": "2:3",
+        "mode": "standard",
+        "timingMark": 5067
+      },
+      {
+        "type": "recycle",
+        "pieceId": "2:3"
+      },
+      {
+        "type": "settleRound",
+        "recycleRemaining": false
+      },
+      {
+        "type": "advanceSummary"
+      },
+      {
+        "type": "strike",
+        "pieceId": "3:1",
+        "mode": "standard",
+        "timingMark": 4662
+      },
+      {
+        "type": "strike",
+        "pieceId": "3:1",
+        "mode": "standard",
+        "timingMark": 5312
+      },
+      {
+        "type": "strike",
+        "pieceId": "3:1",
+        "mode": "standard",
+        "timingMark": 5805
+      },
+      {
+        "type": "strike",
+        "pieceId": "3:1",
+        "mode": "standard",
+        "timingMark": 4921
+      },
+      {
+        "type": "strike",
+        "pieceId": "3:1",
+        "mode": "standard",
+        "timingMark": 5617
+      },
+      {
+        "type": "strike",
+        "pieceId": "3:1",
+        "mode": "standard",
+        "timingMark": 5097
+      },
+      {
+        "type": "deliver",
+        "pieceId": "3:1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "3:2",
+        "mode": "standard",
+        "timingMark": 4467
+      },
+      {
+        "type": "strike",
+        "pieceId": "3:2",
+        "mode": "standard",
+        "timingMark": 5568
+      },
+      {
+        "type": "strike",
+        "pieceId": "3:2",
+        "mode": "standard",
+        "timingMark": 3445
+      },
+      {
+        "type": "strike",
+        "pieceId": "3:2",
+        "mode": "standard",
+        "timingMark": 5555
+      },
+      {
+        "type": "strike",
+        "pieceId": "3:2",
+        "mode": "standard",
+        "timingMark": 5775
+      },
+      {
+        "type": "strike",
+        "pieceId": "3:3",
+        "mode": "standard",
+        "timingMark": 3662
+      },
+      {
+        "type": "strike",
+        "pieceId": "3:3",
+        "mode": "standard",
+        "timingMark": 5675
+      },
+      {
+        "type": "strike",
+        "pieceId": "3:3",
+        "mode": "light",
+        "timingMark": 5060
+      },
+      {
+        "type": "strike",
+        "pieceId": "3:3",
+        "mode": "light",
+        "timingMark": 4099
+      },
+      {
+        "type": "strike",
+        "pieceId": "3:3",
+        "mode": "heavy",
+        "timingMark": 5137
+      },
+      {
+        "type": "deliver",
+        "pieceId": "3:3"
+      },
+      {
+        "type": "settleRound",
+        "recycleRemaining": false
+      },
+      {
+        "type": "advanceSummary"
+      },
+      {
+        "type": "buy",
+        "productId": "bellows"
+      },
+      {
+        "type": "buy",
+        "productId": "anvil"
+      },
+      {
+        "type": "leaveMerchant"
+      },
+      {
+        "type": "strike",
+        "pieceId": "4:1",
+        "mode": "standard",
+        "timingMark": 4963
+      },
+      {
+        "type": "strike",
+        "pieceId": "4:1",
+        "mode": "standard",
+        "timingMark": 5964
+      },
+      {
+        "type": "strike",
+        "pieceId": "4:1",
+        "mode": "standard",
+        "timingMark": 5683
+      },
+      {
+        "type": "strike",
+        "pieceId": "4:1",
+        "mode": "standard",
+        "timingMark": 6996
+      },
+      {
+        "type": "strike",
+        "pieceId": "4:1",
+        "mode": "standard",
+        "timingMark": 6247
+      },
+      {
+        "type": "strike",
+        "pieceId": "4:1",
+        "mode": "standard",
+        "timingMark": 5277
+      },
+      {
+        "type": "heat",
+        "pieceId": "4:1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "4:1",
+        "mode": "standard",
+        "timingMark": 4068
+      },
+      {
+        "type": "strike",
+        "pieceId": "4:1",
+        "mode": "standard",
+        "timingMark": 5536
+      },
+      {
+        "type": "strike",
+        "pieceId": "4:1",
+        "mode": "standard",
+        "timingMark": 5595
+      },
+      {
+        "type": "deliver",
+        "pieceId": "4:1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "4:2",
+        "mode": "standard",
+        "timingMark": 6189
+      },
+      {
+        "type": "strike",
+        "pieceId": "4:2",
+        "mode": "standard",
+        "timingMark": 3907
+      },
+      {
+        "type": "strike",
+        "pieceId": "4:2",
+        "mode": "standard",
+        "timingMark": 5175
+      },
+      {
+        "type": "strike",
+        "pieceId": "4:2",
+        "mode": "standard",
+        "timingMark": 4011
+      },
+      {
+        "type": "deliver",
+        "pieceId": "4:2"
+      },
+      {
+        "type": "strike",
+        "pieceId": "4:3",
+        "mode": "standard",
+        "timingMark": 5043
+      },
+      {
+        "type": "strike",
+        "pieceId": "4:3",
+        "mode": "standard",
+        "timingMark": 6108
+      },
+      {
+        "type": "recycle",
+        "pieceId": "4:3"
+      },
+      {
+        "type": "settleRound",
+        "recycleRemaining": false
+      },
+      {
+        "type": "advanceSummary"
+      },
+      {
+        "type": "strike",
+        "pieceId": "5:1",
+        "mode": "standard",
+        "timingMark": 4546
+      },
+      {
+        "type": "strike",
+        "pieceId": "5:1",
+        "mode": "standard",
+        "timingMark": 5064
+      },
+      {
+        "type": "strike",
+        "pieceId": "5:1",
+        "mode": "standard",
+        "timingMark": 6765
+      },
+      {
+        "type": "strike",
+        "pieceId": "5:1",
+        "mode": "standard",
+        "timingMark": 5942
+      },
+      {
+        "type": "strike",
+        "pieceId": "5:1",
+        "mode": "standard",
+        "timingMark": 4862
+      },
+      {
+        "type": "strike",
+        "pieceId": "5:1",
+        "mode": "standard",
+        "timingMark": 4322
+      },
+      {
+        "type": "heat",
+        "pieceId": "5:1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "5:1",
+        "mode": "standard",
+        "timingMark": 5413
+      },
+      {
+        "type": "strike",
+        "pieceId": "5:1",
+        "mode": "standard",
+        "timingMark": 5984
+      },
+      {
+        "type": "deliver",
+        "pieceId": "5:1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "5:2",
+        "mode": "standard",
+        "timingMark": 6923
+      },
+      {
+        "type": "strike",
+        "pieceId": "5:2",
+        "mode": "standard",
+        "timingMark": 3734
+      },
+      {
+        "type": "strike",
+        "pieceId": "5:2",
+        "mode": "standard",
+        "timingMark": 5398
+      },
+      {
+        "type": "strike",
+        "pieceId": "5:2",
+        "mode": "standard",
+        "timingMark": 4157
+      },
+      {
+        "type": "strike",
+        "pieceId": "5:2",
+        "mode": "standard",
+        "timingMark": 5659
+      },
+      {
+        "type": "strike",
+        "pieceId": "5:2",
+        "mode": "standard",
+        "timingMark": 6285
+      },
+      {
+        "type": "strike",
+        "pieceId": "5:2",
+        "mode": "standard",
+        "timingMark": 5151
+      },
+      {
+        "type": "deliver",
+        "pieceId": "5:2"
+      },
+      {
+        "type": "strike",
+        "pieceId": "5:3",
+        "mode": "standard",
+        "timingMark": 5744
+      },
+      {
+        "type": "strike",
+        "pieceId": "5:3",
+        "mode": "standard",
+        "timingMark": 6201
+      },
+      {
+        "type": "strike",
+        "pieceId": "5:3",
+        "mode": "standard",
+        "timingMark": 5463
+      },
+      {
+        "type": "recycle",
+        "pieceId": "5:3"
+      },
+      {
+        "type": "settleRound",
+        "recycleRemaining": false
+      },
+      {
+        "type": "advanceSummary"
+      },
+      {
+        "type": "strike",
+        "pieceId": "6:1",
+        "mode": "standard",
+        "timingMark": 4586
+      },
+      {
+        "type": "strike",
+        "pieceId": "6:1",
+        "mode": "standard",
+        "timingMark": 6284
+      },
+      {
+        "type": "strike",
+        "pieceId": "6:1",
+        "mode": "standard",
+        "timingMark": 4965
+      },
+      {
+        "type": "strike",
+        "pieceId": "6:1",
+        "mode": "standard",
+        "timingMark": 3551
+      },
+      {
+        "type": "strike",
+        "pieceId": "6:1",
+        "mode": "standard",
+        "timingMark": 5965
+      },
+      {
+        "type": "strike",
+        "pieceId": "6:1",
+        "mode": "standard",
+        "timingMark": 5134
+      },
+      {
+        "type": "heat",
+        "pieceId": "6:1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "6:1",
+        "mode": "standard",
+        "timingMark": 4719
+      },
+      {
+        "type": "strike",
+        "pieceId": "6:1",
+        "mode": "standard",
+        "timingMark": 5878
+      },
+      {
+        "type": "strike",
+        "pieceId": "6:1",
+        "mode": "standard",
+        "timingMark": 4697
+      },
+      {
+        "type": "strike",
+        "pieceId": "6:1",
+        "mode": "heavy",
+        "timingMark": 4369
+      },
+      {
+        "type": "strike",
+        "pieceId": "6:1",
+        "mode": "standard",
+        "timingMark": 4729
+      },
+      {
+        "type": "deliver",
+        "pieceId": "6:1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "6:2",
+        "mode": "standard",
+        "timingMark": 4692
+      },
+      {
+        "type": "strike",
+        "pieceId": "6:2",
+        "mode": "standard",
+        "timingMark": 4982
+      },
+      {
+        "type": "strike",
+        "pieceId": "6:2",
+        "mode": "standard",
+        "timingMark": 6551
+      },
+      {
+        "type": "strike",
+        "pieceId": "6:2",
+        "mode": "standard",
+        "timingMark": 4317
+      },
+      {
+        "type": "deliver",
+        "pieceId": "6:2"
+      },
+      {
+        "type": "strike",
+        "pieceId": "6:3",
+        "mode": "standard",
+        "timingMark": 5450
+      },
+      {
+        "type": "strike",
+        "pieceId": "6:3",
+        "mode": "standard",
+        "timingMark": 4700
+      },
+      {
+        "type": "recycle",
+        "pieceId": "6:3"
+      },
+      {
+        "type": "settleRound",
+        "recycleRemaining": false
+      },
+      {
+        "type": "advanceSummary"
+      },
+      {
+        "type": "buy",
+        "productId": "bellows"
+      },
+      {
+        "type": "buy",
+        "productId": "anvil"
+      },
+      {
+        "type": "leaveMerchant"
+      },
+      {
+        "type": "strike",
+        "pieceId": "7:1",
+        "mode": "standard",
+        "timingMark": 3114
+      },
+      {
+        "type": "strike",
+        "pieceId": "7:1",
+        "mode": "standard",
+        "timingMark": 5803
+      },
+      {
+        "type": "strike",
+        "pieceId": "7:1",
+        "mode": "standard",
+        "timingMark": 3994
+      },
+      {
+        "type": "strike",
+        "pieceId": "7:1",
+        "mode": "standard",
+        "timingMark": 4956
+      },
+      {
+        "type": "strike",
+        "pieceId": "7:1",
+        "mode": "standard",
+        "timingMark": 4839
+      },
+      {
+        "type": "strike",
+        "pieceId": "7:1",
+        "mode": "standard",
+        "timingMark": 6254
+      },
+      {
+        "type": "heat",
+        "pieceId": "7:1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "7:1",
+        "mode": "standard",
+        "timingMark": 4645
+      },
+      {
+        "type": "strike",
+        "pieceId": "7:1",
+        "mode": "standard",
+        "timingMark": 874
+      },
+      {
+        "type": "strike",
+        "pieceId": "7:1",
+        "mode": "light",
+        "timingMark": 4255
+      },
+      {
+        "type": "strike",
+        "pieceId": "7:1",
+        "mode": "light",
+        "timingMark": 4802
+      },
+      {
+        "type": "strike",
+        "pieceId": "7:1",
+        "mode": "light",
+        "timingMark": 5376
+      },
+      {
+        "type": "strike",
+        "pieceId": "7:1",
+        "mode": "standard",
+        "timingMark": 4864
+      },
+      {
+        "type": "deliver",
+        "pieceId": "7:1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "7:2",
+        "mode": "standard",
+        "timingMark": 5900
+      },
+      {
+        "type": "strike",
+        "pieceId": "7:2",
+        "mode": "standard",
+        "timingMark": 5210
+      },
+      {
+        "type": "strike",
+        "pieceId": "7:2",
+        "mode": "standard",
+        "timingMark": 5044
+      },
+      {
+        "type": "strike",
+        "pieceId": "7:2",
+        "mode": "standard",
+        "timingMark": 4802
+      },
+      {
+        "type": "strike",
+        "pieceId": "7:2",
+        "mode": "standard",
+        "timingMark": 4563
+      },
+      {
+        "type": "deliver",
+        "pieceId": "7:2"
+      },
+      {
+        "type": "strike",
+        "pieceId": "7:3",
+        "mode": "standard",
+        "timingMark": 5847
+      },
+      {
+        "type": "strike",
+        "pieceId": "7:3",
+        "mode": "standard",
+        "timingMark": 4642
+      },
+      {
+        "type": "strike",
+        "pieceId": "7:3",
+        "mode": "heavy",
+        "timingMark": 4313
+      },
+      {
+        "type": "strike",
+        "pieceId": "7:3",
+        "mode": "heavy",
+        "timingMark": 3069
+      },
+      {
+        "type": "strike",
+        "pieceId": "7:3",
+        "mode": "standard",
+        "timingMark": 3575
+      },
+      {
+        "type": "deliver",
+        "pieceId": "7:3"
+      },
+      {
+        "type": "settleRound",
+        "recycleRemaining": false
+      },
+      {
+        "type": "advanceSummary"
+      },
+      {
+        "type": "strike",
+        "pieceId": "8:1",
+        "mode": "standard",
+        "timingMark": 6731
+      },
+      {
+        "type": "strike",
+        "pieceId": "8:1",
+        "mode": "standard",
+        "timingMark": 4456
+      },
+      {
+        "type": "strike",
+        "pieceId": "8:1",
+        "mode": "standard",
+        "timingMark": 4995
+      },
+      {
+        "type": "strike",
+        "pieceId": "8:1",
+        "mode": "standard",
+        "timingMark": 5768
+      },
+      {
+        "type": "strike",
+        "pieceId": "8:1",
+        "mode": "standard",
+        "timingMark": 5851
+      },
+      {
+        "type": "strike",
+        "pieceId": "8:1",
+        "mode": "standard",
+        "timingMark": 3521
+      },
+      {
+        "type": "heat",
+        "pieceId": "8:1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "8:1",
+        "mode": "standard",
+        "timingMark": 5269
+      },
+      {
+        "type": "strike",
+        "pieceId": "8:1",
+        "mode": "standard",
+        "timingMark": 6070
+      },
+      {
+        "type": "strike",
+        "pieceId": "8:1",
+        "mode": "standard",
+        "timingMark": 6379
+      },
+      {
+        "type": "strike",
+        "pieceId": "8:1",
+        "mode": "heavy",
+        "timingMark": 4466
+      },
+      {
+        "type": "deliver",
+        "pieceId": "8:1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "8:2",
+        "mode": "standard",
+        "timingMark": 4317
+      },
+      {
+        "type": "strike",
+        "pieceId": "8:2",
+        "mode": "standard",
+        "timingMark": 5074
+      },
+      {
+        "type": "strike",
+        "pieceId": "8:2",
+        "mode": "standard",
+        "timingMark": 4543
+      },
+      {
+        "type": "strike",
+        "pieceId": "8:2",
+        "mode": "standard",
+        "timingMark": 5614
+      },
+      {
+        "type": "strike",
+        "pieceId": "8:2",
+        "mode": "heavy",
+        "timingMark": 5190
+      },
+      {
+        "type": "deliver",
+        "pieceId": "8:2"
+      },
+      {
+        "type": "strike",
+        "pieceId": "8:3",
+        "mode": "standard",
+        "timingMark": 4748
+      },
+      {
+        "type": "strike",
+        "pieceId": "8:3",
+        "mode": "standard",
+        "timingMark": 5098
+      },
+      {
+        "type": "strike",
+        "pieceId": "8:3",
+        "mode": "standard",
+        "timingMark": 5792
+      },
+      {
+        "type": "strike",
+        "pieceId": "8:3",
+        "mode": "standard",
+        "timingMark": 4971
+      },
+      {
+        "type": "strike",
+        "pieceId": "8:3",
+        "mode": "standard",
+        "timingMark": 4603
+      },
+      {
+        "type": "deliver",
+        "pieceId": "8:3"
+      },
+      {
+        "type": "settleRound",
+        "recycleRemaining": false
+      },
+      {
+        "type": "advanceSummary"
+      },
+      {
+        "type": "strike",
+        "pieceId": "9:1",
+        "mode": "standard",
+        "timingMark": 5726
+      },
+      {
+        "type": "strike",
+        "pieceId": "9:1",
+        "mode": "standard",
+        "timingMark": 4575
+      },
+      {
+        "type": "strike",
+        "pieceId": "9:1",
+        "mode": "standard",
+        "timingMark": 3893
+      },
+      {
+        "type": "strike",
+        "pieceId": "9:1",
+        "mode": "standard",
+        "timingMark": 5215
+      },
+      {
+        "type": "strike",
+        "pieceId": "9:1",
+        "mode": "standard",
+        "timingMark": 5266
+      },
+      {
+        "type": "strike",
+        "pieceId": "9:1",
+        "mode": "standard",
+        "timingMark": 6045
+      },
+      {
+        "type": "heat",
+        "pieceId": "9:1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "9:1",
+        "mode": "standard",
+        "timingMark": 6078
+      },
+      {
+        "type": "strike",
+        "pieceId": "9:1",
+        "mode": "standard",
+        "timingMark": 7319
+      },
+      {
+        "type": "strike",
+        "pieceId": "9:1",
+        "mode": "standard",
+        "timingMark": 4591
+      },
+      {
+        "type": "strike",
+        "pieceId": "9:1",
+        "mode": "standard",
+        "timingMark": 4305
+      },
+      {
+        "type": "strike",
+        "pieceId": "9:1",
+        "mode": "standard",
+        "timingMark": 4373
+      },
+      {
+        "type": "strike",
+        "pieceId": "9:1",
+        "mode": "standard",
+        "timingMark": 5349
+      },
+      {
+        "type": "deliver",
+        "pieceId": "9:1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "9:2",
+        "mode": "standard",
+        "timingMark": 4974
+      },
+      {
+        "type": "strike",
+        "pieceId": "9:2",
+        "mode": "standard",
+        "timingMark": 5922
+      },
+      {
+        "type": "strike",
+        "pieceId": "9:2",
+        "mode": "standard",
+        "timingMark": 5971
+      },
+      {
+        "type": "strike",
+        "pieceId": "9:2",
+        "mode": "standard",
+        "timingMark": 5479
+      },
+      {
+        "type": "strike",
+        "pieceId": "9:2",
+        "mode": "heavy",
+        "timingMark": 4457
+      },
+      {
+        "type": "strike",
+        "pieceId": "9:2",
+        "mode": "heavy",
+        "timingMark": 4052
+      },
+      {
+        "type": "strike",
+        "pieceId": "9:2",
+        "mode": "heavy",
+        "timingMark": 6016
+      },
+      {
+        "type": "deliver",
+        "pieceId": "9:2"
+      },
+      {
+        "type": "strike",
+        "pieceId": "9:3",
+        "mode": "standard",
+        "timingMark": 2820
+      },
+      {
+        "type": "strike",
+        "pieceId": "9:3",
+        "mode": "standard",
+        "timingMark": 5610
+      },
+      {
+        "type": "strike",
+        "pieceId": "9:3",
+        "mode": "standard",
+        "timingMark": 4847
+      },
+      {
+        "type": "strike",
+        "pieceId": "9:3",
+        "mode": "standard",
+        "timingMark": 4828
+      },
+      {
+        "type": "strike",
+        "pieceId": "9:3",
+        "mode": "heavy",
+        "timingMark": 4676
+      },
+      {
+        "type": "deliver",
+        "pieceId": "9:3"
+      },
+      {
+        "type": "settleRound",
+        "recycleRemaining": false
+      },
+      {
+        "type": "advanceSummary"
+      },
+      {
+        "type": "leaveMerchant"
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:1",
+        "mode": "standard",
+        "timingMark": 4800
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:1",
+        "mode": "standard",
+        "timingMark": 5314
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:1",
+        "mode": "standard",
+        "timingMark": 5469
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:1",
+        "mode": "standard",
+        "timingMark": 4537
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:1",
+        "mode": "standard",
+        "timingMark": 5685
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:1",
+        "mode": "standard",
+        "timingMark": 4804
+      },
+      {
+        "type": "heat",
+        "pieceId": "10:1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:1",
+        "mode": "standard",
+        "timingMark": 4938
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:1",
+        "mode": "standard",
+        "timingMark": 4896
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:1",
+        "mode": "standard",
+        "timingMark": 4508
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:1",
+        "mode": "standard",
+        "timingMark": 4908
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:1",
+        "mode": "heavy",
+        "timingMark": 5820
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:1",
+        "mode": "standard",
+        "timingMark": 6827
+      },
+      {
+        "type": "deliver",
+        "pieceId": "10:1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:2",
+        "mode": "standard",
+        "timingMark": 5232
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:2",
+        "mode": "standard",
+        "timingMark": 5687
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:2",
+        "mode": "standard",
+        "timingMark": 5247
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:2",
+        "mode": "standard",
+        "timingMark": 4716
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:2",
+        "mode": "standard",
+        "timingMark": 3819
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:2",
+        "mode": "standard",
+        "timingMark": 5851
+      },
+      {
+        "type": "heat",
+        "pieceId": "10:2"
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:2",
+        "mode": "standard",
+        "timingMark": 5684
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:2",
+        "mode": "standard",
+        "timingMark": 5321
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:2",
+        "mode": "standard",
+        "timingMark": 5559
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:2",
+        "mode": "standard",
+        "timingMark": 3753
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:2",
+        "mode": "light",
+        "timingMark": 4961
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:3",
+        "mode": "standard",
+        "timingMark": 4595
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:3",
+        "mode": "standard",
+        "timingMark": 5277
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:3",
+        "mode": "standard",
+        "timingMark": 4712
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:3",
+        "mode": "standard",
+        "timingMark": 4584
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:3",
+        "mode": "standard",
+        "timingMark": 5817
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:3",
+        "mode": "standard",
+        "timingMark": 5067
+      },
+      {
+        "type": "heat",
+        "pieceId": "10:3"
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:3",
+        "mode": "standard",
+        "timingMark": 6521
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:3",
+        "mode": "standard",
+        "timingMark": 4427
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:3",
+        "mode": "standard",
+        "timingMark": 4713
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:3",
+        "mode": "standard",
+        "timingMark": 4769
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:3",
+        "mode": "standard",
+        "timingMark": 5647
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:3",
+        "mode": "standard",
+        "timingMark": 5646
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:3",
+        "mode": "standard",
+        "timingMark": 5686
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:3",
+        "mode": "standard",
+        "timingMark": 4529
+      },
+      {
+        "type": "strike",
+        "pieceId": "10:3",
+        "mode": "standard",
+        "timingMark": 4342
+      },
+      {
+        "type": "deliver",
+        "pieceId": "10:3"
+      },
+      {
+        "type": "settleRound",
+        "recycleRemaining": false
+      },
+      {
+        "type": "advanceSummary"
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:1",
+        "mode": "standard",
+        "timingMark": 3407
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:1",
+        "mode": "standard",
+        "timingMark": 5485
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:1",
+        "mode": "standard",
+        "timingMark": 5184
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:1",
+        "mode": "standard",
+        "timingMark": 4743
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:1",
+        "mode": "standard",
+        "timingMark": 3839
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:1",
+        "mode": "standard",
+        "timingMark": 5116
+      },
+      {
+        "type": "heat",
+        "pieceId": "11:1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:1",
+        "mode": "standard",
+        "timingMark": 4796
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:1",
+        "mode": "standard",
+        "timingMark": 3337
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:1",
+        "mode": "standard",
+        "timingMark": 5884
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:1",
+        "mode": "heavy",
+        "timingMark": 4311
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:1",
+        "mode": "heavy",
+        "timingMark": 5966
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:1",
+        "mode": "standard",
+        "timingMark": 6493
+      },
+      {
+        "type": "deliver",
+        "pieceId": "11:1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:2",
+        "mode": "standard",
+        "timingMark": 5019
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:2",
+        "mode": "standard",
+        "timingMark": 4142
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:2",
+        "mode": "standard",
+        "timingMark": 4479
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:2",
+        "mode": "standard",
+        "timingMark": 4099
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:2",
+        "mode": "standard",
+        "timingMark": 2874
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:2",
+        "mode": "standard",
+        "timingMark": 4436
+      },
+      {
+        "type": "heat",
+        "pieceId": "11:2"
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:2",
+        "mode": "standard",
+        "timingMark": 6543
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:2",
+        "mode": "standard",
+        "timingMark": 4424
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:2",
+        "mode": "standard",
+        "timingMark": 4801
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:2",
+        "mode": "heavy",
+        "timingMark": 5268
+      },
+      {
+        "type": "deliver",
+        "pieceId": "11:2"
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:3",
+        "mode": "standard",
+        "timingMark": 6033
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:3",
+        "mode": "standard",
+        "timingMark": 1472
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:3",
+        "mode": "standard",
+        "timingMark": 5016
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:3",
+        "mode": "standard",
+        "timingMark": 5253
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:3",
+        "mode": "heavy",
+        "timingMark": 4290
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:3",
+        "mode": "standard",
+        "timingMark": 4454
+      },
+      {
+        "type": "strike",
+        "pieceId": "11:3",
+        "mode": "light",
+        "timingMark": 5741
+      },
+      {
+        "type": "deliver",
+        "pieceId": "11:3"
+      },
+      {
+        "type": "settleRound",
+        "recycleRemaining": false
+      },
+      {
+        "type": "advanceSummary"
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:1",
+        "mode": "standard",
+        "timingMark": 5541
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:1",
+        "mode": "standard",
+        "timingMark": 5288
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:1",
+        "mode": "standard",
+        "timingMark": 5291
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:1",
+        "mode": "standard",
+        "timingMark": 4428
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:1",
+        "mode": "standard",
+        "timingMark": 3905
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:1",
+        "mode": "standard",
+        "timingMark": 4087
+      },
+      {
+        "type": "heat",
+        "pieceId": "12:1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:1",
+        "mode": "standard",
+        "timingMark": 5633
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:1",
+        "mode": "standard",
+        "timingMark": 4784
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:1",
+        "mode": "standard",
+        "timingMark": 5606
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:1",
+        "mode": "standard",
+        "timingMark": 5497
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:1",
+        "mode": "standard",
+        "timingMark": 4653
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:1",
+        "mode": "standard",
+        "timingMark": 5017
+      },
+      {
+        "type": "heat",
+        "pieceId": "12:1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:1",
+        "mode": "standard",
+        "timingMark": 4671
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:1",
+        "mode": "standard",
+        "timingMark": 5819
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:1",
+        "mode": "standard",
+        "timingMark": 41
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:1",
+        "mode": "light",
+        "timingMark": 5174
+      },
+      {
+        "type": "deliver",
+        "pieceId": "12:1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:2",
+        "mode": "standard",
+        "timingMark": 2690
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:2",
+        "mode": "standard",
+        "timingMark": 5145
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:2",
+        "mode": "standard",
+        "timingMark": 5036
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:2",
+        "mode": "standard",
+        "timingMark": 5609
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:2",
+        "mode": "standard",
+        "timingMark": 4635
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:2",
+        "mode": "standard",
+        "timingMark": 4768
+      },
+      {
+        "type": "heat",
+        "pieceId": "12:2"
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:2",
+        "mode": "standard",
+        "timingMark": 5756
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:2",
+        "mode": "standard",
+        "timingMark": 6283
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:2",
+        "mode": "standard",
+        "timingMark": 4470
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:2",
+        "mode": "heavy",
+        "timingMark": 5995
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:2",
+        "mode": "standard",
+        "timingMark": 3701
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:2",
+        "mode": "standard",
+        "timingMark": 6699
+      },
+      {
+        "type": "deliver",
+        "pieceId": "12:2"
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:3",
+        "mode": "standard",
+        "timingMark": 4678
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:3",
+        "mode": "standard",
+        "timingMark": 5844
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:3",
+        "mode": "standard",
+        "timingMark": 1419
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:3",
+        "mode": "standard",
+        "timingMark": 5427
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:3",
+        "mode": "light",
+        "timingMark": 5430
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:3",
+        "mode": "light",
+        "timingMark": 5423
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:3",
+        "mode": "light",
+        "timingMark": 5823
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:3",
+        "mode": "light",
+        "timingMark": 4430
+      },
+      {
+        "type": "strike",
+        "pieceId": "12:3",
+        "mode": "light",
+        "timingMark": 4834
+      },
+      {
+        "type": "deliver",
+        "pieceId": "12:3"
+      },
+      {
+        "type": "settleRound",
+        "recycleRemaining": false
+      }
+    ]
+  },
+  "metrics": {
+    "outcome": "victory",
+    "rounds": 12,
+    "seals": 1,
+    "coins": 3268,
+    "goldEarned": 4028,
+    "goldSpent": 760,
+    "scrap": 3,
+    "broken": 2,
+    "strikes": 258,
+    "heats": 14,
+    "accepted": 336,
+    "rejected": 0,
+    "activeInputSeconds": 206.306103515625,
+    "modeStrikes": {
+      "light": 13,
+      "standard": 226,
+      "heavy": 19
+    },
+    "gradeStrikes": {
+      "precise": 139,
+      "ordinary": 111,
+      "mishit": 8
+    },
+    "replayValid": true,
+    "stateBytes": 27219
+  }
+}

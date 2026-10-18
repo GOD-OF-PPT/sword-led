@@ -1,0 +1,85 @@
+[
+  {
+    "args": [
+      "--seeds",
+      "0"
+    ],
+    "status": 1,
+    "error": "Invalid seeds, prefix, suite, or workers"
+  },
+  {
+    "args": [
+      "--seeds",
+      "1.5"
+    ],
+    "status": 1,
+    "error": "Invalid seeds, prefix, suite, or workers"
+  },
+  {
+    "args": [
+      "--prefix",
+      "bad,prefix"
+    ],
+    "status": 1,
+    "error": "Invalid seeds, prefix, suite, or workers"
+  },
+  {
+    "args": [
+      "--workers",
+      "9"
+    ],
+    "status": 1,
+    "error": "Invalid seeds, prefix, suite, or workers"
+  },
+  {
+    "args": [
+      "--suite",
+      "missing"
+    ],
+    "status": 1,
+    "error": "Invalid seeds, prefix, suite, or workers"
+  },
+  {
+    "args": [
+      "--seeds"
+    ],
+    "status": 1,
+    "error": "Unknown, duplicate, or missing argument"
+  },
+  {
+    "args": [
+      "--seeds",
+      "1",
+      "--seeds",
+      "2"
+    ],
+    "status": 1,
+    "error": "Unknown, duplicate, or missing argument"
+  },
+  {
+    "args": [
+      "--replay",
+      "x",
+      "--seeds",
+      "1"
+    ],
+    "status": 1,
+    "error": "--replay cannot be combined with simulation options"
+  },
+  {
+    "args": [
+      "--unknown",
+      "1"
+    ],
+    "status": 1,
+    "error": "Unknown, duplicate, or missing argument"
+  },
+  {
+    "args": [
+      "--out",
+      "tmp/train-v1-cached"
+    ],
+    "status": 1,
+    "error": "Evidence already exists: /Users/gordon/githome/sword-led/tmp/train-v1-cached.json"
+  }
+]

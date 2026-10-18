@@ -1,0 +1,7326 @@
+{
+  "simulationVersion": "sim-v1",
+  "rulesVersion": "forge-v1",
+  "recordedAt": "2026-10-18T02:43:20.256Z",
+  "node": "v22.12.0",
+  "platform": "darwin/x64",
+  "seedPrefix": "verify-v1",
+  "seedsPerScenario": 1000,
+  "suite": "full",
+  "workers": 6,
+  "profiles": {
+    "low": {
+      "sigmaMs": 110,
+      "lapse": 0.12
+    },
+    "medium": {
+      "sigmaMs": 50,
+      "lapse": 0.06
+    },
+    "high": {
+      "sigmaMs": 22,
+      "lapse": 0.02
+    },
+    "perfect": {
+      "sigmaMs": 0,
+      "lapse": 0
+    },
+    "blind": {
+      "sigmaMs": 0,
+      "lapse": 1
+    }
+  },
+  "elapsedSeconds": 1094.766,
+  "sourceHashes": {
+    "package-lock.json": "fb6298f489290886a8b47e266b4205a94acf9763086af45b1cc2992a01d8a73f",
+    "src/core/game.ts": "f24e0a700318b346903d1118c7939686748c4e6e55a0780cf213ef72d7eeac38",
+    "src/core/guards.ts": "a25ec963eb41de673edccb4f1a95c420f73ddc7ee44be6c668a69ba2715c9e21",
+    "src/core/immutable.ts": "9bd212a1885c949d1928a2ecb8daa934483f0d26bce8ff196e8ae460d0a29044",
+    "src/core/index.ts": "f5e7344578fcdd160b6db1296daa9e98387ff99f9e3a45cebae63de9417459ed",
+    "src/core/merchant.ts": "3e23ff6535e9b32897f83bf7417660ac8208d8682dbc815be93b1a736024c978",
+    "src/core/model.ts": "e3568fa89a4dfa1805643dab0a48bbba1689523c01c8408b3e007fedb6d537fd",
+    "src/core/random.ts": "1a3d3d19684573bad8dbf4a80266b0fb343a8ddd32a7aec9d16efc729cf5fca9",
+    "src/core/rules.ts": "cb0a017b155304fe98f43f0f356d72125073fb116e0cbf06c4cfab21cc1f24cc",
+    "src/core/validate.ts": "321a0b1e3675c5d71a92c6bc173b0bd1ec55dcd4e3bc54f21d225f7da40c2dec",
+    "src/core/view.ts": "0a77454028a0695c4610c32e6295ea0379e603d5cd0ee5e394ee1e96d820a936",
+    "scripts/simulate.ts": "a5330c6e649aed61e5ad2eb1e9a15137c37972bd2026956c6302ee539780c169",
+    "scripts/simulation/input.ts": "ef29e3b2fe8a040cde4b35ec44517328c65b0b1167b36f5e8e5096bff6423c87",
+    "scripts/simulation/model.ts": "89f4fa58ec0148a8ffdd9489fe128eab89b0ab9653fbb26733471ed9b431b8be",
+    "scripts/simulation/policy.ts": "d4303667624161e603919788eafd80e1e90809a14d27d50a33b4415fb355b2dd",
+    "scripts/simulation/report.ts": "a5b6aeea754fe146e5cf87baac6393ecc96269368b51a82a448ba9f18b42c5d9",
+    "scripts/simulation/runner.ts": "5ec3124515a0b51f7c05bd3481cbf15d6e4e7b648137ca2090c1b31ee4afa7c7",
+    "scripts/simulation/worker.ts": "a2cf25955fa622718a6d377f93af32a5995127013096571ccc3c64f3987951e9"
+  },
+  "rows": {
+    "file": "docs/evidence/T06/verify-v1.csv.gz",
+    "count": 53000,
+    "sha256": "6dc205b5cf29c2445fb3d63debde938f71998e4a0ae0919631dfb460d4bb51be"
+  },
+  "witnesses": [
+    "medium-victory.json",
+    "raw-defeat.json"
+  ],
+  "reports": [
+    {
+      "scenario": {
+        "id": "conservative-light-low-heat-normal-clean",
+        "strategy": "conservative",
+        "hammer": "light",
+        "skill": "low",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 0,
+      "defeats": 1000,
+      "idle": 0,
+      "winRate": 0,
+      "meanRounds": 8.62,
+      "meanEarned": 2020.597,
+      "meanSpent": 0.5,
+      "meanCoins": 2020.097,
+      "meanScrap": 0.818,
+      "meanBroken": 0.833,
+      "meanStrikes": 217.46,
+      "meanHeats": 5.72,
+      "meanAccepted": 266.586,
+      "meanActiveInputSeconds": 184.79307751739515,
+      "medianActiveInputSeconds": 188.95651336669923,
+      "meanInputSecondsPerRound": 21.345372939885404,
+      "meanVictoryInputSeconds": null,
+      "meanVictoryStrikes": null,
+      "brokenPieceFraction": 0.03221191028615623,
+      "damageStrikeFraction": 0.09770992366412214,
+      "maxStateBytes": 29407,
+      "maxAccepted": 384,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 217460,
+        "standard": 0,
+        "heavy": 0
+      },
+      "gradeStrikes": {
+        "precise": 67282,
+        "ordinary": 106632,
+        "mishit": 43546
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 125
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 996,
+          "missed": 4,
+          "meanDelivered": 159.633
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 973,
+          "missed": 27,
+          "meanDelivered": 188.552
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 950,
+          "missed": 50,
+          "meanDelivered": 215.347
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 855,
+          "missed": 145,
+          "meanDelivered": 249.558
+        },
+        {
+          "round": 6,
+          "reached": 999,
+          "met": 482,
+          "missed": 517,
+          "meanDelivered": 274.6906906906907
+        },
+        {
+          "round": 7,
+          "reached": 993,
+          "met": 301,
+          "missed": 692,
+          "meanDelivered": 307.43504531722056
+        },
+        {
+          "round": 8,
+          "reached": 909,
+          "met": 61,
+          "missed": 848,
+          "meanDelivered": 310.30913091309134
+        },
+        {
+          "round": 9,
+          "reached": 570,
+          "met": 2,
+          "missed": 568,
+          "meanDelivered": 306.840350877193
+        },
+        {
+          "round": 10,
+          "reached": 141,
+          "met": 0,
+          "missed": 141,
+          "meanDelivered": 305.7730496453901
+        },
+        {
+          "round": 11,
+          "reached": 8,
+          "met": 0,
+          "missed": 8,
+          "meanDelivered": 340.5
+        },
+        {
+          "round": 12,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        }
+      ],
+      "purchases": {
+        "handle": 5,
+        "anvil": 0,
+        "bellows": 0,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "conservative-light-medium-heat-normal-clean",
+        "strategy": "conservative",
+        "hammer": "light",
+        "skill": "medium",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 0,
+      "defeats": 1000,
+      "idle": 0,
+      "winRate": 0,
+      "meanRounds": 10.212,
+      "meanEarned": 2833.201,
+      "meanSpent": 0,
+      "meanCoins": 2833.201,
+      "meanScrap": 0.259,
+      "meanBroken": 0.259,
+      "meanStrikes": 240.714,
+      "meanHeats": 5.925,
+      "meanAccepted": 299.268,
+      "meanActiveInputSeconds": 204.5829925003054,
+      "medianActiveInputSeconds": 200.71478805541992,
+      "meanInputSecondsPerRound": 19.9655363527448,
+      "meanVictoryInputSeconds": null,
+      "meanVictoryStrikes": null,
+      "brokenPieceFraction": 0.008454106280193236,
+      "damageStrikeFraction": 0.06744518391119753,
+      "maxStateBytes": 30313,
+      "maxAccepted": 392,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 240714,
+        "standard": 0,
+        "heavy": 0
+      },
+      "gradeStrikes": {
+        "precise": 150937,
+        "ordinary": 80829,
+        "mishit": 8948
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 125
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 159.864
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 998,
+          "missed": 2,
+          "meanDelivered": 189.722
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 995,
+          "missed": 5,
+          "meanDelivered": 217.471
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 983,
+          "missed": 17,
+          "meanDelivered": 258.414
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 858,
+          "missed": 142,
+          "meanDelivered": 303.69
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 817,
+          "missed": 183,
+          "meanDelivered": 350.077
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 401,
+          "missed": 599,
+          "meanDelivered": 366.821
+        },
+        {
+          "round": 9,
+          "reached": 983,
+          "met": 157,
+          "missed": 826,
+          "meanDelivered": 390.8087487283825
+        },
+        {
+          "round": 10,
+          "reached": 828,
+          "met": 3,
+          "missed": 825,
+          "meanDelivered": 388.2826086956522
+        },
+        {
+          "round": 11,
+          "reached": 355,
+          "met": 0,
+          "missed": 355,
+          "meanDelivered": 390.09859154929575
+        },
+        {
+          "round": 12,
+          "reached": 46,
+          "met": 0,
+          "missed": 46,
+          "meanDelivered": 391.17391304347825
+        }
+      ],
+      "purchases": {
+        "handle": 0,
+        "anvil": 0,
+        "bellows": 0,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "conservative-light-high-heat-normal-clean",
+        "strategy": "conservative",
+        "hammer": "light",
+        "skill": "high",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 238,
+      "defeats": 762,
+      "idle": 0,
+      "winRate": 0.238,
+      "meanRounds": 11.645,
+      "meanEarned": 3767.228,
+      "meanSpent": 0,
+      "meanCoins": 3767.228,
+      "meanScrap": 0.128,
+      "meanBroken": 0.128,
+      "meanStrikes": 259.8,
+      "meanHeats": 5.74,
+      "meanAccepted": 325.63,
+      "meanActiveInputSeconds": 220.79812533023065,
+      "medianActiveInputSeconds": 229.01004678344728,
+      "meanInputSecondsPerRound": 18.92339174231598,
+      "meanVictoryInputSeconds": 232.61522286743673,
+      "meanVictoryStrikes": 273.70168067226894,
+      "brokenPieceFraction": 0.0036639473307571203,
+      "damageStrikeFraction": 0.051566589684372596,
+      "maxStateBytes": 28205,
+      "maxAccepted": 360,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 259800,
+        "standard": 0,
+        "heavy": 0
+      },
+      "gradeStrikes": {
+        "precise": 248084,
+        "ordinary": 8582,
+        "mishit": 3134
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 125
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 159.864
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 999,
+          "missed": 1,
+          "meanDelivered": 189.704
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 999,
+          "missed": 1,
+          "meanDelivered": 217.708
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 995,
+          "missed": 5,
+          "meanDelivered": 259.137
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 971,
+          "missed": 29,
+          "meanDelivered": 308.559
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 949,
+          "missed": 51,
+          "meanDelivered": 358.06
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 806,
+          "missed": 194,
+          "meanDelivered": 393.61
+        },
+        {
+          "round": 9,
+          "reached": 998,
+          "met": 783,
+          "missed": 215,
+          "meanDelivered": 455.1503006012024
+        },
+        {
+          "round": 10,
+          "reached": 993,
+          "met": 381,
+          "missed": 612,
+          "meanDelivered": 493.9395770392749
+        },
+        {
+          "round": 11,
+          "reached": 946,
+          "met": 0,
+          "missed": 946,
+          "meanDelivered": 489.8646934460888
+        },
+        {
+          "round": 12,
+          "reached": 708,
+          "met": 0,
+          "missed": 708,
+          "meanDelivered": 490.75141242937855
+        }
+      ],
+      "purchases": {
+        "handle": 0,
+        "anvil": 0,
+        "bellows": 0,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "conservative-standard-low-heat-normal-clean",
+        "strategy": "conservative",
+        "hammer": "standard",
+        "skill": "low",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 0,
+      "defeats": 1000,
+      "idle": 0,
+      "winRate": 0,
+      "meanRounds": 8.055,
+      "meanEarned": 1814.5,
+      "meanSpent": 0,
+      "meanCoins": 1814.5,
+      "meanScrap": 0.245,
+      "meanBroken": 0.245,
+      "meanStrikes": 120.915,
+      "meanHeats": 3.625,
+      "meanAccepted": 165.581,
+      "meanActiveInputSeconds": 96.71423842437733,
+      "medianActiveInputSeconds": 95.70450714111328,
+      "meanInputSecondsPerRound": 11.959470580938946,
+      "meanVictoryInputSeconds": null,
+      "meanVictoryStrikes": null,
+      "brokenPieceFraction": 0.010138630250362093,
+      "damageStrikeFraction": 0.14233966009180002,
+      "maxStateBytes": 21009,
+      "maxAccepted": 250,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 0,
+        "standard": 120915,
+        "heavy": 0
+      },
+      "gradeStrikes": {
+        "precise": 33103,
+        "ordinary": 57222,
+        "mishit": 30590
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 998,
+          "missed": 2,
+          "meanDelivered": 124.931
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 985,
+          "missed": 15,
+          "meanDelivered": 159.234
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 957,
+          "missed": 43,
+          "meanDelivered": 189.667
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 924,
+          "missed": 76,
+          "meanDelivered": 216.138
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 746,
+          "missed": 254,
+          "meanDelivered": 249.129
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 292,
+          "missed": 708,
+          "meanDelivered": 268.565
+        },
+        {
+          "round": 7,
+          "reached": 976,
+          "met": 139,
+          "missed": 837,
+          "meanDelivered": 294.66905737704917
+        },
+        {
+          "round": 8,
+          "reached": 778,
+          "met": 14,
+          "missed": 764,
+          "meanDelivered": 294.68123393316193
+        },
+        {
+          "round": 9,
+          "reached": 265,
+          "met": 0,
+          "missed": 265,
+          "meanDelivered": 299.8566037735849
+        },
+        {
+          "round": 10,
+          "reached": 35,
+          "met": 0,
+          "missed": 35,
+          "meanDelivered": 290.42857142857144
+        },
+        {
+          "round": 11,
+          "reached": 1,
+          "met": 0,
+          "missed": 1,
+          "meanDelivered": 350
+        },
+        {
+          "round": 12,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        }
+      ],
+      "purchases": {
+        "handle": 0,
+        "anvil": 0,
+        "bellows": 0,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "conservative-standard-medium-heat-normal-clean",
+        "strategy": "conservative",
+        "hammer": "standard",
+        "skill": "medium",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 0,
+      "defeats": 1000,
+      "idle": 0,
+      "winRate": 0,
+      "meanRounds": 9.302,
+      "meanEarned": 2379.331,
+      "meanSpent": 0,
+      "meanCoins": 2379.331,
+      "meanScrap": 0.088,
+      "meanBroken": 0.088,
+      "meanStrikes": 135.329,
+      "meanHeats": 3.795,
+      "meanAccepted": 186.962,
+      "meanActiveInputSeconds": 108.23384721908596,
+      "medianActiveInputSeconds": 106.29398498535156,
+      "meanInputSecondsPerRound": 11.589008829909806,
+      "meanVictoryInputSeconds": null,
+      "meanVictoryStrikes": null,
+      "brokenPieceFraction": 0.0031534437038629685,
+      "damageStrikeFraction": 0.10313384418712915,
+      "maxStateBytes": 22504,
+      "maxAccepted": 267,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 0,
+        "standard": 135329,
+        "heavy": 0
+      },
+      "gradeStrikes": {
+        "precise": 76765,
+        "ordinary": 53187,
+        "mishit": 5377
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 125
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 998,
+          "missed": 2,
+          "meanDelivered": 159.773
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 994,
+          "missed": 6,
+          "meanDelivered": 190.029
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 985,
+          "missed": 15,
+          "meanDelivered": 218.149
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 926,
+          "missed": 74,
+          "meanDelivered": 256.933
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 659,
+          "missed": 341,
+          "meanDelivered": 295.003
+        },
+        {
+          "round": 7,
+          "reached": 997,
+          "met": 554,
+          "missed": 443,
+          "meanDelivered": 335.30892678034104
+        },
+        {
+          "round": 8,
+          "reached": 984,
+          "met": 161,
+          "missed": 823,
+          "meanDelivered": 341.4227642276423
+        },
+        {
+          "round": 9,
+          "reached": 839,
+          "met": 25,
+          "missed": 814,
+          "meanDelivered": 351.28605482717524
+        },
+        {
+          "round": 10,
+          "reached": 419,
+          "met": 0,
+          "missed": 419,
+          "meanDelivered": 351.3914081145585
+        },
+        {
+          "round": 11,
+          "reached": 62,
+          "met": 0,
+          "missed": 62,
+          "meanDelivered": 352.7258064516129
+        },
+        {
+          "round": 12,
+          "reached": 1,
+          "met": 0,
+          "missed": 1,
+          "meanDelivered": 350
+        }
+      ],
+      "purchases": {
+        "handle": 0,
+        "anvil": 0,
+        "bellows": 0,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "conservative-standard-high-heat-normal-clean",
+        "strategy": "conservative",
+        "hammer": "standard",
+        "skill": "high",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 0,
+      "defeats": 1000,
+      "idle": 0,
+      "winRate": 0,
+      "meanRounds": 10.476,
+      "meanEarned": 2987.134,
+      "meanSpent": 0,
+      "meanCoins": 2987.134,
+      "meanScrap": 0.058,
+      "meanBroken": 0.058,
+      "meanStrikes": 145.934,
+      "meanHeats": 3.901,
+      "meanAccepted": 204.04,
+      "meanActiveInputSeconds": 116.72004281033333,
+      "medianActiveInputSeconds": 118.11697482299805,
+      "meanInputSecondsPerRound": 11.103324351902389,
+      "meanVictoryInputSeconds": null,
+      "meanVictoryStrikes": null,
+      "brokenPieceFraction": 0.0018454880997836325,
+      "damageStrikeFraction": 0.083983170474324,
+      "maxStateBytes": 22036,
+      "maxAccepted": 260,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 0,
+        "standard": 145934,
+        "heavy": 0
+      },
+      "gradeStrikes": {
+        "precise": 135426,
+        "ordinary": 8793,
+        "mishit": 1715
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 125
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 159.864
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 190.038
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 986,
+          "missed": 14,
+          "meanDelivered": 217.06
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 982,
+          "missed": 18,
+          "meanDelivered": 258.793
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 911,
+          "missed": 89,
+          "meanDelivered": 306.354
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 822,
+          "missed": 178,
+          "meanDelivered": 351.867
+        },
+        {
+          "round": 8,
+          "reached": 999,
+          "met": 534,
+          "missed": 465,
+          "meanDelivered": 374.94794794794797
+        },
+        {
+          "round": 9,
+          "reached": 989,
+          "met": 241,
+          "missed": 748,
+          "meanDelivered": 403.41456016177955
+        },
+        {
+          "round": 10,
+          "reached": 883,
+          "met": 0,
+          "missed": 883,
+          "meanDelivered": 406.47904869762175
+        },
+        {
+          "round": 11,
+          "reached": 505,
+          "met": 0,
+          "missed": 505,
+          "meanDelivered": 406.3425742574257
+        },
+        {
+          "round": 12,
+          "reached": 100,
+          "met": 0,
+          "missed": 100,
+          "meanDelivered": 404.84
+        }
+      ],
+      "purchases": {
+        "handle": 0,
+        "anvil": 0,
+        "bellows": 0,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "conservative-heavy-low-heat-normal-clean",
+        "strategy": "conservative",
+        "hammer": "heavy",
+        "skill": "low",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 0,
+      "defeats": 1000,
+      "idle": 0,
+      "winRate": 0,
+      "meanRounds": 7.158,
+      "meanEarned": 1463.107,
+      "meanSpent": 0,
+      "meanCoins": 1463.107,
+      "meanScrap": 0.064,
+      "meanBroken": 0.064,
+      "meanStrikes": 75.05,
+      "meanHeats": 3.433,
+      "meanAccepted": 115.022,
+      "meanActiveInputSeconds": 56.31251771484377,
+      "medianActiveInputSeconds": 55.5099951171875,
+      "meanInputSecondsPerRound": 7.837633426607585,
+      "meanVictoryInputSeconds": null,
+      "meanVictoryStrikes": null,
+      "brokenPieceFraction": 0.00298034832821086,
+      "damageStrikeFraction": 0.1894603597601599,
+      "maxStateBytes": 13680,
+      "maxAccepted": 157,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 0,
+        "standard": 0,
+        "heavy": 75050
+      },
+      "gradeStrikes": {
+        "precise": 17777,
+        "ordinary": 33332,
+        "mishit": 23941
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 995,
+          "missed": 5,
+          "meanDelivered": 124.95
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 941,
+          "missed": 59,
+          "meanDelivered": 159.225
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 893,
+          "missed": 107,
+          "meanDelivered": 187.701
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 754,
+          "missed": 246,
+          "meanDelivered": 214.211
+        },
+        {
+          "round": 5,
+          "reached": 999,
+          "met": 472,
+          "missed": 527,
+          "meanDelivered": 235.54754754754754
+        },
+        {
+          "round": 6,
+          "reached": 977,
+          "met": 87,
+          "missed": 890,
+          "meanDelivered": 241.05731832139202
+        },
+        {
+          "round": 7,
+          "reached": 813,
+          "met": 16,
+          "missed": 797,
+          "meanDelivered": 259.07995079950797
+        },
+        {
+          "round": 8,
+          "reached": 344,
+          "met": 0,
+          "missed": 344,
+          "meanDelivered": 259.8488372093023
+        },
+        {
+          "round": 9,
+          "reached": 25,
+          "met": 0,
+          "missed": 25,
+          "meanDelivered": 247
+        },
+        {
+          "round": 10,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 11,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 12,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        }
+      ],
+      "purchases": {
+        "handle": 0,
+        "anvil": 0,
+        "bellows": 0,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "conservative-heavy-medium-heat-normal-clean",
+        "strategy": "conservative",
+        "hammer": "heavy",
+        "skill": "medium",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 0,
+      "defeats": 1000,
+      "idle": 0,
+      "winRate": 0,
+      "meanRounds": 8.012,
+      "meanEarned": 1796.35,
+      "meanSpent": 0,
+      "meanCoins": 1796.35,
+      "meanScrap": 0.046,
+      "meanBroken": 0.046,
+      "meanStrikes": 82.668,
+      "meanHeats": 3.339,
+      "meanAccepted": 127.009,
+      "meanActiveInputSeconds": 61.99902351531978,
+      "medianActiveInputSeconds": 61.687232208251956,
+      "meanInputSecondsPerRound": 7.707112181327234,
+      "meanVictoryInputSeconds": null,
+      "meanVictoryStrikes": null,
+      "brokenPieceFraction": 0.0019137959727076053,
+      "damageStrikeFraction": 0.14316301349978225,
+      "maxStateBytes": 16091,
+      "maxAccepted": 184,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 0,
+        "standard": 0,
+        "heavy": 82668
+      },
+      "gradeStrikes": {
+        "precise": 41212,
+        "ordinary": 37270,
+        "mishit": 4186
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 998,
+          "missed": 2,
+          "meanDelivered": 124.969
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 972,
+          "missed": 28,
+          "meanDelivered": 159.636
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 946,
+          "missed": 54,
+          "meanDelivered": 189.03
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 854,
+          "missed": 146,
+          "meanDelivered": 217.139
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 708,
+          "missed": 292,
+          "meanDelivered": 248.226
+        },
+        {
+          "round": 6,
+          "reached": 999,
+          "met": 372,
+          "missed": 627,
+          "meanDelivered": 269.22622622622623
+        },
+        {
+          "round": 7,
+          "reached": 950,
+          "met": 148,
+          "missed": 802,
+          "meanDelivered": 291.38947368421054
+        },
+        {
+          "round": 8,
+          "reached": 733,
+          "met": 14,
+          "missed": 719,
+          "meanDelivered": 294.1282401091405
+        },
+        {
+          "round": 9,
+          "reached": 291,
+          "met": 0,
+          "missed": 291,
+          "meanDelivered": 291.5292096219931
+        },
+        {
+          "round": 10,
+          "reached": 38,
+          "met": 0,
+          "missed": 38,
+          "meanDelivered": 285.05263157894734
+        },
+        {
+          "round": 11,
+          "reached": 1,
+          "met": 0,
+          "missed": 1,
+          "meanDelivered": 310
+        },
+        {
+          "round": 12,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        }
+      ],
+      "purchases": {
+        "handle": 0,
+        "anvil": 0,
+        "bellows": 0,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "conservative-heavy-high-heat-normal-clean",
+        "strategy": "conservative",
+        "hammer": "heavy",
+        "skill": "high",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 0,
+      "defeats": 1000,
+      "idle": 0,
+      "winRate": 0,
+      "meanRounds": 8.773,
+      "meanEarned": 2127.747,
+      "meanSpent": 0,
+      "meanCoins": 2127.747,
+      "meanScrap": 0.028,
+      "meanBroken": 0.028,
+      "meanStrikes": 89.455,
+      "meanHeats": 3.22,
+      "meanAccepted": 137.724,
+      "meanActiveInputSeconds": 67.08203885284435,
+      "medianActiveInputSeconds": 68.27730227661132,
+      "meanInputSecondsPerRound": 7.615381857785753,
+      "meanVictoryInputSeconds": null,
+      "meanVictoryStrikes": null,
+      "brokenPieceFraction": 0.0010638702078346442,
+      "damageStrikeFraction": 0.11466100273880722,
+      "maxStateBytes": 16318,
+      "maxAccepted": 188,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 0,
+        "standard": 0,
+        "heavy": 89455
+      },
+      "gradeStrikes": {
+        "precise": 78949,
+        "ordinary": 9460,
+        "mishit": 1046
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 999,
+          "missed": 1,
+          "meanDelivered": 124.971
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 984,
+          "missed": 16,
+          "meanDelivered": 159.771
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 973,
+          "missed": 27,
+          "meanDelivered": 189.614
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 891,
+          "missed": 109,
+          "meanDelivered": 217.64
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 838,
+          "missed": 162,
+          "meanDelivered": 254.262
+        },
+        {
+          "round": 6,
+          "reached": 998,
+          "met": 605,
+          "missed": 393,
+          "meanDelivered": 285.6683366733467
+        },
+        {
+          "round": 7,
+          "reached": 979,
+          "met": 385,
+          "missed": 594,
+          "meanDelivered": 320.4974463738509
+        },
+        {
+          "round": 8,
+          "reached": 913,
+          "met": 98,
+          "missed": 815,
+          "meanDelivered": 325.04928806133626
+        },
+        {
+          "round": 9,
+          "reached": 635,
+          "met": 0,
+          "missed": 635,
+          "meanDelivered": 323.0503937007874
+        },
+        {
+          "round": 10,
+          "reached": 233,
+          "met": 0,
+          "missed": 233,
+          "meanDelivered": 325.94849785407723
+        },
+        {
+          "round": 11,
+          "reached": 15,
+          "met": 0,
+          "missed": 15,
+          "meanDelivered": 318.1333333333333
+        },
+        {
+          "round": 12,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        }
+      ],
+      "purchases": {
+        "handle": 0,
+        "anvil": 0,
+        "bellows": 0,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "conservative-adaptive-low-heat-normal-clean",
+        "strategy": "conservative",
+        "hammer": "adaptive",
+        "skill": "low",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 0,
+      "defeats": 1000,
+      "idle": 0,
+      "winRate": 0,
+      "meanRounds": 8.38,
+      "meanEarned": 1927.902,
+      "meanSpent": 0,
+      "meanCoins": 1927.902,
+      "meanScrap": 0.631,
+      "meanBroken": 0.631,
+      "meanStrikes": 187.462,
+      "meanHeats": 5.046,
+      "meanAccepted": 234.849,
+      "meanActiveInputSeconds": 157.82490927658074,
+      "medianActiveInputSeconds": 152.45410202026366,
+      "meanInputSecondsPerRound": 18.735899465011514,
+      "meanVictoryInputSeconds": null,
+      "meanVictoryStrikes": null,
+      "brokenPieceFraction": 0.025099443118536197,
+      "damageStrikeFraction": 0.09859064770460146,
+      "maxStateBytes": 27288,
+      "maxAccepted": 351,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 168712,
+        "standard": 8523,
+        "heavy": 10227
+      },
+      "gradeStrikes": {
+        "precise": 56814,
+        "ordinary": 91498,
+        "mishit": 39150
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 999,
+          "missed": 1,
+          "meanDelivered": 124.965
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 998,
+          "missed": 2,
+          "meanDelivered": 159.708
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 973,
+          "missed": 27,
+          "meanDelivered": 189.381
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 959,
+          "missed": 41,
+          "meanDelivered": 216.539
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 833,
+          "missed": 167,
+          "meanDelivered": 252.645
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 396,
+          "missed": 604,
+          "meanDelivered": 273.184
+        },
+        {
+          "round": 7,
+          "reached": 990,
+          "met": 193,
+          "missed": 797,
+          "meanDelivered": 297.92929292929296
+        },
+        {
+          "round": 8,
+          "reached": 881,
+          "met": 29,
+          "missed": 852,
+          "meanDelivered": 298.96140749148697
+        },
+        {
+          "round": 9,
+          "reached": 426,
+          "met": 0,
+          "missed": 426,
+          "meanDelivered": 302.3333333333333
+        },
+        {
+          "round": 10,
+          "reached": 82,
+          "met": 0,
+          "missed": 82,
+          "meanDelivered": 292.9756097560976
+        },
+        {
+          "round": 11,
+          "reached": 1,
+          "met": 0,
+          "missed": 1,
+          "meanDelivered": 327
+        },
+        {
+          "round": 12,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        }
+      ],
+      "purchases": {
+        "handle": 0,
+        "anvil": 0,
+        "bellows": 0,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "conservative-adaptive-medium-heat-normal-clean",
+        "strategy": "conservative",
+        "hammer": "adaptive",
+        "skill": "medium",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 0,
+      "defeats": 1000,
+      "idle": 0,
+      "winRate": 0,
+      "meanRounds": 9.971,
+      "meanEarned": 2720.432,
+      "meanSpent": 0.1,
+      "meanCoins": 2720.332,
+      "meanScrap": 0.234,
+      "meanBroken": 0.237,
+      "meanStrikes": 211.162,
+      "meanHeats": 4.983,
+      "meanAccepted": 267.511,
+      "meanActiveInputSeconds": 177.78027066497805,
+      "medianActiveInputSeconds": 178.2953010559082,
+      "meanInputSecondsPerRound": 17.754291745006405,
+      "meanVictoryInputSeconds": null,
+      "meanVictoryStrikes": null,
+      "brokenPieceFraction": 0.007922976632233477,
+      "damageStrikeFraction": 0.06962426951818983,
+      "maxStateBytes": 28111,
+      "maxAccepted": 359,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 188373,
+        "standard": 11921,
+        "heavy": 10868
+      },
+      "gradeStrikes": {
+        "precise": 130334,
+        "ordinary": 72855,
+        "mishit": 7973
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 125
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 999,
+          "missed": 1,
+          "meanDelivered": 159.829
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 996,
+          "missed": 4,
+          "meanDelivered": 190
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 992,
+          "missed": 8,
+          "meanDelivered": 217.594
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 966,
+          "missed": 34,
+          "meanDelivered": 258.487
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 868,
+          "missed": 132,
+          "meanDelivered": 303.54
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 723,
+          "missed": 277,
+          "meanDelivered": 346.949
+        },
+        {
+          "round": 8,
+          "reached": 997,
+          "met": 309,
+          "missed": 688,
+          "meanDelivered": 360.94884653961884
+        },
+        {
+          "round": 9,
+          "reached": 962,
+          "met": 118,
+          "missed": 844,
+          "meanDelivered": 383.2910602910603
+        },
+        {
+          "round": 10,
+          "reached": 747,
+          "met": 0,
+          "missed": 747,
+          "meanDelivered": 388.1124497991968
+        },
+        {
+          "round": 11,
+          "reached": 249,
+          "met": 0,
+          "missed": 249,
+          "meanDelivered": 379.12449799196787
+        },
+        {
+          "round": 12,
+          "reached": 16,
+          "met": 0,
+          "missed": 16,
+          "meanDelivered": 382.4375
+        }
+      ],
+      "purchases": {
+        "handle": 1,
+        "anvil": 0,
+        "bellows": 0,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "conservative-adaptive-high-heat-normal-clean",
+        "strategy": "conservative",
+        "hammer": "adaptive",
+        "skill": "high",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 0,
+      "defeats": 1000,
+      "idle": 0,
+      "winRate": 0,
+      "meanRounds": 11.159,
+      "meanEarned": 3481.737,
+      "meanSpent": 0,
+      "meanCoins": 3481.737,
+      "meanScrap": 0.094,
+      "meanBroken": 0.094,
+      "meanStrikes": 215.446,
+      "meanHeats": 5.301,
+      "meanAccepted": 278.43,
+      "meanActiveInputSeconds": 181.09158263238524,
+      "medianActiveInputSeconds": 178.3438525390625,
+      "meanInputSecondsPerRound": 16.171784863694743,
+      "meanVictoryInputSeconds": null,
+      "meanVictoryStrikes": null,
+      "brokenPieceFraction": 0.002807897959793291,
+      "damageStrikeFraction": 0.053349795308337125,
+      "maxStateBytes": 25972,
+      "maxAccepted": 326,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 187616,
+        "standard": 15602,
+        "heavy": 12228
+      },
+      "gradeStrikes": {
+        "precise": 204426,
+        "ordinary": 8453,
+        "mishit": 2567
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 125
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 159.864
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 189.766
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 998,
+          "missed": 2,
+          "meanDelivered": 217.702
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 992,
+          "missed": 8,
+          "meanDelivered": 259.128
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 968,
+          "missed": 32,
+          "meanDelivered": 308.592
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 932,
+          "missed": 68,
+          "meanDelivered": 357.7
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 668,
+          "missed": 332,
+          "meanDelivered": 387.331
+        },
+        {
+          "round": 9,
+          "reached": 997,
+          "met": 601,
+          "missed": 396,
+          "meanDelivered": 445.25576730190573
+        },
+        {
+          "round": 10,
+          "reached": 982,
+          "met": 0,
+          "missed": 982,
+          "meanDelivered": 462.4806517311609
+        },
+        {
+          "round": 11,
+          "reached": 826,
+          "met": 0,
+          "missed": 826,
+          "meanDelivered": 490.4588377723971
+        },
+        {
+          "round": 12,
+          "reached": 354,
+          "met": 0,
+          "missed": 354,
+          "meanDelivered": 489.99717514124296
+        }
+      ],
+      "purchases": {
+        "handle": 0,
+        "anvil": 0,
+        "bellows": 0,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "balanced-light-low-heat-normal-clean",
+        "strategy": "balanced",
+        "hammer": "light",
+        "skill": "low",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 56,
+      "defeats": 944,
+      "idle": 0,
+      "winRate": 0.056,
+      "meanRounds": 10.909,
+      "meanEarned": 3067.479,
+      "meanSpent": 808.74,
+      "meanCoins": 2258.739,
+      "meanScrap": 3.487,
+      "meanBroken": 3.354,
+      "meanStrikes": 369.229,
+      "meanHeats": 19.489,
+      "meanAccepted": 446.683,
+      "meanActiveInputSeconds": 313.81723395690886,
+      "medianActiveInputSeconds": 317.0044334411621,
+      "meanInputSecondsPerRound": 28.701316777231355,
+      "meanVictoryInputSeconds": 350.669118625096,
+      "meanVictoryStrikes": 412.67857142857144,
+      "brokenPieceFraction": 0.10248418736822806,
+      "damageStrikeFraction": 0.0886170912902291,
+      "maxStateBytes": 39981,
+      "maxAccepted": 539,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 369229,
+        "standard": 0,
+        "heavy": 0
+      },
+      "gradeStrikes": {
+        "precise": 145461,
+        "ordinary": 149356,
+        "mishit": 74412
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 999,
+          "missed": 1,
+          "meanDelivered": 135.896
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 995,
+          "missed": 5,
+          "meanDelivered": 154.768
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 981,
+          "missed": 19,
+          "meanDelivered": 182.527
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 967,
+          "missed": 33,
+          "meanDelivered": 222.725
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 919,
+          "missed": 81,
+          "meanDelivered": 259.745
+        },
+        {
+          "round": 6,
+          "reached": 999,
+          "met": 719,
+          "missed": 280,
+          "meanDelivered": 264.017017017017
+        },
+        {
+          "round": 7,
+          "reached": 998,
+          "met": 879,
+          "missed": 119,
+          "meanDelivered": 342.77254509018036
+        },
+        {
+          "round": 8,
+          "reached": 997,
+          "met": 764,
+          "missed": 233,
+          "meanDelivered": 367.3309929789368
+        },
+        {
+          "round": 9,
+          "reached": 983,
+          "met": 481,
+          "missed": 502,
+          "meanDelivered": 382.33163784333675
+        },
+        {
+          "round": 10,
+          "reached": 900,
+          "met": 163,
+          "missed": 737,
+          "meanDelivered": 405.02222222222224
+        },
+        {
+          "round": 11,
+          "reached": 693,
+          "met": 34,
+          "missed": 659,
+          "meanDelivered": 399.4689754689755
+        },
+        {
+          "round": 12,
+          "reached": 339,
+          "met": 2,
+          "missed": 337,
+          "meanDelivered": 361.5486725663717
+        }
+      ],
+      "purchases": {
+        "handle": 1290,
+        "anvil": 1557,
+        "bellows": 1962,
+        "repair": 67
+      }
+    },
+    {
+      "scenario": {
+        "id": "balanced-light-medium-heat-normal-clean",
+        "strategy": "balanced",
+        "hammer": "light",
+        "skill": "medium",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 966,
+      "defeats": 34,
+      "idle": 0,
+      "winRate": 0.966,
+      "meanRounds": 11.997,
+      "meanEarned": 4180.071,
+      "meanSpent": 863.2,
+      "meanCoins": 3316.871,
+      "meanScrap": 2.573,
+      "meanBroken": 0.951,
+      "meanStrikes": 343.986,
+      "meanHeats": 16.468,
+      "meanAccepted": 426.544,
+      "meanActiveInputSeconds": 292.3660717628478,
+      "medianActiveInputSeconds": 291.9463516235352,
+      "meanInputSecondsPerRound": 24.369652209680734,
+      "meanVictoryInputSeconds": 292.18754677782397,
+      "meanVictoryStrikes": 343.7919254658385,
+      "brokenPieceFraction": 0.026423272484787864,
+      "damageStrikeFraction": 0.045211142313931384,
+      "maxStateBytes": 35699,
+      "maxAccepted": 475,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 343986,
+        "standard": 0,
+        "heavy": 0
+      },
+      "gradeStrikes": {
+        "precise": 256733,
+        "ordinary": 74443,
+        "mishit": 12810
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 136
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 155.049
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 999,
+          "missed": 1,
+          "meanDelivered": 183.185
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 227.026
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 997,
+          "missed": 3,
+          "meanDelivered": 266.733
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 979,
+          "missed": 21,
+          "meanDelivered": 288.934
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 996,
+          "missed": 4,
+          "meanDelivered": 360.215
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 981,
+          "missed": 19,
+          "meanDelivered": 401.14
+        },
+        {
+          "round": 9,
+          "reached": 1000,
+          "met": 961,
+          "missed": 39,
+          "meanDelivered": 460.7
+        },
+        {
+          "round": 10,
+          "reached": 1000,
+          "met": 908,
+          "missed": 92,
+          "meanDelivered": 529.527
+        },
+        {
+          "round": 11,
+          "reached": 1000,
+          "met": 739,
+          "missed": 261,
+          "meanDelivered": 570.904
+        },
+        {
+          "round": 12,
+          "reached": 997,
+          "met": 272,
+          "missed": 725,
+          "meanDelivered": 602.4653961885657
+        }
+      ],
+      "purchases": {
+        "handle": 1151,
+        "anvil": 1905,
+        "bellows": 2000,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "balanced-light-high-heat-normal-clean",
+        "strategy": "balanced",
+        "hammer": "light",
+        "skill": "high",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 1000,
+      "defeats": 0,
+      "idle": 0,
+      "winRate": 1,
+      "meanRounds": 12,
+      "meanEarned": 4300.592,
+      "meanSpent": 869.46,
+      "meanCoins": 3431.132,
+      "meanScrap": 2.228,
+      "meanBroken": 0.389,
+      "meanStrikes": 303.087,
+      "meanHeats": 15.354,
+      "meanAccepted": 385.125,
+      "meanActiveInputSeconds": 257.58981067016606,
+      "medianActiveInputSeconds": 257.02242211914063,
+      "meanInputSecondsPerRound": 21.465817555847174,
+      "meanVictoryInputSeconds": 257.58981067016606,
+      "meanVictoryStrikes": 303.087,
+      "brokenPieceFraction": 0.010805555555555556,
+      "damageStrikeFraction": 0.027995262086463624,
+      "maxStateBytes": 32023,
+      "maxAccepted": 419,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 303087,
+        "standard": 0,
+        "heavy": 0
+      },
+      "gradeStrikes": {
+        "precise": 296169,
+        "ordinary": 3266,
+        "mishit": 3652
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 136
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 155
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 183.034
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 227
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 266.955
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 994,
+          "missed": 6,
+          "meanDelivered": 289.838
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 360.644
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 996,
+          "missed": 4,
+          "meanDelivered": 403.197
+        },
+        {
+          "round": 9,
+          "reached": 1000,
+          "met": 997,
+          "missed": 3,
+          "meanDelivered": 466.403
+        },
+        {
+          "round": 10,
+          "reached": 1000,
+          "met": 982,
+          "missed": 18,
+          "meanDelivered": 540.691
+        },
+        {
+          "round": 11,
+          "reached": 1000,
+          "met": 912,
+          "missed": 88,
+          "meanDelivered": 605.818
+        },
+        {
+          "round": 12,
+          "reached": 1000,
+          "met": 500,
+          "missed": 500,
+          "meanDelivered": 666.012
+        }
+      ],
+      "purchases": {
+        "handle": 1121,
+        "anvil": 1952,
+        "bellows": 2000,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "balanced-standard-low-heat-normal-clean",
+        "strategy": "balanced",
+        "hammer": "standard",
+        "skill": "low",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 156,
+      "defeats": 844,
+      "idle": 0,
+      "winRate": 0.156,
+      "meanRounds": 11.122,
+      "meanEarned": 3254.819,
+      "meanSpent": 770.88,
+      "meanCoins": 2483.939,
+      "meanScrap": 3.389,
+      "meanBroken": 3.231,
+      "meanStrikes": 248.414,
+      "meanHeats": 15.818,
+      "meanAccepted": 323.266,
+      "meanActiveInputSeconds": 198.71029509704573,
+      "medianActiveInputSeconds": 204.4230093383789,
+      "meanInputSecondsPerRound": 17.811266095474142,
+      "meanVictoryInputSeconds": 219.8400783939851,
+      "meanVictoryStrikes": 274.39102564102564,
+      "brokenPieceFraction": 0.09683510160043157,
+      "damageStrikeFraction": 0.1499351888379882,
+      "maxStateBytes": 31454,
+      "maxAccepted": 399,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 0,
+        "standard": 248414,
+        "heavy": 0
+      },
+      "gradeStrikes": {
+        "precise": 88028,
+        "ordinary": 97671,
+        "mishit": 62715
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 135.867
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 997,
+          "missed": 3,
+          "meanDelivered": 154.801
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 984,
+          "missed": 16,
+          "meanDelivered": 183.232
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 969,
+          "missed": 31,
+          "meanDelivered": 223.666
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 940,
+          "missed": 60,
+          "meanDelivered": 259.461
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 859,
+          "missed": 141,
+          "meanDelivered": 285.505
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 837,
+          "missed": 163,
+          "meanDelivered": 340.771
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 666,
+          "missed": 334,
+          "meanDelivered": 364.959
+        },
+        {
+          "round": 9,
+          "reached": 979,
+          "met": 536,
+          "missed": 443,
+          "meanDelivered": 398.83861082737485
+        },
+        {
+          "round": 10,
+          "reached": 914,
+          "met": 344,
+          "missed": 570,
+          "meanDelivered": 426.09956236323853
+        },
+        {
+          "round": 11,
+          "reached": 761,
+          "met": 112,
+          "missed": 649,
+          "meanDelivered": 422.0932982917214
+        },
+        {
+          "round": 12,
+          "reached": 468,
+          "met": 8,
+          "missed": 460,
+          "meanDelivered": 438.94444444444446
+        }
+      ],
+      "purchases": {
+        "handle": 1341,
+        "anvil": 1390,
+        "bellows": 1965,
+        "repair": 45
+      }
+    },
+    {
+      "scenario": {
+        "id": "balanced-standard-medium-heat-normal-clean",
+        "strategy": "balanced",
+        "hammer": "standard",
+        "skill": "medium",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 869,
+      "defeats": 131,
+      "idle": 0,
+      "winRate": 0.869,
+      "meanRounds": 11.967,
+      "meanEarned": 4110.566,
+      "meanSpent": 849.4,
+      "meanCoins": 3261.166,
+      "meanScrap": 2.743,
+      "meanBroken": 1.267,
+      "meanStrikes": 239.618,
+      "meanHeats": 13.66,
+      "meanAccepted": 318.853,
+      "meanActiveInputSeconds": 191.65296742630005,
+      "medianActiveInputSeconds": 191.42042388916016,
+      "meanInputSecondsPerRound": 16.013383057828936,
+      "meanVictoryInputSeconds": 191.97225796399925,
+      "meanVictoryStrikes": 239.9988492520138,
+      "brokenPieceFraction": 0.03529149605860561,
+      "damageStrikeFraction": 0.09546862088824713,
+      "maxStateBytes": 28669,
+      "maxAccepted": 356,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 0,
+        "standard": 239618,
+        "heavy": 0
+      },
+      "gradeStrikes": {
+        "precise": 164976,
+        "ordinary": 65048,
+        "mishit": 9594
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 136.003
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 155.027
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 998,
+          "missed": 2,
+          "meanDelivered": 183.53
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 998,
+          "missed": 2,
+          "meanDelivered": 226.812
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 994,
+          "missed": 6,
+          "meanDelivered": 266.035
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 983,
+          "missed": 17,
+          "meanDelivered": 294.585
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 979,
+          "missed": 21,
+          "meanDelivered": 358.597
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 922,
+          "missed": 78,
+          "meanDelivered": 395.868
+        },
+        {
+          "round": 9,
+          "reached": 1000,
+          "met": 903,
+          "missed": 97,
+          "meanDelivered": 455.124
+        },
+        {
+          "round": 10,
+          "reached": 1000,
+          "met": 776,
+          "missed": 224,
+          "meanDelivered": 507.786
+        },
+        {
+          "round": 11,
+          "reached": 997,
+          "met": 649,
+          "missed": 348,
+          "meanDelivered": 559.7311935807422
+        },
+        {
+          "round": 12,
+          "reached": 970,
+          "met": 219,
+          "missed": 751,
+          "meanDelivered": 590.8731958762886
+        }
+      ],
+      "purchases": {
+        "handle": 1174,
+        "anvil": 1832,
+        "bellows": 2000,
+        "repair": 1
+      }
+    },
+    {
+      "scenario": {
+        "id": "balanced-standard-high-heat-normal-clean",
+        "strategy": "balanced",
+        "hammer": "standard",
+        "skill": "high",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 987,
+      "defeats": 13,
+      "idle": 0,
+      "winRate": 0.987,
+      "meanRounds": 11.999,
+      "meanEarned": 4273.4,
+      "meanSpent": 865.34,
+      "meanCoins": 3408.06,
+      "meanScrap": 2.428,
+      "meanBroken": 0.672,
+      "meanStrikes": 213.176,
+      "meanHeats": 9.744,
+      "meanAccepted": 289.302,
+      "meanActiveInputSeconds": 170.50234243337994,
+      "medianActiveInputSeconds": 170.05774600219726,
+      "meanInputSecondsPerRound": 14.209707852313182,
+      "meanVictoryInputSeconds": 170.44958121144933,
+      "meanVictoryStrikes": 213.11043566362716,
+      "brokenPieceFraction": 0.018668222351862655,
+      "damageStrikeFraction": 0.07092261793072391,
+      "maxStateBytes": 26419,
+      "maxAccepted": 324,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 0,
+        "standard": 213176,
+        "heavy": 0
+      },
+      "gradeStrikes": {
+        "precise": 206341,
+        "ordinary": 4282,
+        "mishit": 2553
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 135.987
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 154.951
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 183.158
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 999,
+          "missed": 1,
+          "meanDelivered": 226.976
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 999,
+          "missed": 1,
+          "meanDelivered": 267.036
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 997,
+          "missed": 3,
+          "meanDelivered": 292.862
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 994,
+          "missed": 6,
+          "meanDelivered": 360.131
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 975,
+          "missed": 25,
+          "meanDelivered": 401.038
+        },
+        {
+          "round": 9,
+          "reached": 1000,
+          "met": 977,
+          "missed": 23,
+          "meanDelivered": 463.916
+        },
+        {
+          "round": 10,
+          "reached": 1000,
+          "met": 910,
+          "missed": 90,
+          "meanDelivered": 532.781
+        },
+        {
+          "round": 11,
+          "reached": 1000,
+          "met": 807,
+          "missed": 193,
+          "meanDelivered": 589.863
+        },
+        {
+          "round": 12,
+          "reached": 999,
+          "met": 570,
+          "missed": 429,
+          "meanDelivered": 665.3663663663664
+        }
+      ],
+      "purchases": {
+        "handle": 1132,
+        "anvil": 1927,
+        "bellows": 2000,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "balanced-heavy-low-heat-normal-clean",
+        "strategy": "balanced",
+        "hammer": "heavy",
+        "skill": "low",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 13,
+      "defeats": 987,
+      "idle": 0,
+      "winRate": 0.013,
+      "meanRounds": 10.149,
+      "meanEarned": 2793.014,
+      "meanSpent": 626.58,
+      "meanCoins": 2166.434,
+      "meanScrap": 2.013,
+      "meanBroken": 1.363,
+      "meanStrikes": 160.528,
+      "meanHeats": 14.505,
+      "meanAccepted": 230.201,
+      "meanActiveInputSeconds": 120.31972887130736,
+      "medianActiveInputSeconds": 119.1041374206543,
+      "meanInputSecondsPerRound": 11.81034782397565,
+      "meanVictoryInputSeconds": 151.2316926926833,
+      "meanVictoryStrikes": 202.46153846153845,
+      "brokenPieceFraction": 0.04476631523631228,
+      "damageStrikeFraction": 0.21395021429283365,
+      "maxStateBytes": 24375,
+      "maxAccepted": 308,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 0,
+        "standard": 0,
+        "heavy": 160528
+      },
+      "gradeStrikes": {
+        "precise": 47871,
+        "ordinary": 61808,
+        "mishit": 50849
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 135.951
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 993,
+          "missed": 7,
+          "meanDelivered": 154.334
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 970,
+          "missed": 30,
+          "meanDelivered": 184.46
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 981,
+          "missed": 19,
+          "meanDelivered": 223.527
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 913,
+          "missed": 87,
+          "meanDelivered": 259.113
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 850,
+          "missed": 150,
+          "meanDelivered": 289.122
+        },
+        {
+          "round": 7,
+          "reached": 999,
+          "met": 638,
+          "missed": 361,
+          "meanDelivered": 334.04304304304304
+        },
+        {
+          "round": 8,
+          "reached": 997,
+          "met": 443,
+          "missed": 554,
+          "meanDelivered": 353.135406218656
+        },
+        {
+          "round": 9,
+          "reached": 936,
+          "met": 244,
+          "missed": 692,
+          "meanDelivered": 383.6036324786325
+        },
+        {
+          "round": 10,
+          "reached": 733,
+          "met": 90,
+          "missed": 643,
+          "meanDelivered": 403.9658935879945
+        },
+        {
+          "round": 11,
+          "reached": 383,
+          "met": 18,
+          "missed": 365,
+          "meanDelivered": 419.8015665796345
+        },
+        {
+          "round": 12,
+          "reached": 101,
+          "met": 0,
+          "missed": 101,
+          "meanDelivered": 443.34653465346537
+        }
+      ],
+      "purchases": {
+        "handle": 1180,
+        "anvil": 1018,
+        "bellows": 1834,
+        "repair": 22
+      }
+    },
+    {
+      "scenario": {
+        "id": "balanced-heavy-medium-heat-normal-clean",
+        "strategy": "balanced",
+        "hammer": "heavy",
+        "skill": "medium",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 312,
+      "defeats": 688,
+      "idle": 0,
+      "winRate": 0.312,
+      "meanRounds": 11.573,
+      "meanEarned": 3763.055,
+      "meanSpent": 758.26,
+      "meanCoins": 3004.795,
+      "meanScrap": 1.87,
+      "meanBroken": 0.625,
+      "meanStrikes": 179.69,
+      "meanHeats": 15.515,
+      "meanAccepted": 259.081,
+      "meanActiveInputSeconds": 134.73383631057752,
+      "medianActiveInputSeconds": 138.64846725463866,
+      "meanInputSecondsPerRound": 11.622505179001406,
+      "meanVictoryInputSeconds": 141.8489999502133,
+      "meanVictoryStrikes": 189.2403846153846,
+      "brokenPieceFraction": 0.018001670555027507,
+      "damageStrikeFraction": 0.1555512271133619,
+      "maxStateBytes": 23457,
+      "maxAccepted": 294,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 0,
+        "standard": 0,
+        "heavy": 179690
+      },
+      "gradeStrikes": {
+        "precise": 110932,
+        "ordinary": 59735,
+        "mishit": 9023
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 136.052
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 998,
+          "missed": 2,
+          "meanDelivered": 154.681
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 994,
+          "missed": 6,
+          "meanDelivered": 184.136
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 998,
+          "missed": 2,
+          "meanDelivered": 225.888
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 984,
+          "missed": 16,
+          "meanDelivered": 265.427
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 974,
+          "missed": 26,
+          "meanDelivered": 295.041
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 898,
+          "missed": 102,
+          "meanDelivered": 354.733
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 737,
+          "missed": 263,
+          "meanDelivered": 386.856
+        },
+        {
+          "round": 9,
+          "reached": 998,
+          "met": 623,
+          "missed": 375,
+          "meanDelivered": 439.4729458917836
+        },
+        {
+          "round": 10,
+          "reached": 986,
+          "met": 482,
+          "missed": 504,
+          "meanDelivered": 489.8975659229209
+        },
+        {
+          "round": 11,
+          "reached": 908,
+          "met": 227,
+          "missed": 681,
+          "meanDelivered": 521.113436123348
+        },
+        {
+          "round": 12,
+          "reached": 681,
+          "met": 25,
+          "missed": 656,
+          "meanDelivered": 536.618208516887
+        }
+      ],
+      "purchases": {
+        "handle": 1236,
+        "anvil": 1435,
+        "bellows": 1976,
+        "repair": 3
+      }
+    },
+    {
+      "scenario": {
+        "id": "balanced-heavy-high-heat-normal-clean",
+        "strategy": "balanced",
+        "hammer": "heavy",
+        "skill": "high",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 705,
+      "defeats": 295,
+      "idle": 0,
+      "winRate": 0.705,
+      "meanRounds": 11.897,
+      "meanEarned": 4119.09,
+      "meanSpent": 807.88,
+      "meanCoins": 3311.21,
+      "meanScrap": 1.921,
+      "meanBroken": 0.375,
+      "meanStrikes": 172.44,
+      "meanHeats": 11.636,
+      "meanAccepted": 250.01,
+      "meanActiveInputSeconds": 129.30488641131598,
+      "medianActiveInputSeconds": 130.21812255859376,
+      "meanInputSecondsPerRound": 10.863200897039778,
+      "meanVictoryInputSeconds": 130.8362620925794,
+      "meanVictoryStrikes": 174.50070921985815,
+      "brokenPieceFraction": 0.010506850466504162,
+      "damageStrikeFraction": 0.12215263279981443,
+      "maxStateBytes": 22415,
+      "maxAccepted": 275,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 0,
+        "standard": 0,
+        "heavy": 172440
+      },
+      "gradeStrikes": {
+        "precise": 162620,
+        "ordinary": 7792,
+        "mishit": 2028
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 136.06
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 155.03
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 999,
+          "missed": 1,
+          "meanDelivered": 183.571
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 999,
+          "missed": 1,
+          "meanDelivered": 226.304
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 997,
+          "missed": 3,
+          "meanDelivered": 266.598
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 995,
+          "missed": 5,
+          "meanDelivered": 294.859
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 953,
+          "missed": 47,
+          "meanDelivered": 357.392
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 813,
+          "missed": 187,
+          "meanDelivered": 393.021
+        },
+        {
+          "round": 9,
+          "reached": 999,
+          "met": 799,
+          "missed": 200,
+          "meanDelivered": 457.1031031031031
+        },
+        {
+          "round": 10,
+          "reached": 998,
+          "met": 734,
+          "missed": 264,
+          "meanDelivered": 521.2575150300602
+        },
+        {
+          "round": 11,
+          "reached": 983,
+          "met": 513,
+          "missed": 470,
+          "meanDelivered": 574.9338758901323
+        },
+        {
+          "round": 12,
+          "reached": 917,
+          "met": 214,
+          "missed": 703,
+          "meanDelivered": 615.3042529989095
+        }
+      ],
+      "purchases": {
+        "handle": 1161,
+        "anvil": 1672,
+        "bellows": 1993,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "balanced-adaptive-low-heat-normal-clean",
+        "strategy": "balanced",
+        "hammer": "adaptive",
+        "skill": "low",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 110,
+      "defeats": 890,
+      "idle": 0,
+      "winRate": 0.11,
+      "meanRounds": 10.864,
+      "meanEarned": 3041.794,
+      "meanSpent": 759.92,
+      "meanCoins": 2281.874,
+      "meanScrap": 3.695,
+      "meanBroken": 3.703,
+      "meanStrikes": 243.099,
+      "meanHeats": 14.528,
+      "meanAccepted": 314.78,
+      "meanActiveInputSeconds": 194.5934270060728,
+      "medianActiveInputSeconds": 198.1842562866211,
+      "meanInputSecondsPerRound": 17.83873151631378,
+      "meanVictoryInputSeconds": 220.52978638250175,
+      "meanVictoryStrikes": 275.4909090909091,
+      "brokenPieceFraction": 0.11361683848797251,
+      "damageStrikeFraction": 0.15246052019958947,
+      "maxStateBytes": 31301,
+      "maxAccepted": 397,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 16096,
+        "standard": 213581,
+        "heavy": 13422
+      },
+      "gradeStrikes": {
+        "precise": 86024,
+        "ordinary": 95692,
+        "mishit": 61383
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 998,
+          "missed": 2,
+          "meanDelivered": 135.741
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 996,
+          "missed": 4,
+          "meanDelivered": 154.205
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 973,
+          "missed": 27,
+          "meanDelivered": 183.766
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 958,
+          "missed": 42,
+          "meanDelivered": 221.812
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 919,
+          "missed": 81,
+          "meanDelivered": 256.627
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 784,
+          "missed": 216,
+          "meanDelivered": 273.968
+        },
+        {
+          "round": 7,
+          "reached": 996,
+          "met": 808,
+          "missed": 188,
+          "meanDelivered": 339.7259036144578
+        },
+        {
+          "round": 8,
+          "reached": 995,
+          "met": 621,
+          "missed": 374,
+          "meanDelivered": 357.7608040201005
+        },
+        {
+          "round": 9,
+          "reached": 959,
+          "met": 481,
+          "missed": 478,
+          "meanDelivered": 384.3315954118874
+        },
+        {
+          "round": 10,
+          "reached": 852,
+          "met": 292,
+          "missed": 560,
+          "meanDelivered": 401.26408450704224
+        },
+        {
+          "round": 11,
+          "reached": 673,
+          "met": 101,
+          "missed": 572,
+          "meanDelivered": 389.52451708766716
+        },
+        {
+          "round": 12,
+          "reached": 389,
+          "met": 5,
+          "missed": 384,
+          "meanDelivered": 382.3521850899743
+        }
+      ],
+      "purchases": {
+        "handle": 1326,
+        "anvil": 1357,
+        "bellows": 1951,
+        "repair": 54
+      }
+    },
+    {
+      "scenario": {
+        "id": "balanced-adaptive-medium-heat-normal-clean",
+        "strategy": "balanced",
+        "hammer": "adaptive",
+        "skill": "medium",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 819,
+      "defeats": 181,
+      "idle": 0,
+      "winRate": 0.819,
+      "meanRounds": 11.945,
+      "meanEarned": 4083.509,
+      "meanSpent": 840.32,
+      "meanCoins": 3243.189,
+      "meanScrap": 2.727,
+      "meanBroken": 1.363,
+      "meanStrikes": 235.394,
+      "meanHeats": 11.993,
+      "meanAccepted": 312.727,
+      "meanActiveInputSeconds": 188.00198368606567,
+      "medianActiveInputSeconds": 188.22568969726564,
+      "meanInputSecondsPerRound": 15.735438395115224,
+      "meanVictoryInputSeconds": 188.44412858937412,
+      "meanVictoryStrikes": 235.993894993895,
+      "brokenPieceFraction": 0.03803544021208316,
+      "damageStrikeFraction": 0.09746212732694971,
+      "maxStateBytes": 28013,
+      "maxAccepted": 349,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 7518,
+        "standard": 214656,
+        "heavy": 13220
+      },
+      "gradeStrikes": {
+        "precise": 162108,
+        "ordinary": 63761,
+        "mishit": 9525
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 136.028
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 998,
+          "missed": 2,
+          "meanDelivered": 154.781
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 997,
+          "missed": 3,
+          "meanDelivered": 183.76
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 994,
+          "missed": 6,
+          "meanDelivered": 226.104
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 987,
+          "missed": 13,
+          "meanDelivered": 265.396
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 975,
+          "missed": 25,
+          "meanDelivered": 293.171
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 968,
+          "missed": 32,
+          "meanDelivered": 357.663
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 905,
+          "missed": 95,
+          "meanDelivered": 395.552
+        },
+        {
+          "round": 9,
+          "reached": 999,
+          "met": 875,
+          "missed": 124,
+          "meanDelivered": 454.8778778778779
+        },
+        {
+          "round": 10,
+          "reached": 997,
+          "met": 748,
+          "missed": 249,
+          "meanDelivered": 508.86258776328987
+        },
+        {
+          "round": 11,
+          "reached": 989,
+          "met": 599,
+          "missed": 390,
+          "meanDelivered": 563.2103134479272
+        },
+        {
+          "round": 12,
+          "reached": 960,
+          "met": 255,
+          "missed": 705,
+          "meanDelivered": 575.2916666666666
+        }
+      ],
+      "purchases": {
+        "handle": 1207,
+        "anvil": 1776,
+        "bellows": 1995,
+        "repair": 3
+      }
+    },
+    {
+      "scenario": {
+        "id": "balanced-adaptive-high-heat-normal-clean",
+        "strategy": "balanced",
+        "hammer": "adaptive",
+        "skill": "high",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 978,
+      "defeats": 22,
+      "idle": 0,
+      "winRate": 0.978,
+      "meanRounds": 11.997,
+      "meanEarned": 4264.354,
+      "meanSpent": 865.58,
+      "meanCoins": 3398.774,
+      "meanScrap": 2.454,
+      "meanBroken": 0.702,
+      "meanStrikes": 212.453,
+      "meanHeats": 9.749,
+      "meanAccepted": 288.545,
+      "meanActiveInputSeconds": 169.9713151214294,
+      "medianActiveInputSeconds": 169.64755725097658,
+      "meanInputSecondsPerRound": 14.167567832997044,
+      "meanVictoryInputSeconds": 169.91905634740039,
+      "meanVictoryStrikes": 212.3926380368098,
+      "brokenPieceFraction": 0.019504876219054765,
+      "damageStrikeFraction": 0.07034497041698634,
+      "maxStateBytes": 26323,
+      "maxAccepted": 322,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 4310,
+        "standard": 204766,
+        "heavy": 3377
+      },
+      "gradeStrikes": {
+        "precise": 205630,
+        "ordinary": 4280,
+        "mishit": 2543
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 135.983
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 155.041
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 183.05
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 999,
+          "missed": 1,
+          "meanDelivered": 226.792
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 996,
+          "missed": 4,
+          "meanDelivered": 267.082
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 997,
+          "missed": 3,
+          "meanDelivered": 292.228
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 992,
+          "missed": 8,
+          "meanDelivered": 359.869
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 964,
+          "missed": 36,
+          "meanDelivered": 400.283
+        },
+        {
+          "round": 9,
+          "reached": 1000,
+          "met": 968,
+          "missed": 32,
+          "meanDelivered": 463.187
+        },
+        {
+          "round": 10,
+          "reached": 1000,
+          "met": 896,
+          "missed": 104,
+          "meanDelivered": 532.323
+        },
+        {
+          "round": 11,
+          "reached": 999,
+          "met": 793,
+          "missed": 206,
+          "meanDelivered": 592.0600600600601
+        },
+        {
+          "round": 12,
+          "reached": 998,
+          "met": 568,
+          "missed": 430,
+          "meanDelivered": 658.3647294589179
+        }
+      ],
+      "purchases": {
+        "handle": 1131,
+        "anvil": 1928,
+        "bellows": 2000,
+        "repair": 1
+      }
+    },
+    {
+      "scenario": {
+        "id": "aggressive-light-low-heat-normal-clean",
+        "strategy": "aggressive",
+        "hammer": "light",
+        "skill": "low",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 36,
+      "defeats": 964,
+      "idle": 0,
+      "winRate": 0.036,
+      "meanRounds": 9.102,
+      "meanEarned": 2254.383,
+      "meanSpent": 703.64,
+      "meanCoins": 1550.743,
+      "meanScrap": 5.878,
+      "meanBroken": 7.308,
+      "meanStrikes": 375.543,
+      "meanHeats": 17.532,
+      "meanAccepted": 436.831,
+      "meanActiveInputSeconds": 319.18448950241043,
+      "medianActiveInputSeconds": 318.99750076293947,
+      "meanInputSecondsPerRound": 34.785776129214916,
+      "meanVictoryInputSeconds": 435.6902301322089,
+      "meanVictoryStrikes": 512.1944444444445,
+      "brokenPieceFraction": 0.26763348714568225,
+      "damageStrikeFraction": 0.1157949955131636,
+      "maxStateBytes": 46044,
+      "maxAccepted": 630,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 375543,
+        "standard": 0,
+        "heavy": 0
+      },
+      "gradeStrikes": {
+        "precise": 142704,
+        "ordinary": 157264,
+        "mishit": 75575
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 946,
+          "missed": 54,
+          "meanDelivered": 131.489
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 853,
+          "missed": 147,
+          "meanDelivered": 197.969
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 821,
+          "missed": 179,
+          "meanDelivered": 207.996
+        },
+        {
+          "round": 4,
+          "reached": 998,
+          "met": 722,
+          "missed": 276,
+          "meanDelivered": 245.5050100200401
+        },
+        {
+          "round": 5,
+          "reached": 996,
+          "met": 672,
+          "missed": 324,
+          "meanDelivered": 255.12951807228916
+        },
+        {
+          "round": 6,
+          "reached": 950,
+          "met": 353,
+          "missed": 597,
+          "meanDelivered": 232.22947368421052
+        },
+        {
+          "round": 7,
+          "reached": 806,
+          "met": 515,
+          "missed": 291,
+          "meanDelivered": 308.5893300248139
+        },
+        {
+          "round": 8,
+          "reached": 794,
+          "met": 411,
+          "missed": 383,
+          "meanDelivered": 343.6889168765743
+        },
+        {
+          "round": 9,
+          "reached": 647,
+          "met": 227,
+          "missed": 420,
+          "meanDelivered": 303.064914992272
+        },
+        {
+          "round": 10,
+          "reached": 437,
+          "met": 120,
+          "missed": 317,
+          "meanDelivered": 328.13272311212813
+        },
+        {
+          "round": 11,
+          "reached": 338,
+          "met": 30,
+          "missed": 308,
+          "meanDelivered": 297.3343195266272
+        },
+        {
+          "round": 12,
+          "reached": 136,
+          "met": 6,
+          "missed": 130,
+          "meanDelivered": 261.7647058823529
+        }
+      ],
+      "purchases": {
+        "handle": 1164,
+        "anvil": 1102,
+        "bellows": 1582,
+        "repair": 465
+      }
+    },
+    {
+      "scenario": {
+        "id": "aggressive-light-medium-heat-normal-clean",
+        "strategy": "aggressive",
+        "hammer": "light",
+        "skill": "medium",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 894,
+      "defeats": 106,
+      "idle": 0,
+      "winRate": 0.894,
+      "meanRounds": 11.924,
+      "meanEarned": 4617.583,
+      "meanSpent": 1044.1,
+      "meanCoins": 3573.483,
+      "meanScrap": 6.606,
+      "meanBroken": 3.235,
+      "meanStrikes": 432.223,
+      "meanHeats": 24.758,
+      "meanAccepted": 521.331,
+      "meanActiveInputSeconds": 367.33744342269904,
+      "medianActiveInputSeconds": 367.589412689209,
+      "meanInputSecondsPerRound": 30.808549078449285,
+      "meanVictoryInputSeconds": 368.4587107997612,
+      "meanVictoryStrikes": 433.5436241610738,
+      "brokenPieceFraction": 0.09043385888404339,
+      "damageStrikeFraction": 0.06179911758513545,
+      "maxStateBytes": 42330,
+      "maxAccepted": 575,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 432223,
+        "standard": 0,
+        "heavy": 0
+      },
+      "gradeStrikes": {
+        "precise": 331947,
+        "ordinary": 84291,
+        "mishit": 15985
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 992,
+          "missed": 8,
+          "meanDelivered": 126.128
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 948,
+          "missed": 52,
+          "meanDelivered": 218.456
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 952,
+          "missed": 48,
+          "meanDelivered": 235.537
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 932,
+          "missed": 68,
+          "meanDelivered": 307.543
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 921,
+          "missed": 79,
+          "meanDelivered": 326.016
+        },
+        {
+          "round": 6,
+          "reached": 999,
+          "met": 836,
+          "missed": 163,
+          "meanDelivered": 361.1011011011011
+        },
+        {
+          "round": 7,
+          "reached": 996,
+          "met": 985,
+          "missed": 11,
+          "meanDelivered": 399.1024096385542
+        },
+        {
+          "round": 8,
+          "reached": 996,
+          "met": 970,
+          "missed": 26,
+          "meanDelivered": 461.3714859437751
+        },
+        {
+          "round": 9,
+          "reached": 995,
+          "met": 884,
+          "missed": 111,
+          "meanDelivered": 518.8201005025126
+        },
+        {
+          "round": 10,
+          "reached": 991,
+          "met": 803,
+          "missed": 188,
+          "meanDelivered": 549.656912209889
+        },
+        {
+          "round": 11,
+          "reached": 985,
+          "met": 681,
+          "missed": 304,
+          "meanDelivered": 580.7664974619289
+        },
+        {
+          "round": 12,
+          "reached": 962,
+          "met": 502,
+          "missed": 460,
+          "meanDelivered": 574.989604989605
+        }
+      ],
+      "purchases": {
+        "handle": 1846,
+        "anvil": 1927,
+        "bellows": 1989,
+        "repair": 216
+      }
+    },
+    {
+      "scenario": {
+        "id": "aggressive-light-high-heat-normal-clean",
+        "strategy": "aggressive",
+        "hammer": "light",
+        "skill": "high",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 983,
+      "defeats": 17,
+      "idle": 0,
+      "winRate": 0.983,
+      "meanRounds": 11.998,
+      "meanEarned": 4884.787,
+      "meanSpent": 1058.74,
+      "meanCoins": 3826.047,
+      "meanScrap": 8.553,
+      "meanBroken": 1.638,
+      "meanStrikes": 380.571,
+      "meanHeats": 23.209,
+      "meanAccepted": 470.204,
+      "meanActiveInputSeconds": 323.4538657942811,
+      "medianActiveInputSeconds": 322.9125126953125,
+      "meanInputSecondsPerRound": 26.95925048730701,
+      "meanVictoryInputSeconds": 323.28900891523097,
+      "meanVictoryStrikes": 380.3794506612411,
+      "brokenPieceFraction": 0.045507584597432905,
+      "damageStrikeFraction": 0.04127744888601601,
+      "maxStateBytes": 37682,
+      "maxAccepted": 504,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 380571,
+        "standard": 0,
+        "heavy": 0
+      },
+      "gradeStrikes": {
+        "precise": 372069,
+        "ordinary": 3936,
+        "mishit": 4566
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 124.365
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 980,
+          "missed": 20,
+          "meanDelivered": 221.246
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 984,
+          "missed": 16,
+          "meanDelivered": 241.721
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 977,
+          "missed": 23,
+          "meanDelivered": 315.136
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 974,
+          "missed": 26,
+          "meanDelivered": 342.384
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 931,
+          "missed": 69,
+          "meanDelivered": 390.073
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 998,
+          "missed": 2,
+          "meanDelivered": 400.426
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 995,
+          "missed": 5,
+          "meanDelivered": 465.804
+        },
+        {
+          "round": 9,
+          "reached": 1000,
+          "met": 960,
+          "missed": 40,
+          "meanDelivered": 543.98
+        },
+        {
+          "round": 10,
+          "reached": 1000,
+          "met": 906,
+          "missed": 94,
+          "meanDelivered": 574.266
+        },
+        {
+          "round": 11,
+          "reached": 1000,
+          "met": 827,
+          "missed": 173,
+          "meanDelivered": 624.063
+        },
+        {
+          "round": 12,
+          "reached": 998,
+          "met": 646,
+          "missed": 352,
+          "meanDelivered": 642.6082164328658
+        }
+      ],
+      "purchases": {
+        "handle": 1974,
+        "anvil": 1995,
+        "bellows": 2000,
+        "repair": 103
+      }
+    },
+    {
+      "scenario": {
+        "id": "aggressive-standard-low-heat-normal-clean",
+        "strategy": "aggressive",
+        "hammer": "standard",
+        "skill": "low",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 69,
+      "defeats": 931,
+      "idle": 0,
+      "winRate": 0.069,
+      "meanRounds": 9.747,
+      "meanEarned": 2630.441,
+      "meanSpent": 760.64,
+      "meanCoins": 1869.801,
+      "meanScrap": 5.598,
+      "meanBroken": 8.02,
+      "meanStrikes": 270.201,
+      "meanHeats": 17.919,
+      "meanAccepted": 334.919,
+      "meanActiveInputSeconds": 216.13694482284544,
+      "medianActiveInputSeconds": 222.1286848449707,
+      "meanInputSecondsPerRound": 22.04097528697285,
+      "meanVictoryInputSeconds": 271.1018147720116,
+      "meanVictoryStrikes": 339.3333333333333,
+      "brokenPieceFraction": 0.2742724257036353,
+      "damageStrikeFraction": 0.17637610519576166,
+      "maxStateBytes": 35068,
+      "maxAccepted": 449,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 0,
+        "standard": 270201,
+        "heavy": 0
+      },
+      "gradeStrikes": {
+        "precise": 93173,
+        "ordinary": 108601,
+        "mishit": 68427
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 955,
+          "missed": 45,
+          "meanDelivered": 132.455
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 864,
+          "missed": 136,
+          "meanDelivered": 203.366
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 865,
+          "missed": 135,
+          "meanDelivered": 218.972
+        },
+        {
+          "round": 4,
+          "reached": 996,
+          "met": 756,
+          "missed": 240,
+          "meanDelivered": 260.9166666666667
+        },
+        {
+          "round": 5,
+          "reached": 993,
+          "met": 735,
+          "missed": 258,
+          "meanDelivered": 273.5901309164149
+        },
+        {
+          "round": 6,
+          "reached": 964,
+          "met": 546,
+          "missed": 418,
+          "meanDelivered": 279.9771784232365
+        },
+        {
+          "round": 7,
+          "reached": 903,
+          "met": 620,
+          "missed": 283,
+          "meanDelivered": 327.63455149501664
+        },
+        {
+          "round": 8,
+          "reached": 892,
+          "met": 510,
+          "missed": 382,
+          "meanDelivered": 363.99775784753365
+        },
+        {
+          "round": 9,
+          "reached": 789,
+          "met": 291,
+          "missed": 498,
+          "meanDelivered": 324.8808618504436
+        },
+        {
+          "round": 10,
+          "reached": 566,
+          "met": 148,
+          "missed": 418,
+          "meanDelivered": 346.51236749116606
+        },
+        {
+          "round": 11,
+          "reached": 444,
+          "met": 62,
+          "missed": 382,
+          "meanDelivered": 319.7905405405405
+        },
+        {
+          "round": 12,
+          "reached": 200,
+          "met": 24,
+          "missed": 176,
+          "meanDelivered": 296.09
+        }
+      ],
+      "purchases": {
+        "handle": 1276,
+        "anvil": 1189,
+        "bellows": 1703,
+        "repair": 451
+      }
+    },
+    {
+      "scenario": {
+        "id": "aggressive-standard-medium-heat-normal-clean",
+        "strategy": "aggressive",
+        "hammer": "standard",
+        "skill": "medium",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 747,
+      "defeats": 253,
+      "idle": 0,
+      "winRate": 0.747,
+      "meanRounds": 11.86,
+      "meanEarned": 4428.33,
+      "meanSpent": 1008,
+      "meanCoins": 3420.33,
+      "meanScrap": 5.901,
+      "meanBroken": 4.628,
+      "meanStrikes": 301.952,
+      "meanHeats": 19.145,
+      "meanAccepted": 383.573,
+      "meanActiveInputSeconds": 241.5436170021056,
+      "medianActiveInputSeconds": 242.61842498779296,
+      "meanInputSecondsPerRound": 20.368950068866937,
+      "meanVictoryInputSeconds": 242.437168287816,
+      "meanVictoryStrikes": 303.1017402945114,
+      "brokenPieceFraction": 0.13007307476110175,
+      "damageStrikeFraction": 0.11783660979228487,
+      "maxStateBytes": 34187,
+      "maxAccepted": 436,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 0,
+        "standard": 301952,
+        "heavy": 0
+      },
+      "gradeStrikes": {
+        "precise": 214128,
+        "ordinary": 75638,
+        "mishit": 12186
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 994,
+          "missed": 6,
+          "meanDelivered": 129.368
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 943,
+          "missed": 57,
+          "meanDelivered": 215.922
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 953,
+          "missed": 47,
+          "meanDelivered": 235.861
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 929,
+          "missed": 71,
+          "meanDelivered": 303.259
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 919,
+          "missed": 81,
+          "meanDelivered": 319.459
+        },
+        {
+          "round": 6,
+          "reached": 999,
+          "met": 889,
+          "missed": 110,
+          "meanDelivered": 371.0770770770771
+        },
+        {
+          "round": 7,
+          "reached": 997,
+          "met": 956,
+          "missed": 41,
+          "meanDelivered": 394.94884653961884
+        },
+        {
+          "round": 8,
+          "reached": 996,
+          "met": 922,
+          "missed": 74,
+          "meanDelivered": 451.24598393574297
+        },
+        {
+          "round": 9,
+          "reached": 995,
+          "met": 820,
+          "missed": 175,
+          "meanDelivered": 493.7326633165829
+        },
+        {
+          "round": 10,
+          "reached": 988,
+          "met": 700,
+          "missed": 288,
+          "meanDelivered": 517.6771255060729
+        },
+        {
+          "round": 11,
+          "reached": 973,
+          "met": 562,
+          "missed": 411,
+          "meanDelivered": 542.9886947584789
+        },
+        {
+          "round": 12,
+          "reached": 912,
+          "met": 342,
+          "missed": 570,
+          "meanDelivered": 525.7598684210526
+        }
+      ],
+      "purchases": {
+        "handle": 1782,
+        "anvil": 1849,
+        "bellows": 1980,
+        "repair": 208
+      }
+    },
+    {
+      "scenario": {
+        "id": "aggressive-standard-high-heat-normal-clean",
+        "strategy": "aggressive",
+        "hammer": "standard",
+        "skill": "high",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 963,
+      "defeats": 37,
+      "idle": 0,
+      "winRate": 0.963,
+      "meanRounds": 11.99,
+      "meanEarned": 4791.788,
+      "meanSpent": 1053.78,
+      "meanCoins": 3738.008,
+      "meanScrap": 7.551,
+      "meanBroken": 2.798,
+      "meanStrikes": 275.189,
+      "meanHeats": 13.276,
+      "meanAccepted": 353.657,
+      "meanActiveInputSeconds": 220.1222301682737,
+      "medianActiveInputSeconds": 219.56294360351563,
+      "meanInputSecondsPerRound": 18.359590680972307,
+      "meanVictoryInputSeconds": 220.01474932452513,
+      "meanVictoryStrikes": 275.05919003115264,
+      "brokenPieceFraction": 0.07778704475952182,
+      "damageStrikeFraction": 0.0927689696899222,
+      "maxStateBytes": 32140,
+      "maxAccepted": 405,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 0,
+        "standard": 275189,
+        "heavy": 0
+      },
+      "gradeStrikes": {
+        "precise": 266945,
+        "ordinary": 4926,
+        "mishit": 3318
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 999,
+          "missed": 1,
+          "meanDelivered": 126.757
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 978,
+          "missed": 22,
+          "meanDelivered": 220.432
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 976,
+          "missed": 24,
+          "meanDelivered": 239.973
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 965,
+          "missed": 35,
+          "meanDelivered": 312.549
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 968,
+          "missed": 32,
+          "meanDelivered": 336.069
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 936,
+          "missed": 64,
+          "meanDelivered": 391.267
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 988,
+          "missed": 12,
+          "meanDelivered": 399.255
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 982,
+          "missed": 18,
+          "meanDelivered": 462.989
+        },
+        {
+          "round": 9,
+          "reached": 1000,
+          "met": 945,
+          "missed": 55,
+          "meanDelivered": 533.295
+        },
+        {
+          "round": 10,
+          "reached": 998,
+          "met": 883,
+          "missed": 115,
+          "meanDelivered": 564.6683366733467
+        },
+        {
+          "round": 11,
+          "reached": 998,
+          "met": 745,
+          "missed": 253,
+          "meanDelivered": 598.7985971943888
+        },
+        {
+          "round": 12,
+          "reached": 994,
+          "met": 526,
+          "missed": 468,
+          "meanDelivered": 611.7323943661971
+        }
+      ],
+      "purchases": {
+        "handle": 1934,
+        "anvil": 1983,
+        "bellows": 2000,
+        "repair": 125
+      }
+    },
+    {
+      "scenario": {
+        "id": "aggressive-heavy-low-heat-normal-clean",
+        "strategy": "aggressive",
+        "hammer": "heavy",
+        "skill": "low",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 14,
+      "defeats": 986,
+      "idle": 0,
+      "winRate": 0.014,
+      "meanRounds": 9.402,
+      "meanEarned": 2436.189,
+      "meanSpent": 653.34,
+      "meanCoins": 1782.849,
+      "meanScrap": 4.509,
+      "meanBroken": 6.532,
+      "meanStrikes": 184.153,
+      "meanHeats": 16.243,
+      "meanAccepted": 246.386,
+      "meanActiveInputSeconds": 138.03911062728886,
+      "medianActiveInputSeconds": 136.72767120361328,
+      "meanInputSecondsPerRound": 14.602639373325907,
+      "meanVictoryInputSeconds": 182.35164523533413,
+      "meanVictoryStrikes": 244,
+      "brokenPieceFraction": 0.23158193292207332,
+      "damageStrikeFraction": 0.23957252936417,
+      "maxStateBytes": 26999,
+      "maxAccepted": 347,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 0,
+        "standard": 0,
+        "heavy": 184153
+      },
+      "gradeStrikes": {
+        "precise": 53776,
+        "ordinary": 71994,
+        "mishit": 58383
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 964,
+          "missed": 36,
+          "meanDelivered": 138.782
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 926,
+          "missed": 74,
+          "meanDelivered": 200.657
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 881,
+          "missed": 119,
+          "meanDelivered": 214.611
+        },
+        {
+          "round": 4,
+          "reached": 999,
+          "met": 819,
+          "missed": 180,
+          "meanDelivered": 251.64364364364366
+        },
+        {
+          "round": 5,
+          "reached": 999,
+          "met": 710,
+          "missed": 289,
+          "meanDelivered": 266.16916916916915
+        },
+        {
+          "round": 6,
+          "reached": 983,
+          "met": 434,
+          "missed": 549,
+          "meanDelivered": 260.02034587995934
+        },
+        {
+          "round": 7,
+          "reached": 917,
+          "met": 568,
+          "missed": 349,
+          "meanDelivered": 321.93020719738274
+        },
+        {
+          "round": 8,
+          "reached": 898,
+          "met": 393,
+          "missed": 505,
+          "meanDelivered": 335.0991091314031
+        },
+        {
+          "round": 9,
+          "reached": 731,
+          "met": 238,
+          "missed": 493,
+          "meanDelivered": 324.8508891928865
+        },
+        {
+          "round": 10,
+          "reached": 476,
+          "met": 95,
+          "missed": 381,
+          "meanDelivered": 315.0189075630252
+        },
+        {
+          "round": 11,
+          "reached": 302,
+          "met": 31,
+          "missed": 271,
+          "meanDelivered": 323.4139072847682
+        },
+        {
+          "round": 12,
+          "reached": 97,
+          "met": 2,
+          "missed": 95,
+          "meanDelivered": 288.9587628865979
+        }
+      ],
+      "purchases": {
+        "handle": 1146,
+        "anvil": 1002,
+        "bellows": 1615,
+        "repair": 357
+      }
+    },
+    {
+      "scenario": {
+        "id": "aggressive-heavy-medium-heat-normal-clean",
+        "strategy": "aggressive",
+        "hammer": "heavy",
+        "skill": "medium",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 412,
+      "defeats": 588,
+      "idle": 0,
+      "winRate": 0.412,
+      "meanRounds": 11.451,
+      "meanEarned": 3894.973,
+      "meanSpent": 900.76,
+      "meanCoins": 2994.213,
+      "meanScrap": 4.419,
+      "meanBroken": 5.046,
+      "meanStrikes": 221.475,
+      "meanHeats": 20.524,
+      "meanAccepted": 301.452,
+      "meanActiveInputSeconds": 166.0663145919798,
+      "medianActiveInputSeconds": 171.1785903930664,
+      "meanInputSecondsPerRound": 14.489393535619588,
+      "meanVictoryInputSeconds": 173.70770213858583,
+      "meanVictoryStrikes": 231.6601941747573,
+      "brokenPieceFraction": 0.1468867347829884,
+      "damageStrikeFraction": 0.17922113105316628,
+      "maxStateBytes": 26618,
+      "maxAccepted": 343,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 0,
+        "standard": 0,
+        "heavy": 221475
+      },
+      "gradeStrikes": {
+        "precise": 139378,
+        "ordinary": 71009,
+        "mishit": 11088
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 990,
+          "missed": 10,
+          "meanDelivered": 132.858
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 962,
+          "missed": 38,
+          "meanDelivered": 211.645
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 961,
+          "missed": 39,
+          "meanDelivered": 232.653
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 932,
+          "missed": 68,
+          "meanDelivered": 292.997
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 904,
+          "missed": 96,
+          "meanDelivered": 307.238
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 747,
+          "missed": 253,
+          "meanDelivered": 331.584
+        },
+        {
+          "round": 7,
+          "reached": 995,
+          "met": 882,
+          "missed": 113,
+          "meanDelivered": 381.95678391959797
+        },
+        {
+          "round": 8,
+          "reached": 994,
+          "met": 791,
+          "missed": 203,
+          "meanDelivered": 425.87122736418513
+        },
+        {
+          "round": 9,
+          "reached": 975,
+          "met": 653,
+          "missed": 322,
+          "meanDelivered": 441.84615384615387
+        },
+        {
+          "round": 10,
+          "reached": 921,
+          "met": 511,
+          "missed": 410,
+          "meanDelivered": 467.2269272529859
+        },
+        {
+          "round": 11,
+          "reached": 862,
+          "met": 339,
+          "missed": 523,
+          "meanDelivered": 470.62993039443154
+        },
+        {
+          "round": 12,
+          "reached": 704,
+          "met": 123,
+          "missed": 581,
+          "meanDelivered": 448.6306818181818
+        }
+      ],
+      "purchases": {
+        "handle": 1575,
+        "anvil": 1580,
+        "bellows": 1934,
+        "repair": 239
+      }
+    },
+    {
+      "scenario": {
+        "id": "aggressive-heavy-high-heat-normal-clean",
+        "strategy": "aggressive",
+        "hammer": "heavy",
+        "skill": "high",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 891,
+      "defeats": 109,
+      "idle": 0,
+      "winRate": 0.891,
+      "meanRounds": 11.967,
+      "meanEarned": 4589.161,
+      "meanSpent": 997.06,
+      "meanCoins": 3592.101,
+      "meanScrap": 5.353,
+      "meanBroken": 2.991,
+      "meanStrikes": 211.58,
+      "meanHeats": 14.355,
+      "meanAccepted": 290.555,
+      "meanActiveInputSeconds": 158.6519885393372,
+      "medianActiveInputSeconds": 158.54023202514648,
+      "meanInputSecondsPerRound": 13.258539056477726,
+      "meanVictoryInputSeconds": 158.54926026490074,
+      "meanVictoryStrikes": 211.44556677890012,
+      "brokenPieceFraction": 0.08331244255034678,
+      "damageStrikeFraction": 0.14170999149257965,
+      "maxStateBytes": 25976,
+      "maxAccepted": 330,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 0,
+        "standard": 0,
+        "heavy": 211580
+      },
+      "gradeStrikes": {
+        "precise": 201017,
+        "ordinary": 8027,
+        "mishit": 2536
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 129.522
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 981,
+          "missed": 19,
+          "meanDelivered": 217.82
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 981,
+          "missed": 19,
+          "meanDelivered": 240.3
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 973,
+          "missed": 27,
+          "meanDelivered": 308.281
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 970,
+          "missed": 30,
+          "meanDelivered": 327.354
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 939,
+          "missed": 61,
+          "meanDelivered": 365.682
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 971,
+          "missed": 29,
+          "meanDelivered": 398.77
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 955,
+          "missed": 45,
+          "meanDelivered": 455.457
+        },
+        {
+          "round": 9,
+          "reached": 1000,
+          "met": 916,
+          "missed": 84,
+          "meanDelivered": 509.613
+        },
+        {
+          "round": 10,
+          "reached": 998,
+          "met": 823,
+          "missed": 175,
+          "meanDelivered": 546.1673346693386
+        },
+        {
+          "round": 11,
+          "reached": 994,
+          "met": 640,
+          "missed": 354,
+          "meanDelivered": 555.7555331991952
+        },
+        {
+          "round": 12,
+          "reached": 975,
+          "met": 398,
+          "missed": 577,
+          "meanDelivered": 552.6830769230769
+        }
+      ],
+      "purchases": {
+        "handle": 1796,
+        "anvil": 1897,
+        "bellows": 2000,
+        "repair": 85
+      }
+    },
+    {
+      "scenario": {
+        "id": "aggressive-adaptive-low-heat-normal-clean",
+        "strategy": "aggressive",
+        "hammer": "adaptive",
+        "skill": "low",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 16,
+      "defeats": 984,
+      "idle": 0,
+      "winRate": 0.016,
+      "meanRounds": 9.402,
+      "meanEarned": 2429.222,
+      "meanSpent": 654.62,
+      "meanCoins": 1774.602,
+      "meanScrap": 4.543,
+      "meanBroken": 6.584,
+      "meanStrikes": 184.272,
+      "meanHeats": 16.229,
+      "meanAccepted": 246.448,
+      "meanActiveInputSeconds": 138.17076706207285,
+      "medianActiveInputSeconds": 137.3342399597168,
+      "meanInputSecondsPerRound": 14.614347832520556,
+      "meanVictoryInputSeconds": 182.88332355499267,
+      "meanVictoryStrikes": 244.4375,
+      "brokenPieceFraction": 0.233425512302347,
+      "damageStrikeFraction": 0.23954805939046628,
+      "maxStateBytes": 27220,
+      "maxAccepted": 351,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 338,
+        "standard": 146,
+        "heavy": 183788
+      },
+      "gradeStrikes": {
+        "precise": 53929,
+        "ordinary": 71985,
+        "mishit": 58358
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 964,
+          "missed": 36,
+          "meanDelivered": 138.782
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 926,
+          "missed": 74,
+          "meanDelivered": 200.657
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 881,
+          "missed": 119,
+          "meanDelivered": 214.611
+        },
+        {
+          "round": 4,
+          "reached": 999,
+          "met": 817,
+          "missed": 182,
+          "meanDelivered": 252.012012012012
+        },
+        {
+          "round": 5,
+          "reached": 999,
+          "met": 709,
+          "missed": 290,
+          "meanDelivered": 265.9309309309309
+        },
+        {
+          "round": 6,
+          "reached": 983,
+          "met": 431,
+          "missed": 552,
+          "meanDelivered": 259.36622583926754
+        },
+        {
+          "round": 7,
+          "reached": 916,
+          "met": 565,
+          "missed": 351,
+          "meanDelivered": 319.86899563318775
+        },
+        {
+          "round": 8,
+          "reached": 897,
+          "met": 391,
+          "missed": 506,
+          "meanDelivered": 333.4593088071349
+        },
+        {
+          "round": 9,
+          "reached": 727,
+          "met": 244,
+          "missed": 483,
+          "meanDelivered": 325.585969738652
+        },
+        {
+          "round": 10,
+          "reached": 479,
+          "met": 96,
+          "missed": 383,
+          "meanDelivered": 308.29227557411275
+        },
+        {
+          "round": 11,
+          "reached": 302,
+          "met": 33,
+          "missed": 269,
+          "meanDelivered": 320.6788079470199
+        },
+        {
+          "round": 12,
+          "reached": 100,
+          "met": 2,
+          "missed": 98,
+          "meanDelivered": 294.59
+        }
+      ],
+      "purchases": {
+        "handle": 1151,
+        "anvil": 1005,
+        "bellows": 1610,
+        "repair": 361
+      }
+    },
+    {
+      "scenario": {
+        "id": "aggressive-adaptive-medium-heat-normal-clean",
+        "strategy": "aggressive",
+        "hammer": "adaptive",
+        "skill": "medium",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 428,
+      "defeats": 572,
+      "idle": 0,
+      "winRate": 0.428,
+      "meanRounds": 11.463,
+      "meanEarned": 3913.155,
+      "meanSpent": 898.78,
+      "meanCoins": 3014.375,
+      "meanScrap": 4.433,
+      "meanBroken": 5.037,
+      "meanStrikes": 221.909,
+      "meanHeats": 20.553,
+      "meanAccepted": 301.98,
+      "meanActiveInputSeconds": 166.5218473091123,
+      "medianActiveInputSeconds": 171.66396408081056,
+      "meanInputSecondsPerRound": 14.51376049686507,
+      "meanVictoryInputSeconds": 174.07116109544995,
+      "meanVictoryStrikes": 231.92990654205607,
+      "brokenPieceFraction": 0.14647125534327837,
+      "damageStrikeFraction": 0.17873092123347858,
+      "maxStateBytes": 26593,
+      "maxAccepted": 343,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 1066,
+        "standard": 467,
+        "heavy": 220376
+      },
+      "gradeStrikes": {
+        "precise": 139865,
+        "ordinary": 70946,
+        "mishit": 11098
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 990,
+          "missed": 10,
+          "meanDelivered": 132.858
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 962,
+          "missed": 38,
+          "meanDelivered": 211.645
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 961,
+          "missed": 39,
+          "meanDelivered": 232.653
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 932,
+          "missed": 68,
+          "meanDelivered": 292.721
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 900,
+          "missed": 100,
+          "meanDelivered": 306.785
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 748,
+          "missed": 252,
+          "meanDelivered": 331.43
+        },
+        {
+          "round": 7,
+          "reached": 996,
+          "met": 881,
+          "missed": 115,
+          "meanDelivered": 382.16465863453817
+        },
+        {
+          "round": 8,
+          "reached": 995,
+          "met": 796,
+          "missed": 199,
+          "meanDelivered": 426.1829145728643
+        },
+        {
+          "round": 9,
+          "reached": 976,
+          "met": 660,
+          "missed": 316,
+          "meanDelivered": 443.79918032786884
+        },
+        {
+          "round": 10,
+          "reached": 923,
+          "met": 515,
+          "missed": 408,
+          "meanDelivered": 469.43770314192847
+        },
+        {
+          "round": 11,
+          "reached": 863,
+          "met": 362,
+          "missed": 501,
+          "meanDelivered": 475.1344148319815
+        },
+        {
+          "round": 12,
+          "reached": 710,
+          "met": 141,
+          "missed": 569,
+          "meanDelivered": 456.1901408450704
+        }
+      ],
+      "purchases": {
+        "handle": 1578,
+        "anvil": 1574,
+        "bellows": 1934,
+        "repair": 235
+      }
+    },
+    {
+      "scenario": {
+        "id": "aggressive-adaptive-high-heat-normal-clean",
+        "strategy": "aggressive",
+        "hammer": "adaptive",
+        "skill": "high",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 898,
+      "defeats": 102,
+      "idle": 0,
+      "winRate": 0.898,
+      "meanRounds": 11.967,
+      "meanEarned": 4602.382,
+      "meanSpent": 997.34,
+      "meanCoins": 3605.042,
+      "meanScrap": 5.336,
+      "meanBroken": 2.966,
+      "meanStrikes": 211.512,
+      "meanHeats": 14.353,
+      "meanAccepted": 290.511,
+      "meanActiveInputSeconds": 158.72428424850432,
+      "medianActiveInputSeconds": 158.54526232910158,
+      "meanInputSecondsPerRound": 13.26456476225062,
+      "meanVictoryInputSeconds": 158.64737093351548,
+      "meanVictoryStrikes": 211.42093541202672,
+      "brokenPieceFraction": 0.08261608311746191,
+      "damageStrikeFraction": 0.14105109875562616,
+      "maxStateBytes": 25979,
+      "maxAccepted": 330,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 79,
+        "standard": 2314,
+        "heavy": 209119
+      },
+      "gradeStrikes": {
+        "precise": 200977,
+        "ordinary": 8001,
+        "mishit": 2534
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 129.522
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 981,
+          "missed": 19,
+          "meanDelivered": 217.82
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 981,
+          "missed": 19,
+          "meanDelivered": 240.3
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 973,
+          "missed": 27,
+          "meanDelivered": 308.136
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 971,
+          "missed": 29,
+          "meanDelivered": 327.415
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 937,
+          "missed": 63,
+          "meanDelivered": 365.459
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 970,
+          "missed": 30,
+          "meanDelivered": 398.878
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 957,
+          "missed": 43,
+          "meanDelivered": 455.422
+        },
+        {
+          "round": 9,
+          "reached": 1000,
+          "met": 918,
+          "missed": 82,
+          "meanDelivered": 509.785
+        },
+        {
+          "round": 10,
+          "reached": 998,
+          "met": 826,
+          "missed": 172,
+          "meanDelivered": 548.4719438877755
+        },
+        {
+          "round": 11,
+          "reached": 994,
+          "met": 641,
+          "missed": 353,
+          "meanDelivered": 557.8541247484909
+        },
+        {
+          "round": 12,
+          "reached": 975,
+          "met": 409,
+          "missed": 566,
+          "meanDelivered": 561.8082051282051
+        }
+      ],
+      "purchases": {
+        "handle": 1795,
+        "anvil": 1896,
+        "bellows": 2000,
+        "repair": 88
+      }
+    },
+    {
+      "scenario": {
+        "id": "balanced-light-perfect-heat-normal-clean",
+        "strategy": "balanced",
+        "hammer": "light",
+        "skill": "perfect",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 1000,
+      "defeats": 0,
+      "idle": 0,
+      "winRate": 1,
+      "meanRounds": 12,
+      "meanEarned": 4308.519,
+      "meanSpent": 870.5,
+      "meanCoins": 3438.019,
+      "meanScrap": 2.169,
+      "meanBroken": 0.317,
+      "meanStrikes": 299.15,
+      "meanHeats": 15.307,
+      "meanAccepted": 381.217,
+      "meanActiveInputSeconds": 254.27750000000003,
+      "medianActiveInputSeconds": 254.15,
+      "meanInputSecondsPerRound": 21.18979166666668,
+      "meanVictoryInputSeconds": 254.27750000000003,
+      "meanVictoryStrikes": 299.15,
+      "brokenPieceFraction": 0.008805555555555556,
+      "damageStrikeFraction": 0.025468828346983118,
+      "maxStateBytes": 31098,
+      "maxAccepted": 405,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 299150,
+        "standard": 0,
+        "heavy": 0
+      },
+      "gradeStrikes": {
+        "precise": 299150,
+        "ordinary": 0,
+        "mishit": 0
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 136
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 155
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 183
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 227
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 267
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 998,
+          "missed": 2,
+          "meanDelivered": 290.171
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 360.597
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 996,
+          "missed": 4,
+          "meanDelivered": 403.308
+        },
+        {
+          "round": 9,
+          "reached": 1000,
+          "met": 997,
+          "missed": 3,
+          "meanDelivered": 465.95
+        },
+        {
+          "round": 10,
+          "reached": 1000,
+          "met": 983,
+          "missed": 17,
+          "meanDelivered": 540.988
+        },
+        {
+          "round": 11,
+          "reached": 1000,
+          "met": 925,
+          "missed": 75,
+          "meanDelivered": 608.216
+        },
+        {
+          "round": 12,
+          "reached": 1000,
+          "met": 510,
+          "missed": 490,
+          "meanDelivered": 671.289
+        }
+      ],
+      "purchases": {
+        "handle": 1119,
+        "anvil": 1958,
+        "bellows": 2000,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "balanced-standard-perfect-heat-normal-clean",
+        "strategy": "balanced",
+        "hammer": "standard",
+        "skill": "perfect",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 991,
+      "defeats": 9,
+      "idle": 0,
+      "winRate": 0.991,
+      "meanRounds": 12,
+      "meanEarned": 4292.662,
+      "meanSpent": 866.84,
+      "meanCoins": 3425.822,
+      "meanScrap": 2.343,
+      "meanBroken": 0.561,
+      "meanStrikes": 209.784,
+      "meanHeats": 9.542,
+      "meanAccepted": 285.831,
+      "meanActiveInputSeconds": 167.82719999999983,
+      "medianActiveInputSeconds": 167.2,
+      "meanInputSecondsPerRound": 13.985600000000003,
+      "meanVictoryInputSeconds": 167.79091826437926,
+      "meanVictoryStrikes": 209.73864783047426,
+      "brokenPieceFraction": 0.015583333333333333,
+      "damageStrikeFraction": 0.06619665942111887,
+      "maxStateBytes": 25659,
+      "maxAccepted": 311,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 0,
+        "standard": 209784,
+        "heavy": 0
+      },
+      "gradeStrikes": {
+        "precise": 209784,
+        "ordinary": 0,
+        "mishit": 0
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 136
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 154.976
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 183.168
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 999,
+          "missed": 1,
+          "meanDelivered": 226.982
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 998,
+          "missed": 2,
+          "meanDelivered": 266.892
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 999,
+          "missed": 1,
+          "meanDelivered": 292.307
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 995,
+          "missed": 5,
+          "meanDelivered": 360.149
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 976,
+          "missed": 24,
+          "meanDelivered": 401.218
+        },
+        {
+          "round": 9,
+          "reached": 1000,
+          "met": 973,
+          "missed": 27,
+          "meanDelivered": 463.2
+        },
+        {
+          "round": 10,
+          "reached": 1000,
+          "met": 924,
+          "missed": 76,
+          "meanDelivered": 534.652
+        },
+        {
+          "round": 11,
+          "reached": 1000,
+          "met": 832,
+          "missed": 168,
+          "meanDelivered": 593.76
+        },
+        {
+          "round": 12,
+          "reached": 1000,
+          "met": 636,
+          "missed": 364,
+          "meanDelivered": 679.358
+        }
+      ],
+      "purchases": {
+        "handle": 1133,
+        "anvil": 1933,
+        "bellows": 2000,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "balanced-heavy-perfect-heat-normal-clean",
+        "strategy": "balanced",
+        "hammer": "heavy",
+        "skill": "perfect",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 760,
+      "defeats": 240,
+      "idle": 0,
+      "winRate": 0.76,
+      "meanRounds": 11.918,
+      "meanEarned": 4156.431,
+      "meanSpent": 815.82,
+      "meanCoins": 3340.611,
+      "meanScrap": 1.857,
+      "meanBroken": 0.294,
+      "meanStrikes": 170.338,
+      "meanHeats": 10.597,
+      "meanAccepted": 247.086,
+      "meanActiveInputSeconds": 127.7535,
+      "medianActiveInputSeconds": 128.25,
+      "meanInputSecondsPerRound": 10.713765909090911,
+      "meanVictoryInputSeconds": 129.0029605263158,
+      "meanVictoryStrikes": 172.00394736842105,
+      "brokenPieceFraction": 0.008222856183923478,
+      "damageStrikeFraction": 0.11601639094036563,
+      "maxStateBytes": 22414,
+      "maxAccepted": 275,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 0,
+        "standard": 0,
+        "heavy": 170338
+      },
+      "gradeStrikes": {
+        "precise": 170338,
+        "ordinary": 0,
+        "mishit": 0
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 136.067
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 155.01
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 999,
+          "missed": 1,
+          "meanDelivered": 183.477
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 226.459
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 999,
+          "missed": 1,
+          "meanDelivered": 266.646
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 996,
+          "missed": 4,
+          "meanDelivered": 294.939
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 951,
+          "missed": 49,
+          "meanDelivered": 357.267
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 836,
+          "missed": 164,
+          "meanDelivered": 394.939
+        },
+        {
+          "round": 9,
+          "reached": 999,
+          "met": 821,
+          "missed": 178,
+          "meanDelivered": 458.06306306306305
+        },
+        {
+          "round": 10,
+          "reached": 998,
+          "met": 749,
+          "missed": 249,
+          "meanDelivered": 524.5841683366733
+        },
+        {
+          "round": 11,
+          "reached": 980,
+          "met": 573,
+          "missed": 407,
+          "meanDelivered": 583.9081632653061
+        },
+        {
+          "round": 12,
+          "reached": 941,
+          "met": 241,
+          "missed": 700,
+          "meanDelivered": 625.1402763018066
+        }
+      ],
+      "purchases": {
+        "handle": 1159,
+        "anvil": 1704,
+        "bellows": 1993,
+        "repair": 1
+      }
+    },
+    {
+      "scenario": {
+        "id": "balanced-adaptive-perfect-heat-normal-clean",
+        "strategy": "balanced",
+        "hammer": "adaptive",
+        "skill": "perfect",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 981,
+      "defeats": 19,
+      "idle": 0,
+      "winRate": 0.981,
+      "meanRounds": 11.999,
+      "meanEarned": 4279.296,
+      "meanSpent": 868.18,
+      "meanCoins": 3411.116,
+      "meanScrap": 2.372,
+      "meanBroken": 0.612,
+      "meanStrikes": 210.626,
+      "meanHeats": 9.653,
+      "meanAccepted": 286.735,
+      "meanActiveInputSeconds": 168.63555000000002,
+      "medianActiveInputSeconds": 168.1,
+      "meanInputSecondsPerRound": 14.054186742424216,
+      "meanVictoryInputSeconds": 168.54046890927626,
+      "meanVictoryStrikes": 210.51478083588177,
+      "brokenPieceFraction": 0.017001416784732062,
+      "damageStrikeFraction": 0.06574686885759592,
+      "maxStateBytes": 25966,
+      "maxAccepted": 317,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 4218,
+        "standard": 204885,
+        "heavy": 1523
+      },
+      "gradeStrikes": {
+        "precise": 210626,
+        "ordinary": 0,
+        "mishit": 0
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 136
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 155.021
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 999,
+          "missed": 1,
+          "meanDelivered": 183.103
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 999,
+          "missed": 1,
+          "meanDelivered": 226.844
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 997,
+          "missed": 3,
+          "meanDelivered": 267.097
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 997,
+          "missed": 3,
+          "meanDelivered": 291.806
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 995,
+          "missed": 5,
+          "meanDelivered": 360.097
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 961,
+          "missed": 39,
+          "meanDelivered": 400.198
+        },
+        {
+          "round": 9,
+          "reached": 1000,
+          "met": 965,
+          "missed": 35,
+          "meanDelivered": 462.771
+        },
+        {
+          "round": 10,
+          "reached": 1000,
+          "met": 916,
+          "missed": 84,
+          "meanDelivered": 533.882
+        },
+        {
+          "round": 11,
+          "reached": 1000,
+          "met": 806,
+          "missed": 194,
+          "meanDelivered": 592.175
+        },
+        {
+          "round": 12,
+          "reached": 999,
+          "met": 612,
+          "missed": 387,
+          "meanDelivered": 670.972972972973
+        }
+      ],
+      "purchases": {
+        "handle": 1138,
+        "anvil": 1935,
+        "bellows": 2000,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "balanced-adaptive-medium-precision-normal-clean",
+        "strategy": "balanced",
+        "hammer": "adaptive",
+        "skill": "medium",
+        "upgrades": "precision",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 816,
+      "defeats": 184,
+      "idle": 0,
+      "winRate": 0.816,
+      "meanRounds": 11.952,
+      "meanEarned": 4087.585,
+      "meanSpent": 813.94,
+      "meanCoins": 3273.645,
+      "meanScrap": 3.008,
+      "meanBroken": 0.987,
+      "meanStrikes": 226.848,
+      "meanHeats": 9.842,
+      "meanAccepted": 302.446,
+      "meanActiveInputSeconds": 181.0637651184082,
+      "medianActiveInputSeconds": 180.84595489501953,
+      "meanInputSecondsPerRound": 15.147275841641672,
+      "meanVictoryInputSeconds": 181.37724316540903,
+      "meanVictoryStrikes": 227.26960784313727,
+      "brokenPieceFraction": 0.02752677376171352,
+      "damageStrikeFraction": 0.09214980956411342,
+      "maxStateBytes": 27594,
+      "maxAccepted": 341,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 5462,
+        "standard": 208294,
+        "heavy": 13092
+      },
+      "gradeStrikes": {
+        "precise": 168002,
+        "ordinary": 49657,
+        "mishit": 9189
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 136.028
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 998,
+          "missed": 2,
+          "meanDelivered": 154.781
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 997,
+          "missed": 3,
+          "meanDelivered": 183.76
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 995,
+          "missed": 5,
+          "meanDelivered": 226.167
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 987,
+          "missed": 13,
+          "meanDelivered": 265.385
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 976,
+          "missed": 24,
+          "meanDelivered": 293.164
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 979,
+          "missed": 21,
+          "meanDelivered": 358.672
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 915,
+          "missed": 85,
+          "meanDelivered": 396.944
+        },
+        {
+          "round": 9,
+          "reached": 999,
+          "met": 902,
+          "missed": 97,
+          "meanDelivered": 457.67767767767765
+        },
+        {
+          "round": 10,
+          "reached": 998,
+          "met": 763,
+          "missed": 235,
+          "meanDelivered": 516.0841683366733
+        },
+        {
+          "round": 11,
+          "reached": 991,
+          "met": 540,
+          "missed": 451,
+          "meanDelivered": 553.8557013118062
+        },
+        {
+          "round": 12,
+          "reached": 964,
+          "met": 168,
+          "missed": 796,
+          "meanDelivered": 572.1379668049792
+        }
+      ],
+      "purchases": {
+        "handle": 1999,
+        "anvil": 1857,
+        "bellows": 1123,
+        "repair": 6
+      }
+    },
+    {
+      "scenario": {
+        "id": "balanced-adaptive-medium-stability-normal-clean",
+        "strategy": "balanced",
+        "hammer": "adaptive",
+        "skill": "medium",
+        "upgrades": "stability",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 826,
+      "defeats": 174,
+      "idle": 0,
+      "winRate": 0.826,
+      "meanRounds": 11.948,
+      "meanEarned": 4091.872,
+      "meanSpent": 832.46,
+      "meanCoins": 3259.412,
+      "meanScrap": 2.608,
+      "meanBroken": 1.214,
+      "meanStrikes": 234.253,
+      "meanHeats": 11.547,
+      "meanAccepted": 311.214,
+      "meanActiveInputSeconds": 187.02827560119633,
+      "medianActiveInputSeconds": 187.56400604248046,
+      "meanInputSecondsPerRound": 15.650820616755608,
+      "meanVictoryInputSeconds": 187.52500208653794,
+      "meanVictoryStrikes": 234.91041162227603,
+      "brokenPieceFraction": 0.033868987836179,
+      "damageStrikeFraction": 0.094235719499857,
+      "maxStateBytes": 27943,
+      "maxAccepted": 346,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 6756,
+        "standard": 213781,
+        "heavy": 13716
+      },
+      "gradeStrikes": {
+        "precise": 159778,
+        "ordinary": 64979,
+        "mishit": 9496
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 136.028
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 998,
+          "missed": 2,
+          "meanDelivered": 154.781
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 997,
+          "missed": 3,
+          "meanDelivered": 183.76
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 994,
+          "missed": 6,
+          "meanDelivered": 226.104
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 987,
+          "missed": 13,
+          "meanDelivered": 265.387
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 975,
+          "missed": 25,
+          "meanDelivered": 293.338
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 972,
+          "missed": 28,
+          "meanDelivered": 357.999
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 910,
+          "missed": 90,
+          "meanDelivered": 396.516
+        },
+        {
+          "round": 9,
+          "reached": 1000,
+          "met": 883,
+          "missed": 117,
+          "meanDelivered": 456.346
+        },
+        {
+          "round": 10,
+          "reached": 1000,
+          "met": 759,
+          "missed": 241,
+          "meanDelivered": 511.479
+        },
+        {
+          "round": 11,
+          "reached": 990,
+          "met": 587,
+          "missed": 403,
+          "meanDelivered": 562.2272727272727
+        },
+        {
+          "round": 12,
+          "reached": 958,
+          "met": 228,
+          "missed": 730,
+          "meanDelivered": 577.7964509394573
+        }
+      ],
+      "purchases": {
+        "handle": 1116,
+        "anvil": 1990,
+        "bellows": 1780,
+        "repair": 2
+      }
+    },
+    {
+      "scenario": {
+        "id": "balanced-adaptive-medium-none-normal-clean",
+        "strategy": "balanced",
+        "hammer": "adaptive",
+        "skill": "medium",
+        "upgrades": "none",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 15,
+      "defeats": 985,
+      "idle": 0,
+      "winRate": 0.015,
+      "meanRounds": 10.579,
+      "meanEarned": 3007.123,
+      "meanSpent": 0,
+      "meanCoins": 3007.123,
+      "meanScrap": 26.737,
+      "meanBroken": 1.384,
+      "meanStrikes": 199.122,
+      "meanHeats": 6.729,
+      "meanAccepted": 259.25,
+      "meanActiveInputSeconds": 159.0264435317992,
+      "medianActiveInputSeconds": 160.3233985900879,
+      "meanInputSecondsPerRound": 14.997662255623705,
+      "meanVictoryInputSeconds": 188.1467214457194,
+      "meanVictoryStrikes": 235.46666666666667,
+      "brokenPieceFraction": 0.04360840659167533,
+      "damageStrikeFraction": 0.13509808057371864,
+      "maxStateBytes": 26681,
+      "maxAccepted": 327,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 6861,
+        "standard": 180904,
+        "heavy": 11357
+      },
+      "gradeStrikes": {
+        "precise": 112667,
+        "ordinary": 78397,
+        "mishit": 8058
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 136.028
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 998,
+          "missed": 2,
+          "meanDelivered": 154.781
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 997,
+          "missed": 3,
+          "meanDelivered": 183.76
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 980,
+          "missed": 20,
+          "meanDelivered": 225.327
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 945,
+          "missed": 55,
+          "meanDelivered": 262.041
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 921,
+          "missed": 79,
+          "meanDelivered": 289.079
+        },
+        {
+          "round": 7,
+          "reached": 998,
+          "met": 796,
+          "missed": 202,
+          "meanDelivered": 342.3356713426854
+        },
+        {
+          "round": 8,
+          "reached": 997,
+          "met": 523,
+          "missed": 474,
+          "meanDelivered": 363.0641925777332
+        },
+        {
+          "round": 9,
+          "reached": 984,
+          "met": 355,
+          "missed": 629,
+          "meanDelivered": 403.8404471544715
+        },
+        {
+          "round": 10,
+          "reached": 890,
+          "met": 75,
+          "missed": 815,
+          "meanDelivered": 407.4640449438202
+        },
+        {
+          "round": 11,
+          "reached": 537,
+          "met": 4,
+          "missed": 533,
+          "meanDelivered": 414.0409683426443
+        },
+        {
+          "round": 12,
+          "reached": 173,
+          "met": 0,
+          "missed": 173,
+          "meanDelivered": 405.3121387283237
+        }
+      ],
+      "purchases": {
+        "handle": 0,
+        "anvil": 0,
+        "bellows": 0,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "balanced-adaptive-high-precision-normal-clean",
+        "strategy": "balanced",
+        "hammer": "adaptive",
+        "skill": "high",
+        "upgrades": "precision",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 951,
+      "defeats": 49,
+      "idle": 0,
+      "winRate": 0.951,
+      "meanRounds": 11.995,
+      "meanEarned": 4215.174,
+      "meanSpent": 832.44,
+      "meanCoins": 3382.734,
+      "meanScrap": 3.133,
+      "meanBroken": 0.587,
+      "meanStrikes": 209.782,
+      "meanHeats": 8.577,
+      "meanAccepted": 284.808,
+      "meanActiveInputSeconds": 167.7751904588013,
+      "medianActiveInputSeconds": 167.50201974487305,
+      "meanInputSecondsPerRound": 13.98686012408386,
+      "meanVictoryInputSeconds": 167.732210935703,
+      "meanVictoryStrikes": 209.73711882229233,
+      "brokenPieceFraction": 0.016312352369042656,
+      "damageStrikeFraction": 0.06884289405192057,
+      "maxStateBytes": 25564,
+      "maxAccepted": 309,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 3628,
+        "standard": 202254,
+        "heavy": 3900
+      },
+      "gradeStrikes": {
+        "precise": 204164,
+        "ordinary": 3102,
+        "mishit": 2516
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 135.983
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 155.041
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 183.05
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 999,
+          "missed": 1,
+          "meanDelivered": 226.792
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 996,
+          "missed": 4,
+          "meanDelivered": 267.082
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 997,
+          "missed": 3,
+          "meanDelivered": 292.228
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 993,
+          "missed": 7,
+          "meanDelivered": 359.914
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 966,
+          "missed": 34,
+          "meanDelivered": 400.433
+        },
+        {
+          "round": 9,
+          "reached": 1000,
+          "met": 958,
+          "missed": 42,
+          "meanDelivered": 462.33
+        },
+        {
+          "round": 10,
+          "reached": 1000,
+          "met": 870,
+          "missed": 130,
+          "meanDelivered": 529.552
+        },
+        {
+          "round": 11,
+          "reached": 999,
+          "met": 687,
+          "missed": 312,
+          "meanDelivered": 574.4664664664665
+        },
+        {
+          "round": 12,
+          "reached": 996,
+          "met": 320,
+          "missed": 676,
+          "meanDelivered": 631.402610441767
+        }
+      ],
+      "purchases": {
+        "handle": 2000,
+        "anvil": 1965,
+        "bellows": 1095,
+        "repair": 1
+      }
+    },
+    {
+      "scenario": {
+        "id": "balanced-adaptive-high-stability-normal-clean",
+        "strategy": "balanced",
+        "hammer": "adaptive",
+        "skill": "high",
+        "upgrades": "stability",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 979,
+      "defeats": 21,
+      "idle": 0,
+      "winRate": 0.979,
+      "meanRounds": 11.998,
+      "meanEarned": 4267.113,
+      "meanSpent": 862.82,
+      "meanCoins": 3404.293,
+      "meanScrap": 2.427,
+      "meanBroken": 0.663,
+      "meanStrikes": 212.031,
+      "meanHeats": 9.605,
+      "meanAccepted": 287.992,
+      "meanActiveInputSeconds": 169.61911226791386,
+      "medianActiveInputSeconds": 169.4403604736328,
+      "meanInputSecondsPerRound": 14.136990188871767,
+      "meanVictoryInputSeconds": 169.58489490329018,
+      "meanVictoryStrikes": 211.9908069458631,
+      "brokenPieceFraction": 0.018419736622770463,
+      "damageStrikeFraction": 0.0691314005970825,
+      "maxStateBytes": 25603,
+      "maxAccepted": 312,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 4101,
+        "standard": 204464,
+        "heavy": 3466
+      },
+      "gradeStrikes": {
+        "precise": 205167,
+        "ordinary": 4323,
+        "mishit": 2541
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 135.983
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 155.041
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 183.05
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 999,
+          "missed": 1,
+          "meanDelivered": 226.792
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 996,
+          "missed": 4,
+          "meanDelivered": 267.082
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 997,
+          "missed": 3,
+          "meanDelivered": 292.228
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 994,
+          "missed": 6,
+          "meanDelivered": 359.988
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 968,
+          "missed": 32,
+          "meanDelivered": 400.965
+        },
+        {
+          "round": 9,
+          "reached": 1000,
+          "met": 969,
+          "missed": 31,
+          "meanDelivered": 462.997
+        },
+        {
+          "round": 10,
+          "reached": 1000,
+          "met": 901,
+          "missed": 99,
+          "meanDelivered": 532.282
+        },
+        {
+          "round": 11,
+          "reached": 999,
+          "met": 797,
+          "missed": 202,
+          "meanDelivered": 594.0750750750751
+        },
+        {
+          "round": 12,
+          "reached": 999,
+          "met": 567,
+          "missed": 432,
+          "meanDelivered": 657.8818818818819
+        }
+      ],
+      "purchases": {
+        "handle": 1101,
+        "anvil": 2000,
+        "bellows": 1928,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "balanced-adaptive-high-none-normal-clean",
+        "strategy": "balanced",
+        "hammer": "adaptive",
+        "skill": "high",
+        "upgrades": "none",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 286,
+      "defeats": 714,
+      "idle": 0,
+      "winRate": 0.286,
+      "meanRounds": 11.72,
+      "meanEarned": 3782.269,
+      "meanSpent": 0,
+      "meanCoins": 3782.269,
+      "meanScrap": 28.945,
+      "meanBroken": 0.962,
+      "meanStrikes": 206.086,
+      "meanHeats": 6.256,
+      "meanAccepted": 271.977,
+      "meanActiveInputSeconds": 164.92649809585558,
+      "medianActiveInputSeconds": 168.11094528198242,
+      "meanInputSecondsPerRound": 14.060827077970847,
+      "meanVictoryInputSeconds": 169.5996481531318,
+      "meanVictoryStrikes": 212.02797202797203,
+      "brokenPieceFraction": 0.027360637087599546,
+      "damageStrikeFraction": 0.1082266626553963,
+      "maxStateBytes": 24918,
+      "maxAccepted": 302,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 5516,
+        "standard": 196830,
+        "heavy": 3740
+      },
+      "gradeStrikes": {
+        "precise": 191281,
+        "ordinary": 12328,
+        "mishit": 2477
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 135.983
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 155.041
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 183.05
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 999,
+          "missed": 1,
+          "meanDelivered": 226.852
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 990,
+          "missed": 10,
+          "meanDelivered": 266.333
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 975,
+          "missed": 25,
+          "meanDelivered": 292.718
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 948,
+          "missed": 52,
+          "meanDelivered": 355.441
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 874,
+          "missed": 126,
+          "meanDelivered": 390.537
+        },
+        {
+          "round": 9,
+          "reached": 1000,
+          "met": 770,
+          "missed": 230,
+          "meanDelivered": 442.204
+        },
+        {
+          "round": 10,
+          "reached": 997,
+          "met": 431,
+          "missed": 566,
+          "meanDelivered": 481.111334002006
+        },
+        {
+          "round": 11,
+          "reached": 970,
+          "met": 24,
+          "missed": 946,
+          "meanDelivered": 484.86494845360824
+        },
+        {
+          "round": 12,
+          "reached": 753,
+          "met": 0,
+          "missed": 753,
+          "meanDelivered": 510.1235059760956
+        }
+      ],
+      "purchases": {
+        "handle": 0,
+        "anvil": 0,
+        "bellows": 0,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "balanced-adaptive-low-heat-slow-clean",
+        "strategy": "balanced",
+        "hammer": "adaptive",
+        "skill": "low",
+        "upgrades": "heat",
+        "slow": true,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 467,
+      "defeats": 533,
+      "idle": 0,
+      "winRate": 0.467,
+      "meanRounds": 11.681,
+      "meanEarned": 3688.952,
+      "meanSpent": 815.06,
+      "meanCoins": 2873.892,
+      "meanScrap": 3.3,
+      "meanBroken": 2.509,
+      "meanStrikes": 249.917,
+      "meanHeats": 14.44,
+      "meanAccepted": 327.132,
+      "meanActiveInputSeconds": 243.45150107772827,
+      "medianActiveInputSeconds": 247.5412335205078,
+      "meanInputSecondsPerRound": 20.817677051475144,
+      "meanVictoryInputSeconds": 249.79708230584254,
+      "meanVictoryStrikes": 256.6359743040685,
+      "brokenPieceFraction": 0.07159775133407528,
+      "damageStrikeFraction": 0.12361704085756471,
+      "maxStateBytes": 29940,
+      "maxAccepted": 377,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 12300,
+        "standard": 222965,
+        "heavy": 14652
+      },
+      "gradeStrikes": {
+        "precise": 124688,
+        "ordinary": 94897,
+        "mishit": 30332
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 135.973
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 997,
+          "missed": 3,
+          "meanDelivered": 154.542
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 990,
+          "missed": 10,
+          "meanDelivered": 183.904
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 980,
+          "missed": 20,
+          "meanDelivered": 224.72
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 974,
+          "missed": 26,
+          "meanDelivered": 263.458
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 925,
+          "missed": 75,
+          "meanDelivered": 289.326
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 909,
+          "missed": 91,
+          "meanDelivered": 351.267
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 805,
+          "missed": 195,
+          "meanDelivered": 381.92
+        },
+        {
+          "round": 9,
+          "reached": 997,
+          "met": 729,
+          "missed": 268,
+          "meanDelivered": 432.1063189568706
+        },
+        {
+          "round": 10,
+          "reached": 976,
+          "met": 580,
+          "missed": 396,
+          "meanDelivered": 470.5266393442623
+        },
+        {
+          "round": 11,
+          "reached": 936,
+          "met": 321,
+          "missed": 615,
+          "meanDelivered": 480.1623931623932
+        },
+        {
+          "round": 12,
+          "reached": 772,
+          "met": 54,
+          "missed": 718,
+          "meanDelivered": 471.97668393782385
+        }
+      ],
+      "purchases": {
+        "handle": 1286,
+        "anvil": 1608,
+        "bellows": 1990,
+        "repair": 19
+      }
+    },
+    {
+      "scenario": {
+        "id": "balanced-adaptive-medium-heat-slow-clean",
+        "strategy": "balanced",
+        "hammer": "adaptive",
+        "skill": "medium",
+        "upgrades": "heat",
+        "slow": true,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 941,
+      "defeats": 59,
+      "idle": 0,
+      "winRate": 0.941,
+      "meanRounds": 11.986,
+      "meanEarned": 4200.804,
+      "meanSpent": 860.58,
+      "meanCoins": 3340.224,
+      "meanScrap": 2.57,
+      "meanBroken": 0.963,
+      "meanStrikes": 221.064,
+      "meanHeats": 10.39,
+      "meanAccepted": 297.465,
+      "meanActiveInputSeconds": 215.24237211456284,
+      "medianActiveInputSeconds": 214.70175018310547,
+      "meanInputSecondsPerRound": 17.957285430530206,
+      "meanVictoryInputSeconds": 215.30987428509073,
+      "meanVictoryStrikes": 221.15515409139215,
+      "brokenPieceFraction": 0.02678124478558318,
+      "damageStrikeFraction": 0.08305287156660515,
+      "maxStateBytes": 26967,
+      "maxAccepted": 331,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 5530,
+        "standard": 206659,
+        "heavy": 8875
+      },
+      "gradeStrikes": {
+        "precise": 187812,
+        "ordinary": 25271,
+        "mishit": 7981
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 135.983
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 999,
+          "missed": 1,
+          "meanDelivered": 154.968
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 183.361
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 999,
+          "missed": 1,
+          "meanDelivered": 226.699
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 996,
+          "missed": 4,
+          "meanDelivered": 267.076
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 987,
+          "missed": 13,
+          "meanDelivered": 292.667
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 982,
+          "missed": 18,
+          "meanDelivered": 358.593
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 935,
+          "missed": 65,
+          "meanDelivered": 398.265
+        },
+        {
+          "round": 9,
+          "reached": 1000,
+          "met": 939,
+          "missed": 61,
+          "meanDelivered": 459.865
+        },
+        {
+          "round": 10,
+          "reached": 1000,
+          "met": 840,
+          "missed": 160,
+          "meanDelivered": 522.83
+        },
+        {
+          "round": 11,
+          "reached": 999,
+          "met": 736,
+          "missed": 263,
+          "meanDelivered": 579.4864864864865
+        },
+        {
+          "round": 12,
+          "reached": 987,
+          "met": 459,
+          "missed": 528,
+          "meanDelivered": 629.7771023302938
+        }
+      ],
+      "purchases": {
+        "handle": 1151,
+        "anvil": 1890,
+        "bellows": 2000,
+        "repair": 3
+      }
+    },
+    {
+      "scenario": {
+        "id": "raw-light-perfect-none-normal-clean",
+        "strategy": "raw",
+        "hammer": "light",
+        "skill": "perfect",
+        "upgrades": "none",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 0,
+      "defeats": 1000,
+      "idle": 0,
+      "winRate": 0,
+      "meanRounds": 3,
+      "meanEarned": 181.72,
+      "meanSpent": 0,
+      "meanCoins": 181.72,
+      "meanScrap": 0,
+      "meanBroken": 0,
+      "meanStrikes": 0,
+      "meanHeats": 0,
+      "meanAccepted": 14,
+      "meanActiveInputSeconds": 0,
+      "medianActiveInputSeconds": 0,
+      "meanInputSecondsPerRound": 0,
+      "meanVictoryInputSeconds": null,
+      "meanVictoryStrikes": null,
+      "brokenPieceFraction": 0,
+      "damageStrikeFraction": 0,
+      "maxStateBytes": 2707,
+      "maxAccepted": 14,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 0,
+        "standard": 0,
+        "heavy": 0
+      },
+      "gradeStrikes": {
+        "precise": 0,
+        "ordinary": 0,
+        "mishit": 0
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 0,
+          "missed": 1000,
+          "meanDelivered": 58
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 0,
+          "missed": 1000,
+          "meanDelivered": 61.92
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 0,
+          "missed": 1000,
+          "meanDelivered": 61.8
+        },
+        {
+          "round": 4,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 5,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 6,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 7,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 8,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 9,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 10,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 11,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 12,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        }
+      ],
+      "purchases": {
+        "handle": 0,
+        "anvil": 0,
+        "bellows": 0,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "recycle-light-perfect-none-normal-clean",
+        "strategy": "recycle",
+        "hammer": "light",
+        "skill": "perfect",
+        "upgrades": "none",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 0,
+      "defeats": 1000,
+      "idle": 0,
+      "winRate": 0,
+      "meanRounds": 3,
+      "meanEarned": 0,
+      "meanSpent": 0,
+      "meanCoins": 0,
+      "meanScrap": 31.72,
+      "meanBroken": 0,
+      "meanStrikes": 0,
+      "meanHeats": 0,
+      "meanAccepted": 14,
+      "meanActiveInputSeconds": 0,
+      "medianActiveInputSeconds": 0,
+      "meanInputSecondsPerRound": 0,
+      "meanVictoryInputSeconds": null,
+      "meanVictoryStrikes": null,
+      "brokenPieceFraction": 0,
+      "damageStrikeFraction": 0,
+      "maxStateBytes": 2692,
+      "maxAccepted": 14,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 0,
+        "standard": 0,
+        "heavy": 0
+      },
+      "gradeStrikes": {
+        "precise": 0,
+        "ordinary": 0,
+        "mishit": 0
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 0,
+          "missed": 1000,
+          "meanDelivered": 0
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 0,
+          "missed": 1000,
+          "meanDelivered": 0
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 0,
+          "missed": 1000,
+          "meanDelivered": 0
+        },
+        {
+          "round": 4,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 5,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 6,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 7,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 8,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 9,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 10,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 11,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 12,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        }
+      ],
+      "purchases": {
+        "handle": 0,
+        "anvil": 0,
+        "bellows": 0,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "idle-light-perfect-none-normal-clean",
+        "strategy": "idle",
+        "hammer": "light",
+        "skill": "perfect",
+        "upgrades": "none",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 0,
+      "defeats": 0,
+      "idle": 1000,
+      "winRate": 0,
+      "meanRounds": 0,
+      "meanEarned": 0,
+      "meanSpent": 0,
+      "meanCoins": 0,
+      "meanScrap": 0,
+      "meanBroken": 0,
+      "meanStrikes": 0,
+      "meanHeats": 0,
+      "meanAccepted": 0,
+      "meanActiveInputSeconds": 0,
+      "medianActiveInputSeconds": 0,
+      "meanInputSecondsPerRound": 0,
+      "meanVictoryInputSeconds": null,
+      "meanVictoryStrikes": null,
+      "brokenPieceFraction": 0,
+      "damageStrikeFraction": 0,
+      "maxStateBytes": 871,
+      "maxAccepted": 0,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 0,
+        "standard": 0,
+        "heavy": 0
+      },
+      "gradeStrikes": {
+        "precise": 0,
+        "ordinary": 0,
+        "mishit": 0
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 2,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 3,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 4,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 5,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 6,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 7,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 8,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 9,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 10,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 11,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 12,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        }
+      ],
+      "purchases": {
+        "handle": 0,
+        "anvil": 0,
+        "bellows": 0,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "blind-heavy-blind-none-normal-clean",
+        "strategy": "blind",
+        "hammer": "heavy",
+        "skill": "blind",
+        "upgrades": "none",
+        "slow": false,
+        "duplicateSpam": false
+      },
+      "count": 1000,
+      "victories": 0,
+      "defeats": 1000,
+      "idle": 0,
+      "winRate": 0,
+      "meanRounds": 7.009,
+      "meanEarned": 1627.787,
+      "meanSpent": 0,
+      "meanCoins": 1627.787,
+      "meanScrap": 4.006,
+      "meanBroken": 4.006,
+      "meanStrikes": 122.897,
+      "meanHeats": 0,
+      "meanAccepted": 154.636,
+      "meanActiveInputSeconds": 92.24718945007314,
+      "medianActiveInputSeconds": 92.70357971191406,
+      "meanInputSecondsPerRound": 13.144176372673389,
+      "meanVictoryInputSeconds": null,
+      "meanVictoryStrikes": null,
+      "brokenPieceFraction": 0.19051695439197222,
+      "damageStrikeFraction": 0.2988600209931894,
+      "maxStateBytes": 19095,
+      "maxAccepted": 231,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 0,
+        "standard": 0,
+        "heavy": 122897
+      },
+      "gradeStrikes": {
+        "precise": 14606,
+        "ordinary": 34602,
+        "mishit": 73689
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 982,
+          "missed": 18,
+          "meanDelivered": 239.257
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 877,
+          "missed": 123,
+          "meanDelivered": 229.381
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 767,
+          "missed": 233,
+          "meanDelivered": 230.586
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 608,
+          "missed": 392,
+          "meanDelivered": 232.774
+        },
+        {
+          "round": 5,
+          "reached": 981,
+          "met": 479,
+          "missed": 502,
+          "meanDelivered": 234.04689092762487
+        },
+        {
+          "round": 6,
+          "reached": 909,
+          "met": 246,
+          "missed": 663,
+          "meanDelivered": 229.71507150715072
+        },
+        {
+          "round": 7,
+          "reached": 697,
+          "met": 47,
+          "missed": 650,
+          "meanDelivered": 230.2984218077475
+        },
+        {
+          "round": 8,
+          "reached": 350,
+          "met": 3,
+          "missed": 347,
+          "meanDelivered": 227.75428571428571
+        },
+        {
+          "round": 9,
+          "reached": 69,
+          "met": 0,
+          "missed": 69,
+          "meanDelivered": 237.52173913043478
+        },
+        {
+          "round": 10,
+          "reached": 3,
+          "met": 0,
+          "missed": 3,
+          "meanDelivered": 252.33333333333334
+        },
+        {
+          "round": 11,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        },
+        {
+          "round": 12,
+          "reached": 0,
+          "met": 0,
+          "missed": 0,
+          "meanDelivered": null
+        }
+      ],
+      "purchases": {
+        "handle": 0,
+        "anvil": 0,
+        "bellows": 0,
+        "repair": 0
+      }
+    },
+    {
+      "scenario": {
+        "id": "balanced-adaptive-medium-heat-normal-spam",
+        "strategy": "balanced",
+        "hammer": "adaptive",
+        "skill": "medium",
+        "upgrades": "heat",
+        "slow": false,
+        "duplicateSpam": true
+      },
+      "count": 1000,
+      "victories": 819,
+      "defeats": 181,
+      "idle": 0,
+      "winRate": 0.819,
+      "meanRounds": 11.945,
+      "meanEarned": 4083.509,
+      "meanSpent": 840.32,
+      "meanCoins": 3243.189,
+      "meanScrap": 2.727,
+      "meanBroken": 1.363,
+      "meanStrikes": 235.394,
+      "meanHeats": 11.993,
+      "meanAccepted": 312.727,
+      "meanActiveInputSeconds": 188.00198368606567,
+      "medianActiveInputSeconds": 188.22568969726564,
+      "meanInputSecondsPerRound": 15.735438395115224,
+      "meanVictoryInputSeconds": 188.44412858937412,
+      "meanVictoryStrikes": 235.993894993895,
+      "brokenPieceFraction": 0.03803544021208316,
+      "damageStrikeFraction": 0.09746212732694971,
+      "maxStateBytes": 28013,
+      "maxAccepted": 349,
+      "allReplayValid": true,
+      "modeStrikes": {
+        "light": 7518,
+        "standard": 214656,
+        "heavy": 13220
+      },
+      "gradeStrikes": {
+        "precise": 162108,
+        "ordinary": 63761,
+        "mishit": 9525
+      },
+      "rounds": [
+        {
+          "round": 1,
+          "reached": 1000,
+          "met": 1000,
+          "missed": 0,
+          "meanDelivered": 136.028
+        },
+        {
+          "round": 2,
+          "reached": 1000,
+          "met": 998,
+          "missed": 2,
+          "meanDelivered": 154.781
+        },
+        {
+          "round": 3,
+          "reached": 1000,
+          "met": 997,
+          "missed": 3,
+          "meanDelivered": 183.76
+        },
+        {
+          "round": 4,
+          "reached": 1000,
+          "met": 994,
+          "missed": 6,
+          "meanDelivered": 226.104
+        },
+        {
+          "round": 5,
+          "reached": 1000,
+          "met": 987,
+          "missed": 13,
+          "meanDelivered": 265.396
+        },
+        {
+          "round": 6,
+          "reached": 1000,
+          "met": 975,
+          "missed": 25,
+          "meanDelivered": 293.171
+        },
+        {
+          "round": 7,
+          "reached": 1000,
+          "met": 968,
+          "missed": 32,
+          "meanDelivered": 357.663
+        },
+        {
+          "round": 8,
+          "reached": 1000,
+          "met": 905,
+          "missed": 95,
+          "meanDelivered": 395.552
+        },
+        {
+          "round": 9,
+          "reached": 999,
+          "met": 875,
+          "missed": 124,
+          "meanDelivered": 454.8778778778779
+        },
+        {
+          "round": 10,
+          "reached": 997,
+          "met": 748,
+          "missed": 249,
+          "meanDelivered": 508.86258776328987
+        },
+        {
+          "round": 11,
+          "reached": 989,
+          "met": 599,
+          "missed": 390,
+          "meanDelivered": 563.2103134479272
+        },
+        {
+          "round": 12,
+          "reached": 960,
+          "met": 255,
+          "missed": 705,
+          "meanDelivered": 575.2916666666666
+        }
+      ],
+      "purchases": {
+        "handle": 1207,
+        "anvil": 1776,
+        "bellows": 1995,
+        "repair": 3
+      }
+    }
+  ]
+}

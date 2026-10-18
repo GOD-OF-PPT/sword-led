@@ -1,0 +1,35 @@
+{
+  "recordedAt": "2026-10-18T02:45:13.827Z",
+  "sourceHashesMatch": true,
+  "csvDigestMatch": true,
+  "uniqueSeedCases": 53000,
+  "totals": {
+    "victory": 23392,
+    "defeat": 28608,
+    "idle": 1000,
+    "accepted": 14670092,
+    "rejected": 1573635
+  },
+  "reports": 53,
+  "seedsPerScenario": 1000,
+  "pairedSpamStatesIdentical": true,
+  "allFinalStatesReplayValidated": true,
+  "maxAccepted": 630,
+  "maxStateBytes": 46044,
+  "artifactAndConfigurationHashes": {
+    "package.json": "f1b06ddf3428f808f2ccd396d5963c4583beb1c3e179f81024f9e18ef4c25ffd",
+    "package-lock.json": "fb6298f489290886a8b47e266b4205a94acf9763086af45b1cc2992a01d8a73f",
+    "tsconfig.json": "524527357da709001027eb4272ef2f3fb999e4a87f0894fc4dfd4f7321562cfc",
+    "tsconfig.simulation.json": "71a5000123e026eaf0a6f534445eed8ce27ef581f74fc9bb059082bf731da2a7",
+    "tsconfig.node.json": "3d490dbea305ae41467c7ea67052034473ea4753233809987cbd0511200f5184",
+    "tests/core/concept-scenario.ts": "5299ce3bd749a6069e241b003ce9cb04b080c1f413ddadf03babd97379f7a585",
+    "tests/core/concept.test.ts": "084dcb7e17a66fb810cf2a8dbda443f26e712073cc58154ca3d00462f18ee6dc",
+    "tests/core/simulation.test.ts": "78819f90e77b99244398b027adb6b1d5d36df17249592b4404a6807e68535917",
+    "docs/evidence/T06/verify-v1.json": "161629caf6bdc8e0c5c36c61cc5f947b5a338b59b3f71826bf57fb1f8675599a",
+    "docs/evidence/T06/verify-v1.csv.gz": "6dc205b5cf29c2445fb3d63debde938f71998e4a0ae0919631dfb460d4bb51be",
+    "docs/evidence/T06/verify-v1.medium-victory.json": "e1367a7109b1d847a1a190d3bc0441af7342d53563311100fc395923b84d859f",
+    "docs/evidence/T06/verify-v1.raw-defeat.json": "eca6be28fc415bf808503c10f2604383b46105f5660f74a59f3c6296974b0234",
+    "docs/evidence/T06/concept-b-state.json": "9b2ea54f05ed28a3806b5a6e57c4e304cdb909617172b7cbf9004ddf3602a943",
+    "docs/evidence/T06/native-bfcache.json": "8126c66477ea31a6a59b490a768e7aef90bc33874d3de75fc88ee06ff658d366"
+  }
+}

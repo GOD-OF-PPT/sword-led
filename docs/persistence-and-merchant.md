@@ -67,7 +67,7 @@ storage 事件只提示存档已变化，不自动采纳写入基准，也不隐
 
 ## 正式入口与页面接线
 
-- 纯规则：`src/core/index.ts`，createRun / applyCommand / getRunView / validateRun。模拟器只用此入口，不写玩家存档。
+- 纯规则：`src/core/index.ts`，createRun / applyCommand / getRunView / validateRun。模拟器的业务动作只用此入口；独立输入流复用纯随机工具算法，不读取业务随机状态，也不写玩家存档。
 - 浏览器会话：`src/persistence/index.ts` 的 createBrowserSession(window)，自动接 pagehide/pageshow/storage。
 - 可替换 Adapter：createSaveRepository 和 createWriterLease，供测试或其他宿主使用。页面接线使用完整会话，不绕过锁直接写低层仓库。
 - 页面订阅只读快照渲染；规则动作只通过 dispatch 送入，不能再根据领域事件手动加金币/废料。
@@ -107,4 +107,4 @@ npm run test:storage:browser
 
 浏览器脚本先构建，再在隔离的测试 origin/profile 中验证产物。两个 ESM 入口共享 dist 中的公共 chunk，应整体保留 dist，不能只复制一个入口文件。测试页和原生探测均在 tests/browser，不进入运行产物，也不是游戏页面。
 
-实际结果及边界见 [T05 验证报告](reviews/T05-persistence-validation.md)。数值策略平衡、完整网页、音效/可访问性和所有游戏页面的用户验收仍由 T06–T12 完成。
+实际结果及边界见[T05验证报告](reviews/T05-persistence-validation.md)；T06已完成[整局模拟/R2](reviews/R2-kernel-and-balance.md)。完整网页、音效/可访问性和所有游戏页面的用户验收仍由T07–T12完成。
