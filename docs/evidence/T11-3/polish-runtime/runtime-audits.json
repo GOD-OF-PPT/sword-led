@@ -1,0 +1,121 @@
+[
+  {
+    "case": "v2-d-flow.spec.ts / D keyboard-only twelve-round campaign reaches all three merchants, keeps exact rules and reloads victory",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "v2-d-flow.spec.ts / D real failed contract has three receipts per round, no terminal merchant and an explicit restart",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "v2-d-flow.spec.ts / D private practice really forges, quenches and delivers without touching an existing formal contract",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "v2-d-flow.spec.ts / D actual target and hammer motion cancel cleanly and reduced motion leaves only accepted results",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "v2-d-flow.spec.ts / D unavailable artwork and unavailable audio have real visible exits while forging remains usable",
+    "errors": [],
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+    ],
+    "http": [
+      {
+        "status": 503,
+        "url": "http://127.0.0.1:4180/assets/d/metal-atlas-v1.webp"
+      },
+      {
+        "status": 503,
+        "url": "http://127.0.0.1:4180/assets/d/metal-atlas-v1.webp"
+      }
+    ],
+    "allowedHttpStatuses": [
+      503
+    ]
+  },
+  {
+    "case": "v2-d-flow.spec.ts / D earned merchant resources pay for real seal repair and atomic full-slot replacement with cancel preserved",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "v2-d-flow.spec.ts / D exported art really decodes with source alpha and both desktop canvases show the live forging scene",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "v2-playable.spec.ts / v2 real blade decisions produce the approved sword, trial and reload without touching legacy data",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "v2-playable.spec.ts / three v2 rounds reach a real merchant, preserve the customer return and buy a different technique",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "v2-playable.spec.ts / v1 and v2 genuine saves stay separate and contend for the same writer lease",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "v2-playable.spec.ts / a held v2 strike is cancelled by a real target change and risky outcomes stay visible at 720px",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "v2-playable.spec.ts / v2 slow timing is actually saved and changes release timing without changing its grade reward",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "v2-playable.spec.ts / v2 failed writes can export the real accepted in-memory progress while leaving the disk contract intact",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "v2-playable.spec.ts / v2 has an explicit playable no-save route when the browser cannot provide writer locks",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "v2-playable.spec.ts / keyboard alone selects a v2 forging route, quenches, delivers and settles a real first round",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  }
+]

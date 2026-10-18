@@ -1,0 +1,222 @@
+{
+  "config": {
+    "argv": [
+      "/Users/gordon/.nvm/versions/node/v22.12.0/bin/node",
+      "/Users/gordon/githome/sword-led/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "playwright.ui.config.ts",
+      "tests/e2e/v2-d-flow.spec.ts",
+      "--grep",
+      "earned merchant"
+    ],
+    "configFile": "/Users/gordon/githome/sword-led/playwright.ui.config.ts",
+    "rootDir": "/Users/gordon/githome/sword-led/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/ui",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-game",
+        "name": "chromium-game",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/ui",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chromium-game",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4180",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "launchOptions": {
+            "args": [
+              "--no-proxy-server"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium-game"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/ui-report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 4180 --strictPort",
+      "url": "http://127.0.0.1:4180",
+      "timeout": 30000,
+      "reuseExistingServer": false,
+      "env": {
+        "NO_PROXY": "127.0.0.1,localhost",
+        "no_proxy": "127.0.0.1,localhost"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "v2-d-flow.spec.ts",
+      "file": "v2-d-flow.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "D earned merchant resources pay for real seal repair and atomic full-slot replacement with cancel preserved",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-game",
+              "projectName": "chromium-game",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 20036,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).not.\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('body')\nExpected: not focused\nReceived: focused\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"not toBeFocused\" locator('body') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('body')\u001b[22m\n\u001b[2m    14 × locator resolved to <body>…</body>\u001b[22m\n\u001b[2m       - unexpected value \"focused\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).not.\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('body')\nExpected: not focused\nReceived: focused\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"not toBeFocused\" locator('body') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('body')\u001b[22m\n\u001b[2m    14 × locator resolved to <body>…</body>\u001b[22m\n\u001b[2m       - unexpected value \"focused\"\u001b[22m\n\n    at send (/Users/gordon/githome/sword-led/tests/e2e/v2-d-flow.spec.ts:75:322)\n    at /Users/gordon/githome/sword-led/tests/e2e/v2-d-flow.spec.ts:80:89",
+                    "location": {
+                      "file": "/Users/gordon/githome/sword-led/tests/e2e/v2-d-flow.spec.ts",
+                      "column": 322,
+                      "line": 75
+                    },
+                    "snippet": "  73 |   test.setTimeout(180000);const witness=validateRun(JSON.parse(await readFile('docs/evidence/T11-2/simulation/victory.json','utf8')));if(!witness.ok)throw Error(witness.detail);\n  74 |   await boot(page,witness.state.seed);let expected=await state(page);\n> 75 |   async function send(action:Action){await runAction(page,action,false);const r=applyCommand(expected,{runId:expected.runId,expectedRevision:expected.revision,action});if(!r.ok)throw Error(r.error);expected=r.state;expect(await state(page)).toEqual(expected);if(action.type==='buy')await expect(page.locator('body')).not.toBeFocused();}\n     |                                                                                                                                                                                                                                                                                                                                  ^\n  76 |   await send({type:'chooseTechnique',techniqueId:'edgeTooth'});await send({type:'chooseRequest',requestId:null});await send({type:'settleRound',recycleRemaining:true});await send({type:'advanceSummary'});\n  77 |   const original=witness.state;\n  78 |   // Partition the already verified journal by accepted round transitions, never inject its snapshots."
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v2-d-flow.spec.ts",
+                        "column": 322,
+                        "line": 75
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).not.\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('body')\nExpected: not focused\nReceived: focused\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"not toBeFocused\" locator('body') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('body')\u001b[22m\n\u001b[2m    14 × locator resolved to <body>…</body>\u001b[22m\n\u001b[2m       - unexpected value \"focused\"\u001b[22m\n\n\n  73 |   test.setTimeout(180000);const witness=validateRun(JSON.parse(await readFile('docs/evidence/T11-2/simulation/victory.json','utf8')));if(!witness.ok)throw Error(witness.detail);\n  74 |   await boot(page,witness.state.seed);let expected=await state(page);\n> 75 |   async function send(action:Action){await runAction(page,action,false);const r=applyCommand(expected,{runId:expected.runId,expectedRevision:expected.revision,action});if(!r.ok)throw Error(r.error);expected=r.state;expect(await state(page)).toEqual(expected);if(action.type==='buy')await expect(page.locator('body')).not.toBeFocused();}\n     |                                                                                                                                                                                                                                                                                                                                  ^\n  76 |   await send({type:'chooseTechnique',techniqueId:'edgeTooth'});await send({type:'chooseRequest',requestId:null});await send({type:'settleRound',recycleRemaining:true});await send({type:'advanceSummary'});\n  77 |   const original=witness.state;\n  78 |   // Partition the already verified journal by accepted round transitions, never inject its snapshots.\n    at send (/Users/gordon/githome/sword-led/tests/e2e/v2-d-flow.spec.ts:75:322)\n    at /Users/gordon/githome/sword-led/tests/e2e/v2-d-flow.spec.ts:80:89"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T19:41:06.320Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/test-results/ui/v2-d-flow-D-earned-merchan-be9b8-ement-with-cancel-preserved-chromium-game/test-failed-1.png"
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/test-results/ui/v2-d-flow-D-earned-merchan-be9b8-ement-with-cancel-preserved-chromium-game/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/test-results/ui/v2-d-flow-D-earned-merchan-be9b8-ement-with-cancel-preserved-chromium-game/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/gordon/githome/sword-led/tests/e2e/v2-d-flow.spec.ts",
+                    "column": 322,
+                    "line": 75
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "900f0d18f8e4e9037dca-66700278cf514cb483f5",
+          "file": "v2-d-flow.spec.ts",
+          "line": 72,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-18T19:41:02.569Z",
+    "duration": 26702.44,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}
