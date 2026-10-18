@@ -7,7 +7,7 @@ export const MAX_SAVE_BYTES = 256 * 1024;
 export const MAX_JOURNAL_ACTIONS = 2048;
 
 // A bounded JSON snapshot without invoking accessors or trusting object prototypes.
-function canonicalJson(value: unknown): string | null {
+export function canonicalJson(value: unknown): string | null {
   let nodes = 0;
   let characters = 0;
   const visit = (item: unknown, depth: number): string | null => {

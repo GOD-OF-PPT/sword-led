@@ -1,5 +1,7 @@
 # 游戏实施方案与确认范围
 
+> 版本范围：本文为v0.2已确认实施记录；新增v0.3以[批准提案](v0.3-gameplay-proposal.md)、[核心/存档接线](v0.3-core-and-preview.md)和goal T11.2–T12为准。独立试玩已实现，不将旧方案的数值/模拟自动套用新版。
+
 版本v0.2（2026-10-17确认；2026-10-18更新进度）。状态：T04–T09规则、存档、美术、完整UI/R3已有证据；T10已接声音/设置与品质，实际结果见[确认记录](decision-record.md)、[R3](reviews/R3-full-contract-flow.md)及[T10报告](reviews/T10-quality-validation.md)。继续T11–T12，不重开确认门槛。
 
 ## 1. 本次要做成什么

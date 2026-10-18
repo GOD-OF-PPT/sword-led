@@ -3,6 +3,7 @@ import type { HammerMode } from '../core/index.js';
 export interface InputIdentity {
   readonly runId: string; readonly revision: number; readonly generation: number; readonly epoch: number;
   readonly pieceId: string; readonly mode: HammerMode; readonly periodMs: number;
+  readonly rulesVersion?: string; readonly node?: number;
 }
 export interface Attempt { readonly id: number; readonly owner: string; readonly startedAt: number; readonly identity: InputIdentity }
 export interface ReleasedAttempt extends Attempt { readonly timingMark: number }
@@ -14,7 +15,8 @@ export function timingMarkAt(elapsedMs: number, periodMs: number): number {
 }
 export function sameInput(a: InputIdentity, b: InputIdentity | null): boolean {
   return b !== null && a.runId === b.runId && a.revision === b.revision && a.generation === b.generation
-    && a.epoch === b.epoch && a.pieceId === b.pieceId && a.mode === b.mode && a.periodMs === b.periodMs;
+    && a.epoch === b.epoch && a.pieceId === b.pieceId && a.mode === b.mode && a.periodMs === b.periodMs
+    && a.rulesVersion === b.rulesVersion && a.node === b.node;
 }
 
 export class StrikeAttempt {

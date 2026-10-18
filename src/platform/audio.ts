@@ -104,6 +104,7 @@ export function createForgeAudio(createContext: () => AudioContext = () => new A
     gesture,
     silence() { epoch++;stop(); },
     accepted(events: readonly DomainEvent[]) { if (mode !== 'game') return;const cue = cueFor(events);if (cue) play(cue); },
+    acceptedCue(cue: Cue) { if (mode === 'game') play(cue); },
     async preview() { const token = epoch;if (mode === 'preview' && await gesture() && token === epoch) play('standard'); },
     async dispose() {
       if (disposed) return;disposed = true;epoch++;mode = 'silent';stop();listeners.clear();

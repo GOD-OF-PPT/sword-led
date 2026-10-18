@@ -1,0 +1,4304 @@
+{
+  "rulesVersion": "forge-v2",
+  "runId": "v2-strategy",
+  "seed": "v2-verify-0000",
+  "revision": 282,
+  "phase": "defeat",
+  "round": 11,
+  "coins": 3068,
+  "scrap": 3,
+  "coal": 2,
+  "seals": 0,
+  "starterChosen": true,
+  "techniques": [
+    "edgeTooth",
+    "bridgeClip",
+    "reheatSand"
+  ],
+  "pieces": [
+    {
+      "id": "11:1",
+      "material": "iron",
+      "baseValue": 18,
+      "temperedBonus": 0,
+      "threshold": 40,
+      "maxIntegrity": 4,
+      "integrity": 4,
+      "heat": 72,
+      "stress": 8,
+      "ratings": {
+        "edge": 8,
+        "toughness": 5,
+        "balance": 2
+      },
+      "nodes": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "chain": [],
+      "patterns": [
+        "edge",
+        "spine"
+      ],
+      "traces": [
+        {
+          "pattern": "edge",
+          "nodes": [
+            0,
+            1,
+            2
+          ],
+          "rewarded": true
+        },
+        {
+          "pattern": "spine",
+          "nodes": [
+            7,
+            8,
+            9
+          ],
+          "rewarded": true
+        }
+      ],
+      "strikes": 6,
+      "heavyStrikes": 0,
+      "reheats": 0,
+      "bridgeUsed": false,
+      "quench": "water",
+      "status": "delivered",
+      "paidValue": 108,
+      "recoveredScrap": 0
+    },
+    {
+      "id": "11:2",
+      "material": "steel",
+      "baseValue": 22,
+      "temperedBonus": 0,
+      "threshold": 36,
+      "maxIntegrity": 3,
+      "integrity": 3,
+      "heat": 72,
+      "stress": 8,
+      "ratings": {
+        "edge": 10,
+        "toughness": 3,
+        "balance": 2
+      },
+      "nodes": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "chain": [],
+      "patterns": [
+        "edge",
+        "spine"
+      ],
+      "traces": [
+        {
+          "pattern": "edge",
+          "nodes": [
+            0,
+            1,
+            2
+          ],
+          "rewarded": true
+        },
+        {
+          "pattern": "spine",
+          "nodes": [
+            7,
+            8,
+            9
+          ],
+          "rewarded": true
+        }
+      ],
+      "strikes": 6,
+      "heavyStrikes": 0,
+      "reheats": 0,
+      "bridgeUsed": false,
+      "quench": "water",
+      "status": "delivered",
+      "paidValue": 112,
+      "recoveredScrap": 0
+    },
+    {
+      "id": "11:3",
+      "material": "iron",
+      "baseValue": 18,
+      "temperedBonus": 0,
+      "threshold": 40,
+      "maxIntegrity": 4,
+      "integrity": 4,
+      "heat": 72,
+      "stress": 8,
+      "ratings": {
+        "edge": 8,
+        "toughness": 5,
+        "balance": 2
+      },
+      "nodes": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "chain": [],
+      "patterns": [
+        "edge",
+        "spine"
+      ],
+      "traces": [
+        {
+          "pattern": "edge",
+          "nodes": [
+            0,
+            1,
+            2
+          ],
+          "rewarded": true
+        },
+        {
+          "pattern": "spine",
+          "nodes": [
+            7,
+            8,
+            9
+          ],
+          "rewarded": true
+        }
+      ],
+      "strikes": 6,
+      "heavyStrikes": 0,
+      "reheats": 0,
+      "bridgeUsed": false,
+      "quench": "water",
+      "status": "delivered",
+      "paidValue": 108,
+      "recoveredScrap": 0
+    }
+  ],
+  "condition": {
+    "kind": "brightFire",
+    "stat": null,
+    "pattern": null
+  },
+  "credit": 0,
+  "pendingCredit": 0,
+  "requests": [
+    {
+      "id": "11:ceremony",
+      "kind": "ceremony",
+      "label": "仪仗的匀衡剑",
+      "needs": [
+        {
+          "stat": "toughness",
+          "minimum": 10
+        },
+        {
+          "stat": "balance",
+          "minimum": 13
+        }
+      ],
+      "patterns": [
+        "bridge"
+      ]
+    },
+    {
+      "id": "11:guard",
+      "kind": "guard",
+      "label": "巡卫的守夜剑",
+      "needs": [
+        {
+          "stat": "edge",
+          "minimum": 12
+        },
+        {
+          "stat": "toughness",
+          "minimum": 11
+        }
+      ],
+      "patterns": []
+    }
+  ],
+  "requestDecided": true,
+  "acceptedRequestId": "11:guard",
+  "fulfilledRequestId": null,
+  "returns": [
+    {
+      "requestId": "1:guard",
+      "label": "巡卫的守夜剑",
+      "pieceId": "1:1",
+      "dueRound": 3,
+      "received": true
+    }
+  ],
+  "roundBreaks": 0,
+  "merchant": [],
+  "purchases": [
+    {
+      "afterRound": 3,
+      "productId": "bridgeClip",
+      "replaced": null,
+      "coins": 100,
+      "scrap": 3
+    },
+    {
+      "afterRound": 3,
+      "productId": "reheatSand",
+      "replaced": null,
+      "coins": 100,
+      "scrap": 3
+    },
+    {
+      "afterRound": 9,
+      "productId": "repair",
+      "replaced": null,
+      "coins": 240,
+      "scrap": 6
+    }
+  ],
+  "history": [
+    {
+      "round": 1,
+      "quota": 150,
+      "delivered": 256,
+      "credit": 0,
+      "met": true,
+      "sealsBefore": 3,
+      "sealsAfter": 3,
+      "nextCredit": 45,
+      "pieces": [
+        {
+          "id": "1:1",
+          "material": "iron",
+          "baseValue": 18,
+          "temperedBonus": 0,
+          "threshold": 40,
+          "maxIntegrity": 4,
+          "integrity": 4,
+          "heat": 52,
+          "stress": 8,
+          "ratings": {
+            "edge": 8,
+            "toughness": 5,
+            "balance": 2
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 148,
+          "recoveredScrap": 0
+        },
+        {
+          "id": "1:2",
+          "material": "iron",
+          "baseValue": 18,
+          "temperedBonus": 0,
+          "threshold": 40,
+          "maxIntegrity": 4,
+          "integrity": 4,
+          "heat": 52,
+          "stress": 8,
+          "ratings": {
+            "edge": 8,
+            "toughness": 5,
+            "balance": 2
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 108,
+          "recoveredScrap": 0
+        },
+        {
+          "id": "1:3",
+          "material": "steel",
+          "baseValue": 22,
+          "temperedBonus": 0,
+          "threshold": 36,
+          "maxIntegrity": 3,
+          "integrity": 3,
+          "heat": 100,
+          "stress": 0,
+          "ratings": {
+            "edge": 2,
+            "toughness": 0,
+            "balance": 0
+          },
+          "nodes": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "chain": [],
+          "patterns": [],
+          "traces": [],
+          "strikes": 0,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": null,
+          "status": "recycled",
+          "paidValue": 0,
+          "recoveredScrap": 4
+        }
+      ],
+      "condition": {
+        "kind": "steady",
+        "stat": null,
+        "pattern": null
+      },
+      "request": {
+        "id": "1:guard",
+        "kind": "guard",
+        "label": "巡卫的守夜剑",
+        "needs": [
+          {
+            "stat": "edge",
+            "minimum": 6
+          },
+          {
+            "stat": "toughness",
+            "minimum": 5
+          }
+        ],
+        "patterns": []
+      }
+    },
+    {
+      "round": 2,
+      "quota": 180,
+      "delivered": 220,
+      "credit": 45,
+      "met": true,
+      "sealsBefore": 3,
+      "sealsAfter": 3,
+      "nextCredit": 20,
+      "pieces": [
+        {
+          "id": "2:1",
+          "material": "iron",
+          "baseValue": 18,
+          "temperedBonus": 0,
+          "threshold": 40,
+          "maxIntegrity": 4,
+          "integrity": 4,
+          "heat": 52,
+          "stress": 8,
+          "ratings": {
+            "edge": 8,
+            "toughness": 5,
+            "balance": 2
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 108,
+          "recoveredScrap": 0
+        },
+        {
+          "id": "2:2",
+          "material": "steel",
+          "baseValue": 22,
+          "temperedBonus": 0,
+          "threshold": 36,
+          "maxIntegrity": 3,
+          "integrity": 3,
+          "heat": 52,
+          "stress": 8,
+          "ratings": {
+            "edge": 10,
+            "toughness": 3,
+            "balance": 2
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 112,
+          "recoveredScrap": 0
+        },
+        {
+          "id": "2:3",
+          "material": "meteorite",
+          "baseValue": 28,
+          "temperedBonus": 0,
+          "threshold": 32,
+          "maxIntegrity": 2,
+          "integrity": 2,
+          "heat": 100,
+          "stress": 0,
+          "ratings": {
+            "edge": 0,
+            "toughness": 0,
+            "balance": 2
+          },
+          "nodes": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "chain": [],
+          "patterns": [],
+          "traces": [],
+          "strikes": 0,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": null,
+          "status": "recycled",
+          "paidValue": 0,
+          "recoveredScrap": 5
+        }
+      ],
+      "condition": {
+        "kind": "steady",
+        "stat": null,
+        "pattern": null
+      },
+      "request": {
+        "id": "2:courier",
+        "kind": "courier",
+        "label": "信使的随身剑",
+        "needs": [
+          {
+            "stat": "edge",
+            "minimum": 5
+          },
+          {
+            "stat": "balance",
+            "minimum": 6
+          }
+        ],
+        "patterns": []
+      }
+    },
+    {
+      "round": 3,
+      "quota": 210,
+      "delivered": 220,
+      "credit": 20,
+      "met": true,
+      "sealsBefore": 3,
+      "sealsAfter": 3,
+      "nextCredit": 5,
+      "pieces": [
+        {
+          "id": "3:1",
+          "material": "iron",
+          "baseValue": 18,
+          "temperedBonus": 0,
+          "threshold": 40,
+          "maxIntegrity": 4,
+          "integrity": 4,
+          "heat": 52,
+          "stress": 8,
+          "ratings": {
+            "edge": 8,
+            "toughness": 5,
+            "balance": 2
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 108,
+          "recoveredScrap": 0
+        },
+        {
+          "id": "3:2",
+          "material": "steel",
+          "baseValue": 22,
+          "temperedBonus": 0,
+          "threshold": 36,
+          "maxIntegrity": 3,
+          "integrity": 3,
+          "heat": 52,
+          "stress": 8,
+          "ratings": {
+            "edge": 10,
+            "toughness": 3,
+            "balance": 2
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 112,
+          "recoveredScrap": 0
+        },
+        {
+          "id": "3:3",
+          "material": "meteorite",
+          "baseValue": 28,
+          "temperedBonus": 0,
+          "threshold": 32,
+          "maxIntegrity": 2,
+          "integrity": 2,
+          "heat": 100,
+          "stress": 0,
+          "ratings": {
+            "edge": 0,
+            "toughness": 0,
+            "balance": 2
+          },
+          "nodes": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "chain": [],
+          "patterns": [],
+          "traces": [],
+          "strikes": 0,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": null,
+          "status": "recycled",
+          "paidValue": 0,
+          "recoveredScrap": 5
+        }
+      ],
+      "condition": {
+        "kind": "steady",
+        "stat": null,
+        "pattern": null
+      },
+      "request": {
+        "id": "3:hunter",
+        "kind": "hunter",
+        "label": "猎手的开路剑",
+        "needs": [
+          {
+            "stat": "edge",
+            "minimum": 8
+          },
+          {
+            "stat": "balance",
+            "minimum": 3
+          }
+        ],
+        "patterns": []
+      }
+    },
+    {
+      "round": 4,
+      "quota": 250,
+      "delivered": 328,
+      "credit": 5,
+      "met": true,
+      "sealsBefore": 3,
+      "sealsAfter": 3,
+      "nextCredit": 39,
+      "pieces": [
+        {
+          "id": "4:1",
+          "material": "iron",
+          "baseValue": 18,
+          "temperedBonus": 0,
+          "threshold": 40,
+          "maxIntegrity": 4,
+          "integrity": 4,
+          "heat": 52,
+          "stress": 8,
+          "ratings": {
+            "edge": 8,
+            "toughness": 5,
+            "balance": 2
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 108,
+          "recoveredScrap": 0
+        },
+        {
+          "id": "4:2",
+          "material": "steel",
+          "baseValue": 22,
+          "temperedBonus": 0,
+          "threshold": 36,
+          "maxIntegrity": 3,
+          "integrity": 3,
+          "heat": 52,
+          "stress": 8,
+          "ratings": {
+            "edge": 10,
+            "toughness": 3,
+            "balance": 2
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 112,
+          "recoveredScrap": 0
+        },
+        {
+          "id": "4:3",
+          "material": "iron",
+          "baseValue": 18,
+          "temperedBonus": 0,
+          "threshold": 40,
+          "maxIntegrity": 4,
+          "integrity": 4,
+          "heat": 52,
+          "stress": 8,
+          "ratings": {
+            "edge": 8,
+            "toughness": 5,
+            "balance": 2
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 108,
+          "recoveredScrap": 0
+        }
+      ],
+      "condition": {
+        "kind": "urgent",
+        "stat": null,
+        "pattern": "bridge"
+      },
+      "request": {
+        "id": "4:hunter",
+        "kind": "hunter",
+        "label": "猎手的开路剑",
+        "needs": [
+          {
+            "stat": "edge",
+            "minimum": 10
+          },
+          {
+            "stat": "balance",
+            "minimum": 5
+          }
+        ],
+        "patterns": [
+          "bridge"
+        ]
+      }
+    },
+    {
+      "round": 5,
+      "quota": 290,
+      "delivered": 362,
+      "credit": 39,
+      "met": true,
+      "sealsBefore": 3,
+      "sealsAfter": 3,
+      "nextCredit": 36,
+      "pieces": [
+        {
+          "id": "5:1",
+          "material": "iron",
+          "baseValue": 14,
+          "temperedBonus": 0,
+          "threshold": 40,
+          "maxIntegrity": 4,
+          "integrity": 4,
+          "heat": 52,
+          "stress": 8,
+          "ratings": {
+            "edge": 8,
+            "toughness": 5,
+            "balance": 4
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 118,
+          "recoveredScrap": 0
+        },
+        {
+          "id": "5:2",
+          "material": "steel",
+          "baseValue": 18,
+          "temperedBonus": 0,
+          "threshold": 36,
+          "maxIntegrity": 3,
+          "integrity": 3,
+          "heat": 52,
+          "stress": 0,
+          "ratings": {
+            "edge": 7,
+            "toughness": 6,
+            "balance": 4
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "oil",
+          "status": "delivered",
+          "paidValue": 122,
+          "recoveredScrap": 0
+        },
+        {
+          "id": "5:3",
+          "material": "steel",
+          "baseValue": 18,
+          "temperedBonus": 0,
+          "threshold": 36,
+          "maxIntegrity": 3,
+          "integrity": 3,
+          "heat": 52,
+          "stress": 0,
+          "ratings": {
+            "edge": 7,
+            "toughness": 6,
+            "balance": 4
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "oil",
+          "status": "delivered",
+          "paidValue": 122,
+          "recoveredScrap": 0
+        }
+      ],
+      "condition": {
+        "kind": "reclaimed",
+        "stat": "balance",
+        "pattern": null
+      },
+      "request": {
+        "id": "5:guard",
+        "kind": "guard",
+        "label": "巡卫的守夜剑",
+        "needs": [
+          {
+            "stat": "edge",
+            "minimum": 8
+          },
+          {
+            "stat": "toughness",
+            "minimum": 7
+          }
+        ],
+        "patterns": []
+      }
+    },
+    {
+      "round": 6,
+      "quota": 330,
+      "delivered": 332,
+      "credit": 36,
+      "met": true,
+      "sealsBefore": 3,
+      "sealsAfter": 3,
+      "nextCredit": 1,
+      "pieces": [
+        {
+          "id": "6:1",
+          "material": "iron",
+          "baseValue": 18,
+          "temperedBonus": 0,
+          "threshold": 40,
+          "maxIntegrity": 4,
+          "integrity": 4,
+          "heat": 52,
+          "stress": 8,
+          "ratings": {
+            "edge": 8,
+            "toughness": 5,
+            "balance": 2
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 108,
+          "recoveredScrap": 0
+        },
+        {
+          "id": "6:2",
+          "material": "steel",
+          "baseValue": 22,
+          "temperedBonus": 0,
+          "threshold": 36,
+          "maxIntegrity": 3,
+          "integrity": 3,
+          "heat": 52,
+          "stress": 8,
+          "ratings": {
+            "edge": 10,
+            "toughness": 3,
+            "balance": 2
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 112,
+          "recoveredScrap": 0
+        },
+        {
+          "id": "6:3",
+          "material": "steel",
+          "baseValue": 22,
+          "temperedBonus": 0,
+          "threshold": 36,
+          "maxIntegrity": 3,
+          "integrity": 3,
+          "heat": 52,
+          "stress": 8,
+          "ratings": {
+            "edge": 10,
+            "toughness": 3,
+            "balance": 2
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 112,
+          "recoveredScrap": 0
+        }
+      ],
+      "condition": {
+        "kind": "urgent",
+        "stat": null,
+        "pattern": "edge"
+      },
+      "request": {
+        "id": "6:duelist",
+        "kind": "duelist",
+        "label": "剑客的试锋剑",
+        "needs": [
+          {
+            "stat": "edge",
+            "minimum": 9
+          },
+          {
+            "stat": "toughness",
+            "minimum": 6
+          }
+        ],
+        "patterns": [
+          "edge"
+        ]
+      }
+    },
+    {
+      "round": 7,
+      "quota": 380,
+      "delivered": 388,
+      "credit": 1,
+      "met": true,
+      "sealsBefore": 3,
+      "sealsAfter": 3,
+      "nextCredit": 4,
+      "pieces": [
+        {
+          "id": "7:1",
+          "material": "iron",
+          "baseValue": 18,
+          "temperedBonus": 20,
+          "threshold": 36,
+          "maxIntegrity": 4,
+          "integrity": 4,
+          "heat": 52,
+          "stress": 8,
+          "ratings": {
+            "edge": 8,
+            "toughness": 5,
+            "balance": 2
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 128,
+          "recoveredScrap": 0
+        },
+        {
+          "id": "7:2",
+          "material": "steel",
+          "baseValue": 22,
+          "temperedBonus": 20,
+          "threshold": 32,
+          "maxIntegrity": 3,
+          "integrity": 3,
+          "heat": 52,
+          "stress": 8,
+          "ratings": {
+            "edge": 10,
+            "toughness": 3,
+            "balance": 2
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 132,
+          "recoveredScrap": 0
+        },
+        {
+          "id": "7:3",
+          "material": "iron",
+          "baseValue": 18,
+          "temperedBonus": 20,
+          "threshold": 36,
+          "maxIntegrity": 4,
+          "integrity": 4,
+          "heat": 52,
+          "stress": 8,
+          "ratings": {
+            "edge": 8,
+            "toughness": 5,
+            "balance": 2
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 128,
+          "recoveredScrap": 0
+        }
+      ],
+      "condition": {
+        "kind": "brittle",
+        "stat": null,
+        "pattern": null
+      },
+      "request": {
+        "id": "7:guard",
+        "kind": "guard",
+        "label": "巡卫的守夜剑",
+        "needs": [
+          {
+            "stat": "edge",
+            "minimum": 10
+          },
+          {
+            "stat": "toughness",
+            "minimum": 9
+          }
+        ],
+        "patterns": []
+      }
+    },
+    {
+      "round": 8,
+      "quota": 430,
+      "delivered": 358,
+      "credit": 4,
+      "met": false,
+      "sealsBefore": 3,
+      "sealsAfter": 2,
+      "nextCredit": 0,
+      "pieces": [
+        {
+          "id": "8:1",
+          "material": "iron",
+          "baseValue": 14,
+          "temperedBonus": 0,
+          "threshold": 40,
+          "maxIntegrity": 4,
+          "integrity": 4,
+          "heat": 52,
+          "stress": 8,
+          "ratings": {
+            "edge": 8,
+            "toughness": 5,
+            "balance": 4
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 118,
+          "recoveredScrap": 0
+        },
+        {
+          "id": "8:2",
+          "material": "steel",
+          "baseValue": 18,
+          "temperedBonus": 0,
+          "threshold": 36,
+          "maxIntegrity": 3,
+          "integrity": 3,
+          "heat": 52,
+          "stress": 0,
+          "ratings": {
+            "edge": 7,
+            "toughness": 6,
+            "balance": 4
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "oil",
+          "status": "delivered",
+          "paidValue": 122,
+          "recoveredScrap": 0
+        },
+        {
+          "id": "8:3",
+          "material": "iron",
+          "baseValue": 14,
+          "temperedBonus": 0,
+          "threshold": 40,
+          "maxIntegrity": 4,
+          "integrity": 4,
+          "heat": 52,
+          "stress": 8,
+          "ratings": {
+            "edge": 8,
+            "toughness": 5,
+            "balance": 4
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 118,
+          "recoveredScrap": 0
+        }
+      ],
+      "condition": {
+        "kind": "reclaimed",
+        "stat": "balance",
+        "pattern": null
+      },
+      "request": {
+        "id": "8:guard",
+        "kind": "guard",
+        "label": "巡卫的守夜剑",
+        "needs": [
+          {
+            "stat": "edge",
+            "minimum": 10
+          },
+          {
+            "stat": "toughness",
+            "minimum": 9
+          }
+        ],
+        "patterns": []
+      }
+    },
+    {
+      "round": 9,
+      "quota": 480,
+      "delivered": 388,
+      "credit": 0,
+      "met": false,
+      "sealsBefore": 2,
+      "sealsAfter": 1,
+      "nextCredit": 0,
+      "pieces": [
+        {
+          "id": "9:1",
+          "material": "iron",
+          "baseValue": 18,
+          "temperedBonus": 20,
+          "threshold": 36,
+          "maxIntegrity": 4,
+          "integrity": 4,
+          "heat": 52,
+          "stress": 8,
+          "ratings": {
+            "edge": 8,
+            "toughness": 5,
+            "balance": 2
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 128,
+          "recoveredScrap": 0
+        },
+        {
+          "id": "9:2",
+          "material": "steel",
+          "baseValue": 22,
+          "temperedBonus": 20,
+          "threshold": 32,
+          "maxIntegrity": 3,
+          "integrity": 3,
+          "heat": 52,
+          "stress": 8,
+          "ratings": {
+            "edge": 10,
+            "toughness": 3,
+            "balance": 2
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 132,
+          "recoveredScrap": 0
+        },
+        {
+          "id": "9:3",
+          "material": "iron",
+          "baseValue": 18,
+          "temperedBonus": 20,
+          "threshold": 36,
+          "maxIntegrity": 4,
+          "integrity": 4,
+          "heat": 52,
+          "stress": 8,
+          "ratings": {
+            "edge": 8,
+            "toughness": 5,
+            "balance": 2
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 128,
+          "recoveredScrap": 0
+        }
+      ],
+      "condition": {
+        "kind": "brittle",
+        "stat": null,
+        "pattern": null
+      },
+      "request": {
+        "id": "9:hunter",
+        "kind": "hunter",
+        "label": "猎手的开路剑",
+        "needs": [
+          {
+            "stat": "edge",
+            "minimum": 12
+          },
+          {
+            "stat": "balance",
+            "minimum": 7
+          }
+        ],
+        "patterns": []
+      }
+    },
+    {
+      "round": 10,
+      "quota": 540,
+      "delivered": 328,
+      "credit": 0,
+      "met": false,
+      "sealsBefore": 2,
+      "sealsAfter": 1,
+      "nextCredit": 0,
+      "pieces": [
+        {
+          "id": "10:1",
+          "material": "iron",
+          "baseValue": 18,
+          "temperedBonus": 0,
+          "threshold": 40,
+          "maxIntegrity": 4,
+          "integrity": 4,
+          "heat": 52,
+          "stress": 8,
+          "ratings": {
+            "edge": 8,
+            "toughness": 5,
+            "balance": 2
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 108,
+          "recoveredScrap": 0
+        },
+        {
+          "id": "10:2",
+          "material": "steel",
+          "baseValue": 22,
+          "temperedBonus": 0,
+          "threshold": 36,
+          "maxIntegrity": 3,
+          "integrity": 3,
+          "heat": 52,
+          "stress": 8,
+          "ratings": {
+            "edge": 10,
+            "toughness": 3,
+            "balance": 2
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 112,
+          "recoveredScrap": 0
+        },
+        {
+          "id": "10:3",
+          "material": "iron",
+          "baseValue": 18,
+          "temperedBonus": 0,
+          "threshold": 40,
+          "maxIntegrity": 4,
+          "integrity": 4,
+          "heat": 52,
+          "stress": 8,
+          "ratings": {
+            "edge": 8,
+            "toughness": 5,
+            "balance": 2
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 108,
+          "recoveredScrap": 0
+        }
+      ],
+      "condition": {
+        "kind": "steady",
+        "stat": null,
+        "pattern": null
+      },
+      "request": {
+        "id": "10:guard",
+        "kind": "guard",
+        "label": "巡卫的守夜剑",
+        "needs": [
+          {
+            "stat": "edge",
+            "minimum": 12
+          },
+          {
+            "stat": "toughness",
+            "minimum": 11
+          }
+        ],
+        "patterns": []
+      }
+    },
+    {
+      "round": 11,
+      "quota": 600,
+      "delivered": 328,
+      "credit": 0,
+      "met": false,
+      "sealsBefore": 1,
+      "sealsAfter": 0,
+      "nextCredit": 0,
+      "pieces": [
+        {
+          "id": "11:1",
+          "material": "iron",
+          "baseValue": 18,
+          "temperedBonus": 0,
+          "threshold": 40,
+          "maxIntegrity": 4,
+          "integrity": 4,
+          "heat": 72,
+          "stress": 8,
+          "ratings": {
+            "edge": 8,
+            "toughness": 5,
+            "balance": 2
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 108,
+          "recoveredScrap": 0
+        },
+        {
+          "id": "11:2",
+          "material": "steel",
+          "baseValue": 22,
+          "temperedBonus": 0,
+          "threshold": 36,
+          "maxIntegrity": 3,
+          "integrity": 3,
+          "heat": 72,
+          "stress": 8,
+          "ratings": {
+            "edge": 10,
+            "toughness": 3,
+            "balance": 2
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 112,
+          "recoveredScrap": 0
+        },
+        {
+          "id": "11:3",
+          "material": "iron",
+          "baseValue": 18,
+          "temperedBonus": 0,
+          "threshold": 40,
+          "maxIntegrity": 4,
+          "integrity": 4,
+          "heat": 72,
+          "stress": 8,
+          "ratings": {
+            "edge": 8,
+            "toughness": 5,
+            "balance": 2
+          },
+          "nodes": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "chain": [],
+          "patterns": [
+            "edge",
+            "spine"
+          ],
+          "traces": [
+            {
+              "pattern": "edge",
+              "nodes": [
+                0,
+                1,
+                2
+              ],
+              "rewarded": true
+            },
+            {
+              "pattern": "spine",
+              "nodes": [
+                7,
+                8,
+                9
+              ],
+              "rewarded": true
+            }
+          ],
+          "strikes": 6,
+          "heavyStrikes": 0,
+          "reheats": 0,
+          "bridgeUsed": false,
+          "quench": "water",
+          "status": "delivered",
+          "paidValue": 108,
+          "recoveredScrap": 0
+        }
+      ],
+      "condition": {
+        "kind": "brightFire",
+        "stat": null,
+        "pattern": null
+      },
+      "request": {
+        "id": "11:guard",
+        "kind": "guard",
+        "label": "巡卫的守夜剑",
+        "needs": [
+          {
+            "stat": "edge",
+            "minimum": 12
+          },
+          {
+            "stat": "toughness",
+            "minimum": 11
+          }
+        ],
+        "patterns": []
+      }
+    }
+  ],
+  "rng": {
+    "stock": {
+      "state": 1238273356,
+      "draws": 10
+    },
+    "requests": {
+      "state": 2495008814,
+      "draws": 20
+    },
+    "conditions": {
+      "state": 3366217202,
+      "draws": 12
+    },
+    "merchant": {
+      "state": 2201375225,
+      "draws": 9
+    }
+  },
+  "journal": [
+    {
+      "type": "chooseTechnique",
+      "techniqueId": "edgeTooth"
+    },
+    {
+      "type": "chooseRequest",
+      "requestId": "1:guard"
+    },
+    {
+      "type": "strike",
+      "pieceId": "1:1",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "1:1",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "1:1",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "1:1",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "1:1",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "1:1",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "1:1",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "1:1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "1:2",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "1:2",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "1:2",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "1:2",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "1:2",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "1:2",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "1:2",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "1:2"
+    },
+    {
+      "type": "scrap",
+      "pieceId": "1:3"
+    },
+    {
+      "type": "settleRound",
+      "recycleRemaining": true
+    },
+    {
+      "type": "advanceSummary"
+    },
+    {
+      "type": "chooseRequest",
+      "requestId": "2:courier"
+    },
+    {
+      "type": "strike",
+      "pieceId": "2:1",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "2:1",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "2:1",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "2:1",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "2:1",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "2:1",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "2:1",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "2:1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "2:2",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "2:2",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "2:2",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "2:2",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "2:2",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "2:2",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "2:2",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "2:2"
+    },
+    {
+      "type": "scrap",
+      "pieceId": "2:3"
+    },
+    {
+      "type": "settleRound",
+      "recycleRemaining": true
+    },
+    {
+      "type": "advanceSummary"
+    },
+    {
+      "type": "chooseRequest",
+      "requestId": "3:hunter"
+    },
+    {
+      "type": "strike",
+      "pieceId": "3:1",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "3:1",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "3:1",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "3:1",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "3:1",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "3:1",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "3:1",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "3:1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "3:2",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "3:2",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "3:2",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "3:2",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "3:2",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "3:2",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "3:2",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "3:2"
+    },
+    {
+      "type": "scrap",
+      "pieceId": "3:3"
+    },
+    {
+      "type": "settleRound",
+      "recycleRemaining": true
+    },
+    {
+      "type": "advanceSummary"
+    },
+    {
+      "type": "buy",
+      "productId": "bridgeClip"
+    },
+    {
+      "type": "buy",
+      "productId": "reheatSand"
+    },
+    {
+      "type": "leaveMerchant"
+    },
+    {
+      "type": "chooseRequest",
+      "requestId": "4:hunter"
+    },
+    {
+      "type": "strike",
+      "pieceId": "4:1",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "4:1",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "4:1",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "4:1",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "4:1",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "4:1",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "4:1",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "4:1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "4:2",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "4:2",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "4:2",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "4:2",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "4:2",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "4:2",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "4:2",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "4:2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "4:3",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "4:3",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "4:3",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "4:3",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "4:3",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "4:3",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "4:3",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "4:3"
+    },
+    {
+      "type": "settleRound",
+      "recycleRemaining": true
+    },
+    {
+      "type": "advanceSummary"
+    },
+    {
+      "type": "chooseRequest",
+      "requestId": "5:guard"
+    },
+    {
+      "type": "strike",
+      "pieceId": "5:1",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "5:1",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "5:1",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "5:1",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "5:1",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "5:1",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "5:1",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "5:1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "5:2",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "5:2",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "5:2",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "5:2",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "5:2",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "5:2",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "5:2",
+      "medium": "oil"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "5:2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "5:3",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "5:3",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "5:3",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "5:3",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "5:3",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "5:3",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "5:3",
+      "medium": "oil"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "5:3"
+    },
+    {
+      "type": "settleRound",
+      "recycleRemaining": true
+    },
+    {
+      "type": "advanceSummary"
+    },
+    {
+      "type": "chooseRequest",
+      "requestId": "6:duelist"
+    },
+    {
+      "type": "strike",
+      "pieceId": "6:1",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "6:1",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "6:1",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "6:1",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "6:1",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "6:1",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "6:1",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "6:1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "6:2",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "6:2",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "6:2",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "6:2",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "6:2",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "6:2",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "6:2",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "6:2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "6:3",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "6:3",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "6:3",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "6:3",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "6:3",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "6:3",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "6:3",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "6:3"
+    },
+    {
+      "type": "settleRound",
+      "recycleRemaining": true
+    },
+    {
+      "type": "advanceSummary"
+    },
+    {
+      "type": "leaveMerchant"
+    },
+    {
+      "type": "chooseRequest",
+      "requestId": "7:guard"
+    },
+    {
+      "type": "strike",
+      "pieceId": "7:1",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "7:1",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "7:1",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "7:1",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "7:1",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "7:1",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "7:1",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "7:1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "7:2",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "7:2",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "7:2",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "7:2",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "7:2",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "7:2",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "7:2",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "7:2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "7:3",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "7:3",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "7:3",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "7:3",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "7:3",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "7:3",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "7:3",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "7:3"
+    },
+    {
+      "type": "settleRound",
+      "recycleRemaining": true
+    },
+    {
+      "type": "advanceSummary"
+    },
+    {
+      "type": "chooseRequest",
+      "requestId": "8:guard"
+    },
+    {
+      "type": "strike",
+      "pieceId": "8:1",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "8:1",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "8:1",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "8:1",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "8:1",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "8:1",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "8:1",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "8:1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "8:2",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "8:2",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "8:2",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "8:2",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "8:2",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "8:2",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "8:2",
+      "medium": "oil"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "8:2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "8:3",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "8:3",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "8:3",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "8:3",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "8:3",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "8:3",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "8:3",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "8:3"
+    },
+    {
+      "type": "settleRound",
+      "recycleRemaining": true
+    },
+    {
+      "type": "advanceSummary"
+    },
+    {
+      "type": "chooseRequest",
+      "requestId": "9:hunter"
+    },
+    {
+      "type": "strike",
+      "pieceId": "9:1",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "9:1",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "9:1",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "9:1",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "9:1",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "9:1",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "9:1",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "9:1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "9:2",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "9:2",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "9:2",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "9:2",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "9:2",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "9:2",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "9:2",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "9:2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "9:3",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "9:3",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "9:3",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "9:3",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "9:3",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "9:3",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "9:3",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "9:3"
+    },
+    {
+      "type": "settleRound",
+      "recycleRemaining": true
+    },
+    {
+      "type": "advanceSummary"
+    },
+    {
+      "type": "buy",
+      "productId": "repair"
+    },
+    {
+      "type": "leaveMerchant"
+    },
+    {
+      "type": "chooseRequest",
+      "requestId": "10:guard"
+    },
+    {
+      "type": "strike",
+      "pieceId": "10:1",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "10:1",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "10:1",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "10:1",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "10:1",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "10:1",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "10:1",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "10:1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "10:2",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "10:2",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "10:2",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "10:2",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "10:2",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "10:2",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "10:2",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "10:2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "10:3",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "10:3",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "10:3",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "10:3",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "10:3",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "10:3",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "10:3",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "10:3"
+    },
+    {
+      "type": "settleRound",
+      "recycleRemaining": true
+    },
+    {
+      "type": "advanceSummary"
+    },
+    {
+      "type": "chooseRequest",
+      "requestId": "11:guard"
+    },
+    {
+      "type": "strike",
+      "pieceId": "11:1",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "11:1",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "11:1",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "11:1",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "11:1",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "11:1",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "11:1",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "11:1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "11:2",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "11:2",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "11:2",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "11:2",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "11:2",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "11:2",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "11:2",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "11:2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "11:3",
+      "node": 0,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "11:3",
+      "node": 1,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "11:3",
+      "node": 2,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "11:3",
+      "node": 7,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "11:3",
+      "node": 8,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "strike",
+      "pieceId": "11:3",
+      "node": 9,
+      "mode": "light",
+      "timingMark": 5000
+    },
+    {
+      "type": "quench",
+      "pieceId": "11:3",
+      "medium": "water"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "11:3"
+    },
+    {
+      "type": "settleRound",
+      "recycleRemaining": true
+    }
+  ]
+}

@@ -2,12 +2,15 @@
 
 一款面向现代 PC 浏览器的轮次制锻造游戏。每轮只有三件铁坯：控制落锤时机让它升值，在断裂前决定交货还是回收，靠商人升级撑过十二轮契约。
 
-当前运行版为v0.2/B「行会手账」，包含十二轮/商人/胜负/续玩和设置/声音。**2026-10-18真人试玩认为玩法和美术缺乏新意，当前可玩性未通过。** 已按用户给出的ForgeTax链接研究七款Steam作品与110条唯一评论，形成[v0.3玩法/实施提案](docs/v0.3-gameplay-proposal.md)。用户已明确回复“确认 v0.3，开始前三轮可玩版本”，美术采用新偏好的[D「行脚灯炉」](design/v03/README.md)。下一任务实施新核心与三轮可玩，图稿和确认不能当作新版已实现。T11完整D界面/十二轮/复验及T12最大审查保留。
+**v0.3新核心已可试玩：[/v2.html](http://127.0.0.1:4179/v2.html)**。先体验前三轮和第一个商人：落点锻纹、公开应力、淬火/试剑、不同委托、回收与技法搭配都接正式规则/独立存档。当前是原生几何玩法稿，最终美术按已选[D「行脚灯炉」](design/v03/README.md)在T11.3接入，不能当作完整美术交付。原版`/`继续保留以支持旧契约。
+
+2026-10-18真人曾评价v0.2玩法/美术缺乏新意；已据ForgeTax及110条唯一Steam评论修订并取得明确v0.3批准。[新核心说明](docs/v0.3-core-and-preview.md)和[R3.5复核](docs/reviews/R3-5-v2-core-and-playable.md)记录210单测、72页面、8存储、40跨引擎定向检查与928局正式回放。它们证明对应工程/可达性条件，新版真人乐趣、完整D界面和最大交付仍在T11.3–T12。
 
 ## 项目资料
 
 - [Steam玩法/评论研究](docs/research/2026-10-18-forging-games.md)：抽样方法、正负体验、具体评论回链和现版设计诊断。
 - [已确认v0.3改版提案](docs/v0.3-gameplay-proposal.md)与[D方向图](design/v03/README.md)：锻脉/试剑/技法构筑、样例/风险/新旧档与实施验收。
+- [v0.3核心与试玩](docs/v0.3-core-and-preview.md)：操作、共享存储适配口、独立存档/SDK、928局策略边界与复跑命令；[R3.5](docs/reviews/R3-5-v2-core-and-playable.md)保留三任务复核与后续责任。
 - [游戏设计文档](docs/game-design.md)：完整玩法、材料来源、锻造风险、回收/交货、商人、配额、惩罚与胜负。
 - [实施方案](docs/implementation-plan.md)：确认范围、开发阶段、工具命令合同与交付门槛。
 - [代码架构](docs/architecture.md)：纯内核、状态机、随机数、输入时序、可靠存档与模块分工。
@@ -33,7 +36,7 @@
 
 先完善并复核游戏设计和实施文档，使用 imagegen 提供三套主界面候选。用户确认实施方案后先开发独立玩法内核；主界面选定后派生美术并完成网页全流程。测试、模拟、浏览器试玩与最终审查均保留实际证据。
 
-v0.2三套候选、实施确认、内核/R2、B美术及完整UI/音效/设置已实现，真人反馈后正在T11改版。当前正式入口为`createRun/applyCommand/getRunView/validateRun`及只读账本`getRunLedger`，见[内核](src/core/index.ts)；[持久化会话](src/persistence/index.ts)唯一持有正式工作副本。界面不自行加钱或抽随机数；未来v2使用独立规则/存档，不能以旧模拟证明新版。
+v0.2三套候选、内核/R2/B美术与完整UI保留。v0.3已实施独立[core-v2](src/core-v2/index.ts)及真实试玩，仍用`createRun/applyCommand/getRunView/validateRun`，并提供只读试剑/作品簿。共享会话保护分别注入v1/v2解释器，界面不自行加钱或抽随机。完整D美术/全界面与最终验收继续推进，旧模拟不能证明新玩法。
 
 ## 本地游玩与验证
 
@@ -44,7 +47,7 @@ npm ci --registry=https://registry.npmjs.org/
 npm run dev
 ```
 
-打开终端显示的地址，默认[本地游戏](http://127.0.0.1:5173/)。生产版本用`npm run build`后`npm run preview`，默认端口4173。构建包含dist/index.html、网页资源及兼容保留的core/session SDK；应整体保留dist，不提交dist或node_modules。需要通过localhost或HTTPS运行。
+打开终端显示的地址，默认`/`为旧版，`/v2.html`为新版核心试玩。生产版本用`npm run build`后`npm run preview`，默认端口4173。构建包含两个HTML、网页资源与core/session/v2 SDK及共享chunk，应整体保留dist，不提交dist或node_modules。需要通过localhost或HTTPS运行。
 
 | 操作 | 用法 |
 | --- | --- |

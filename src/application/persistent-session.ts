@@ -8,59 +8,66 @@ export type SessionMode = 'inactive' | 'writer' | 'readonly' | 'unsupported' | '
 export type SessionError = 'not_active' | 'readonly' | 'locks_unsupported' | 'disposed' | 'no_run'
   | 'confirmation_required' | 'save_unavailable' | 'save_conflict' | 'backup_unavailable'
   | 'main_available' | 'stale_session';
-export interface SessionSnapshot {
+export interface SessionSnapshot<S = RunState> {
   readonly generation: number;
   readonly mode: SessionMode;
   readonly active: boolean;
-  readonly state: RunState | null;
+  readonly state: S | null;
   readonly dirty: boolean;
   readonly conflict: boolean;
-  readonly load: SaveReport | null;
+  readonly load: SaveReport<S> | null;
   readonly lastSave: SaveWrite | null;
 }
 export interface Decision { readonly generation: number; readonly confirmed: boolean }
-export type SessionResult =
-  | { readonly ok: true; readonly snapshot: SessionSnapshot }
-  | { readonly ok: false; readonly error: SessionError | ErrorCode; readonly snapshot: SessionSnapshot };
-export type SessionCommandResult =
-  | { readonly ok: true; readonly state: RunState; readonly events: readonly DomainEvent[]; readonly persistence: SaveWrite | null; readonly snapshot: SessionSnapshot }
-  | { readonly ok: false; readonly state: RunState | null; readonly error: SessionError | ErrorCode; readonly events: readonly []; readonly snapshot: SessionSnapshot };
-export interface PersistentSession {
-  getSnapshot(): SessionSnapshot;
-  subscribe(listener: (snapshot: SessionSnapshot) => void): () => void;
-  activate(): Promise<SessionSnapshot>;
-  startNewGame(input: CreateRunInput, decision: Decision): SessionResult;
-  resume(decision: Decision): SessionResult;
-  recoverBackup(decision: Decision): SessionResult;
-  useMemory(input: CreateRunInput | null, decision: Decision): SessionResult;
-  dispatch(command: unknown, generation: number): SessionCommandResult;
-  retrySave(generation: number): SessionResult;
+export type SessionResult<S = RunState, E extends string = ErrorCode> =
+  | { readonly ok: true; readonly snapshot: SessionSnapshot<S> }
+  | { readonly ok: false; readonly error: SessionError | E; readonly snapshot: SessionSnapshot<S> };
+export type SessionCommandResult<S = RunState, E extends string = ErrorCode, V = DomainEvent> =
+  | { readonly ok: true; readonly state: S; readonly events: readonly V[]; readonly persistence: SaveWrite | null; readonly snapshot: SessionSnapshot<S> }
+  | { readonly ok: false; readonly state: S | null; readonly error: SessionError | E; readonly events: readonly []; readonly snapshot: SessionSnapshot<S> };
+export interface PersistentSession<S = RunState, I = CreateRunInput, E extends string = ErrorCode, V = DomainEvent> {
+  getSnapshot(): SessionSnapshot<S>;
+  subscribe(listener: (snapshot: SessionSnapshot<S>) => void): () => void;
+  activate(): Promise<SessionSnapshot<S>>;
+  startNewGame(input: I, decision: Decision): SessionResult<S,E>;
+  resume(decision: Decision): SessionResult<S,E>;
+  recoverBackup(decision: Decision): SessionResult<S,E>;
+  useMemory(input: I | null, decision: Decision): SessionResult<S,E>;
+  dispatch(command: unknown, generation: number): SessionCommandResult<S,E,V>;
+  retrySave(generation: number): SessionResult<S,E>;
   notifyExternalChange(): void;
   suspend(): Promise<void>;
   dispose(): Promise<void>;
 }
 
 export function createPersistentSession(repository: SaveRepository, lease: WriterLease): PersistentSession {
+  return createAdaptedSession<RunState,CreateRunInput,ErrorCode,DomainEvent>(repository, lease, { createRun, applyCommand });
+}
+export interface RuleAdapter<S,I,E extends string,V> {
+  createRun(input:I): {readonly ok:true;readonly state:S}|{readonly ok:false;readonly error:E};
+  applyCommand(state:S,command:unknown): {readonly ok:true;readonly state:S;readonly events:readonly V[]}|{readonly ok:false;readonly state:S;readonly error:E;readonly events:readonly []};
+}
+export function createAdaptedSession<S extends {readonly phase:string},I,E extends string,V>(repository: SaveRepository<S>, lease: WriterLease, rules: RuleAdapter<S,I,E,V>): PersistentSession<S,I,E,V> {
   let generation = 0;
   let activationEpoch = 0;
   let mode: SessionMode = 'inactive';
   let active = false;
-  let state: RunState | null = null;
+  let state: S | null = null;
   let dirty = false;
   let conflict = false;
-  let load: SaveReport | null = null;
+  let load: SaveReport<S> | null = null;
   let lastSave: SaveWrite | null = null;
   let workingBase: string | null | undefined;
-  const listeners = new Set<(snapshot: SessionSnapshot) => void>();
-  const getSnapshot = (): SessionSnapshot => freezeDeep({ generation, mode, active, state, dirty, conflict, load, lastSave });
+  const listeners = new Set<(snapshot: SessionSnapshot<S>) => void>();
+  const getSnapshot = (): SessionSnapshot<S> => freezeDeep({ generation, mode, active, state, dirty, conflict, load, lastSave });
   const publish = () => {
     const snapshot = getSnapshot();
     for (const listener of listeners) {
       try { listener(snapshot); } catch { /* A view listener cannot revoke an accepted command or its save. */ }
     }
   };
-  const fail = (error: SessionError | ErrorCode): SessionResult => ({ ok: false, error, snapshot: getSnapshot() });
-  const success = (): SessionResult => ({ ok: true, snapshot: getSnapshot() });
+  const fail = (error: SessionError | E): SessionResult<S,E> => ({ ok: false, error, snapshot: getSnapshot() });
+  const success = (): SessionResult<S,E> => ({ ok: true, snapshot: getSnapshot() });
   const invalidate = () => { generation++; activationEpoch++; };
   const conflictAfterRead = () => {
     conflict = true;
@@ -68,7 +75,7 @@ export function createPersistentSession(repository: SaveRepository, lease: Write
     invalidate();
     publish();
   };
-  const needsReplacement = (report: SaveReport) =>
+  const needsReplacement = (report: SaveReport<S>) =>
     (report.main.status === 'valid' && report.main.state.phase !== 'victory' && report.main.state.phase !== 'defeat')
     || report.main.status === 'invalid' || (report.main.status === 'empty' && report.backup.status === 'valid');
   const permission = (expected: number, allowConflict = false): SessionError | null => {
@@ -89,7 +96,7 @@ export function createPersistentSession(repository: SaveRepository, lease: Write
     if (!lastSave.ok && lastSave.error === 'storage_conflict') conflict = true;
     return lastSave;
   };
-  const session: PersistentSession = {
+  const session: PersistentSession<S,I,E,V> = {
     getSnapshot,
     subscribe: listener => {
       listeners.add(listener);
@@ -128,7 +135,7 @@ export function createPersistentSession(repository: SaveRepository, lease: Write
     startNewGame: (input, decision) => {
       const denied = permission(decision.generation, true);
       if (denied) return fail(denied);
-      const created = createRun(input);
+      const created = rules.createRun(input);
       if (!created.ok) return fail(created.error);
       if (mode === 'memory') {
         if (state && decision.confirmed !== true) return fail('confirmation_required');
@@ -192,7 +199,7 @@ export function createPersistentSession(repository: SaveRepository, lease: Write
       if (mode === 'disposed') return fail('disposed');
       if (decision.generation !== generation) return fail('stale_session');
       if (input !== null && state && decision.confirmed !== true) return fail('confirmation_required');
-      const created = input === null ? null : createRun(input);
+      const created = input === null ? null : rules.createRun(input);
       if (created && !created.ok) return fail(created.error);
       if (!created && !state) return fail('no_run');
       invalidate();
@@ -206,7 +213,7 @@ export function createPersistentSession(repository: SaveRepository, lease: Write
     dispatch: (command, expected) => {
       const denied = permission(expected);
       if (denied || state === null) return { ok: false, state, error: denied ?? 'no_run', events: [], snapshot: getSnapshot() };
-      const result = applyCommand(state, command);
+      const result = rules.applyCommand(state, command);
       if (!result.ok) return { ...result, snapshot: getSnapshot() };
       state = result.state;
       dirty = true;

@@ -1,5 +1,7 @@
 # 需求到验收的映射
 
+> 版本范围：原44AC保留其v1证据与共享平台责任；forge-v2须另按[V3-01–10](v0.3-gameplay-proposal.md)核验。不能把旧规则/旧界面通过自动算成新版通过，最终适用/替代映射由T11.4完成。
+
 版本 v0.2 / 2026-10-18 进度更新。下表为验收合同；当前有原始输入、设计/概念/R1、[T04内核](reviews/T04-kernel-validation.md)、[T05商人/存储/窗口生命周期](reviews/T05-persistence-validation.md)与[T06整局模拟/R2](reviews/R2-kernel-and-balance.md)的规则、Adapter、M与浏览器SDK证据。**实际游戏页面与玩家视觉/交互/主观可玩性验收仍待对应任务**。OpenSpec 位于[提案](../openspec/changes/add-forging-game/proposal.md)，F/E/S/U 是稳定能力标识。
 
 证据层级：D 文档核对；K 正式纯内核/存档测试；M 调用正式内核的策略模拟；B 浏览器实际行为；V 实际渲染截图/视觉检查；H 人类选择或试玩反馈。某一层通过不能自动代表其他层通过。

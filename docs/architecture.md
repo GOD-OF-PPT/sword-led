@@ -1,5 +1,7 @@
 # 代码架构与玩法内核约定
 
+> 版本范围：本文保留v1分层。v2新增core-v2与独立入口，并从既有存储/会话提取类型化规则适配口，详见[v0.3核心说明](v0.3-core-and-preview.md)。原版解释器与旧档继续保留。
+
 版本：v0.2，2026-10-18。状态：用户已确认方案并选择B；纯规则/存档/R2/B美术、[T08工坊](reviews/T08-workshop-validation.md)、[T09经营/终局](contract-flow.md)及[T10设置/音效/恢复](settings-and-audio.md)已接线；实际结果见对应报告，T11–T12继续更广验收与最大审查。玩法依据：[游戏设计](game-design.md)；交付顺序：[实施方案](implementation-plan.md)。
 
 本文件描述完整目标架构。规则入口为createRun/applyCommand/getRunView/validateRun，T09增加只读getRunLedger；T08已加入index.html与主装配。构建先生成网页，再用独立vite.sdk.config.ts保留core/session SDK及共享chunk，不把设计预览或测试入口打进页面。见[T04](reviews/T04-kernel-validation.md)、[T05](reviews/T05-persistence-validation.md)、[持久化合同](persistence-and-merchant.md)、[工坊合同](workshop-implementation.md)与[经营接线](contract-flow.md)。

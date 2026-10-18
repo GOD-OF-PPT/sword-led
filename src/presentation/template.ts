@@ -14,6 +14,7 @@ export const APP_TEMPLATE = `
       <div class="menu-pair"><button id="reconnect">重新读取契约</button><button id="recover" hidden>从备份恢复</button></div>
       <button id="menu-keep-memory" hidden>保留当前进度，不保存续玩</button>
       <button id="memory-game" class="quiet">不保存试玩</button>
+      <a class="small" href="/v2.html">试玩新版：锻脉与试剑</a>
       <p class="small">鼠标或空格按住蓄锤，松开落锤。没有现实时间倒计时，随时暂停。</p>
     </article>
   </section>
