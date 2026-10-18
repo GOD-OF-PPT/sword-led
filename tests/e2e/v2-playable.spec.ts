@@ -1,6 +1,7 @@
 import { test, expect } from './fixtures';
 import { openGame, startGame, preciseKeyStrike } from './helpers';
 import { keyActivate } from './keyboard';
+import {renderedTextReadability} from './v2-readability';
 import { applyCommand, validateRun } from '../../src/core-v2/index.js';
 import { readFile } from 'node:fs/promises';
 import type { RunState } from '../../src/core-v2/index.js';
@@ -43,7 +44,7 @@ test('three v2 rounds reach a real merchant, preserve the customer return and bu
   await page.locator('#v2-phase-actions').getByRole('button',{name:/下一轮/}).click();await page.locator('#v2-decline').click();
   await forge(page);await quenchAndDeliver(page);await page.locator('#v2-piece-1').click();await page.locator('#v2-deliver').click();await confirm(page);await settle(page);
   await page.locator('#v2-phase-actions').getByRole('button',{name:/下一轮/}).click();await page.locator('#v2-decline').click();
-  expect((await readV2(page)).returns[0]?.received).toBe(true);
+  expect((await readV2(page)).returns[0]?.received).toBe(true);const visitRaw=await page.evaluate(()=>localStorage.getItem('sword-led.save.v2'));await expect(page.locator('#v2-collection')).toContainText('回访 1');await page.locator('#v2-collection').click();await expect(page.locator('#v2-dialog .customer-return')).toHaveCount(1);await expect(page.locator('#v2-dialog .customer-return')).toContainText('感谢：+1废料（已收）');await expect(page.locator('#v2-dialog .customer-return')).toContainText('切绳2/8 · 挡击4/8 · 绕铃2/8');await expect(page.locator('#v2-dialog .customer-return')).toHaveAttribute('data-piece-id','1:1');const visitMetrics=await renderedTextReadability(page,'#v2-dialog .customer-returns');expect(visitMetrics.length).toBeGreaterThanOrEqual(6);for(const m of visitMetrics){expect(m.fontSize,`${m.text} visit font`).toBeGreaterThanOrEqual(12);expect(m.minContrast,`${m.text} visit contrast`).toBeGreaterThanOrEqual(4.5);}const visitPath=info.outputPath('v2-customer-letter.png');await page.screenshot({path:visitPath});await info.attach('v2-customer-letter',{path:visitPath,contentType:'image/png'});await info.attach('v2-customer-letter-readability',{body:Buffer.from(JSON.stringify(visitMetrics,null,2)),contentType:'application/json'});await page.keyboard.press('Escape');await page.locator('#v2-collection').click();await page.keyboard.press('Escape');expect(await page.evaluate(()=>localStorage.getItem('sword-led.save.v2'))).toBe(visitRaw);
   await forge(page);await quenchAndDeliver(page);await page.locator('#v2-piece-1').click();await forge(page,[0,1,2]);await quenchAndDeliver(page);await settle(page);
   await expect(page.locator('#v2-phase-content')).toContainText('前三轮已经走完');await page.locator('#v2-phase-actions').getByRole('button',{name:/商人的工具/}).click();
   const before=await readV2(page);expect(before).toMatchObject({round:3,phase:'merchant',seals:3});expect(before.history.map(h=>h.met)).toEqual([true,true,true]);

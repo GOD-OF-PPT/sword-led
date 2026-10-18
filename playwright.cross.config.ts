@@ -1,7 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
-  testDir: './tests/e2e', testMatch: '**/*.spec.ts', testIgnore: ['**/native-input.spec.ts','**/native-ui-cache.spec.ts'],
+  testDir: './tests/e2e', testMatch: '**/*.spec.ts', testIgnore: ['**/native-input.spec.ts','**/native-ui-cache.spec.ts','**/native-v2.spec.ts'],
   outputDir: 'test-results/cross', fullyParallel: false, workers: 1, retries: 0, timeout: 30000,
   reporter: [['list'], ['json', { outputFile: 'test-results/cross-report.json' }]],
   use: { baseURL: 'http://127.0.0.1:4181', trace: 'retain-on-failure', screenshot: 'only-on-failure' },

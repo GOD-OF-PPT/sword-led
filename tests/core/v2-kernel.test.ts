@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { applyCommand, createRun, getCollection, getRunView, getTrial, previewStrike, validateRun } from '../../src/core-v2/index.js';
+import { applyCommand, createRun, getCollection, getRunView, getTrial, getCustomerVisits, previewStrike, validateRun } from '../../src/core-v2/index.js';
 import type { Action, RunState, Technique } from '../../src/core-v2/index.js';
 
 function fresh(seed='v2-contract',starter:Technique='bridgeClip',request:string|null='1:guard'):RunState {
@@ -15,6 +15,10 @@ function sample(medium:'water'|'oil'){
 }
 
 describe('forge-v2 actual public-command contract',()=>{
+  test('a received customer visit preserves the actual delivered sword, performance and one paid thank-you',()=>{
+    let state=step(sample('oil'),{type:'deliver',pieceId:'1:1'});expect(getCustomerVisits(state)).toEqual([]);state=step(state,{type:'settleRound',recycleRemaining:true});state=step(state,{type:'advanceSummary'});state=step(state,{type:'chooseRequest',requestId:null});state=step(state,{type:'settleRound',recycleRemaining:true});expect(getCustomerVisits(state)).toEqual([]);state=step(state,{type:'advanceSummary'});const raw=JSON.stringify(state),visits=getCustomerVisits(state);expect(visits).toHaveLength(1);expect(visits[0]).toMatchObject({pieceId:'1:1',kind:'guard',receivedRound:3,scrap:1,trial:{cut:2,block:4,handling:2},piece:{status:'delivered',paidValue:200,strikes:6,quench:'oil'}});expect(Object.isFrozen(visits[0]?.piece.nodes)).toBe(true);getCustomerVisits(state);expect(JSON.stringify(state)).toBe(raw);expect(validateRun(state).ok).toBe(true);
+  });
+
   test('read-only technique status follows real per-sword activations without changing an existing save',()=>{
     let edge=fresh('status','edgeTooth');expect(getRunView(edge).techniques[0]).toMatchObject({short:'待巡锋'});
     for(const node of[0,1,2])edge=strike(edge,node);expect(getRunView(edge).techniques[0]).toMatchObject({short:'已生效'});
@@ -117,7 +121,7 @@ describe('forge-v2 actual public-command contract',()=>{
     const request=state.requests.find(r=>r.kind!=='protector');if(!request)throw Error('two unique templates');state=step(state,{type:'chooseRequest',requestId:request.id});
     for(const node of[0,1,2,7,8,9])state=strike(state,node,5000,'standard','3:1');state=step(state,{type:'quench',pieceId:'3:1',medium:request.kind==='hunter'?'water':'oil'});state=step(state,{type:'deliver',pieceId:'3:1'});state=step(state,{type:'settleRound',recycleRemaining:true});
     expect(state.history[2]?.met).toBe(false);state=step(state,{type:'advanceSummary'});expect(state.phase).toBe('merchant');state=step(state,{type:'leaveMerchant'});state=step(state,{type:'chooseRequest',requestId:null});state=step(state,{type:'settleRound',recycleRemaining:true});
-    expect(state).toMatchObject({round:4,phase:'defeat',seals:0});expect(state.returns.find(r=>r.pieceId==='3:1')).toMatchObject({dueRound:5,received:false});expect(validateRun(state)).toMatchObject({ok:true});
+    expect(state).toMatchObject({round:4,phase:'defeat',seals:0});expect(state.returns.find(r=>r.pieceId==='3:1')).toMatchObject({dueRound:5,received:false});expect(getCustomerVisits(state).some(v=>v.pieceId==='3:1')).toBe(false);expect(validateRun(state)).toMatchObject({ok:true});
   });
 
   test('reheat sand opens a short guard-request recipe that the same paid reheat cannot otherwise fulfil',()=>{

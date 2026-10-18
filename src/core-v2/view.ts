@@ -11,6 +11,15 @@ export function getCollection(state:RunState):readonly Workpiece[]{
   const pieces=new Map<string,Workpiece>();for(const summary of state.history)for(const p of summary.pieces)pieces.set(p.id,p);for(const p of state.pieces)pieces.set(p.id,p);
   return freezeDeep(structuredClone([...pieces.values()]));
 }
+/** Received visits refer to the actual delivered snapshot; opening the book awards nothing. */
+export function getCustomerVisits(state:RunState){
+  const pieces=new Map(getCollection(state).map(piece=>[piece.id,piece]));
+  return freezeDeep(structuredClone(state.returns.filter(visit=>visit.received).map(visit=>{
+    const piece=pieces.get(visit.pieceId),request=state.history.find(h=>h.request?.id===visit.requestId)?.request??state.requests.find(r=>r.id===visit.requestId),trial=piece?getTrial(piece):null;
+    if(!piece||!request||!trial)throw Error('Missing recorded customer sword');
+    return{...visit,kind:request.kind,piece,trial,receivedRound:Math.min(12,visit.dueRound),scrap:1};
+  })));
+}
 /** Read-only presentation of real activation counters; it never changes the replayed rules. */
 function techniqueStatus(state:RunState,piece:Workpiece|null,id:Technique){
   if(state.phase==='merchant'&&state.purchases.some(p=>p.afterRound===state.round&&p.productId===id))return{short:'下轮生效',status:'本次新装入，下一轮开始使用。'};

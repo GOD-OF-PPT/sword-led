@@ -4,7 +4,7 @@
 
 **v0.3 D「行脚灯炉」：[/v2.html](http://127.0.0.1:4179/v2.html)**。五节十点锻纹、公开应力、淬火/试剑、委托与技法搭配接入真实十二轮规则/独立存档。已派生[正式D美术](design/d/README.md)，接入练习、锻造、作品簿、三次商人、收据与胜负界面；原版`/`保留以支持旧契约。
 
-2026-10-18真人曾评价v0.2玩法/美术缺乏新意；已据ForgeTax及110条唯一Steam评论修订并取得明确v0.3批准。[核心证据](docs/reviews/R3-5-v2-core-and-playable.md)保留928局策略与原试玩结果，[D界面说明](docs/v0.3-d-interface.md)记录新接线与独立练习。最终广矩阵、真人乐趣与最大交付仍按T11.4–T12推进，技术通过不等于玩家满意。
+2026-10-18真人曾评价v0.2玩法/美术缺乏新意；已据ForgeTax及110条唯一Steam评论修订并取得明确v0.3批准。[核心证据](docs/reviews/R3-5-v2-core-and-playable.md)保留928局策略与原试玩结果，[D界面说明](docs/v0.3-d-interface.md)记录新接线与独立练习。[新版技术验收](docs/reviews/R3-7-v2-technical-acceptance.md)与[44AC映射](docs/v0.3-acceptance.md)分别记录实际矩阵、故障修复及待办。真人再玩和最大交付仍按T11.4.2–T12推进，技术通过不等于玩家满意。
 
 ## 项目资料
 
@@ -75,7 +75,14 @@ npm run test:art
 
 `check`运行单测、严格类型检查与双构建。`test:browser`一次构建后串行运行正式页面与存储SDK；也可分别用`test:e2e`/`test:storage:browser`。真实Chrome原生窗口/缓存探测采用隔离profile；测试只改变测试侧时钟/事件，不注入钱包/终局。美术检查使用独立设计页，不作为正式游戏验收。单项命令还包括`npm test`、`npm run typecheck`、`npm run build`和交互`test:watch`。
 
-跨引擎工具：`npx playwright install firefox webkit`后执行`npm run test:cross`。独立输出在`test-results/cross/`和`cross-report.json`，包含Chromium DPR2、Firefox/WebKit常规与两者的DPR2定向界面检查。原生Chrome进程专用测试保留在`test:browser`，不会伪标为Firefox/WebKit。Playwright WebKit引擎不是已在真实Safari产品上验收，Chromium也不等同真实Edge。当前只归档实际通过的子集，完整新版本矩阵按T11.4执行。[贡献说明](CONTRIBUTING.md)列出测试边界。
+跨引擎工具：`npx playwright install firefox webkit`后可执行旧版/混合定向配置`npm run test:cross`。新版完整矩阵单独执行：
+
+```bash
+npm run build
+npx playwright test --config playwright.v2.config.ts
+```
+
+新版配置使用4182端口、单worker、无重试；六个Chromium/Firefox/WebKit的DPR1/2项目各35项，另有原生Chrome两项，共212项。每个项目都包含纯键盘十二轮、三商人、失败重开和组合保存故障；两种桌面尺寸由规格明确覆盖。输出`test-results/v2-release/`与`test-results/v2-release-report.json`，不会覆盖旧版/存储报告。原生Chrome窗口/缓存探测独立标记，不会伪标为Firefox/WebKit。运行中不要重建同一个dist；具体结果以技术验收报告为准。Playwright WebKit引擎不是在真实Safari产品上验收，Chromium也不等同真实Edge。[贡献说明](CONTRIBUTING.md)列出证据归档与边界。
 
 整局模拟与回放：
 

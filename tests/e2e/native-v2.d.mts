@@ -1,0 +1,3 @@
+import type {RunState} from '../../src/core-v2/index.js';
+export function verifyNativeV2Minimize(baseURL:string,screenshotPath:string):Promise<{browser:string;method:string;nativeMinimizedHidden:boolean;nativeBlurObserved:boolean;oldKeyupUnchanged:boolean;staleKeyups:number;before:RunState;finalState:RunState;viewport:{width:number;height:number};errors:string[]}>;
+export function verifyNativeV2Cache(baseURL:string):Promise<{browser:string;method:string;nativePersisted:boolean;pageShowTrusted:boolean;heapRetained:boolean;oldKeyupUnchanged:boolean;restoredNotice:string;before:RunState;changed:RunState;restored:RunState;finalState:RunState;errors:string[]}>;

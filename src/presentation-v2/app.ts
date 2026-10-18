@@ -5,7 +5,7 @@ import { bindStrikeInput } from '../platform/input.js';
 import { createPreferences } from '../platform/settings.js';
 import { createForgeAudio } from '../platform/audio.js';
 import type { Cue } from '../platform/audio.js';
-import { getCollection, getRunView, getTrial } from '../core-v2/index.js';
+import { getCollection, getRunView, getTrial, getCustomerVisits } from '../core-v2/index.js';
 import type { Action, HammerMode, RunState, Workpiece } from '../core-v2/index.js';
 import { HAMMERS, marketValue, MATERIALS, PATTERN_NAMES, requestBonus, SECTION_NAMES, STARTERS, STAT_NAMES, TECHNIQUES } from '../core-v2/rules.js';
 import { element, enableKeyboardNavigation } from '../presentation/dom.js';
@@ -76,7 +76,7 @@ export function mountV2(root:HTMLElement,port:V2Session){
     const returns=result.events.filter(e=>e.type==='return').map(e=>`${e.label??'顾客'}回访，废料+1`);
     note(broken?`铁件破碎，只回收 ${broken.scrap??1} 废料；已交货的成果保留。`:patterns.length?`锻出${patterns.join('、')}！`:
       action.type==='strike'?'落锤已结算；继续、换路线或淬火收手。':action.type==='quench'?'淬火完成，可以试剑并检查委托。':action.type==='deliver'?`交货 +${result.events.find(e=>e.type==='delivery')?.value??0}`:
-      returns.length?returns.join('；'):'已记录这次选择。');
+      returns.length?`${returns.join('；')}，回信见作品簿。`:'已记录这次选择。');
     input?.refresh();
     if(action.type==='strike'){const anchor=find('v2-hammer-anchor');anchor.classList.remove('preparing');effect(find('v2-hammer'),[{transform:'translate(-26%,-65%) rotate(-30deg)'},{transform:'translate(-26%,-23%) rotate(0deg)',offset:.28},{transform:'translate(-26%,-75%) rotate(-12deg)',offset:.62},{transform:'translate(-26%,-65%) rotate(-8deg)'}],340);effect(anchor.querySelector<HTMLElement>('.impact-rays')!,[{opacity:1,transform:'scale(.3)'},{opacity:0,transform:'scale(1.6)'}],300);}
     if(action.type==='quench')effect(find('v2-steam'),[{opacity:0,transform:'translateY(10px) scale(.6)'},{opacity:.7,offset:.2},{opacity:0,transform:'translateY(-65px) scale(1.4)'}],650);
@@ -101,8 +101,10 @@ export function mountV2(root:HTMLElement,port:V2Session){
   }
   function swordCard(p:Workpiece){const card=element('article',undefined,'sword-record');card.append(element('h3',`${p.id} · ${MATERIALS[p.material].label} · ${p.status==='delivered'?`交货 ${p.paidValue}`:p.status==='recycled'?`回收 ${p.recoveredScrap} 废料`:p.status==='broken'?'破碎':'台上'}`));const canvas=element('canvas');canvas.setAttribute('aria-label',`${p.id}的实际剑形与锻纹`);card.append(canvas,element('p',`锋${p.ratings.edge} / 韧${p.ratings.toughness} / 衡${p.ratings.balance} · ${p.quench==='water'?'水淬':p.quench==='oil'?'油淬':'未淬火'} · ${p.patterns.map(t=>PATTERN_NAMES[t]).join('、')||'无锻纹'}`));queueMicrotask(()=>{if(!disposed&&canvas.isConnected)paintBlade(canvas,p,-1,art.texture());});return card;}
   function collection(){
-    if(!snapshot.state)return;const body=element('div');
-    for(const p of getCollection(snapshot.state)){const card=swordCard(p),item=element('button',getTrial(p)?'试剑':p.status==='broken'?'破碎，无法试剑':'未淬火，无法试剑');item.disabled=getTrial(p)===null;item.addEventListener('click',()=>trial(p));card.append(item);body.append(card);}
+    if(!snapshot.state)return;const body=element('div'),visits=getCustomerVisits(snapshot.state),works=element('div',undefined,'work-collection');
+    if(visits.length){const letters=element('section',undefined,'customer-returns');letters.append(element('h3','行客回信'));for(const visit of [...visits].reverse()){const letter=element('article',undefined,'customer-return');letter.dataset.pieceId=visit.pieceId;const content=element('div');content.append(element('h4',`${visit.label} · ${visit.dueRound>12?'契约终结回访':`第${visit.receivedRound}轮回访`}`),element('p',`已带它上路：切绳${visit.trial.cut}/8 · 挡击${visit.trial.block}/8 · 绕铃${visit.trial.handling}/8。`),element('strong',`感谢：+${visit.scrap}废料（已收）`),swordCard(visit.piece));letter.append(portrait(portraitIndex(visit.kind)),content);letters.append(letter);}body.append(letters);}
+    body.append(element('h3','本炉作品'),works);
+    for(const p of getCollection(snapshot.state)){const card=swordCard(p),item=element('button',getTrial(p)?'试剑':p.status==='broken'?'破碎，无法试剑':'未淬火，无法试剑');item.disabled=getTrial(p)===null;item.addEventListener('click',()=>trial(p));card.append(item);works.append(card);}
     openDialog('这一炉的作品簿',body,[{label:'合上手账',run:closeDialog}]);
   }
   function renderPhase(state:RunState){
@@ -137,11 +139,11 @@ export function mountV2(root:HTMLElement,port:V2Session){
     button('v2-retry').disabled=!snapshot.dirty||snapshot.mode!=='writer'||snapshot.conflict;button('v2-keep-memory').disabled=!state;
     show('v2-retry',snapshot.dirty);show('v2-reread',snapshot.conflict||['readonly','unsupported','error'].includes(snapshot.mode)||snapshot.load?.main.status==='unavailable');show('v2-keep-memory',!!state&&(snapshot.dirty||snapshot.conflict||['readonly','error'].includes(snapshot.mode)));
     text('v2-save-state',snapshot.mode==='readonly'?'另一窗口正在保存，本窗只读。':snapshot.mode==='memory'?'不保存试玩；刷新或关闭会丢失本次进度。':snapshot.conflict?'存档已在其他窗口变化，请明确读取最新。':snapshot.dirty?'最新进度尚未成功保存，请重试或保留内存续玩。':snapshot.load?.main.status==='invalid'?'主档不兼容或已损坏，原档保留。':snapshot.load?.main.status==='unavailable'?'无法读取本机契约，可重新读取或不保存试玩。':snapshot.mode==='unsupported'||snapshot.mode==='error'?'此环境暂时无法单写保存，可重新读取或不保存试玩。':snapshot.mode==='inactive'?'正在准备本机契约…':!state?'可以开一份新版契约，旧版存档保留。':snapshot.lastSave?.ok&&snapshot.lastSave.backupWarning?'主档已保存；备份未能更新，请保留导出副本。':'本机契约已保存。');
-    button('v2-continue').disabled=state===null||!snapshot.active;button('v2-new').disabled=!snapshot.active||!['writer','memory'].includes(snapshot.mode);
+    button('v2-continue').disabled=state===null||!snapshot.active;button('v2-new').disabled=!snapshot.active||!['writer','memory'].includes(snapshot.mode)||(snapshot.mode==='writer'&&snapshot.load?.main.status==='unavailable');
     text('v2-save-preview',state?`本机：第${state.round}/12轮 · ${state.coins}金币 · ${state.seals}枚印记${snapshot.dirty?' · 未保存':''}`:'还没有新版契约。旧版存档会保留。');
     if(!state){text('v2-order','三件来料，一把自己的剑。');text('v2-wallet','');return;}
     const quota=find<HTMLProgressElement>('v2-quota');quota.max=state.history.at(-1)?.round===state.round&&state.phase!=='workshop'?state.history.at(-1)?.quota??150:getRunView(state).quota;quota.value=state.pieces.reduce((sum,p)=>sum+p.paidValue,0)+state.credit;
-    const view=getRunView(state,{pieceId:selectedId,node,mode});if(view.selected)selectedId=view.selected.id;
+    const view=getRunView(state,{pieceId:selectedId,node,mode});if(view.selected)selectedId=view.selected.id;const visits=state.returns.filter(r=>r.received).length;text('v2-collection',visits?`作品簿 · 回访 ${visits}`:'翻看作品簿');
     text('v2-order',`第 ${state.round} / 12 轮 · 新交 ${view.delivered} + 信用 ${state.credit} / ${view.quota} · 还差 ${view.remaining}`);text('v2-wallet',`金币 ${state.coins}　废料 ${state.scrap}　煤 ${state.coal}　印记 ${state.seals}/3`);
     const workshop=route==='play'&&state.phase==='workshop';show('v2-starter-panel',workshop&&!state.starterChosen);show('v2-request-panel',workshop&&state.starterChosen&&!state.requestDecided);show('v2-workshop',workshop&&state.starterChosen&&state.requestDecided);show('v2-phase',route==='play'&&state.phase!=='workshop');
     const key=`${state.runId}/${state.revision}/${snapshot.generation}/${canOperate()}`;
@@ -159,7 +161,7 @@ export function mountV2(root:HTMLElement,port:V2Session){
       text('v2-price-preview',p.quench!==null?`当前交货 ${p.value+p.requestBonus}（市价${p.value} + 委托${p.requestBonus}）`:p.strikes?`现在按原坯交 ${p.value}；${p.quenches.map(q=>`${q.medium==='water'?'水淬':'油淬'}后${q.piece.status==='broken'?'会破碎':`可交${quenchQuote(view,q.piece)}`}`).join(' / ')}`:'落锤增加性能，淬火后成为能交货的成品。');
       text('v2-chain',`锻纹：${p.patterns.length?p.patterns.map(pattern=>PATTERN_NAMES[pattern]).join(' / '):'还未形成'}　连线 ${p.chain.length}/3`);
       text('v2-target-hint',`${SECTION_NAMES[node%5]} · ${node<5?'刃':'脊'} · 本点提升${STAT_NAMES[p.nodeViews[node]?.stat??'balance']}；相邻三点连纹。方向键选点，Q/W/E换锤，1/2/3换坯。`);
-      const current=find('v2-current-request');current.replaceChildren(element('h3',view.request?.label??'本轮只做市场'),element('p',view.request?describeRequest(view.request):'成品市价计入配额，回收换废料。'),element('p',view.fulfilledRequestId?'委托已完成，顾客稍后回访。':p.quench?`当前成品可得委托奖励 ${p.requestBonus}`:'淬火后检查委托；两项各超要求3点再奖20。'));
+      const current=find('v2-current-request');current.replaceChildren(element('h3',view.request?.label??'本轮只做市场'),element('p',view.request?describeRequest(view.request):'成品市价计入配额，回收换废料。'),element('p',view.fulfilledRequestId?'委托已完成，顾客稍后回访。':!view.request?'本轮只做市场，无委托奖励。':p.quench?`当前成品可得委托奖励 ${p.requestBonus}`:'淬火后核对；双项各超3另奖20。'));
       const chips=element('div',undefined,'tech-chips');for(const t of view.techniques){const chip=element('button',`${t.label} · ${t.short}`);chip.id=`v2-tech-${t.id}`;chip.title=`${t.effect} ${t.status}`;chip.addEventListener('click',()=>openDialog(t.label,`${t.effect} ${t.status}`,[{label:'记住了',run:closeDialog}]));chips.append(chip);}find('v2-techniques').replaceChildren(element('h3','随身手艺 · 点开查看'),chips);
       const readiness=p.outcomes[0];button('v2-strike').disabled=!canOperate()||!readiness?.allowed;
       text('v2-outcomes',p.quench!==null?'已淬火封存，可以试剑、交货或回收。':p.status!=='active'?'这件来料已处置，请换一件或收工。':p.outcomes.map(o=>`${o.grade==='precise'?'精准':o.grade==='ordinary'?'普通':'偏击'}：${o.allowed?`+${o.gained}属性 / 热−${o.heatCost} / 应力+${o.stressAdded}${o.damaged?` / 完整−${o.damaged}`:''}${o.piece.status==='broken'?'，将破碎':''}`:error(o.reason??'')}`).join('；'));

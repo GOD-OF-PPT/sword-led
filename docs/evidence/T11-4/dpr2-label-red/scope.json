@@ -1,0 +1,290 @@
+{
+  "reason": "Intentional SIGINT after a real DPR2 label-background defect; not a timeout/restart and not final acceptance",
+  "stats": {
+    "startTime": "2026-10-18T21:00:59.126Z",
+    "duration": 447124.115,
+    "expected": 52,
+    "skipped": 152,
+    "unexpected": 2,
+    "flaky": 0
+  },
+  "cases": [
+    {
+      "name": "v2 live text, painted backgrounds, target scale and trial remain readable at 1280",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "v2 live text, painted backgrounds, target scale and trial remain readable at 1920",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "v2 live text, painted backgrounds, target scale and trial remain readable at 1280",
+      "project": "v2-chromium-dpr2",
+      "status": "failed"
+    },
+    {
+      "name": "v2 live text, painted backgrounds, target scale and trial remain readable at 1920",
+      "project": "v2-chromium-dpr2",
+      "status": "failed"
+    },
+    {
+      "name": "v2 actual accepted strike creates native waveform and mute/pause/menu/reload stop or avoid replay",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "v2 delayed native audio resume cannot sound the old accepted strike after a pause or new contract",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "v2 native resume denial stays readable and never revokes an accepted sword",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "v2 actual accepted strike creates native waveform and mute/pause/menu/reload stop or avoid replay",
+      "project": "v2-chromium-dpr2",
+      "status": "passed"
+    },
+    {
+      "name": "v2 delayed native audio resume cannot sound the old accepted strike after a pause or new contract",
+      "project": "v2-chromium-dpr2",
+      "status": "passed"
+    },
+    {
+      "name": "v2 native resume denial stays readable and never revokes an accepted sword",
+      "project": "v2-chromium-dpr2",
+      "status": "passed"
+    },
+    {
+      "name": "v2 720px fatal stress forecasts and recovery remain visible during simultaneous save/settings failure",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "v2 720px fatal stress forecasts and recovery remain visible during simultaneous save/settings failure",
+      "project": "v2-chromium-dpr2",
+      "status": "passed"
+    },
+    {
+      "name": "D keyboard-only twelve-round campaign reaches all three merchants, keeps exact rules and reloads victory",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "D real failed contract has three receipts per round, no terminal merchant and an explicit restart",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "D private practice really forges, quenches and delivers without touching an existing formal contract",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "D actual target and hammer motion cancel cleanly and reduced motion leaves only accepted results",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "D unavailable artwork and unavailable audio have real visible exits while forging remains usable",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "D earned merchant resources pay for real seal repair and atomic full-slot replacement with cancel preserved",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "D exported art really decodes with source alpha and both desktop canvases show the live forging scene",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "D keyboard-only twelve-round campaign reaches all three merchants, keeps exact rules and reloads victory",
+      "project": "v2-chromium-dpr2",
+      "status": "passed"
+    },
+    {
+      "name": "D real failed contract has three receipts per round, no terminal merchant and an explicit restart",
+      "project": "v2-chromium-dpr2",
+      "status": "passed"
+    },
+    {
+      "name": "D private practice really forges, quenches and delivers without touching an existing formal contract",
+      "project": "v2-chromium-dpr2",
+      "status": "passed"
+    },
+    {
+      "name": "D actual target and hammer motion cancel cleanly and reduced motion leaves only accepted results",
+      "project": "v2-chromium-dpr2",
+      "status": "passed"
+    },
+    {
+      "name": "D unavailable artwork and unavailable audio have real visible exits while forging remains usable",
+      "project": "v2-chromium-dpr2",
+      "status": "passed"
+    },
+    {
+      "name": "D earned merchant resources pay for real seal repair and atomic full-slot replacement with cancel preserved",
+      "project": "v2-chromium-dpr2",
+      "status": "passed"
+    },
+    {
+      "name": "D exported art really decodes with source alpha and both desktop canvases show the live forging scene",
+      "project": "v2-chromium-dpr2",
+      "status": "passed"
+    },
+    {
+      "name": "v2 simulated 60Hz release uses event time and leaves no idle callback",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "v2 simulated 120Hz release uses event time and leaves no idle callback",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "v2 simulated 144Hz release uses event time and leaves no idle callback",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "v2 native callback cost and idle budget at 1280",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "v2 native callback cost and idle budget at 1920",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "v2 longer genuine UI journal has measured release cost and a replayable next strike",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "v2 real blade decisions produce the approved sword, trial and reload without touching legacy data",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "three v2 rounds reach a real merchant, preserve the customer return and buy a different technique",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "v1 and v2 genuine saves stay separate and contend for the same writer lease",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "a held v2 strike is cancelled by a real target change and risky outcomes stay visible at 720px",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "v2 slow timing is actually saved and changes release timing without changing its grade reward",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "v2 failed writes can export the real accepted in-memory progress while leaving the disk contract intact",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "v2 has an explicit playable no-save route when the browser cannot provide writer locks",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "keyboard alone selects a v2 forging route, quenches, delivers and settles a real first round",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "v2 real blade decisions produce the approved sword, trial and reload without touching legacy data",
+      "project": "v2-chromium-dpr2",
+      "status": "passed"
+    },
+    {
+      "name": "three v2 rounds reach a real merchant, preserve the customer return and buy a different technique",
+      "project": "v2-chromium-dpr2",
+      "status": "passed"
+    },
+    {
+      "name": "v1 and v2 genuine saves stay separate and contend for the same writer lease",
+      "project": "v2-chromium-dpr2",
+      "status": "passed"
+    },
+    {
+      "name": "a held v2 strike is cancelled by a real target change and risky outcomes stay visible at 720px",
+      "project": "v2-chromium-dpr2",
+      "status": "passed"
+    },
+    {
+      "name": "v2 slow timing is actually saved and changes release timing without changing its grade reward",
+      "project": "v2-chromium-dpr2",
+      "status": "passed"
+    },
+    {
+      "name": "v2 failed writes can export the real accepted in-memory progress while leaving the disk contract intact",
+      "project": "v2-chromium-dpr2",
+      "status": "passed"
+    },
+    {
+      "name": "v2 has an explicit playable no-save route when the browser cannot provide writer locks",
+      "project": "v2-chromium-dpr2",
+      "status": "passed"
+    },
+    {
+      "name": "keyboard alone selects a v2 forging route, quenches, delivers and settles a real first round",
+      "project": "v2-chromium-dpr2",
+      "status": "interrupted"
+    },
+    {
+      "name": "v2 combined settings and primary/backup write failures preserve exact progress and recovery at 1280",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "v2 combined settings and primary/backup write failures preserve exact progress and recovery at 1920",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "v2 backup-only refusal preserves the accepted primary and exposes its warning without another action",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "v2 corrupt primary needs explicit backup recovery and preserves the actual earlier sword",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "v2 future rules and settings stay untouched on read and cancelled replacement",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "v2 denied storage provides actual no-save forging while preferences fail separately",
+      "project": "v2-chromium",
+      "status": "passed"
+    },
+    {
+      "name": "v2 real writer handoff rereads the last accepted command and only then accepts a new strike",
+      "project": "v2-chromium",
+      "status": "passed"
+    }
+  ],
+  "onlyFailingLabelImagesArchived": true,
+  "largeTracesNotArchived": true
+}

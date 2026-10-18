@@ -38,7 +38,7 @@ test('D keyboard-only twelve-round campaign reaches all three merchants, keeps e
   }
   expect(visited).toEqual([3,6,9]);expect(expected).toMatchObject({phase:'victory',round:12,seals:3,coins:5258});expect(expected.journal).toHaveLength(301);pointerEvents+=await page.evaluate(()=>Number(Reflect.get(window,'dPointerCount')));expect(pointerEvents).toBe(0);
   await shot(page,info,'d-keyboard-victory');await page.reload();await keyActivate(page,'#v2-continue');await expect(page.locator('#v2-phase-title')).toHaveText('十二轮，炉火仍在');expect(await state(page)).toEqual(expected);
-  await keyActivate(page,'#v2-phase-actions button:last-child');await expect(page.locator('#v2-dialog .sword-record')).toHaveCount(36);const raw=await page.evaluate(()=>localStorage.getItem('sword-led.save.v2'));await page.keyboard.press('Escape');expect(await page.evaluate(()=>localStorage.getItem('sword-led.save.v2'))).toBe(raw);
+  await keyActivate(page,'#v2-phase-actions button:last-child');await expect(page.locator('#v2-dialog .work-collection .sword-record')).toHaveCount(36);await expect(page.locator('#v2-dialog .customer-return')).toHaveCount(expected.returns.filter(r=>r.received).length);const raw=await page.evaluate(()=>localStorage.getItem('sword-led.save.v2'));await page.keyboard.press('Escape');expect(await page.evaluate(()=>localStorage.getItem('sword-led.save.v2'))).toBe(raw);
   await info.attach('d-keyboard-campaign',{body:Buffer.from(JSON.stringify({pointerEvents,visited,state:expected},null,2)),contentType:'application/json'});
 });
 

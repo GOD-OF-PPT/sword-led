@@ -1,0 +1,434 @@
+{
+  "method": "native rAF callback cost plus separately wrapped actual Space-keyup handler duration without trace; not GPU or physical refresh certification",
+  "size": {
+    "width": 1280,
+    "height": 720
+  },
+  "browser": "156.0.8078.4",
+  "p95Ms": 0.20000000298023224,
+  "sample": {
+    "callbacks": 84,
+    "costs": [
+      0.10000000894069672,
+      0.29999999701976776,
+      0,
+      0.10000000894069672,
+      0.09999999403953552,
+      0,
+      0.09999999403953552,
+      0.09999999403953552,
+      0.20000000298023224,
+      0.10000000894069672,
+      0.10000000894069672,
+      0,
+      0.10000000894069672,
+      0,
+      0,
+      0.09999999403953552,
+      0.09999999403953552,
+      0.09999999403953552,
+      0.10000000894069672,
+      0,
+      0,
+      0,
+      0,
+      0.09999999403953552,
+      0,
+      0,
+      0.09999999403953552,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0.10000000894069672,
+      0.09999999403953552,
+      0.10000000894069672,
+      0.10000000894069672,
+      0.09999999403953552,
+      0,
+      0.09999999403953552,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0.10000000894069672,
+      0,
+      0,
+      0.09999999403953552,
+      0,
+      0.09999999403953552,
+      0.09999999403953552,
+      0,
+      0.10000000894069672,
+      0.09999999403953552,
+      0.10000000894069672,
+      0.09999999403953552,
+      0,
+      0.10000000894069672,
+      0,
+      0.20000000298023224,
+      0,
+      0.10000000894069672,
+      0,
+      0.20000000298023224,
+      0,
+      0.10000000894069672,
+      0.10000000894069672,
+      0,
+      0.09999999403953552,
+      0.09999999403953552,
+      0.20000000298023224,
+      0.09999999403953552,
+      0.10000000894069672,
+      0.09999999403953552,
+      0.10000000894069672,
+      0.09999999403953552,
+      0.10000000894069672,
+      0.10000000894069672,
+      0.20000000298023224,
+      0.09999999403953552,
+      0.20000000298023224
+    ],
+    "stamps": [
+      538.4,
+      555,
+      571.8,
+      588.4,
+      605,
+      621.7,
+      638.4,
+      655.1,
+      671.7,
+      688.4,
+      705.1,
+      721.7,
+      738.3,
+      755.1,
+      771.7,
+      788.4,
+      805,
+      821.7,
+      838.4,
+      855,
+      871.7,
+      888.4,
+      905.1,
+      921.7,
+      938.4,
+      955.1,
+      971.7,
+      988.4,
+      1038.366,
+      1055,
+      1071.7,
+      1088.4,
+      1105.1,
+      1121.7,
+      1138.4,
+      1155.1,
+      1171.7,
+      1188.4,
+      1205,
+      1221.7,
+      1238.3,
+      1255,
+      1271.7,
+      1288.4,
+      1305,
+      1321.7,
+      1338.4,
+      1355,
+      1371.7,
+      1388.3,
+      1405,
+      1421.7,
+      1438.3,
+      1455,
+      1471.6,
+      1488.3,
+      1538.366,
+      1555,
+      1571.7,
+      1588.3,
+      1605,
+      1621.7,
+      1638.4,
+      1655,
+      1671.6,
+      1688.3,
+      1705,
+      1721.7,
+      1738.4,
+      1755,
+      1771.7,
+      1788.4,
+      1805.1,
+      1821.7,
+      1838.3,
+      1855,
+      1871.7,
+      1888.3,
+      1905,
+      1921.6,
+      1938.3,
+      1955,
+      1971.7,
+      1988.3
+    ],
+    "keyupCosts": [
+      5.9000000059604645,
+      3.5,
+      4.700000002980232
+    ]
+  },
+  "state": {
+    "rulesVersion": "forge-v2",
+    "runId": "5a3ecb13-5b04-4a22-a7af-f4df1eff02cd",
+    "seed": "v2-native-budget",
+    "revision": 5,
+    "phase": "workshop",
+    "round": 1,
+    "coins": 0,
+    "scrap": 0,
+    "coal": 2,
+    "seals": 3,
+    "starterChosen": true,
+    "techniques": [
+      "bridgeClip"
+    ],
+    "pieces": [
+      {
+        "id": "1:1",
+        "material": "iron",
+        "baseValue": 18,
+        "temperedBonus": 0,
+        "threshold": 40,
+        "maxIntegrity": 4,
+        "integrity": 4,
+        "heat": 52,
+        "stress": 18,
+        "ratings": {
+          "edge": 8,
+          "toughness": 2,
+          "balance": 3
+        },
+        "nodes": [
+          3,
+          3,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "chain": [],
+        "patterns": [
+          "edge"
+        ],
+        "traces": [
+          {
+            "pattern": "edge",
+            "nodes": [
+              0,
+              1,
+              2
+            ],
+            "rewarded": true
+          }
+        ],
+        "strikes": 3,
+        "heavyStrikes": 0,
+        "reheats": 0,
+        "bridgeUsed": false,
+        "quench": null,
+        "status": "active",
+        "paidValue": 0,
+        "recoveredScrap": 0
+      },
+      {
+        "id": "1:2",
+        "material": "iron",
+        "baseValue": 18,
+        "temperedBonus": 0,
+        "threshold": 40,
+        "maxIntegrity": 4,
+        "integrity": 4,
+        "heat": 100,
+        "stress": 0,
+        "ratings": {
+          "edge": 0,
+          "toughness": 2,
+          "balance": 0
+        },
+        "nodes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "chain": [],
+        "patterns": [],
+        "traces": [],
+        "strikes": 0,
+        "heavyStrikes": 0,
+        "reheats": 0,
+        "bridgeUsed": false,
+        "quench": null,
+        "status": "active",
+        "paidValue": 0,
+        "recoveredScrap": 0
+      },
+      {
+        "id": "1:3",
+        "material": "steel",
+        "baseValue": 22,
+        "temperedBonus": 0,
+        "threshold": 36,
+        "maxIntegrity": 3,
+        "integrity": 3,
+        "heat": 100,
+        "stress": 0,
+        "ratings": {
+          "edge": 2,
+          "toughness": 0,
+          "balance": 0
+        },
+        "nodes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "chain": [],
+        "patterns": [],
+        "traces": [],
+        "strikes": 0,
+        "heavyStrikes": 0,
+        "reheats": 0,
+        "bridgeUsed": false,
+        "quench": null,
+        "status": "active",
+        "paidValue": 0,
+        "recoveredScrap": 0
+      }
+    ],
+    "condition": {
+      "kind": "steady",
+      "stat": null,
+      "pattern": null
+    },
+    "credit": 0,
+    "pendingCredit": 0,
+    "requests": [
+      {
+        "id": "1:guard",
+        "kind": "guard",
+        "label": "巡卫的守夜剑",
+        "needs": [
+          {
+            "stat": "edge",
+            "minimum": 6
+          },
+          {
+            "stat": "toughness",
+            "minimum": 5
+          }
+        ],
+        "patterns": []
+      },
+      {
+        "id": "1:courier",
+        "kind": "courier",
+        "label": "信使的随身剑",
+        "needs": [
+          {
+            "stat": "edge",
+            "minimum": 5
+          },
+          {
+            "stat": "balance",
+            "minimum": 6
+          }
+        ],
+        "patterns": []
+      }
+    ],
+    "requestDecided": true,
+    "acceptedRequestId": "1:guard",
+    "fulfilledRequestId": null,
+    "returns": [],
+    "roundBreaks": 0,
+    "merchant": [],
+    "purchases": [],
+    "history": [],
+    "rng": {
+      "stock": {
+        "state": 677196015,
+        "draws": 0
+      },
+      "requests": {
+        "state": 696064845,
+        "draws": 0
+      },
+      "conditions": {
+        "state": 3317984677,
+        "draws": 0
+      },
+      "merchant": {
+        "state": 2137522111,
+        "draws": 0
+      }
+    },
+    "journal": [
+      {
+        "type": "chooseTechnique",
+        "techniqueId": "bridgeClip"
+      },
+      {
+        "type": "chooseRequest",
+        "requestId": "1:guard"
+      },
+      {
+        "type": "strike",
+        "pieceId": "1:1",
+        "node": 0,
+        "mode": "standard",
+        "timingMark": 6534
+      },
+      {
+        "type": "strike",
+        "pieceId": "1:1",
+        "node": 1,
+        "mode": "standard",
+        "timingMark": 6489
+      },
+      {
+        "type": "strike",
+        "pieceId": "1:1",
+        "node": 2,
+        "mode": "standard",
+        "timingMark": 6491
+      }
+    ]
+  }
+}
