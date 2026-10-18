@@ -1,0 +1,6 @@
+{
+  "status": 1,
+  "outputExists": false,
+  "reason": "A snapshot taken after a real completed test run is rejected before creating the archive.",
+  "stderr": "node:internal/modules/run_main:122\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Baseline must predate the actual test run\n    at file:///Users/gordon/githome/sword-led/scripts/collect-v2-cross.mjs:14:169 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '=='\n}\n\nNode.js v22.12.0\n"
+}

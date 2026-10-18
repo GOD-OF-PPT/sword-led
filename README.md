@@ -18,6 +18,7 @@
 - [三套主界面候选](design/README.md)：A 余烬工坊、B 行会手账、C 冷铁控制台，最终选型图、比较和完整提示词。
 - [界面与风格](docs/ui-design.md)：完整页面、信息结构与三图共同状态。
 - [验收矩阵](docs/acceptance-matrix.md)：44项场景；已有规则、存储、模拟与工坊输入证据，整局UI/真人验收继续按任务完成。
+- [R4审查检查点](docs/reviews/R4-final-audit.md)：原始五项/44AC/V3逐项结果、恢复提示修补、当前策略规模批次与未完成的真人门槛；[REPEAT](docs/reviews/REPEAT-2026-10-19.md)记录只扩展有据的重复流程。
 - [首次全面复核 R1](docs/reviews/R1-design-and-concepts.md)：规则闭环、架构、图稿检查、修正与后续验证责任。
 - [确认记录](docs/decision-record.md)：用户已确认实施并选择 B，原始问答留存。
 - [T04 内核验证](docs/reviews/T04-kernel-validation.md)：77 项测试、类型检查、构建与独立产物验证，含本轮边界。

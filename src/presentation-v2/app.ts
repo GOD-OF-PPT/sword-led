@@ -215,7 +215,11 @@ export function mountV2(root:HTMLElement,port:V2Session){
   button('v2-trial').addEventListener('click',()=>{const p=snapshot.state?.pieces.find(p=>p.id===selectedId);if(p)trial(p);});button('v2-collection').addEventListener('click',collection);
   button('v2-retry').addEventListener('click',()=>{const r=port.retrySave(snapshot.generation);if(!r.ok)note(error(r.error));});
   button('v2-reread').addEventListener('click',()=>{const generation=snapshot.generation;openDialog('读取最新契约','会放弃尚未保存的内存进度，重新取得可用的写入权限并读取磁盘。',[{label:'保留当前',run:closeDialog},{label:'确认读取',run:()=>{closeDialog();if(generation!==snapshot.generation){note(error('stale_session'));return;}const token=++epoch;void port.activate().then(()=>{if(disposed||token!==epoch)return;const r=port.resume({generation:snapshot.generation,confirmed:true});if(!r.ok)note(error(r.error));});}}]);});
-  button('v2-recover').addEventListener('click',()=>{const generation=snapshot.generation;openDialog('恢复备份','备份可能少了最近一步；原主档不会被自动当作合法进度。',[{label:'先保留',run:closeDialog},{label:'确认恢复',run:()=>{closeDialog();const r=port.recoverBackup({generation,confirmed:true});if(!r.ok)note(error(r.error));}}]);});
+  button('v2-recover').addEventListener('click',()=>{
+    const generation=snapshot.generation,backup=snapshot.load?.backup;
+    const details=backup?.status==='valid'?`备份：第 ${backup.state.round} / 12 轮，${backup.state.coins}金币；保存于 ${new Date(backup.savedAt).toLocaleString('zh-CN')}。`:'当前没有可用的备份。';
+    openDialog('恢复备份',`${details}确认后会回到备份时的进度并替换主档；备份不含其后未保存的操作。`,[{label:'先保留',run:closeDialog},{label:'确认恢复',run:()=>{closeDialog();const r=port.recoverBackup({generation,confirmed:true});if(!r.ok)note(error(r.error));}}]);
+  });
   button('v2-keep-memory').addEventListener('click',()=>{const generation=snapshot.generation;openDialog('不保存续玩','保留当前进度；刷新或关闭会失去这些尚未写入的操作。',[{label:'继续尝试保存',run:closeDialog},{label:'保留进度，不保存',run:()=>{closeDialog();const r=port.useMemory(null,{generation,confirmed:true});if(!r.ok)note(error(r.error));}}]);});
   function pause(){if(route!=='play'||!snapshot.state)return;if(dialog.open)closeDialog();paused=true;epoch++;input?.cancel();stopEffects();render();}
   button('v2-pause').addEventListener('click',pause);button('v2-resume').addEventListener('click',()=>{paused=false;epoch++;render();});

@@ -43,7 +43,7 @@ The system SHALL offer two optional requests per round, accept at most one befor
 #### Scenario: A request completes once
 - **GIVEN** a matching quenched sword and an accepted request
 - **WHEN** delivery is confirmed
-- **THEN** market and capped request rewards are settled atomically, the sword becomes unavailable for resale, and its saved customer return occurs two rounds later or at the ending.
+- **THEN** market and capped request rewards are settled atomically, the sword becomes unavailable for resale, and its saved customer return occurs two rounds later or at the twelve-round ending; an early defeat does not pay future visits.
 
 ### Requirement: Limited credit and complete economy
 The system SHALL distinguish new delivered value, original quota and previous-round credit; award currency only for new deliveries; cap next-round credit at 25 percent of the next quota and derive it from half the new surplus only. Salvage, breakage, settlement, seal loss and victory/defeat SHALL be one-time transitions.

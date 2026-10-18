@@ -1,0 +1,319 @@
+{
+  "config": {
+    "argv": [
+      "/Users/gordon/.nvm/versions/node/v22.12.0/bin/node",
+      "/Users/gordon/githome/sword-led/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/v2-resilience.spec.ts",
+      "--config",
+      "playwright.v2.config.ts",
+      "--project=v2-chromium",
+      "--grep",
+      "v2 corrupt primary"
+    ],
+    "configFile": "/Users/gordon/githome/sword-led/playwright.v2.config.ts",
+    "rootDir": "/Users/gordon/githome/sword-led/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v2-release",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v2-chromium",
+        "name": "v2-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/v2-*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v2-release",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v2-chromium-dpr2",
+        "name": "v2-chromium-dpr2",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/v2-*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v2-release",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v2-firefox",
+        "name": "v2-firefox",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/v2-*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v2-release",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v2-firefox-dpr2",
+        "name": "v2-firefox-dpr2",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/v2-*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v2-release",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v2-webkit",
+        "name": "v2-webkit",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/v2-*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v2-release",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v2-webkit-dpr2",
+        "name": "v2-webkit-dpr2",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/v2-*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v2-release",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v2-native-chromium",
+        "name": "v2-native-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/native-v2.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v2-release",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v2-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "**/v2-*.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4182",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "launchOptions": {
+            "args": [
+              "--no-proxy-server"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v2-chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/v2-release-report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 4182 --strictPort",
+      "url": "http://127.0.0.1:4182/v2.html",
+      "reuseExistingServer": false,
+      "timeout": 30000,
+      "env": {
+        "NO_PROXY": "127.0.0.1,localhost",
+        "no_proxy": "127.0.0.1,localhost"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "v2-resilience.spec.ts",
+      "file": "v2-resilience.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "v2 corrupt primary needs explicit backup recovery and preserves the actual earlier sword",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v2-chromium",
+              "projectName": "v2-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8397,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#v2-dialog-body')\nExpected substring: \u001b[32m\"第 1 / 12 轮\"\u001b[39m\nReceived string:    \u001b[31m\"备份可能少了最近一步；原主档不会被自动当作合法进度。\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('#v2-dialog-body') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#v2-dialog-body')\u001b[22m\n\u001b[2m    14 × locator resolved to <div id=\"v2-dialog-body\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"备份可能少了最近一步；原主档不会被自动当作合法进度。\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#v2-dialog-body')\nExpected substring: \u001b[32m\"第 1 / 12 轮\"\u001b[39m\nReceived string:    \u001b[31m\"备份可能少了最近一步；原主档不会被自动当作合法进度。\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('#v2-dialog-body') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#v2-dialog-body')\u001b[22m\n\u001b[2m    14 × locator resolved to <div id=\"v2-dialog-body\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"备份可能少了最近一步；原主档不会被自动当作合法进度。\"\u001b[22m\n\n    at /Users/gordon/githome/sword-led/tests/e2e/v2-resilience.spec.ts:25:193",
+                    "location": {
+                      "file": "/Users/gordon/githome/sword-led/tests/e2e/v2-resilience.spec.ts",
+                      "column": 193,
+                      "line": 25
+                    },
+                    "snippet": "  23 |   if(!rawBackup)throw Error('Missing real backup');const savedAt=JSON.parse(rawBackup).savedAt as string,localTime=await page.evaluate(savedAt=>new Date(savedAt).toLocaleString('zh-CN'),savedAt);\n  24 |   await page.evaluate(()=>localStorage.setItem('sword-led.save.v2','{damaged'));await page.reload();await expect(page.locator('#v2-save-state')).toContainText('不兼容或已损坏');\n> 25 |   for(const size of[{width:1280,height:720},{width:1920,height:1080}]){await page.setViewportSize(size);await page.locator('#v2-recover').click();await expect(page.locator('#v2-dialog-body')).toContainText(`第 ${backup.round} / 12 轮`);await expect(page.locator('#v2-dialog-body')).toContainText(`${backup.coins}金币`);await expect(page.locator('#v2-dialog-body')).toContainText(localTime);await expect(page.locator('#v2-dialog-actions button:last-child')).toBeInViewport({ratio:.95});const path=info.outputPath(`v2-backup-preview-${size.width}.png`);await page.screenshot({path});await info.attach(`v2-backup-preview-${size.width}`,{path,contentType:'image/png'});await page.locator('#v2-dialog-actions button:first-child').click();expect(await page.evaluate(()=>localStorage.getItem('sword-led.save.v2'))).toBe('{damaged');expect(await page.evaluate(()=>localStorage.getItem('sword-led.save.backup.v2'))).toBe(rawBackup);}\n     |                                                                                                                                                                                                 ^\n  26 |   await page.locator('#v2-recover').click();await confirmV2(page);expect(await readV2(page)).toEqual(backup);await page.locator('#v2-continue').click();await expect(page.locator('#v2-piece-stats')).toContainText('已锻 1锤');await info.attach('v2-recovered-backup',{body:Buffer.from(JSON.stringify(backup,null,2)),contentType:'application/json'});\n  27 | });\n  28 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v2-resilience.spec.ts",
+                        "column": 193,
+                        "line": 25
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#v2-dialog-body')\nExpected substring: \u001b[32m\"第 1 / 12 轮\"\u001b[39m\nReceived string:    \u001b[31m\"备份可能少了最近一步；原主档不会被自动当作合法进度。\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('#v2-dialog-body') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#v2-dialog-body')\u001b[22m\n\u001b[2m    14 × locator resolved to <div id=\"v2-dialog-body\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"备份可能少了最近一步；原主档不会被自动当作合法进度。\"\u001b[22m\n\n\n  23 |   if(!rawBackup)throw Error('Missing real backup');const savedAt=JSON.parse(rawBackup).savedAt as string,localTime=await page.evaluate(savedAt=>new Date(savedAt).toLocaleString('zh-CN'),savedAt);\n  24 |   await page.evaluate(()=>localStorage.setItem('sword-led.save.v2','{damaged'));await page.reload();await expect(page.locator('#v2-save-state')).toContainText('不兼容或已损坏');\n> 25 |   for(const size of[{width:1280,height:720},{width:1920,height:1080}]){await page.setViewportSize(size);await page.locator('#v2-recover').click();await expect(page.locator('#v2-dialog-body')).toContainText(`第 ${backup.round} / 12 轮`);await expect(page.locator('#v2-dialog-body')).toContainText(`${backup.coins}金币`);await expect(page.locator('#v2-dialog-body')).toContainText(localTime);await expect(page.locator('#v2-dialog-actions button:last-child')).toBeInViewport({ratio:.95});const path=info.outputPath(`v2-backup-preview-${size.width}.png`);await page.screenshot({path});await info.attach(`v2-backup-preview-${size.width}`,{path,contentType:'image/png'});await page.locator('#v2-dialog-actions button:first-child').click();expect(await page.evaluate(()=>localStorage.getItem('sword-led.save.v2'))).toBe('{damaged');expect(await page.evaluate(()=>localStorage.getItem('sword-led.save.backup.v2'))).toBe(rawBackup);}\n     |                                                                                                                                                                                                 ^\n  26 |   await page.locator('#v2-recover').click();await confirmV2(page);expect(await readV2(page)).toEqual(backup);await page.locator('#v2-continue').click();await expect(page.locator('#v2-piece-stats')).toContainText('已锻 1锤');await info.attach('v2-recovered-backup',{body:Buffer.from(JSON.stringify(backup,null,2)),contentType:'application/json'});\n  27 | });\n  28 |\n    at /Users/gordon/githome/sword-led/tests/e2e/v2-resilience.spec.ts:25:193"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T22:50:08.772Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v2-release/v2-resilience-v2-corrupt-p-178fc-es-the-actual-earlier-sword-v2-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v2-release/v2-resilience-v2-corrupt-p-178fc-es-the-actual-earlier-sword-v2-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v2-release/v2-resilience-v2-corrupt-p-178fc-es-the-actual-earlier-sword-v2-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/gordon/githome/sword-led/tests/e2e/v2-resilience.spec.ts",
+                    "column": 193,
+                    "line": 25
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "0cd10d0527668c20348d-1c7073ec7fd2f3026e60",
+          "file": "v2-resilience.spec.ts",
+          "line": 21,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-18T22:50:04.656Z",
+    "duration": 13756.187,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

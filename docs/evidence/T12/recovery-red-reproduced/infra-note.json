@@ -1,0 +1,9 @@
+{
+  "status": "infrastructure-attempt-not-product-regression",
+  "session": 34379,
+  "exitCode": 1,
+  "observedHttpStatus": 404,
+  "cause": "Temporary config lives in tmp; installed Playwright defaults webServer cwd to configDir. No product test ran.",
+  "fix": "Set explicit repository cwd; use separate subsequent real regression report.",
+  "primarySource": "node_modules/playwright/lib/runner/index.js:841"
+}

@@ -24,4 +24,18 @@ v2核心开发可先执行`npm run verify:v2 -- --seeds 1 --out tmp/v2-new-smoke
 
 新版完整报告用`node scripts/collect-v2-cross.mjs --report test-results/v2-release-report.json --out <新目录> --expected 212 --projects 7 --purpose <本次范围>`归档；会拒绝跳过、重试、失败或不匹配的数量，并用当前构建SDK回放附件状态、记录源/产物指纹。原始失败报告另存诊断目录，不伪装成绿报告。高DPR截图可在测试全部结束后用可选维护脚本`scripts/encode-browser-evidence.py --report <原报告> --out <新临时目录>`无损换容器，需要Pillow/cwebp，不是游戏或测试运行依赖。它逐图验证完整解码RGBA/尺寸及ICC/Exif，保留原PNG和原始报告于忽略临时目录、记录原/归档hash；再将生成的report.json交给collector。压缩不裁切/重画，原图稿PNG仍原样提交。不要在原生性能测试同时编码截图。
 
+新批次应在构建后、测试前保存输入快照，避免归档时才拍下另一套源码/产物：
+
+```sh
+mkdir -p tmp
+npm run build
+node scripts/release-fingerprint.mjs capture tmp/release-start.json
+npx playwright test --config playwright.v2.config.ts
+node scripts/collect-v2-cross.mjs --report test-results/v2-release-report.json --out docs/evidence/my-new-release --expected 212 --projects 7 --baseline tmp/release-start.json
+```
+
+输出文件/目录必须新建。快照覆盖src/tests/scripts/public、构建/配置和测试实际读取的历史JSON；新增外部测试输入可在capture命令末尾追加仓库相对路径。`verify <manifest>`单独核对；新collector的`--baseline`会拒绝测试开始之后才取得的快照，以及变更/新增/丢失输入。旧报告无基线时保持明确的旧证据层级，不补拍假装已有开始快照。该工具不运行测试、不改变源码、不证明真人验收；普通审查笔记和本轮结果目录不在执行输入内。
+
+v2完整规模使用`npm run verify:v2 -- --seeds 1000 --workers 4 --out tmp/my-v2-1000`。workers范围1–8，1为同一batch函数的串行路径；默认4。固定29组合全部保留，25种子分片按原profile/seed顺序归并，每终态正式回放并记录状态hash，worker退出异常或源/编译产物变化则不写成功summary。会运行较久；不要在它运行时重新编译tmp/simulation或修改参与模拟的core/timing/policy/worker/锁文件。不要把合成输入误差分布称为真人准确率。T12原规模批次的终态以实际会话/summary为准，启动不等于通过。
+
 所有AI美术保存原图、实际提示词、来源/引用链与SHA；运行资源独立于整张概念图，文字由代码渲染。未获用户同意的风格不能默认为选定。旧图/旧存档/旧提交使用新增版本或revert保留；不强推覆盖历史，不提交.env、dist、tmp和node_modules。

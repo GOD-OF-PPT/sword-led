@@ -1,0 +1,67 @@
+{
+  "status": "independent-checkpoint-not-final-R4",
+  "recordedAt": "2026-10-18T23:28:38.278Z",
+  "originalInputSha256": "b961f5c651df51121659687138cfe5edf125e25dadda11642136dfc6aaca852b",
+  "lockSha256": "fb6298f489290886a8b47e266b4205a94acf9763086af45b1cc2992a01d8a73f",
+  "documents": {
+    "count": 103,
+    "localLinks": 417,
+    "broken": 0,
+    "unclosedFences": 0,
+    "originalACRows": 44,
+    "v3Rows": 10
+  },
+  "runtime": {
+    "page": "v2-CMdU4yiC.js",
+    "css": "v2-BrL_rNsN.css",
+    "buildFiles": 32,
+    "hashesMatch": true
+  },
+  "tests": {
+    "fullUnits": {
+      "session": 34167,
+      "passed": 216,
+      "files": 19
+    },
+    "timingBoundary": {
+      "session": 38709,
+      "passed": 1,
+      "acceptedMarks": 11,
+      "rejectedMarks": 9
+    },
+    "strict": {
+      "session": 9568,
+      "exitCode": 0
+    },
+    "build": {
+      "session": 1672,
+      "exitCode": 0
+    },
+    "recovery": {
+      "session": 3370,
+      "passed": 42,
+      "projects": 6
+    },
+    "baselineAdoption": {
+      "session": 43025,
+      "passed": 1
+    }
+  },
+  "openSpec": {
+    "v2": 4454,
+    "v1": 49535,
+    "strictPassed": true
+  },
+  "preview": {
+    "session": 6935,
+    "snapshot": "tmp/previews/T12-recovery",
+    "smokeSession": 72607,
+    "passed": true
+  },
+  "pending": [
+    "1000-seed/29000-run simulation session 88804 terminal result",
+    "T11.4.2 human replay and any necessary fixes",
+    "final R4 closure and final delivery"
+  ],
+  "scope": "R4 work in progress; no complete goal claim"
+}

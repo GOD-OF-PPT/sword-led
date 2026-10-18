@@ -1,0 +1,30 @@
+{
+  "rows": 53000,
+  "scenarios": 53,
+  "seedsPerScenario": 1000,
+  "uniqueScenarioSeedPairs": 53000,
+  "csvSha256": "6dc205b5cf29c2445fb3d63debde938f71998e4a0ae0919631dfb460d4bb51be",
+  "changedSinceT06": [
+    "src/core/index.ts",
+    "src/core/merchant.ts",
+    "src/core/validate.ts"
+  ],
+  "exactAllowedDifferences": [
+    "index adds read-only getRunLedger exports",
+    "merchant effect text changes 0.02 to 2 percentage points, no prices or calculation changes",
+    "canonicalJson gains export, body/caps unchanged"
+  ],
+  "allOtherSourceBytesIdentical": true,
+  "witnesses": [
+    {
+      "file": "docs/evidence/T06/verify-v1.medium-victory.json",
+      "phase": "victory",
+      "revision": 336
+    },
+    {
+      "file": "docs/evidence/T06/verify-v1.raw-defeat.json",
+      "phase": "defeat",
+      "revision": 14
+    }
+  ]
+}

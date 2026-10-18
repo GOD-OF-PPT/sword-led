@@ -1,0 +1,7 @@
+{
+  "method": "Separate compiled copy throws after posting a real result. CLI must reject worker exit, terminate peers, and never emit a success summary.",
+  "status": 1,
+  "summaryExists": false,
+  "stdout": "",
+  "stderr": "\nnode:internal/modules/run_main:122\n    triggerUncaughtException(\n    ^\nError: Intentional post-result worker fault\n    at file:///Users/gordon/githome/sword-led/tmp/T12-worker-fault-compiled/scripts/v2/batch.js:34:26\n    at ModuleJob.run (node:internal/modules/esm/module_job:271:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:547:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:116:5)\n\nNode.js v22.12.0\n"
+}

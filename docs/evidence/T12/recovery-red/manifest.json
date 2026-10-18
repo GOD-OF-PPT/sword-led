@@ -1,0 +1,30 @@
+{
+  "stats": {
+    "startTime": "2026-10-18T22:50:04.656Z",
+    "duration": 13756.187,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "records": [
+    {
+      "name": "screenshot",
+      "archived": "failed.png",
+      "sha256": "2dde9dc74618ae7089b64c166f600a80c02ddb3ae2bf536c9fecb9f699eaa956"
+    },
+    {
+      "name": "error-context",
+      "archived": "error-context.json",
+      "sha256": "e76daf5674da614306b4ab1a913fa10891967abdb81ae0c591daa3a3699aa6b7"
+    },
+    {
+      "name": "trace",
+      "sha256": "62499d309e929c79bbe26b8f010f641d22c63071bf3dc9f5c1dcbc0f8a8ac828",
+      "originalTransientPath": "/Users/gordon/githome/sword-led/test-results/v2-release/v2-resilience-v2-corrupt-p-178fc-es-the-actual-earlier-sword-v2-chromium/trace.zip",
+      "retention": "not retained"
+    }
+  ],
+  "originalTraceRetained": false,
+  "note": "Report, failure screenshot and UTF-8 context retained. Original transient trace was not copied before subsequent test-output cleanup; a later separately identified reproduction is in recovery-red-reproduced."
+}
