@@ -2,10 +2,12 @@
 
 一款面向现代 PC 浏览器的轮次制锻造游戏。每轮只有三件铁坯：控制落锤时机让它升值，在断裂前决定交货还是回收，靠商人升级撑过十二轮契约。
 
-用户已确认实施方案v0.2，并选定 **B「行会手账」**。现已接通中文主菜单、独立教学、真实工坊、日终收据、商人、胜负总结和重开/续玩；T10加入短音效/静音/音量、独立设置保存、键盘焦点和异常恢复。内核、存档、53场景×1000种子模拟/R2、B美术与R3已有独立证据，T10实际验证见品质报告；更广浏览器/真人反馈及最终审查继续按T11–T12完成。
+当前运行版为v0.2/B「行会手账」，包含十二轮/商人/胜负/续玩和设置/声音。**2026-10-18真人试玩认为玩法和美术缺乏新意，当前可玩性未通过。** 已按用户给出的ForgeTax链接研究七款Steam作品与110条唯一评论，形成[v0.3玩法/实施提案](docs/v0.3-gameplay-proposal.md)。用户已明确回复“确认 v0.3，开始前三轮可玩版本”，美术采用新偏好的[D「行脚灯炉」](design/v03/README.md)。下一任务实施新核心与三轮可玩，图稿和确认不能当作新版已实现。T11完整D界面/十二轮/复验及T12最大审查保留。
 
 ## 项目资料
 
+- [Steam玩法/评论研究](docs/research/2026-10-18-forging-games.md)：抽样方法、正负体验、具体评论回链和现版设计诊断。
+- [已确认v0.3改版提案](docs/v0.3-gameplay-proposal.md)与[D方向图](design/v03/README.md)：锻脉/试剑/技法构筑、样例/风险/新旧档与实施验收。
 - [游戏设计文档](docs/game-design.md)：完整玩法、材料来源、锻造风险、回收/交货、商人、配额、惩罚与胜负。
 - [实施方案](docs/implementation-plan.md)：确认范围、开发阶段、工具命令合同与交付门槛。
 - [代码架构](docs/architecture.md)：纯内核、状态机、随机数、输入时序、可靠存档与模块分工。
@@ -31,7 +33,7 @@
 
 先完善并复核游戏设计和实施文档，使用 imagegen 提供三套主界面候选。用户确认实施方案后先开发独立玩法内核；主界面选定后派生美术并完成网页全流程。测试、模拟、浏览器试玩与最终审查均保留实际证据。
 
-三套候选、实施确认、内核/R2、B美术及完整UI/音效/设置已实现，继续完成T11–T12验收。正式入口为`createRun/applyCommand/getRunView/validateRun`及只读账本`getRunLedger`，见[内核](src/core/index.ts)；[持久化会话](src/persistence/index.ts)唯一持有正式工作副本。界面不自行加钱或抽随机数。
+v0.2三套候选、实施确认、内核/R2、B美术及完整UI/音效/设置已实现，真人反馈后正在T11改版。当前正式入口为`createRun/applyCommand/getRunView/validateRun`及只读账本`getRunLedger`，见[内核](src/core/index.ts)；[持久化会话](src/persistence/index.ts)唯一持有正式工作副本。界面不自行加钱或抽随机数；未来v2使用独立规则/存档，不能以旧模拟证明新版。
 
 ## 本地游玩与验证
 
@@ -69,6 +71,8 @@ npm run test:art
 ```
 
 `check`运行单测、严格类型检查与双构建。`test:browser`一次构建后串行运行正式页面与存储SDK；也可分别用`test:e2e`/`test:storage:browser`。真实Chrome原生窗口/缓存探测采用隔离profile；测试只改变测试侧时钟/事件，不注入钱包/终局。美术检查使用独立设计页，不作为正式游戏验收。单项命令还包括`npm test`、`npm run typecheck`、`npm run build`和交互`test:watch`。
+
+跨引擎工具：`npx playwright install firefox webkit`后执行`npm run test:cross`。独立输出在`test-results/cross/`和`cross-report.json`，包含Chromium DPR2、Firefox/WebKit常规与两者的DPR2定向界面检查。原生Chrome进程专用测试保留在`test:browser`，不会伪标为Firefox/WebKit。Playwright WebKit引擎不是已在真实Safari产品上验收，Chromium也不等同真实Edge。当前只归档实际通过的子集，完整新版本矩阵按T11.4执行。[贡献说明](CONTRIBUTING.md)列出测试边界。
 
 整局模拟与回放：
 

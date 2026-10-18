@@ -72,7 +72,8 @@ export class ForgeScene {
       if (!back) return;
       back.fillStyle = '#30251e';back.fillRect(0, 0, width, height);
       // Extend the room softly into wide viewports while keeping the foreground rig undistorted.
-      back.save();back.filter = 'blur(18px) brightness(.42)';back.drawImage(artImage(this.#art, 'workshop'), -24, -24, width + 48, height + 48);back.restore();
+      // Some desktop engines omit Canvas filters; keep the dark matte instead of a bright duplicated room.
+      if ('filter' in back) { back.save();back.filter = 'blur(18px) brightness(.42)';back.drawImage(artImage(this.#art, 'workshop'), -24, -24, width + 48, height + 48);back.restore(); }
       back.setTransform(scale, 0, 0, scale, ox, oy);
       back.drawImage(artImage(this.#art, 'workshop'), 0, 0, stage.width, stage.height);
       const anvil = artAsset(this.#art, 'anvil'), aw = stage.anvilWidth, ah = aw * anvil.height / anvil.width;

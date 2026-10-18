@@ -15,16 +15,15 @@ import { createPreferences, DEFAULT_PREFERENCES, SETTINGS_KEY } from '../platfor
 import type { Preferences, PreferencesSnapshot } from '../platform/settings.js';
 import { createForgeAudio } from '../platform/audio.js';
 import type { SaveError } from '../platform/storage.js';
+import { element, enableKeyboardNavigation } from './dom.js';
 
 const MODES: readonly HammerMode[] = ['light', 'standard', 'heavy'];
 const STATUS = { active: '加工中', delivered: '已交货', recycled: '已回收', broken: '已破碎' } as const;
 function newIdentity(): string { return [...crypto.getRandomValues(new Uint32Array(4))].map(value => value.toString(16).padStart(8, '0')).join(''); }
-function element<K extends keyof HTMLElementTagNameMap>(tag: K, text?: string, className?: string): HTMLElementTagNameMap[K] {
-  const node = document.createElement(tag);if (text !== undefined) node.textContent = text;if (className) node.className = className;return node;
-}
 
 export function mountGame(root: HTMLElement, port: PersistentSession) {
   root.innerHTML = APP_TEMPLATE;
+  enableKeyboardNavigation(root);
   const required = <T extends HTMLElement>(selector: string): T => { const node = root.querySelector<T>(selector);if (!node) throw new Error(`Missing view: ${selector}`);return node; };
   const text = (selector: string, value: string | number) => { const node = required(selector);const next = String(value);if (node.textContent !== next) node.textContent = next; };
   const button = (selector: string) => required<HTMLButtonElement>(selector);
@@ -446,8 +445,13 @@ export function mountGame(root: HTMLElement, port: PersistentSession) {
   const onBlur = () => game.pause();const onHidden = () => { if (document.hidden) game.pause();else render(game.getSnapshot()); };
   const onMotion = () => { game.setReducedMotion(preferencesSnapshot.value.reducedMotion || motionQuery.matches);const field = root.querySelector<HTMLInputElement>('#motion-setting');if (field) field.disabled = motionQuery.matches;paintAudio(); };
   const onGesture = (event: Event) => { if (event.isTrusted && !(event instanceof KeyboardEvent && event.repeat)) void audio.gesture(); };
+  const onControlClick = (event: MouseEvent) => {
+    const control = event.target instanceof Element ? event.target.closest('button') : null;
+    if (control instanceof HTMLButtonElement && !control.disabled) control.focus({ preventScroll: true });
+  };
   const onSettingsStorage = (event: StorageEvent) => { if (event.key === SETTINGS_KEY || event.key === null) preferences.reload(); };
   root.addEventListener('pointerdown', onGesture, true);root.addEventListener('keydown', onGesture, true);window.addEventListener('storage', onSettingsStorage);
+  root.addEventListener('click', onControlClick, true);
   window.addEventListener('keydown', onKey);window.addEventListener('blur', onBlur);document.addEventListener('visibilitychange', onHidden);motionQuery.addEventListener('change', onMotion);
   const resize = new ResizeObserver(() => { thumbnailKeys.clear();render(game.getSnapshot()); });resize.observe(root);
   const unsubscribeAccepted = game.subscribeAccepted(action => audio.accepted(action.events));
@@ -477,6 +481,7 @@ export function mountGame(root: HTMLElement, port: PersistentSession) {
   void loadAssets();
   return { dispose(): Promise<void> { if (disposal) return disposal;disposed = true;loadEpoch++;cancelAnimationFrame(feedbackFrame);input.dispose();unsubscribe();unsubscribeAccepted();unsubscribeAudio();unsubscribePreferences();resize.disconnect();scene?.dispose();menuScene?.dispose();
     root.removeEventListener('pointerdown', onGesture, true);root.removeEventListener('keydown', onGesture, true);window.removeEventListener('storage', onSettingsStorage);
+    root.removeEventListener('click', onControlClick, true);
     window.removeEventListener('keydown', onKey);window.removeEventListener('blur', onBlur);document.removeEventListener('visibilitychange', onHidden);motionQuery.removeEventListener('change', onMotion);dialog.removeEventListener('cancel', onCancel);dialog.removeEventListener('keydown', onDialogKey);
     if (dialog.open) dialog.close();shell.remove();disposal = Promise.allSettled([audio.dispose(), game.dispose()]).then(() => undefined);return disposal; } };
 }

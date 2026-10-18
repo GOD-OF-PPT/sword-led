@@ -1,0 +1,39 @@
+{
+  "sounding": {
+    "contexts": 1,
+    "constructors": 1,
+    "states": [
+      "running"
+    ],
+    "active": 3,
+    "starts": 3,
+    "stops": 3,
+    "maxActive": 3,
+    "frequencies": [
+      719,
+      1193,
+      1777
+    ],
+    "peak": 0.0027638121973723173
+  },
+  "silent": {
+    "contexts": 1,
+    "constructors": 1,
+    "states": [
+      "suspended"
+    ],
+    "active": 0,
+    "starts": 6,
+    "stops": 12,
+    "maxActive": 3,
+    "frequencies": [
+      719,
+      1193,
+      1777,
+      719,
+      1193,
+      1777
+    ],
+    "peak": 0
+  }
+}

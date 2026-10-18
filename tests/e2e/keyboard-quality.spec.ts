@@ -42,11 +42,13 @@ test('read-only practice returns focus to a usable menu control',async({page,con
   await expect(other.locator('#continue')).toBeFocused();await other.close();
 });
 
-test('feedback restores a ready strike but never steals focus after an explicit Tab away',async({page})=>{
+test('feedback restores a ready strike but never steals focus after an explicit keyboard move',async({page})=>{
   await openGame(page);await startGame(page);await expect(page.locator('#strike')).toBeFocused();
   await page.keyboard.down('Space');await page.clock.runFor(350);await page.keyboard.up('Space');await page.clock.runFor(500);await expect(page.locator('#strike')).toBeFocused();
-  await page.keyboard.down('Space');await page.clock.runFor(350);await page.keyboard.up('Space');await page.keyboard.press('Tab');
-  await expect(page.locator('#menu-logo')).toBeFocused();await page.clock.runFor(500);await expect(page.locator('#menu-logo')).toBeFocused();expect((await readRun(page)).revision).toBe(2);
+  // Forward Tab may leave the document from the last temporarily disabled control.
+  // Shift+Tab chooses the preceding enabled toolbar control without browser-chrome wrap assumptions.
+  await page.keyboard.down('Space');await page.clock.runFor(350);await page.keyboard.up('Space');await page.keyboard.press('Shift+Tab');
+  await expect(page.locator('#mute')).toBeFocused();await page.clock.runFor(500);await expect(page.locator('#mute')).toBeFocused();expect((await readRun(page)).revision).toBe(2);
 });
 
 test('the sound toggle remains readable in both enabled and muted states',async({page},info)=>{

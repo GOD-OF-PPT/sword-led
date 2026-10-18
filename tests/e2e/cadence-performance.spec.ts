@@ -1,6 +1,9 @@
 import { test, expect } from './fixtures';
 import { openGame, startGame, readRun } from './helpers';
 
+// Timing samples should not include trace screenshot/DOM collection overhead; other UI specs retain failure traces.
+test.use({ trace: 'off' });
+
 interface FrameProbe { callbacks:number; costs:number[]; stamps:number[] }
 declare global { interface Window { frameTestProbe: FrameProbe } }
 for (const hz of [60,120,144]) test(`simulated ${hz}Hz drawing preserves the event-time strike and stops when idle`,async({page},info)=>{
@@ -31,6 +34,6 @@ for(const size of [{width:1280,height:720},{width:1920,height:1080}])test(`nativ
   const before=await page.evaluate(()=>window.frameTestProbe.callbacks);await page.waitForTimeout(200);expect(await page.evaluate(()=>window.frameTestProbe.callbacks)).toBe(before);
   const sample=await page.evaluate(()=>window.frameTestProbe);expect(sample.costs.length).toBeGreaterThan(30);
   const costs=[...sample.costs].sort((a,b)=>a-b),p95=costs[Math.min(costs.length-1,Math.ceil(costs.length*.95)-1)]??Infinity;
-  expect(p95).toBeLessThan(16.7);expect((await readRun(page)).stats.strikes).toBe(3);
   await info.attach(`native-frame-budget-${size.width}`,{body:Buffer.from(JSON.stringify({size,browser:await page.context().browser()?.version(),method:'native rAF callback wall-time cost, includes JS drawing/feedback; not GPU or physical high-refresh certification',p95Ms:p95,sample},null,2)),contentType:'application/json'});
+  expect(p95).toBeLessThan(16.7);expect((await readRun(page)).stats.strikes).toBe(3);
 });

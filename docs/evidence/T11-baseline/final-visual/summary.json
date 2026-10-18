@@ -1,0 +1,452 @@
+{
+  "purpose": "Final two-line Canvas-filter fallback, separate from the earlier full 64-case baseline build",
+  "passed": 5,
+  "screenshots": 10,
+  "capabilities": [
+    {
+      "project": "chromium-dpr2",
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "width": 1924,
+      "cssWidth": 962,
+      "filterSupported": true,
+      "sidePixel": [
+        50,
+        28,
+        14,
+        255
+      ]
+    },
+    {
+      "project": "chromium-dpr2",
+      "size": {
+        "width": 1920,
+        "height": 1080
+      },
+      "width": 3032,
+      "cssWidth": 1516,
+      "filterSupported": true,
+      "sidePixel": [
+        48,
+        27,
+        14,
+        255
+      ]
+    },
+    {
+      "project": "firefox-game",
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "width": 962,
+      "cssWidth": 962,
+      "filterSupported": true,
+      "sidePixel": [
+        52,
+        29,
+        16,
+        255
+      ]
+    },
+    {
+      "project": "firefox-game",
+      "size": {
+        "width": 1920,
+        "height": 1080
+      },
+      "width": 1516,
+      "cssWidth": 1516,
+      "filterSupported": true,
+      "sidePixel": [
+        53,
+        29,
+        15,
+        255
+      ]
+    },
+    {
+      "project": "webkit-game",
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "width": 962,
+      "cssWidth": 962,
+      "filterSupported": false,
+      "sidePixel": [
+        48,
+        37,
+        30,
+        255
+      ]
+    },
+    {
+      "project": "webkit-game",
+      "size": {
+        "width": 1920,
+        "height": 1080
+      },
+      "width": 1516,
+      "cssWidth": 1516,
+      "filterSupported": false,
+      "sidePixel": [
+        48,
+        37,
+        30,
+        255
+      ]
+    },
+    {
+      "project": "firefox-dpr2",
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "width": 1924,
+      "cssWidth": 962,
+      "filterSupported": true,
+      "sidePixel": [
+        50,
+        28,
+        15,
+        255
+      ]
+    },
+    {
+      "project": "firefox-dpr2",
+      "size": {
+        "width": 1920,
+        "height": 1080
+      },
+      "width": 3032,
+      "cssWidth": 1516,
+      "filterSupported": true,
+      "sidePixel": [
+        48,
+        27,
+        15,
+        255
+      ]
+    },
+    {
+      "project": "webkit-dpr2",
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "width": 1924,
+      "cssWidth": 962,
+      "filterSupported": false,
+      "sidePixel": [
+        48,
+        37,
+        30,
+        255
+      ]
+    },
+    {
+      "project": "webkit-dpr2",
+      "size": {
+        "width": 1920,
+        "height": 1080
+      },
+      "width": 3032,
+      "cssWidth": 1516,
+      "filterSupported": false,
+      "sidePixel": [
+        48,
+        37,
+        30,
+        255
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "chromium-dpr2/canvas-capability-1280-2545fcd71617.json",
+      "sha256": "2545fcd71617d8ea14e481d3fcdc254c2238d813ef11221aaa28cb3dd352c593",
+      "bytes": 173
+    },
+    {
+      "path": "chromium-dpr2/desktop-1280-dpr2-0dd319b0f818.png",
+      "sha256": "0dd319b0f818dc4def668464506f69864fc16c1157a2b54f954fcc568fe11b9c",
+      "bytes": 2111593
+    },
+    {
+      "path": "chromium-dpr2/canvas-capability-1920-76c1d10bf757.json",
+      "sha256": "76c1d10bf7578b92d073816192134dedd28fcc3a4b51b76e7dca8620f107be2d",
+      "bytes": 175
+    },
+    {
+      "path": "chromium-dpr2/desktop-1920-dpr2-dbdb7bf174a6.png",
+      "sha256": "dbdb7bf174a63dc660107e0b24d232076517b33d0d357f179e06aff4c00f1ff8",
+      "bytes": 5145856
+    },
+    {
+      "path": "chromium-dpr2/engine-environment-6b512f956ca8.json",
+      "sha256": "6b512f956ca8513bba971a3be7814f2ae298b456cd7134423902d8fea7bc8178",
+      "bytes": 312
+    },
+    {
+      "path": "chromium-dpr2/runtime-audit-003018422993.json",
+      "sha256": "00301842299326dd42a58212bda98e0900dd732c70428ca838f453c9fe2dd0b5",
+      "bytes": 84
+    },
+    {
+      "path": "firefox-game/canvas-capability-1280-3ddb076947a5.json",
+      "sha256": "3ddb076947a54d95a6324451de1a98f30d8c6d2e0dc6670fda9bfc4a630037fa",
+      "bytes": 172
+    },
+    {
+      "path": "firefox-game/desktop-1280-dpr1-1137d5e5edf3.png",
+      "sha256": "1137d5e5edf351a4ad22d925baa1a7ddc23b9210e4f6f7768c27672f885844ce",
+      "bytes": 769155
+    },
+    {
+      "path": "firefox-game/canvas-capability-1920-576e086d33a3.json",
+      "sha256": "576e086d33a3e5ed70f21f3eaa02ee8e7e1e20f927d62c65fd98e76321f123b1",
+      "bytes": 175
+    },
+    {
+      "path": "firefox-game/desktop-1920-dpr1-5fbf51827001.png",
+      "sha256": "5fbf51827001a0bfead5691cb9ec5e68312bdbd6e8d9a64f45964f2b7f53e0d8",
+      "bytes": 2049025
+    },
+    {
+      "path": "firefox-game/engine-environment-d4efce40a487.json",
+      "sha256": "d4efce40a487ec3631aa1aa7ecd744e1c42226b8c1f7c54e41036366b896045d",
+      "bytes": 270
+    },
+    {
+      "path": "firefox-game/runtime-audit-003018422993.json",
+      "sha256": "00301842299326dd42a58212bda98e0900dd732c70428ca838f453c9fe2dd0b5",
+      "bytes": 84
+    },
+    {
+      "path": "webkit-game/canvas-capability-1280-9ec23a2a00c9.json",
+      "sha256": "9ec23a2a00c9910f1100754560953ef11f82f9ba2d40c2aa6231b8e718942fb7",
+      "bytes": 173
+    },
+    {
+      "path": "webkit-game/desktop-1280-dpr1-af1d05c1c660.png",
+      "sha256": "af1d05c1c660d68fa24f5b1c727513282adeb06aee7822290c1edf58d8a28833",
+      "bytes": 848500
+    },
+    {
+      "path": "webkit-game/canvas-capability-1920-6c8fff35b0c8.json",
+      "sha256": "6c8fff35b0c8e4e1af17a23a3fa93ff774b3a3b43d7efc3f90f2584410336afb",
+      "bytes": 176
+    },
+    {
+      "path": "webkit-game/desktop-1920-dpr1-9a0781f69eb8.png",
+      "sha256": "9a0781f69eb8fe3f3dadaa47e5b68bfea09cc6e493d13fc6c3baa3ea22cf060b",
+      "bytes": 2218488
+    },
+    {
+      "path": "webkit-game/engine-environment-a13c8ffcef42.json",
+      "sha256": "a13c8ffcef4280b525a8f07c12a7b2da617effa916f246e64bebfc3241be9106",
+      "bytes": 305
+    },
+    {
+      "path": "webkit-game/runtime-audit-003018422993.json",
+      "sha256": "00301842299326dd42a58212bda98e0900dd732c70428ca838f453c9fe2dd0b5",
+      "bytes": 84
+    },
+    {
+      "path": "firefox-dpr2/canvas-capability-1280-64d5e540b423.json",
+      "sha256": "64d5e540b42330797b11d3f97d20b2abc24216c29f04912de79234761d46efd9",
+      "bytes": 173
+    },
+    {
+      "path": "firefox-dpr2/desktop-1280-dpr2-9b09d2e77153.png",
+      "sha256": "9b09d2e77153d26ed297792584bca272c38a69650b130d5c3cbb321d4e558ea2",
+      "bytes": 2545459
+    },
+    {
+      "path": "firefox-dpr2/canvas-capability-1920-d6be26bff2c8.json",
+      "sha256": "d6be26bff2c855befbee6d50e9157c8c8c09575933e112c8e3a856cafe28a068",
+      "bytes": 175
+    },
+    {
+      "path": "firefox-dpr2/desktop-1920-dpr2-d93b6dc95c64.png",
+      "sha256": "d93b6dc95c6461e32618b54d125fd0d0e4b00d8704c06f104cd4b1a01591e6fd",
+      "bytes": 6543017
+    },
+    {
+      "path": "firefox-dpr2/engine-environment-c6063a9ad0b1.json",
+      "sha256": "c6063a9ad0b12be10bbdd6307677a1951385a418ce7af6fcc0475645f8c1f4b3",
+      "bytes": 270
+    },
+    {
+      "path": "firefox-dpr2/runtime-audit-003018422993.json",
+      "sha256": "00301842299326dd42a58212bda98e0900dd732c70428ca838f453c9fe2dd0b5",
+      "bytes": 84
+    },
+    {
+      "path": "webkit-dpr2/canvas-capability-1280-8e21596aa0c4.json",
+      "sha256": "8e21596aa0c4416b0141abff7546e90ec43bf5d0af82715a5447554846a58638",
+      "bytes": 174
+    },
+    {
+      "path": "webkit-dpr2/desktop-1280-dpr2-ea9f90bc9a8b.png",
+      "sha256": "ea9f90bc9a8bc07dc890927cc32499edd5fc03075ec034e2e8c45e20cc8238e3",
+      "bytes": 2801013
+    },
+    {
+      "path": "webkit-dpr2/canvas-capability-1920-efaf48589f9d.json",
+      "sha256": "efaf48589f9dd18b5fa7c537b317b78e749eb0fd09d75b857cc7e336b9ae958c",
+      "bytes": 176
+    },
+    {
+      "path": "webkit-dpr2/desktop-1920-dpr2-d1b4e21f4ef4.png",
+      "sha256": "d1b4e21f4ef48d57dce5d629fd670e3b2c2aab7f9333a072ed56bb05ab88798f",
+      "bytes": 7113532
+    },
+    {
+      "path": "webkit-dpr2/engine-environment-faaced1f4dcc.json",
+      "sha256": "faaced1f4dcc151a45b439dc35a7b8e9fb72f3e2fcbc930bbfbfe789a48b49d3",
+      "bytes": 305
+    },
+    {
+      "path": "webkit-dpr2/runtime-audit-003018422993.json",
+      "sha256": "00301842299326dd42a58212bda98e0900dd732c70428ca838f453c9fe2dd0b5",
+      "bytes": 84
+    }
+  ],
+  "sourceHashes": {
+    "package.json": "e371e90e3ed2aa3dd13943f34f6fbe7e8e319d83d245332674c6f69addb23d70",
+    "package-lock.json": "fb6298f489290886a8b47e266b4205a94acf9763086af45b1cc2992a01d8a73f",
+    "playwright.cross.config.ts": "75b3fd6b59099de4bb2a51850771e7650fa72ab2177ca37890c2a64b3137884e",
+    "src/main.ts": "96828efb2be8d9a47d28380ab7f9db411ebec880f1dd7c9b13b02df30a711f3c",
+    "src/env.d.ts": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+    "src/tutorial/lesson.ts": "f386af1776d0d6c427d91efb73315206f1f798f3e68d141d1aefb28f77c99b5e",
+    "src/core/view.ts": "0a77454028a0695c4610c32e6295ea0379e603d5cd0ee5e394ee1e96d820a936",
+    "src/core/validate.ts": "321a0b1e3675c5d71a92c6bc173b0bd1ec55dcd4e3bc54f21d225f7da40c2dec",
+    "src/core/model.ts": "e3568fa89a4dfa1805643dab0a48bbba1689523c01c8408b3e007fedb6d537fd",
+    "src/core/random.ts": "1a3d3d19684573bad8dbf4a80266b0fb343a8ddd32a7aec9d16efc729cf5fca9",
+    "src/core/rules.ts": "cb0a017b155304fe98f43f0f356d72125073fb116e0cbf06c4cfab21cc1f24cc",
+    "src/core/ledger.ts": "0190a08b7b7205408e08cbf365bd448062bdb2acf00e34ed8c2e79e4ffd06b73",
+    "src/core/game.ts": "f24e0a700318b346903d1118c7939686748c4e6e55a0780cf213ef72d7eeac38",
+    "src/core/index.ts": "4fd1ab0adc5c1fe6836329427e7744d0e2eacf2e67745d3c986c93446424b0e9",
+    "src/core/guards.ts": "a25ec963eb41de673edccb4f1a95c420f73ddc7ee44be6c668a69ba2715c9e21",
+    "src/core/merchant.ts": "931f772c1ffe19b8a55cea4c4109d620bd34c6d6daa9e3fb257be85a3ee89a11",
+    "src/core/immutable.ts": "9bd212a1885c949d1928a2ecb8daa934483f0d26bce8ff196e8ae460d0a29044",
+    "src/platform/audio.ts": "b735d4f9485235050804df1a2e347f4705ad59250617e62d31f65631cf15da9b",
+    "src/platform/settings.ts": "ebd2da1261789ca8b10d7a56f4700f06427395e230dfab65d4a250a0b4379228",
+    "src/platform/input.ts": "d5d0f7ddd779f600b19df5cb3710963493fe00bf6ab549bd461e17c02b17e799",
+    "src/platform/storage.ts": "c2c7d2c666be1d44e2304707958a3933bc1ee78a533bbed8df2ebead14d3ce1f",
+    "src/platform/timing.ts": "782c9178c583e213d961f42778677f56c8926e65634df727621394dddd1c00ce",
+    "src/platform/browser-session.ts": "99915c22f9ae217b56905af7ce45163161abe2c057a3fc95ca9cea521f4adf0b",
+    "src/platform/writer-lease.ts": "1920339b776acbf4097fe9e3488afea221d0b7c20f6203387f22f49bbcc79bf9",
+    "src/persistence/index.ts": "ca53cf54562098b30a48873a0c639cf751366a40e7079b320937c862bfb2b4c6",
+    "src/application/session.ts": "a885844f7ddce22b10bf3f8badbabd84da1bb9990f0817826047c00d5135f851",
+    "src/application/persistent-session.ts": "0cbbbaaa1f9a543a02ac25bff8eeb6e1f6cbeeb0624ab287e55d7907bb891940",
+    "src/presentation/dom.ts": "6b68ea14bde1c07fdc65293e9df8136b8bc203b1d72e62843a29d2fb421a8e4b",
+    "src/presentation/template.ts": "7f780d8b72b3dc0b1e71f00c6617f9c07e7132332bb9bae1b899e515356fe2b0",
+    "src/presentation/app.ts": "26c4a57c47a4ebf394d5f6fa394fe734f6654d7731b35113de68ccabeb817559",
+    "src/presentation/assets.ts": "ec244c5fd60b65bf54568eb38a3ca76cac8e8f2643ce111bc31573852827f053",
+    "src/presentation/phases.ts": "37515eaf8bc110413858dde0d54c13b7545a4478d18ca517fd4d90a2d56475a2",
+    "src/presentation/scene.ts": "124df9403dc3a3a8ac2cbdd72dea13088ea90ab4e32eb1da756febba7e20f191",
+    "tests/e2e/contract-flow.spec.ts": "1bb6aacabbfa1cb5670af5fc9b05a4a89216925ea85664c5c437a52373812329",
+    "tests/e2e/keyboard.ts": "e3df58d7454b6c3858d401f7c4fd56677232762b01bd80de4432209980ee7678",
+    "tests/e2e/native-input.spec.ts": "bb9b1d0528eb8443524f45a690bafc9028dbfbecbd41535774878b245045c6af",
+    "tests/e2e/fixtures.ts": "2ec14c68141d2883949f1a4a8a6319b4aad34a00db6b8538795104e48790c6a4",
+    "tests/e2e/helpers.ts": "86b12c46c499a667b26a15c88e3e22f7eeeab4a142e28d970d6dcd962184e899",
+    "tests/e2e/workshop.spec.ts": "9319713a485aa1478a08f8af1a1f2e16b54aead63a90caac1d4e8ab36942d23f",
+    "tests/e2e/native-input.mjs": "0bd1824273a81a9d34d49dd80585fa5530dbf21040dfd2a53508402e559ec99b",
+    "tests/e2e/keyboard-quality.spec.ts": "7ab7f451aaeb826a7f3562dac082fd3aee2a74878f231be6fe6a4aa5a0efe60f",
+    "tests/e2e/native-input.d.mts": "99a4f4e5ae686646152d8a73ee5e20d66101a308106be4f14730d46f76f8658e",
+    "tests/e2e/cadence-performance.spec.ts": "c0c5b916b96581a68e74eee7c7dcd1d8e36751fa1ba63cc82bccb750914dbcf6",
+    "tests/e2e/keyboard-contract.spec.ts": "29d00c1732f62cc20033e0476c34d62bccda3f6f9639da7a9631f5b10a54475f",
+    "tests/e2e/native-ui-cache.mjs": "5503895169a47d043273faff6473caa4fd78fb291cfde894beb7e6abe15446ce",
+    "tests/e2e/audio.spec.ts": "51b64237dbe89043b8a3b83f2dd618ea349a593e27fe698aa563561224531ca6",
+    "tests/e2e/preferences-recovery.spec.ts": "17060560a8e57c047715316964cca94240d1c7bbb3f7bf9756914a17fd0b8a37",
+    "tests/e2e/acceptance.spec.ts": "8308bb1e3f98e1a955f278f295c4c0fcf139c108989ea10de7368013a76df1a8",
+    "tests/e2e/audio-probe.ts": "a87208b4b0a2ad48a91c514889a9032d960f6a4ad592b55d2541f5b96a1af68a",
+    "tests/e2e/native-ui-cache.spec.ts": "25df4632a9413d047a160ab804f56310fd82b3bfbda7c3805c28c337c992970e",
+    "tests/e2e/workshop-boundaries.spec.ts": "69aac4e1d7133dd3cdf3680c099bc229893e67985eee8482c523f37b8e00901e",
+    "tests/e2e/readability.ts": "bb554240a24f5473df1cc0b176292a4cd00ef455852423c1b37efbc8abcb4507",
+    "tests/e2e/workshop-quality.spec.ts": "f17d82901479541484aa4b4dd2fa42677da486ed16451ae94d6448a5a570f6b0",
+    "tests/e2e/native-ui-cache.d.mts": "00c03034eb04e89b3031b0ad9aae2218880b024cfbf0ff2d96fe5aa5d9db320f"
+  },
+  "buildFiles": {
+    "index.html": {
+      "sha256": "4b299ad72c51265a3c3b5365e484e27ddfc92e3f0f7a12c92e7a53dc53790afe",
+      "bytes": 697
+    },
+    "sword-led-session.js": {
+      "sha256": "a4bb7d9a88acdd5ed3ab6e6e3063854507bd23998b31e4e44ade7983797a5ea5",
+      "bytes": 11234
+    },
+    "core-DzOw35Pn.js": {
+      "sha256": "f04e2b8064b053b5313c39b2ff7555992742478447293d7ba2d2ef618da3897f",
+      "bytes": 21169
+    },
+    "sword-led-core.js": {
+      "sha256": "c93332fd3ecb0feef0b760db4e7c4b18fba3c3beb0dcc3c0077db5d10833321e",
+      "bytes": 126
+    },
+    "assets/index-CidoUqtJ.css": {
+      "sha256": "542a1875c5de6ec3b2fb043c7c5d2d7e6bcd19f35ebc0b6c82052c688703c12b",
+      "bytes": 20582
+    },
+    "assets/index-CFF4nBdh.js": {
+      "sha256": "3c11e4fc589102c34f91f2029f54af5a92d0018a9b3771caec6c7e052135dbb5",
+      "bytes": 93487
+    },
+    "assets/b/material-steel-v1.webp": {
+      "sha256": "c5985ca938f459770ebe8e7e0f045db4a96768c20525c7a7f05d28ab3c070a4e",
+      "bytes": 297586
+    },
+    "assets/b/hammer-heavy-v1.webp": {
+      "sha256": "3b9ed6d6aab155503af7ae167676fd88badcc2f859ee693823e1b68c4ae26714",
+      "bytes": 286032
+    },
+    "assets/b/anvil-v1.webp": {
+      "sha256": "ed44b20b36a834581655f02c6e6660452b72a9742c37e1d97d3ab132413af9f1",
+      "bytes": 351706
+    },
+    "assets/b/hammer-standard-v1.webp": {
+      "sha256": "604bc26957ac0dae08bec6160fbb1104dad6949676ed3df4bc254743fe392c03",
+      "bytes": 243778
+    },
+    "assets/b/merchant-kit-v1.webp": {
+      "sha256": "9a7623f3b226fc1918b08054ccfd080d852a278f9c92a97219c9da72a40e1c72",
+      "bytes": 463234
+    },
+    "assets/b/tokens.css": {
+      "sha256": "6892f99cdee0107212fd750a058191d2933efefb8a4e7b05b8df35412132614e",
+      "bytes": 428
+    },
+    "assets/b/manifest.json": {
+      "sha256": "7d97cba7f4cfd6df7656385c61db9096d1a1c5901b50202abda60b55cc52dc13",
+      "bytes": 16507
+    },
+    "assets/b/material-iron-v1.webp": {
+      "sha256": "891f332a7543e005bb4eecf9c8cbf9ed6fbb6e7acc60ef02c6a08d828cbdf8e9",
+      "bytes": 297192
+    },
+    "assets/b/material-meteorite-v3.webp": {
+      "sha256": "bffe5da4cc1522fa9e16df68790d11fbf551659176210ecb04e66ea82da98f3a",
+      "bytes": 171384
+    },
+    "assets/b/hammer-light-v1.webp": {
+      "sha256": "4a294cde83b0765ba919c1943f151a9ad66c8aad5e163c1f3b81df2208b8bbf8",
+      "bytes": 153704
+    },
+    "assets/b/workshop-background-v1.webp": {
+      "sha256": "c8813b1438f61b6edbb8890d2df843ce7ac5732899a52edb9af67d1f8771497c",
+      "bytes": 387784
+    }
+  },
+  "typecheck": "npm run typecheck exit 0",
+  "sdkMatchesT10": [
+    "sword-led-core.js",
+    "sword-led-session.js",
+    "core-DzOw35Pn.js"
+  ],
+  "performance": "Mixed 11-case run had one Firefox p95=20ms failure; separate Firefox two-case post-research-tab-close rerun p95=6/7ms. Both reports retained; cause not established. No all-hardware claim."
+}

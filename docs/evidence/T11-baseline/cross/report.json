@@ -1,0 +1,1598 @@
+{
+  "config": {
+    "argv": [
+      "/Users/gordon/.nvm/versions/node/v22.12.0/bin/node",
+      "/Users/gordon/githome/sword-led/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "playwright.cross.config.ts",
+      "--grep",
+      "desktop context identity|read-only game window|native rAF|asset-load failure|keyboard alone signs|closing settings"
+    ],
+    "configFile": "/Users/gordon/githome/sword-led/playwright.cross.config.ts",
+    "rootDir": "/Users/gordon/githome/sword-led/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/cross",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-dpr2",
+        "name": "chromium-dpr2",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [
+          "**/native-input.spec.ts",
+          "**/native-ui-cache.spec.ts"
+        ],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/cross",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox-game",
+        "name": "firefox-game",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [
+          "**/native-input.spec.ts",
+          "**/native-ui-cache.spec.ts"
+        ],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/cross",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit-game",
+        "name": "webkit-game",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [
+          "**/native-input.spec.ts",
+          "**/native-ui-cache.spec.ts"
+        ],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/cross",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox-dpr2",
+        "name": "firefox-dpr2",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [
+          "**/native-input.spec.ts",
+          "**/native-ui-cache.spec.ts"
+        ],
+        "testMatch": [
+          "**/acceptance.spec.ts",
+          "**/workshop.spec.ts",
+          "**/workshop-quality.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/cross",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit-dpr2",
+        "name": "webkit-dpr2",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [
+          "**/native-input.spec.ts",
+          "**/native-ui-cache.spec.ts"
+        ],
+        "testMatch": [
+          "**/acceptance.spec.ts",
+          "**/workshop.spec.ts",
+          "**/workshop-quality.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/cross",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chromium-dpr2",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [
+          "**/native-input.spec.ts",
+          "**/native-ui-cache.spec.ts"
+        ],
+        "testMatch": "**/*.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4181",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 2,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "launchOptions": {
+            "args": [
+              "--no-proxy-server"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium-dpr2"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/cross",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "firefox-game",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [
+          "**/native-input.spec.ts",
+          "**/native-ui-cache.spec.ts"
+        ],
+        "testMatch": "**/*.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4181",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "firefox",
+          "launchOptions": {
+            "firefoxUserPrefs": {
+              "network.proxy.type": 0
+            }
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "firefox-game"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/cross",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "webkit-game",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [
+          "**/native-input.spec.ts",
+          "**/native-ui-cache.spec.ts"
+        ],
+        "testMatch": "**/*.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4181",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1792,
+            "height": 1120
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "webkit"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "webkit-game"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/cross",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "firefox-dpr2",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [
+          "**/native-input.spec.ts",
+          "**/native-ui-cache.spec.ts"
+        ],
+        "testMatch": [
+          "**/acceptance.spec.ts",
+          "**/workshop.spec.ts",
+          "**/workshop-quality.spec.ts"
+        ],
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4181",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 2,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "firefox",
+          "launchOptions": {
+            "firefoxUserPrefs": {
+              "network.proxy.type": 0
+            }
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "firefox-dpr2"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/cross",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "webkit-dpr2",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [
+          "**/native-input.spec.ts",
+          "**/native-ui-cache.spec.ts"
+        ],
+        "testMatch": [
+          "**/acceptance.spec.ts",
+          "**/workshop.spec.ts",
+          "**/workshop-quality.spec.ts"
+        ],
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4181",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1792,
+            "height": 1120
+          },
+          "deviceScaleFactor": 2,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "webkit"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "webkit-dpr2"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/cross-report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 4181 --strictPort",
+      "url": "http://127.0.0.1:4181",
+      "timeout": 30000,
+      "reuseExistingServer": false,
+      "env": {
+        "NO_PROXY": "127.0.0.1,localhost",
+        "no_proxy": "127.0.0.1,localhost"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "acceptance.spec.ts",
+      "file": "acceptance.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "desktop context identity and image/control scale are reported from the real engine",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-dpr2",
+              "projectName": "chromium-dpr2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6963,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T11:30:06.457Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "desktop-1280-dpr2",
+                      "contentType": "image/png",
+                      "unarchivedOriginalPath": "cross/initial-subset/chromium-dpr2/desktop-1280-dpr2-0dd319b0f818.png"
+                    },
+                    {
+                      "name": "desktop-1920-dpr2",
+                      "contentType": "image/png",
+                      "unarchivedOriginalPath": "cross/initial-subset/chromium-dpr2/desktop-1920-dpr2-dbdb7bf174a6.png"
+                    },
+                    {
+                      "name": "engine-environment",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyTmFtZSI6ICJjaHJvbWl1bSIsCiAgInZlcnNpb24iOiAiMTU2LjAuODA3OC40IiwKICAiZW52aXJvbm1lbnQiOiB7CiAgICAidXNlckFnZW50IjogIk1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNTYuMC44MDc4LjQgU2FmYXJpLzUzNy4zNiIsCiAgICAiZHByIjogMiwKICAgICJzZWN1cmVDb250ZXh0IjogdHJ1ZSwKICAgICJ3ZWJMb2NrcyI6ICJmdW5jdGlvbiIsCiAgICAiYXVkaW8iOiAiZnVuY3Rpb24iCiAgfQp9"
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-f369001793d1a6e59b9b",
+          "file": "acceptance.spec.ts",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "a read-only game window acquires ownership only after rereading the latest saved command",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-dpr2",
+              "projectName": "chromium-dpr2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3596,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T11:30:13.817Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "ui-window-handoff",
+                      "contentType": "application/json",
+                      "body": "ewogICJpbml0aWFsIjogewogICAgInJ1bGVzVmVyc2lvbiI6ICJmb3JnZS12MSIsCiAgICAicnVuSWQiOiAiNTU3ZjBmNmU5NmFhYmUxZDc2MGY3ZmM1NDJjYjM1YmIiLAogICAgInNlZWQiOiAidWktd2luZG93LWhhbmRvZmYiLAogICAgInJldmlzaW9uIjogMCwKICAgICJwaGFzZSI6ICJ3b3Jrc2hvcCIsCiAgICAicm91bmQiOiAxLAogICAgImNvaW5zIjogMCwKICAgICJzY3JhcCI6IDAsCiAgICAiY29hbCI6IDEsCiAgICAic2VhbHMiOiAzLAogICAgInVwZ3JhZGVzIjogewogICAgICAiaGFuZGxlIjogMCwKICAgICAgImJlbGxvd3MiOiAwLAogICAgICAiYW52aWwiOiAwCiAgICB9LAogICAgInBpZWNlcyI6IFsKICAgICAgewogICAgICAgICJpZCI6ICIxOjEiLAogICAgICAgICJtYXRlcmlhbCI6ICJpcm9uIiwKICAgICAgICAicHJvZ3Jlc3MiOiAwLAogICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICJzdHJlc3MiOiAwLAogICAgICAgICJpbnRlZ3JpdHkiOiA0LAogICAgICAgICJzdGF0dXMiOiAiYWN0aXZlIgogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogIjE6MiIsCiAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiMTozIiwKICAgICAgICAibWF0ZXJpYWwiOiAic3RlZWwiLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDMsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0KICAgIF0sCiAgICAicm5nIjogewogICAgICAic3RvY2siOiB7CiAgICAgICAgInN0YXRlIjogMTQ4NzE0Nzg5MSwKICAgICAgICAiZHJhd3MiOiAwCiAgICAgIH0sCiAgICAgICJzdHJpa2UiOiB7CiAgICAgICAgInN0YXRlIjogMTgxMjAwMzg5LAogICAgICAgICJkcmF3cyI6IDAKICAgICAgfQogICAgfSwKICAgICJoaXN0b3J5IjogW10sCiAgICAicHVyY2hhc2VzIjogW10sCiAgICAic3RhdHMiOiB7CiAgICAgICJzdHJpa2VzIjogMCwKICAgICAgInN1Y2Nlc3NmdWxTdHJpa2VzIjogMCwKICAgICAgImRhbWFnZWRTdHJpa2VzIjogMCwKICAgICAgImhlYXRzIjogMCwKICAgICAgImRlbGl2ZXJlZFBpZWNlcyI6IDAsCiAgICAgICJyZWN5Y2xlZFBpZWNlcyI6IDAsCiAgICAgICJicm9rZW5QaWVjZXMiOiAwLAogICAgICAiaGlnaGVzdFRpZXIiOiAwLAogICAgICAiY29pbnNFYXJuZWQiOiAwLAogICAgICAiY29pbnNTcGVudCI6IDAsCiAgICAgICJzY3JhcEVhcm5lZCI6IDAsCiAgICAgICJzY3JhcFNwZW50IjogMCwKICAgICAgInJvdW5kc01ldCI6IDAsCiAgICAgICJyb3VuZHNNaXNzZWQiOiAwCiAgICB9LAogICAgImpvdXJuYWwiOiBbXQogIH0sCiAgImxhdGVzdCI6IHsKICAgICJydWxlc1ZlcnNpb24iOiAiZm9yZ2UtdjEiLAogICAgInJ1bklkIjogIjU1N2YwZjZlOTZhYWJlMWQ3NjBmN2ZjNTQyY2IzNWJiIiwKICAgICJzZWVkIjogInVpLXdpbmRvdy1oYW5kb2ZmIiwKICAgICJyZXZpc2lvbiI6IDEsCiAgICAicGhhc2UiOiAid29ya3Nob3AiLAogICAgInJvdW5kIjogMSwKICAgICJjb2lucyI6IDAsCiAgICAic2NyYXAiOiAwLAogICAgImNvYWwiOiAxLAogICAgInNlYWxzIjogMywKICAgICJ1cGdyYWRlcyI6IHsKICAgICAgImhhbmRsZSI6IDAsCiAgICAgICJiZWxsb3dzIjogMCwKICAgICAgImFudmlsIjogMAogICAgfSwKICAgICJwaWVjZXMiOiBbCiAgICAgIHsKICAgICAgICAiaWQiOiAiMToxIiwKICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgInByb2dyZXNzIjogMywKICAgICAgICAiaGVhdCI6IDg4LAogICAgICAgICJzdHJlc3MiOiA3LAogICAgICAgICJpbnRlZ3JpdHkiOiA0LAogICAgICAgICJzdGF0dXMiOiAiYWN0aXZlIgogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogIjE6MiIsCiAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiMTozIiwKICAgICAgICAibWF0ZXJpYWwiOiAic3RlZWwiLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDMsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0KICAgIF0sCiAgICAicm5nIjogewogICAgICAic3RvY2siOiB7CiAgICAgICAgInN0YXRlIjogMTQ4NzE0Nzg5MSwKICAgICAgICAiZHJhd3MiOiAwCiAgICAgIH0sCiAgICAgICJzdHJpa2UiOiB7CiAgICAgICAgInN0YXRlIjogMjAxMjc2NjIwMiwKICAgICAgICAiZHJhd3MiOiAxCiAgICAgIH0KICAgIH0sCiAgICAiaGlzdG9yeSI6IFtdLAogICAgInB1cmNoYXNlcyI6IFtdLAogICAgInN0YXRzIjogewogICAgICAic3RyaWtlcyI6IDEsCiAgICAgICJzdWNjZXNzZnVsU3RyaWtlcyI6IDEsCiAgICAgICJkYW1hZ2VkU3RyaWtlcyI6IDAsCiAgICAgICJoZWF0cyI6IDAsCiAgICAgICJkZWxpdmVyZWRQaWVjZXMiOiAwLAogICAgICAicmVjeWNsZWRQaWVjZXMiOiAwLAogICAgICAiYnJva2VuUGllY2VzIjogMCwKICAgICAgImhpZ2hlc3RUaWVyIjogMSwKICAgICAgImNvaW5zRWFybmVkIjogMCwKICAgICAgImNvaW5zU3BlbnQiOiAwLAogICAgICAic2NyYXBFYXJuZWQiOiAwLAogICAgICAic2NyYXBTcGVudCI6IDAsCiAgICAgICJyb3VuZHNNZXQiOiAwLAogICAgICAicm91bmRzTWlzc2VkIjogMAogICAgfSwKICAgICJqb3VybmFsIjogWwogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICIxOjEiLAogICAgICAgICJtb2RlIjogInN0YW5kYXJkIiwKICAgICAgICAidGltaW5nTWFyayI6IDUwMDAKICAgICAgfQogICAgXQogIH0sCiAgImFmdGVyIjogewogICAgInJ1bGVzVmVyc2lvbiI6ICJmb3JnZS12MSIsCiAgICAicnVuSWQiOiAiNTU3ZjBmNmU5NmFhYmUxZDc2MGY3ZmM1NDJjYjM1YmIiLAogICAgInNlZWQiOiAidWktd2luZG93LWhhbmRvZmYiLAogICAgInJldmlzaW9uIjogMiwKICAgICJwaGFzZSI6ICJ3b3Jrc2hvcCIsCiAgICAicm91bmQiOiAxLAogICAgImNvaW5zIjogMCwKICAgICJzY3JhcCI6IDAsCiAgICAiY29hbCI6IDEsCiAgICAic2VhbHMiOiAzLAogICAgInVwZ3JhZGVzIjogewogICAgICAiaGFuZGxlIjogMCwKICAgICAgImJlbGxvd3MiOiAwLAogICAgICAiYW52aWwiOiAwCiAgICB9LAogICAgInBpZWNlcyI6IFsKICAgICAgewogICAgICAgICJpZCI6ICIxOjEiLAogICAgICAgICJtYXRlcmlhbCI6ICJpcm9uIiwKICAgICAgICAicHJvZ3Jlc3MiOiA2LAogICAgICAgICJoZWF0IjogNzYsCiAgICAgICAgInN0cmVzcyI6IDE0LAogICAgICAgICJpbnRlZ3JpdHkiOiA0LAogICAgICAgICJzdGF0dXMiOiAiYWN0aXZlIgogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogIjE6MiIsCiAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiMTozIiwKICAgICAgICAibWF0ZXJpYWwiOiAic3RlZWwiLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDMsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0KICAgIF0sCiAgICAicm5nIjogewogICAgICAic3RvY2siOiB7CiAgICAgICAgInN0YXRlIjogMTQ4NzE0Nzg5MSwKICAgICAgICAiZHJhd3MiOiAwCiAgICAgIH0sCiAgICAgICJzdHJpa2UiOiB7CiAgICAgICAgInN0YXRlIjogMzg0NDMzMjAxNSwKICAgICAgICAiZHJhd3MiOiAyCiAgICAgIH0KICAgIH0sCiAgICAiaGlzdG9yeSI6IFtdLAogICAgInB1cmNoYXNlcyI6IFtdLAogICAgInN0YXRzIjogewogICAgICAic3RyaWtlcyI6IDIsCiAgICAgICJzdWNjZXNzZnVsU3RyaWtlcyI6IDIsCiAgICAgICJkYW1hZ2VkU3RyaWtlcyI6IDAsCiAgICAgICJoZWF0cyI6IDAsCiAgICAgICJkZWxpdmVyZWRQaWVjZXMiOiAwLAogICAgICAicmVjeWNsZWRQaWVjZXMiOiAwLAogICAgICAiYnJva2VuUGllY2VzIjogMCwKICAgICAgImhpZ2hlc3RUaWVyIjogMiwKICAgICAgImNvaW5zRWFybmVkIjogMCwKICAgICAgImNvaW5zU3BlbnQiOiAwLAogICAgICAic2NyYXBFYXJuZWQiOiAwLAogICAgICAic2NyYXBTcGVudCI6IDAsCiAgICAgICJyb3VuZHNNZXQiOiAwLAogICAgICAicm91bmRzTWlzc2VkIjogMAogICAgfSwKICAgICJqb3VybmFsIjogWwogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICIxOjEiLAogICAgICAgICJtb2RlIjogInN0YW5kYXJkIiwKICAgICAgICAidGltaW5nTWFyayI6IDUwMDAKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiMToxIiwKICAgICAgICAibW9kZSI6ICJzdGFuZGFyZCIsCiAgICAgICAgInRpbWluZ01hcmsiOiA1MDAwCiAgICAgIH0KICAgIF0KICB9Cn0="
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-2c090311bbfcc54889af",
+          "file": "acceptance.spec.ts",
+          "line": 43,
+          "column": 1
+        },
+        {
+          "title": "desktop context identity and image/control scale are reported from the real engine",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-game",
+              "projectName": "firefox-game",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5249,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T11:30:47.634Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "desktop-1280-dpr1",
+                      "contentType": "image/png",
+                      "unarchivedOriginalPath": "cross/initial-subset/firefox-game/desktop-1280-dpr1-1137d5e5edf3.png"
+                    },
+                    {
+                      "name": "desktop-1920-dpr1",
+                      "contentType": "image/png",
+                      "unarchivedOriginalPath": "cross/initial-subset/firefox-game/desktop-1920-dpr1-5fbf51827001.png"
+                    },
+                    {
+                      "name": "engine-environment",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyTmFtZSI6ICJmaXJlZm94IiwKICAidmVyc2lvbiI6ICIxNTcuMCIsCiAgImVudmlyb25tZW50IjogewogICAgInVzZXJBZ2VudCI6ICJNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0OyBydjoxNTcuMCkgR2Vja28vMjAxMDAxMDEgRmlyZWZveC8xNTcuMCIsCiAgICAiZHByIjogMSwKICAgICJzZWN1cmVDb250ZXh0IjogdHJ1ZSwKICAgICJ3ZWJMb2NrcyI6ICJmdW5jdGlvbiIsCiAgICAiYXVkaW8iOiAiZnVuY3Rpb24iCiAgfQp9"
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-93d4fce1a86a7a030d46",
+          "file": "acceptance.spec.ts",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "a read-only game window acquires ownership only after rereading the latest saved command",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-game",
+              "projectName": "firefox-game",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4554,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T11:30:55.093Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "ui-window-handoff",
+                      "contentType": "application/json",
+                      "body": "ewogICJpbml0aWFsIjogewogICAgInJ1bGVzVmVyc2lvbiI6ICJmb3JnZS12MSIsCiAgICAicnVuSWQiOiAiZjdkZWZlMDBmZjg5NTkzODlhYzhkOWRkNGRmZmVmNjEiLAogICAgInNlZWQiOiAidWktd2luZG93LWhhbmRvZmYiLAogICAgInJldmlzaW9uIjogMCwKICAgICJwaGFzZSI6ICJ3b3Jrc2hvcCIsCiAgICAicm91bmQiOiAxLAogICAgImNvaW5zIjogMCwKICAgICJzY3JhcCI6IDAsCiAgICAiY29hbCI6IDEsCiAgICAic2VhbHMiOiAzLAogICAgInVwZ3JhZGVzIjogewogICAgICAiaGFuZGxlIjogMCwKICAgICAgImJlbGxvd3MiOiAwLAogICAgICAiYW52aWwiOiAwCiAgICB9LAogICAgInBpZWNlcyI6IFsKICAgICAgewogICAgICAgICJpZCI6ICIxOjEiLAogICAgICAgICJtYXRlcmlhbCI6ICJpcm9uIiwKICAgICAgICAicHJvZ3Jlc3MiOiAwLAogICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICJzdHJlc3MiOiAwLAogICAgICAgICJpbnRlZ3JpdHkiOiA0LAogICAgICAgICJzdGF0dXMiOiAiYWN0aXZlIgogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogIjE6MiIsCiAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiMTozIiwKICAgICAgICAibWF0ZXJpYWwiOiAic3RlZWwiLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDMsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0KICAgIF0sCiAgICAicm5nIjogewogICAgICAic3RvY2siOiB7CiAgICAgICAgInN0YXRlIjogMTQ4NzE0Nzg5MSwKICAgICAgICAiZHJhd3MiOiAwCiAgICAgIH0sCiAgICAgICJzdHJpa2UiOiB7CiAgICAgICAgInN0YXRlIjogMTgxMjAwMzg5LAogICAgICAgICJkcmF3cyI6IDAKICAgICAgfQogICAgfSwKICAgICJoaXN0b3J5IjogW10sCiAgICAicHVyY2hhc2VzIjogW10sCiAgICAic3RhdHMiOiB7CiAgICAgICJzdHJpa2VzIjogMCwKICAgICAgInN1Y2Nlc3NmdWxTdHJpa2VzIjogMCwKICAgICAgImRhbWFnZWRTdHJpa2VzIjogMCwKICAgICAgImhlYXRzIjogMCwKICAgICAgImRlbGl2ZXJlZFBpZWNlcyI6IDAsCiAgICAgICJyZWN5Y2xlZFBpZWNlcyI6IDAsCiAgICAgICJicm9rZW5QaWVjZXMiOiAwLAogICAgICAiaGlnaGVzdFRpZXIiOiAwLAogICAgICAiY29pbnNFYXJuZWQiOiAwLAogICAgICAiY29pbnNTcGVudCI6IDAsCiAgICAgICJzY3JhcEVhcm5lZCI6IDAsCiAgICAgICJzY3JhcFNwZW50IjogMCwKICAgICAgInJvdW5kc01ldCI6IDAsCiAgICAgICJyb3VuZHNNaXNzZWQiOiAwCiAgICB9LAogICAgImpvdXJuYWwiOiBbXQogIH0sCiAgImxhdGVzdCI6IHsKICAgICJydWxlc1ZlcnNpb24iOiAiZm9yZ2UtdjEiLAogICAgInJ1bklkIjogImY3ZGVmZTAwZmY4OTU5Mzg5YWM4ZDlkZDRkZmZlZjYxIiwKICAgICJzZWVkIjogInVpLXdpbmRvdy1oYW5kb2ZmIiwKICAgICJyZXZpc2lvbiI6IDEsCiAgICAicGhhc2UiOiAid29ya3Nob3AiLAogICAgInJvdW5kIjogMSwKICAgICJjb2lucyI6IDAsCiAgICAic2NyYXAiOiAwLAogICAgImNvYWwiOiAxLAogICAgInNlYWxzIjogMywKICAgICJ1cGdyYWRlcyI6IHsKICAgICAgImhhbmRsZSI6IDAsCiAgICAgICJiZWxsb3dzIjogMCwKICAgICAgImFudmlsIjogMAogICAgfSwKICAgICJwaWVjZXMiOiBbCiAgICAgIHsKICAgICAgICAiaWQiOiAiMToxIiwKICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgInByb2dyZXNzIjogMywKICAgICAgICAiaGVhdCI6IDg4LAogICAgICAgICJzdHJlc3MiOiA3LAogICAgICAgICJpbnRlZ3JpdHkiOiA0LAogICAgICAgICJzdGF0dXMiOiAiYWN0aXZlIgogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogIjE6MiIsCiAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiMTozIiwKICAgICAgICAibWF0ZXJpYWwiOiAic3RlZWwiLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDMsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0KICAgIF0sCiAgICAicm5nIjogewogICAgICAic3RvY2siOiB7CiAgICAgICAgInN0YXRlIjogMTQ4NzE0Nzg5MSwKICAgICAgICAiZHJhd3MiOiAwCiAgICAgIH0sCiAgICAgICJzdHJpa2UiOiB7CiAgICAgICAgInN0YXRlIjogMjAxMjc2NjIwMiwKICAgICAgICAiZHJhd3MiOiAxCiAgICAgIH0KICAgIH0sCiAgICAiaGlzdG9yeSI6IFtdLAogICAgInB1cmNoYXNlcyI6IFtdLAogICAgInN0YXRzIjogewogICAgICAic3RyaWtlcyI6IDEsCiAgICAgICJzdWNjZXNzZnVsU3RyaWtlcyI6IDEsCiAgICAgICJkYW1hZ2VkU3RyaWtlcyI6IDAsCiAgICAgICJoZWF0cyI6IDAsCiAgICAgICJkZWxpdmVyZWRQaWVjZXMiOiAwLAogICAgICAicmVjeWNsZWRQaWVjZXMiOiAwLAogICAgICAiYnJva2VuUGllY2VzIjogMCwKICAgICAgImhpZ2hlc3RUaWVyIjogMSwKICAgICAgImNvaW5zRWFybmVkIjogMCwKICAgICAgImNvaW5zU3BlbnQiOiAwLAogICAgICAic2NyYXBFYXJuZWQiOiAwLAogICAgICAic2NyYXBTcGVudCI6IDAsCiAgICAgICJyb3VuZHNNZXQiOiAwLAogICAgICAicm91bmRzTWlzc2VkIjogMAogICAgfSwKICAgICJqb3VybmFsIjogWwogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICIxOjEiLAogICAgICAgICJtb2RlIjogInN0YW5kYXJkIiwKICAgICAgICAidGltaW5nTWFyayI6IDUwMDAKICAgICAgfQogICAgXQogIH0sCiAgImFmdGVyIjogewogICAgInJ1bGVzVmVyc2lvbiI6ICJmb3JnZS12MSIsCiAgICAicnVuSWQiOiAiZjdkZWZlMDBmZjg5NTkzODlhYzhkOWRkNGRmZmVmNjEiLAogICAgInNlZWQiOiAidWktd2luZG93LWhhbmRvZmYiLAogICAgInJldmlzaW9uIjogMiwKICAgICJwaGFzZSI6ICJ3b3Jrc2hvcCIsCiAgICAicm91bmQiOiAxLAogICAgImNvaW5zIjogMCwKICAgICJzY3JhcCI6IDAsCiAgICAiY29hbCI6IDEsCiAgICAic2VhbHMiOiAzLAogICAgInVwZ3JhZGVzIjogewogICAgICAiaGFuZGxlIjogMCwKICAgICAgImJlbGxvd3MiOiAwLAogICAgICAiYW52aWwiOiAwCiAgICB9LAogICAgInBpZWNlcyI6IFsKICAgICAgewogICAgICAgICJpZCI6ICIxOjEiLAogICAgICAgICJtYXRlcmlhbCI6ICJpcm9uIiwKICAgICAgICAicHJvZ3Jlc3MiOiA2LAogICAgICAgICJoZWF0IjogNzYsCiAgICAgICAgInN0cmVzcyI6IDE0LAogICAgICAgICJpbnRlZ3JpdHkiOiA0LAogICAgICAgICJzdGF0dXMiOiAiYWN0aXZlIgogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogIjE6MiIsCiAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiMTozIiwKICAgICAgICAibWF0ZXJpYWwiOiAic3RlZWwiLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDMsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0KICAgIF0sCiAgICAicm5nIjogewogICAgICAic3RvY2siOiB7CiAgICAgICAgInN0YXRlIjogMTQ4NzE0Nzg5MSwKICAgICAgICAiZHJhd3MiOiAwCiAgICAgIH0sCiAgICAgICJzdHJpa2UiOiB7CiAgICAgICAgInN0YXRlIjogMzg0NDMzMjAxNSwKICAgICAgICAiZHJhd3MiOiAyCiAgICAgIH0KICAgIH0sCiAgICAiaGlzdG9yeSI6IFtdLAogICAgInB1cmNoYXNlcyI6IFtdLAogICAgInN0YXRzIjogewogICAgICAic3RyaWtlcyI6IDIsCiAgICAgICJzdWNjZXNzZnVsU3RyaWtlcyI6IDIsCiAgICAgICJkYW1hZ2VkU3RyaWtlcyI6IDAsCiAgICAgICJoZWF0cyI6IDAsCiAgICAgICJkZWxpdmVyZWRQaWVjZXMiOiAwLAogICAgICAicmVjeWNsZWRQaWVjZXMiOiAwLAogICAgICAiYnJva2VuUGllY2VzIjogMCwKICAgICAgImhpZ2hlc3RUaWVyIjogMiwKICAgICAgImNvaW5zRWFybmVkIjogMCwKICAgICAgImNvaW5zU3BlbnQiOiAwLAogICAgICAic2NyYXBFYXJuZWQiOiAwLAogICAgICAic2NyYXBTcGVudCI6IDAsCiAgICAgICJyb3VuZHNNZXQiOiAwLAogICAgICAicm91bmRzTWlzc2VkIjogMAogICAgfSwKICAgICJqb3VybmFsIjogWwogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICIxOjEiLAogICAgICAgICJtb2RlIjogInN0YW5kYXJkIiwKICAgICAgICAidGltaW5nTWFyayI6IDUwMDAKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiMToxIiwKICAgICAgICAibW9kZSI6ICJzdGFuZGFyZCIsCiAgICAgICAgInRpbWluZ01hcmsiOiA1MDAwCiAgICAgIH0KICAgIF0KICB9Cn0="
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-cdce053e906f92f2052e",
+          "file": "acceptance.spec.ts",
+          "line": 43,
+          "column": 1
+        },
+        {
+          "title": "desktop context identity and image/control scale are reported from the real engine",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-game",
+              "projectName": "webkit-game",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3885,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T11:31:42.504Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "desktop-1280-dpr1",
+                      "contentType": "image/png",
+                      "unarchivedOriginalPath": "cross/initial-subset/webkit-game/desktop-1280-dpr1-b1d0eb68792e.png"
+                    },
+                    {
+                      "name": "desktop-1920-dpr1",
+                      "contentType": "image/png",
+                      "unarchivedOriginalPath": "cross/initial-subset/webkit-game/desktop-1920-dpr1-3efe232c5b86.png"
+                    },
+                    {
+                      "name": "engine-environment",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyTmFtZSI6ICJ3ZWJraXQiLAogICJ2ZXJzaW9uIjogIjI3LjIiLAogICJlbnZpcm9ubWVudCI6IHsKICAgICJ1c2VyQWdlbnQiOiAiTW96aWxsYS81LjAgKE1hY2ludG9zaDsgSW50ZWwgTWFjIE9TIFggMTBfMTVfNykgQXBwbGVXZWJLaXQvNjA1LjEuMTUgKEtIVE1MLCBsaWtlIEdlY2tvKSBWZXJzaW9uLzI3LjIgU2FmYXJpLzYwNS4xLjE1IiwKICAgICJkcHIiOiAxLAogICAgInNlY3VyZUNvbnRleHQiOiB0cnVlLAogICAgIndlYkxvY2tzIjogImZ1bmN0aW9uIiwKICAgICJhdWRpbyI6ICJmdW5jdGlvbiIKICB9Cn0="
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-6f8dccab360f93fc659e",
+          "file": "acceptance.spec.ts",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "a read-only game window acquires ownership only after rereading the latest saved command",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-game",
+              "projectName": "webkit-game",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4400,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T11:31:47.055Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "ui-window-handoff",
+                      "contentType": "application/json",
+                      "body": "ewogICJpbml0aWFsIjogewogICAgInJ1bGVzVmVyc2lvbiI6ICJmb3JnZS12MSIsCiAgICAicnVuSWQiOiAiNmNmOGU3YzdhMWZhNmIwMGY4MDdlYzllNjZjMjI3ZTYiLAogICAgInNlZWQiOiAidWktd2luZG93LWhhbmRvZmYiLAogICAgInJldmlzaW9uIjogMCwKICAgICJwaGFzZSI6ICJ3b3Jrc2hvcCIsCiAgICAicm91bmQiOiAxLAogICAgImNvaW5zIjogMCwKICAgICJzY3JhcCI6IDAsCiAgICAiY29hbCI6IDEsCiAgICAic2VhbHMiOiAzLAogICAgInVwZ3JhZGVzIjogewogICAgICAiaGFuZGxlIjogMCwKICAgICAgImJlbGxvd3MiOiAwLAogICAgICAiYW52aWwiOiAwCiAgICB9LAogICAgInBpZWNlcyI6IFsKICAgICAgewogICAgICAgICJpZCI6ICIxOjEiLAogICAgICAgICJtYXRlcmlhbCI6ICJpcm9uIiwKICAgICAgICAicHJvZ3Jlc3MiOiAwLAogICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICJzdHJlc3MiOiAwLAogICAgICAgICJpbnRlZ3JpdHkiOiA0LAogICAgICAgICJzdGF0dXMiOiAiYWN0aXZlIgogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogIjE6MiIsCiAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiMTozIiwKICAgICAgICAibWF0ZXJpYWwiOiAic3RlZWwiLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDMsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0KICAgIF0sCiAgICAicm5nIjogewogICAgICAic3RvY2siOiB7CiAgICAgICAgInN0YXRlIjogMTQ4NzE0Nzg5MSwKICAgICAgICAiZHJhd3MiOiAwCiAgICAgIH0sCiAgICAgICJzdHJpa2UiOiB7CiAgICAgICAgInN0YXRlIjogMTgxMjAwMzg5LAogICAgICAgICJkcmF3cyI6IDAKICAgICAgfQogICAgfSwKICAgICJoaXN0b3J5IjogW10sCiAgICAicHVyY2hhc2VzIjogW10sCiAgICAic3RhdHMiOiB7CiAgICAgICJzdHJpa2VzIjogMCwKICAgICAgInN1Y2Nlc3NmdWxTdHJpa2VzIjogMCwKICAgICAgImRhbWFnZWRTdHJpa2VzIjogMCwKICAgICAgImhlYXRzIjogMCwKICAgICAgImRlbGl2ZXJlZFBpZWNlcyI6IDAsCiAgICAgICJyZWN5Y2xlZFBpZWNlcyI6IDAsCiAgICAgICJicm9rZW5QaWVjZXMiOiAwLAogICAgICAiaGlnaGVzdFRpZXIiOiAwLAogICAgICAiY29pbnNFYXJuZWQiOiAwLAogICAgICAiY29pbnNTcGVudCI6IDAsCiAgICAgICJzY3JhcEVhcm5lZCI6IDAsCiAgICAgICJzY3JhcFNwZW50IjogMCwKICAgICAgInJvdW5kc01ldCI6IDAsCiAgICAgICJyb3VuZHNNaXNzZWQiOiAwCiAgICB9LAogICAgImpvdXJuYWwiOiBbXQogIH0sCiAgImxhdGVzdCI6IHsKICAgICJydWxlc1ZlcnNpb24iOiAiZm9yZ2UtdjEiLAogICAgInJ1bklkIjogIjZjZjhlN2M3YTFmYTZiMDBmODA3ZWM5ZTY2YzIyN2U2IiwKICAgICJzZWVkIjogInVpLXdpbmRvdy1oYW5kb2ZmIiwKICAgICJyZXZpc2lvbiI6IDEsCiAgICAicGhhc2UiOiAid29ya3Nob3AiLAogICAgInJvdW5kIjogMSwKICAgICJjb2lucyI6IDAsCiAgICAic2NyYXAiOiAwLAogICAgImNvYWwiOiAxLAogICAgInNlYWxzIjogMywKICAgICJ1cGdyYWRlcyI6IHsKICAgICAgImhhbmRsZSI6IDAsCiAgICAgICJiZWxsb3dzIjogMCwKICAgICAgImFudmlsIjogMAogICAgfSwKICAgICJwaWVjZXMiOiBbCiAgICAgIHsKICAgICAgICAiaWQiOiAiMToxIiwKICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgInByb2dyZXNzIjogMywKICAgICAgICAiaGVhdCI6IDg4LAogICAgICAgICJzdHJlc3MiOiA3LAogICAgICAgICJpbnRlZ3JpdHkiOiA0LAogICAgICAgICJzdGF0dXMiOiAiYWN0aXZlIgogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogIjE6MiIsCiAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiMTozIiwKICAgICAgICAibWF0ZXJpYWwiOiAic3RlZWwiLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDMsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0KICAgIF0sCiAgICAicm5nIjogewogICAgICAic3RvY2siOiB7CiAgICAgICAgInN0YXRlIjogMTQ4NzE0Nzg5MSwKICAgICAgICAiZHJhd3MiOiAwCiAgICAgIH0sCiAgICAgICJzdHJpa2UiOiB7CiAgICAgICAgInN0YXRlIjogMjAxMjc2NjIwMiwKICAgICAgICAiZHJhd3MiOiAxCiAgICAgIH0KICAgIH0sCiAgICAiaGlzdG9yeSI6IFtdLAogICAgInB1cmNoYXNlcyI6IFtdLAogICAgInN0YXRzIjogewogICAgICAic3RyaWtlcyI6IDEsCiAgICAgICJzdWNjZXNzZnVsU3RyaWtlcyI6IDEsCiAgICAgICJkYW1hZ2VkU3RyaWtlcyI6IDAsCiAgICAgICJoZWF0cyI6IDAsCiAgICAgICJkZWxpdmVyZWRQaWVjZXMiOiAwLAogICAgICAicmVjeWNsZWRQaWVjZXMiOiAwLAogICAgICAiYnJva2VuUGllY2VzIjogMCwKICAgICAgImhpZ2hlc3RUaWVyIjogMSwKICAgICAgImNvaW5zRWFybmVkIjogMCwKICAgICAgImNvaW5zU3BlbnQiOiAwLAogICAgICAic2NyYXBFYXJuZWQiOiAwLAogICAgICAic2NyYXBTcGVudCI6IDAsCiAgICAgICJyb3VuZHNNZXQiOiAwLAogICAgICAicm91bmRzTWlzc2VkIjogMAogICAgfSwKICAgICJqb3VybmFsIjogWwogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICIxOjEiLAogICAgICAgICJtb2RlIjogInN0YW5kYXJkIiwKICAgICAgICAidGltaW5nTWFyayI6IDUwMDAKICAgICAgfQogICAgXQogIH0sCiAgImFmdGVyIjogewogICAgInJ1bGVzVmVyc2lvbiI6ICJmb3JnZS12MSIsCiAgICAicnVuSWQiOiAiNmNmOGU3YzdhMWZhNmIwMGY4MDdlYzllNjZjMjI3ZTYiLAogICAgInNlZWQiOiAidWktd2luZG93LWhhbmRvZmYiLAogICAgInJldmlzaW9uIjogMiwKICAgICJwaGFzZSI6ICJ3b3Jrc2hvcCIsCiAgICAicm91bmQiOiAxLAogICAgImNvaW5zIjogMCwKICAgICJzY3JhcCI6IDAsCiAgICAiY29hbCI6IDEsCiAgICAic2VhbHMiOiAzLAogICAgInVwZ3JhZGVzIjogewogICAgICAiaGFuZGxlIjogMCwKICAgICAgImJlbGxvd3MiOiAwLAogICAgICAiYW52aWwiOiAwCiAgICB9LAogICAgInBpZWNlcyI6IFsKICAgICAgewogICAgICAgICJpZCI6ICIxOjEiLAogICAgICAgICJtYXRlcmlhbCI6ICJpcm9uIiwKICAgICAgICAicHJvZ3Jlc3MiOiA2LAogICAgICAgICJoZWF0IjogNzYsCiAgICAgICAgInN0cmVzcyI6IDE0LAogICAgICAgICJpbnRlZ3JpdHkiOiA0LAogICAgICAgICJzdGF0dXMiOiAiYWN0aXZlIgogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogIjE6MiIsCiAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiMTozIiwKICAgICAgICAibWF0ZXJpYWwiOiAic3RlZWwiLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDMsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0KICAgIF0sCiAgICAicm5nIjogewogICAgICAic3RvY2siOiB7CiAgICAgICAgInN0YXRlIjogMTQ4NzE0Nzg5MSwKICAgICAgICAiZHJhd3MiOiAwCiAgICAgIH0sCiAgICAgICJzdHJpa2UiOiB7CiAgICAgICAgInN0YXRlIjogMzg0NDMzMjAxNSwKICAgICAgICAiZHJhd3MiOiAyCiAgICAgIH0KICAgIH0sCiAgICAiaGlzdG9yeSI6IFtdLAogICAgInB1cmNoYXNlcyI6IFtdLAogICAgInN0YXRzIjogewogICAgICAic3RyaWtlcyI6IDIsCiAgICAgICJzdWNjZXNzZnVsU3RyaWtlcyI6IDIsCiAgICAgICJkYW1hZ2VkU3RyaWtlcyI6IDAsCiAgICAgICJoZWF0cyI6IDAsCiAgICAgICJkZWxpdmVyZWRQaWVjZXMiOiAwLAogICAgICAicmVjeWNsZWRQaWVjZXMiOiAwLAogICAgICAiYnJva2VuUGllY2VzIjogMCwKICAgICAgImhpZ2hlc3RUaWVyIjogMiwKICAgICAgImNvaW5zRWFybmVkIjogMCwKICAgICAgImNvaW5zU3BlbnQiOiAwLAogICAgICAic2NyYXBFYXJuZWQiOiAwLAogICAgICAic2NyYXBTcGVudCI6IDAsCiAgICAgICJyb3VuZHNNZXQiOiAwLAogICAgICAicm91bmRzTWlzc2VkIjogMAogICAgfSwKICAgICJqb3VybmFsIjogWwogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICIxOjEiLAogICAgICAgICJtb2RlIjogInN0YW5kYXJkIiwKICAgICAgICAidGltaW5nTWFyayI6IDUwMDAKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiMToxIiwKICAgICAgICAibW9kZSI6ICJzdGFuZGFyZCIsCiAgICAgICAgInRpbWluZ01hcmsiOiA1MDAwCiAgICAgIH0KICAgIF0KICB9Cn0="
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-436d137452890d44b21e",
+          "file": "acceptance.spec.ts",
+          "line": 43,
+          "column": 1
+        },
+        {
+          "title": "desktop context identity and image/control scale are reported from the real engine",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-dpr2",
+              "projectName": "firefox-dpr2",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6821,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T11:32:15.335Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "desktop-1280-dpr2",
+                      "contentType": "image/png",
+                      "unarchivedOriginalPath": "cross/initial-subset/firefox-dpr2/desktop-1280-dpr2-9b09d2e77153.png"
+                    },
+                    {
+                      "name": "desktop-1920-dpr2",
+                      "contentType": "image/png",
+                      "unarchivedOriginalPath": "cross/initial-subset/firefox-dpr2/desktop-1920-dpr2-d93b6dc95c64.png"
+                    },
+                    {
+                      "name": "engine-environment",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyTmFtZSI6ICJmaXJlZm94IiwKICAidmVyc2lvbiI6ICIxNTcuMCIsCiAgImVudmlyb25tZW50IjogewogICAgInVzZXJBZ2VudCI6ICJNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0OyBydjoxNTcuMCkgR2Vja28vMjAxMDAxMDEgRmlyZWZveC8xNTcuMCIsCiAgICAiZHByIjogMiwKICAgICJzZWN1cmVDb250ZXh0IjogdHJ1ZSwKICAgICJ3ZWJMb2NrcyI6ICJmdW5jdGlvbiIsCiAgICAiYXVkaW8iOiAiZnVuY3Rpb24iCiAgfQp9"
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-9f32d32c14500acf4650",
+          "file": "acceptance.spec.ts",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "a read-only game window acquires ownership only after rereading the latest saved command",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-dpr2",
+              "projectName": "firefox-dpr2",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5576,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T11:32:24.211Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "ui-window-handoff",
+                      "contentType": "application/json",
+                      "body": "ewogICJpbml0aWFsIjogewogICAgInJ1bGVzVmVyc2lvbiI6ICJmb3JnZS12MSIsCiAgICAicnVuSWQiOiAiNjA4ZDdlNzAzNTMyZWViZmQ0ZDZhNzMyZTVmZmMyNTMiLAogICAgInNlZWQiOiAidWktd2luZG93LWhhbmRvZmYiLAogICAgInJldmlzaW9uIjogMCwKICAgICJwaGFzZSI6ICJ3b3Jrc2hvcCIsCiAgICAicm91bmQiOiAxLAogICAgImNvaW5zIjogMCwKICAgICJzY3JhcCI6IDAsCiAgICAiY29hbCI6IDEsCiAgICAic2VhbHMiOiAzLAogICAgInVwZ3JhZGVzIjogewogICAgICAiaGFuZGxlIjogMCwKICAgICAgImJlbGxvd3MiOiAwLAogICAgICAiYW52aWwiOiAwCiAgICB9LAogICAgInBpZWNlcyI6IFsKICAgICAgewogICAgICAgICJpZCI6ICIxOjEiLAogICAgICAgICJtYXRlcmlhbCI6ICJpcm9uIiwKICAgICAgICAicHJvZ3Jlc3MiOiAwLAogICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICJzdHJlc3MiOiAwLAogICAgICAgICJpbnRlZ3JpdHkiOiA0LAogICAgICAgICJzdGF0dXMiOiAiYWN0aXZlIgogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogIjE6MiIsCiAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiMTozIiwKICAgICAgICAibWF0ZXJpYWwiOiAic3RlZWwiLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDMsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0KICAgIF0sCiAgICAicm5nIjogewogICAgICAic3RvY2siOiB7CiAgICAgICAgInN0YXRlIjogMTQ4NzE0Nzg5MSwKICAgICAgICAiZHJhd3MiOiAwCiAgICAgIH0sCiAgICAgICJzdHJpa2UiOiB7CiAgICAgICAgInN0YXRlIjogMTgxMjAwMzg5LAogICAgICAgICJkcmF3cyI6IDAKICAgICAgfQogICAgfSwKICAgICJoaXN0b3J5IjogW10sCiAgICAicHVyY2hhc2VzIjogW10sCiAgICAic3RhdHMiOiB7CiAgICAgICJzdHJpa2VzIjogMCwKICAgICAgInN1Y2Nlc3NmdWxTdHJpa2VzIjogMCwKICAgICAgImRhbWFnZWRTdHJpa2VzIjogMCwKICAgICAgImhlYXRzIjogMCwKICAgICAgImRlbGl2ZXJlZFBpZWNlcyI6IDAsCiAgICAgICJyZWN5Y2xlZFBpZWNlcyI6IDAsCiAgICAgICJicm9rZW5QaWVjZXMiOiAwLAogICAgICAiaGlnaGVzdFRpZXIiOiAwLAogICAgICAiY29pbnNFYXJuZWQiOiAwLAogICAgICAiY29pbnNTcGVudCI6IDAsCiAgICAgICJzY3JhcEVhcm5lZCI6IDAsCiAgICAgICJzY3JhcFNwZW50IjogMCwKICAgICAgInJvdW5kc01ldCI6IDAsCiAgICAgICJyb3VuZHNNaXNzZWQiOiAwCiAgICB9LAogICAgImpvdXJuYWwiOiBbXQogIH0sCiAgImxhdGVzdCI6IHsKICAgICJydWxlc1ZlcnNpb24iOiAiZm9yZ2UtdjEiLAogICAgInJ1bklkIjogIjYwOGQ3ZTcwMzUzMmVlYmZkNGQ2YTczMmU1ZmZjMjUzIiwKICAgICJzZWVkIjogInVpLXdpbmRvdy1oYW5kb2ZmIiwKICAgICJyZXZpc2lvbiI6IDEsCiAgICAicGhhc2UiOiAid29ya3Nob3AiLAogICAgInJvdW5kIjogMSwKICAgICJjb2lucyI6IDAsCiAgICAic2NyYXAiOiAwLAogICAgImNvYWwiOiAxLAogICAgInNlYWxzIjogMywKICAgICJ1cGdyYWRlcyI6IHsKICAgICAgImhhbmRsZSI6IDAsCiAgICAgICJiZWxsb3dzIjogMCwKICAgICAgImFudmlsIjogMAogICAgfSwKICAgICJwaWVjZXMiOiBbCiAgICAgIHsKICAgICAgICAiaWQiOiAiMToxIiwKICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgInByb2dyZXNzIjogMywKICAgICAgICAiaGVhdCI6IDg4LAogICAgICAgICJzdHJlc3MiOiA3LAogICAgICAgICJpbnRlZ3JpdHkiOiA0LAogICAgICAgICJzdGF0dXMiOiAiYWN0aXZlIgogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogIjE6MiIsCiAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiMTozIiwKICAgICAgICAibWF0ZXJpYWwiOiAic3RlZWwiLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDMsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0KICAgIF0sCiAgICAicm5nIjogewogICAgICAic3RvY2siOiB7CiAgICAgICAgInN0YXRlIjogMTQ4NzE0Nzg5MSwKICAgICAgICAiZHJhd3MiOiAwCiAgICAgIH0sCiAgICAgICJzdHJpa2UiOiB7CiAgICAgICAgInN0YXRlIjogMjAxMjc2NjIwMiwKICAgICAgICAiZHJhd3MiOiAxCiAgICAgIH0KICAgIH0sCiAgICAiaGlzdG9yeSI6IFtdLAogICAgInB1cmNoYXNlcyI6IFtdLAogICAgInN0YXRzIjogewogICAgICAic3RyaWtlcyI6IDEsCiAgICAgICJzdWNjZXNzZnVsU3RyaWtlcyI6IDEsCiAgICAgICJkYW1hZ2VkU3RyaWtlcyI6IDAsCiAgICAgICJoZWF0cyI6IDAsCiAgICAgICJkZWxpdmVyZWRQaWVjZXMiOiAwLAogICAgICAicmVjeWNsZWRQaWVjZXMiOiAwLAogICAgICAiYnJva2VuUGllY2VzIjogMCwKICAgICAgImhpZ2hlc3RUaWVyIjogMSwKICAgICAgImNvaW5zRWFybmVkIjogMCwKICAgICAgImNvaW5zU3BlbnQiOiAwLAogICAgICAic2NyYXBFYXJuZWQiOiAwLAogICAgICAic2NyYXBTcGVudCI6IDAsCiAgICAgICJyb3VuZHNNZXQiOiAwLAogICAgICAicm91bmRzTWlzc2VkIjogMAogICAgfSwKICAgICJqb3VybmFsIjogWwogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICIxOjEiLAogICAgICAgICJtb2RlIjogInN0YW5kYXJkIiwKICAgICAgICAidGltaW5nTWFyayI6IDUwMDAKICAgICAgfQogICAgXQogIH0sCiAgImFmdGVyIjogewogICAgInJ1bGVzVmVyc2lvbiI6ICJmb3JnZS12MSIsCiAgICAicnVuSWQiOiAiNjA4ZDdlNzAzNTMyZWViZmQ0ZDZhNzMyZTVmZmMyNTMiLAogICAgInNlZWQiOiAidWktd2luZG93LWhhbmRvZmYiLAogICAgInJldmlzaW9uIjogMiwKICAgICJwaGFzZSI6ICJ3b3Jrc2hvcCIsCiAgICAicm91bmQiOiAxLAogICAgImNvaW5zIjogMCwKICAgICJzY3JhcCI6IDAsCiAgICAiY29hbCI6IDEsCiAgICAic2VhbHMiOiAzLAogICAgInVwZ3JhZGVzIjogewogICAgICAiaGFuZGxlIjogMCwKICAgICAgImJlbGxvd3MiOiAwLAogICAgICAiYW52aWwiOiAwCiAgICB9LAogICAgInBpZWNlcyI6IFsKICAgICAgewogICAgICAgICJpZCI6ICIxOjEiLAogICAgICAgICJtYXRlcmlhbCI6ICJpcm9uIiwKICAgICAgICAicHJvZ3Jlc3MiOiA2LAogICAgICAgICJoZWF0IjogNzYsCiAgICAgICAgInN0cmVzcyI6IDE0LAogICAgICAgICJpbnRlZ3JpdHkiOiA0LAogICAgICAgICJzdGF0dXMiOiAiYWN0aXZlIgogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogIjE6MiIsCiAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiMTozIiwKICAgICAgICAibWF0ZXJpYWwiOiAic3RlZWwiLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDMsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0KICAgIF0sCiAgICAicm5nIjogewogICAgICAic3RvY2siOiB7CiAgICAgICAgInN0YXRlIjogMTQ4NzE0Nzg5MSwKICAgICAgICAiZHJhd3MiOiAwCiAgICAgIH0sCiAgICAgICJzdHJpa2UiOiB7CiAgICAgICAgInN0YXRlIjogMzg0NDMzMjAxNSwKICAgICAgICAiZHJhd3MiOiAyCiAgICAgIH0KICAgIH0sCiAgICAiaGlzdG9yeSI6IFtdLAogICAgInB1cmNoYXNlcyI6IFtdLAogICAgInN0YXRzIjogewogICAgICAic3RyaWtlcyI6IDIsCiAgICAgICJzdWNjZXNzZnVsU3RyaWtlcyI6IDIsCiAgICAgICJkYW1hZ2VkU3RyaWtlcyI6IDAsCiAgICAgICJoZWF0cyI6IDAsCiAgICAgICJkZWxpdmVyZWRQaWVjZXMiOiAwLAogICAgICAicmVjeWNsZWRQaWVjZXMiOiAwLAogICAgICAiYnJva2VuUGllY2VzIjogMCwKICAgICAgImhpZ2hlc3RUaWVyIjogMiwKICAgICAgImNvaW5zRWFybmVkIjogMCwKICAgICAgImNvaW5zU3BlbnQiOiAwLAogICAgICAic2NyYXBFYXJuZWQiOiAwLAogICAgICAic2NyYXBTcGVudCI6IDAsCiAgICAgICJyb3VuZHNNZXQiOiAwLAogICAgICAicm91bmRzTWlzc2VkIjogMAogICAgfSwKICAgICJqb3VybmFsIjogWwogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICIxOjEiLAogICAgICAgICJtb2RlIjogInN0YW5kYXJkIiwKICAgICAgICAidGltaW5nTWFyayI6IDUwMDAKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiMToxIiwKICAgICAgICAibW9kZSI6ICJzdGFuZGFyZCIsCiAgICAgICAgInRpbWluZ01hcmsiOiA1MDAwCiAgICAgIH0KICAgIF0KICB9Cn0="
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-ca1849edf7e0b1110b9d",
+          "file": "acceptance.spec.ts",
+          "line": 43,
+          "column": 1
+        },
+        {
+          "title": "desktop context identity and image/control scale are reported from the real engine",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-dpr2",
+              "projectName": "webkit-dpr2",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4905,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T11:32:31.478Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "desktop-1280-dpr2",
+                      "contentType": "image/png",
+                      "unarchivedOriginalPath": "cross/initial-subset/webkit-dpr2/desktop-1280-dpr2-c714c16501f3.png"
+                    },
+                    {
+                      "name": "desktop-1920-dpr2",
+                      "contentType": "image/png",
+                      "unarchivedOriginalPath": "cross/initial-subset/webkit-dpr2/desktop-1920-dpr2-f01f314edde3.png"
+                    },
+                    {
+                      "name": "engine-environment",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyTmFtZSI6ICJ3ZWJraXQiLAogICJ2ZXJzaW9uIjogIjI3LjIiLAogICJlbnZpcm9ubWVudCI6IHsKICAgICJ1c2VyQWdlbnQiOiAiTW96aWxsYS81LjAgKE1hY2ludG9zaDsgSW50ZWwgTWFjIE9TIFggMTBfMTVfNykgQXBwbGVXZWJLaXQvNjA1LjEuMTUgKEtIVE1MLCBsaWtlIEdlY2tvKSBWZXJzaW9uLzI3LjIgU2FmYXJpLzYwNS4xLjE1IiwKICAgICJkcHIiOiAyLAogICAgInNlY3VyZUNvbnRleHQiOiB0cnVlLAogICAgIndlYkxvY2tzIjogImZ1bmN0aW9uIiwKICAgICJhdWRpbyI6ICJmdW5jdGlvbiIKICB9Cn0="
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-588ac5622c6f638e5a35",
+          "file": "acceptance.spec.ts",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "a read-only game window acquires ownership only after rereading the latest saved command",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-dpr2",
+              "projectName": "webkit-dpr2",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4886,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T11:32:36.972Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "ui-window-handoff",
+                      "contentType": "application/json",
+                      "body": "ewogICJpbml0aWFsIjogewogICAgInJ1bGVzVmVyc2lvbiI6ICJmb3JnZS12MSIsCiAgICAicnVuSWQiOiAiOTZmZDU3YTFkOTA0NzRhNDJhYThlMmU3NzIyM2Q1YjMiLAogICAgInNlZWQiOiAidWktd2luZG93LWhhbmRvZmYiLAogICAgInJldmlzaW9uIjogMCwKICAgICJwaGFzZSI6ICJ3b3Jrc2hvcCIsCiAgICAicm91bmQiOiAxLAogICAgImNvaW5zIjogMCwKICAgICJzY3JhcCI6IDAsCiAgICAiY29hbCI6IDEsCiAgICAic2VhbHMiOiAzLAogICAgInVwZ3JhZGVzIjogewogICAgICAiaGFuZGxlIjogMCwKICAgICAgImJlbGxvd3MiOiAwLAogICAgICAiYW52aWwiOiAwCiAgICB9LAogICAgInBpZWNlcyI6IFsKICAgICAgewogICAgICAgICJpZCI6ICIxOjEiLAogICAgICAgICJtYXRlcmlhbCI6ICJpcm9uIiwKICAgICAgICAicHJvZ3Jlc3MiOiAwLAogICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICJzdHJlc3MiOiAwLAogICAgICAgICJpbnRlZ3JpdHkiOiA0LAogICAgICAgICJzdGF0dXMiOiAiYWN0aXZlIgogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogIjE6MiIsCiAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiMTozIiwKICAgICAgICAibWF0ZXJpYWwiOiAic3RlZWwiLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDMsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0KICAgIF0sCiAgICAicm5nIjogewogICAgICAic3RvY2siOiB7CiAgICAgICAgInN0YXRlIjogMTQ4NzE0Nzg5MSwKICAgICAgICAiZHJhd3MiOiAwCiAgICAgIH0sCiAgICAgICJzdHJpa2UiOiB7CiAgICAgICAgInN0YXRlIjogMTgxMjAwMzg5LAogICAgICAgICJkcmF3cyI6IDAKICAgICAgfQogICAgfSwKICAgICJoaXN0b3J5IjogW10sCiAgICAicHVyY2hhc2VzIjogW10sCiAgICAic3RhdHMiOiB7CiAgICAgICJzdHJpa2VzIjogMCwKICAgICAgInN1Y2Nlc3NmdWxTdHJpa2VzIjogMCwKICAgICAgImRhbWFnZWRTdHJpa2VzIjogMCwKICAgICAgImhlYXRzIjogMCwKICAgICAgImRlbGl2ZXJlZFBpZWNlcyI6IDAsCiAgICAgICJyZWN5Y2xlZFBpZWNlcyI6IDAsCiAgICAgICJicm9rZW5QaWVjZXMiOiAwLAogICAgICAiaGlnaGVzdFRpZXIiOiAwLAogICAgICAiY29pbnNFYXJuZWQiOiAwLAogICAgICAiY29pbnNTcGVudCI6IDAsCiAgICAgICJzY3JhcEVhcm5lZCI6IDAsCiAgICAgICJzY3JhcFNwZW50IjogMCwKICAgICAgInJvdW5kc01ldCI6IDAsCiAgICAgICJyb3VuZHNNaXNzZWQiOiAwCiAgICB9LAogICAgImpvdXJuYWwiOiBbXQogIH0sCiAgImxhdGVzdCI6IHsKICAgICJydWxlc1ZlcnNpb24iOiAiZm9yZ2UtdjEiLAogICAgInJ1bklkIjogIjk2ZmQ1N2ExZDkwNDc0YTQyYWE4ZTJlNzcyMjNkNWIzIiwKICAgICJzZWVkIjogInVpLXdpbmRvdy1oYW5kb2ZmIiwKICAgICJyZXZpc2lvbiI6IDEsCiAgICAicGhhc2UiOiAid29ya3Nob3AiLAogICAgInJvdW5kIjogMSwKICAgICJjb2lucyI6IDAsCiAgICAic2NyYXAiOiAwLAogICAgImNvYWwiOiAxLAogICAgInNlYWxzIjogMywKICAgICJ1cGdyYWRlcyI6IHsKICAgICAgImhhbmRsZSI6IDAsCiAgICAgICJiZWxsb3dzIjogMCwKICAgICAgImFudmlsIjogMAogICAgfSwKICAgICJwaWVjZXMiOiBbCiAgICAgIHsKICAgICAgICAiaWQiOiAiMToxIiwKICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgInByb2dyZXNzIjogMywKICAgICAgICAiaGVhdCI6IDg4LAogICAgICAgICJzdHJlc3MiOiA3LAogICAgICAgICJpbnRlZ3JpdHkiOiA0LAogICAgICAgICJzdGF0dXMiOiAiYWN0aXZlIgogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogIjE6MiIsCiAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiMTozIiwKICAgICAgICAibWF0ZXJpYWwiOiAic3RlZWwiLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDMsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0KICAgIF0sCiAgICAicm5nIjogewogICAgICAic3RvY2siOiB7CiAgICAgICAgInN0YXRlIjogMTQ4NzE0Nzg5MSwKICAgICAgICAiZHJhd3MiOiAwCiAgICAgIH0sCiAgICAgICJzdHJpa2UiOiB7CiAgICAgICAgInN0YXRlIjogMjAxMjc2NjIwMiwKICAgICAgICAiZHJhd3MiOiAxCiAgICAgIH0KICAgIH0sCiAgICAiaGlzdG9yeSI6IFtdLAogICAgInB1cmNoYXNlcyI6IFtdLAogICAgInN0YXRzIjogewogICAgICAic3RyaWtlcyI6IDEsCiAgICAgICJzdWNjZXNzZnVsU3RyaWtlcyI6IDEsCiAgICAgICJkYW1hZ2VkU3RyaWtlcyI6IDAsCiAgICAgICJoZWF0cyI6IDAsCiAgICAgICJkZWxpdmVyZWRQaWVjZXMiOiAwLAogICAgICAicmVjeWNsZWRQaWVjZXMiOiAwLAogICAgICAiYnJva2VuUGllY2VzIjogMCwKICAgICAgImhpZ2hlc3RUaWVyIjogMSwKICAgICAgImNvaW5zRWFybmVkIjogMCwKICAgICAgImNvaW5zU3BlbnQiOiAwLAogICAgICAic2NyYXBFYXJuZWQiOiAwLAogICAgICAic2NyYXBTcGVudCI6IDAsCiAgICAgICJyb3VuZHNNZXQiOiAwLAogICAgICAicm91bmRzTWlzc2VkIjogMAogICAgfSwKICAgICJqb3VybmFsIjogWwogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICIxOjEiLAogICAgICAgICJtb2RlIjogInN0YW5kYXJkIiwKICAgICAgICAidGltaW5nTWFyayI6IDUwMDAKICAgICAgfQogICAgXQogIH0sCiAgImFmdGVyIjogewogICAgInJ1bGVzVmVyc2lvbiI6ICJmb3JnZS12MSIsCiAgICAicnVuSWQiOiAiOTZmZDU3YTFkOTA0NzRhNDJhYThlMmU3NzIyM2Q1YjMiLAogICAgInNlZWQiOiAidWktd2luZG93LWhhbmRvZmYiLAogICAgInJldmlzaW9uIjogMiwKICAgICJwaGFzZSI6ICJ3b3Jrc2hvcCIsCiAgICAicm91bmQiOiAxLAogICAgImNvaW5zIjogMCwKICAgICJzY3JhcCI6IDAsCiAgICAiY29hbCI6IDEsCiAgICAic2VhbHMiOiAzLAogICAgInVwZ3JhZGVzIjogewogICAgICAiaGFuZGxlIjogMCwKICAgICAgImJlbGxvd3MiOiAwLAogICAgICAiYW52aWwiOiAwCiAgICB9LAogICAgInBpZWNlcyI6IFsKICAgICAgewogICAgICAgICJpZCI6ICIxOjEiLAogICAgICAgICJtYXRlcmlhbCI6ICJpcm9uIiwKICAgICAgICAicHJvZ3Jlc3MiOiA2LAogICAgICAgICJoZWF0IjogNzYsCiAgICAgICAgInN0cmVzcyI6IDE0LAogICAgICAgICJpbnRlZ3JpdHkiOiA0LAogICAgICAgICJzdGF0dXMiOiAiYWN0aXZlIgogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogIjE6MiIsCiAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiMTozIiwKICAgICAgICAibWF0ZXJpYWwiOiAic3RlZWwiLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDMsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0KICAgIF0sCiAgICAicm5nIjogewogICAgICAic3RvY2siOiB7CiAgICAgICAgInN0YXRlIjogMTQ4NzE0Nzg5MSwKICAgICAgICAiZHJhd3MiOiAwCiAgICAgIH0sCiAgICAgICJzdHJpa2UiOiB7CiAgICAgICAgInN0YXRlIjogMzg0NDMzMjAxNSwKICAgICAgICAiZHJhd3MiOiAyCiAgICAgIH0KICAgIH0sCiAgICAiaGlzdG9yeSI6IFtdLAogICAgInB1cmNoYXNlcyI6IFtdLAogICAgInN0YXRzIjogewogICAgICAic3RyaWtlcyI6IDIsCiAgICAgICJzdWNjZXNzZnVsU3RyaWtlcyI6IDIsCiAgICAgICJkYW1hZ2VkU3RyaWtlcyI6IDAsCiAgICAgICJoZWF0cyI6IDAsCiAgICAgICJkZWxpdmVyZWRQaWVjZXMiOiAwLAogICAgICAicmVjeWNsZWRQaWVjZXMiOiAwLAogICAgICAiYnJva2VuUGllY2VzIjogMCwKICAgICAgImhpZ2hlc3RUaWVyIjogMiwKICAgICAgImNvaW5zRWFybmVkIjogMCwKICAgICAgImNvaW5zU3BlbnQiOiAwLAogICAgICAic2NyYXBFYXJuZWQiOiAwLAogICAgICAic2NyYXBTcGVudCI6IDAsCiAgICAgICJyb3VuZHNNZXQiOiAwLAogICAgICAicm91bmRzTWlzc2VkIjogMAogICAgfSwKICAgICJqb3VybmFsIjogWwogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICIxOjEiLAogICAgICAgICJtb2RlIjogInN0YW5kYXJkIiwKICAgICAgICAidGltaW5nTWFyayI6IDUwMDAKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiMToxIiwKICAgICAgICAibW9kZSI6ICJzdGFuZGFyZCIsCiAgICAgICAgInRpbWluZ01hcmsiOiA1MDAwCiAgICAgIH0KICAgIF0KICB9Cn0="
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-bf442ab1920ef751c7c0",
+          "file": "acceptance.spec.ts",
+          "line": 43,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "audio.spec.ts",
+      "file": "audio.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "closing settings cancels an unresolved preview instead of playing it later",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-dpr2",
+              "projectName": "chromium-dpr2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2581,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T11:30:17.449Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "87be2dcdb54c25970a35-fab2d714620009dd1004",
+          "file": "audio.spec.ts",
+          "line": 56,
+          "column": 1
+        },
+        {
+          "title": "closing settings cancels an unresolved preview instead of playing it later",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-game",
+              "projectName": "firefox-game",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2142,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T11:30:59.707Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "87be2dcdb54c25970a35-cef364f0d92f8273ebf7",
+          "file": "audio.spec.ts",
+          "line": 56,
+          "column": 1
+        },
+        {
+          "title": "closing settings cancels an unresolved preview instead of playing it later",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-game",
+              "projectName": "webkit-game",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1393,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T11:31:51.512Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "87be2dcdb54c25970a35-0e00a78fb348abb3db24",
+          "file": "audio.spec.ts",
+          "line": 56,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "cadence-performance.spec.ts",
+      "file": "cadence-performance.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "native rAF callback budget and idle work at 1280x720",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-dpr2",
+              "projectName": "chromium-dpr2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6715,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T11:30:31.502Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-frame-budget-1280",
+                      "contentType": "application/json",
+                      "body": "ewogICJzaXplIjogewogICAgIndpZHRoIjogMTI4MCwKICAgICJoZWlnaHQiOiA3MjAKICB9LAogICJicm93c2VyIjogIjE1Ni4wLjgwNzguNCIsCiAgIm1ldGhvZCI6ICJuYXRpdmUgckFGIGNhbGxiYWNrIHdhbGwtdGltZSBjb3N0LCBpbmNsdWRlcyBKUyBkcmF3aW5nL2ZlZWRiYWNrOyBub3QgR1BVIG9yIHBoeXNpY2FsIGhpZ2gtcmVmcmVzaCBjZXJ0aWZpY2F0aW9uIiwKICAicDk1TXMiOiAxLjEwMDAwMDAwMTQ5MDExNjEsCiAgInNhbXBsZSI6IHsKICAgICJjYWxsYmFja3MiOiAxNTIsCiAgICAiY29zdHMiOiBbCiAgICAgIDAuODk5OTk5OTk4NTA5ODgzOSwKICAgICAgMC42MDAwMDAwMDE0OTAxMTYxLAogICAgICAwLjM5OTk5OTk5ODUwOTg4MzksCiAgICAgIDAuNSwKICAgICAgMC44MDAwMDAwMDQ0NzAzNDg0LAogICAgICAwLjM5OTk5OTk5ODUwOTg4MzksCiAgICAgIDAuMzk5OTk5OTk4NTA5ODgzOSwKICAgICAgMC43OTk5OTk5OTcwMTk3Njc4LAogICAgICAwLjUsCiAgICAgIDAuNjAwMDAwMDAxNDkwMTE2MSwKICAgICAgMC41LAogICAgICAwLjM5OTk5OTk5ODUwOTg4MzksCiAgICAgIDAuMjk5OTk5OTk3MDE5NzY3NzYsCiAgICAgIDAuNSwKICAgICAgMC40MDAwMDAwMDU5NjA0NjQ1LAogICAgICAwLjY5OTk5OTk5NTUyOTY1MTYsCiAgICAgIDAuNDAwMDAwMDA1OTYwNDY0NSwKICAgICAgMC42MDAwMDAwMDE0OTAxMTYxLAogICAgICAwLjUsCiAgICAgIDAuNSwKICAgICAgMC41LAogICAgICAwLjQwMDAwMDAwNTk2MDQ2NDUsCiAgICAgIDAuMzAwMDAwMDA0NDcwMzQ4MzYsCiAgICAgIDAuMjAwMDAwMDAyOTgwMjMyMjQsCiAgICAgIDAuMjAwMDAwMDAyOTgwMjMyMjQsCiAgICAgIDAuMjAwMDAwMDAyOTgwMjMyMjQsCiAgICAgIDAuMzAwMDAwMDA0NDcwMzQ4MzYsCiAgICAgIDAuMTAwMDAwMDAxNDkwMTE2MTIsCiAgICAgIDAuMDk5OTk5OTk0MDM5NTM1NTIsCiAgICAgIDAuMTk5OTk5OTk1NTI5NjUxNjQsCiAgICAgIDAuMjAwMDAwMDAyOTgwMjMyMjQsCiAgICAgIDAuMjAwMDAwMDAyOTgwMjMyMjQsCiAgICAgIDAuMjAwMDAwMDAyOTgwMjMyMjQsCiAgICAgIDExLjE5OTk5OTk5NTUyOTY1MiwKICAgICAgMC4xMDAwMDAwMDE0OTAxMTYxMiwKICAgICAgMC4yMDAwMDAwMDI5ODAyMzIyNCwKICAgICAgMC4xOTk5OTk5OTU1Mjk2NTE2NCwKICAgICAgMC4yOTk5OTk5OTcwMTk3Njc3NiwKICAgICAgMC4xMDAwMDAwMDE0OTAxMTYxMiwKICAgICAgMC4xOTk5OTk5OTU1Mjk2NTE2NCwKICAgICAgMC4yMDAwMDAwMDI5ODAyMzIyNCwKICAgICAgMC4wOTk5OTk5OTQwMzk1MzU1MiwKICAgICAgMC4yMDAwMDAwMDI5ODAyMzIyNCwKICAgICAgMC4yMDAwMDAwMDI5ODAyMzIyNCwKICAgICAgMC4xMDAwMDAwMDE0OTAxMTYxMiwKICAgICAgMC4xMDAwMDAwMDE0OTAxMTYxMiwKICAgICAgMC4yOTk5OTk5OTcwMTk3Njc3NiwKICAgICAgMCwKICAgICAgMC41LAogICAgICA0LjcwMDAwMDAwMjk4MDIzMiwKICAgICAgMC42MDAwMDAwMDE0OTAxMTYxLAogICAgICAwLjUsCiAgICAgIDEuMTAwMDAwMDAxNDkwMTE2MSwKICAgICAgMC4yOTk5OTk5OTcwMTk3Njc3NiwKICAgICAgMC41LAogICAgICAwLjYwMDAwMDAwMTQ5MDExNjEsCiAgICAgIDAuODk5OTk5OTk4NTA5ODgzOSwKICAgICAgMC4zOTk5OTk5OTg1MDk4ODM5LAogICAgICAwLjM5OTk5OTk5ODUwOTg4MzksCiAgICAgIDAuMzk5OTk5OTk4NTA5ODgzOSwKICAgICAgMC42MDAwMDAwMDE0OTAxMTYxLAogICAgICAwLjUsCiAgICAgIDAuMzk5OTk5OTk4NTA5ODgzOSwKICAgICAgMC4zOTk5OTk5OTg1MDk4ODM5LAogICAgICAwLjI5OTk5OTk5NzAxOTc2Nzc2LAogICAgICAwLjQwMDAwMDAwNTk2MDQ2NDUsCiAgICAgIDAuNjAwMDAwMDAxNDkwMTE2MSwKICAgICAgMC42MDAwMDAwMDE0OTAxMTYxLAogICAgICAwLjM5OTk5OTk5ODUwOTg4MzksCiAgICAgIDEuMDk5OTk5OTk0MDM5NTM1NSwKICAgICAgMC41LAogICAgICAwLjYwMDAwMDAwMTQ5MDExNjEsCiAgICAgIDAuNTk5OTk5OTk0MDM5NTM1NSwKICAgICAgMC4xMDAwMDAwMDE0OTAxMTYxMiwKICAgICAgMC4yOTk5OTk5OTcwMTk3Njc3NiwKICAgICAgMC4yMDAwMDAwMDI5ODAyMzIyNCwKICAgICAgMC4yMDAwMDAwMDI5ODAyMzIyNCwKICAgICAgMC4xMDAwMDAwMDE0OTAxMTYxMiwKICAgICAgMC4wOTk5OTk5OTQwMzk1MzU1MiwKICAgICAgMC4xMDAwMDAwMDE0OTAxMTYxMiwKICAgICAgMCwKICAgICAgMC4yMDAwMDAwMDI5ODAyMzIyNCwKICAgICAgMC4xOTk5OTk5OTU1Mjk2NTE2NCwKICAgICAgMC4xOTk5OTk5OTU1Mjk2NTE2NCwKICAgICAgOC42MDAwMDAwMDE0OTAxMTYsCiAgICAgIDAuMDk5OTk5OTk0MDM5NTM1NTIsCiAgICAgIDAuMjAwMDAwMDAyOTgwMjMyMjQsCiAgICAgIDAuMTk5OTk5OTk1NTI5NjUxNjQsCiAgICAgIDAuMTk5OTk5OTk1NTI5NjUxNjQsCiAgICAgIDAuMTAwMDAwMDAxNDkwMTE2MTIsCiAgICAgIDAuMTAwMDAwMDAxNDkwMTE2MTIsCiAgICAgIDAuMjAwMDAwMDAyOTgwMjMyMjQsCiAgICAgIDAuMzk5OTk5OTk4NTA5ODgzOSwKICAgICAgMC4zMDAwMDAwMDQ0NzAzNDgzNiwKICAgICAgMC4xMDAwMDAwMDE0OTAxMTYxMiwKICAgICAgMC4xOTk5OTk5OTU1Mjk2NTE2NCwKICAgICAgMC4yOTk5OTk5OTcwMTk3Njc3NiwKICAgICAgMC4xOTk5OTk5OTU1Mjk2NTE2NCwKICAgICAgMC4yMDAwMDAwMDI5ODAyMzIyNCwKICAgICAgMC4zMDAwMDAwMDQ0NzAzNDgzNiwKICAgICAgMy41OTk5OTk5OTQwMzk1MzU1LAogICAgICAwLjU5OTk5OTk5NDAzOTUzNTUsCiAgICAgIDAuNSwKICAgICAgMC4zOTk5OTk5OTg1MDk4ODM5LAogICAgICAwLjYwMDAwMDAwMTQ5MDExNjEsCiAgICAgIDAuNDAwMDAwMDA1OTYwNDY0NSwKICAgICAgMC4zOTk5OTk5OTg1MDk4ODM5LAogICAgICAwLjYwMDAwMDAwMTQ5MDExNjEsCiAgICAgIDEuNSwKICAgICAgMC41LAogICAgICAwLjM5OTk5OTk5ODUwOTg4MzksCiAgICAgIDAuMzAwMDAwMDA0NDcwMzQ4MzYsCiAgICAgIDAuNSwKICAgICAgMC41LAogICAgICAwLjQwMDAwMDAwNTk2MDQ2NDUsCiAgICAgIDAuNSwKICAgICAgMC41LAogICAgICAwLjQwMDAwMDAwNTk2MDQ2NDUsCiAgICAgIDAuNjAwMDAwMDAxNDkwMTE2MSwKICAgICAgMC4yOTk5OTk5OTcwMTk3Njc3NiwKICAgICAgMC41LAogICAgICAwLjQwMDAwMDAwNTk2MDQ2NDUsCiAgICAgIDAuNjk5OTk5OTk1NTI5NjUxNiwKICAgICAgMC41LAogICAgICAwLjE5OTk5OTk5NTUyOTY1MTY0LAogICAgICAwLjEwMDAwMDAwMTQ5MDExNjEyLAogICAgICAwLjI5OTk5OTk5NzAxOTc2Nzc2LAogICAgICAwLjM5OTk5OTk5ODUwOTg4MzksCiAgICAgIDAuMjAwMDAwMDAyOTgwMjMyMjQsCiAgICAgIDAuMzk5OTk5OTk4NTA5ODgzOSwKICAgICAgMC4wOTk5OTk5OTQwMzk1MzU1MiwKICAgICAgMC4wOTk5OTk5OTQwMzk1MzU1MiwKICAgICAgMC4xMDAwMDAwMDE0OTAxMTYxMiwKICAgICAgMC4xOTk5OTk5OTU1Mjk2NTE2NCwKICAgICAgMC42MDAwMDAwMDE0OTAxMTYxLAogICAgICA3Ljc5OTk5OTk5NzAxOTc2OCwKICAgICAgMC4xMDAwMDAwMDE0OTAxMTYxMiwKICAgICAgMC4xMDAwMDAwMDE0OTAxMTYxMiwKICAgICAgMC4yMDAwMDAwMDI5ODAyMzIyNCwKICAgICAgMC4yMDAwMDAwMDI5ODAyMzIyNCwKICAgICAgMC4zMDAwMDAwMDQ0NzAzNDgzNiwKICAgICAgMC4xMDAwMDAwMDE0OTAxMTYxMiwKICAgICAgMC4yMDAwMDAwMDI5ODAyMzIyNCwKICAgICAgMC4xOTk5OTk5OTU1Mjk2NTE2NCwKICAgICAgMC4xOTk5OTk5OTU1Mjk2NTE2NCwKICAgICAgMC4yMDAwMDAwMDI5ODAyMzIyNCwKICAgICAgMC4yMDAwMDAwMDI5ODAyMzIyNCwKICAgICAgMC4yMDAwMDAwMDI5ODAyMzIyNCwKICAgICAgMC4xMDAwMDAwMDE0OTAxMTYxMiwKICAgICAgMC4xOTk5OTk5OTU1Mjk2NTE2NCwKICAgICAgMC4xOTk5OTk5OTU1Mjk2NTE2NCwKICAgICAgNQogICAgXSwKICAgICJzdGFtcHMiOiBbCiAgICAgIDE5NjguMzc4LAogICAgICAxOTg1LAogICAgICAyMDAxLjcsCiAgICAgIDIwMTguNCwKICAgICAgMjAzNSwKICAgICAgMjA1MS43LAogICAgICAyMDY4LjQsCiAgICAgIDIwODUsCiAgICAgIDIxMDEuNywKICAgICAgMjExOC40LAogICAgICAyMTM1LAogICAgICAyMTUxLjcsCiAgICAgIDIxNjguNCwKICAgICAgMjE4NSwKICAgICAgMjIwMS43LAogICAgICAyMjE4LjQsCiAgICAgIDIyMzUsCiAgICAgIDIyNTEuNiwKICAgICAgMjI2OC4zLAogICAgICAyMjg1LAogICAgICAyMzAxLjcsCiAgICAgIDIzMTguMywKICAgICAgMjMzNS4xLAogICAgICAyMzUxLjcsCiAgICAgIDIzNjguNCwKICAgICAgMjM4NSwKICAgICAgMjQwMS42LAogICAgICAyNDE4LjMsCiAgICAgIDI0MzUsCiAgICAgIDI0NTEuNywKICAgICAgMjQ2OC40LAogICAgICAyNDg1LAogICAgICAyNTAxLjYsCiAgICAgIDI1MTguMywKICAgICAgMjUzNSwKICAgICAgMjU1MS43LAogICAgICAyNTY4LjMsCiAgICAgIDI1ODUsCiAgICAgIDI2MDEuNywKICAgICAgMjYxOC4zLAogICAgICAyNjM1LAogICAgICAyNjUxLjcsCiAgICAgIDI2NjguNCwKICAgICAgMjY4NSwKICAgICAgMjcwMS43LAogICAgICAyNzE4LjMsCiAgICAgIDI3MzUsCiAgICAgIDI3NTEuNywKICAgICAgMjc2OC4zLAogICAgICAyNzg1LAogICAgICAzMTg0Ljk4NCwKICAgICAgMzE4NSwKICAgICAgMzIwMS43LAogICAgICAzMjE4LjMsCiAgICAgIDMyMzQuOSwKICAgICAgMzI1MS42LAogICAgICAzMjY4LjMsCiAgICAgIDMyODQuOSwKICAgICAgMzMwMS42LAogICAgICAzMzE4LjMsCiAgICAgIDMzMzUsCiAgICAgIDMzNTEuNiwKICAgICAgMzM2OC4zLAogICAgICAzMzg1LAogICAgICAzNDAxLjYsCiAgICAgIDM0MTguMywKICAgICAgMzQzNSwKICAgICAgMzQ1MS43LAogICAgICAzNDY4LjMsCiAgICAgIDM0ODQuOSwKICAgICAgMzUwMS42LAogICAgICAzNTE4LjMsCiAgICAgIDM1MzQuOSwKICAgICAgMzU1MS42LAogICAgICAzNTY4LjMsCiAgICAgIDM1ODUsCiAgICAgIDM2MDEuNiwKICAgICAgMzYxOC4zLAogICAgICAzNjM0LjksCiAgICAgIDM2NTEuNywKICAgICAgMzY2OC4zLAogICAgICAzNjg0LjksCiAgICAgIDM3MDEuNiwKICAgICAgMzcxOC4zLAogICAgICAzNzM1LAogICAgICAzNzUxLjYsCiAgICAgIDM3NjguMywKICAgICAgMzc4NC45LAogICAgICAzODAxLjYsCiAgICAgIDM4MTguMywKICAgICAgMzgzNSwKICAgICAgMzg1MS42LAogICAgICAzODY4LjIsCiAgICAgIDM4ODQuOSwKICAgICAgMzkwMS42LAogICAgICAzOTE4LjMsCiAgICAgIDM5MzUsCiAgICAgIDM5NTEuNiwKICAgICAgMzk2OC4yLAogICAgICAzOTg1LAogICAgICA0MDAxLjYsCiAgICAgIDQzNjguMywKICAgICAgNDM4NSwKICAgICAgNDQwMS42LAogICAgICA0NDE4LjMsCiAgICAgIDQ0MzQuOSwKICAgICAgNDQ1MS42LAogICAgICA0NDY4LjIsCiAgICAgIDQ0ODQuOSwKICAgICAgNDUwMS42LAogICAgICA0NTE4LjIsCiAgICAgIDQ1MzQuOSwKICAgICAgNDU1MS42LAogICAgICA0NTY4LjIsCiAgICAgIDQ1ODQuOSwKICAgICAgNDYwMS42LAogICAgICA0NjE4LjMsCiAgICAgIDQ2MzQuOSwKICAgICAgNDY1MS42LAogICAgICA0NjY4LjMsCiAgICAgIDQ2ODQuOSwKICAgICAgNDcwMS41LAogICAgICA0NzE4LjMsCiAgICAgIDQ3MzQuOSwKICAgICAgNDc1MS42LAogICAgICA0NzY4LjMsCiAgICAgIDQ3ODQuOSwKICAgICAgNDgwMS42LAogICAgICA0ODE4LjIsCiAgICAgIDQ4MzQuOSwKICAgICAgNDg1MS42LAogICAgICA0ODY4LjMsCiAgICAgIDQ4ODQuOSwKICAgICAgNDkwMS42LAogICAgICA0OTE4LjIsCiAgICAgIDQ5MzQuOSwKICAgICAgNDk1MS41LAogICAgICA0OTY4LjIsCiAgICAgIDQ5ODQuOSwKICAgICAgNTAwMS42LAogICAgICA1MDE4LjMsCiAgICAgIDUwMzQuOSwKICAgICAgNTA1MS42LAogICAgICA1MDY4LjIsCiAgICAgIDUwODQuOSwKICAgICAgNTEwMS41LAogICAgICA1MTE4LjIsCiAgICAgIDUxMzQuOSwKICAgICAgNTE1MS41LAogICAgICA1MTY4LjIsCiAgICAgIDUxODQuOSwKICAgICAgNTIwMS41CiAgICBdCiAgfQp9"
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0e5811008cb7fd058f05-894b51c0c85687d3ca33",
+          "file": "cadence-performance.spec.ts",
+          "line": 24,
+          "column": 70
+        },
+        {
+          "title": "native rAF callback budget and idle work at 1920x1080",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-dpr2",
+              "projectName": "chromium-dpr2",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7726,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T11:30:38.650Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-frame-budget-1920",
+                      "contentType": "application/json",
+                      "body": "ewogICJzaXplIjogewogICAgIndpZHRoIjogMTkyMCwKICAgICJoZWlnaHQiOiAxMDgwCiAgfSwKICAiYnJvd3NlciI6ICIxNTYuMC44MDc4LjQiLAogICJtZXRob2QiOiAibmF0aXZlIHJBRiBjYWxsYmFjayB3YWxsLXRpbWUgY29zdCwgaW5jbHVkZXMgSlMgZHJhd2luZy9mZWVkYmFjazsgbm90IEdQVSBvciBwaHlzaWNhbCBoaWdoLXJlZnJlc2ggY2VydGlmaWNhdGlvbiIsCiAgInA5NU1zIjogMS4zMDAwMDAwMDQ0NzAzNDg0LAogICJzYW1wbGUiOiB7CiAgICAiY2FsbGJhY2tzIjogMTMzLAogICAgImNvc3RzIjogWwogICAgICAwLjg5OTk5OTk5ODUwOTg4MzksCiAgICAgIDAuNSwKICAgICAgMC41LAogICAgICAxLAogICAgICAwLjgwMDAwMDAwNDQ3MDM0ODQsCiAgICAgIDEsCiAgICAgIDAuNSwKICAgICAgMC42OTk5OTk5OTU1Mjk2NTE2LAogICAgICAwLjUsCiAgICAgIDEuMzAwMDAwMDA0NDcwMzQ4NCwKICAgICAgMC41OTk5OTk5OTQwMzk1MzU1LAogICAgICAwLjUsCiAgICAgIDAuNjAwMDAwMDAxNDkwMTE2MSwKICAgICAgMC41LAogICAgICAwLjM5OTk5OTk5ODUwOTg4MzksCiAgICAgIDAuNTk5OTk5OTk0MDM5NTM1NSwKICAgICAgMC4zOTk5OTk5OTg1MDk4ODM5LAogICAgICAwLjIwMDAwMDAwMjk4MDIzMjI0LAogICAgICAwLjIwMDAwMDAwMjk4MDIzMjI0LAogICAgICAwLjIwMDAwMDAwMjk4MDIzMjI0LAogICAgICAwLjEwMDAwMDAwMTQ5MDExNjEyLAogICAgICAwLjEwMDAwMDAwMTQ5MDExNjEyLAogICAgICAwLAogICAgICAwLjIwMDAwMDAwMjk4MDIzMjI0LAogICAgICAwLjEwMDAwMDAwMTQ5MDExNjEyLAogICAgICAwLjEwMDAwMDAwMTQ5MDExNjEyLAogICAgICAxMi42MDAwMDAwMDE0OTAxMTYsCiAgICAgIDAuMjk5OTk5OTk3MDE5NzY3NzYsCiAgICAgIDAuMTAwMDAwMDAxNDkwMTE2MTIsCiAgICAgIDAuNSwKICAgICAgMC4wOTk5OTk5OTQwMzk1MzU1MiwKICAgICAgMC4yMDAwMDAwMDI5ODAyMzIyNCwKICAgICAgMC4xOTk5OTk5OTU1Mjk2NTE2NCwKICAgICAgMC4yMDAwMDAwMDI5ODAyMzIyNCwKICAgICAgMC4yMDAwMDAwMDI5ODAyMzIyNCwKICAgICAgMC4xOTk5OTk5OTU1Mjk2NTE2NCwKICAgICAgMC4yMDAwMDAwMDI5ODAyMzIyNCwKICAgICAgMC4yMDAwMDAwMDI5ODAyMzIyNCwKICAgICAgMC4xMDAwMDAwMDE0OTAxMTYxMiwKICAgICAgMC4xMDAwMDAwMDE0OTAxMTYxMiwKICAgICAgNC4yMDAwMDAwMDI5ODAyMzIsCiAgICAgIDAuMzAwMDAwMDA0NDcwMzQ4MzYsCiAgICAgIDAuMzk5OTk5OTk4NTA5ODgzOSwKICAgICAgMC41LAogICAgICAwLjM5OTk5OTk5ODUwOTg4MzksCiAgICAgIDAuODk5OTk5OTk4NTA5ODgzOSwKICAgICAgMC4zOTk5OTk5OTg1MDk4ODM5LAogICAgICAwLjQwMDAwMDAwNTk2MDQ2NDUsCiAgICAgIDAuMzk5OTk5OTk4NTA5ODgzOSwKICAgICAgMC41LAogICAgICAwLjI5OTk5OTk5NzAxOTc2Nzc2LAogICAgICAwLjM5OTk5OTk5ODUwOTg4MzksCiAgICAgIDAuMzk5OTk5OTk4NTA5ODgzOSwKICAgICAgMC4zOTk5OTk5OTg1MDk4ODM5LAogICAgICAwLjY5OTk5OTk5NTUyOTY1MTYsCiAgICAgIDAuNSwKICAgICAgMC41LAogICAgICAwLjI5OTk5OTk5NzAxOTc2Nzc2LAogICAgICAwLjM5OTk5OTk5ODUwOTg4MzksCiAgICAgIDAuMjk5OTk5OTk3MDE5NzY3NzYsCiAgICAgIDAuMDk5OTk5OTk0MDM5NTM1NTIsCiAgICAgIDAuMTAwMDAwMDAxNDkwMTE2MTIsCiAgICAgIDAuMjAwMDAwMDAyOTgwMjMyMjQsCiAgICAgIDAuMDk5OTk5OTk0MDM5NTM1NTIsCiAgICAgIDAuMjAwMDAwMDAyOTgwMjMyMjQsCiAgICAgIDAuMTAwMDAwMDAxNDkwMTE2MTIsCiAgICAgIDAuMTAwMDAwMDAxNDkwMTE2MTIsCiAgICAgIDAuMTAwMDAwMDAxNDkwMTE2MTIsCiAgICAgIDAuMTAwMDAwMDAxNDkwMTE2MTIsCiAgICAgIDAuMTAwMDAwMDAxNDkwMTE2MTIsCiAgICAgIDkuNjAwMDAwMDAxNDkwMTE2LAogICAgICAwLjEwMDAwMDAwMTQ5MDExNjEyLAogICAgICAwLjEwMDAwMDAwMTQ5MDExNjEyLAogICAgICAwLjM5OTk5OTk5ODUwOTg4MzksCiAgICAgIDAuMTAwMDAwMDAxNDkwMTE2MTIsCiAgICAgIDAuMzAwMDAwMDA0NDcwMzQ4MzYsCiAgICAgIDAuMjAwMDAwMDAyOTgwMjMyMjQsCiAgICAgIDAuMjk5OTk5OTk3MDE5NzY3NzYsCiAgICAgIDAuMTk5OTk5OTk1NTI5NjUxNjQsCiAgICAgIDAuMTk5OTk5OTk1NTI5NjUxNjQsCiAgICAgIDAuMTAwMDAwMDAxNDkwMTE2MTIsCiAgICAgIDAuMTAwMDAwMDAxNDkwMTE2MTIsCiAgICAgIDAuMTk5OTk5OTk1NTI5NjUxNjQsCiAgICAgIDAuMDk5OTk5OTk0MDM5NTM1NTIsCiAgICAgIDAuMTk5OTk5OTk1NTI5NjUxNjQsCiAgICAgIDAuMTAwMDAwMDAxNDkwMTE2MTIsCiAgICAgIDIuODk5OTk5OTk4NTA5ODg0LAogICAgICAwLjM5OTk5OTk5ODUwOTg4MzksCiAgICAgIDAuNzAwMDAwMDAyOTgwMjMyMiwKICAgICAgMC4zOTk5OTk5OTg1MDk4ODM5LAogICAgICAxLAogICAgICAwLjUsCiAgICAgIDAuMzk5OTk5OTk4NTA5ODgzOSwKICAgICAgMC4yOTk5OTk5OTcwMTk3Njc3NiwKICAgICAgMC41LAogICAgICAwLjMwMDAwMDAwNDQ3MDM0ODM2LAogICAgICAwLjYwMDAwMDAwMTQ5MDExNjEsCiAgICAgIDAuMzk5OTk5OTk4NTA5ODgzOSwKICAgICAgMC40MDAwMDAwMDU5NjA0NjQ1LAogICAgICAwLjM5OTk5OTk5ODUwOTg4MzksCiAgICAgIDAuMjk5OTk5OTk3MDE5NzY3NzYsCiAgICAgIDAuMzk5OTk5OTk4NTA5ODgzOSwKICAgICAgMC4zOTk5OTk5OTg1MDk4ODM5LAogICAgICAwLjM5OTk5OTk5ODUwOTg4MzksCiAgICAgIDAuNSwKICAgICAgMC4zOTk5OTk5OTg1MDk4ODM5LAogICAgICAwLjM5OTk5OTk5ODUwOTg4MzksCiAgICAgIDAuMjAwMDAwMDAyOTgwMjMyMjQsCiAgICAgIDAuMTAwMDAwMDAxNDkwMTE2MTIsCiAgICAgIDAuMTAwMDAwMDAxNDkwMTE2MTIsCiAgICAgIDAuMDk5OTk5OTk0MDM5NTM1NTIsCiAgICAgIDAuMTAwMDAwMDAxNDkwMTE2MTIsCiAgICAgIDAuMTAwMDAwMDAxNDkwMTE2MTIsCiAgICAgIDAuMTk5OTk5OTk1NTI5NjUxNjQsCiAgICAgIDAuMTAwMDAwMDAxNDkwMTE2MTIsCiAgICAgIDAuMTAwMDAwMDAxNDkwMTE2MTIsCiAgICAgIDAuMDk5OTk5OTk0MDM5NTM1NTIsCiAgICAgIDguMzAwMDAwMDA0NDcwMzQ4LAogICAgICAwLjIwMDAwMDAwMjk4MDIzMjI0LAogICAgICAwLjIwMDAwMDAwMjk4MDIzMjI0LAogICAgICAwLjIwMDAwMDAwMjk4MDIzMjI0LAogICAgICAwLjQwMDAwMDAwNTk2MDQ2NDUsCiAgICAgIDAuMTAwMDAwMDAxNDkwMTE2MTIsCiAgICAgIDAuMTAwMDAwMDAxNDkwMTE2MTIsCiAgICAgIDAuMjk5OTk5OTk3MDE5NzY3NzYsCiAgICAgIDAuMTAwMDAwMDAxNDkwMTE2MTIsCiAgICAgIDAuMTk5OTk5OTk1NTI5NjUxNjQsCiAgICAgIDAuMjAwMDAwMDAyOTgwMjMyMjQsCiAgICAgIDAuMjAwMDAwMDAyOTgwMjMyMjQsCiAgICAgIDAuMTk5OTk5OTk1NTI5NjUxNjQsCiAgICAgIDAuMTAwMDAwMDAxNDkwMTE2MTIsCiAgICAgIDAuMjAwMDAwMDAyOTgwMjMyMjQsCiAgICAgIDMuNjk5OTk5OTk1NTI5NjUxNgogICAgXSwKICAgICJzdGFtcHMiOiBbCiAgICAgIDE2ODIuMjk2LAogICAgICAxNjk5LAogICAgICAxNzE1LjYsCiAgICAgIDE3NDguOSwKICAgICAgMTc2NS42LAogICAgICAxNzk4LjksCiAgICAgIDE4MTUuNiwKICAgICAgMTgzMi4yLAogICAgICAxODQ4LjksCiAgICAgIDE4NjUuNiwKICAgICAgMTg5OC45LAogICAgICAxOTE1LjYsCiAgICAgIDE5MzIuMywKICAgICAgMTk0OC45LAogICAgICAxOTY1LjYsCiAgICAgIDE5ODIuMiwKICAgICAgMTk5OC45LAogICAgICAyMDE1LjUsCiAgICAgIDIwNjUuNSwKICAgICAgMjA5OC45LAogICAgICAyMTE1LjUsCiAgICAgIDIxMzIuMywKICAgICAgMjE0OC45LAogICAgICAyMTY1LjUsCiAgICAgIDIxODIuMiwKICAgICAgMjE5OC45LAogICAgICAyMjE1LjYsCiAgICAgIDIyNDguOCwKICAgICAgMjI2NS41LAogICAgICAyMjgyLjIsCiAgICAgIDIyOTguOSwKICAgICAgMjMzMi4zLAogICAgICAyMzQ4LjksCiAgICAgIDIzNjUuNSwKICAgICAgMjM4Mi4zLAogICAgICAyMzk4LjksCiAgICAgIDI0MTUuNiwKICAgICAgMjQzMi4yLAogICAgICAyNDQ4LjksCiAgICAgIDI0NjUuNiwKICAgICAgMjQ4Mi4yLAogICAgICAyOTQ4Ljg0OCwKICAgICAgMjk2NS41LAogICAgICAyOTgyLjIsCiAgICAgIDI5OTguOSwKICAgICAgMzAxNS42LAogICAgICAzMDMyLjIsCiAgICAgIDMwNDguOSwKICAgICAgMzA2NS41LAogICAgICAzMDk4LjgsCiAgICAgIDMxMTUuNSwKICAgICAgMzEzMi4yLAogICAgICAzMTQ4LjksCiAgICAgIDMxNjUuNSwKICAgICAgMzE5OC45LAogICAgICAzMjE1LjUsCiAgICAgIDMyMzIuMiwKICAgICAgMzI0OC44LAogICAgICAzMjY1LjUsCiAgICAgIDMyODIuMSwKICAgICAgMzI5OC44LAogICAgICAzMzMyLjIsCiAgICAgIDMzNDguOCwKICAgICAgMzM2NS41LAogICAgICAzMzgyLjIsCiAgICAgIDM0MTUuNSwKICAgICAgMzQzMi4xLAogICAgICAzNDQ4LjksCiAgICAgIDM0NjUuNSwKICAgICAgMzQ4Mi4xLAogICAgICAzNDk4LjgsCiAgICAgIDM1MTUuNSwKICAgICAgMzUzMi4yLAogICAgICAzNTQ4LjgsCiAgICAgIDM1NjUuNSwKICAgICAgMzU4Mi4yLAogICAgICAzNTk4LjgsCiAgICAgIDM2MTUuNSwKICAgICAgMzYzMi4yLAogICAgICAzNjQ4LjgsCiAgICAgIDM2NjUuNSwKICAgICAgMzY4Mi4yLAogICAgICAzNjk4LjgsCiAgICAgIDM3MTUuNSwKICAgICAgMzczMi4yLAogICAgICAzNzQ4LjksCiAgICAgIDM3NjUuNSwKICAgICAgNDIxNS40ODIsCiAgICAgIDQyMzIuMSwKICAgICAgNDI0OC44LAogICAgICA0MjY1LjUsCiAgICAgIDQyODIuMSwKICAgICAgNDI5OC44LAogICAgICA0MzE1LjQsCiAgICAgIDQzMzIuMSwKICAgICAgNDM0OC44LAogICAgICA0MzY1LjUsCiAgICAgIDQzODIuMSwKICAgICAgNDM5OC44LAogICAgICA0NDMyLjEsCiAgICAgIDQ0NDguOCwKICAgICAgNDQ2NS41LAogICAgICA0NDgyLjEsCiAgICAgIDQ0OTguOCwKICAgICAgNDUxNS41LAogICAgICA0NTMyLjEsCiAgICAgIDQ1NDguOCwKICAgICAgNDU2NS40LAogICAgICA0NTk4LjgsCiAgICAgIDQ2MzIuMSwKICAgICAgNDY0OC44LAogICAgICA0NjY1LjUsCiAgICAgIDQ2ODIuMSwKICAgICAgNDY5OC44LAogICAgICA0NzE1LjUsCiAgICAgIDQ3MzIuMSwKICAgICAgNDc0OC44LAogICAgICA0NzY1LjUsCiAgICAgIDQ3ODIuMSwKICAgICAgNDc5OC44LAogICAgICA0ODE1LjQsCiAgICAgIDQ4MzIuMiwKICAgICAgNDg2NS41LAogICAgICA0ODgyLjEsCiAgICAgIDQ4OTguOCwKICAgICAgNDkxNS40LAogICAgICA0OTMyLjEsCiAgICAgIDQ5NDguOCwKICAgICAgNDk2NS40LAogICAgICA0OTgyLjEsCiAgICAgIDQ5OTguNywKICAgICAgNTAxNS40LAogICAgICA1MDMyLjEKICAgIF0KICB9Cn0="
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0e5811008cb7fd058f05-62a4250007e62834cd20",
+          "file": "cadence-performance.spec.ts",
+          "line": 24,
+          "column": 70
+        },
+        {
+          "title": "native rAF callback budget and idle work at 1280x720",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-game",
+              "projectName": "firefox-game",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10984,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T11:31:18.032Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-frame-budget-1280",
+                      "contentType": "application/json",
+                      "body": "ewogICJzaXplIjogewogICAgIndpZHRoIjogMTI4MCwKICAgICJoZWlnaHQiOiA3MjAKICB9LAogICJicm93c2VyIjogIjE1Ny4wIiwKICAibWV0aG9kIjogIm5hdGl2ZSByQUYgY2FsbGJhY2sgd2FsbC10aW1lIGNvc3QsIGluY2x1ZGVzIEpTIGRyYXdpbmcvZmVlZGJhY2s7IG5vdCBHUFUgb3IgcGh5c2ljYWwgaGlnaC1yZWZyZXNoIGNlcnRpZmljYXRpb24iLAogICJwOTVNcyI6IDYsCiAgInNhbXBsZSI6IHsKICAgICJjYWxsYmFja3MiOiAxMzksCiAgICAiY29zdHMiOiBbCiAgICAgIDYsCiAgICAgIDYsCiAgICAgIDEsCiAgICAgIDQsCiAgICAgIDYsCiAgICAgIDQsCiAgICAgIDMsCiAgICAgIDIsCiAgICAgIDMsCiAgICAgIDMsCiAgICAgIDMsCiAgICAgIDIsCiAgICAgIDMsCiAgICAgIDIsCiAgICAgIDIsCiAgICAgIDMsCiAgICAgIDMsCiAgICAgIDIsCiAgICAgIDMsCiAgICAgIDIsCiAgICAgIDMsCiAgICAgIDIsCiAgICAgIDIsCiAgICAgIDQsCiAgICAgIDEsCiAgICAgIDEsCiAgICAgIDIsCiAgICAgIDMsCiAgICAgIDIsCiAgICAgIDEsCiAgICAgIDIsCiAgICAgIDEsCiAgICAgIDE5LAogICAgICAzLAogICAgICAxLAogICAgICAyLAogICAgICAyLAogICAgICAyLAogICAgICAxLAogICAgICAyLAogICAgICAzLAogICAgICAyLAogICAgICAyLAogICAgICAzLAogICAgICAyLAogICAgICAyLAogICAgICAxLAogICAgICAyLAogICAgICAxMSwKICAgICAgNiwKICAgICAgMiwKICAgICAgNSwKICAgICAgMiwKICAgICAgMywKICAgICAgMiwKICAgICAgMiwKICAgICAgNSwKICAgICAgMywKICAgICAgMywKICAgICAgNCwKICAgICAgNCwKICAgICAgNCwKICAgICAgMywKICAgICAgMywKICAgICAgNCwKICAgICAgNCwKICAgICAgMiwKICAgICAgMiwKICAgICAgMiwKICAgICAgMiwKICAgICAgMiwKICAgICAgMywKICAgICAgMiwKICAgICAgNiwKICAgICAgMywKICAgICAgMTYsCiAgICAgIDEsCiAgICAgIDIsCiAgICAgIDIsCiAgICAgIDIsCiAgICAgIDQsCiAgICAgIDEsCiAgICAgIDIsCiAgICAgIDMsCiAgICAgIDIsCiAgICAgIDIsCiAgICAgIDIsCiAgICAgIDMsCiAgICAgIDMsCiAgICAgIDIsCiAgICAgIDE3LAogICAgICAyLAogICAgICA1LAogICAgICAzLAogICAgICAyLAogICAgICAzLAogICAgICAzLAogICAgICA1LAogICAgICAxLAogICAgICA1LAogICAgICAyLAogICAgICAyLAogICAgICA1LAogICAgICAyLAogICAgICAyLAogICAgICAzLAogICAgICA0LAogICAgICAzLAogICAgICAzLAogICAgICAyLAogICAgICAyLAogICAgICAzLAogICAgICAyLAogICAgICAxLAogICAgICAyLAogICAgICAyLAogICAgICAyLAogICAgICAyLAogICAgICAyLAogICAgICAxLAogICAgICAyLAogICAgICAzLAogICAgICAxNiwKICAgICAgMiwKICAgICAgMiwKICAgICAgMCwKICAgICAgMiwKICAgICAgMiwKICAgICAgMiwKICAgICAgMiwKICAgICAgMiwKICAgICAgMiwKICAgICAgMiwKICAgICAgMiwKICAgICAgMiwKICAgICAgMiwKICAgICAgMSwKICAgICAgMSwKICAgICAgMTIKICAgIF0sCiAgICAic3RhbXBzIjogWwogICAgICAyNzY2LjQ0LAogICAgICAyNzY3LjA2LAogICAgICAyODE3LjM4LAogICAgICAyODM0LjU4LAogICAgICAyODUxLjA0LAogICAgICAyODY3LjIsCiAgICAgIDI4ODMuODQsCiAgICAgIDI5MDAuNzYsCiAgICAgIDI5MTcuMDIsCiAgICAgIDI5MzMuNzQsCiAgICAgIDI5NTAuNDgsCiAgICAgIDI5NjcuNDgsCiAgICAgIDI5ODMuODIsCiAgICAgIDMwMDAuMzQsCiAgICAgIDMwMTcsCiAgICAgIDMwMzMuODQsCiAgICAgIDMwNTAuOTIsCiAgICAgIDMwNjcuMzIsCiAgICAgIDMwODQuMSwKICAgICAgMzEwMS4zOCwKICAgICAgMzExNy43OCwKICAgICAgMzEzMy45NCwKICAgICAgMzE1MC42NCwKICAgICAgMzE2NywKICAgICAgMzE4My43NiwKICAgICAgMzIwMC42LAogICAgICAzMjE3Ljk0LAogICAgICAzMjMzLjk2LAogICAgICAzMjUwLjM4LAogICAgICAzMjY3LjQ0LAogICAgICAzMjgzLjk0LAogICAgICAzMzAwLjgyLAogICAgICAzMzE3LjE0LAogICAgICAzMzM0LjAyLAogICAgICAzMzUwLjcsCiAgICAgIDMzNjcuOSwKICAgICAgMzM4NC4wNiwKICAgICAgMzQwMS4xMiwKICAgICAgMzQxNy4xLAogICAgICAzNDMzLjY2LAogICAgICAzNDUwLjM2LAogICAgICAzNDY3LjEsCiAgICAgIDM0ODMuODQsCiAgICAgIDM1MDAuMzgsCiAgICAgIDM1MTcuOTYsCiAgICAgIDM1MzMuNywKICAgICAgMzU1MC41LAogICAgICAzNTY3LjA2LAogICAgICAzNTgzLjgsCiAgICAgIDQwMjYuODIsCiAgICAgIDQwMjcsCiAgICAgIDQwNzEuODgsCiAgICAgIDQwODguOCwKICAgICAgNDEwNS4xMiwKICAgICAgNDEyMS42NiwKICAgICAgNDE1NS41NiwKICAgICAgNDE3Mi42LAogICAgICA0MjA1LjA0LAogICAgICA0MjIxLjY2LAogICAgICA0MjcyLjM4LAogICAgICA0Mjg4LjgyLAogICAgICA0MzA1LjAyLAogICAgICA0MzIyLjMyLAogICAgICA0MzM4LjI4LAogICAgICA0MzU1LjQ4LAogICAgICA0MzcxLjUsCiAgICAgIDQ0MDUuNjQsCiAgICAgIDQ0MjEuNDIsCiAgICAgIDQ0NzIuMzgsCiAgICAgIDQ0ODguNDQsCiAgICAgIDQ1MDUuMiwKICAgICAgNDUyMi4xMiwKICAgICAgNDUzOC44NCwKICAgICAgNDU1NC42NiwKICAgICAgNDU3Mi4wMiwKICAgICAgNDU4OC4zOCwKICAgICAgNDYwNC42NCwKICAgICAgNDYyMS41LAogICAgICA0NjM4LjgyLAogICAgICA0NjU1LjE4LAogICAgICA0NjcxLjI0LAogICAgICA0Njg4LjI2LAogICAgICA0NzA1LjM2LAogICAgICA0NzIxLjM4LAogICAgICA0NzM4LjI2LAogICAgICA0NzcxLjc0LAogICAgICA0Nzg4LjI0LAogICAgICA0ODA1LjQ4LAogICAgICA0ODIyLjE2LAogICAgICA0ODM4LjA2LAogICAgICA0ODU0LjcsCiAgICAgIDU1MTUuMDYsCiAgICAgIDU1MzUsCiAgICAgIDU1NjkuODIsCiAgICAgIDU1ODYuMjYsCiAgICAgIDU2MDIuNzIsCiAgICAgIDU2MTkuOTIsCiAgICAgIDU2MzYuMTgsCiAgICAgIDU2NTMuMzgsCiAgICAgIDU2NzAuMjQsCiAgICAgIDU2ODYuNzQsCiAgICAgIDU3MDIuNjQsCiAgICAgIDU3MjAsCiAgICAgIDU3MzYsCiAgICAgIDU3NTMuMjQsCiAgICAgIDU3NjkuODYsCiAgICAgIDU3ODYuMjYsCiAgICAgIDU4MDMsCiAgICAgIDU4MjAuMDgsCiAgICAgIDU4MzYuMzQsCiAgICAgIDU4NTIuNjQsCiAgICAgIDU4NjkuMzIsCiAgICAgIDU4ODYuMywKICAgICAgNTkxOS4yNCwKICAgICAgNTkzNi4wNCwKICAgICAgNTk4Ni40MiwKICAgICAgNjAwMi42MiwKICAgICAgNjAxOS4yMiwKICAgICAgNjAzNiwKICAgICAgNjA1Mi40MiwKICAgICAgNjA2OS43OCwKICAgICAgNjA4NS43NiwKICAgICAgNjEwMi41MiwKICAgICAgNjExOS4zLAogICAgICA2MTM1LjgyLAogICAgICA2MTUyLjM2LAogICAgICA2MTY5LjU2LAogICAgICA2MTg1LjY4LAogICAgICA2MjAzLjE2LAogICAgICA2MjE5Ljc2LAogICAgICA2MjM1Ljk4LAogICAgICA2MjUyLjM2LAogICAgICA2MjY5LjEsCiAgICAgIDYyODUuNjQsCiAgICAgIDYzMDIuMjgsCiAgICAgIDYzMTkuMjYsCiAgICAgIDYzMzYuMjgsCiAgICAgIDYzNTMuMjQsCiAgICAgIDYzNjkuNDYKICAgIF0KICB9Cn0="
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0e5811008cb7fd058f05-b60c2872c25b2b774bd3",
+          "file": "cadence-performance.spec.ts",
+          "line": 24,
+          "column": 70
+        },
+        {
+          "title": "native rAF callback budget and idle work at 1920x1080",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-game",
+              "projectName": "firefox-game",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5717,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T11:31:35.075Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-frame-budget-1920",
+                      "contentType": "application/json",
+                      "body": "ewogICJzaXplIjogewogICAgIndpZHRoIjogMTkyMCwKICAgICJoZWlnaHQiOiAxMDgwCiAgfSwKICAiYnJvd3NlciI6ICIxNTcuMCIsCiAgIm1ldGhvZCI6ICJuYXRpdmUgckFGIGNhbGxiYWNrIHdhbGwtdGltZSBjb3N0LCBpbmNsdWRlcyBKUyBkcmF3aW5nL2ZlZWRiYWNrOyBub3QgR1BVIG9yIHBoeXNpY2FsIGhpZ2gtcmVmcmVzaCBjZXJ0aWZpY2F0aW9uIiwKICAicDk1TXMiOiAxMCwKICAic2FtcGxlIjogewogICAgImNhbGxiYWNrcyI6IDEyMywKICAgICJjb3N0cyI6IFsKICAgICAgNSwKICAgICAgNSwKICAgICAgNCwKICAgICAgMywKICAgICAgMTEsCiAgICAgIDYsCiAgICAgIDcsCiAgICAgIDQsCiAgICAgIDUsCiAgICAgIDQsCiAgICAgIDcsCiAgICAgIDMsCiAgICAgIDQsCiAgICAgIDQsCiAgICAgIDYsCiAgICAgIDMsCiAgICAgIDUsCiAgICAgIDMsCiAgICAgIDMsCiAgICAgIDIsCiAgICAgIDQsCiAgICAgIDMsCiAgICAgIDQsCiAgICAgIDE3LAogICAgICA0LAogICAgICA0LAogICAgICAzLAogICAgICAyLAogICAgICAzLAogICAgICAzLAogICAgICAyLAogICAgICAyLAogICAgICAzLAogICAgICAzLAogICAgICAzLAogICAgICAzLAogICAgICAzLAogICAgICAzLAogICAgICAxNywKICAgICAgMywKICAgICAgNSwKICAgICAgNiwKICAgICAgMywKICAgICAgMywKICAgICAgNCwKICAgICAgNSwKICAgICAgNiwKICAgICAgNCwKICAgICAgNSwKICAgICAgNywKICAgICAgNCwKICAgICAgOSwKICAgICAgNCwKICAgICAgNCwKICAgICAgMSwKICAgICAgNCwKICAgICAgMiwKICAgICAgMiwKICAgICAgMywKICAgICAgMTEsCiAgICAgIDIsCiAgICAgIDQsCiAgICAgIDMsCiAgICAgIDIsCiAgICAgIDMsCiAgICAgIDMsCiAgICAgIDMsCiAgICAgIDMsCiAgICAgIDQsCiAgICAgIDMsCiAgICAgIDMsCiAgICAgIDMsCiAgICAgIDIsCiAgICAgIDMsCiAgICAgIDQsCiAgICAgIDEwLAogICAgICA0LAogICAgICA0LAogICAgICAzLAogICAgICA1LAogICAgICA1LAogICAgICA1LAogICAgICA0LAogICAgICAyLAogICAgICA2LAogICAgICAzLAogICAgICAzLAogICAgICAzLAogICAgICA1LAogICAgICA0LAogICAgICA0LAogICAgICA0LAogICAgICAyLAogICAgICA0LAogICAgICAzLAogICAgICA1LAogICAgICAzLAogICAgICA0LAogICAgICAzLAogICAgICAzLAogICAgICAzLAogICAgICAzLAogICAgICAzLAogICAgICAyLAogICAgICAzLAogICAgICA0LAogICAgICAxNiwKICAgICAgMywKICAgICAgMywKICAgICAgMywKICAgICAgNCwKICAgICAgMywKICAgICAgNCwKICAgICAgMSwKICAgICAgMiwKICAgICAgMywKICAgICAgMiwKICAgICAgMywKICAgICAgNSwKICAgICAgMiwKICAgICAgMywKICAgICAgNSwKICAgICAgMTIKICAgIF0sCiAgICAic3RhbXBzIjogWwogICAgICAxMDMxLjQ0LAogICAgICAxMDQyLjcsCiAgICAgIDEwNTkuMywKICAgICAgMTA5Mi43MiwKICAgICAgMTEwOS44MiwKICAgICAgMTE0My4wMiwKICAgICAgMTE3Ni43NiwKICAgICAgMTE5Mi45LAogICAgICAxMjI1Ljc0LAogICAgICAxMjQyLjM2LAogICAgICAxMjc1Ljg4LAogICAgICAxMjkyLjMyLAogICAgICAxMzA5Ljc0LAogICAgICAxMzQyLjIyLAogICAgICAxMzU4Ljk4LAogICAgICAxMzc2LjE2LAogICAgICAxNDI1Ljc2LAogICAgICAxNDQyLjM2LAogICAgICAxNDc2LjIyLAogICAgICAxNTA4LjcyLAogICAgICAxNTI1LjgyLAogICAgICAxNTQyLjM2LAogICAgICAxNTU5LjEyLAogICAgICAxNTc1LjgsCiAgICAgIDE2MDguNzgsCiAgICAgIDE2MjYuMTYsCiAgICAgIDE2NDIuODQsCiAgICAgIDE2NTguNiwKICAgICAgMTY3NS42LAogICAgICAxNjkyLjM2LAogICAgICAxNzA4LjM4LAogICAgICAxNzQxLjksCiAgICAgIDE3NTkuMDQsCiAgICAgIDE3NzUuMDgsCiAgICAgIDE3OTIuNDQsCiAgICAgIDE4MDkuMjQsCiAgICAgIDE4MjUsCiAgICAgIDE4NDEuNjgsCiAgICAgIDE4NTguMTYsCiAgICAgIDIyODAuMjIsCiAgICAgIDIyODAuNzgsCiAgICAgIDIzMDkuMywKICAgICAgMjMyNS4wNiwKICAgICAgMjM1OC40LAogICAgICAyMzc2LjA0LAogICAgICAyMzkyLjY2LAogICAgICAyNDI1LjAyLAogICAgICAyNDQyLjI4LAogICAgICAyNDU4LjMsCiAgICAgIDI0OTIuMzYsCiAgICAgIDI1NDIuNjIsCiAgICAgIDI1OTEuNjIsCiAgICAgIDI2NzQuOSwKICAgICAgMjY5MS44LAogICAgICAyNzQxLjYsCiAgICAgIDI3NTkuMSwKICAgICAgMjc3NC45LAogICAgICAyNzkyLjQsCiAgICAgIDI4MDguMDQsCiAgICAgIDI4MjQuOTYsCiAgICAgIDI4NDEuNDQsCiAgICAgIDI4NTguMjQsCiAgICAgIDI4NzUuMTgsCiAgICAgIDI4OTEuNSwKICAgICAgMjkwOC40LAogICAgICAyOTI1LAogICAgICAyOTQyLjMyLAogICAgICAyOTU4LjE4LAogICAgICAyOTc0LjkyLAogICAgICAyOTkyLjAyLAogICAgICAzMDA4LjQ2LAogICAgICAzMDI1LjE0LAogICAgICAzMDQxLjg0LAogICAgICAzMDYwLjIsCiAgICAgIDMwNzUuNzQsCiAgICAgIDMwOTMuNDgsCiAgICAgIDM1MDkuMDIsCiAgICAgIDM1MDkuMiwKICAgICAgMzU0Ny40OCwKICAgICAgMzU2My42LAogICAgICAzNTgwLjE4LAogICAgICAzNjEzLjU4LAogICAgICAzNjMwLjIyLAogICAgICAzNjQ2LjksCiAgICAgIDM2NjMuNjIsCiAgICAgIDM2ODAuODIsCiAgICAgIDM2OTYuODYsCiAgICAgIDM3MzAuMTQsCiAgICAgIDM3NDYuODYsCiAgICAgIDM3NjQuMTQsCiAgICAgIDM3ODAuMDgsCiAgICAgIDM3OTcuNjgsCiAgICAgIDM4MTMuOSwKICAgICAgMzgzMC4zNCwKICAgICAgMzg0Ni45MiwKICAgICAgMzg2NC4zNCwKICAgICAgMzg3OS45NCwKICAgICAgMzg5Ni44NiwKICAgICAgMzkzMC42OCwKICAgICAgMzk0Ny41OCwKICAgICAgMzk2My43MiwKICAgICAgMzk4MC43OCwKICAgICAgMzk5Ni42MiwKICAgICAgNDAxMy4zLAogICAgICA0MDM0LjcyLAogICAgICA0MDUzLjA2LAogICAgICA0MDcwLjc4LAogICAgICA0MDg3LjEsCiAgICAgIDQxMDMuNDIsCiAgICAgIDQxMjAuMTIsCiAgICAgIDQxMzYuNzgsCiAgICAgIDQxNTMuNzIsCiAgICAgIDQxNzAuMzgsCiAgICAgIDQxODcuMDYsCiAgICAgIDQyMDQuMzgsCiAgICAgIDQyMjEuMTYsCiAgICAgIDQyMzcuNjYsCiAgICAgIDQyNTQuMTYsCiAgICAgIDQyNzEuNDIsCiAgICAgIDQyODcuOTYsCiAgICAgIDQzMDQuODQsCiAgICAgIDQzMjEuMjQsCiAgICAgIDQzMzcuNzgKICAgIF0KICB9Cn0="
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0e5811008cb7fd058f05-027230346011f43b46d3",
+          "file": "cadence-performance.spec.ts",
+          "line": 24,
+          "column": 70
+        },
+        {
+          "title": "native rAF callback budget and idle work at 1280x720",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-game",
+              "projectName": "webkit-game",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5326,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T11:32:02.987Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-frame-budget-1280",
+                      "contentType": "application/json",
+                      "body": "ewogICJzaXplIjogewogICAgIndpZHRoIjogMTI4MCwKICAgICJoZWlnaHQiOiA3MjAKICB9LAogICJicm93c2VyIjogIjI3LjIiLAogICJtZXRob2QiOiAibmF0aXZlIHJBRiBjYWxsYmFjayB3YWxsLXRpbWUgY29zdCwgaW5jbHVkZXMgSlMgZHJhd2luZy9mZWVkYmFjazsgbm90IEdQVSBvciBwaHlzaWNhbCBoaWdoLXJlZnJlc2ggY2VydGlmaWNhdGlvbiIsCiAgInA5NU1zIjogMiwKICAic2FtcGxlIjogewogICAgImNhbGxiYWNrcyI6IDE1MSwKICAgICJjb3N0cyI6IFsKICAgICAgMywKICAgICAgMSwKICAgICAgMSwKICAgICAgMSwKICAgICAgMSwKICAgICAgMiwKICAgICAgMSwKICAgICAgMSwKICAgICAgMSwKICAgICAgMSwKICAgICAgMiwKICAgICAgMSwKICAgICAgMSwKICAgICAgMSwKICAgICAgMiwKICAgICAgMSwKICAgICAgMSwKICAgICAgMiwKICAgICAgMSwKICAgICAgMSwKICAgICAgMiwKICAgICAgMSwKICAgICAgMCwKICAgICAgMSwKICAgICAgMCwKICAgICAgMCwKICAgICAgMCwKICAgICAgMSwKICAgICAgMCwKICAgICAgMCwKICAgICAgMSwKICAgICAgMCwKICAgICAgMCwKICAgICAgOSwKICAgICAgMSwKICAgICAgMSwKICAgICAgMCwKICAgICAgMSwKICAgICAgMCwKICAgICAgMCwKICAgICAgMCwKICAgICAgMCwKICAgICAgMCwKICAgICAgMSwKICAgICAgMCwKICAgICAgMSwKICAgICAgMCwKICAgICAgMCwKICAgICAgMCwKICAgICAgMCwKICAgICAgMTAsCiAgICAgIDEsCiAgICAgIDEsCiAgICAgIDEsCiAgICAgIDEsCiAgICAgIDEsCiAgICAgIDEsCiAgICAgIDIsCiAgICAgIDEsCiAgICAgIDEsCiAgICAgIDAsCiAgICAgIDEsCiAgICAgIDEsCiAgICAgIDIsCiAgICAgIDEsCiAgICAgIDEsCiAgICAgIDEsCiAgICAgIDAsCiAgICAgIDEsCiAgICAgIDIsCiAgICAgIDEsCiAgICAgIDEsCiAgICAgIDIsCiAgICAgIDAsCiAgICAgIDAsCiAgICAgIDEsCiAgICAgIDAsCiAgICAgIDAsCiAgICAgIDAsCiAgICAgIDAsCiAgICAgIDAsCiAgICAgIDEsCiAgICAgIDEsCiAgICAgIDAsCiAgICAgIDEwLAogICAgICAwLAogICAgICAwLAogICAgICAxLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICA4LAogICAgICAxLAogICAgICAxLAogICAgICAwLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAyLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAxLAogICAgICAxLAogICAgICA1LAogICAgICAwLAogICAgICAxLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAxLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAxMgogICAgXSwKICAgICJzdGFtcHMiOiBbCiAgICAgIDc3OCwKICAgICAgNzk1LAogICAgICA4MDksCiAgICAgIDgyNSwKICAgICAgODQyLAogICAgICA4NTksCiAgICAgIDg3NiwKICAgICAgODkzLAogICAgICA5MDksCiAgICAgIDkyNSwKICAgICAgOTQyLAogICAgICA5NTgsCiAgICAgIDk3NiwKICAgICAgOTkzLAogICAgICAxMDA5LAogICAgICAxMDI2LAogICAgICAxMDQyLAogICAgICAxMDU4LAogICAgICAxMDc1LAogICAgICAxMDkzLAogICAgICAxMTA5LAogICAgICAxMTI1LAogICAgICAxMTQ5LAogICAgICAxMTYxLAogICAgICAxMTc1LAogICAgICAxMTkzLAogICAgICAxMjA4LAogICAgICAxMjI2LAogICAgICAxMjQyLAogICAgICAxMjU4LAogICAgICAxMjc1LAogICAgICAxMjkyLAogICAgICAxMzA5LAogICAgICAxMzI1LAogICAgICAxMzQyLAogICAgICAxMzU4LAogICAgICAxMzc1LAogICAgICAxMzkxLAogICAgICAxNDA4LAogICAgICAxNDI1LAogICAgICAxNDM1LAogICAgICAxNDUzLAogICAgICAxNDY4LAogICAgICAxNDg1LAogICAgICAxNTAyLAogICAgICAxNTE4LAogICAgICAxNTM1LAogICAgICAxNTUxLAogICAgICAxNTY4LAogICAgICAxNTg1LAogICAgICAxNjAyLAogICAgICAxOTY2LAogICAgICAxOTg0LAogICAgICAxOTk5LAogICAgICAyMDE2LAogICAgICAyMDMzLAogICAgICAyMDQ5LAogICAgICAyMDY1LAogICAgICAyMDgyLAogICAgICAyMTAwLAogICAgICAyMTE2LAogICAgICAyMTMzLAogICAgICAyMTQ5LAogICAgICAyMTY1LAogICAgICAyMTgzLAogICAgICAyMTk4LAogICAgICAyMjE1LAogICAgICAyMjMyLAogICAgICAyMjQ5LAogICAgICAyMjY1LAogICAgICAyMjgyLAogICAgICAyMjk4LAogICAgICAyMzE0LAogICAgICAyMzMxLAogICAgICAyMzQ5LAogICAgICAyMzY0LAogICAgICAyMzgxLAogICAgICAyMzk4LAogICAgICAyNDE1LAogICAgICAyNDMxLAogICAgICAyNDQ0LAogICAgICAyNDYwLAogICAgICAyNDc2LAogICAgICAyNDk0LAogICAgICAyNTEwLAogICAgICAyNTI2LAogICAgICAyNTQ0LAogICAgICAyNTU5LAogICAgICAyNTc3LAogICAgICAyNTkzLAogICAgICAyNjEwLAogICAgICAyNjI3LAogICAgICAyNjQyLAogICAgICAyNjU5LAogICAgICAyNjc2LAogICAgICAyNjkyLAogICAgICAyNzA5LAogICAgICAyNzI2LAogICAgICAyNzQyLAogICAgICAyNzU5LAogICAgICAyNzc1LAogICAgICAzMTM5LAogICAgICAzMTU2LAogICAgICAzMTc0LAogICAgICAzMTkwLAogICAgICAzMjA2LAogICAgICAzMjIzLAogICAgICAzMjM5LAogICAgICAzMjU1LAogICAgICAzMjcyLAogICAgICAzMjg5LAogICAgICAzMzA1LAogICAgICAzMzIxLAogICAgICAzMzM4LAogICAgICAzMzU3LAogICAgICAzMzczLAogICAgICAzMzkxLAogICAgICAzNDA2LAogICAgICAzNDIzLAogICAgICAzNDQwLAogICAgICAzNDU2LAogICAgICAzNDczLAogICAgICAzNDkwLAogICAgICAzNTA3LAogICAgICAzNTIyLAogICAgICAzNTQwLAogICAgICAzNTU2LAogICAgICAzNTczLAogICAgICAzNTkwLAogICAgICAzNjA2LAogICAgICAzNjIyLAogICAgICAzNjM5LAogICAgICAzNjU1LAogICAgICAzNjcyLAogICAgICAzNjg5LAogICAgICAzNzA1LAogICAgICAzNzIxLAogICAgICAzNzM4LAogICAgICAzNzU1LAogICAgICAzNzcxLAogICAgICAzNzg5LAogICAgICAzODA1LAogICAgICAzODIxLAogICAgICAzODM5LAogICAgICAzODU0LAogICAgICAzODcxLAogICAgICAzODg4LAogICAgICAzOTA1LAogICAgICAzOTIxLAogICAgICAzOTM3LAogICAgICAzOTU0CiAgICBdCiAgfQp9"
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0e5811008cb7fd058f05-fc349da1de1f26320f98",
+          "file": "cadence-performance.spec.ts",
+          "line": 24,
+          "column": 70
+        },
+        {
+          "title": "native rAF callback budget and idle work at 1920x1080",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-game",
+              "projectName": "webkit-game",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5225,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T11:32:08.822Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-frame-budget-1920",
+                      "contentType": "application/json",
+                      "body": "ewogICJzaXplIjogewogICAgIndpZHRoIjogMTkyMCwKICAgICJoZWlnaHQiOiAxMDgwCiAgfSwKICAiYnJvd3NlciI6ICIyNy4yIiwKICAibWV0aG9kIjogIm5hdGl2ZSByQUYgY2FsbGJhY2sgd2FsbC10aW1lIGNvc3QsIGluY2x1ZGVzIEpTIGRyYXdpbmcvZmVlZGJhY2s7IG5vdCBHUFUgb3IgcGh5c2ljYWwgaGlnaC1yZWZyZXNoIGNlcnRpZmljYXRpb24iLAogICJwOTVNcyI6IDIsCiAgInNhbXBsZSI6IHsKICAgICJjYWxsYmFja3MiOiAxNDgsCiAgICAiY29zdHMiOiBbCiAgICAgIDIsCiAgICAgIDIsCiAgICAgIDEsCiAgICAgIDEsCiAgICAgIDMsCiAgICAgIDIsCiAgICAgIDEsCiAgICAgIDEsCiAgICAgIDIsCiAgICAgIDEsCiAgICAgIDIsCiAgICAgIDIsCiAgICAgIDEsCiAgICAgIDIsCiAgICAgIDIsCiAgICAgIDIsCiAgICAgIDIsCiAgICAgIDEsCiAgICAgIDEsCiAgICAgIDIsCiAgICAgIDIsCiAgICAgIDIsCiAgICAgIDAsCiAgICAgIDEsCiAgICAgIDEsCiAgICAgIDAsCiAgICAgIDAsCiAgICAgIDAsCiAgICAgIDAsCiAgICAgIDAsCiAgICAgIDAsCiAgICAgIDAsCiAgICAgIDAsCiAgICAgIDE1LAogICAgICAxLAogICAgICAxLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAxLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAxLAogICAgICAwLAogICAgICAwLAogICAgICAxNSwKICAgICAgMiwKICAgICAgMSwKICAgICAgMSwKICAgICAgMSwKICAgICAgMSwKICAgICAgMSwKICAgICAgMiwKICAgICAgMiwKICAgICAgMSwKICAgICAgMiwKICAgICAgMSwKICAgICAgMiwKICAgICAgMSwKICAgICAgMSwKICAgICAgMiwKICAgICAgMSwKICAgICAgMiwKICAgICAgMiwKICAgICAgMiwKICAgICAgMSwKICAgICAgMSwKICAgICAgMCwKICAgICAgMCwKICAgICAgMCwKICAgICAgMCwKICAgICAgMCwKICAgICAgMCwKICAgICAgMCwKICAgICAgMSwKICAgICAgMSwKICAgICAgMSwKICAgICAgMCwKICAgICAgMTAsCiAgICAgIDEsCiAgICAgIDAsCiAgICAgIDEsCiAgICAgIDEsCiAgICAgIDEsCiAgICAgIDAsCiAgICAgIDAsCiAgICAgIDEsCiAgICAgIDAsCiAgICAgIDAsCiAgICAgIDAsCiAgICAgIDEsCiAgICAgIDAsCiAgICAgIDAsCiAgICAgIDAsCiAgICAgIDEyLAogICAgICAxLAogICAgICAyLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAyLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAxLAogICAgICAwLAogICAgICAwLAogICAgICAxLAogICAgICAwLAogICAgICAxLAogICAgICAxLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAxLAogICAgICAxLAogICAgICA2LAogICAgICAxLAogICAgICAwLAogICAgICAwLAogICAgICAxLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAxLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAwLAogICAgICAxLAogICAgICAwLAogICAgICAxNAogICAgXSwKICAgICJzdGFtcHMiOiBbCiAgICAgIDY3MSwKICAgICAgNjg1LAogICAgICA3MDMsCiAgICAgIDcxOSwKICAgICAgNzM1LAogICAgICA3NTEsCiAgICAgIDc2NywKICAgICAgNzg1LAogICAgICA4MDIsCiAgICAgIDgyMCwKICAgICAgODM2LAogICAgICA4NTIsCiAgICAgIDg2OSwKICAgICAgODg2LAogICAgICA5MDAsCiAgICAgIDkxOSwKICAgICAgOTM1LAogICAgICA5NTEsCiAgICAgIDk2OSwKICAgICAgOTg2LAogICAgICAxMDAxLAogICAgICAxMDE4LAogICAgICAxMDQ5LAogICAgICAxMDU4LAogICAgICAxMDY4LAogICAgICAxMDg1LAogICAgICAxMTAxLAogICAgICAxMTE5LAogICAgICAxMTM0LAogICAgICAxMTUzLAogICAgICAxMTcwLAogICAgICAxMTg2LAogICAgICAxMjAxLAogICAgICAxMjE4LAogICAgICAxMjQzLAogICAgICAxMjUyLAogICAgICAxMjY4LAogICAgICAxMjg2LAogICAgICAxMzAyLAogICAgICAxMzE4LAogICAgICAxMzM0LAogICAgICAxMzUyLAogICAgICAxMzcwLAogICAgICAxMzg1LAogICAgICAxNDAyLAogICAgICAxNDE5LAogICAgICAxNDM1LAogICAgICAxNDUxLAogICAgICAxNDcwLAogICAgICAxNDg1LAogICAgICAxODg2LAogICAgICAxOTAyLAogICAgICAxOTE4LAogICAgICAxOTM1LAogICAgICAxOTUxLAogICAgICAxOTY5LAogICAgICAxOTg0LAogICAgICAyMDAxLAogICAgICAyMDE5LAogICAgICAyMDM2LAogICAgICAyMDUxLAogICAgICAyMDY5LAogICAgICAyMDg0LAogICAgICAyMTAyLAogICAgICAyMTE5LAogICAgICAyMTM1LAogICAgICAyMTUyLAogICAgICAyMTY5LAogICAgICAyMTg1LAogICAgICAyMjAxLAogICAgICAyMjE5LAogICAgICAyMjQzLAogICAgICAyMjU3LAogICAgICAyMjcwLAogICAgICAyMjg2LAogICAgICAyMzAxLAogICAgICAyMzE4LAogICAgICAyMzM1LAogICAgICAyMzUxLAogICAgICAyMzY4LAogICAgICAyMzg0LAogICAgICAyNDAzLAogICAgICAyNDE4LAogICAgICAyNDM1LAogICAgICAyNDUzLAogICAgICAyNDcxLAogICAgICAyNDg3LAogICAgICAyNTAxLAogICAgICAyNTE5LAogICAgICAyNTM2LAogICAgICAyNTUxLAogICAgICAyNTcwLAogICAgICAyNTg1LAogICAgICAyNjAxLAogICAgICAyNjE4LAogICAgICAyNjM2LAogICAgICAyNjUyLAogICAgICAyNjcwLAogICAgICAyNjg1LAogICAgICAzMDg2LAogICAgICAzMTAzLAogICAgICAzMTE5LAogICAgICAzMTM1LAogICAgICAzMTUxLAogICAgICAzMTY4LAogICAgICAzMTg2LAogICAgICAzMjAyLAogICAgICAzMjE5LAogICAgICAzMjM1LAogICAgICAzMjUxLAogICAgICAzMjY5LAogICAgICAzMjg0LAogICAgICAzMzAzLAogICAgICAzMzE4LAogICAgICAzMzM1LAogICAgICAzMzUxLAogICAgICAzMzY5LAogICAgICAzMzg1LAogICAgICAzNDAwLAogICAgICAzNDI5LAogICAgICAzNDQyLAogICAgICAzNDUzLAogICAgICAzNDcwLAogICAgICAzNDg2LAogICAgICAzNTAyLAogICAgICAzNTIwLAogICAgICAzNTM0LAogICAgICAzNTUzLAogICAgICAzNTY5LAogICAgICAzNTg1LAogICAgICAzNjAxLAogICAgICAzNjIwLAogICAgICAzNjM2LAogICAgICAzNjUyLAogICAgICAzNjY4LAogICAgICAzNjg1LAogICAgICAzNzAxLAogICAgICAzNzE4LAogICAgICAzNzM0LAogICAgICAzNzUxLAogICAgICAzNzcwLAogICAgICAzNzg3LAogICAgICAzODA0LAogICAgICAzODE4LAogICAgICAzODM2LAogICAgICAzODUxLAogICAgICAzODY4LAogICAgICAzODg0CiAgICBdCiAgfQp9"
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0e5811008cb7fd058f05-556a0e7f8ce6caa7aec4",
+          "file": "cadence-performance.spec.ts",
+          "line": 24,
+          "column": 70
+        }
+      ]
+    },
+    {
+      "title": "keyboard-quality.spec.ts",
+      "file": "keyboard-quality.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "keyboard alone signs a contract, saves settings, forges, disposes, pauses, loses and restarts",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-dpr2",
+              "projectName": "chromium-dpr2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6721,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T11:30:20.080Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "keyboard-settings",
+                      "contentType": "image/png",
+                      "unarchivedOriginalPath": "/Users/gordon/githome/sword-led/test-results/cross/keyboard-quality-keyboard--cced9-s-pauses-loses-and-restarts-chromium-dpr2/attachments/keyboard-settings-7610fce716d15375c21f13131b6a41f901531b11.png"
+                    },
+                    {
+                      "name": "keyboard-only-flow",
+                      "contentType": "application/json",
+                      "body": "ewogICJwb2ludGVyRXZlbnRzIjogMCwKICAiZm9yZ2VkIjogewogICAgInJ1bGVzVmVyc2lvbiI6ICJmb3JnZS12MSIsCiAgICAicnVuSWQiOiAiMjIwMzFmOWZiZDc0ZDRlYWE5ZjYyZWIwYTA1ZTY1YzIiLAogICAgInNlZWQiOiAia2V5Ym9hcmQtY29udHJhY3QiLAogICAgInJldmlzaW9uIjogMiwKICAgICJwaGFzZSI6ICJ3b3Jrc2hvcCIsCiAgICAicm91bmQiOiAxLAogICAgImNvaW5zIjogMCwKICAgICJzY3JhcCI6IDAsCiAgICAiY29hbCI6IDEsCiAgICAic2VhbHMiOiAzLAogICAgInVwZ3JhZGVzIjogewogICAgICAiaGFuZGxlIjogMCwKICAgICAgImJlbGxvd3MiOiAwLAogICAgICAiYW52aWwiOiAwCiAgICB9LAogICAgInBpZWNlcyI6IFsKICAgICAgewogICAgICAgICJpZCI6ICIxOjEiLAogICAgICAgICJtYXRlcmlhbCI6ICJpcm9uIiwKICAgICAgICAicHJvZ3Jlc3MiOiAzLAogICAgICAgICJoZWF0IjogODgsCiAgICAgICAgInN0cmVzcyI6IDcsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiMToyIiwKICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgInByb2dyZXNzIjogMCwKICAgICAgICAiaGVhdCI6IDEwMCwKICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAiaW50ZWdyaXR5IjogNCwKICAgICAgICAic3RhdHVzIjogImFjdGl2ZSIKICAgICAgfSwKICAgICAgewogICAgICAgICJpZCI6ICIxOjMiLAogICAgICAgICJtYXRlcmlhbCI6ICJzdGVlbCIsCiAgICAgICAgInByb2dyZXNzIjogMiwKICAgICAgICAiaGVhdCI6IDkyLAogICAgICAgICJzdHJlc3MiOiAzLAogICAgICAgICJpbnRlZ3JpdHkiOiAzLAogICAgICAgICJzdGF0dXMiOiAiYWN0aXZlIgogICAgICB9CiAgICBdLAogICAgInJuZyI6IHsKICAgICAgInN0b2NrIjogewogICAgICAgICJzdGF0ZSI6IDIxMTE4MTYxMzUsCiAgICAgICAgImRyYXdzIjogMAogICAgICB9LAogICAgICAic3RyaWtlIjogewogICAgICAgICJzdGF0ZSI6IDEzODQ1NTc4ODMsCiAgICAgICAgImRyYXdzIjogMgogICAgICB9CiAgICB9LAogICAgImhpc3RvcnkiOiBbXSwKICAgICJwdXJjaGFzZXMiOiBbXSwKICAgICJzdGF0cyI6IHsKICAgICAgInN0cmlrZXMiOiAyLAogICAgICAic3VjY2Vzc2Z1bFN0cmlrZXMiOiAyLAogICAgICAiZGFtYWdlZFN0cmlrZXMiOiAwLAogICAgICAiaGVhdHMiOiAwLAogICAgICAiZGVsaXZlcmVkUGllY2VzIjogMCwKICAgICAgInJlY3ljbGVkUGllY2VzIjogMCwKICAgICAgImJyb2tlblBpZWNlcyI6IDAsCiAgICAgICJoaWdoZXN0VGllciI6IDEsCiAgICAgICJjb2luc0Vhcm5lZCI6IDAsCiAgICAgICJjb2luc1NwZW50IjogMCwKICAgICAgInNjcmFwRWFybmVkIjogMCwKICAgICAgInNjcmFwU3BlbnQiOiAwLAogICAgICAicm91bmRzTWV0IjogMCwKICAgICAgInJvdW5kc01pc3NlZCI6IDAKICAgIH0sCiAgICAiam91cm5hbCI6IFsKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiMToxIiwKICAgICAgICAibW9kZSI6ICJzdGFuZGFyZCIsCiAgICAgICAgInRpbWluZ01hcmsiOiA1MDAwCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJzdHJpa2UiLAogICAgICAgICJwaWVjZUlkIjogIjE6MyIsCiAgICAgICAgIm1vZGUiOiAibGlnaHQiLAogICAgICAgICJ0aW1pbmdNYXJrIjogNTAwMAogICAgICB9CiAgICBdCiAgfSwKICAiZGF5MSI6IHsKICAgICJydWxlc1ZlcnNpb24iOiAiZm9yZ2UtdjEiLAogICAgInJ1bklkIjogIjIyMDMxZjlmYmQ3NGQ0ZWFhOWY2MmViMGEwNWU2NWMyIiwKICAgICJzZWVkIjogImtleWJvYXJkLWNvbnRyYWN0IiwKICAgICJyZXZpc2lvbiI6IDUsCiAgICAicGhhc2UiOiAicm91bmRTdW1tYXJ5IiwKICAgICJyb3VuZCI6IDEsCiAgICAiY29pbnMiOiAzNSwKICAgICJzY3JhcCI6IDYsCiAgICAiY29hbCI6IDEsCiAgICAic2VhbHMiOiAyLAogICAgInVwZ3JhZGVzIjogewogICAgICAiaGFuZGxlIjogMCwKICAgICAgImJlbGxvd3MiOiAwLAogICAgICAiYW52aWwiOiAwCiAgICB9LAogICAgInBpZWNlcyI6IFsKICAgICAgewogICAgICAgICJpZCI6ICIxOjEiLAogICAgICAgICJtYXRlcmlhbCI6ICJpcm9uIiwKICAgICAgICAicHJvZ3Jlc3MiOiAzLAogICAgICAgICJoZWF0IjogODgsCiAgICAgICAgInN0cmVzcyI6IDcsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJyZWN5Y2xlZCIKICAgICAgfSwKICAgICAgewogICAgICAgICJpZCI6ICIxOjIiLAogICAgICAgICJtYXRlcmlhbCI6ICJpcm9uIiwKICAgICAgICAicHJvZ3Jlc3MiOiAwLAogICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICJzdHJlc3MiOiAwLAogICAgICAgICJpbnRlZ3JpdHkiOiA0LAogICAgICAgICJzdGF0dXMiOiAicmVjeWNsZWQiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiMTozIiwKICAgICAgICAibWF0ZXJpYWwiOiAic3RlZWwiLAogICAgICAgICJwcm9ncmVzcyI6IDIsCiAgICAgICAgImhlYXQiOiA5MiwKICAgICAgICAic3RyZXNzIjogMywKICAgICAgICAiaW50ZWdyaXR5IjogMywKICAgICAgICAic3RhdHVzIjogImRlbGl2ZXJlZCIKICAgICAgfQogICAgXSwKICAgICJybmciOiB7CiAgICAgICJzdG9jayI6IHsKICAgICAgICAic3RhdGUiOiAyMTExODE2MTM1LAogICAgICAgICJkcmF3cyI6IDAKICAgICAgfSwKICAgICAgInN0cmlrZSI6IHsKICAgICAgICAic3RhdGUiOiAxMzg0NTU3ODgzLAogICAgICAgICJkcmF3cyI6IDIKICAgICAgfQogICAgfSwKICAgICJoaXN0b3J5IjogWwogICAgICB7CiAgICAgICAgInJvdW5kIjogMSwKICAgICAgICAicXVvdGEiOiAxMjAsCiAgICAgICAgImRlbGl2ZXJlZCI6IDM1LAogICAgICAgICJkZWZpY2l0IjogODUsCiAgICAgICAgIm1ldFF1b3RhIjogZmFsc2UsCiAgICAgICAgInNlYWxzQmVmb3JlIjogMywKICAgICAgICAic2VhbHNBZnRlciI6IDIsCiAgICAgICAgImNvYWxSZW1haW5pbmciOiAxLAogICAgICAgICJwaWVjZXMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJpZCI6ICIxOjEiLAogICAgICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgICAgICJwcm9ncmVzcyI6IDMsCiAgICAgICAgICAgICJoZWF0IjogODgsCiAgICAgICAgICAgICJzdHJlc3MiOiA3LAogICAgICAgICAgICAiaW50ZWdyaXR5IjogNCwKICAgICAgICAgICAgInN0YXR1cyI6ICJyZWN5Y2xlZCIKICAgICAgICAgIH0sCiAgICAgICAgICB7CiAgICAgICAgICAgICJpZCI6ICIxOjIiLAogICAgICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgICAgICJzdGF0dXMiOiAicmVjeWNsZWQiCiAgICAgICAgICB9LAogICAgICAgICAgewogICAgICAgICAgICAiaWQiOiAiMTozIiwKICAgICAgICAgICAgIm1hdGVyaWFsIjogInN0ZWVsIiwKICAgICAgICAgICAgInByb2dyZXNzIjogMiwKICAgICAgICAgICAgImhlYXQiOiA5MiwKICAgICAgICAgICAgInN0cmVzcyI6IDMsCiAgICAgICAgICAgICJpbnRlZ3JpdHkiOiAzLAogICAgICAgICAgICAic3RhdHVzIjogImRlbGl2ZXJlZCIKICAgICAgICAgIH0KICAgICAgICBdCiAgICAgIH0KICAgIF0sCiAgICAicHVyY2hhc2VzIjogW10sCiAgICAic3RhdHMiOiB7CiAgICAgICJzdHJpa2VzIjogMiwKICAgICAgInN1Y2Nlc3NmdWxTdHJpa2VzIjogMiwKICAgICAgImRhbWFnZWRTdHJpa2VzIjogMCwKICAgICAgImhlYXRzIjogMCwKICAgICAgImRlbGl2ZXJlZFBpZWNlcyI6IDEsCiAgICAgICJyZWN5Y2xlZFBpZWNlcyI6IDIsCiAgICAgICJicm9rZW5QaWVjZXMiOiAwLAogICAgICAiaGlnaGVzdFRpZXIiOiAxLAogICAgICAiY29pbnNFYXJuZWQiOiAzNSwKICAgICAgImNvaW5zU3BlbnQiOiAwLAogICAgICAic2NyYXBFYXJuZWQiOiA2LAogICAgICAic2NyYXBTcGVudCI6IDAsCiAgICAgICJyb3VuZHNNZXQiOiAwLAogICAgICAicm91bmRzTWlzc2VkIjogMQogICAgfSwKICAgICJqb3VybmFsIjogWwogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICIxOjEiLAogICAgICAgICJtb2RlIjogInN0YW5kYXJkIiwKICAgICAgICAidGltaW5nTWFyayI6IDUwMDAKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiMTozIiwKICAgICAgICAibW9kZSI6ICJsaWdodCIsCiAgICAgICAgInRpbWluZ01hcmsiOiA1MDAwCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJkZWxpdmVyIiwKICAgICAgICAicGllY2VJZCI6ICIxOjMiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJyZWN5Y2xlIiwKICAgICAgICAicGllY2VJZCI6ICIxOjEiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJzZXR0bGVSb3VuZCIsCiAgICAgICAgInJlY3ljbGVSZW1haW5pbmciOiB0cnVlCiAgICAgIH0KICAgIF0KICB9LAogICJmYWlsZWQiOiB7CiAgICAicnVsZXNWZXJzaW9uIjogImZvcmdlLXYxIiwKICAgICJydW5JZCI6ICIyMjAzMWY5ZmJkNzRkNGVhYTlmNjJlYjBhMDVlNjVjMiIsCiAgICAic2VlZCI6ICJrZXlib2FyZC1jb250cmFjdCIsCiAgICAicmV2aXNpb24iOiA5LAogICAgInBoYXNlIjogImRlZmVhdCIsCiAgICAicm91bmQiOiAzLAogICAgImNvaW5zIjogMzUsCiAgICAic2NyYXAiOiAyNywKICAgICJjb2FsIjogMSwKICAgICJzZWFscyI6IDAsCiAgICAidXBncmFkZXMiOiB7CiAgICAgICJoYW5kbGUiOiAwLAogICAgICAiYmVsbG93cyI6IDAsCiAgICAgICJhbnZpbCI6IDAKICAgIH0sCiAgICAicGllY2VzIjogWwogICAgICB7CiAgICAgICAgImlkIjogIjM6MSIsCiAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJyZWN5Y2xlZCIKICAgICAgfSwKICAgICAgewogICAgICAgICJpZCI6ICIzOjIiLAogICAgICAgICJtYXRlcmlhbCI6ICJzdGVlbCIsCiAgICAgICAgInByb2dyZXNzIjogMCwKICAgICAgICAiaGVhdCI6IDEwMCwKICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAiaW50ZWdyaXR5IjogMywKICAgICAgICAic3RhdHVzIjogInJlY3ljbGVkIgogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogIjM6MyIsCiAgICAgICAgIm1hdGVyaWFsIjogInN0ZWVsIiwKICAgICAgICAicHJvZ3Jlc3MiOiAwLAogICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICJzdHJlc3MiOiAwLAogICAgICAgICJpbnRlZ3JpdHkiOiAzLAogICAgICAgICJzdGF0dXMiOiAicmVjeWNsZWQiCiAgICAgIH0KICAgIF0sCiAgICAicm5nIjogewogICAgICAic3RvY2siOiB7CiAgICAgICAgInN0YXRlIjogMTQ3OTk4MDQ2NSwKICAgICAgICAiZHJhd3MiOiAyCiAgICAgIH0sCiAgICAgICJzdHJpa2UiOiB7CiAgICAgICAgInN0YXRlIjogMTM4NDU1Nzg4MywKICAgICAgICAiZHJhd3MiOiAyCiAgICAgIH0KICAgIH0sCiAgICAiaGlzdG9yeSI6IFsKICAgICAgewogICAgICAgICJyb3VuZCI6IDEsCiAgICAgICAgInF1b3RhIjogMTIwLAogICAgICAgICJkZWxpdmVyZWQiOiAzNSwKICAgICAgICAiZGVmaWNpdCI6IDg1LAogICAgICAgICJtZXRRdW90YSI6IGZhbHNlLAogICAgICAgICJzZWFsc0JlZm9yZSI6IDMsCiAgICAgICAgInNlYWxzQWZ0ZXIiOiAyLAogICAgICAgICJjb2FsUmVtYWluaW5nIjogMSwKICAgICAgICAicGllY2VzIjogWwogICAgICAgICAgewogICAgICAgICAgICAiaWQiOiAiMToxIiwKICAgICAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICAgICAicHJvZ3Jlc3MiOiAzLAogICAgICAgICAgICAiaGVhdCI6IDg4LAogICAgICAgICAgICAic3RyZXNzIjogNywKICAgICAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgICAgICJzdGF0dXMiOiAicmVjeWNsZWQiCiAgICAgICAgICB9LAogICAgICAgICAgewogICAgICAgICAgICAiaWQiOiAiMToyIiwKICAgICAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICAgICAicHJvZ3Jlc3MiOiAwLAogICAgICAgICAgICAiaGVhdCI6IDEwMCwKICAgICAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgICAgICJpbnRlZ3JpdHkiOiA0LAogICAgICAgICAgICAic3RhdHVzIjogInJlY3ljbGVkIgogICAgICAgICAgfSwKICAgICAgICAgIHsKICAgICAgICAgICAgImlkIjogIjE6MyIsCiAgICAgICAgICAgICJtYXRlcmlhbCI6ICJzdGVlbCIsCiAgICAgICAgICAgICJwcm9ncmVzcyI6IDIsCiAgICAgICAgICAgICJoZWF0IjogOTIsCiAgICAgICAgICAgICJzdHJlc3MiOiAzLAogICAgICAgICAgICAiaW50ZWdyaXR5IjogMywKICAgICAgICAgICAgInN0YXR1cyI6ICJkZWxpdmVyZWQiCiAgICAgICAgICB9CiAgICAgICAgXQogICAgICB9LAogICAgICB7CiAgICAgICAgInJvdW5kIjogMiwKICAgICAgICAicXVvdGEiOiAxNTAsCiAgICAgICAgImRlbGl2ZXJlZCI6IDAsCiAgICAgICAgImRlZmljaXQiOiAxNTAsCiAgICAgICAgIm1ldFF1b3RhIjogZmFsc2UsCiAgICAgICAgInNlYWxzQmVmb3JlIjogMiwKICAgICAgICAic2VhbHNBZnRlciI6IDEsCiAgICAgICAgImNvYWxSZW1haW5pbmciOiAxLAogICAgICAgICJwaWVjZXMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJpZCI6ICIyOjEiLAogICAgICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgICAgICJzdGF0dXMiOiAicmVjeWNsZWQiCiAgICAgICAgICB9LAogICAgICAgICAgewogICAgICAgICAgICAiaWQiOiAiMjoyIiwKICAgICAgICAgICAgIm1hdGVyaWFsIjogInN0ZWVsIiwKICAgICAgICAgICAgInByb2dyZXNzIjogMCwKICAgICAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgICAgICJzdHJlc3MiOiAwLAogICAgICAgICAgICAiaW50ZWdyaXR5IjogMywKICAgICAgICAgICAgInN0YXR1cyI6ICJyZWN5Y2xlZCIKICAgICAgICAgIH0sCiAgICAgICAgICB7CiAgICAgICAgICAgICJpZCI6ICIyOjMiLAogICAgICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgICAgICJzdGF0dXMiOiAicmVjeWNsZWQiCiAgICAgICAgICB9CiAgICAgICAgXQogICAgICB9LAogICAgICB7CiAgICAgICAgInJvdW5kIjogMywKICAgICAgICAicXVvdGEiOiAxODAsCiAgICAgICAgImRlbGl2ZXJlZCI6IDAsCiAgICAgICAgImRlZmljaXQiOiAxODAsCiAgICAgICAgIm1ldFF1b3RhIjogZmFsc2UsCiAgICAgICAgInNlYWxzQmVmb3JlIjogMSwKICAgICAgICAic2VhbHNBZnRlciI6IDAsCiAgICAgICAgImNvYWxSZW1haW5pbmciOiAxLAogICAgICAgICJwaWVjZXMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJpZCI6ICIzOjEiLAogICAgICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgICAgICJzdGF0dXMiOiAicmVjeWNsZWQiCiAgICAgICAgICB9LAogICAgICAgICAgewogICAgICAgICAgICAiaWQiOiAiMzoyIiwKICAgICAgICAgICAgIm1hdGVyaWFsIjogInN0ZWVsIiwKICAgICAgICAgICAgInByb2dyZXNzIjogMCwKICAgICAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgICAgICJzdHJlc3MiOiAwLAogICAgICAgICAgICAiaW50ZWdyaXR5IjogMywKICAgICAgICAgICAgInN0YXR1cyI6ICJyZWN5Y2xlZCIKICAgICAgICAgIH0sCiAgICAgICAgICB7CiAgICAgICAgICAgICJpZCI6ICIzOjMiLAogICAgICAgICAgICAibWF0ZXJpYWwiOiAic3RlZWwiLAogICAgICAgICAgICAicHJvZ3Jlc3MiOiAwLAogICAgICAgICAgICAiaGVhdCI6IDEwMCwKICAgICAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgICAgICJpbnRlZ3JpdHkiOiAzLAogICAgICAgICAgICAic3RhdHVzIjogInJlY3ljbGVkIgogICAgICAgICAgfQogICAgICAgIF0KICAgICAgfQogICAgXSwKICAgICJwdXJjaGFzZXMiOiBbXSwKICAgICJzdGF0cyI6IHsKICAgICAgInN0cmlrZXMiOiAyLAogICAgICAic3VjY2Vzc2Z1bFN0cmlrZXMiOiAyLAogICAgICAiZGFtYWdlZFN0cmlrZXMiOiAwLAogICAgICAiaGVhdHMiOiAwLAogICAgICAiZGVsaXZlcmVkUGllY2VzIjogMSwKICAgICAgInJlY3ljbGVkUGllY2VzIjogOCwKICAgICAgImJyb2tlblBpZWNlcyI6IDAsCiAgICAgICJoaWdoZXN0VGllciI6IDEsCiAgICAgICJjb2luc0Vhcm5lZCI6IDM1LAogICAgICAiY29pbnNTcGVudCI6IDAsCiAgICAgICJzY3JhcEVhcm5lZCI6IDI3LAogICAgICAic2NyYXBTcGVudCI6IDAsCiAgICAgICJyb3VuZHNNZXQiOiAwLAogICAgICAicm91bmRzTWlzc2VkIjogMwogICAgfSwKICAgICJqb3VybmFsIjogWwogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICIxOjEiLAogICAgICAgICJtb2RlIjogInN0YW5kYXJkIiwKICAgICAgICAidGltaW5nTWFyayI6IDUwMDAKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiMTozIiwKICAgICAgICAibW9kZSI6ICJsaWdodCIsCiAgICAgICAgInRpbWluZ01hcmsiOiA1MDAwCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJkZWxpdmVyIiwKICAgICAgICAicGllY2VJZCI6ICIxOjMiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJyZWN5Y2xlIiwKICAgICAgICAicGllY2VJZCI6ICIxOjEiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJzZXR0bGVSb3VuZCIsCiAgICAgICAgInJlY3ljbGVSZW1haW5pbmciOiB0cnVlCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJhZHZhbmNlU3VtbWFyeSIKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogInNldHRsZVJvdW5kIiwKICAgICAgICAicmVjeWNsZVJlbWFpbmluZyI6IHRydWUKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogImFkdmFuY2VTdW1tYXJ5IgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic2V0dGxlUm91bmQiLAogICAgICAgICJyZWN5Y2xlUmVtYWluaW5nIjogdHJ1ZQogICAgICB9CiAgICBdCiAgfSwKICAicmVhZGFiaWxpdHkiOiBbCiAgICB7CiAgICAgICJ0ZXh0IjogIuaTjeS9nOiuvue9riIsCiAgICAgICJmb250U2l6ZSI6IDI4LAogICAgICAiY29udHJhc3QiOiAxMi4zNDc5MjcyMTQyMDI5MDUKICAgIH0sCiAgICB7CiAgICAgICJ0ZXh0IjogIuaFoumAn+a4uOaghyDDlzEuNe+8iOaUtuebiuS4jeWPmO+8iSIsCiAgICAgICJmb250U2l6ZSI6IDE2LAogICAgICAiY29udHJhc3QiOiAxMi4zNDc5MjcyMTQyMDI5MDUKICAgIH0sCiAgICB7CiAgICAgICJ0ZXh0IjogIuWHj+W8seWKqOaViCIsCiAgICAgICJmb250U2l6ZSI6IDE2LAogICAgICAiY29udHJhc3QiOiAxMi4zNDc5MjcyMTQyMDI5MDUKICAgIH0sCiAgICB7CiAgICAgICJ0ZXh0IjogIumdmemfsyIsCiAgICAgICJmb250U2l6ZSI6IDE2LAogICAgICAiY29udHJhc3QiOiAxMi4zNDc5MjcyMTQyMDI5MDUKICAgIH0sCiAgICB7CiAgICAgICJ0ZXh0IjogIumfs+mHjzElIiwKICAgICAgImZvbnRTaXplIjogMTYsCiAgICAgICJjb250cmFzdCI6IDEyLjM0NzkyNzIxNDIwMjkwNQogICAgfSwKICAgIHsKICAgICAgInRleHQiOiAiMSUiLAogICAgICAiZm9udFNpemUiOiAxNiwKICAgICAgImNvbnRyYXN0IjogMTIuMzQ3OTI3MjE0MjAyOTA1CiAgICB9LAogICAgewogICAgICAidGV4dCI6ICLor5XlkKzplKTlo7AiLAogICAgICAiZm9udFNpemUiOiAxNiwKICAgICAgImNvbnRyYXN0IjogNS44MzUyNjI1OTc2MDUyMDU1CiAgICB9LAogICAgewogICAgICAidGV4dCI6ICLlt7LpnZnpn7PvvJvlhajpg6jnu5Pmnpzku43mnInmloflrZfkuI7lm77lvaLmj5DnpLrjgIIiLAogICAgICAiZm9udFNpemUiOiAxMiwKICAgICAgImNvbnRyYXN0IjogMTIuMzQ3OTI3MjE0MjAyOTA1CiAgICB9LAogICAgewogICAgICAidGV4dCI6ICLorr7nva7lt7Lkv53lrZgiLAogICAgICAiZm9udFNpemUiOiAxMiwKICAgICAgImNvbnRyYXN0IjogNS4wNTU3NzE4NTU4MTI5MDE0CiAgICB9LAogICAgewogICAgICAidGV4dCI6ICLmgaLlpI3pu5jorqTorr7nva4iLAogICAgICAiZm9udFNpemUiOiAxNiwKICAgICAgImNvbnRyYXN0IjogMTAuODM4NTk1NjEyMzE2MzI1CiAgICB9LAogICAgewogICAgICAidGV4dCI6ICLnqbrmoLzlj6rlnKjlh7vmiZPljLrojrflvpfnhKbngrnml7bok4TplKTjgILmlbDlrZcgMS8yLzMg6YCJ5p2l5paZ77yMUS9XL0Ug5o2i6ZSk77yMRXNjIOaaguWBnOOAgiIsCiAgICAgICJmb250U2l6ZSI6IDE2LAogICAgICAiY29udHJhc3QiOiAxMi4zNDc5MjcyMTQyMDI5MDUKICAgIH0sCiAgICB7CiAgICAgICJ0ZXh0IjogIuWujOaIkCIsCiAgICAgICJmb250U2l6ZSI6IDE2LAogICAgICAiY29udHJhc3QiOiA1LjE1OTUyOTExMzU1MzYxOAogICAgfQogIF0KfQ=="
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "de5764f1806931144548-c2bee6b93c5a57b81ec4",
+          "file": "keyboard-quality.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "keyboard alone signs a contract, saves settings, forges, disposes, pauses, loses and restarts",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-game",
+              "projectName": "firefox-game",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8669,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T11:31:01.895Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "keyboard-settings",
+                      "contentType": "image/png",
+                      "unarchivedOriginalPath": "/Users/gordon/githome/sword-led/test-results/cross/keyboard-quality-keyboard--cced9-s-pauses-loses-and-restarts-firefox-game/attachments/keyboard-settings-19d2fefa5e58d591a8aa4e6401895dd35aecc4d2.png"
+                    },
+                    {
+                      "name": "keyboard-only-flow",
+                      "contentType": "application/json",
+                      "body": "ewogICJwb2ludGVyRXZlbnRzIjogMCwKICAiZm9yZ2VkIjogewogICAgInJ1bGVzVmVyc2lvbiI6ICJmb3JnZS12MSIsCiAgICAicnVuSWQiOiAiYTlmM2Y3ZmY1ODY4YzA1ZGExOTI3YzMzYWMwYmUxZTUiLAogICAgInNlZWQiOiAia2V5Ym9hcmQtY29udHJhY3QiLAogICAgInJldmlzaW9uIjogMiwKICAgICJwaGFzZSI6ICJ3b3Jrc2hvcCIsCiAgICAicm91bmQiOiAxLAogICAgImNvaW5zIjogMCwKICAgICJzY3JhcCI6IDAsCiAgICAiY29hbCI6IDEsCiAgICAic2VhbHMiOiAzLAogICAgInVwZ3JhZGVzIjogewogICAgICAiaGFuZGxlIjogMCwKICAgICAgImJlbGxvd3MiOiAwLAogICAgICAiYW52aWwiOiAwCiAgICB9LAogICAgInBpZWNlcyI6IFsKICAgICAgewogICAgICAgICJpZCI6ICIxOjEiLAogICAgICAgICJtYXRlcmlhbCI6ICJpcm9uIiwKICAgICAgICAicHJvZ3Jlc3MiOiAzLAogICAgICAgICJoZWF0IjogODgsCiAgICAgICAgInN0cmVzcyI6IDcsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiMToyIiwKICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgInByb2dyZXNzIjogMCwKICAgICAgICAiaGVhdCI6IDEwMCwKICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAiaW50ZWdyaXR5IjogNCwKICAgICAgICAic3RhdHVzIjogImFjdGl2ZSIKICAgICAgfSwKICAgICAgewogICAgICAgICJpZCI6ICIxOjMiLAogICAgICAgICJtYXRlcmlhbCI6ICJzdGVlbCIsCiAgICAgICAgInByb2dyZXNzIjogMiwKICAgICAgICAiaGVhdCI6IDkyLAogICAgICAgICJzdHJlc3MiOiAzLAogICAgICAgICJpbnRlZ3JpdHkiOiAzLAogICAgICAgICJzdGF0dXMiOiAiYWN0aXZlIgogICAgICB9CiAgICBdLAogICAgInJuZyI6IHsKICAgICAgInN0b2NrIjogewogICAgICAgICJzdGF0ZSI6IDIxMTE4MTYxMzUsCiAgICAgICAgImRyYXdzIjogMAogICAgICB9LAogICAgICAic3RyaWtlIjogewogICAgICAgICJzdGF0ZSI6IDEzODQ1NTc4ODMsCiAgICAgICAgImRyYXdzIjogMgogICAgICB9CiAgICB9LAogICAgImhpc3RvcnkiOiBbXSwKICAgICJwdXJjaGFzZXMiOiBbXSwKICAgICJzdGF0cyI6IHsKICAgICAgInN0cmlrZXMiOiAyLAogICAgICAic3VjY2Vzc2Z1bFN0cmlrZXMiOiAyLAogICAgICAiZGFtYWdlZFN0cmlrZXMiOiAwLAogICAgICAiaGVhdHMiOiAwLAogICAgICAiZGVsaXZlcmVkUGllY2VzIjogMCwKICAgICAgInJlY3ljbGVkUGllY2VzIjogMCwKICAgICAgImJyb2tlblBpZWNlcyI6IDAsCiAgICAgICJoaWdoZXN0VGllciI6IDEsCiAgICAgICJjb2luc0Vhcm5lZCI6IDAsCiAgICAgICJjb2luc1NwZW50IjogMCwKICAgICAgInNjcmFwRWFybmVkIjogMCwKICAgICAgInNjcmFwU3BlbnQiOiAwLAogICAgICAicm91bmRzTWV0IjogMCwKICAgICAgInJvdW5kc01pc3NlZCI6IDAKICAgIH0sCiAgICAiam91cm5hbCI6IFsKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiMToxIiwKICAgICAgICAibW9kZSI6ICJzdGFuZGFyZCIsCiAgICAgICAgInRpbWluZ01hcmsiOiA1MDAwCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJzdHJpa2UiLAogICAgICAgICJwaWVjZUlkIjogIjE6MyIsCiAgICAgICAgIm1vZGUiOiAibGlnaHQiLAogICAgICAgICJ0aW1pbmdNYXJrIjogNTAwMAogICAgICB9CiAgICBdCiAgfSwKICAiZGF5MSI6IHsKICAgICJydWxlc1ZlcnNpb24iOiAiZm9yZ2UtdjEiLAogICAgInJ1bklkIjogImE5ZjNmN2ZmNTg2OGMwNWRhMTkyN2MzM2FjMGJlMWU1IiwKICAgICJzZWVkIjogImtleWJvYXJkLWNvbnRyYWN0IiwKICAgICJyZXZpc2lvbiI6IDUsCiAgICAicGhhc2UiOiAicm91bmRTdW1tYXJ5IiwKICAgICJyb3VuZCI6IDEsCiAgICAiY29pbnMiOiAzNSwKICAgICJzY3JhcCI6IDYsCiAgICAiY29hbCI6IDEsCiAgICAic2VhbHMiOiAyLAogICAgInVwZ3JhZGVzIjogewogICAgICAiaGFuZGxlIjogMCwKICAgICAgImJlbGxvd3MiOiAwLAogICAgICAiYW52aWwiOiAwCiAgICB9LAogICAgInBpZWNlcyI6IFsKICAgICAgewogICAgICAgICJpZCI6ICIxOjEiLAogICAgICAgICJtYXRlcmlhbCI6ICJpcm9uIiwKICAgICAgICAicHJvZ3Jlc3MiOiAzLAogICAgICAgICJoZWF0IjogODgsCiAgICAgICAgInN0cmVzcyI6IDcsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJyZWN5Y2xlZCIKICAgICAgfSwKICAgICAgewogICAgICAgICJpZCI6ICIxOjIiLAogICAgICAgICJtYXRlcmlhbCI6ICJpcm9uIiwKICAgICAgICAicHJvZ3Jlc3MiOiAwLAogICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICJzdHJlc3MiOiAwLAogICAgICAgICJpbnRlZ3JpdHkiOiA0LAogICAgICAgICJzdGF0dXMiOiAicmVjeWNsZWQiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiMTozIiwKICAgICAgICAibWF0ZXJpYWwiOiAic3RlZWwiLAogICAgICAgICJwcm9ncmVzcyI6IDIsCiAgICAgICAgImhlYXQiOiA5MiwKICAgICAgICAic3RyZXNzIjogMywKICAgICAgICAiaW50ZWdyaXR5IjogMywKICAgICAgICAic3RhdHVzIjogImRlbGl2ZXJlZCIKICAgICAgfQogICAgXSwKICAgICJybmciOiB7CiAgICAgICJzdG9jayI6IHsKICAgICAgICAic3RhdGUiOiAyMTExODE2MTM1LAogICAgICAgICJkcmF3cyI6IDAKICAgICAgfSwKICAgICAgInN0cmlrZSI6IHsKICAgICAgICAic3RhdGUiOiAxMzg0NTU3ODgzLAogICAgICAgICJkcmF3cyI6IDIKICAgICAgfQogICAgfSwKICAgICJoaXN0b3J5IjogWwogICAgICB7CiAgICAgICAgInJvdW5kIjogMSwKICAgICAgICAicXVvdGEiOiAxMjAsCiAgICAgICAgImRlbGl2ZXJlZCI6IDM1LAogICAgICAgICJkZWZpY2l0IjogODUsCiAgICAgICAgIm1ldFF1b3RhIjogZmFsc2UsCiAgICAgICAgInNlYWxzQmVmb3JlIjogMywKICAgICAgICAic2VhbHNBZnRlciI6IDIsCiAgICAgICAgImNvYWxSZW1haW5pbmciOiAxLAogICAgICAgICJwaWVjZXMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJpZCI6ICIxOjEiLAogICAgICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgICAgICJwcm9ncmVzcyI6IDMsCiAgICAgICAgICAgICJoZWF0IjogODgsCiAgICAgICAgICAgICJzdHJlc3MiOiA3LAogICAgICAgICAgICAiaW50ZWdyaXR5IjogNCwKICAgICAgICAgICAgInN0YXR1cyI6ICJyZWN5Y2xlZCIKICAgICAgICAgIH0sCiAgICAgICAgICB7CiAgICAgICAgICAgICJpZCI6ICIxOjIiLAogICAgICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgICAgICJzdGF0dXMiOiAicmVjeWNsZWQiCiAgICAgICAgICB9LAogICAgICAgICAgewogICAgICAgICAgICAiaWQiOiAiMTozIiwKICAgICAgICAgICAgIm1hdGVyaWFsIjogInN0ZWVsIiwKICAgICAgICAgICAgInByb2dyZXNzIjogMiwKICAgICAgICAgICAgImhlYXQiOiA5MiwKICAgICAgICAgICAgInN0cmVzcyI6IDMsCiAgICAgICAgICAgICJpbnRlZ3JpdHkiOiAzLAogICAgICAgICAgICAic3RhdHVzIjogImRlbGl2ZXJlZCIKICAgICAgICAgIH0KICAgICAgICBdCiAgICAgIH0KICAgIF0sCiAgICAicHVyY2hhc2VzIjogW10sCiAgICAic3RhdHMiOiB7CiAgICAgICJzdHJpa2VzIjogMiwKICAgICAgInN1Y2Nlc3NmdWxTdHJpa2VzIjogMiwKICAgICAgImRhbWFnZWRTdHJpa2VzIjogMCwKICAgICAgImhlYXRzIjogMCwKICAgICAgImRlbGl2ZXJlZFBpZWNlcyI6IDEsCiAgICAgICJyZWN5Y2xlZFBpZWNlcyI6IDIsCiAgICAgICJicm9rZW5QaWVjZXMiOiAwLAogICAgICAiaGlnaGVzdFRpZXIiOiAxLAogICAgICAiY29pbnNFYXJuZWQiOiAzNSwKICAgICAgImNvaW5zU3BlbnQiOiAwLAogICAgICAic2NyYXBFYXJuZWQiOiA2LAogICAgICAic2NyYXBTcGVudCI6IDAsCiAgICAgICJyb3VuZHNNZXQiOiAwLAogICAgICAicm91bmRzTWlzc2VkIjogMQogICAgfSwKICAgICJqb3VybmFsIjogWwogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICIxOjEiLAogICAgICAgICJtb2RlIjogInN0YW5kYXJkIiwKICAgICAgICAidGltaW5nTWFyayI6IDUwMDAKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiMTozIiwKICAgICAgICAibW9kZSI6ICJsaWdodCIsCiAgICAgICAgInRpbWluZ01hcmsiOiA1MDAwCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJkZWxpdmVyIiwKICAgICAgICAicGllY2VJZCI6ICIxOjMiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJyZWN5Y2xlIiwKICAgICAgICAicGllY2VJZCI6ICIxOjEiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJzZXR0bGVSb3VuZCIsCiAgICAgICAgInJlY3ljbGVSZW1haW5pbmciOiB0cnVlCiAgICAgIH0KICAgIF0KICB9LAogICJmYWlsZWQiOiB7CiAgICAicnVsZXNWZXJzaW9uIjogImZvcmdlLXYxIiwKICAgICJydW5JZCI6ICJhOWYzZjdmZjU4NjhjMDVkYTE5MjdjMzNhYzBiZTFlNSIsCiAgICAic2VlZCI6ICJrZXlib2FyZC1jb250cmFjdCIsCiAgICAicmV2aXNpb24iOiA5LAogICAgInBoYXNlIjogImRlZmVhdCIsCiAgICAicm91bmQiOiAzLAogICAgImNvaW5zIjogMzUsCiAgICAic2NyYXAiOiAyNywKICAgICJjb2FsIjogMSwKICAgICJzZWFscyI6IDAsCiAgICAidXBncmFkZXMiOiB7CiAgICAgICJoYW5kbGUiOiAwLAogICAgICAiYmVsbG93cyI6IDAsCiAgICAgICJhbnZpbCI6IDAKICAgIH0sCiAgICAicGllY2VzIjogWwogICAgICB7CiAgICAgICAgImlkIjogIjM6MSIsCiAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJyZWN5Y2xlZCIKICAgICAgfSwKICAgICAgewogICAgICAgICJpZCI6ICIzOjIiLAogICAgICAgICJtYXRlcmlhbCI6ICJzdGVlbCIsCiAgICAgICAgInByb2dyZXNzIjogMCwKICAgICAgICAiaGVhdCI6IDEwMCwKICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAiaW50ZWdyaXR5IjogMywKICAgICAgICAic3RhdHVzIjogInJlY3ljbGVkIgogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogIjM6MyIsCiAgICAgICAgIm1hdGVyaWFsIjogInN0ZWVsIiwKICAgICAgICAicHJvZ3Jlc3MiOiAwLAogICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICJzdHJlc3MiOiAwLAogICAgICAgICJpbnRlZ3JpdHkiOiAzLAogICAgICAgICJzdGF0dXMiOiAicmVjeWNsZWQiCiAgICAgIH0KICAgIF0sCiAgICAicm5nIjogewogICAgICAic3RvY2siOiB7CiAgICAgICAgInN0YXRlIjogMTQ3OTk4MDQ2NSwKICAgICAgICAiZHJhd3MiOiAyCiAgICAgIH0sCiAgICAgICJzdHJpa2UiOiB7CiAgICAgICAgInN0YXRlIjogMTM4NDU1Nzg4MywKICAgICAgICAiZHJhd3MiOiAyCiAgICAgIH0KICAgIH0sCiAgICAiaGlzdG9yeSI6IFsKICAgICAgewogICAgICAgICJyb3VuZCI6IDEsCiAgICAgICAgInF1b3RhIjogMTIwLAogICAgICAgICJkZWxpdmVyZWQiOiAzNSwKICAgICAgICAiZGVmaWNpdCI6IDg1LAogICAgICAgICJtZXRRdW90YSI6IGZhbHNlLAogICAgICAgICJzZWFsc0JlZm9yZSI6IDMsCiAgICAgICAgInNlYWxzQWZ0ZXIiOiAyLAogICAgICAgICJjb2FsUmVtYWluaW5nIjogMSwKICAgICAgICAicGllY2VzIjogWwogICAgICAgICAgewogICAgICAgICAgICAiaWQiOiAiMToxIiwKICAgICAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICAgICAicHJvZ3Jlc3MiOiAzLAogICAgICAgICAgICAiaGVhdCI6IDg4LAogICAgICAgICAgICAic3RyZXNzIjogNywKICAgICAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgICAgICJzdGF0dXMiOiAicmVjeWNsZWQiCiAgICAgICAgICB9LAogICAgICAgICAgewogICAgICAgICAgICAiaWQiOiAiMToyIiwKICAgICAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICAgICAicHJvZ3Jlc3MiOiAwLAogICAgICAgICAgICAiaGVhdCI6IDEwMCwKICAgICAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgICAgICJpbnRlZ3JpdHkiOiA0LAogICAgICAgICAgICAic3RhdHVzIjogInJlY3ljbGVkIgogICAgICAgICAgfSwKICAgICAgICAgIHsKICAgICAgICAgICAgImlkIjogIjE6MyIsCiAgICAgICAgICAgICJtYXRlcmlhbCI6ICJzdGVlbCIsCiAgICAgICAgICAgICJwcm9ncmVzcyI6IDIsCiAgICAgICAgICAgICJoZWF0IjogOTIsCiAgICAgICAgICAgICJzdHJlc3MiOiAzLAogICAgICAgICAgICAiaW50ZWdyaXR5IjogMywKICAgICAgICAgICAgInN0YXR1cyI6ICJkZWxpdmVyZWQiCiAgICAgICAgICB9CiAgICAgICAgXQogICAgICB9LAogICAgICB7CiAgICAgICAgInJvdW5kIjogMiwKICAgICAgICAicXVvdGEiOiAxNTAsCiAgICAgICAgImRlbGl2ZXJlZCI6IDAsCiAgICAgICAgImRlZmljaXQiOiAxNTAsCiAgICAgICAgIm1ldFF1b3RhIjogZmFsc2UsCiAgICAgICAgInNlYWxzQmVmb3JlIjogMiwKICAgICAgICAic2VhbHNBZnRlciI6IDEsCiAgICAgICAgImNvYWxSZW1haW5pbmciOiAxLAogICAgICAgICJwaWVjZXMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJpZCI6ICIyOjEiLAogICAgICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgICAgICJzdGF0dXMiOiAicmVjeWNsZWQiCiAgICAgICAgICB9LAogICAgICAgICAgewogICAgICAgICAgICAiaWQiOiAiMjoyIiwKICAgICAgICAgICAgIm1hdGVyaWFsIjogInN0ZWVsIiwKICAgICAgICAgICAgInByb2dyZXNzIjogMCwKICAgICAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgICAgICJzdHJlc3MiOiAwLAogICAgICAgICAgICAiaW50ZWdyaXR5IjogMywKICAgICAgICAgICAgInN0YXR1cyI6ICJyZWN5Y2xlZCIKICAgICAgICAgIH0sCiAgICAgICAgICB7CiAgICAgICAgICAgICJpZCI6ICIyOjMiLAogICAgICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgICAgICJzdGF0dXMiOiAicmVjeWNsZWQiCiAgICAgICAgICB9CiAgICAgICAgXQogICAgICB9LAogICAgICB7CiAgICAgICAgInJvdW5kIjogMywKICAgICAgICAicXVvdGEiOiAxODAsCiAgICAgICAgImRlbGl2ZXJlZCI6IDAsCiAgICAgICAgImRlZmljaXQiOiAxODAsCiAgICAgICAgIm1ldFF1b3RhIjogZmFsc2UsCiAgICAgICAgInNlYWxzQmVmb3JlIjogMSwKICAgICAgICAic2VhbHNBZnRlciI6IDAsCiAgICAgICAgImNvYWxSZW1haW5pbmciOiAxLAogICAgICAgICJwaWVjZXMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJpZCI6ICIzOjEiLAogICAgICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgICAgICJzdGF0dXMiOiAicmVjeWNsZWQiCiAgICAgICAgICB9LAogICAgICAgICAgewogICAgICAgICAgICAiaWQiOiAiMzoyIiwKICAgICAgICAgICAgIm1hdGVyaWFsIjogInN0ZWVsIiwKICAgICAgICAgICAgInByb2dyZXNzIjogMCwKICAgICAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgICAgICJzdHJlc3MiOiAwLAogICAgICAgICAgICAiaW50ZWdyaXR5IjogMywKICAgICAgICAgICAgInN0YXR1cyI6ICJyZWN5Y2xlZCIKICAgICAgICAgIH0sCiAgICAgICAgICB7CiAgICAgICAgICAgICJpZCI6ICIzOjMiLAogICAgICAgICAgICAibWF0ZXJpYWwiOiAic3RlZWwiLAogICAgICAgICAgICAicHJvZ3Jlc3MiOiAwLAogICAgICAgICAgICAiaGVhdCI6IDEwMCwKICAgICAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgICAgICJpbnRlZ3JpdHkiOiAzLAogICAgICAgICAgICAic3RhdHVzIjogInJlY3ljbGVkIgogICAgICAgICAgfQogICAgICAgIF0KICAgICAgfQogICAgXSwKICAgICJwdXJjaGFzZXMiOiBbXSwKICAgICJzdGF0cyI6IHsKICAgICAgInN0cmlrZXMiOiAyLAogICAgICAic3VjY2Vzc2Z1bFN0cmlrZXMiOiAyLAogICAgICAiZGFtYWdlZFN0cmlrZXMiOiAwLAogICAgICAiaGVhdHMiOiAwLAogICAgICAiZGVsaXZlcmVkUGllY2VzIjogMSwKICAgICAgInJlY3ljbGVkUGllY2VzIjogOCwKICAgICAgImJyb2tlblBpZWNlcyI6IDAsCiAgICAgICJoaWdoZXN0VGllciI6IDEsCiAgICAgICJjb2luc0Vhcm5lZCI6IDM1LAogICAgICAiY29pbnNTcGVudCI6IDAsCiAgICAgICJzY3JhcEVhcm5lZCI6IDI3LAogICAgICAic2NyYXBTcGVudCI6IDAsCiAgICAgICJyb3VuZHNNZXQiOiAwLAogICAgICAicm91bmRzTWlzc2VkIjogMwogICAgfSwKICAgICJqb3VybmFsIjogWwogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICIxOjEiLAogICAgICAgICJtb2RlIjogInN0YW5kYXJkIiwKICAgICAgICAidGltaW5nTWFyayI6IDUwMDAKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiMTozIiwKICAgICAgICAibW9kZSI6ICJsaWdodCIsCiAgICAgICAgInRpbWluZ01hcmsiOiA1MDAwCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJkZWxpdmVyIiwKICAgICAgICAicGllY2VJZCI6ICIxOjMiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJyZWN5Y2xlIiwKICAgICAgICAicGllY2VJZCI6ICIxOjEiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJzZXR0bGVSb3VuZCIsCiAgICAgICAgInJlY3ljbGVSZW1haW5pbmciOiB0cnVlCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJhZHZhbmNlU3VtbWFyeSIKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogInNldHRsZVJvdW5kIiwKICAgICAgICAicmVjeWNsZVJlbWFpbmluZyI6IHRydWUKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogImFkdmFuY2VTdW1tYXJ5IgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic2V0dGxlUm91bmQiLAogICAgICAgICJyZWN5Y2xlUmVtYWluaW5nIjogdHJ1ZQogICAgICB9CiAgICBdCiAgfSwKICAicmVhZGFiaWxpdHkiOiBbCiAgICB7CiAgICAgICJ0ZXh0IjogIuaTjeS9nOiuvue9riIsCiAgICAgICJmb250U2l6ZSI6IDI4LAogICAgICAiY29udHJhc3QiOiAxMi4zNDc5MjcyMTQyMDI5MDUKICAgIH0sCiAgICB7CiAgICAgICJ0ZXh0IjogIuaFoumAn+a4uOaghyDDlzEuNe+8iOaUtuebiuS4jeWPmO+8iSIsCiAgICAgICJmb250U2l6ZSI6IDE2LAogICAgICAiY29udHJhc3QiOiAxMi4zNDc5MjcyMTQyMDI5MDUKICAgIH0sCiAgICB7CiAgICAgICJ0ZXh0IjogIuWHj+W8seWKqOaViCIsCiAgICAgICJmb250U2l6ZSI6IDE2LAogICAgICAiY29udHJhc3QiOiAxMi4zNDc5MjcyMTQyMDI5MDUKICAgIH0sCiAgICB7CiAgICAgICJ0ZXh0IjogIumdmemfsyIsCiAgICAgICJmb250U2l6ZSI6IDE2LAogICAgICAiY29udHJhc3QiOiAxMi4zNDc5MjcyMTQyMDI5MDUKICAgIH0sCiAgICB7CiAgICAgICJ0ZXh0IjogIumfs+mHjzElIiwKICAgICAgImZvbnRTaXplIjogMTYsCiAgICAgICJjb250cmFzdCI6IDEyLjM0NzkyNzIxNDIwMjkwNQogICAgfSwKICAgIHsKICAgICAgInRleHQiOiAiMSUiLAogICAgICAiZm9udFNpemUiOiAxNiwKICAgICAgImNvbnRyYXN0IjogMTIuMzQ3OTI3MjE0MjAyOTA1CiAgICB9LAogICAgewogICAgICAidGV4dCI6ICLor5XlkKzplKTlo7AiLAogICAgICAiZm9udFNpemUiOiAxNiwKICAgICAgImNvbnRyYXN0IjogNS44MzUyNjI1OTc2MDUyMDU1CiAgICB9LAogICAgewogICAgICAidGV4dCI6ICLlt7LpnZnpn7PvvJvlhajpg6jnu5Pmnpzku43mnInmloflrZfkuI7lm77lvaLmj5DnpLrjgIIiLAogICAgICAiZm9udFNpemUiOiAxMiwKICAgICAgImNvbnRyYXN0IjogMTIuMzQ3OTI3MjE0MjAyOTA1CiAgICB9LAogICAgewogICAgICAidGV4dCI6ICLorr7nva7lt7Lkv53lrZgiLAogICAgICAiZm9udFNpemUiOiAxMiwKICAgICAgImNvbnRyYXN0IjogNS4wNTU3NzE4NTU4MTI5MDE0CiAgICB9LAogICAgewogICAgICAidGV4dCI6ICLmgaLlpI3pu5jorqTorr7nva4iLAogICAgICAiZm9udFNpemUiOiAxNiwKICAgICAgImNvbnRyYXN0IjogMTAuODM4NTk1NjEyMzE2MzI1CiAgICB9LAogICAgewogICAgICAidGV4dCI6ICLnqbrmoLzlj6rlnKjlh7vmiZPljLrojrflvpfnhKbngrnml7bok4TplKTjgILmlbDlrZcgMS8yLzMg6YCJ5p2l5paZ77yMUS9XL0Ug5o2i6ZSk77yMRXNjIOaaguWBnOOAgiIsCiAgICAgICJmb250U2l6ZSI6IDE2LAogICAgICAiY29udHJhc3QiOiAxMi4zNDc5MjcyMTQyMDI5MDUKICAgIH0sCiAgICB7CiAgICAgICJ0ZXh0IjogIuWujOaIkCIsCiAgICAgICJmb250U2l6ZSI6IDE2LAogICAgICAiY29udHJhc3QiOiA1LjE1OTUyOTExMzU1MzYxOAogICAgfQogIF0KfQ=="
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "de5764f1806931144548-6b13b249ab6a6fe89344",
+          "file": "keyboard-quality.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "keyboard alone signs a contract, saves settings, forges, disposes, pauses, loses and restarts",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-game",
+              "projectName": "webkit-game",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6216,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T11:31:52.945Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "keyboard-settings",
+                      "contentType": "image/png",
+                      "unarchivedOriginalPath": "/Users/gordon/githome/sword-led/test-results/cross/keyboard-quality-keyboard--cced9-s-pauses-loses-and-restarts-webkit-game/attachments/keyboard-settings-24468bb2a2271abd7328047105336d1f4ae9f284.png"
+                    },
+                    {
+                      "name": "keyboard-only-flow",
+                      "contentType": "application/json",
+                      "body": "ewogICJwb2ludGVyRXZlbnRzIjogMCwKICAiZm9yZ2VkIjogewogICAgInJ1bGVzVmVyc2lvbiI6ICJmb3JnZS12MSIsCiAgICAicnVuSWQiOiAiYWU4MjA3ZThmZjhkM2RhYzcwZGY3NmViNTk3OTY4ODMiLAogICAgInNlZWQiOiAia2V5Ym9hcmQtY29udHJhY3QiLAogICAgInJldmlzaW9uIjogMiwKICAgICJwaGFzZSI6ICJ3b3Jrc2hvcCIsCiAgICAicm91bmQiOiAxLAogICAgImNvaW5zIjogMCwKICAgICJzY3JhcCI6IDAsCiAgICAiY29hbCI6IDEsCiAgICAic2VhbHMiOiAzLAogICAgInVwZ3JhZGVzIjogewogICAgICAiaGFuZGxlIjogMCwKICAgICAgImJlbGxvd3MiOiAwLAogICAgICAiYW52aWwiOiAwCiAgICB9LAogICAgInBpZWNlcyI6IFsKICAgICAgewogICAgICAgICJpZCI6ICIxOjEiLAogICAgICAgICJtYXRlcmlhbCI6ICJpcm9uIiwKICAgICAgICAicHJvZ3Jlc3MiOiAzLAogICAgICAgICJoZWF0IjogODgsCiAgICAgICAgInN0cmVzcyI6IDcsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiMToyIiwKICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgInByb2dyZXNzIjogMCwKICAgICAgICAiaGVhdCI6IDEwMCwKICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAiaW50ZWdyaXR5IjogNCwKICAgICAgICAic3RhdHVzIjogImFjdGl2ZSIKICAgICAgfSwKICAgICAgewogICAgICAgICJpZCI6ICIxOjMiLAogICAgICAgICJtYXRlcmlhbCI6ICJzdGVlbCIsCiAgICAgICAgInByb2dyZXNzIjogMiwKICAgICAgICAiaGVhdCI6IDkyLAogICAgICAgICJzdHJlc3MiOiAzLAogICAgICAgICJpbnRlZ3JpdHkiOiAzLAogICAgICAgICJzdGF0dXMiOiAiYWN0aXZlIgogICAgICB9CiAgICBdLAogICAgInJuZyI6IHsKICAgICAgInN0b2NrIjogewogICAgICAgICJzdGF0ZSI6IDIxMTE4MTYxMzUsCiAgICAgICAgImRyYXdzIjogMAogICAgICB9LAogICAgICAic3RyaWtlIjogewogICAgICAgICJzdGF0ZSI6IDEzODQ1NTc4ODMsCiAgICAgICAgImRyYXdzIjogMgogICAgICB9CiAgICB9LAogICAgImhpc3RvcnkiOiBbXSwKICAgICJwdXJjaGFzZXMiOiBbXSwKICAgICJzdGF0cyI6IHsKICAgICAgInN0cmlrZXMiOiAyLAogICAgICAic3VjY2Vzc2Z1bFN0cmlrZXMiOiAyLAogICAgICAiZGFtYWdlZFN0cmlrZXMiOiAwLAogICAgICAiaGVhdHMiOiAwLAogICAgICAiZGVsaXZlcmVkUGllY2VzIjogMCwKICAgICAgInJlY3ljbGVkUGllY2VzIjogMCwKICAgICAgImJyb2tlblBpZWNlcyI6IDAsCiAgICAgICJoaWdoZXN0VGllciI6IDEsCiAgICAgICJjb2luc0Vhcm5lZCI6IDAsCiAgICAgICJjb2luc1NwZW50IjogMCwKICAgICAgInNjcmFwRWFybmVkIjogMCwKICAgICAgInNjcmFwU3BlbnQiOiAwLAogICAgICAicm91bmRzTWV0IjogMCwKICAgICAgInJvdW5kc01pc3NlZCI6IDAKICAgIH0sCiAgICAiam91cm5hbCI6IFsKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiMToxIiwKICAgICAgICAibW9kZSI6ICJzdGFuZGFyZCIsCiAgICAgICAgInRpbWluZ01hcmsiOiA1MDAwCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJzdHJpa2UiLAogICAgICAgICJwaWVjZUlkIjogIjE6MyIsCiAgICAgICAgIm1vZGUiOiAibGlnaHQiLAogICAgICAgICJ0aW1pbmdNYXJrIjogNTAwMAogICAgICB9CiAgICBdCiAgfSwKICAiZGF5MSI6IHsKICAgICJydWxlc1ZlcnNpb24iOiAiZm9yZ2UtdjEiLAogICAgInJ1bklkIjogImFlODIwN2U4ZmY4ZDNkYWM3MGRmNzZlYjU5Nzk2ODgzIiwKICAgICJzZWVkIjogImtleWJvYXJkLWNvbnRyYWN0IiwKICAgICJyZXZpc2lvbiI6IDUsCiAgICAicGhhc2UiOiAicm91bmRTdW1tYXJ5IiwKICAgICJyb3VuZCI6IDEsCiAgICAiY29pbnMiOiAzNSwKICAgICJzY3JhcCI6IDYsCiAgICAiY29hbCI6IDEsCiAgICAic2VhbHMiOiAyLAogICAgInVwZ3JhZGVzIjogewogICAgICAiaGFuZGxlIjogMCwKICAgICAgImJlbGxvd3MiOiAwLAogICAgICAiYW52aWwiOiAwCiAgICB9LAogICAgInBpZWNlcyI6IFsKICAgICAgewogICAgICAgICJpZCI6ICIxOjEiLAogICAgICAgICJtYXRlcmlhbCI6ICJpcm9uIiwKICAgICAgICAicHJvZ3Jlc3MiOiAzLAogICAgICAgICJoZWF0IjogODgsCiAgICAgICAgInN0cmVzcyI6IDcsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJyZWN5Y2xlZCIKICAgICAgfSwKICAgICAgewogICAgICAgICJpZCI6ICIxOjIiLAogICAgICAgICJtYXRlcmlhbCI6ICJpcm9uIiwKICAgICAgICAicHJvZ3Jlc3MiOiAwLAogICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICJzdHJlc3MiOiAwLAogICAgICAgICJpbnRlZ3JpdHkiOiA0LAogICAgICAgICJzdGF0dXMiOiAicmVjeWNsZWQiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiMTozIiwKICAgICAgICAibWF0ZXJpYWwiOiAic3RlZWwiLAogICAgICAgICJwcm9ncmVzcyI6IDIsCiAgICAgICAgImhlYXQiOiA5MiwKICAgICAgICAic3RyZXNzIjogMywKICAgICAgICAiaW50ZWdyaXR5IjogMywKICAgICAgICAic3RhdHVzIjogImRlbGl2ZXJlZCIKICAgICAgfQogICAgXSwKICAgICJybmciOiB7CiAgICAgICJzdG9jayI6IHsKICAgICAgICAic3RhdGUiOiAyMTExODE2MTM1LAogICAgICAgICJkcmF3cyI6IDAKICAgICAgfSwKICAgICAgInN0cmlrZSI6IHsKICAgICAgICAic3RhdGUiOiAxMzg0NTU3ODgzLAogICAgICAgICJkcmF3cyI6IDIKICAgICAgfQogICAgfSwKICAgICJoaXN0b3J5IjogWwogICAgICB7CiAgICAgICAgInJvdW5kIjogMSwKICAgICAgICAicXVvdGEiOiAxMjAsCiAgICAgICAgImRlbGl2ZXJlZCI6IDM1LAogICAgICAgICJkZWZpY2l0IjogODUsCiAgICAgICAgIm1ldFF1b3RhIjogZmFsc2UsCiAgICAgICAgInNlYWxzQmVmb3JlIjogMywKICAgICAgICAic2VhbHNBZnRlciI6IDIsCiAgICAgICAgImNvYWxSZW1haW5pbmciOiAxLAogICAgICAgICJwaWVjZXMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJpZCI6ICIxOjEiLAogICAgICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgICAgICJwcm9ncmVzcyI6IDMsCiAgICAgICAgICAgICJoZWF0IjogODgsCiAgICAgICAgICAgICJzdHJlc3MiOiA3LAogICAgICAgICAgICAiaW50ZWdyaXR5IjogNCwKICAgICAgICAgICAgInN0YXR1cyI6ICJyZWN5Y2xlZCIKICAgICAgICAgIH0sCiAgICAgICAgICB7CiAgICAgICAgICAgICJpZCI6ICIxOjIiLAogICAgICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgICAgICJzdGF0dXMiOiAicmVjeWNsZWQiCiAgICAgICAgICB9LAogICAgICAgICAgewogICAgICAgICAgICAiaWQiOiAiMTozIiwKICAgICAgICAgICAgIm1hdGVyaWFsIjogInN0ZWVsIiwKICAgICAgICAgICAgInByb2dyZXNzIjogMiwKICAgICAgICAgICAgImhlYXQiOiA5MiwKICAgICAgICAgICAgInN0cmVzcyI6IDMsCiAgICAgICAgICAgICJpbnRlZ3JpdHkiOiAzLAogICAgICAgICAgICAic3RhdHVzIjogImRlbGl2ZXJlZCIKICAgICAgICAgIH0KICAgICAgICBdCiAgICAgIH0KICAgIF0sCiAgICAicHVyY2hhc2VzIjogW10sCiAgICAic3RhdHMiOiB7CiAgICAgICJzdHJpa2VzIjogMiwKICAgICAgInN1Y2Nlc3NmdWxTdHJpa2VzIjogMiwKICAgICAgImRhbWFnZWRTdHJpa2VzIjogMCwKICAgICAgImhlYXRzIjogMCwKICAgICAgImRlbGl2ZXJlZFBpZWNlcyI6IDEsCiAgICAgICJyZWN5Y2xlZFBpZWNlcyI6IDIsCiAgICAgICJicm9rZW5QaWVjZXMiOiAwLAogICAgICAiaGlnaGVzdFRpZXIiOiAxLAogICAgICAiY29pbnNFYXJuZWQiOiAzNSwKICAgICAgImNvaW5zU3BlbnQiOiAwLAogICAgICAic2NyYXBFYXJuZWQiOiA2LAogICAgICAic2NyYXBTcGVudCI6IDAsCiAgICAgICJyb3VuZHNNZXQiOiAwLAogICAgICAicm91bmRzTWlzc2VkIjogMQogICAgfSwKICAgICJqb3VybmFsIjogWwogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICIxOjEiLAogICAgICAgICJtb2RlIjogInN0YW5kYXJkIiwKICAgICAgICAidGltaW5nTWFyayI6IDUwMDAKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiMTozIiwKICAgICAgICAibW9kZSI6ICJsaWdodCIsCiAgICAgICAgInRpbWluZ01hcmsiOiA1MDAwCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJkZWxpdmVyIiwKICAgICAgICAicGllY2VJZCI6ICIxOjMiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJyZWN5Y2xlIiwKICAgICAgICAicGllY2VJZCI6ICIxOjEiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJzZXR0bGVSb3VuZCIsCiAgICAgICAgInJlY3ljbGVSZW1haW5pbmciOiB0cnVlCiAgICAgIH0KICAgIF0KICB9LAogICJmYWlsZWQiOiB7CiAgICAicnVsZXNWZXJzaW9uIjogImZvcmdlLXYxIiwKICAgICJydW5JZCI6ICJhZTgyMDdlOGZmOGQzZGFjNzBkZjc2ZWI1OTc5Njg4MyIsCiAgICAic2VlZCI6ICJrZXlib2FyZC1jb250cmFjdCIsCiAgICAicmV2aXNpb24iOiA5LAogICAgInBoYXNlIjogImRlZmVhdCIsCiAgICAicm91bmQiOiAzLAogICAgImNvaW5zIjogMzUsCiAgICAic2NyYXAiOiAyNywKICAgICJjb2FsIjogMSwKICAgICJzZWFscyI6IDAsCiAgICAidXBncmFkZXMiOiB7CiAgICAgICJoYW5kbGUiOiAwLAogICAgICAiYmVsbG93cyI6IDAsCiAgICAgICJhbnZpbCI6IDAKICAgIH0sCiAgICAicGllY2VzIjogWwogICAgICB7CiAgICAgICAgImlkIjogIjM6MSIsCiAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJyZWN5Y2xlZCIKICAgICAgfSwKICAgICAgewogICAgICAgICJpZCI6ICIzOjIiLAogICAgICAgICJtYXRlcmlhbCI6ICJzdGVlbCIsCiAgICAgICAgInByb2dyZXNzIjogMCwKICAgICAgICAiaGVhdCI6IDEwMCwKICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAiaW50ZWdyaXR5IjogMywKICAgICAgICAic3RhdHVzIjogInJlY3ljbGVkIgogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogIjM6MyIsCiAgICAgICAgIm1hdGVyaWFsIjogInN0ZWVsIiwKICAgICAgICAicHJvZ3Jlc3MiOiAwLAogICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICJzdHJlc3MiOiAwLAogICAgICAgICJpbnRlZ3JpdHkiOiAzLAogICAgICAgICJzdGF0dXMiOiAicmVjeWNsZWQiCiAgICAgIH0KICAgIF0sCiAgICAicm5nIjogewogICAgICAic3RvY2siOiB7CiAgICAgICAgInN0YXRlIjogMTQ3OTk4MDQ2NSwKICAgICAgICAiZHJhd3MiOiAyCiAgICAgIH0sCiAgICAgICJzdHJpa2UiOiB7CiAgICAgICAgInN0YXRlIjogMTM4NDU1Nzg4MywKICAgICAgICAiZHJhd3MiOiAyCiAgICAgIH0KICAgIH0sCiAgICAiaGlzdG9yeSI6IFsKICAgICAgewogICAgICAgICJyb3VuZCI6IDEsCiAgICAgICAgInF1b3RhIjogMTIwLAogICAgICAgICJkZWxpdmVyZWQiOiAzNSwKICAgICAgICAiZGVmaWNpdCI6IDg1LAogICAgICAgICJtZXRRdW90YSI6IGZhbHNlLAogICAgICAgICJzZWFsc0JlZm9yZSI6IDMsCiAgICAgICAgInNlYWxzQWZ0ZXIiOiAyLAogICAgICAgICJjb2FsUmVtYWluaW5nIjogMSwKICAgICAgICAicGllY2VzIjogWwogICAgICAgICAgewogICAgICAgICAgICAiaWQiOiAiMToxIiwKICAgICAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICAgICAicHJvZ3Jlc3MiOiAzLAogICAgICAgICAgICAiaGVhdCI6IDg4LAogICAgICAgICAgICAic3RyZXNzIjogNywKICAgICAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgICAgICJzdGF0dXMiOiAicmVjeWNsZWQiCiAgICAgICAgICB9LAogICAgICAgICAgewogICAgICAgICAgICAiaWQiOiAiMToyIiwKICAgICAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICAgICAicHJvZ3Jlc3MiOiAwLAogICAgICAgICAgICAiaGVhdCI6IDEwMCwKICAgICAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgICAgICJpbnRlZ3JpdHkiOiA0LAogICAgICAgICAgICAic3RhdHVzIjogInJlY3ljbGVkIgogICAgICAgICAgfSwKICAgICAgICAgIHsKICAgICAgICAgICAgImlkIjogIjE6MyIsCiAgICAgICAgICAgICJtYXRlcmlhbCI6ICJzdGVlbCIsCiAgICAgICAgICAgICJwcm9ncmVzcyI6IDIsCiAgICAgICAgICAgICJoZWF0IjogOTIsCiAgICAgICAgICAgICJzdHJlc3MiOiAzLAogICAgICAgICAgICAiaW50ZWdyaXR5IjogMywKICAgICAgICAgICAgInN0YXR1cyI6ICJkZWxpdmVyZWQiCiAgICAgICAgICB9CiAgICAgICAgXQogICAgICB9LAogICAgICB7CiAgICAgICAgInJvdW5kIjogMiwKICAgICAgICAicXVvdGEiOiAxNTAsCiAgICAgICAgImRlbGl2ZXJlZCI6IDAsCiAgICAgICAgImRlZmljaXQiOiAxNTAsCiAgICAgICAgIm1ldFF1b3RhIjogZmFsc2UsCiAgICAgICAgInNlYWxzQmVmb3JlIjogMiwKICAgICAgICAic2VhbHNBZnRlciI6IDEsCiAgICAgICAgImNvYWxSZW1haW5pbmciOiAxLAogICAgICAgICJwaWVjZXMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJpZCI6ICIyOjEiLAogICAgICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgICAgICJzdGF0dXMiOiAicmVjeWNsZWQiCiAgICAgICAgICB9LAogICAgICAgICAgewogICAgICAgICAgICAiaWQiOiAiMjoyIiwKICAgICAgICAgICAgIm1hdGVyaWFsIjogInN0ZWVsIiwKICAgICAgICAgICAgInByb2dyZXNzIjogMCwKICAgICAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgICAgICJzdHJlc3MiOiAwLAogICAgICAgICAgICAiaW50ZWdyaXR5IjogMywKICAgICAgICAgICAgInN0YXR1cyI6ICJyZWN5Y2xlZCIKICAgICAgICAgIH0sCiAgICAgICAgICB7CiAgICAgICAgICAgICJpZCI6ICIyOjMiLAogICAgICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgICAgICJzdGF0dXMiOiAicmVjeWNsZWQiCiAgICAgICAgICB9CiAgICAgICAgXQogICAgICB9LAogICAgICB7CiAgICAgICAgInJvdW5kIjogMywKICAgICAgICAicXVvdGEiOiAxODAsCiAgICAgICAgImRlbGl2ZXJlZCI6IDAsCiAgICAgICAgImRlZmljaXQiOiAxODAsCiAgICAgICAgIm1ldFF1b3RhIjogZmFsc2UsCiAgICAgICAgInNlYWxzQmVmb3JlIjogMSwKICAgICAgICAic2VhbHNBZnRlciI6IDAsCiAgICAgICAgImNvYWxSZW1haW5pbmciOiAxLAogICAgICAgICJwaWVjZXMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJpZCI6ICIzOjEiLAogICAgICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgICAgICJwcm9ncmVzcyI6IDAsCiAgICAgICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgICAgICJzdGF0dXMiOiAicmVjeWNsZWQiCiAgICAgICAgICB9LAogICAgICAgICAgewogICAgICAgICAgICAiaWQiOiAiMzoyIiwKICAgICAgICAgICAgIm1hdGVyaWFsIjogInN0ZWVsIiwKICAgICAgICAgICAgInByb2dyZXNzIjogMCwKICAgICAgICAgICAgImhlYXQiOiAxMDAsCiAgICAgICAgICAgICJzdHJlc3MiOiAwLAogICAgICAgICAgICAiaW50ZWdyaXR5IjogMywKICAgICAgICAgICAgInN0YXR1cyI6ICJyZWN5Y2xlZCIKICAgICAgICAgIH0sCiAgICAgICAgICB7CiAgICAgICAgICAgICJpZCI6ICIzOjMiLAogICAgICAgICAgICAibWF0ZXJpYWwiOiAic3RlZWwiLAogICAgICAgICAgICAicHJvZ3Jlc3MiOiAwLAogICAgICAgICAgICAiaGVhdCI6IDEwMCwKICAgICAgICAgICAgInN0cmVzcyI6IDAsCiAgICAgICAgICAgICJpbnRlZ3JpdHkiOiAzLAogICAgICAgICAgICAic3RhdHVzIjogInJlY3ljbGVkIgogICAgICAgICAgfQogICAgICAgIF0KICAgICAgfQogICAgXSwKICAgICJwdXJjaGFzZXMiOiBbXSwKICAgICJzdGF0cyI6IHsKICAgICAgInN0cmlrZXMiOiAyLAogICAgICAic3VjY2Vzc2Z1bFN0cmlrZXMiOiAyLAogICAgICAiZGFtYWdlZFN0cmlrZXMiOiAwLAogICAgICAiaGVhdHMiOiAwLAogICAgICAiZGVsaXZlcmVkUGllY2VzIjogMSwKICAgICAgInJlY3ljbGVkUGllY2VzIjogOCwKICAgICAgImJyb2tlblBpZWNlcyI6IDAsCiAgICAgICJoaWdoZXN0VGllciI6IDEsCiAgICAgICJjb2luc0Vhcm5lZCI6IDM1LAogICAgICAiY29pbnNTcGVudCI6IDAsCiAgICAgICJzY3JhcEVhcm5lZCI6IDI3LAogICAgICAic2NyYXBTcGVudCI6IDAsCiAgICAgICJyb3VuZHNNZXQiOiAwLAogICAgICAicm91bmRzTWlzc2VkIjogMwogICAgfSwKICAgICJqb3VybmFsIjogWwogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICIxOjEiLAogICAgICAgICJtb2RlIjogInN0YW5kYXJkIiwKICAgICAgICAidGltaW5nTWFyayI6IDUwMDAKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiMTozIiwKICAgICAgICAibW9kZSI6ICJsaWdodCIsCiAgICAgICAgInRpbWluZ01hcmsiOiA1MDAwCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJkZWxpdmVyIiwKICAgICAgICAicGllY2VJZCI6ICIxOjMiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJyZWN5Y2xlIiwKICAgICAgICAicGllY2VJZCI6ICIxOjEiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJzZXR0bGVSb3VuZCIsCiAgICAgICAgInJlY3ljbGVSZW1haW5pbmciOiB0cnVlCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJhZHZhbmNlU3VtbWFyeSIKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogInNldHRsZVJvdW5kIiwKICAgICAgICAicmVjeWNsZVJlbWFpbmluZyI6IHRydWUKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogImFkdmFuY2VTdW1tYXJ5IgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic2V0dGxlUm91bmQiLAogICAgICAgICJyZWN5Y2xlUmVtYWluaW5nIjogdHJ1ZQogICAgICB9CiAgICBdCiAgfSwKICAicmVhZGFiaWxpdHkiOiBbCiAgICB7CiAgICAgICJ0ZXh0IjogIuaTjeS9nOiuvue9riIsCiAgICAgICJmb250U2l6ZSI6IDI4LAogICAgICAiY29udHJhc3QiOiAxMi4zNDc5MjcyMTQyMDI5MDUKICAgIH0sCiAgICB7CiAgICAgICJ0ZXh0IjogIuaFoumAn+a4uOaghyDDlzEuNe+8iOaUtuebiuS4jeWPmO+8iSIsCiAgICAgICJmb250U2l6ZSI6IDE2LAogICAgICAiY29udHJhc3QiOiAxMi4zNDc5MjcyMTQyMDI5MDUKICAgIH0sCiAgICB7CiAgICAgICJ0ZXh0IjogIuWHj+W8seWKqOaViCIsCiAgICAgICJmb250U2l6ZSI6IDE2LAogICAgICAiY29udHJhc3QiOiAxMi4zNDc5MjcyMTQyMDI5MDUKICAgIH0sCiAgICB7CiAgICAgICJ0ZXh0IjogIumdmemfsyIsCiAgICAgICJmb250U2l6ZSI6IDE2LAogICAgICAiY29udHJhc3QiOiAxMi4zNDc5MjcyMTQyMDI5MDUKICAgIH0sCiAgICB7CiAgICAgICJ0ZXh0IjogIumfs+mHjzElIiwKICAgICAgImZvbnRTaXplIjogMTYsCiAgICAgICJjb250cmFzdCI6IDEyLjM0NzkyNzIxNDIwMjkwNQogICAgfSwKICAgIHsKICAgICAgInRleHQiOiAiMSUiLAogICAgICAiZm9udFNpemUiOiAxNiwKICAgICAgImNvbnRyYXN0IjogMTIuMzQ3OTI3MjE0MjAyOTA1CiAgICB9LAogICAgewogICAgICAidGV4dCI6ICLor5XlkKzplKTlo7AiLAogICAgICAiZm9udFNpemUiOiAxNiwKICAgICAgImNvbnRyYXN0IjogNS44MzUyNjI1OTc2MDUyMDU1CiAgICB9LAogICAgewogICAgICAidGV4dCI6ICLlt7LpnZnpn7PvvJvlhajpg6jnu5Pmnpzku43mnInmloflrZfkuI7lm77lvaLmj5DnpLrjgIIiLAogICAgICAiZm9udFNpemUiOiAxMiwKICAgICAgImNvbnRyYXN0IjogMTIuMzQ3OTI3MjE0MjAyOTA1CiAgICB9LAogICAgewogICAgICAidGV4dCI6ICLorr7nva7lt7Lkv53lrZgiLAogICAgICAiZm9udFNpemUiOiAxMiwKICAgICAgImNvbnRyYXN0IjogNS4wNTU3NzE4NTU4MTI5MDE0CiAgICB9LAogICAgewogICAgICAidGV4dCI6ICLmgaLlpI3pu5jorqTorr7nva4iLAogICAgICAiZm9udFNpemUiOiAxNiwKICAgICAgImNvbnRyYXN0IjogMTAuODM4NTk1NjEyMzE2MzI1CiAgICB9LAogICAgewogICAgICAidGV4dCI6ICLnqbrmoLzlj6rlnKjlh7vmiZPljLrojrflvpfnhKbngrnml7bok4TplKTjgILmlbDlrZcgMS8yLzMg6YCJ5p2l5paZ77yMUS9XL0Ug5o2i6ZSk77yMRXNjIOaaguWBnOOAgiIsCiAgICAgICJmb250U2l6ZSI6IDE2LAogICAgICAiY29udHJhc3QiOiAxMi4zNDc5MjcyMTQyMDI5MDUKICAgIH0sCiAgICB7CiAgICAgICJ0ZXh0IjogIuWujOaIkCIsCiAgICAgICJmb250U2l6ZSI6IDE2LAogICAgICAiY29udHJhc3QiOiA1LjE1OTUyOTExMzU1MzYxOAogICAgfQogIF0KfQ=="
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "de5764f1806931144548-4be6012d5b63c1d0c37f",
+          "file": "keyboard-quality.spec.ts",
+          "line": 6,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "workshop-boundaries.spec.ts",
+      "file": "workshop-boundaries.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "asset-load failure can retry without erasing a saved run",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-dpr2",
+              "projectName": "chromium-dpr2",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3487,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T11:30:26.842Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFsKICAgICJGYWlsZWQgdG8gbG9hZCByZXNvdXJjZTogdGhlIHNlcnZlciByZXNwb25kZWQgd2l0aCBhIHN0YXR1cyBvZiA1MDMgKFNlcnZpY2UgVW5hdmFpbGFibGUpIgogIF0sCiAgImh0dHAiOiBbCiAgICB7CiAgICAgICJzdGF0dXMiOiA1MDMsCiAgICAgICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2Fzc2V0cy9iL2hhbW1lci1zdGFuZGFyZC12MS53ZWJwIgogICAgfQogIF0sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbCiAgICA1MDMKICBdCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2c45478a65e9fd96c249-5e07491995afba99523d",
+          "file": "workshop-boundaries.spec.ts",
+          "line": 98,
+          "column": 1
+        },
+        {
+          "title": "asset-load failure can retry without erasing a saved run",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-game",
+              "projectName": "firefox-game",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5025,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T11:31:10.618Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogWwogICAgewogICAgICAic3RhdHVzIjogNTAzLAogICAgICAidXJsIjogImh0dHA6Ly8xMjcuMC4wLjE6NDE4MS9hc3NldHMvYi9oYW1tZXItc3RhbmRhcmQtdjEud2VicCIKICAgIH0KICBdLAogICJhbGxvd2VkSHR0cFN0YXR1c2VzIjogWwogICAgNTAzCiAgXQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2c45478a65e9fd96c249-f6459b7456ee29e659da",
+          "file": "workshop-boundaries.spec.ts",
+          "line": 98,
+          "column": 1
+        },
+        {
+          "title": "asset-load failure can retry without erasing a saved run",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-game",
+              "projectName": "webkit-game",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2629,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-18T11:31:59.210Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFsKICAgICJGYWlsZWQgdG8gbG9hZCByZXNvdXJjZTogdGhlIHNlcnZlciByZXNwb25kZWQgd2l0aCBhIHN0YXR1cyBvZiA1MDMgKFNlcnZpY2UgVW5hdmFpbGFibGUpIgogIF0sCiAgImh0dHAiOiBbCiAgICB7CiAgICAgICJzdGF0dXMiOiA1MDMsCiAgICAgICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo0MTgxL2Fzc2V0cy9iL2hhbW1lci1zdGFuZGFyZC12MS53ZWJwIgogICAgfQogIF0sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbCiAgICA1MDMKICBdCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2c45478a65e9fd96c249-c0b15bf25599355aeb13",
+          "file": "workshop-boundaries.spec.ts",
+          "line": 98,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-18T11:30:03.366Z",
+    "duration": 158688.585,
+    "expected": 25,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

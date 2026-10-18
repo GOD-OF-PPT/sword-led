@@ -7,6 +7,7 @@
     "node": "^22.12.0 || ^24.0.0 || >=26.0.0"
   },
   "scripts": {
+    "test:cross": "npm run build && playwright test --config playwright.cross.config.ts",
     "test:browser": "npm run build && playwright test --config playwright.ui.config.ts && playwright test",
     "test:e2e": "npm run build && playwright test --config playwright.ui.config.ts",
     "test:art": "npm run build && node scripts/art/verify.mjs",

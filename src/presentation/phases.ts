@@ -3,10 +3,8 @@ import { getRunLedger } from '../core/index.js';
 import type { ArtBundle } from './assets.js';
 import { artAsset } from './assets.js';
 import { explainError } from '../application/session.js';
+import { element as node } from './dom.js';
 
-function node<K extends keyof HTMLElementTagNameMap>(tag: K, text?: string, className?: string): HTMLElementTagNameMap[K] {
-  const el = document.createElement(tag);if (text !== undefined) el.textContent = text;if (className) el.className = className;return el;
-}
 export interface PhaseHooks {
   command(action: Action): void;
   confirm(title: string, message: string, label: string, run: () => void): void;
