@@ -2,6 +2,8 @@
 
 2026-10-17。前置已满足：用户明确答复“确认 v0.2，开始玩法内核”，并选“B 行会手账”。原问答见 [确认记录](../decision-record.md)。本轮只完成 T04，未把经营/存档或界面任务提前勾选。
 
+后续状态：本页保留 T04 证据快照；T05 此后已实现商人和持久化会话，见 [T05 报告](T05-persistence-validation.md)，不改写为 T04 当时已完成。
+
 ## 实际实现
 
 - 正式 Interface：`src/core/index.ts` 导出的 createRun、applyCommand、getRunView。模块纯同步、无 DOM/存储/墙钟/Math.random；运行时第三方依赖为 0。

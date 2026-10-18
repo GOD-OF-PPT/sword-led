@@ -1,4 +1,4 @@
-import type { HammerMode, Material, RunState, TimingGrade, Workpiece } from './model.js';
+import type { HammerMode, Material, ProductId, RunState, TimingGrade, Workpiece } from './model.js';
 import { freezeDeep } from './immutable.js';
 
 export const RULES_VERSION = 'forge-v1';
@@ -28,6 +28,10 @@ export const HAMMERS = freezeDeep({
 
 export function isHammerMode(value: unknown): value is HammerMode {
   return value === 'light' || value === 'standard' || value === 'heavy';
+}
+
+export function isProductId(value: unknown): value is ProductId {
+  return value === 'handle' || value === 'bellows' || value === 'anvil' || value === 'repair';
 }
 
 export function tierOf(progress: number): number {

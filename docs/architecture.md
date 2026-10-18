@@ -1,8 +1,8 @@
 # 代码架构与玩法内核约定
 
-版本：v0.1，2026-10-17。状态：用户已确认方案并选择 B；T04 纯锻造/轮次内核已实现，经营/存档与界面按后续任务实施。玩法依据：[游戏设计](game-design.md)；交付顺序：[实施方案](implementation-plan.md)。
+版本：v0.2，2026-10-18。状态：用户已确认方案并选择 B；T04/T05 已实现纯规则、经营、校验与持久化会话，整局平衡和界面按后续任务实施。玩法依据：[游戏设计](game-design.md)；交付顺序：[实施方案](implementation-plan.md)。
 
-本文件描述完整目标架构。当前正式运行入口为 createRun/applyCommand/getRunView；validateRun 和商人购买在 T05 添加，未以占位函数伪装存在。T04 通过 Vite library mode 构建同一内核，网页入口在 T08 添加，见 [T04 证据](reviews/T04-kernel-validation.md)。
+本文件描述完整目标架构。规则入口为 createRun/applyCommand/getRunView/validateRun，buy 与持久化会话已实现；通过 Vite library mode 输出 core/session 两入口及共享 chunk。网页入口在 T08 添加。见 [T04 证据](reviews/T04-kernel-validation.md)、[T05 证据](reviews/T05-persistence-validation.md)与[持久化合同](persistence-and-merchant.md)。
 
 ## 1. 架构决策
 
@@ -53,9 +53,12 @@ src/
     game.ts               # 纯状态转移
     validate.ts           # 导入状态的结构/语义校验
     view.ts               # 可操作项、概率与派生值
-  application/session.ts  # 会话与动作/存档/表现编排
+  application/persistent-session.ts # 已实现：唯一工作副本、命令、保存与生命周期
+  application/session.ts  # 后续：输入/暂停/表现编排，委托持久化会话，不复制规则状态
   platform/
     storage.ts            # 本地存档 Adapter
+    writer-lease.ts       # 原生独占锁与释放
+    browser-session.ts    # Window 生命周期接线
     input.ts              # 键鼠与时机
     audio.ts              # 原生 Web Audio 声音
   presentation/
@@ -64,6 +67,7 @@ src/
     scene.ts              # Canvas 场景与效果
     styles.css            # 布局和选定风格 token
   tutorial/lesson.ts      # 明确标示的独立练习，不写正式存档
+  persistence/index.ts    # 已实现：宿主/浏览器会话入口
 scripts/simulate.ts       # 调用正式内核的策略模拟
 tests/core/               # 规则、恢复和不变量
 tests/e2e/                # 真实网页输入与整局验证
@@ -88,6 +92,7 @@ docs/reviews/             # R1–R4 与验证结果
 | history | 最多 12 条；每轮唯一，保存配额、实际交货、印记变化、三件处置及破碎时损失估值 |
 | purchases | 来访轮次 3/6/9、商品与扣费；每商品每次来访至多一条 |
 | stats | 击打/成功/裂损数、交货/回收/破碎数、最高阶级、累计收入/支出、达标/违约轮数；可与记录交叉核验 |
+| journal | 每个 Accepted 命令的规范 Action；长度等于 revision，最多 2048；选择/暂停/动画不计入 |
 
 当前选择、锤法、弹窗、暂停、游标时间、动画、音量和焦点不在规则状态中。视图选中件失效时切到第一件仍 active 的铁坯；没有可用件时清空选择并突出结算。参数通过 `pieceId` 明确指向目标，不依赖某个闭包里的旧选中件。
 
@@ -152,7 +157,7 @@ Accepted 恰好增加一次 revision。runId 不符、revision 过期、阶段�
 
 存档主键 `sword-led.save.v1`、备份键 `sword-led.save.backup.v1`、设置键 `sword-led.settings.v1`。Envelope 包含 `schemaVersion=1`、`rulesVersion="forge-v1"`、savedAt（仅展示）和 RunState。正式确认/复核后冻结首个规则版本，调整不兼容规则须升级版本并明确提示，不静默混用。
 
-读取流程：在 try/catch 内读存储 → 长度上限 256 KiB → JSON 解析为 unknown → schema/rules 版本 → 重建已知字段 → 有限整数、枚举、范围、三件 id、完整度与 status、阶段/历史长度、货币账目与限购语义校验。拒绝 NaN/Infinity、负值、过大数组、未知阶段和不可能的终局。不能把“JSON 能解析”当作合法游戏状态。
+读取流程：try/catch 存储 → 256 KiB UTF-8 上限 → JSON unknown → envelope/schema/rules/日期 → 有界纯 JSON/整数 → seed/runId 重建 → 通过正式内核回放 journal → 全快照一致性核对。非法命令、伪造钱/统计/随机位置、错误历史/阶段/完整度及未知字段均拒绝；不执行输入 getter，不把“JSON 能解析”当合法状态。
 
 累计账目只统计一次：history 只含已结算轮；workshop 当前轮的交货/回收/破碎尚未进入 history，校验时额外计入；roundSummary/merchant/终局的当前轮已在 history，不再重复加当前三件。coins 等于累计交货收入减已记录购买金币，scrap 等于累计回收/破碎收入减购买废料；热度、应力等当前状态不靠钱包值推断。
 
@@ -163,6 +168,8 @@ Accepted 恰好增加一次 revision。runId 不符、revision 过期、阶段�
 浏览器存储可能因策略被禁用并抛错，直接双击 `file:` 的行为不能作为正式运行方式，必须通过开发服务器或 HTTPS 静态托管。[localStorage 文档](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)。
 
 同源只允许一个可写游戏窗口：存档 Adapter 在开始可写会话前申请 `sword-led.writer` 独占 Web Lock，使用 `ifAvailable`，持有至会话释放/页面离开；第二窗口显示只读提示与重试入口，不抢锁、不覆盖主档。页面从 bfcache 恢复须重新拿锁并重新读取主档，不能直接复用旧内存。`storage` 事件用于发现外部变更，不充当互斥锁，也不在本窗口写入后等待自身事件。[Web Locks](https://developer.mozilla.org/en-US/docs/Web/API/Web_Locks_API)、[storage 事件](https://developer.mozilla.org/en-US/docs/Web/API/Window/storage_event)。
+
+T05 已落实：会话唯一持有工作副本；对外 generation 使旧输入失效，内部 activationEpoch 表示激活流程，排队通知不取消后者。激活期间 active=false。workingBase 绑定该副本，读缓存变化不授予覆写许可；写前在持有独占锁时核对自身原主档。真实 BFCache 及两个窗口 dirty 冲突链已验证。
 
 支持目标为现代桌面 Chrome/Edge、Firefox、Safari，运行在 localhost 或 HTTPS 安全上下文；Web Lock 不可用时给出具体能力提示，允许不写盘的独立试玩，不声称该模式提供存档互斥保护。存储不可用时也可明确进入内存试玩，不覆盖别的窗口。
 

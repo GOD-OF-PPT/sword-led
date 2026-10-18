@@ -44,3 +44,9 @@
 使用 Node 22.12.0 / npm 10.9.0，实际锁定 Vite 8.3.4、TypeScript 7.0.2、Vitest 5.0.5、@types/node 22.20.5；Playwright 在后续真实界面验证时添加。本轮无运行时依赖。`npm ci --registry=https://registry.npmjs.org/` 和 `npm run check` 已执行通过，完整结果见 T04 报告。
 
 内核先按 [Vite library mode](https://vite.dev/guide/build#library-mode) 构建独立 ESM，网页入口在 T08 添加。随机算法核对 [Tommy Ettinger 的原始 C 实现](https://gist.github.com/tommyettinger/46a874533244883189143505d203312c) 与 [FNV 文档](https://www.ietf.org/archive/id/draft-eastlake-fnv-25.html)；C 参考输出向量保存在 tests/fixtures，TypeScript 与其逐项对照。保留约定算法用于本地可重放，不宣称其为密码学随机或已证明整局概率平衡。
+
+## T05 实际落地（2026-10-18）
+
+新增精确 devDependency `@playwright/test` 1.64.1（npm 官方源核实 Node engines ≥20）；实际 Chromium/Chrome for Testing 为 156.0.8078.4。干净安装、141 单元测试、strict/构建与 8 浏览器集成均通过，见 [T05 报告](reviews/T05-persistence-validation.md)。Node 测试配置增加 DOM 类型以检查浏览器回调与能力 Interface，所有严格选项保留，纯 core 平台隔离另行检查。
+
+Web Locks 的 [request/ifAvailable](https://developer.mozilla.org/en-US/docs/Web/API/LockManager/request) 和 [localStorage 异常](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)用于真实 Adapter。Playwright [官方 Next 导航说明](https://playwright.dev/docs/next/navigations#backforward-cache-bfcache)指出普通 Page 不支持 BFCache 恢复测试，因此原生回归以独立 Chrome/CDP 管道执行；实际缓存/heap/版本/构建 hash 在 JSON 证据中记录。该浏览器缓存不入仓库，没有修改用户全局 registry/代理或正常浏览器 profile。

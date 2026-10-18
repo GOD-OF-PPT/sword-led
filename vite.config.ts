@@ -5,9 +5,12 @@ export default defineConfig({
   build: {
     target: 'es2022',
     lib: {
-      entry: fileURLToPath(new URL('./src/core/index.ts', import.meta.url)),
+      entry: {
+        'sword-led-core': fileURLToPath(new URL('./src/core/index.ts', import.meta.url)),
+        'sword-led-session': fileURLToPath(new URL('./src/persistence/index.ts', import.meta.url)),
+      },
       formats: ['es'],
-      fileName: 'sword-led-core',
+      fileName: (_format, entryName) => `${entryName}.js`,
     },
   },
 });

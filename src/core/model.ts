@@ -82,12 +82,14 @@ export interface RunState {
   readonly history: readonly RoundSummary[];
   readonly purchases: readonly Purchase[];
   readonly stats: GameStats;
+  readonly journal: readonly Action[];
 }
 
 export type Action =
   | { readonly type: 'strike'; readonly pieceId: string; readonly mode: HammerMode; readonly timingMark: number }
   | { readonly type: 'heat' | 'deliver' | 'recycle'; readonly pieceId: string }
   | { readonly type: 'settleRound'; readonly recycleRemaining: boolean }
+  | { readonly type: 'buy'; readonly productId: ProductId }
   | { readonly type: 'advanceSummary' | 'leaveMerchant' };
 
 export interface RunCommand {
@@ -100,7 +102,9 @@ export type ErrorCode =
   | 'invalid_run_id' | 'invalid_seed' | 'invalid_command' | 'foreign_run'
   | 'stale_revision' | 'wrong_phase' | 'piece_not_found' | 'piece_finalized'
   | 'no_heat' | 'max_progress' | 'no_coal' | 'already_hot'
-  | 'unprocessed_pieces' | 'invalid_timing' | 'invalid_hammer' | 'invalid_rules_version';
+  | 'unprocessed_pieces' | 'invalid_timing' | 'invalid_hammer' | 'invalid_rules_version'
+  | 'invalid_product' | 'already_purchased' | 'max_level' | 'repair_not_needed'
+  | 'insufficient_coins' | 'insufficient_scrap';
 
 export type Availability =
   | { readonly allowed: true }
@@ -121,6 +125,7 @@ export type DomainEvent =
   | { readonly type: 'RoundSettled'; readonly summary: RoundSummary }
   | { readonly type: 'RoundStarted'; readonly round: number; readonly quota: number; readonly coal: number }
   | { readonly type: 'MerchantEntered'; readonly afterRound: number }
+  | { readonly type: 'PurchaseMade'; readonly purchase: Purchase }
   | { readonly type: 'RunEnded'; readonly outcome: 'victory' | 'defeat'; readonly round: number; readonly seals: number };
 
 export type CommandResult =
@@ -160,6 +165,20 @@ export interface PieceView extends Workpiece {
 }
 
 export interface ViewOptions { readonly pieceId?: string | null; readonly mode?: HammerMode }
+export interface MerchantOffer {
+  readonly productId: ProductId;
+  readonly label: string;
+  readonly effect: string;
+  readonly level: number;
+  readonly nextLevel: number | null;
+  readonly price: { readonly coins: number; readonly scrap: number } | null;
+  readonly availability: Availability;
+}
+
+export type ValidationResult =
+  | { readonly ok: true; readonly state: RunState }
+  | { readonly ok: false; readonly error: 'invalid_state' | 'invalid_rules_version' | 'invalid_journal'; readonly detail: string };
+
 export interface RunView {
   readonly runId: string;
   readonly revision: number;
@@ -185,4 +204,6 @@ export interface RunView {
     readonly advance: Availability; readonly leaveMerchant: Availability };
   readonly history: readonly RoundSummary[];
   readonly stats: GameStats;
+  readonly purchases: readonly Purchase[];
+  readonly merchant: { readonly active: boolean; readonly offers: readonly MerchantOffer[] };
 }

@@ -1,6 +1,6 @@
 # 游戏实施方案与确认范围
 
-版本 v0.2 / 2026-10-17（R1 补充锤法支配策略检查）。状态：**用户已确认，T04 独立内核已实现并验证；主界面已选 B**，见[确认记录](decision-record.md)与 [T04 验证](reviews/T04-kernel-validation.md)。
+版本 v0.2（2026-10-17 确认；2026-10-18 更新进度）。状态：**T04/T05 内核、经营与存档已实现并验证；主界面已选 B**，见[确认记录](decision-record.md)、[T04](reviews/T04-kernel-validation.md)与 [T05](reviews/T05-persistence-validation.md)。
 
 ## 1. 本次要做成什么
 
@@ -59,7 +59,7 @@ T03/R1 检查 T01–T03；T06/R2 检查 T04–T06；T09/R3 检查 T07–T09；T1
 
 ## 5. 工具与命令约定
 
-以下为 npm scripts 合同。T04 已建立并运行安装、测试、类型检查、构建和模块开发服务；当前 build 是内核 ESM library，dev/preview 只提供模块，不代表已有游戏首页。simulate 在 T06、test:e2e 在界面阶段实现，不能把尚未建立的命令当成已运行：
+以下为 npm scripts 合同。T04/T05 已运行安装、规则/会话测试、类型检查、SDK 构建及存储浏览器测试。当前 dev/preview 只提供模块，没有游戏首页；simulate 在 T06、游戏 test:e2e 在界面阶段建立：
 
 | 命令 | 行为 | 建立任务 |
 | --- | --- | --- |
@@ -72,6 +72,7 @@ T03/R1 检查 T01–T03；T06/R2 检查 T04–T06；T09/R3 检查 T07–T09；T1
 | `npm run preview` | 本地预览生产产物，不当作长期线上服务 | T04 |
 | `npm run simulate -- --seeds 1000` | 调用正式内核，运行固定种子集的策略模拟并输出统计 | T06 |
 | `npm run test:e2e` | 真实浏览器回归，保存失败截图/trace | T08 起，T11 全量 |
+| `npm run test:storage:browser` | 构建后验证 SDK 存储/锁/原生 BFCache；不代表游戏页面验收 | T05 已运行 |
 | `npm run check` | 一次性类型、单测、生产构建 | T04；后续新增适当检查 |
 
 使用 npm 精确版本与 package-lock，不加 `^`/`~`，不混用锁文件。初始工具版本在 [核实记录](technical-sources.md)；实施时重新检查 engines 与实际安装结果，更新为真正锁定版本。Vite 转译不等于类型检查，两个步骤必须真实执行。

@@ -1,5 +1,5 @@
 import type { Action, Availability, ErrorCode, RunState, Workpiece } from './model.js';
-import { isHammerMode, MAX_PROGRESS } from './rules.js';
+import { isHammerMode, isProductId, MAX_PROGRESS } from './rules.js';
 
 export function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value);
@@ -50,6 +50,10 @@ export function parseAction(value: unknown): { readonly ok: true; readonly actio
       return typeof value.recycleRemaining === 'boolean'
         ? { ok: true, action: { type: 'settleRound', recycleRemaining: value.recycleRemaining } }
         : { ok: false, error: 'invalid_command' };
+    case 'buy':
+      return isProductId(value.productId)
+        ? { ok: true, action: { type: 'buy', productId: value.productId } }
+        : { ok: false, error: 'invalid_product' };
     case 'advanceSummary':
     case 'leaveMerchant':
       return { ok: true, action: { type: value.type } };

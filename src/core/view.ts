@@ -1,6 +1,7 @@
 import type { HammerMode, PieceView, RunState, RunView, TimingGrade, ViewOptions, Workpiece } from './model.js';
 import { freezeDeep } from './immutable.js';
 import { available, pieceError, settleError } from './guards.js';
+import { merchantOffer, PRODUCT_IDS } from './merchant.js';
 import { damageRisk, deliveredThisRound, HAMMERS, isHammerMode, MATERIALS, MERCHANT_ROUNDS,
   quotaFor, recyclingValue, tierAt, tierOf, valueOf } from './rules.js';
 
@@ -44,5 +45,6 @@ export function getRunView(state: RunState, options: ViewOptions = {}): RunView 
     pieces, selected, nextMerchantRound: nextMerchant,
     actions: { settle: available(settleError(state, false)), closeEarly: available(settleError(state, true)),
       advance: available(state.phase === 'roundSummary' ? null : 'wrong_phase'),
-      leaveMerchant: available(state.phase === 'merchant' ? null : 'wrong_phase') }, history: state.history, stats: state.stats });
+      leaveMerchant: available(state.phase === 'merchant' ? null : 'wrong_phase') }, history: state.history, stats: state.stats,
+    purchases: state.purchases, merchant: { active: state.phase === 'merchant', offers: PRODUCT_IDS.map(id => merchantOffer(state, id)) } });
 }

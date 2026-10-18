@@ -1,6 +1,6 @@
 # 需求到验收的映射
 
-版本 v0.2 / 2026-10-17。下表为验收合同；当前有原始输入、设计/提案、概念与 R1，以及 [T04 纯内核规则验证](reviews/T04-kernel-validation.md)。T04 的规则层已执行；**经营/存档、完整局策略模拟和浏览器业务验收尚待对应任务**。历史资料见 [R1](reviews/R1-design-and-concepts.md)。OpenSpec 位于 [提案](../openspec/changes/add-forging-game/proposal.md)，引用的 F/E/S/U 编号是稳定的能力标识。
+版本 v0.2 / 2026-10-18 进度更新。下表为验收合同；当前有原始输入、设计/概念/R1、[T04 内核](reviews/T04-kernel-validation.md)和 [T05 商人/存储/窗口生命周期](reviews/T05-persistence-validation.md)的规则、Adapter 和浏览器 SDK 证据。**完整局策略平衡、实际游戏页面与玩家视觉/交互验收仍待对应任务**。OpenSpec 位于[提案](../openspec/changes/add-forging-game/proposal.md)，F/E/S/U 是稳定能力标识。
 
 证据层级：D 文档核对；K 正式纯内核/存档测试；M 调用正式内核的策略模拟；B 浏览器实际行为；V 实际渲染截图/视觉检查；H 人类选择或试玩反馈。某一层通过不能自动代表其他层通过。
 

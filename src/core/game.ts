@@ -3,6 +3,7 @@ import type { Action, CommandResult, CreateResult, CreateRunInput, DomainEvent, 
 import { freezeDeep } from './immutable.js';
 import { isRecord, parseAction, pieceError, settleError } from './guards.js';
 import { nextRandom, seedStream } from './random.js';
+import { merchantOffer } from './merchant.js';
 import { damageRisk, deliveredThisRound, gradeOf, HAMMERS, MATERIALS, MAX_PROGRESS,
   MERCHANT_ROUNDS, quotaFor, recyclingValue, RULES_VERSION, tierOf, valueOf } from './rules.js';
 
@@ -40,7 +41,7 @@ export function createRun(input: CreateRunInput): CreateResult {
     rulesVersion: RULES_VERSION, runId: input.runId, seed, revision: 0, phase: 'workshop', round: 1,
     coins: 0, scrap: 0, coal: 1, seals: 3, upgrades: { handle: 0, bellows: 0, anvil: 0 },
     pieces: trio(1, ['iron', 'iron', 'steel']), rng: { stock: seedStream(seed, 'stock'), strike: seedStream(seed, 'strike') },
-    history: [], purchases: [], stats: initialStats(),
+    history: [], purchases: [], stats: initialStats(), journal: [],
   } });
 }
 
@@ -96,7 +97,7 @@ function settleRound(state: RunState, recycleRemaining: boolean): CommandResult 
   return accept(state, next, events);
 }
 
-function applyPieceAction(state: RunState, action: Exclude<Action, { readonly type: 'settleRound' } | { readonly type: 'advanceSummary' | 'leaveMerchant' }>): CommandResult {
+function applyPieceAction(state: RunState, action: Extract<Action, { readonly pieceId: string }>): CommandResult {
   const piece = state.pieces.find(candidate => candidate.id === action.pieceId);
   const error = pieceError(state, piece, action.type);
   if (error) return reject(state, error);
@@ -156,8 +157,28 @@ export function applyCommand(state: RunState, command: unknown): CommandResult {
   if (command.expectedRevision !== state.revision) return reject(state, 'stale_revision');
   const parsed = parseAction(command.action);
   if (!parsed.ok) return reject(state, parsed.error);
-  const action = parsed.action;
+  const result = reduceAction(state, parsed.action);
+  if (!result.ok) return result;
+  return freezeDeep({ ...result, state: { ...result.state, journal: [...state.journal, parsed.action] } });
+}
+
+function reduceAction(state: RunState, action: Action): CommandResult {
   switch (action.type) {
+    case 'buy': {
+      const offer = merchantOffer(state, action.productId);
+      if (!offer.availability.allowed) return reject(state, offer.availability.reason);
+      if (!offer.price) return reject(state, 'max_level');
+      const purchase = { afterRound: state.round, product: action.productId,
+        level: action.productId === 'repair' ? 1 : state.upgrades[action.productId] + 1,
+        coins: offer.price.coins, scrap: offer.price.scrap };
+      return accept(state, { ...state, coins: state.coins - purchase.coins, scrap: state.scrap - purchase.scrap,
+        seals: action.productId === 'repair' ? state.seals + 1 : state.seals,
+        upgrades: action.productId === 'repair' ? state.upgrades
+          : { ...state.upgrades, [action.productId]: purchase.level },
+        purchases: [...state.purchases, purchase], stats: { ...state.stats,
+          coinsSpent: state.stats.coinsSpent + purchase.coins, scrapSpent: state.stats.scrapSpent + purchase.scrap } },
+      [{ type: 'PurchaseMade', purchase }]);
+    }
     case 'settleRound': return settleRound(state, action.recycleRemaining);
     case 'advanceSummary': {
       if (state.phase !== 'roundSummary') return reject(state, 'wrong_phase');

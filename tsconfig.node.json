@@ -1,5 +1,5 @@
 {
   "extends": "./tsconfig.json",
-  "compilerOptions": { "lib": ["ES2022"], "types": ["node"], "resolveJsonModule": true },
-  "include": ["tests/**/*.ts", "vite.config.ts", "vitest.config.ts"]
+  "compilerOptions": { "lib": ["ES2022", "DOM"], "types": ["node"], "resolveJsonModule": true },
+  "include": ["tests/**/*.ts", "vite.config.ts", "vitest.config.ts", "playwright.config.ts"]
 }
