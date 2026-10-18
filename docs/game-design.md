@@ -1,6 +1,6 @@
 # 《锤下求生》游戏设计文档
 
-版本：v0.2 / 2026-10-18（规则不变，更新实施证据）。项目代号：sword-led。状态：用户已确认实施并选B；T04–T06内核/交易/存档及[R2自动策略验证](reviews/R2-kernel-and-balance.md)、T07[B派生美术](../design/b/README.md)已完成，完整网页与真人反馈仍待后续任务。
+版本：v0.2 / 2026-10-18（规则不变）。项目代号：sword-led。状态：内核/存档/[R2模拟](reviews/R2-kernel-and-balance.md)、[B美术](../design/b/README.md)与[T08入口/教学/工坊](reviews/T08-workshop-validation.md)已完成；完整经营/终局/R3、声音/设置及真人评价仍待后续任务。
 
 ## 1. 一句话与体验目标
 

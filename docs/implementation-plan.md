@@ -1,6 +1,6 @@
 # 游戏实施方案与确认范围
 
-版本v0.2（2026-10-17确认；2026-10-18更新进度）。状态：**T04–T07内核、经营、存档、整局模拟/R2及B派生美术已实现并验证**，见[确认记录](decision-record.md)、[T04](reviews/T04-kernel-validation.md)、[T05](reviews/T05-persistence-validation.md)、[R2](reviews/R2-kernel-and-balance.md)与[T07](reviews/T07-art-validation.md)。下一项接正式工坊界面。
+版本v0.2（2026-10-17确认；2026-10-18更新进度）。状态：**T04–T08内核、存档、R2、美术、正式入口/教学/工坊已实现并验证**，见[确认记录](decision-record.md)、[R2](reviews/R2-kernel-and-balance.md)、[T07](reviews/T07-art-validation.md)与[T08](reviews/T08-workshop-validation.md)。下一项完善经营/终局并做R3。
 
 ## 1. 本次要做成什么
 
@@ -59,7 +59,7 @@ T03/R1 检查 T01–T03；T06/R2 检查 T04–T06；T09/R3 检查 T07–T09；T1
 
 ## 5. 工具与命令约定
 
-以下为npm scripts合同。T04–T07已运行安装、规则/会话/模拟测试、类型检查、SDK构建、存储浏览器测试、完整策略模拟和美术浏览器检查。dev可访问设计专用美术页，preview提供模块/素材，均尚无正式游戏首页；simulate已实现，游戏test:e2e在界面阶段建立：
+以下为npm scripts合同。T04–T08已运行安装、规则/会话/输入测试、严格类型检查、网页/SDK双构建、页面/存储浏览器、完整策略模拟和美术检查。dev/preview根路径已有正式入口；美术专用页仅在开发服务下额外提供。
 
 | 命令 | 行为 | 建立任务 |
 | --- | --- | --- |
@@ -71,7 +71,8 @@ T03/R1 检查 T01–T03；T06/R2 检查 T04–T06；T09/R3 检查 T07–T09；T1
 | `npm run build` | 类型检查通过后执行生产构建 | T04 |
 | `npm run preview` | 本地预览生产产物，不当作长期线上服务 | T04 |
 | `npm run simulate -- --seeds 1000` | 调用正式内核，运行固定种子集的策略模拟并输出统计 | T06 |
-| `npm run test:e2e` | 真实浏览器回归，保存失败截图/trace | T08 起，T11 全量 |
+| `npm run test:e2e` | 构建后从正式首页测试工坊/教学/输入；完整游戏验收逐步扩展 | T08已运行，T11全量 |
+| `npm run test:browser` | 一次构建，串行执行页面/存储套件，避免共享产物与报告互相覆盖 | T08已运行 |
 | `npm run test:storage:browser` | 构建后验证 SDK 存储/锁/原生 BFCache；不代表游戏页面验收 | T05 已运行 |
 | `npm run test:art` | 构建后核对实际图片/alpha/源矩形/姿态/对比度/尺寸；设计预览不进入游戏生产库 | T07已运行 |
 | `npm run check` | 一次性类型、单测、生产构建 | T04；后续新增适当检查 |

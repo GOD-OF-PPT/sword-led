@@ -1,8 +1,8 @@
 # 代码架构与玩法内核约定
 
-版本：v0.2，2026-10-18。状态：用户已确认方案并选择B；T04–T07已实现纯规则、经营、校验、持久化会话、整局模拟/[R2](reviews/R2-kernel-and-balance.md)与[B派生美术](../design/b/README.md)。完整网页和真人评估按后续任务实施。玩法依据：[游戏设计](game-design.md)；交付顺序：[实施方案](implementation-plan.md)。
+版本：v0.2，2026-10-18。状态：用户已确认方案并选择B；纯规则/存档/R2/B美术以及[T08入口、教学和工坊](reviews/T08-workshop-validation.md)已实现。T09继续经营/终局与R3，T10–T12继续品质与最终验收。玩法依据：[游戏设计](game-design.md)；交付顺序：[实施方案](implementation-plan.md)。
 
-本文件描述完整目标架构。规则入口为 createRun/applyCommand/getRunView/validateRun，buy 与持久化会话已实现；通过 Vite library mode 输出 core/session 两入口及共享 chunk。网页入口在 T08 添加。见 [T04 证据](reviews/T04-kernel-validation.md)、[T05 证据](reviews/T05-persistence-validation.md)与[持久化合同](persistence-and-merchant.md)。
+本文件描述完整目标架构。规则入口为createRun/applyCommand/getRunView/validateRun；T08已加入index.html与主装配。构建先生成网页，再用独立vite.sdk.config.ts保留core/session SDK及共享chunk，不把设计预览或测试入口打进页面。见[T04](reviews/T04-kernel-validation.md)、[T05](reviews/T05-persistence-validation.md)、[持久化合同](persistence-and-merchant.md)与[工坊合同](workshop-implementation.md)。
 
 ## 1. 架构决策
 
@@ -40,7 +40,7 @@ flowchart TD
 
 ## 3. 拟建文件布局
 
-以下为目标布局；core、持久化/平台存储、scripts模拟及public/assets/b美术已实现。design/b/preview是设计专用校验页，不进入游戏生产库；其余正式页面/输入/声音按T08–T10落地，以实际仓库为准。
+以下为目标布局；core、持久化/存储、模拟、美术及T08应用/输入/场景/教学已实现。design/b/preview仅作设计校验；正式经营/终局完善及声音等按T09–T10推进，以实际仓库为准。
 
 ```text
 src/
@@ -54,19 +54,21 @@ src/
     validate.ts           # 导入状态的结构/语义校验
     view.ts               # 可操作项、概率与派生值
   application/persistent-session.ts # 已实现：唯一工作副本、命令、保存与生命周期
-  application/session.ts  # 后续：输入/暂停/表现编排，委托持久化会话，不复制规则状态
+  application/session.ts  # 已实现：路线/暂停/表现编排，委托持久化会话，教学独立
   platform/
     storage.ts            # 本地存档 Adapter
     writer-lease.ts       # 原生独占锁与释放
     browser-session.ts    # Window 生命周期接线
-    input.ts              # 键鼠与时机
+    input.ts              # 单一键鼠所有者/捕获/取消
+    timing.ts             # 纯三角波与attempt身份
     audio.ts              # 原生 Web Audio 声音
   presentation/
-    app.ts                # 持久根节点、页面/弹窗与焦点
+    app.ts                # 已实现：稳定根节点、菜单/工坊/基础阶段路由与弹窗
+    assets.ts             # 美术清单/图片尺寸/矩形加载校验
     workshop.ts           # 工坊 DOM 控件
     scene.ts              # Canvas 场景与效果
     styles.css            # 布局和选定风格 token
-  tutorial/lesson.ts      # 明确标示的独立练习，不写正式存档
+  tutorial/lesson.ts      # 已实现：三课固定示例，准备和操作均走正式核心，不写正式档
   persistence/index.ts    # 已实现：宿主/浏览器会话入口
 scripts/simulate.ts       # 调用正式内核的策略模拟
 tests/core/               # 规则、恢复和不变量

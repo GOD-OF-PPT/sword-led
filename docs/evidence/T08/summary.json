@@ -1,0 +1,424 @@
+{
+  "recordedAt": "2026-10-18T05:56:49.670Z",
+  "node": "v22.12.0",
+  "platform": "darwin/x64",
+  "rulesVersion": "forge-v1",
+  "stage": "T08 workshop and entry; full business/ending review remains T09",
+  "units": {
+    "files": 11,
+    "passed": 175
+  },
+  "ui": {
+    "passed": 26,
+    "cases": [
+      {
+        "name": "native-input.spec.ts / native Chrome minimize/restore cancels a held key and preserves the accepted-command stream",
+        "project": "chromium-game",
+        "durationMs": 5865,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / controlled release uses its timestamp while the displayed frame is still at zero",
+        "project": "chromium-game",
+        "durationMs": 1461,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / repeat keydown and inputs during feedback cannot add commands",
+        "project": "chromium-game",
+        "durationMs": 2250,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / element blur and pointer cancellation do not consume a strike",
+        "project": "chromium-game",
+        "durationMs": 2459,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / cancelling a resized confirmation restores controls and focus without changing the piece",
+        "project": "chromium-game",
+        "durationMs": 2352,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / slow timing changes only the period, and a changed setting cancels the held input",
+        "project": "chromium-game",
+        "durationMs": 2043,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / reload during feedback restores the accepted result without replaying it",
+        "project": "chromium-game",
+        "durationMs": 2047,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / a newly signed contract is not changed by an old feedback callback",
+        "project": "chromium-game",
+        "durationMs": 2199,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / the second same-origin tab is read-only but can practice without rewriting the slot",
+        "project": "chromium-game",
+        "durationMs": 2485,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / write failure retains accepted memory across the menu and retries the same result",
+        "project": "chromium-game",
+        "durationMs": 1968,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / asset-load failure can retry without erasing a saved run",
+        "project": "chromium-game",
+        "durationMs": 2429,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / seed input and menu previews treat external text as text",
+        "project": "chromium-game",
+        "durationMs": 1555,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / held Enter cannot submit a newly opened contract dialog or skip the introduction",
+        "project": "chromium-game",
+        "durationMs": 1103,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / delivery, recycling and round exit use the real order ledger",
+        "project": "chromium-game",
+        "durationMs": 2059,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / a real critical steel piece displays all three actual break risks",
+        "project": "chromium-game",
+        "durationMs": 2504,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / explicit memory play never writes and never presents a later contract as saved",
+        "project": "chromium-game",
+        "durationMs": 1842,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-quality.spec.ts / visible workshop text meets the typography and contrast contract, including preparation",
+        "project": "chromium-game",
+        "durationMs": 1836,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-quality.spec.ts / system reduced motion is honoured without changing the strike reward",
+        "project": "chromium-game",
+        "durationMs": 1619,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-quality.spec.ts / the lesson displays its true cracked piece and supports non-destructive return",
+        "project": "chromium-game",
+        "durationMs": 1655,
+        "status": "passed"
+      },
+      {
+        "name": "workshop.spec.ts / production entry accepts a precise keyboard strike and saves it once",
+        "project": "chromium-game",
+        "durationMs": 1577,
+        "status": "passed"
+      },
+      {
+        "name": "workshop.spec.ts / real native keyboard events also reach the kernel without a controlled clock",
+        "project": "chromium-game",
+        "durationMs": 1761,
+        "status": "passed"
+      },
+      {
+        "name": "workshop.spec.ts / mixed pointer/space and duplicate releases cannot dispatch a second strike",
+        "project": "chromium-game",
+        "durationMs": 1656,
+        "status": "passed"
+      },
+      {
+        "name": "workshop.spec.ts / target, hammer and pause cancellation consume no resources or random draws",
+        "project": "chromium-game",
+        "durationMs": 1849,
+        "status": "passed"
+      },
+      {
+        "name": "workshop.spec.ts / tutorial can be practised, skipped and replayed without touching the formal slot",
+        "project": "chromium-game",
+        "durationMs": 1952,
+        "status": "passed"
+      },
+      {
+        "name": "workshop.spec.ts / workshop stays readable and reachable at 1280x720",
+        "project": "chromium-game",
+        "durationMs": 1603,
+        "status": "passed"
+      },
+      {
+        "name": "workshop.spec.ts / workshop stays readable and reachable at 1920x1080",
+        "project": "chromium-game",
+        "durationMs": 2198,
+        "status": "passed"
+      }
+    ]
+  },
+  "storage": {
+    "passed": 8,
+    "cases": [
+      {
+        "name": "native-cache.spec.ts / native CDP restores the actual cached heap and rereads the other window save",
+        "project": "chromium-storage",
+        "durationMs": 2818,
+        "status": "passed"
+      },
+      {
+        "name": "persistence.spec.ts / persists real breakage across reload with no reward replay or random reroll",
+        "project": "chromium-storage",
+        "durationMs": 408,
+        "status": "passed"
+      },
+      {
+        "name": "persistence.spec.ts / native Web Locks allow one writer and a clean handoff between two windows",
+        "project": "chromium-storage",
+        "durationMs": 475,
+        "status": "passed"
+      },
+      {
+        "name": "persistence.spec.ts / ordinary history navigation releases ownership and rereads the newest save",
+        "project": "chromium-storage",
+        "durationMs": 538,
+        "status": "passed"
+      },
+      {
+        "name": "persistence.spec.ts / real localStorage quota failure keeps accepted memory dirty and retries without a second action",
+        "project": "chromium-storage",
+        "durationMs": 1280,
+        "status": "passed"
+      },
+      {
+        "name": "persistence.spec.ts / corrupt primary keeps its backup and only explicit recovery replaces it",
+        "project": "chromium-storage",
+        "durationMs": 289,
+        "status": "passed"
+      },
+      {
+        "name": "persistence.spec.ts / missing lock capability enables explicit memory play and leaves the disk unchanged",
+        "project": "chromium-storage",
+        "durationMs": 229,
+        "status": "passed"
+      },
+      {
+        "name": "persistence.spec.ts / native storage events cannot rebase retained dirty memory over another window progress",
+        "project": "chromium-storage",
+        "durationMs": 469,
+        "status": "passed"
+      }
+    ]
+  },
+  "sdkMatchesT06": true,
+  "runtimeImages": 9,
+  "runtimeImageBytes": 2652400,
+  "attachments": {
+    "ui/native-window-input": {
+      "file": "ui/native-window-input.json",
+      "sha256": "6153b0cfc79b1167d5a0086cfe56c995147dfbf9494ae1d17f9c6f12266772b9",
+      "bytes": 425
+    },
+    "ui/native-window-input-screen": {
+      "file": "ui/native-window-input-screen.png",
+      "sha256": "f4dda2dfb09e241e80e82ab691d5a4e58fb0e1e93e3be32f7581f4df254573d0",
+      "bytes": 802377
+    },
+    "ui/critical-steel": {
+      "file": "ui/critical-steel.png",
+      "sha256": "93cb9a70a97d06328644bffe26189bad493e5900e4d78567170cea626a905c33",
+      "bytes": 638917
+    },
+    "ui/main-menu": {
+      "file": "ui/main-menu.png",
+      "sha256": "f48b2396133738ee7179b2ede2449b879c9cba2bf5ca192eceffad006748bcef",
+      "bytes": 1225512
+    },
+    "ui/paused-workshop": {
+      "file": "ui/paused-workshop.png",
+      "sha256": "4d91df01bfa605f96b6c0833727352433f3eeefc48f6b535e85af3ac30cd231d",
+      "bytes": 327302
+    },
+    "ui/workshop-readability": {
+      "file": "ui/workshop-readability.json",
+      "sha256": "872672578873a7cfb0d90f7015f6f24a708813471f488ce96af57a82c43af831",
+      "bytes": 6731
+    },
+    "ui/tutorial-crack": {
+      "file": "ui/tutorial-crack.png",
+      "sha256": "52b76cfc9ca0607cc1c87f36eb9b95e4ba7fc33e4d583a347f677d9905d24986",
+      "bytes": 479123
+    },
+    "ui/workshop-1280": {
+      "file": "ui/workshop-1280.png",
+      "sha256": "0f644f3e2d73c0058cdcbf6c280c47199c1a8cd74e13785d8838fbbaf354c3cd",
+      "bytes": 644010
+    },
+    "ui/workshop-1920": {
+      "file": "ui/workshop-1920.png",
+      "sha256": "c0837c61bea8defb495709e55a40ade03768ecaaf888bce219dbced50040cac1",
+      "bytes": 1694149
+    },
+    "storage/native-bfcache-evidence": {
+      "file": "storage/native-bfcache-evidence.json",
+      "sha256": "0ce1326fdc8fa96ac8692a4dbcb763a86165c5e681ed2c337c889c06c7f6c772",
+      "bytes": 586
+    }
+  },
+  "sourceHashes": {
+    "index.html": "df194f1fc660f599175924dad894fc825d5961bf0652bd2437abd7fd6b18569e",
+    "package-lock.json": "fb6298f489290886a8b47e266b4205a94acf9763086af45b1cc2992a01d8a73f",
+    "package.json": "46b78480fc4fdd2af74aba2affda14d266edeba8d1bc4734336de3c1305d4494",
+    "playwright.config.ts": "29cf3ab8ef5a990e7b0537dc180af347a1da8228058c3a04c6fec9a2f9a97dd2",
+    "playwright.ui.config.ts": "f51f28eee087c864e3672911126beb6d3cb7332b4ad5ae1aff2f29af5e353bad",
+    "scripts/collect-ui-evidence.mjs": "a291883d83da7f634229f40851727217e3303ffb26b495da88dc590da910344e",
+    "src/application/persistent-session.ts": "0cbbbaaa1f9a543a02ac25bff8eeb6e1f6cbeeb0624ab287e55d7907bb891940",
+    "src/application/session.ts": "27b3032532b8375238b949f06a6570f65b6e1bb7ed4696bdee7ef6b6f0ac2503",
+    "src/core/game.ts": "f24e0a700318b346903d1118c7939686748c4e6e55a0780cf213ef72d7eeac38",
+    "src/core/guards.ts": "a25ec963eb41de673edccb4f1a95c420f73ddc7ee44be6c668a69ba2715c9e21",
+    "src/core/immutable.ts": "9bd212a1885c949d1928a2ecb8daa934483f0d26bce8ff196e8ae460d0a29044",
+    "src/core/index.ts": "f5e7344578fcdd160b6db1296daa9e98387ff99f9e3a45cebae63de9417459ed",
+    "src/core/merchant.ts": "3e23ff6535e9b32897f83bf7417660ac8208d8682dbc815be93b1a736024c978",
+    "src/core/model.ts": "e3568fa89a4dfa1805643dab0a48bbba1689523c01c8408b3e007fedb6d537fd",
+    "src/core/random.ts": "1a3d3d19684573bad8dbf4a80266b0fb343a8ddd32a7aec9d16efc729cf5fca9",
+    "src/core/rules.ts": "cb0a017b155304fe98f43f0f356d72125073fb116e0cbf06c4cfab21cc1f24cc",
+    "src/core/validate.ts": "321a0b1e3675c5d71a92c6bc173b0bd1ec55dcd4e3bc54f21d225f7da40c2dec",
+    "src/core/view.ts": "0a77454028a0695c4610c32e6295ea0379e603d5cd0ee5e394ee1e96d820a936",
+    "src/env.d.ts": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+    "src/main.ts": "96828efb2be8d9a47d28380ab7f9db411ebec880f1dd7c9b13b02df30a711f3c",
+    "src/persistence/index.ts": "ca53cf54562098b30a48873a0c639cf751366a40e7079b320937c862bfb2b4c6",
+    "src/platform/browser-session.ts": "99915c22f9ae217b56905af7ce45163161abe2c057a3fc95ca9cea521f4adf0b",
+    "src/platform/input.ts": "d5383e703c8ba32aefd21a1a9485b7404dc7c342ad9ef36acdf504c089323be2",
+    "src/platform/storage.ts": "c2c7d2c666be1d44e2304707958a3933bc1ee78a533bbed8df2ebead14d3ce1f",
+    "src/platform/timing.ts": "782c9178c583e213d961f42778677f56c8926e65634df727621394dddd1c00ce",
+    "src/platform/writer-lease.ts": "1920339b776acbf4097fe9e3488afea221d0b7c20f6203387f22f49bbcc79bf9",
+    "src/presentation/app.ts": "1bea80f20e76efdab71f30d0efa724fae3aea3bb478cdf1daf9745c7448cc8d6",
+    "src/presentation/assets.ts": "ec244c5fd60b65bf54568eb38a3ca76cac8e8f2643ce111bc31573852827f053",
+    "src/presentation/scene.ts": "15642e3fa5a1894fc55461d26e494982d451970df05db21e6f8dc1f968129528",
+    "src/presentation/styles.css": "921d9d0a37f0c79387f6f36b58d87cfdb2d42a79706c41028d3677ead6f6a1ea",
+    "src/presentation/template.ts": "ac667d31626dce32d539a8b032758e2ce6aee8a9284e3624fbe49b67c0d976a4",
+    "src/tutorial/lesson.ts": "f386af1776d0d6c427d91efb73315206f1f798f3e68d141d1aefb28f77c99b5e",
+    "tests/browser/away.html": "73453ec127a9cfe04827d89d92a39e72b70c72928740b69bcee3cb8a7887cb88",
+    "tests/browser/fixture.html": "1f022bdddb09322f7b741fa468b7339e10e87029811f88260eb53319d9088290",
+    "tests/browser/native-bfcache.mjs": "f0e5504fcd91cf4b10f277c242457b12d62a15bb6eab81740ea66f1ec9ae3998",
+    "tests/browser/native-cache.spec.ts": "ec2a651c6e3a6298f7d1ff612694f884de68b80b37cb954a6ff9832297adfcea",
+    "tests/browser/persistence.spec.ts": "8bbe19666c376cea8f45aaec292d1f10a7551d93e66f0800205820df52c6b46e",
+    "tests/browser/server.mjs": "42d4271946acaf24222bba6c23005f4ab2c0aa88045117d691c483f8827f727c",
+    "tests/browser/window.d.ts": "b77dbca04e7c7b14868e39e342272e1d5d8fe66a12dfb4d0fb5510e25cace614",
+    "tests/core/concept-scenario.ts": "5299ce3bd749a6069e241b003ce9cb04b080c1f413ddadf03babd97379f7a585",
+    "tests/core/concept.test.ts": "084dcb7e17a66fb810cf2a8dbda443f26e712073cc58154ca3d00462f18ee6dc",
+    "tests/core/contract.test.ts": "a2729a50f2bea3a5cc9b560545509826272dd922e597b7b0124b2cc35f5089c7",
+    "tests/core/forging.test.ts": "7d8b50bf3c4aa59704c9a03256a2d9a355b7c6e470f56a3f3ec2baaea026d02c",
+    "tests/core/game-session.test.ts": "85af99467ed3175fae73686fe73e62cc48d5916ab818cff4b63c28d42d423d31",
+    "tests/core/helpers.ts": "2aab98c713d28a41195f2dde3eeacdb0fa81bdeb1570e166e8c957d3c42e201d",
+    "tests/core/input.test.ts": "479ac24cfa299fee958daeec23d333421e5910a3ec112648e9672684e013116f",
+    "tests/core/merchant.test.ts": "b809ffc4b13a935c32b4e643c1a273eb5d54d57ec0654b54178f833b0430feb5",
+    "tests/core/persistence-fixtures.ts": "4f4d4765b5c64059233c26f3d056cfb6f184d2a3ff3ecdbcf0b16bbe79cea049",
+    "tests/core/random.test.ts": "684f2b41f7b3b5455472c211a86328f109fd55712e71c3dacc025ef7299d41e8",
+    "tests/core/scenarios.ts": "9ab78fc07257d333681f4322e98fe9474f9a550e67fb87b8ab0ac20d4bd13efd",
+    "tests/core/session.test.ts": "2cd5ddd1103ca1d099f0540048d078cfe33cb41d25973b4330fcde7ba877ea1d",
+    "tests/core/simulation.test.ts": "78819f90e77b99244398b027adb6b1d5d36df17249592b4404a6807e68535917",
+    "tests/core/storage.test.ts": "e0e30e3e18bc0f73fc455f07f2cc61701ede1a5b0106cf671c207e97676e94f4",
+    "tests/core/validation.test.ts": "6b14715c6b74e69624457ab0457a8331ec0cd36f95800663a09b01f7168d4d1b",
+    "tests/e2e/fixtures.ts": "2ec14c68141d2883949f1a4a8a6319b4aad34a00db6b8538795104e48790c6a4",
+    "tests/e2e/helpers.ts": "86b12c46c499a667b26a15c88e3e22f7eeeab4a142e28d970d6dcd962184e899",
+    "tests/e2e/native-input.mjs": "0bd1824273a81a9d34d49dd80585fa5530dbf21040dfd2a53508402e559ec99b",
+    "tests/e2e/native-input.spec.ts": "bb9b1d0528eb8443524f45a690bafc9028dbfbecbd41535774878b245045c6af",
+    "tests/e2e/workshop-boundaries.spec.ts": "1032d4c6602e105e67221bbf70bc32d31cdc4f6fb3eba8c1962880ff92424956",
+    "tests/e2e/workshop-quality.spec.ts": "f17d82901479541484aa4b4dd2fa42677da486ed16451ae94d6448a5a570f6b0",
+    "tests/e2e/workshop.spec.ts": "9319713a485aa1478a08f8af1a1f2e16b54aead63a90caac1d4e8ab36942d23f",
+    "tests/support/native-chrome.mjs": "0eeed2d8fb3263c67001fb7bee2562542633d90d7c56f6d4fe51521a3b5b80b7",
+    "tsconfig.app.json": "fd783c2b63b28ec16bf021c71777e0c83c6bdb4eb585a331d3b36263bc44f864",
+    "tsconfig.node.json": "ca83da47c2f14e9f14e61b2d04f286a38da08e9e5e4b925a23ddc8a321e295cd",
+    "vite.config.ts": "98b9034acd508335b108700e0647afd579067640fcf1336e9b37e42ac960f706",
+    "vite.sdk.config.ts": "618b408918114cf64bc4dd9d0d11980706b46cf2533da397be2cdc7c7e3bd2b8"
+  },
+  "buildFiles": {
+    "assets/b/anvil-v1.webp": {
+      "bytes": 351706,
+      "sha256": "ed44b20b36a834581655f02c6e6660452b72a9742c37e1d97d3ab132413af9f1"
+    },
+    "assets/b/hammer-heavy-v1.webp": {
+      "bytes": 286032,
+      "sha256": "3b9ed6d6aab155503af7ae167676fd88badcc2f859ee693823e1b68c4ae26714"
+    },
+    "assets/b/hammer-light-v1.webp": {
+      "bytes": 153704,
+      "sha256": "4a294cde83b0765ba919c1943f151a9ad66c8aad5e163c1f3b81df2208b8bbf8"
+    },
+    "assets/b/hammer-standard-v1.webp": {
+      "bytes": 243778,
+      "sha256": "604bc26957ac0dae08bec6160fbb1104dad6949676ed3df4bc254743fe392c03"
+    },
+    "assets/b/manifest.json": {
+      "bytes": 16507,
+      "sha256": "7d97cba7f4cfd6df7656385c61db9096d1a1c5901b50202abda60b55cc52dc13"
+    },
+    "assets/b/material-iron-v1.webp": {
+      "bytes": 297192,
+      "sha256": "891f332a7543e005bb4eecf9c8cbf9ed6fbb6e7acc60ef02c6a08d828cbdf8e9"
+    },
+    "assets/b/material-meteorite-v3.webp": {
+      "bytes": 171384,
+      "sha256": "bffe5da4cc1522fa9e16df68790d11fbf551659176210ecb04e66ea82da98f3a"
+    },
+    "assets/b/material-steel-v1.webp": {
+      "bytes": 297586,
+      "sha256": "c5985ca938f459770ebe8e7e0f045db4a96768c20525c7a7f05d28ab3c070a4e"
+    },
+    "assets/b/merchant-kit-v1.webp": {
+      "bytes": 463234,
+      "sha256": "9a7623f3b226fc1918b08054ccfd080d852a278f9c92a97219c9da72a40e1c72"
+    },
+    "assets/b/tokens.css": {
+      "bytes": 428,
+      "sha256": "6892f99cdee0107212fd750a058191d2933efefb8a4e7b05b8df35412132614e",
+      "gzipBytes": 270
+    },
+    "assets/b/workshop-background-v1.webp": {
+      "bytes": 387784,
+      "sha256": "c8813b1438f61b6edbb8890d2df843ce7ac5732899a52edb9af67d1f8771497c"
+    },
+    "assets/index-BLSvxncn.css": {
+      "bytes": 15053,
+      "sha256": "e73b5a5287e2441e7e79480e763857c212b9573b4ccd3ba0b6653f36c70b876a",
+      "gzipBytes": 4028
+    },
+    "assets/index-DwJG9aNG.js": {
+      "bytes": 72823,
+      "sha256": "cdd4e1f77763f46251ca1abf78659eea7057190ff27fb3e077cd93cc3b7fbc96",
+      "gzipBytes": 26298
+    },
+    "core-0D-ttmFL.js": {
+      "bytes": 20206,
+      "sha256": "34262cd0d3819bb5cc4d0af611d244ef538ebf48272462d183cbf39c781e14c8",
+      "gzipBytes": 6524
+    },
+    "index.html": {
+      "bytes": 697,
+      "sha256": "0d25a5674a6c0b0d0ffca5a29e5cc36061eb2a558d34f7e0ea708c088e1df44b"
+    },
+    "sword-led-core.js": {
+      "bytes": 107,
+      "sha256": "3a71fca7ef26a062ea1834031e0601d14d9e49654e38e28838586295da795700",
+      "gzipBytes": 116
+    },
+    "sword-led-session.js": {
+      "bytes": 11234,
+      "sha256": "8a15a68cd7b2ae82394a61fa81e0d3b2a12c7df1765cbb8a43ffdc68947bdba9",
+      "gzipBytes": 3461
+    }
+  }
+}

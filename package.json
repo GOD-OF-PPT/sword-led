@@ -7,6 +7,8 @@
     "node": "^22.12.0 || ^24.0.0 || >=26.0.0"
   },
   "scripts": {
+    "test:browser": "npm run build && playwright test --config playwright.ui.config.ts && playwright test",
+    "test:e2e": "npm run build && playwright test --config playwright.ui.config.ts",
     "test:art": "npm run build && node scripts/art/verify.mjs",
     "simulate": "tsc -p tsconfig.simulation.json && node tmp/simulation/scripts/simulate.js",
     "dev": "vite --host 127.0.0.1",
@@ -14,7 +16,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:storage:browser": "npm run build && playwright test",
-    "build": "npm run typecheck && vite build",
+    "build": "npm run typecheck && vite build && vite build --config vite.sdk.config.ts",
     "preview": "vite preview --host 127.0.0.1",
     "check": "npm test && npm run build"
   },
