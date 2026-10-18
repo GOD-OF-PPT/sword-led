@@ -1,0 +1,7 @@
+Use case: stylized-concept
+Input image 1 is STYLE REFERENCE ONLY: the user-selected B “行会手账” for 锤下求生. This is a NEW derived asset, not a replacement of that screenshot. Match its warm 2D hand-painted gouache blocks, dark brown ink contours, worn wood, cream parchment atmosphere and simple readable painted metal facets. No photorealism, no 3D render, no low-poly style, no glossy mobile-game plastic. Lighting is warm forge light from the left and softer daylight from upper right.
+Asset type: one isolated blacksmith ANVIL sprite on real transparent alpha.
+Subject: the heavy worn steel anvil from the selected visual world, broad flat horizontal striking face, tapered horn to LEFT, squat sturdy waist and wide two-foot base. Small nicks and inked facets, painted slate gray. No stand or pedestal: the anvil itself is separate from the background plinth.
+Composition: close three-quarter front view from slightly above, so the top striking face is visible as a shallow plane; the face is approximately horizontal across image, no extreme tilt. Entire silhouette including horn and feet fits with 8% clear transparent margin. Top striking plane around upper third of the object. Suitable for a horizontal iron blank resting on it.
+Lighting: restrained warm edge from LEFT and mild daylight from upper right; NOT orange glowing metal. No piece on top and no hammer.
+Constraints: exactly one anvil. No wooden stump, forge, background, text, sparks, drop-shadow rectangle, extra loose object. True transparency.

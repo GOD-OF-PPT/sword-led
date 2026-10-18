@@ -1,6 +1,6 @@
 # 代码架构与玩法内核约定
 
-版本：v0.2，2026-10-18。状态：用户已确认方案并选择B；T04–T06已实现纯规则、经营、校验、持久化会话和整局模拟/[R2](reviews/R2-kernel-and-balance.md)，完整网页和真人评估按后续任务实施。玩法依据：[游戏设计](game-design.md)；交付顺序：[实施方案](implementation-plan.md)。
+版本：v0.2，2026-10-18。状态：用户已确认方案并选择B；T04–T07已实现纯规则、经营、校验、持久化会话、整局模拟/[R2](reviews/R2-kernel-and-balance.md)与[B派生美术](../design/b/README.md)。完整网页和真人评估按后续任务实施。玩法依据：[游戏设计](game-design.md)；交付顺序：[实施方案](implementation-plan.md)。
 
 本文件描述完整目标架构。规则入口为 createRun/applyCommand/getRunView/validateRun，buy 与持久化会话已实现；通过 Vite library mode 输出 core/session 两入口及共享 chunk。网页入口在 T08 添加。见 [T04 证据](reviews/T04-kernel-validation.md)、[T05 证据](reviews/T05-persistence-validation.md)与[持久化合同](persistence-and-merchant.md)。
 
@@ -40,7 +40,7 @@ flowchart TD
 
 ## 3. 拟建文件布局
 
-以下为目标布局；core、持久化/平台存储与scripts模拟已实现，其余页面/输入/声音/美术路径按T07–T10落地，以实际仓库为准。
+以下为目标布局；core、持久化/平台存储、scripts模拟及public/assets/b美术已实现。design/b/preview是设计专用校验页，不进入游戏生产库；其余正式页面/输入/声音按T08–T10落地，以实际仓库为准。
 
 ```text
 src/

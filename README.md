@@ -2,7 +2,7 @@
 
 一款面向现代 PC 浏览器的轮次制锻造游戏。每轮只有三件铁坯：控制落锤时机让它升值，在断裂前决定交货还是回收，靠商人升级撑过十二轮契约。
 
-用户已确认实施方案 v0.2，并选定 **B「行会手账」**。T04–T06 已实现玩法内核、商人/升级、可靠存档与单写会话，并完成53场景×1000种子的整局模拟/R2；当前构建产物是 SDK，尚无完整游戏页面。B 衍生素材与网页全流程按后续任务交付，模拟不代替真人可玩性验证。
+用户已确认实施方案v0.2，并选定 **B「行会手账」**。T04–T07已实现玩法内核、商人/升级、可靠存档、53场景×1000种子模拟/R2及B派生美术；当前构建为SDK与运行素材，完整游戏页面从T08接入。模拟与美术预览不代替真人可玩性验证。
 
 ## 项目资料
 
@@ -18,6 +18,7 @@
 - [T04 内核验证](docs/reviews/T04-kernel-validation.md)：77 项测试、类型检查、构建与独立产物验证，含本轮边界。
 - [T05 交易与存档验证](docs/reviews/T05-persistence-validation.md)：141 项测试、8 项浏览器集成测试与真 BFCache 证据。
 - [模拟合同](docs/simulation-contract.md)与 [R2 内核/平衡报告](docs/reviews/R2-kernel-and-balance.md)：53,000行证据、正式通关/失败回放、锤法/升级/辅助/滥用对照与150项测试。
+- [B派生美术包](design/b/README.md)与[T07验证](docs/reviews/T07-art-validation.md)：9张运行图、24材料帧、完整状态/流程设计、色板和可复跑拼装预览。
 - [OpenSpec 提案](openspec/changes/add-forging-game/proposal.md)：四项新能力，已批准、分阶段实施。
 - [原始输入](goal-1/input.md)：用户需求逐字保存。
 - [执行计划](goal-1/plan.md)：实施顺序、验证、风险和回滚。
@@ -27,7 +28,7 @@
 
 先完善并复核游戏设计和实施文档，使用 imagegen 提供三套主界面候选。用户确认实施方案后先开发独立玩法内核；主界面选定后派生美术并完成网页全流程。测试、模拟、浏览器试玩与最终审查均保留实际证据。
 
-三套候选、实施确认、内核和 R2 已完成；下一项由 B 派生美术并接完整页面。当前四个规则入口为 `createRun`、`applyCommand`、`getRunView`、`validateRun`，见[内核](src/core/index.ts)；[持久化会话](src/persistence/index.ts)接保存、锁和恢复。命令失败与保存失败分别处理。
+三套候选、实施确认、内核/R2和B派生美术已完成，下一项接主菜单、教程与正式工坊。当前四个规则入口为 `createRun`、`applyCommand`、`getRunView`、`validateRun`，见[内核](src/core/index.ts)；[持久化会话](src/persistence/index.ts)接保存、锁和恢复。命令失败与保存失败分别处理。
 
 ## 本地验证
 
@@ -58,7 +59,7 @@ npm run simulate -- --replay docs/evidence/T06/verify-v1.medium-victory.json
 
 默认53场景，每个最终状态都完整回放；输出统计JSON、逐局CSV.gz与胜负witness。已有输出不会覆盖；参数、输入误差假设和指标边界见模拟合同。T06 实测批次约18分钟，速度取决于设备，模型输入秒数不等于脚本耗时或真人整局时长。
 
-目前 `npm run dev` 提供 Vite 模块开发服务，可查看 `/src/core/index.ts`；`npm run preview` 提供已构建的模块。**当前不提供游戏首页**，网页入口在 T08 的完整界面任务中添加。
+目前`npm run dev`提供Vite模块服务和设计专用的`/design/b/preview/index.html`美术预览；`npm run preview`提供已构建模块与素材。**当前不提供游戏首页**，网页入口在T08添加。`npm run test:art`构建后验证生产图片、alpha、288种姿态组合、24材料帧、状态/对比度及两种尺寸；预览与正式游戏验收分别记录。
 
 构建后可在 Node 中调用同一个正式内核：
 

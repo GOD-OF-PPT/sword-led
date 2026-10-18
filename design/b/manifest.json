@@ -1,0 +1,1229 @@
+{
+  "task": "T07",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "model": "not exposed by tool",
+  "reference": "design/concepts/main-b-v3.png",
+  "referenceSha256": "1559ed5b09c82a0a9eff6d3d0e779c16e13ed3c7216aa5925a6d54592aff75bd",
+  "encoding": {
+    "tool": "1.6.0\nlibsharpyuv: 0.4.2",
+    "arguments": [
+      "-q",
+      "90",
+      "-m",
+      "6",
+      "-alpha_q",
+      "100",
+      "-exact"
+    ],
+    "purpose": "format/size export only; no creative image edits"
+  },
+  "images": [
+    {
+      "name": "workshop-background-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-87b61bb8-b44a-4b2a-9124-1d7860035c2c.png",
+      "transparent": false,
+      "kind": "runtime",
+      "width": 1672,
+      "height": 941,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentFraction": 0.0
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1672,
+        "h": 941
+      },
+      "path": "design/b/originals/workshop-background-v1.png",
+      "bytes": 2554876,
+      "sha256": "357047f2cd2f930d3b08703b2bea3bea58265f3d77f2e58d6ee177bc24169af0",
+      "prompt": "design/b/prompts/workshop-background-v1.md",
+      "promptSha256": "b24aef947bb871e8c8ca19d6e425fa6bd14303b159ad1afad6b5503f4614a251",
+      "references": [
+        "/Users/gordon/githome/sword-led/design/concepts/main-b-v3.png"
+      ],
+      "selected": true
+    },
+    {
+      "name": "hammer-light-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-9889e04f-1d81-4e14-acb7-f93f5b09e8bd.png",
+      "transparent": true,
+      "kind": "runtime",
+      "width": 1671,
+      "height": 941,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentFraction": 0.7900434428403261
+      },
+      "visibleBounds": {
+        "x": 94,
+        "y": 228,
+        "w": 1487,
+        "h": 497
+      },
+      "path": "design/b/originals/hammer-light-v1.png",
+      "bytes": 708906,
+      "sha256": "343c31035f692a859c2ceea62b145e938bd169dad529e37f5728e22b768c4049",
+      "prompt": "design/b/prompts/hammer-light-v1.md",
+      "promptSha256": "d90ab1d8ae0bf0ff6388efb113f135f4541a0cb526d125546cc7801269f6f82f",
+      "references": [
+        "/Users/gordon/githome/sword-led/design/concepts/main-b-v3.png"
+      ],
+      "selected": true
+    },
+    {
+      "name": "hammer-standard-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-a2fd9ac9-0b05-4f55-ba05-8191573ef349.png",
+      "transparent": true,
+      "kind": "runtime",
+      "width": 1983,
+      "height": 793,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentFraction": 0.6635926179588291
+      },
+      "visibleBounds": {
+        "x": 84,
+        "y": 88,
+        "w": 1821,
+        "h": 628
+      },
+      "path": "design/b/originals/hammer-standard-v1.png",
+      "bytes": 1109944,
+      "sha256": "30ce24d7e43426bd72b5d18426e67bda8a66ee18ee3421d91f6a4b9e9891b60d",
+      "prompt": "design/b/prompts/hammer-standard-v1.md",
+      "promptSha256": "c0afdde2af81639a674de0cc52dff15eed26a64650ced3b6273cd2d657e6f7e8",
+      "references": [
+        "/Users/gordon/githome/sword-led/design/concepts/main-b-v3.png"
+      ],
+      "selected": true
+    },
+    {
+      "name": "hammer-heavy-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-745b98b9-12c3-4e22-9acf-8e6f85f264bd.png",
+      "transparent": true,
+      "kind": "runtime",
+      "width": 1997,
+      "height": 787,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentFraction": 0.5870362086967809
+      },
+      "visibleBounds": {
+        "x": 34,
+        "y": 12,
+        "w": 1933,
+        "h": 763
+      },
+      "path": "design/b/originals/hammer-heavy-v1.png",
+      "bytes": 1346605,
+      "sha256": "56212bfb426fdd7d5a03b735ddc04f12032e9ef89ca670e5b29b5a6a6af0abd8",
+      "prompt": "design/b/prompts/hammer-heavy-v1.md",
+      "promptSha256": "de64b93ed41116ed03d22edd7657afa95a9f859c34ff94caa5564190e5f64484",
+      "references": [
+        "/Users/gordon/githome/sword-led/design/concepts/main-b-v3.png"
+      ],
+      "selected": true
+    },
+    {
+      "name": "anvil-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-c5825683-8f3b-4acb-bb7f-9539cceb9604.png",
+      "transparent": true,
+      "kind": "runtime",
+      "width": 1671,
+      "height": 941,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentFraction": 0.4893230841046011
+      },
+      "visibleBounds": {
+        "x": 29,
+        "y": 95,
+        "w": 1625,
+        "h": 787
+      },
+      "path": "design/b/originals/anvil-v1.png",
+      "bytes": 1696083,
+      "sha256": "f73c36755b5d8573a6d6e488101daf3c1f6d9b3ffc65ee95142ecc9d1fad7330",
+      "prompt": "design/b/prompts/anvil-v1.md",
+      "promptSha256": "393772295c0a442a7827d3ccbe7a22c68b1940b4d7b954affc1f72d7e555c8fb",
+      "references": [
+        "/Users/gordon/githome/sword-led/design/concepts/main-b-v3.png"
+      ],
+      "selected": true
+    },
+    {
+      "name": "material-iron-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-54a1081f-14fa-40fc-ad17-8431b1501d36.png",
+      "transparent": true,
+      "kind": "runtime",
+      "width": 1254,
+      "height": 1254,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentFraction": 0.6686024180358101
+      },
+      "visibleBounds": {
+        "x": 44,
+        "y": 85,
+        "w": 1177,
+        "h": 1074
+      },
+      "path": "design/b/originals/material-iron-v1.png",
+      "bytes": 1282228,
+      "sha256": "8be379ad664ba55d862b3dda1fc2cedfdb34bb59cbfce6ba083c0ca58e22a825",
+      "prompt": "design/b/prompts/material-iron-v1.md",
+      "promptSha256": "f5a463b021c96603b89c7aa4a95257ed4ec3c0e5a0cb223af4edd16c396e5dfa",
+      "references": [
+        "/Users/gordon/githome/sword-led/design/concepts/main-b-v3.png"
+      ],
+      "selected": true
+    },
+    {
+      "name": "material-steel-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-705ba2ad-2145-4c4c-904e-770b0d942211.png",
+      "transparent": true,
+      "kind": "runtime",
+      "width": 1254,
+      "height": 1254,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentFraction": 0.6923846879777376
+      },
+      "visibleBounds": {
+        "x": 26,
+        "y": 147,
+        "w": 1202,
+        "h": 1017
+      },
+      "path": "design/b/originals/material-steel-v1.png",
+      "bytes": 1246238,
+      "sha256": "2f269aec991cc66e68d1dadf56ae06b0d9e0a70d337743ce799ea232b59853a9",
+      "prompt": "design/b/prompts/material-steel-v1.md",
+      "promptSha256": "cb3132ee1431cb81f28c3e1ad2160c1612f0a9095ccaa78b4efc66f0a3c9500f",
+      "references": [
+        "/Users/gordon/githome/sword-led/design/concepts/main-b-v3.png"
+      ],
+      "selected": true
+    },
+    {
+      "name": "material-meteorite-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-9b539671-11cf-4bf3-bdab-bac0f793abf8.png",
+      "transparent": true,
+      "kind": "runtime",
+      "width": 1254,
+      "height": 1254,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentFraction": 0.6821431387661556
+      },
+      "visibleBounds": {
+        "x": 52,
+        "y": 91,
+        "w": 1170,
+        "h": 1079
+      },
+      "path": "design/b/originals/material-meteorite-v1.png",
+      "bytes": 1307765,
+      "sha256": "85dc12b02645347ce26edba1ec97a67304031d699a4d704aee136e541557498e",
+      "prompt": "design/b/prompts/material-meteorite-v1.md",
+      "promptSha256": "f09c5a620dde7ec6926ad8c51cba279cd24e0430ac1bcd94f0e7504116a83efe",
+      "references": [
+        "/Users/gordon/githome/sword-led/design/concepts/main-b-v3.png"
+      ],
+      "selected": false
+    },
+    {
+      "name": "material-meteorite-v2",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-0178a42c-07bb-421a-b114-340bbf479e99.png",
+      "transparent": true,
+      "kind": "runtime",
+      "references": [
+        "/Users/gordon/githome/sword-led/design/b/originals/material-meteorite-v1.png",
+        "/Users/gordon/githome/sword-led/design/concepts/main-b-v3.png"
+      ],
+      "width": 1254,
+      "height": 1254,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentFraction": 0.6778926255758287
+      },
+      "visibleBounds": {
+        "x": 56,
+        "y": 91,
+        "w": 1171,
+        "h": 1090
+      },
+      "path": "design/b/originals/material-meteorite-v2.png",
+      "bytes": 1223218,
+      "sha256": "966dd96e1b86a3865c9cb9b6e6f6a5b68e326d0a941aa3e7c17dba2fea7af804",
+      "prompt": "design/b/prompts/material-meteorite-v2.md",
+      "promptSha256": "50093e1a2f17d90447e93e3a71cac043084d13c00fef3d44669d117d79d48165",
+      "selected": false
+    },
+    {
+      "name": "merchant-kit-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-8703ce8d-cad2-4082-a94f-f3d78cf26c3e.png",
+      "transparent": true,
+      "kind": "runtime",
+      "references": [
+        "/Users/gordon/githome/sword-led/design/concepts/main-b-v3.png"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "alpha": {
+        "min": 0,
+        "max": 254,
+        "transparentFraction": 0.3742408752441406
+      },
+      "visibleBounds": {
+        "x": 32,
+        "y": 21,
+        "w": 1478,
+        "h": 960
+      },
+      "path": "design/b/originals/merchant-kit-v1.png",
+      "bytes": 2713765,
+      "sha256": "1071a8d52fcd8a7d623d9f99d00b9b00574474e445e004e49706b3bb7960b21c",
+      "prompt": "design/b/prompts/merchant-kit-v1.md",
+      "promptSha256": "336e3291b9b0cbe90ad70c3d3b614265e231c5f6d58ac699824722502198a7b4",
+      "selected": true
+    },
+    {
+      "name": "merchant-screen-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-36cd5923-1dd3-4c22-9e2d-2e4a9a8b39a5.png",
+      "transparent": false,
+      "kind": "board",
+      "width": 1672,
+      "height": 941,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentFraction": 0.0
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1672,
+        "h": 941
+      },
+      "path": "design/b/boards/merchant-screen-v1.png",
+      "bytes": 2448338,
+      "sha256": "87321e05203875c76b4a67f602bb351883065f3ef59d503a49a35225c36b11e2",
+      "prompt": "design/b/prompts/merchant-screen-v1.md",
+      "promptSha256": "6189533331109da3c0ed72d9ec8afb55958f91cfec4b08f9593a63064e60591c",
+      "references": [
+        "/Users/gordon/githome/sword-led/design/concepts/main-b-v3.png"
+      ],
+      "selected": true
+    },
+    {
+      "name": "round-summary-board-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-98ca2ae8-26c6-4d3a-adb4-55adbdafe636.png",
+      "transparent": false,
+      "kind": "board",
+      "width": 1672,
+      "height": 941,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentFraction": 0.0
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1672,
+        "h": 941
+      },
+      "path": "design/b/boards/round-summary-board-v1.png",
+      "bytes": 2444669,
+      "sha256": "700c29e3f139a7a8fbf5ea6d203e7f773c709ebb53fb8a12dd5f32b88097f9f4",
+      "prompt": "design/b/prompts/round-summary-board-v1.md",
+      "promptSha256": "c25350ff9c20f730f8431865f651d3bbd520bca7f8342d3964480d45b8c2d386",
+      "references": [
+        "/Users/gordon/githome/sword-led/design/concepts/main-b-v3.png"
+      ],
+      "selected": true
+    },
+    {
+      "name": "ending-board-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-06c4ee28-1f5c-47db-8076-ee6614a25123.png",
+      "transparent": false,
+      "kind": "board",
+      "width": 1672,
+      "height": 941,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentFraction": 0.0
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1672,
+        "h": 941
+      },
+      "path": "design/b/boards/ending-board-v1.png",
+      "bytes": 2721504,
+      "sha256": "ac8a1fd0652d2ab2ea8029f91a77cae0cb19d160d9770d09c002b9a44db7bbda",
+      "prompt": "design/b/prompts/ending-board-v1.md",
+      "promptSha256": "aa00f22bd06b91f70c392f079dc0be312d15bbb899b9462dbcb42442609d3f4f",
+      "references": [
+        "/Users/gordon/githome/sword-led/design/concepts/main-b-v3.png"
+      ],
+      "selected": false
+    },
+    {
+      "name": "ending-board-v2",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-7cec4e6d-399e-4874-bc2d-68a7c5360b8c.png",
+      "transparent": false,
+      "kind": "board",
+      "references": [
+        "/Users/gordon/githome/sword-led/design/b/boards/ending-board-v1.png",
+        "/Users/gordon/githome/sword-led/design/concepts/main-b-v3.png"
+      ],
+      "width": 1672,
+      "height": 941,
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentFraction": 0.0
+      },
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1672,
+        "h": 941
+      },
+      "path": "design/b/boards/ending-board-v2.png",
+      "bytes": 2586817,
+      "sha256": "67fe67200cee6ad441ad58af78f21f23548f659927343ba1a7d114106c9185f0",
+      "prompt": "design/b/prompts/ending-board-v2.md",
+      "promptSha256": "a60457958e2e54597f05d2fef310dc2276beba43d6083dfcca0130dc945d1dd9",
+      "selected": true
+    },
+    {
+      "name": "material-meteorite-v3",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-d322b494-3117-48db-a96d-df94490097e6.png",
+      "transparent": true,
+      "kind": "runtime",
+      "references": [
+        "/Users/gordon/githome/sword-led/design/b/originals/material-meteorite-v2.png"
+      ],
+      "width": 1254,
+      "height": 1254,
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentFraction": 0.813679479254901
+      },
+      "visibleBounds": {
+        "x": 102,
+        "y": 127,
+        "w": 1070,
+        "h": 1012
+      },
+      "path": "design/b/originals/material-meteorite-v3.png",
+      "bytes": 745529,
+      "sha256": "ec91ab7795331bd25e934c65d161e3ca746fa7ba70603eb50f909772846badfd",
+      "prompt": "design/b/prompts/material-meteorite-v3.md",
+      "promptSha256": "47309469303f143caba600abe4301ed5d880f3e39ad9531016a06586628611d3",
+      "selected": true
+    }
+  ],
+  "runtime": {
+    "schemaVersion": 1,
+    "direction": "B",
+    "version": "guild-ledger-v1",
+    "palette": {
+      "paper": "#f2e3bd",
+      "ink": "#2b211b",
+      "wood": "#58402c",
+      "primary": "#9f3f17",
+      "ember": "#e76a24",
+      "teal": "#185e67",
+      "danger": "#9f2d26",
+      "warning": "#79460c",
+      "muted": "#6b5c4d"
+    },
+    "stage": {
+      "width": 1600,
+      "height": 900,
+      "contact": {
+        "x": 800,
+        "y": 330
+      },
+      "anvilWidth": 750,
+      "pieceWidth": 400,
+      "hammerWidths": {
+        "light": 330,
+        "standard": 340,
+        "heavy": 350
+      },
+      "idleAngle": 0.26,
+      "impactHeightRatio": 0.38
+    },
+    "assets": [
+      {
+        "id": "workshop",
+        "name": "workshop-background-v1",
+        "kind": "background",
+        "src": "/assets/b/workshop-background-v1.webp",
+        "width": 1672,
+        "height": 941,
+        "bytes": 387784,
+        "sha256": "c8813b1438f61b6edbb8890d2df843ce7ac5732899a52edb9af67d1f8771497c",
+        "visibleBounds": {
+          "x": 0,
+          "y": 0,
+          "w": 1672,
+          "h": 941
+        },
+        "alpha": {
+          "min": 255,
+          "max": 255,
+          "transparentFraction": 0.0
+        },
+        "alphaMatchesOriginal": true
+      },
+      {
+        "id": "hammer-light",
+        "name": "hammer-light-v1",
+        "kind": "sprite",
+        "pivot": {
+          "x": 0.895,
+          "y": 0.655
+        },
+        "strike": {
+          "x": 0.16,
+          "y": 0.74
+        },
+        "src": "/assets/b/hammer-light-v1.webp",
+        "width": 1671,
+        "height": 941,
+        "bytes": 153704,
+        "sha256": "4a294cde83b0765ba919c1943f151a9ad66c8aad5e163c1f3b81df2208b8bbf8",
+        "visibleBounds": {
+          "x": 94,
+          "y": 228,
+          "w": 1487,
+          "h": 497
+        },
+        "alpha": {
+          "min": 0,
+          "max": 255,
+          "transparentFraction": 0.7900434428403261
+        },
+        "alphaMatchesOriginal": true
+      },
+      {
+        "id": "hammer-standard",
+        "name": "hammer-standard-v1",
+        "kind": "sprite",
+        "pivot": {
+          "x": 0.905,
+          "y": 0.67
+        },
+        "strike": {
+          "x": 0.14,
+          "y": 0.9
+        },
+        "src": "/assets/b/hammer-standard-v1.webp",
+        "width": 1983,
+        "height": 793,
+        "bytes": 243778,
+        "sha256": "604bc26957ac0dae08bec6160fbb1104dad6949676ed3df4bc254743fe392c03",
+        "visibleBounds": {
+          "x": 84,
+          "y": 88,
+          "w": 1821,
+          "h": 628
+        },
+        "alpha": {
+          "min": 0,
+          "max": 255,
+          "transparentFraction": 0.6635926179588291
+        },
+        "alphaMatchesOriginal": true
+      },
+      {
+        "id": "hammer-heavy",
+        "name": "hammer-heavy-v1",
+        "kind": "sprite",
+        "pivot": {
+          "x": 0.91,
+          "y": 0.71
+        },
+        "strike": {
+          "x": 0.16,
+          "y": 0.97
+        },
+        "src": "/assets/b/hammer-heavy-v1.webp",
+        "width": 1997,
+        "height": 787,
+        "bytes": 286032,
+        "sha256": "3b9ed6d6aab155503af7ae167676fd88badcc2f859ee693823e1b68c4ae26714",
+        "visibleBounds": {
+          "x": 34,
+          "y": 12,
+          "w": 1933,
+          "h": 763
+        },
+        "alpha": {
+          "min": 0,
+          "max": 255,
+          "transparentFraction": 0.5870362086967809
+        },
+        "alphaMatchesOriginal": true
+      },
+      {
+        "id": "anvil",
+        "name": "anvil-v1",
+        "kind": "sprite",
+        "anchor": {
+          "x": 0.59,
+          "y": 0.24
+        },
+        "src": "/assets/b/anvil-v1.webp",
+        "width": 1671,
+        "height": 941,
+        "bytes": 351706,
+        "sha256": "ed44b20b36a834581655f02c6e6660452b72a9742c37e1d97d3ab132413af9f1",
+        "visibleBounds": {
+          "x": 29,
+          "y": 95,
+          "w": 1625,
+          "h": 787
+        },
+        "alpha": {
+          "min": 0,
+          "max": 255,
+          "transparentFraction": 0.4893230841046011
+        },
+        "alphaMatchesOriginal": true
+      },
+      {
+        "id": "iron",
+        "name": "material-iron-v1",
+        "kind": "atlas",
+        "columns": 2,
+        "rows": 4,
+        "src": "/assets/b/material-iron-v1.webp",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 297192,
+        "sha256": "891f332a7543e005bb4eecf9c8cbf9ed6fbb6e7acc60ef02c6a08d828cbdf8e9",
+        "visibleBounds": {
+          "x": 44,
+          "y": 85,
+          "w": 1177,
+          "h": 1074
+        },
+        "alpha": {
+          "min": 0,
+          "max": 255,
+          "transparentFraction": 0.6686024180358101
+        },
+        "alphaMatchesOriginal": true,
+        "frames": [
+          {
+            "tier": 0,
+            "sourceRect": {
+              "x": 0,
+              "y": 0,
+              "w": 627,
+              "h": 372
+            },
+            "visibleBounds": {
+              "x": 48,
+              "y": 85,
+              "w": 541,
+              "h": 235
+            },
+            "anchor": {
+              "x": 0.5079744816586922,
+              "y": 0.8602150537634409
+            }
+          },
+          {
+            "tier": 1,
+            "sourceRect": {
+              "x": 627,
+              "y": 0,
+              "w": 627,
+              "h": 372
+            },
+            "visibleBounds": {
+              "x": 33,
+              "y": 126,
+              "w": 547,
+              "h": 188
+            },
+            "anchor": {
+              "x": 0.48883572567783096,
+              "y": 0.8440860215053764
+            }
+          },
+          {
+            "tier": 2,
+            "sourceRect": {
+              "x": 0,
+              "y": 372,
+              "w": 627,
+              "h": 287
+            },
+            "visibleBounds": {
+              "x": 51,
+              "y": 53,
+              "w": 544,
+              "h": 172
+            },
+            "anchor": {
+              "x": 0.5151515151515151,
+              "y": 0.7839721254355401
+            }
+          },
+          {
+            "tier": 3,
+            "sourceRect": {
+              "x": 627,
+              "y": 372,
+              "w": 627,
+              "h": 287
+            },
+            "visibleBounds": {
+              "x": 33,
+              "y": 63,
+              "w": 561,
+              "h": 150
+            },
+            "anchor": {
+              "x": 0.5,
+              "y": 0.7421602787456446
+            }
+          },
+          {
+            "tier": 4,
+            "sourceRect": {
+              "x": 0,
+              "y": 659,
+              "w": 627,
+              "h": 281
+            },
+            "visibleBounds": {
+              "x": 44,
+              "y": 63,
+              "w": 556,
+              "h": 160
+            },
+            "anchor": {
+              "x": 0.5135566188197768,
+              "y": 0.7935943060498221
+            }
+          },
+          {
+            "tier": 5,
+            "sourceRect": {
+              "x": 627,
+              "y": 659,
+              "w": 627,
+              "h": 281
+            },
+            "visibleBounds": {
+              "x": 29,
+              "y": 73,
+              "w": 556,
+              "h": 149
+            },
+            "anchor": {
+              "x": 0.48963317384370014,
+              "y": 0.7900355871886121
+            }
+          },
+          {
+            "tier": 6,
+            "sourceRect": {
+              "x": 0,
+              "y": 940,
+              "w": 627,
+              "h": 314
+            },
+            "visibleBounds": {
+              "x": 44,
+              "y": 58,
+              "w": 555,
+              "h": 157
+            },
+            "anchor": {
+              "x": 0.5127591706539075,
+              "y": 0.6847133757961783
+            }
+          },
+          {
+            "tier": 7,
+            "sourceRect": {
+              "x": 627,
+              "y": 940,
+              "w": 627,
+              "h": 314
+            },
+            "visibleBounds": {
+              "x": 25,
+              "y": 64,
+              "w": 558,
+              "h": 155
+            },
+            "anchor": {
+              "x": 0.48484848484848486,
+              "y": 0.697452229299363
+            }
+          }
+        ],
+        "measuredRowBands": [
+          [
+            85,
+            320
+          ],
+          [
+            425,
+            597
+          ],
+          [
+            722,
+            882
+          ],
+          [
+            998,
+            1159
+          ]
+        ]
+      },
+      {
+        "id": "steel",
+        "name": "material-steel-v1",
+        "kind": "atlas",
+        "columns": 2,
+        "rows": 4,
+        "src": "/assets/b/material-steel-v1.webp",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 297586,
+        "sha256": "c5985ca938f459770ebe8e7e0f045db4a96768c20525c7a7f05d28ab3c070a4e",
+        "visibleBounds": {
+          "x": 26,
+          "y": 147,
+          "w": 1202,
+          "h": 1017
+        },
+        "alpha": {
+          "min": 0,
+          "max": 255,
+          "transparentFraction": 0.6923846879777376
+        },
+        "alphaMatchesOriginal": true,
+        "frames": [
+          {
+            "tier": 0,
+            "sourceRect": {
+              "x": 0,
+              "y": 0,
+              "w": 627,
+              "h": 405
+            },
+            "visibleBounds": {
+              "x": 49,
+              "y": 147,
+              "w": 543,
+              "h": 215
+            },
+            "anchor": {
+              "x": 0.511164274322169,
+              "y": 0.8938271604938272
+            }
+          },
+          {
+            "tier": 1,
+            "sourceRect": {
+              "x": 627,
+              "y": 0,
+              "w": 627,
+              "h": 405
+            },
+            "visibleBounds": {
+              "x": 37,
+              "y": 154,
+              "w": 539,
+              "h": 201
+            },
+            "anchor": {
+              "x": 0.48883572567783096,
+              "y": 0.8765432098765432
+            }
+          },
+          {
+            "tier": 2,
+            "sourceRect": {
+              "x": 0,
+              "y": 405,
+              "w": 627,
+              "h": 264
+            },
+            "visibleBounds": {
+              "x": 33,
+              "y": 44,
+              "w": 568,
+              "h": 172
+            },
+            "anchor": {
+              "x": 0.5055821371610846,
+              "y": 0.8181818181818182
+            }
+          },
+          {
+            "tier": 3,
+            "sourceRect": {
+              "x": 627,
+              "y": 405,
+              "w": 627,
+              "h": 264
+            },
+            "visibleBounds": {
+              "x": 33,
+              "y": 60,
+              "w": 559,
+              "h": 161
+            },
+            "anchor": {
+              "x": 0.4984051036682616,
+              "y": 0.8371212121212122
+            }
+          },
+          {
+            "tier": 4,
+            "sourceRect": {
+              "x": 0,
+              "y": 669,
+              "w": 627,
+              "h": 271
+            },
+            "visibleBounds": {
+              "x": 26,
+              "y": 44,
+              "w": 573,
+              "h": 187
+            },
+            "anchor": {
+              "x": 0.4984051036682616,
+              "y": 0.8523985239852399
+            }
+          },
+          {
+            "tier": 5,
+            "sourceRect": {
+              "x": 627,
+              "y": 669,
+              "w": 627,
+              "h": 271
+            },
+            "visibleBounds": {
+              "x": 33,
+              "y": 56,
+              "w": 567,
+              "h": 175
+            },
+            "anchor": {
+              "x": 0.5047846889952153,
+              "y": 0.8523985239852399
+            }
+          },
+          {
+            "tier": 6,
+            "sourceRect": {
+              "x": 0,
+              "y": 940,
+              "w": 627,
+              "h": 314
+            },
+            "visibleBounds": {
+              "x": 33,
+              "y": 41,
+              "w": 569,
+              "h": 183
+            },
+            "anchor": {
+              "x": 0.5063795853269537,
+              "y": 0.7133757961783439
+            }
+          },
+          {
+            "tier": 7,
+            "sourceRect": {
+              "x": 627,
+              "y": 940,
+              "w": 627,
+              "h": 314
+            },
+            "visibleBounds": {
+              "x": 29,
+              "y": 41,
+              "w": 572,
+              "h": 182
+            },
+            "anchor": {
+              "x": 0.5023923444976076,
+              "y": 0.7101910828025477
+            }
+          }
+        ],
+        "measuredRowBands": [
+          [
+            147,
+            362
+          ],
+          [
+            449,
+            626
+          ],
+          [
+            713,
+            900
+          ],
+          [
+            981,
+            1164
+          ]
+        ]
+      },
+      {
+        "id": "meteorite",
+        "name": "material-meteorite-v3",
+        "kind": "atlas",
+        "columns": 2,
+        "rows": 4,
+        "src": "/assets/b/material-meteorite-v3.webp",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 171384,
+        "sha256": "bffe5da4cc1522fa9e16df68790d11fbf551659176210ecb04e66ea82da98f3a",
+        "visibleBounds": {
+          "x": 102,
+          "y": 127,
+          "w": 1070,
+          "h": 1012
+        },
+        "alpha": {
+          "min": 0,
+          "max": 255,
+          "transparentFraction": 0.813679479254901
+        },
+        "alphaMatchesOriginal": true,
+        "frames": [
+          {
+            "tier": 0,
+            "sourceRect": {
+              "x": 0,
+              "y": 0,
+              "w": 627,
+              "h": 382
+            },
+            "visibleBounds": {
+              "x": 137,
+              "y": 127,
+              "w": 384,
+              "h": 186
+            },
+            "anchor": {
+              "x": 0.5247208931419458,
+              "y": 0.819371727748691
+            }
+          },
+          {
+            "tier": 1,
+            "sourceRect": {
+              "x": 627,
+              "y": 0,
+              "w": 627,
+              "h": 382
+            },
+            "visibleBounds": {
+              "x": 134,
+              "y": 148,
+              "w": 355,
+              "h": 158
+            },
+            "anchor": {
+              "x": 0.49681020733652315,
+              "y": 0.8010471204188482
+            }
+          },
+          {
+            "tier": 2,
+            "sourceRect": {
+              "x": 0,
+              "y": 382,
+              "w": 627,
+              "h": 289
+            },
+            "visibleBounds": {
+              "x": 131,
+              "y": 69,
+              "w": 404,
+              "h": 153
+            },
+            "anchor": {
+              "x": 0.5311004784688995,
+              "y": 0.7681660899653979
+            }
+          },
+          {
+            "tier": 3,
+            "sourceRect": {
+              "x": 627,
+              "y": 382,
+              "w": 627,
+              "h": 289
+            },
+            "visibleBounds": {
+              "x": 106,
+              "y": 75,
+              "w": 425,
+              "h": 131
+            },
+            "anchor": {
+              "x": 0.5079744816586922,
+              "y": 0.71280276816609
+            }
+          },
+          {
+            "tier": 4,
+            "sourceRect": {
+              "x": 0,
+              "y": 671,
+              "w": 627,
+              "h": 268
+            },
+            "visibleBounds": {
+              "x": 115,
+              "y": 67,
+              "w": 427,
+              "h": 127
+            },
+            "anchor": {
+              "x": 0.5239234449760766,
+              "y": 0.7238805970149254
+            }
+          },
+          {
+            "tier": 5,
+            "sourceRect": {
+              "x": 627,
+              "y": 671,
+              "w": 627,
+              "h": 268
+            },
+            "visibleBounds": {
+              "x": 96,
+              "y": 71,
+              "w": 446,
+              "h": 120
+            },
+            "anchor": {
+              "x": 0.5087719298245614,
+              "y": 0.7126865671641791
+            }
+          },
+          {
+            "tier": 6,
+            "sourceRect": {
+              "x": 0,
+              "y": 939,
+              "w": 627,
+              "h": 315
+            },
+            "visibleBounds": {
+              "x": 102,
+              "y": 75,
+              "w": 449,
+              "h": 120
+            },
+            "anchor": {
+              "x": 0.5207336523125997,
+              "y": 0.6190476190476191
+            }
+          },
+          {
+            "tier": 7,
+            "sourceRect": {
+              "x": 627,
+              "y": 939,
+              "w": 627,
+              "h": 315
+            },
+            "visibleBounds": {
+              "x": 91,
+              "y": 75,
+              "w": 454,
+              "h": 125
+            },
+            "anchor": {
+              "x": 0.507177033492823,
+              "y": 0.6349206349206349
+            }
+          }
+        ],
+        "measuredRowBands": [
+          [
+            127,
+            313
+          ],
+          [
+            451,
+            604
+          ],
+          [
+            738,
+            865
+          ],
+          [
+            1014,
+            1139
+          ]
+        ]
+      },
+      {
+        "id": "merchant-kit",
+        "name": "merchant-kit-v1",
+        "kind": "decoration",
+        "src": "/assets/b/merchant-kit-v1.webp",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 463234,
+        "sha256": "9a7623f3b226fc1918b08054ccfd080d852a278f9c92a97219c9da72a40e1c72",
+        "visibleBounds": {
+          "x": 32,
+          "y": 21,
+          "w": 1478,
+          "h": 960
+        },
+        "alpha": {
+          "min": 0,
+          "max": 254,
+          "transparentFraction": 0.3742408752441406
+        },
+        "alphaMatchesOriginal": true
+      }
+    ]
+  },
+  "totalRuntimeImageBytes": 2652400
+}

@@ -1,0 +1,783 @@
+{
+  "schemaVersion": 1,
+  "direction": "B",
+  "version": "guild-ledger-v1",
+  "palette": {
+    "paper": "#f2e3bd",
+    "ink": "#2b211b",
+    "wood": "#58402c",
+    "primary": "#9f3f17",
+    "ember": "#e76a24",
+    "teal": "#185e67",
+    "danger": "#9f2d26",
+    "warning": "#79460c",
+    "muted": "#6b5c4d"
+  },
+  "stage": {
+    "width": 1600,
+    "height": 900,
+    "contact": {
+      "x": 800,
+      "y": 330
+    },
+    "anvilWidth": 750,
+    "pieceWidth": 400,
+    "hammerWidths": {
+      "light": 330,
+      "standard": 340,
+      "heavy": 350
+    },
+    "idleAngle": 0.26,
+    "impactHeightRatio": 0.38
+  },
+  "assets": [
+    {
+      "id": "workshop",
+      "name": "workshop-background-v1",
+      "kind": "background",
+      "src": "/assets/b/workshop-background-v1.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 387784,
+      "sha256": "c8813b1438f61b6edbb8890d2df843ce7ac5732899a52edb9af67d1f8771497c",
+      "visibleBounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1672,
+        "h": 941
+      },
+      "alpha": {
+        "min": 255,
+        "max": 255,
+        "transparentFraction": 0.0
+      },
+      "alphaMatchesOriginal": true
+    },
+    {
+      "id": "hammer-light",
+      "name": "hammer-light-v1",
+      "kind": "sprite",
+      "pivot": {
+        "x": 0.895,
+        "y": 0.655
+      },
+      "strike": {
+        "x": 0.16,
+        "y": 0.74
+      },
+      "src": "/assets/b/hammer-light-v1.webp",
+      "width": 1671,
+      "height": 941,
+      "bytes": 153704,
+      "sha256": "4a294cde83b0765ba919c1943f151a9ad66c8aad5e163c1f3b81df2208b8bbf8",
+      "visibleBounds": {
+        "x": 94,
+        "y": 228,
+        "w": 1487,
+        "h": 497
+      },
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentFraction": 0.7900434428403261
+      },
+      "alphaMatchesOriginal": true
+    },
+    {
+      "id": "hammer-standard",
+      "name": "hammer-standard-v1",
+      "kind": "sprite",
+      "pivot": {
+        "x": 0.905,
+        "y": 0.67
+      },
+      "strike": {
+        "x": 0.14,
+        "y": 0.9
+      },
+      "src": "/assets/b/hammer-standard-v1.webp",
+      "width": 1983,
+      "height": 793,
+      "bytes": 243778,
+      "sha256": "604bc26957ac0dae08bec6160fbb1104dad6949676ed3df4bc254743fe392c03",
+      "visibleBounds": {
+        "x": 84,
+        "y": 88,
+        "w": 1821,
+        "h": 628
+      },
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentFraction": 0.6635926179588291
+      },
+      "alphaMatchesOriginal": true
+    },
+    {
+      "id": "hammer-heavy",
+      "name": "hammer-heavy-v1",
+      "kind": "sprite",
+      "pivot": {
+        "x": 0.91,
+        "y": 0.71
+      },
+      "strike": {
+        "x": 0.16,
+        "y": 0.97
+      },
+      "src": "/assets/b/hammer-heavy-v1.webp",
+      "width": 1997,
+      "height": 787,
+      "bytes": 286032,
+      "sha256": "3b9ed6d6aab155503af7ae167676fd88badcc2f859ee693823e1b68c4ae26714",
+      "visibleBounds": {
+        "x": 34,
+        "y": 12,
+        "w": 1933,
+        "h": 763
+      },
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentFraction": 0.5870362086967809
+      },
+      "alphaMatchesOriginal": true
+    },
+    {
+      "id": "anvil",
+      "name": "anvil-v1",
+      "kind": "sprite",
+      "anchor": {
+        "x": 0.59,
+        "y": 0.24
+      },
+      "src": "/assets/b/anvil-v1.webp",
+      "width": 1671,
+      "height": 941,
+      "bytes": 351706,
+      "sha256": "ed44b20b36a834581655f02c6e6660452b72a9742c37e1d97d3ab132413af9f1",
+      "visibleBounds": {
+        "x": 29,
+        "y": 95,
+        "w": 1625,
+        "h": 787
+      },
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentFraction": 0.4893230841046011
+      },
+      "alphaMatchesOriginal": true
+    },
+    {
+      "id": "iron",
+      "name": "material-iron-v1",
+      "kind": "atlas",
+      "columns": 2,
+      "rows": 4,
+      "src": "/assets/b/material-iron-v1.webp",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 297192,
+      "sha256": "891f332a7543e005bb4eecf9c8cbf9ed6fbb6e7acc60ef02c6a08d828cbdf8e9",
+      "visibleBounds": {
+        "x": 44,
+        "y": 85,
+        "w": 1177,
+        "h": 1074
+      },
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentFraction": 0.6686024180358101
+      },
+      "alphaMatchesOriginal": true,
+      "frames": [
+        {
+          "tier": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 0,
+            "w": 627,
+            "h": 372
+          },
+          "visibleBounds": {
+            "x": 48,
+            "y": 85,
+            "w": 541,
+            "h": 235
+          },
+          "anchor": {
+            "x": 0.5079744816586922,
+            "y": 0.8602150537634409
+          }
+        },
+        {
+          "tier": 1,
+          "sourceRect": {
+            "x": 627,
+            "y": 0,
+            "w": 627,
+            "h": 372
+          },
+          "visibleBounds": {
+            "x": 33,
+            "y": 126,
+            "w": 547,
+            "h": 188
+          },
+          "anchor": {
+            "x": 0.48883572567783096,
+            "y": 0.8440860215053764
+          }
+        },
+        {
+          "tier": 2,
+          "sourceRect": {
+            "x": 0,
+            "y": 372,
+            "w": 627,
+            "h": 287
+          },
+          "visibleBounds": {
+            "x": 51,
+            "y": 53,
+            "w": 544,
+            "h": 172
+          },
+          "anchor": {
+            "x": 0.5151515151515151,
+            "y": 0.7839721254355401
+          }
+        },
+        {
+          "tier": 3,
+          "sourceRect": {
+            "x": 627,
+            "y": 372,
+            "w": 627,
+            "h": 287
+          },
+          "visibleBounds": {
+            "x": 33,
+            "y": 63,
+            "w": 561,
+            "h": 150
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.7421602787456446
+          }
+        },
+        {
+          "tier": 4,
+          "sourceRect": {
+            "x": 0,
+            "y": 659,
+            "w": 627,
+            "h": 281
+          },
+          "visibleBounds": {
+            "x": 44,
+            "y": 63,
+            "w": 556,
+            "h": 160
+          },
+          "anchor": {
+            "x": 0.5135566188197768,
+            "y": 0.7935943060498221
+          }
+        },
+        {
+          "tier": 5,
+          "sourceRect": {
+            "x": 627,
+            "y": 659,
+            "w": 627,
+            "h": 281
+          },
+          "visibleBounds": {
+            "x": 29,
+            "y": 73,
+            "w": 556,
+            "h": 149
+          },
+          "anchor": {
+            "x": 0.48963317384370014,
+            "y": 0.7900355871886121
+          }
+        },
+        {
+          "tier": 6,
+          "sourceRect": {
+            "x": 0,
+            "y": 940,
+            "w": 627,
+            "h": 314
+          },
+          "visibleBounds": {
+            "x": 44,
+            "y": 58,
+            "w": 555,
+            "h": 157
+          },
+          "anchor": {
+            "x": 0.5127591706539075,
+            "y": 0.6847133757961783
+          }
+        },
+        {
+          "tier": 7,
+          "sourceRect": {
+            "x": 627,
+            "y": 940,
+            "w": 627,
+            "h": 314
+          },
+          "visibleBounds": {
+            "x": 25,
+            "y": 64,
+            "w": 558,
+            "h": 155
+          },
+          "anchor": {
+            "x": 0.48484848484848486,
+            "y": 0.697452229299363
+          }
+        }
+      ],
+      "measuredRowBands": [
+        [
+          85,
+          320
+        ],
+        [
+          425,
+          597
+        ],
+        [
+          722,
+          882
+        ],
+        [
+          998,
+          1159
+        ]
+      ]
+    },
+    {
+      "id": "steel",
+      "name": "material-steel-v1",
+      "kind": "atlas",
+      "columns": 2,
+      "rows": 4,
+      "src": "/assets/b/material-steel-v1.webp",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 297586,
+      "sha256": "c5985ca938f459770ebe8e7e0f045db4a96768c20525c7a7f05d28ab3c070a4e",
+      "visibleBounds": {
+        "x": 26,
+        "y": 147,
+        "w": 1202,
+        "h": 1017
+      },
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentFraction": 0.6923846879777376
+      },
+      "alphaMatchesOriginal": true,
+      "frames": [
+        {
+          "tier": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 0,
+            "w": 627,
+            "h": 405
+          },
+          "visibleBounds": {
+            "x": 49,
+            "y": 147,
+            "w": 543,
+            "h": 215
+          },
+          "anchor": {
+            "x": 0.511164274322169,
+            "y": 0.8938271604938272
+          }
+        },
+        {
+          "tier": 1,
+          "sourceRect": {
+            "x": 627,
+            "y": 0,
+            "w": 627,
+            "h": 405
+          },
+          "visibleBounds": {
+            "x": 37,
+            "y": 154,
+            "w": 539,
+            "h": 201
+          },
+          "anchor": {
+            "x": 0.48883572567783096,
+            "y": 0.8765432098765432
+          }
+        },
+        {
+          "tier": 2,
+          "sourceRect": {
+            "x": 0,
+            "y": 405,
+            "w": 627,
+            "h": 264
+          },
+          "visibleBounds": {
+            "x": 33,
+            "y": 44,
+            "w": 568,
+            "h": 172
+          },
+          "anchor": {
+            "x": 0.5055821371610846,
+            "y": 0.8181818181818182
+          }
+        },
+        {
+          "tier": 3,
+          "sourceRect": {
+            "x": 627,
+            "y": 405,
+            "w": 627,
+            "h": 264
+          },
+          "visibleBounds": {
+            "x": 33,
+            "y": 60,
+            "w": 559,
+            "h": 161
+          },
+          "anchor": {
+            "x": 0.4984051036682616,
+            "y": 0.8371212121212122
+          }
+        },
+        {
+          "tier": 4,
+          "sourceRect": {
+            "x": 0,
+            "y": 669,
+            "w": 627,
+            "h": 271
+          },
+          "visibleBounds": {
+            "x": 26,
+            "y": 44,
+            "w": 573,
+            "h": 187
+          },
+          "anchor": {
+            "x": 0.4984051036682616,
+            "y": 0.8523985239852399
+          }
+        },
+        {
+          "tier": 5,
+          "sourceRect": {
+            "x": 627,
+            "y": 669,
+            "w": 627,
+            "h": 271
+          },
+          "visibleBounds": {
+            "x": 33,
+            "y": 56,
+            "w": 567,
+            "h": 175
+          },
+          "anchor": {
+            "x": 0.5047846889952153,
+            "y": 0.8523985239852399
+          }
+        },
+        {
+          "tier": 6,
+          "sourceRect": {
+            "x": 0,
+            "y": 940,
+            "w": 627,
+            "h": 314
+          },
+          "visibleBounds": {
+            "x": 33,
+            "y": 41,
+            "w": 569,
+            "h": 183
+          },
+          "anchor": {
+            "x": 0.5063795853269537,
+            "y": 0.7133757961783439
+          }
+        },
+        {
+          "tier": 7,
+          "sourceRect": {
+            "x": 627,
+            "y": 940,
+            "w": 627,
+            "h": 314
+          },
+          "visibleBounds": {
+            "x": 29,
+            "y": 41,
+            "w": 572,
+            "h": 182
+          },
+          "anchor": {
+            "x": 0.5023923444976076,
+            "y": 0.7101910828025477
+          }
+        }
+      ],
+      "measuredRowBands": [
+        [
+          147,
+          362
+        ],
+        [
+          449,
+          626
+        ],
+        [
+          713,
+          900
+        ],
+        [
+          981,
+          1164
+        ]
+      ]
+    },
+    {
+      "id": "meteorite",
+      "name": "material-meteorite-v3",
+      "kind": "atlas",
+      "columns": 2,
+      "rows": 4,
+      "src": "/assets/b/material-meteorite-v3.webp",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 171384,
+      "sha256": "bffe5da4cc1522fa9e16df68790d11fbf551659176210ecb04e66ea82da98f3a",
+      "visibleBounds": {
+        "x": 102,
+        "y": 127,
+        "w": 1070,
+        "h": 1012
+      },
+      "alpha": {
+        "min": 0,
+        "max": 255,
+        "transparentFraction": 0.813679479254901
+      },
+      "alphaMatchesOriginal": true,
+      "frames": [
+        {
+          "tier": 0,
+          "sourceRect": {
+            "x": 0,
+            "y": 0,
+            "w": 627,
+            "h": 382
+          },
+          "visibleBounds": {
+            "x": 137,
+            "y": 127,
+            "w": 384,
+            "h": 186
+          },
+          "anchor": {
+            "x": 0.5247208931419458,
+            "y": 0.819371727748691
+          }
+        },
+        {
+          "tier": 1,
+          "sourceRect": {
+            "x": 627,
+            "y": 0,
+            "w": 627,
+            "h": 382
+          },
+          "visibleBounds": {
+            "x": 134,
+            "y": 148,
+            "w": 355,
+            "h": 158
+          },
+          "anchor": {
+            "x": 0.49681020733652315,
+            "y": 0.8010471204188482
+          }
+        },
+        {
+          "tier": 2,
+          "sourceRect": {
+            "x": 0,
+            "y": 382,
+            "w": 627,
+            "h": 289
+          },
+          "visibleBounds": {
+            "x": 131,
+            "y": 69,
+            "w": 404,
+            "h": 153
+          },
+          "anchor": {
+            "x": 0.5311004784688995,
+            "y": 0.7681660899653979
+          }
+        },
+        {
+          "tier": 3,
+          "sourceRect": {
+            "x": 627,
+            "y": 382,
+            "w": 627,
+            "h": 289
+          },
+          "visibleBounds": {
+            "x": 106,
+            "y": 75,
+            "w": 425,
+            "h": 131
+          },
+          "anchor": {
+            "x": 0.5079744816586922,
+            "y": 0.71280276816609
+          }
+        },
+        {
+          "tier": 4,
+          "sourceRect": {
+            "x": 0,
+            "y": 671,
+            "w": 627,
+            "h": 268
+          },
+          "visibleBounds": {
+            "x": 115,
+            "y": 67,
+            "w": 427,
+            "h": 127
+          },
+          "anchor": {
+            "x": 0.5239234449760766,
+            "y": 0.7238805970149254
+          }
+        },
+        {
+          "tier": 5,
+          "sourceRect": {
+            "x": 627,
+            "y": 671,
+            "w": 627,
+            "h": 268
+          },
+          "visibleBounds": {
+            "x": 96,
+            "y": 71,
+            "w": 446,
+            "h": 120
+          },
+          "anchor": {
+            "x": 0.5087719298245614,
+            "y": 0.7126865671641791
+          }
+        },
+        {
+          "tier": 6,
+          "sourceRect": {
+            "x": 0,
+            "y": 939,
+            "w": 627,
+            "h": 315
+          },
+          "visibleBounds": {
+            "x": 102,
+            "y": 75,
+            "w": 449,
+            "h": 120
+          },
+          "anchor": {
+            "x": 0.5207336523125997,
+            "y": 0.6190476190476191
+          }
+        },
+        {
+          "tier": 7,
+          "sourceRect": {
+            "x": 627,
+            "y": 939,
+            "w": 627,
+            "h": 315
+          },
+          "visibleBounds": {
+            "x": 91,
+            "y": 75,
+            "w": 454,
+            "h": 125
+          },
+          "anchor": {
+            "x": 0.507177033492823,
+            "y": 0.6349206349206349
+          }
+        }
+      ],
+      "measuredRowBands": [
+        [
+          127,
+          313
+        ],
+        [
+          451,
+          604
+        ],
+        [
+          738,
+          865
+        ],
+        [
+          1014,
+          1139
+        ]
+      ]
+    },
+    {
+      "id": "merchant-kit",
+      "name": "merchant-kit-v1",
+      "kind": "decoration",
+      "src": "/assets/b/merchant-kit-v1.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 463234,
+      "sha256": "9a7623f3b226fc1918b08054ccfd080d852a278f9c92a97219c9da72a40e1c72",
+      "visibleBounds": {
+        "x": 32,
+        "y": 21,
+        "w": 1478,
+        "h": 960
+      },
+      "alpha": {
+        "min": 0,
+        "max": 254,
+        "transparentFraction": 0.3742408752441406
+      },
+      "alphaMatchesOriginal": true
+    }
+  ]
+}

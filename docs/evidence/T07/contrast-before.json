@@ -1,0 +1,12 @@
+{
+  "issue": "T07-04",
+  "observation": "The preview assembly section inherited paper foreground into its paper form; headings, labels and helper text were unreadable.",
+  "screenshot": "contrast-before.png",
+  "regressionCommand": "node scripts/art/verify.mjs --out tmp/art-contrast-red",
+  "exitCodeBeforeFix": 1,
+  "assertion": "Unreadable rendered labels",
+  "foreground": "rgb(242, 227, 189)",
+  "background": "rgb(242, 227, 189)",
+  "contrastRatioBeforeFix": 1,
+  "fix": "Explicit ink foreground on .paper; retain computed-style contrast coverage in the browser verifier."
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>B 行会手账 · 美术拼装校验</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/assets/b/tokens.css"><link rel="stylesheet" href="./preview.css">
+</head>
+<body>
+<main>
+  <header><p class="eyebrow">锤下求生 · B 行会手账 · T07</p><h1>一间可以拼装的手绘工坊</h1>
+    <p>这是美术与状态设计校验页。可调项只改变画面，不读写游戏存档或执行玩法。</p></header>
+  <p id="status" role="status">正在加载分层素材…</p>
+  <section class="assembly" aria-label="场景拼装预览">
+    <div class="stage"><canvas id="scene" aria-label="背景、砧台、铁件与可动铁锤独立拼装"></canvas>
+      <p class="caption">独立背景 / 独立砧台 / 材料图集 / 旋转铁锤 / 代码裂纹与热光</p></div>
+    <form id="controls" class="paper">
+      <h2>表现层参数</h2>
+      <label>材料<select name="material"><option value="iron">熟铁</option><option value="steel" selected>精钢</option><option value="meteorite">陨铁</option></select></label>
+      <label>阶级<select name="tier"></select></label>
+      <label>铁锤<select name="hammer"><option value="light">轻锤</option><option value="standard" selected>标准锤</option><option value="heavy">重锤</option></select></label>
+      <label>热度 <output id="heat-value">40</output><input name="heat" type="range" min="0" max="100" step="20" value="40"></label>
+      <label>完整度<select name="integrity"></select></label>
+      <label>升级装饰<select name="level"><option value="0">0 级</option><option value="1">1 级</option><option value="2">2 级</option></select></label>
+      <label>姿态<select name="pose"><option value="ready">准备</option><option value="contact">接触</option></select></label>
+      <label>本次反馈<select name="feedback"><option value="none">无</option><option value="precise">精准</option><option value="ordinary">普通</option><option value="mishit">偏击</option><option value="damage">裂损</option></select></label>
+      <label class="check"><input name="broken" type="checkbox">已破碎（分片表现）</label>
+      <button id="play" type="button">演示一次落锤 · 450ms</button>
+      <p class="small">柄/砧同级仅为装饰对照；实际游戏分别升级。热度数字才是资源读数，环境暖反光不等于高热。</p>
+    </form>
+  </section>
+  <section><h2>同一铁件的状态层</h2><p>纹理不替代完整度读数；热、裂纹、碎片和结果字可独立控制。</p>
+    <div id="states" class="state-grid"></div></section>
+  <section id="feedback-board" class="paper"><h2>时机与结果的视觉语汇</h2><p>精准、普通、偏击是时机；成功、裂损和破碎是结果，两者不能混为一项。</p>
+    <div class="feedback-grid">
+      <figure class="feedback-tile"><svg viewBox="0 0 100 80" role="img" aria-label="精准放射纹"><circle cx="50" cy="40" r="12"/><path d="M50 5v15m0 40v15M15 40h15m40 0h15M25 15l11 11m28 28 11 11M25 65l11-11m28-28 11-11"/></svg><figcaption>精准 · 八向短纹</figcaption></figure>
+      <figure class="feedback-tile"><svg viewBox="0 0 100 80" role="img" aria-label="普通接触点"><circle cx="50" cy="40" r="5"/><path d="M50 12v12m0 32v12M22 40h12m32 0h12"/></svg><figcaption>普通 · 接触点</figcaption></figure>
+      <figure class="feedback-tile warning"><svg viewBox="0 0 100 80" role="img" aria-label="偏击划痕"><path d="m25 20 40 37m-6-39 20 18M20 66h35"/></svg><figcaption>偏击 · 偏移划痕</figcaption></figure>
+      <figure class="feedback-tile"><svg viewBox="0 0 100 80" role="img" aria-label="成功进度"><path d="M15 55h70M25 40l15-15 13 13 25-25m-16 0h16v16"/></svg><figcaption>成功 · 增加进度</figcaption></figure>
+      <figure class="feedback-tile warning"><svg viewBox="0 0 100 80" role="img" aria-label="裂损折线"><path d="m53 8-13 21 17 10-18 32M15 42H4m81 0h11"/></svg><figcaption>裂损 · 完整度 −1</figcaption></figure>
+      <figure class="feedback-tile warning"><svg viewBox="0 0 100 80" role="img" aria-label="破碎分片"><path d="m14 25 26-4 5 13-12 12 7 15-27-2ZM63 20l24 5 2 31-28 5-7-15 13-11Z"/></svg><figcaption>破碎 · 仅 1 废料</figcaption></figure>
+      <figure class="feedback-tile heat"><svg viewBox="0 0 100 80" role="img" aria-label="加热波纹"><path d="M25 65c-20-18 20-25 0-45M50 65c-20-18 20-25 0-55M75 65c-20-18 20-25 0-45"/></svg><figcaption>加热 · 消耗 1 煤</figcaption></figure>
+      <figure class="feedback-tile"><svg viewBox="0 0 100 80" role="img" aria-label="交货纸签"><path d="M18 12h44l15 15v40H18ZM62 12v18h15M30 49l10 10 22-22"/></svg><figcaption>交货 · 订单 + 金币</figcaption></figure>
+      <figure class="feedback-tile"><svg viewBox="0 0 100 80" role="img" aria-label="回收循环"><path d="M25 25q25-25 50 0m-2-14 2 14-14-2M75 55q-25 25-50 0m2 14-2-14 14 2M39 31l23 4-4 18-23-5Z"/></svg><figcaption>回收 · 只加废料</figcaption></figure>
+    </div>
+    <h3>计时条 · B 固定样例，锤柄 1</h3><div class="timing-example" aria-label="偏击30%，普通12%，精准16%，普通12%，偏击30%">
+      <span class="timing-band miss">偏击</span><span class="timing-band ordinary">普通</span><span class="timing-band precise">精准</span><span class="timing-band ordinary">普通</span><span class="timing-band miss">偏击</span></div>
+    <p class="timing-risk">裂损风险另列：精准 14% · 普通 20% · 偏击 32%；剩 1 格时，裂损即破碎。</p>
+    <div class="component-buttons" aria-label="按钮与商品状态样式"><span class="button-sample">交货 · 83</span><span class="button-sample secondary">回收 · 5 废料</span><span class="button-sample disabled">煤不足</span><span class="shop-state">✓ 本次已购买</span><span class="shop-state">满级 2 / 2</span><span class="shop-state">废料不足</span></div>
+  </section>
+  <section><h2>24 帧材料矩阵</h2><p>每行一个阶级，每列一种材料。矩形采用实测行带，下面显示的是实际运行 WebP。</p>
+    <div class="matrix-head"><b>熟铁</b><b>精钢</b><b>陨铁</b></div><div id="atlas" class="atlas-grid"></div></section>
+  <section class="paper"><h2>读数、印记与配色</h2><div id="palette" class="palette"></div>
+    <div class="legends"><span class="token">契</span><span>契约印记：纸牌与数字</span><span class="coal">煤</span><span>煤：深色矿块与文字</span>
+      <span class="feedback good">✓ 精准 / 达标</span><span class="feedback bad">! 裂损 / 违约</span></div>
+    <p class="small">标题采用系统中文衬线，正文采用系统无衬线；不加载外部字体。橙色 ember 用于热光，不用于小字。</p></section>
+  <section><h2>商人、日终与终局设计稿</h2><p>数字和按钮在正式界面中由 DOM 渲染；这些是版式与美术参考。</p>
+    <div class="board-grid"><figure><img src="../boards/merchant-screen-v1.png" alt="第三轮商人：四种升级、双货币价格与每访限购"><figcaption>商人 · 784金币 / 22废料 / 2印记</figcaption></figure>
+      <figure><img src="../boards/round-summary-board-v1.png" alt="达标与违约：267/250与351/520，扣一枚印记并保留金币"><figcaption>达标 / 违约</figcaption></figure>
+      <figure><img src="../boards/ending-board-v2.png" alt="契约期完成与契约终止：纸质印记、达标违约统计和重开入口"><figcaption>通关 / 失败 · 已修正印记图标</figcaption></figure></div></section>
+  <section class="paper"><h2>商人器具的透明叠放</h2><div class="kit"><img src="/assets/b/merchant-kit-v1.webp" alt="皮革商人工具包、风箱、握柄、支架、账簿与金币"></div></section>
+  <footer>仅美术预览 · 游戏入口与完整键鼠流程在 T08–T10 接入。</footer>
+</main><script type="module" src="./preview.js"></script>
+</body></html>

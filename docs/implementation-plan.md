@@ -1,6 +1,6 @@
 # 游戏实施方案与确认范围
 
-版本 v0.2（2026-10-17 确认；2026-10-18 更新进度）。状态：**T04–T06 内核、经营、存档及整局模拟/R2已实现并验证；主界面已选B**，见[确认记录](decision-record.md)、[T04](reviews/T04-kernel-validation.md)、[T05](reviews/T05-persistence-validation.md)与[R2](reviews/R2-kernel-and-balance.md)。
+版本v0.2（2026-10-17确认；2026-10-18更新进度）。状态：**T04–T07内核、经营、存档、整局模拟/R2及B派生美术已实现并验证**，见[确认记录](decision-record.md)、[T04](reviews/T04-kernel-validation.md)、[T05](reviews/T05-persistence-validation.md)、[R2](reviews/R2-kernel-and-balance.md)与[T07](reviews/T07-art-validation.md)。下一项接正式工坊界面。
 
 ## 1. 本次要做成什么
 
@@ -59,7 +59,7 @@ T03/R1 检查 T01–T03；T06/R2 检查 T04–T06；T09/R3 检查 T07–T09；T1
 
 ## 5. 工具与命令约定
 
-以下为 npm scripts 合同。T04–T06 已运行安装、规则/会话/模拟测试、类型检查、SDK构建、存储浏览器测试和完整策略模拟。当前dev/preview只提供模块，没有游戏首页；simulate已实现，游戏test:e2e在界面阶段建立：
+以下为npm scripts合同。T04–T07已运行安装、规则/会话/模拟测试、类型检查、SDK构建、存储浏览器测试、完整策略模拟和美术浏览器检查。dev可访问设计专用美术页，preview提供模块/素材，均尚无正式游戏首页；simulate已实现，游戏test:e2e在界面阶段建立：
 
 | 命令 | 行为 | 建立任务 |
 | --- | --- | --- |
@@ -73,6 +73,7 @@ T03/R1 检查 T01–T03；T06/R2 检查 T04–T06；T09/R3 检查 T07–T09；T1
 | `npm run simulate -- --seeds 1000` | 调用正式内核，运行固定种子集的策略模拟并输出统计 | T06 |
 | `npm run test:e2e` | 真实浏览器回归，保存失败截图/trace | T08 起，T11 全量 |
 | `npm run test:storage:browser` | 构建后验证 SDK 存储/锁/原生 BFCache；不代表游戏页面验收 | T05 已运行 |
+| `npm run test:art` | 构建后核对实际图片/alpha/源矩形/姿态/对比度/尺寸；设计预览不进入游戏生产库 | T07已运行 |
 | `npm run check` | 一次性类型、单测、生产构建 | T04；后续新增适当检查 |
 
 使用 npm 精确版本与 package-lock，不加 `^`/`~`，不混用锁文件。初始工具版本在 [核实记录](technical-sources.md)；实施时重新检查 engines 与实际安装结果，更新为真正锁定版本。Vite 转译不等于类型检查，两个步骤必须真实执行。

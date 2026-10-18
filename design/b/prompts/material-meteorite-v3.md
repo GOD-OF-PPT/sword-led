@@ -1,0 +1,6 @@
+Use case: precise-object-edit
+Asset type: production spacing correction for a transparent 8-frame meteorite sprite atlas.
+Input image 1 is the EDIT TARGET: preserve all its shapes, cool dark meteorite with quiet gold grain, eight stages, correct tang-left/tip-right orientation, 2D ink/gouache style and genuine alpha.
+Change ONLY spacing/scale: SHRINK EACH of the eight separate objects UNIFORMLY to 80% of its current size about its own center, then center it within its logical cell of the TWO-COLUMN by FOUR-ROW atlas. Keep object aspect ratios unchanged.
+Critical: no object may approach a cell edge. In a 1254 square canvas each column is 627 wide: leave at least 40 fully transparent pixels on both sides of every column cell; leave at least 24 transparent pixels above/below each row cell. The third-row LEFT blade point currently extends past the midpoint; move it safely inside its own left cell. No overlap or touching neighboring sprites. Exactly eight full silhouettes, no clipped tips.
+Keep the canvas size and all empty areas genuinely transparent, no text, grid, captions, new textures, glow, shadows, handles or guards. Do not mirror anything; all five final blade tips must still point RIGHT.

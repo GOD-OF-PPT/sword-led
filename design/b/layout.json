@@ -1,0 +1,29 @@
+{
+  "version": "guild-ledger-v1",
+  "palette": {
+    "paper": "#f2e3bd", "ink": "#2b211b", "wood": "#58402c",
+    "primary": "#9f3f17", "ember": "#e76a24", "teal": "#185e67",
+    "danger": "#9f2d26", "warning": "#79460c", "muted": "#6b5c4d"
+  },
+  "stage": {
+    "width": 1600, "height": 900,
+    "contact": { "x": 800, "y": 330 },
+    "anvilWidth": 750, "pieceWidth": 400,
+    "hammerWidths": { "light": 330, "standard": 340, "heavy": 350 },
+    "idleAngle": 0.26,
+    "impactHeightRatio": 0.38
+  },
+  "assets": [
+    { "id": "workshop", "name": "workshop-background-v1", "kind": "background" },
+    { "id": "hammer-light", "name": "hammer-light-v1", "kind": "sprite", "pivot": { "x": 0.895, "y": 0.655 }, "strike": { "x": 0.16, "y": 0.74 } },
+    { "id": "hammer-standard", "name": "hammer-standard-v1", "kind": "sprite", "pivot": { "x": 0.905, "y": 0.67 }, "strike": { "x": 0.14, "y": 0.9 } },
+    { "id": "hammer-heavy", "name": "hammer-heavy-v1", "kind": "sprite", "pivot": { "x": 0.91, "y": 0.71 }, "strike": { "x": 0.16, "y": 0.97 } },
+    { "id": "anvil", "name": "anvil-v1", "kind": "sprite", "anchor": { "x": 0.59, "y": 0.24 } },
+    { "id": "iron", "name": "material-iron-v1", "kind": "atlas", "columns": 2, "rows": 4 },
+    { "id": "steel", "name": "material-steel-v1", "kind": "atlas", "columns": 2, "rows": 4 },
+    { "id": "meteorite", "name": "material-meteorite-v3", "kind": "atlas", "columns": 2, "rows": 4 },
+    { "id": "merchant-kit", "name": "merchant-kit-v1", "kind": "decoration" }
+  ],
+  "boards": ["merchant-screen-v1", "round-summary-board-v1", "ending-board-v2"],
+  "superseded": { "material-meteorite-v1": "material-meteorite-v2", "material-meteorite-v2": "material-meteorite-v3", "ending-board-v1": "ending-board-v2" }
+}

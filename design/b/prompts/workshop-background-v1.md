@@ -1,0 +1,7 @@
+Use case: stylized-concept
+Input image 1 is STYLE REFERENCE ONLY: the user-selected B “行会手账” for 锤下求生. This is a NEW derived asset, not a replacement of that screenshot. Match its warm 2D hand-painted gouache blocks, dark brown ink contours, worn wood, cream parchment atmosphere and simple readable painted metal facets. No photorealism, no 3D render, no low-poly style, no glossy mobile-game plastic. Lighting is warm forge light from the left and softer daylight from upper right.
+Asset type: reusable PC game workshop background, landscape 16:9, high-resolution.
+Primary request: the SAME type of cozy hand-illustrated blacksmith workshop as the reference, as a clean empty scene plate for layering interactive tools later.
+Scene: warm stone forge with contained orange fire at left; timber beams, a small rack of stationary tongs at rear; daylight window upper right; worn brown floor and a low plain stone plinth in the lower center for an independently drawn anvil.
+Composition: fixed close 3/4 front view, visual center around the lower-middle plinth. Leave middle 55% fairly uncluttered and lower foreground quiet. Keep the forge/window less contrasty than foreground objects will be. Painted flat shading and bold ink, not realistic gradients.
+Constraints: NO hammer, NO anvil, NO workpiece, NO weapon, NO people, NO airborne sparks, NO foreground loose tools. No HUD, no cards, no buttons, no text, no logos, no frame, no watermark. The empty central space must actually be empty, not occupied by a baked-in interactive object. Opaque background.
