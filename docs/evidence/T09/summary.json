@@ -1,0 +1,599 @@
+{
+  "recordedAt": "2026-10-18T07:17:57.785Z",
+  "node": "v22.12.0",
+  "platform": "darwin/x64",
+  "rulesVersion": "forge-v1",
+  "stage": "T09 full contract flow and R3; audio/settings and final acceptance remain T10–T12",
+  "units": {
+    "files": 12,
+    "passed": 179
+  },
+  "ui": {
+    "passed": 30,
+    "cases": [
+      {
+        "name": "contract-flow.spec.ts / cancelled disposal and early closure retain the contract; receipts survive reload without a second penalty",
+        "project": "chromium-game",
+        "durationMs": 3074,
+        "status": "passed"
+      },
+      {
+        "name": "contract-flow.spec.ts / a complete UI contract reaches all three merchants and victory, retains the ledger and restarts cleanly",
+        "project": "chromium-game",
+        "durationMs": 126136,
+        "status": "passed"
+      },
+      {
+        "name": "contract-flow.spec.ts / a separate normal UI run loses the last seal, offers no final merchant and can start a different seed",
+        "project": "chromium-game",
+        "durationMs": 5785,
+        "status": "passed"
+      },
+      {
+        "name": "contract-flow.spec.ts / handle and repair purchases, scrap shortage, visit limits and next-round upgrade effects use real UI receipts",
+        "project": "chromium-game",
+        "durationMs": 39000,
+        "status": "passed"
+      },
+      {
+        "name": "native-input.spec.ts / native Chrome minimize/restore cancels a held key and preserves the accepted-command stream",
+        "project": "chromium-game",
+        "durationMs": 5217,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / controlled release uses its timestamp while the displayed frame is still at zero",
+        "project": "chromium-game",
+        "durationMs": 1443,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / repeat keydown and inputs during feedback cannot add commands",
+        "project": "chromium-game",
+        "durationMs": 1813,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / element blur and pointer cancellation do not consume a strike",
+        "project": "chromium-game",
+        "durationMs": 2987,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / cancelling a resized confirmation restores controls and focus without changing the piece",
+        "project": "chromium-game",
+        "durationMs": 2924,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / slow timing changes only the period, and a changed setting cancels the held input",
+        "project": "chromium-game",
+        "durationMs": 2158,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / reload during feedback restores the accepted result without replaying it",
+        "project": "chromium-game",
+        "durationMs": 2127,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / a newly signed contract is not changed by an old feedback callback",
+        "project": "chromium-game",
+        "durationMs": 1692,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / the second same-origin tab is read-only but can practice without rewriting the slot",
+        "project": "chromium-game",
+        "durationMs": 3079,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / write failure retains accepted memory across the menu and retries the same result",
+        "project": "chromium-game",
+        "durationMs": 2003,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / asset-load failure can retry without erasing a saved run",
+        "project": "chromium-game",
+        "durationMs": 2974,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / seed input and menu previews treat external text as text",
+        "project": "chromium-game",
+        "durationMs": 1538,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / held Enter cannot submit a newly opened contract dialog or skip the introduction",
+        "project": "chromium-game",
+        "durationMs": 1235,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / delivery, recycling and round exit use the real order ledger",
+        "project": "chromium-game",
+        "durationMs": 2308,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / a real critical steel piece displays all three actual break risks",
+        "project": "chromium-game",
+        "durationMs": 2707,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-boundaries.spec.ts / explicit memory play never writes and never presents a later contract as saved",
+        "project": "chromium-game",
+        "durationMs": 2216,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-quality.spec.ts / visible workshop text meets the typography and contrast contract, including preparation",
+        "project": "chromium-game",
+        "durationMs": 1995,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-quality.spec.ts / system reduced motion is honoured without changing the strike reward",
+        "project": "chromium-game",
+        "durationMs": 1781,
+        "status": "passed"
+      },
+      {
+        "name": "workshop-quality.spec.ts / the lesson displays its true cracked piece and supports non-destructive return",
+        "project": "chromium-game",
+        "durationMs": 1715,
+        "status": "passed"
+      },
+      {
+        "name": "workshop.spec.ts / production entry accepts a precise keyboard strike and saves it once",
+        "project": "chromium-game",
+        "durationMs": 1664,
+        "status": "passed"
+      },
+      {
+        "name": "workshop.spec.ts / real native keyboard events also reach the kernel without a controlled clock",
+        "project": "chromium-game",
+        "durationMs": 2251,
+        "status": "passed"
+      },
+      {
+        "name": "workshop.spec.ts / mixed pointer/space and duplicate releases cannot dispatch a second strike",
+        "project": "chromium-game",
+        "durationMs": 1764,
+        "status": "passed"
+      },
+      {
+        "name": "workshop.spec.ts / target, hammer and pause cancellation consume no resources or random draws",
+        "project": "chromium-game",
+        "durationMs": 1922,
+        "status": "passed"
+      },
+      {
+        "name": "workshop.spec.ts / tutorial can be practised, skipped and replayed without touching the formal slot",
+        "project": "chromium-game",
+        "durationMs": 2131,
+        "status": "passed"
+      },
+      {
+        "name": "workshop.spec.ts / workshop stays readable and reachable at 1280x720",
+        "project": "chromium-game",
+        "durationMs": 1747,
+        "status": "passed"
+      },
+      {
+        "name": "workshop.spec.ts / workshop stays readable and reachable at 1920x1080",
+        "project": "chromium-game",
+        "durationMs": 2271,
+        "status": "passed"
+      }
+    ]
+  },
+  "storage": {
+    "passed": 8,
+    "cases": [
+      {
+        "name": "native-cache.spec.ts / native CDP restores the actual cached heap and rereads the other window save",
+        "project": "chromium-storage",
+        "durationMs": 3366,
+        "status": "passed"
+      },
+      {
+        "name": "persistence.spec.ts / persists real breakage across reload with no reward replay or random reroll",
+        "project": "chromium-storage",
+        "durationMs": 483,
+        "status": "passed"
+      },
+      {
+        "name": "persistence.spec.ts / native Web Locks allow one writer and a clean handoff between two windows",
+        "project": "chromium-storage",
+        "durationMs": 554,
+        "status": "passed"
+      },
+      {
+        "name": "persistence.spec.ts / ordinary history navigation releases ownership and rereads the newest save",
+        "project": "chromium-storage",
+        "durationMs": 707,
+        "status": "passed"
+      },
+      {
+        "name": "persistence.spec.ts / real localStorage quota failure keeps accepted memory dirty and retries without a second action",
+        "project": "chromium-storage",
+        "durationMs": 1342,
+        "status": "passed"
+      },
+      {
+        "name": "persistence.spec.ts / corrupt primary keeps its backup and only explicit recovery replaces it",
+        "project": "chromium-storage",
+        "durationMs": 320,
+        "status": "passed"
+      },
+      {
+        "name": "persistence.spec.ts / missing lock capability enables explicit memory play and leaves the disk unchanged",
+        "project": "chromium-storage",
+        "durationMs": 274,
+        "status": "passed"
+      },
+      {
+        "name": "persistence.spec.ts / native storage events cannot rebase retained dirty memory over another window progress",
+        "project": "chromium-storage",
+        "durationMs": 566,
+        "status": "passed"
+      }
+    ]
+  },
+  "sdkMatchesT06": false,
+  "sdkVerifiedCurrent": true,
+  "runtimeImages": 9,
+  "runtimeImageBytes": 2652400,
+  "attachments": {
+    "ui/summary-missed-1280-readability": {
+      "file": "ui/summary-missed-1280-readability.json",
+      "sha256": "3d243fa4b85115ec6cb7be55a4cad3d67be2ac5d1e6bc77fb5f1d51951df748a",
+      "bytes": 2171
+    },
+    "ui/summary-missed-1280": {
+      "file": "ui/summary-missed-1280.png",
+      "sha256": "21585ba1343be5e7abba74f43daa7cf284db63a1f03fddd478790829a96a1875",
+      "bytes": 380647
+    },
+    "ui/summary-met-1280-readability": {
+      "file": "ui/summary-met-1280-readability.json",
+      "sha256": "57713d018773507a45231f383ee0e5026b1806d5de3e2b2ae3cbd84e7447a518",
+      "bytes": 2121
+    },
+    "ui/summary-met-1280": {
+      "file": "ui/summary-met-1280.png",
+      "sha256": "a5b0ef6dc706eeba9d95c6373f1f53af9449858163b6e42cc6c3211d70e31a65",
+      "bytes": 383541
+    },
+    "ui/merchant-3-1280-readability": {
+      "file": "ui/merchant-3-1280-readability.json",
+      "sha256": "235963fe1083f7bbfd4f02adf0f33daf07a5e2e3eb7c9c1a7882cf4c8349b806",
+      "bytes": 2873
+    },
+    "ui/merchant-3-1280": {
+      "file": "ui/merchant-3-1280.png",
+      "sha256": "c73ad3c2f54b24d2bab3709dd2701ad0850f5f89a1413a8a59775db465349951",
+      "bytes": 392877
+    },
+    "ui/merchant-3-1920-readability": {
+      "file": "ui/merchant-3-1920-readability.json",
+      "sha256": "71dc33cc5d663674c1e8545830609114b8a21d6a584fa79c2cbfe65ca4d8daa3",
+      "bytes": 2873
+    },
+    "ui/merchant-3-1920": {
+      "file": "ui/merchant-3-1920.png",
+      "sha256": "aef13f3977bce679e965e2077705e2a447579d48b14845b02b749809d39eb696",
+      "bytes": 1158385
+    },
+    "ui/merchant-6-1280-readability": {
+      "file": "ui/merchant-6-1280-readability.json",
+      "sha256": "a29f5fd61b17cd1af8b5a8b3f900a09ad49dc809b796e7a66ed842758ba33eb4",
+      "bytes": 2874
+    },
+    "ui/merchant-6-1280": {
+      "file": "ui/merchant-6-1280.png",
+      "sha256": "5923644881cad52f8b9a1a2e7fd52dbddbce0f0a8361159d1585788dfb1733cc",
+      "bytes": 394491
+    },
+    "ui/merchant-9-1280-readability": {
+      "file": "ui/merchant-9-1280-readability.json",
+      "sha256": "0c26824329284e7fe32a8cddf9b0a81f110693aebcd7f24c80180b11bcdfec1f",
+      "bytes": 2825
+    },
+    "ui/merchant-9-1280": {
+      "file": "ui/merchant-9-1280.png",
+      "sha256": "7c56da8b00b6f7f4ae5fe6c3b82583074ddb49fd382f1c7fc3f9894e8c234339",
+      "bytes": 394992
+    },
+    "ui/summary-missed-full-run-readability": {
+      "file": "ui/summary-missed-full-run-readability.json",
+      "sha256": "fd61c19307f86e9d3cb1533fbc1f8203b9d752b689f242604b730be3a3840c1a",
+      "bytes": 2144
+    },
+    "ui/summary-missed-full-run": {
+      "file": "ui/summary-missed-full-run.png",
+      "sha256": "27d24e9541fb87d9fae896c71516f6524316c88db9b92265c1de831b05e9c0c4",
+      "bytes": 389174
+    },
+    "ui/victory-1280-readability": {
+      "file": "ui/victory-1280-readability.json",
+      "sha256": "8321579adc472d5a26b100c1c05c7e3d775082a88f2eecd3c9fb3458dd245d83",
+      "bytes": 5960
+    },
+    "ui/victory-1280": {
+      "file": "ui/victory-1280.png",
+      "sha256": "0dbf579b73eb8b3c59d7e2a466019cdb36aacf3b6678839976247d991d866ad1",
+      "bytes": 399727
+    },
+    "ui/victory-ledger-1280-readability": {
+      "file": "ui/victory-ledger-1280-readability.json",
+      "sha256": "8321579adc472d5a26b100c1c05c7e3d775082a88f2eecd3c9fb3458dd245d83",
+      "bytes": 5960
+    },
+    "ui/victory-ledger-1280": {
+      "file": "ui/victory-ledger-1280.png",
+      "sha256": "ee0904eb5ee19667e3b396fd788bbcd672d32aba2b846777226b4c422ba492bd",
+      "bytes": 389915
+    },
+    "ui/victory-ledger-1920-readability": {
+      "file": "ui/victory-ledger-1920-readability.json",
+      "sha256": "3d389b768d9b2942d576d90e2789fd6679ce02d4ec29d0955526ede2fd5a2a32",
+      "bytes": 5960
+    },
+    "ui/victory-ledger-1920": {
+      "file": "ui/victory-ledger-1920.png",
+      "sha256": "488add844c43ec3fb4813c3f50eb22e82e4dc8e60f2a65613d21a01262375471",
+      "bytes": 1143739
+    },
+    "ui/complete-victory-run": {
+      "file": "ui/complete-victory-run.json",
+      "sha256": "38d5cda1731a8be4e7cf2e734e781d0a2992bd50af085c896e566cf74a33eccd",
+      "bytes": 54503
+    },
+    "ui/defeat-1280-readability": {
+      "file": "ui/defeat-1280-readability.json",
+      "sha256": "5c9f9872ccc0b040c14787d4393b882cd8f99ba1a5ea5cf9b15cc0adb706bef6",
+      "bytes": 3397
+    },
+    "ui/defeat-1280": {
+      "file": "ui/defeat-1280.png",
+      "sha256": "33917b11f59a52bd0f68abfb644ad3c0da9087e707d820949e753bc4a8418f09",
+      "bytes": 393897
+    },
+    "ui/defeat-1920-readability": {
+      "file": "ui/defeat-1920-readability.json",
+      "sha256": "0206d908cc5fa18f23e2592d72f39ba6d8a88a21b1003841b47f08fe3c60b008",
+      "bytes": 3397
+    },
+    "ui/defeat-1920": {
+      "file": "ui/defeat-1920.png",
+      "sha256": "4000bd9ea4a28d2c3c1d7030fdb6d5c477542b6f1b99fe8219ba62078e37a5f3",
+      "bytes": 1136993
+    },
+    "ui/complete-defeat-run": {
+      "file": "ui/complete-defeat-run.json",
+      "sha256": "24a6b6a188fe57692f333aaeade56c836a4e802917f5585915c4f1b305a7bf61",
+      "bytes": 5273
+    },
+    "ui/merchant-repair-and-limits-1280-readability": {
+      "file": "ui/merchant-repair-and-limits-1280-readability.json",
+      "sha256": "c53d8995f2c69e282b45a674ab245b37065286ad361409ebd83ea2bdcf0ffd48",
+      "bytes": 2847
+    },
+    "ui/merchant-repair-and-limits-1280": {
+      "file": "ui/merchant-repair-and-limits-1280.png",
+      "sha256": "f59f8a8263e9e1478af0e44c3f7d1babb4841bc2fffa6c9d3033c78ac8dbda22",
+      "bytes": 392411
+    },
+    "ui/repair-and-upgrade-run": {
+      "file": "ui/repair-and-upgrade-run.json",
+      "sha256": "5572528b62c8242bf27000ab835e0822d87d54d9597c4606d5277e3ef42f5816",
+      "bytes": 74377
+    },
+    "ui/native-window-input": {
+      "file": "ui/native-window-input.json",
+      "sha256": "6f3623e7410504da47e01455186395f57f5659e85e7ff63b8bd18605fcfdfaf9",
+      "bytes": 425
+    },
+    "ui/native-window-input-screen": {
+      "file": "ui/native-window-input-screen.png",
+      "sha256": "f4dda2dfb09e241e80e82ab691d5a4e58fb0e1e93e3be32f7581f4df254573d0",
+      "bytes": 802377
+    },
+    "ui/critical-steel": {
+      "file": "ui/critical-steel.png",
+      "sha256": "93cb9a70a97d06328644bffe26189bad493e5900e4d78567170cea626a905c33",
+      "bytes": 638917
+    },
+    "ui/main-menu": {
+      "file": "ui/main-menu.png",
+      "sha256": "f48b2396133738ee7179b2ede2449b879c9cba2bf5ca192eceffad006748bcef",
+      "bytes": 1225512
+    },
+    "ui/paused-workshop": {
+      "file": "ui/paused-workshop.png",
+      "sha256": "4d91df01bfa605f96b6c0833727352433f3eeefc48f6b535e85af3ac30cd231d",
+      "bytes": 327302
+    },
+    "ui/workshop-readability": {
+      "file": "ui/workshop-readability.json",
+      "sha256": "872672578873a7cfb0d90f7015f6f24a708813471f488ce96af57a82c43af831",
+      "bytes": 6731
+    },
+    "ui/tutorial-crack": {
+      "file": "ui/tutorial-crack.png",
+      "sha256": "52b76cfc9ca0607cc1c87f36eb9b95e4ba7fc33e4d583a347f677d9905d24986",
+      "bytes": 479123
+    },
+    "ui/workshop-1280": {
+      "file": "ui/workshop-1280.png",
+      "sha256": "0f644f3e2d73c0058cdcbf6c280c47199c1a8cd74e13785d8838fbbaf354c3cd",
+      "bytes": 644010
+    },
+    "ui/workshop-1920": {
+      "file": "ui/workshop-1920.png",
+      "sha256": "c0837c61bea8defb495709e55a40ade03768ecaaf888bce219dbced50040cac1",
+      "bytes": 1694149
+    },
+    "storage/native-bfcache-evidence": {
+      "file": "storage/native-bfcache-evidence.json",
+      "sha256": "d38781a053e45dcbeee987a05beadaf7d8dc1afa2bb8e9642f4ee7b2943dcda5",
+      "bytes": 586
+    }
+  },
+  "sourceHashes": {
+    "index.html": "df194f1fc660f599175924dad894fc825d5961bf0652bd2437abd7fd6b18569e",
+    "package-lock.json": "fb6298f489290886a8b47e266b4205a94acf9763086af45b1cc2992a01d8a73f",
+    "package.json": "46b78480fc4fdd2af74aba2affda14d266edeba8d1bc4734336de3c1305d4494",
+    "playwright.config.ts": "29cf3ab8ef5a990e7b0537dc180af347a1da8228058c3a04c6fec9a2f9a97dd2",
+    "playwright.ui.config.ts": "f51f28eee087c864e3672911126beb6d3cb7332b4ad5ae1aff2f29af5e353bad",
+    "scripts/collect-ui-evidence.mjs": "cb78ab943c191fa4c3c146ddc9607619ae3e4e8c47014e1cccc84a414cff0e31",
+    "src/application/persistent-session.ts": "0cbbbaaa1f9a543a02ac25bff8eeb6e1f6cbeeb0624ab287e55d7907bb891940",
+    "src/application/session.ts": "4aac3c3a11760d2570adaa28bb6e4a2d8d41ac26fb265c47fe4917228500f195",
+    "src/core/game.ts": "f24e0a700318b346903d1118c7939686748c4e6e55a0780cf213ef72d7eeac38",
+    "src/core/guards.ts": "a25ec963eb41de673edccb4f1a95c420f73ddc7ee44be6c668a69ba2715c9e21",
+    "src/core/immutable.ts": "9bd212a1885c949d1928a2ecb8daa934483f0d26bce8ff196e8ae460d0a29044",
+    "src/core/index.ts": "4fd1ab0adc5c1fe6836329427e7744d0e2eacf2e67745d3c986c93446424b0e9",
+    "src/core/ledger.ts": "0190a08b7b7205408e08cbf365bd448062bdb2acf00e34ed8c2e79e4ffd06b73",
+    "src/core/merchant.ts": "931f772c1ffe19b8a55cea4c4109d620bd34c6d6daa9e3fb257be85a3ee89a11",
+    "src/core/model.ts": "e3568fa89a4dfa1805643dab0a48bbba1689523c01c8408b3e007fedb6d537fd",
+    "src/core/random.ts": "1a3d3d19684573bad8dbf4a80266b0fb343a8ddd32a7aec9d16efc729cf5fca9",
+    "src/core/rules.ts": "cb0a017b155304fe98f43f0f356d72125073fb116e0cbf06c4cfab21cc1f24cc",
+    "src/core/validate.ts": "321a0b1e3675c5d71a92c6bc173b0bd1ec55dcd4e3bc54f21d225f7da40c2dec",
+    "src/core/view.ts": "0a77454028a0695c4610c32e6295ea0379e603d5cd0ee5e394ee1e96d820a936",
+    "src/env.d.ts": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+    "src/main.ts": "96828efb2be8d9a47d28380ab7f9db411ebec880f1dd7c9b13b02df30a711f3c",
+    "src/persistence/index.ts": "ca53cf54562098b30a48873a0c639cf751366a40e7079b320937c862bfb2b4c6",
+    "src/platform/browser-session.ts": "99915c22f9ae217b56905af7ce45163161abe2c057a3fc95ca9cea521f4adf0b",
+    "src/platform/input.ts": "d5383e703c8ba32aefd21a1a9485b7404dc7c342ad9ef36acdf504c089323be2",
+    "src/platform/storage.ts": "c2c7d2c666be1d44e2304707958a3933bc1ee78a533bbed8df2ebead14d3ce1f",
+    "src/platform/timing.ts": "782c9178c583e213d961f42778677f56c8926e65634df727621394dddd1c00ce",
+    "src/platform/writer-lease.ts": "1920339b776acbf4097fe9e3488afea221d0b7c20f6203387f22f49bbcc79bf9",
+    "src/presentation/app.ts": "ddb440b014c82bc980fc3a23a5eaf1336eddfe2cb9beecd19127a6b5da12e195",
+    "src/presentation/assets.ts": "ec244c5fd60b65bf54568eb38a3ca76cac8e8f2643ce111bc31573852827f053",
+    "src/presentation/phases.ts": "10ca88d50abc7242ce4e10886922570ec53ad6cf2ac14635dc11b156fbfcc944",
+    "src/presentation/scene.ts": "15642e3fa5a1894fc55461d26e494982d451970df05db21e6f8dc1f968129528",
+    "src/presentation/styles.css": "150752d84a2c9d45852d154fd70660b1e1491adda9295ea47225e4b509f1db6d",
+    "src/presentation/template.ts": "b8933a45663961b6025d711e50a642d4798afbf7b11c79af273b16fb50dfcc3a",
+    "src/tutorial/lesson.ts": "f386af1776d0d6c427d91efb73315206f1f798f3e68d141d1aefb28f77c99b5e",
+    "tests/browser/away.html": "73453ec127a9cfe04827d89d92a39e72b70c72928740b69bcee3cb8a7887cb88",
+    "tests/browser/fixture.html": "1f022bdddb09322f7b741fa468b7339e10e87029811f88260eb53319d9088290",
+    "tests/browser/native-bfcache.mjs": "f0e5504fcd91cf4b10f277c242457b12d62a15bb6eab81740ea66f1ec9ae3998",
+    "tests/browser/native-cache.spec.ts": "ec2a651c6e3a6298f7d1ff612694f884de68b80b37cb954a6ff9832297adfcea",
+    "tests/browser/persistence.spec.ts": "8bbe19666c376cea8f45aaec292d1f10a7551d93e66f0800205820df52c6b46e",
+    "tests/browser/server.mjs": "42d4271946acaf24222bba6c23005f4ab2c0aa88045117d691c483f8827f727c",
+    "tests/browser/window.d.ts": "b77dbca04e7c7b14868e39e342272e1d5d8fe66a12dfb4d0fb5510e25cace614",
+    "tests/core/concept-scenario.ts": "5299ce3bd749a6069e241b003ce9cb04b080c1f413ddadf03babd97379f7a585",
+    "tests/core/concept.test.ts": "084dcb7e17a66fb810cf2a8dbda443f26e712073cc58154ca3d00462f18ee6dc",
+    "tests/core/contract.test.ts": "055c83bad0183b6c03c399f29af45b8b4a2a22130afee8866e01e37b931dea0c",
+    "tests/core/forging.test.ts": "7d8b50bf3c4aa59704c9a03256a2d9a355b7c6e470f56a3f3ec2baaea026d02c",
+    "tests/core/game-session.test.ts": "703d399a34ab1bfd42c577b48f41beb36e20a1cd89d377098f5944cd733661be",
+    "tests/core/helpers.ts": "2aab98c713d28a41195f2dde3eeacdb0fa81bdeb1570e166e8c957d3c42e201d",
+    "tests/core/input.test.ts": "479ac24cfa299fee958daeec23d333421e5910a3ec112648e9672684e013116f",
+    "tests/core/ledger.test.ts": "b2013734bd696c400d48de9a1bd5ca1679c809a4f4175d97f9628ba7f465b3c9",
+    "tests/core/merchant.test.ts": "b809ffc4b13a935c32b4e643c1a273eb5d54d57ec0654b54178f833b0430feb5",
+    "tests/core/persistence-fixtures.ts": "4f4d4765b5c64059233c26f3d056cfb6f184d2a3ff3ecdbcf0b16bbe79cea049",
+    "tests/core/random.test.ts": "684f2b41f7b3b5455472c211a86328f109fd55712e71c3dacc025ef7299d41e8",
+    "tests/core/scenarios.ts": "9ab78fc07257d333681f4322e98fe9474f9a550e67fb87b8ab0ac20d4bd13efd",
+    "tests/core/session.test.ts": "2cd5ddd1103ca1d099f0540048d078cfe33cb41d25973b4330fcde7ba877ea1d",
+    "tests/core/simulation.test.ts": "78819f90e77b99244398b027adb6b1d5d36df17249592b4404a6807e68535917",
+    "tests/core/storage.test.ts": "e0e30e3e18bc0f73fc455f07f2cc61701ede1a5b0106cf671c207e97676e94f4",
+    "tests/core/validation.test.ts": "6b14715c6b74e69624457ab0457a8331ec0cd36f95800663a09b01f7168d4d1b",
+    "tests/e2e/contract-flow.spec.ts": "1bb6aacabbfa1cb5670af5fc9b05a4a89216925ea85664c5c437a52373812329",
+    "tests/e2e/fixtures.ts": "2ec14c68141d2883949f1a4a8a6319b4aad34a00db6b8538795104e48790c6a4",
+    "tests/e2e/helpers.ts": "86b12c46c499a667b26a15c88e3e22f7eeeab4a142e28d970d6dcd962184e899",
+    "tests/e2e/native-input.mjs": "0bd1824273a81a9d34d49dd80585fa5530dbf21040dfd2a53508402e559ec99b",
+    "tests/e2e/native-input.spec.ts": "bb9b1d0528eb8443524f45a690bafc9028dbfbecbd41535774878b245045c6af",
+    "tests/e2e/readability.ts": "bb554240a24f5473df1cc0b176292a4cd00ef455852423c1b37efbc8abcb4507",
+    "tests/e2e/workshop-boundaries.spec.ts": "1032d4c6602e105e67221bbf70bc32d31cdc4f6fb3eba8c1962880ff92424956",
+    "tests/e2e/workshop-quality.spec.ts": "f17d82901479541484aa4b4dd2fa42677da486ed16451ae94d6448a5a570f6b0",
+    "tests/e2e/workshop.spec.ts": "9319713a485aa1478a08f8af1a1f2e16b54aead63a90caac1d4e8ab36942d23f",
+    "tests/support/native-chrome.mjs": "0eeed2d8fb3263c67001fb7bee2562542633d90d7c56f6d4fe51521a3b5b80b7",
+    "tsconfig.app.json": "fd783c2b63b28ec16bf021c71777e0c83c6bdb4eb585a331d3b36263bc44f864",
+    "tsconfig.node.json": "ca83da47c2f14e9f14e61b2d04f286a38da08e9e5e4b925a23ddc8a321e295cd",
+    "vite.config.ts": "98b9034acd508335b108700e0647afd579067640fcf1336e9b37e42ac960f706",
+    "vite.sdk.config.ts": "618b408918114cf64bc4dd9d0d11980706b46cf2533da397be2cdc7c7e3bd2b8"
+  },
+  "buildFiles": {
+    "assets/b/anvil-v1.webp": {
+      "bytes": 351706,
+      "sha256": "ed44b20b36a834581655f02c6e6660452b72a9742c37e1d97d3ab132413af9f1"
+    },
+    "assets/b/hammer-heavy-v1.webp": {
+      "bytes": 286032,
+      "sha256": "3b9ed6d6aab155503af7ae167676fd88badcc2f859ee693823e1b68c4ae26714"
+    },
+    "assets/b/hammer-light-v1.webp": {
+      "bytes": 153704,
+      "sha256": "4a294cde83b0765ba919c1943f151a9ad66c8aad5e163c1f3b81df2208b8bbf8"
+    },
+    "assets/b/hammer-standard-v1.webp": {
+      "bytes": 243778,
+      "sha256": "604bc26957ac0dae08bec6160fbb1104dad6949676ed3df4bc254743fe392c03"
+    },
+    "assets/b/manifest.json": {
+      "bytes": 16507,
+      "sha256": "7d97cba7f4cfd6df7656385c61db9096d1a1c5901b50202abda60b55cc52dc13"
+    },
+    "assets/b/material-iron-v1.webp": {
+      "bytes": 297192,
+      "sha256": "891f332a7543e005bb4eecf9c8cbf9ed6fbb6e7acc60ef02c6a08d828cbdf8e9"
+    },
+    "assets/b/material-meteorite-v3.webp": {
+      "bytes": 171384,
+      "sha256": "bffe5da4cc1522fa9e16df68790d11fbf551659176210ecb04e66ea82da98f3a"
+    },
+    "assets/b/material-steel-v1.webp": {
+      "bytes": 297586,
+      "sha256": "c5985ca938f459770ebe8e7e0f045db4a96768c20525c7a7f05d28ab3c070a4e"
+    },
+    "assets/b/merchant-kit-v1.webp": {
+      "bytes": 463234,
+      "sha256": "9a7623f3b226fc1918b08054ccfd080d852a278f9c92a97219c9da72a40e1c72"
+    },
+    "assets/b/tokens.css": {
+      "bytes": 428,
+      "sha256": "6892f99cdee0107212fd750a058191d2933efefb8a4e7b05b8df35412132614e",
+      "gzipBytes": 270
+    },
+    "assets/b/workshop-background-v1.webp": {
+      "bytes": 387784,
+      "sha256": "c8813b1438f61b6edbb8890d2df843ce7ac5732899a52edb9af67d1f8771497c"
+    },
+    "assets/index-BGeMibVx.css": {
+      "bytes": 19522,
+      "sha256": "ae3d46b6fffc24d96a6bd34425acb12992e9a889c337099411eb9496b8d60aea",
+      "gzipBytes": 5031
+    },
+    "assets/index-L7WF6Rcj.js": {
+      "bytes": 79976,
+      "sha256": "7a69e1b57279330b5b82efa02cdce4a8f39d7a3530194efd9a7627a3afd5ca8c",
+      "gzipBytes": 28833
+    },
+    "core-DzOw35Pn.js": {
+      "bytes": 21169,
+      "sha256": "f04e2b8064b053b5313c39b2ff7555992742478447293d7ba2d2ef618da3897f",
+      "gzipBytes": 6790
+    },
+    "index.html": {
+      "bytes": 697,
+      "sha256": "bfcf45e19c6b67b0862493ccfec5bd36961d9e3ad5fd06c8ca02e7a36194a00d"
+    },
+    "sword-led-core.js": {
+      "bytes": 126,
+      "sha256": "c93332fd3ecb0feef0b760db4e7c4b18fba3c3beb0dcc3c0077db5d10833321e",
+      "gzipBytes": 127
+    },
+    "sword-led-session.js": {
+      "bytes": 11234,
+      "sha256": "a4bb7d9a88acdd5ed3ab6e6e3063854507bd23998b31e4e44ade7983797a5ea5",
+      "gzipBytes": 3463
+    }
+  }
+}

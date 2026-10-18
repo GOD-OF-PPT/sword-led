@@ -3,7 +3,7 @@ import { available } from './guards.js';
 import { freezeDeep } from './immutable.js';
 
 const PRODUCTS = freezeDeep({
-  handle: { label: '配重锤柄', effect: '精准区每级向两侧各扩大 0.02', prices: [{ coins: 100, scrap: 3 }, { coins: 180, scrap: 5 }] },
+  handle: { label: '配重锤柄', effect: '精准区每级向两侧各扩大 2 个百分点', prices: [{ coins: 100, scrap: 3 }, { coins: 180, scrap: 5 }] },
   bellows: { label: '强化风箱', effect: '每级令下一轮煤炭配给 +1', prices: [{ coins: 120, scrap: 4 }, { coins: 220, scrap: 6 }] },
   anvil: { label: '稳固砧台', effect: '每级裂损概率 -3 个百分点', prices: [{ coins: 160, scrap: 6 }, { coins: 260, scrap: 8 }] },
   repair: { label: '契约修补', effect: '恢复一枚契约印记，本次来访限一次', prices: [{ coins: 240, scrap: 6 }] },

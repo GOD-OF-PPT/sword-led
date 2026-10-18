@@ -53,7 +53,7 @@ export const APP_TEMPLATE = `
         </div>
       </section>
     </main>
-    <section id="phase-panel" class="phase-panel paper" hidden><p id="phase-kicker" class="eyebrow"></p><h1 id="phase-title"></h1><p id="phase-description"></p><div id="phase-content"></div><div id="phase-actions" class="phase-actions"></div></section>
+    <section id="phase-panel" class="phase-panel paper" aria-labelledby="phase-title" hidden><div class="phase-scroll"><p id="phase-kicker" class="eyebrow"></p><h1 id="phase-title" tabindex="-1"></h1><p id="phase-description"></p><div id="phase-content"></div></div><div class="phase-footer"><span id="phase-storage" class="small"></span><div id="phase-actions" class="phase-actions"></div></div></section>
     <p id="game-note" class="game-note" role="status" aria-live="polite"></p>
   </section>
   <dialog id="dialog" aria-labelledby="dialog-title"><div class="dialog-paper paper"><h2 id="dialog-title"></h2><div id="dialog-body"></div><div id="dialog-actions" class="dialog-actions"></div></div></dialog>

@@ -2,7 +2,7 @@
 
 一款面向现代 PC 浏览器的轮次制锻造游戏。每轮只有三件铁坯：控制落锤时机让它升值，在断裂前决定交货还是回收，靠商人升级撑过十二轮契约。
 
-用户已确认实施方案v0.2，并选定 **B「行会手账」**。现在可以进入中文主菜单、独立教学与真实工坊，用鼠标/空格锤击并自动保存。内核、商人/升级、存档、53场景×1000种子模拟/R2及B美术已完成；经营/结算/终局已有基础路由，完整表现与整局R3在T09继续，声音/设置保存等在T10完善。
+用户已确认实施方案v0.2，并选定 **B「行会手账」**。现已接通中文主菜单、独立教学、真实工坊、交货/回收、日终三件收据、商人升级、胜负总结和重开/续玩。内核、存档、53场景×1000种子模拟/R2及B美术已有独立证据；页面整局验证见R3，声音/设置保存等在T10完善。
 
 ## 项目资料
 
@@ -20,6 +20,7 @@
 - [模拟合同](docs/simulation-contract.md)与 [R2 内核/平衡报告](docs/reviews/R2-kernel-and-balance.md)：53,000行证据、正式通关/失败回放、锤法/升级/辅助/滥用对照与150项测试。
 - [B派生美术包](design/b/README.md)与[T07验证](docs/reviews/T07-art-validation.md)：9张运行图、24材料帧、完整状态/流程设计、色板和可复跑拼装预览。
 - [工坊接线合同](docs/workshop-implementation.md)与[T08验证](docs/reviews/T08-workshop-validation.md)：175单测、26页面检查、8存储回归、原生Chrome最小化/恢复与实际截图。
+- [经营/终局接线](docs/contract-flow.md)与[R3报告](docs/reviews/R3-full-contract-flow.md)：真实页面成功/失败、商人、账本、重开与T07–T09联合复核。
 - [OpenSpec 提案](openspec/changes/add-forging-game/proposal.md)：四项新能力，已批准、分阶段实施。
 - [原始输入](goal-1/input.md)：用户需求逐字保存。
 - [执行计划](goal-1/plan.md)：实施顺序、验证、风险和回滚。
@@ -29,7 +30,7 @@
 
 先完善并复核游戏设计和实施文档，使用 imagegen 提供三套主界面候选。用户确认实施方案后先开发独立玩法内核；主界面选定后派生美术并完成网页全流程。测试、模拟、浏览器试玩与最终审查均保留实际证据。
 
-三套候选、实施确认、内核/R2、B美术和T08工坊已完成。接下来完善经营/三件复盘/终局并做R3，再接音效/设置与最终验收。四个规则入口仍为`createRun/applyCommand/getRunView/validateRun`，见[内核](src/core/index.ts)；[持久化会话](src/persistence/index.ts)唯一持有正式工作副本。界面不自行加钱或抽随机数。
+三套候选、实施确认、内核/R2、B美术及工坊/经营/终局已实现，接下来接音效/设置与最终验收。正式入口为`createRun/applyCommand/getRunView/validateRun`及只读账本`getRunLedger`，见[内核](src/core/index.ts)；[持久化会话](src/persistence/index.ts)唯一持有正式工作副本。界面不自行加钱或抽随机数。
 
 ## 本地游玩与验证
 
@@ -52,7 +53,7 @@ npm run dev
 
 每个接受动作后尝试保存，失败保留内存进度并提示重试；菜单继续会保留未保存工作副本。教学与显式不保存试玩不写正式档。同源另一窗口只读，关闭占用窗口后可重新读取。
 
-本轮临时[可玩预览](http://127.0.0.1:4179/)来自已测试的T08快照，仅当前机器/服务存活时可用；其他机器按上述命令运行，没有宣称已互联网部署。
+临时[可玩预览](http://127.0.0.1:4179/)使用已验证构建快照，具体版本和实际存活检查见[执行计划](goal-1/plan.md)。仅当前机器/服务存活时可用；其他机器按上述命令运行，没有宣称已互联网部署。
 
 工程检查按顺序执行，避免同时构建共用的dist：
 
@@ -74,7 +75,7 @@ npm run simulate -- --replay docs/evidence/T06/verify-v1.medium-victory.json
 
 默认53场景，每个最终状态都完整回放；输出统计JSON、逐局CSV.gz与胜负witness。已有输出不会覆盖；参数、输入误差假设和指标边界见模拟合同。T06 实测批次约18分钟，速度取决于设备，模型输入秒数不等于脚本耗时或真人整局时长。
 
-正式入口为根路径`/`；开发服务还提供`/design/b/preview/index.html`美术校验页。`test:art`核对9张生产图片、alpha、288姿态、24材料帧和设计组件；它与正式页面测试分别记录。机器证据归档工具为`node scripts/collect-ui-evidence.mjs --out <新的证据目录>`，已有证据不覆盖。
+正式入口为根路径`/`；开发服务还提供`/design/b/preview/index.html`美术校验页。`test:art`核对9张生产图片、alpha、288姿态、24材料帧和设计组件；它与正式页面测试分别记录。机器证据归档工具为`node scripts/collect-ui-evidence.mjs --stage T09 --out <新的证据目录>`，已有证据不覆盖；归档前需生成最新unit/UI/storage报告。
 
 构建后可在 Node 中调用同一个正式内核：
 

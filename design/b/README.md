@@ -83,4 +83,4 @@ npm run test:art
 
 弃用稿：[陨铁v1](originals/material-meteorite-v1.png)方向不一致；[v2](originals/material-meteorite-v2.png)已修方向但帧边留白不足；最终v3扩大留白。[终局v1](boards/ending-board-v1.png)误用煤块/奖章，最终v2改为契约纸牌/文书。修正prompt均在prompts目录，来源链见manifest。
 
-本项交付是可复用美术与设计稿；真正游戏首页、键鼠、商人购买、保存提示及全流程仍由T08–T10接入并在T11验收。
+本项保留T07可复用美术与设计稿。T08已接真实工坊/教学/输入，T09已接商人/收据/终局并跑真实页面胜负，见[R3](../../docs/reviews/R3-full-contract-flow.md)；T10–T12继续声音/设置、完整品质与最终验收，不把设计预览替代游戏证据。

@@ -1,0 +1,221 @@
+[
+  {
+    "case": "contract-flow.spec.ts / cancelled disposal and early closure retain the contract; receipts survive reload without a second penalty",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "contract-flow.spec.ts / a complete UI contract reaches all three merchants and victory, retains the ledger and restarts cleanly",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "contract-flow.spec.ts / a separate normal UI run loses the last seal, offers no final merchant and can start a different seed",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "contract-flow.spec.ts / handle and repair purchases, scrap shortage, visit limits and next-round upgrade effects use real UI receipts",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "native-input.spec.ts / native Chrome minimize/restore cancels a held key and preserves the accepted-command stream",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "workshop-boundaries.spec.ts / controlled release uses its timestamp while the displayed frame is still at zero",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "workshop-boundaries.spec.ts / repeat keydown and inputs during feedback cannot add commands",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "workshop-boundaries.spec.ts / element blur and pointer cancellation do not consume a strike",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "workshop-boundaries.spec.ts / cancelling a resized confirmation restores controls and focus without changing the piece",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "workshop-boundaries.spec.ts / slow timing changes only the period, and a changed setting cancels the held input",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "workshop-boundaries.spec.ts / reload during feedback restores the accepted result without replaying it",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "workshop-boundaries.spec.ts / a newly signed contract is not changed by an old feedback callback",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "workshop-boundaries.spec.ts / the second same-origin tab is read-only but can practice without rewriting the slot",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "workshop-boundaries.spec.ts / write failure retains accepted memory across the menu and retries the same result",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "workshop-boundaries.spec.ts / asset-load failure can retry without erasing a saved run",
+    "errors": [],
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+    ],
+    "http": [
+      {
+        "status": 503,
+        "url": "http://127.0.0.1:4180/assets/b/hammer-standard-v1.webp"
+      }
+    ],
+    "allowedHttpStatuses": [
+      503
+    ]
+  },
+  {
+    "case": "workshop-boundaries.spec.ts / seed input and menu previews treat external text as text",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "workshop-boundaries.spec.ts / held Enter cannot submit a newly opened contract dialog or skip the introduction",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "workshop-boundaries.spec.ts / delivery, recycling and round exit use the real order ledger",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "workshop-boundaries.spec.ts / a real critical steel piece displays all three actual break risks",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "workshop-boundaries.spec.ts / explicit memory play never writes and never presents a later contract as saved",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "workshop-quality.spec.ts / visible workshop text meets the typography and contrast contract, including preparation",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "workshop-quality.spec.ts / system reduced motion is honoured without changing the strike reward",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "workshop-quality.spec.ts / the lesson displays its true cracked piece and supports non-destructive return",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "workshop.spec.ts / production entry accepts a precise keyboard strike and saves it once",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "workshop.spec.ts / real native keyboard events also reach the kernel without a controlled clock",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "workshop.spec.ts / mixed pointer/space and duplicate releases cannot dispatch a second strike",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "workshop.spec.ts / target, hammer and pause cancellation consume no resources or random draws",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "workshop.spec.ts / tutorial can be practised, skipped and replayed without touching the formal slot",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "workshop.spec.ts / workshop stays readable and reachable at 1280x720",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  },
+  {
+    "case": "workshop.spec.ts / workshop stays readable and reachable at 1920x1080",
+    "errors": [],
+    "consoleErrors": [],
+    "http": [],
+    "allowedHttpStatuses": []
+  }
+]

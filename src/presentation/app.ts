@@ -10,6 +10,7 @@ import type { ArtBundle } from './assets.js';
 import { ForgeScene } from './scene.js';
 import type { SceneModel } from './scene.js';
 import { APP_TEMPLATE } from './template.js';
+import { renderPhase } from './phases.js';
 
 const MODES: readonly HammerMode[] = ['light', 'standard', 'heavy'];
 const STATUS = { active: '加工中', delivered: '已交货', recycled: '已回收', broken: '已破碎' } as const;
@@ -48,6 +49,7 @@ export function mountGame(root: HTMLElement, port: PersistentSession) {
         && !(previous instanceof HTMLButtonElement && previous.disabled)) previous.focus({ preventScroll: true });
       else if (snapshot.route !== 'menu' && snapshot.view?.phase === 'workshop' && !strike.disabled) strike.focus({ preventScroll: true });
       else if (snapshot.route === 'menu') button('#new-game').focus({ preventScroll: true });
+      else if (snapshot.view?.phase !== 'workshop') required('#phase-title').focus({ preventScroll: true });
       else button('#pause').focus({ preventScroll: true });
     });
   }
@@ -125,11 +127,11 @@ export function mountGame(root: HTMLElement, port: PersistentSession) {
   }
   function act(action: Action, ticket: Ticket = game.capture()) { game.command(action, ticket); }
   function disposePiece(type: 'deliver' | 'recycle') {
-    const selected = snapshot.view?.selected;if (!selected || !snapshot.canOperate) return;
+    const view = snapshot.view, selected = view?.selected;if (!view || !selected || !snapshot.canOperate) return;
     const ticket = game.capture();
     confirm(type === 'deliver' ? '交货后不能继续加工' : '回收后失去交货价值',
-      type === 'deliver' ? `${selected.materialName} · ${selected.tierName}\n获得 ${selected.forgedValue} 金币，并计入当轮订单。`
-        : `获得 ${selected.recoverableScrap} 废料，不计入订单。\n这件铁件当前可交货 ${selected.forgedValue} 金币。`,
+      type === 'deliver' ? `${selected.materialName} · ${selected.tierName}\n获得 ${selected.forgedValue} 金币，并计入当轮订单。\n交货后订单 ${view.delivered + selected.forgedValue} / ${view.quota}；金币 ${view.coins} → ${view.coins + selected.forgedValue}。`
+        : `${selected.materialName} · ${selected.tierName}\n获得 ${selected.recoverableScrap} 废料，不计入订单。\n这件铁件当前可交货 ${selected.forgedValue} 金币；回收后不能恢复。`,
       type === 'deliver' ? '确认交货' : '确认回收', () => act({ type, pieceId: selected.id }, ticket));
   }
   function settle() {
@@ -137,7 +139,8 @@ export function mountGame(root: HTMLElement, port: PersistentSession) {
     const view = snapshot.view;if (!view || !snapshot.canOperate) return;
     const ticket = game.capture(), active = view.pieces.filter(piece => piece.status === 'active').length;
     if (!active) { act({ type: 'settleRound', recycleRemaining: false }, ticket);return; }
-    confirm('提前收工', `剩余 ${active} 件会按当前阶级回收。\n已交货 ${view.delivered} / ${view.quota}${view.remaining ? `，尚差 ${view.remaining}，将扣 1 枚印记。` : '，订单已经达成。'}`,
+    const scrap = view.pieces.reduce((sum, piece) => sum + piece.recoverableScrap, 0);
+    confirm('提前收工', `剩余 ${active} 件会按当前阶级回收，共 ${scrap} 废料，不计入订单。\n已交货 ${view.delivered} / ${view.quota}${view.remaining ? `，尚差 ${view.remaining}，将扣 1 枚印记（${view.seals} → ${view.seals - 1}）。${view.seals === 1 ? '印记耗尽将终止契约。' : ''}` : '，订单已经达成，印记保留。'}`,
       '回收余件并结算', () => act({ type: 'settleRound', recycleRemaining: true }, ticket));
   }
 
@@ -243,41 +246,11 @@ export function mountGame(root: HTMLElement, port: PersistentSession) {
     text('#scene-status', snapshot.route === 'lesson' ? '独立练习 · 不保存' : piece ? `${piece.materialName} · ${STATUS[piece.status]}` : '三件来料已处理');
     text('#saved', storageMessage(snapshot));text('#feedback', snapshot.feedback?.text ?? '');paintTiming();
   }
-  function phase(view: RunView) {
-    text('#phase-kicker', `第 ${view.round} / ${view.totalRounds} 轮 · 金币 ${view.coins} · 废料 ${view.scrap}`);
-    const content = required('#phase-content'), actions = required('#phase-actions');content.replaceChildren();actions.replaceChildren();
-    const addAction = (label: string, run: () => void, primary = false, needsWrite = false) => { const node = element('button', label, primary ? 'primary' : '');node.disabled = needsWrite && !snapshot.canOperate;node.addEventListener('click', run);actions.append(node); };
-    if (view.phase === 'roundSummary') {
-      const summary = view.history.at(-1);text('#phase-title', summary?.metQuota ? '今日订单达成' : '订单未达标');
-      text('#phase-description', `已交货 ${view.delivered} / ${view.quota}，契约印记 ${view.seals} / 3。${summary?.metQuota ? '' : '金币保留，本轮扣除 1 枚印记。'}`);
-      addAction([3,6,9].includes(view.round) ? '拜访行会商人' : '进入下一轮', () => act({ type: 'advanceSummary' }), true, true);
-    } else if (view.phase === 'merchant') {
-      text('#phase-title', '行会商人');text('#phase-description', '每种商品本次限购一次。金币和废料都要留意；风箱从下一轮开始增加煤配给。');
-      const offers = element('div', undefined, 'merchant-offers');
-      for (const offer of view.merchant.offers) {
-        const card = element('article', undefined, 'offer');card.append(element('h3', offer.label), element('p', offer.effect));
-        card.append(element('p', offer.price ? `${offer.price.coins} 金币 + ${offer.price.scrap} 废料` : '已满级', 'price'));
-        const buy = element('button', offer.availability.allowed ? '购买' : '不可购买');buy.disabled = !snapshot.canOperate || !offer.availability.allowed;
-        buy.setAttribute('aria-label', `购买${offer.label}`);buy.addEventListener('click', () => act({ type: 'buy', productId: offer.productId }));card.append(buy);
-        if (!offer.availability.allowed) card.append(element('p', explainError(offer.availability.reason), 'disabled-reason'));
-        offers.append(card);
-      }
-      content.append(offers);addAction('准备下一轮', () => act({ type: 'leaveMerchant' }), true, true);
-    } else {
-      text('#phase-title', view.phase === 'victory' ? '契约期完成' : '契约终止');
-      text('#phase-description', view.phase === 'victory' ? '撑过十二轮，仍有印记即可完成契约期。' : '契约印记耗尽，本次契约结束。');
-      const stats = element('div', undefined, 'phase-stats');
-      for (const [label, value] of [['达标', `${view.stats.roundsMet} 轮`], ['违约', `${view.stats.roundsMissed} 轮`], ['剩余印记', `${view.seals} / 3`]]) {
-        const cell = element('div', label);cell.append(element('strong', value));stats.append(cell);
-      }
-      content.append(stats);addAction('同种子再战', () => { const seed = snapshot.seed ?? '';game.menu();newGame(false, seed); }, true, true);
-      addAction('新契约', () => { game.menu();newGame(); }, false, true);
-    }
-    addAction('返回菜单', () => game.menu());
-  }
   let lastPhaseKey = '';
+  let focusPhaseKey = '';
   function render(next: GameSnapshot) {
     if (disposed) return;snapshot = next;input.refresh();
+    if (next.route === 'menu') focusPhaseKey = '';
     const ready = art !== null && portReady;required('#loading').hidden = ready;required('#menu').hidden = !ready || next.route !== 'menu';required('#game-route').hidden = !ready || next.route === 'menu';
     root.dataset.route = next.route;root.dataset.phase = next.view?.phase ?? 'none';root.dataset.revision = String(next.view?.revision ?? 0);
     required('#game-route').classList.toggle('lesson-running', next.route === 'lesson');
@@ -310,7 +283,24 @@ export function mountGame(root: HTMLElement, port: PersistentSession) {
       button('#retry-save').hidden = !next.port.dirty || next.port.conflict || next.port.mode !== 'writer';
       button('#refresh-slot').hidden = next.port.mode === 'memory';
       if (view.phase === 'workshop') renderPiece(view);
-      else { const key = `${view.runId}/${view.revision}/${next.canOperate}`;if (key !== lastPhaseKey) { phase(view);lastPhaseKey = key; } }
+      else {
+        text('#phase-storage', storageMessage(next));
+        const key = `${view.runId}/${view.revision}/${next.canOperate}/${next.port.generation}/${next.epoch}`;
+        if (key !== lastPhaseKey && art) {
+          const ticket = game.capture(), previous = document.activeElement;
+          const focusId = previous instanceof HTMLElement && required('#phase-panel').contains(previous) ? previous.id : '';
+          renderPhase(required('#phase-panel'), view, next.canOperate, art, { command: action => act(action, ticket), confirm,
+            restart: sameSeed => newGame(false, sameSeed ? snapshot.seed ?? '' : ''), menu: () => game.menu() });lastPhaseKey = key;
+          const replacement = focusId ? root.querySelector<HTMLElement>(`#${CSS.escape(focusId)}`) : null;
+          if (!dialog.open && replacement instanceof HTMLButtonElement && !replacement.disabled) replacement.focus({ preventScroll: true });
+          else if (!dialog.open && focusId) required('#phase-title').focus({ preventScroll: true });
+        }
+      }
+      const stageKey = `${view.runId}/${view.phase}/${view.round}/${next.route}`;
+      if (stageKey !== focusPhaseKey && !dialog.open && !document.hidden) {
+        focusPhaseKey = stageKey;
+        if (view.phase !== 'workshop') required('#phase-title').focus({ preventScroll: true });
+      }
     }
     text('#game-note', next.note);paintScene();updateFeedbackLoop();
     if (next.paused && next.route !== 'menu' && modal?.kind !== 'pause' && modal?.kind !== 'options') { if (modal) closeDialog(false);if (!document.hidden) pauseDialog(); }
@@ -342,6 +332,7 @@ export function mountGame(root: HTMLElement, port: PersistentSession) {
   };
   dialog.addEventListener('keydown', onDialogKey);
   const onKey = (event: KeyboardEvent) => {
+    if (event.repeat && event.key === 'Enter' && !(event.target instanceof HTMLTextAreaElement)) { event.preventDefault();return; }
     if (dialog.open || event.repeat) return;
     if (event.key === 'Escape' && snapshot.route !== 'menu') { event.preventDefault();game.pause();return; }
     if (snapshot.route === 'menu' || snapshot.paused || snapshot.view?.phase !== 'workshop') return;

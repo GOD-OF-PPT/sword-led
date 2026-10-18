@@ -1,8 +1,8 @@
 # 代码架构与玩法内核约定
 
-版本：v0.2，2026-10-18。状态：用户已确认方案并选择B；纯规则/存档/R2/B美术以及[T08入口、教学和工坊](reviews/T08-workshop-validation.md)已实现。T09继续经营/终局与R3，T10–T12继续品质与最终验收。玩法依据：[游戏设计](game-design.md)；交付顺序：[实施方案](implementation-plan.md)。
+版本：v0.2，2026-10-18。状态：用户已确认方案并选择B；纯规则/存档/R2/B美术、[T08工坊](reviews/T08-workshop-validation.md)及[T09经营/结算/终局](contract-flow.md)已接线；R3验证见实际报告，T10–T12继续品质与最终验收。玩法依据：[游戏设计](game-design.md)；交付顺序：[实施方案](implementation-plan.md)。
 
-本文件描述完整目标架构。规则入口为createRun/applyCommand/getRunView/validateRun；T08已加入index.html与主装配。构建先生成网页，再用独立vite.sdk.config.ts保留core/session SDK及共享chunk，不把设计预览或测试入口打进页面。见[T04](reviews/T04-kernel-validation.md)、[T05](reviews/T05-persistence-validation.md)、[持久化合同](persistence-and-merchant.md)与[工坊合同](workshop-implementation.md)。
+本文件描述完整目标架构。规则入口为createRun/applyCommand/getRunView/validateRun，T09增加只读getRunLedger；T08已加入index.html与主装配。构建先生成网页，再用独立vite.sdk.config.ts保留core/session SDK及共享chunk，不把设计预览或测试入口打进页面。见[T04](reviews/T04-kernel-validation.md)、[T05](reviews/T05-persistence-validation.md)、[持久化合同](persistence-and-merchant.md)、[工坊合同](workshop-implementation.md)与[经营接线](contract-flow.md)。
 
 ## 1. 架构决策
 
@@ -40,7 +40,7 @@ flowchart TD
 
 ## 3. 拟建文件布局
 
-以下为目标布局；core、持久化/存储、模拟、美术及T08应用/输入/场景/教学已实现。design/b/preview仅作设计校验；正式经营/终局完善及声音等按T09–T10推进，以实际仓库为准。
+以下为目标布局；core、持久化/存储、模拟、美术及应用/输入/场景/教学/阶段渲染已实现。design/b/preview仅作设计校验；T09新增core/ledger.ts和presentation/phases.ts，声音等按T10推进，以实际仓库为准。
 
 ```text
 src/
@@ -63,7 +63,8 @@ src/
     timing.ts             # 纯三角波与attempt身份
     audio.ts              # 原生 Web Audio 声音
   presentation/
-    app.ts                # 已实现：稳定根节点、菜单/工坊/基础阶段路由与弹窗
+    app.ts                # 已实现：稳定根节点、菜单/工坊/阶段路由与弹窗
+    phases.ts             # 已实现：日终/商人/终局DOM与确认意图
     assets.ts             # 美术清单/图片尺寸/矩形加载校验
     workshop.ts           # 工坊 DOM 控件
     scene.ts              # Canvas 场景与效果
@@ -107,6 +108,7 @@ docs/reviews/             # R1–R4 与验证结果
 | createRun | 应用生成的 runId、seed；空输入由应用生成种子，非空输入由内核统一规范化/校验 | 成功返回轮 1 全新状态；非法种子返回结构化错误；不读取存档、不启动教程 |
 | applyCommand | 当前只读状态 + `{runId, expectedRevision, action}` | Accepted：新状态与本次领域事件；Rejected：原状态与错误码；不抛用户输入异常 |
 | getRunView | 状态、选中件 id、锤法 | 配额/价值/三种时机的风险、可执行动作与禁用原因；不修改状态或抽样 |
+| getRunLedger | 合法状态生成的RunView | 深冻结的已结算轮收据/三件去向/损失估值/购买标签；复用同一规则表，不改状态或抽样 |
 | validateRun | unknown 数据、期望 rulesVersion | 成功返回经过重建的规范状态；失败返回具体原因；拒绝不可信字段，不能直接类型断言后使用 |
 
 动作集合：`strike(pieceId, hammerMode, timingMark)`、`heat(pieceId)`、`deliver(pieceId)`、`recycle(pieceId)`、`settleRound(recycleRemaining)`、`advanceSummary`、`buy(productId)`、`leaveMerchant`。新局/重开由 createRun 完成，不给旧局添加“复活”动作。

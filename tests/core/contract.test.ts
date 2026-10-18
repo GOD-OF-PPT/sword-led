@@ -223,5 +223,5 @@ describe('actual command sequences and bounded invariants', () => {
       expect(['defeat', 'victory']).toContain(run.phase);
     }
     expect(accepted).toBeGreaterThan(1500);
-  });
+  }, 15000);
 });

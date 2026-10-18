@@ -97,6 +97,18 @@ describe('game presentation session', () => {
     game.practice();expect(game.inputContext()).not.toBeNull();expect(storage.getItem(SAVE_KEY)).toBe(raw);
     await game.dispose();await first.dispose();
   });
+  it('announces settlement before automatic recycling and cannot replay the old confirmation', async () => {
+    const f = await fixture(), ticket = f.game.capture();
+    expect(f.game.command({ type: 'settleRound', recycleRemaining: true }, ticket)).toBe(true);
+    expect(f.game.getSnapshot().note).toBe('订单未达标，扣除 1 枚印记');
+    const settled = f.port.getSnapshot().state;
+    expect(settled).toMatchObject({ coins: 0, scrap: 10, seals: 2, phase: 'roundSummary', revision: 1 });
+    expect(f.game.command({ type: 'settleRound', recycleRemaining: true }, ticket)).toBe(false);
+    expect(f.port.getSnapshot().state).toBe(settled);
+    expect(f.game.command({ type: 'advanceSummary' }, f.game.capture())).toBe(true);
+    expect(f.game.getSnapshot().note).toBe('第 2 轮开炉：三件新来料，配额 150，配给 1 煤。');
+    await f.game.dispose();
+  });
 });
 
 it('pins a reachable lesson recipe rather than an assigned integrity fixture', () => {

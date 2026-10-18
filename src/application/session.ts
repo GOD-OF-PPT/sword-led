@@ -40,6 +40,12 @@ export function explainError(error: string): string {
   return messages[error] ?? '当前操作未能完成，请检查契约状态后重试。';
 }
 function eventText(events: readonly DomainEvent[]): string {
+  const ending = events.find(event => event.type === 'RunEnded');
+  if (ending?.type === 'RunEnded') return ending.outcome === 'victory' ? '十二轮契约期完成' : '契约印记耗尽，契约终止';
+  const settled = events.find(event => event.type === 'RoundSettled');
+  if (settled?.type === 'RoundSettled') return settled.summary.metQuota ? '订单达成' : '订单未达标，扣除 1 枚印记';
+  const started = events.find(event => event.type === 'RoundStarted');
+  if (started?.type === 'RoundStarted') return `第 ${started.round} 轮开炉：三件新来料，配额 ${started.quota}，配给 ${started.coal} 煤。`;
   const strike = events.find(event => event.type === 'StrikeResolved');
   if (strike?.type === 'StrikeResolved') {
     const grade = { precise: '精准', ordinary: '普通', mishit: '偏击' }[strike.timing];

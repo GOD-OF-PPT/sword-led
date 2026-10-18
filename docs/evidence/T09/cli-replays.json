@@ -1,0 +1,25 @@
+{
+  "method": "compiled CLI invoked sequentially; no shared-output compilation overlap in these final replays",
+  "results": [
+    {
+      "file": "verify-v1.medium-victory.json",
+      "result": {
+        "replayValid": true,
+        "outcome": "victory",
+        "seed": "verify-v1-0001",
+        "revision": 336,
+        "sha256": "044183af9cea57a447463d4f54ef164888459e4b0293f6a665c8a1289b84819c"
+      }
+    },
+    {
+      "file": "verify-v1.raw-defeat.json",
+      "result": {
+        "replayValid": true,
+        "outcome": "defeat",
+        "seed": "verify-v1-0000",
+        "revision": 14,
+        "sha256": "958424671186cfd35530756a832feef2af12a54e70d2995c4e8b19ad5bdeaee1"
+      }
+    }
+  ]
+}
