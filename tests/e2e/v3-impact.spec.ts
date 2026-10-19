@@ -2,26 +2,13 @@ import {test,expect} from '@playwright/test';
 import type {Page} from '@playwright/test';
 import {applyCommand,validateRun} from '../../src/core-v3/index.js';
 import {installAudioProbe,audioProbe} from './audio-probe';
+import {installHammerProbe} from './hammer-probe';
 import {mkdir,writeFile} from 'node:fs/promises';
 const dir='tmp/v3-impact-states';
 async function read(page:Page){const raw=await page.evaluate(()=>localStorage.getItem('sword-led.save.v3'));if(!raw)throw Error('No actual save');const r=validateRun(JSON.parse(raw).state);if(!r.ok)throw Error(r.detail);return r.state;}
 async function open(page:Page){await page.goto('/');await expect(page.locator('#v3-hit')).toBeEnabled();}
 async function point(page:Page,x=.62,y=.6){const box=await page.locator('#v3-hit').boundingBox();if(!box)throw Error('No hit area');return{x:box.x+box.width*x,y:box.y+box.height*y};}
 async function left(page:Page){const before=await read(page),p=await point(page);await page.mouse.move(p.x,p.y);await page.mouse.down();const expected=applyCommand(before,{runId:before.runId,expectedRevision:before.revision,action:{type:'strike',pieceId:'r1-1'}});if(!expected.ok)throw Error(expected.error);expect(await read(page)).toEqual(expected.state);await page.mouse.up();await expect(page.locator('#v3-strike')).toHaveAttribute('aria-busy','false');return expected.state;}
-declare global{interface Window{v3ContactGeometry:{gap:number;samples:number;complete:boolean;frames:unknown[];events:unknown[]}}}
-async function installContactProbe(page:Page){await page.locator('#v3-scene').evaluate(scene=>{
- const hammer=scene.querySelector<HTMLElement>('#v3-hammer')!,image=hammer.querySelector('img')!;let started=0;window.v3ContactGeometry={gap:10000,samples:0,complete:false,frames:[],events:[]};
- window.addEventListener('blur',e=>window.v3ContactGeometry.events.push({time:performance.now()-started,type:'blur',target:e.target instanceof Element?e.target.id:'window'}),true);
- function sample(){const probe=window.v3ContactGeometry;probe.samples++;const rect=scene.getBoundingClientRect(),hs=getComputedStyle(hammer),is=getComputedStyle(image);const w=image.clientWidth,h=image.clientHeight,fit=Math.min(w/image.naturalWidth,h/image.naturalHeight),fw=image.naturalWidth*fit,fh=image.naturalHeight*fit;
-  const io=is.transformOrigin.split(' ').map(parseFloat),ho=hs.transformOrigin.split(' ').map(parseFloat);const anchor=new DOMMatrix(is.transform).transformPoint({x:(w-fw)/2+fw*.075-io[0]!,y:(h-fh)/2+fh*.367-io[1]!});
-  const p=new DOMMatrix(hs.transform==='none'?undefined:hs.transform).transformPoint({x:anchor.x+io[0]!+image.offsetLeft-ho[0]!,y:anchor.y+io[1]!+image.offsetTop-ho[1]!});
-  const hitX=parseFloat((scene as HTMLElement).style.getPropertyValue('--hit-x'))/100*rect.width,hitY=parseFloat((scene as HTMLElement).style.getPropertyValue('--hit-y'))/100*rect.height;
-  probe.gap=Math.min(probe.gap,Math.hypot(hammer.offsetLeft+p.x+ho[0]!-hitX,hammer.offsetTop+p.y+ho[1]!-hitY));
-  probe.frames.push({time:performance.now()-started,transform:hs.transform,animations:hammer.getAnimations().map(a=>String(a.currentTime)),gap:probe.gap});
-  if(probe.gap<6||performance.now()-started>500)probe.complete=true;else requestAnimationFrame(sample);
- }
- scene.addEventListener('pointerdown',()=>{started=performance.now();requestAnimationFrame(sample);},{capture:true,once:true});
-});}
 test('left-down on the actual sword commits once, aim is cosmetic, hold/up/double-click/drag do not duplicate',async({page})=>{
  await open(page);const original=await read(page);let p=await point(page,.35,.55);await page.mouse.move(p.x,p.y);await expect(page.locator('#v3-scene')).toHaveClass(/aiming/);const x1=await page.locator('#v3-scene').evaluate(e=>e.style.getPropertyValue('--aim-x'));p=await point(page,.8,.63);await page.mouse.move(p.x,p.y);expect(await page.locator('#v3-scene').evaluate(e=>e.style.getPropertyValue('--aim-x'))).not.toBe(x1);expect(await read(page)).toEqual(original);
  await page.mouse.down();const hit=await read(page);expect(hit.revision).toBe(original.revision+1);expect(hit.rng.forge.draws).toBe(1);await page.waitForTimeout(320);await page.locator('#v3-strike').focus();await page.keyboard.press('Space');expect(await read(page)).toEqual(hit);await page.mouse.move(5,5);await page.mouse.up();expect(await read(page)).toEqual(hit);
@@ -30,9 +17,9 @@ test('left-down on the actual sword commits once, aim is cosmetic, hold/up/doubl
  await page.mouse.dblclick(p.x,p.y,{delay:5});const twice=await read(page);expect(twice.revision).toBe(hit.revision+1);await page.keyboard.down('Space');await expect(page.locator('#v3-strike')).toHaveAttribute('aria-busy','false');await page.keyboard.up('Space');expect(await read(page)).toEqual(twice);
 });
 test('contact has real particles, ring, blade recoil and distinct native percussive sound; mute and reduced motion still work',async({page},info)=>{
- await installAudioProbe(page);await open(page);await page.locator('#v3-settings summary').click();await expect.poll(async()=>(await audioProbe(page)).states).toContain('running');await page.locator('#v3-settings summary').click();const p=await point(page);await page.mouse.move(p.x,p.y);await installContactProbe(page);await page.mouse.down();await expect(page.locator('#v3-scene')).toHaveAttribute('data-outcome',/success|great/);
+ await installAudioProbe(page);await open(page);await page.locator('#v3-settings summary').click();await expect.poll(async()=>(await audioProbe(page)).states).toContain('running');await page.locator('#v3-settings summary').click();const p=await point(page);await page.mouse.move(p.x,p.y);await installHammerProbe(page);await page.mouse.down();await expect(page.locator('#v3-scene')).toHaveAttribute('data-outcome',/success|great/);
  const effects=await page.locator('#v3-scene').evaluate(e=>({particles:e.querySelectorAll('#v3-sparks i').length,animations:e.getAnimations({subtree:true}).filter(a=>a.playState==='running').length,outcome:e.getAttribute('data-outcome')}));expect(effects.particles).toBe(36);expect(effects.animations).toBeGreaterThan(10);await page.mouse.up();const sound=await audioProbe(page);expect(sound.starts).toBe(3);expect(sound.frequencies).toEqual(effects.outcome==='great'?[89,631,1723]:[139,947,2381]);expect(sound.maxActive).toBeLessThanOrEqual(12);
- await expect.poll(()=>page.evaluate(()=>window.v3ContactGeometry.complete)).toBe(true);const contact=await page.evaluate(()=>window.v3ContactGeometry);await mkdir(dir,{recursive:true});await writeFile(`${dir}/${info.project.name}-contact.json`,JSON.stringify({effects,sound,contact,state:await read(page)},null,2)+'\n');expect(contact.gap).toBeLessThan(6);await page.screenshot({path:`${dir}/${info.project.name}-contact.png`});
+ await expect.poll(()=>page.evaluate(()=>window.v3HammerGeometry.complete)).toBe(true);const geometry=await page.evaluate(()=>window.v3HammerGeometry),best=geometry.frames.reduce((a,b)=>b.gap<a.gap?b:a),contact={...geometry,gap:best.gap,best};await mkdir(dir,{recursive:true});await writeFile(`${dir}/${info.project.name}-contact.json`,JSON.stringify({effects,sound,contact,state:await read(page)},null,2)+'\n');expect(contact.gap).toBeLessThan(6);await page.screenshot({path:`${dir}/${info.project.name}-contact.png`});
  await page.locator('#v3-settings summary').click();await page.locator('#v3-muted').check();await page.locator('#v3-motion').check();await page.locator('#v3-settings summary').click();const starts=(await audioProbe(page)).starts;await expect(page.locator('#v3-hit')).toBeEnabled();await left(page);expect((await audioProbe(page)).starts).toBe(starts);expect((await audioProbe(page)).active).toBe(0);expect(await page.locator('#v3-scene').evaluate(e=>e.getAnimations({subtree:true}).filter(a=>a.playState==='running').length)).toBe(0);
 });
 test('burst is atomic on left-down and late visual hits cannot survive pause, modal or reload',async({page})=>{

@@ -1,0 +1,455 @@
+{
+  "config": {
+    "argv": [
+      "/Users/gordon/.nvm/versions/node/v22.12.0/bin/node",
+      "/Users/gordon/githome/sword-led/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "playwright.v3.config.ts",
+      "--project=v3-chromium",
+      "tests/e2e/v3-hammer.spec.ts",
+      "tests/e2e/v3-impact.spec.ts"
+    ],
+    "configFile": "/Users/gordon/githome/sword-led/playwright.v3.config.ts",
+    "rootDir": "/Users/gordon/githome/sword-led/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v3-chromium",
+        "name": "v3-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v3-*.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v3-firefox",
+        "name": "v3-firefox",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v3-*.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v3-webkit",
+        "name": "v3-webkit",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v3-*.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v3-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v3-*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4186",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v3-chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/v3-report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 4186 --strictPort",
+      "url": "http://127.0.0.1:4186",
+      "reuseExistingServer": false,
+      "env": {
+        "NO_PROXY": "127.0.0.1,localhost",
+        "no_proxy": "127.0.0.1,localhost"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "v3-hammer.spec.ts",
+      "file": "v3-hammer.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "hammer strikes with a flat metal face and rotates around its grip at both desktop sizes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8774,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T07:33:17.827Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f83ebcaaaeffaac8dc96-7ada93d63387d55971ca",
+          "file": "v3-hammer.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "flat face follows actual opaque metal for all three shapes at rough and masterwork stages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 23412,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T07:33:27.328Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f83ebcaaaeffaac8dc96-7ab4f7d2ca70e9ac6591",
+          "file": "v3-hammer.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "slow presentation frames still show a flat contact; pause cancels the pending swing without another command",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2766,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T07:33:50.764Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f83ebcaaaeffaac8dc96-9813be17983a16652121",
+          "file": "v3-hammer.spec.ts",
+          "line": 19,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v3-impact.spec.ts",
+      "file": "v3-impact.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "left-down on the actual sword commits once, aim is cosmetic, hold/up/double-click/drag do not duplicate",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2365,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T07:33:53.631Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d232d6b3759930feec43-c67c023f867e2fb36dae",
+          "file": "v3-impact.spec.ts",
+          "line": 12,
+          "column": 1
+        },
+        {
+          "title": "contact has real particles, ring, blade recoil and distinct native percussive sound; mute and reduced motion still work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3432,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T07:33:56.013Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d232d6b3759930feec43-3f0538991ea715215b65",
+          "file": "v3-impact.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "burst is atomic on left-down and late visual hits cannot survive pause, modal or reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4193,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T07:33:59.467Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d232d6b3759930feec43-019f5b1a5782db1044e0",
+          "file": "v3-impact.spec.ts",
+          "line": 25,
+          "column": 1
+        },
+        {
+          "title": "large left-click target and keyboard alternatives remain visible at both desktop sizes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3134,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T07:34:03.678Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d232d6b3759930feec43-20d2f3ed7181d78ba656",
+          "file": "v3-impact.spec.ts",
+          "line": 29,
+          "column": 1
+        },
+        {
+          "title": "record actual left-click growth and burst effects without injecting any game result",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9176,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T07:34:06.846Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "actual-left-click-effects",
+                      "contentType": "video/webm",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v3/v3-impact-record-actual-le-d01d8-t-injecting-any-game-result-v3-chromium/attachments/actual-left-click-effects-e69b89bfbe85bca777686d17ea85ef43f6d80905.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d232d6b3759930feec43-c80d23f238edf4de57ce",
+          "file": "v3-impact.spec.ts",
+          "line": 32,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-19T07:33:13.782Z",
+    "duration": 62573.494,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

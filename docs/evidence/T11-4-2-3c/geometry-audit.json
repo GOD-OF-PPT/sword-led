@@ -1,0 +1,115 @@
+{
+  "contactCases": [
+    {
+      "file": "v3-chromium-1280-geometry.json",
+      "contactFrames": 2,
+      "best": {
+        "gap": 0.17386979674341144,
+        "angle": 0.3580939593235471,
+        "pivotGap": 0.17188768180486041,
+        "headHeight": 76.27017006285682,
+        "metalGap": 0.4156901041666856,
+        "time": 192.5
+      }
+    },
+    {
+      "file": "v3-chromium-1920-geometry.json",
+      "contactFrames": 2,
+      "best": {
+        "gap": 0.9495135233258946,
+        "angle": 0.35809395932357113,
+        "pivotGap": 0.2586607363437186,
+        "headHeight": 110.76508788673979,
+        "metalGap": 0.9959249050817789,
+        "time": 163
+      }
+    },
+    {
+      "file": "v3-chromium-slow.json",
+      "contactFrames": 2,
+      "best": {
+        "gap": 0.5238153581548413,
+        "angle": 0.35809395932354804,
+        "pivotGap": 0.17188768180486041,
+        "headHeight": 76.27017006285682,
+        "metalGap": 0.46941447257995605,
+        "time": 430.1000000089407
+      }
+    },
+    {
+      "file": "v3-firefox-1280-geometry.json",
+      "contactFrames": 2,
+      "best": {
+        "gap": 0.436061436081558,
+        "angle": 0.3580939593235471,
+        "pivotGap": 0.16668768747645485,
+        "headHeight": 76.27017006285682,
+        "metalGap": 1.1452739818676037,
+        "time": 204
+      }
+    },
+    {
+      "file": "v3-firefox-1920-geometry.json",
+      "contactFrames": 2,
+      "best": {
+        "gap": 0.6963202556881048,
+        "angle": 0.35809395932357113,
+        "pivotGap": 0.2605844122369553,
+        "headHeight": 110.76508788673979,
+        "metalGap": 1.009427545194967,
+        "time": 371
+      }
+    },
+    {
+      "file": "v3-firefox-slow.json",
+      "contactFrames": 2,
+      "best": {
+        "gap": 0.4194787912104135,
+        "angle": 0.35809395932354804,
+        "pivotGap": 0.16668768747645485,
+        "headHeight": 76.27017006285682,
+        "metalGap": 0.5902187038112174,
+        "time": 563
+      }
+    },
+    {
+      "file": "v3-webkit-1280-geometry.json",
+      "contactFrames": 2,
+      "best": {
+        "gap": 0.3712576998608245,
+        "angle": 0.35809395932354804,
+        "pivotGap": 0.17190549999999405,
+        "headHeight": 76.27017006285682,
+        "metalGap": 0.5187106132507324,
+        "time": 256
+      }
+    },
+    {
+      "file": "v3-webkit-1920-geometry.json",
+      "contactFrames": 2,
+      "best": {
+        "gap": 0.9495135233258944,
+        "angle": 0.35809395932357113,
+        "pivotGap": 0.25868625060269224,
+        "headHeight": 110.76508788673979,
+        "metalGap": 0.9959249050817789,
+        "time": 722
+      }
+    },
+    {
+      "file": "v3-webkit-slow.json",
+      "contactFrames": 2,
+      "best": {
+        "gap": 0.5238153581548413,
+        "angle": 0.35809395932354804,
+        "pivotGap": 0.17190549999999405,
+        "headHeight": 76.27017006285682,
+        "metalGap": 0.58642578125,
+        "time": 769
+      }
+    }
+  ],
+  "shapeSamples": 36,
+  "maxShapeMetalGap": 4.0537805289866355,
+  "maxShapeFaceGap": 0.8631797813967422
+}

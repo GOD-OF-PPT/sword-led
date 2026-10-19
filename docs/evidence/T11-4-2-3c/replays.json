@@ -1,0 +1,433 @@
+{
+  "method": "current production SDK validateRun and deep equality, objects not unique runs",
+  "count": 61,
+  "checks": [
+    {
+      "path": "ui/v3-chromium-broken.json",
+      "runId": "v3-1792396393892-2731953703",
+      "commands": 13,
+      "phase": "workshop",
+      "sha256": "c2f936b6b87cf242ed9bbe489041716e8b70267e037cf0d19bce9047591f7853"
+    },
+    {
+      "path": "ui/v3-chromium-cracked.json",
+      "runId": "v3-1792396393892-2731953703",
+      "commands": 12,
+      "phase": "workshop",
+      "sha256": "c2813bda211c2712747ddb7594475ea8a88bf06a2105dc2b4f4c03f8b7619136"
+    },
+    {
+      "path": "ui/v3-chromium-experience-end.json",
+      "runId": "v3-1792396378360",
+      "commands": 27,
+      "phase": "experienceComplete",
+      "sha256": "18b0910db2251a5c42c458682df704ad14076c6982d76ffcedd28a5d075dd664"
+    },
+    {
+      "path": "ui/v3-chromium-keyboard-end.json",
+      "runId": "v3-1792396400679",
+      "commands": 22,
+      "phase": "experienceComplete",
+      "sha256": "bba794132458e8643c32116a01cc7d19e8ced73c515988ba2175da1e1c801057"
+    },
+    {
+      "path": "ui/v3-chromium-recovered.json",
+      "runId": "v3-1792396390286-125740130",
+      "commands": 0,
+      "phase": "workshop",
+      "sha256": "d6a8e593fa78ea13b69278fa5f88f6e694863129c92572e20a43934493bf659d"
+    },
+    {
+      "path": "ui/v3-chromium-reload.json",
+      "runId": "v3-1792396375855",
+      "commands": 3,
+      "phase": "workshop",
+      "sha256": "696cc55a959cd8408ceab90b5ccaece5536cfad0e7f26f5a809fb93add2d297a"
+    },
+    {
+      "path": "ui/v3-chromium-round-1.json",
+      "runId": "v3-1792396378360",
+      "commands": 11,
+      "phase": "workshop",
+      "sha256": "0baebad3117ce426712716b8195fc63e4cc4b962d18b66905e30e05c847b6db4"
+    },
+    {
+      "path": "ui/v3-chromium-round-2.json",
+      "runId": "v3-1792396378360",
+      "commands": 16,
+      "phase": "workshop",
+      "sha256": "0b5b53cf83a54f43f1f8db65a40758c2ffd9976bc9b3e7112422a6e61f09488a"
+    },
+    {
+      "path": "ui/v3-chromium-round-3.json",
+      "runId": "v3-1792396378360",
+      "commands": 26,
+      "phase": "workshop",
+      "sha256": "05f9d6da70d7cd6ddf08722362f59bb68cca033671fba00a6d17d5de5af475cb"
+    },
+    {
+      "path": "ui/v3-firefox-broken.json",
+      "runId": "v3-1792396539139-1155642181",
+      "commands": 13,
+      "phase": "workshop",
+      "sha256": "de7f27561bc5556e0ac8c34c23cce3db446f38c477b2b1ebf63fdf61fb26570d"
+    },
+    {
+      "path": "ui/v3-firefox-cracked.json",
+      "runId": "v3-1792396539139-1155642181",
+      "commands": 12,
+      "phase": "workshop",
+      "sha256": "dc8aa0d06e56ea886ae8df529a774a8bb5605ee5290ee6b83bc99a058080c9a0"
+    },
+    {
+      "path": "ui/v3-firefox-experience-end.json",
+      "runId": "v3-1792396514077",
+      "commands": 27,
+      "phase": "experienceComplete",
+      "sha256": "8fce93c1098d63f324ef61ed90b57eeed5da1328d023612f3db491d2b641e6f8"
+    },
+    {
+      "path": "ui/v3-firefox-keyboard-end.json",
+      "runId": "v3-1792396548459",
+      "commands": 22,
+      "phase": "experienceComplete",
+      "sha256": "f439465a0a5d2d8a103d57f3ca1e5249296643015bc08bc6af7becdac1d39251"
+    },
+    {
+      "path": "ui/v3-firefox-recovered.json",
+      "runId": "v3-1792396534132-1507386531",
+      "commands": 0,
+      "phase": "workshop",
+      "sha256": "cfe1bc028e9a448d405899d35064e2834431cc2ae9e13a38aa0676337dc121ac"
+    },
+    {
+      "path": "ui/v3-firefox-reload.json",
+      "runId": "v3-1792396510266",
+      "commands": 3,
+      "phase": "workshop",
+      "sha256": "0efcebafa487f1a2ad18b42c6615cb57a7a48f2942a050ab55fb10e57cac4f59"
+    },
+    {
+      "path": "ui/v3-firefox-round-1.json",
+      "runId": "v3-1792396514077",
+      "commands": 11,
+      "phase": "workshop",
+      "sha256": "aae3fe698fbba5d726a8b4d3c8faeb29e0041879fe71291a489f0e2beafa0b50"
+    },
+    {
+      "path": "ui/v3-firefox-round-2.json",
+      "runId": "v3-1792396514077",
+      "commands": 16,
+      "phase": "workshop",
+      "sha256": "29f4cb392414142670715ac8696aee45085f2a0ee0d74fffc4cbba1f62ef4bd5"
+    },
+    {
+      "path": "ui/v3-firefox-round-3.json",
+      "runId": "v3-1792396514077",
+      "commands": 26,
+      "phase": "workshop",
+      "sha256": "4e0cc9ca9bab103295935d8417d436aa2c12a619d0a0dc783ac2d302ed2a3714"
+    },
+    {
+      "path": "ui/v3-webkit-broken.json",
+      "runId": "v3-1792396738275-3067678820",
+      "commands": 13,
+      "phase": "workshop",
+      "sha256": "97ac8f72ec6f20862c84d408147b3f0dae1b13c1fef7b5d34293dd8884bc3be8"
+    },
+    {
+      "path": "ui/v3-webkit-cracked.json",
+      "runId": "v3-1792396738275-3067678820",
+      "commands": 12,
+      "phase": "workshop",
+      "sha256": "85b4243df52c7b9d5febf9a3b69b7909448d14f276c005d7c3687308fd39188a"
+    },
+    {
+      "path": "ui/v3-webkit-experience-end.json",
+      "runId": "v3-1792396689927",
+      "commands": 27,
+      "phase": "experienceComplete",
+      "sha256": "e8c5af359786c84d5b37fb6b8f86fd8161c7f92994f653c37940574d07d50b89"
+    },
+    {
+      "path": "ui/v3-webkit-keyboard-end.json",
+      "runId": "v3-1792396754175",
+      "commands": 22,
+      "phase": "experienceComplete",
+      "sha256": "29bf70dff6b650aba133e36c6b674efe9e7a0d4810a5fb3eee5512710d218f71"
+    },
+    {
+      "path": "ui/v3-webkit-recovered.json",
+      "runId": "v3-1792396720883-2237001072",
+      "commands": 0,
+      "phase": "workshop",
+      "sha256": "ea6f90230a5522f5399b1b9fff7db243ad462045bd68a81b4f5a5424fa7ebdf7"
+    },
+    {
+      "path": "ui/v3-webkit-reload.json",
+      "runId": "v3-1792396684531",
+      "commands": 3,
+      "phase": "workshop",
+      "sha256": "03eaaf7be182233ae82e089da93a6d46adf76bb5942e7592cb415d40d8472dd9"
+    },
+    {
+      "path": "ui/v3-webkit-round-1.json",
+      "runId": "v3-1792396689927",
+      "commands": 11,
+      "phase": "workshop",
+      "sha256": "b4955879a3e7482e8b08835443a4e991fb2a394454f27c885901d0d20e798d82"
+    },
+    {
+      "path": "ui/v3-webkit-round-2.json",
+      "runId": "v3-1792396689927",
+      "commands": 16,
+      "phase": "workshop",
+      "sha256": "709f84f07c28de38255764c03f820801c950fe79d3a1fbf311972addc78d3a7b"
+    },
+    {
+      "path": "ui/v3-webkit-round-3.json",
+      "runId": "v3-1792396689927",
+      "commands": 26,
+      "phase": "workshop",
+      "sha256": "faaccace82eb4f655f7439eb2d561e689d0bfedfa60162fc558288c81372362b"
+    },
+    {
+      "path": "impact/v3-chromium-clip-state.json",
+      "runId": "v3-1792396366331",
+      "commands": 7,
+      "phase": "workshop",
+      "sha256": "144c685c399e19b4b29f96546cf0a440785b4397987da7250aea3d8fda5220ca"
+    },
+    {
+      "path": "impact/v3-chromium-contact.json/state",
+      "runId": "v3-1792396357452",
+      "commands": 1,
+      "phase": "workshop",
+      "sha256": "8cedfe5037e25daa95aeae735a499d798f3ead3eabf5a816060eb852d049cd1f"
+    },
+    {
+      "path": "impact/v3-firefox-clip-state.json",
+      "runId": "v3-1792396501497",
+      "commands": 7,
+      "phase": "workshop",
+      "sha256": "f3e66c6913863d5143504c4dfd5a809c3c1e490199e0b7cc3ff57c67e7ff0824"
+    },
+    {
+      "path": "impact/v3-firefox-contact.json/state",
+      "runId": "v3-1792396490356",
+      "commands": 1,
+      "phase": "workshop",
+      "sha256": "cafbe9e3bc1eba6415cbff7465dd5be6affdbf8494ee1a6ad3721b145d1cc9be"
+    },
+    {
+      "path": "impact/v3-webkit-clip-state.json",
+      "runId": "v3-1792396673150",
+      "commands": 7,
+      "phase": "workshop",
+      "sha256": "4cec2c88dd399fa5e7db6933ae2c803a2735a2cb52e160f31de42d019080e62b"
+    },
+    {
+      "path": "impact/v3-webkit-contact.json/state",
+      "runId": "v3-1792396655230",
+      "commands": 1,
+      "phase": "workshop",
+      "sha256": "9554b96ddafb26e0bf01a04a30b614d3c556c9d5fcb9431a584efbc92448b813"
+    },
+    {
+      "path": "visual/v3-chromium-catalog-0-equipped.json",
+      "runId": "v3-1792396432328-968408459",
+      "commands": 8,
+      "phase": "workshop",
+      "sha256": "3154415fa8354560747ef7f8064d71904c9d8cda5c4ee6ed833f8df46ab5c723"
+    },
+    {
+      "path": "visual/v3-chromium-catalog-1-equipped.json",
+      "runId": "v3-1792396434762-3852559956",
+      "commands": 8,
+      "phase": "workshop",
+      "sha256": "a994454b83aa467aa31971cced9c1a79cf01cd8e7623f4a244be27df7db13eee"
+    },
+    {
+      "path": "visual/v3-chromium-catalog-2-equipped.json",
+      "runId": "v3-1792396437147-2889282689",
+      "commands": 5,
+      "phase": "workshop",
+      "sha256": "b2a5e01ea5256740a9d842a012e4af2640fe0bc3e568f63d7db2299eb7e3282a"
+    },
+    {
+      "path": "visual/v3-chromium-catalog-5-equipped.json",
+      "runId": "v3-1792396438128-2123386402",
+      "commands": 8,
+      "phase": "workshop",
+      "sha256": "18bfccf30d0e5ff6095950375734ddc53d2460a025426ed60366b18de9614002"
+    },
+    {
+      "path": "visual/v3-chromium-catalog-7-equipped.json",
+      "runId": "v3-1792396440611-576115623",
+      "commands": 5,
+      "phase": "workshop",
+      "sha256": "d3e074a7909cf10c5fe708a1bcd36da85f9b0a006e60e7884baf6839af167c0c"
+    },
+    {
+      "path": "visual/v3-chromium-family-0.json",
+      "runId": "v3-1792396411279-596233925",
+      "commands": 7,
+      "phase": "workshop",
+      "sha256": "b917dc9853cbd48c501329d718dde5eb40dc7045545346bac399aa896db198bc"
+    },
+    {
+      "path": "visual/v3-chromium-family-1.json",
+      "runId": "v3-1792396417062-50153595",
+      "commands": 7,
+      "phase": "workshop",
+      "sha256": "efd5b898466af48b725e89523db4a5f12ffde140a6c2b1de98b92206d8f21dfd"
+    },
+    {
+      "path": "visual/v3-chromium-family-2.json",
+      "runId": "v3-1792396422761-1965147515",
+      "commands": 7,
+      "phase": "workshop",
+      "sha256": "e8adea3fe49f3301a39b5344dd8bbb6ab1980d30bf5e6804b41dee84aa1b74f8"
+    },
+    {
+      "path": "visual/v3-chromium-three-props.json/state",
+      "runId": "v3-1792396442427-1145470810",
+      "commands": 12,
+      "phase": "workshop",
+      "sha256": "929d0ca77ca2494480774b21eedf25818e2f32c1a8a0c12dbfe3c36cb526737c"
+    },
+    {
+      "path": "visual/v3-firefox-catalog-0-equipped.json",
+      "runId": "v3-1792396579797-3036185476",
+      "commands": 8,
+      "phase": "workshop",
+      "sha256": "3b02cdbb5612bdf1768f4ca48c4adc07dce7c9fecb2c38e3aac3e972a58e97b9"
+    },
+    {
+      "path": "visual/v3-firefox-catalog-1-equipped.json",
+      "runId": "v3-1792396583311-548764345",
+      "commands": 8,
+      "phase": "workshop",
+      "sha256": "6679f055417c864f4ca08b819147449751d54d8a3a24e88fd8ec1241a1c3e15a"
+    },
+    {
+      "path": "visual/v3-firefox-catalog-2-equipped.json",
+      "runId": "v3-1792396586640-1025697092",
+      "commands": 5,
+      "phase": "workshop",
+      "sha256": "b53f0e792e2d26ef9748710ba0ca4010c407ee216c3477b61d9a69e80b54b4e8"
+    },
+    {
+      "path": "visual/v3-firefox-catalog-5-equipped.json",
+      "runId": "v3-1792396588187-2386974807",
+      "commands": 8,
+      "phase": "workshop",
+      "sha256": "49a1263c3b7a0e4bafd3c14269b42ebd2e047b3609c54d9604806aae957a02e6"
+    },
+    {
+      "path": "visual/v3-firefox-catalog-7-equipped.json",
+      "runId": "v3-1792396591284-511767320",
+      "commands": 5,
+      "phase": "workshop",
+      "sha256": "8b24e7293c5b8f159a988b544eac5d81f6bd0fe8282a2b2affb0286ba984267c"
+    },
+    {
+      "path": "visual/v3-firefox-family-0.json",
+      "runId": "v3-1792396561169-327641259",
+      "commands": 7,
+      "phase": "workshop",
+      "sha256": "0761c6bb41a71cd406c12a2f0c36ec62e7a03528adc76bce3d1a96f9cc97257e"
+    },
+    {
+      "path": "visual/v3-firefox-family-1.json",
+      "runId": "v3-1792396566394-3194461099",
+      "commands": 7,
+      "phase": "workshop",
+      "sha256": "fc0bab76651fefa7e45295e8ed7e262b504ca4226616f371551efd04ede80703"
+    },
+    {
+      "path": "visual/v3-firefox-family-2.json",
+      "runId": "v3-1792396571262-3182142660",
+      "commands": 7,
+      "phase": "workshop",
+      "sha256": "7509089f5e1b02514bdf44e0e600fff3df16d97768ce7d866588662b529916f2"
+    },
+    {
+      "path": "visual/v3-firefox-three-props.json/state",
+      "runId": "v3-1792396593875-147356623",
+      "commands": 12,
+      "phase": "workshop",
+      "sha256": "1f4167992026c19acfc12d352db48bd7384575dafa58e60fa2d71cbfd6b85081"
+    },
+    {
+      "path": "visual/v3-webkit-catalog-0-equipped.json",
+      "runId": "v3-1792396812714-296568092",
+      "commands": 8,
+      "phase": "workshop",
+      "sha256": "dad049eaaa03c28fb0f0331b9c38332ece7864870de7f9be9b99d145030afb38"
+    },
+    {
+      "path": "visual/v3-webkit-catalog-1-equipped.json",
+      "runId": "v3-1792396819029-53152836",
+      "commands": 8,
+      "phase": "workshop",
+      "sha256": "c082259242eeabee073cc0daa3b6f7ceb3dda1ee0c64046118cfa0ec0f318238"
+    },
+    {
+      "path": "visual/v3-webkit-catalog-2-equipped.json",
+      "runId": "v3-1792396825024-974960943",
+      "commands": 5,
+      "phase": "workshop",
+      "sha256": "26c6d3ac4443518bf19a1d9eda9a48bb92ca7c38c20d284f65e443edc7bb70ec"
+    },
+    {
+      "path": "visual/v3-webkit-catalog-5-equipped.json",
+      "runId": "v3-1792396828803-3653535838",
+      "commands": 8,
+      "phase": "workshop",
+      "sha256": "0e214001baa961031aa0c49377f10d5b16cf52865b09bf3d428d32b269fb3fbb"
+    },
+    {
+      "path": "visual/v3-webkit-catalog-7-equipped.json",
+      "runId": "v3-1792396835364-3354636861",
+      "commands": 5,
+      "phase": "workshop",
+      "sha256": "d81458d27736e4cd412750d7e6958697ad673c14e838cb56f206152f3e386c6a"
+    },
+    {
+      "path": "visual/v3-webkit-family-0.json",
+      "runId": "v3-1792396778372-1052938509",
+      "commands": 7,
+      "phase": "workshop",
+      "sha256": "bc1d32a1a22a0799b0e032ab46efd5346fc3a995745db313a5db6c32b8b90393"
+    },
+    {
+      "path": "visual/v3-webkit-family-1.json",
+      "runId": "v3-1792396786398-1967303284",
+      "commands": 7,
+      "phase": "workshop",
+      "sha256": "fad070da6ee4be3b2133a0f68d5ae00aa09f8074b85325f01fedd590f13da6ca"
+    },
+    {
+      "path": "visual/v3-webkit-family-2.json",
+      "runId": "v3-1792396794693-1890601992",
+      "commands": 7,
+      "phase": "workshop",
+      "sha256": "b73c450880becc905ef8501e6d4cc4d6d19c682eba21a621723e010bd7e7ac7e"
+    },
+    {
+      "path": "visual/v3-webkit-three-props.json/state",
+      "runId": "v3-1792396840880-2296741635",
+      "commands": 12,
+      "phase": "workshop",
+      "sha256": "072c721f135f3f4794c877bbfaf9c99a6795ba10e2d768c28ff7b832bb606dd8"
+    },
+    {
+      "path": "preview-smoke.json/state",
+      "runId": "v3-1792397080744",
+      "commands": 1,
+      "phase": "workshop",
+      "sha256": "2b3258f8cbe8446a75ea3c0e4e84291a5aed1c7a7f9db465d0e3fad070d16d0f"
+    }
+  ]
+}
