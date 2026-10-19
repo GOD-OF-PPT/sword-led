@@ -1,0 +1,75 @@
+{
+  "scope": "independent auditor rejects mutated copies; real outputs unchanged; fingerprints, witness, preview and overwrite checks",
+  "cases": [
+    {
+      "name": "missing row",
+      "rejected": true
+    },
+    {
+      "name": "duplicate seed",
+      "rejected": true
+    },
+    {
+      "name": "wrong profile",
+      "rejected": true
+    },
+    {
+      "name": "invalid state hash",
+      "rejected": true
+    },
+    {
+      "name": "negative coins",
+      "rejected": true
+    },
+    {
+      "name": "nonterminal row",
+      "rejected": true
+    },
+    {
+      "name": "old overlap changed",
+      "rejected": true
+    },
+    {
+      "name": "raw policy survived",
+      "rejected": true
+    },
+    {
+      "name": "false replay coverage",
+      "rejected": true
+    },
+    {
+      "name": "old seed universe changed",
+      "rejected": true
+    },
+    {
+      "name": "baseline mismatch",
+      "rejected": true,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    'package-lock.json': 'fb6298f489290886a8b47e266b4205a94acf9763086af45b1cc2992a"
+    },
+    {
+      "name": "current source fingerprint mismatch",
+      "rejected": true,
+      "error": "AssertionError [ERR_ASSERTION]: Fingerprint changed: ./src/core-v2/rules.ts\n+ actual - expected\n\n+ '342b600fad9679a1225a3e9a60e9ef4d7c033d6a7979a7ef83ddfa50ed1e7a4a'\n- '0000000000000000000000000000000"
+    },
+    {
+      "name": "compiled fingerprint mismatch",
+      "rejected": true,
+      "error": "AssertionError [ERR_ASSERTION]: Fingerprint changed: tmp/simulation/src/core-v2/rules.js\n+ actual - expected\n\n+ 'a6b747192f6fe924e2269ecf7269398a65fdca6308a46a02865b0fd5c25562e2'\n- '000000000000000000"
+    },
+    {
+      "name": "tampered full witness",
+      "rejected": true,
+      "error": "AssertionError [ERR_ASSERTION]: Snapshot differs from its deterministic replay."
+    },
+    {
+      "name": "preview SDK mismatch",
+      "rejected": true,
+      "error": "AssertionError [ERR_ASSERTION]: Preview SDK differs: sword-led-v2.js\n+ actual - expected\n\n+ 'ac9a57a933507cdcfecdbb3d5cd9088bc743e0f24f9bb7711a81656a2549cb74'\n- 'bd0566edb3185bf904d0536e71bb736f0a62cb"
+    },
+    {
+      "name": "existing archive refused",
+      "rejected": true,
+      "error": "Error: EEXIST: file already exists, mkdir 'docs/evidence/T12/model-1000'"
+    }
+  ]
+}

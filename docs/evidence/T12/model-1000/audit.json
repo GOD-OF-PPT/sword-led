@@ -1,0 +1,721 @@
+{
+  "scope": "forge-v2 only; model/coverage audit is not human playability or forge-v3 acceptance",
+  "uniqueCases": 29000,
+  "profiles": [
+    {
+      "profile": [
+        "light",
+        "edgeTooth",
+        "perfect"
+      ],
+      "cases": 1000,
+      "victories": 0,
+      "defeats": 1000,
+      "meanRounds": 9.796,
+      "meanStrikes": 151.428,
+      "meanBroken": 0,
+      "meanOrders": 2.039,
+      "meanCoins": 2674.307,
+      "meanPatterns": 50.476,
+      "meanActions": 240.234,
+      "victoryMeanActions": null,
+      "minActions": 205,
+      "maxActions": 302
+    },
+    {
+      "profile": [
+        "light",
+        "edgeTooth",
+        "steady"
+      ],
+      "cases": 1000,
+      "victories": 0,
+      "defeats": 1000,
+      "meanRounds": 9.796,
+      "meanStrikes": 151.428,
+      "meanBroken": 0,
+      "meanOrders": 2.039,
+      "meanCoins": 2674.307,
+      "meanPatterns": 50.476,
+      "meanActions": 240.234,
+      "victoryMeanActions": null,
+      "minActions": 205,
+      "maxActions": 302
+    },
+    {
+      "profile": [
+        "light",
+        "edgeTooth",
+        "shaky"
+      ],
+      "cases": 1000,
+      "victories": 0,
+      "defeats": 1000,
+      "meanRounds": 7.754,
+      "meanStrikes": 126.312,
+      "meanBroken": 0,
+      "meanOrders": 1.323,
+      "meanCoins": 1721.994,
+      "meanPatterns": 26.038,
+      "meanActions": 197.755,
+      "victoryMeanActions": null,
+      "minActions": 123,
+      "maxActions": 282
+    },
+    {
+      "profile": [
+        "light",
+        "bridgeClip",
+        "perfect"
+      ],
+      "cases": 1000,
+      "victories": 0,
+      "defeats": 1000,
+      "meanRounds": 7.272,
+      "meanStrikes": 124.896,
+      "meanBroken": 0,
+      "meanOrders": 0,
+      "meanCoins": 1726.334,
+      "meanPatterns": 20.816,
+      "meanActions": 192.331,
+      "victoryMeanActions": null,
+      "minActions": 184,
+      "maxActions": 212
+    },
+    {
+      "profile": [
+        "light",
+        "bridgeClip",
+        "steady"
+      ],
+      "cases": 1000,
+      "victories": 0,
+      "defeats": 1000,
+      "meanRounds": 7.272,
+      "meanStrikes": 124.896,
+      "meanBroken": 0,
+      "meanOrders": 0,
+      "meanCoins": 1726.334,
+      "meanPatterns": 20.816,
+      "meanActions": 192.331,
+      "victoryMeanActions": null,
+      "minActions": 184,
+      "maxActions": 212
+    },
+    {
+      "profile": [
+        "light",
+        "bridgeClip",
+        "shaky"
+      ],
+      "cases": 1000,
+      "victories": 0,
+      "defeats": 1000,
+      "meanRounds": 6.636,
+      "meanStrikes": 114.246,
+      "meanBroken": 0,
+      "meanOrders": 0,
+      "meanCoins": 1420.772,
+      "meanPatterns": 16.01,
+      "meanActions": 175.543,
+      "victoryMeanActions": null,
+      "minActions": 129,
+      "maxActions": 218
+    },
+    {
+      "profile": [
+        "light",
+        "reheatSand",
+        "perfect"
+      ],
+      "cases": 1000,
+      "victories": 0,
+      "defeats": 1000,
+      "meanRounds": 9.551,
+      "meanStrikes": 148.506,
+      "meanBroken": 0,
+      "meanOrders": 1.994,
+      "meanCoins": 2516.405,
+      "meanPatterns": 49.502,
+      "meanActions": 235.271,
+      "victoryMeanActions": null,
+      "minActions": 199,
+      "maxActions": 302
+    },
+    {
+      "profile": [
+        "light",
+        "reheatSand",
+        "steady"
+      ],
+      "cases": 1000,
+      "victories": 0,
+      "defeats": 1000,
+      "meanRounds": 9.551,
+      "meanStrikes": 148.506,
+      "meanBroken": 0,
+      "meanOrders": 1.994,
+      "meanCoins": 2516.405,
+      "meanPatterns": 49.502,
+      "meanActions": 235.271,
+      "victoryMeanActions": null,
+      "minActions": 199,
+      "maxActions": 302
+    },
+    {
+      "profile": [
+        "light",
+        "reheatSand",
+        "shaky"
+      ],
+      "cases": 1000,
+      "victories": 0,
+      "defeats": 1000,
+      "meanRounds": 7.402,
+      "meanStrikes": 122.7,
+      "meanBroken": 0,
+      "meanOrders": 0.973,
+      "meanCoins": 1633.691,
+      "meanPatterns": 25.297,
+      "meanActions": 191.041,
+      "victoryMeanActions": null,
+      "minActions": 124,
+      "maxActions": 282
+    },
+    {
+      "profile": [
+        "balanced",
+        "edgeTooth",
+        "perfect"
+      ],
+      "cases": 1000,
+      "victories": 1000,
+      "defeats": 0,
+      "meanRounds": 12,
+      "meanStrikes": 206.598,
+      "meanBroken": 0,
+      "meanOrders": 11.248,
+      "meanCoins": 5418.988,
+      "meanPatterns": 52.535,
+      "meanActions": 318.031,
+      "victoryMeanActions": 318.031,
+      "minActions": 301,
+      "maxActions": 336
+    },
+    {
+      "profile": [
+        "balanced",
+        "edgeTooth",
+        "steady"
+      ],
+      "cases": 1000,
+      "victories": 1000,
+      "defeats": 0,
+      "meanRounds": 12,
+      "meanStrikes": 207.714,
+      "meanBroken": 0,
+      "meanOrders": 11.248,
+      "meanCoins": 5399.424,
+      "meanPatterns": 52.867,
+      "meanActions": 319.333,
+      "victoryMeanActions": 319.333,
+      "minActions": 301,
+      "maxActions": 343
+    },
+    {
+      "profile": [
+        "balanced",
+        "edgeTooth",
+        "shaky"
+      ],
+      "cases": 1000,
+      "victories": 737,
+      "defeats": 263,
+      "meanRounds": 11.971,
+      "meanStrikes": 246.784,
+      "meanBroken": 2.333,
+      "meanOrders": 10.058,
+      "meanCoins": 4464.274,
+      "meanPatterns": 31.371,
+      "meanActions": 360.728,
+      "victoryMeanActions": 361.7951153324288,
+      "minActions": 248,
+      "maxActions": 407
+    },
+    {
+      "profile": [
+        "balanced",
+        "bridgeClip",
+        "perfect"
+      ],
+      "cases": 1000,
+      "victories": 1000,
+      "defeats": 0,
+      "meanRounds": 12,
+      "meanStrikes": 227.472,
+      "meanBroken": 0,
+      "meanOrders": 10.142,
+      "meanCoins": 5116.024,
+      "meanPatterns": 35.246,
+      "meanActions": 342.384,
+      "victoryMeanActions": 342.384,
+      "minActions": 322,
+      "maxActions": 364
+    },
+    {
+      "profile": [
+        "balanced",
+        "bridgeClip",
+        "steady"
+      ],
+      "cases": 1000,
+      "victories": 1000,
+      "defeats": 0,
+      "meanRounds": 12,
+      "meanStrikes": 228.702,
+      "meanBroken": 0,
+      "meanOrders": 10.142,
+      "meanCoins": 5084.447,
+      "meanPatterns": 35.439,
+      "meanActions": 343.819,
+      "victoryMeanActions": 343.819,
+      "minActions": 322,
+      "maxActions": 364
+    },
+    {
+      "profile": [
+        "balanced",
+        "bridgeClip",
+        "shaky"
+      ],
+      "cases": 1000,
+      "victories": 555,
+      "defeats": 445,
+      "meanRounds": 11.929,
+      "meanStrikes": 252.66,
+      "meanBroken": 2.451,
+      "meanOrders": 9.099,
+      "meanCoins": 4233.243,
+      "meanPatterns": 23.547,
+      "meanActions": 367.221,
+      "victoryMeanActions": 370.6504504504505,
+      "minActions": 248,
+      "maxActions": 409
+    },
+    {
+      "profile": [
+        "balanced",
+        "reheatSand",
+        "perfect"
+      ],
+      "cases": 1000,
+      "victories": 1000,
+      "defeats": 0,
+      "meanRounds": 12,
+      "meanStrikes": 206.196,
+      "meanBroken": 0,
+      "meanOrders": 11.248,
+      "meanCoins": 5408.648,
+      "meanPatterns": 52.425,
+      "meanActions": 317.562,
+      "victoryMeanActions": 317.562,
+      "minActions": 301,
+      "maxActions": 336
+    },
+    {
+      "profile": [
+        "balanced",
+        "reheatSand",
+        "steady"
+      ],
+      "cases": 1000,
+      "victories": 1000,
+      "defeats": 0,
+      "meanRounds": 12,
+      "meanStrikes": 207.642,
+      "meanBroken": 0,
+      "meanOrders": 11.248,
+      "meanCoins": 5398,
+      "meanPatterns": 52.861,
+      "meanActions": 319.249,
+      "victoryMeanActions": 319.249,
+      "minActions": 301,
+      "maxActions": 336
+    },
+    {
+      "profile": [
+        "balanced",
+        "reheatSand",
+        "shaky"
+      ],
+      "cases": 1000,
+      "victories": 749,
+      "defeats": 251,
+      "meanRounds": 11.976,
+      "meanStrikes": 246.163,
+      "meanBroken": 2.33,
+      "meanOrders": 10.06,
+      "meanCoins": 4488.912,
+      "meanPatterns": 31.319,
+      "meanActions": 360.027,
+      "victoryMeanActions": 361.11481975967956,
+      "minActions": 248,
+      "maxActions": 407
+    },
+    {
+      "profile": [
+        "heavy",
+        "edgeTooth",
+        "perfect"
+      ],
+      "cases": 1000,
+      "victories": 1000,
+      "defeats": 0,
+      "meanRounds": 12,
+      "meanStrikes": 146.876,
+      "meanBroken": 0.016,
+      "meanOrders": 10.939,
+      "meanCoins": 5257.917,
+      "meanPatterns": 35.864,
+      "meanActions": 259.646,
+      "victoryMeanActions": 259.646,
+      "minActions": 247,
+      "maxActions": 275
+    },
+    {
+      "profile": [
+        "heavy",
+        "edgeTooth",
+        "steady"
+      ],
+      "cases": 1000,
+      "victories": 1000,
+      "defeats": 0,
+      "meanRounds": 12,
+      "meanStrikes": 147.518,
+      "meanBroken": 0.211,
+      "meanOrders": 10.939,
+      "meanCoins": 5230.994,
+      "meanPatterns": 36.096,
+      "meanActions": 260.044,
+      "victoryMeanActions": 260.044,
+      "minActions": 247,
+      "maxActions": 281
+    },
+    {
+      "profile": [
+        "heavy",
+        "edgeTooth",
+        "shaky"
+      ],
+      "cases": 1000,
+      "victories": 265,
+      "defeats": 735,
+      "meanRounds": 11.534,
+      "meanStrikes": 167.061,
+      "meanBroken": 4.966,
+      "meanOrders": 8.579,
+      "meanCoins": 3652.369,
+      "meanPatterns": 14.465,
+      "meanActions": 273.328,
+      "victoryMeanActions": 287.1132075471698,
+      "minActions": 127,
+      "maxActions": 319
+    },
+    {
+      "profile": [
+        "heavy",
+        "bridgeClip",
+        "perfect"
+      ],
+      "cases": 1000,
+      "victories": 1000,
+      "defeats": 0,
+      "meanRounds": 12,
+      "meanStrikes": 149.374,
+      "meanBroken": 0.025,
+      "meanOrders": 10.83,
+      "meanCoins": 5208.612,
+      "meanPatterns": 36.456,
+      "meanActions": 262.696,
+      "victoryMeanActions": 262.696,
+      "minActions": 247,
+      "maxActions": 284
+    },
+    {
+      "profile": [
+        "heavy",
+        "bridgeClip",
+        "steady"
+      ],
+      "cases": 1000,
+      "victories": 1000,
+      "defeats": 0,
+      "meanRounds": 12,
+      "meanStrikes": 150.006,
+      "meanBroken": 0.239,
+      "meanOrders": 10.83,
+      "meanCoins": 5175.9,
+      "meanPatterns": 36.692,
+      "meanActions": 263.048,
+      "victoryMeanActions": 263.048,
+      "minActions": 247,
+      "maxActions": 293
+    },
+    {
+      "profile": [
+        "heavy",
+        "bridgeClip",
+        "shaky"
+      ],
+      "cases": 1000,
+      "victories": 231,
+      "defeats": 769,
+      "meanRounds": 11.45,
+      "meanStrikes": 166.848,
+      "meanBroken": 4.99,
+      "meanOrders": 8.029,
+      "meanCoins": 3551.084,
+      "meanPatterns": 14.487,
+      "meanActions": 272.523,
+      "victoryMeanActions": 288.9004329004329,
+      "minActions": 127,
+      "maxActions": 320
+    },
+    {
+      "profile": [
+        "heavy",
+        "reheatSand",
+        "perfect"
+      ],
+      "cases": 1000,
+      "victories": 1000,
+      "defeats": 0,
+      "meanRounds": 12,
+      "meanStrikes": 146.845,
+      "meanBroken": 0.02,
+      "meanOrders": 10.939,
+      "meanCoins": 5251.169,
+      "meanPatterns": 35.854,
+      "meanActions": 259.593,
+      "victoryMeanActions": 259.593,
+      "minActions": 245,
+      "maxActions": 278
+    },
+    {
+      "profile": [
+        "heavy",
+        "reheatSand",
+        "steady"
+      ],
+      "cases": 1000,
+      "victories": 1000,
+      "defeats": 0,
+      "meanRounds": 12,
+      "meanStrikes": 147.471,
+      "meanBroken": 0.211,
+      "meanOrders": 10.939,
+      "meanCoins": 5223.898,
+      "meanPatterns": 36.078,
+      "meanActions": 259.984,
+      "victoryMeanActions": 259.984,
+      "minActions": 245,
+      "maxActions": 283
+    },
+    {
+      "profile": [
+        "heavy",
+        "reheatSand",
+        "shaky"
+      ],
+      "cases": 1000,
+      "victories": 289,
+      "defeats": 711,
+      "meanRounds": 11.541,
+      "meanStrikes": 166.646,
+      "meanBroken": 4.938,
+      "meanOrders": 8.628,
+      "meanCoins": 3693.121,
+      "meanPatterns": 14.438,
+      "meanActions": 272.885,
+      "victoryMeanActions": 286.5536332179931,
+      "minActions": 127,
+      "maxActions": 320
+    },
+    {
+      "profile": [
+        "raw",
+        "bridgeClip",
+        "perfect"
+      ],
+      "cases": 1000,
+      "victories": 0,
+      "defeats": 1000,
+      "meanRounds": 3,
+      "meanStrikes": 0,
+      "meanBroken": 0,
+      "meanOrders": 0,
+      "meanCoins": 181.58,
+      "meanPatterns": 0,
+      "meanActions": 18,
+      "victoryMeanActions": null,
+      "minActions": 18,
+      "maxActions": 18
+    },
+    {
+      "profile": [
+        "salvage",
+        "bridgeClip",
+        "perfect"
+      ],
+      "cases": 1000,
+      "victories": 0,
+      "defeats": 1000,
+      "meanRounds": 3,
+      "meanStrikes": 0,
+      "meanBroken": 0,
+      "meanOrders": 0,
+      "meanCoins": 0,
+      "meanPatterns": 0,
+      "meanActions": 18,
+      "victoryMeanActions": null,
+      "minActions": 18,
+      "maxActions": 18
+    }
+  ],
+  "overlapRows": 928,
+  "maxActions": 409,
+  "maxStrikes": 292,
+  "witnesses": {
+    "victory": {
+      "phase": "victory",
+      "rounds": 12,
+      "met": 12,
+      "strikes": 192,
+      "broken": 0,
+      "orders": 12,
+      "coins": 5258,
+      "scrap": 81,
+      "patterns": 48,
+      "actions": 301,
+      "seed": "v2-verify-0000",
+      "profile": [
+        "balanced",
+        "edgeTooth",
+        "perfect"
+      ],
+      "stateSha256": "7860eafab54b2c26a185d9d85963a80b2a92ebdcb816c61262dbd03e71a7536b",
+      "fileSha256": "d8023510eddbe537c1fedec49a00de4829994179e807100e3cbee746f7a7f5f3",
+      "bytes": 90870,
+      "replay": "current production SDK validateRun passed"
+    },
+    "defeat": {
+      "phase": "defeat",
+      "rounds": 11,
+      "met": 7,
+      "strikes": 180,
+      "broken": 0,
+      "orders": 1,
+      "coins": 3068,
+      "scrap": 3,
+      "patterns": 60,
+      "actions": 282,
+      "seed": "v2-verify-0000",
+      "profile": [
+        "light",
+        "edgeTooth",
+        "perfect"
+      ],
+      "stateSha256": "f49af55a6c4a0c9fe4c4eb5686d6c7336cc908890d5e4abd77a3104e5b644c61",
+      "fileSha256": "4045e0810e4bb1218773bbf06f53ec146a6e33cdb79eed29a23804e38ede9eb7",
+      "bytes": 83688,
+      "replay": "current production SDK validateRun passed"
+    }
+  },
+  "elapsedMs": 6531357.110052,
+  "replayEvidence": "All29000 producer states passed formal validateRun in the frozen policy; this audit independently replays the two archived full witnesses, not all29000 again.",
+  "sourceFiles": 23,
+  "compiledFiles": 21,
+  "sourceHashes": {
+    "package-lock.json": "fb6298f489290886a8b47e266b4205a94acf9763086af45b1cc2992a01d8a73f",
+    "tsconfig.simulation.json": "71a5000123e026eaf0a6f534445eed8ce27ef581f74fc9bb059082bf731da2a7",
+    "src/platform/timing.ts": "27f2c219b50dc2bbea1761517a4ea393735b6b6bc4710f11bf4ed66527d13d39",
+    "scripts/v2-verify.ts": "5200b66a16d3706b7c00e9f633e03e61658cf018145636568425a954f6be1422",
+    "src/core/game.ts": "f24e0a700318b346903d1118c7939686748c4e6e55a0780cf213ef72d7eeac38",
+    "src/core/guards.ts": "a25ec963eb41de673edccb4f1a95c420f73ddc7ee44be6c668a69ba2715c9e21",
+    "src/core/immutable.ts": "9bd212a1885c949d1928a2ecb8daa934483f0d26bce8ff196e8ae460d0a29044",
+    "src/core/index.ts": "4fd1ab0adc5c1fe6836329427e7744d0e2eacf2e67745d3c986c93446424b0e9",
+    "src/core/ledger.ts": "0190a08b7b7205408e08cbf365bd448062bdb2acf00e34ed8c2e79e4ffd06b73",
+    "src/core/merchant.ts": "931f772c1ffe19b8a55cea4c4109d620bd34c6d6daa9e3fb257be85a3ee89a11",
+    "src/core/model.ts": "e3568fa89a4dfa1805643dab0a48bbba1689523c01c8408b3e007fedb6d537fd",
+    "src/core/random.ts": "1a3d3d19684573bad8dbf4a80266b0fb343a8ddd32a7aec9d16efc729cf5fca9",
+    "src/core/rules.ts": "cb0a017b155304fe98f43f0f356d72125073fb116e0cbf06c4cfab21cc1f24cc",
+    "src/core/validate.ts": "69814cc7a3e40038d6d91bc24f65364a0600209915d210c6c03d5cd98afc6d08",
+    "src/core/view.ts": "0a77454028a0695c4610c32e6295ea0379e603d5cd0ee5e394ee1e96d820a936",
+    "src/core-v2/game.ts": "784474e6957db40d8336c85244f0f100feab2b4dccaafcd4a012ee9e0e8af74f",
+    "src/core-v2/index.ts": "7ab2a9bfe8f3d313d3dd9d1a5ac9a5162e9347f506f8059205301e2a3394853b",
+    "src/core-v2/model.ts": "09c318993539a464960416bb5aa2c3b33e7d8a73bb551a5a892502719c46e4f7",
+    "src/core-v2/rules.ts": "342b600fad9679a1225a3e9a60e9ef4d7c033d6a7979a7ef83ddfa50ed1e7a4a",
+    "src/core-v2/validate.ts": "b2234d783e49985f2d289348532603002e0883767d40b584af0774671d7ac9b6",
+    "src/core-v2/view.ts": "56a7f2839af1756ad24aef4b5ccd8075eecac3bf9c59e58914c310c814f9c6e2",
+    "scripts/v2/batch.ts": "2ad2f4c2ef0080e173d0300f2d23ba6c901056c4f8f2776db9ab404af6d4d150",
+    "scripts/v2/policy.ts": "19a43b60384d5777eac6c1d6eec4beccf5d44dacd8d517214f2d7b71c9e1a9ae"
+  },
+  "compiledHashes": {
+    "src/platform/timing.js": "e7bce1f7ca006cfa28ac945d0037bf9c459329bc002cd0ce89a4527c73178401",
+    "scripts/v2-verify.js": "143b3644d73cb1b42fa7787c3d8782c796f688683d943844b5e43cdefce6b901",
+    "src/core/game.js": "73e005e7bf88861fa7af209f0a49856c40ade0cc3b1187c8b8dc246d8c391296",
+    "src/core/guards.js": "e95f3caa7f06b4dd0ea4261611dfc647eec591519a22d37bc267a85a9f787059",
+    "src/core/immutable.js": "e58afdb87266448734f446c64c1b9678fe316eaa85b85aa0c5157f691bc26ddc",
+    "src/core/index.js": "a4c576095f3359522b690d632184b1e12729cc56c73d281a3d5e2f705b212395",
+    "src/core/ledger.js": "4a48ccde44adbd1b8307c7c6921abe654f68c299400a7da44b9c8e65332a5dbf",
+    "src/core/merchant.js": "ff1fbd3fb18ad9c5d1c3f8e5789e248faab7ca570ed17ca707e52429734deb46",
+    "src/core/model.js": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+    "src/core/random.js": "2fc467bacef5591e7f1e106d545ddee1df1760c7e89902fe26cff84f78bd880f",
+    "src/core/rules.js": "8de6012f2e7b732ab32ded1d66d466f4d0194386862efc320df141d0d037ecd6",
+    "src/core/validate.js": "5377dfe3d2d4909978d80e2f2c3cf884670245070c293b6a00ea5ec02479d296",
+    "src/core/view.js": "d123c85d0c8be4a0a4317aa54b4928691486a330b945e5d5e4671b4f99c9ee1a",
+    "src/core-v2/game.js": "edf2ec40ada8058b48d23155a433a6d57f2dae67d598ac088d1cb88536ca251c",
+    "src/core-v2/index.js": "7ab2a9bfe8f3d313d3dd9d1a5ac9a5162e9347f506f8059205301e2a3394853b",
+    "src/core-v2/model.js": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+    "src/core-v2/rules.js": "a6b747192f6fe924e2269ecf7269398a65fdca6308a46a02865b0fd5c25562e2",
+    "src/core-v2/validate.js": "4ed52240c97eaa0d8648e39709f746f8500d86d40d0bf9d1014efd81d020ec29",
+    "src/core-v2/view.js": "06aaa59c42bd9700f1229cd5a299576a8b0521aac3353eb867c466e7ea55db20",
+    "scripts/v2/batch.js": "d80f3ad7de90c68aba12e68c4ea73d6619324af671344e5e160ee477e822da07",
+    "scripts/v2/policy.js": "5fcc62acd42fc8a2d12c371ab6a516441ffad37375c65419f234d51aaa55d43d"
+  },
+  "sdkHashes": {
+    "dist/browser-session-tNm91aCh.js": "8d49e78ac9e8b0039f77e9427a19e656d05f38679b18ee1a70535bd116d25e56",
+    "dist/core-CvAZnNjA.js": "d454eb5d786660f0a1132580582c6af8c2004b274337feb9f606cddbf76beb46",
+    "dist/sword-led-core.js": "3a75d8229c7e0840bfc0272d76964e1fa91d5d4fbe6faeab3689636bbfb321c4",
+    "dist/sword-led-session.js": "3a0545bcde904327ddd4d3a05f9d83ae548eb6a7ce0c804da7242f2f5dff604c",
+    "dist/sword-led-v2.js": "ac9a57a933507cdcfecdbb3d5cd9088bc743e0f24f9bb7711a81656a2549cb74"
+  },
+  "inputs": {
+    "summary": {
+      "path": "tmp/T12-v2-1000/summary.json",
+      "sha256": "cfa048595fc268a705871c5153bd2b59f6ba0abb5db052e1338bd2cb3454409e",
+      "bytes": 12273662
+    },
+    "oldSummary": {
+      "path": "docs/evidence/T11-2/simulation/summary.json",
+      "sha256": "be57a25b20c8518dac774cfc7a20a2af1c57bca2c41a52c15ef9c217612b3017"
+    },
+    "baseline": {
+      "path": "docs/evidence/T12/run.json",
+      "sha256": "dd2be9585210a144daf49f055fab49ab23ba982b2d53c9d6aed3ac3b1b9e5ec3"
+    },
+    "terminal": {
+      "path": "docs/evidence/T11-4-2/model-terminal-observation.json",
+      "sha256": "7252695e2893635c7c2c9549dc84faba61cf5e49c3f5c89fb76a97d5dd9e3b4e",
+      "session": 88804,
+      "exitCode": 0
+    }
+  },
+  "archive": {
+    "summaryGzipSha256": "15d46dfbaba1f1ffe0e25e0c925c06e83822f06403d98ebd25d0462f7157d4d4",
+    "bytes": 1428099,
+    "exactDecodedSha256": "cfa048595fc268a705871c5153bd2b59f6ba0abb5db052e1338bd2cb3454409e"
+  },
+  "auditorSha256": "46c8b3546ca68ce6c6f390f7cc353ab670babce4d560019173f12f69a3b5477a"
+}
