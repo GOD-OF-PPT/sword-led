@@ -1,0 +1,385 @@
+{
+  "config": {
+    "argv": [
+      "/Users/gordon/.nvm/versions/node/v22.12.0/bin/node",
+      "/Users/gordon/githome/sword-led/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/v3-impact.spec.ts",
+      "--config",
+      "playwright.v3.config.ts",
+      "--grep",
+      "contact has real"
+    ],
+    "configFile": "/Users/gordon/githome/sword-led/playwright.v3.config.ts",
+    "rootDir": "/Users/gordon/githome/sword-led/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v3-chromium",
+        "name": "v3-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v3-*.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v3-firefox",
+        "name": "v3-firefox",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v3-*.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v3-webkit",
+        "name": "v3-webkit",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v3-*.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v3-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v3-*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4186",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v3-chromium"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v3-firefox",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v3-*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4186",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "firefox"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v3-firefox"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v3-webkit",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v3-*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4186",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1792,
+            "height": 1120
+          },
+          "deviceScaleFactor": 2,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "webkit"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v3-webkit"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/v3-report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 4186 --strictPort",
+      "url": "http://127.0.0.1:4186",
+      "reuseExistingServer": false,
+      "env": {
+        "NO_PROXY": "127.0.0.1,localhost",
+        "no_proxy": "127.0.0.1,localhost"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "v3-impact.spec.ts",
+      "file": "v3-impact.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "contact has real particles, ring, blade recoil and distinct native percussive sound; mute and reduced motion still work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3237,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T04:58:34.003Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d232d6b3759930feec43-3f0538991ea715215b65",
+          "file": "v3-impact.spec.ts",
+          "line": 30,
+          "column": 1
+        },
+        {
+          "title": "contact has real particles, ring, blade recoil and distinct native percussive sound; mute and reduced motion still work",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5537,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m6\u001b[39m\nReceived:   \u001b[31m23.651771842797505\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m6\u001b[39m\nReceived:   \u001b[31m23.651771842797505\u001b[39m\n    at /Users/gordon/githome/sword-led/tests/e2e/v3-impact.spec.ts:33:173",
+                    "location": {
+                      "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-impact.spec.ts",
+                      "column": 173,
+                      "line": 33
+                    },
+                    "snippet": "  31 |  await installAudioProbe(page);await open(page);await page.locator('#v3-settings summary').click();await expect.poll(async()=>(await audioProbe(page)).states).toContain('running');await page.locator('#v3-settings summary').click();const p=await point(page);await page.mouse.move(p.x,p.y);await installContactProbe(page);await page.mouse.down();await expect(page.locator('#v3-scene')).toHaveAttribute('data-outcome',/success|great/);\n  32 |  const effects=await page.locator('#v3-scene').evaluate(e=>({particles:e.querySelectorAll('#v3-sparks i').length,animations:e.getAnimations({subtree:true}).filter(a=>a.playState==='running').length,outcome:e.getAttribute('data-outcome')}));expect(effects.particles).toBe(36);expect(effects.animations).toBeGreaterThan(10);await page.mouse.up();const sound=await audioProbe(page);expect(sound.starts).toBe(3);expect(sound.frequencies).toEqual(effects.outcome==='great'?[89,631,1723]:[139,947,2381]);expect(sound.maxActive).toBeLessThanOrEqual(12);\n> 33 |  await expect.poll(()=>page.evaluate(()=>window.v3ContactGeometry.complete)).toBe(true);const contact=await page.evaluate(()=>window.v3ContactGeometry);expect(contact.gap).toBeLessThan(6);await mkdir(dir,{recursive:true});await page.screenshot({path:`${dir}/${info.project.name}-contact.png`});await writeFile(`${dir}/${info.project.name}-contact.json`,JSON.stringify({effects,sound,contact,state:await read(page)},null,2)+'\\n');\n     |                                                                                                                                                                             ^\n  34 |  await page.locator('#v3-settings summary').click();await page.locator('#v3-muted').check();await page.locator('#v3-motion').check();await page.locator('#v3-settings summary').click();const starts=(await audioProbe(page)).starts;await expect(page.locator('#v3-hit')).toBeEnabled();await left(page);expect((await audioProbe(page)).starts).toBe(starts);expect((await audioProbe(page)).active).toBe(0);expect(await page.locator('#v3-scene').evaluate(e=>e.getAnimations({subtree:true}).filter(a=>a.playState==='running').length)).toBe(0);\n  35 | });\n  36 | test('burst is atomic on left-down and late visual hits cannot survive pause, modal or reload',async({page})=>{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-impact.spec.ts",
+                        "column": 173,
+                        "line": 33
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m6\u001b[39m\nReceived:   \u001b[31m23.651771842797505\u001b[39m\n\n  31 |  await installAudioProbe(page);await open(page);await page.locator('#v3-settings summary').click();await expect.poll(async()=>(await audioProbe(page)).states).toContain('running');await page.locator('#v3-settings summary').click();const p=await point(page);await page.mouse.move(p.x,p.y);await installContactProbe(page);await page.mouse.down();await expect(page.locator('#v3-scene')).toHaveAttribute('data-outcome',/success|great/);\n  32 |  const effects=await page.locator('#v3-scene').evaluate(e=>({particles:e.querySelectorAll('#v3-sparks i').length,animations:e.getAnimations({subtree:true}).filter(a=>a.playState==='running').length,outcome:e.getAttribute('data-outcome')}));expect(effects.particles).toBe(36);expect(effects.animations).toBeGreaterThan(10);await page.mouse.up();const sound=await audioProbe(page);expect(sound.starts).toBe(3);expect(sound.frequencies).toEqual(effects.outcome==='great'?[89,631,1723]:[139,947,2381]);expect(sound.maxActive).toBeLessThanOrEqual(12);\n> 33 |  await expect.poll(()=>page.evaluate(()=>window.v3ContactGeometry.complete)).toBe(true);const contact=await page.evaluate(()=>window.v3ContactGeometry);expect(contact.gap).toBeLessThan(6);await mkdir(dir,{recursive:true});await page.screenshot({path:`${dir}/${info.project.name}-contact.png`});await writeFile(`${dir}/${info.project.name}-contact.json`,JSON.stringify({effects,sound,contact,state:await read(page)},null,2)+'\\n');\n     |                                                                                                                                                                             ^\n  34 |  await page.locator('#v3-settings summary').click();await page.locator('#v3-muted').check();await page.locator('#v3-motion').check();await page.locator('#v3-settings summary').click();const starts=(await audioProbe(page)).starts;await expect(page.locator('#v3-hit')).toBeEnabled();await left(page);expect((await audioProbe(page)).starts).toBe(starts);expect((await audioProbe(page)).active).toBe(0);expect(await page.locator('#v3-scene').evaluate(e=>e.getAnimations({subtree:true}).filter(a=>a.playState==='running').length)).toBe(0);\n  35 | });\n  36 | test('burst is atomic on left-down and late visual hits cannot survive pause, modal or reload',async({page})=>{\n    at /Users/gordon/githome/sword-led/tests/e2e/v3-impact.spec.ts:33:173"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T04:58:39.241Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v3/v3-impact-contact-has-real-71f77-d-reduced-motion-still-work-v3-firefox/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v3/v3-impact-contact-has-real-71f77-d-reduced-motion-still-work-v3-firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v3/v3-impact-contact-has-real-71f77-d-reduced-motion-still-work-v3-firefox/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-impact.spec.ts",
+                    "column": 173,
+                    "line": 33
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d232d6b3759930feec43-6a7937bb627cfa524534",
+          "file": "v3-impact.spec.ts",
+          "line": 30,
+          "column": 1
+        },
+        {
+          "title": "contact has real particles, ring, blade recoil and distinct native percussive sound; mute and reduced motion still work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6584,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T04:58:50.095Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d232d6b3759930feec43-96d3ea490344b83c772d",
+          "file": "v3-impact.spec.ts",
+          "line": 30,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-19T04:58:31.757Z",
+    "duration": 25707.306,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

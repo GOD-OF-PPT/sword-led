@@ -8,6 +8,16 @@ The new mode SHALL start with a usable blade and accept one strike intent withou
 - **THEN** one ordinary strike is accepted, one formal draw is consumed, the current blade value changes immediately and the same result drives visual/audio feedback
 - **AND** mixed input, repeats and rejected stale identities cannot produce extra outcomes
 
+#### Scenario: Direct left-click requested by the player
+- **WHEN** the player presses the primary mouse button over the central blade area
+- **THEN** one eligible hit is accepted immediately without timing or aim requirements, the hammer indicates the cosmetic contact location and pointer release never adds another hit
+- **AND** right clicks, outside drags and inputs begun during recoil are not queued into a later strike
+
+#### Scenario: Visible contact under slow rendering
+- **WHEN** an accepted hit is presented with motion enabled
+- **THEN** the real contact pose is held through actual paint frames before recoil, with bounded particles, the actual price delta and outcome-specific feedback
+- **AND** mute/reduced motion and cancellation on pause or disposition retain the accepted rules result and clean pending presentation work
+
 #### Scenario: Ordinary growth
 - **WHEN** base40 receives three ordinary successes
 - **THEN** its visible values are58,84,121 without a separate processing gate

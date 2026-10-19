@@ -7,3 +7,23 @@
 #v3-hammer{top:calc(60% - 175px)}#v3-hammer img{transform:rotate(135deg)}#v3-sparks{position:absolute;left:58%;top:60%;pointer-events:none}#v3-sparks i{position:absolute;display:block;width:4px;height:10px;background:#ffdfa1;box-shadow:0 0 10px #ffa43e;opacity:0}.v3-save>span{background:#102126e6;padding:5px 9px;border-radius:3px}.v3-focus{background:radial-gradient(ellipse,#08171bc7,transparent 74%)}
 @media(max-height:780px){#v3-hammer{top:calc(60% - 145px)}}
 .v3-actions .v3-primary:hover:enabled{background:#edc37d;color:#261a12;border-color:#ffe2a8}
+/* Direct-hit surface: the weapon is the mouse target, controls stay outside it. */
+#v3-scene{--aim-x:58%;--aim-y:60%;--hit-x:58%;--hit-y:60%;--hit-color:#ffba61;isolation:isolate}
+#v3-hit,#v3-hit:hover:enabled,#v3-hit:disabled{position:absolute;inset:0;width:100%;height:100%;z-index:3;padding:0;min-height:0;border:0;border-radius:6px;background:transparent;box-shadow:none;opacity:1;cursor:crosshair;color:#ffdea2}
+#v3-hit:disabled{cursor:default}#v3-hit[aria-busy=true]{cursor:progress}#v3-hit:focus-visible{outline:2px solid #ffe6ac;outline-offset:-4px}
+.hit-hint{position:absolute;left:50%;bottom:9px;transform:translateX(-50%);font-size:12px;background:#102126ec;border:1px solid #a08a58;padding:5px 13px;border-radius:16px;white-space:nowrap;pointer-events:none}
+#v3-hammer{z-index:5;left:calc(var(--aim-x) - 118px);top:calc(var(--aim-y) - 175px);filter:drop-shadow(0 4px 4px #0009)}
+#v3-reticle{position:absolute;z-index:4;left:var(--aim-x);top:var(--aim-y);width:19px;height:19px;border:1px solid #ffe8b0;border-radius:2px;transform:translate(-50%,-50%) rotate(45deg);box-shadow:0 0 14px #ffb44d99;opacity:0;pointer-events:none}
+#v3-scene.aiming #v3-reticle{opacity:.9}#v3-scene.striking #v3-reticle{opacity:.2}
+#v3-impact-glow,#v3-impact-ring{position:absolute;z-index:2;left:var(--hit-x);top:var(--hit-y);transform:translate(-50%,-50%);pointer-events:none;opacity:0}
+#v3-impact-glow{width:240px;height:120px;background:radial-gradient(ellipse,var(--hit-color),transparent 70%);mix-blend-mode:screen}
+#v3-impact-ring{width:90px;height:48px;border:3px solid var(--hit-color);border-radius:50%;box-shadow:0 0 20px var(--hit-color)}
+#v3-sparks{z-index:6;left:var(--hit-x);top:var(--hit-y)}#v3-sparks i{border-radius:1px;opacity:0}
+#v3-float{z-index:7;left:var(--hit-x);right:auto;top:calc(var(--hit-y) - 15px);width:max-content;max-width:80%;font-size:30px;opacity:0;color:#fff2cb;pointer-events:none;transform:translateX(-50%)}
+#v3-impact-badge{position:absolute;z-index:7;left:var(--hit-x);top:calc(var(--hit-y) - 65px);width:max-content;transform:translateX(-50%);font-family:KaiTi,STKaiti,serif;font-size:27px;font-weight:bold;color:var(--hit-color);text-shadow:0 2px 4px #000,0 0 18px #c86420;opacity:0;pointer-events:none}
+#v3-scene.burst-ready .hit-hint{border-color:#ffe5a0;color:#fff2c5;box-shadow:0 0 18px #ffb33e55}#v3-scene.burst-ready{background:radial-gradient(ellipse at 58% 66%,#eaaa2520,transparent 60%)}#v3-scene.bursting{background:radial-gradient(ellipse at var(--hit-x) var(--hit-y),#ffbe3838,transparent 65%)}
+#v3-scene[data-outcome=great] #v3-impact-badge{font-size:34px;color:#fff2ac}#v3-scene[data-outcome=crack] #v3-impact-badge,#v3-scene[data-outcome=broken] #v3-impact-badge{color:#ffa87b}
+@media(max-height:780px){#v3-hammer{left:calc(var(--aim-x) - 98px);top:calc(var(--aim-y) - 145px)}#v3-float{font-size:25px}.hit-hint{bottom:2px;padding:3px 10px}}
+/* Source contact face is at (7.5%,36.7%) in the square hammer export. */
+#v3-hammer img{transform:rotate(-90deg)}#v3-hammer{left:calc(var(--aim-x) - 58px);top:calc(var(--aim-y) - 181px)}
+@media(max-height:780px){#v3-hammer{left:calc(var(--aim-x) - 48px);top:calc(var(--aim-y) - 151px)}}

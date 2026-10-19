@@ -1,0 +1,163 @@
+{
+  "effects": {
+    "particles": 36,
+    "animations": 26,
+    "outcome": "success"
+  },
+  "sound": {
+    "contexts": 1,
+    "constructors": 1,
+    "states": [
+      "running"
+    ],
+    "active": 0,
+    "starts": 3,
+    "stops": 3,
+    "maxActive": 3,
+    "frequencies": [
+      139,
+      947,
+      2381
+    ],
+    "peak": 0
+  },
+  "contact": {
+    "gap": 23.658027476154896,
+    "samples": 7,
+    "complete": true,
+    "frames": [
+      {
+        "time": 16,
+        "transform": "none",
+        "animations": [],
+        "gap": 23.658027476154896
+      },
+      {
+        "time": 250,
+        "transform": "none",
+        "animations": [],
+        "gap": 23.658027476154896
+      },
+      {
+        "time": 388,
+        "transform": "none",
+        "animations": [],
+        "gap": 23.658027476154896
+      },
+      {
+        "time": 474,
+        "transform": "none",
+        "animations": [],
+        "gap": 23.658027476154896
+      },
+      {
+        "time": 484,
+        "transform": "none",
+        "animations": [],
+        "gap": 23.658027476154896
+      },
+      {
+        "time": 497,
+        "transform": "none",
+        "animations": [],
+        "gap": 23.658027476154896
+      },
+      {
+        "time": 648,
+        "transform": "none",
+        "animations": [],
+        "gap": 23.658027476154896
+      }
+    ],
+    "events": [
+      {
+        "time": 1,
+        "type": "blur",
+        "target": ""
+      }
+    ]
+  },
+  "state": {
+    "rulesVersion": "forge-v3",
+    "runId": "v3-1792386305454",
+    "seed": "行脚新炉",
+    "roundLimit": 3,
+    "revision": 1,
+    "phase": "workshop",
+    "round": 1,
+    "coins": 0,
+    "seals": 3,
+    "base": 40,
+    "blades": [
+      {
+        "id": "r1-1",
+        "suppliedRound": 1,
+        "status": "active",
+        "base": 40,
+        "value": 58,
+        "peak": 58,
+        "level": 1,
+        "cracked": false,
+        "hits": 1,
+        "charge": 1,
+        "successes": 1,
+        "finalizedRound": null
+      },
+      {
+        "id": "r1-2",
+        "suppliedRound": 1,
+        "status": "active",
+        "base": 40,
+        "value": 40,
+        "peak": 40,
+        "level": 0,
+        "cracked": false,
+        "hits": 0,
+        "charge": 0,
+        "successes": 0,
+        "finalizedRound": null
+      },
+      {
+        "id": "r1-3",
+        "suppliedRound": 1,
+        "status": "active",
+        "base": 40,
+        "value": 40,
+        "peak": 40,
+        "level": 0,
+        "cracked": false,
+        "hits": 0,
+        "charge": 0,
+        "successes": 0,
+        "finalizedRound": null
+      }
+    ],
+    "reserveId": null,
+    "delivered": 0,
+    "traits": [],
+    "gift": "locked",
+    "pardonUsed": false,
+    "pendingInheritance": 0,
+    "shop": [],
+    "sold": [],
+    "upgraded": false,
+    "repaired": false,
+    "history": [],
+    "rng": {
+      "forge": {
+        "state": 3022150949,
+        "draws": 1
+      },
+      "shop": {
+        "state": 1526952265,
+        "draws": 0
+      }
+    },
+    "journal": [
+      {
+        "type": "strike",
+        "pieceId": "r1-1"
+      }
+    ]
+  }
+}

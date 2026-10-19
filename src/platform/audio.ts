@@ -16,7 +16,8 @@ export function cueFor(events: readonly DomainEvent[]): Cue | null {
   if (events.some(event => event.type === 'PieceRecycled')) return 'recycle';
   return events.some(event => event.type === 'Heated') ? 'heat' : null;
 }
-const SOUNDS: Record<Cue, { readonly tones: readonly number[]; readonly duration: number; readonly type?: OscillatorType; readonly fall?: number }> = {
+export interface ForgeSound {readonly tones:readonly number[];readonly duration:number;readonly type?:OscillatorType;readonly fall?:number}
+const SOUNDS: Record<Cue, ForgeSound> = {
   light: { tones: [1117,1733,2411], duration: .16 }, standard: { tones: [719,1193,1777], duration: .22 }, heavy: { tones: [431,731,1153], duration: .3 },
   damage: { tones: [183,271], duration: .2, type: 'triangle' }, broken: { tones: [677,359,193], duration: .38, fall: .3 },
   heat: { tones: [73,109], duration: .28, type: 'triangle' }, delivery: { tones: [523,784], duration: .32 },
@@ -25,7 +26,7 @@ const SOUNDS: Record<Cue, { readonly tones: readonly number[]; readonly duration
   victory: { tones: [523,659,784], duration: .65 }, defeat: { tones: [196,233,294], duration: .6, type: 'triangle', fall: .65 },
 };
 
-export function createForgeAudio(createContext: () => AudioContext = () => new AudioContext({ latencyHint: 'interactive' })) {
+export function createForgeAudio(createContext: () => AudioContext = () => new AudioContext({ latencyHint: 'interactive' }),palette:Readonly<Partial<Record<Cue,ForgeSound>>> = {}) {
   let context: AudioContext | null = null, master: GainNode | null = null, pending: Promise<boolean> | null = null;
   let mode: AudioMode = 'silent', muted = false, volume = 55, epoch = 0, disposed = false;
   let identity = '';
@@ -70,7 +71,7 @@ export function createForgeAudio(createContext: () => AudioContext = () => new A
   function play(cue: Cue) {
     if (!enabled() || mode === 'silent' || !context || !master || context.state !== 'running') return;
     while (voices.size >= 4) voices.values().next().value?.stop();
-    const sound = SOUNDS[cue], sources: OscillatorNode[] = [], gains: GainNode[] = [];
+    const sound = palette[cue]??SOUNDS[cue], sources: OscillatorNode[] = [], gains: GainNode[] = [];
     let ended = 0, cleaned = false;
     const cleanup = () => {
       if (cleaned) return;cleaned = true;
