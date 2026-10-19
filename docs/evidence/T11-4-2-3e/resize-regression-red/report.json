@@ -1,0 +1,244 @@
+{
+  "config": {
+    "argv": [
+      "/Users/gordon/.nvm/versions/node/v22.12.0/bin/node",
+      "/Users/gordon/githome/sword-led/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "playwright.v3.config.ts",
+      "--project",
+      "v3-chromium",
+      "--grep",
+      "resizing four actual"
+    ],
+    "configFile": "/Users/gordon/githome/sword-led/playwright.v3.config.ts",
+    "rootDir": "/Users/gordon/githome/sword-led/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v3-chromium",
+        "name": "v3-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v3-*.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v3-firefox",
+        "name": "v3-firefox",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v3-*.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v3-webkit",
+        "name": "v3-webkit",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v3-*.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v3-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v3-*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4186",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v3-chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/v3-report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 4186 --strictPort",
+      "url": "http://127.0.0.1:4186",
+      "reuseExistingServer": false,
+      "env": {
+        "NO_PROXY": "127.0.0.1,localhost",
+        "no_proxy": "127.0.0.1,localhost"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "v3-scene.spec.ts",
+      "file": "v3-scene.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "resizing four actual inventory pieces preserves the focused sword node and exact saved bytes",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 3299,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/gordon/githome/sword-led/tests/e2e/v3-scene.spec.ts:12:281",
+                    "location": {
+                      "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-scene.spec.ts",
+                      "column": 281,
+                      "line": 12
+                    },
+                    "snippet": "  10 | test('resizing four actual inventory pieces preserves the focused sword node and exact saved bytes',async({page},info)=>{\n  11 |  await page.setViewportSize({width:1280,height:720});await open(page);await page.locator('#v3-store').click();await page.locator('#v3-settle').click();await page.getByRole('button',{name:'确认',exact:true}).click();await page.getByRole('button',{name:'领取下一轮三柄剑'}).click();await page.locator('#v3-reserve-slot button').click();await expect(page.locator('#v3-inventory button')).toHaveCount(4);await page.keyboard.press('Shift+Tab');await page.keyboard.press('Shift+Tab');const target=page.locator('#v3-inventory button').last();await expect(target).toBeFocused();const original=await target.elementHandle(),bytes=await page.evaluate(()=>localStorage.getItem('sword-led.save.v3'));const samples=[];\n> 12 |  for(const [width,height]of [[1920,1080],[1280,720]]){await page.setViewportSize({width:width!,height:height!});await page.evaluate(()=>new Promise<void>(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve()))));expect(await original!.evaluate(e=>e.isConnected)).toBe(true);await expect(target).toBeFocused();expect(await page.evaluate(()=>localStorage.getItem('sword-led.save.v3'))).toBe(bytes);const boxes=await page.evaluate(()=>Array.from(document.querySelectorAll('#v3-inventory button')).map(e=>{const b=e.getBoundingClientRect();return{x:b.x,y:b.y,width:b.width,height:b.height};}));expect(boxes).toHaveLength(4);for(const b of boxes){expect(b.width).toBeGreaterThan(0);expect(b.height).toBeGreaterThan(0);expect(b.y+b.height).toBeLessThanOrEqual(height!);}samples.push({width,height,boxes});}\n     |                                                                                                                                                                                                                                                                                         ^\n  13 |  await writeFile(`${dir}/${info.project.name}-resize-focus.json`,JSON.stringify({samples,state:await read(page)},null,2)+'\\n');\n  14 | });\n  15 | test('physical workshop and three-step guide stay readable; help is optional and never changes a save',async({page},info)=>{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-scene.spec.ts",
+                        "column": 281,
+                        "line": 12
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n  10 | test('resizing four actual inventory pieces preserves the focused sword node and exact saved bytes',async({page},info)=>{\n  11 |  await page.setViewportSize({width:1280,height:720});await open(page);await page.locator('#v3-store').click();await page.locator('#v3-settle').click();await page.getByRole('button',{name:'确认',exact:true}).click();await page.getByRole('button',{name:'领取下一轮三柄剑'}).click();await page.locator('#v3-reserve-slot button').click();await expect(page.locator('#v3-inventory button')).toHaveCount(4);await page.keyboard.press('Shift+Tab');await page.keyboard.press('Shift+Tab');const target=page.locator('#v3-inventory button').last();await expect(target).toBeFocused();const original=await target.elementHandle(),bytes=await page.evaluate(()=>localStorage.getItem('sword-led.save.v3'));const samples=[];\n> 12 |  for(const [width,height]of [[1920,1080],[1280,720]]){await page.setViewportSize({width:width!,height:height!});await page.evaluate(()=>new Promise<void>(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve()))));expect(await original!.evaluate(e=>e.isConnected)).toBe(true);await expect(target).toBeFocused();expect(await page.evaluate(()=>localStorage.getItem('sword-led.save.v3'))).toBe(bytes);const boxes=await page.evaluate(()=>Array.from(document.querySelectorAll('#v3-inventory button')).map(e=>{const b=e.getBoundingClientRect();return{x:b.x,y:b.y,width:b.width,height:b.height};}));expect(boxes).toHaveLength(4);for(const b of boxes){expect(b.width).toBeGreaterThan(0);expect(b.height).toBeGreaterThan(0);expect(b.y+b.height).toBeLessThanOrEqual(height!);}samples.push({width,height,boxes});}\n     |                                                                                                                                                                                                                                                                                         ^\n  13 |  await writeFile(`${dir}/${info.project.name}-resize-focus.json`,JSON.stringify({samples,state:await read(page)},null,2)+'\\n');\n  14 | });\n  15 | test('physical workshop and three-step guide stay readable; help is optional and never changes a save',async({page},info)=>{\n    at /Users/gordon/githome/sword-led/tests/e2e/v3-scene.spec.ts:12:281"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T10:10:31.769Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v3/v3-scene-resizing-four-act-02de4--node-and-exact-saved-bytes-v3-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v3/v3-scene-resizing-four-act-02de4--node-and-exact-saved-bytes-v3-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v3/v3-scene-resizing-four-act-02de4--node-and-exact-saved-bytes-v3-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-scene.spec.ts",
+                    "column": 281,
+                    "line": 12
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "f6a4d8b894875780f139-faf97dedbc892c449335",
+          "file": "v3-scene.spec.ts",
+          "line": 10,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-19T10:10:28.526Z",
+    "duration": 7764.044,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

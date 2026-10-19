@@ -1,0 +1,104 @@
+{
+  "sourceTraceSha256": "13feb61cddddf0ecedb45f8ad65a2c2a7ce8ae955a5872a3d3b402127ef41005",
+  "scope": "Observed gaps only; no confirmed attribution to sleep, user pause or product logic",
+  "traces": [
+    {
+      "member": "test.trace",
+      "timedEvents": 9576,
+      "largestGaps": [
+        {
+          "gapMs": 3607052.6999999997,
+          "before": {
+            "type": "before",
+            "callId": "tnhk@13104",
+            "method": "pw:api",
+            "title": "Evaluate"
+          },
+          "after": {
+            "type": "before",
+            "callId": "tnhk@13106",
+            "method": "hook",
+            "title": "After Hooks"
+          }
+        },
+        {
+          "gapMs": 13699.165000000037,
+          "before": {
+            "type": "after",
+            "callId": "tnhk@13494"
+          },
+          "after": {
+            "type": "before",
+            "callId": "tnhk@13496",
+            "method": "pw:api",
+            "title": "Close context"
+          }
+        },
+        {
+          "gapMs": 3833.8259999998845,
+          "before": {
+            "type": "before",
+            "callId": "tnhk@13144",
+            "method": "expect",
+            "title": "Expect \"toHaveAttribute\""
+          },
+          "after": {
+            "type": "before",
+            "callId": "tnhk@13146",
+            "method": "fixture",
+            "title": "Fixture \"page\""
+          }
+        }
+      ]
+    },
+    {
+      "member": "1-trace.trace",
+      "timedEvents": 8328,
+      "largestGaps": [
+        {
+          "gapMs": 3607086.485,
+          "before": {
+            "type": "before",
+            "callId": "tnhk@13104",
+            "method": "waitForSelector",
+            "title": "Evaluate"
+          },
+          "after": {
+            "type": "after",
+            "callId": "tnhk@13104"
+          }
+        },
+        {
+          "gapMs": 3665.2029999997467,
+          "before": {
+            "type": "before",
+            "callId": "tnhk@13144",
+            "method": "expect",
+            "title": "Expect \"toHaveAttribute\""
+          },
+          "after": {
+            "type": "after",
+            "callId": "tnhk@13144"
+          }
+        },
+        {
+          "gapMs": 1127.7770000000019,
+          "before": {
+            "type": "before",
+            "callId": "tnhk@2301",
+            "method": "screenshot"
+          },
+          "after": {
+            "type": "after",
+            "callId": "tnhk@2301"
+          }
+        }
+      ]
+    },
+    {
+      "member": "0-trace.trace",
+      "timedEvents": 0,
+      "largestGaps": []
+    }
+  ]
+}

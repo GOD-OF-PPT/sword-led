@@ -1,0 +1,611 @@
+{
+  "scope": "84 current-build cases: full attempt 83 passed/1 timeout; unchanged isolated Chromium full-campaign recheck passed under the same 360000ms timeout. Separate real reports, not a fabricated all-green 84 run.",
+  "fullAttemptStats": {
+    "startTime": "2026-10-19T10:15:01.606Z",
+    "duration": 4941046.179,
+    "expected": 83,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "recheckStats": {
+    "startTime": "2026-10-19T11:54:31.414Z",
+    "duration": 128694.429,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "coveredCases": 84,
+  "sourceBaseline": "final-baseline.json",
+  "cases": [
+    {
+      "file": "v3-campaign.spec.ts",
+      "title": "default twelve-round campaign completes through three merchants, upgrades, replacement and reload with zero pointer events",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "final-recheck.json"
+    },
+    {
+      "file": "v3-campaign.spec.ts",
+      "title": "twelve-round failure and merchant repair use real seals and coins",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-campaign.spec.ts",
+      "title": "existing three-round save stays three rounds; explicit fresh campaign supports twelve and cancel preserves the old bytes",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-campaign.spec.ts",
+      "title": "default twelve-round campaign completes through three merchants, upgrades, replacement and reload with zero pointer events",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-campaign.spec.ts",
+      "title": "twelve-round failure and merchant repair use real seals and coins",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-campaign.spec.ts",
+      "title": "existing three-round save stays three rounds; explicit fresh campaign supports twelve and cancel preserves the old bytes",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-campaign.spec.ts",
+      "title": "default twelve-round campaign completes through three merchants, upgrades, replacement and reload with zero pointer events",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-campaign.spec.ts",
+      "title": "twelve-round failure and merchant repair use real seals and coins",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-campaign.spec.ts",
+      "title": "existing three-round save stays three rounds; explicit fresh campaign supports twelve and cancel preserves the old bytes",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-hammer.spec.ts",
+      "title": "hammer strikes with a flat metal face and rotates around its grip at both desktop sizes",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-hammer.spec.ts",
+      "title": "flat face follows actual opaque metal for all three shapes at rough and masterwork stages",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-hammer.spec.ts",
+      "title": "slow presentation frames still show a flat contact; pause cancels the pending swing without another command",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-hammer.spec.ts",
+      "title": "hammer strikes with a flat metal face and rotates around its grip at both desktop sizes",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-hammer.spec.ts",
+      "title": "flat face follows actual opaque metal for all three shapes at rough and masterwork stages",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-hammer.spec.ts",
+      "title": "slow presentation frames still show a flat contact; pause cancels the pending swing without another command",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-hammer.spec.ts",
+      "title": "hammer strikes with a flat metal face and rotates around its grip at both desktop sizes",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-hammer.spec.ts",
+      "title": "flat face follows actual opaque metal for all three shapes at rough and masterwork stages",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-hammer.spec.ts",
+      "title": "slow presentation frames still show a flat contact; pause cancels the pending swing without another command",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "left-down on the actual sword commits once, aim is cosmetic, hold/up/double-click/drag do not duplicate",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "contact has real particles, ring, blade recoil and distinct native percussive sound; mute and reduced motion still work",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "burst is atomic on left-down and late visual hits cannot survive pause, modal or reload",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "large left-click target and keyboard alternatives remain visible at both desktop sizes",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "record actual left-click growth and burst effects without injecting any game result",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "left-down on the actual sword commits once, aim is cosmetic, hold/up/double-click/drag do not duplicate",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "contact has real particles, ring, blade recoil and distinct native percussive sound; mute and reduced motion still work",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "burst is atomic on left-down and late visual hits cannot survive pause, modal or reload",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "large left-click target and keyboard alternatives remain visible at both desktop sizes",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "record actual left-click growth and burst effects without injecting any game result",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "left-down on the actual sword commits once, aim is cosmetic, hold/up/double-click/drag do not duplicate",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "contact has real particles, ring, blade recoil and distinct native percussive sound; mute and reduced motion still work",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "burst is atomic on left-down and late visual hits cannot survive pause, modal or reload",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "large left-click target and keyboard alternatives remain visible at both desktop sizes",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "record actual left-click growth and burst effects without injecting any game result",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "primary hammer remains readable while hovered",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "first click is live; keyboard has no timing requirement; reduced motion, pause and reload keep results",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "actual three rounds, optional gift, insurance, merchant trade and upgrade; honest ending at two desktop sizes",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "three misses really fail; restart respects a changed seed; invalid main recovers actual backup",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "same-origin v2 writer blocks v3 safely; write refusal carries exact state into unsaved play",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "real seeded burst survives interruption; crack then break and next-piece action are distinct",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "menu seed survives resize and asynchronous asset arrivals before confirmed replacement",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "keyboard completes all three rounds with zero pointer events and no timing recipe",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "primary hammer remains readable while hovered",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "first click is live; keyboard has no timing requirement; reduced motion, pause and reload keep results",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "actual three rounds, optional gift, insurance, merchant trade and upgrade; honest ending at two desktop sizes",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "three misses really fail; restart respects a changed seed; invalid main recovers actual backup",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "same-origin v2 writer blocks v3 safely; write refusal carries exact state into unsaved play",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "real seeded burst survives interruption; crack then break and next-piece action are distinct",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "menu seed survives resize and asynchronous asset arrivals before confirmed replacement",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "keyboard completes all three rounds with zero pointer events and no timing recipe",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "primary hammer remains readable while hovered",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "first click is live; keyboard has no timing requirement; reduced motion, pause and reload keep results",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "actual three rounds, optional gift, insurance, merchant trade and upgrade; honest ending at two desktop sizes",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "three misses really fail; restart respects a changed seed; invalid main recovers actual backup",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "same-origin v2 writer blocks v3 safely; write refusal carries exact state into unsaved play",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "real seeded burst survives interruption; crack then break and next-piece action are distinct",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "menu seed survives resize and asynchronous asset arrivals before confirmed replacement",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "keyboard completes all three rounds with zero pointer events and no timing recipe",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "resizing four actual inventory pieces preserves the focused sword node and exact saved bytes",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "physical workshop and three-step guide stay readable; help is optional and never changes a save",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "accepted delivery has real sword flight, quota stamp, and honest pieces on the round receipt",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "ceremony cancels on pause; reduced motion and rapid return never replay rewards or leave flying objects",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "merchant staging and terminal trophies use actual props and blades; all story controls fit the small viewport",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "resizing four actual inventory pieces preserves the focused sword node and exact saved bytes",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "physical workshop and three-step guide stay readable; help is optional and never changes a save",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "accepted delivery has real sword flight, quota stamp, and honest pieces on the round receipt",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "ceremony cancels on pause; reduced motion and rapid return never replay rewards or leave flying objects",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "merchant staging and terminal trophies use actual props and blades; all story controls fit the small viewport",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "resizing four actual inventory pieces preserves the focused sword node and exact saved bytes",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "physical workshop and three-step guide stay readable; help is optional and never changes a save",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "accepted delivery has real sword flight, quota stamp, and honest pieces on the round receipt",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "ceremony cancels on pause; reduced motion and rapid return never replay rewards or leave flying objects",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "merchant staging and terminal trophies use actual props and blades; all story controls fit the small viewport",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-visual.spec.ts",
+      "title": "three actual supplied weapons grow through five illustrated stages and reload the same appearance",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-visual.spec.ts",
+      "title": "missing weapon art falls back to a usable native blade and keeps an accepted strike",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-visual.spec.ts",
+      "title": "all six physical handcraft props appear in real merchant offers; equipped echo lights only on its third success",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-visual.spec.ts",
+      "title": "three equipped props keep the full workshop, merchant and settings inside both desktop viewports",
+      "project": "v3-chromium",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-visual.spec.ts",
+      "title": "three actual supplied weapons grow through five illustrated stages and reload the same appearance",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-visual.spec.ts",
+      "title": "missing weapon art falls back to a usable native blade and keeps an accepted strike",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-visual.spec.ts",
+      "title": "all six physical handcraft props appear in real merchant offers; equipped echo lights only on its third success",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-visual.spec.ts",
+      "title": "three equipped props keep the full workshop, merchant and settings inside both desktop viewports",
+      "project": "v3-firefox",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-visual.spec.ts",
+      "title": "three actual supplied weapons grow through five illustrated stages and reload the same appearance",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-visual.spec.ts",
+      "title": "missing weapon art falls back to a usable native blade and keeps an accepted strike",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-visual.spec.ts",
+      "title": "all six physical handcraft props appear in real merchant offers; equipped echo lights only on its third success",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    },
+    {
+      "file": "v3-visual.spec.ts",
+      "title": "three equipped props keep the full workshop, merchant and settings inside both desktop viewports",
+      "project": "v3-webkit",
+      "status": "passed",
+      "report": "timeout-attempt/report.json"
+    }
+  ]
+}

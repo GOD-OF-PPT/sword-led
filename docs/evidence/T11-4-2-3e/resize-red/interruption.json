@@ -1,0 +1,24 @@
+{
+  "session": 47673,
+  "terminatedIntentionally": true,
+  "exitCode": 130,
+  "reason": "Confirmed inventory node replacement / focus loss on resize, before changing production code",
+  "enumerated": 81,
+  "observedCompletedChromium": 27,
+  "observedPassedChromium": 26,
+  "observedFailedChromium": 1,
+  "fullRunFinalReportAvailable": false,
+  "previousReportRetainedButNotAttributedToFullRun": {
+    "path": "previous-report-at-interruption.json",
+    "stats": {
+      "startTime": "2026-10-19T09:58:04.788Z",
+      "duration": 21800.447,
+      "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "baselineRecordedAt": "2026-10-19T09:59:20.261Z",
+  "scope": "Raw result files and exact failing error-context/trace retained. Interrupted/unexecuted cases are not claimed passed."
+}

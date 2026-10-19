@@ -1,0 +1,632 @@
+{
+  "jsonFiles": [
+    {
+      "source": "tmp/v3-ui-states/v3-chromium-broken.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-chromium-broken.json",
+      "sha256": "be53935161571b9a6edac3815aec91b026c5f5f6b4803deea6f688cf0d1e6d85"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-chromium-cracked.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-chromium-cracked.json",
+      "sha256": "5a865b344e28efa568e3b3fdb0e379ec18d70c0598f227f5fe17fdab82b12e53"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-chromium-experience-end.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-chromium-experience-end.json",
+      "sha256": "cdba6d4f612f0d0268e64fe4603e9eed0f6d6d917d36e476a7dc52e8d25f628e"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-chromium-keyboard-end.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-chromium-keyboard-end.json",
+      "sha256": "be306a6dbb73b5dc8b2d9270d245c845d34c9d6f9776d4779ecab469901f01c4"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-chromium-recovered.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-chromium-recovered.json",
+      "sha256": "16ca6598743b28a7e61c7463a61a0ab180e6790ddfb66b396d70eed97a9197a4"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-chromium-reload.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-chromium-reload.json",
+      "sha256": "879d6291f28e3b3026d3e8a5f7872462aede0fc7c6e860a2ecbf696900d67850"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-chromium-round-1.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-chromium-round-1.json",
+      "sha256": "3f9d9d76d8bf62b7721b6d2329565db2c37bca758d3d920b03c1fc4bc989d559"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-chromium-round-2.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-chromium-round-2.json",
+      "sha256": "f995b81af2f26ed34500a5fedffb1e0eee90749669dddcc5167d2a245932b0cf"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-chromium-round-3.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-chromium-round-3.json",
+      "sha256": "328f98dbd3def2c064f22c346d63e3db08a39e778b35dc312e9ab3898b65135a"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-firefox-broken.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-firefox-broken.json",
+      "sha256": "08112c795bb4132c1aba5862d7b9d57ea02c36ec2e15b31254fb25941a6cb5ae"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-firefox-cracked.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-firefox-cracked.json",
+      "sha256": "0bfd301cc7c8628659038c4ceb22cd74fb10e5e2faf24139b952bdf6bc2eab7e"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-firefox-experience-end.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-firefox-experience-end.json",
+      "sha256": "5d539a09e6dc11be67e7f58366a60fd0e698c08f5be79d039317110c599b60cd"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-firefox-keyboard-end.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-firefox-keyboard-end.json",
+      "sha256": "c0386a367c8b2253dde49c7cd54b056d8f6309d949a531da745d5c11b0221995"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-firefox-recovered.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-firefox-recovered.json",
+      "sha256": "b6f255d752346140cffe997b38dd1c844030d1f911111202b364ca7124b2745a"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-firefox-reload.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-firefox-reload.json",
+      "sha256": "42e83d07c713de453362d0e9ad31d9978ae6f6cc9322afa4bb4dd34948ba501e"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-firefox-round-1.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-firefox-round-1.json",
+      "sha256": "d92e73f9a2976b71a7cca0b30f176f71f10524f3e2515d3e4448e315bc83cbea"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-firefox-round-2.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-firefox-round-2.json",
+      "sha256": "1eee733b51d3956b92bd31b0e64d75f0d5cfa39f15f4c7429e80b31d0aab283d"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-firefox-round-3.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-firefox-round-3.json",
+      "sha256": "4da4db9cda9887a00435408e1a4d8e782d554875dbdf3d2c6401b1158e7ad62c"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-webkit-broken.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-webkit-broken.json",
+      "sha256": "c81bc959e0c2b90b509e808016a52fa2c08218823230472dc2d66d8123cd7fa9"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-webkit-cracked.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-webkit-cracked.json",
+      "sha256": "25952a92f69fff8885522960910a79aef212a0f0e9b25f06a600ebb398614fe0"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-webkit-experience-end.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-webkit-experience-end.json",
+      "sha256": "5c8c9924bd0637e8ba94bd6e8f23ed6bc66006d8985c7039cf4f80db5e19e12b"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-webkit-keyboard-end.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-webkit-keyboard-end.json",
+      "sha256": "cd2bb07ec403fbf45be5fa3d1fedc42620cfefa64febaf4fb516ea84fe89d5b9"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-webkit-recovered.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-webkit-recovered.json",
+      "sha256": "82d8284c142975edf01bf88774db75ad1c924861a042a115a9984a3663495dfd"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-webkit-reload.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-webkit-reload.json",
+      "sha256": "9765e0e200997a8c5cbf521a252a3cb2f7cf2fd4ab571d9c7f51462fcab208eb"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-webkit-round-1.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-webkit-round-1.json",
+      "sha256": "d1e0ce365dd1a8dbafd3c4660e56450b787871816d9a3c6b507b3411d41b85be"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-webkit-round-2.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-webkit-round-2.json",
+      "sha256": "b80e85aec5cc489109de7d50db1f71a3ed960eaa041b1cd38f04a2522f08f6c2"
+    },
+    {
+      "source": "tmp/v3-ui-states/v3-webkit-round-3.json",
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-webkit-round-3.json",
+      "sha256": "9eed538d99f99fb109c27bcc753fa6e2dec84c16851a8d8d99e5ebddd751d815"
+    },
+    {
+      "source": "tmp/v3-impact-states/v3-chromium-clip-state.json",
+      "path": "docs/evidence/T11-4-2-3e/impact/v3-chromium-clip-state.json",
+      "sha256": "9eb063bd23e6e6e73b3566618bb2690f9fadc6bc85731941094c3193cb938da9"
+    },
+    {
+      "source": "tmp/v3-impact-states/v3-chromium-contact.json",
+      "path": "docs/evidence/T11-4-2-3e/impact/v3-chromium-contact.json",
+      "sha256": "7dbeba905cd93ebfceed096f6e0eb6c756658f93c5a6af7c0a07244bae928891"
+    },
+    {
+      "source": "tmp/v3-impact-states/v3-firefox-clip-state.json",
+      "path": "docs/evidence/T11-4-2-3e/impact/v3-firefox-clip-state.json",
+      "sha256": "84a6a77b6728589407ac4ed6256a67bc61769c2a66d0bd858fcf8f1ad18e68a8"
+    },
+    {
+      "source": "tmp/v3-impact-states/v3-firefox-contact.json",
+      "path": "docs/evidence/T11-4-2-3e/impact/v3-firefox-contact.json",
+      "sha256": "b2e0f8332d99dd09b4d475f47458329f63b8848cc43c75d607bfd00f3840470c"
+    },
+    {
+      "source": "tmp/v3-impact-states/v3-webkit-clip-state.json",
+      "path": "docs/evidence/T11-4-2-3e/impact/v3-webkit-clip-state.json",
+      "sha256": "0e7e8278d475bcebabbb9b1f6b3a69cba7df0e3152340da67d9a0e0eaff65525"
+    },
+    {
+      "source": "tmp/v3-impact-states/v3-webkit-contact.json",
+      "path": "docs/evidence/T11-4-2-3e/impact/v3-webkit-contact.json",
+      "sha256": "e830fc63e3dfac964fbba9a366b2b0a09228dfe41bb89bd9011aabe8bbbb1c26"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-chromium-catalog-0-equipped.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-chromium-catalog-0-equipped.json",
+      "sha256": "5d340283727cb551604e5bf04d07708b5cf8ce6803435bd243e1d83a68fa2a46"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-chromium-catalog-1-equipped.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-chromium-catalog-1-equipped.json",
+      "sha256": "808cd382a22638193ae69dfa2636f76f9aed1a7a52cecac7618b79f969e95040"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-chromium-catalog-2-equipped.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-chromium-catalog-2-equipped.json",
+      "sha256": "bf67ece75c182d9bc954cca3374afc0a848587da0457c70fc0568a5493ef8c39"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-chromium-catalog-5-equipped.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-chromium-catalog-5-equipped.json",
+      "sha256": "21ff381ed5f8daeeb587f9c92cf5c3b9869dace4cfe1859f06716ab3f1295f2d"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-chromium-catalog-7-equipped.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-chromium-catalog-7-equipped.json",
+      "sha256": "034238d71dc6909fdea0b6e31732528a15d0ad7ae88b580ca950615f31e429c4"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-chromium-family-0-pixels.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-chromium-family-0-pixels.json",
+      "sha256": "cc9f1848c926af7e95f6ad35dcaa4b025e03182401761288b73b6ddd055ea774"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-chromium-family-0.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-chromium-family-0.json",
+      "sha256": "356b915b3adb41eff90b71c5fcc3610c5cb0c218086c8db5c6e1051f4c84d466"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-chromium-family-1-pixels.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-chromium-family-1-pixels.json",
+      "sha256": "4634b7f7698697349cef424c753a20f8c6925e9f99abe07ea62195cb36bab067"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-chromium-family-1.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-chromium-family-1.json",
+      "sha256": "0f328844d512caea5d0cb83df98933d249172d93e400b06d29f675b65a2edde1"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-chromium-family-2-pixels.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-chromium-family-2-pixels.json",
+      "sha256": "5058e69ae9db616d4b971eaeea7bb541d18bec258f2fcb4caacbf2823ff2efdf"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-chromium-family-2.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-chromium-family-2.json",
+      "sha256": "a76d6fdbf675df96a5031652b60a9634d60540488198a355cc1a8867bd3b89b6"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-chromium-three-props.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-chromium-three-props.json",
+      "sha256": "48fbc114be873a30d16e504aae1697d3e50cec4984cc4fc5eeea3b01f7c7f2e3"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-firefox-catalog-0-equipped.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-firefox-catalog-0-equipped.json",
+      "sha256": "13bb982fc69f987c3a28386b9bd749bf6577c1ca146b75be5111d231aa04e945"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-firefox-catalog-1-equipped.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-firefox-catalog-1-equipped.json",
+      "sha256": "1c8328a6a12499ffab30c0cbec3163355497f4f38f63c42a2e0eb361cbd40535"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-firefox-catalog-2-equipped.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-firefox-catalog-2-equipped.json",
+      "sha256": "c1fdc5c4bce368f9444414021aa92cd442a82b5cbc6110ec5b58edea4cc61854"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-firefox-catalog-5-equipped.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-firefox-catalog-5-equipped.json",
+      "sha256": "479e0e8799475d5e0fbffa310c0a3ee3a25836dadc6d18d1f7a5c85c3be5bea3"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-firefox-catalog-7-equipped.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-firefox-catalog-7-equipped.json",
+      "sha256": "9709668c662bf6c99f1448add10878f1d74fce1276319367fcb13cf8cb4286b8"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-firefox-family-0-pixels.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-firefox-family-0-pixels.json",
+      "sha256": "972cc3f80a961d1f891d736e15530595d9f426c6a2485763facb71bbe2dc479a"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-firefox-family-0.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-firefox-family-0.json",
+      "sha256": "1e4d63b6abc85ffe24c8cef4072ead54ebc0cff05772081011efa6eeefcbb5af"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-firefox-family-1-pixels.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-firefox-family-1-pixels.json",
+      "sha256": "2ffce612742f1340e3cdf47b0ae82befb8879bf3d95feddfa5d8a88c46ec0cf6"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-firefox-family-1.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-firefox-family-1.json",
+      "sha256": "cd68176e1f06de115a10b7e7a719eb479b8f1d13d6586068d10a9b0fcdcb9bd8"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-firefox-family-2-pixels.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-firefox-family-2-pixels.json",
+      "sha256": "b8b3413355a037d63c9c85869d1dfcea474ea67939d77b234693087a5ab4242c"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-firefox-family-2.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-firefox-family-2.json",
+      "sha256": "93bfb3eba306f3cd96098635307160d8801d74f5f0d1b7f2dac2ad3f801b3496"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-firefox-three-props.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-firefox-three-props.json",
+      "sha256": "21a2e27c2c1790cbab56e14accfaedded10dcadd721bfa24f4ad5bca83089544"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-webkit-catalog-0-equipped.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-webkit-catalog-0-equipped.json",
+      "sha256": "b67a1febcfb4e3b2cd0448805e12df0256ef9e870ba863a43ad21da5560a4dab"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-webkit-catalog-1-equipped.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-webkit-catalog-1-equipped.json",
+      "sha256": "73a2fe8151636b249e4b640af452a6e42e6f6f18441546dd1c8e38c4fbfe3151"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-webkit-catalog-2-equipped.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-webkit-catalog-2-equipped.json",
+      "sha256": "bbf622f74d6b9c259585893d8f671fded6995b37bc6eb6345481ca93e88180d8"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-webkit-catalog-5-equipped.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-webkit-catalog-5-equipped.json",
+      "sha256": "56834baa187f06921bb3763ac1b0df0298b9f33c3d4f7f6d2402073c716b8cb7"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-webkit-catalog-7-equipped.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-webkit-catalog-7-equipped.json",
+      "sha256": "dafd3eff3fb63269d0c4e89d1860bdb98dea5a8501183ead3b668576842ff234"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-webkit-family-0-pixels.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-webkit-family-0-pixels.json",
+      "sha256": "502431e722e1919f026c90560ab0307ea5fbd4e87e3a6a2d60fa18bb78c9c5bb"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-webkit-family-0.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-webkit-family-0.json",
+      "sha256": "330ae340442f6d6983bed5059cb2350d31c52da2d43582d0f90f4efae0554089"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-webkit-family-1-pixels.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-webkit-family-1-pixels.json",
+      "sha256": "c6462aca90d18501b7d3ffb7407cbbb7ff1696b3e8636b0fbccf991ef71546b8"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-webkit-family-1.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-webkit-family-1.json",
+      "sha256": "60becdf876ddaeb085e4fcf95c7061557f746b49555a3bc86f95221c20adf4eb"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-webkit-family-2-pixels.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-webkit-family-2-pixels.json",
+      "sha256": "b15f783ee5ffb870d1cfb7746dda89a49c294e49b84409b25fa945f7c21c7f29"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-webkit-family-2.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-webkit-family-2.json",
+      "sha256": "6d209aa5de9bb321a545a5517887fe8730bf1f95047ad44ff84e453f227a723e"
+    },
+    {
+      "source": "tmp/v3-visual-states/v3-webkit-three-props.json",
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-webkit-three-props.json",
+      "sha256": "1e09de81cecadf9ab3e6732e5239a408f1a271ba0b901f13448344a07be6eca9"
+    },
+    {
+      "source": "tmp/v3-hammer-states/v3-chromium-1280-geometry.json",
+      "path": "docs/evidence/T11-4-2-3e/hammer/v3-chromium-1280-geometry.json",
+      "sha256": "aadeeced856771b728eaaabc860d2915fd7825f2dd3ede792c83cfab159a124b"
+    },
+    {
+      "source": "tmp/v3-hammer-states/v3-chromium-1920-geometry.json",
+      "path": "docs/evidence/T11-4-2-3e/hammer/v3-chromium-1920-geometry.json",
+      "sha256": "87f2c76c8658f8d7dd0aeaf43027451d57b4deac4e0ab44b7e0f3ad38a909c08"
+    },
+    {
+      "source": "tmp/v3-hammer-states/v3-chromium-shapes.json",
+      "path": "docs/evidence/T11-4-2-3e/hammer/v3-chromium-shapes.json",
+      "sha256": "b1483d3f274b0284f7ebb1c9731ce44dd621f4323f53889eb112f2ccec3e9882"
+    },
+    {
+      "source": "tmp/v3-hammer-states/v3-chromium-slow.json",
+      "path": "docs/evidence/T11-4-2-3e/hammer/v3-chromium-slow.json",
+      "sha256": "4334c6ebbe95ed0fd3699694260df04ba8244b0fef5eae706e7a0babc2303925"
+    },
+    {
+      "source": "tmp/v3-hammer-states/v3-firefox-1280-geometry.json",
+      "path": "docs/evidence/T11-4-2-3e/hammer/v3-firefox-1280-geometry.json",
+      "sha256": "40947dc40a2ed85eccdde89742f3f4e6615bf4ba4c83b0b24a20db83c5e53d4e"
+    },
+    {
+      "source": "tmp/v3-hammer-states/v3-firefox-1920-geometry.json",
+      "path": "docs/evidence/T11-4-2-3e/hammer/v3-firefox-1920-geometry.json",
+      "sha256": "cd447e020bf3171888467df510ce81fc35b03b72b8276d9502d11ad18ef79cf7"
+    },
+    {
+      "source": "tmp/v3-hammer-states/v3-firefox-shapes.json",
+      "path": "docs/evidence/T11-4-2-3e/hammer/v3-firefox-shapes.json",
+      "sha256": "2292dc873bddf52ce5e0725b2e198e31206ee735bd745b1b003e953dc0b0cb45"
+    },
+    {
+      "source": "tmp/v3-hammer-states/v3-firefox-slow.json",
+      "path": "docs/evidence/T11-4-2-3e/hammer/v3-firefox-slow.json",
+      "sha256": "d61416e50eeeba1b9c75da0ae6391607825d2db5b5517f94555154b2efc345c4"
+    },
+    {
+      "source": "tmp/v3-hammer-states/v3-webkit-1280-geometry.json",
+      "path": "docs/evidence/T11-4-2-3e/hammer/v3-webkit-1280-geometry.json",
+      "sha256": "6f1d99d18d8991aed00b925d4c2286838c1ebbdbeca3f36bf0835dc85b974b97"
+    },
+    {
+      "source": "tmp/v3-hammer-states/v3-webkit-1920-geometry.json",
+      "path": "docs/evidence/T11-4-2-3e/hammer/v3-webkit-1920-geometry.json",
+      "sha256": "594a0c4391cde2909a28ad419e4e91c20b5c6a12701f1f2bfb5c900b6af79ae0"
+    },
+    {
+      "source": "tmp/v3-hammer-states/v3-webkit-shapes.json",
+      "path": "docs/evidence/T11-4-2-3e/hammer/v3-webkit-shapes.json",
+      "sha256": "efa067df4fbe33bff2be5b287af558909893e159ca30c092eaedf9ce86eeb7f7"
+    },
+    {
+      "source": "tmp/v3-hammer-states/v3-webkit-slow.json",
+      "path": "docs/evidence/T11-4-2-3e/hammer/v3-webkit-slow.json",
+      "sha256": "6db4696833f8e68fb6e602be3bf01232b2fd62a801ee0b40ca1c49f98bea8c5b"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-chromium-defeat.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-chromium-defeat.json",
+      "sha256": "83cfff6cce87cc91a16c366ac476b7932c04060d65a2a1aa767d65d7ffb42936"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-chromium-merchant-3.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-chromium-merchant-3.json",
+      "sha256": "b24b1dba323a00dc0f7ac0f4555baaa854006cbdab2873f76590d4a7d07ebeb4"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-chromium-merchant-6.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-chromium-merchant-6.json",
+      "sha256": "6d278c94cfba912342d4c574331bc0db2854c377b5f68f23894943612ab53bf6"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-chromium-merchant-9.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-chromium-merchant-9.json",
+      "sha256": "9c9ab64dde15193f5ae2826e97a429e97d2fa6abb9d7cd4d39851d8dd52bc303"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-chromium-mode-continuity.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-chromium-mode-continuity.json",
+      "sha256": "826fa9901b2098b0c6178890cda71761f185fc5a7b878539f10b0bf1b039c0e3"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-chromium-repaired.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-chromium-repaired.json",
+      "sha256": "127d506862d0af767fd6715127a7c2b1cf527877a3fec3371dd7782bff8b5331"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-chromium-supply-10.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-chromium-supply-10.json",
+      "sha256": "1b32b180bdc1042631bf3ffffec739b8efbd13d4217ee2fcebb24287f3193175"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-chromium-supply-4.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-chromium-supply-4.json",
+      "sha256": "08047b38ae732b9d3a01b845bad792b78356562ca549efa041967e5e01dbd66d"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-chromium-supply-7.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-chromium-supply-7.json",
+      "sha256": "ff6685ad9c7d9803ae44f47858186d08ec2ef01f3e61d9ff3e5242edb04e6b49"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-chromium-victory.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-chromium-victory.json",
+      "sha256": "8143458a1f4fe706cee711762ce265c97345fd777fd69aeda76cde0c1aa43d7b"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-firefox-defeat.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-firefox-defeat.json",
+      "sha256": "c731246916810a4fe0e4f4f62b9456ed2e26233f7ae79bb11edfbb4ad41c53e6"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-firefox-merchant-3.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-firefox-merchant-3.json",
+      "sha256": "54613e7efd75690668fd53473a6b7c5a39fb53f229d34d35844f32c40a11716f"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-firefox-merchant-6.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-firefox-merchant-6.json",
+      "sha256": "313ada133791e3d352c743a4202829db44a92bbee859560fe8cf67cb20125ed6"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-firefox-merchant-9.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-firefox-merchant-9.json",
+      "sha256": "fe1de7c2853000c0abed773bfab6edd5c14cb1ed850b0edb51fe809fa02a7920"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-firefox-mode-continuity.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-firefox-mode-continuity.json",
+      "sha256": "3542fdce3bc1f156c9e16863950e06031f3aa5c3d2931f58410fcc18557b28c3"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-firefox-repaired.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-firefox-repaired.json",
+      "sha256": "6943a125f5d2434537ac518f8b26d287d5b78a0ab79870a54beaa23fad941959"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-firefox-supply-10.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-firefox-supply-10.json",
+      "sha256": "0d077430592c4ab13e87533f2f0d57eeca6141a5795a88de1525ad643b6b1b7f"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-firefox-supply-4.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-firefox-supply-4.json",
+      "sha256": "da729a366a107f1983a280fac30a66d2d11822b1bd7c2219ec4789e91f19f9b1"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-firefox-supply-7.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-firefox-supply-7.json",
+      "sha256": "8db1967d0362945b599c2e3a6979f599337a7e2a85a015b594dd73c98fbd26cb"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-firefox-victory.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-firefox-victory.json",
+      "sha256": "5b09738ff4bb8fcf4f0a1a287d05df6439ee3e39c4da006ae44775922121f530"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-webkit-defeat.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-webkit-defeat.json",
+      "sha256": "beebcf1a0c88f455a633111201e15d86fabe96b9fcb2a8bac1c74d1d2d82dbb3"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-webkit-merchant-3.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-webkit-merchant-3.json",
+      "sha256": "08c21ca9d67f2a711bc52d69dce5dac1e2661b5d965f4980d4d137b57448eb2c"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-webkit-merchant-6.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-webkit-merchant-6.json",
+      "sha256": "fcc67f9f2318fb030bbf62427e389ae90207f5cf75b22294d02692686b2c7a0c"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-webkit-merchant-9.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-webkit-merchant-9.json",
+      "sha256": "0ae34805776db335415f153f74d78d1282d30f0050c3d2ee3239446c873ce46b"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-webkit-mode-continuity.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-webkit-mode-continuity.json",
+      "sha256": "8795bc4c0db0dc6b3f2c15bb6788d7e3d6bb1eca5068ebfb33d2855be357e623"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-webkit-repaired.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-webkit-repaired.json",
+      "sha256": "0b14aa94bdbcfb8ae44c8c1b1b89fce0c8bbb800b312c8db08050ef2945dd968"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-webkit-supply-10.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-webkit-supply-10.json",
+      "sha256": "41ed7716f971d4234951988b66add4b80110601fe01ea2ef2ed25a780ef3f912"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-webkit-supply-4.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-webkit-supply-4.json",
+      "sha256": "17b95b82099230f25fe15fee229cf738a4c4721a0ffa8683828ca7d14125fd32"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-webkit-supply-7.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-webkit-supply-7.json",
+      "sha256": "9ef64b715e421103cd4ec8b132bc4528088bd5d8e1e8e2287654f9875fd52f41"
+    },
+    {
+      "source": "tmp/v3-campaign-states/v3-webkit-victory.json",
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-webkit-victory.json",
+      "sha256": "c59eddefacdf0b9eb100ad362ae94cf5e06a77fd2ef3e401dfb9f46bd9eda125"
+    },
+    {
+      "source": "tmp/v3-scene-states/v3-chromium-defeat.json",
+      "path": "docs/evidence/T11-4-2-3e/scene/v3-chromium-defeat.json",
+      "sha256": "b63aeed53c0d89ebef16197e40836f09389bd8b69a314fbf91acce634a405524"
+    },
+    {
+      "source": "tmp/v3-scene-states/v3-chromium-receipt.json",
+      "path": "docs/evidence/T11-4-2-3e/scene/v3-chromium-receipt.json",
+      "sha256": "fea0c77cdbacbdbd2d4ded1f86aa7feea0afee2b5aa763cb205619190834af54"
+    },
+    {
+      "source": "tmp/v3-scene-states/v3-chromium-resize-focus.json",
+      "path": "docs/evidence/T11-4-2-3e/scene/v3-chromium-resize-focus.json",
+      "sha256": "f7a1b959413ce7918912e0e1a5ef033c2840743c26c02c547b8933d7adce0789"
+    },
+    {
+      "source": "tmp/v3-scene-states/v3-firefox-defeat.json",
+      "path": "docs/evidence/T11-4-2-3e/scene/v3-firefox-defeat.json",
+      "sha256": "1424ab2303863f1251c7f651798a67158b4e7d77ad792a02ab5f2ec73398e5a1"
+    },
+    {
+      "source": "tmp/v3-scene-states/v3-firefox-receipt.json",
+      "path": "docs/evidence/T11-4-2-3e/scene/v3-firefox-receipt.json",
+      "sha256": "97fb62fff685680a85d31b7171d94b659f7aa91e44595a27a8ef53ff03e5bf8b"
+    },
+    {
+      "source": "tmp/v3-scene-states/v3-firefox-resize-focus.json",
+      "path": "docs/evidence/T11-4-2-3e/scene/v3-firefox-resize-focus.json",
+      "sha256": "0261c68d7c36b5d5cbaa1d238f52b1ff4db0dc12183bea414f65b5af62a70b7f"
+    },
+    {
+      "source": "tmp/v3-scene-states/v3-webkit-defeat.json",
+      "path": "docs/evidence/T11-4-2-3e/scene/v3-webkit-defeat.json",
+      "sha256": "f13bc7745851014d3070d0c1ff86dc7410f4f2a14c1cec3c3ab7fa1b97aaa901"
+    },
+    {
+      "source": "tmp/v3-scene-states/v3-webkit-receipt.json",
+      "path": "docs/evidence/T11-4-2-3e/scene/v3-webkit-receipt.json",
+      "sha256": "4c6c95fb2d7bcc09daa8e2b3b65aebb68f705c4604ae2d122b15e480ecd48a5f"
+    },
+    {
+      "source": "tmp/v3-scene-states/v3-webkit-resize-focus.json",
+      "path": "docs/evidence/T11-4-2-3e/scene/v3-webkit-resize-focus.json",
+      "sha256": "fc39070a136b53a73c5f58b6fcda4e5bdc3c967e970c4b27bf349d39c4c8f93e"
+    }
+  ],
+  "videos": [
+    {
+      "source": "docs/evidence/T11-4-2-3e/timeout-attempt/results/v3-impact-record-actual-le-d01d8-t-injecting-any-game-result-v3-chromium/attachments/actual-left-click-effects-1973d360d188f3042ff64b501715a2453d51d6f9.webm",
+      "path": "docs/evidence/T11-4-2-3e/v3-chromium-impact.webm",
+      "sha256": "3b9236eb835410635a16f24e740b5dc6f425034e617599576443883f723e46eb",
+      "bytes": 2757380,
+      "remotePublished": false,
+      "localPath": "tmp/T11-4-2-3e/full-evidence/v3-chromium-impact.webm"
+    },
+    {
+      "source": "docs/evidence/T11-4-2-3e/timeout-attempt/results/v3-impact-record-actual-le-d01d8-t-injecting-any-game-result-v3-firefox/attachments/actual-left-click-effects-b9fe96a438c0f6a5f8906abeace10c49b2325596.webm",
+      "path": "docs/evidence/T11-4-2-3e/v3-firefox-impact.webm",
+      "sha256": "ef865079ecc810d493e0f5f26bc4f9a846ac896cc91f5b7a6c401122e17866e8",
+      "bytes": 2965177,
+      "remotePublished": false,
+      "localPath": "tmp/T11-4-2-3e/full-evidence/v3-firefox-impact.webm"
+    },
+    {
+      "source": "docs/evidence/T11-4-2-3e/timeout-attempt/results/v3-impact-record-actual-le-d01d8-t-injecting-any-game-result-v3-webkit/attachments/actual-left-click-effects-f53d451b018dc58b134e0f68271912846df95c84.webm",
+      "path": "docs/evidence/T11-4-2-3e/v3-webkit-impact.webm",
+      "sha256": "5a468e31f8f4767290c4b53d0b89454fb0ed357bb06a719dbacb99cf420f3829",
+      "bytes": 4487533,
+      "remotePublished": false,
+      "localPath": "tmp/T11-4-2-3e/full-evidence/v3-webkit-impact.webm"
+    }
+  ],
+  "excludedStaleFiles": [],
+  "publicationPolicy": "Large QA media remains locally preserved with hashes; game source/runtime art, reports, state replays and representative screenshots are published."
+}

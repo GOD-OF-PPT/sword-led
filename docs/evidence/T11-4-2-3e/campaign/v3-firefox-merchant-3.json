@@ -1,0 +1,308 @@
+{
+  "rulesVersion": "forge-v3",
+  "runId": "v3-1792408864337-3006073798",
+  "seed": "campaign-0",
+  "roundLimit": 12,
+  "revision": 28,
+  "phase": "workshop",
+  "round": 3,
+  "coins": 566,
+  "seals": 3,
+  "base": 40,
+  "blades": [
+    {
+      "id": "r1-1",
+      "suppliedRound": 1,
+      "status": "delivered",
+      "base": 40,
+      "value": 140,
+      "peak": 175,
+      "level": 4,
+      "cracked": true,
+      "hits": 5,
+      "charge": 5,
+      "successes": 4,
+      "finalizedRound": 1
+    },
+    {
+      "id": "r1-2",
+      "suppliedRound": 1,
+      "status": "delivered",
+      "base": 40,
+      "value": 40,
+      "peak": 40,
+      "level": 0,
+      "cracked": false,
+      "hits": 0,
+      "charge": 0,
+      "successes": 0,
+      "finalizedRound": 1
+    },
+    {
+      "id": "r1-3",
+      "suppliedRound": 1,
+      "status": "traded",
+      "base": 40,
+      "value": 121,
+      "peak": 121,
+      "level": 3,
+      "cracked": false,
+      "hits": 3,
+      "charge": 3,
+      "successes": 3,
+      "finalizedRound": 3
+    },
+    {
+      "id": "r2-1",
+      "suppliedRound": 2,
+      "status": "delivered",
+      "base": 40,
+      "value": 366,
+      "peak": 366,
+      "level": 6,
+      "cracked": false,
+      "hits": 6,
+      "charge": 6,
+      "successes": 6,
+      "finalizedRound": 2
+    },
+    {
+      "id": "r2-2",
+      "suppliedRound": 2,
+      "status": "recycled",
+      "base": 40,
+      "value": 121,
+      "peak": 121,
+      "level": 3,
+      "cracked": false,
+      "hits": 3,
+      "charge": 3,
+      "successes": 3,
+      "finalizedRound": 2
+    },
+    {
+      "id": "r2-3",
+      "suppliedRound": 2,
+      "status": "recycled",
+      "base": 40,
+      "value": 40,
+      "peak": 40,
+      "level": 0,
+      "cracked": false,
+      "hits": 0,
+      "charge": 0,
+      "successes": 0,
+      "finalizedRound": 2
+    },
+    {
+      "id": "r3-1",
+      "suppliedRound": 3,
+      "status": "active",
+      "base": 40,
+      "value": 40,
+      "peak": 40,
+      "level": 0,
+      "cracked": false,
+      "hits": 0,
+      "charge": 0,
+      "successes": 0,
+      "finalizedRound": null
+    },
+    {
+      "id": "r3-2",
+      "suppliedRound": 3,
+      "status": "active",
+      "base": 40,
+      "value": 40,
+      "peak": 40,
+      "level": 0,
+      "cracked": false,
+      "hits": 0,
+      "charge": 0,
+      "successes": 0,
+      "finalizedRound": null
+    },
+    {
+      "id": "r3-3",
+      "suppliedRound": 3,
+      "status": "active",
+      "base": 40,
+      "value": 40,
+      "peak": 40,
+      "level": 0,
+      "cracked": false,
+      "hits": 0,
+      "charge": 0,
+      "successes": 0,
+      "finalizedRound": null
+    }
+  ],
+  "reserveId": null,
+  "delivered": 0,
+  "traits": [
+    "ember",
+    "steady"
+  ],
+  "gift": "claimed",
+  "pardonUsed": false,
+  "pendingInheritance": 0,
+  "shop": [
+    "steady",
+    "inherit"
+  ],
+  "sold": [
+    "steady"
+  ],
+  "upgraded": false,
+  "repaired": false,
+  "history": [
+    {
+      "round": 1,
+      "quota": 180,
+      "delivered": 180,
+      "met": true,
+      "recovered": 0,
+      "recoveredIds": [],
+      "reserveId": "r1-3",
+      "sealsBefore": 3,
+      "sealsAfter": 3,
+      "protected": false
+    },
+    {
+      "round": 2,
+      "quota": 300,
+      "delivered": 366,
+      "met": true,
+      "recovered": 20,
+      "recoveredIds": [
+        "r2-2",
+        "r2-3"
+      ],
+      "reserveId": "r1-3",
+      "sealsBefore": 3,
+      "sealsAfter": 3,
+      "protected": false
+    }
+  ],
+  "rng": {
+    "forge": {
+      "state": 3773363387,
+      "draws": 17
+    },
+    "shop": {
+      "state": 2825944829,
+      "draws": 2
+    }
+  },
+  "journal": [
+    {
+      "type": "strike",
+      "pieceId": "r1-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r1-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r1-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r1-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r1-1"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r1-1"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r1-2"
+    },
+    {
+      "traitId": "ember",
+      "type": "claimGift"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r1-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r1-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r1-3"
+    },
+    {
+      "type": "reserve",
+      "pieceId": "r1-3"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r2-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r2-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r2-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r2-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r2-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r2-1"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r2-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r2-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r2-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r2-2"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "reserve",
+      "pieceId": "r1-3"
+    },
+    {
+      "pieceId": "r1-3",
+      "traitId": "steady",
+      "type": "buy"
+    }
+  ]
+}

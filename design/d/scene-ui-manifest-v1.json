@@ -1,0 +1,51 @@
+{
+  "assets": [
+    {
+      "name": "guild-scroll-v1",
+      "generator": "built-in image_gen.imagegen",
+      "generatedPath": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-def93a4c-85de-4df0-81a0-e7e162e9a6cd.png",
+      "source": "design/d/originals/guild-scroll-v1.png",
+      "sourceSha256": "d4cbe7906a2660c8b15efee470e5b4a201c4f7f7cc18bcec489f9e141ddd6031",
+      "runtime": "public/assets/d/guild-scroll-v1.webp",
+      "runtimeSha256": "695295f4d69d86c6ea79e884482eee3b0d6ab1643c61a2d9f4aa2d235086204e",
+      "bytes": 322924,
+      "width": 1024,
+      "height": 1536,
+      "alphaByteIdentical": true,
+      "prompt": "design/d/prompts/guild-scroll-v1.md",
+      "promptSha256": "1512ed696b287198617330d8b32520bfdcb99ecc2af6c9d51243c6f05251d347",
+      "references": [
+        {
+          "path": "design/d/reference-main-v2.png",
+          "sha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949",
+          "role": "style reference only"
+        }
+      ]
+    },
+    {
+      "name": "forge-pennant-v1",
+      "generator": "built-in image_gen.imagegen",
+      "generatedPath": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-1acd3614-b76c-4c72-a463-a558900048e9.png",
+      "source": "design/d/originals/forge-pennant-v1.png",
+      "sourceSha256": "aaebedc84af94aa29a7445976d5c6b0313f02d85f827564bf2db08811d7930dd",
+      "runtime": "public/assets/d/forge-pennant-v1.webp",
+      "runtimeSha256": "5acb97d4d6eed7d50d2975e1d63e03bf5023f9cb4a8db8568ff8fa9660854a0a",
+      "bytes": 251572,
+      "width": 2087,
+      "height": 753,
+      "alphaByteIdentical": true,
+      "prompt": "design/d/prompts/forge-pennant-v1.md",
+      "promptSha256": "a5fb8d722bce633cd62779adeaca5c591fee52cb2eac29c11b5179923259d76c",
+      "references": [
+        {
+          "path": "design/d/reference-main-v2.png",
+          "sha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949",
+          "role": "style reference only"
+        }
+      ]
+    }
+  ],
+  "runtimeBytes": 574496,
+  "ruleChanges": false,
+  "note": "Original PNG pixels retained; runtime RGB WebP encoding only, alpha unchanged. No bitmap cutting/masking/repainting outside imagegen."
+}

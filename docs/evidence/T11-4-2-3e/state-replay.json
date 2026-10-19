@@ -1,0 +1,817 @@
+{
+  "sdk": "dist/sword-led-v3.js",
+  "actualUIObjects": 99,
+  "previewObjects": 2,
+  "objects": 101,
+  "scope": "Each actual object full-journal replayed and deep-compared; not distinct games. Generator fixtures / old before-state / raw reports are excluded.",
+  "rows": [
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-chromium-broken.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 13
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-chromium-cracked.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 12
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-chromium-experience-end.json",
+      "pointer": "",
+      "phase": "experienceComplete",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 27
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-chromium-keyboard-end.json",
+      "pointer": "",
+      "phase": "experienceComplete",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 22
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-chromium-recovered.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 0
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-chromium-reload.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 3
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-chromium-round-1.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 11
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-chromium-round-2.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 2,
+      "roundLimit": 3,
+      "commands": 16
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-chromium-round-3.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 26
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-firefox-broken.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 13
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-firefox-cracked.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 12
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-firefox-experience-end.json",
+      "pointer": "",
+      "phase": "experienceComplete",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 27
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-firefox-keyboard-end.json",
+      "pointer": "",
+      "phase": "experienceComplete",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 22
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-firefox-recovered.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 0
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-firefox-reload.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 3
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-firefox-round-1.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 11
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-firefox-round-2.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 2,
+      "roundLimit": 3,
+      "commands": 16
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-firefox-round-3.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 26
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-webkit-broken.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 13
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-webkit-cracked.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 12
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-webkit-experience-end.json",
+      "pointer": "",
+      "phase": "experienceComplete",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 27
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-webkit-keyboard-end.json",
+      "pointer": "",
+      "phase": "experienceComplete",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 22
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-webkit-recovered.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 0
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-webkit-reload.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 3
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-webkit-round-1.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 11
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-webkit-round-2.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 2,
+      "roundLimit": 3,
+      "commands": 16
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/ui/v3-webkit-round-3.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 26
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/impact/v3-chromium-clip-state.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 7
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/impact/v3-chromium-contact.json",
+      "pointer": "/state",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 1
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/impact/v3-firefox-clip-state.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 7
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/impact/v3-firefox-contact.json",
+      "pointer": "/state",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 1
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/impact/v3-webkit-clip-state.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 7
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/impact/v3-webkit-contact.json",
+      "pointer": "/state",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 1
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-chromium-catalog-0-equipped.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 8
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-chromium-catalog-1-equipped.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 8
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-chromium-catalog-2-equipped.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 5
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-chromium-catalog-5-equipped.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 8
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-chromium-catalog-7-equipped.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 5
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-chromium-family-0.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 7
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-chromium-family-1.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 7
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-chromium-family-2.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 7
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-chromium-three-props.json",
+      "pointer": "/state",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 12
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-firefox-catalog-0-equipped.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 8
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-firefox-catalog-1-equipped.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 8
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-firefox-catalog-2-equipped.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 5
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-firefox-catalog-5-equipped.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 8
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-firefox-catalog-7-equipped.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 5
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-firefox-family-0.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 7
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-firefox-family-1.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 7
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-firefox-family-2.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 7
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-firefox-three-props.json",
+      "pointer": "/state",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 12
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-webkit-catalog-0-equipped.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 8
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-webkit-catalog-1-equipped.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 8
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-webkit-catalog-2-equipped.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 5
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-webkit-catalog-5-equipped.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 8
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-webkit-catalog-7-equipped.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 5
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-webkit-family-0.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 7
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-webkit-family-1.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 7
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-webkit-family-2.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 7
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/visual/v3-webkit-three-props.json",
+      "pointer": "/state",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 12
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-chromium-defeat.json",
+      "pointer": "",
+      "phase": "defeat",
+      "round": 3,
+      "roundLimit": 12,
+      "commands": 5
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-chromium-merchant-3.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 12,
+      "commands": 28
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-chromium-merchant-6.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 6,
+      "roundLimit": 12,
+      "commands": 73
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-chromium-merchant-9.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 9,
+      "roundLimit": 12,
+      "commands": 120
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-chromium-mode-continuity.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 12,
+      "commands": 0
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-chromium-repaired.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 12,
+      "commands": 32
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-chromium-supply-10.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 10,
+      "roundLimit": 12,
+      "commands": 138
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-chromium-supply-4.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 4,
+      "roundLimit": 12,
+      "commands": 46
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-chromium-supply-7.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 7,
+      "roundLimit": 12,
+      "commands": 91
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-chromium-victory.json",
+      "pointer": "",
+      "phase": "victory",
+      "round": 12,
+      "roundLimit": 12,
+      "commands": 188
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-firefox-defeat.json",
+      "pointer": "",
+      "phase": "defeat",
+      "round": 3,
+      "roundLimit": 12,
+      "commands": 5
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-firefox-merchant-3.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 12,
+      "commands": 28
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-firefox-merchant-6.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 6,
+      "roundLimit": 12,
+      "commands": 73
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-firefox-merchant-9.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 9,
+      "roundLimit": 12,
+      "commands": 120
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-firefox-mode-continuity.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 12,
+      "commands": 0
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-firefox-repaired.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 12,
+      "commands": 32
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-firefox-supply-10.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 10,
+      "roundLimit": 12,
+      "commands": 138
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-firefox-supply-4.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 4,
+      "roundLimit": 12,
+      "commands": 46
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-firefox-supply-7.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 7,
+      "roundLimit": 12,
+      "commands": 91
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-firefox-victory.json",
+      "pointer": "",
+      "phase": "victory",
+      "round": 12,
+      "roundLimit": 12,
+      "commands": 188
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-webkit-defeat.json",
+      "pointer": "",
+      "phase": "defeat",
+      "round": 3,
+      "roundLimit": 12,
+      "commands": 5
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-webkit-merchant-3.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 12,
+      "commands": 28
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-webkit-merchant-6.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 6,
+      "roundLimit": 12,
+      "commands": 73
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-webkit-merchant-9.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 9,
+      "roundLimit": 12,
+      "commands": 120
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-webkit-mode-continuity.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 12,
+      "commands": 0
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-webkit-repaired.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 3,
+      "roundLimit": 12,
+      "commands": 32
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-webkit-supply-10.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 10,
+      "roundLimit": 12,
+      "commands": 138
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-webkit-supply-4.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 4,
+      "roundLimit": 12,
+      "commands": 46
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-webkit-supply-7.json",
+      "pointer": "",
+      "phase": "workshop",
+      "round": 7,
+      "roundLimit": 12,
+      "commands": 91
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/campaign/v3-webkit-victory.json",
+      "pointer": "",
+      "phase": "victory",
+      "round": 12,
+      "roundLimit": 12,
+      "commands": 188
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/scene/v3-chromium-defeat.json",
+      "pointer": "",
+      "phase": "defeat",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 5
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/scene/v3-chromium-receipt.json",
+      "pointer": "",
+      "phase": "summary",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 5
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/scene/v3-chromium-resize-focus.json",
+      "pointer": "/state",
+      "phase": "workshop",
+      "round": 2,
+      "roundLimit": 3,
+      "commands": 4
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/scene/v3-firefox-defeat.json",
+      "pointer": "",
+      "phase": "defeat",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 5
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/scene/v3-firefox-receipt.json",
+      "pointer": "",
+      "phase": "summary",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 5
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/scene/v3-firefox-resize-focus.json",
+      "pointer": "/state",
+      "phase": "workshop",
+      "round": 2,
+      "roundLimit": 3,
+      "commands": 4
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/scene/v3-webkit-defeat.json",
+      "pointer": "",
+      "phase": "defeat",
+      "round": 3,
+      "roundLimit": 3,
+      "commands": 5
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/scene/v3-webkit-receipt.json",
+      "pointer": "",
+      "phase": "summary",
+      "round": 1,
+      "roundLimit": 3,
+      "commands": 5
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/scene/v3-webkit-resize-focus.json",
+      "pointer": "/state",
+      "phase": "workshop",
+      "round": 2,
+      "roundLimit": 3,
+      "commands": 4
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/preview-smoke.json",
+      "pointer": "/firstStrike",
+      "phase": "workshop",
+      "round": 1,
+      "roundLimit": 12,
+      "commands": 1
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3e/preview-smoke.json",
+      "pointer": "/state",
+      "phase": "workshop",
+      "round": 2,
+      "roundLimit": 12,
+      "commands": 7
+    }
+  ]
+}
