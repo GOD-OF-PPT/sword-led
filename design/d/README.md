@@ -31,3 +31,9 @@
 菜单、免费手艺、两单择一、工坊、淬火/交货/回收确认、试剑、作品簿、三件收据、商人/满槽替换/修补、日终历史、胜负/重开和存档异常出口使用同一套视觉。练习炉是私有的新规则状态，经真实命令形成锻纹、淬火与交货，不接正式存储会话。试剑/作品簿读真实快照，不回收已售剑、不重复奖励。
 
 完整范围/真实构建截图与验收结论将在本轮报告归档；广跨浏览器/组合故障/性能与真人乐趣仍由T11.4/T12核验，不能用图稿或规则批准替代。
+
+本次内置imagegen原件与完整实际提示词：
+
+- [工坊原PNG](originals/forge-backdrop-v2.png)、[工坊完整prompt](prompts/forge-backdrop-v2.md)。
+- [委托人物原PNG](originals/commission-guard-v2.png)、[人物完整prompt](prompts/commission-guard-v2.md)。
+- [当前真实界面与验证](../../docs/reviews/R3-8-art-and-reference.md)。
