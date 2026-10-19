@@ -1,5 +1,7 @@
 # 代码架构与玩法内核约定
 
+> 当前默认版本为forge-v3/schema3，见[v0.4实施提案](v0.4-gameplay-proposal.md)与[完整契约接线](v0.4-campaign.md)。`core-v3`的createRun/applyCommand/validateRun及只读规则投影是唯一计价/随机来源；`application/v3-persistence.ts`接已有generic会话、独立主备key和共用writer锁。`presentation-v3/app.ts`管理意图与页面，`campaign.ts`只读手艺状态/契约统计，appearance/blade/art负责兵器道具，impact/hammer/surface负责接触表现。菜单长度仅为草稿，新建后以正式保存的roundLimit为准；URL不改旧档。
+
 > 版本范围：本文保留v1分层。v2新增core-v2与独立入口，并从既有存储/会话提取类型化规则适配口，详见[v0.3核心说明](v0.3-core-and-preview.md)。原版解释器与旧档继续保留。
 
 版本：v0.2，2026-10-18。状态：用户已确认方案并选择B；纯规则/存档/R2/B美术、[T08工坊](reviews/T08-workshop-validation.md)、[T09经营/终局](contract-flow.md)及[T10设置/音效/恢复](settings-and-audio.md)已接线；实际结果见对应报告，T11–T12继续更广验收与最大审查。玩法依据：[游戏设计](game-design.md)；交付顺序：[实施方案](implementation-plan.md)。

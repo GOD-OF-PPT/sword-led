@@ -1,5 +1,5 @@
 import type {V3Session} from '../application/v3-persistence.js';
-import type {Action,DomainEvent,Trait} from '../core-v3/index.js';
+import type {Action,DomainEvent,Trait,RunState} from '../core-v3/index.js';
 import {TRAITS,quotaFor,strikeOdds,atCap,recovery,settlementPreview,merchantPresent,upgradePrice} from '../core-v3/index.js';
 import {bindDirectStrikeInput} from '../platform/direct-strike-input.js';
 import type {StrikePoint} from '../platform/direct-strike-input.js';
@@ -12,11 +12,13 @@ import {bladeAppearance} from './appearance.js';
 import {bladeContact} from './surface.js';
 import {paintBlade} from './blade.js';
 import {createImpactFeedback,IMPACT_SOUNDS} from './impact.js';
+import {campaignTotals,contractName,traitStatus} from './campaign.js';
+import type {ContractLength} from './campaign.js';
 
 const TEMPLATE=`<div class="v3-app">
-<header class="v3-top"><div class="v3-brand">锤下求生<small>行脚灯炉 · v0.4 锻锤修正版 · 前三轮</small></div><div class="v3-contract"><b id="v3-round"></b><span id="v3-target"></span><progress id="v3-progress" aria-label="本轮交差进度"></progress></div><div id="v3-wallet"></div><button id="v3-pause">暂停</button><button id="v3-menu">契约</button></header>
+<header class="v3-top"><div class="v3-brand">锤下求生<small id="v3-edition">行脚灯炉 · v0.4 十二轮契约版</small></div><div class="v3-contract"><b id="v3-round"></b><span id="v3-target"></span><progress id="v3-progress" aria-label="本轮交差进度"></progress></div><div id="v3-wallet"></div><button id="v3-pause">暂停</button><button id="v3-menu">契约</button></header>
 <section id="v3-save" class="v3-save" aria-label="保存状态"><span id="v3-save-text" role="status"></span><button id="v3-retry">重试保存</button><button id="v3-reread">读取最新</button><button id="v3-recover">恢复备份</button><button id="v3-memory">保留进度，不保存续玩</button><button id="v3-export">导出进度</button></section>
-<main id="v3-workshop" class="v3-workshop"><aside class="v3-rack"><h2>今日三柄</h2><div id="v3-inventory"></div><section class="v3-reserve"><h3>留给明天</h3><div id="v3-reserve-slot"></div></section></aside>
+<main id="v3-workshop" class="v3-workshop"><aside class="v3-rack"><h2>今日三柄</h2><div id="v3-inventory"></div><section class="v3-reserve"><h3 id="v3-reserve-title">留给明天</h3><div id="v3-reserve-slot"></div></section></aside>
 <section class="v3-anvil"><div class="v3-focus"><span id="v3-blade-name"></span><strong id="v3-value"></strong><span id="v3-value-hint">当前身价 · 收手即可交差</span></div><div id="v3-scene" class="v3-scene"><canvas id="v3-blade" role="img" aria-label="当前剑的造型与裂纹"></canvas><button id="v3-hit" type="button" aria-label="铁砧 · 鼠标左键直接落锤，无需瞄准或卡时机"><span class="hit-hint">鼠标左键 · 直接敲击剑身</span></button><div class="v3-tool-layer" aria-hidden="true"><div id="v3-hammer"><img src="/assets/d/hammer-forge-v2.webp" alt=""></div></div><div id="v3-impact-glow" aria-hidden="true"></div><div id="v3-impact-ring" aria-hidden="true"></div><div id="v3-reticle" aria-hidden="true"></div><div id="v3-sparks" aria-hidden="true"></div><div id="v3-steam" aria-hidden="true"></div><div id="v3-float" aria-live="off"></div><div id="v3-impact-badge" aria-hidden="true"></div></div><div id="v3-result" class="v3-result" role="status" aria-live="polite">第一柄已就位。鼠标左键点剑身，即刻落锤。</div><div class="v3-risk"><b id="v3-risk"></b><span id="v3-risk-after"></span></div><div class="v3-charge"><span>锤势</span><div id="v3-pips"></div><span id="v3-charge-text"></span></div>
 <div class="v3-actions"><button id="v3-strike" class="v3-primary">落锤<small>点击 / 空格松开</small></button><button id="v3-deliver" class="v3-gold">交差</button><button id="v3-store">挂剑</button></div><div class="v3-minor"><button id="v3-scrap">回收</button><button id="v3-settle">收工</button><details><summary>看懂这一锤</summary><p>成功涨价45%，大成涨价120%。前三锤无裂损，之后风险逐渐升高。首次裂损掉价20%，再次裂损才会断剑。每六记存活锤，换来一次安全连锻。交差计目标与金币，回收只给底价的四分之一。</p></details></div></section>
 <aside class="v3-order"><h2>今日交差</h2><img class="v3-client" src="/assets/d/commission-guard-v2.webp" alt="等候成品的行客"><strong id="v3-deficit"></strong><p id="v3-advice"></p><section id="v3-gift"></section><section><h3>随身手艺</h3><div id="v3-traits"></div></section><button id="v3-shop">行脚商人 · 已到场</button><p class="v3-caption">一柄交差，一柄留后手。<br>再锤一次，还是就此收手？</p></aside></main>
@@ -25,6 +27,14 @@ const TEMPLATE=`<div class="v3-app">
 <dialog id="v3-dialog" aria-labelledby="v3-dialog-title"><h2 id="v3-dialog-title"></h2><div id="v3-dialog-body"></div><div id="v3-dialog-actions"></div></dialog></div>`;
 const ERROR:Record<string,string>={readonly:'另一窗口正在保存。关闭占用页面后读取最新，或明确选择不保存试玩。',locks_unsupported:'浏览器无法取得保存锁，可不保存试玩。',save_conflict:'存档已被另一窗口更新。请导出当前进度，再明确读取最新或不保存续玩。',save_unavailable:'当前主档不可读取；可恢复备份、导出或不保存试玩。',insufficient_coins:'金币不足，这次没有扣款。',invalid_replacement:'请先选择换下哪门手艺。',at_cap:'这柄剑已封顶，可以交差或留到明天。',record_limit:'操作记录已到安全上限，仍可交差、回收和收工。',confirmation_required:'替换进度需要明确确认。',stale_revision:'状态已变化，请重新操作。',stale_session:'页面身份已更新，请重新操作。'};
 const fmt=(n:number)=>n.toLocaleString('zh-CN');
+function ledgerFor(s:RunState){
+ const ledger=element('details',undefined,'v3-ledger');ledger.id='v3-ledger';ledger.append(element('summary',`查看本局 ${s.history.length} 轮账本`));
+ const table=element('table'),head=element('thead'),header=element('tr'),rows=element('tbody');table.append(element('caption','逐轮交差与印记'));
+ for(const label of ['轮次','交差 / 目标','结果','印记','回收金币','挂剑']){const th=element('th',label);th.scope='col';header.append(th);}head.append(header);table.append(head,rows);
+ for(const h of s.history){const tr=element('tr');for(const v of [`第${h.round}轮`,`${fmt(h.delivered)} / ${fmt(h.quota)}`,h.met?'达标':h.protected?'受保护':'失约',String(h.sealsAfter),fmt(h.recovered),h.reserveId??'—'])tr.append(element('td',v));rows.append(tr);}ledger.append(table);
+ const pieces=element('details',undefined,'v3-piece-ledger');pieces.append(element('summary',`本局 ${s.blades.length} 柄兵器去向`));const list=element('ol');
+ for(const b of s.blades){const label=({active:'挂剑保留',delivered:'交差',recycled:'回收',broken:'断剑回收',traded:'换手艺'}as const)[b.status];list.append(element('li',`${b.id} ${bladeAppearance(b).name} · ${label} · ${b.status==='broken'?`曾达${fmt(b.peak)}`:`身价${fmt(b.value)}`}`));}pieces.append(list);ledger.append(pieces);return ledger;
+}
 export function mountV3(root:HTMLElement,port:V3Session){
   root.innerHTML=TEMPLATE;
   enableKeyboardNavigation(root);
@@ -36,6 +46,7 @@ export function mountV3(root:HTMLElement,port:V3Session){
   const dialog=find<HTMLDialogElement>('v3-dialog'),canvas=find<HTMLCanvasElement>('v3-blade');
   const preferences=createPreferences(()=>localStorage),audio=createForgeAudio(undefined,IMPACT_SOUNDS),motion=matchMedia('(prefers-reduced-motion: reduce)');
   let snapshot=port.getSnapshot(),prefs=preferences.getSnapshot(),selectedId='',epoch=0,disposed=false,paused=false,busy=false,menu=false,seedDraft='行脚新炉';
+  let modeDraft:ContractLength=new URLSearchParams(location.search).get('mode')==='3'?3:12;
   let input:ReturnType<typeof bindDirectStrikeInput>|null=null,modal=false,origin:HTMLElement|null=null,frameKey='',screenKey='',effectToken=0,lastStrikePoint:StrikePoint|null=null;
   const timers=new Set<ReturnType<typeof setTimeout>>(),animations=new Set<Animation>();
   const note=(s:string)=>text('v3-note',s),current=()=>snapshot.state?.blades.find(b=>b.id===selectedId)??null;
@@ -77,7 +88,7 @@ export function mountV3(root:HTMLElement,port:V3Session){
       text('v3-result',`已交差 ${fmt(delivered.amount)} · 目标和金币同时增加。`);audio.acceptedCue('delivery');find('v3-steam').classList.add('show');animate(find('v3-steam'),[{opacity:0,transform:'translateY(12px)'},{opacity:.8,offset:.3},{opacity:0,transform:'translateY(-50px)'}],500);chooseNext();later(()=>find('v3-steam').classList.remove('show'),500);
     }else if(events.some(e=>e.type==='Traded'||e.type==='Trait')){audio.acceptedCue('purchase');text('v3-result','手艺已带上，下一锤会按它的实际效果结算。');chooseNext();}
     else if(events.some(e=>e.type==='Recycled')){audio.acceptedCue('recycle');chooseNext();text('v3-result','已回收。这笔金币不计交差。');}
-    else if(events.some(e=>e.type==='Settled')){audio.acceptedCue(snapshot.state?.history.at(-1)?.met?'met':'missed');}
+    else if(events.some(e=>e.type==='Settled')){const s=snapshot.state;audio.acceptedCue(s?.phase==='victory'?'victory':s?.phase==='defeat'?'defeat':s?.history.at(-1)?.met?'met':'missed');}
     render();
   }
   function send(action:Action){
@@ -96,22 +107,24 @@ export function mountV3(root:HTMLElement,port:V3Session){
   function shop(){const s=snapshot.state;if(!s||!merchantPresent(s))return;const body=element('div',undefined,'v3-shop-grid');
     body.append(element('p','手艺用当前选中的剑交换。金币用来升级未来配给或修补印记。'));
     for(const id of s.shop){const card=element('article');card.dataset.trait=id;card.append(traitArt(id),element('h3',TRAITS[id].name),element('p',TRAITS[id].text));const owned=s.traits.includes(id)||s.sold.includes(id),b=current(),buy=element('button',owned?'已持有 / 已换取':`用当前剑交换 · 放弃${fmt(b?.value??0)}`);buy.disabled=owned||!b||b.status!=='active'||b.id===s.reserveId;buy.onclick=()=>{closeModal();acquire(id,true);};card.append(buy);body.append(card);}
-    const upgrade=element('button',s.upgraded?'炉具本次已升级':`升级炉具 · ${fmt(upgradePrice(s.round))}金币`);upgrade.disabled=s.upgraded||s.coins<upgradePrice(s.round);upgrade.onclick=()=>{closeModal();confirm('提高未来配给底价',`支付${upgradePrice(s.round)}金币；从下一轮起底价翻倍。当前三柄不改变，前三轮体验本身不会发第4轮配给。`,()=>send({type:'upgrade'}));};body.append(upgrade);
+    body.append(element('p',`下轮配给底价 ${fmt(s.base)}；本轮剑的底价保持原样。${s.round===s.roundLimit?' 本轮结束即结束本次练手，不再发配给。':''}`));
+    const upgrade=element('button',s.upgraded?'炉具本次已升级':`升级炉具 · ${fmt(upgradePrice(s.round))}金币`);upgrade.disabled=s.upgraded||s.coins<upgradePrice(s.round);upgrade.onclick=()=>{closeModal();confirm('提高未来配给底价',`支付${upgradePrice(s.round)}金币；下轮配给底价 ${fmt(s.base)}→${fmt(s.base*2)}。当前三柄不改变。${s.roundLimit===3?'三轮练手本身不会发第4轮配给。':''}`,()=>send({type:'upgrade'}));};body.append(upgrade);
     if(s.seals<3){const repair=element('button',`补一枚印记 · ${Math.ceil(quotaFor(s.round)/2)}金币`);repair.disabled=s.repaired||s.coins<Math.ceil(quotaFor(s.round)/2);repair.onclick=()=>{closeModal();confirm('修补契约印记',`支付${Math.ceil(quotaFor(s.round)/2)}金币，本轮商人最多修补一次。`,()=>send({type:'repair'}));};body.append(repair);}
     openModal('行脚商人的摊子',body,[{label:'回铁砧',run:closeModal}]);
   }
   function settle(){const s=snapshot.state;if(!s||s.phase!=='workshop')return;const p=settlementPreview(s),body=element('div');body.append(element('p',`交差 ${fmt(s.delivered)} / ${fmt(quotaFor(s.round))}。${p.met?'已经达标。':p.protected?'护炉契将保护这次失约。':`尚未达标，将扣一枚印记（${s.seals}→${p.sealsAfter}）。`}`));
     for(const b of p.remaining)body.append(element('p',`${b.id} · 当前身价${fmt(b.value)} → 按底价回收${recovery(b)}金币，不计交差。`));
-    body.append(element('p',s.reserveId?`挂剑${s.reserveId}原样保留，其余回收共${p.recovered}金币。`:`没有挂剑保留，回收共${p.recovered}金币。`));confirm('确认收工',body,()=>send({type:'settle'}));}
-  function start(confirmed=false,memory=false){const seed=seedDraft;const input={runId:`v3-${Date.now()}-${crypto.getRandomValues(new Uint32Array(1))[0]}`,seed,roundLimit:3 as const},decision={generation:snapshot.generation,confirmed};
+    body.append(element('p',s.reserveId?`挂剑${s.reserveId}原样保留，其余回收共${p.recovered}金币。${s.round===s.roundLimit?'这柄剑会作为本局收官留剑保留，不再发下一轮配给。':''}`:`没有挂剑保留，回收共${p.recovered}金币。`));confirm('确认收工',body,()=>send({type:'settle'}));}
+  function start(confirmed=false,memory=false){const seed=seedDraft;const input={runId:`v3-${Date.now()}-${crypto.getRandomValues(new Uint32Array(1))[0]}`,seed,roundLimit:modeDraft},decision={generation:snapshot.generation,confirmed};
     const result=memory?port.useMemory(input,decision):port.startNewGame(input,decision);
-    if(!result.ok&&result.error==='confirmation_required'){confirm('开始新契约',`将替换当前v0.4进度；可以先导出。旧v0.2/v0.3档保留。`,()=>start(true,memory));return;}
+    if(!result.ok&&result.error==='confirmation_required'){confirm('开始新契约',`将开启${contractName(modeDraft)}并替换当前v0.4进度；可以先导出。旧v0.2/v0.3档保留。`,()=>start(true,memory));return;}
     if(!result.ok){note(ERROR[result.error]??'无法开始，请检查种子或保存状态。');return;}menu=false;paused=false;chooseNext();epoch++;render();text('v3-result','第一柄已就位。鼠标左键点剑身，即刻落锤。');button('v3-strike').focus();}
   function screen(title:string,body:HTMLElement,actions:HTMLButtonElement[]){const key=JSON.stringify([title,menu,paused,snapshot.mode,snapshot.active,snapshot.generation,snapshot.conflict,snapshot.load?.main.status,snapshot.state?.runId,snapshot.state?.revision]);if(key===screenKey)return;screenKey=key;text('v3-screen-title',title);find('v3-screen-body').replaceChildren(body);find('v3-screen-actions').replaceChildren(...actions);}
   function actionButton(label:string,run:()=>void){const b=element('button',label);b.onclick=run;return b;}
   function render(){
     if(disposed)return;const s=snapshot.state,b=current();syncAudio();
-    text('v3-round',s?`第 ${s.round} 轮 / 前三轮体验`:'新炉 · 前三轮体验');text('v3-target',s?`交差 ${fmt(s.delivered)} / ${fmt(quotaFor(s.round))}`:'十二轮契约 · 本版先体验前三轮');
+    text('v3-edition',`行脚灯炉 · v0.4 ${s?.roundLimit===3?'三轮练手':'十二轮契约版'}`);
+    text('v3-round',s?`第 ${s.round} / ${s.roundLimit} 轮${s.roundLimit===3?' · 练手':''}`:'新炉 · 十二轮契约');text('v3-target',s?`交差 ${fmt(s.delivered)} / ${fmt(quotaFor(s.round))}`:'三次商人 · 十二轮契约');
     const progress=find<HTMLProgressElement>('v3-progress');progress.max=s?quotaFor(s.round):180;progress.value=s?.delivered??0;
     text('v3-wallet',s?`金币 ${fmt(s.coins)}　印记 ${'●'.repeat(s.seals)}${'○'.repeat(3-s.seals)}`:'金币 0　印记 ●●●');
     const main=snapshot.load?.main,backup=snapshot.load?.backup;
@@ -122,23 +135,24 @@ export function mountV3(root:HTMLElement,port:V3Session){
     if(!work){const body=element('div');if(!s||menu){
       body.append(element('p','点击落锤就会增值。看到裂纹后，可以交差，也可以赌下一次连锻。'));
       const label=element('label','契约种子'),seed=element('input');seed.id='v3-seed';seed.maxLength=64;seed.value=seedDraft;seed.oninput=()=>{seedDraft=seed.value;};label.append(seed);body.append(label);
+      const modeLabel=element('label','契约长度'),mode=element('select');mode.id='v3-mode';for(const length of [12,3]as const){const option=element('option',contractName(length));option.value=String(length);mode.append(option);}mode.value=String(modeDraft);const hint=element('p',modeDraft===12?'完成十二轮；商人在第3、6、9轮到场。':'第三轮结束即练手结束，不计十二轮通关。');mode.onchange=()=>{modeDraft=mode.value==='3'?3:12;hint.textContent=modeDraft===12?'完成十二轮；商人在第3、6、9轮到场。':'第三轮结束即练手结束，不计十二轮通关。';};modeLabel.append(mode);body.append(modeLabel,hint);
       const actions:HTMLButtonElement[]=[];if(s)actions.push(actionButton('返回当前进度',()=>{menu=false;render();}));
       const create=actionButton('开一炉新契约',()=>start());create.disabled=!snapshot.active||snapshot.mode!=='writer'||main?.status==='unavailable';actions.push(create,actionButton('不保存开一炉',()=>start(false,true)));
       const links=element('p');for(const [href,label] of [['/v2.html','继续旧版D细锻'],['/legacy.html','继续B版旧契约']]){const a=element('a',label);a.href=href??'';links.append(a,document.createTextNode('　'));}body.append(links);screen('锤下求生 · 行脚灯炉',body,actions);
     }else if(paused){body.append(element('p','准备中的锤击已取消，已经接受的身价和风险保留。'));screen('炉火暂歇',body,[actionButton('继续锻造',()=>togglePause())]);}
-    else{const last=s.history.at(-1);body.append(element('p',last?`第${last.round}轮：交差${fmt(last.delivered)}/${fmt(last.quota)}，${last.met?'达标':last.protected?'护炉契保护':'未达标'}；印记${last.sealsBefore}→${last.sealsAfter}。`:'这轮结束了。'));
-      if(last){body.append(element('p',`回收${last.recovered}金币；${last.reserveId?`挂剑${last.reserveId}保留`:'未留挂剑'}。`));}
-      const table=element('table');for(const h of s.history){const tr=element('tr');for(const v of [`第${h.round}轮`,`${fmt(h.delivered)} / ${fmt(h.quota)}`,h.met?'达标':h.protected?'受保护':'失约'])tr.append(element('td',v));table.append(tr);}body.append(table);
-      if(s.phase==='summary')screen('本轮收据',body,[actionButton('领取下一轮三柄剑',()=>{if(send({type:'advance'})){chooseNext();text('v3-result','新配给已就位。继续锤，还是先用一柄投资手艺？');render();button('v3-strike').focus();}})]);
-      else{body.append(element('p',s.phase==='experienceComplete'?'前三轮体验已结束。这不是十二轮通关；你的剑、去向和构筑都来自实际操作。':'三枚印记用尽，可以换一种收手计划再来。'));screen(s.phase==='experienceComplete'?'前三轮体验结束':s.phase==='victory'?'十二轮契约完成':'契约终止',body,[actionButton('再开一炉',()=>{menu=true;render();}),actionButton('导出这次经历',exportSave)]);}
+    else{const last=s.history.at(-1);if(s.phase==='summary')body.append(element('p',last?`第${last.round}轮：交差${fmt(last.delivered)}/${fmt(last.quota)}，${last.met?'达标':last.protected?'护炉契保护':'未达标'}；印记${last.sealsBefore}→${last.sealsAfter}。`:'这轮结束了。'));
+      if(last&&s.phase==='summary'){body.append(element('p',`回收${last.recovered}金币；${last.reserveId?`挂剑${last.reserveId}保留`:'未留挂剑'}。`));}
+      const ledger=ledgerFor(s);
+      if(s.phase==='summary'){body.append(ledger);screen('本轮收据',body,[actionButton('领取下一轮三柄剑',()=>{if(send({type:'advance'})){chooseNext();text('v3-result','新配给已就位。继续锤，还是先用一柄投资手艺？');render();button('v3-strike').focus();}})]);}
+      else{const totals=campaignTotals(s);body.append(element('p',s.phase==='experienceComplete'?'三轮练手已结束。这不是十二轮通关，可以开启完整十二轮契约。':s.phase==='victory'?`你已完成十二轮契约期，保住${s.seals}枚印记。`:`第${s.round}轮三枚印记用尽，可以换一种收手计划再来。`));const metrics=element('div',undefined,'v3-end-metrics');for(const [label,value]of [['达标轮数',`${totals.met}/${s.history.length}`],['累计交差',fmt(totals.earned)],['留存金币',fmt(s.coins)],['最高身价',fmt(totals.peak)]]){const card=element('p');card.append(element('small',label),element('b',value));metrics.append(card);}body.append(metrics);const kept=s.blades.find(p=>p.id===s.reserveId);if(kept)body.append(element('p',`收官留剑：${bladeAppearance(kept).name} · 身价${fmt(kept.value)}${kept.cracked?' · 有裂纹':''}。`));const actions=[actionButton('再开一炉',()=>{modeDraft=s.roundLimit;menu=true;render();}),actionButton('导出这次经历',exportSave)];if(s.phase==='experienceComplete')actions.unshift(actionButton('开始十二轮契约',()=>{modeDraft=12;menu=true;render();}));body.append(ledger);screen(s.phase==='experienceComplete'?'前三轮体验结束':s.phase==='victory'?'十二轮契约完成':'契约终止',body,actions);}
     }}
     if(s){
       const inventory=find('v3-inventory');inventory.replaceChildren();for(const p of s.blades.filter(p=>p.status==='active'&&p.id!==s.reserveId)){
         const x=actionButton('',()=>select(p.id)),look=bladeAppearance(p),thumb=element('canvas');thumb.className='v3-weapon-thumb';thumb.setAttribute('aria-hidden','true');x.append(thumb,element('b',look.name),element('small',`${p.suppliedRound===s.round?'本轮':'上轮'} · ${fmt(p.value)}${p.cracked?' · 裂纹':''}`));x.dataset.piece=p.id;x.setAttribute('aria-pressed',String(p.id===selectedId));x.disabled=!allowed()||busy;inventory.append(x);if(work)paintBlade(thumb,p,art.texture(),art.weapon(look.family));}
       if(!inventory.children.length)inventory.append(element('p','本轮可用剑已处理。'));
-      const reserve=s.blades.find(p=>p.id===s.reserveId),slot=find('v3-reserve-slot');slot.replaceChildren();if(reserve){const x=actionButton('',()=>{if(send({type:'reserve',pieceId:reserve.id}))select(reserve.id);}),thumb=element('canvas');thumb.className='v3-weapon-thumb';thumb.setAttribute('aria-hidden','true');x.append(thumb,element('small',`${fmt(reserve.value)}${reserve.cracked?' · 裂纹':''} · 取下`));x.disabled=!allowed()||busy;slot.append(x);if(work)paintBlade(thumb,reserve,art.texture(),art.weapon(bladeAppearance(reserve).family));}else slot.append(element('p','空架 · 可留一柄跨轮'));
+      text('v3-reserve-title',s.round===s.roundLimit?'收官留剑':'留给明天');const reserve=s.blades.find(p=>p.id===s.reserveId),slot=find('v3-reserve-slot');slot.replaceChildren();if(reserve){const x=actionButton('',()=>{if(send({type:'reserve',pieceId:reserve.id}))select(reserve.id);}),thumb=element('canvas');thumb.className='v3-weapon-thumb';thumb.setAttribute('aria-hidden','true');x.append(thumb,element('small',`${fmt(reserve.value)}${reserve.cracked?' · 裂纹':''} · 取下`));x.disabled=!allowed()||busy;slot.append(x);if(work)paintBlade(thumb,reserve,art.texture(),art.weapon(bladeAppearance(reserve).family));}else slot.append(element('p',s.round===s.roundLimit?'可挂一柄作为本局留剑':'空架 · 可留一柄跨轮'));
       text('v3-deficit',s.delivered>=quotaFor(s.round)?'今日已达标':`还差 ${fmt(quotaFor(s.round)-s.delivered)}`);text('v3-advice',s.delivered>=quotaFor(s.round)?'可以收工保住印记。剩下的剑，也能投资手艺或留给明天。':'交差才计入目标。不要把三柄都花在商人那里。');
-      const traits=find('v3-traits');if(traits.dataset.equipped!==JSON.stringify([s.traits,s.pardonUsed])){traits.dataset.equipped=JSON.stringify([s.traits,s.pardonUsed]);traits.replaceChildren();for(const id of s.traits){const p=element('p',undefined,'v3-trait-item');p.dataset.trait=id;const copy=element('span');copy.append(element('b',TRAITS[id].name),element('small',TRAITS[id].text+(id==='pardon'&&s.pardonUsed?'（本局已用）':'')));p.append(traitArt(id),copy);traits.append(p);}if(!s.traits.length)traits.append(element('p',undefined,'v3-empty-traits'));if(!s.traits.length){traits.firstElementChild?.append(traitArt('steady'),element('small','首次达标 · 免费领手艺'));}}
+      const traits=find('v3-traits'),statuses=s.traits.map(id=>traitStatus(s,b,id)),traitKey=JSON.stringify([s.traits,statuses]);if(traits.dataset.equipped!==traitKey){traits.dataset.equipped=traitKey;traits.replaceChildren();for(const id of s.traits){const p=actionButton('',()=>{const body=element('div');body.append(traitArt(id),element('p',TRAITS[id].text),element('p',traitStatus(snapshot.state??s,current(),id)));openModal(TRAITS[id].name,body,[{label:'回铁砧',run:closeModal}]);});p.className='v3-trait-item';p.dataset.trait=id;const copy=element('span');copy.append(element('b',TRAITS[id].name),element('small',traitStatus(s,b,id)));p.append(traitArt(id),copy);traits.append(p);}if(!s.traits.length)traits.append(element('p',undefined,'v3-empty-traits'));if(!s.traits.length){traits.firstElementChild?.append(traitArt('steady'),element('small','首次达标 · 免费领手艺'));}}
       const gift=find('v3-gift');gift.replaceChildren();if(s.gift==='available'){const claim=actionButton('首次达标 · 领一门免费手艺',()=>{const body=element('div'),options=(['steady','ember']as const).filter(id=>!s.traits.includes(id));body.className='v3-gift-grid';for(const id of options){const x=actionButton(`${TRAITS[id].name} · ${TRAITS[id].text}`,()=>{closeModal();acquire(id,false);});x.prepend(traitArt(id));body.append(x);}if(!options.length)body.append(actionButton('领取40金币',()=>{closeModal();acquire(null,false);}));openModal('带上一门手艺',body,[{label:'稍后领取',run:closeModal}]);});claim.disabled=!allowed()||busy;gift.append(claim);}
       button('v3-shop').hidden=!merchantPresent(s);button('v3-shop').disabled=!allowed()||busy;
     }
@@ -157,7 +171,7 @@ export function mountV3(root:HTMLElement,port:V3Session){
     button('v3-hit').setAttribute('aria-label',busy?'铁砧 · 落锤中':active?(atCap(b!)?'铁砧 · 已封顶，请交差或挂剑':b?.charge===6?'铁砧 · 鼠标左键安全连锻':'铁砧 · 鼠标左键直接落锤，无需瞄准或卡时机'):s?.blades.some(p=>p.status==='active'&&p.id!==s.reserveId)?'铁砧 · 左键换下一柄':'铁砧 · 左键查看收工结果');
     const hint=find('v3-hit').querySelector('.hit-hint');if(hint)hint.textContent=busy?'锤落 · 火星迸发':active&&b?.charge===6?'锤势已满 · 左键释放连锻':b?.status==='broken'?'剑已断 · 左键换下一柄':!active?'左键查看下一步':'鼠标左键 · 直接敲击剑身';
     button('v3-deliver').textContent=`交差 ${fmt(b?.value??0)}`;button('v3-deliver').disabled=!allowed()||busy||!active;
-    button('v3-store').textContent=s?.reserveId?'交换挂剑':'留给下一轮';button('v3-store').disabled=!allowed()||busy||!active;
+    button('v3-store').textContent=s?.reserveId?'交换挂剑':s?.round===s?.roundLimit?'挂剑保留':'留给下一轮';button('v3-store').disabled=!allowed()||busy||!active;
     button('v3-scrap').textContent=`回收 · ${b?recovery(b):0}金币`;button('v3-scrap').disabled=!allowed()||busy||!active;button('v3-settle').disabled=!allowed()||busy||s?.phase!=='workshop';
     const bladeKey=JSON.stringify(b);if(frameKey!==bladeKey&&work){frameKey=bladeKey;canvas.setAttribute('aria-label',b?`${look?.name}，${look?.rank}，等级${b.level}，身价${b.value}，${b.status==='broken'?'断剑':b.cracked?'有裂纹':'完好'}；外形不影响属性`:'空铁砧');paintBlade(canvas,b,art.texture(),art.weapon(look?.family??0));impact.refresh();}
     input?.refresh();
@@ -189,6 +203,6 @@ export function mountV3(root:HTMLElement,port:V3Session){
   const offPrefs=preferences.subscribe(value=>{prefs=value;muted.checked=value.value.muted;volume.value=String(value.value.volume);motionField.checked=value.value.reducedMotion;audio.configure(value.value);text('v3-preferences-state',value.problem?'设置未保存，可重试':'设置已保存');button('v3-settings-retry').hidden=!value.problem;});
   const offAudio=audio.subscribe(status=>text('v3-audio-state',({waiting:'点击后开启声音',ready:'声音已就绪',muted:'已静音',blocked:'声音未能开启，玩法仍可继续',unavailable:'音频不可用，玩法仍可继续'})[status]));
   const off=port.subscribe(value=>{const changed=snapshot.generation!==value.generation||snapshot.state?.runId!==value.state?.runId;snapshot=value;if(changed){input?.cancel();cancelEffects();epoch++;chooseNext();}if(!selectedId)chooseNext();render();});
-  void port.activate().then(()=>{if(disposed)return;const s=port.getSnapshot();if(!s.state&&s.mode==='writer'&&s.load?.main.status==='empty'&&s.load.backup.status==='empty'){const r=port.startNewGame({runId:`v3-${Date.now()}`,seed:'行脚新炉',roundLimit:3},{generation:s.generation,confirmed:false});if(r.ok){chooseNext();render();button('v3-strike').focus();}}else{chooseNext();render();if(s.state)text('v3-result',`已续上第${s.state.round}轮，剑的身价、裂纹和锤势原样保留。`);}});
+  void port.activate().then(()=>{if(disposed)return;const s=port.getSnapshot();if(!s.state&&s.mode==='writer'&&s.load?.main.status==='empty'&&s.load.backup.status==='empty'){const r=port.startNewGame({runId:`v3-${Date.now()}`,seed:'行脚新炉',roundLimit:modeDraft},{generation:s.generation,confirmed:false});if(r.ok){chooseNext();render();button('v3-strike').focus();}}else{chooseNext();render();if(s.state)text('v3-result',`已续上第${s.state.round}轮，剑的身价、裂纹和锤势原样保留。`);}});
   return{async dispose(){disposed=true;off();offPrefs();offAudio();input?.dispose();cancelEffects();art.dispose();resize.disconnect();motion.removeEventListener('change',changeMotion);root.removeEventListener('pointerdown',gesture,true);root.removeEventListener('keydown',gesture,true);window.removeEventListener('blur',blur);document.removeEventListener('visibilitychange',hidden);window.removeEventListener('keydown',key);window.removeEventListener('storage',changedSettings);await Promise.all([port.dispose(),audio.dispose()]);if(root.firstElementChild===ownRoot)root.replaceChildren();}};
 }

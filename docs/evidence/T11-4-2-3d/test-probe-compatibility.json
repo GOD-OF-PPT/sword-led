@@ -1,0 +1,11 @@
+{
+  "fullAttemptBaseline": "final-baseline.json",
+  "correctedProbeBaseline": "corrected-baseline.json",
+  "changedInputs": [
+    "tests/e2e/v3-campaign.spec.ts",
+    "tests/e2e/v3-impact.spec.ts"
+  ],
+  "productionBuildByteIdentical": true,
+  "unitInputsUnchanged": true,
+  "policy": "Re-run both corrected cases on all three engines (6 pairs); retain the 63 unaffected passes on the identical production build and unchanged case implementations. The 4 originally passing affected pairs were also rechecked. Never present the targeted 6 as a single all-green 69 run."
+}

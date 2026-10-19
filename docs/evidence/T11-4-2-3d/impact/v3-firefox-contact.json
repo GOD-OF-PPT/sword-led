@@ -1,0 +1,159 @@
+{
+  "effects": {
+    "particles": 36,
+    "animations": 27,
+    "outcome": "success"
+  },
+  "sound": {
+    "contexts": 1,
+    "constructors": 1,
+    "states": [
+      "running"
+    ],
+    "active": 3,
+    "starts": 3,
+    "stops": 3,
+    "maxActive": 3,
+    "frequencies": [
+      139,
+      947,
+      2381
+    ],
+    "peak": 0.0029432238079607487
+  },
+  "contact": {
+    "frames": [
+      {
+        "gap": 23.87461010791994,
+        "angle": 8.35808890244455,
+        "pivotGap": 0.16668767249458707,
+        "headHeight": 76.27016320769982,
+        "metalGap": 10000,
+        "time": 23
+      },
+      {
+        "gap": 23.87461010791994,
+        "angle": 8.35808890244455,
+        "pivotGap": 0.16668767249458707,
+        "headHeight": 76.27016320769982,
+        "metalGap": 10000,
+        "time": 28
+      },
+      {
+        "gap": 1.822458394649393,
+        "angle": 1.017605694799838,
+        "pivotGap": 0.16668773156372868,
+        "headHeight": 76.27019023557563,
+        "metalGap": 1.359696437606658,
+        "time": 92
+      },
+      {
+        "gap": 0.45798293927620154,
+        "angle": 0.35809395932354626,
+        "pivotGap": 0.16668768747645485,
+        "headHeight": 76.27017006285682,
+        "metalGap": 0.3619403736011577,
+        "time": 168
+      }
+    ],
+    "complete": true,
+    "source": "http://127.0.0.1:4186/assets/d/hammer-forge-v2.webp",
+    "sourceAlpha": [
+      249,
+      253,
+      253
+    ],
+    "gap": 0.45798293927620154,
+    "best": {
+      "gap": 0.45798293927620154,
+      "angle": 0.35809395932354626,
+      "pivotGap": 0.16668768747645485,
+      "headHeight": 76.27017006285682,
+      "metalGap": 0.3619403736011577,
+      "time": 168
+    }
+  },
+  "state": {
+    "rulesVersion": "forge-v3",
+    "runId": "v3-1792400223644",
+    "seed": "行脚新炉",
+    "roundLimit": 3,
+    "revision": 1,
+    "phase": "workshop",
+    "round": 1,
+    "coins": 0,
+    "seals": 3,
+    "base": 40,
+    "blades": [
+      {
+        "id": "r1-1",
+        "suppliedRound": 1,
+        "status": "active",
+        "base": 40,
+        "value": 58,
+        "peak": 58,
+        "level": 1,
+        "cracked": false,
+        "hits": 1,
+        "charge": 1,
+        "successes": 1,
+        "finalizedRound": null
+      },
+      {
+        "id": "r1-2",
+        "suppliedRound": 1,
+        "status": "active",
+        "base": 40,
+        "value": 40,
+        "peak": 40,
+        "level": 0,
+        "cracked": false,
+        "hits": 0,
+        "charge": 0,
+        "successes": 0,
+        "finalizedRound": null
+      },
+      {
+        "id": "r1-3",
+        "suppliedRound": 1,
+        "status": "active",
+        "base": 40,
+        "value": 40,
+        "peak": 40,
+        "level": 0,
+        "cracked": false,
+        "hits": 0,
+        "charge": 0,
+        "successes": 0,
+        "finalizedRound": null
+      }
+    ],
+    "reserveId": null,
+    "delivered": 0,
+    "traits": [],
+    "gift": "locked",
+    "pardonUsed": false,
+    "pendingInheritance": 0,
+    "shop": [],
+    "sold": [],
+    "upgraded": false,
+    "repaired": false,
+    "history": [],
+    "rng": {
+      "forge": {
+        "state": 3022150949,
+        "draws": 1
+      },
+      "shop": {
+        "state": 1526952265,
+        "draws": 0
+      }
+    },
+    "journal": [
+      {
+        "type": "strike",
+        "pieceId": "r1-1"
+      }
+    ]
+  }
+}

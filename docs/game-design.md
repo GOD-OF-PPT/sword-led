@@ -1,5 +1,7 @@
 # 《锤下求生》游戏设计文档
 
+> 当前默认规则为已批准的forge-v3/schema3，见[v0.4完整规则与算例](v0.4-gameplay-proposal.md)、[基础玩法](v0.4-playable.md)和[十二轮契约](v0.4-campaign.md)。点击即增值、两次裂损、六格连锻、交差/保险剑/剑换手艺，替换默认时机/加工多轴操作。旧两版解释器/档/入口继续保留；下面为历史v0.2设计，不能用旧数值或模型结论证明新玩法。
+
 > 版本范围：本文保留forge-v1/旧契约规则。真人反馈后已批准并实施forge-v2，见[v0.3提案](v0.3-gameplay-proposal.md)、[核心说明](v0.3-core-and-preview.md)和[D完整界面](v0.3-d-interface.md)。D全流程及212技术矩阵已交付；新版真人复验、原规模补验和最大审查见[R4检查点](reviews/R4-final-audit.md)，仍未全部完成。
 
 版本：v0.2 / 2026-10-18（规则不变）。项目代号：sword-led。状态：内核/存档/[R2模拟](reviews/R2-kernel-and-balance.md)、[B美术](../design/b/README.md)、[R3完整流程](reviews/R3-full-contract-flow.md)及[T10声音/设置/品质](reviews/T10-quality-validation.md)已完成；更广浏览器、真人评价与最终审查仍待T11–T12。

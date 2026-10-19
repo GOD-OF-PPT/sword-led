@@ -1,5 +1,7 @@
 # 界面流程与三套风格设计约定
 
+> 当前首页为v0.4「十二轮契约版」，实际流程见[完整契约](v0.4-campaign.md)和[基础操作](v0.4-playable.md)：左键直接落锤，常驻身价/差额/风险/连锻，交差/挂剑/收工，三次商人以及可展开整局账本。沿已批准D资产/兵器成长/六手艺道具和已修正锤子；不要求十点选位、卡时机或独立淬火。以下保留旧版设计记录，不能当作首页操作说明。
+
 > 版本范围：本文说明旧版UI。用户最新方向为[D行脚灯炉](../design/v03/README.md)；[v2核心试玩](v0.3-core-and-preview.md)已连接规则，现有[D正式资产与全界面](v0.3-d-interface.md)沿该方向接入；最终验收按当前报告范围判定。
 
 版本v0.2 / 2026-10-18（规则不变）。状态：用户已选B，[T07素材](../design/b/README.md)、[T08工坊](reviews/T08-workshop-validation.md)、[T09完整流程](contract-flow.md)与[T10设置/音效/恢复](settings-and-audio.md)已接入；实际结果见[R3](reviews/R3-full-contract-flow.md)和[T10](reviews/T10-quality-validation.md)。更广浏览器、真人体验与最终审查按T11–T12继续。

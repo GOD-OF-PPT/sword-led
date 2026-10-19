@@ -1,0 +1,57 @@
+import {test,expect} from '@playwright/test';
+import type {Page,Locator} from '@playwright/test';
+import {readFileSync} from 'node:fs';
+import {mkdir,writeFile} from 'node:fs/promises';
+import {applyCommand,validateRun,TRAITS} from '../../src/core-v3/index.js';
+import type {Action,RunState} from '../../src/core-v3/index.js';
+const dir='tmp/v3-campaign-states';
+type Route={seed:string;actions:Action[];finalState:RunState};
+const route=JSON.parse(readFileSync('docs/evidence/T11-4-2-3d/route.json','utf8')) as Route;
+const repairRoute=JSON.parse(readFileSync('docs/evidence/T11-4-2-3d/repair-route.json','utf8')) as Route;
+async function read(page:Page){const raw=await page.evaluate(()=>localStorage.getItem('sword-led.save.v3'));if(!raw)throw Error('No actual v3 save');const result=validateRun(JSON.parse(raw).state);if(!result.ok)throw Error(result.detail);return result.state;}
+async function tabTo(page:Page,target:Locator){for(let i=0;i<100;i++){if(await target.evaluate(e=>e===document.activeElement))return;const back=await target.evaluate(e=>Boolean(document.activeElement&&(document.activeElement.compareDocumentPosition(e)&Node.DOCUMENT_POSITION_PRECEDING)));await page.keyboard.press(back?'Shift+Tab':'Tab');}throw Error('Not keyboard reachable');}
+async function activate(page:Page,target:Locator){await tabTo(page,target);await page.keyboard.press('Enter');}
+const confirm=(page:Page)=>activate(page,page.locator('#v3-dialog-actions').getByRole('button',{name:'确认',exact:true}));
+async function start(page:Page,seed:string){await page.goto('/');await expect(page.locator('#v3-workshop')).toBeVisible();await activate(page,page.locator('#v3-menu'));await tabTo(page,page.locator('#v3-seed'));await page.keyboard.press('ControlOrMeta+A');await page.keyboard.type(seed);await expect(page.locator('#v3-mode')).toHaveValue('12');await activate(page,page.getByRole('button',{name:'开一炉新契约'}));await confirm(page);expect((await read(page)).roundLimit).toBe(12);}
+async function snapshot(page:Page,name:string){await mkdir(dir,{recursive:true});await writeFile(`${dir}/${test.info().project.name}-${name}.json`,JSON.stringify(await read(page),null,2)+'\n');}
+async function perform(page:Page,action:Action){
+ const before=await read(page);if('pieceId'in action){if(action.type==='reserve'&&before.reserveId===action.pieceId)await activate(page,page.locator('#v3-reserve-slot button'));else await activate(page,page.locator(`[data-piece="${action.pieceId}"]`));}
+ switch(action.type){
+  case 'strike':await tabTo(page,page.locator('#v3-strike'));await page.keyboard.press('Space');await expect(page.locator('#v3-strike')).toHaveAttribute('aria-busy','false');break;
+  case 'deliver':await activate(page,page.locator('#v3-deliver'));break;
+  case 'reserve':if(before.reserveId!==action.pieceId)await activate(page,page.locator('#v3-store'));break;
+  case 'scrap':await activate(page,page.locator('#v3-scrap'));await confirm(page);break;
+  case 'settle':await activate(page,page.locator('#v3-settle'));await confirm(page);break;
+  case 'advance':await activate(page,page.getByRole('button',{name:'领取下一轮三柄剑'}));break;
+  case 'claimGift':await activate(page,page.getByRole('button',{name:'首次达标 · 领一门免费手艺'}));await activate(page,page.getByRole('button',{name:action.traitId?new RegExp(`^${TRAITS[action.traitId].name} ·`):'领取40金币'}));break;
+  case 'buy':await activate(page,page.locator('#v3-shop'));await activate(page,page.locator(`article[data-trait="${action.traitId}"] button`));if(action.replaceId)await activate(page,page.getByRole('button',{name:new RegExp(`^换下${TRAITS[action.replaceId].name}：`)}));await confirm(page);break;
+  case 'upgrade':await activate(page,page.locator('#v3-shop'));await activate(page,page.getByRole('button',{name:/升级炉具/}));await expect(page.locator('#v3-dialog-body')).toContainText(`${before.base}→${before.base*2}`);await confirm(page);break;
+  case 'repair':await activate(page,page.locator('#v3-shop'));await activate(page,page.getByRole('button',{name:/补一枚印记/}));await confirm(page);break;
+ }
+ const result=applyCommand(before,{runId:before.runId,expectedRevision:before.revision,action});if(!result.ok)throw Error(result.error);expect(await read(page)).toEqual(result.state);return result.state;
+}
+test('default twelve-round campaign completes through three merchants, upgrades, replacement and reload with zero pointer events',async({page},info)=>{
+ test.setTimeout(360000);expect(validateRun(route.finalState).ok).toBe(true);const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)errors.push(`${r.status()} ${r.url()}`);});await page.addInitScript(()=>window.addEventListener('pointerdown',()=>document.documentElement.dataset.pointers=String(Number(document.documentElement.dataset.pointers??0)+1)));
+ await start(page,route.seed);let checkedCancel=false,checkedDetails=false;const prices:number[]=[],seenFour:number[]=[];
+ for(const action of route.actions){const before=await read(page);
+  if(action.type==='buy'&&action.replaceId&&!checkedCancel){await activate(page,page.locator(`[data-piece="${action.pieceId}"]`));await activate(page,page.locator('#v3-shop'));await activate(page,page.locator(`article[data-trait="${action.traitId}"] button`));await activate(page,page.getByRole('button',{name:'保留原样',exact:true}));expect(await read(page)).toEqual(before);checkedCancel=true;}
+  const s=await perform(page,action);
+  if(action.type==='upgrade'){prices.push(before.coins-s.coins);expect(s.blades.filter(b=>b.status==='active').map(b=>b.base)).toEqual(before.blades.filter(b=>b.status==='active').map(b=>b.base));}
+  if(action.type==='advance'){const fresh=s.blades.filter(b=>b.suppliedRound===s.round);expect(fresh).toHaveLength(3);expect(fresh.slice(1).every(b=>b.base===s.base)).toBe(true);if([4,7,10].includes(s.round)){await snapshot(page,`supply-${s.round}`);const bytes=await page.evaluate(()=>localStorage.getItem('sword-led.save.v3'));await page.reload();await expect(page.locator('#v3-workshop')).toBeVisible();expect(await page.evaluate(()=>localStorage.getItem('sword-led.save.v3'))).toBe(bytes);}}
+  if(action.type==='reserve'&&before.reserveId===action.pieceId&&await page.locator('#v3-inventory button').count()===4){seenFour.push(s.round);for(const [width,height]of [[1280,720],[1920,1080]]){await page.setViewportSize({width:width!,height:height!});const boxes=await page.locator('#v3-inventory button,#v3-strike,#v3-shop,#v3-settings summary').evaluateAll(nodes=>nodes.map(e=>{const r=e.getBoundingClientRect();return{x:r.x,y:r.y,width:r.width,height:r.height};}));expect(boxes).toHaveLength(7);for(const box of boxes){expect(box.width).toBeGreaterThan(0);expect(box.height).toBeGreaterThan(0);expect(box.y).toBeGreaterThanOrEqual(0);expect(box.y+box.height).toBeLessThanOrEqual(height!);}}}
+  if(action.type==='buy'){for(const [width,height]of [[1280,720],[1920,1080]]){await page.setViewportSize({width:width!,height:height!});for(const id of ['v3-value','v3-strike','v3-deliver','v3-shop','v3-settings']){const box=await page.locator('#'+id).boundingBox();expect(box!.y+box!.height).toBeLessThanOrEqual(height!);}await mkdir(dir,{recursive:true});await page.screenshot({path:`${dir}/${info.project.name}-merchant-${s.round}-${width}.png`});}await snapshot(page,`merchant-${s.round}`);}
+  if(!checkedDetails&&s.traits.length){const bytes=await page.evaluate(()=>localStorage.getItem('sword-led.save.v3'));await activate(page,page.locator('#v3-traits .v3-trait-item').first());await expect(page.locator('#v3-dialog')).toBeVisible();await activate(page,page.getByRole('button',{name:'回铁砧',exact:true}));expect(await page.evaluate(()=>localStorage.getItem('sword-led.save.v3'))).toBe(bytes);checkedDetails=true;}
+ }
+ const s=await read(page);expect(s.phase).toBe('victory');expect(s.round).toBe(12);expect(s.history).toHaveLength(12);expect(s.blades).toHaveLength(36);expect(prices).toEqual([180,900,4500]);expect(checkedCancel).toBe(true);expect(seenFour).toEqual([3,6,9]);expect(Number(await page.locator('html').getAttribute('data-pointers'))).toBe(0);
+ await expect(page.locator('#v3-screen-title')).toHaveText('十二轮契约完成');await expect(page.locator('#v3-screen-body')).not.toContainText('三枚印记用尽');await expect(page.getByRole('button',{name:'领取下一轮三柄剑'})).toHaveCount(0);
+ for(const [width,height]of [[1280,720],[1920,1080]]){await page.setViewportSize({width:width!,height:height!});const box=await page.locator('#v3-screen-actions').boundingBox();expect(box!.y+box!.height).toBeLessThanOrEqual(height!);await page.screenshot({path:`${dir}/${info.project.name}-victory-${width}.png`});}
+ await snapshot(page,'victory');await activate(page,page.locator('#v3-ledger>summary'));await expect(page.locator('#v3-ledger>table>tbody>tr')).toHaveCount(12);await activate(page,page.locator('.v3-piece-ledger>summary'));await expect(page.locator('.v3-piece-ledger li')).toHaveCount(36);await page.keyboard.press('End');await page.reload();expect((await read(page)).phase).toBe('victory');expect(errors).toEqual([]);
+});
+test('twelve-round failure and merchant repair use real seals and coins',async({page})=>{
+ test.setTimeout(90000);await start(page,repairRoute.seed);const stop=repairRoute.actions.findIndex(a=>a.type==='repair');expect(stop).toBeGreaterThan(0);for(const action of repairRoute.actions.slice(0,stop+1))await perform(page,action);const repaired=await read(page);expect(repaired.repaired).toBe(true);expect(repaired.seals).toBe(3);await snapshot(page,'repaired');
+ await activate(page,page.locator('#v3-menu'));await activate(page,page.getByRole('button',{name:'开一炉新契约'}));await confirm(page);for(let n=0;n<3;n++){await perform(page,{type:'settle'});if(n<2)await perform(page,{type:'advance'});}expect((await read(page)).phase).toBe('defeat');expect((await read(page)).roundLimit).toBe(12);await expect(page.locator('#v3-screen-title')).toHaveText('契约终止');await snapshot(page,'defeat');
+});
+test('existing three-round save stays three rounds; explicit fresh campaign supports twelve and cancel preserves the old bytes',async({page})=>{
+ await page.goto('/?mode=3');await expect(page.locator('#v3-hit')).toBeEnabled();expect((await read(page)).roundLimit).toBe(3);await perform(page,{type:'strike',pieceId:'r1-1'});const old=await page.evaluate(()=>localStorage.getItem('sword-led.save.v3'));await page.goto('/');await expect(page.locator('#v3-workshop')).toBeVisible();expect(await page.evaluate(()=>localStorage.getItem('sword-led.save.v3'))).toBe(old);await expect(page.locator('#v3-edition')).toContainText('三轮练手');
+ await activate(page,page.locator('#v3-menu'));await expect(page.locator('#v3-mode')).toHaveValue('12');await activate(page,page.getByRole('button',{name:'开一炉新契约'}));await activate(page,page.locator('#v3-dialog-actions').getByRole('button',{name:'返回',exact:true}));expect(await page.evaluate(()=>localStorage.getItem('sword-led.save.v3'))).toBe(old);await activate(page,page.getByRole('button',{name:'开一炉新契约'}));await confirm(page);expect((await read(page)).roundLimit).toBe(12);const twelve=await page.evaluate(()=>localStorage.getItem('sword-led.save.v3'));await page.goto('/?mode=3');await expect(page.locator('#v3-workshop')).toBeVisible();expect(await page.evaluate(()=>localStorage.getItem('sword-led.save.v3'))).toBe(twelve);await snapshot(page,'mode-continuity');
+});

@@ -1,0 +1,129 @@
+{
+  "trace": "interaction-probe-red/results/v3-impact-left-down-on-the-681f9-click-drag-do-not-duplicate-v3-webkit/trace.zip",
+  "observed": "Double-click revision assertion passed at 2; final comparison after a later Space release got revision 3. Browser automation round trips allowed the 210ms busy interval to end before keydown. This does not establish duplicate pointer acceptance.",
+  "calls": [
+    {
+      "type": "before",
+      "callId": "jbwh@3994",
+      "startTime": 825424.601,
+      "class": "Test",
+      "method": "pw:api",
+      "title": "Double click",
+      "params": {
+        "x": "686.28",
+        "y": "338.0375",
+        "clickCount": "2"
+      },
+      "stack": [
+        {
+          "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-impact.spec.ts",
+          "line": 17,
+          "column": 19
+        }
+      ]
+    },
+    {
+      "type": "after",
+      "callId": "jbwh@3994",
+      "endTime": 825984.299,
+      "annotations": []
+    },
+    {
+      "type": "before",
+      "callId": "jbwh@3999",
+      "startTime": 825991.476,
+      "class": "Test",
+      "method": "pw:api",
+      "title": "Key down \"Space\"",
+      "params": {
+        "key": "Space"
+      },
+      "stack": [
+        {
+          "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-impact.spec.ts",
+          "line": 17,
+          "column": 140
+        }
+      ]
+    },
+    {
+      "type": "after",
+      "callId": "jbwh@3999",
+      "endTime": 825996.321,
+      "annotations": []
+    },
+    {
+      "type": "before",
+      "callId": "jbwh@4003",
+      "startTime": 826102.11,
+      "class": "Test",
+      "method": "pw:api",
+      "title": "Key up \"Space\"",
+      "params": {
+        "key": "Space"
+      },
+      "stack": [
+        {
+          "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-impact.spec.ts",
+          "line": 17,
+          "column": 252
+        }
+      ]
+    },
+    {
+      "type": "after",
+      "callId": "jbwh@4003",
+      "endTime": 826138.482,
+      "annotations": []
+    },
+    {
+      "type": "before",
+      "callId": "jbwh@3994",
+      "startTime": 825424.975,
+      "title": "Double click",
+      "class": "Page",
+      "method": "mouseClick",
+      "params": {
+        "x": 686.28,
+        "y": 338.0375,
+        "delay": 5,
+        "clickCount": 2
+      }
+    },
+    {
+      "type": "after",
+      "callId": "jbwh@3994",
+      "endTime": 825792.505
+    },
+    {
+      "type": "before",
+      "callId": "jbwh@3999",
+      "startTime": 825991.827,
+      "class": "Page",
+      "method": "keyboardDown",
+      "params": {
+        "key": "Space"
+      }
+    },
+    {
+      "type": "after",
+      "callId": "jbwh@3999",
+      "endTime": 825994.439
+    },
+    {
+      "type": "before",
+      "callId": "jbwh@4003",
+      "startTime": 826102.548,
+      "class": "Page",
+      "method": "keyboardUp",
+      "params": {
+        "key": "Space"
+      }
+    },
+    {
+      "type": "after",
+      "callId": "jbwh@4003",
+      "endTime": 826134.682
+    }
+  ]
+}

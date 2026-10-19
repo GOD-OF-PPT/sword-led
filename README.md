@@ -2,16 +2,16 @@
 
 一款面向现代 PC 浏览器的轮次制锻造游戏。每轮只有三件铁坯：点击落锤让它升值，在断裂前决定交货、留剑还是回收，靠手艺和商人升级撑过契约。
 
-**当前首页为 v0.4「锻锤修正版」前三轮体验：[打开游戏](http://127.0.0.1:4179/)**。实际修正锤头/柄方向、工具比例与握柄转轴，平锤面沿兵器上沿接触，准备/回弹有统一支点；[修正说明](docs/v0.4-hammer-correction.md)记录真实旧问题与新接触验证。青云剑、赤羽刀、镇岳重剑的五段外形、六门手艺道具和左键锻造继续可用。[兵器美术](docs/v0.4-weapon-art.md)、[操作](docs/v0.4-playable.md)保留具体边界。外形不改变属性或概率，原v0.4进度继续；`/v2.html`与`/legacy.html`保留旧模式和旧档。正式本机快照发布后需刷新原标签页；没有公网部署声明。
+**当前首页为 v0.4「十二轮契约版」：[打开游戏](http://127.0.0.1:4179/)**。第3、6、9轮商人、未来来料升级、手艺替换、十二轮胜负和整局账本已接通；随身道具显示当前选剑的生效状态。[完整契约说明](docs/v0.4-campaign.md)列出操作与兼容边界。已有三轮存档会继续三轮练手；想体验完整局，刷新后点“契约”→选择“十二轮契约”→“开一炉新契约”，确认前可先导出旧进度。新空档直接开启十二轮，也可选择[三轮练手](http://127.0.0.1:4179/?mode=3)。
 
-用户已认可成长/道具交互改善，随后明确指出锤头/柄方向或比例不对；本轮据此修正实际工具几何与动作，不把部分认可扩大成H或整体可玩性通过。[完整实况复核](docs/research/2026-10-19-forgetax-session-study.md)与[v0.4方案](docs/v0.4-gameplay-proposal.md)保留研究/批准来源，完整十二轮与最大审查仍在后续任务。
+用户最新认可锤子的方向和比例自然。青云剑、赤羽刀、镇岳重剑的五段外形、六门手艺道具和左键锻造沿用已修正的D美术；[锤子修正](docs/v0.4-hammer-correction.md)、[兵器美术](docs/v0.4-weapon-art.md)保留来源与验证。外形不改变属性或概率；`/v2.html`与`/legacy.html`保留旧模式和旧档。[完整实况复核](docs/research/2026-10-19-forgetax-session-study.md)与[v0.4方案](docs/v0.4-gameplay-proposal.md)保留研究/批准来源。整体趣味性、新规则1000种子及最终最大审查继续推进，没有公网部署声明。
 
 2026-10-18真人曾评价v0.2玩法/美术缺乏新意；已据ForgeTax及110条唯一Steam评论修订并取得明确v0.3批准。[核心证据](docs/reviews/R3-5-v2-core-and-playable.md)保留928局策略与原试玩结果，[D界面说明](docs/v0.3-d-interface.md)记录新接线与独立练习。[新版技术验收](docs/reviews/R3-7-v2-technical-acceptance.md)与[44AC映射](docs/v0.3-acceptance.md)分别记录实际矩阵、故障修复及待办。真人再玩和最大交付仍按T11.4.2–T12推进，技术通过不等于玩家满意。
 
 ## 项目资料
 
 - [Steam玩法/评论研究](docs/research/2026-10-18-forging-games.md)：抽样方法、正负体验、具体评论回链和现版设计诊断。
-- [v0.4前三轮实际玩法](docs/v0.4-playable.md)：已批准的即时增值、裂损/连锻、保险剑、用剑构筑、键鼠/存档与明确体验终点；旧模式继续可用。
+- [v0.4完整契约](docs/v0.4-campaign.md)与[基础玩法](docs/v0.4-playable.md)：即时增值、裂损/连锻、保险剑、三次商人、胜负与账本；旧三轮档继续练手。
 - [已确认v0.3改版提案](docs/v0.3-gameplay-proposal.md)与[D方向图](design/v03/README.md)：锻脉/试剑/技法构筑、样例/风险/新旧档与实施验收。
 - [v0.3核心与试玩](docs/v0.3-core-and-preview.md)：操作、共享存储适配口、独立存档/SDK、928局策略边界与复跑命令；[R3.5](docs/reviews/R3-5-v2-core-and-playable.md)保留三任务复核与后续责任。
 - [forge-v2原规模模型审计](docs/reviews/R4-v2-model-audit.md)：29组合各1000种子、旧928重叠与正式胜负回放、压缩原结果和16项审计拒绝检查；只验证旧规则技术条件，不替代真人乐趣或新v0.4验收。
@@ -22,7 +22,7 @@
 - [三套主界面候选](design/README.md)：A 余烬工坊、B 行会手账、C 冷铁控制台，最终选型图、比较和完整提示词。
 - [界面与风格](docs/ui-design.md)：完整页面、信息结构与三图共同状态。
 - [验收矩阵](docs/acceptance-matrix.md)：44项场景；已有规则、存储、模拟与工坊输入证据，整局UI/真人验收继续按任务完成。
-- [R4审查检查点](docs/reviews/R4-final-audit.md)：原始五项/44AC/V3逐项结果、恢复提示修补、当前策略规模批次与未完成的真人门槛；[REPEAT](docs/reviews/REPEAT-2026-10-19.md)记录只扩展有据的重复流程。
+- [R4审查检查点](docs/reviews/R4-final-audit.md)：原始五项/44AC/V3逐项结果、恢复提示修补、历史v2策略规模批次与未完成的真人门槛；[REPEAT](docs/reviews/REPEAT-2026-10-19.md)记录只扩展有据的重复流程。
 - [首次全面复核 R1](docs/reviews/R1-design-and-concepts.md)：规则闭环、架构、图稿检查、修正与后续验证责任。
 - [确认记录](docs/decision-record.md)：用户已确认实施并选择 B，原始问答留存。
 - [T04 内核验证](docs/reviews/T04-kernel-validation.md)：77 项测试、类型检查、构建与独立产物验证，含本轮边界。
@@ -52,20 +52,20 @@ npm ci --registry=https://registry.npmjs.org/
 npm run dev
 ```
 
-打开终端显示的地址，默认`/`和`/v2.html`均为新版，`/legacy.html`为旧版。生产版本用`npm run build`后`npm run preview`，默认端口4173。构建包含三个HTML、网页资源与core/session/v2 SDK及共享chunk，应整体保留dist，不提交dist或node_modules。需要通过localhost或HTTPS运行。
+打开终端显示的地址，默认`/`为v0.4，`/v2.html`为旧D细锻，`/legacy.html`为B版旧契约。生产版本用`npm run build`后`npm run preview`，默认端口4173。构建包含三个HTML、网页资源与core/session/v2/v3 SDK及共享chunk，应整体保留dist，不提交dist或node_modules。需要通过localhost或HTTPS运行。
 
 | 操作 | 用法 |
 | --- | --- |
-| 落锤 | 在击打区按住鼠标，或聚焦后按住空格；松开按时机结算 |
-| 来料/锤法 | 点击，或数字1/2/3与Q/W/E；准备中切换会取消 |
+| 落锤 | 中央剑身区域鼠标左键；键盘聚焦落锤后松开空格，或Enter激活；无需卡时机 |
+| 换剑 | 左侧剑架点击，或Tab/Shift+Tab移动后Enter选择 |
 | 暂停 | Esc或暂停按钮；后台/失焦取消准备，不偷扣资源 |
-| 交货/回收 | 交货计订单和金币，回收只加废料；确认后不可再加工 |
-| 操作设置 | 静音/音量、慢速×1.5、减弱动效自动独立保存；系统动效优先，失败可重试 |
+| 交差/回收 | 交差计本轮目标和金币，回收只给底价的四分之一金币；处置后不可再加工 |
+| 操作设置 | 静音/音量、减弱动效自动独立保存；系统动效优先，失败可重试；旧细锻模式另有慢速时机 |
 | 声音 | 首次手势后启用；游戏顶部可静音，设置中可试听；暂停/后台/菜单会停止 |
 
-每个接受动作后尝试保存，失败保留内存进度并提示重试；菜单继续会保留未保存工作副本。教学与显式不保存试玩不写正式档。同源另一窗口只读，关闭占用窗口后可重新读取。
+每个接受动作后尝试保存，失败保留内存进度并提示重试；菜单继续会保留未保存工作副本。旧两版的独立教学与显式不保存试玩不写正式档。同源另一窗口只读，关闭占用窗口后可重新读取。
 
-保存故障可确认保留当前局继续不保存；刷新/关闭会失去这份试玩，本机磁盘契约保留。坏档不自动删除，合法备份恢复前显示轮次与时间；备份写失败会明确区别于主档写失败。设置故障不阻断正式锻造。教学初次使用慢速，可在设置中明确调整，正式契约使用保存的慢速选项。
+保存故障可确认保留当前局继续不保存；刷新/关闭会失去这份试玩，本机磁盘契约保留。坏档不自动删除，合法备份恢复前显示轮次与时间；备份写失败会明确区别于主档写失败。设置故障不阻断正式锻造。旧两版教学初次使用慢速，可在设置中调整；v0.4直接落锤，不使用时机速度。
 
 临时[可玩预览](http://127.0.0.1:4179/)使用已验证构建快照，具体版本和实际存活检查见[执行计划](goal-1/plan.md)。仅当前机器/服务存活时可用；其他机器按上述命令运行，没有宣称已互联网部署。
 
@@ -80,7 +80,16 @@ npm run test:art
 
 `check`运行单测、严格类型检查与双构建。`test:browser`一次构建后串行运行正式页面与存储SDK；也可分别用`test:e2e`/`test:storage:browser`。真实Chrome原生窗口/缓存探测采用隔离profile；测试只改变测试侧时钟/事件，不注入钱包/终局。美术检查使用独立设计页，不作为正式游戏验收。单项命令还包括`npm test`、`npm run typecheck`、`npm run build`和交互`test:watch`。
 
-跨引擎工具：`npx playwright install firefox webkit`后可执行旧版/混合定向配置`npm run test:cross`。新版完整矩阵单独执行：
+v0.4当前配置在同一构建上测试三种引擎：
+
+```bash
+npm run build
+npx playwright test --config playwright.v3.config.ts
+```
+
+使用4186端口、单worker、无重试；实际69项中60项沿公开三轮练手模式验证既有操作/美术/恢复，另9项验证默认十二轮、三商人/升级/替换/修补、真实胜负与新旧长度续玩。完整局用原生Tab/Enter/Space逐命令对照正式内核，不能将这9项当最终所有DPR/原生生命周期/性能矩阵。结果见[R3.14](docs/reviews/R3-14-v04-full-campaign.md)。
+
+跨引擎工具：`npx playwright install firefox webkit`后可执行旧版/混合定向配置`npm run test:cross`。旧D细锻矩阵单独执行：
 
 ```bash
 npm run build
@@ -98,7 +107,7 @@ npm run simulate -- --replay docs/evidence/T06/verify-v1.medium-victory.json
 
 默认53场景，每个最终状态都完整回放；输出统计JSON、逐局CSV.gz与胜负witness。已有输出不会覆盖；参数、输入误差假设和指标边界见模拟合同。T06 实测批次约18分钟，速度取决于设备，模型输入秒数不等于脚本耗时或真人整局时长。
 
-旧版入口为`/legacy.html`，新版为`/`或`/v2.html`；开发服务还提供`/design/b/preview/index.html`美术校验页。`test:art`核对B风格的9张图片、alpha、288姿态、24材料帧和设计组件；D素材在新版UI/alpha规格中核对，两者证据分别记录。旧阶段机器证据归档工具为`node scripts/collect-ui-evidence.mjs --stage T10 --out <新的证据目录>`，已有证据不覆盖；归档前需生成最新unit/UI/storage报告。新版完整矩阵使用贡献说明中的v2 collector。
+B旧版入口为`/legacy.html`，D细锻为`/v2.html`，v0.4为`/`；开发服务还提供`/design/b/preview/index.html`美术校验页。`test:art`核对B风格的9张图片、alpha、288姿态、24材料帧和设计组件；D素材在新版UI/alpha规格中核对，两者证据分别记录。旧阶段机器证据归档工具为`node scripts/collect-ui-evidence.mjs --stage T10 --out <新的证据目录>`，已有证据不覆盖；归档前需生成最新unit/UI/storage报告。新版完整矩阵使用贡献说明中的v2 collector。
 
 构建后可在 Node 中调用同一个正式内核：
 
