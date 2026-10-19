@@ -19,5 +19,11 @@
     "documents": 4,
     "links": 49
   },
-  "scope": "T11.4.2.3c hammer art and motion correction only; H and full goal remain open"
+  "scope": "T11.4.2.3c hammer art and motion correction only; H and full goal remain open",
+  "diffCheck": {
+    "fullExitCode": 2,
+    "reason": "Original generated Playwright error-context source excerpts contain trailing spaces; bytes intentionally retained",
+    "codeAndHandwrittenDocumentsExitCode": 0,
+    "excludedPathspec": ":(exclude,glob)docs/evidence/T11-4-2-3c/**/error-context.md"
+  }
 }
