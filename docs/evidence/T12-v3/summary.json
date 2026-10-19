@@ -1,0 +1,523 @@
+{
+  "schemaVersion": 1,
+  "rulesVersion": "forge-v3",
+  "seeds": 1000,
+  "profiles": [
+    {
+      "id": "conservative-steady",
+      "risk": "conservative",
+      "gift": "steady",
+      "reserve": true,
+      "trade": true,
+      "upgrade": true,
+      "repair": true,
+      "shop": true,
+      "traits": true,
+      "rank": [
+        "ember",
+        "echo",
+        "steady",
+        "pardon",
+        "inherit",
+        "crackedEdge"
+      ]
+    },
+    {
+      "id": "conservative-ember",
+      "risk": "conservative",
+      "gift": "ember",
+      "reserve": true,
+      "trade": true,
+      "upgrade": true,
+      "repair": true,
+      "shop": true,
+      "traits": true,
+      "rank": [
+        "ember",
+        "echo",
+        "steady",
+        "pardon",
+        "inherit",
+        "crackedEdge"
+      ]
+    },
+    {
+      "id": "balanced-steady",
+      "risk": "balanced",
+      "gift": "steady",
+      "reserve": true,
+      "trade": true,
+      "upgrade": true,
+      "repair": true,
+      "shop": true,
+      "traits": true,
+      "rank": [
+        "ember",
+        "echo",
+        "steady",
+        "pardon",
+        "inherit",
+        "crackedEdge"
+      ]
+    },
+    {
+      "id": "balanced-ember",
+      "risk": "balanced",
+      "gift": "ember",
+      "reserve": true,
+      "trade": true,
+      "upgrade": true,
+      "repair": true,
+      "shop": true,
+      "traits": true,
+      "rank": [
+        "ember",
+        "echo",
+        "steady",
+        "pardon",
+        "inherit",
+        "crackedEdge"
+      ]
+    },
+    {
+      "id": "aggressive-steady",
+      "risk": "aggressive",
+      "gift": "steady",
+      "reserve": true,
+      "trade": true,
+      "upgrade": true,
+      "repair": true,
+      "shop": true,
+      "traits": true,
+      "rank": [
+        "ember",
+        "echo",
+        "steady",
+        "pardon",
+        "inherit",
+        "crackedEdge"
+      ]
+    },
+    {
+      "id": "aggressive-ember",
+      "risk": "aggressive",
+      "gift": "ember",
+      "reserve": true,
+      "trade": true,
+      "upgrade": true,
+      "repair": true,
+      "shop": true,
+      "traits": true,
+      "rank": [
+        "ember",
+        "echo",
+        "steady",
+        "pardon",
+        "inherit",
+        "crackedEdge"
+      ]
+    },
+    {
+      "id": "fixed-3",
+      "risk": "fixed",
+      "gift": "ember",
+      "reserve": true,
+      "trade": true,
+      "upgrade": true,
+      "repair": true,
+      "shop": true,
+      "traits": true,
+      "rank": [
+        "ember",
+        "echo",
+        "steady",
+        "pardon",
+        "inherit",
+        "crackedEdge"
+      ],
+      "clicks": 3
+    },
+    {
+      "id": "fixed-6",
+      "risk": "fixed",
+      "gift": "ember",
+      "reserve": true,
+      "trade": true,
+      "upgrade": true,
+      "repair": true,
+      "shop": true,
+      "traits": true,
+      "rank": [
+        "ember",
+        "echo",
+        "steady",
+        "pardon",
+        "inherit",
+        "crackedEdge"
+      ],
+      "clicks": 6
+    },
+    {
+      "id": "fixed-7",
+      "risk": "fixed",
+      "gift": "ember",
+      "reserve": true,
+      "trade": true,
+      "upgrade": true,
+      "repair": true,
+      "shop": true,
+      "traits": true,
+      "rank": [
+        "ember",
+        "echo",
+        "steady",
+        "pardon",
+        "inherit",
+        "crackedEdge"
+      ],
+      "clicks": 7
+    },
+    {
+      "id": "fixed-10",
+      "risk": "fixed",
+      "gift": "ember",
+      "reserve": true,
+      "trade": true,
+      "upgrade": true,
+      "repair": true,
+      "shop": true,
+      "traits": true,
+      "rank": [
+        "ember",
+        "echo",
+        "steady",
+        "pardon",
+        "inherit",
+        "crackedEdge"
+      ],
+      "clicks": 10
+    },
+    {
+      "id": "without-reserve",
+      "risk": "balanced",
+      "gift": "ember",
+      "reserve": false,
+      "trade": true,
+      "upgrade": true,
+      "repair": true,
+      "shop": true,
+      "traits": true,
+      "rank": [
+        "ember",
+        "echo",
+        "steady",
+        "pardon",
+        "inherit",
+        "crackedEdge"
+      ]
+    },
+    {
+      "id": "without-trade",
+      "risk": "balanced",
+      "gift": "ember",
+      "reserve": true,
+      "trade": false,
+      "upgrade": true,
+      "repair": true,
+      "shop": true,
+      "traits": true,
+      "rank": [
+        "ember",
+        "echo",
+        "steady",
+        "pardon",
+        "inherit",
+        "crackedEdge"
+      ]
+    },
+    {
+      "id": "without-upgrade",
+      "risk": "balanced",
+      "gift": "ember",
+      "reserve": true,
+      "trade": true,
+      "upgrade": false,
+      "repair": true,
+      "shop": true,
+      "traits": true,
+      "rank": [
+        "ember",
+        "echo",
+        "steady",
+        "pardon",
+        "inherit",
+        "crackedEdge"
+      ]
+    },
+    {
+      "id": "without-repair",
+      "risk": "balanced",
+      "gift": "ember",
+      "reserve": true,
+      "trade": true,
+      "upgrade": true,
+      "repair": false,
+      "shop": true,
+      "traits": true,
+      "rank": [
+        "ember",
+        "echo",
+        "steady",
+        "pardon",
+        "inherit",
+        "crackedEdge"
+      ]
+    },
+    {
+      "id": "without-shop",
+      "risk": "balanced",
+      "gift": "ember",
+      "reserve": true,
+      "trade": true,
+      "upgrade": true,
+      "repair": true,
+      "shop": false,
+      "traits": true,
+      "rank": [
+        "ember",
+        "echo",
+        "steady",
+        "pardon",
+        "inherit",
+        "crackedEdge"
+      ]
+    },
+    {
+      "id": "without-traits",
+      "risk": "balanced",
+      "gift": "ember",
+      "reserve": true,
+      "trade": true,
+      "upgrade": true,
+      "repair": true,
+      "shop": true,
+      "traits": false,
+      "rank": [
+        "ember",
+        "echo",
+        "steady",
+        "pardon",
+        "inherit",
+        "crackedEdge"
+      ]
+    },
+    {
+      "id": "prefer-echo",
+      "risk": "balanced",
+      "gift": "ember",
+      "reserve": true,
+      "trade": true,
+      "upgrade": true,
+      "repair": true,
+      "shop": true,
+      "traits": true,
+      "rank": [
+        "echo",
+        "ember",
+        "steady",
+        "pardon",
+        "inherit",
+        "crackedEdge"
+      ]
+    },
+    {
+      "id": "prefer-steady",
+      "risk": "balanced",
+      "gift": "ember",
+      "reserve": true,
+      "trade": true,
+      "upgrade": true,
+      "repair": true,
+      "shop": true,
+      "traits": true,
+      "rank": [
+        "steady",
+        "ember",
+        "echo",
+        "pardon",
+        "inherit",
+        "crackedEdge"
+      ]
+    },
+    {
+      "id": "prefer-pardon",
+      "risk": "balanced",
+      "gift": "ember",
+      "reserve": true,
+      "trade": true,
+      "upgrade": true,
+      "repair": true,
+      "shop": true,
+      "traits": true,
+      "rank": [
+        "pardon",
+        "ember",
+        "echo",
+        "steady",
+        "inherit",
+        "crackedEdge"
+      ]
+    },
+    {
+      "id": "prefer-inherit",
+      "risk": "balanced",
+      "gift": "ember",
+      "reserve": true,
+      "trade": true,
+      "upgrade": true,
+      "repair": true,
+      "shop": true,
+      "traits": true,
+      "rank": [
+        "inherit",
+        "ember",
+        "echo",
+        "steady",
+        "pardon",
+        "crackedEdge"
+      ]
+    },
+    {
+      "id": "prefer-crackedEdge",
+      "risk": "balanced",
+      "gift": "ember",
+      "reserve": true,
+      "trade": true,
+      "upgrade": true,
+      "repair": true,
+      "shop": true,
+      "traits": true,
+      "rank": [
+        "crackedEdge",
+        "ember",
+        "echo",
+        "steady",
+        "pardon",
+        "inherit"
+      ]
+    },
+    {
+      "id": "balanced-duplicate",
+      "risk": "balanced",
+      "gift": "ember",
+      "reserve": true,
+      "trade": true,
+      "upgrade": true,
+      "repair": true,
+      "shop": true,
+      "traits": true,
+      "rank": [
+        "ember",
+        "echo",
+        "steady",
+        "pardon",
+        "inherit",
+        "crackedEdge"
+      ],
+      "probe": "duplicate"
+    },
+    {
+      "id": "balanced-reload",
+      "risk": "balanced",
+      "gift": "ember",
+      "reserve": true,
+      "trade": true,
+      "upgrade": true,
+      "repair": true,
+      "shop": true,
+      "traits": true,
+      "rank": [
+        "ember",
+        "echo",
+        "steady",
+        "pardon",
+        "inherit",
+        "crackedEdge"
+      ],
+      "probe": "reload"
+    },
+    {
+      "id": "raw",
+      "risk": "raw",
+      "gift": "ember",
+      "reserve": false,
+      "trade": true,
+      "upgrade": true,
+      "repair": true,
+      "shop": false,
+      "traits": false,
+      "rank": [
+        "ember",
+        "echo",
+        "steady",
+        "pardon",
+        "inherit",
+        "crackedEdge"
+      ]
+    },
+    {
+      "id": "scrap",
+      "risk": "scrap",
+      "gift": "ember",
+      "reserve": false,
+      "trade": true,
+      "upgrade": true,
+      "repair": true,
+      "shop": false,
+      "traits": false,
+      "rank": [
+        "ember",
+        "echo",
+        "steady",
+        "pardon",
+        "inherit",
+        "crackedEdge"
+      ]
+    },
+    {
+      "id": "blind",
+      "risk": "blind",
+      "gift": "ember",
+      "reserve": false,
+      "trade": true,
+      "upgrade": true,
+      "repair": true,
+      "shop": false,
+      "traits": false,
+      "rank": [
+        "ember",
+        "echo",
+        "steady",
+        "pardon",
+        "inherit",
+        "crackedEdge"
+      ]
+    }
+  ],
+  "cases": 26000,
+  "workers": 6,
+  "replayedFinalStates": 26000,
+  "elapsedMs": 1869725.67875,
+  "rowsSha256": "ccb9194888d645cf6083d291971c5a1f94558405a65f44c04b278ef28b8b0516",
+  "baselineSha256": "9e3f5970561608867cef3f2a88fb8c6e74c553994ef3b493cdb2c9b66acb3b0c",
+  "witnesses": {
+    "defeat": {
+      "batch": 0,
+      "stateSha256": "5a5990845548f1b57fc1e54514abce29767f7a9fdd2780b745f001dad1d46517"
+    },
+    "victory": {
+      "batch": 22,
+      "stateSha256": "296fc06b09ed8ca0cf6b41be8be89c7bf4f07f1814aca976028df90ce52886dc"
+    }
+  }
+}

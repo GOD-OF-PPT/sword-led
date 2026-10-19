@@ -1,0 +1,1510 @@
+{
+  "rulesVersion": "forge-v3",
+  "runId": "v3-model",
+  "seed": "v3-balance-0565",
+  "roundLimit": 12,
+  "revision": 209,
+  "phase": "victory",
+  "round": 12,
+  "coins": 53735,
+  "seals": 1,
+  "base": 320,
+  "blades": [
+    {
+      "id": "r1-1",
+      "suppliedRound": 1,
+      "status": "delivered",
+      "base": 40,
+      "value": 253,
+      "peak": 253,
+      "level": 5,
+      "cracked": false,
+      "hits": 5,
+      "charge": 5,
+      "successes": 5,
+      "finalizedRound": 1
+    },
+    {
+      "id": "r1-2",
+      "suppliedRound": 1,
+      "status": "recycled",
+      "base": 40,
+      "value": 184,
+      "peak": 184,
+      "level": 4,
+      "cracked": false,
+      "hits": 3,
+      "charge": 3,
+      "successes": 3,
+      "finalizedRound": 4
+    },
+    {
+      "id": "r1-3",
+      "suppliedRound": 1,
+      "status": "recycled",
+      "base": 40,
+      "value": 121,
+      "peak": 121,
+      "level": 3,
+      "cracked": false,
+      "hits": 3,
+      "charge": 3,
+      "successes": 3,
+      "finalizedRound": 1
+    },
+    {
+      "id": "r2-1",
+      "suppliedRound": 2,
+      "status": "delivered",
+      "base": 40,
+      "value": 253,
+      "peak": 253,
+      "level": 5,
+      "cracked": false,
+      "hits": 5,
+      "charge": 5,
+      "successes": 5,
+      "finalizedRound": 2
+    },
+    {
+      "id": "r2-2",
+      "suppliedRound": 2,
+      "status": "delivered",
+      "base": 40,
+      "value": 58,
+      "peak": 58,
+      "level": 1,
+      "cracked": false,
+      "hits": 1,
+      "charge": 1,
+      "successes": 1,
+      "finalizedRound": 2
+    },
+    {
+      "id": "r2-3",
+      "suppliedRound": 2,
+      "status": "recycled",
+      "base": 40,
+      "value": 121,
+      "peak": 121,
+      "level": 3,
+      "cracked": false,
+      "hits": 3,
+      "charge": 3,
+      "successes": 3,
+      "finalizedRound": 2
+    },
+    {
+      "id": "r3-1",
+      "suppliedRound": 3,
+      "status": "traded",
+      "base": 40,
+      "value": 40,
+      "peak": 40,
+      "level": 0,
+      "cracked": false,
+      "hits": 0,
+      "charge": 0,
+      "successes": 0,
+      "finalizedRound": 3
+    },
+    {
+      "id": "r3-2",
+      "suppliedRound": 3,
+      "status": "delivered",
+      "base": 40,
+      "value": 479,
+      "peak": 479,
+      "level": 6,
+      "cracked": false,
+      "hits": 5,
+      "charge": 5,
+      "successes": 5,
+      "finalizedRound": 3
+    },
+    {
+      "id": "r3-3",
+      "suppliedRound": 3,
+      "status": "delivered",
+      "base": 40,
+      "value": 58,
+      "peak": 58,
+      "level": 1,
+      "cracked": false,
+      "hits": 1,
+      "charge": 1,
+      "successes": 1,
+      "finalizedRound": 3
+    },
+    {
+      "id": "r4-1",
+      "suppliedRound": 4,
+      "status": "delivered",
+      "base": 80,
+      "value": 968,
+      "peak": 968,
+      "level": 6,
+      "cracked": false,
+      "hits": 5,
+      "charge": 5,
+      "successes": 5,
+      "finalizedRound": 4
+    },
+    {
+      "id": "r4-2",
+      "suppliedRound": 4,
+      "status": "delivered",
+      "base": 80,
+      "value": 461,
+      "peak": 461,
+      "level": 4,
+      "cracked": true,
+      "hits": 4,
+      "charge": 4,
+      "successes": 3,
+      "finalizedRound": 6
+    },
+    {
+      "id": "r4-3",
+      "suppliedRound": 4,
+      "status": "recycled",
+      "base": 80,
+      "value": 80,
+      "peak": 80,
+      "level": 0,
+      "cracked": false,
+      "hits": 0,
+      "charge": 0,
+      "successes": 0,
+      "finalizedRound": 4
+    },
+    {
+      "id": "r5-1",
+      "suppliedRound": 5,
+      "status": "delivered",
+      "base": 80,
+      "value": 968,
+      "peak": 968,
+      "level": 6,
+      "cracked": false,
+      "hits": 5,
+      "charge": 5,
+      "successes": 5,
+      "finalizedRound": 5
+    },
+    {
+      "id": "r5-2",
+      "suppliedRound": 5,
+      "status": "delivered",
+      "base": 80,
+      "value": 439,
+      "peak": 439,
+      "level": 4,
+      "cracked": false,
+      "hits": 4,
+      "charge": 4,
+      "successes": 4,
+      "finalizedRound": 5
+    },
+    {
+      "id": "r5-3",
+      "suppliedRound": 5,
+      "status": "recycled",
+      "base": 80,
+      "value": 303,
+      "peak": 303,
+      "level": 3,
+      "cracked": false,
+      "hits": 3,
+      "charge": 3,
+      "successes": 3,
+      "finalizedRound": 5
+    },
+    {
+      "id": "r6-1",
+      "suppliedRound": 6,
+      "status": "traded",
+      "base": 80,
+      "value": 80,
+      "peak": 80,
+      "level": 0,
+      "cracked": false,
+      "hits": 0,
+      "charge": 0,
+      "successes": 0,
+      "finalizedRound": 6
+    },
+    {
+      "id": "r6-2",
+      "suppliedRound": 6,
+      "status": "delivered",
+      "base": 80,
+      "value": 968,
+      "peak": 968,
+      "level": 6,
+      "cracked": false,
+      "hits": 5,
+      "charge": 5,
+      "successes": 5,
+      "finalizedRound": 6
+    },
+    {
+      "id": "r6-3",
+      "suppliedRound": 6,
+      "status": "delivered",
+      "base": 80,
+      "value": 636,
+      "peak": 636,
+      "level": 5,
+      "cracked": false,
+      "hits": 5,
+      "charge": 5,
+      "successes": 5,
+      "finalizedRound": 6
+    },
+    {
+      "id": "r7-1",
+      "suppliedRound": 7,
+      "status": "delivered",
+      "base": 160,
+      "value": 1277,
+      "peak": 1277,
+      "level": 5,
+      "cracked": false,
+      "hits": 5,
+      "charge": 5,
+      "successes": 5,
+      "finalizedRound": 7
+    },
+    {
+      "id": "r7-2",
+      "suppliedRound": 7,
+      "status": "delivered",
+      "base": 160,
+      "value": 1277,
+      "peak": 1277,
+      "level": 5,
+      "cracked": false,
+      "hits": 5,
+      "charge": 5,
+      "successes": 5,
+      "finalizedRound": 7
+    },
+    {
+      "id": "r7-3",
+      "suppliedRound": 7,
+      "status": "delivered",
+      "base": 160,
+      "value": 1277,
+      "peak": 1277,
+      "level": 5,
+      "cracked": false,
+      "hits": 5,
+      "charge": 5,
+      "successes": 5,
+      "finalizedRound": 7
+    },
+    {
+      "id": "r8-1",
+      "suppliedRound": 8,
+      "status": "delivered",
+      "base": 160,
+      "value": 1938,
+      "peak": 1938,
+      "level": 6,
+      "cracked": false,
+      "hits": 5,
+      "charge": 5,
+      "successes": 5,
+      "finalizedRound": 8
+    },
+    {
+      "id": "r8-2",
+      "suppliedRound": 8,
+      "status": "delivered",
+      "base": 160,
+      "value": 1940,
+      "peak": 1940,
+      "level": 6,
+      "cracked": false,
+      "hits": 5,
+      "charge": 5,
+      "successes": 5,
+      "finalizedRound": 8
+    },
+    {
+      "id": "r8-3",
+      "suppliedRound": 8,
+      "status": "delivered",
+      "base": 160,
+      "value": 881,
+      "peak": 881,
+      "level": 4,
+      "cracked": true,
+      "hits": 5,
+      "charge": 5,
+      "successes": 4,
+      "finalizedRound": 8
+    },
+    {
+      "id": "r9-1",
+      "suppliedRound": 9,
+      "status": "delivered",
+      "base": 160,
+      "value": 2943,
+      "peak": 2943,
+      "level": 7,
+      "cracked": false,
+      "hits": 5,
+      "charge": 5,
+      "successes": 5,
+      "finalizedRound": 9
+    },
+    {
+      "id": "r9-2",
+      "suppliedRound": 9,
+      "status": "delivered",
+      "base": 160,
+      "value": 2943,
+      "peak": 2943,
+      "level": 7,
+      "cracked": false,
+      "hits": 5,
+      "charge": 5,
+      "successes": 5,
+      "finalizedRound": 9
+    },
+    {
+      "id": "r9-3",
+      "suppliedRound": 9,
+      "status": "delivered",
+      "base": 160,
+      "value": 4466,
+      "peak": 4466,
+      "level": 8,
+      "cracked": false,
+      "hits": 5,
+      "charge": 5,
+      "successes": 5,
+      "finalizedRound": 9
+    },
+    {
+      "id": "r10-1",
+      "suppliedRound": 10,
+      "status": "delivered",
+      "base": 320,
+      "value": 5889,
+      "peak": 5889,
+      "level": 7,
+      "cracked": false,
+      "hits": 5,
+      "charge": 5,
+      "successes": 5,
+      "finalizedRound": 10
+    },
+    {
+      "id": "r10-2",
+      "suppliedRound": 10,
+      "status": "delivered",
+      "base": 320,
+      "value": 5893,
+      "peak": 5893,
+      "level": 7,
+      "cracked": false,
+      "hits": 5,
+      "charge": 5,
+      "successes": 5,
+      "finalizedRound": 10
+    },
+    {
+      "id": "r10-3",
+      "suppliedRound": 10,
+      "status": "delivered",
+      "base": 320,
+      "value": 5894,
+      "peak": 5894,
+      "level": 7,
+      "cracked": false,
+      "hits": 5,
+      "charge": 5,
+      "successes": 5,
+      "finalizedRound": 10
+    },
+    {
+      "id": "r11-1",
+      "suppliedRound": 11,
+      "status": "delivered",
+      "base": 320,
+      "value": 3880,
+      "peak": 3880,
+      "level": 6,
+      "cracked": false,
+      "hits": 5,
+      "charge": 5,
+      "successes": 5,
+      "finalizedRound": 11
+    },
+    {
+      "id": "r11-2",
+      "suppliedRound": 11,
+      "status": "delivered",
+      "base": 320,
+      "value": 3884,
+      "peak": 3884,
+      "level": 6,
+      "cracked": false,
+      "hits": 5,
+      "charge": 5,
+      "successes": 5,
+      "finalizedRound": 11
+    },
+    {
+      "id": "r11-3",
+      "suppliedRound": 11,
+      "status": "delivered",
+      "base": 320,
+      "value": 3880,
+      "peak": 3880,
+      "level": 6,
+      "cracked": false,
+      "hits": 5,
+      "charge": 5,
+      "successes": 5,
+      "finalizedRound": 11
+    },
+    {
+      "id": "r12-1",
+      "suppliedRound": 12,
+      "status": "delivered",
+      "base": 320,
+      "value": 3881,
+      "peak": 3881,
+      "level": 6,
+      "cracked": false,
+      "hits": 5,
+      "charge": 5,
+      "successes": 5,
+      "finalizedRound": 12
+    },
+    {
+      "id": "r12-2",
+      "suppliedRound": 12,
+      "status": "delivered",
+      "base": 320,
+      "value": 3884,
+      "peak": 3884,
+      "level": 6,
+      "cracked": false,
+      "hits": 5,
+      "charge": 5,
+      "successes": 5,
+      "finalizedRound": 12
+    },
+    {
+      "id": "r12-3",
+      "suppliedRound": 12,
+      "status": "delivered",
+      "base": 320,
+      "value": 2677,
+      "peak": 2677,
+      "level": 5,
+      "cracked": true,
+      "hits": 5,
+      "charge": 5,
+      "successes": 4,
+      "finalizedRound": 12
+    }
+  ],
+  "reserveId": null,
+  "delivered": 10442,
+  "traits": [
+    "steady",
+    "echo",
+    "pardon"
+  ],
+  "gift": "claimed",
+  "pardonUsed": true,
+  "pendingInheritance": 0,
+  "shop": [],
+  "sold": [],
+  "upgraded": false,
+  "repaired": false,
+  "history": [
+    {
+      "round": 1,
+      "quota": 180,
+      "delivered": 253,
+      "met": true,
+      "recovered": 10,
+      "recoveredIds": [
+        "r1-3"
+      ],
+      "reserveId": "r1-2",
+      "sealsBefore": 3,
+      "sealsAfter": 3,
+      "protected": false
+    },
+    {
+      "round": 2,
+      "quota": 300,
+      "delivered": 311,
+      "met": true,
+      "recovered": 10,
+      "recoveredIds": [
+        "r2-3"
+      ],
+      "reserveId": "r1-2",
+      "sealsBefore": 3,
+      "sealsAfter": 3,
+      "protected": false
+    },
+    {
+      "round": 3,
+      "quota": 520,
+      "delivered": 537,
+      "met": true,
+      "recovered": 0,
+      "recoveredIds": [],
+      "reserveId": "r1-2",
+      "sealsBefore": 3,
+      "sealsAfter": 3,
+      "protected": false
+    },
+    {
+      "round": 4,
+      "quota": 850,
+      "delivered": 968,
+      "met": true,
+      "recovered": 30,
+      "recoveredIds": [
+        "r1-2",
+        "r4-3"
+      ],
+      "reserveId": "r4-2",
+      "sealsBefore": 3,
+      "sealsAfter": 3,
+      "protected": false
+    },
+    {
+      "round": 5,
+      "quota": 1400,
+      "delivered": 1407,
+      "met": true,
+      "recovered": 20,
+      "recoveredIds": [
+        "r5-3"
+      ],
+      "reserveId": "r4-2",
+      "sealsBefore": 3,
+      "sealsAfter": 3,
+      "protected": false
+    },
+    {
+      "round": 6,
+      "quota": 2300,
+      "delivered": 2065,
+      "met": false,
+      "recovered": 0,
+      "recoveredIds": [],
+      "reserveId": null,
+      "sealsBefore": 3,
+      "sealsAfter": 3,
+      "protected": true
+    },
+    {
+      "round": 7,
+      "quota": 3800,
+      "delivered": 3831,
+      "met": true,
+      "recovered": 0,
+      "recoveredIds": [],
+      "reserveId": null,
+      "sealsBefore": 3,
+      "sealsAfter": 3,
+      "protected": false
+    },
+    {
+      "round": 8,
+      "quota": 6200,
+      "delivered": 4759,
+      "met": false,
+      "recovered": 0,
+      "recoveredIds": [],
+      "reserveId": null,
+      "sealsBefore": 3,
+      "sealsAfter": 2,
+      "protected": false
+    },
+    {
+      "round": 9,
+      "quota": 10000,
+      "delivered": 10352,
+      "met": true,
+      "recovered": 0,
+      "recoveredIds": [],
+      "reserveId": null,
+      "sealsBefore": 3,
+      "sealsAfter": 3,
+      "protected": false
+    },
+    {
+      "round": 10,
+      "quota": 16000,
+      "delivered": 17676,
+      "met": true,
+      "recovered": 0,
+      "recoveredIds": [],
+      "reserveId": null,
+      "sealsBefore": 3,
+      "sealsAfter": 3,
+      "protected": false
+    },
+    {
+      "round": 11,
+      "quota": 26000,
+      "delivered": 11644,
+      "met": false,
+      "recovered": 0,
+      "recoveredIds": [],
+      "reserveId": null,
+      "sealsBefore": 3,
+      "sealsAfter": 2,
+      "protected": false
+    },
+    {
+      "round": 12,
+      "quota": 42000,
+      "delivered": 10442,
+      "met": false,
+      "recovered": 0,
+      "recoveredIds": [],
+      "reserveId": null,
+      "sealsBefore": 2,
+      "sealsAfter": 1,
+      "protected": false
+    }
+  ],
+  "rng": {
+    "forge": {
+      "state": 791171551,
+      "draws": 147
+    },
+    "shop": {
+      "state": 1019259399,
+      "draws": 6
+    }
+  },
+  "journal": [
+    {
+      "type": "strike",
+      "pieceId": "r1-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r1-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r1-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r1-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r1-1"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r1-1"
+    },
+    {
+      "traitId": "steady",
+      "type": "claimGift"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r1-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r1-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r1-2"
+    },
+    {
+      "type": "reserve",
+      "pieceId": "r1-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r1-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r1-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r1-3"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r2-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r2-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r2-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r2-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r2-1"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r2-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r2-2"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r2-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r2-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r2-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r2-3"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "pieceId": "r3-1",
+      "traitId": "echo",
+      "type": "buy"
+    },
+    {
+      "type": "upgrade"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r3-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r3-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r3-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r3-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r3-2"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r3-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r3-3"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r3-3"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r4-1"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r4-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r4-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r4-2"
+    },
+    {
+      "type": "reserve",
+      "pieceId": "r4-2"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r5-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r5-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r5-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r5-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r5-1"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r5-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r5-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r5-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r5-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r5-2"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r5-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r5-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r5-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r5-3"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "pieceId": "r6-1",
+      "traitId": "pardon",
+      "type": "buy"
+    },
+    {
+      "type": "upgrade"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r6-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r6-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r6-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r6-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r6-2"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r6-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r6-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r6-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r6-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r6-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r6-3"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r6-3"
+    },
+    {
+      "type": "reserve",
+      "pieceId": "r4-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r4-2"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r4-2"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r7-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r7-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r7-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r7-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r7-1"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r7-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r7-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r7-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r7-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r7-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r7-2"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r7-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r7-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r7-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r7-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r7-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r7-3"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r7-3"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r8-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r8-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r8-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r8-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r8-1"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r8-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r8-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r8-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r8-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r8-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r8-2"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r8-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r8-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r8-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r8-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r8-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r8-3"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r8-3"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "upgrade"
+    },
+    {
+      "type": "repair"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r9-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r9-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r9-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r9-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r9-1"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r9-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r9-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r9-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r9-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r9-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r9-2"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r9-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r9-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r9-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r9-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r9-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r9-3"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r9-3"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r10-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r10-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r10-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r10-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r10-1"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r10-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r10-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r10-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r10-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r10-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r10-2"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r10-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r10-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r10-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r10-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r10-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r10-3"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r10-3"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r11-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r11-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r11-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r11-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r11-1"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r11-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r11-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r11-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r11-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r11-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r11-2"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r11-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r11-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r11-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r11-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r11-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r11-3"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r11-3"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r12-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r12-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r12-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r12-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r12-1"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r12-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r12-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r12-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r12-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r12-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r12-2"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r12-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r12-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r12-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r12-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r12-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r12-3"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r12-3"
+    },
+    {
+      "type": "settle"
+    }
+  ]
+}

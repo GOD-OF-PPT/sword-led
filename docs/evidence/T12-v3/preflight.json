@@ -1,0 +1,101 @@
+{
+  "serialParallel": {
+    "cases": 26,
+    "rowsSha256": "adb2ece9e3980538a1d69b59570119affaaa1f71fea1f12dd72869fc3e160a2b",
+    "witnessBytesEqual": true
+  },
+  "cliRefusals": [
+    {
+      "args": [
+        "--seeds",
+        "0"
+      ],
+      "exit": 1,
+      "stderrSha256": "f75314527827b2ccb791c36e6ba2e7be49184aa7dd8e6eabfdc42d7a21df7486"
+    },
+    {
+      "args": [
+        "--seeds",
+        "1001"
+      ],
+      "exit": 1,
+      "stderrSha256": "f75314527827b2ccb791c36e6ba2e7be49184aa7dd8e6eabfdc42d7a21df7486"
+    },
+    {
+      "args": [
+        "--seeds",
+        "1.5"
+      ],
+      "exit": 1,
+      "stderrSha256": "f75314527827b2ccb791c36e6ba2e7be49184aa7dd8e6eabfdc42d7a21df7486"
+    },
+    {
+      "args": [
+        "--workers",
+        "0"
+      ],
+      "exit": 1,
+      "stderrSha256": "f75314527827b2ccb791c36e6ba2e7be49184aa7dd8e6eabfdc42d7a21df7486"
+    },
+    {
+      "args": [
+        "--workers",
+        "9"
+      ],
+      "exit": 1,
+      "stderrSha256": "f75314527827b2ccb791c36e6ba2e7be49184aa7dd8e6eabfdc42d7a21df7486"
+    },
+    {
+      "args": [
+        "--bad",
+        "1"
+      ],
+      "exit": 1,
+      "stderrSha256": "38f06ee6bcfbc42b6211334ce06a4a86d45e1d3fada7e86c2d30e116e85d5801"
+    },
+    {
+      "args": [
+        "--seeds"
+      ],
+      "exit": 1,
+      "stderrSha256": "38f06ee6bcfbc42b6211334ce06a4a86d45e1d3fada7e86c2d30e116e85d5801"
+    },
+    {
+      "args": [
+        "--seeds",
+        "1",
+        "--seeds",
+        "1"
+      ],
+      "exit": 1,
+      "stderrSha256": "38f06ee6bcfbc42b6211334ce06a4a86d45e1d3fada7e86c2d30e116e85d5801"
+    },
+    {
+      "args": [
+        "--seeds",
+        "1",
+        "--out",
+        "tmp/T12-v3-tools/serial"
+      ],
+      "exit": 1,
+      "stderrSha256": "a1f3a969ef822aec242aacd9190ebd945a0063c2ecadef11179f1bc37e753a0b"
+    }
+  ],
+  "auditRefusals": [
+    "schema",
+    "rules",
+    "profiles",
+    "cases",
+    "replays",
+    "baseline",
+    "rows",
+    "witness"
+  ],
+  "rowRefusals": 11,
+  "workerFailure": {
+    "exit": 1,
+    "summaryAbsent": true,
+    "signal": null,
+    "stderrSha256": "cb255ac081e04e19e1f1062e3f3fa39d2e66a8d89ac872e75ba80a61093d324e"
+  }
+}

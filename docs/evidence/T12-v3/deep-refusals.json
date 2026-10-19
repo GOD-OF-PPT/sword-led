@@ -1,0 +1,21 @@
+{
+  "checks": [
+    {
+      "kind": "source-drift",
+      "rejected": true
+    },
+    {
+      "kind": "sdk-drift",
+      "rejected": true
+    },
+    {
+      "kind": "witness-coins",
+      "rejected": true
+    },
+    {
+      "kind": "corrupt-gzip",
+      "rejected": true
+    }
+  ],
+  "actualProductionInputsModified": false
+}

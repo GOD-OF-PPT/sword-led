@@ -1,0 +1,50 @@
+{
+  "pilotRowsMatched": 26,
+  "independentMetricWitnesses": [
+    {
+      "phase": "victory",
+      "profile": "conservative-steady",
+      "seed": "v3-balance-0565",
+      "actual": {
+        "strikes": 147,
+        "bursts": 0,
+        "cracks": 3,
+        "broken": 0,
+        "upgrades": 3,
+        "repairs": 1,
+        "deliveries": 29,
+        "delivered": 64245,
+        "peak": 5894,
+        "triggers": {
+          "echo": 26,
+          "steady": 3
+        }
+      }
+    },
+    {
+      "phase": "defeat",
+      "profile": "conservative-steady",
+      "seed": "v3-balance-0000",
+      "actual": {
+        "strikes": 131,
+        "bursts": 0,
+        "cracks": 1,
+        "broken": 0,
+        "upgrades": 3,
+        "repairs": 0,
+        "deliveries": 26,
+        "delivered": 50785,
+        "peak": 5897,
+        "triggers": {
+          "echo": 24,
+          "steady": 1
+        }
+      }
+    }
+  ],
+  "maxCommands": 303,
+  "witnessCanonicalBytes": {
+    "victory": 15319,
+    "defeat": 14022
+  }
+}

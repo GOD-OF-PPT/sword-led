@@ -1,0 +1,133 @@
+{
+  "files": {
+    "scripts/v3-model.mjs": {
+      "bytes": 9465,
+      "sha256": "b28296b08c3dc7c489ecaa85c27a66f90cabb5d8dcef6d2e4bbc739d63bea166"
+    },
+    "scripts/v3-model-policy.mjs": {
+      "bytes": 3840,
+      "sha256": "6917711f8fe0e70d285b86e57dc58dafbef135476cb0c8f9832a7033dcbc8349"
+    },
+    "scripts/audit-v3-model.mjs": {
+      "bytes": 8996,
+      "sha256": "e743320590ccef3a70b35d6c4b44d7e4777cb302ad242c642e465e5444eed350"
+    },
+    "tests/model/v3-model.test.mjs": {
+      "bytes": 2285,
+      "sha256": "c3f437f17cb7be57aca7f94b3573d2ddcb9fffe9f02e5438dc8b4da4866500a7"
+    },
+    "README.md": {
+      "bytes": 14023,
+      "sha256": "4755fae73e7854689e6bbffc6b0742747454f372d29238bbc3a96d970a657bd7"
+    },
+    "goal-1/plan.md": {
+      "bytes": 65132,
+      "sha256": "b6ed10aa3258f0d4b5a5b24ca4bbf792a5f623d7baa71be788b9e6b8ade29f81"
+    },
+    "goal-1/tasks.md": {
+      "bytes": 79757,
+      "sha256": "7a9a8caf3f3af572569b0feb644b6c7cec8161534ede5996db38032b7671bd9a"
+    },
+    "docs/reviews/R4-v3-model-audit.md": {
+      "bytes": 8851,
+      "sha256": "de0390a4f13b800f0b0cbd339be0e121e2da73a23d644378b8e2ce4e8b5fbb90"
+    },
+    "docs/reviews/R4-final-audit.md": {
+      "bytes": 17089,
+      "sha256": "ef23647bee50b166743ae08c43dc888fc2857d4cb73b2ed5cd1f57ee3a24199e"
+    },
+    "docs/v0.3-acceptance.md": {
+      "bytes": 5234,
+      "sha256": "7463072eff057b4903c1689236dcac1ccd0db0502e99a34f9079dfbb16c0a50b"
+    },
+    "docs/v0.4-campaign.md": {
+      "bytes": 3920,
+      "sha256": "230f1cdde7a9043881ddf33a3cfe1677e83a1a784b981dab3b892b90a223f397"
+    },
+    "docs/v0.4-workshop-scene.md": {
+      "bytes": 4274,
+      "sha256": "70611663187aadb84111ceb7570c728692d3facdd97edb1edec44eeb0d853ce5"
+    },
+    "docs/evidence/T12-v3/contract.md": {
+      "bytes": 3133,
+      "sha256": "54d416980f92bfb75034918d37bf891ba85566ec4353cc35ab75f8e35dbdea2f"
+    },
+    "docs/evidence/T12-v3/audit.json": {
+      "bytes": 149296,
+      "sha256": "b63daec26413c1a1b7031350c7b9496a3997ff6184f6f89cb8ce1fd7e3331246"
+    },
+    "docs/evidence/T12-v3/baseline.json": {
+      "bytes": 42224,
+      "sha256": "9e3f5970561608867cef3f2a88fb8c6e74c553994ef3b493cdb2c9b66acb3b0c"
+    },
+    "docs/evidence/T12-v3/deep-refusals.json": {
+      "bytes": 326,
+      "sha256": "9ca166187a72dcceef2b4241dbb1228d2e2d53786085ddc8c1b16410d1fa7485"
+    },
+    "docs/evidence/T12-v3/defeat.json": {
+      "bytes": 23529,
+      "sha256": "c9faa445b418d98b4ab9e758622a763cacd618971e49857734e6f5f0359f4ccb"
+    },
+    "docs/evidence/T12-v3/journal-boundary-result.json": {
+      "bytes": 329,
+      "sha256": "dfe5b1793d01b617ea746aabd6d17264a835d4b56679226b6331000a07083a54"
+    },
+    "docs/evidence/T12-v3/journal-boundary.json": {
+      "bytes": 122318,
+      "sha256": "2d81fb1464930f390e73c81e6350410b8e5c193a1405276582b843495692e596"
+    },
+    "docs/evidence/T12-v3/overlap-and-witness-metrics.json": {
+      "bytes": 1008,
+      "sha256": "83ea2b2b0451fccb480a0c8c3b4509d5b688eab28ead23b734670f91c327e6cf"
+    },
+    "docs/evidence/T12-v3/pilot-receipt.json": {
+      "bytes": 890,
+      "sha256": "54e1f51d8e1e5d04b98304dd66cd80b227ddcb38869415e37e7318373cf178c3"
+    },
+    "docs/evidence/T12-v3/preflight.json": {
+      "bytes": 2174,
+      "sha256": "22eb2894e5a6e450624d9457e8ab113a17f935af1703ea609bc2791c9956fa1f"
+    },
+    "docs/evidence/T12-v3/preview-health.json": {
+      "bytes": 214,
+      "sha256": "6ba667d0974d05069373dbaa60433515b464045b321344329578a7707fc64ca2"
+    },
+    "docs/evidence/T12-v3/reserved-journal-boundary.json": {
+      "bytes": 122376,
+      "sha256": "1afe5e8e0cc0e27c88522445c65d8bdeb3769d2135e0dc31f4f6a5821ff30c84"
+    },
+    "docs/evidence/T12-v3/rows.jsonl.gz": {
+      "bytes": 4689128,
+      "sha256": "e3517b2802368314b4c0969e4cbb9a6761ab8b2ca643f2dea8277e146879714b"
+    },
+    "docs/evidence/T12-v3/run-start.json": {
+      "bytes": 479,
+      "sha256": "ea3ef773d1cce157a723a1ada4f61a15e610e29f824272dc29c6bf3c8a665cb0"
+    },
+    "docs/evidence/T12-v3/runtime-identity.json": {
+      "bytes": 154,
+      "sha256": "9d98090b5e0626ada56483efd98305669f6050eaf4251e5d76904f83fe354777"
+    },
+    "docs/evidence/T12-v3/summary.json": {
+      "bytes": 10022,
+      "sha256": "efceafc6beb0cdef9af44336a37563f8ae6edc8406e0c38660b508da120f4f8f"
+    },
+    "docs/evidence/T12-v3/terminal.json": {
+      "bytes": 334,
+      "sha256": "a292d41816fdc55416d772617b055b5ada54798a7d651be9092e18df69e216a3"
+    },
+    "docs/evidence/T12-v3/victory.json": {
+      "bytes": 25704,
+      "sha256": "be07117a104c851e4dcd7b378e395b5e6e547ac82b059ad45752763f44bf3576"
+    }
+  },
+  "payloadBytes": 5416504,
+  "filesScanned": 30,
+  "textFiles": 29,
+  "decodedArchives": 1,
+  "credentialFindings": 0,
+  "markdownFiles": 9,
+  "localLinks": 95,
+  "inputSha256": "b961f5c651df51121659687138cfe5edf125e25dadda11642136dfc6aaca852b",
+  "oldCompiledFilesUnchanged": 21
+}

@@ -1,0 +1,39 @@
+{
+  "unitTests": {
+    "session": 43001,
+    "exit": 0,
+    "tests": 4,
+    "rowRejectionCases": 11,
+    "durationMs": 8366.083392
+  },
+  "typecheck": {
+    "session": 85522,
+    "exit": 0
+  },
+  "serial": {
+    "session": 36572,
+    "exit": 0,
+    "cases": 26,
+    "elapsedMs": 5246.189522
+  },
+  "parallel": {
+    "session": 9603,
+    "exit": 0,
+    "cases": 26,
+    "elapsedMs": 2665.4441
+  },
+  "files": {
+    "tmp/T12-v3-tools/serial/summary.json": {
+      "sha256": "c6c35d1f81395f7efd3ce83df9259ecbf37527eb4ace443d4c5454127f7556ea",
+      "bytes": 10010
+    },
+    "tmp/T12-v3-tools/parallel/summary.json": {
+      "sha256": "c22326a81a83dc185ebe8cc25f756e813ece72243e1e92c66884f298cf535a78",
+      "bytes": 10017
+    },
+    "tmp/T12-v3-tools/serial-audit.json": {
+      "sha256": "498bb72447f8786783bb8f63b69dd6afc7047351cced97d3c0c770af1f08a298",
+      "bytes": 144276
+    }
+  }
+}

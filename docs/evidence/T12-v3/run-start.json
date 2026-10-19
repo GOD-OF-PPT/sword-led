@@ -1,0 +1,19 @@
+{
+  "recordedWhileActiveAt": "2026-10-19T17:19:01.078Z",
+  "session": 5662,
+  "expectedCases": 26000,
+  "strategyProfiles": 24,
+  "mirrorProfiles": 2,
+  "seeds": 1000,
+  "workers": 6,
+  "output": "tmp/T12-v3-1000",
+  "log": "tmp/T12-v3-tools/formal.log",
+  "baselineSha256": "9e3f5970561608867cef3f2a88fb8c6e74c553994ef3b493cdb2c9b66acb3b0c",
+  "sourceInputs": 235,
+  "buildFiles": 46,
+  "environment": {
+    "node": "v22.12.0",
+    "platform": "darwin",
+    "arch": "x64"
+  }
+}

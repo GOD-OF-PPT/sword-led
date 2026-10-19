@@ -1,0 +1,7022 @@
+{
+  "rulesVersion": "forge-v3",
+  "seeds": 1000,
+  "cases": 26000,
+  "producerReplays": 26000,
+  "independentWitnessReplays": 2,
+  "mirrorComparisons": 2000,
+  "noActionSnapshots": 1000,
+  "sourceInputs": 235,
+  "buildFiles": 46,
+  "rowsSha256": "ccb9194888d645cf6083d291971c5a1f94558405a65f44c04b278ef28b8b0516",
+  "statistics": {
+    "conservative-steady": {
+      "cases": 1000,
+      "victories": 2,
+      "winRate": 0.002,
+      "round": {
+        "min": 8,
+        "p25": 11,
+        "median": 11,
+        "p75": 11,
+        "max": 12,
+        "mean": 10.753
+      },
+      "commands": {
+        "min": 125,
+        "p25": 178,
+        "median": 187,
+        "p75": 192,
+        "max": 221,
+        "mean": 184.323
+      },
+      "winningCommands": {
+        "min": 207,
+        "p25": 207,
+        "median": 207,
+        "p75": 207,
+        "max": 209,
+        "mean": 208
+      },
+      "met": {
+        "min": 5,
+        "p25": 6,
+        "median": 7,
+        "p75": 7,
+        "max": 9,
+        "mean": 6.66
+      },
+      "broken": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "bursts": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "coins": {
+        "min": 9325,
+        "p25": 22533,
+        "median": 29756,
+        "p75": 35115,
+        "max": 67060,
+        "mean": 29080.594
+      },
+      "upgrades": {
+        "min": 2,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "max": 3,
+        "mean": 2.967
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 0,
+        "median": 1,
+        "p75": 1,
+        "max": 2,
+        "mean": 0.639
+      },
+      "reserveRetrievals": 1453,
+      "triggers": {
+        "steady": 2727,
+        "ember": 0,
+        "inherit": 0,
+        "echo": 13716,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 1000,
+        "ember": 895,
+        "inherit": 30,
+        "echo": 844,
+        "crackedEdge": 0,
+        "pardon": 231
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 180,
+            "p25": 184,
+            "median": 253,
+            "p75": 253,
+            "max": 385,
+            "mean": 235.641
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 300,
+            "p25": 311,
+            "median": 385,
+            "p75": 385,
+            "max": 613,
+            "mean": 367.032
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 426,
+            "p25": 546,
+            "median": 569,
+            "p75": 638,
+            "max": 1113,
+            "mean": 605.971
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 850,
+            "p25": 862,
+            "median": 887,
+            "p75": 968,
+            "max": 1788,
+            "mean": 955.274
+          }
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 1400,
+            "p25": 1418,
+            "median": 1496,
+            "p75": 1555,
+            "max": 2714,
+            "mean": 1527.422
+          }
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 1000,
+          "met": 524,
+          "protected": 244,
+          "delivered": {
+            "min": 939,
+            "p25": 1908,
+            "median": 2304,
+            "p75": 2441,
+            "max": 4058,
+            "mean": 2200.02
+          }
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 1000,
+          "met": 821,
+          "protected": 42,
+          "delivered": {
+            "min": 2216,
+            "p25": 3823,
+            "median": 3878,
+            "p75": 4129,
+            "max": 6784,
+            "mean": 3911.466
+          }
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 1000,
+          "met": 292,
+          "protected": 109,
+          "delivered": {
+            "min": 2264,
+            "p25": 4159,
+            "median": 5157,
+            "p75": 6255,
+            "max": 8348,
+            "mean": 5232.623
+          }
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 967,
+          "met": 4,
+          "protected": 60,
+          "delivered": {
+            "min": 1489,
+            "p25": 3217,
+            "median": 4127,
+            "p75": 5157,
+            "max": 10719,
+            "mean": 4349.311271975181
+          }
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 967,
+          "met": 19,
+          "protected": 1,
+          "delivered": {
+            "min": 3995,
+            "p25": 8285,
+            "median": 10318,
+            "p75": 12330,
+            "max": 20017,
+            "mean": 10287.140641158221
+          }
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 758,
+          "met": 1,
+          "protected": 0,
+          "delivered": {
+            "min": 4991,
+            "p25": 8262,
+            "median": 10317,
+            "p75": 12329,
+            "max": 26404,
+            "mean": 10357.509234828496
+          }
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 61,
+          "met": 0,
+          "protected": 0,
+          "delivered": {
+            "min": 6314,
+            "p25": 7791,
+            "median": 8998,
+            "p75": 11625,
+            "max": 20017,
+            "mean": 10018.098360655738
+          }
+        }
+      ]
+    },
+    "conservative-ember": {
+      "cases": 1000,
+      "victories": 2,
+      "winRate": 0.002,
+      "round": {
+        "min": 8,
+        "p25": 11,
+        "median": 11,
+        "p75": 11,
+        "max": 12,
+        "mean": 10.788
+      },
+      "commands": {
+        "min": 121,
+        "p25": 179,
+        "median": 187,
+        "p75": 192,
+        "max": 221,
+        "mean": 184.9
+      },
+      "winningCommands": {
+        "min": 209,
+        "p25": 209,
+        "median": 209,
+        "p75": 209,
+        "max": 211,
+        "mean": 210
+      },
+      "met": {
+        "min": 4,
+        "p25": 6,
+        "median": 7,
+        "p75": 7,
+        "max": 9,
+        "mean": 6.705
+      },
+      "broken": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "bursts": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "coins": {
+        "min": 9104,
+        "p25": 23195,
+        "median": 30342,
+        "p75": 35490,
+        "max": 67060,
+        "mean": 29597.583
+      },
+      "upgrades": {
+        "min": 2,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "max": 3,
+        "mean": 2.973
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 0,
+        "median": 1,
+        "p75": 1,
+        "max": 2,
+        "mean": 0.622
+      },
+      "reserveRetrievals": 1463,
+      "triggers": {
+        "steady": 1620,
+        "ember": 0,
+        "inherit": 0,
+        "echo": 15343,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 847,
+        "ember": 1000,
+        "inherit": 25,
+        "echo": 884,
+        "crackedEdge": 0,
+        "pardon": 244
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 180,
+            "p25": 184,
+            "median": 253,
+            "p75": 253,
+            "max": 385,
+            "mean": 235.641
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 300,
+            "p25": 311,
+            "median": 385,
+            "p75": 385,
+            "max": 613,
+            "mean": 368.806
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 426,
+            "p25": 546,
+            "median": 569,
+            "p75": 651,
+            "max": 1113,
+            "mean": 608.001
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 854,
+            "p25": 862,
+            "median": 897,
+            "p75": 968,
+            "max": 1788,
+            "mean": 961.041
+          }
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 1266,
+            "p25": 1420,
+            "median": 1470,
+            "p75": 1555,
+            "max": 2714,
+            "mean": 1525.455
+          }
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 1000,
+          "met": 538,
+          "protected": 239,
+          "delivered": {
+            "min": 878,
+            "p25": 1940,
+            "median": 2315,
+            "p75": 2443,
+            "max": 4058,
+            "mean": 2215.361
+          }
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 1000,
+          "met": 832,
+          "protected": 40,
+          "delivered": {
+            "min": 2003,
+            "p25": 3823,
+            "median": 3878,
+            "p75": 4138,
+            "max": 6784,
+            "mean": 3926.408
+          }
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 1000,
+          "met": 311,
+          "protected": 113,
+          "delivered": {
+            "min": 2311,
+            "p25": 4450,
+            "median": 5365,
+            "p75": 6267,
+            "max": 8348,
+            "mean": 5283.474
+          }
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 973,
+          "met": 3,
+          "protected": 70,
+          "delivered": {
+            "min": 1729,
+            "p25": 3217,
+            "median": 4220,
+            "p75": 5157,
+            "max": 10771,
+            "mean": 4385.27852004111
+          }
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 973,
+          "met": 22,
+          "protected": 1,
+          "delivered": {
+            "min": 3360,
+            "p25": 8286,
+            "median": 10318,
+            "p75": 12329,
+            "max": 20017,
+            "mean": 10292.651593011306
+          }
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 773,
+          "met": 1,
+          "protected": 0,
+          "delivered": {
+            "min": 4503,
+            "p25": 8288,
+            "median": 10317,
+            "p75": 12330,
+            "max": 26404,
+            "mean": 10370.9042690815
+          }
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 69,
+          "met": 0,
+          "protected": 0,
+          "delivered": {
+            "min": 5826,
+            "p25": 7848,
+            "median": 8998,
+            "p75": 11641,
+            "max": 20017,
+            "mean": 9887.985507246376
+          }
+        }
+      ]
+    },
+    "balanced-steady": {
+      "cases": 1000,
+      "victories": 1000,
+      "winRate": 1,
+      "round": {
+        "min": 12,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 12
+      },
+      "commands": {
+        "min": 157,
+        "p25": 171,
+        "median": 177,
+        "p75": 184,
+        "max": 215,
+        "mean": 178.187
+      },
+      "winningCommands": {
+        "min": 157,
+        "p25": 171,
+        "median": 177,
+        "p75": 184,
+        "max": 215,
+        "mean": 178.187
+      },
+      "met": {
+        "min": 11,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 11.987
+      },
+      "broken": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "bursts": {
+        "min": 4,
+        "p25": 8,
+        "median": 8,
+        "p75": 9,
+        "max": 13,
+        "mean": 8.395
+      },
+      "coins": {
+        "min": 112365,
+        "p25": 148202,
+        "median": 166797,
+        "p75": 190519,
+        "max": 323341,
+        "mean": 173179.287
+      },
+      "upgrades": {
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "max": 3,
+        "mean": 3
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 1,
+        "mean": 0.001
+      },
+      "reserveRetrievals": 117,
+      "triggers": {
+        "steady": 3333,
+        "ember": 19308,
+        "inherit": 0,
+        "echo": 19387,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 1000,
+        "ember": 896,
+        "inherit": 0,
+        "echo": 865,
+        "crackedEdge": 0,
+        "pardon": 239
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 180,
+            "p25": 184,
+            "median": 253,
+            "p75": 253,
+            "max": 385,
+            "mean": 235.641
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 300,
+            "p25": 366,
+            "median": 385,
+            "p75": 404,
+            "max": 1223,
+            "mean": 411.988
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 426,
+            "p25": 558,
+            "median": 632,
+            "p75": 872,
+            "max": 4098,
+            "mean": 871.635
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 850,
+            "p25": 1020,
+            "median": 1152,
+            "p75": 1702,
+            "max": 7865,
+            "mean": 1567.331
+          }
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 1404,
+            "p25": 1706,
+            "median": 2356,
+            "p75": 3578,
+            "max": 11954,
+            "mean": 2916.636
+          }
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 2301,
+            "p25": 3321,
+            "median": 4461,
+            "p75": 5591,
+            "max": 19048,
+            "mean": 5105.746
+          }
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 3801,
+            "p25": 5333,
+            "median": 7383,
+            "p75": 11193,
+            "max": 37437,
+            "mean": 9576.843
+          }
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 6203,
+            "p25": 7377,
+            "median": 10694,
+            "p75": 16229,
+            "max": 56834,
+            "mean": 12791.608
+          }
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 1000,
+          "met": 998,
+          "protected": 1,
+          "delivered": {
+            "min": 8853,
+            "p25": 10705,
+            "median": 16227,
+            "p75": 20674,
+            "max": 86160,
+            "mean": 17160.541
+          }
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 16000,
+            "p25": 20826,
+            "median": 24395,
+            "p75": 33726,
+            "max": 117750,
+            "mean": 31641.017
+          }
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 25066,
+            "p25": 31067,
+            "median": 32552,
+            "p75": 49337,
+            "max": 180460,
+            "mean": 40596.933
+          }
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 1000,
+          "met": 991,
+          "protected": 4,
+          "delivered": {
+            "min": 5962,
+            "p25": 47137,
+            "median": 49349,
+            "p75": 59794,
+            "max": 184487,
+            "mean": 55252.178
+          }
+        }
+      ]
+    },
+    "balanced-ember": {
+      "cases": 1000,
+      "victories": 1000,
+      "winRate": 1,
+      "round": {
+        "min": 12,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 12
+      },
+      "commands": {
+        "min": 157,
+        "p25": 171,
+        "median": 177,
+        "p75": 183,
+        "max": 210,
+        "mean": 177.283
+      },
+      "winningCommands": {
+        "min": 157,
+        "p25": 171,
+        "median": 177,
+        "p75": 183,
+        "max": 210,
+        "mean": 177.283
+      },
+      "met": {
+        "min": 11,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 11.984
+      },
+      "broken": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "bursts": {
+        "min": 5,
+        "p25": 7,
+        "median": 8,
+        "p75": 9,
+        "max": 13,
+        "mean": 8.282
+      },
+      "coins": {
+        "min": 115415,
+        "p25": 158836,
+        "median": 176867,
+        "p75": 200918,
+        "max": 360208,
+        "mean": 182468.46
+      },
+      "upgrades": {
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "max": 3,
+        "mean": 3
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 1,
+        "mean": 0.002
+      },
+      "reserveRetrievals": 116,
+      "triggers": {
+        "steady": 2146,
+        "ember": 24846,
+        "inherit": 0,
+        "echo": 21127,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 849,
+        "ember": 1000,
+        "inherit": 0,
+        "echo": 900,
+        "crackedEdge": 0,
+        "pardon": 251
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 180,
+            "p25": 184,
+            "median": 253,
+            "p75": 253,
+            "max": 385,
+            "mean": 235.641
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 300,
+            "p25": 366,
+            "median": 385,
+            "p75": 404,
+            "max": 1415,
+            "mean": 422.063
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 426,
+            "p25": 572,
+            "median": 730,
+            "p75": 1113,
+            "max": 4098,
+            "mean": 951.172
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 851,
+            "p25": 1016,
+            "median": 1152,
+            "p75": 1748,
+            "max": 7865,
+            "mean": 1678.886
+          }
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 1403,
+            "p25": 1748,
+            "median": 3414,
+            "p75": 5185,
+            "max": 12262,
+            "mean": 3530.273
+          }
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 1430,
+            "p25": 3417,
+            "median": 5326,
+            "p75": 8082,
+            "max": 19048,
+            "mean": 5730.77
+          }
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 3822,
+            "p25": 5913,
+            "median": 10412,
+            "p75": 15802,
+            "max": 37437,
+            "mean": 11163.809
+          }
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 6212,
+            "p25": 8962,
+            "median": 11118,
+            "p75": 16262,
+            "max": 56834,
+            "mean": 14974.973
+          }
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 1000,
+          "met": 995,
+          "protected": 0,
+          "delivered": {
+            "min": 2370,
+            "p25": 10705,
+            "median": 16229,
+            "p75": 24624,
+            "max": 86160,
+            "mean": 17726.364
+          }
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 16008,
+            "p25": 21425,
+            "median": 31603,
+            "p75": 35232,
+            "max": 113792,
+            "mean": 32482.554
+          }
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 1000,
+          "met": 998,
+          "protected": 1,
+          "delivered": {
+            "min": 17961,
+            "p25": 31085,
+            "median": 32553,
+            "p75": 49355,
+            "max": 180460,
+            "mean": 42178.63
+          }
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 1000,
+          "met": 993,
+          "protected": 3,
+          "delivered": {
+            "min": 24266,
+            "p25": 47138,
+            "median": 49383,
+            "p75": 63936,
+            "max": 196497,
+            "mean": 56340.275
+          }
+        }
+      ]
+    },
+    "aggressive-steady": {
+      "cases": 1000,
+      "victories": 1000,
+      "winRate": 1,
+      "round": {
+        "min": 12,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 12
+      },
+      "commands": {
+        "min": 157,
+        "p25": 166,
+        "median": 170,
+        "p75": 176,
+        "max": 221,
+        "mean": 171.616
+      },
+      "winningCommands": {
+        "min": 157,
+        "p25": 166,
+        "median": 170,
+        "p75": 176,
+        "max": 221,
+        "mean": 171.616
+      },
+      "met": {
+        "min": 11,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 11.998
+      },
+      "broken": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 1,
+        "max": 6,
+        "mean": 0.687
+      },
+      "bursts": {
+        "min": 5,
+        "p25": 8,
+        "median": 9,
+        "p75": 9,
+        "max": 14,
+        "mean": 8.632
+      },
+      "coins": {
+        "min": 116741,
+        "p25": 147294,
+        "median": 165443,
+        "p75": 186286,
+        "max": 354483,
+        "mean": 171336.674
+      },
+      "upgrades": {
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "max": 3,
+        "mean": 3
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "reserveRetrievals": 12,
+      "triggers": {
+        "steady": 2992,
+        "ember": 19359,
+        "inherit": 41,
+        "echo": 18522,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 1000,
+        "ember": 896,
+        "inherit": 0,
+        "echo": 865,
+        "crackedEdge": 0,
+        "pardon": 239
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 184,
+            "p25": 184,
+            "median": 253,
+            "p75": 253,
+            "max": 385,
+            "mean": 238.529
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 366,
+            "p25": 366,
+            "median": 385,
+            "p75": 404,
+            "max": 1223,
+            "mean": 441.89
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 530,
+            "p25": 572,
+            "median": 768,
+            "p75": 1113,
+            "max": 4098,
+            "mean": 943.833
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 851,
+            "p25": 1122,
+            "median": 1177,
+            "p75": 2250,
+            "max": 8252,
+            "mean": 1740.971
+          }
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 1449,
+            "p25": 1748,
+            "median": 2421,
+            "p75": 3581,
+            "max": 11943,
+            "mean": 3066.908
+          }
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 2356,
+            "p25": 3396,
+            "median": 4042,
+            "p75": 5576,
+            "max": 18662,
+            "mean": 5027.37
+          }
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 3890,
+            "p25": 5333,
+            "median": 7383,
+            "p75": 11193,
+            "max": 37437,
+            "mean": 9689.857
+          }
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 1000,
+          "met": 999,
+          "protected": 1,
+          "delivered": {
+            "min": 0,
+            "p25": 7380,
+            "median": 10696,
+            "p75": 16237,
+            "max": 56806,
+            "mean": 13035.588
+          }
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 10174,
+            "p25": 10701,
+            "median": 15813,
+            "p75": 16273,
+            "max": 86160,
+            "mean": 16537.747
+          }
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 16193,
+            "p25": 20838,
+            "median": 22446,
+            "p75": 32551,
+            "max": 113676,
+            "mean": 30364.27
+          }
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 27225,
+            "p25": 31070,
+            "median": 32526,
+            "p75": 47198,
+            "max": 172667,
+            "mean": 39915.09
+          }
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 1000,
+          "met": 999,
+          "protected": 1,
+          "delivered": {
+            "min": 0,
+            "p25": 47140,
+            "median": 49328,
+            "p75": 56313,
+            "max": 172680,
+            "mean": 55142.861
+          }
+        }
+      ]
+    },
+    "aggressive-ember": {
+      "cases": 1000,
+      "victories": 1000,
+      "winRate": 1,
+      "round": {
+        "min": 12,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 12
+      },
+      "commands": {
+        "min": 157,
+        "p25": 166,
+        "median": 169,
+        "p75": 175,
+        "max": 202,
+        "mean": 170.729
+      },
+      "winningCommands": {
+        "min": 157,
+        "p25": 166,
+        "median": 169,
+        "p75": 175,
+        "max": 202,
+        "mean": 170.729
+      },
+      "met": {
+        "min": 11,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 11.999
+      },
+      "broken": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 1,
+        "max": 5,
+        "mean": 0.642
+      },
+      "bursts": {
+        "min": 5,
+        "p25": 8,
+        "median": 9,
+        "p75": 9,
+        "max": 13,
+        "mean": 8.545
+      },
+      "coins": {
+        "min": 122293,
+        "p25": 155623,
+        "median": 172433,
+        "p75": 197179,
+        "max": 374473,
+        "mean": 178837.164
+      },
+      "upgrades": {
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "max": 3,
+        "mean": 3
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "reserveRetrievals": 13,
+      "triggers": {
+        "steady": 1851,
+        "ember": 25635,
+        "inherit": 34,
+        "echo": 20148,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 849,
+        "ember": 1000,
+        "inherit": 0,
+        "echo": 900,
+        "crackedEdge": 0,
+        "pardon": 251
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 184,
+            "p25": 184,
+            "median": 253,
+            "p75": 253,
+            "max": 385,
+            "mean": 238.529
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 305,
+            "p25": 366,
+            "median": 385,
+            "p75": 404,
+            "max": 2138,
+            "mean": 458.743
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 530,
+            "p25": 572,
+            "median": 867,
+            "p75": 1168,
+            "max": 4098,
+            "mean": 1037.28
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 851,
+            "p25": 1122,
+            "median": 1177,
+            "p75": 2351,
+            "max": 8252,
+            "mean": 1937.39
+          }
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 1425,
+            "p25": 1753,
+            "median": 3416,
+            "p75": 5186,
+            "max": 12511,
+            "mean": 3642.441
+          }
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 2343,
+            "p25": 3417,
+            "median": 5192,
+            "p75": 7879,
+            "max": 18662,
+            "mean": 5522.049
+          }
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 3890,
+            "p25": 6857,
+            "median": 10415,
+            "p75": 15799,
+            "max": 37437,
+            "mean": 11180.569
+          }
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 6552,
+            "p25": 8971,
+            "median": 10718,
+            "p75": 16261,
+            "max": 56834,
+            "mean": 14775.468
+          }
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 10219,
+            "p25": 10705,
+            "median": 16229,
+            "p75": 24624,
+            "max": 86160,
+            "mean": 17767.511
+          }
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 16193,
+            "p25": 21425,
+            "median": 27229,
+            "p75": 32553,
+            "max": 113792,
+            "mean": 31568.835
+          }
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 26008,
+            "p25": 31070,
+            "median": 32524,
+            "p75": 47201,
+            "max": 172660,
+            "mean": 39840.248
+          }
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 1000,
+          "met": 999,
+          "protected": 1,
+          "delivered": {
+            "min": 0,
+            "p25": 47140,
+            "median": 49328,
+            "p75": 60669,
+            "max": 262002,
+            "mean": 55677.181
+          }
+        }
+      ]
+    },
+    "fixed-3": {
+      "cases": 1000,
+      "victories": 0,
+      "winRate": 0,
+      "round": {
+        "min": 5,
+        "p25": 7,
+        "median": 8,
+        "p75": 8,
+        "max": 11,
+        "mean": 7.606
+      },
+      "commands": {
+        "min": 68,
+        "p25": 96,
+        "median": 110,
+        "p75": 111,
+        "max": 150,
+        "mean": 104.782
+      },
+      "winningCommands": null,
+      "met": {
+        "min": 2,
+        "p25": 3,
+        "median": 3,
+        "p75": 4,
+        "max": 6,
+        "mean": 3.321
+      },
+      "broken": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "bursts": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "coins": {
+        "min": 1000,
+        "p25": 3466,
+        "median": 4596,
+        "p75": 6073,
+        "max": 11203,
+        "mean": 4784.729
+      },
+      "upgrades": {
+        "min": 1,
+        "p25": 2,
+        "median": 2,
+        "p75": 2,
+        "max": 3,
+        "mean": 2.049
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 1,
+        "median": 1,
+        "p75": 1,
+        "max": 2,
+        "mean": 0.85
+      },
+      "reserveRetrievals": 1118,
+      "triggers": {
+        "steady": 0,
+        "ember": 0,
+        "inherit": 0,
+        "echo": 8045,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 646,
+        "ember": 1000,
+        "inherit": 242,
+        "echo": 684,
+        "crackedEdge": 0,
+        "pardon": 358
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 184,
+            "p25": 184,
+            "median": 242,
+            "p75": 279,
+            "max": 424,
+            "mean": 245.263
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 305,
+            "p25": 305,
+            "median": 363,
+            "p75": 400,
+            "max": 666,
+            "mean": 361.485
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 386,
+          "protected": 133,
+          "delivered": {
+            "min": 363,
+            "p25": 426,
+            "median": 489,
+            "p75": 565,
+            "max": 923,
+            "mean": 503.398
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 1000,
+          "met": 848,
+          "protected": 12,
+          "delivered": {
+            "min": 729,
+            "p25": 855,
+            "median": 930,
+            "p75": 1067,
+            "max": 1827,
+            "mean": 958.733
+          }
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 1000,
+          "met": 84,
+          "protected": 45,
+          "delivered": {
+            "min": 729,
+            "p25": 855,
+            "median": 981,
+            "p75": 1173,
+            "max": 2084,
+            "mean": 1029.673
+          }
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 930,
+          "met": 0,
+          "protected": 245,
+          "delivered": {
+            "min": 486,
+            "p25": 606,
+            "median": 738,
+            "p75": 764,
+            "max": 1524,
+            "mean": 718.8247311827957
+          }
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 930,
+          "met": 3,
+          "protected": 0,
+          "delivered": {
+            "min": 1461,
+            "p25": 1824,
+            "median": 2139,
+            "p75": 2454,
+            "max": 4206,
+            "mean": 2167.0021505376344
+          }
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 611,
+          "met": 0,
+          "protected": 0,
+          "delivered": {
+            "min": 1461,
+            "p25": 1824,
+            "median": 2139,
+            "p75": 2454,
+            "max": 4452,
+            "mean": 2142.7266775777416
+          }
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 119,
+          "met": 0,
+          "protected": 0,
+          "delivered": {
+            "min": 974,
+            "p25": 1216,
+            "median": 1531,
+            "p75": 1965,
+            "max": 3248,
+            "mean": 1659.1176470588234
+          }
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 15,
+          "met": 0,
+          "protected": 0,
+          "delivered": {
+            "min": 3651,
+            "p25": 4282,
+            "median": 4282,
+            "p75": 5239,
+            "max": 5870,
+            "mean": 4621.066666666667
+          }
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 1,
+          "met": 0,
+          "protected": 0,
+          "delivered": {
+            "min": 3651,
+            "p25": 3651,
+            "median": 3651,
+            "p75": 3651,
+            "max": 3651,
+            "mean": 3651
+          }
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        }
+      ]
+    },
+    "fixed-6": {
+      "cases": 1000,
+      "victories": 492,
+      "winRate": 0.492,
+      "round": {
+        "min": 11,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 11.885
+      },
+      "commands": {
+        "min": 187,
+        "p25": 224,
+        "median": 231,
+        "p75": 237,
+        "max": 259,
+        "mean": 229.81
+      },
+      "winningCommands": {
+        "min": 209,
+        "p25": 227,
+        "median": 232,
+        "p75": 237,
+        "max": 259,
+        "mean": 231.760162601626
+      },
+      "met": {
+        "min": 6,
+        "p25": 8,
+        "median": 9,
+        "p75": 10,
+        "max": 12,
+        "mean": 9.177
+      },
+      "broken": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 1,
+        "max": 4,
+        "mean": 0.473
+      },
+      "bursts": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "coins": {
+        "min": 34546,
+        "p25": 72807,
+        "median": 83391,
+        "p75": 91602,
+        "max": 131242,
+        "mean": 81212.213
+      },
+      "upgrades": {
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "max": 3,
+        "mean": 3
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 1,
+        "mean": 0.042
+      },
+      "reserveRetrievals": 1413,
+      "triggers": {
+        "steady": 3583,
+        "ember": 0,
+        "inherit": 34,
+        "echo": 31180,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 849,
+        "ember": 1000,
+        "inherit": 0,
+        "echo": 900,
+        "crackedEdge": 0,
+        "pardon": 251
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 201,
+            "p25": 366,
+            "median": 556,
+            "p75": 558,
+            "max": 1954,
+            "mean": 532.139
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 305,
+            "p25": 366,
+            "median": 558,
+            "p75": 759,
+            "max": 3174,
+            "mean": 592.122
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 999,
+          "protected": 1,
+          "delivered": {
+            "min": 202,
+            "p25": 572,
+            "median": 834,
+            "p75": 924,
+            "max": 7053,
+            "mean": 860.984
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 890,
+            "p25": 1152,
+            "median": 1632,
+            "p75": 1861,
+            "max": 6655,
+            "mean": 1706.435
+          }
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 1430,
+            "p25": 1743,
+            "median": 1862,
+            "p75": 2447,
+            "max": 9327,
+            "mean": 2198.228
+          }
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 1000,
+          "met": 951,
+          "protected": 34,
+          "delivered": {
+            "min": 1279,
+            "p25": 2637,
+            "median": 2900,
+            "p75": 3501,
+            "max": 7934,
+            "mean": 3129.955
+          }
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 1000,
+          "met": 996,
+          "protected": 2,
+          "delivered": {
+            "min": 2575,
+            "p25": 4793,
+            "median": 5664,
+            "p75": 6845,
+            "max": 14605,
+            "mean": 5885.478
+          }
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 1000,
+          "met": 914,
+          "protected": 59,
+          "delivered": {
+            "min": 3036,
+            "p25": 6939,
+            "median": 7651,
+            "p75": 8847,
+            "max": 22167,
+            "mean": 8030.853
+          }
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 1000,
+          "met": 458,
+          "protected": 143,
+          "delivered": {
+            "min": 1277,
+            "p25": 7024,
+            "median": 9345,
+            "p75": 11281,
+            "max": 19024,
+            "mean": 9312.208
+          }
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 1000,
+          "met": 687,
+          "protected": 18,
+          "delivered": {
+            "min": 5015,
+            "p25": 14448,
+            "median": 17707,
+            "p75": 20091,
+            "max": 41966,
+            "mean": 17685.244
+          }
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 1000,
+          "met": 169,
+          "protected": 34,
+          "delivered": {
+            "min": 6441,
+            "p25": 15155,
+            "median": 19132,
+            "p75": 24572,
+            "max": 44371,
+            "mean": 19906.069
+          }
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 885,
+          "met": 3,
+          "protected": 12,
+          "delivered": {
+            "min": 6441,
+            "p25": 14380,
+            "median": 18419,
+            "p75": 22352,
+            "max": 55058,
+            "mean": 19233.127683615818
+          }
+        }
+      ]
+    },
+    "fixed-7": {
+      "cases": 1000,
+      "victories": 1000,
+      "winRate": 1,
+      "round": {
+        "min": 12,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 12
+      },
+      "commands": {
+        "min": 168,
+        "p25": 180,
+        "median": 187,
+        "p75": 194,
+        "max": 222,
+        "mean": 187.815
+      },
+      "winningCommands": {
+        "min": 168,
+        "p25": 180,
+        "median": 187,
+        "p75": 194,
+        "max": 222,
+        "mean": 187.815
+      },
+      "met": {
+        "min": 12,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 12
+      },
+      "broken": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 3,
+        "mean": 0.278
+      },
+      "bursts": {
+        "min": 12,
+        "p25": 13,
+        "median": 14,
+        "p75": 15,
+        "max": 19,
+        "mean": 14.216
+      },
+      "coins": {
+        "min": 134145,
+        "p25": 194229,
+        "median": 218974,
+        "p75": 249108,
+        "max": 442969,
+        "mean": 224373.52
+      },
+      "upgrades": {
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "max": 3,
+        "mean": 3
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "reserveRetrievals": 57,
+      "triggers": {
+        "steady": 1903,
+        "ember": 39648,
+        "inherit": 21,
+        "echo": 22061,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 849,
+        "ember": 1000,
+        "inherit": 0,
+        "echo": 900,
+        "crackedEdge": 0,
+        "pardon": 251
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 421,
+            "p25": 979,
+            "median": 1173,
+            "p75": 1780,
+            "max": 6243,
+            "mean": 1566.38
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 610,
+            "p25": 1689,
+            "median": 2567,
+            "p75": 3900,
+            "max": 13701,
+            "mean": 2698.766
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 610,
+            "p25": 1700,
+            "median": 2580,
+            "p75": 3922,
+            "max": 32452,
+            "mean": 3150.418
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 1239,
+            "p25": 3417,
+            "median": 5196,
+            "p75": 8082,
+            "max": 43100,
+            "mean": 6484.062
+          }
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 1544,
+            "p25": 3417,
+            "median": 5192,
+            "p75": 8082,
+            "max": 43137,
+            "mean": 6579.511
+          }
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 2347,
+            "p25": 5116,
+            "median": 5427,
+            "p75": 8111,
+            "max": 28431,
+            "mean": 7563.172
+          }
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 3890,
+            "p25": 8971,
+            "median": 10896,
+            "p75": 16517,
+            "max": 130915,
+            "mean": 15870.908
+          }
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 6857,
+            "p25": 10406,
+            "median": 13994,
+            "p75": 16598,
+            "max": 86288,
+            "mean": 16088.15
+          }
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 10289,
+            "p25": 11377,
+            "median": 16242,
+            "p75": 24644,
+            "max": 86281,
+            "mean": 19882.746
+          }
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 17941,
+            "p25": 21438,
+            "median": 32524,
+            "p75": 49348,
+            "max": 261852,
+            "mean": 37869.371
+          }
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 27079,
+            "p25": 32548,
+            "median": 42881,
+            "p75": 53943,
+            "max": 190459,
+            "mean": 48292.09
+          }
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 42011,
+            "p25": 49381,
+            "median": 54035,
+            "p75": 73831,
+            "max": 208237,
+            "mean": 63290.716
+          }
+        }
+      ]
+    },
+    "fixed-10": {
+      "cases": 1000,
+      "victories": 1000,
+      "winRate": 1,
+      "round": {
+        "min": 12,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 12
+      },
+      "commands": {
+        "min": 204,
+        "p25": 225,
+        "median": 237,
+        "p75": 248,
+        "max": 303,
+        "mean": 237.816
+      },
+      "winningCommands": {
+        "min": 204,
+        "p25": 225,
+        "median": 237,
+        "p75": 248,
+        "max": 303,
+        "mean": 237.816
+      },
+      "met": {
+        "min": 9,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 11.907
+      },
+      "broken": {
+        "min": 0,
+        "p25": 2,
+        "median": 4,
+        "p75": 5,
+        "max": 14,
+        "mean": 3.934
+      },
+      "bursts": {
+        "min": 12,
+        "p25": 14,
+        "median": 15,
+        "p75": 17,
+        "max": 23,
+        "mean": 15.629
+      },
+      "coins": {
+        "min": 261836,
+        "p25": 519999,
+        "median": 659152,
+        "p75": 826099,
+        "max": 2230966,
+        "mean": 706956.278
+      },
+      "upgrades": {
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "max": 3,
+        "mean": 3
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 2,
+        "mean": 0.054
+      },
+      "reserveRetrievals": 280,
+      "triggers": {
+        "steady": 5417,
+        "ember": 42990,
+        "inherit": 307,
+        "echo": 27106,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 849,
+        "ember": 1000,
+        "inherit": 0,
+        "echo": 900,
+        "crackedEdge": 0,
+        "pardon": 251
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 984,
+          "protected": 0,
+          "delivered": {
+            "min": 0,
+            "p25": 2338,
+            "median": 3574,
+            "p75": 6866,
+            "max": 43705,
+            "mean": 5226.465
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 998,
+          "protected": 0,
+          "delivered": {
+            "min": 0,
+            "p25": 4327,
+            "median": 6580,
+            "p75": 10003,
+            "max": 96171,
+            "mean": 8440.258
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 981,
+          "protected": 3,
+          "delivered": {
+            "min": 0,
+            "p25": 5182,
+            "median": 8222,
+            "p75": 15331,
+            "max": 81668,
+            "mean": 11974.063
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 1000,
+          "met": 996,
+          "protected": 0,
+          "delivered": {
+            "min": 0,
+            "p25": 10890,
+            "median": 16548,
+            "p75": 30795,
+            "max": 277621,
+            "mean": 24174.193
+          }
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 1000,
+          "met": 997,
+          "protected": 1,
+          "delivered": {
+            "min": 0,
+            "p25": 10415,
+            "median": 16533,
+            "p75": 30795,
+            "max": 164225,
+            "mean": 23930.972
+          }
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 1000,
+          "met": 979,
+          "protected": 10,
+          "delivered": {
+            "min": 0,
+            "p25": 13373,
+            "median": 20622,
+            "p75": 31389,
+            "max": 357413,
+            "mean": 29396.996
+          }
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 0,
+            "p25": 26556,
+            "median": 40842,
+            "p75": 73037,
+            "max": 555475,
+            "mean": 62064.076
+          }
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 1000,
+          "met": 997,
+          "protected": 1,
+          "delivered": {
+            "min": 0,
+            "p25": 26855,
+            "median": 41496,
+            "p75": 78623,
+            "max": 1646100,
+            "mean": 66371.069
+          }
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 1000,
+          "met": 991,
+          "protected": 4,
+          "delivered": {
+            "min": 0,
+            "p25": 31721,
+            "median": 51792,
+            "p75": 93832,
+            "max": 715077,
+            "mean": 73568.019
+          }
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 1000,
+          "met": 992,
+          "protected": 2,
+          "delivered": {
+            "min": 0,
+            "p25": 68345,
+            "median": 103732,
+            "p75": 157583,
+            "max": 1513225,
+            "mean": 130534.758
+          }
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 1000,
+          "met": 996,
+          "protected": 1,
+          "delivered": {
+            "min": 0,
+            "p25": 68353,
+            "median": 103747,
+            "p75": 157586,
+            "max": 1514718,
+            "mean": 134075.018
+          }
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 1000,
+          "met": 997,
+          "protected": 1,
+          "delivered": {
+            "min": 0,
+            "p25": 68440,
+            "median": 103863,
+            "p75": 188011,
+            "max": 997851,
+            "mean": 142106.237
+          }
+        }
+      ]
+    },
+    "without-reserve": {
+      "cases": 1000,
+      "victories": 1000,
+      "winRate": 1,
+      "round": {
+        "min": 12,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 12
+      },
+      "commands": {
+        "min": 112,
+        "p25": 127,
+        "median": 133,
+        "p75": 140,
+        "max": 165,
+        "mean": 133.876
+      },
+      "winningCommands": {
+        "min": 112,
+        "p25": 127,
+        "median": 133,
+        "p75": 140,
+        "max": 165,
+        "mean": 133.876
+      },
+      "met": {
+        "min": 10,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 11.886
+      },
+      "broken": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "bursts": {
+        "min": 4,
+        "p25": 7,
+        "median": 8,
+        "p75": 9,
+        "max": 12,
+        "mean": 8.199
+      },
+      "coins": {
+        "min": 100131,
+        "p25": 156466,
+        "median": 173421,
+        "p75": 197849,
+        "max": 355173,
+        "mean": 180086.153
+      },
+      "upgrades": {
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "max": 3,
+        "mean": 3
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 1,
+        "mean": 0.028
+      },
+      "reserveRetrievals": 0,
+      "triggers": {
+        "steady": 2017,
+        "ember": 24597,
+        "inherit": 0,
+        "echo": 14590,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 849,
+        "ember": 1000,
+        "inherit": 0,
+        "echo": 900,
+        "crackedEdge": 0,
+        "pardon": 251
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 180,
+            "p25": 184,
+            "median": 253,
+            "p75": 253,
+            "max": 385,
+            "mean": 235.641
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 300,
+            "p25": 366,
+            "median": 385,
+            "p75": 404,
+            "max": 2147,
+            "mean": 426.468
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 984,
+          "protected": 2,
+          "delivered": {
+            "min": 236,
+            "p25": 572,
+            "median": 730,
+            "p75": 1108,
+            "max": 3896,
+            "mean": 928.432
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 851,
+            "p25": 1016,
+            "median": 1152,
+            "p75": 1748,
+            "max": 7865,
+            "mean": 1670.864
+          }
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 1000,
+          "met": 998,
+          "protected": 0,
+          "delivered": {
+            "min": 1239,
+            "p25": 1748,
+            "median": 2653,
+            "p75": 5185,
+            "max": 12262,
+            "mean": 3521.592
+          }
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 1000,
+          "met": 977,
+          "protected": 12,
+          "delivered": {
+            "min": 484,
+            "p25": 3417,
+            "median": 5326,
+            "p75": 7898,
+            "max": 18662,
+            "mean": 5685.099
+          }
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 3823,
+            "p25": 6857,
+            "median": 10406,
+            "p75": 16227,
+            "max": 37437,
+            "mean": 11234.987
+          }
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 2097,
+            "p25": 8714,
+            "median": 10902,
+            "p75": 16261,
+            "max": 57442,
+            "mean": 14613.068
+          }
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 1000,
+          "met": 976,
+          "protected": 5,
+          "delivered": {
+            "min": 1442,
+            "p25": 10701,
+            "median": 16229,
+            "p75": 18274,
+            "max": 86160,
+            "mean": 17106.823
+          }
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 1000,
+          "met": 997,
+          "protected": 2,
+          "delivered": {
+            "min": 3795,
+            "p25": 21426,
+            "median": 32509,
+            "p75": 34371,
+            "max": 113740,
+            "mean": 32930.542
+          }
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 1000,
+          "met": 979,
+          "protected": 5,
+          "delivered": {
+            "min": 4829,
+            "p25": 31082,
+            "median": 32552,
+            "p75": 49348,
+            "max": 174852,
+            "mean": 41641.475
+          }
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 1000,
+          "met": 976,
+          "protected": 8,
+          "delivered": {
+            "min": 3357,
+            "p25": 47050,
+            "median": 49337,
+            "p75": 61192,
+            "max": 187183,
+            "mean": 55027.522
+          }
+        }
+      ]
+    },
+    "without-trade": {
+      "cases": 1000,
+      "victories": 1000,
+      "winRate": 1,
+      "round": {
+        "min": 12,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 12
+      },
+      "commands": {
+        "min": 160,
+        "p25": 177,
+        "median": 184,
+        "p75": 192,
+        "max": 217,
+        "mean": 184.388
+      },
+      "winningCommands": {
+        "min": 160,
+        "p25": 177,
+        "median": 184,
+        "p75": 192,
+        "max": 217,
+        "mean": 184.388
+      },
+      "met": {
+        "min": 10,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 11.966
+      },
+      "broken": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "bursts": {
+        "min": 6,
+        "p25": 9,
+        "median": 10,
+        "p75": 11,
+        "max": 14,
+        "mean": 9.737
+      },
+      "coins": {
+        "min": 81999,
+        "p25": 141849,
+        "median": 154086,
+        "p75": 169787,
+        "max": 306151,
+        "mean": 158305.926
+      },
+      "upgrades": {
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "max": 3,
+        "mean": 3
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 1,
+        "mean": 0.001
+      },
+      "reserveRetrievals": 147,
+      "triggers": {
+        "steady": 0,
+        "ember": 29211,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 0,
+        "ember": 1000,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 0
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 180,
+            "p25": 184,
+            "median": 253,
+            "p75": 253,
+            "max": 385,
+            "mean": 235.641
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 300,
+            "p25": 366,
+            "median": 385,
+            "p75": 404,
+            "max": 1415,
+            "mean": 422.063
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 521,
+            "p25": 558,
+            "median": 589,
+            "p75": 1209,
+            "max": 3992,
+            "mean": 999.663
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 851,
+            "p25": 1122,
+            "median": 1178,
+            "p75": 2250,
+            "max": 7865,
+            "mean": 1984.177
+          }
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 1403,
+            "p25": 1885,
+            "median": 3416,
+            "p75": 5185,
+            "max": 11954,
+            "mean": 3689.047
+          }
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 1458,
+            "p25": 3416,
+            "median": 5183,
+            "p75": 5386,
+            "max": 18444,
+            "mean": 5147.191
+          }
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 3803,
+            "p25": 6857,
+            "median": 10403,
+            "p75": 11259,
+            "max": 36372,
+            "mean": 10069.144
+          }
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 6212,
+            "p25": 6858,
+            "median": 10405,
+            "p75": 15787,
+            "max": 55237,
+            "mean": 11861.586
+          }
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 7841,
+            "p25": 10406,
+            "median": 14415,
+            "p75": 15798,
+            "max": 55231,
+            "mean": 14828.358
+          }
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 16000,
+            "p25": 19904,
+            "median": 20840,
+            "p75": 31604,
+            "max": 110481,
+            "mean": 26874.543
+          }
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 1000,
+          "met": 992,
+          "protected": 0,
+          "delivered": {
+            "min": 3816,
+            "p25": 30196,
+            "median": 31598,
+            "p75": 42592,
+            "max": 167651,
+            "mean": 36205.114
+          }
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 1000,
+          "met": 976,
+          "protected": 0,
+          "delivered": {
+            "min": 9934,
+            "p25": 43816,
+            "median": 46849,
+            "p75": 53414,
+            "max": 139333,
+            "mean": 50937.419
+          }
+        }
+      ]
+    },
+    "without-upgrade": {
+      "cases": 1000,
+      "victories": 889,
+      "winRate": 0.889,
+      "round": {
+        "min": 11,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 11.984
+      },
+      "commands": {
+        "min": 189,
+        "p25": 223,
+        "median": 231,
+        "p75": 238,
+        "max": 264,
+        "mean": 230.551
+      },
+      "winningCommands": {
+        "min": 191,
+        "p25": 223,
+        "median": 231,
+        "p75": 238,
+        "max": 264,
+        "mean": 230.95163104611925
+      },
+      "met": {
+        "min": 7,
+        "p25": 10,
+        "median": 10,
+        "p75": 11,
+        "max": 12,
+        "mean": 10.277
+      },
+      "broken": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "bursts": {
+        "min": 9,
+        "p25": 14,
+        "median": 16,
+        "p75": 17,
+        "max": 21,
+        "mean": 15.678
+      },
+      "coins": {
+        "min": 43032,
+        "p25": 87841,
+        "median": 99454,
+        "p75": 111406,
+        "max": 158428,
+        "mean": 99950.829
+      },
+      "upgrades": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 1,
+        "mean": 0.006
+      },
+      "reserveRetrievals": 1196,
+      "triggers": {
+        "steady": 5756,
+        "ember": 47034,
+        "inherit": 0,
+        "echo": 28555,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 849,
+        "ember": 1000,
+        "inherit": 0,
+        "echo": 900,
+        "crackedEdge": 0,
+        "pardon": 251
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 180,
+            "p25": 184,
+            "median": 253,
+            "p75": 253,
+            "max": 385,
+            "mean": 235.641
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 300,
+            "p25": 366,
+            "median": 385,
+            "p75": 404,
+            "max": 1415,
+            "mean": 422.063
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 426,
+            "p25": 572,
+            "median": 730,
+            "p75": 1113,
+            "max": 4098,
+            "mean": 951.172
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 837,
+            "p25": 1113,
+            "median": 1700,
+            "p75": 2643,
+            "max": 9026,
+            "mean": 2139.822
+          }
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 1400,
+            "p25": 1742,
+            "median": 2583,
+            "p75": 4010,
+            "max": 14126,
+            "mean": 3190.697
+          }
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 1000,
+          "met": 999,
+          "protected": 1,
+          "delivered": {
+            "min": 1704,
+            "p25": 2643,
+            "median": 3913,
+            "p75": 4972,
+            "max": 14257,
+            "mean": 4231.738
+          }
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 3801,
+            "p25": 4008,
+            "median": 4342,
+            "p75": 6111,
+            "max": 21388,
+            "mean": 5280.756
+          }
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 1000,
+          "met": 993,
+          "protected": 3,
+          "delivered": {
+            "min": 4015,
+            "p25": 6700,
+            "median": 8289,
+            "p75": 8884,
+            "max": 25335,
+            "mean": 8484.424
+          }
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 1000,
+          "met": 916,
+          "protected": 24,
+          "delivered": {
+            "min": 911,
+            "p25": 10655,
+            "median": 11908,
+            "p75": 13444,
+            "max": 27186,
+            "mean": 12221.61
+          }
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 1000,
+          "met": 818,
+          "protected": 56,
+          "delivered": {
+            "min": 875,
+            "p25": 16318,
+            "median": 17317,
+            "p75": 19403,
+            "max": 32518,
+            "mean": 17247.626
+          }
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 1000,
+          "met": 453,
+          "protected": 97,
+          "delivered": {
+            "min": 571,
+            "p25": 16082,
+            "median": 23950,
+            "p75": 27785,
+            "max": 49201,
+            "mean": 22171.232
+          }
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 984,
+          "met": 100,
+          "protected": 58,
+          "delivered": {
+            "min": 635,
+            "p25": 14588,
+            "median": 21556,
+            "p75": 30570,
+            "max": 73714,
+            "mean": 23658.636178861787
+          }
+        }
+      ]
+    },
+    "without-repair": {
+      "cases": 1000,
+      "victories": 1000,
+      "winRate": 1,
+      "round": {
+        "min": 12,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 12
+      },
+      "commands": {
+        "min": 157,
+        "p25": 171,
+        "median": 177,
+        "p75": 183,
+        "max": 210,
+        "mean": 177.281
+      },
+      "winningCommands": {
+        "min": 157,
+        "p25": 171,
+        "median": 177,
+        "p75": 183,
+        "max": 210,
+        "mean": 177.281
+      },
+      "met": {
+        "min": 11,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 11.984
+      },
+      "broken": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "bursts": {
+        "min": 5,
+        "p25": 7,
+        "median": 8,
+        "p75": 9,
+        "max": 13,
+        "mean": 8.282
+      },
+      "coins": {
+        "min": 115415,
+        "p25": 158836,
+        "median": 176867,
+        "p75": 200918,
+        "max": 360208,
+        "mean": 182474.61
+      },
+      "upgrades": {
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "max": 3,
+        "mean": 3
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "reserveRetrievals": 116,
+      "triggers": {
+        "steady": 2146,
+        "ember": 24846,
+        "inherit": 0,
+        "echo": 21127,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 849,
+        "ember": 1000,
+        "inherit": 0,
+        "echo": 900,
+        "crackedEdge": 0,
+        "pardon": 251
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 180,
+            "p25": 184,
+            "median": 253,
+            "p75": 253,
+            "max": 385,
+            "mean": 235.641
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 300,
+            "p25": 366,
+            "median": 385,
+            "p75": 404,
+            "max": 1415,
+            "mean": 422.063
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 426,
+            "p25": 572,
+            "median": 730,
+            "p75": 1113,
+            "max": 4098,
+            "mean": 951.172
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 851,
+            "p25": 1016,
+            "median": 1152,
+            "p75": 1748,
+            "max": 7865,
+            "mean": 1678.886
+          }
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 1403,
+            "p25": 1748,
+            "median": 3414,
+            "p75": 5185,
+            "max": 12262,
+            "mean": 3530.273
+          }
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 1430,
+            "p25": 3417,
+            "median": 5326,
+            "p75": 8082,
+            "max": 19048,
+            "mean": 5730.77
+          }
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 3822,
+            "p25": 5913,
+            "median": 10412,
+            "p75": 15802,
+            "max": 37437,
+            "mean": 11163.809
+          }
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 6212,
+            "p25": 8962,
+            "median": 11118,
+            "p75": 16262,
+            "max": 56834,
+            "mean": 14974.973
+          }
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 1000,
+          "met": 995,
+          "protected": 0,
+          "delivered": {
+            "min": 2370,
+            "p25": 10705,
+            "median": 16229,
+            "p75": 24624,
+            "max": 86160,
+            "mean": 17726.364
+          }
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 16008,
+            "p25": 21425,
+            "median": 31603,
+            "p75": 35232,
+            "max": 113792,
+            "mean": 32482.554
+          }
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 1000,
+          "met": 998,
+          "protected": 1,
+          "delivered": {
+            "min": 17961,
+            "p25": 31085,
+            "median": 32553,
+            "p75": 49355,
+            "max": 180460,
+            "mean": 42178.63
+          }
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 1000,
+          "met": 993,
+          "protected": 3,
+          "delivered": {
+            "min": 24266,
+            "p25": 47138,
+            "median": 49383,
+            "p75": 63936,
+            "max": 196497,
+            "mean": 56340.275
+          }
+        }
+      ]
+    },
+    "without-shop": {
+      "cases": 1000,
+      "victories": 497,
+      "winRate": 0.497,
+      "round": {
+        "min": 10,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 11.884
+      },
+      "commands": {
+        "min": 174,
+        "p25": 232,
+        "median": 241,
+        "p75": 249,
+        "max": 278,
+        "mean": 239.574
+      },
+      "winningCommands": {
+        "min": 201,
+        "p25": 234,
+        "median": 242,
+        "p75": 250,
+        "max": 278,
+        "mean": 241.8450704225352
+      },
+      "met": {
+        "min": 7,
+        "p25": 9,
+        "median": 9,
+        "p75": 10,
+        "max": 11,
+        "mean": 9.46
+      },
+      "broken": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "bursts": {
+        "min": 9,
+        "p25": 16,
+        "median": 17,
+        "p75": 18,
+        "max": 23,
+        "mean": 17.167
+      },
+      "coins": {
+        "min": 27177,
+        "p25": 66989,
+        "median": 76472,
+        "p75": 85824,
+        "max": 147980,
+        "mean": 76765.023
+      },
+      "upgrades": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "reserveRetrievals": 1165,
+      "triggers": {
+        "steady": 0,
+        "ember": 51501,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 0,
+        "ember": 1000,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 0
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 180,
+            "p25": 184,
+            "median": 253,
+            "p75": 253,
+            "max": 385,
+            "mean": 235.641
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 300,
+            "p25": 366,
+            "median": 385,
+            "p75": 404,
+            "max": 1415,
+            "mean": 422.063
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 521,
+            "p25": 558,
+            "median": 589,
+            "p75": 1209,
+            "max": 3992,
+            "mean": 999.663
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 667,
+            "p25": 1561,
+            "median": 2163,
+            "p75": 2583,
+            "max": 9026,
+            "mean": 2397.831
+          }
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 1410,
+            "p25": 1692,
+            "median": 2567,
+            "p75": 3487,
+            "max": 9122,
+            "mean": 2789.183
+          }
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 1000,
+          "met": 997,
+          "protected": 0,
+          "delivered": {
+            "min": 1780,
+            "p25": 2565,
+            "median": 2583,
+            "p75": 3913,
+            "max": 13703,
+            "mean": 3451.349
+          }
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 1000,
+          "met": 996,
+          "protected": 0,
+          "delivered": {
+            "min": 2945,
+            "p25": 3913,
+            "median": 4542,
+            "p75": 5470,
+            "max": 22357,
+            "mean": 5003
+          }
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 1000,
+          "met": 974,
+          "protected": 0,
+          "delivered": {
+            "min": 1798,
+            "p25": 6729,
+            "median": 7545,
+            "p75": 8595,
+            "max": 23152,
+            "mean": 7870.025
+          }
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 1000,
+          "met": 858,
+          "protected": 0,
+          "delivered": {
+            "min": 2045,
+            "p25": 10272,
+            "median": 11066,
+            "p75": 12481,
+            "max": 24344,
+            "mean": 11241.825
+          }
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 1000,
+          "met": 513,
+          "protected": 0,
+          "delivered": {
+            "min": 288,
+            "p25": 10224,
+            "median": 16038,
+            "p75": 17472,
+            "max": 31502,
+            "mean": 14099.811
+          }
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 993,
+          "met": 112,
+          "protected": 0,
+          "delivered": {
+            "min": 805,
+            "p25": 9748,
+            "median": 14156,
+            "p75": 20384,
+            "max": 43705,
+            "mean": 15331.49244712991
+          }
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 891,
+          "met": 11,
+          "protected": 0,
+          "delivered": {
+            "min": 376,
+            "p25": 8532,
+            "median": 12790,
+            "p75": 18408,
+            "max": 72308,
+            "mean": 14483.086419753086
+          }
+        }
+      ]
+    },
+    "without-traits": {
+      "cases": 1000,
+      "victories": 1000,
+      "winRate": 1,
+      "round": {
+        "min": 12,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 12
+      },
+      "commands": {
+        "min": 160,
+        "p25": 190,
+        "median": 199,
+        "p75": 208,
+        "max": 235,
+        "mean": 198.932
+      },
+      "winningCommands": {
+        "min": 160,
+        "p25": 190,
+        "median": 199,
+        "p75": 208,
+        "max": 235,
+        "mean": 198.932
+      },
+      "met": {
+        "min": 10,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 11.86
+      },
+      "broken": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "bursts": {
+        "min": 7,
+        "p25": 10,
+        "median": 11,
+        "p75": 12,
+        "max": 15,
+        "mean": 11.068
+      },
+      "coins": {
+        "min": 75234,
+        "p25": 122594,
+        "median": 129030,
+        "p75": 137429,
+        "max": 173851,
+        "mean": 130634.97
+      },
+      "upgrades": {
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "max": 3,
+        "mean": 3
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 1,
+        "mean": 0.003
+      },
+      "reserveRetrievals": 401,
+      "triggers": {
+        "steady": 0,
+        "ember": 0,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 0,
+        "ember": 0,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 0
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 180,
+            "p25": 184,
+            "median": 253,
+            "p75": 253,
+            "max": 385,
+            "mean": 235.641
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 300,
+            "p25": 366,
+            "median": 385,
+            "p75": 404,
+            "max": 976,
+            "mean": 407.978
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 521,
+            "p25": 558,
+            "median": 585,
+            "p75": 847,
+            "max": 1867,
+            "mean": 747.435
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 851,
+            "p25": 1122,
+            "median": 1177,
+            "p75": 1702,
+            "max": 3575,
+            "mean": 1474.435
+          }
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 1285,
+            "p25": 1630,
+            "median": 2356,
+            "p75": 2784,
+            "max": 5623,
+            "mean": 2411.038
+          }
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 1660,
+            "p25": 2360,
+            "median": 3262,
+            "p75": 3581,
+            "max": 8265,
+            "mean": 3356.45
+          }
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 3803,
+            "p25": 4729,
+            "median": 5183,
+            "p75": 7177,
+            "max": 16537,
+            "mean": 6301.565
+          }
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 5153,
+            "p25": 6858,
+            "median": 7180,
+            "p75": 10403,
+            "max": 25686,
+            "mean": 8611.508
+          }
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 1000,
+          "met": 993,
+          "protected": 0,
+          "delivered": {
+            "min": 4063,
+            "p25": 10405,
+            "median": 10860,
+            "p75": 12550,
+            "max": 38084,
+            "mean": 11916.096
+          }
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 1000,
+          "met": 996,
+          "protected": 0,
+          "delivered": {
+            "min": 8068,
+            "p25": 18946,
+            "median": 20826,
+            "p75": 21812,
+            "max": 50234,
+            "mean": 21655.497
+          }
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 1000,
+          "met": 980,
+          "protected": 0,
+          "delivered": {
+            "min": 11067,
+            "p25": 28075,
+            "median": 30218,
+            "p75": 33070,
+            "max": 58148,
+            "mean": 31841.345
+          }
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 1000,
+          "met": 894,
+          "protected": 0,
+          "delivered": {
+            "min": 8964,
+            "p25": 43328,
+            "median": 45840,
+            "p75": 50095,
+            "max": 81426,
+            "mean": 46747.672
+          }
+        }
+      ]
+    },
+    "prefer-echo": {
+      "cases": 1000,
+      "victories": 1000,
+      "winRate": 1,
+      "round": {
+        "min": 12,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 12
+      },
+      "commands": {
+        "min": 157,
+        "p25": 171,
+        "median": 177,
+        "p75": 183,
+        "max": 210,
+        "mean": 177.283
+      },
+      "winningCommands": {
+        "min": 157,
+        "p25": 171,
+        "median": 177,
+        "p75": 183,
+        "max": 210,
+        "mean": 177.283
+      },
+      "met": {
+        "min": 11,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 11.984
+      },
+      "broken": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "bursts": {
+        "min": 5,
+        "p25": 7,
+        "median": 8,
+        "p75": 9,
+        "max": 13,
+        "mean": 8.282
+      },
+      "coins": {
+        "min": 115415,
+        "p25": 158836,
+        "median": 176867,
+        "p75": 200918,
+        "max": 360208,
+        "mean": 182468.46
+      },
+      "upgrades": {
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "max": 3,
+        "mean": 3
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 1,
+        "mean": 0.002
+      },
+      "reserveRetrievals": 116,
+      "triggers": {
+        "steady": 2146,
+        "ember": 24846,
+        "inherit": 0,
+        "echo": 21127,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 849,
+        "ember": 1000,
+        "inherit": 0,
+        "echo": 900,
+        "crackedEdge": 0,
+        "pardon": 251
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 180,
+            "p25": 184,
+            "median": 253,
+            "p75": 253,
+            "max": 385,
+            "mean": 235.641
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 300,
+            "p25": 366,
+            "median": 385,
+            "p75": 404,
+            "max": 1415,
+            "mean": 422.063
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 426,
+            "p25": 572,
+            "median": 730,
+            "p75": 1113,
+            "max": 4098,
+            "mean": 951.172
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 851,
+            "p25": 1016,
+            "median": 1152,
+            "p75": 1748,
+            "max": 7865,
+            "mean": 1678.886
+          }
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 1403,
+            "p25": 1748,
+            "median": 3414,
+            "p75": 5185,
+            "max": 12262,
+            "mean": 3530.273
+          }
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 1430,
+            "p25": 3417,
+            "median": 5326,
+            "p75": 8082,
+            "max": 19048,
+            "mean": 5730.77
+          }
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 3822,
+            "p25": 5913,
+            "median": 10412,
+            "p75": 15802,
+            "max": 37437,
+            "mean": 11163.809
+          }
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 6212,
+            "p25": 8962,
+            "median": 11118,
+            "p75": 16262,
+            "max": 56834,
+            "mean": 14974.973
+          }
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 1000,
+          "met": 995,
+          "protected": 0,
+          "delivered": {
+            "min": 2370,
+            "p25": 10705,
+            "median": 16229,
+            "p75": 24624,
+            "max": 86160,
+            "mean": 17726.364
+          }
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 16008,
+            "p25": 21425,
+            "median": 31603,
+            "p75": 35232,
+            "max": 113792,
+            "mean": 32482.554
+          }
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 1000,
+          "met": 998,
+          "protected": 1,
+          "delivered": {
+            "min": 17961,
+            "p25": 31085,
+            "median": 32553,
+            "p75": 49355,
+            "max": 180460,
+            "mean": 42178.63
+          }
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 1000,
+          "met": 993,
+          "protected": 3,
+          "delivered": {
+            "min": 24266,
+            "p25": 47138,
+            "median": 49383,
+            "p75": 63936,
+            "max": 196497,
+            "mean": 56340.275
+          }
+        }
+      ]
+    },
+    "prefer-steady": {
+      "cases": 1000,
+      "victories": 1000,
+      "winRate": 1,
+      "round": {
+        "min": 12,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 12
+      },
+      "commands": {
+        "min": 157,
+        "p25": 171,
+        "median": 177,
+        "p75": 183,
+        "max": 210,
+        "mean": 177.694
+      },
+      "winningCommands": {
+        "min": 157,
+        "p25": 171,
+        "median": 177,
+        "p75": 183,
+        "max": 210,
+        "mean": 177.694
+      },
+      "met": {
+        "min": 11,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 11.982
+      },
+      "broken": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "bursts": {
+        "min": 5,
+        "p25": 8,
+        "median": 8,
+        "p75": 9,
+        "max": 13,
+        "mean": 8.412
+      },
+      "coins": {
+        "min": 115415,
+        "p25": 157295,
+        "median": 175361,
+        "p75": 199471,
+        "max": 304458,
+        "mean": 180687.953
+      },
+      "upgrades": {
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "max": 3,
+        "mean": 3
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 1,
+        "mean": 0.002
+      },
+      "reserveRetrievals": 119,
+      "triggers": {
+        "steady": 2339,
+        "ember": 25236,
+        "inherit": 0,
+        "echo": 19245,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 896,
+        "ember": 1000,
+        "inherit": 0,
+        "echo": 865,
+        "crackedEdge": 0,
+        "pardon": 239
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 180,
+            "p25": 184,
+            "median": 253,
+            "p75": 253,
+            "max": 385,
+            "mean": 235.641
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 300,
+            "p25": 366,
+            "median": 385,
+            "p75": 404,
+            "max": 1415,
+            "mean": 422.063
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 426,
+            "p25": 558,
+            "median": 729,
+            "p75": 1113,
+            "max": 4098,
+            "mean": 968.478
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 851,
+            "p25": 1063,
+            "median": 1152,
+            "p75": 1885,
+            "max": 7865,
+            "mean": 1744.429
+          }
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 1403,
+            "p25": 1753,
+            "median": 3416,
+            "p75": 5186,
+            "max": 12262,
+            "mean": 3597.756
+          }
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 1430,
+            "p25": 3417,
+            "median": 5192,
+            "p75": 8082,
+            "max": 19048,
+            "mean": 5693.004
+          }
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 3822,
+            "p25": 6784,
+            "median": 10406,
+            "p75": 15790,
+            "max": 37437,
+            "mean": 11036.642
+          }
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 6212,
+            "p25": 8102,
+            "median": 10890,
+            "p75": 16262,
+            "max": 56834,
+            "mean": 14803.718
+          }
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 1000,
+          "met": 995,
+          "protected": 0,
+          "delivered": {
+            "min": 2370,
+            "p25": 10705,
+            "median": 16229,
+            "p75": 23977,
+            "max": 86160,
+            "mean": 17692.265
+          }
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 16008,
+            "p25": 21425,
+            "median": 31598,
+            "p75": 35196,
+            "max": 113792,
+            "mean": 32359.064
+          }
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 1000,
+          "met": 998,
+          "protected": 1,
+          "delivered": {
+            "min": 17961,
+            "p25": 31076,
+            "median": 32553,
+            "p75": 49352,
+            "max": 180460,
+            "mean": 41523.395
+          }
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 1000,
+          "met": 991,
+          "protected": 3,
+          "delivered": {
+            "min": 5962,
+            "p25": 47135,
+            "median": 49355,
+            "p75": 63577,
+            "max": 172680,
+            "mean": 55560.948
+          }
+        }
+      ]
+    },
+    "prefer-pardon": {
+      "cases": 1000,
+      "victories": 1000,
+      "winRate": 1,
+      "round": {
+        "min": 12,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 12
+      },
+      "commands": {
+        "min": 157,
+        "p25": 172,
+        "median": 177,
+        "p75": 184,
+        "max": 210,
+        "mean": 178.254
+      },
+      "winningCommands": {
+        "min": 157,
+        "p25": 172,
+        "median": 177,
+        "p75": 184,
+        "max": 210,
+        "mean": 178.254
+      },
+      "met": {
+        "min": 11,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 11.985
+      },
+      "broken": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "bursts": {
+        "min": 5,
+        "p25": 8,
+        "median": 8,
+        "p75": 9,
+        "max": 13,
+        "mean": 8.517
+      },
+      "coins": {
+        "min": 115415,
+        "p25": 156241,
+        "median": 175343,
+        "p75": 201802,
+        "max": 389295,
+        "mean": 181757.274
+      },
+      "upgrades": {
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "max": 3,
+        "mean": 3
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 1,
+        "mean": 0.001
+      },
+      "reserveRetrievals": 115,
+      "triggers": {
+        "steady": 1038,
+        "ember": 25551,
+        "inherit": 0,
+        "echo": 18873,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 269,
+        "ember": 1000,
+        "inherit": 0,
+        "echo": 842,
+        "crackedEdge": 0,
+        "pardon": 889
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 180,
+            "p25": 184,
+            "median": 253,
+            "p75": 253,
+            "max": 385,
+            "mean": 235.641
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 300,
+            "p25": 366,
+            "median": 385,
+            "p75": 404,
+            "max": 1415,
+            "mean": 422.063
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 426,
+            "p25": 558,
+            "median": 730,
+            "p75": 1113,
+            "max": 4098,
+            "mean": 958.69
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 851,
+            "p25": 1070,
+            "median": 1152,
+            "p75": 1883,
+            "max": 7865,
+            "mean": 1737.701
+          }
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 1403,
+            "p25": 1748,
+            "median": 3414,
+            "p75": 5183,
+            "max": 12262,
+            "mean": 3536.851
+          }
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 1000,
+          "met": 999,
+          "protected": 1,
+          "delivered": {
+            "min": 1094,
+            "p25": 3417,
+            "median": 5198,
+            "p75": 7878,
+            "max": 19048,
+            "mean": 5674.832
+          }
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 3804,
+            "p25": 6857,
+            "median": 10406,
+            "p75": 15796,
+            "max": 37437,
+            "mean": 11076.951
+          }
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 6212,
+            "p25": 7871,
+            "median": 10718,
+            "p75": 16262,
+            "max": 56834,
+            "mean": 14511.65
+          }
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 1000,
+          "met": 997,
+          "protected": 3,
+          "delivered": {
+            "min": 4971,
+            "p25": 10705,
+            "median": 16229,
+            "p75": 23972,
+            "max": 86160,
+            "mean": 17812.046
+          }
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 16000,
+            "p25": 21425,
+            "median": 31598,
+            "p75": 33922,
+            "max": 113792,
+            "mean": 32463.137
+          }
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 1000,
+          "met": 997,
+          "protected": 3,
+          "delivered": {
+            "min": 17961,
+            "p25": 31085,
+            "median": 32553,
+            "p75": 49354,
+            "max": 261969,
+            "mean": 42464.627
+          }
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 1000,
+          "met": 993,
+          "protected": 6,
+          "delivered": {
+            "min": 4768,
+            "p25": 47135,
+            "median": 49355,
+            "p75": 61172,
+            "max": 196497,
+            "mean": 55810.435
+          }
+        }
+      ]
+    },
+    "prefer-inherit": {
+      "cases": 1000,
+      "victories": 1000,
+      "winRate": 1,
+      "round": {
+        "min": 12,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 12
+      },
+      "commands": {
+        "min": 159,
+        "p25": 172,
+        "median": 177,
+        "p75": 184,
+        "max": 209,
+        "mean": 178.174
+      },
+      "winningCommands": {
+        "min": 159,
+        "p25": 172,
+        "median": 177,
+        "p75": 184,
+        "max": 209,
+        "mean": 178.174
+      },
+      "met": {
+        "min": 11,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 11.982
+      },
+      "broken": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "bursts": {
+        "min": 5,
+        "p25": 8,
+        "median": 8,
+        "p75": 9,
+        "max": 13,
+        "mean": 8.542
+      },
+      "coins": {
+        "min": 115455,
+        "p25": 157018,
+        "median": 175122,
+        "p75": 198533,
+        "max": 360248,
+        "mean": 180322.955
+      },
+      "upgrades": {
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "max": 3,
+        "mean": 3
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 1,
+        "mean": 0.003
+      },
+      "reserveRetrievals": 131,
+      "triggers": {
+        "steady": 1018,
+        "ember": 25626,
+        "inherit": 0,
+        "echo": 18769,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 252,
+        "ember": 1000,
+        "inherit": 899,
+        "echo": 849,
+        "crackedEdge": 0,
+        "pardon": 0
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 180,
+            "p25": 184,
+            "median": 253,
+            "p75": 253,
+            "max": 385,
+            "mean": 235.641
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 300,
+            "p25": 366,
+            "median": 385,
+            "p75": 404,
+            "max": 1415,
+            "mean": 422.063
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 339,
+            "p25": 558,
+            "median": 679,
+            "p75": 1113,
+            "max": 3992,
+            "mean": 956.484
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 851,
+            "p25": 1070,
+            "median": 1152,
+            "p75": 1885,
+            "max": 7865,
+            "mean": 1740.267
+          }
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 1403,
+            "p25": 1753,
+            "median": 3416,
+            "p75": 5186,
+            "max": 12262,
+            "mean": 3638.034
+          }
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 1000,
+          "met": 998,
+          "protected": 0,
+          "delivered": {
+            "min": 1014,
+            "p25": 3417,
+            "median": 5191,
+            "p75": 7878,
+            "max": 19196,
+            "mean": 5617.672
+          }
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 3814,
+            "p25": 5913,
+            "median": 10406,
+            "p75": 15796,
+            "max": 37437,
+            "mean": 10959.198
+          }
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 6212,
+            "p25": 8102,
+            "median": 10718,
+            "p75": 16261,
+            "max": 56834,
+            "mean": 14460.317
+          }
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 1000,
+          "met": 995,
+          "protected": 0,
+          "delivered": {
+            "min": 4498,
+            "p25": 10705,
+            "median": 16229,
+            "p75": 23966,
+            "max": 86160,
+            "mean": 17648.928
+          }
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 16067,
+            "p25": 21425,
+            "median": 31620,
+            "p75": 35779,
+            "max": 113792,
+            "mean": 32486.446
+          }
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 1000,
+          "met": 998,
+          "protected": 0,
+          "delivered": {
+            "min": 17961,
+            "p25": 31085,
+            "median": 32553,
+            "p75": 49342,
+            "max": 178900,
+            "mean": 41278.53
+          }
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 1000,
+          "met": 992,
+          "protected": 0,
+          "delivered": {
+            "min": 13690,
+            "p25": 47137,
+            "median": 49343,
+            "p75": 64045,
+            "max": 196497,
+            "mean": 55835.225
+          }
+        }
+      ]
+    },
+    "prefer-crackedEdge": {
+      "cases": 1000,
+      "victories": 1000,
+      "winRate": 1,
+      "round": {
+        "min": 12,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 12
+      },
+      "commands": {
+        "min": 158,
+        "p25": 172,
+        "median": 177,
+        "p75": 184,
+        "max": 209,
+        "mean": 178.305
+      },
+      "winningCommands": {
+        "min": 158,
+        "p25": 172,
+        "median": 177,
+        "p75": 184,
+        "max": 209,
+        "mean": 178.305
+      },
+      "met": {
+        "min": 11,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 11.982
+      },
+      "broken": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "bursts": {
+        "min": 5,
+        "p25": 8,
+        "median": 9,
+        "p75": 9,
+        "max": 13,
+        "mean": 8.537
+      },
+      "coins": {
+        "min": 116374,
+        "p25": 155539,
+        "median": 175247,
+        "p75": 199108,
+        "max": 360248,
+        "mean": 180601.973
+      },
+      "upgrades": {
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "max": 3,
+        "mean": 3
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 1,
+        "mean": 0.002
+      },
+      "reserveRetrievals": 120,
+      "triggers": {
+        "steady": 1038,
+        "ember": 25611,
+        "inherit": 0,
+        "echo": 18993,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 249,
+        "ember": 1000,
+        "inherit": 0,
+        "echo": 861,
+        "crackedEdge": 890,
+        "pardon": 0
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 180,
+            "p25": 184,
+            "median": 253,
+            "p75": 253,
+            "max": 385,
+            "mean": 235.641
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 300,
+            "p25": 366,
+            "median": 385,
+            "p75": 404,
+            "max": 1415,
+            "mean": 422.063
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 426,
+            "p25": 558,
+            "median": 681,
+            "p75": 1113,
+            "max": 4098,
+            "mean": 971.342
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 851,
+            "p25": 1122,
+            "median": 1152,
+            "p75": 1885,
+            "max": 7865,
+            "mean": 1763.516
+          }
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 1403,
+            "p25": 1753,
+            "median": 3414,
+            "p75": 5185,
+            "max": 12262,
+            "mean": 3558.595
+          }
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 1142,
+            "p25": 3417,
+            "median": 5192,
+            "p75": 7885,
+            "max": 19048,
+            "mean": 5657.746
+          }
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 3815,
+            "p25": 6039,
+            "median": 10406,
+            "p75": 15789,
+            "max": 37437,
+            "mean": 10912.349
+          }
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 6212,
+            "p25": 8092,
+            "median": 10718,
+            "p75": 16261,
+            "max": 56806,
+            "mean": 14546.959
+          }
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 1000,
+          "met": 997,
+          "protected": 0,
+          "delivered": {
+            "min": 1945,
+            "p25": 10705,
+            "median": 16229,
+            "p75": 24624,
+            "max": 58430,
+            "mean": 17719.449
+          }
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 16008,
+            "p25": 21425,
+            "median": 31592,
+            "p75": 33969,
+            "max": 113792,
+            "mean": 32488.67
+          }
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 1000,
+          "met": 996,
+          "protected": 0,
+          "delivered": {
+            "min": 15595,
+            "p25": 31085,
+            "median": 32553,
+            "p75": 49352,
+            "max": 178900,
+            "mean": 41834.087
+          }
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 1000,
+          "met": 991,
+          "protected": 0,
+          "delivered": {
+            "min": 4768,
+            "p25": 47138,
+            "median": 49352,
+            "p75": 60469,
+            "max": 196497,
+            "mean": 55444.536
+          }
+        }
+      ]
+    },
+    "balanced-duplicate": {
+      "cases": 1000,
+      "victories": 1000,
+      "winRate": 1,
+      "round": {
+        "min": 12,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 12
+      },
+      "commands": {
+        "min": 157,
+        "p25": 171,
+        "median": 177,
+        "p75": 183,
+        "max": 210,
+        "mean": 177.283
+      },
+      "winningCommands": {
+        "min": 157,
+        "p25": 171,
+        "median": 177,
+        "p75": 183,
+        "max": 210,
+        "mean": 177.283
+      },
+      "met": {
+        "min": 11,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 11.984
+      },
+      "broken": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "bursts": {
+        "min": 5,
+        "p25": 7,
+        "median": 8,
+        "p75": 9,
+        "max": 13,
+        "mean": 8.282
+      },
+      "coins": {
+        "min": 115415,
+        "p25": 158836,
+        "median": 176867,
+        "p75": 200918,
+        "max": 360208,
+        "mean": 182468.46
+      },
+      "upgrades": {
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "max": 3,
+        "mean": 3
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 1,
+        "mean": 0.002
+      },
+      "reserveRetrievals": 116,
+      "triggers": {
+        "steady": 2146,
+        "ember": 24846,
+        "inherit": 0,
+        "echo": 21127,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 849,
+        "ember": 1000,
+        "inherit": 0,
+        "echo": 900,
+        "crackedEdge": 0,
+        "pardon": 251
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 180,
+            "p25": 184,
+            "median": 253,
+            "p75": 253,
+            "max": 385,
+            "mean": 235.641
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 300,
+            "p25": 366,
+            "median": 385,
+            "p75": 404,
+            "max": 1415,
+            "mean": 422.063
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 426,
+            "p25": 572,
+            "median": 730,
+            "p75": 1113,
+            "max": 4098,
+            "mean": 951.172
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 851,
+            "p25": 1016,
+            "median": 1152,
+            "p75": 1748,
+            "max": 7865,
+            "mean": 1678.886
+          }
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 1403,
+            "p25": 1748,
+            "median": 3414,
+            "p75": 5185,
+            "max": 12262,
+            "mean": 3530.273
+          }
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 1430,
+            "p25": 3417,
+            "median": 5326,
+            "p75": 8082,
+            "max": 19048,
+            "mean": 5730.77
+          }
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 3822,
+            "p25": 5913,
+            "median": 10412,
+            "p75": 15802,
+            "max": 37437,
+            "mean": 11163.809
+          }
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 6212,
+            "p25": 8962,
+            "median": 11118,
+            "p75": 16262,
+            "max": 56834,
+            "mean": 14974.973
+          }
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 1000,
+          "met": 995,
+          "protected": 0,
+          "delivered": {
+            "min": 2370,
+            "p25": 10705,
+            "median": 16229,
+            "p75": 24624,
+            "max": 86160,
+            "mean": 17726.364
+          }
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 16008,
+            "p25": 21425,
+            "median": 31603,
+            "p75": 35232,
+            "max": 113792,
+            "mean": 32482.554
+          }
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 1000,
+          "met": 998,
+          "protected": 1,
+          "delivered": {
+            "min": 17961,
+            "p25": 31085,
+            "median": 32553,
+            "p75": 49355,
+            "max": 180460,
+            "mean": 42178.63
+          }
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 1000,
+          "met": 993,
+          "protected": 3,
+          "delivered": {
+            "min": 24266,
+            "p25": 47138,
+            "median": 49383,
+            "p75": 63936,
+            "max": 196497,
+            "mean": 56340.275
+          }
+        }
+      ]
+    },
+    "balanced-reload": {
+      "cases": 1000,
+      "victories": 1000,
+      "winRate": 1,
+      "round": {
+        "min": 12,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 12
+      },
+      "commands": {
+        "min": 157,
+        "p25": 171,
+        "median": 177,
+        "p75": 183,
+        "max": 210,
+        "mean": 177.283
+      },
+      "winningCommands": {
+        "min": 157,
+        "p25": 171,
+        "median": 177,
+        "p75": 183,
+        "max": 210,
+        "mean": 177.283
+      },
+      "met": {
+        "min": 11,
+        "p25": 12,
+        "median": 12,
+        "p75": 12,
+        "max": 12,
+        "mean": 11.984
+      },
+      "broken": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "bursts": {
+        "min": 5,
+        "p25": 7,
+        "median": 8,
+        "p75": 9,
+        "max": 13,
+        "mean": 8.282
+      },
+      "coins": {
+        "min": 115415,
+        "p25": 158836,
+        "median": 176867,
+        "p75": 200918,
+        "max": 360208,
+        "mean": 182468.46
+      },
+      "upgrades": {
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "max": 3,
+        "mean": 3
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 1,
+        "mean": 0.002
+      },
+      "reserveRetrievals": 116,
+      "triggers": {
+        "steady": 2146,
+        "ember": 24846,
+        "inherit": 0,
+        "echo": 21127,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 849,
+        "ember": 1000,
+        "inherit": 0,
+        "echo": 900,
+        "crackedEdge": 0,
+        "pardon": 251
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 180,
+            "p25": 184,
+            "median": 253,
+            "p75": 253,
+            "max": 385,
+            "mean": 235.641
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 300,
+            "p25": 366,
+            "median": 385,
+            "p75": 404,
+            "max": 1415,
+            "mean": 422.063
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 426,
+            "p25": 572,
+            "median": 730,
+            "p75": 1113,
+            "max": 4098,
+            "mean": 951.172
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 851,
+            "p25": 1016,
+            "median": 1152,
+            "p75": 1748,
+            "max": 7865,
+            "mean": 1678.886
+          }
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 1403,
+            "p25": 1748,
+            "median": 3414,
+            "p75": 5185,
+            "max": 12262,
+            "mean": 3530.273
+          }
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 1000,
+          "met": 999,
+          "protected": 0,
+          "delivered": {
+            "min": 1430,
+            "p25": 3417,
+            "median": 5326,
+            "p75": 8082,
+            "max": 19048,
+            "mean": 5730.77
+          }
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 3822,
+            "p25": 5913,
+            "median": 10412,
+            "p75": 15802,
+            "max": 37437,
+            "mean": 11163.809
+          }
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 6212,
+            "p25": 8962,
+            "median": 11118,
+            "p75": 16262,
+            "max": 56834,
+            "mean": 14974.973
+          }
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 1000,
+          "met": 995,
+          "protected": 0,
+          "delivered": {
+            "min": 2370,
+            "p25": 10705,
+            "median": 16229,
+            "p75": 24624,
+            "max": 86160,
+            "mean": 17726.364
+          }
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 1000,
+          "met": 1000,
+          "protected": 0,
+          "delivered": {
+            "min": 16008,
+            "p25": 21425,
+            "median": 31603,
+            "p75": 35232,
+            "max": 113792,
+            "mean": 32482.554
+          }
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 1000,
+          "met": 998,
+          "protected": 1,
+          "delivered": {
+            "min": 17961,
+            "p25": 31085,
+            "median": 32553,
+            "p75": 49355,
+            "max": 180460,
+            "mean": 42178.63
+          }
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 1000,
+          "met": 993,
+          "protected": 3,
+          "delivered": {
+            "min": 24266,
+            "p25": 47138,
+            "median": 49383,
+            "p75": 63936,
+            "max": 196497,
+            "mean": 56340.275
+          }
+        }
+      ]
+    },
+    "raw": {
+      "cases": 1000,
+      "victories": 0,
+      "winRate": 0,
+      "round": {
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "max": 3,
+        "mean": 3
+      },
+      "commands": {
+        "min": 14,
+        "p25": 14,
+        "median": 14,
+        "p75": 14,
+        "max": 14,
+        "mean": 14
+      },
+      "winningCommands": null,
+      "met": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "broken": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "bursts": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "coins": {
+        "min": 360,
+        "p25": 360,
+        "median": 360,
+        "p75": 360,
+        "max": 360,
+        "mean": 360
+      },
+      "upgrades": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "reserveRetrievals": 0,
+      "triggers": {
+        "steady": 0,
+        "ember": 0,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 0,
+        "ember": 0,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 0
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 0,
+          "protected": 0,
+          "delivered": {
+            "min": 120,
+            "p25": 120,
+            "median": 120,
+            "p75": 120,
+            "max": 120,
+            "mean": 120
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 0,
+          "protected": 0,
+          "delivered": {
+            "min": 120,
+            "p25": 120,
+            "median": 120,
+            "p75": 120,
+            "max": 120,
+            "mean": 120
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 0,
+          "protected": 0,
+          "delivered": {
+            "min": 120,
+            "p25": 120,
+            "median": 120,
+            "p75": 120,
+            "max": 120,
+            "mean": 120
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        }
+      ]
+    },
+    "scrap": {
+      "cases": 1000,
+      "victories": 0,
+      "winRate": 0,
+      "round": {
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "max": 3,
+        "mean": 3
+      },
+      "commands": {
+        "min": 14,
+        "p25": 14,
+        "median": 14,
+        "p75": 14,
+        "max": 14,
+        "mean": 14
+      },
+      "winningCommands": null,
+      "met": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "broken": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "bursts": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "coins": {
+        "min": 90,
+        "p25": 90,
+        "median": 90,
+        "p75": 90,
+        "max": 90,
+        "mean": 90
+      },
+      "upgrades": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "reserveRetrievals": 0,
+      "triggers": {
+        "steady": 0,
+        "ember": 0,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 0,
+        "ember": 0,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 0
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 0,
+          "protected": 0,
+          "delivered": {
+            "min": 0,
+            "p25": 0,
+            "median": 0,
+            "p75": 0,
+            "max": 0,
+            "mean": 0
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 0,
+          "protected": 0,
+          "delivered": {
+            "min": 0,
+            "p25": 0,
+            "median": 0,
+            "p75": 0,
+            "max": 0,
+            "mean": 0
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 0,
+          "protected": 0,
+          "delivered": {
+            "min": 0,
+            "p25": 0,
+            "median": 0,
+            "p75": 0,
+            "max": 0,
+            "mean": 0
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        }
+      ]
+    },
+    "blind": {
+      "cases": 1000,
+      "victories": 0,
+      "winRate": 0,
+      "round": {
+        "min": 3,
+        "p25": 3,
+        "median": 3,
+        "p75": 3,
+        "max": 3,
+        "mean": 3
+      },
+      "commands": {
+        "min": 93,
+        "p25": 112,
+        "median": 118,
+        "p75": 124,
+        "max": 150,
+        "mean": 118.195
+      },
+      "winningCommands": null,
+      "met": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "broken": {
+        "min": 9,
+        "p25": 9,
+        "median": 9,
+        "p75": 9,
+        "max": 9,
+        "mean": 9
+      },
+      "bursts": {
+        "min": 8,
+        "p25": 10,
+        "median": 11,
+        "p75": 12,
+        "max": 17,
+        "mean": 11.548
+      },
+      "coins": {
+        "min": 90,
+        "p25": 90,
+        "median": 90,
+        "p75": 90,
+        "max": 90,
+        "mean": 90
+      },
+      "upgrades": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "repairs": {
+        "min": 0,
+        "p25": 0,
+        "median": 0,
+        "p75": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "reserveRetrievals": 0,
+      "triggers": {
+        "steady": 0,
+        "ember": 0,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0
+      },
+      "equipped": {
+        "steady": 0,
+        "ember": 0,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 0
+      },
+      "roundDetail": [
+        {
+          "round": 1,
+          "quota": 180,
+          "reached": 1000,
+          "met": 0,
+          "protected": 0,
+          "delivered": {
+            "min": 0,
+            "p25": 0,
+            "median": 0,
+            "p75": 0,
+            "max": 0,
+            "mean": 0
+          }
+        },
+        {
+          "round": 2,
+          "quota": 300,
+          "reached": 1000,
+          "met": 0,
+          "protected": 0,
+          "delivered": {
+            "min": 0,
+            "p25": 0,
+            "median": 0,
+            "p75": 0,
+            "max": 0,
+            "mean": 0
+          }
+        },
+        {
+          "round": 3,
+          "quota": 520,
+          "reached": 1000,
+          "met": 0,
+          "protected": 0,
+          "delivered": {
+            "min": 0,
+            "p25": 0,
+            "median": 0,
+            "p75": 0,
+            "max": 0,
+            "mean": 0
+          }
+        },
+        {
+          "round": 4,
+          "quota": 850,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        },
+        {
+          "round": 5,
+          "quota": 1400,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        },
+        {
+          "round": 6,
+          "quota": 2300,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        },
+        {
+          "round": 7,
+          "quota": 3800,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        },
+        {
+          "round": 8,
+          "quota": 6200,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        },
+        {
+          "round": 9,
+          "quota": 10000,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        },
+        {
+          "round": 10,
+          "quota": 16000,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        },
+        {
+          "round": 11,
+          "quota": 26000,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        },
+        {
+          "round": 12,
+          "quota": 42000,
+          "reached": 0,
+          "met": 0,
+          "protected": 0,
+          "delivered": null
+        }
+      ]
+    }
+  },
+  "paired": {
+    "without-reserve": {
+      "baselineOnlyWins": 0,
+      "controlOnlyWins": 0,
+      "bothWin": 1000,
+      "bothLose": 0
+    },
+    "without-trade": {
+      "baselineOnlyWins": 0,
+      "controlOnlyWins": 0,
+      "bothWin": 1000,
+      "bothLose": 0
+    },
+    "without-upgrade": {
+      "baselineOnlyWins": 111,
+      "controlOnlyWins": 0,
+      "bothWin": 889,
+      "bothLose": 0
+    },
+    "without-repair": {
+      "baselineOnlyWins": 0,
+      "controlOnlyWins": 0,
+      "bothWin": 1000,
+      "bothLose": 0
+    },
+    "without-shop": {
+      "baselineOnlyWins": 503,
+      "controlOnlyWins": 0,
+      "bothWin": 497,
+      "bothLose": 0
+    },
+    "without-traits": {
+      "baselineOnlyWins": 0,
+      "controlOnlyWins": 0,
+      "bothWin": 1000,
+      "bothLose": 0
+    },
+    "prefer-echo": {
+      "baselineOnlyWins": 0,
+      "controlOnlyWins": 0,
+      "bothWin": 1000,
+      "bothLose": 0
+    },
+    "prefer-steady": {
+      "baselineOnlyWins": 0,
+      "controlOnlyWins": 0,
+      "bothWin": 1000,
+      "bothLose": 0
+    },
+    "prefer-pardon": {
+      "baselineOnlyWins": 0,
+      "controlOnlyWins": 0,
+      "bothWin": 1000,
+      "bothLose": 0
+    },
+    "prefer-inherit": {
+      "baselineOnlyWins": 0,
+      "controlOnlyWins": 0,
+      "bothWin": 1000,
+      "bothLose": 0
+    },
+    "prefer-crackedEdge": {
+      "baselineOnlyWins": 0,
+      "controlOnlyWins": 0,
+      "bothWin": 1000,
+      "bothLose": 0
+    }
+  },
+  "witnesses": {
+    "victory": {
+      "profile": "conservative-steady",
+      "seed": "v3-balance-0565",
+      "stateSha256": "296fc06b09ed8ca0cf6b41be8be89c7bf4f07f1814aca976028df90ce52886dc",
+      "commands": 209
+    },
+    "defeat": {
+      "profile": "conservative-steady",
+      "seed": "v3-balance-0000",
+      "stateSha256": "5a5990845548f1b57fc1e54514abce29767f7a9fdd2780b745f001dad1d46517",
+      "commands": 190
+    }
+  }
+}

@@ -6,7 +6,7 @@
 
 保留已认可的左键操作、锤子方向/比例、三家族五阶段兵器和既有规则。暂停、隐藏、菜单会清理旧动效；减弱动效与静音继续可用。刷新原标签页应能看到“行旅版”。已有三轮档按原长度继续；要玩完整局，点“契约”→选“十二轮契约”→“开一炉新契约”，确认前可导出旧进度。新空档直接开启十二轮，[三轮练手](http://127.0.0.1:4179/?mode=3)也保留。
 
-[完整实况复核](docs/research/2026-10-19-forgetax-session-study.md)、[批准方案](docs/v0.4-gameplay-proposal.md)、[完整契约](docs/v0.4-campaign.md)与[美术来源/提示词](design/d/scene-ui-manifest-v1.json)保留研究与实施身份。整体趣味性、新规则1000种子及最终最大审查继续推进。`/v2.html`与`/legacy.html`保留旧模式和旧档；没有公网部署声明。
+[完整实况复核](docs/research/2026-10-19-forgetax-session-study.md)、[批准方案](docs/v0.4-gameplay-proposal.md)、[完整契约](docs/v0.4-campaign.md)与[美术来源/提示词](design/d/scene-ui-manifest-v1.json)保留研究与实施身份。[新规则模型审计](docs/reviews/R4-v3-model-audit.md)已完成24条路线和2组一致性检查、各1000种子共26,000局：资源/回放通过，但固定七次点击和无手艺路线均全通关，经营取舍仍需优化。整体趣味性、新版广矩阵与最终最大审查继续推进。`/v2.html`与`/legacy.html`保留旧模式和旧档；没有公网部署声明。
 
 2026-10-18真人曾评价v0.2玩法/美术缺乏新意；已据ForgeTax及110条唯一Steam评论修订并取得明确v0.3批准。[核心证据](docs/reviews/R3-5-v2-core-and-playable.md)保留928局策略与原试玩结果，[D界面说明](docs/v0.3-d-interface.md)记录新接线与独立练习。[新版技术验收](docs/reviews/R3-7-v2-technical-acceptance.md)与[44AC映射](docs/v0.3-acceptance.md)分别记录实际矩阵、故障修复及待办。真人再玩和最大交付仍按T11.4.2–T12推进，技术通过不等于玩家满意。
 

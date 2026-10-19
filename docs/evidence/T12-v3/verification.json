@@ -1,0 +1,68 @@
+{
+  "task": "T12.2",
+  "date": "2026-10-20",
+  "scope": "forge-v3 model/integrity audit; gameplay tension and overall goal not complete",
+  "formal": {
+    "session": 5662,
+    "exit": 0,
+    "cases": 26000,
+    "elapsedMs": 1869725.67875
+  },
+  "audit": {
+    "session": 2987,
+    "exit": 0
+  },
+  "publishedArchiveAudit": {
+    "session": 31306,
+    "exit": 0,
+    "exactAuditBytesEqual": true
+  },
+  "unitTests": {
+    "session": 43001,
+    "exit": 0,
+    "tests": 4
+  },
+  "typecheck": {
+    "session": 85522,
+    "exit": 0
+  },
+  "sourceInputsUnchanged": 235,
+  "buildFilesUnchanged": 46,
+  "oldCompiledUnchanged": 21,
+  "sourceCodeUnchangedFromScene": true,
+  "pilotOverlapRows": 26,
+  "mirrorRowsCompared": 2000,
+  "noActionStates": 1000,
+  "producerFinalReplays": 26000,
+  "independentFullWitnessReplays": 2,
+  "additionalIndependentMetricReplays": 2,
+  "journalBoundaryReplays": 2,
+  "maxCommands": 303,
+  "refusals": {
+    "cli": 9,
+    "summary": 8,
+    "rows": 11,
+    "deep": 4,
+    "workerAfterMessageFault": 1
+  },
+  "markdownFiles": 9,
+  "localLinks": 95,
+  "credentialFindings": 0,
+  "payloadBytes": 5416504,
+  "inputSha256": "b961f5c651df51121659687138cfe5edf125e25dadda11642136dfc6aaca852b",
+  "gameplayFindings": {
+    "fixed7Wins": 1000,
+    "fixed7AllRoundsMet": true,
+    "noTraitsWins": 1000,
+    "noReserveWins": 1000,
+    "baselineMeanCommands": 177.283,
+    "noReserveMeanCommands": 133.876
+  },
+  "residuals": [
+    "gameplay tradeoffs",
+    "higher-value reserve and cracked-build targeted comparisons",
+    "final browser/native/DPR/fault/audio/performance matrix",
+    "human playability feedback",
+    "maximum R4"
+  ]
+}
