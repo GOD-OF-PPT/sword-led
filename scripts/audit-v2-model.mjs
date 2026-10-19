@@ -95,7 +95,9 @@ export async function auditModel({input, oldPath, baselinePath, compiled, sdkPat
   await verifyHashes(summary.sourceHashes,'.');
   await verifyHashes(summary.compiledHashes,compiled);
   const inspected = inspectRows(summary,old);
-  const sdkNames = (await readdir('dist')).filter(n=>n.endsWith('.js')).sort();
+  // Additional rule SDKs are separate consumers, outside this frozen v1/v2 audit.
+  const sdkNames = (await readdir('dist')).filter(n=>n.endsWith('.js')&&
+    (['sword-led-core.js','sword-led-session.js','sword-led-v2.js'].includes(n)||n.startsWith('core-')||n.startsWith('browser-session-'))).sort();
   assert.equal(sdkNames.length,5);
   const sdkHashes = {};
   for (const name of sdkNames) {

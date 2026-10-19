@@ -19,4 +19,4 @@
 
 ## Approval
 
-待用户明确确认v0.4后实施；当前只有研究、文档与规格。依据原始输入“确认实施文档”及祖先OpenSpec的“Do not start implementation until proposal is approved”。这次确认只针对新规则，不重复申请D美术或v0.3权限。
+2026-10-19用户已明确确认“确认 v0.4，开始前三轮开发”，原问答见docs/decisions/2026-10-19-v04-approval.json。新规则实施前置满足，不重复申请D美术或v0.3/v0.4权限。
