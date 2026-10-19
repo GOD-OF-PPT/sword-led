@@ -2,9 +2,9 @@
   "direction": "D",
   "assets": [
     {
-      "name": "forge-backdrop-v1",
+      "name": "forge-backdrop-v2",
       "kind": "background",
-      "src": "/assets/d/forge-backdrop-v1.webp",
+      "src": "/assets/d/forge-backdrop-v2.webp",
       "width": 1672,
       "height": 941,
       "alphaRange": [
@@ -19,9 +19,15 @@
         1672,
         941
       ],
-      "sha256": "af03aec23b63729c2dc0e05abaaaa6004d2c692d233fcafdbf446166676896eb",
-      "bytes": 326918,
-      "alphaMatchesOriginal": true
+      "sha256": "74d11a3a34a9f066933e5f5995cd1a3cfc37339495c48759a3bac4ecab8f0851",
+      "bytes": 367418,
+      "alphaMatchesOriginal": true,
+      "original": "design/d/originals/forge-backdrop-v2.png",
+      "originalSha256": "b4fa13ce25bd62965b597efba9370d14dc27b7d77b1b5cf9c79b13158e71a21b",
+      "prompt": "design/d/prompts/forge-backdrop-v2.md",
+      "promptSha256": "fc07b8caba59d7d72ed8749c1493c731413667010a5701b524ebad07c6e3be50",
+      "reference": "design/d/reference-main-v2.png",
+      "referenceSha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
     },
     {
       "name": "hammer-light-v1",
@@ -176,7 +182,36 @@
       "sha256": "d50d096a3951cf5a609fc0c81e48a38eb9eee0a97c3c05c47a674a5505d7dd67",
       "bytes": 337260,
       "alphaMatchesOriginal": true
+    },
+    {
+      "name": "commission-guard-v2",
+      "kind": "portrait",
+      "src": "/assets/d/commission-guard-v2.webp",
+      "width": 1374,
+      "height": 1145,
+      "alphaRange": [
+        0,
+        255
+      ],
+      "alphaSha256": "382464bc6f298ae86d987d7f7667d942755d10fbe5e49e43d9c20df3bd142885",
+      "transparentFraction": 0.42658543251781367,
+      "visibleBounds": [
+        0,
+        6,
+        1350,
+        1145
+      ],
+      "sha256": "0a8b9d04123e63d30163c7e486eb5e6917e67088ba6e8b3ca69eae8662f1a226",
+      "bytes": 542200,
+      "alphaMatchesOriginal": true,
+      "original": "design/d/originals/commission-guard-v2.png",
+      "originalSha256": "4f56a2a428c90abaf54446946adf5560094709b2bc30d3c44d79d9414ac691cc",
+      "prompt": "design/d/prompts/commission-guard-v2.md",
+      "promptSha256": "0d2f5ac4768ebf78e5ee20756894c698e0cd95dff60c9ee80201a7b7749c2483",
+      "reference": "design/d/reference-main-v2.png",
+      "referenceSha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
     }
   ],
-  "totalBytes": 2335062
+  "totalBytes": 2917762,
+  "revision": "2026-10-19 actual-workshop-v2"
 }

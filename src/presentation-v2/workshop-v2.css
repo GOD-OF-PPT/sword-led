@@ -1,0 +1,125 @@
+/* Actual workshop composition derived from the user's second main-screen reference. */
+:root{--paper:#ebd7ad;--ink:#2d2924;--gold:#dcb470;--mint:#a4c7bb;background:#141c20;color:#efe0bc}
+body{background:linear-gradient(#10191d55,#10191d66),url('/assets/d/forge-backdrop-v2.webp') center/cover fixed}
+button{border-color:#9c8459;background:linear-gradient(130deg,#263331f5,#101d1ff5);border-radius:2px;color:#f1e2bc;box-shadow:inset 0 0 0 3px #142223, inset 0 0 0 4px #8e764c55,0 3px 6px #0005}
+button[aria-pressed=true]{outline:2px solid #f2c77d;outline-offset:1px;box-shadow:inset 0 0 0 3px #111e20,inset 0 0 15px #d9a44b44,0 0 12px #e8ad5055}
+.forge-app{gap:7px;padding:8px 14px;max-width:2100px}
+.v2-header{background:linear-gradient(95deg,#132024f5,#111b1de8);border:1px solid #9c7b4b;border-radius:0;box-shadow:0 4px 12px #0009;min-height:62px}
+.v2-brand{font-size:34px;color:#e9c17c;letter-spacing:.06em;text-shadow:2px 3px #070d11}
+.v2-brand small{letter-spacing:.05em;font:12px system-ui;color:#d3c2a1}
+.contract-counter{padding:0 20px;border-left:1px solid #a88a5355;border-right:1px solid #a88a5355}
+#v2-quota{height:6px;max-width:none;border-color:#ab8b57}
+.save-strip{min-height:19px;color:#f0ddbd;background:#122024cf;padding:1px 8px;align-self:end;max-width:100%}
+.save-strip>span{min-width:0}
+.forge-app:has(#v2-workshop:not([hidden])) #v2-game{flex:1;min-height:0}
+.v2-workshop{position:relative;isolation:isolate;grid-template-columns:105px minmax(0,1fr) 272px;grid-template-rows:42px minmax(320px,1fr) 176px;gap:10px;min-height:calc(100vh - 155px)}
+.v2-workshop:before{content:"";position:absolute;inset:40px 275px 186px 0;background:url('/assets/d/forge-backdrop-v2.webp') center 60%/cover;z-index:-1;box-shadow:inset 0 0 30px #0008}
+.forge-flow{grid-column:1/-1;display:flex;align-items:center;gap:14px;background:#101b1edb;padding:6px 12px;border-top:1px solid #9c7b4b;border-bottom:1px solid #9c7b4b;font-size:13px}
+.forge-flow span{white-space:nowrap;color:#d2c6af}.forge-flow .current{color:#ffdfa2;border-bottom:2px solid #e8b35c;padding-bottom:3px;font-weight:750}.forge-flow b{margin-left:auto;color:#ffe2ad;font-size:13px;font-weight:500}
+.blank-tray{grid-column:1;grid-row:2;gap:9px;padding:0;justify-content:stretch}
+.blank-tray button{flex:1;min-height:0;background:linear-gradient(110deg,#1d2b2be6,#121d1ef0);padding:7px 5px;gap:4px;position:relative}
+.blank-tray button:before{content:"◇";position:absolute;right:-5px;top:8px;font-size:13px;color:#e1bd74}
+.material-stone{width:70%;height:47px;min-height:30px;clip-path:polygon(22% 5%,78% 0,100% 23%,82% 87%,20% 100%,0 65%);transform:rotate(-10deg);border:1px solid #c3ba9c88}
+.blank-tray button span{font-size:12px;line-height:1.5}
+.forge-board{grid-row:2;grid-column:2;position:relative;align-self:stretch;min-height:0;background:none;border:0;border-radius:0;box-shadow:none;overflow:visible}
+.forge-caption{position:absolute;inset:0 0 auto;z-index:4;border:0;background:linear-gradient(90deg,#101b1de8,#101b1d88,transparent);font:600 15px "Kaiti SC","STKaiti",serif;padding:10px 14px}
+.forge-caption span{font:12px system-ui;color:#f0dbb5;align-self:center}
+.forge-board>.blade-host{position:absolute;inset:25px -8px 65px;min-height:0;height:auto;aspect-ratio:auto;background:none}
+.forge-board>.blade-host:before{display:none}
+.forge-readout{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(90deg,#102024ec,#102024d9);padding:6px 12px;border-left:2px solid #b59157;min-height:78px;display:grid;grid-template-columns:1fr;gap:2px;z-index:4;box-shadow:0 3px 7px #0005}
+.forge-stats{border:0;background:none;padding:0;font-size:15px;line-height:1.4;color:#f8e4b9}
+.value-line{margin:0;font-size:13px;line-height:1.4;color:#ffd58e}.chain-line{padding:0;margin:0;font-size:12px;line-height:1.4;color:#f0d09b}
+#v2-target-hint{margin:0;padding:0;font-size:12px;line-height:1.4;color:#e8deca}
+.hammer-anchor{z-index:2}.hammer-anchor img{width:220px;height:220px;transform:translate(-26%,-65%) rotate(-8deg);filter:drop-shadow(4px 8px 3px #0008)}
+.hammer-anchor.preparing img{transform:translate(-20%,-80%) rotate(-36deg)}
+#v2-nodes button{height:46px;min-height:46px;width:46px;border:1px solid #d1b17d99;background:#101e2022;border-radius:50%;box-shadow:inset 0 0 0 3px #14242655}
+#v2-nodes button[aria-pressed=true]{background:#efb75333;outline:2px solid #ffd28b;box-shadow:0 0 15px #ffb45588}
+.node-capacity{top:29px;line-height:16px;background:#142426f5;border-color:#b69d70;color:#fff0cc}
+.commission.paper{grid-column:3;grid-row:2;position:relative;padding:12px 16px;background:radial-gradient(ellipse at 90% 10%,#f5e8cbbb,transparent 60%),repeating-linear-gradient(87deg,#987c3908 0 1px,transparent 1px 4px),#ebd7ad;box-shadow:1px 6px 13px #0009,inset 0 0 30px #85683b30;border:1px solid #b79a67;border-top:5px solid #c4ac79;clip-path:polygon(0 0,28% 1%,51% 0,79% 1%,100% 0,99% 23%,100% 60%,99% 100%,65% 99%,34% 100%,0 99%,1% 72%)}
+.commission h2{font-size:25px;line-height:1.2}.commission h3{font:700 17px "Kaiti SC","STKaiti",serif;margin:7px 0}
+.commission #v2-client .d-portrait{width:100%;height:clamp(95px,15vh,190px);aspect-ratio:auto;margin:2px auto 0}
+.commission #v2-client .portrait-1,.menu-portrait{background-image:url('/assets/d/commission-guard-v2.webp');background-size:contain;background-position:center;background-repeat:no-repeat}
+.commission #v2-client .d-portrait:not(.portrait-1){width:135px;height:120px;background-size:200% 200%}
+.commission p{font-size:13px;line-height:1.45;margin:5px 0}.commission #v2-current-request{border-top:1px solid #a38a5b;border-bottom:1px solid #a38a5b;padding-bottom:5px}
+.commission #v2-techniques{border:0;margin:5px 0}.commission #v2-techniques h3{font-size:14px;margin:3px 0}
+.commission .tech-chips button{min-height:32px;background:#dbc28f;color:#322c25;border-color:#9e7e49;box-shadow:inset 0 0 0 2px #ebd6a5;font-size:12px}
+.commission>button{font-size:13px;min-height:36px;margin-top:5px;padding:5px;color:#332b23}
+.work-controls.paper{grid-column:1/-1;grid-row:3;background:linear-gradient(110deg,#152224f5,#101c1feb);border:1px solid #ac8951;border-top:4px double #b79a66;border-radius:0;grid-template-columns:260px minmax(0,1fr) 320px;gap:17px;padding:10px 13px;box-shadow:0 6px 12px #0008}
+.hammer-row{gap:8px}.hammer-row button{position:relative;background:radial-gradient(ellipse at 50% 60%,#344445aa,transparent),#142023d9;border:1px solid #887a56;box-shadow:inset 0 0 0 3px #111d1f,inset 0 0 0 4px #8e764c44;padding:3px!important;gap:1px}
+.hammer-row img{width:100%;height:96px;object-fit:contain;filter:drop-shadow(2px 3px 2px #0007)}
+.hammer-row span{font-size:12px;line-height:1.5;max-width:none;padding:0 4px}
+.timing-track{height:19px;margin:0 0 4px;border:1px solid #b7965f;font-size:12px}.timing-track span{padding-top:0;line-height:17px}
+#v2-strike{font:700 26px "Kaiti SC","STKaiti",serif;min-height:45px;background:linear-gradient(140deg,#efd49a,#d7a75d);color:#241f1a;border-color:#d3ac64;letter-spacing:.06em}
+#v2-outcomes{font-size:12px;line-height:1.4;margin:3px 0;color:#eee1c6}.heat-bars{gap:14px;margin-top:auto;font-size:12px}.heat-bars meter{height:12px}
+.finish-actions{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;grid-template-rows:1fr 44px}.finish-actions button{font:700 16px "Kaiti SC","STKaiti",serif;min-height:40px;padding:4px;background:#142224c9}
+#v2-water,#v2-oil{flex-direction:column;gap:0}#v2-water img,#v2-oil img{width:74px;height:60px}#v2-water span,#v2-oil span{font-size:13px}
+.work-controls.paper #v2-deliver{background:linear-gradient(130deg,#efce87,#b88d4c);color:#231e19;border-color:#e4be73;box-shadow:inset 0 0 0 3px #ae7e3f,inset 0 0 0 4px #efd49e;font-size:23px}
+.work-controls.paper #v2-scrap{background:#243638;color:#e3deca;border-color:#9b9c87;box-shadow:inset 0 0 0 3px #132124;font-size:18px}
+#v2-settle{color:#f4d5a3;border-style:dashed;font-size:15px}
+.v2-workshop[data-step=deliver] #v2-deliver,.v2-workshop[data-step=quench] #v2-water,.v2-workshop[data-step=quench] #v2-oil,.v2-workshop[data-step=settle] #v2-settle{outline:2px solid #e9c47b;outline-offset:2px}
+.v2-footer{margin-top:0;background:#101b1fe8;border:1px solid #7f6c49;padding:1px 8px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.v2-footer>p{flex:1;font-size:13px;min-height:19px;line-height:1.4;margin:2px 0}.v2-footer summary{padding:4px 2px;min-height:25px;font-size:12px}.v2-footer details[open]{width:100%}.v2-footer .settings-row{padding:5px 0}
+.paper{background-color:#ebd7ad;color:#30291f;border-color:#b99b62;border-radius:2px}
+.v2-menu{background:linear-gradient(110deg,#ebd7adf5 70%,#ebd7adb8);border:1px solid #c9a96d;box-shadow:0 12px 35px #0008;min-height:460px}
+.v2-menu .menu-portrait{height:90%;bottom:0;width:320px;right:-10px;background-position:bottom center}
+.decision-panel{box-shadow:0 12px 35px #0009}.phase{box-shadow:0 10px 30px #0008}
+@media(min-height:900px){
+ .forge-app{padding:12px 22px;gap:10px}.v2-header{min-height:78px}.v2-brand{font-size:45px}
+ .v2-workshop{grid-template-columns:125px minmax(0,1fr) 330px;grid-template-rows:48px minmax(450px,1fr) 210px;min-height:calc(100vh - 191px);gap:14px}
+ .v2-workshop:before{inset:48px 337px 224px 0}.forge-flow{font-size:16px;padding:8px 16px;gap:22px}.forge-flow b{font-size:15px}
+ .forge-board>.blade-host{inset:30px -5px 90px}.forge-stats{font-size:20px}.value-line{font-size:16px}.chain-line{font-size:14px}#v2-target-hint{font-size:13px}.forge-readout{padding:10px 15px;min-height:99px;gap:4px}
+ .hammer-anchor img{width:300px;height:300px}.material-stone{height:80px}.blank-tray button span{font-size:14px}
+ .commission.paper{padding:18px 22px}.commission h2{font-size:31px}.commission h3{font-size:21px}.commission p{font-size:15px;line-height:1.6}.commission #v2-client .d-portrait{height:200px}.commission>button{min-height:44px;font-size:16px}.commission #v2-techniques h3{font-size:16px}.commission .tech-chips button{font-size:13px;min-height:36px}
+ .work-controls.paper{grid-template-columns:330px minmax(0,1fr) 390px;padding:14px 18px;gap:22px}.hammer-row img{height:128px}.hammer-row span{font-size:15px}.timing-track{height:24px;font-size:13px}.timing-track span{line-height:22px}#v2-strike{min-height:57px;font-size:31px}#v2-outcomes{font-size:14px}.heat-bars{font-size:14px}.finish-actions{grid-template-rows:1fr 48px}#v2-water img,#v2-oil img{width:95px;height:83px}#v2-water span,#v2-oil span{font-size:16px}.work-controls.paper #v2-deliver{font-size:29px}
+}
+@media(max-height:780px){
+ .v2-header{min-height:54px}.v2-brand{font-size:30px}.contract-counter{padding:0 10px}.v2-workshop{grid-template-columns:96px minmax(0,1fr) 250px;grid-template-rows:38px minmax(320px,1fr) 160px;min-height:calc(100vh - 141px);gap:8px}.v2-workshop:before{inset:38px 254px 168px 0}
+ .forge-flow{gap:12px;padding:5px 8px;font-size:12px}.forge-flow b{font-size:12px}.forge-caption{padding:8px}.forge-stats{font-size:14px}.forge-readout{padding:5px 8px}.commission.paper{padding:9px 12px}.commission h2{font-size:23px}.commission #v2-client .d-portrait{height:95px}.commission p{font-size:12px;line-height:1.4}.commission h3{font-size:16px;margin:5px 0}.commission>button{min-height:34px;font-size:12px}.commission #v2-techniques h3{font-size:13px}.commission .tech-chips button{min-height:29px}
+ .work-controls.paper{grid-template-columns:220px minmax(0,1fr) 284px;padding:8px 10px;gap:12px}.hammer-row img{height:84px}.hammer-anchor img{width:205px;height:205px}.timing-track{height:18px}.finish-actions{grid-template-rows:1fr 40px}#v2-water img,#v2-oil img{width:62px;height:49px}.finish-actions button{min-height:36px}#v2-strike{font-size:23px;min-height:43px}
+ .forge-app:has(#v2-retry:not([hidden])) .v2-workshop{min-height:545px}.forge-app:has(#v2-retry:not([hidden])) .commission #v2-client .d-portrait{height:70px}
+}
+@media(max-width:1050px){.v2-header{flex-wrap:wrap}.v2-workshop{grid-template-columns:80px minmax(0,1fr) 220px;min-height:660px}.forge-flow{flex-wrap:wrap;height:auto}.forge-flow b{width:100%;margin:0}.work-controls.paper{grid-template-columns:190px minmax(0,1fr);grid-template-rows:auto}.finish-actions{grid-column:1/-1;grid-template-rows:50px 44px}.v2-workshop{grid-template-rows:64px 370px auto}.v2-workshop:before{inset:64px 222px 250px 0}}
+@media(max-width:760px){.v2-workshop{display:flex;flex-direction:column}.blank-tray{flex-direction:row;min-height:120px}.forge-board{min-height:360px}.commission{grid-row:auto}.work-controls.paper{grid-template-columns:1fr}.commission #v2-client{float:right;width:130px}.v2-workshop:before{inset:64px 0 280px}.forge-flow b{font-size:12px}.v2-menu .menu-portrait{display:none}}
+@media(min-width:1051px){
+ .forge-app:has(#v2-workshop:not([hidden])){height:100vh;min-height:0}
+ .v2-header,.save-strip,.v2-footer{flex-shrink:0}.v2-header{padding-top:4px;padding-bottom:4px}.v2-brand{line-height:1}.v2-brand small{line-height:1.15;margin-top:4px}
+ .v2-workshop{height:100%;min-height:0;grid-template-rows:42px minmax(0,1fr) 176px}
+ .commission.paper{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto minmax(40px,1fr) auto auto 38px;gap:4px;min-height:0}
+ .commission>h2,.commission>#v2-client,.commission>#v2-current-request,.commission>#v2-techniques{grid-column:1/-1}
+ .commission #v2-client{min-height:0;overflow:hidden}.commission #v2-client .d-portrait{height:100%;max-height:190px;margin:0 auto}
+ .commission #v2-techniques{margin:2px 0;padding:0}.commission #v2-techniques h3{margin:0 0 3px}
+ .commission h3{margin:4px 0}.commission p{margin:3px 0}.commission>button{margin:0;min-height:34px;font-size:12px}
+}
+@media(min-width:1051px) and (max-height:780px){.v2-workshop{grid-template-rows:36px minmax(0,1fr) 160px}.commission.paper{padding:8px 11px;grid-template-rows:29px minmax(40px,1fr) auto auto 34px;gap:3px}.commission h2{font-size:22px}.commission #v2-techniques h3{font-size:12px}.forge-flow{gap:10px}.forge-readout{min-height:77px}}
+@media(min-width:1051px) and (min-height:900px){.v2-workshop{grid-template-rows:48px minmax(0,1fr) 210px}.commission.paper{grid-template-rows:auto minmax(110px,1fr) auto auto 44px;gap:8px}.commission>button{font-size:14px;min-height:44px}}
+.work-controls.paper{grid-template-columns:minmax(0,1.15fr) minmax(160px,.65fr) minmax(0,1.1fr) minmax(130px,.5fr);gap:14px}
+.hammer-row img{height:105px;width:100%}.hammer-row button{gap:0}.hammer-row span{font-size:12px}
+.quench-tools{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:minmax(0,1fr) 34px;gap:6px;min-width:0}
+.quench-tools button{min-width:0;min-height:0!important;padding:3px!important;background:radial-gradient(ellipse,#40525155,transparent),#142224c9!important;border:1px solid #8a7957;box-shadow:inset 0 0 0 3px #172426}
+.quench-tools #v2-water,.quench-tools #v2-oil{grid-column:auto;grid-row:auto;display:flex;flex-direction:column;justify-content:center;gap:1px}
+.quench-tools #v2-reheat{grid-column:1/-1;grid-row:2;font-size:12px;white-space:nowrap}
+.quench-tools #v2-water img,.quench-tools #v2-oil img{width:90px;max-width:100%;height:72px;object-fit:contain}
+.quench-tools #v2-water span,.quench-tools #v2-oil span{font-size:12px;line-height:1.4}
+.finish-actions{grid-template-columns:1fr;grid-template-rows:1fr 1fr 30px;gap:5px}
+.finish-actions #v2-deliver,.finish-actions #v2-scrap,.finish-actions #v2-settle{grid-column:1;grid-row:auto;min-height:0;padding:3px;font-size:18px}
+.finish-actions #v2-settle{font-size:13px}.finish-actions #v2-deliver{font-size:24px}
+#v2-strike{min-height:48px;line-height:1.1;padding:3px 8px}#v2-strike strong{display:block;font-size:24px}#v2-strike small{display:block;font:12px system-ui;letter-spacing:.03em;margin-top:2px}
+#v2-outcomes{font-size:12px;line-height:1.3}.heat-bars{flex-direction:column;gap:2px}.heat-bars label{min-height:15px}.heat-bars meter{height:9px}.timing-track{height:17px}.timing-track span{font-size:12px;line-height:15px}
+@media(min-height:900px){.work-controls.paper{gap:20px}.hammer-row img{height:143px}.hammer-row span{font-size:15px}.quench-tools{grid-template-rows:minmax(0,1fr) 38px}.quench-tools #v2-water img,.quench-tools #v2-oil img{width:128px;height:108px}.quench-tools #v2-water span,.quench-tools #v2-oil span{font-size:15px}.quench-tools #v2-reheat{font-size:14px}#v2-strike{min-height:60px}#v2-strike strong{font-size:31px}#v2-strike small{font-size:13px}#v2-outcomes{font-size:14px}.heat-bars{gap:3px}.heat-bars label{min-height:17px}.heat-bars meter{height:11px}.finish-actions{grid-template-rows:1fr 1fr 34px}.finish-actions #v2-deliver{font-size:29px}.finish-actions #v2-scrap{font-size:23px}.finish-actions #v2-settle{font-size:16px}}
+@media(max-width:1050px){.work-controls.paper{grid-template-columns:minmax(0,1fr) 190px}.strike-area{grid-row:2}.finish-actions{grid-column:2;grid-row:2}.quench-tools{min-height:150px}}
+@media(max-width:760px){.work-controls.paper{grid-template-columns:1fr}.quench-tools,.strike-area,.finish-actions{grid-column:1;grid-row:auto}.hammer-row{min-height:150px}.finish-actions{grid-template-rows:48px 48px 36px}}
+.hammer-row{min-height:0;height:100%}.hammer-row button{min-height:0;overflow:hidden}.hammer-row img{flex:1;min-height:0;max-height:143px}.hammer-row span{flex-shrink:0}
+.strike-area{gap:2px}.quench-tools,.finish-actions{min-height:0}
+@media(min-width:1051px) and (max-height:899px){#v2-strike{min-height:44px;padding:4px 6px;white-space:nowrap}#v2-strike strong{display:inline;font-size:24px;line-height:1}#v2-strike small{display:inline;margin:0 0 0 10px;font-size:12px}.timing-track{margin-bottom:2px}#v2-outcomes{margin:2px 0}.quench-tools #v2-water img,.quench-tools #v2-oil img{height:64px}}
+.trial-stage{background:linear-gradient(#14242699,#132025bb),url('/assets/d/forge-backdrop-v2.webp') center/cover}
+button.v2-brand{background:#132024;border:0;box-shadow:none;padding:5px 8px}
+.forge-caption span{background:#142326;padding:3px 7px;color:#f3e1bc;border-radius:2px}
+@media(min-width:1051px){.forge-app:has(#v2-retry:not([hidden])) .v2-workshop{min-height:0}.forge-app:has(#v2-settings[open]) .forge-board>.blade-host{inset:20px -8px 55px}}
+@media(min-width:1051px) and (max-height:780px){.v2-workshop{grid-template-rows:36px minmax(0,1fr) 176px}.v2-workshop:before{bottom:184px}.work-controls.paper{min-height:0}}
+.timing-track{height:25px;min-height:25px}.timing-track span{line-height:23px;padding:0}
+@media(min-width:1051px) and (max-height:780px){.v2-workshop{grid-template-rows:36px minmax(0,1fr) 184px}.v2-workshop:before{bottom:192px}}
+.blank-tray button span{background:#142426;color:#f3e6c9;padding:2px 3px;line-height:1.3;border-radius:2px;position:relative}
+@media(min-width:1051px) and (max-height:780px){.blank-tray button{padding:4px;gap:3px}.blank-tray .material-stone{height:22px;min-height:18px}.blank-tray button span{font-size:12px}}
+.v2-brand{line-height:1.45}
+#v2-dialog-actions{position:sticky;bottom:0;background:#ebd7ad;border-top:1px solid #a78a57;padding:10px 0 2px;z-index:2}
+.forge-lesson .lesson-stage{background-image:url('/assets/d/forge-backdrop-v2.webp')}

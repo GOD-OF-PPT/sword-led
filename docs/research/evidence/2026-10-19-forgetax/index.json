@@ -1,0 +1,1247 @@
+{
+  "collectedAt": "2026-10-18T23:58:48.215Z",
+  "method": "8 first-page buckets; max12 each; Steam purchases; quality and off-topic filtering kept; purposive not representative",
+  "rows": 90,
+  "unique": 73,
+  "queries": [
+    {
+      "name": "store-en",
+      "url": "https://store.steampowered.com/api/appdetails?appids=5245810&l=english",
+      "path": "tmp/research/2026-10-19-forgetax-deep/store-en.json",
+      "fetchedAt": "2026-10-18T23:47:22.014Z",
+      "bytes": 16824,
+      "sha256": "7520acdd48c7d5555579ac7ae693a4a655c3c687d567818db78f21e1d1a0146b"
+    },
+    {
+      "name": "store-zh",
+      "url": "https://store.steampowered.com/api/appdetails?appids=5245810&l=schinese",
+      "path": "tmp/research/2026-10-19-forgetax-deep/store-zh.json",
+      "fetchedAt": "2026-10-18T23:47:22.366Z",
+      "bytes": 16975,
+      "sha256": "21204a61a34d356adfafd1126863d5730de0ee1b73cf522bbfac3b5e7b95725f"
+    },
+    {
+      "name": "news",
+      "url": "https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=5245810&count=30&maxlength=0",
+      "path": "tmp/research/2026-10-19-forgetax-deep/news.json",
+      "fetchedAt": "2026-10-18T23:47:23.117Z",
+      "bytes": 32972,
+      "sha256": "3d329d137fc18afafad0c4150564d4593b954119a65c22591bdb90b0cb597e22"
+    },
+    {
+      "name": "store-html",
+      "url": "https://store.steampowered.com/app/5245810/ForgeTax/?l=english",
+      "path": "tmp/research/2026-10-19-forgetax-deep/store-html.html",
+      "fetchedAt": "2026-10-18T23:47:23.524Z",
+      "bytes": 132582,
+      "sha256": "6e1f2ed3ca16c11a8ac0f52fdc248ba5642898fe9fea062208cc0c99d5b5ffcc"
+    },
+    {
+      "name": "reviews-english-1-0",
+      "url": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/?input_json=%7B%22appid%22%3A5245810%2C%22filter%22%3A0%2C%22languages%22%3A%5B%22english%22%5D%2C%22review_type%22%3A1%2C%22purchase_type%22%3A0%2C%22num_per_page%22%3A12%2C%22day_range%22%3A0%2C%22filter_offtopic_activity%22%3Atrue%2C%22use_review_quality%22%3Atrue%7D",
+      "path": "tmp/research/2026-10-19-forgetax-deep/reviews-english-1-0.json",
+      "fetchedAt": "2026-10-18T23:47:24.149Z",
+      "bytes": 20814,
+      "sha256": "1beee15c5e429ca1144be24ae386678e68bed26e740a98c4dc37a371ea6abf19",
+      "count": 12
+    },
+    {
+      "name": "reviews-english-1-1",
+      "url": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/?input_json=%7B%22appid%22%3A5245810%2C%22filter%22%3A1%2C%22languages%22%3A%5B%22english%22%5D%2C%22review_type%22%3A1%2C%22purchase_type%22%3A0%2C%22num_per_page%22%3A12%2C%22day_range%22%3A0%2C%22filter_offtopic_activity%22%3Atrue%2C%22use_review_quality%22%3Atrue%7D",
+      "path": "tmp/research/2026-10-19-forgetax-deep/reviews-english-1-1.json",
+      "fetchedAt": "2026-10-18T23:47:24.663Z",
+      "bytes": 11247,
+      "sha256": "d994b8fc24b6063cb885fbf9fe42fc743d1b648fd545100573fe548a4beac31d",
+      "count": 12
+    },
+    {
+      "name": "reviews-english-2-0",
+      "url": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/?input_json=%7B%22appid%22%3A5245810%2C%22filter%22%3A0%2C%22languages%22%3A%5B%22english%22%5D%2C%22review_type%22%3A2%2C%22purchase_type%22%3A0%2C%22num_per_page%22%3A12%2C%22day_range%22%3A0%2C%22filter_offtopic_activity%22%3Atrue%2C%22use_review_quality%22%3Atrue%7D",
+      "path": "tmp/research/2026-10-19-forgetax-deep/reviews-english-2-0.json",
+      "fetchedAt": "2026-10-18T23:47:25.171Z",
+      "bytes": 8144,
+      "sha256": "1898621daae99a1a778413ac819f72c9f472063771dcc35a5a5409f6c561f53c",
+      "count": 9
+    },
+    {
+      "name": "reviews-english-2-1",
+      "url": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/?input_json=%7B%22appid%22%3A5245810%2C%22filter%22%3A1%2C%22languages%22%3A%5B%22english%22%5D%2C%22review_type%22%3A2%2C%22purchase_type%22%3A0%2C%22num_per_page%22%3A12%2C%22day_range%22%3A0%2C%22filter_offtopic_activity%22%3Atrue%2C%22use_review_quality%22%3Atrue%7D",
+      "path": "tmp/research/2026-10-19-forgetax-deep/reviews-english-2-1.json",
+      "fetchedAt": "2026-10-18T23:47:25.450Z",
+      "bytes": 8121,
+      "sha256": "5d62c312e696659b70a7049ea0cdf9c4319d1464205f04ebb629e934a127614b",
+      "count": 9
+    },
+    {
+      "name": "reviews-schinese-1-0",
+      "url": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/?input_json=%7B%22appid%22%3A5245810%2C%22filter%22%3A0%2C%22languages%22%3A%5B%22schinese%22%5D%2C%22review_type%22%3A1%2C%22purchase_type%22%3A0%2C%22num_per_page%22%3A12%2C%22day_range%22%3A0%2C%22filter_offtopic_activity%22%3Atrue%2C%22use_review_quality%22%3Atrue%7D",
+      "path": "tmp/research/2026-10-19-forgetax-deep/reviews-schinese-1-0.json",
+      "fetchedAt": "2026-10-18T23:47:25.721Z",
+      "bytes": 14559,
+      "sha256": "119acb69fcaedc8fba2da960790f220945fc006c1569e869f1833a8d76e379a9",
+      "count": 12
+    },
+    {
+      "name": "reviews-schinese-1-1",
+      "url": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/?input_json=%7B%22appid%22%3A5245810%2C%22filter%22%3A1%2C%22languages%22%3A%5B%22schinese%22%5D%2C%22review_type%22%3A1%2C%22purchase_type%22%3A0%2C%22num_per_page%22%3A12%2C%22day_range%22%3A0%2C%22filter_offtopic_activity%22%3Atrue%2C%22use_review_quality%22%3Atrue%7D",
+      "path": "tmp/research/2026-10-19-forgetax-deep/reviews-schinese-1-1.json",
+      "fetchedAt": "2026-10-18T23:47:25.994Z",
+      "bytes": 6718,
+      "sha256": "3b5d94e35455e5d07a1a056c0bd51882bcd5e6f6b7b7ebfedb4ccfd6ed803a44",
+      "count": 12
+    },
+    {
+      "name": "reviews-schinese-2-0",
+      "url": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/?input_json=%7B%22appid%22%3A5245810%2C%22filter%22%3A0%2C%22languages%22%3A%5B%22schinese%22%5D%2C%22review_type%22%3A2%2C%22purchase_type%22%3A0%2C%22num_per_page%22%3A12%2C%22day_range%22%3A0%2C%22filter_offtopic_activity%22%3Atrue%2C%22use_review_quality%22%3Atrue%7D",
+      "path": "tmp/research/2026-10-19-forgetax-deep/reviews-schinese-2-0.json",
+      "fetchedAt": "2026-10-18T23:47:26.231Z",
+      "bytes": 12563,
+      "sha256": "c113c27e7e103b4b09b521c236b815ae9a494c44bd48f1d671e0e9638fa45df9",
+      "count": 12
+    },
+    {
+      "name": "reviews-schinese-2-1",
+      "url": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/?input_json=%7B%22appid%22%3A5245810%2C%22filter%22%3A1%2C%22languages%22%3A%5B%22schinese%22%5D%2C%22review_type%22%3A2%2C%22purchase_type%22%3A0%2C%22num_per_page%22%3A12%2C%22day_range%22%3A0%2C%22filter_offtopic_activity%22%3Atrue%2C%22use_review_quality%22%3Atrue%7D",
+      "path": "tmp/research/2026-10-19-forgetax-deep/reviews-schinese-2-1.json",
+      "fetchedAt": "2026-10-18T23:47:26.464Z",
+      "bytes": 8209,
+      "sha256": "89b0d3a30221ff06d0834045eb67c63591980748e86c5ab275b33d797d8913a4",
+      "count": 12
+    }
+  ],
+  "news": [
+    {
+      "title": "Hotfix — Achievement Upload Fix and Interface Improvements",
+      "gid": "1846018067941085",
+      "apiUrl": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067941085",
+      "verifiedReadableHub": "https://steamcommunity.com/app/5245810/allnews/",
+      "publishedAt": "2026-10-12T14:14:24.000Z",
+      "contentSha256": "4ac3f56d05b565991b5ce07a27455206751fe3f9ba42cd9c26a83993eb97f21a"
+    },
+    {
+      "title": "Forge Improvements & New Content — November Update Development News",
+      "gid": "1846018067938228",
+      "apiUrl": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067938228",
+      "verifiedReadableHub": "https://steamcommunity.com/app/5245810/allnews/",
+      "publishedAt": "2026-10-11T11:02:26.000Z",
+      "contentSha256": "8d89ec5b6f9f2dd77e8aee1909ab4bd01864817c17e745f8cf65a257fc3d15eb"
+    },
+    {
+      "title": "Hotfix — Save Loading and Rewind Fixes",
+      "gid": "1846018067936799",
+      "apiUrl": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067936799",
+      "verifiedReadableHub": "https://steamcommunity.com/app/5245810/allnews/",
+      "publishedAt": "2026-10-10T17:04:11.000Z",
+      "contentSha256": "9076b1c5edd4d20b41e6a7228e8fac81198d07a46da38f386546820ed41cf8b7"
+    },
+    {
+      "title": "Hotfix — Progression Fix and Clearer Relic Effect Displays",
+      "gid": "1846018067925226",
+      "apiUrl": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1846018067925226",
+      "verifiedReadableHub": "https://steamcommunity.com/app/5245810/allnews/",
+      "publishedAt": "2026-10-07T07:18:35.000Z",
+      "contentSha256": "93d3d3d1b8e566a7e2286ff8f05d9b220386762b620c849532a53bfbbc3f094b"
+    },
+    {
+      "title": "Hotfix — Startup Fixes and Recovery Relic Improvements",
+      "gid": "1845383656396962",
+      "apiUrl": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1845383656396962",
+      "verifiedReadableHub": "https://steamcommunity.com/app/5245810/allnews/",
+      "publishedAt": "2026-10-06T16:12:08.000Z",
+      "contentSha256": "e8ea370a6ee071f6d71cdd4afc7f68b0c1975c99a9310df185261822e2eb8725"
+    },
+    {
+      "title": "Hotfix: Save slots and bug fixes",
+      "gid": "1845383656396285",
+      "apiUrl": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1845383656396285",
+      "verifiedReadableHub": "https://steamcommunity.com/app/5245810/allnews/",
+      "publishedAt": "2026-10-06T12:33:17.000Z",
+      "contentSha256": "74cd43c514d2331c250ad8e30fbbf7dad06e874602a8e12630c6d7643c93512a"
+    },
+    {
+      "title": "Thank You & A Preview of a Major Content Update",
+      "gid": "1845383656395800",
+      "apiUrl": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1845383656395800",
+      "verifiedReadableHub": "https://steamcommunity.com/app/5245810/allnews/",
+      "publishedAt": "2026-10-06T09:34:19.000Z",
+      "contentSha256": "96a91b5cddda2d8628d5c75c062d79c9d8de3e4a45c9a4fb3ba5c6b7533e5fd9"
+    },
+    {
+      "title": "Relic & Balance Overhaul — Starting Relics, +99 Forging and Codex Improvements",
+      "gid": "1845383656395798",
+      "apiUrl": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1845383656395798",
+      "verifiedReadableHub": "https://steamcommunity.com/app/5245810/allnews/",
+      "publishedAt": "2026-10-06T09:33:47.000Z",
+      "contentSha256": "cd77b0833b2b25a20ac39688f3a73736557e10aa88c537e4d9cc9291c954cb9c"
+    },
+    {
+      "title": "New Relics and the Funerary Sword — Forging & Performance Update",
+      "gid": "1845383656391739",
+      "apiUrl": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1845383656391739",
+      "verifiedReadableHub": "https://steamcommunity.com/app/5245810/allnews/",
+      "publishedAt": "2026-10-04T17:49:55.000Z",
+      "contentSha256": "29024496031c5d438d2cfdd12335f320d8ece04b2d0363c99d8923db7c7dce69"
+    },
+    {
+      "title": "21-Day Contract Update — Balance, Performance & Steam Cloud",
+      "gid": "1845383656379551",
+      "apiUrl": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1845383656379551",
+      "verifiedReadableHub": "https://steamcommunity.com/app/5245810/allnews/",
+      "publishedAt": "2026-10-01T02:39:16.000Z",
+      "contentSha256": "ae402d5cc5a7f171789cf9821abbb7aa5b86076ce37540d22f5a1d07d26351b4"
+    }
+  ],
+  "media": [
+    {
+      "name": "official-loop-1",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5245810/extras/ea78c397e8bd99572dc3a99444f37fae.mp4?t=1791135247",
+      "path": "tmp/research/2026-10-19-forgetax-deep/media/official-loop-1.mp4",
+      "bytes": 1903959,
+      "sha256": "a3eb51e034e6ff73ac08554af100c7b977ba4be721fca50af8e44dc8761b95e7"
+    },
+    {
+      "name": "official-loop-2",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5245810/extras/89b1c68bfd95dbae2ce44cb322f4abfd.mp4?t=1791135247",
+      "path": "tmp/research/2026-10-19-forgetax-deep/media/official-loop-2.mp4",
+      "bytes": 446827,
+      "sha256": "3044d15af933f6010a42999eea9486072d571574454f4cedfec41d9465b6f2af"
+    },
+    {
+      "name": "official-loop-3",
+      "url": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5245810/extras/50def6974498fda5d7858da7bc8c107a.mp4?t=1791135247",
+      "path": "tmp/research/2026-10-19-forgetax-deep/media/official-loop-3.mp4",
+      "bytes": 71643,
+      "sha256": "b3ab54e220c28f86ca893b182b24b0f4a79ff434a2757ea15638ed0ba0e35096"
+    },
+    {
+      "name": "official-shot-1",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5245810/56552a39ccb0cca1829e5758183eab6ad6989153/ss_56552a39ccb0cca1829e5758183eab6ad6989153.1920x1080.jpg?t=1791135247",
+      "path": "tmp/research/2026-10-19-forgetax-deep/media/official-shot-1.jpg",
+      "bytes": 185924,
+      "sha256": "f484bf4f66b5af7df9e3a35d2818ad22de574ccd344a1d13d07f6f0912ffd8c2"
+    },
+    {
+      "name": "official-shot-2",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5245810/9f7e55b1574b8550e638ba4938ef25d562d64be5/ss_9f7e55b1574b8550e638ba4938ef25d562d64be5.1920x1080.jpg?t=1791135247",
+      "path": "tmp/research/2026-10-19-forgetax-deep/media/official-shot-2.jpg",
+      "bytes": 416307,
+      "sha256": "f3905ef6ffd26f9b205eb938351443f4688c88f51eddc9feb13fd537b7005e52"
+    },
+    {
+      "name": "official-shot-3",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5245810/e23a97a75b7d857f5565dad480f62f6cf3018f5f/ss_e23a97a75b7d857f5565dad480f62f6cf3018f5f.1920x1080.jpg?t=1791135247",
+      "path": "tmp/research/2026-10-19-forgetax-deep/media/official-shot-3.jpg",
+      "bytes": 203319,
+      "sha256": "1d2f19f61fdbb5c89490ae7635aff2534c0d427c06ddcbfedab564afe3d944bc"
+    },
+    {
+      "name": "official-shot-4",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5245810/c9b7b56d0662e769ba1385edfb40b9f43b6e7079/ss_c9b7b56d0662e769ba1385edfb40b9f43b6e7079.1920x1080.jpg?t=1791135247",
+      "path": "tmp/research/2026-10-19-forgetax-deep/media/official-shot-4.jpg",
+      "bytes": 299959,
+      "sha256": "6e1e8c581161c78d925b8db1e0c2efcc451386b57dd2a0e23b6f61650df6eba3"
+    },
+    {
+      "name": "official-shot-5",
+      "url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/5245810/9fb47920d98da371b6c3279dd64802798acab558/ss_9fb47920d98da371b6c3279dd64802798acab558.1920x1080.jpg?t=1791135247",
+      "path": "tmp/research/2026-10-19-forgetax-deep/media/official-shot-5.jpg",
+      "bytes": 371088,
+      "sha256": "441e741b399bd2796ee6b8780c9d0ef2a004fbb1429455ba94d2adf0049a9558"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "237025305",
+      "url": "https://steamcommunity.com/profiles/76561198171342166/recommended/5245810/",
+      "language": "english",
+      "recommended": true,
+      "createdAt": "2026-10-06T05:12:57.000Z",
+      "updatedAt": "2026-10-06T05:12:57.000Z",
+      "playtimeMinutes": 55,
+      "textSha256": "235d989c56b7e5e37438d7b12dafddf1508a540c0c5942388b9af2e556c00397",
+      "queries": [
+        "reviews-english-1-0"
+      ]
+    },
+    {
+      "id": "237631418",
+      "url": "https://steamcommunity.com/profiles/76561198300805671/recommended/5245810/",
+      "language": "english",
+      "recommended": true,
+      "createdAt": "2026-10-13T15:02:18.000Z",
+      "updatedAt": "2026-10-13T15:02:18.000Z",
+      "playtimeMinutes": 115,
+      "textSha256": "eb8c106e7f81c76bcc7f31720760b68792c80b89fb966e5fa4f7a9c293a040f1",
+      "queries": [
+        "reviews-english-1-0",
+        "reviews-english-1-1"
+      ]
+    },
+    {
+      "id": "237889081",
+      "url": "https://steamcommunity.com/profiles/76561197964532777/recommended/5245810/",
+      "language": "english",
+      "recommended": true,
+      "createdAt": "2026-10-16T23:26:08.000Z",
+      "updatedAt": "2026-10-16T23:26:08.000Z",
+      "playtimeMinutes": 49,
+      "textSha256": "2aa205107d0e41b4f5dd573185e3a94dff4269ce7527d5833b46ec6348a9b374",
+      "queries": [
+        "reviews-english-1-0",
+        "reviews-english-1-1"
+      ]
+    },
+    {
+      "id": "237854457",
+      "url": "https://steamcommunity.com/profiles/76561198211640628/recommended/5245810/",
+      "language": "english",
+      "recommended": true,
+      "createdAt": "2026-10-16T14:47:18.000Z",
+      "updatedAt": "2026-10-16T14:47:18.000Z",
+      "playtimeMinutes": 426,
+      "textSha256": "73a0b5864519d2f6814e40c990e658d36f2510e784f85bc0c2b8c49e12f7b2aa",
+      "queries": [
+        "reviews-english-1-0",
+        "reviews-english-1-1"
+      ]
+    },
+    {
+      "id": "237585752",
+      "url": "https://steamcommunity.com/profiles/76561198367471798/recommended/5245810/",
+      "language": "english",
+      "recommended": true,
+      "createdAt": "2026-10-12T21:54:12.000Z",
+      "updatedAt": "2026-10-12T21:54:12.000Z",
+      "playtimeMinutes": 758,
+      "textSha256": "87dc0ed7eedf42af04f25c81233dfd8410bae141712b313cbe2ed36566c57fbf",
+      "queries": [
+        "reviews-english-1-0"
+      ]
+    },
+    {
+      "id": "237704517",
+      "url": "https://steamcommunity.com/profiles/76561198066243624/recommended/5245810/",
+      "language": "english",
+      "recommended": true,
+      "createdAt": "2026-10-14T14:56:04.000Z",
+      "updatedAt": "2026-10-14T14:56:04.000Z",
+      "playtimeMinutes": 66,
+      "textSha256": "30d8097c06297f065cfa0032194bc1fb3fe3913d11014d071757ba278fea2d3c",
+      "queries": [
+        "reviews-english-1-0",
+        "reviews-english-1-1"
+      ]
+    },
+    {
+      "id": "237135670",
+      "url": "https://steamcommunity.com/profiles/76561199477086667/recommended/5245810/",
+      "language": "english",
+      "recommended": true,
+      "createdAt": "2026-10-07T15:03:47.000Z",
+      "updatedAt": "2026-10-07T15:03:47.000Z",
+      "playtimeMinutes": 59,
+      "textSha256": "1619e953e87eda7a2d1e84d008fe435fba7170314a41d2fbd174decd3f2133a8",
+      "queries": [
+        "reviews-english-1-0"
+      ]
+    },
+    {
+      "id": "237732711",
+      "url": "https://steamcommunity.com/profiles/76561198271161030/recommended/5245810/",
+      "language": "english",
+      "recommended": true,
+      "createdAt": "2026-10-14T21:59:18.000Z",
+      "updatedAt": "2026-10-14T21:59:18.000Z",
+      "playtimeMinutes": 94,
+      "textSha256": "87261fe224900ea746d9a2786ba9dbdfcd336822fa44c58c2a48d57aefa09be6",
+      "queries": [
+        "reviews-english-1-0",
+        "reviews-english-1-1"
+      ]
+    },
+    {
+      "id": "237682294",
+      "url": "https://steamcommunity.com/profiles/76561198027953558/recommended/5245810/",
+      "language": "english",
+      "recommended": true,
+      "createdAt": "2026-10-14T07:23:56.000Z",
+      "updatedAt": "2026-10-14T07:23:56.000Z",
+      "playtimeMinutes": 209,
+      "textSha256": "e4a4f7302fd64812f2c8d07510a1b0f05c3893ae1e63f40a4c6c11bfa152d4f5",
+      "queries": [
+        "reviews-english-1-0",
+        "reviews-english-1-1"
+      ]
+    },
+    {
+      "id": "237634924",
+      "url": "https://steamcommunity.com/profiles/76561198053551891/recommended/5245810/",
+      "language": "english",
+      "recommended": true,
+      "createdAt": "2026-10-13T15:53:38.000Z",
+      "updatedAt": "2026-10-13T15:53:38.000Z",
+      "playtimeMinutes": 93,
+      "textSha256": "56881efed80bc9bf48bae0af86eb22023502875aaf9305406341049fd23a796a",
+      "queries": [
+        "reviews-english-1-0",
+        "reviews-english-1-1"
+      ]
+    },
+    {
+      "id": "237623099",
+      "url": "https://steamcommunity.com/profiles/76561199257262471/recommended/5245810/",
+      "language": "english",
+      "recommended": true,
+      "createdAt": "2026-10-13T12:44:30.000Z",
+      "updatedAt": "2026-10-13T12:44:30.000Z",
+      "playtimeMinutes": 103,
+      "textSha256": "5867c13f0d56d7f9f24240a3f3cd72dd4386e24e29ff21f223f7e5dc0d89eb0d",
+      "queries": [
+        "reviews-english-1-0",
+        "reviews-english-1-1"
+      ]
+    },
+    {
+      "id": "237339402",
+      "url": "https://steamcommunity.com/profiles/76561199553074750/recommended/5245810/",
+      "language": "english",
+      "recommended": true,
+      "createdAt": "2026-10-10T03:57:35.000Z",
+      "updatedAt": "2026-10-10T03:57:35.000Z",
+      "playtimeMinutes": 102,
+      "textSha256": "a06f7352f2d44736109b232dc6793d7a77ac55ec430f3404bc856fabb2b2d6f3",
+      "queries": [
+        "reviews-english-1-0"
+      ]
+    },
+    {
+      "id": "238053021",
+      "url": "https://steamcommunity.com/profiles/76561198116705681/recommended/5245810/",
+      "language": "english",
+      "recommended": true,
+      "createdAt": "2026-10-18T21:16:47.000Z",
+      "updatedAt": "2026-10-18T21:18:17.000Z",
+      "playtimeMinutes": 97,
+      "textSha256": "567fb903981eaba3a961529e81b33c4ff9d601ba7e004a9c09188a8145364a9b",
+      "queries": [
+        "reviews-english-1-1"
+      ]
+    },
+    {
+      "id": "237972619",
+      "url": "https://steamcommunity.com/profiles/76561197991524260/recommended/5245810/",
+      "language": "english",
+      "recommended": true,
+      "createdAt": "2026-10-17T22:48:51.000Z",
+      "updatedAt": "2026-10-17T22:48:51.000Z",
+      "playtimeMinutes": 106,
+      "textSha256": "152e4d73a62bf02502de653bd27e5167f4e8d89b844ea839f0d61c1896538bcb",
+      "queries": [
+        "reviews-english-1-1"
+      ]
+    },
+    {
+      "id": "237951211",
+      "url": "https://steamcommunity.com/profiles/76561198074054695/recommended/5245810/",
+      "language": "english",
+      "recommended": true,
+      "createdAt": "2026-10-17T17:42:37.000Z",
+      "updatedAt": "2026-10-17T17:42:37.000Z",
+      "playtimeMinutes": 357,
+      "textSha256": "9bf67fb5aa4d711f8ab85802641d38b371301fdc4d312f4862b3203e7e11eae5",
+      "queries": [
+        "reviews-english-1-1"
+      ]
+    },
+    {
+      "id": "237913683",
+      "url": "https://steamcommunity.com/profiles/76561198076002770/recommended/5245810/",
+      "language": "english",
+      "recommended": true,
+      "createdAt": "2026-10-17T08:13:27.000Z",
+      "updatedAt": "2026-10-17T08:13:27.000Z",
+      "playtimeMinutes": 44,
+      "textSha256": "d58e0a950e393ca266b19d0525e0ece4ba9a053d5cd7350ad7bd9d3ddc128574",
+      "queries": [
+        "reviews-english-1-1"
+      ]
+    },
+    {
+      "id": "237602818",
+      "url": "https://steamcommunity.com/profiles/76561199119587549/recommended/5245810/",
+      "language": "english",
+      "recommended": false,
+      "createdAt": "2026-10-13T03:40:31.000Z",
+      "updatedAt": "2026-10-13T03:40:31.000Z",
+      "playtimeMinutes": 64,
+      "textSha256": "be8bb2df90a5a42f38e2f2c64f4a12bbfae1e0e10c1f58ca57f8df8c59ce4f4f",
+      "queries": [
+        "reviews-english-2-0",
+        "reviews-english-2-1"
+      ]
+    },
+    {
+      "id": "237165600",
+      "url": "https://steamcommunity.com/profiles/76561199108928289/recommended/5245810/",
+      "language": "english",
+      "recommended": false,
+      "createdAt": "2026-10-07T22:40:12.000Z",
+      "updatedAt": "2026-10-07T22:40:12.000Z",
+      "playtimeMinutes": 7,
+      "textSha256": "ed22e1a6637f30d63bda16fb19f6333522a563623196602ab7b29e7611630da1",
+      "queries": [
+        "reviews-english-2-0",
+        "reviews-english-2-1"
+      ]
+    },
+    {
+      "id": "237523920",
+      "url": "https://steamcommunity.com/profiles/76561197991817650/recommended/5245810/",
+      "language": "english",
+      "recommended": false,
+      "createdAt": "2026-10-12T05:11:04.000Z",
+      "updatedAt": "2026-10-12T22:12:52.000Z",
+      "playtimeMinutes": 112,
+      "textSha256": "637fc616080042408b16f66c23d5610ea71fbc20a137a41bdc815aa25c18bcdd",
+      "queries": [
+        "reviews-english-2-0",
+        "reviews-english-2-1"
+      ]
+    },
+    {
+      "id": "237651815",
+      "url": "https://steamcommunity.com/profiles/76561197972614179/recommended/5245810/",
+      "language": "english",
+      "recommended": false,
+      "createdAt": "2026-10-13T20:02:10.000Z",
+      "updatedAt": "2026-10-13T20:02:10.000Z",
+      "playtimeMinutes": 108,
+      "textSha256": "e7f491d75798afee54a338960f9469f7d8f70160bf082aff194b41a056625ba7",
+      "queries": [
+        "reviews-english-2-0",
+        "reviews-english-2-1"
+      ]
+    },
+    {
+      "id": "237261082",
+      "url": "https://steamcommunity.com/profiles/76561198686999540/recommended/5245810/",
+      "language": "english",
+      "recommended": false,
+      "createdAt": "2026-10-09T05:37:19.000Z",
+      "updatedAt": "2026-10-09T05:37:19.000Z",
+      "playtimeMinutes": 190,
+      "textSha256": "5a65f5b27092449f78881fc1854507eb113e2fdf2d40e07df46c6250c9c9a560",
+      "queries": [
+        "reviews-english-2-0",
+        "reviews-english-2-1"
+      ]
+    },
+    {
+      "id": "237709720",
+      "url": "https://steamcommunity.com/profiles/76561198000892126/recommended/5245810/",
+      "language": "english",
+      "recommended": false,
+      "createdAt": "2026-10-14T16:15:04.000Z",
+      "updatedAt": "2026-10-14T16:15:04.000Z",
+      "playtimeMinutes": 35,
+      "textSha256": "939e36da41626dc6dd2d72daa34c7ea5844c624a44752007b6ed9b458ae34fb0",
+      "queries": [
+        "reviews-english-2-0",
+        "reviews-english-2-1"
+      ]
+    },
+    {
+      "id": "237351672",
+      "url": "https://steamcommunity.com/profiles/76561198133813709/recommended/5245810/",
+      "language": "english",
+      "recommended": false,
+      "createdAt": "2026-10-10T08:20:57.000Z",
+      "updatedAt": "2026-10-10T08:20:57.000Z",
+      "playtimeMinutes": 353,
+      "textSha256": "25237608e7d1d650eb6716d4e241171a9c45ef84d98332b40c2ccfff7197d0a2",
+      "queries": [
+        "reviews-english-2-0",
+        "reviews-english-2-1"
+      ]
+    },
+    {
+      "id": "237290643",
+      "url": "https://steamcommunity.com/profiles/76561198997070449/recommended/5245810/",
+      "language": "english",
+      "recommended": false,
+      "createdAt": "2026-10-09T15:02:39.000Z",
+      "updatedAt": "2026-10-09T15:02:39.000Z",
+      "playtimeMinutes": 45,
+      "textSha256": "65c6962556484726c2993ec80d2323cbcab41b605e516ec6dadf002c5eb7ef64",
+      "queries": [
+        "reviews-english-2-0",
+        "reviews-english-2-1"
+      ]
+    },
+    {
+      "id": "237511057",
+      "url": "https://steamcommunity.com/profiles/76561198373173069/recommended/5245810/",
+      "language": "english",
+      "recommended": false,
+      "createdAt": "2026-10-12T00:18:47.000Z",
+      "updatedAt": "2026-10-12T00:18:47.000Z",
+      "playtimeMinutes": 31,
+      "textSha256": "8670c90c96e09ec008b591523f8b1297b1bbde43d2376c7bae384f785b9caef6",
+      "queries": [
+        "reviews-english-2-0",
+        "reviews-english-2-1"
+      ]
+    },
+    {
+      "id": "236969921",
+      "url": "https://steamcommunity.com/profiles/76561199112454838/recommended/5245810/",
+      "language": "schinese",
+      "recommended": true,
+      "createdAt": "2026-10-05T13:54:05.000Z",
+      "updatedAt": "2026-10-05T13:54:05.000Z",
+      "playtimeMinutes": 265,
+      "textSha256": "6ee65e7d14290ed494f26ef798c351e9835a17b505602e9348f4d4f772e98f1c",
+      "queries": [
+        "reviews-schinese-1-0"
+      ]
+    },
+    {
+      "id": "237897938",
+      "url": "https://steamcommunity.com/profiles/76561198850723175/recommended/5245810/",
+      "language": "schinese",
+      "recommended": true,
+      "createdAt": "2026-10-17T02:31:39.000Z",
+      "updatedAt": "2026-10-17T11:55:37.000Z",
+      "playtimeMinutes": 132,
+      "textSha256": "72885225003de6d34f9a7894ff0aeb6c552c09117ed1e2b2f1530247f8e2e34f",
+      "queries": [
+        "reviews-schinese-1-0"
+      ]
+    },
+    {
+      "id": "237035534",
+      "url": "https://steamcommunity.com/profiles/76561199644492914/recommended/5245810/",
+      "language": "schinese",
+      "recommended": true,
+      "createdAt": "2026-10-06T09:15:35.000Z",
+      "updatedAt": "2026-10-06T09:15:35.000Z",
+      "playtimeMinutes": 372,
+      "textSha256": "ae6323dadbb73e1e5897afc4a960ee2bd66a8fda9ffdd45ebcf727903de0be4d",
+      "queries": [
+        "reviews-schinese-1-0"
+      ]
+    },
+    {
+      "id": "237172949",
+      "url": "https://steamcommunity.com/profiles/76561198191913975/recommended/5245810/",
+      "language": "schinese",
+      "recommended": true,
+      "createdAt": "2026-10-08T01:26:31.000Z",
+      "updatedAt": "2026-10-08T01:26:31.000Z",
+      "playtimeMinutes": 223,
+      "textSha256": "0db475be0b9e136d591a9640334287e6a389eb81b34f94c1af034299b78f004f",
+      "queries": [
+        "reviews-schinese-1-0"
+      ]
+    },
+    {
+      "id": "237033004",
+      "url": "https://steamcommunity.com/profiles/76561198283496518/recommended/5245810/",
+      "language": "schinese",
+      "recommended": true,
+      "createdAt": "2026-10-06T08:18:41.000Z",
+      "updatedAt": "2026-10-06T08:18:41.000Z",
+      "playtimeMinutes": 88,
+      "textSha256": "46e5d107d1c3dbfe0c4c12e18eede230f97a17fa0f2339e67be37225c31e094d",
+      "queries": [
+        "reviews-schinese-1-0"
+      ]
+    },
+    {
+      "id": "237108499",
+      "url": "https://steamcommunity.com/profiles/76561198310273994/recommended/5245810/",
+      "language": "schinese",
+      "recommended": true,
+      "createdAt": "2026-10-07T06:24:00.000Z",
+      "updatedAt": "2026-10-07T06:24:00.000Z",
+      "playtimeMinutes": 186,
+      "textSha256": "e9cb65db510f473347ce1c3b6ddbd88611f9f3e838c68d50a1e1db3e2a74530f",
+      "queries": [
+        "reviews-schinese-1-0"
+      ]
+    },
+    {
+      "id": "237797053",
+      "url": "https://steamcommunity.com/profiles/76561198249974542/recommended/5245810/",
+      "language": "schinese",
+      "recommended": true,
+      "createdAt": "2026-10-15T19:10:05.000Z",
+      "updatedAt": "2026-10-17T05:36:17.000Z",
+      "playtimeMinutes": 370,
+      "textSha256": "89b9740a38b0f02c542d1d4700657baf10f5201439e6be629fe3185876dce584",
+      "queries": [
+        "reviews-schinese-1-0"
+      ]
+    },
+    {
+      "id": "236971568",
+      "url": "https://steamcommunity.com/profiles/76561198207467423/recommended/5245810/",
+      "language": "schinese",
+      "recommended": true,
+      "createdAt": "2026-10-05T14:16:47.000Z",
+      "updatedAt": "2026-10-05T14:16:47.000Z",
+      "playtimeMinutes": 240,
+      "textSha256": "ca354d76b735d2089165579a32c5e5ed6bd45e24d72cae7315033181013c0a7a",
+      "queries": [
+        "reviews-schinese-1-0"
+      ]
+    },
+    {
+      "id": "237289793",
+      "url": "https://steamcommunity.com/profiles/76561198343329531/recommended/5245810/",
+      "language": "schinese",
+      "recommended": true,
+      "createdAt": "2026-10-09T14:52:22.000Z",
+      "updatedAt": "2026-10-09T14:52:22.000Z",
+      "playtimeMinutes": 60,
+      "textSha256": "35cd84becde882db64f28ec49bb00e150cff6195305086de68fb5216277f0445",
+      "queries": [
+        "reviews-schinese-1-0"
+      ]
+    },
+    {
+      "id": "237753414",
+      "url": "https://steamcommunity.com/profiles/76561199047617884/recommended/5245810/",
+      "language": "schinese",
+      "recommended": true,
+      "createdAt": "2026-10-15T06:08:42.000Z",
+      "updatedAt": "2026-10-15T06:08:42.000Z",
+      "playtimeMinutes": 105,
+      "textSha256": "6893cb28c179c16e022f36cb9907f2ecb1b863424f8c17095d2da7895cd7809b",
+      "queries": [
+        "reviews-schinese-1-0"
+      ]
+    },
+    {
+      "id": "237939288",
+      "url": "https://steamcommunity.com/profiles/76561199221525928/recommended/5245810/",
+      "language": "schinese",
+      "recommended": true,
+      "createdAt": "2026-10-17T15:10:11.000Z",
+      "updatedAt": "2026-10-17T15:10:11.000Z",
+      "playtimeMinutes": 322,
+      "textSha256": "27d49c21bd62d48f5c8b04c4324e4cde7d724196c22bd6ae2672dd2f1d114da0",
+      "queries": [
+        "reviews-schinese-1-0"
+      ]
+    },
+    {
+      "id": "237844341",
+      "url": "https://steamcommunity.com/profiles/76561198312702205/recommended/5245810/",
+      "language": "schinese",
+      "recommended": true,
+      "createdAt": "2026-10-16T12:02:59.000Z",
+      "updatedAt": "2026-10-16T12:02:59.000Z",
+      "playtimeMinutes": 146,
+      "textSha256": "0b34b53f44fccc8c700a6a35f45f12c2a0f5da98c1f55137c769d0d34bbf1edd",
+      "queries": [
+        "reviews-schinese-1-0"
+      ]
+    },
+    {
+      "id": "238041670",
+      "url": "https://steamcommunity.com/profiles/76561198998721019/recommended/5245810/",
+      "language": "schinese",
+      "recommended": true,
+      "createdAt": "2026-10-18T18:27:31.000Z",
+      "updatedAt": "2026-10-18T18:27:31.000Z",
+      "playtimeMinutes": 2604,
+      "textSha256": "d7f9ffe83da764291aa8dd9a6a3041a5ae78e69840c3646fe4f444e1ca628950",
+      "queries": [
+        "reviews-schinese-1-1"
+      ]
+    },
+    {
+      "id": "238037824",
+      "url": "https://steamcommunity.com/profiles/76561199004855450/recommended/5245810/",
+      "language": "schinese",
+      "recommended": true,
+      "createdAt": "2026-10-18T17:36:12.000Z",
+      "updatedAt": "2026-10-18T17:36:12.000Z",
+      "playtimeMinutes": 458,
+      "textSha256": "c9ac6de0d196d12d25d4bb668f24753a1169336c48ee92337b1d0711bcf45e82",
+      "queries": [
+        "reviews-schinese-1-1"
+      ]
+    },
+    {
+      "id": "238035492",
+      "url": "https://steamcommunity.com/profiles/76561198720368821/recommended/5245810/",
+      "language": "schinese",
+      "recommended": true,
+      "createdAt": "2026-10-18T17:04:41.000Z",
+      "updatedAt": "2026-10-18T17:04:41.000Z",
+      "playtimeMinutes": 354,
+      "textSha256": "2c1629a44274ff21998eed9bf6561f2fb5dde8c8303abc64bcc81a7b9e4e4d69",
+      "queries": [
+        "reviews-schinese-1-1"
+      ]
+    },
+    {
+      "id": "238034057",
+      "url": "https://steamcommunity.com/profiles/76561199112879781/recommended/5245810/",
+      "language": "schinese",
+      "recommended": true,
+      "createdAt": "2026-10-18T16:46:08.000Z",
+      "updatedAt": "2026-10-18T16:46:08.000Z",
+      "playtimeMinutes": 269,
+      "textSha256": "23e77d94372bf246ffd1a7ca3ee0821cc3ab8323f19d69b11060d45d6639a047",
+      "queries": [
+        "reviews-schinese-1-1"
+      ]
+    },
+    {
+      "id": "238031865",
+      "url": "https://steamcommunity.com/profiles/76561199027585368/recommended/5245810/",
+      "language": "schinese",
+      "recommended": true,
+      "createdAt": "2026-10-18T16:16:58.000Z",
+      "updatedAt": "2026-10-18T16:16:58.000Z",
+      "playtimeMinutes": 137,
+      "textSha256": "39689b9dc3f20b863de2cd73d8dd79fe68e1af0987db2a968d5b35a08d36ed6c",
+      "queries": [
+        "reviews-schinese-1-1"
+      ]
+    },
+    {
+      "id": "238031210",
+      "url": "https://steamcommunity.com/profiles/76561198694161611/recommended/5245810/",
+      "language": "schinese",
+      "recommended": true,
+      "createdAt": "2026-10-18T16:08:29.000Z",
+      "updatedAt": "2026-10-18T16:08:29.000Z",
+      "playtimeMinutes": 512,
+      "textSha256": "653b04330b75751f79b5031887ef159e015da5821dc8e47648fe4fdf8e925f4d",
+      "queries": [
+        "reviews-schinese-1-1"
+      ]
+    },
+    {
+      "id": "238024509",
+      "url": "https://steamcommunity.com/profiles/76561198844864380/recommended/5245810/",
+      "language": "schinese",
+      "recommended": true,
+      "createdAt": "2026-10-18T14:42:48.000Z",
+      "updatedAt": "2026-10-18T14:42:48.000Z",
+      "playtimeMinutes": 458,
+      "textSha256": "1a7648bc484b3d9ed9e2226d223a6193d64e5e1fcacd97868adec665fe12b924",
+      "queries": [
+        "reviews-schinese-1-1"
+      ]
+    },
+    {
+      "id": "238021614",
+      "url": "https://steamcommunity.com/profiles/76561198417535422/recommended/5245810/",
+      "language": "schinese",
+      "recommended": true,
+      "createdAt": "2026-10-18T14:05:58.000Z",
+      "updatedAt": "2026-10-18T14:05:58.000Z",
+      "playtimeMinutes": 509,
+      "textSha256": "f85adc10e9263374f9f0235885b3b0cd7c62d9c6e8807b30ed3baa023b44f318",
+      "queries": [
+        "reviews-schinese-1-1"
+      ]
+    },
+    {
+      "id": "238020703",
+      "url": "https://steamcommunity.com/profiles/76561199880873437/recommended/5245810/",
+      "language": "schinese",
+      "recommended": true,
+      "createdAt": "2026-10-18T13:53:09.000Z",
+      "updatedAt": "2026-10-18T13:53:09.000Z",
+      "playtimeMinutes": 249,
+      "textSha256": "bb59ff189781a84656c9bfa6f8b375cf516fbd679497996c0fcf543a9324fd5d",
+      "queries": [
+        "reviews-schinese-1-1"
+      ]
+    },
+    {
+      "id": "238018869",
+      "url": "https://steamcommunity.com/profiles/76561198861384230/recommended/5245810/",
+      "language": "schinese",
+      "recommended": true,
+      "createdAt": "2026-10-18T13:27:55.000Z",
+      "updatedAt": "2026-10-18T13:27:55.000Z",
+      "playtimeMinutes": 606,
+      "textSha256": "c7e616822f366fb1b5e0756af498cc11d2c0862edcb32ca65882f622ff39de1b",
+      "queries": [
+        "reviews-schinese-1-1"
+      ]
+    },
+    {
+      "id": "238015854",
+      "url": "https://steamcommunity.com/profiles/76561199760479593/recommended/5245810/",
+      "language": "schinese",
+      "recommended": true,
+      "createdAt": "2026-10-18T12:44:33.000Z",
+      "updatedAt": "2026-10-18T12:44:33.000Z",
+      "playtimeMinutes": 285,
+      "textSha256": "50a8c3a10547bc625c07cfc6642c545dd541566d04e538afbf44361e13ddbf39",
+      "queries": [
+        "reviews-schinese-1-1"
+      ]
+    },
+    {
+      "id": "238015299",
+      "url": "https://steamcommunity.com/profiles/76561198361130637/recommended/5245810/",
+      "language": "schinese",
+      "recommended": true,
+      "createdAt": "2026-10-18T12:36:20.000Z",
+      "updatedAt": "2026-10-18T12:36:31.000Z",
+      "playtimeMinutes": 462,
+      "textSha256": "ce80b2c63345bb24ce63bd9d4b0c10ae26c4366492c9cfb975160116ce0de806",
+      "queries": [
+        "reviews-schinese-1-1"
+      ]
+    },
+    {
+      "id": "237830645",
+      "url": "https://steamcommunity.com/profiles/76561199007921258/recommended/5245810/",
+      "language": "schinese",
+      "recommended": false,
+      "createdAt": "2026-10-16T06:22:10.000Z",
+      "updatedAt": "2026-10-16T06:24:48.000Z",
+      "playtimeMinutes": 911,
+      "textSha256": "bf6872538a68458b987a614769455a111edad84d67058bbe79738ed7ecc65e2a",
+      "queries": [
+        "reviews-schinese-2-0"
+      ]
+    },
+    {
+      "id": "237609171",
+      "url": "https://steamcommunity.com/profiles/76561198280311936/recommended/5245810/",
+      "language": "schinese",
+      "recommended": false,
+      "createdAt": "2026-10-13T06:41:42.000Z",
+      "updatedAt": "2026-10-13T06:41:42.000Z",
+      "playtimeMinutes": 154,
+      "textSha256": "41ba629b1e415896b1491a5aa35c837056addc0dce26d2a4e99024e324ee92ec",
+      "queries": [
+        "reviews-schinese-2-0"
+      ]
+    },
+    {
+      "id": "237033476",
+      "url": "https://steamcommunity.com/profiles/76561198214993721/recommended/5245810/",
+      "language": "schinese",
+      "recommended": false,
+      "createdAt": "2026-10-06T08:29:56.000Z",
+      "updatedAt": "2026-10-06T08:29:56.000Z",
+      "playtimeMinutes": 52,
+      "textSha256": "4ab5953962be5f845f97f95e2ae493900079b2173e67005e90f07ae9cc9d3ba6",
+      "queries": [
+        "reviews-schinese-2-0"
+      ]
+    },
+    {
+      "id": "236973766",
+      "url": "https://steamcommunity.com/profiles/76561198280892718/recommended/5245810/",
+      "language": "schinese",
+      "recommended": false,
+      "createdAt": "2026-10-05T14:47:22.000Z",
+      "updatedAt": "2026-10-05T14:47:22.000Z",
+      "playtimeMinutes": 106,
+      "textSha256": "733ef8494adb95d2143e1b940207645d312236abf7340b5a3f83f2a0f4e18567",
+      "queries": [
+        "reviews-schinese-2-0"
+      ]
+    },
+    {
+      "id": "236961158",
+      "url": "https://steamcommunity.com/profiles/76561198201890093/recommended/5245810/",
+      "language": "schinese",
+      "recommended": false,
+      "createdAt": "2026-10-05T11:30:16.000Z",
+      "updatedAt": "2026-10-05T11:30:16.000Z",
+      "playtimeMinutes": 64,
+      "textSha256": "e1772e90deeb89a734a728ef33378cc2834beb5bb1c5c4f0d5c77001a94eda4e",
+      "queries": [
+        "reviews-schinese-2-0"
+      ]
+    },
+    {
+      "id": "237052729",
+      "url": "https://steamcommunity.com/profiles/76561198255696050/recommended/5245810/",
+      "language": "schinese",
+      "recommended": false,
+      "createdAt": "2026-10-06T14:19:06.000Z",
+      "updatedAt": "2026-10-06T14:19:06.000Z",
+      "playtimeMinutes": 17,
+      "textSha256": "98173c482a039c4e919ac128398d8dea74d8cb9c5e5b97329c1bed54a523676a",
+      "queries": [
+        "reviews-schinese-2-0"
+      ]
+    },
+    {
+      "id": "237038167",
+      "url": "https://steamcommunity.com/profiles/76561198688823611/recommended/5245810/",
+      "language": "schinese",
+      "recommended": false,
+      "createdAt": "2026-10-06T10:10:45.000Z",
+      "updatedAt": "2026-10-06T10:10:45.000Z",
+      "playtimeMinutes": 309,
+      "textSha256": "f8881e2d1e58aeb220dd30a14e8130ecad14d8158d49e57b400d8f8027d3144f",
+      "queries": [
+        "reviews-schinese-2-0"
+      ]
+    },
+    {
+      "id": "237827751",
+      "url": "https://steamcommunity.com/profiles/76561199485206802/recommended/5245810/",
+      "language": "schinese",
+      "recommended": false,
+      "createdAt": "2026-10-16T05:02:57.000Z",
+      "updatedAt": "2026-10-16T05:02:57.000Z",
+      "playtimeMinutes": 34,
+      "textSha256": "3ce934086b6a77f8c27058e6f21de93a6ffb409cf0eb7a0a69d200f3ed586b80",
+      "queries": [
+        "reviews-schinese-2-0"
+      ]
+    },
+    {
+      "id": "237374292",
+      "url": "https://steamcommunity.com/profiles/76561198046477402/recommended/5245810/",
+      "language": "schinese",
+      "recommended": false,
+      "createdAt": "2026-10-10T14:16:34.000Z",
+      "updatedAt": "2026-10-10T14:16:34.000Z",
+      "playtimeMinutes": 156,
+      "textSha256": "3b44d4e4cec0a8a0bddf31352a1bcc90e48ee2a35731a0d3bb87987e0ed712bf",
+      "queries": [
+        "reviews-schinese-2-0"
+      ]
+    },
+    {
+      "id": "237205467",
+      "url": "https://steamcommunity.com/profiles/76561198131989336/recommended/5245810/",
+      "language": "schinese",
+      "recommended": false,
+      "createdAt": "2026-10-08T13:46:41.000Z",
+      "updatedAt": "2026-10-08T14:36:06.000Z",
+      "playtimeMinutes": 74,
+      "textSha256": "e05660daed7ec08a951cb862a4a6b201897d082178bb210ba182858a3a2c8a81",
+      "queries": [
+        "reviews-schinese-2-0"
+      ]
+    },
+    {
+      "id": "237185921",
+      "url": "https://steamcommunity.com/profiles/76561198352052480/recommended/5245810/",
+      "language": "schinese",
+      "recommended": false,
+      "createdAt": "2026-10-08T06:49:31.000Z",
+      "updatedAt": "2026-10-08T06:49:31.000Z",
+      "playtimeMinutes": 26,
+      "textSha256": "e1c50d82740f6dfca0ebf597f1ccabd6338045a4858d24b468ef8dcf76582f2f",
+      "queries": [
+        "reviews-schinese-2-0"
+      ]
+    },
+    {
+      "id": "237824980",
+      "url": "https://steamcommunity.com/profiles/76561198816500791/recommended/5245810/",
+      "language": "schinese",
+      "recommended": false,
+      "createdAt": "2026-10-16T03:53:24.000Z",
+      "updatedAt": "2026-10-16T03:53:24.000Z",
+      "playtimeMinutes": 610,
+      "textSha256": "cf16e3a539c1ad7ba0aa03636cdbfda2411bf4cc1b05853320498847a477104d",
+      "queries": [
+        "reviews-schinese-2-0"
+      ]
+    },
+    {
+      "id": "238055936",
+      "url": "https://steamcommunity.com/profiles/76561198446116259/recommended/5245810/",
+      "language": "schinese",
+      "recommended": false,
+      "createdAt": "2026-10-18T22:07:32.000Z",
+      "updatedAt": "2026-10-18T22:07:32.000Z",
+      "playtimeMinutes": 606,
+      "textSha256": "6013e54ebbc7fa0ad787736ba0a73ffae90a1e7f7c371f5219198b6cc7927f92",
+      "queries": [
+        "reviews-schinese-2-1"
+      ]
+    },
+    {
+      "id": "238053605",
+      "url": "https://steamcommunity.com/profiles/76561199029836538/recommended/5245810/",
+      "language": "schinese",
+      "recommended": false,
+      "createdAt": "2026-10-18T21:27:07.000Z",
+      "updatedAt": "2026-10-18T21:32:40.000Z",
+      "playtimeMinutes": 393,
+      "textSha256": "fd2767c89f41fdf4b49dd48067efb7fc3d5f715f47cd54e7136feb0718a4c8f7",
+      "queries": [
+        "reviews-schinese-2-1"
+      ]
+    },
+    {
+      "id": "238052435",
+      "url": "https://steamcommunity.com/profiles/76561199566171055/recommended/5245810/",
+      "language": "schinese",
+      "recommended": false,
+      "createdAt": "2026-10-18T21:06:19.000Z",
+      "updatedAt": "2026-10-18T21:06:19.000Z",
+      "playtimeMinutes": 130,
+      "textSha256": "1ef6d6d91afc0e630b58b74df8de34bfd7534739ac234fd66a88ab237e9323b4",
+      "queries": [
+        "reviews-schinese-2-1"
+      ]
+    },
+    {
+      "id": "238044149",
+      "url": "https://steamcommunity.com/profiles/76561198796023615/recommended/5245810/",
+      "language": "schinese",
+      "recommended": false,
+      "createdAt": "2026-10-18T19:02:25.000Z",
+      "updatedAt": "2026-10-18T19:02:25.000Z",
+      "playtimeMinutes": 201,
+      "textSha256": "7445914e746c8b828acfe9cb7fcfe472e34ef5c783e13afac459e22a4d98b083",
+      "queries": [
+        "reviews-schinese-2-1"
+      ]
+    },
+    {
+      "id": "238040176",
+      "url": "https://steamcommunity.com/profiles/76561199148798233/recommended/5245810/",
+      "language": "schinese",
+      "recommended": false,
+      "createdAt": "2026-10-18T18:07:05.000Z",
+      "updatedAt": "2026-10-18T18:07:05.000Z",
+      "playtimeMinutes": 66,
+      "textSha256": "2df08a4a7967e61ecbd065aa8a33065fb970383d779171e24f1b54effe1272fb",
+      "queries": [
+        "reviews-schinese-2-1"
+      ]
+    },
+    {
+      "id": "238035634",
+      "url": "https://steamcommunity.com/profiles/76561198346769663/recommended/5245810/",
+      "language": "schinese",
+      "recommended": false,
+      "createdAt": "2026-10-18T17:06:27.000Z",
+      "updatedAt": "2026-10-18T17:06:27.000Z",
+      "playtimeMinutes": 33,
+      "textSha256": "8226bb26b7f6bdbc536c11e48d790cbb3e1f1191f9a85960614be51dca733702",
+      "queries": [
+        "reviews-schinese-2-1"
+      ]
+    },
+    {
+      "id": "238033954",
+      "url": "https://steamcommunity.com/profiles/76561199578413114/recommended/5245810/",
+      "language": "schinese",
+      "recommended": false,
+      "createdAt": "2026-10-18T16:44:41.000Z",
+      "updatedAt": "2026-10-18T16:44:41.000Z",
+      "playtimeMinutes": 36,
+      "textSha256": "7f4f7d2b13b15e272396657b73c3aff971ffbe6ced0e5530f2ff99bad15caa79",
+      "queries": [
+        "reviews-schinese-2-1"
+      ]
+    },
+    {
+      "id": "238029679",
+      "url": "https://steamcommunity.com/profiles/76561198688057369/recommended/5245810/",
+      "language": "schinese",
+      "recommended": false,
+      "createdAt": "2026-10-18T15:48:04.000Z",
+      "updatedAt": "2026-10-18T15:48:04.000Z",
+      "playtimeMinutes": 134,
+      "textSha256": "13c9005ef74f90b42e68eb65c51acb4b47fb1cfc1a6080db556fd63558a61e6f",
+      "queries": [
+        "reviews-schinese-2-1"
+      ]
+    },
+    {
+      "id": "238026379",
+      "url": "https://steamcommunity.com/profiles/76561198629441735/recommended/5245810/",
+      "language": "schinese",
+      "recommended": false,
+      "createdAt": "2026-10-18T15:06:37.000Z",
+      "updatedAt": "2026-10-18T15:06:54.000Z",
+      "playtimeMinutes": 46,
+      "textSha256": "7e03fdb39c7e64680d36b50cf9f5cb6b60418bada9f358b81681fd6430ce98d3",
+      "queries": [
+        "reviews-schinese-2-1"
+      ]
+    },
+    {
+      "id": "238023208",
+      "url": "https://steamcommunity.com/profiles/76561199161965106/recommended/5245810/",
+      "language": "schinese",
+      "recommended": false,
+      "createdAt": "2026-10-18T14:26:26.000Z",
+      "updatedAt": "2026-10-18T14:26:26.000Z",
+      "playtimeMinutes": 39,
+      "textSha256": "187efc86bbbf587065d0be2b558547de319a68eb89dee97b9a64976790ed5ae9",
+      "queries": [
+        "reviews-schinese-2-1"
+      ]
+    },
+    {
+      "id": "238010901",
+      "url": "https://steamcommunity.com/profiles/76561199198008413/recommended/5245810/",
+      "language": "schinese",
+      "recommended": false,
+      "createdAt": "2026-10-18T11:33:28.000Z",
+      "updatedAt": "2026-10-18T11:33:28.000Z",
+      "playtimeMinutes": 101,
+      "textSha256": "f6da1d01266362457f853ed72d916b3ba962e8627cd55aefd3a18bbdac40eacf",
+      "queries": [
+        "reviews-schinese-2-1"
+      ]
+    },
+    {
+      "id": "238007847",
+      "url": "https://steamcommunity.com/profiles/76561199310767902/recommended/5245810/",
+      "language": "schinese",
+      "recommended": false,
+      "createdAt": "2026-10-18T10:40:27.000Z",
+      "updatedAt": "2026-10-18T10:40:27.000Z",
+      "playtimeMinutes": 59,
+      "textSha256": "de01ea742affe7fc0c716c1d141216934a3f301b44c60474c234207c5bc8448b",
+      "queries": [
+        "reviews-schinese-2-1"
+      ]
+    }
+  ],
+  "publicRun": {
+    "url": "https://www.bilibili.com/video/BV1oApw6tEQ1/",
+    "author": "Atheryl",
+    "duration": 3511,
+    "observedSeconds": [
+      12.258159,
+      29.754237,
+      60.717669,
+      119.016949,
+      297.542372
+    ],
+    "blockedSamples": [
+      {
+        "target": 360,
+        "actual": 299.396851
+      },
+      {
+        "target": 720,
+        "actual": 299.396851
+      },
+      {
+        "target": 1200,
+        "actual": 299.396851
+      }
+    ],
+    "limitation": "Login required after first five minutes. Did not bypass or claim subsequent segments observed."
+  }
+}

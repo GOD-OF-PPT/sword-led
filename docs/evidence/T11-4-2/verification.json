@@ -1,0 +1,63 @@
+{
+  "recordedAt": "2026-10-19T01:50:54.515Z",
+  "unit": {
+    "passed": 217,
+    "failed": 0,
+    "files": 20
+  },
+  "production": {
+    "entry": "v2-main-Bv_W7lw0.js",
+    "css": "v2-main-BgGChR3Q.css",
+    "files": 35,
+    "baselineMatches": true,
+    "sdkGraphSameAsT12": true
+  },
+  "browser": {
+    "functional26": {
+      "wholeRun": "red-6/report.json",
+      "passedInitially": 25,
+      "captureTimeoutInitially": 1,
+      "recheckedSameSource": "visual-recheck/summary.json",
+      "recheckPassed": 1,
+      "successfulSubset": "functional-25/summary.json"
+    },
+    "cross": {
+      "report": "final-cross/summary.json",
+      "session": 14845,
+      "passed": 24,
+      "projects": 6,
+      "retries": 0
+    },
+    "legacyNative": {
+      "report": "legacy-native/summary.json",
+      "session": 59947,
+      "passed": 2,
+      "formallyReplayedLegacyStates": 4
+    },
+    "validatedV2StateObjects": 54,
+    "validationsAreNotUniqueRuns": true
+  },
+  "readability": {
+    "samples": 672,
+    "minFontPx": 12,
+    "minContrast": 5.365235182742199,
+    "disabledAndDecorativeTextExcluded": true
+  },
+  "art": {
+    "runtimeAssets": 9,
+    "runtimeBytes": 2917762,
+    "newOriginals": 2,
+    "fullPromptAndReference": "design/d/revision-v2-manifest.json"
+  },
+  "preview": {
+    "url": "http://127.0.0.1:4179/",
+    "session": 62192,
+    "all35HttpFilesMatch": true,
+    "userTabReloaded": false
+  },
+  "remaining": [
+    "Human art/playability feedback remains failed until actual revised-version feedback",
+    "T12 model independent audit and final R4",
+    "One screenshot capture timeout did not recur; cause not established"
+  ]
+}

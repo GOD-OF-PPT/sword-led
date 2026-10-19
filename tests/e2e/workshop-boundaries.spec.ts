@@ -72,7 +72,7 @@ test('a newly signed contract is not changed by an old feedback callback', async
 
 test('the second same-origin tab is read-only but can practice without rewriting the slot', async ({ page, context }) => {
   await openGame(page);await startGame(page);const before = await page.evaluate(() => localStorage.getItem('sword-led.save.v1'));
-  const other = await context.newPage();await other.goto('/');await expect(other.locator('#menu')).toBeVisible();
+  const other = await context.newPage();await other.goto('/legacy.html');await expect(other.locator('#menu')).toBeVisible();
   await expect(other.locator('#new-game')).toBeDisabled();await expect(other.locator('#menu-storage')).toContainText('只可查看');
   await other.locator('#continue').click();await expect(other.locator('#strike')).toBeDisabled();
   await other.locator('#menu-logo').click();await other.locator('#practice').click();await other.locator('#lesson-next').click();

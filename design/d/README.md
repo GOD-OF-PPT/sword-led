@@ -1,5 +1,7 @@
 # D「行脚灯炉」正式美术与界面
 
+2026-10-19修订：用户明确指出第一版构图未落实且流程不清晰，现依[最新指定稿](reference-main-v2.png)重做实际近景布局，研究与落地约定见[视觉修订](visual-revision-2026-10-19.md)。新增工坊背景和委托人物通过内置image_gen.imagegen生成，原PNG保存在`originals/forge-backdrop-v2.png`及`originals/commission-guard-v2.png`，完整实际提示词在`prompts/`对应文件；[新来源清单](revision-v2-manifest.json)含参考/原件/提示词/运行hash。九份实际运行素材共2,917,762字节，均低于原3MiB预算，两张新增导出的alpha与原PNG逐像素相同。下面八图/旧构图描述为首版记录，不能当作最新实际画面验收。
+
 本轮T11.3沿[用户选定D图](../v03/concepts/main-d-v1.png)派生。当前新版入口为`/v2.html`；旧B入口和存档保留。正式D使用[八份运行WebP](../../public/assets/d/manifest.json)，合计2,335,062字节，约2.23MiB。没有用概念整图作为点击界面。
 
 ## 来源与导出

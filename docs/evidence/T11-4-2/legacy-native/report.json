@@ -1,0 +1,247 @@
+{
+  "config": {
+    "argv": [
+      "/Users/gordon/.nvm/versions/node/v22.12.0/bin/node",
+      "/Users/gordon/githome/sword-led/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/native-input.spec.ts",
+      "tests/e2e/native-ui-cache.spec.ts",
+      "--config=playwright.ui.config.ts"
+    ],
+    "configFile": "/Users/gordon/githome/sword-led/playwright.ui.config.ts",
+    "rootDir": "/Users/gordon/githome/sword-led/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/ui",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-game",
+        "name": "chromium-game",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/ui",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chromium-game",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4180",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "launchOptions": {
+            "args": [
+              "--no-proxy-server"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium-game"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/ui-report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 4180 --strictPort",
+      "url": "http://127.0.0.1:4180",
+      "timeout": 30000,
+      "reuseExistingServer": false,
+      "env": {
+        "NO_PROXY": "127.0.0.1,localhost",
+        "no_proxy": "127.0.0.1,localhost"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "native-input.spec.ts",
+      "file": "native-input.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "native Chrome minimize/restore cancels a held key and preserves the accepted-command stream",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-game",
+              "projectName": "chromium-game",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6043,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T00:33:14.747Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-window-input",
+                      "contentType": "application/json",
+                      "path": "chromium-game/native-window-input-2e49fa5fb2df.json"
+                    },
+                    {
+                      "name": "native-window-input-screen",
+                      "contentType": "image/png",
+                      "path": "chromium-game/native-window-input-screen-9409c3acd43f.png"
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9",
+                      "path": "chromium-game/runtime-audit-003018422993.json"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "be24e7fcad3339d4e332-ed61a2f074f17ba1aca3",
+          "file": "native-input.spec.ts",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "native-ui-cache.spec.ts",
+      "file": "native-ui-cache.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "production UI rereads a newer window save after a real native cached-heap restoration",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-game",
+              "projectName": "chromium-game",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5709,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-19T00:33:21.290Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "native-ui-bfcache",
+                      "contentType": "application/json",
+                      "body": "ewogICJicm93c2VyIjogIkNocm9tZS8xNTYuMC44MDc4LjQiLAogICJtZXRob2QiOiAicmF3IG5hdGl2ZSBDaHJvbWUgcGlwZSwgcHJvZHVjdGlvbiBET00gY29udHJvbHMsIG11dGVkIHByZWZlcmVuY2U7IG5vIFBsYXl3cmlnaHQgUGFnZSBsaWZlY3ljbGUgZW11bGF0aW9uIiwKICAibmF0aXZlUGVyc2lzdGVkIjogdHJ1ZSwKICAicGFnZVNob3dUcnVzdGVkIjogdHJ1ZSwKICAiaGVhcFJldGFpbmVkIjogdHJ1ZSwKICAib2xkS2V5dXBVbmNoYW5nZWQiOiB0cnVlLAogICJyZXN0b3JlZFN0b3JhZ2UiOiAi5Y+m5LiA56qX5Y+j5q2j5Zyo6ZS76YCg77yM5pys56qX5Y+j5Y+q5Y+v5p+l55yL44CCIiwKICAiaW5wdXRSZWFkaW5lc3MiOiB7CiAgICAiYWN0aXZlQmVmb3JlIjogInN0cmlrZSIsCiAgICAic3RyaWtlRW5hYmxlZCI6IHRydWUsCiAgICAiYWN0aXZlQWZ0ZXIiOiAic3RyaWtlIgogIH0sCiAgImJlZm9yZSI6IHsKICAgICJydWxlc1ZlcnNpb24iOiAiZm9yZ2UtdjEiLAogICAgInJ1bklkIjogImVjNGNkYTMxNWJhYTdkY2NkM2E5ZmM0MjNjN2M1YjU1IiwKICAgICJzZWVkIjogIm5hdGl2ZS11aS1jYWNoZSIsCiAgICAicmV2aXNpb24iOiAxLAogICAgInBoYXNlIjogIndvcmtzaG9wIiwKICAgICJyb3VuZCI6IDEsCiAgICAiY29pbnMiOiAwLAogICAgInNjcmFwIjogMCwKICAgICJjb2FsIjogMSwKICAgICJzZWFscyI6IDMsCiAgICAidXBncmFkZXMiOiB7CiAgICAgICJoYW5kbGUiOiAwLAogICAgICAiYmVsbG93cyI6IDAsCiAgICAgICJhbnZpbCI6IDAKICAgIH0sCiAgICAicGllY2VzIjogWwogICAgICB7CiAgICAgICAgImlkIjogIjE6MSIsCiAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICJwcm9ncmVzcyI6IDMsCiAgICAgICAgImhlYXQiOiA4OCwKICAgICAgICAic3RyZXNzIjogNywKICAgICAgICAiaW50ZWdyaXR5IjogNCwKICAgICAgICAic3RhdHVzIjogImFjdGl2ZSIKICAgICAgfSwKICAgICAgewogICAgICAgICJpZCI6ICIxOjIiLAogICAgICAgICJtYXRlcmlhbCI6ICJpcm9uIiwKICAgICAgICAicHJvZ3Jlc3MiOiAwLAogICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICJzdHJlc3MiOiAwLAogICAgICAgICJpbnRlZ3JpdHkiOiA0LAogICAgICAgICJzdGF0dXMiOiAiYWN0aXZlIgogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogIjE6MyIsCiAgICAgICAgIm1hdGVyaWFsIjogInN0ZWVsIiwKICAgICAgICAicHJvZ3Jlc3MiOiAwLAogICAgICAgICJoZWF0IjogMTAwLAogICAgICAgICJzdHJlc3MiOiAwLAogICAgICAgICJpbnRlZ3JpdHkiOiAzLAogICAgICAgICJzdGF0dXMiOiAiYWN0aXZlIgogICAgICB9CiAgICBdLAogICAgInJuZyI6IHsKICAgICAgInN0b2NrIjogewogICAgICAgICJzdGF0ZSI6IDQ4OTkxMDUwLAogICAgICAgICJkcmF3cyI6IDAKICAgICAgfSwKICAgICAgInN0cmlrZSI6IHsKICAgICAgICAic3RhdGUiOiAzNzI4NTA1MzYzLAogICAgICAgICJkcmF3cyI6IDEKICAgICAgfQogICAgfSwKICAgICJoaXN0b3J5IjogW10sCiAgICAicHVyY2hhc2VzIjogW10sCiAgICAic3RhdHMiOiB7CiAgICAgICJzdHJpa2VzIjogMSwKICAgICAgInN1Y2Nlc3NmdWxTdHJpa2VzIjogMSwKICAgICAgImRhbWFnZWRTdHJpa2VzIjogMCwKICAgICAgImhlYXRzIjogMCwKICAgICAgImRlbGl2ZXJlZFBpZWNlcyI6IDAsCiAgICAgICJyZWN5Y2xlZFBpZWNlcyI6IDAsCiAgICAgICJicm9rZW5QaWVjZXMiOiAwLAogICAgICAiaGlnaGVzdFRpZXIiOiAxLAogICAgICAiY29pbnNFYXJuZWQiOiAwLAogICAgICAiY29pbnNTcGVudCI6IDAsCiAgICAgICJzY3JhcEVhcm5lZCI6IDAsCiAgICAgICJzY3JhcFNwZW50IjogMCwKICAgICAgInJvdW5kc01ldCI6IDAsCiAgICAgICJyb3VuZHNNaXNzZWQiOiAwCiAgICB9LAogICAgImpvdXJuYWwiOiBbCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJzdHJpa2UiLAogICAgICAgICJwaWVjZUlkIjogIjE6MSIsCiAgICAgICAgIm1vZGUiOiAic3RhbmRhcmQiLAogICAgICAgICJ0aW1pbmdNYXJrIjogNTA2MAogICAgICB9CiAgICBdCiAgfSwKICAiY2hhbmdlZCI6IHsKICAgICJydWxlc1ZlcnNpb24iOiAiZm9yZ2UtdjEiLAogICAgInJ1bklkIjogImVjNGNkYTMxNWJhYTdkY2NkM2E5ZmM0MjNjN2M1YjU1IiwKICAgICJzZWVkIjogIm5hdGl2ZS11aS1jYWNoZSIsCiAgICAicmV2aXNpb24iOiAyLAogICAgInBoYXNlIjogIndvcmtzaG9wIiwKICAgICJyb3VuZCI6IDEsCiAgICAiY29pbnMiOiAyMiwKICAgICJzY3JhcCI6IDAsCiAgICAiY29hbCI6IDEsCiAgICAic2VhbHMiOiAzLAogICAgInVwZ3JhZGVzIjogewogICAgICAiaGFuZGxlIjogMCwKICAgICAgImJlbGxvd3MiOiAwLAogICAgICAiYW52aWwiOiAwCiAgICB9LAogICAgInBpZWNlcyI6IFsKICAgICAgewogICAgICAgICJpZCI6ICIxOjEiLAogICAgICAgICJtYXRlcmlhbCI6ICJpcm9uIiwKICAgICAgICAicHJvZ3Jlc3MiOiAzLAogICAgICAgICJoZWF0IjogODgsCiAgICAgICAgInN0cmVzcyI6IDcsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiMToyIiwKICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgInByb2dyZXNzIjogMCwKICAgICAgICAiaGVhdCI6IDEwMCwKICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAiaW50ZWdyaXR5IjogNCwKICAgICAgICAic3RhdHVzIjogImFjdGl2ZSIKICAgICAgfSwKICAgICAgewogICAgICAgICJpZCI6ICIxOjMiLAogICAgICAgICJtYXRlcmlhbCI6ICJzdGVlbCIsCiAgICAgICAgInByb2dyZXNzIjogMCwKICAgICAgICAiaGVhdCI6IDEwMCwKICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAiaW50ZWdyaXR5IjogMywKICAgICAgICAic3RhdHVzIjogImRlbGl2ZXJlZCIKICAgICAgfQogICAgXSwKICAgICJybmciOiB7CiAgICAgICJzdG9jayI6IHsKICAgICAgICAic3RhdGUiOiA0ODk5MTA1MCwKICAgICAgICAiZHJhd3MiOiAwCiAgICAgIH0sCiAgICAgICJzdHJpa2UiOiB7CiAgICAgICAgInN0YXRlIjogMzcyODUwNTM2MywKICAgICAgICAiZHJhd3MiOiAxCiAgICAgIH0KICAgIH0sCiAgICAiaGlzdG9yeSI6IFtdLAogICAgInB1cmNoYXNlcyI6IFtdLAogICAgInN0YXRzIjogewogICAgICAic3RyaWtlcyI6IDEsCiAgICAgICJzdWNjZXNzZnVsU3RyaWtlcyI6IDEsCiAgICAgICJkYW1hZ2VkU3RyaWtlcyI6IDAsCiAgICAgICJoZWF0cyI6IDAsCiAgICAgICJkZWxpdmVyZWRQaWVjZXMiOiAxLAogICAgICAicmVjeWNsZWRQaWVjZXMiOiAwLAogICAgICAiYnJva2VuUGllY2VzIjogMCwKICAgICAgImhpZ2hlc3RUaWVyIjogMSwKICAgICAgImNvaW5zRWFybmVkIjogMjIsCiAgICAgICJjb2luc1NwZW50IjogMCwKICAgICAgInNjcmFwRWFybmVkIjogMCwKICAgICAgInNjcmFwU3BlbnQiOiAwLAogICAgICAicm91bmRzTWV0IjogMCwKICAgICAgInJvdW5kc01pc3NlZCI6IDAKICAgIH0sCiAgICAiam91cm5hbCI6IFsKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiMToxIiwKICAgICAgICAibW9kZSI6ICJzdGFuZGFyZCIsCiAgICAgICAgInRpbWluZ01hcmsiOiA1MDYwCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJkZWxpdmVyIiwKICAgICAgICAicGllY2VJZCI6ICIxOjMiCiAgICAgIH0KICAgIF0KICB9LAogICJyZXN0b3JlZCI6IHsKICAgICJydWxlc1ZlcnNpb24iOiAiZm9yZ2UtdjEiLAogICAgInJ1bklkIjogImVjNGNkYTMxNWJhYTdkY2NkM2E5ZmM0MjNjN2M1YjU1IiwKICAgICJzZWVkIjogIm5hdGl2ZS11aS1jYWNoZSIsCiAgICAicmV2aXNpb24iOiAyLAogICAgInBoYXNlIjogIndvcmtzaG9wIiwKICAgICJyb3VuZCI6IDEsCiAgICAiY29pbnMiOiAyMiwKICAgICJzY3JhcCI6IDAsCiAgICAiY29hbCI6IDEsCiAgICAic2VhbHMiOiAzLAogICAgInVwZ3JhZGVzIjogewogICAgICAiaGFuZGxlIjogMCwKICAgICAgImJlbGxvd3MiOiAwLAogICAgICAiYW52aWwiOiAwCiAgICB9LAogICAgInBpZWNlcyI6IFsKICAgICAgewogICAgICAgICJpZCI6ICIxOjEiLAogICAgICAgICJtYXRlcmlhbCI6ICJpcm9uIiwKICAgICAgICAicHJvZ3Jlc3MiOiAzLAogICAgICAgICJoZWF0IjogODgsCiAgICAgICAgInN0cmVzcyI6IDcsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiMToyIiwKICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgInByb2dyZXNzIjogMCwKICAgICAgICAiaGVhdCI6IDEwMCwKICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAiaW50ZWdyaXR5IjogNCwKICAgICAgICAic3RhdHVzIjogImFjdGl2ZSIKICAgICAgfSwKICAgICAgewogICAgICAgICJpZCI6ICIxOjMiLAogICAgICAgICJtYXRlcmlhbCI6ICJzdGVlbCIsCiAgICAgICAgInByb2dyZXNzIjogMCwKICAgICAgICAiaGVhdCI6IDEwMCwKICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAiaW50ZWdyaXR5IjogMywKICAgICAgICAic3RhdHVzIjogImRlbGl2ZXJlZCIKICAgICAgfQogICAgXSwKICAgICJybmciOiB7CiAgICAgICJzdG9jayI6IHsKICAgICAgICAic3RhdGUiOiA0ODk5MTA1MCwKICAgICAgICAiZHJhd3MiOiAwCiAgICAgIH0sCiAgICAgICJzdHJpa2UiOiB7CiAgICAgICAgInN0YXRlIjogMzcyODUwNTM2MywKICAgICAgICAiZHJhd3MiOiAxCiAgICAgIH0KICAgIH0sCiAgICAiaGlzdG9yeSI6IFtdLAogICAgInB1cmNoYXNlcyI6IFtdLAogICAgInN0YXRzIjogewogICAgICAic3RyaWtlcyI6IDEsCiAgICAgICJzdWNjZXNzZnVsU3RyaWtlcyI6IDEsCiAgICAgICJkYW1hZ2VkU3RyaWtlcyI6IDAsCiAgICAgICJoZWF0cyI6IDAsCiAgICAgICJkZWxpdmVyZWRQaWVjZXMiOiAxLAogICAgICAicmVjeWNsZWRQaWVjZXMiOiAwLAogICAgICAiYnJva2VuUGllY2VzIjogMCwKICAgICAgImhpZ2hlc3RUaWVyIjogMSwKICAgICAgImNvaW5zRWFybmVkIjogMjIsCiAgICAgICJjb2luc1NwZW50IjogMCwKICAgICAgInNjcmFwRWFybmVkIjogMCwKICAgICAgInNjcmFwU3BlbnQiOiAwLAogICAgICAicm91bmRzTWV0IjogMCwKICAgICAgInJvdW5kc01pc3NlZCI6IDAKICAgIH0sCiAgICAiam91cm5hbCI6IFsKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiMToxIiwKICAgICAgICAibW9kZSI6ICJzdGFuZGFyZCIsCiAgICAgICAgInRpbWluZ01hcmsiOiA1MDYwCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJkZWxpdmVyIiwKICAgICAgICAicGllY2VJZCI6ICIxOjMiCiAgICAgIH0KICAgIF0KICB9LAogICJmaW5hbFN0YXRlIjogewogICAgInJ1bGVzVmVyc2lvbiI6ICJmb3JnZS12MSIsCiAgICAicnVuSWQiOiAiZWM0Y2RhMzE1YmFhN2RjY2QzYTlmYzQyM2M3YzViNTUiLAogICAgInNlZWQiOiAibmF0aXZlLXVpLWNhY2hlIiwKICAgICJyZXZpc2lvbiI6IDMsCiAgICAicGhhc2UiOiAid29ya3Nob3AiLAogICAgInJvdW5kIjogMSwKICAgICJjb2lucyI6IDIyLAogICAgInNjcmFwIjogMCwKICAgICJjb2FsIjogMSwKICAgICJzZWFscyI6IDMsCiAgICAidXBncmFkZXMiOiB7CiAgICAgICJoYW5kbGUiOiAwLAogICAgICAiYmVsbG93cyI6IDAsCiAgICAgICJhbnZpbCI6IDAKICAgIH0sCiAgICAicGllY2VzIjogWwogICAgICB7CiAgICAgICAgImlkIjogIjE6MSIsCiAgICAgICAgIm1hdGVyaWFsIjogImlyb24iLAogICAgICAgICJwcm9ncmVzcyI6IDYsCiAgICAgICAgImhlYXQiOiA3NiwKICAgICAgICAic3RyZXNzIjogMTQsCiAgICAgICAgImludGVncml0eSI6IDQsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiMToyIiwKICAgICAgICAibWF0ZXJpYWwiOiAiaXJvbiIsCiAgICAgICAgInByb2dyZXNzIjogMCwKICAgICAgICAiaGVhdCI6IDEwMCwKICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAiaW50ZWdyaXR5IjogNCwKICAgICAgICAic3RhdHVzIjogImFjdGl2ZSIKICAgICAgfSwKICAgICAgewogICAgICAgICJpZCI6ICIxOjMiLAogICAgICAgICJtYXRlcmlhbCI6ICJzdGVlbCIsCiAgICAgICAgInByb2dyZXNzIjogMCwKICAgICAgICAiaGVhdCI6IDEwMCwKICAgICAgICAic3RyZXNzIjogMCwKICAgICAgICAiaW50ZWdyaXR5IjogMywKICAgICAgICAic3RhdHVzIjogImRlbGl2ZXJlZCIKICAgICAgfQogICAgXSwKICAgICJybmciOiB7CiAgICAgICJzdG9jayI6IHsKICAgICAgICAic3RhdGUiOiA0ODk5MTA1MCwKICAgICAgICAiZHJhd3MiOiAwCiAgICAgIH0sCiAgICAgICJzdHJpa2UiOiB7CiAgICAgICAgInN0YXRlIjogMTI2NTEwMzg4MCwKICAgICAgICAiZHJhd3MiOiAyCiAgICAgIH0KICAgIH0sCiAgICAiaGlzdG9yeSI6IFtdLAogICAgInB1cmNoYXNlcyI6IFtdLAogICAgInN0YXRzIjogewogICAgICAic3RyaWtlcyI6IDIsCiAgICAgICJzdWNjZXNzZnVsU3RyaWtlcyI6IDIsCiAgICAgICJkYW1hZ2VkU3RyaWtlcyI6IDAsCiAgICAgICJoZWF0cyI6IDAsCiAgICAgICJkZWxpdmVyZWRQaWVjZXMiOiAxLAogICAgICAicmVjeWNsZWRQaWVjZXMiOiAwLAogICAgICAiYnJva2VuUGllY2VzIjogMCwKICAgICAgImhpZ2hlc3RUaWVyIjogMiwKICAgICAgImNvaW5zRWFybmVkIjogMjIsCiAgICAgICJjb2luc1NwZW50IjogMCwKICAgICAgInNjcmFwRWFybmVkIjogMCwKICAgICAgInNjcmFwU3BlbnQiOiAwLAogICAgICAicm91bmRzTWV0IjogMCwKICAgICAgInJvdW5kc01pc3NlZCI6IDAKICAgIH0sCiAgICAiam91cm5hbCI6IFsKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiMToxIiwKICAgICAgICAibW9kZSI6ICJzdGFuZGFyZCIsCiAgICAgICAgInRpbWluZ01hcmsiOiA1MDYwCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJkZWxpdmVyIiwKICAgICAgICAicGllY2VJZCI6ICIxOjMiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJzdHJpa2UiLAogICAgICAgICJwaWVjZUlkIjogIjE6MSIsCiAgICAgICAgIm1vZGUiOiAic3RhbmRhcmQiLAogICAgICAgICJ0aW1pbmdNYXJrIjogNTAzMwogICAgICB9CiAgICBdCiAgfSwKICAiZXJyb3JzIjogW10KfQ==",
+                      "path": "chromium-game/native-ui-bfcache-afbcbb72ad38.json"
+                    },
+                    {
+                      "name": "runtime-audit",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbXSwKICAiY29uc29sZUVycm9ycyI6IFtdLAogICJodHRwIjogW10sCiAgImFsbG93ZWRIdHRwU3RhdHVzZXMiOiBbXQp9",
+                      "path": "chromium-game/runtime-audit-003018422993.json"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1ee8555f59fdab60c857-7e9eb2f761826c6fdc58",
+          "file": "native-ui-cache.spec.ts",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-19T00:33:12.760Z",
+    "duration": 14349.963,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

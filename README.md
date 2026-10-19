@@ -2,7 +2,7 @@
 
 一款面向现代 PC 浏览器的轮次制锻造游戏。每轮只有三件铁坯：控制落锤时机让它升值，在断裂前决定交货还是回收，靠商人升级撑过十二轮契约。
 
-**v0.3 D「行脚灯炉」：[/v2.html](http://127.0.0.1:4179/v2.html)**。五节十点锻纹、公开应力、淬火/试剑、委托与技法搭配接入真实十二轮规则/独立存档。已派生[正式D美术](design/d/README.md)，接入练习、锻造、作品簿、三次商人、收据与胜负界面；原版`/`保留以支持旧契约。
+**当前首页为 D「行脚灯炉」主界面二版：[打开游戏](http://127.0.0.1:4179/)**，`/v2.html`也是相同新版；旧契约移至`/legacy.html`，数据保留。按用户最新附图重做近景工坊、大剑、三锤/水油器具与纸单，加入当前步骤和下一步提示。[ForgeTax深入参考](docs/research/2026-10-19-forgetax-interaction.md)记录实际媒体观察、官方更新、73条评论及限制。新版仍待修订后的真人评价，技术通过不代表满意。
 
 2026-10-18真人曾评价v0.2玩法/美术缺乏新意；已据ForgeTax及110条唯一Steam评论修订并取得明确v0.3批准。[核心证据](docs/reviews/R3-5-v2-core-and-playable.md)保留928局策略与原试玩结果，[D界面说明](docs/v0.3-d-interface.md)记录新接线与独立练习。[新版技术验收](docs/reviews/R3-7-v2-technical-acceptance.md)与[44AC映射](docs/v0.3-acceptance.md)分别记录实际矩阵、故障修复及待办。真人再玩和最大交付仍按T11.4.2–T12推进，技术通过不等于玩家满意。
 
@@ -48,7 +48,7 @@ npm ci --registry=https://registry.npmjs.org/
 npm run dev
 ```
 
-打开终端显示的地址，默认`/`为旧版，`/v2.html`为新版核心试玩。生产版本用`npm run build`后`npm run preview`，默认端口4173。构建包含两个HTML、网页资源与core/session/v2 SDK及共享chunk，应整体保留dist，不提交dist或node_modules。需要通过localhost或HTTPS运行。
+打开终端显示的地址，默认`/`和`/v2.html`均为新版，`/legacy.html`为旧版。生产版本用`npm run build`后`npm run preview`，默认端口4173。构建包含三个HTML、网页资源与core/session/v2 SDK及共享chunk，应整体保留dist，不提交dist或node_modules。需要通过localhost或HTTPS运行。
 
 | 操作 | 用法 |
 | --- | --- |
@@ -83,7 +83,7 @@ npm run build
 npx playwright test --config playwright.v2.config.ts
 ```
 
-新版配置使用4182端口、单worker、无重试；六个Chromium/Firefox/WebKit的DPR1/2项目各35项，另有原生Chrome两项，共212项。每个项目都包含纯键盘十二轮、三商人、失败重开和组合保存故障；两种桌面尺寸由规格明确覆盖。输出`test-results/v2-release/`与`test-results/v2-release-report.json`，不会覆盖旧版/存储报告。原生Chrome窗口/缓存探测独立标记，不会伪标为Firefox/WebKit。运行中不要重建同一个dist；具体结果以技术验收报告为准。Playwright WebKit引擎不是在真实Safari产品上验收，Chromium也不等同真实Edge。[贡献说明](CONTRIBUTING.md)列出证据归档与边界。
+新版配置使用4182端口、单worker、无重试。R3.7首版基线为六个Chromium/Firefox/WebKit的DPR1/2项目各35项加原生Chrome两项，共212项；本次主界面二版新增视觉流程用例，实际枚举和结果以当前报告为准，不能把旧212称为新构建全量通过。每个项目都包含纯键盘十二轮、三商人、失败重开和组合保存故障；两种桌面尺寸由规格明确覆盖。输出`test-results/v2-release/`与`test-results/v2-release-report.json`，不会覆盖旧版/存储报告。原生Chrome窗口/缓存探测独立标记，不会伪标为Firefox/WebKit。运行中不要重建同一个dist；具体结果以技术验收报告为准。Playwright WebKit引擎不是在真实Safari产品上验收，Chromium也不等同真实Edge。[贡献说明](CONTRIBUTING.md)列出证据归档与边界。
 
 整局模拟与回放：
 
@@ -94,7 +94,7 @@ npm run simulate -- --replay docs/evidence/T06/verify-v1.medium-victory.json
 
 默认53场景，每个最终状态都完整回放；输出统计JSON、逐局CSV.gz与胜负witness。已有输出不会覆盖；参数、输入误差假设和指标边界见模拟合同。T06 实测批次约18分钟，速度取决于设备，模型输入秒数不等于脚本耗时或真人整局时长。
 
-旧版入口为`/`，新版为`/v2.html`；开发服务还提供`/design/b/preview/index.html`美术校验页。`test:art`核对B风格的9张图片、alpha、288姿态、24材料帧和设计组件；D素材在新版UI/alpha规格中核对，两者证据分别记录。旧阶段机器证据归档工具为`node scripts/collect-ui-evidence.mjs --stage T10 --out <新的证据目录>`，已有证据不覆盖；归档前需生成最新unit/UI/storage报告。新版完整矩阵使用贡献说明中的v2 collector。
+旧版入口为`/legacy.html`，新版为`/`或`/v2.html`；开发服务还提供`/design/b/preview/index.html`美术校验页。`test:art`核对B风格的9张图片、alpha、288姿态、24材料帧和设计组件；D素材在新版UI/alpha规格中核对，两者证据分别记录。旧阶段机器证据归档工具为`node scripts/collect-ui-evidence.mjs --stage T10 --out <新的证据目录>`，已有证据不覆盖；归档前需生成最新unit/UI/storage报告。新版完整矩阵使用贡献说明中的v2 collector。
 
 构建后可在 Node 中调用同一个正式内核：
 

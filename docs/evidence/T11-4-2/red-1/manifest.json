@@ -1,0 +1,59 @@
+{
+  "session": 22930,
+  "exitCode": 130,
+  "intentionallyInterrupted": true,
+  "ownedRunner": 75607,
+  "passed": 2,
+  "failed": 6,
+  "interrupted": 1,
+  "notRun": 15,
+  "retained": [
+    {
+      "source": "test-results/v2-release/v2-accessibility-v2-live-t-18689-ial-remain-readable-at-1280-v2-chromium/trace.zip",
+      "file": "v2-accessibility-v2-live-t-18689-ial-remain-readable-at-1280-v2-chromium/trace.zip",
+      "sha256": "0947f272d7c9677e229c936e9c1c9904bcac269358fbe03495600543711f195b"
+    },
+    {
+      "source": "test-results/v2-release/v2-accessibility-v2-live-t-18689-ial-remain-readable-at-1280-v2-chromium/test-failed-1.png",
+      "file": "v2-accessibility-v2-live-t-18689-ial-remain-readable-at-1280-v2-chromium/test-failed-1.png",
+      "sha256": "e65fc30db50cb1c1e939f71d9c75101f50b8d9d673b4a99a7699142e80e4ad6c"
+    },
+    {
+      "source": "test-results/v2-release/v2-accessibility-v2-live-t-18689-ial-remain-readable-at-1280-v2-chromium/error-context.md",
+      "file": "v2-accessibility-v2-live-t-18689-ial-remain-readable-at-1280-v2-chromium/error-context.json",
+      "sha256": "933231d0826612ac15e5e399fc603e988d3430e62cce0461b872317240db61e8"
+    },
+    {
+      "source": "test-results/v2-release/v2-accessibility-v2-live-t-2a754-ial-remain-readable-at-1920-v2-chromium/trace.zip",
+      "file": "v2-accessibility-v2-live-t-2a754-ial-remain-readable-at-1920-v2-chromium/trace.zip",
+      "sha256": "ecb02341a424ce0bd2a2b8f0b03bc0f0d6652ab107c1f63fd93df9e7e0881759"
+    },
+    {
+      "source": "test-results/v2-release/v2-accessibility-v2-live-t-2a754-ial-remain-readable-at-1920-v2-chromium/test-failed-1.png",
+      "file": "v2-accessibility-v2-live-t-2a754-ial-remain-readable-at-1920-v2-chromium/test-failed-1.png",
+      "sha256": "e42225c96c0ddecb58dc645f921c98728ff6e719a5605a278bb3e2d9ece07c50"
+    },
+    {
+      "source": "test-results/v2-release/v2-accessibility-v2-live-t-2a754-ial-remain-readable-at-1920-v2-chromium/error-context.md",
+      "file": "v2-accessibility-v2-live-t-2a754-ial-remain-readable-at-1920-v2-chromium/error-context.json",
+      "sha256": "49d2a453469a36889caf879abe89b7db873057592d11fcd315316126dec48cd1"
+    },
+    {
+      "source": "test-results/v2-release/v2-critical-fault-v2-720px-d5ec7-neous-save-settings-failure-v2-chromium/trace.zip",
+      "file": "v2-critical-fault-v2-720px-d5ec7-neous-save-settings-failure-v2-chromium/trace.zip",
+      "sha256": "4022610ce9586994a14219c9616c909fbc2b272374c33c135b451d7224affc5d"
+    },
+    {
+      "source": "test-results/v2-release/v2-critical-fault-v2-720px-d5ec7-neous-save-settings-failure-v2-chromium/test-failed-1.png",
+      "file": "v2-critical-fault-v2-720px-d5ec7-neous-save-settings-failure-v2-chromium/test-failed-1.png",
+      "sha256": "d3f0238e548cc6fc096e95270033e3529b9617d6623acdbbd991e16826a68e99"
+    },
+    {
+      "source": "test-results/v2-release/v2-critical-fault-v2-720px-d5ec7-neous-save-settings-failure-v2-chromium/error-context.md",
+      "file": "v2-critical-fault-v2-720px-d5ec7-neous-save-settings-failure-v2-chromium/error-context.json",
+      "sha256": "22862386df12543aaea65dac78f77158fa14219cff30eb3054a9d68a92b5e6cc"
+    }
+  ],
+  "otherRawFilesLocal": "tmp/T11-4-2-red-1-raw",
+  "rule": "Representative three Chromium failed cases retain trace/PNG/context; whole raw interrupted batch kept locally. Not a completed matrix."
+}

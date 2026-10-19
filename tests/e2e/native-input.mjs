@@ -7,7 +7,7 @@ export async function verifyNativeInput(baseURL, screenshotPath) {
   const { request, evaluate, wait, attach } = native;
   try {
     const version = await request('Browser.getVersion');
-    const page = await attach(`${baseURL}/`);
+    const page = await attach(`${baseURL}/legacy.html`);
     const targetWindow = await request('Browser.getWindowForTarget', { targetId: page.targetId });
     await request('Browser.setWindowBounds', { windowId: targetWindow.windowId, bounds: { width: 1280, height: 900 } });
     await request('Page.bringToFront', {}, page.sessionId);

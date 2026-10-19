@@ -1,0 +1,22 @@
+{
+  "session": 48138,
+  "exitCode": 1,
+  "passed": 25,
+  "failed": 1,
+  "kind": "Screenshot capture timeout after fonts ready; 90s configured limit but 30.5m reported duration. Cause not established, no source change before isolated retry.",
+  "files": [
+    {
+      "file": "trace.zip",
+      "bytes": 14959645,
+      "sha256": "60768cd868817872e038063b83f5dcb7c097bf493ee441076dfdeec65e80246a",
+      "retainedInRepo": true
+    },
+    {
+      "file": "test-failed-1.png",
+      "bytes": 1052461,
+      "sha256": "11d9f4cbef0a010f4bf7b4c904ee43d35651da7b5189e0cc57c01295aa797788",
+      "retainedInRepo": true
+    }
+  ],
+  "rawLocal": "tmp/T11-4-2-red-6-raw"
+}

@@ -1,7 +1,7 @@
 import type { RequestKind, HammerMode } from '../core-v2/index.js';
 import { element } from '../presentation/dom.js';
 
-export const D_ASSETS = ['forge-backdrop-v1','hammer-light-v1','hammer-standard-v1','hammer-heavy-v1','portraits-v1','water-v1','oil-v1','metal-atlas-v1'] as const;
+export const D_ASSETS = ['forge-backdrop-v2','hammer-light-v1','hammer-standard-v1','hammer-heavy-v1','portraits-v1','water-v1','oil-v1','metal-atlas-v1','commission-guard-v2'] as const;
 export const artPath = (name: string) => `/assets/d/${name}.webp`;
 export const hammerPath = (mode: HammerMode) => artPath(`hammer-${mode}-v1`);
 export const portraitIndex = (kind: RequestKind | 'merchant' | null) => kind === 'merchant' ? 3 : kind === 'ceremony' ? 2 : kind === 'guard' || kind === 'protector' || kind === 'duelist' ? 1 : 0;

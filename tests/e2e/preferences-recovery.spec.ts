@@ -110,7 +110,7 @@ test('native settings events preserve a dirty local preference and never rebase 
   });
   await openGame(page);await startGame(page);await preciseKeyStrike(page);const before=await readRun(page);
   await page.evaluate(()=>Reflect.set(window,'settingsFail',true));await page.locator('#pause').click();await page.getByRole('button',{name:'操作设置',exact:true}).click();await page.locator('#slow-setting').check();
-  const other=await context.newPage();await other.goto('/');await expect(other.locator('#menu')).toBeVisible();await other.locator('#options').click();await other.locator('#mute-setting').check();
+  const other=await context.newPage();await other.goto('/legacy.html');await expect(other.locator('#menu')).toBeVisible();await other.locator('#options').click();await other.locator('#mute-setting').check();
   await expect(page.locator('#mute-setting')).not.toBeChecked();await expect(page.locator('#slow-setting')).toBeChecked();await expect(page.locator('#settings-status')).toContainText('尚未保存');expect(await readRun(page)).toEqual(before);
   await page.evaluate(()=>Reflect.set(window,'settingsFail',false));await page.locator('#settings-retry').click();
   await expect(other.locator('#mute-setting')).not.toBeChecked();await expect(other.locator('#slow-setting')).toBeChecked();expect(await readRun(page)).toEqual(before);await other.close();

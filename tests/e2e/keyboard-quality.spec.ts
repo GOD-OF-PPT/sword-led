@@ -37,7 +37,7 @@ test('keyboard alone signs a contract, saves settings, forges, disposes, pauses,
 
 test('read-only practice returns focus to a usable menu control',async({page,context})=>{
   await openGame(page);await keyActivate(page,'#new-game');await page.keyboard.type('owner');await page.keyboard.press('Tab');await page.keyboard.press('Enter');await page.keyboard.press('Tab');await page.keyboard.press('Enter');
-  const other=await context.newPage();await other.goto('/');await expect(other.locator('#menu')).toBeVisible();await expect(other.locator('#new-game')).toBeDisabled();
+  const other=await context.newPage();await other.goto('/legacy.html');await expect(other.locator('#menu')).toBeVisible();await expect(other.locator('#new-game')).toBeDisabled();
   await keyActivate(other,'#practice');await keyActivate(other,'#lesson-exit');
   await expect(other.locator('#continue')).toBeFocused();await other.close();
 });

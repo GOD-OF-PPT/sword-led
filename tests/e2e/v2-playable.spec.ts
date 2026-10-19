@@ -60,7 +60,7 @@ test('v1 and v2 genuine saves stay separate and contend for the same writer leas
   await openGame(page);await startGame(page,'legacy-before-v2');await preciseKeyStrike(page);const legacy=await page.evaluate(()=>localStorage.getItem('sword-led.save.v1'));
   await page.goto('/v2.html');await expect(page.locator('#v2-new')).toBeEnabled();await page.locator('#v2-new').click();await page.locator('#v2-starters').getByRole('button',{name:/巡锋齿/}).click();await page.locator('#v2-decline').click();
   expect(await page.evaluate(()=>localStorage.getItem('sword-led.save.v1'))).toBe(legacy);const v2=await page.evaluate(()=>localStorage.getItem('sword-led.save.v2'));
-  const other=await context.newPage();await other.goto('/');await expect(other.locator('#new-game')).toBeDisabled();await page.close();
+  const other=await context.newPage();await other.goto('/legacy.html');await expect(other.locator('#new-game')).toBeDisabled();await page.close();
   await other.locator('#reconnect').click();await expect(other.locator('#new-game')).toBeEnabled();expect(await other.evaluate(()=>localStorage.getItem('sword-led.save.v1'))).toBe(legacy);expect(await other.evaluate(()=>localStorage.getItem('sword-led.save.v2'))).toBe(v2);await other.close();
 });
 
@@ -108,7 +108,7 @@ test('keyboard alone selects a v2 forging route, quenches, delivers and settles 
   await page.addInitScript(()=>{Reflect.set(window,'v2PointerCount',0);window.addEventListener('pointerdown',()=>Reflect.set(window,'v2PointerCount',Number(Reflect.get(window,'v2PointerCount'))+1));});
   await page.clock.install({time:new Date('2026-10-19T06:00:00Z')});await page.goto('/v2.html');await expect(page.locator('#v2-new')).toBeEnabled();await page.clock.pauseAt(new Date('2026-10-19T06:01:00Z'));
   await keyActivate(page,'#v2-new');await keyActivate(page,'#v2-starters button:first-child');await keyActivate(page,'#v2-requests button:first-child');
-  for(const direction of[null,'ArrowRight','ArrowRight','ArrowUp','ArrowRight','ArrowRight']){if(direction)await page.keyboard.press(direction);await expect(page.locator('#v2-strike')).toBeFocused();await page.keyboard.down('Space');await page.clock.runFor(350);await page.keyboard.up('Space');}
+  for(const[direction,node]of[[null,0],['ArrowLeft',1],['ArrowLeft',2],['ArrowUp',7],['ArrowLeft',8],['ArrowLeft',9]]as const){if(direction)await page.keyboard.press(direction);await expect(page.locator(`#v2-node-${node}`)).toHaveAttribute('aria-pressed','true');await expect(page.locator('#v2-strike')).toBeFocused();await page.keyboard.down('Space');await page.clock.runFor(350);await page.keyboard.up('Space');}
   await keyActivate(page,'#v2-oil');await page.keyboard.press('Tab');await page.keyboard.press('Enter');await keyActivate(page,'#v2-deliver');await page.keyboard.press('Tab');await page.keyboard.press('Enter');
   await keyActivate(page,'#v2-settle');await page.keyboard.press('Tab');await page.keyboard.press('Enter');const state=await readV2(page);expect(state).toMatchObject({phase:'roundSummary',round:1,coins:228,seals:3});expect(state.history[0]).toMatchObject({met:true,delivered:228,nextCredit:39});
   expect(await page.evaluate(()=>Reflect.get(window,'v2PointerCount'))).toBe(0);await info.attach('v2-keyboard-only-round',{body:Buffer.from(JSON.stringify({pointerEvents:0,state},null,2)),contentType:'application/json'});

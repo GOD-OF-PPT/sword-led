@@ -10,7 +10,7 @@ export async function verifyNativeUiCache(baseURL) {
   let native;
   try {
     native=await launchNativeChrome();const {request,evaluate,wait,attach}=native;
-    const version=await request('Browser.getVersion'),a=await attach(`${baseURL}/`);
+    const version=await request('Browser.getVersion'),a=await attach(`${baseURL}/legacy.html`);
     const window=await request('Browser.getWindowForTarget',{targetId:a.targetId});await request('Browser.setWindowBounds',{windowId:window.windowId,bounds:{width:1280,height:900}});
     await request('Page.bringToFront',{},a.sessionId);
     await wait(a.sessionId,`Boolean(document.querySelector('#menu')&&!document.querySelector('#menu').hidden&&!document.querySelector('#new-game').disabled)`);
@@ -32,12 +32,12 @@ export async function verifyNativeUiCache(baseURL) {
     const before=await evaluate(a.sessionId,`JSON.parse(localStorage.getItem('sword-led.save.v1')).state`);
     await evaluate(a.sessionId,`document.querySelector('#strike').focus()`);await request('Input.dispatchKeyEvent',{type:'keyDown',...key},a.sessionId);
     await request('Page.navigate',{url:`http://127.0.0.1:${address.port}/away`},a.sessionId);await wait(a.sessionId,`location.pathname==='/away'`);
-    const b=await attach(`${baseURL}/`);await request('Page.bringToFront',{},b.sessionId);
+    const b=await attach(`${baseURL}/legacy.html`);await request('Page.bringToFront',{},b.sessionId);
     await wait(b.sessionId,`Boolean(document.querySelector('#menu')&&!document.querySelector('#menu').hidden&&!document.querySelector('#new-game').disabled)`);
     await evaluate(b.sessionId,`(() => {document.querySelector('#continue').click();document.querySelector('#piece-3').click();document.querySelector('#deliver-button').click();[...document.querySelectorAll('#dialog button')].find(button=>button.textContent==='确认交货').click();})()`);
     await wait(b.sessionId,`JSON.parse(localStorage.getItem('sword-led.save.v1')).state.revision===2`);
     const changed=await evaluate(b.sessionId,`({raw:localStorage.getItem('sword-led.save.v1'),state:JSON.parse(localStorage.getItem('sword-led.save.v1')).state})`);
-    const history=await request('Page.getNavigationHistory',{},a.sessionId),entry=history.entries.find(item=>item.url===`${baseURL}/`);if(!entry)throw new Error('No UI history entry');
+    const history=await request('Page.getNavigationHistory',{},a.sessionId),entry=history.entries.find(item=>item.url===`${baseURL}/legacy.html`);if(!entry)throw new Error('No UI history entry');
     await request('Page.navigateToHistoryEntry',{entryId:entry.id},a.sessionId);await request('Page.bringToFront',{},a.sessionId);
     await wait(a.sessionId,`location.origin===${JSON.stringify(baseURL)}&&document.querySelector('#app')?.dataset.revision==='2'`);
     await request('Input.dispatchKeyEvent',{type:'keyUp',...key},a.sessionId);

@@ -8,7 +8,7 @@ import { NODE_X, nodeY, paintBlade } from './blade.js';
 /** A real private run: no repository, formal session, journal export or economic rewards. */
 export function createTutorial(texture:()=>HTMLImageElement|undefined,slow:boolean){
   const body=element('section',undefined,'forge-lesson');body.id='v2-lesson';
-  const intro=element('p','练习炉不写入正式契约。先在刃上连续敲左侧三个相邻点，再转到脊；最后淬火与交货。每点容量6，平锤占3。');
+  const intro=element('p','练习炉不写入正式契约。先在刃上连续敲剑尖起的三个相邻点，再转到脊；最后淬火与交货。每点容量6，平锤占3。');
   const hint=element('p',undefined,'lesson-hint');hint.id='v2-lesson-hint';hint.setAttribute('role','status');
   const stage=element('div',undefined,'blade-host lesson-stage'),canvas=element('canvas');canvas.setAttribute('aria-label','练习剑真实锻造结果');
   const nodes=element('div');stage.append(canvas,nodes);
@@ -38,6 +38,6 @@ export function createTutorial(texture:()=>HTMLImageElement|undefined,slow:boole
   for(let i=0;i<10;i++){const b=element('button',undefined,'lesson-node');b.style.left=`${(NODE_X[i%5]??0)/10}%`;b.style.top=`${nodeY(i)/3.4}%`;b.setAttribute('aria-label',`练习${SECTION_NAMES[i%5]}${i<5?'刃':'脊'}落点`);b.addEventListener('click',()=>{input.cancel();epoch++;node=i;render();strike.focus({preventScroll:true});});buttons.push(b);nodes.append(b);}
   for(const[control,medium]of[[water,'water'],[oil,'oil']]as const)control.addEventListener('click',()=>send({type:'quench',pieceId:'1:1',medium}));
   deliver.addEventListener('click',()=>send({type:'deliver',pieceId:'1:1'}));reset.addEventListener('click',()=>{input.cancel();epoch++;state=initial();node=0;render();strike.focus();});
-  body.addEventListener('keydown',event=>{if(event.ctrlKey||event.altKey||event.metaKey)return;const k=event.key;if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(k))return;event.preventDefault();input.cancel();epoch++;node=k==='ArrowUp'?node%5+5:k==='ArrowDown'?node%5:Math.floor(node/5)*5+Math.max(0,Math.min(4,node%5+(k==='ArrowRight'?1:-1)));render();if(!strike.disabled)strike.focus({preventScroll:true});});
+  body.addEventListener('keydown',event=>{if(event.ctrlKey||event.altKey||event.metaKey)return;const k=event.key;if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(k))return;event.preventDefault();input.cancel();epoch++;node=k==='ArrowUp'?node%5+5:k==='ArrowDown'?node%5:Math.floor(node/5)*5+Math.max(0,Math.min(4,node%5+(k==='ArrowRight'?-1:1)));render();if(!strike.disabled)strike.focus({preventScroll:true});});
   render();return {body,dispose(){disposed=true;epoch++;input.dispose();}};
 }

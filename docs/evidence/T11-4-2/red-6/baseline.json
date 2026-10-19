@@ -1,0 +1,908 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-19T00:37:41.124Z",
+  "environment": {
+    "node": "v22.12.0",
+    "platform": "darwin",
+    "arch": "x64"
+  },
+  "extraInputs": [
+    "legacy.html"
+  ],
+  "sourceHashes": {
+    "src/application/persistent-session.ts": {
+      "sha256": "23408bacb9b0d150f937ac9af59f4c93be020018ce8e9203cbb6abd9470607e4",
+      "bytes": 12349
+    },
+    "src/application/session.ts": {
+      "sha256": "a885844f7ddce22b10bf3f8badbabd84da1bb9990f0817826047c00d5135f851",
+      "bytes": 16344
+    },
+    "src/application/v2-persistence.ts": {
+      "sha256": "2cc364c4e33b369b4955ae80cc4e780b07a605d470c083cf9713e7a95504456f",
+      "bytes": 1450
+    },
+    "src/core/game.ts": {
+      "sha256": "f24e0a700318b346903d1118c7939686748c4e6e55a0780cf213ef72d7eeac38",
+      "bytes": 11322
+    },
+    "src/core/guards.ts": {
+      "sha256": "a25ec963eb41de673edccb4f1a95c420f73ddc7ee44be6c668a69ba2715c9e21",
+      "bytes": 2931
+    },
+    "src/core/immutable.ts": {
+      "sha256": "9bd212a1885c949d1928a2ecb8daa934483f0d26bce8ff196e8ae460d0a29044",
+      "bytes": 464
+    },
+    "src/core/index.ts": {
+      "sha256": "4fd1ab0adc5c1fe6836329427e7744d0e2eacf2e67745d3c986c93446424b0e9",
+      "bytes": 607
+    },
+    "src/core/ledger.ts": {
+      "sha256": "0190a08b7b7205408e08cbf365bd448062bdb2acf00e34ed8c2e79e4ffd06b73",
+      "bytes": 1962
+    },
+    "src/core/merchant.ts": {
+      "sha256": "931f772c1ffe19b8a55cea4c4109d620bd34c6d6daa9e3fb257be85a3ee89a11",
+      "bytes": 1845
+    },
+    "src/core/model.ts": {
+      "sha256": "e3568fa89a4dfa1805643dab0a48bbba1689523c01c8408b3e007fedb6d537fd",
+      "bytes": 8082
+    },
+    "src/core/random.ts": {
+      "sha256": "1a3d3d19684573bad8dbf4a80266b0fb343a8ddd32a7aec9d16efc729cf5fca9",
+      "bytes": 897
+    },
+    "src/core/rules.ts": {
+      "sha256": "cb0a017b155304fe98f43f0f356d72125073fb116e0cbf06c4cfab21cc1f24cc",
+      "bytes": 3496
+    },
+    "src/core/validate.ts": {
+      "sha256": "69814cc7a3e40038d6d91bc24f65364a0600209915d210c6c03d5cd98afc6d08",
+      "bytes": 4904
+    },
+    "src/core/view.ts": {
+      "sha256": "0a77454028a0695c4610c32e6295ea0379e603d5cd0ee5e394ee1e96d820a936",
+      "bytes": 3747
+    },
+    "src/core-v2/game.ts": {
+      "sha256": "784474e6957db40d8336c85244f0f100feab2b4dccaafcd4a012ee9e0e8af74f",
+      "bytes": 17685
+    },
+    "src/core-v2/index.ts": {
+      "sha256": "7ab2a9bfe8f3d313d3dd9d1a5ac9a5162e9347f506f8059205301e2a3394853b",
+      "bytes": 253
+    },
+    "src/core-v2/model.ts": {
+      "sha256": "09c318993539a464960416bb5aa2c3b33e7d8a73bb551a5a892502719c46e4f7",
+      "bytes": 6066
+    },
+    "src/core-v2/rules.ts": {
+      "sha256": "342b600fad9679a1225a3e9a60e9ef4d7c033d6a7979a7ef83ddfa50ed1e7a4a",
+      "bytes": 5907
+    },
+    "src/core-v2/validate.ts": {
+      "sha256": "b2234d783e49985f2d289348532603002e0883767d40b584af0774671d7ac9b6",
+      "bytes": 1693
+    },
+    "src/core-v2/view.ts": {
+      "sha256": "56a7f2839af1756ad24aef4b5ccd8075eecac3bf9c59e58914c310c814f9c6e2",
+      "bytes": 7342
+    },
+    "src/env.d.ts": {
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+      "bytes": 38
+    },
+    "src/main.ts": {
+      "sha256": "96828efb2be8d9a47d28380ab7f9db411ebec880f1dd7c9b13b02df30a711f3c",
+      "bytes": 395
+    },
+    "src/persistence/index.ts": {
+      "sha256": "ca53cf54562098b30a48873a0c639cf751366a40e7079b320937c862bfb2b4c6",
+      "bytes": 715
+    },
+    "src/platform/audio.ts": {
+      "sha256": "3a714dddc4edd42f2ace195cd52afba1c8129e060eb2fc1a98be7b7e9a70c388",
+      "bytes": 8072
+    },
+    "src/platform/browser-session.ts": {
+      "sha256": "ed4cb749b6845b413fbc8ba437ff51862b148fa2dd09f1a39b9c94c4fcd36f2f",
+      "bytes": 1828
+    },
+    "src/platform/input.ts": {
+      "sha256": "d5d0f7ddd779f600b19df5cb3710963493fe00bf6ab549bd461e17c02b17e799",
+      "bytes": 4750
+    },
+    "src/platform/settings.ts": {
+      "sha256": "ebd2da1261789ca8b10d7a56f4700f06427395e230dfab65d4a250a0b4379228",
+      "bytes": 3344
+    },
+    "src/platform/storage.ts": {
+      "sha256": "7c5cea46af4ea241535235a0d37666cbbf502e0902859460b2ad0a20961f60bf",
+      "bytes": 7352
+    },
+    "src/platform/timing.ts": {
+      "sha256": "27f2c219b50dc2bbea1761517a4ea393735b6b6bc4710f11bf4ed66527d13d39",
+      "bytes": 2225
+    },
+    "src/platform/writer-lease.ts": {
+      "sha256": "1920339b776acbf4097fe9e3488afea221d0b7c20f6203387f22f49bbcc79bf9",
+      "bytes": 2363
+    },
+    "src/presentation/app.ts": {
+      "sha256": "26c4a57c47a4ebf394d5f6fa394fe734f6654d7731b35113de68ccabeb817559",
+      "bytes": 45347
+    },
+    "src/presentation/assets.ts": {
+      "sha256": "ec244c5fd60b65bf54568eb38a3ca76cac8e8f2643ce111bc31573852827f053",
+      "bytes": 6264
+    },
+    "src/presentation/dom.ts": {
+      "sha256": "6b68ea14bde1c07fdc65293e9df8136b8bc203b1d72e62843a29d2fb421a8e4b",
+      "bytes": 723
+    },
+    "src/presentation/phases.ts": {
+      "sha256": "37515eaf8bc110413858dde0d54c13b7545a4478d18ca517fd4d90a2d56475a2",
+      "bytes": 10020
+    },
+    "src/presentation/scene.ts": {
+      "sha256": "124df9403dc3a3a8ac2cbdd72dea13088ea90ab4e32eb1da756febba7e20f191",
+      "bytes": 9830
+    },
+    "src/presentation/styles.css": {
+      "sha256": "6983e813a6860ea20c73644bd344ddbdf1242c9fcb9e0df4a44ed23456abab16",
+      "bytes": 24530
+    },
+    "src/presentation/template.ts": {
+      "sha256": "07bad5600321164d7392b35437c06618dc089d275cf5ba16ea07b2d072425941",
+      "bytes": 8075
+    },
+    "src/presentation-v2/app.ts": {
+      "sha256": "206f409ac744500ea4c1b89548d601ed7d346a940c0a605de068ae2179582ae9",
+      "bytes": 50769
+    },
+    "src/presentation-v2/art.ts": {
+      "sha256": "62bc2fee60f31f3ec7b818a6ac59d8cb07fb7e1f1395127860e0256357e4d9cf",
+      "bytes": 1598
+    },
+    "src/presentation-v2/blade.ts": {
+      "sha256": "b6e05972db3cf545ffe0304544b9dda6f6408ff6a5983d3e0724a287524f5a9e",
+      "bytes": 4428
+    },
+    "src/presentation-v2/d.css": {
+      "sha256": "992b54c1d73cb2cb7765cd8ca43dfed2f572517bf8369b929635b554fb49cbd2",
+      "bytes": 20513
+    },
+    "src/presentation-v2/styles.css": {
+      "sha256": "2a816902da872d24851b7d75838bd9b98c67677684ea281e871a7a1fb7128d42",
+      "bytes": 10145
+    },
+    "src/presentation-v2/tutorial.ts": {
+      "sha256": "a9ebf1bd933f0f39e52c6c83a0b174c6de046610692719358d60fc08d6284426",
+      "bytes": 5722
+    },
+    "src/presentation-v2/workshop-v2.css": {
+      "sha256": "d71cbf08e99c86fa79bb2e0b37218d4db434a150a6661d2cc60b0603bc256667",
+      "bytes": 19042
+    },
+    "src/tutorial/lesson.ts": {
+      "sha256": "f386af1776d0d6c427d91efb73315206f1f798f3e68d141d1aefb28f77c99b5e",
+      "bytes": 2611
+    },
+    "src/v2-main.ts": {
+      "sha256": "d6a4946338a34018d68d63cb282c3de3b3d060ddd2b1445b18356a3723e07b34",
+      "bytes": 469
+    },
+    "src/v2-sdk.ts": {
+      "sha256": "d1fd648ace271e659e66f9b8baadf33a0e041c1b0de7b393e3c818a475e00636",
+      "bytes": 176
+    },
+    "tests/browser/away.html": {
+      "sha256": "73453ec127a9cfe04827d89d92a39e72b70c72928740b69bcee3cb8a7887cb88",
+      "bytes": 205
+    },
+    "tests/browser/fixture.html": {
+      "sha256": "1f022bdddb09322f7b741fa468b7339e10e87029811f88260eb53319d9088290",
+      "bytes": 275
+    },
+    "tests/browser/fixture.js": {
+      "sha256": "52cf9bd7857242f6158051312912704f9d92320375bca04079b00025cee22672",
+      "bytes": 415
+    },
+    "tests/browser/native-bfcache.d.mts": {
+      "sha256": "2bf297e049f9bdfb9dedca72d9306c1731640b48f5042c2b73ada2ead399f57a",
+      "bytes": 295
+    },
+    "tests/browser/native-bfcache.mjs": {
+      "sha256": "f0e5504fcd91cf4b10f277c242457b12d62a15bb6eab81740ea66f1ec9ae3998",
+      "bytes": 3868
+    },
+    "tests/browser/native-cache.spec.ts": {
+      "sha256": "ec2a651c6e3a6298f7d1ff612694f884de68b80b37cb954a6ff9832297adfcea",
+      "bytes": 1167
+    },
+    "tests/browser/persistence.spec.ts": {
+      "sha256": "8bbe19666c376cea8f45aaec292d1f10a7551d93e66f0800205820df52c6b46e",
+      "bytes": 12648
+    },
+    "tests/browser/server.mjs": {
+      "sha256": "42d4271946acaf24222bba6c23005f4ab2c0aa88045117d691c483f8827f727c",
+      "bytes": 1393
+    },
+    "tests/browser/window.d.ts": {
+      "sha256": "b77dbca04e7c7b14868e39e342272e1d5d8fe66a12dfb4d0fb5510e25cace614",
+      "bytes": 425
+    },
+    "tests/core/concept-scenario.ts": {
+      "sha256": "5299ce3bd749a6069e241b003ce9cb04b080c1f413ddadf03babd97379f7a585",
+      "bytes": 3846
+    },
+    "tests/core/concept.test.ts": {
+      "sha256": "084dcb7e17a66fb810cf2a8dbda443f26e712073cc58154ca3d00462f18ee6dc",
+      "bytes": 1435
+    },
+    "tests/core/contract.test.ts": {
+      "sha256": "055c83bad0183b6c03c399f29af45b8b4a2a22130afee8866e01e37b931dea0c",
+      "bytes": 12998
+    },
+    "tests/core/forging.test.ts": {
+      "sha256": "7d8b50bf3c4aa59704c9a03256a2d9a355b7c6e470f56a3f3ec2baaea026d02c",
+      "bytes": 15036
+    },
+    "tests/core/game-session.test.ts": {
+      "sha256": "3ce61e3220496436321bebef2813e044e2b4e607bc7358cd90cd12489ccfeca2",
+      "bytes": 10000
+    },
+    "tests/core/helpers.ts": {
+      "sha256": "2aab98c713d28a41195f2dde3eeacdb0fa81bdeb1570e166e8c957d3c42e201d",
+      "bytes": 1458
+    },
+    "tests/core/input.test.ts": {
+      "sha256": "479ac24cfa299fee958daeec23d333421e5910a3ec112648e9672684e013116f",
+      "bytes": 2501
+    },
+    "tests/core/ledger.test.ts": {
+      "sha256": "b2013734bd696c400d48de9a1bd5ca1679c809a4f4175d97f9628ba7f465b3c9",
+      "bytes": 2624
+    },
+    "tests/core/merchant.test.ts": {
+      "sha256": "b809ffc4b13a935c32b4e643c1a273eb5d54d57ec0654b54178f833b0430feb5",
+      "bytes": 5164
+    },
+    "tests/core/persistence-fixtures.ts": {
+      "sha256": "4f4d4765b5c64059233c26f3d056cfb6f184d2a3ff3ecdbcf0b16bbe79cea049",
+      "bytes": 2458
+    },
+    "tests/core/random.test.ts": {
+      "sha256": "684f2b41f7b3b5455472c211a86328f109fd55712e71c3dacc025ef7299d41e8",
+      "bytes": 1689
+    },
+    "tests/core/release-fingerprint.test.ts": {
+      "sha256": "5842ef91e456c8b9732b227e5a432214e817d1046d764a0198f09b19d07c59b2",
+      "bytes": 2215
+    },
+    "tests/core/scenarios.ts": {
+      "sha256": "9ab78fc07257d333681f4322e98fe9474f9a550e67fb87b8ab0ac20d4bd13efd",
+      "bytes": 2116
+    },
+    "tests/core/session.test.ts": {
+      "sha256": "2cd5ddd1103ca1d099f0540048d078cfe33cb41d25973b4330fcde7ba877ea1d",
+      "bytes": 15470
+    },
+    "tests/core/settings.test.ts": {
+      "sha256": "4dcc0264959660c7cfa69ce87382c22eee98e1f0e8074773c2a016d283e24cc1",
+      "bytes": 5073
+    },
+    "tests/core/simulation.test.ts": {
+      "sha256": "78819f90e77b99244398b027adb6b1d5d36df17249592b4404a6807e68535917",
+      "bytes": 4405
+    },
+    "tests/core/storage.test.ts": {
+      "sha256": "e0e30e3e18bc0f73fc455f07f2cc61701ede1a5b0106cf671c207e97676e94f4",
+      "bytes": 5119
+    },
+    "tests/core/v2-batches.test.ts": {
+      "sha256": "efb7a40012e8c0d15d67120186f5abf6528cf34b5990fb98f448cc23248c0fce",
+      "bytes": 1452
+    },
+    "tests/core/v2-economy.test.ts": {
+      "sha256": "02e61fccdbdef53a8bc1086900a7f3599160b1d6883b32b9d14e4c195b43a79d",
+      "bytes": 6903
+    },
+    "tests/core/v2-kernel.test.ts": {
+      "sha256": "a445c28bdb1d886395eccc090c6cb00aa0732580f9a7ccb9e065ffae1ec70271",
+      "bytes": 14696
+    },
+    "tests/core/v2-persistence.test.ts": {
+      "sha256": "ab248fadb46d9bc14d97e718d2469b1f70dfedf88e0e855ccf4ebf03b6c4b352",
+      "bytes": 6724
+    },
+    "tests/core/v2-timing-boundaries.test.ts": {
+      "sha256": "1acb591ddf38abac3b1bb912ef0c2d712e987a50030a7a637e231c5df8f983c2",
+      "bytes": 1856
+    },
+    "tests/core/v2-visits.test.ts": {
+      "sha256": "564aed56799ea8b5a13443b219bc5852a4517ad8ded31bdcf085e1e3cc588d7c",
+      "bytes": 1057
+    },
+    "tests/core/validation.test.ts": {
+      "sha256": "6b14715c6b74e69624457ab0457a8331ec0cd36f95800663a09b01f7168d4d1b",
+      "bytes": 4485
+    },
+    "tests/e2e/acceptance.spec.ts": {
+      "sha256": "8308bb1e3f98e1a955f278f295c4c0fcf139c108989ea10de7368013a76df1a8",
+      "bytes": 6571
+    },
+    "tests/e2e/audio-probe.ts": {
+      "sha256": "a87208b4b0a2ad48a91c514889a9032d960f6a4ad592b55d2541f5b96a1af68a",
+      "bytes": 3350
+    },
+    "tests/e2e/audio.spec.ts": {
+      "sha256": "51b64237dbe89043b8a3b83f2dd618ea349a593e27fe698aa563561224531ca6",
+      "bytes": 7491
+    },
+    "tests/e2e/cadence-performance.spec.ts": {
+      "sha256": "c0c5b916b96581a68e74eee7c7dcd1d8e36751fa1ba63cc82bccb750914dbcf6",
+      "bytes": 3543
+    },
+    "tests/e2e/contract-flow.spec.ts": {
+      "sha256": "1bb6aacabbfa1cb5670af5fc9b05a4a89216925ea85664c5c437a52373812329",
+      "bytes": 16469
+    },
+    "tests/e2e/fixtures.ts": {
+      "sha256": "2ec14c68141d2883949f1a4a8a6319b4aad34a00db6b8538795104e48790c6a4",
+      "bytes": 1604
+    },
+    "tests/e2e/helpers.ts": {
+      "sha256": "b8d89e20c02ce49cb5b70ff1029b1b8854f73d6ac53b5f1fae3ff1963321b8a6",
+      "bytes": 1582
+    },
+    "tests/e2e/keyboard-contract.spec.ts": {
+      "sha256": "29d00c1732f62cc20033e0476c34d62bccda3f6f9639da7a9631f5b10a54475f",
+      "bytes": 4398
+    },
+    "tests/e2e/keyboard-quality.spec.ts": {
+      "sha256": "51a9240e9cfbd18bb712aaebb293700fde88db1dea769f19da9c23a2db3d0c9c",
+      "bytes": 6358
+    },
+    "tests/e2e/keyboard.ts": {
+      "sha256": "e3df58d7454b6c3858d401f7c4fd56677232762b01bd80de4432209980ee7678",
+      "bytes": 696
+    },
+    "tests/e2e/native-input.d.mts": {
+      "sha256": "99a4f4e5ae686646152d8a73ee5e20d66101a308106be4f14730d46f76f8658e",
+      "bytes": 392
+    },
+    "tests/e2e/native-input.mjs": {
+      "sha256": "787e7eca00681fb55d0fae197c71821db02db1576601241856ea6d7d42131264",
+      "bytes": 5346
+    },
+    "tests/e2e/native-input.spec.ts": {
+      "sha256": "bb9b1d0528eb8443524f45a690bafc9028dbfbecbd41535774878b245045c6af",
+      "bytes": 1032
+    },
+    "tests/e2e/native-ui-cache.d.mts": {
+      "sha256": "00c03034eb04e89b3031b0ad9aae2218880b024cfbf0ff2d96fe5aa5d9db320f",
+      "bytes": 535
+    },
+    "tests/e2e/native-ui-cache.mjs": {
+      "sha256": "862214da56281992bf788fd01e3c303264b95f08d1b68680d09010f23668008d",
+      "bytes": 8031
+    },
+    "tests/e2e/native-ui-cache.spec.ts": {
+      "sha256": "25df4632a9413d047a160ab804f56310fd82b3bfbda7c3805c28c337c992970e",
+      "bytes": 928
+    },
+    "tests/e2e/native-v2.d.mts": {
+      "sha256": "aa7cf37921e4b3c395651a7ece84f004d9e2447c75611b05b3b7d8a67e0e5630",
+      "bytes": 665
+    },
+    "tests/e2e/native-v2.mjs": {
+      "sha256": "9a6ed7cea4aba336139e37d753643920cea41649c4636da5a934f3daf3432b08",
+      "bytes": 8979
+    },
+    "tests/e2e/native-v2.spec.ts": {
+      "sha256": "071ce1fda720b961647075631f2cf98fa3d037863ecddc91cf46fe2485bddc48",
+      "bytes": 1917
+    },
+    "tests/e2e/preferences-recovery.spec.ts": {
+      "sha256": "b768478ee05d1c75ab46bec765deafe97f338f304a09dfa98011f42ec03f364d",
+      "bytes": 14389
+    },
+    "tests/e2e/readability.ts": {
+      "sha256": "bb554240a24f5473df1cc0b176292a4cd00ef455852423c1b37efbc8abcb4507",
+      "bytes": 1380
+    },
+    "tests/e2e/v2-accessibility.spec.ts": {
+      "sha256": "1b3dbd18153818b2483f6488b3387e25b6587c30a445bfa4e34bae53c3da814e",
+      "bytes": 3155
+    },
+    "tests/e2e/v2-audio.spec.ts": {
+      "sha256": "2649350c9c025cb3e25a6d2d02a8c2949ed901bf42e48bf7edf825cb70c3212c",
+      "bytes": 3966
+    },
+    "tests/e2e/v2-critical-fault.spec.ts": {
+      "sha256": "50a36554964470b39890da27bc78947a01259c8dcf8d7a07a76110ca34951246",
+      "bytes": 3375
+    },
+    "tests/e2e/v2-d-flow.spec.ts": {
+      "sha256": "a92e9066b21cbe5c9c161f841da5973f36648cef33fc383621d8a216e9399144",
+      "bytes": 19259
+    },
+    "tests/e2e/v2-helpers.ts": {
+      "sha256": "8a5e7a112167c172183d564143ce9a6d36cceecb017a2acbf239309a5ef1e654",
+      "bytes": 1932
+    },
+    "tests/e2e/v2-performance.spec.ts": {
+      "sha256": "36494ee7a0ba0cfd1e232b778f375b9e68f10d17b08b1d9087a257c2643329f4",
+      "bytes": 6186
+    },
+    "tests/e2e/v2-plans.spec.ts": {
+      "sha256": "521fa2b66454d4f68ee5e7d4387061a41344fb5732962f0cff102d5ed738ec26",
+      "bytes": 2998
+    },
+    "tests/e2e/v2-playable.spec.ts": {
+      "sha256": "3f7a19a81e975c163b4160ebef819e278185ed83e32222da1ef2067fdbf25c03",
+      "bytes": 16486
+    },
+    "tests/e2e/v2-readability.ts": {
+      "sha256": "7cd369ba8116612946d2299129db6579ca689ae67c7053102b3225e876e36e76",
+      "bytes": 3648
+    },
+    "tests/e2e/v2-resilience.spec.ts": {
+      "sha256": "45ded5c59dcd6924f85bac4a20faf1b36b39a4ad38a8b327579d887acd208f7c",
+      "bytes": 9186
+    },
+    "tests/e2e/v2-visual-revision.spec.ts": {
+      "sha256": "b6a0be3ffd632a01f50505dd9bccf809b573697c0fc34f850317532cd446e903",
+      "bytes": 4611
+    },
+    "tests/e2e/workshop-boundaries.spec.ts": {
+      "sha256": "73c92c131c5cfa3000c243f033ae66ffa9ec1e2f2637fc0d61f855ea393e773a",
+      "bytes": 14828
+    },
+    "tests/e2e/workshop-quality.spec.ts": {
+      "sha256": "f17d82901479541484aa4b4dd2fa42677da486ed16451ae94d6448a5a570f6b0",
+      "bytes": 4329
+    },
+    "tests/e2e/workshop.spec.ts": {
+      "sha256": "9319713a485aa1478a08f8af1a1f2e16b54aead63a90caac1d4e8ab36942d23f",
+      "bytes": 4360
+    },
+    "tests/fixtures/mulberry32-reference.c": {
+      "sha256": "d43692034dcd9bd061f4a350d2f4b85847d1a4ba86b401a80bd926d8d71f2846",
+      "bytes": 462
+    },
+    "tests/fixtures/mulberry32-vectors.json": {
+      "sha256": "7b17a0c9e0599e0049008d25c7456d7eb54e480d8f9dcd795c69e5665bb8f48f",
+      "bytes": 695
+    },
+    "tests/support/native-chrome.mjs": {
+      "sha256": "0eeed2d8fb3263c67001fb7bee2562542633d90d7c56f6d4fe51521a3b5b80b7",
+      "bytes": 3758
+    },
+    "scripts/art/prepare-d-v2.py": {
+      "sha256": "dab61fa1e7d0980ced7fddfeb46baf0250e9f0bf520b22f6b0a04dd81590743e",
+      "bytes": 2045
+    },
+    "scripts/art/prepare-d.py": {
+      "sha256": "1bd895f56e72390b7f2a07fcd9cac31aa142f44f67431f1fefc9e3fbc7704d5c",
+      "bytes": 3453
+    },
+    "scripts/art/prepare.py": {
+      "sha256": "281357aeb8ec21ae6c00992654411c08df74d4bb8e3030dd938ce64f2808dfb4",
+      "bytes": 6950
+    },
+    "scripts/art/verify.mjs": {
+      "sha256": "345e7ae90cbd1fc0ba26b8d141a1138896ebf7f31997f923628306462748a2fc",
+      "bytes": 12675
+    },
+    "scripts/collect-ui-evidence.mjs": {
+      "sha256": "6d9684845e67af78e5f70fc4acad8b2726752918c01d40b562cc862abd4abdbb",
+      "bytes": 10514
+    },
+    "scripts/collect-v2-cross.mjs": {
+      "sha256": "d706001ecea61cf1c3ac48cb84a7aa6d7c77b67276436952d37267d92f3dceda",
+      "bytes": 5521
+    },
+    "scripts/encode-browser-evidence.py": {
+      "sha256": "274c7df5fd6882b8e4a53e0a3daf6fa58318245b712671be826d3890ead9689e",
+      "bytes": 3984
+    },
+    "scripts/release-fingerprint.mjs": {
+      "sha256": "b769b83309f5c8410a12ba51cdd842a8e9b5abf0e5ed4f71372875452d95dcc7",
+      "bytes": 3481
+    },
+    "scripts/research/steam-reviews.mjs": {
+      "sha256": "14eaa83cb2a15b281c4032fd2589123309bfb0b2f61a2d1361c9184b736de016",
+      "bytes": 5014
+    },
+    "scripts/simulate.ts": {
+      "sha256": "a5330c6e649aed61e5ad2eb1e9a15137c37972bd2026956c6302ee539780c169",
+      "bytes": 7968
+    },
+    "scripts/simulation/input.ts": {
+      "sha256": "ef29e3b2fe8a040cde4b35ec44517328c65b0b1167b36f5e8e5096bff6423c87",
+      "bytes": 1380
+    },
+    "scripts/simulation/model.ts": {
+      "sha256": "89f4fa58ec0148a8ffdd9489fe128eab89b0ab9653fbb26733471ed9b431b8be",
+      "bytes": 3080
+    },
+    "scripts/simulation/policy.ts": {
+      "sha256": "d4303667624161e603919788eafd80e1e90809a14d27d50a33b4415fb355b2dd",
+      "bytes": 6172
+    },
+    "scripts/simulation/report.ts": {
+      "sha256": "a5b6aeea754fe146e5cf87baac6393ecc96269368b51a82a448ba9f18b42c5d9",
+      "bytes": 3340
+    },
+    "scripts/simulation/runner.ts": {
+      "sha256": "5ec3124515a0b51f7c05bd3481cbf15d6e4e7b648137ca2090c1b31ee4afa7c7",
+      "bytes": 5246
+    },
+    "scripts/simulation/worker.ts": {
+      "sha256": "a2cf25955fa622718a6d377f93af32a5995127013096571ccc3c64f3987951e9",
+      "bytes": 1767
+    },
+    "scripts/v2/batch.ts": {
+      "sha256": "2ad2f4c2ef0080e173d0300f2d23ba6c901056c4f8f2776db9ab404af6d4d150",
+      "bytes": 2189
+    },
+    "scripts/v2/policy.ts": {
+      "sha256": "19a43b60384d5777eac6c1d6eec4beccf5d44dacd8d517214f2d7b71c9e1a9ae",
+      "bytes": 5150
+    },
+    "scripts/v2-verify.ts": {
+      "sha256": "5200b66a16d3706b7c00e9f633e03e61658cf018145636568425a954f6be1422",
+      "bytes": 5413
+    },
+    "public/assets/b/anvil-v1.webp": {
+      "sha256": "ed44b20b36a834581655f02c6e6660452b72a9742c37e1d97d3ab132413af9f1",
+      "bytes": 351706
+    },
+    "public/assets/b/hammer-heavy-v1.webp": {
+      "sha256": "3b9ed6d6aab155503af7ae167676fd88badcc2f859ee693823e1b68c4ae26714",
+      "bytes": 286032
+    },
+    "public/assets/b/hammer-light-v1.webp": {
+      "sha256": "4a294cde83b0765ba919c1943f151a9ad66c8aad5e163c1f3b81df2208b8bbf8",
+      "bytes": 153704
+    },
+    "public/assets/b/hammer-standard-v1.webp": {
+      "sha256": "604bc26957ac0dae08bec6160fbb1104dad6949676ed3df4bc254743fe392c03",
+      "bytes": 243778
+    },
+    "public/assets/b/manifest.json": {
+      "sha256": "7d97cba7f4cfd6df7656385c61db9096d1a1c5901b50202abda60b55cc52dc13",
+      "bytes": 16507
+    },
+    "public/assets/b/material-iron-v1.webp": {
+      "sha256": "891f332a7543e005bb4eecf9c8cbf9ed6fbb6e7acc60ef02c6a08d828cbdf8e9",
+      "bytes": 297192
+    },
+    "public/assets/b/material-meteorite-v3.webp": {
+      "sha256": "bffe5da4cc1522fa9e16df68790d11fbf551659176210ecb04e66ea82da98f3a",
+      "bytes": 171384
+    },
+    "public/assets/b/material-steel-v1.webp": {
+      "sha256": "c5985ca938f459770ebe8e7e0f045db4a96768c20525c7a7f05d28ab3c070a4e",
+      "bytes": 297586
+    },
+    "public/assets/b/merchant-kit-v1.webp": {
+      "sha256": "9a7623f3b226fc1918b08054ccfd080d852a278f9c92a97219c9da72a40e1c72",
+      "bytes": 463234
+    },
+    "public/assets/b/tokens.css": {
+      "sha256": "6892f99cdee0107212fd750a058191d2933efefb8a4e7b05b8df35412132614e",
+      "bytes": 428
+    },
+    "public/assets/b/workshop-background-v1.webp": {
+      "sha256": "c8813b1438f61b6edbb8890d2df843ce7ac5732899a52edb9af67d1f8771497c",
+      "bytes": 387784
+    },
+    "public/assets/d/commission-guard-v2.webp": {
+      "sha256": "0a8b9d04123e63d30163c7e486eb5e6917e67088ba6e8b3ca69eae8662f1a226",
+      "bytes": 542200
+    },
+    "public/assets/d/forge-backdrop-v1.webp": {
+      "sha256": "af03aec23b63729c2dc0e05abaaaa6004d2c692d233fcafdbf446166676896eb",
+      "bytes": 326918
+    },
+    "public/assets/d/forge-backdrop-v2.webp": {
+      "sha256": "74d11a3a34a9f066933e5f5995cd1a3cfc37339495c48759a3bac4ecab8f0851",
+      "bytes": 367418
+    },
+    "public/assets/d/hammer-heavy-v1.webp": {
+      "sha256": "5609cf65ecc2a887f580d76be907d5c5196e202f500e9aa3806c20b39f883dd3",
+      "bytes": 239784
+    },
+    "public/assets/d/hammer-light-v1.webp": {
+      "sha256": "bb2f802ef48756af9ac0051c31194d5d8e32d8be11ed83e20d180cb973da4234",
+      "bytes": 181090
+    },
+    "public/assets/d/hammer-standard-v1.webp": {
+      "sha256": "30c2ab0bb57383aad563dcb78abf9b96d56d63c6665b3f945240f8ab27ff71e5",
+      "bytes": 173226
+    },
+    "public/assets/d/manifest.json": {
+      "sha256": "790ea270419a058df9d2aa2224f708847e9e271857b05311f7d098560b80e196",
+      "bytes": 6175
+    },
+    "public/assets/d/metal-atlas-v1.webp": {
+      "sha256": "d50d096a3951cf5a609fc0c81e48a38eb9eee0a97c3c05c47a674a5505d7dd67",
+      "bytes": 337260
+    },
+    "public/assets/d/oil-v1.webp": {
+      "sha256": "cabe57bfa72e6d064cc8d31a4fe5f4b10ef1b9521d4a340905e3f48d4b7198c9",
+      "bytes": 244050
+    },
+    "public/assets/d/portraits-v1.webp": {
+      "sha256": "fe52ff958203125c4e40a8a7566e536e7f1b5488c51b6ecc7088e43fb9e42ec3",
+      "bytes": 566448
+    },
+    "public/assets/d/water-v1.webp": {
+      "sha256": "a0db1b1b4c9ee96d4ecc25f569b929aeda3e811bd457e5ad9f3792d1fff60c03",
+      "bytes": 266286
+    },
+    ".nvmrc": {
+      "sha256": "ccb4022e91abb8575a29d306d7aff041f578bb86eb1180d69475bb86a5c4512c",
+      "bytes": 8
+    },
+    "index.html": {
+      "sha256": "37fa54f1550ebbf2a69c06abef12d9ddbb3b2e211f3a996be7031cbe4512f114",
+      "bytes": 558
+    },
+    "package-lock.json": {
+      "sha256": "fb6298f489290886a8b47e266b4205a94acf9763086af45b1cc2992a01d8a73f",
+      "bytes": 49449
+    },
+    "package.json": {
+      "sha256": "f9249bbb80a48434b304e55517829c201e3319901f7dc296b50a6c4a7fecf2e4",
+      "bytes": 1297
+    },
+    "playwright.config.ts": {
+      "sha256": "29cf3ab8ef5a990e7b0537dc180af347a1da8228058c3a04c6fec9a2f9a97dd2",
+      "bytes": 864
+    },
+    "playwright.cross.config.ts": {
+      "sha256": "79d72e58a46e8f9263deb80ea0ee2c4f473ea120b9c657c33773f0de35a9d760",
+      "bytes": 1659
+    },
+    "playwright.ui.config.ts": {
+      "sha256": "f51f28eee087c864e3672911126beb6d3cb7332b4ad5ae1aff2f29af5e353bad",
+      "bytes": 779
+    },
+    "playwright.v2.config.ts": {
+      "sha256": "bd3c5987cf58047b3139c35e7e59b5d62dbeebd733688bc1592975e21caffb6b",
+      "bytes": 1530
+    },
+    "tsconfig.app.json": {
+      "sha256": "fd783c2b63b28ec16bf021c71777e0c83c6bdb4eb585a331d3b36263bc44f864",
+      "bytes": 129
+    },
+    "tsconfig.json": {
+      "sha256": "524527357da709001027eb4272ef2f3fb999e4a87f0894fc4dfd4f7321562cfc",
+      "bytes": 440
+    },
+    "tsconfig.node.json": {
+      "sha256": "ca83da47c2f14e9f14e61b2d04f286a38da08e9e5e4b925a23ddc8a321e295cd",
+      "bytes": 247
+    },
+    "tsconfig.simulation.json": {
+      "sha256": "71a5000123e026eaf0a6f534445eed8ce27ef581f74fc9bb059082bf731da2a7",
+      "bytes": 217
+    },
+    "v2.html": {
+      "sha256": "5d263df2e43d478ff884804b8335305be0abe6a4883f1faaecfd5bc1231a608e",
+      "bytes": 442
+    },
+    "vite.config.ts": {
+      "sha256": "2253168472f8db3077238d7824ab366dacffefb3cb4ac8f6b4cd109c32702ad9",
+      "bytes": 372
+    },
+    "vite.sdk.config.ts": {
+      "sha256": "a250c90163779b8ac3238f370f3c24f79d641794b45243459c3817fe59abe9ad",
+      "bytes": 594
+    },
+    "vitest.config.ts": {
+      "sha256": "cdfd20e8deb5d32fb17f57c157a59a7478d529dd7f79a6af8844a3df40a69e91",
+      "bytes": 187
+    },
+    "docs/evidence/T06/cli-rejections.json": {
+      "sha256": "7d356525cbc8ed92dd7a20b3f1c736ca4f7f73e67420c5fd6642a1a19a89d658",
+      "bytes": 1436
+    },
+    "docs/evidence/T06/concept-b-state.json": {
+      "sha256": "9b2ea54f05ed28a3806b5a6e57c4e304cdb909617172b7cbf9004ddf3602a943",
+      "bytes": 15473
+    },
+    "docs/evidence/T06/harness-equivalence.json": {
+      "sha256": "c3bdcff0553e39470cf2e4f292359027dca30b1b846622daa5006ec9eb127c7d",
+      "bytes": 281
+    },
+    "docs/evidence/T06/native-bfcache.json": {
+      "sha256": "8126c66477ea31a6a59b490a768e7aef90bc33874d3de75fc88ee06ff658d366",
+      "bytes": 586
+    },
+    "docs/evidence/T06/verification.json": {
+      "sha256": "8a513d3289302274a4e8595375fd8a95e3e886c1de6888d7053cebccb2c93054",
+      "bytes": 1937
+    },
+    "docs/evidence/T06/verify-v1.csv.gz": {
+      "sha256": "6dc205b5cf29c2445fb3d63debde938f71998e4a0ae0919631dfb460d4bb51be",
+      "bytes": 3268704
+    },
+    "docs/evidence/T06/verify-v1.json": {
+      "sha256": "161629caf6bdc8e0c5c36c61cc5f947b5a338b59b3f71826bf57fb1f8675599a",
+      "bytes": 175021
+    },
+    "docs/evidence/T06/verify-v1.medium-victory.json": {
+      "sha256": "e1367a7109b1d847a1a190d3bc0441af7342d53563311100fc395923b84d859f",
+      "bytes": 50961
+    },
+    "docs/evidence/T06/verify-v1.raw-defeat.json": {
+      "sha256": "eca6be28fc415bf808503c10f2604383b46105f5660f74a59f3c6296974b0234",
+      "bytes": 5882
+    },
+    "docs/evidence/T11-2/simulation/victory.json": {
+      "sha256": "d8023510eddbe537c1fedec49a00de4829994179e807100e3cbee746f7a7f5f3",
+      "bytes": 90870
+    },
+    "docs/evidence/T11-3/polish-runtime/ui/d-keyboard-campaign.json": {
+      "sha256": "ba49d1a4ff2636f9e7fb09e54e6290151e5c9f421c092187e2f54823ccb2b509",
+      "bytes": 100207
+    },
+    "docs/evidence/T11-3/polish-runtime/ui/v2-three-round-contract.json": {
+      "sha256": "dc4428e60746141f6a260cb0c98cef28b8199dcfbd7967642c3fcc44ffef454c",
+      "bytes": 41929
+    },
+    "legacy.html": {
+      "sha256": "df194f1fc660f599175924dad894fc825d5961bf0652bd2437abd7fd6b18569e",
+      "bytes": 597
+    }
+  },
+  "buildFiles": {
+    "dist/assets/b/anvil-v1.webp": {
+      "sha256": "ed44b20b36a834581655f02c6e6660452b72a9742c37e1d97d3ab132413af9f1",
+      "bytes": 351706
+    },
+    "dist/assets/b/hammer-heavy-v1.webp": {
+      "sha256": "3b9ed6d6aab155503af7ae167676fd88badcc2f859ee693823e1b68c4ae26714",
+      "bytes": 286032
+    },
+    "dist/assets/b/hammer-light-v1.webp": {
+      "sha256": "4a294cde83b0765ba919c1943f151a9ad66c8aad5e163c1f3b81df2208b8bbf8",
+      "bytes": 153704
+    },
+    "dist/assets/b/hammer-standard-v1.webp": {
+      "sha256": "604bc26957ac0dae08bec6160fbb1104dad6949676ed3df4bc254743fe392c03",
+      "bytes": 243778
+    },
+    "dist/assets/b/manifest.json": {
+      "sha256": "7d97cba7f4cfd6df7656385c61db9096d1a1c5901b50202abda60b55cc52dc13",
+      "bytes": 16507
+    },
+    "dist/assets/b/material-iron-v1.webp": {
+      "sha256": "891f332a7543e005bb4eecf9c8cbf9ed6fbb6e7acc60ef02c6a08d828cbdf8e9",
+      "bytes": 297192
+    },
+    "dist/assets/b/material-meteorite-v3.webp": {
+      "sha256": "bffe5da4cc1522fa9e16df68790d11fbf551659176210ecb04e66ea82da98f3a",
+      "bytes": 171384
+    },
+    "dist/assets/b/material-steel-v1.webp": {
+      "sha256": "c5985ca938f459770ebe8e7e0f045db4a96768c20525c7a7f05d28ab3c070a4e",
+      "bytes": 297586
+    },
+    "dist/assets/b/merchant-kit-v1.webp": {
+      "sha256": "9a7623f3b226fc1918b08054ccfd080d852a278f9c92a97219c9da72a40e1c72",
+      "bytes": 463234
+    },
+    "dist/assets/b/tokens.css": {
+      "sha256": "6892f99cdee0107212fd750a058191d2933efefb8a4e7b05b8df35412132614e",
+      "bytes": 428
+    },
+    "dist/assets/b/workshop-background-v1.webp": {
+      "sha256": "c8813b1438f61b6edbb8890d2df843ce7ac5732899a52edb9af67d1f8771497c",
+      "bytes": 387784
+    },
+    "dist/assets/d/commission-guard-v2.webp": {
+      "sha256": "0a8b9d04123e63d30163c7e486eb5e6917e67088ba6e8b3ca69eae8662f1a226",
+      "bytes": 542200
+    },
+    "dist/assets/d/forge-backdrop-v1.webp": {
+      "sha256": "af03aec23b63729c2dc0e05abaaaa6004d2c692d233fcafdbf446166676896eb",
+      "bytes": 326918
+    },
+    "dist/assets/d/forge-backdrop-v2.webp": {
+      "sha256": "74d11a3a34a9f066933e5f5995cd1a3cfc37339495c48759a3bac4ecab8f0851",
+      "bytes": 367418
+    },
+    "dist/assets/d/hammer-heavy-v1.webp": {
+      "sha256": "5609cf65ecc2a887f580d76be907d5c5196e202f500e9aa3806c20b39f883dd3",
+      "bytes": 239784
+    },
+    "dist/assets/d/hammer-light-v1.webp": {
+      "sha256": "bb2f802ef48756af9ac0051c31194d5d8e32d8be11ed83e20d180cb973da4234",
+      "bytes": 181090
+    },
+    "dist/assets/d/hammer-standard-v1.webp": {
+      "sha256": "30c2ab0bb57383aad563dcb78abf9b96d56d63c6665b3f945240f8ab27ff71e5",
+      "bytes": 173226
+    },
+    "dist/assets/d/manifest.json": {
+      "sha256": "790ea270419a058df9d2aa2224f708847e9e271857b05311f7d098560b80e196",
+      "bytes": 6175
+    },
+    "dist/assets/d/metal-atlas-v1.webp": {
+      "sha256": "d50d096a3951cf5a609fc0c81e48a38eb9eee0a97c3c05c47a674a5505d7dd67",
+      "bytes": 337260
+    },
+    "dist/assets/d/oil-v1.webp": {
+      "sha256": "cabe57bfa72e6d064cc8d31a4fe5f4b10ef1b9521d4a340905e3f48d4b7198c9",
+      "bytes": 244050
+    },
+    "dist/assets/d/portraits-v1.webp": {
+      "sha256": "fe52ff958203125c4e40a8a7566e536e7f1b5488c51b6ecc7088e43fb9e42ec3",
+      "bytes": 566448
+    },
+    "dist/assets/d/water-v1.webp": {
+      "sha256": "a0db1b1b4c9ee96d4ecc25f569b929aeda3e811bd457e5ad9f3792d1fff60c03",
+      "bytes": 266286
+    },
+    "dist/assets/dom-Cbs79pC-.js": {
+      "sha256": "78891758be53f77bb07ac088d4d5351fb3c8b155f6e05ab8f6c8f4942e952aad",
+      "bytes": 33907
+    },
+    "dist/assets/legacy-2ySDNTOq.js": {
+      "sha256": "0deed376da9c5c5671f9c5b149a7312ca6c9927477b9d5e5aa97947cbff80c58",
+      "bytes": 60336
+    },
+    "dist/assets/legacy-CidoUqtJ.css": {
+      "sha256": "542a1875c5de6ec3b2fb043c7c5d2d7e6bcd19f35ebc0b6c82052c688703c12b",
+      "bytes": 20582
+    },
+    "dist/assets/v2-main-BgGChR3Q.css": {
+      "sha256": "08bd72f2215e57d65bcfb4b513abe29599a25b8e6613986ef44c8f1d1c32f9dd",
+      "bytes": 46808
+    },
+    "dist/assets/v2-main-Bv_W7lw0.js": {
+      "sha256": "701ec4588e19807d08e09cbf155d0142a359ede451d709c139c992a8f1f276b2",
+      "bytes": 68613
+    },
+    "dist/browser-session-tNm91aCh.js": {
+      "sha256": "8d49e78ac9e8b0039f77e9427a19e656d05f38679b18ee1a70535bd116d25e56",
+      "bytes": 11620
+    },
+    "dist/core-CvAZnNjA.js": {
+      "sha256": "d454eb5d786660f0a1132580582c6af8c2004b274337feb9f606cddbf76beb46",
+      "bytes": 21211
+    },
+    "dist/index.html": {
+      "sha256": "6f1464b8f387bb9e20431cd3aaca9070c649f7b1d3a2a655fd8eaa0804d84e55",
+      "bytes": 735
+    },
+    "dist/legacy.html": {
+      "sha256": "cf91dcc9aa3f74c10d2810724823b39c3c823be0318548d80a4e133fee23ec68",
+      "bytes": 771
+    },
+    "dist/sword-led-core.js": {
+      "sha256": "3a75d8229c7e0840bfc0272d76964e1fa91d5d4fbe6faeab3689636bbfb321c4",
+      "bytes": 126
+    },
+    "dist/sword-led-session.js": {
+      "sha256": "3a0545bcde904327ddd4d3a05f9d83ae548eb6a7ce0c804da7242f2f5dff604c",
+      "bytes": 223
+    },
+    "dist/sword-led-v2.js": {
+      "sha256": "ac9a57a933507cdcfecdbb3d5cd9088bc743e0f24f9bb7711a81656a2549cb74",
+      "bytes": 28145
+    },
+    "dist/v2.html": {
+      "sha256": "59aa253df36ae1b6dc250cefcd330bc73efad4b7d47181ab378e7f41fcbdfe20",
+      "bytes": 619
+    }
+  }
+}

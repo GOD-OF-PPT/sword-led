@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-10-19T00:35:30.680Z",
+  "originalInputSha256": "b961f5c651df51121659687138cfe5edf125e25dadda11642136dfc6aaca852b",
+  "lockSha256": "fb6298f489290886a8b47e266b4205a94acf9763086af45b1cc2992a01d8a73f",
+  "modelInputs": {
+    "sourceFiles": 23,
+    "compiledFiles": 21,
+    "unchanged": true,
+    "changed": []
+  },
+  "unit": {
+    "passed": 217,
+    "failed": 0,
+    "success": true,
+    "session": 62969
+  },
+  "types": {
+    "session": 46438,
+    "exitCode": 0
+  },
+  "finalBuild": {
+    "session": 49872,
+    "exitCode": 0,
+    "files": 35,
+    "entry": "v2-main-Bv_W7lw0.js",
+    "css": "v2-main-BgGChR3Q.css"
+  },
+  "notes": [
+    "Native legacy: 59947 passed2 and four actual legacy states replayed.",
+    "Final26: 48138 passed25, visual screenshot timed out; same-source isolated 31886 passed1. Original failure remains red-6.",
+    "Model88804 reached terminal0 with29000 runner cases; independent T12 result audit is still pending."
+  ]
+}

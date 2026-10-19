@@ -5,7 +5,7 @@ import type { RunState } from '../../src/core/index.js';
 
 export async function openGame(page: Page, clock = true) {
   if (clock) await page.clock.install({ time: new Date('2026-10-18T06:00:00.000Z') });
-  await page.goto('/');await expect(page.locator('#menu')).toBeVisible();
+  await page.goto('/legacy.html');await expect(page.locator('#menu')).toBeVisible();
   if (clock) await page.clock.pauseAt(new Date('2026-10-18T06:01:00.000Z'));
 }
 export async function startGame(page: Page, seed = 'workshop-browser') {
