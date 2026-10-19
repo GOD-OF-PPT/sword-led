@@ -1,9 +1,27 @@
 import type {Blade} from '../core-v3/index.js';
-export function paintBlade(canvas:HTMLCanvasElement,blade:Blade|null,texture?:HTMLImageElement){
+import {bladeAppearance} from './appearance.js';
+import {BLADE_FRAMES} from './art-data.js';
+export function paintBlade(canvas:HTMLCanvasElement,blade:Blade|null,texture?:HTMLImageElement,weapon?:HTMLImageElement){
   const width=canvas.clientWidth,height=canvas.clientHeight;if(!width||!height)return;
   const ratio=Math.min(2,devicePixelRatio||1);canvas.width=Math.round(width*ratio);canvas.height=Math.round(height*ratio);
   const c=canvas.getContext('2d');if(!c)return;c.scale(canvas.width/1100,canvas.height/400);c.clearRect(0,0,1100,400);
   if(!blade)return;
+  const appearance=bladeAppearance(blade);canvas.dataset.family=String(appearance.family);canvas.dataset.stage=String(appearance.stage);canvas.dataset.illustrated=String(!!weapon);canvas.dataset.condition=blade.status==='broken'?'broken':blade.cracked?'cracked':'intact';
+  if(weapon){
+    const rect=BLADE_FRAMES[appearance.family]![appearance.stage]!;
+    const [sx,sy,sw,sh]=rect,h=Math.min(174,1000*sh/sw),y=240-h*.5;
+    c.save();c.shadowColor='#000b';c.shadowBlur=18;c.fillStyle='#08121499';c.beginPath();c.ellipse(575,320,440,17,0,0,Math.PI*2);c.fill();c.restore();
+    const draw=()=>c.drawImage(weapon,sx,sy,sw,sh,32,y,1000,h);
+    if(blade.status==='broken'){
+      c.save();c.beginPath();c.moveTo(0,0);c.lineTo(644,0);c.lineTo(644,230);c.lineTo(623,245);c.lineTo(657,260);c.lineTo(638,400);c.lineTo(0,400);c.closePath();c.clip();draw();c.restore();
+      c.save();c.translate(650,255);c.rotate(.13);c.translate(-635,-203);c.beginPath();c.moveTo(650,0);c.lineTo(1100,0);c.lineTo(1100,400);c.lineTo(640,400);c.lineTo(659,260);c.lineTo(625,245);c.lineTo(650,230);c.closePath();c.clip();c.globalAlpha=.65;draw();c.restore();
+    }else draw();
+    if(blade.cracked||blade.status==='broken'){
+      const x=blade.status==='broken'?640:520+appearance.family*45;
+      c.save();c.strokeStyle='#080c0e';c.lineWidth=7;c.beginPath();c.moveTo(x,y+18);c.lineTo(x-10,230);c.lineTo(x+16,245);c.lineTo(x-7,259);c.lineTo(x+5,y+h-8);c.stroke();c.strokeStyle='#ff8253';c.lineWidth=2;c.shadowBlur=7;c.shadowColor='#ff7536';c.stroke();c.restore();
+    }
+    return;
+  }
   const stage=Math.min(5,Math.floor(blade.level/3)),lift=stage*6,end=blade.status==='broken'?650:1020;
   c.save();c.shadowColor='#000';c.shadowBlur=24;c.fillStyle='#0a1113bb';c.beginPath();c.ellipse(590,310,450,22,0,0,Math.PI*2);c.fill();c.restore();
   c.fillStyle='#4b2b20';c.strokeStyle='#ba8850';c.lineWidth=3;c.fillRect(32,223,170,38);c.strokeRect(32,223,170,38);

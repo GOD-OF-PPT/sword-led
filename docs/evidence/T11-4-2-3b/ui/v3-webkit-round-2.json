@@ -1,0 +1,200 @@
+{
+  "rulesVersion": "forge-v3",
+  "runId": "v3-1792391441323",
+  "seed": "行脚新炉",
+  "roundLimit": 3,
+  "revision": 16,
+  "phase": "workshop",
+  "round": 2,
+  "coins": 667,
+  "seals": 3,
+  "base": 40,
+  "blades": [
+    {
+      "id": "r1-1",
+      "suppliedRound": 1,
+      "status": "delivered",
+      "base": 40,
+      "value": 404,
+      "peak": 404,
+      "level": 6,
+      "cracked": false,
+      "hits": 4,
+      "charge": 4,
+      "successes": 4,
+      "finalizedRound": 2
+    },
+    {
+      "id": "r1-2",
+      "suppliedRound": 1,
+      "status": "delivered",
+      "base": 40,
+      "value": 253,
+      "peak": 253,
+      "level": 5,
+      "cracked": false,
+      "hits": 5,
+      "charge": 5,
+      "successes": 5,
+      "finalizedRound": 1
+    },
+    {
+      "id": "r1-3",
+      "suppliedRound": 1,
+      "status": "recycled",
+      "base": 40,
+      "value": 40,
+      "peak": 40,
+      "level": 0,
+      "cracked": false,
+      "hits": 0,
+      "charge": 0,
+      "successes": 0,
+      "finalizedRound": 1
+    },
+    {
+      "id": "r2-1",
+      "suppliedRound": 2,
+      "status": "active",
+      "base": 40,
+      "value": 40,
+      "peak": 40,
+      "level": 0,
+      "cracked": false,
+      "hits": 0,
+      "charge": 0,
+      "successes": 0,
+      "finalizedRound": null
+    },
+    {
+      "id": "r2-2",
+      "suppliedRound": 2,
+      "status": "active",
+      "base": 40,
+      "value": 40,
+      "peak": 40,
+      "level": 0,
+      "cracked": false,
+      "hits": 0,
+      "charge": 0,
+      "successes": 0,
+      "finalizedRound": null
+    },
+    {
+      "id": "r2-3",
+      "suppliedRound": 2,
+      "status": "active",
+      "base": 40,
+      "value": 40,
+      "peak": 40,
+      "level": 0,
+      "cracked": false,
+      "hits": 0,
+      "charge": 0,
+      "successes": 0,
+      "finalizedRound": null
+    }
+  ],
+  "reserveId": null,
+  "delivered": 404,
+  "traits": [
+    "steady"
+  ],
+  "gift": "claimed",
+  "pardonUsed": false,
+  "pendingInheritance": 0,
+  "shop": [],
+  "sold": [],
+  "upgraded": false,
+  "repaired": false,
+  "history": [
+    {
+      "round": 1,
+      "quota": 180,
+      "delivered": 253,
+      "met": true,
+      "recovered": 10,
+      "recoveredIds": [
+        "r1-3"
+      ],
+      "reserveId": "r1-1",
+      "sealsBefore": 3,
+      "sealsAfter": 3,
+      "protected": false
+    }
+  ],
+  "rng": {
+    "forge": {
+      "state": 494808269,
+      "draws": 9
+    },
+    "shop": {
+      "state": 1526952265,
+      "draws": 0
+    }
+  },
+  "journal": [
+    {
+      "type": "strike",
+      "pieceId": "r1-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r1-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r1-1"
+    },
+    {
+      "type": "reserve",
+      "pieceId": "r1-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r1-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r1-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r1-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r1-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r1-2"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r1-2"
+    },
+    {
+      "traitId": "steady",
+      "type": "claimGift"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "reserve",
+      "pieceId": "r1-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "r1-1"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "r1-1"
+    }
+  ]
+}

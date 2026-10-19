@@ -1,0 +1,88 @@
+{
+  "tool": "builtin image_gen.imagegen",
+  "task": "T11.4.2.3b",
+  "processing": "cwebp format export only; no creative edits or alpha retouching",
+  "assets": [
+    {
+      "name": "blade-jian-v2",
+      "original": "design/d/originals/blade-jian-v2.png",
+      "originalSha256": "eade248c8fa06bb5044f9a047f9522e053ad28abdeaf8a31b5b9360b71c9a5d2",
+      "src": "/assets/d/blade-jian-v2.webp",
+      "sha256": "ece499d885fd4a7b74978fac75a547caa6eb40c335e1643364f955f6eca6582b",
+      "bytes": 354522,
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.614203135172526,
+      "alphaMatchesOriginal": true,
+      "prompt": "design/d/prompts/blade-jian-v2.md",
+      "promptSha256": "2e4eed3821c85262dad156cb4cf7b4c375abc0b7955af0903c46827e0affdf73",
+      "reference": "design/d/reference-main-v2.png",
+      "referenceSha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+    },
+    {
+      "name": "blade-dao-v2",
+      "original": "design/d/originals/blade-dao-v2.png",
+      "originalSha256": "157f936f3f5b786f522d5adcebd58747233e3078ae2bb6c174abfd47c99f3783",
+      "src": "/assets/d/blade-dao-v2.webp",
+      "sha256": "0849c54fc542d5781ce71c177e379f9336d012ed7dbc38250e0793ccaa642b48",
+      "bytes": 412412,
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.5894571940104166,
+      "alphaMatchesOriginal": true,
+      "prompt": "design/d/prompts/blade-dao-v2.md",
+      "promptSha256": "658587e64d49073e9f84a30c22c56bc7f749f8fd2c812a54ffa7a7b8a0a2c0ab",
+      "reference": "design/d/reference-main-v2.png",
+      "referenceSha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+    },
+    {
+      "name": "blade-cleaver-v1",
+      "original": "design/d/originals/blade-cleaver-v1.png",
+      "originalSha256": "f3fb647bcecbf4efdc955fc8898546cbe083880a92546c77a5b38eb728c7903a",
+      "src": "/assets/d/blade-cleaver-v1.webp",
+      "sha256": "7ce0ae4d8fbd5b6f467d3ac487e1325807cbba993e0b2e0cd01875a96c8734db",
+      "bytes": 475570,
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.5023428599039713,
+      "alphaMatchesOriginal": true,
+      "prompt": "design/d/prompts/blade-cleaver-v1.md",
+      "promptSha256": "d9aaab6253d5ff0f43f3fa3c43c76b4b1c936c92c47d4b040e99ab02ba363d5a",
+      "reference": "design/d/reference-main-v2.png",
+      "referenceSha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+    },
+    {
+      "name": "trait-props-v1",
+      "original": "design/d/originals/trait-props-v1.png",
+      "originalSha256": "c364e3d666ecc9f541c5d75e6f4c48591d513cf94abd8f890855e443fe3a5354",
+      "src": "/assets/d/trait-props-v1.webp",
+      "sha256": "11b900241ce1095845336ac8fe9c627a29e47d0a3ab8d2e9de63a91cb5496fff",
+      "bytes": 493826,
+      "width": 1536,
+      "height": 1024,
+      "alphaRange": [
+        0,
+        254
+      ],
+      "transparentFraction": 0.5694726308186849,
+      "alphaMatchesOriginal": true,
+      "prompt": "design/d/prompts/trait-props-v1.md",
+      "promptSha256": "3877dc015b0d55b49a1399423623fea26393685fa8c64bc7510bb4adcc17e128",
+      "reference": "design/d/reference-main-v2.png",
+      "referenceSha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+    }
+  ],
+  "totalAdditionalRuntimeBytes": 1736330
+}

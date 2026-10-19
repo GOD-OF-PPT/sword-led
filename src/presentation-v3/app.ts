@@ -7,12 +7,13 @@ import type {InputIdentity} from '../platform/timing.js';
 import {createPreferences,SETTINGS_KEY} from '../platform/settings.js';
 import {createForgeAudio} from '../platform/audio.js';
 import {element,enableKeyboardNavigation} from '../presentation/dom.js';
-import {loadDArt} from '../presentation-v2/art.js';
+import {loadV3Art,traitArt} from './art.js';
+import {bladeAppearance} from './appearance.js';
 import {paintBlade} from './blade.js';
 import {createImpactFeedback,IMPACT_SOUNDS} from './impact.js';
 
 const TEMPLATE=`<div class="v3-app">
-<header class="v3-top"><div class="v3-brand">锤下求生<small>行脚灯炉 · v0.4 左键锻造版 · 前三轮</small></div><div class="v3-contract"><b id="v3-round"></b><span id="v3-target"></span><progress id="v3-progress" aria-label="本轮交差进度"></progress></div><div id="v3-wallet"></div><button id="v3-pause">暂停</button><button id="v3-menu">契约</button></header>
+<header class="v3-top"><div class="v3-brand">锤下求生<small>行脚灯炉 · v0.4 兵器成长版 · 前三轮</small></div><div class="v3-contract"><b id="v3-round"></b><span id="v3-target"></span><progress id="v3-progress" aria-label="本轮交差进度"></progress></div><div id="v3-wallet"></div><button id="v3-pause">暂停</button><button id="v3-menu">契约</button></header>
 <section id="v3-save" class="v3-save" aria-label="保存状态"><span id="v3-save-text" role="status"></span><button id="v3-retry">重试保存</button><button id="v3-reread">读取最新</button><button id="v3-recover">恢复备份</button><button id="v3-memory">保留进度，不保存续玩</button><button id="v3-export">导出进度</button></section>
 <main id="v3-workshop" class="v3-workshop"><aside class="v3-rack"><h2>今日三柄</h2><div id="v3-inventory"></div><section class="v3-reserve"><h3>留给明天</h3><div id="v3-reserve-slot"></div></section></aside>
 <section class="v3-anvil"><div class="v3-focus"><span id="v3-blade-name"></span><strong id="v3-value"></strong><span id="v3-value-hint">当前身价 · 收手即可交差</span></div><div id="v3-scene" class="v3-scene"><canvas id="v3-blade" role="img" aria-label="当前剑的造型与裂纹"></canvas><button id="v3-hit" type="button" aria-label="铁砧 · 鼠标左键直接落锤，无需瞄准或卡时机"><span class="hit-hint">鼠标左键 · 直接敲击剑身</span></button><div id="v3-hammer" aria-hidden="true"><img src="/assets/d/hammer-standard-v1.webp" alt=""><i></i></div><div id="v3-impact-glow" aria-hidden="true"></div><div id="v3-impact-ring" aria-hidden="true"></div><div id="v3-reticle" aria-hidden="true"></div><div id="v3-sparks" aria-hidden="true"></div><div id="v3-steam" aria-hidden="true"></div><div id="v3-float" aria-live="off"></div><div id="v3-impact-badge" aria-hidden="true"></div></div><div id="v3-result" class="v3-result" role="status" aria-live="polite">第一柄已就位。鼠标左键点剑身，即刻落锤。</div><div class="v3-risk"><b id="v3-risk"></b><span id="v3-risk-after"></span></div><div class="v3-charge"><span>锤势</span><div id="v3-pips"></div><span id="v3-charge-text"></span></div>
@@ -41,11 +42,10 @@ export function mountV3(root:HTMLElement,port:V3Session){
   const stamp=()=>`${snapshot.state?.runId}/${snapshot.generation}/${epoch}`;
   const reduced=()=>prefs.value.reducedMotion||motion.matches;
   const impact=createImpactFeedback({scene:find('v3-scene'),canvas,hammer:find('v3-hammer'),sparks:find('v3-sparks'),glow:find('v3-impact-glow'),ring:find('v3-impact-ring'),reticle:find('v3-reticle'),float:find('v3-float'),badge:find('v3-impact-badge'),value:find('v3-value')},{reduced,animate,cue:cue=>audio.acceptedCue(cue)});
-  let textureReady=false;
-  const art=loadDArt(()=>{if(art.texture()&&!textureReady){textureReady=true;frameKey='';render();}},()=>note('部分画稿未加载；数值、文字与锻造仍可使用。'));
+  const art=loadV3Art(()=>{frameKey='';render();},()=>note('部分画稿未加载；数值、文字与锻造仍可使用。'));
   function syncAudio(){audio.identify(stamp());audio.setMode(allowed()&&!document.hidden?'game':'silent');}
   function later(fn:()=>void,ms:number){const id=setTimeout(()=>{timers.delete(id);if(!disposed)fn();},ms);timers.add(id);}
-  function cancelEffects(silence=true){effectToken++;for(const id of timers)clearTimeout(id);timers.clear();for(const a of animations)a.cancel();animations.clear();busy=false;find('v3-hammer').classList.remove('preparing');find('v3-steam').classList.remove('show');impact.reset();if(silence)audio.silence();}
+  function cancelEffects(silence=true){effectToken++;for(const id of timers)clearTimeout(id);timers.clear();for(const a of animations)a.cancel();animations.clear();busy=false;find('v3-hammer').classList.remove('preparing');find('v3-steam').classList.remove('show');find('v3-workshop').classList.remove('forge-flare');for(const n of root.querySelectorAll('.trait-triggered'))n.classList.remove('trait-triggered');impact.reset();if(silence)audio.silence();}
   function animate(node:HTMLElement,frames:Keyframe[],ms:number,easing='ease-out'){if(reduced()||document.hidden)return;const a=node.animate(frames,{duration:ms,easing});animations.add(a);void a.finished.catch(()=>{}).finally(()=>animations.delete(a));}
   function select(id:string){input?.cancel();cancelEffects();epoch++;selectedId=id;render();button('v3-strike').focus({preventScroll:true});}
   function chooseNext(){const s=snapshot.state;if(!s)return;selectedId=s.blades.find(b=>b.status==='active'&&b.id!==s.reserveId)?.id??s.reserveId??'';}
@@ -68,10 +68,10 @@ export function mountV3(root:HTMLElement,port:V3Session){
       const total=last.after-(strike.hits[0]?.before??last.after),triggers=[...new Set(strike.hits.flatMap(h=>h.triggers))];
       text('v3-result',`${strike.burst?'连锻 ×'+strike.hits.length+' · ':''}${names[last.result]} · 身价${total>=0?'+':''}${fmt(total)}${triggers.length?' · '+triggers.map(t=>TRAITS[t].name).join('、')+'触发':''}${last.result==='broken'?' · 已按底价回收金币':''}`);
       busy=true;const token=++effectToken;impact.start(lastStrikePoint,strike.burst);
-      for(const [i,h] of strike.hits.entries())later(()=>{if(token!==effectToken||document.hidden)return;impact.contact(h,i,strike.hits.length);},i*175);
+      for(const [i,h] of strike.hits.entries())later(()=>{if(token!==effectToken||document.hidden)return;impact.contact(h,i,strike.hits.length);find('v3-workshop').classList.add('forge-flare');for(const id of h.triggers){const item=root.querySelector<HTMLElement>(`#v3-traits [data-trait="${id}"]`);if(item){item.classList.add('trait-triggered');animate(item,[{filter:'brightness(1)'},{filter:'brightness(1.6)',offset:.2},{filter:'brightness(1)'}],500);}}},i*175);
       const duration=strike.burst?(strike.hits.length-1)*175+235:210;
       later(()=>{if(token!==effectToken)return;busy=false;render();},duration);
-      later(()=>{if(token===effectToken)impact.reset();},Math.max(600,duration+80));
+      later(()=>{if(token===effectToken){impact.reset();find('v3-workshop').classList.remove('forge-flare');for(const n of root.querySelectorAll('.trait-triggered'))n.classList.remove('trait-triggered');}},Math.max(600,duration+80));
     }else if(delivered?.type==='Delivered'){
       text('v3-result',`已交差 ${fmt(delivered.amount)} · 目标和金币同时增加。`);audio.acceptedCue('delivery');find('v3-steam').classList.add('show');animate(find('v3-steam'),[{opacity:0,transform:'translateY(12px)'},{opacity:.8,offset:.3},{opacity:0,transform:'translateY(-50px)'}],500);chooseNext();later(()=>find('v3-steam').classList.remove('show'),500);
     }else if(events.some(e=>e.type==='Traded'||e.type==='Trait')){audio.acceptedCue('purchase');text('v3-result','手艺已带上，下一锤会按它的实际效果结算。');chooseNext();}
@@ -94,7 +94,7 @@ export function mountV3(root:HTMLElement,port:V3Session){
   }
   function shop(){const s=snapshot.state;if(!s||!merchantPresent(s))return;const body=element('div',undefined,'v3-shop-grid');
     body.append(element('p','手艺用当前选中的剑交换。金币用来升级未来配给或修补印记。'));
-    for(const id of s.shop){const card=element('article');card.append(element('h3',TRAITS[id].name),element('p',TRAITS[id].text));const owned=s.traits.includes(id)||s.sold.includes(id),b=current(),buy=element('button',owned?'已持有 / 已换取':`用当前剑交换 · 放弃${fmt(b?.value??0)}`);buy.disabled=owned||!b||b.status!=='active'||b.id===s.reserveId;buy.onclick=()=>{closeModal();acquire(id,true);};card.append(buy);body.append(card);}
+    for(const id of s.shop){const card=element('article');card.dataset.trait=id;card.append(traitArt(id),element('h3',TRAITS[id].name),element('p',TRAITS[id].text));const owned=s.traits.includes(id)||s.sold.includes(id),b=current(),buy=element('button',owned?'已持有 / 已换取':`用当前剑交换 · 放弃${fmt(b?.value??0)}`);buy.disabled=owned||!b||b.status!=='active'||b.id===s.reserveId;buy.onclick=()=>{closeModal();acquire(id,true);};card.append(buy);body.append(card);}
     const upgrade=element('button',s.upgraded?'炉具本次已升级':`升级炉具 · ${fmt(upgradePrice(s.round))}金币`);upgrade.disabled=s.upgraded||s.coins<upgradePrice(s.round);upgrade.onclick=()=>{closeModal();confirm('提高未来配给底价',`支付${upgradePrice(s.round)}金币；从下一轮起底价翻倍。当前三柄不改变，前三轮体验本身不会发第4轮配给。`,()=>send({type:'upgrade'}));};body.append(upgrade);
     if(s.seals<3){const repair=element('button',`补一枚印记 · ${Math.ceil(quotaFor(s.round)/2)}金币`);repair.disabled=s.repaired||s.coins<Math.ceil(quotaFor(s.round)/2);repair.onclick=()=>{closeModal();confirm('修补契约印记',`支付${Math.ceil(quotaFor(s.round)/2)}金币，本轮商人最多修补一次。`,()=>send({type:'repair'}));};body.append(repair);}
     openModal('行脚商人的摊子',body,[{label:'回铁砧',run:closeModal}]);
@@ -133,16 +133,17 @@ export function mountV3(root:HTMLElement,port:V3Session){
     }}
     if(s){
       const inventory=find('v3-inventory');inventory.replaceChildren();for(const p of s.blades.filter(p=>p.status==='active'&&p.id!==s.reserveId)){
-        const x=actionButton(`${p.suppliedRound===s.round?'本轮':'上轮'} · ${fmt(p.value)}${p.cracked?' · 裂纹':''}`,()=>select(p.id));x.dataset.piece=p.id;x.setAttribute('aria-pressed',String(p.id===selectedId));x.disabled=!allowed()||busy;inventory.append(x);}
+        const x=actionButton('',()=>select(p.id)),look=bladeAppearance(p),thumb=element('canvas');thumb.className='v3-weapon-thumb';thumb.setAttribute('aria-hidden','true');x.append(thumb,element('b',look.name),element('small',`${p.suppliedRound===s.round?'本轮':'上轮'} · ${fmt(p.value)}${p.cracked?' · 裂纹':''}`));x.dataset.piece=p.id;x.setAttribute('aria-pressed',String(p.id===selectedId));x.disabled=!allowed()||busy;inventory.append(x);if(work)paintBlade(thumb,p,art.texture(),art.weapon(look.family));}
       if(!inventory.children.length)inventory.append(element('p','本轮可用剑已处理。'));
-      const reserve=s.blades.find(p=>p.id===s.reserveId),slot=find('v3-reserve-slot');slot.replaceChildren();if(reserve){const x=actionButton(`${fmt(reserve.value)}${reserve.cracked?' · 裂纹':''} · 取下`,()=>{if(send({type:'reserve',pieceId:reserve.id}))select(reserve.id);});x.disabled=!allowed()||busy;slot.append(x);}else slot.append(element('p','空架 · 可留一柄跨轮'));
+      const reserve=s.blades.find(p=>p.id===s.reserveId),slot=find('v3-reserve-slot');slot.replaceChildren();if(reserve){const x=actionButton('',()=>{if(send({type:'reserve',pieceId:reserve.id}))select(reserve.id);}),thumb=element('canvas');thumb.className='v3-weapon-thumb';thumb.setAttribute('aria-hidden','true');x.append(thumb,element('small',`${fmt(reserve.value)}${reserve.cracked?' · 裂纹':''} · 取下`));x.disabled=!allowed()||busy;slot.append(x);if(work)paintBlade(thumb,reserve,art.texture(),art.weapon(bladeAppearance(reserve).family));}else slot.append(element('p','空架 · 可留一柄跨轮'));
       text('v3-deficit',s.delivered>=quotaFor(s.round)?'今日已达标':`还差 ${fmt(quotaFor(s.round)-s.delivered)}`);text('v3-advice',s.delivered>=quotaFor(s.round)?'可以收工保住印记。剩下的剑，也能投资手艺或留给明天。':'交差才计入目标。不要把三柄都花在商人那里。');
-      const traits=find('v3-traits');traits.replaceChildren();for(const id of s.traits){const p=element('p');p.append(element('b',TRAITS[id].name),element('small',TRAITS[id].text+(id==='pardon'&&s.pardonUsed?'（本局已用）':'')));traits.append(p);}if(!s.traits.length)traits.append(element('p','先落锤。首次达标后，可免费领一门手艺。'));
-      const gift=find('v3-gift');gift.replaceChildren();if(s.gift==='available'){const claim=actionButton('首次达标 · 领一门免费手艺',()=>{const body=element('div'),options=(['steady','ember']as const).filter(id=>!s.traits.includes(id));for(const id of options){const x=actionButton(`${TRAITS[id].name} · ${TRAITS[id].text}`,()=>{closeModal();acquire(id,false);});body.append(x);}if(!options.length)body.append(actionButton('领取40金币',()=>{closeModal();acquire(null,false);}));openModal('带上一门手艺',body,[{label:'稍后领取',run:closeModal}]);});claim.disabled=!allowed()||busy;gift.append(claim);}
+      const traits=find('v3-traits');if(traits.dataset.equipped!==JSON.stringify([s.traits,s.pardonUsed])){traits.dataset.equipped=JSON.stringify([s.traits,s.pardonUsed]);traits.replaceChildren();for(const id of s.traits){const p=element('p',undefined,'v3-trait-item');p.dataset.trait=id;const copy=element('span');copy.append(element('b',TRAITS[id].name),element('small',TRAITS[id].text+(id==='pardon'&&s.pardonUsed?'（本局已用）':'')));p.append(traitArt(id),copy);traits.append(p);}if(!s.traits.length)traits.append(element('p',undefined,'v3-empty-traits'));if(!s.traits.length){traits.firstElementChild?.append(traitArt('steady'),element('small','首次达标 · 免费领手艺'));}}
+      const gift=find('v3-gift');gift.replaceChildren();if(s.gift==='available'){const claim=actionButton('首次达标 · 领一门免费手艺',()=>{const body=element('div'),options=(['steady','ember']as const).filter(id=>!s.traits.includes(id));body.className='v3-gift-grid';for(const id of options){const x=actionButton(`${TRAITS[id].name} · ${TRAITS[id].text}`,()=>{closeModal();acquire(id,false);});x.prepend(traitArt(id));body.append(x);}if(!options.length)body.append(actionButton('领取40金币',()=>{closeModal();acquire(null,false);}));openModal('带上一门手艺',body,[{label:'稍后领取',run:closeModal}]);});claim.disabled=!allowed()||busy;gift.append(claim);}
       button('v3-shop').hidden=!merchantPresent(s);button('v3-shop').disabled=!allowed()||busy;
     }
     const active=!!s&&!!b&&b.status==='active'&&b.id!==s.reserveId,forge=active&&!atCap(b!);
-    text('v3-blade-name',b?`${b.id} · ${['铁坯','初开锋','火纹刃','金纹长刀','流火剑','灯炉名剑'][Math.min(5,Math.floor(b.level/3))]} +${b.level}${b.cracked?' · 已有裂纹':''}`:'铁砧空了');
+    const look=b?bladeAppearance(b):null;text('v3-blade-name',b&&look?`${b.id} · ${look.name} / ${look.rank} +${b.level}${b.cracked?' · 已有裂纹':''}`:'铁砧空了');
+    find('v3-scene').dataset.tier=String(look?.stage??0);find('v3-workshop').classList.toggle('visual-still',!work||!snapshot.active||modal||document.hidden||reduced());
     text('v3-value',b?fmt(b.value):'—');
     if(s&&b){const odds=strikeOdds(s,b);find('v3-scene').classList.toggle('burst-ready',odds.burst&&active);text('v3-risk',b.status==='broken'?'这把剑已断，请换下一柄':odds.burst?'连锻已就绪 · 本次无裂损':`${b.cracked?'再裂会断':'下一锤裂损'} ${odds.crack/10}%`);text('v3-risk-after',active?(odds.burst?`连锻后普通风险 ${odds.afterBurstCrack/10}%`:`大成 ${odds.great/10}% · ${b.cracked?'当前身价仍可交差':'首次裂损仍能保住剑'}`):'');
       find('v3-pips').replaceChildren(...Array.from({length:6},(_,i)=>element('i',undefined,i<b.charge?'charged':'')));text('v3-charge-text',`${b.charge}/6${odds.burst?' · 下一锤爆发':''}`);
@@ -157,7 +158,7 @@ export function mountV3(root:HTMLElement,port:V3Session){
     button('v3-deliver').textContent=`交差 ${fmt(b?.value??0)}`;button('v3-deliver').disabled=!allowed()||busy||!active;
     button('v3-store').textContent=s?.reserveId?'交换挂剑':'留给下一轮';button('v3-store').disabled=!allowed()||busy||!active;
     button('v3-scrap').textContent=`回收 · ${b?recovery(b):0}金币`;button('v3-scrap').disabled=!allowed()||busy||!active;button('v3-settle').disabled=!allowed()||busy||s?.phase!=='workshop';
-    const bladeKey=JSON.stringify(b);if(frameKey!==bladeKey&&work){frameKey=bladeKey;canvas.setAttribute('aria-label',b?`等级${b.level}，身价${b.value}，${b.status==='broken'?'断剑':b.cracked?'有裂纹':'完好'}`:'空铁砧');paintBlade(canvas,b,art.texture());}
+    const bladeKey=JSON.stringify(b);if(frameKey!==bladeKey&&work){frameKey=bladeKey;canvas.setAttribute('aria-label',b?`${look?.name}，${look?.rank}，等级${b.level}，身价${b.value}，${b.status==='broken'?'断剑':b.cracked?'有裂纹':'完好'}；外形不影响属性`:'空铁砧');paintBlade(canvas,b,art.texture(),art.weapon(look?.family??0));}
     input?.refresh();
   }
   function togglePause(){if(!snapshot.state||snapshot.state.phase!=='workshop')return;paused=!paused;epoch++;input?.cancel();cancelEffects();render();if(!paused)button('v3-strike').focus();}

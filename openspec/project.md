@@ -23,6 +23,8 @@
 
 ## 标准
 
+2026-10-19最新真人答复认可基本交互，但指出画面/道具单调。T11.4.2.3b沿已批准D美术实际新增三种兵器/五阶段和六手艺道具，纯展示投影不改变forge-v3/schema3、随机、计价与旧档；不添加选材或换锤步骤。原PNG与内置imagegen完整prompt/直接引用链保存在design/d/v3-generation-records.json，运行四图1,736,330字节。满三手艺时对肖像/间距作适配以保留完整操作与设置。人类吸引力仍待这版实际评价，完整十二轮与最终R4保留。
+
 面向现代桌面 Chrome/Edge、Firefox、Safari；目标视口 1280×720、1920×1080。文字中文、键鼠完整可用、减弱动效与慢速时机可选。隐私数据/密钥不进仓库，资产和来源可追踪，不把静态图或单测包装成整局验收。
 
 具体约定与验收使用 `docs/architecture.md`、`docs/ui-design.md`、`docs/implementation-plan.md`、`docs/acceptance-matrix.md`。提案中重复出现的能力是可验证合同，不是另一套独立玩法规则。

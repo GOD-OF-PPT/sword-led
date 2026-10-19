@@ -1,0 +1,96 @@
+{
+  "tool": "builtin image_gen.imagegen",
+  "model": "not exposed by tool",
+  "records": [
+    {
+      "name": "blade-jian-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-7c00a76e-750f-428c-9171-bcbd94c7d310.png",
+      "selected": false,
+      "references": [
+        "design/d/reference-main-v2.png"
+      ],
+      "original": "design/d/originals/blade-jian-v1.png",
+      "sha256": "b2ee2f1100621b14fe0a9801b098c5eaeba4352a236801522946823426db807b",
+      "prompt": "design/d/prompts/blade-jian-v1.md",
+      "promptSha256": "2230000dd2d7a29566aa84e24b2006770fcd8313712b6c2835539928ffd57e77",
+      "referenceHashes": {
+        "design/d/reference-main-v2.png": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+      }
+    },
+    {
+      "name": "blade-dao-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-42120e8a-e75e-437a-9830-7c12899d1d79.png",
+      "selected": false,
+      "references": [
+        "design/d/reference-main-v2.png"
+      ],
+      "original": "design/d/originals/blade-dao-v1.png",
+      "sha256": "2045f14a9b0782be328764e1d2108b9d04591ae15d8d681832b9a4dec359b30a",
+      "prompt": "design/d/prompts/blade-dao-v1.md",
+      "promptSha256": "3a7bd896c2b6a4c9f5cc8430b488f770ced16069d269b6398c44ad1af097ce53",
+      "referenceHashes": {
+        "design/d/reference-main-v2.png": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+      }
+    },
+    {
+      "name": "blade-cleaver-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-288426d6-9f8c-4535-bbe4-ac4403eafd33.png",
+      "selected": true,
+      "references": [
+        "design/d/reference-main-v2.png"
+      ],
+      "original": "design/d/originals/blade-cleaver-v1.png",
+      "sha256": "f3fb647bcecbf4efdc955fc8898546cbe083880a92546c77a5b38eb728c7903a",
+      "prompt": "design/d/prompts/blade-cleaver-v1.md",
+      "promptSha256": "d9aaab6253d5ff0f43f3fa3c43c76b4b1c936c92c47d4b040e99ab02ba363d5a",
+      "referenceHashes": {
+        "design/d/reference-main-v2.png": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+      }
+    },
+    {
+      "name": "trait-props-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-f5906941-31a4-4c12-a45b-d21fb67f2ef8.png",
+      "selected": true,
+      "references": [
+        "design/d/reference-main-v2.png"
+      ],
+      "original": "design/d/originals/trait-props-v1.png",
+      "sha256": "c364e3d666ecc9f541c5d75e6f4c48591d513cf94abd8f890855e443fe3a5354",
+      "prompt": "design/d/prompts/trait-props-v1.md",
+      "promptSha256": "3877dc015b0d55b49a1399423623fea26393685fa8c64bc7510bb4adcc17e128",
+      "referenceHashes": {
+        "design/d/reference-main-v2.png": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+      }
+    },
+    {
+      "name": "blade-jian-v2",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-58e59e21-5a95-409d-a39a-adaeec217f3a.png",
+      "selected": true,
+      "references": [
+        "design/d/originals/blade-jian-v1.png"
+      ],
+      "original": "design/d/originals/blade-jian-v2.png",
+      "sha256": "eade248c8fa06bb5044f9a047f9522e053ad28abdeaf8a31b5b9360b71c9a5d2",
+      "prompt": "design/d/prompts/blade-jian-v2.md",
+      "promptSha256": "2e4eed3821c85262dad156cb4cf7b4c375abc0b7955af0903c46827e0affdf73",
+      "referenceHashes": {
+        "design/d/originals/blade-jian-v1.png": "b2ee2f1100621b14fe0a9801b098c5eaeba4352a236801522946823426db807b"
+      }
+    },
+    {
+      "name": "blade-dao-v2",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-cad0cae6-3b3b-4e2c-baa4-b701ecc1e5a4.png",
+      "selected": true,
+      "references": [
+        "design/d/originals/blade-dao-v1.png"
+      ],
+      "original": "design/d/originals/blade-dao-v2.png",
+      "sha256": "157f936f3f5b786f522d5adcebd58747233e3078ae2bb6c174abfd47c99f3783",
+      "prompt": "design/d/prompts/blade-dao-v2.md",
+      "promptSha256": "658587e64d49073e9f84a30c22c56bc7f749f8fd2c812a54ffa7a7b8a0a2c0ab",
+      "referenceHashes": {
+        "design/d/originals/blade-dao-v1.png": "2045f14a9b0782be328764e1d2108b9d04591ae15d8d681832b9a4dec359b30a"
+      }
+    }
+  ]
+}
