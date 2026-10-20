@@ -1,0 +1,94 @@
+{
+  "task": "T11.4.2.3f",
+  "date": "2026-10-20",
+  "scope": "Directed existing-rule evidence and read-only notebook kernel; scene UI not attached yet",
+  "directed": {
+    "session": 51544,
+    "exit": 0,
+    "cases": 1152,
+    "seeds": 128,
+    "profiles": 9,
+    "producerReplays": 1152,
+    "overlapRows": 512,
+    "elapsedMs": 76246.962906
+  },
+  "independentAudit": {
+    "session": 74115,
+    "exit": 0,
+    "rowRefusals": 8,
+    "verifiedSnapshots": 6
+  },
+  "postRunOnlyDisplayAdditions": [
+    "src/presentation-v3/notebook.ts",
+    "tests/core/v3-notebook.test.ts"
+  ],
+  "unit": {
+    "session": 91875,
+    "exit": 0,
+    "tests": 247,
+    "files": 24,
+    "notebookTests": 12
+  },
+  "nodePreflight": {
+    "session": 83625,
+    "exit": 0,
+    "tests": 4,
+    "cliRefusals": 7,
+    "workerFaultExit": 1
+  },
+  "build": {
+    "session": 21799,
+    "exit": 0,
+    "includesStrict": true,
+    "buildFilesUnchanged": 46
+  },
+  "lastTypecheck": {
+    "session": 16921,
+    "exit": 0
+  },
+  "openSpec": {
+    "session": 7767,
+    "exit": 0,
+    "change": "simplify-forging-loop"
+  },
+  "compatibility": {
+    "sceneInputs": 233,
+    "oldCompiled": 21,
+    "producerInputs": 237,
+    "producerBuilds": 46,
+    "postChecksFingerprint": "post-checks.json",
+    "postChecksAreNotPretendedPreTestBaseline": true
+  },
+  "art": {
+    "tool": "built-in image_gen",
+    "png": "design/d/v05/main-customer-v1.png",
+    "bytes": 2660535,
+    "width": 1672,
+    "height": 941,
+    "proposalOnly": true,
+    "runtimeAsset": false
+  },
+  "rulesIdentity": "forge-v3",
+  "saveSchema": 3,
+  "newRuleActionRewardOrSaveField": false,
+  "actualUiChanged": false,
+  "preview": "Existing T3e frozen page; HTTP200 and HTML byte identity checked",
+  "residuals": [
+    "T11.4.2.3g actual characters/paper/notebook integration",
+    "human playability and appearance",
+    "final native/DPR/fault/audio/performance matrix",
+    "maximum R4"
+  ],
+  "postChecks": {
+    "sourceInputs": 244,
+    "buildFiles": 46,
+    "finalManifest": "post-checks.json",
+    "verifyExit": 0
+  },
+  "publicationChecks": {
+    "markdownFiles": 13,
+    "localLinks": 116,
+    "credentialFindings": 0,
+    "decodedArchives": 1
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "unit": {
+    "session": 83625,
+    "exit": 0,
+    "tests": 4,
+    "durationMs": 4413.595258
+  },
+  "serial": {
+    "session": 40486,
+    "exit": 0,
+    "cases": 9
+  },
+  "parallel": {
+    "session": 18262,
+    "exit": 0,
+    "cases": 9
+  },
+  "exactRowsAndAvailableWitnessesEqual": true,
+  "cliRefusals": [
+    {
+      "args": [
+        "--seeds",
+        "0"
+      ],
+      "exit": 1,
+      "stderrSha256": "bebcfae985c7b7dfbfff7e9217373c5b54d9518334bcf572e17f6b5d8a5acd9b"
+    },
+    {
+      "args": [
+        "--seeds",
+        "129"
+      ],
+      "exit": 1,
+      "stderrSha256": "bebcfae985c7b7dfbfff7e9217373c5b54d9518334bcf572e17f6b5d8a5acd9b"
+    },
+    {
+      "args": [
+        "--workers",
+        "0"
+      ],
+      "exit": 1,
+      "stderrSha256": "bebcfae985c7b7dfbfff7e9217373c5b54d9518334bcf572e17f6b5d8a5acd9b"
+    },
+    {
+      "args": [
+        "--workers",
+        "5"
+      ],
+      "exit": 1,
+      "stderrSha256": "bebcfae985c7b7dfbfff7e9217373c5b54d9518334bcf572e17f6b5d8a5acd9b"
+    },
+    {
+      "args": [
+        "--bad",
+        "1"
+      ],
+      "exit": 1,
+      "stderrSha256": "e154b76dc8b4740b8ebdc44aec21e06caaf0b07a55ebccdbd3aa5ed484f1d7f4"
+    },
+    {
+      "args": [
+        "--out"
+      ],
+      "exit": 1,
+      "stderrSha256": "e154b76dc8b4740b8ebdc44aec21e06caaf0b07a55ebccdbd3aa5ed484f1d7f4"
+    },
+    {
+      "args": [
+        "--out",
+        "tmp/T11-4-2-3f/serial"
+      ],
+      "exit": 1,
+      "stderrSha256": "7d9160e23e97677537641204b086b7d00aa464cca4229dc9ae3e14f82f60a9b7"
+    }
+  ],
+  "workerFault": {
+    "exit": 1,
+    "summaryAbsent": true,
+    "stderrSha256": "d0244f00576c78ad9ea3e4e0c800a6b18f9f3fbb8b0142ccaf5f2a735e81119a"
+  },
+  "pilotWitnessFiles": [],
+  "pilotWitnessPresenceAndBytesEqual": true
+}

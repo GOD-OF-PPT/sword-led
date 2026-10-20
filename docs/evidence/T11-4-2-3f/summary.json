@@ -1,0 +1,164 @@
+{
+  "rulesVersion": "forge-v3",
+  "purpose": "Directed tests of existing rules; 128-seed subset, not a new 1000-seed audit or human fun test",
+  "seeds": 128,
+  "cases": 1152,
+  "profiles": [
+    "baseline",
+    "no-reserve",
+    "carry-next",
+    "no-upgrade",
+    "carry-no-upgrade",
+    "aggressive",
+    "aggressive-inherit",
+    "aggressive-edge",
+    "aggressive-no-traits"
+  ],
+  "workers": 4,
+  "producerReplays": 1152,
+  "overlapRows": 512,
+  "elapsedMs": 76246.962906,
+  "rowsSha256": "b838764f79c04a3b051a3c84b067ee6591946977692efdfa70021fdef6215432",
+  "statistics": {
+    "baseline": {
+      "cases": 128,
+      "victories": 128,
+      "meanCommands": 176.6015625,
+      "meanMet": 11.984375,
+      "meanBroken": 0,
+      "meanReserveDeliveries": 0.109375,
+      "meanReserveDelivered": 1787,
+      "inheritanceBonus": 0,
+      "triggers": {
+        "inherit": 0,
+        "crackedEdge": 0
+      }
+    },
+    "no-reserve": {
+      "cases": 128,
+      "victories": 128,
+      "meanCommands": 133.765625,
+      "meanMet": 11.921875,
+      "meanBroken": 0,
+      "meanReserveDeliveries": 0,
+      "meanReserveDelivered": 0,
+      "inheritanceBonus": 0,
+      "triggers": {
+        "inherit": 0,
+        "crackedEdge": 0
+      }
+    },
+    "carry-next": {
+      "cases": 128,
+      "victories": 128,
+      "meanCommands": 160.0546875,
+      "meanMet": 11.984375,
+      "meanBroken": 0,
+      "meanReserveDeliveries": 8.4375,
+      "meanReserveDelivered": 117072.34375,
+      "inheritanceBonus": 0,
+      "triggers": {
+        "inherit": 0,
+        "crackedEdge": 0
+      }
+    },
+    "no-upgrade": {
+      "cases": 128,
+      "victories": 110,
+      "meanCommands": 229.625,
+      "meanMet": 10.125,
+      "meanBroken": 0,
+      "meanReserveDeliveries": 1.1875,
+      "meanReserveDelivered": 6542.3671875,
+      "inheritanceBonus": 0,
+      "triggers": {
+        "inherit": 0,
+        "crackedEdge": 0
+      }
+    },
+    "carry-no-upgrade": {
+      "cases": 128,
+      "victories": 109,
+      "meanCommands": 223.0390625,
+      "meanMet": 10.1171875,
+      "meanBroken": 0,
+      "meanReserveDeliveries": 7.328125,
+      "meanReserveDelivered": 31656.4296875,
+      "inheritanceBonus": 0,
+      "triggers": {
+        "inherit": 0,
+        "crackedEdge": 0
+      }
+    },
+    "aggressive": {
+      "cases": 128,
+      "victories": 128,
+      "meanCommands": 169.828125,
+      "meanMet": 12,
+      "meanBroken": 0.4921875,
+      "meanReserveDeliveries": 0,
+      "meanReserveDelivered": 0,
+      "inheritanceBonus": 1152,
+      "triggers": {
+        "inherit": 6,
+        "crackedEdge": 0
+      }
+    },
+    "aggressive-inherit": {
+      "cases": 128,
+      "victories": 128,
+      "meanCommands": 171.0078125,
+      "meanMet": 12,
+      "meanBroken": 0.59375,
+      "meanReserveDeliveries": 0.015625,
+      "meanReserveDelivered": 940.8671875,
+      "inheritanceBonus": 31976,
+      "triggers": {
+        "inherit": 63,
+        "crackedEdge": 0
+      }
+    },
+    "aggressive-edge": {
+      "cases": 128,
+      "victories": 128,
+      "meanCommands": 170.640625,
+      "meanMet": 11.9921875,
+      "meanBroken": 0.5703125,
+      "meanReserveDeliveries": 0.015625,
+      "meanReserveDelivered": 470.953125,
+      "inheritanceBonus": 0,
+      "triggers": {
+        "inherit": 0,
+        "crackedEdge": 90
+      }
+    },
+    "aggressive-no-traits": {
+      "cases": 128,
+      "victories": 128,
+      "meanCommands": 190.59375,
+      "meanMet": 11.9140625,
+      "meanBroken": 2.265625,
+      "meanReserveDeliveries": 0.09375,
+      "meanReserveDelivered": 4151.03125,
+      "inheritanceBonus": 0,
+      "triggers": {
+        "inherit": 0,
+        "crackedEdge": 0
+      }
+    }
+  },
+  "witnesses": {
+    "inherit": {
+      "profile": "aggressive",
+      "index": 37,
+      "afterSha256": "957f1ce76e9c9fe5e99baa450b97ce35d09ca5334e190eb3899a7c74412224b3",
+      "finalSha256": "0ae88b0d0f8d744d6291e0abc111d4e727052c18d12fd7317dc4fbbd48c36733"
+    },
+    "crackedEdge": {
+      "profile": "aggressive-edge",
+      "index": 3,
+      "afterSha256": "04abbe028d22397ad5cd61e55c42184c207587e13c8ea2c8cdde92ba502216df",
+      "finalSha256": "305ba43e166a5aef6949969ca87ff142b82da423b5b6a795f89404d5c0053302"
+    }
+  }
+}

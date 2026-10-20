@@ -1,0 +1,23 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {evaluate,DIRECTED,choose,run} from '../../scripts/v3-directed.mjs';
+import {observe} from '../../scripts/v3-model-policy.mjs';
+test('directed profiles use genuine commands, stop and replay deterministically',()=>{
+ assert.equal(new Set(DIRECTED.map(p=>p.id)).size,9);
+ for(const p of DIRECTED){const a=evaluate(p.id,0),b=evaluate(p.id,0);assert.deepEqual(a.row,b.row);assert(['victory','defeat'].includes(a.state.phase));}
+});
+test('active cracked builds genuinely exercise inheritance and cracked-edge',()=>{
+ for(const [id,trait]of [['aggressive-inherit','inherit'],['aggressive-edge','crackedEdge']]){let witness;
+  for(let seed=0;seed<16&&!witness;seed++)witness=evaluate(id,seed).first[trait];
+  assert(witness,`${id} never exercised ${trait}`);assert(witness.hit.triggers.includes(trait));
+  if(trait==='crackedEdge'){assert(witness.before.blades.find(b=>b.id===witness.action.pieceId).cracked);assert.equal(witness.hit.result,'great');}
+ }
+});
+test('high-value carry can be retrieved as soon as it covers the visible gap',()=>{
+ let used=false;for(let seed=0;seed<8&&!used;seed++){const result=evaluate('carry-next',seed);used=result.row.reserveDeliveries>0;}assert(used);
+ const state=evaluate('carry-next',0).state;assert(!('rng'in observe(state)));assert.equal(choose(observe(state),DIRECTED[2],{clicks:new Map(),prepared:new Set()}),null);
+});
+test('invalid profile/seed/CLI range cannot create a run or output',async()=>{
+ for(const [id,index]of [['wrong',0],['baseline',-1],['baseline',128]])assert.throws(()=>evaluate(id,index));
+ await assert.rejects(run({out:'should-not-exist',seeds:129,workers:4}));await assert.rejects(run({out:'should-not-exist',seeds:1,workers:5}));
+});

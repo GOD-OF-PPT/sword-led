@@ -1,0 +1,182 @@
+{
+  "rulesVersion": "forge-v3",
+  "scope": "Existing rules directed 128-seed subset; not a new 1000-seed audit or human fun verdict",
+  "cases": 1152,
+  "seeds": 128,
+  "overlapRows": 512,
+  "producerReplayedFinalStates": 1152,
+  "independentWitnessSnapshots": 6,
+  "independentWitnessCommands": 2,
+  "rowRefusals": 8,
+  "sourceInputsUnchanged": 237,
+  "postRunDisplayAdditions": {
+    "src/presentation-v3/notebook.ts": {
+      "sha256": "683d681bfa0fb11488b642483e11d7d9fe3876ba3dc8ea65f6fdd5a4c72b447f",
+      "bytes": 8599
+    },
+    "tests/core/v3-notebook.test.ts": {
+      "sha256": "e3032aeeb1e976fcb55f94d3c8a8e4f48487cfcc3cfcdd1156bc642f11560141",
+      "bytes": 10071
+    }
+  },
+  "buildFilesUnchanged": 46,
+  "rowsSha256": "b838764f79c04a3b051a3c84b067ee6591946977692efdfa70021fdef6215432",
+  "statistics": {
+    "baseline": {
+      "cases": 128,
+      "victories": 128,
+      "meanCommands": 176.6015625,
+      "meanMet": 11.984375,
+      "meanBroken": 0,
+      "meanReserveDeliveries": 0.109375,
+      "meanReserveDelivered": 1787,
+      "inheritanceBonus": 0,
+      "triggers": {
+        "inherit": 0,
+        "crackedEdge": 0
+      }
+    },
+    "no-reserve": {
+      "cases": 128,
+      "victories": 128,
+      "meanCommands": 133.765625,
+      "meanMet": 11.921875,
+      "meanBroken": 0,
+      "meanReserveDeliveries": 0,
+      "meanReserveDelivered": 0,
+      "inheritanceBonus": 0,
+      "triggers": {
+        "inherit": 0,
+        "crackedEdge": 0
+      }
+    },
+    "carry-next": {
+      "cases": 128,
+      "victories": 128,
+      "meanCommands": 160.0546875,
+      "meanMet": 11.984375,
+      "meanBroken": 0,
+      "meanReserveDeliveries": 8.4375,
+      "meanReserveDelivered": 117072.34375,
+      "inheritanceBonus": 0,
+      "triggers": {
+        "inherit": 0,
+        "crackedEdge": 0
+      }
+    },
+    "no-upgrade": {
+      "cases": 128,
+      "victories": 110,
+      "meanCommands": 229.625,
+      "meanMet": 10.125,
+      "meanBroken": 0,
+      "meanReserveDeliveries": 1.1875,
+      "meanReserveDelivered": 6542.3671875,
+      "inheritanceBonus": 0,
+      "triggers": {
+        "inherit": 0,
+        "crackedEdge": 0
+      }
+    },
+    "carry-no-upgrade": {
+      "cases": 128,
+      "victories": 109,
+      "meanCommands": 223.0390625,
+      "meanMet": 10.1171875,
+      "meanBroken": 0,
+      "meanReserveDeliveries": 7.328125,
+      "meanReserveDelivered": 31656.4296875,
+      "inheritanceBonus": 0,
+      "triggers": {
+        "inherit": 0,
+        "crackedEdge": 0
+      }
+    },
+    "aggressive": {
+      "cases": 128,
+      "victories": 128,
+      "meanCommands": 169.828125,
+      "meanMet": 12,
+      "meanBroken": 0.4921875,
+      "meanReserveDeliveries": 0,
+      "meanReserveDelivered": 0,
+      "inheritanceBonus": 1152,
+      "triggers": {
+        "inherit": 6,
+        "crackedEdge": 0
+      }
+    },
+    "aggressive-inherit": {
+      "cases": 128,
+      "victories": 128,
+      "meanCommands": 171.0078125,
+      "meanMet": 12,
+      "meanBroken": 0.59375,
+      "meanReserveDeliveries": 0.015625,
+      "meanReserveDelivered": 940.8671875,
+      "inheritanceBonus": 31976,
+      "triggers": {
+        "inherit": 63,
+        "crackedEdge": 0
+      }
+    },
+    "aggressive-edge": {
+      "cases": 128,
+      "victories": 128,
+      "meanCommands": 170.640625,
+      "meanMet": 11.9921875,
+      "meanBroken": 0.5703125,
+      "meanReserveDeliveries": 0.015625,
+      "meanReserveDelivered": 470.953125,
+      "inheritanceBonus": 0,
+      "triggers": {
+        "inherit": 0,
+        "crackedEdge": 90
+      }
+    },
+    "aggressive-no-traits": {
+      "cases": 128,
+      "victories": 128,
+      "meanCommands": 190.59375,
+      "meanMet": 11.9140625,
+      "meanBroken": 2.265625,
+      "meanReserveDeliveries": 0.09375,
+      "meanReserveDelivered": 4151.03125,
+      "inheritanceBonus": 0,
+      "triggers": {
+        "inherit": 0,
+        "crackedEdge": 0
+      }
+    }
+  },
+  "witnesses": {
+    "inherit": {
+      "profile": "aggressive",
+      "index": 37,
+      "phase": "victory",
+      "trigger": "broken",
+      "beforeValue": 811,
+      "afterValue": 0,
+      "appliedSupplies": [
+        {
+          "round": 7,
+          "pending": 162,
+          "normalBase": 160,
+          "appliedExtra": 162
+        }
+      ],
+      "finalSha256": "0ae88b0d0f8d744d6291e0abc111d4e727052c18d12fd7317dc4fbbd48c36733"
+    },
+    "crackedEdge": {
+      "profile": "aggressive-edge",
+      "index": 3,
+      "phase": "victory",
+      "trigger": "great",
+      "beforeValue": 2492,
+      "afterValue": 5482,
+      "appliedSupplies": [],
+      "finalSha256": "305ba43e166a5aef6949969ca87ff142b82da423b5b6a795f89404d5c0053302"
+    }
+  },
+  "auditorSha256": "e14394b0776e336a84bfb0249c79adccbc7c9b2c4a28910c243611d20a9f02be"
+}

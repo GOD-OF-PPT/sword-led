@@ -107,3 +107,12 @@ The interface SHALL reuse the approved D style and place current value, delta, n
 #### Scenario: Desktop and keyboard
 - **WHEN** the player uses mouse or keyboard at1280×720 or1920×1080
 - **THEN** primary action, risk, quota, stop and destination controls remain readable and reachable without instructions covering them
+
+#### Scenario: Read-only purpose and actual works
+- **WHEN** a valid run is projected into optional traveler advice and a works notebook
+- **THEN** the view derives normal birth base, accepted burst count and first matching delivered works from existing immutable blade facts and accepted delivery order
+- **AND** no new command, reward, gate, random draw, saved field or rule identity is introduced; ignoring the advice preserves every original contract outcome
+
+#### Scenario: Old blade after upgrade
+- **WHEN** a carried blade is evaluated after later supply upgrades
+- **THEN** advice and the recorded work use its original normal birth base and retained risk/charge, and new-supply reference text cannot be mistaken for that old blade's threshold
