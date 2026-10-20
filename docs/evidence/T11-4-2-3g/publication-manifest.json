@@ -1,16 +1,1142 @@
 {
+  "baseCommit": "2c60eae10fb1465037f565d86e08f9c5feaae0be",
   "scope": "T11.4.2.3g sources, all runtime art/originals/prompts, structured reports and eight representative lossless screenshots, including corrected initial book navigation. Large raw browser media remain local and hashed by release/artifact-manifest.json.",
   "excludedSelfAndVerification": true,
   "files": [
     {
+      "path": "README.md",
+      "bytes": 14289,
+      "sha256": "5a46862730b282196c9a2d174159d324b20a00438abdee75527d014bf4838045"
+    },
+    {
+      "path": "design/d/v05/README.md",
+      "bytes": 2148,
+      "sha256": "e478e035a8d7abb5dcd8970a9cdc23a3948a48950cb691fad24c7cb47182e70d"
+    },
+    {
+      "path": "design/d/v05/customers-atlas-v1.prompt.txt",
+      "bytes": 2200,
+      "sha256": "94ea356b69d4854b0533030ee8d183646c9df3cdffc1fcc01853438a4d634bf3"
+    },
+    {
+      "path": "design/d/v05/customers-atlas-v2.prompt.txt",
+      "bytes": 1128,
+      "sha256": "30f03bba05ce6066994f2ead1dbdb00e1dca1bc7324c1037d8816f5bff415836"
+    },
+    {
+      "path": "design/d/v05/notebook-cover-v1.prompt.txt",
+      "bytes": 1047,
+      "sha256": "994580d4a7c7d43029b5d9f2558f38b58e47492f9b9bf0b7907ae5c093236a58"
+    },
+    {
+      "path": "design/d/v05/originals/customers-atlas-v1.png",
+      "bytes": 2644316,
+      "sha256": "1aaa5b28cb4ccdc4cf055cc57688076bb178dba01d3ce654998258681967c5ce"
+    },
+    {
+      "path": "design/d/v05/originals/customers-atlas-v2.png",
+      "bytes": 1937506,
+      "sha256": "fe613eab5a26f33eabbbc74a2332c6c471a1acc5dd14fea09091574b42db5f50"
+    },
+    {
+      "path": "design/d/v05/originals/notebook-cover-v1.png",
+      "bytes": 2229229,
+      "sha256": "11ddfd1e77d11ab1880067a29f666555b6310f102848454bad6ce8e5a14c9325"
+    },
+    {
+      "path": "design/d/v05/runtime-assets.json",
+      "bytes": 3045,
+      "sha256": "4af9d55202f68e95e47e9b544968d36ae6fc475f34d861e4c5f0f449a7c3d5d9"
+    },
+    {
+      "path": "design/d/v05/runtime-generation-records.json",
+      "bytes": 3477,
+      "sha256": "e350712b3cbdaac09ececce8da396bc57131aa102e50579352c9d53e98e91206"
+    },
+    {
+      "path": "docs/architecture.md",
+      "bytes": 22698,
+      "sha256": "6d3c3aa92851f52a149262a8d464676cda898a1f33e753af2b0d602db4d5b1a6"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/asset-proof.json",
+      "bytes": 1860,
+      "sha256": "416524c30142bfcc4fe66815e4cf4b6c0b6ae071aaf1801baadd334da397d5c9"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/book-layout-red.json",
+      "bytes": 11708,
+      "sha256": "7966d22337a513915c03b9aed3a1f4626c7200da3020f2815c07527a357a7121"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/book-layout-red.log.gz",
+      "bytes": 1176,
+      "sha256": "a39e751fdee9159d7ab0cec28a96714bfa442fba2f4cd43f62f8505fc0268adc"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/book-polish1.json",
+      "bytes": 45360,
+      "sha256": "de57cc389711fbc433246c7a64fb436dfa673cf535dfa48dcf70a99b5607c763"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/book-polish1.log.gz",
+      "bytes": 1752,
+      "sha256": "ed65bf92fe64ae9d97c1b2a3eec1db8c38254dac430837e529d912e420773a2a"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/build-release2.log.gz",
+      "bytes": 604,
+      "sha256": "f1b3f3c2424408ecbc024b13e7a53e81be1a0f08a996aa0beb9a17270531039a"
+    },
+    {
       "path": "docs/evidence/T11-4-2-3g/check-publication.mjs.txt",
-      "bytes": 8943,
-      "sha256": "8c2cb538e3e992dbc598753d2b332cc1e0ad7c5e0d56b0dfc36ed498fee03d19"
+      "bytes": 9040,
+      "sha256": "ace791b9d9018cb34b29819829152b32ab93bcad71ccb7baae26246851023c28"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/directed-tool-tests.txt.gz",
+      "bytes": 455,
+      "sha256": "2d64c2bb1f466de9303e8d4744dba8e7d77da748a81b062f8e4bb4706e7c7050"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/dirty-layout-green.json",
+      "bytes": 10063,
+      "sha256": "bfa6ecd712dd559c34a483a58788dcb6cb09aa52e3255feef610d8b6d8eb2829"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/dirty-layout-red.json",
+      "bytes": 17255,
+      "sha256": "5df71019d012c36f4fa468ec8140ae4ad88169f216e6eaa84e49c7a5cb13923b"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/interrupted-full.json",
+      "bytes": 16096,
+      "sha256": "a746d5f94da8424df8a5ee043136dce315ee29c54f394dd5863711da6747c041"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/old-preview-before-release.json",
+      "bytes": 85,
+      "sha256": "7ee4085d946cd42d83dc57740c1f0a4e59532eb30bdb63c13799775eac473b62"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/pilot-chromium.json",
+      "bytes": 9837,
+      "sha256": "b8f17c30c95310807b6ea2261a428097fbca9d1ed5f7f57675aaea845c4a8ad1"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/artifact-manifest.json",
+      "bytes": 15175,
+      "sha256": "4024c6bec19af844b930efbd03a7b505e7c601c05fea20ec15d736bf9793311e"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/baseline.json",
+      "bytes": 44954,
+      "sha256": "dd0d12894877918161e358d5725f3ed8d957a25f4da3ad30a081613263b07bb0"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/book-full-twelve-1280.webp",
+      "bytes": 1458462,
+      "sha256": "84a0983ad968f769de2a5996337c11d53ae3d6f47885ad15fd6eded3bbdaafba"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/book-real-work-1280.webp",
+      "bytes": 317062,
+      "sha256": "94fcc3cd83f852e3b0dd8b571077c1dd8bfe736904c95b2217433f9808c25a9e"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/build.log.gz",
+      "bytes": 587,
+      "sha256": "5fb2c2858b17f82824e6264d1955cfd2dde58ffbcebc864e14541af829982ad7"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/collector.mjs.txt",
+      "bytes": 5391,
+      "sha256": "5dfcd86abf6579343a47b469f302610bf599d1cd7add62330b0fefb5d77c0caa"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/compatibility.json",
+      "bytes": 2496,
+      "sha256": "a3c46788b44a95d4097763582bd3c24a7f447ece118e5d6b33d8c3aec6d48006"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/console.log.gz",
+      "bytes": 834,
+      "sha256": "146d41f1ac6ced97c440af2328aa1f5cda7c2a542ad092ed5464cd91487bad5d"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/list-only.log.gz",
+      "bytes": 2201,
+      "sha256": "fd9450ca1b745bd8be424fb2063c3c5e82833924f8a5ce80c17163cd61a76ec5"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/preview-http.json",
+      "bytes": 8379,
+      "sha256": "3477be59d3ad6fbf2dcbd2ed10ae07fd26a5386036995cd87ac0a51743d19bb2"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/preview-smoke-states.json",
+      "bytes": 7093,
+      "sha256": "bf685f69667b36d263b9785fba816352e92727665961f966eef57152e66f9281"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/preview-smoke.json",
+      "bytes": 806,
+      "sha256": "162d1c512173cc747d3716003324dbecacdfe7a550557895eb5ba257e27cd452"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/replayed-states.json",
+      "bytes": 5018,
+      "sha256": "ed3bec755d486fe781437e897aa3f8a53a3bd6fd59d08669f7e64d04cce1d36e"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/report.json",
+      "bytes": 29808,
+      "sha256": "19808db79b75800e83ecfd6fffb41636ff3aeef3c5d21649c54249610a84486b"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/screenshot-lossless.json",
+      "bytes": 910,
+      "sha256": "ef6745a14906f0a4687b981f282969f2bf2e6be19876a0a3400fddb55616889f"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/summary.json",
+      "bytes": 4642,
+      "sha256": "4ab371142f8c0504250497663db19b947980064978183eb273859c34aefeb6e6"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/ui/v3-chromium-art-fallback.json",
+      "bytes": 1468,
+      "sha256": "d9aa0f5697638b79a1ff53015b3db271f25fe2001f6c8534990b32192d748645"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/ui/v3-chromium-delivered.json",
+      "bytes": 1661,
+      "sha256": "5a9f059e322d6cf75084d7158f3e338c8c9a99f69991cea61cb9a970e09a3a9c"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/ui/v3-chromium-dirty-resume.json",
+      "bytes": 22344,
+      "sha256": "ff39c41ea8aab79489f95b213dec6e0f9e6a4035ec6c700ad502d34a8d7a9b10"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/ui/v3-chromium-full-book-fixture.json",
+      "bytes": 24773,
+      "sha256": "4267acbe68f97ea28e032659d9a56510a6d462315322154cc1dacb887f64e8e7"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/ui/v3-chromium-reduced-motion.json",
+      "bytes": 1672,
+      "sha256": "48ab68022eb225144da59b1561c79845ed4c3965538d014061a7b892eae8738c"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/ui/v3-chromium-unmatched.json",
+      "bytes": 2942,
+      "sha256": "d6ba862afbfc8408b09a7ca3233ddcea14e1bd3a44d9543d2f0debab11e6e6e1"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/ui/v3-firefox-art-fallback.json",
+      "bytes": 1468,
+      "sha256": "f900c7a57b29f63aa577db4aa13f02f89653da8e64fb038e36cb362fc9918233"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/ui/v3-firefox-delivered.json",
+      "bytes": 1661,
+      "sha256": "db6286ca1234faa4ab2ab3b07530b18d45cb6700b4830f6dd1d3129635717305"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/ui/v3-firefox-dirty-resume.json",
+      "bytes": 22378,
+      "sha256": "2368f742f362e72ea68eed7c3853bb9ec8c28cd054e61c4b2f0d64d4ea76187e"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/ui/v3-firefox-full-book-fixture.json",
+      "bytes": 24773,
+      "sha256": "4267acbe68f97ea28e032659d9a56510a6d462315322154cc1dacb887f64e8e7"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/ui/v3-firefox-reduced-motion.json",
+      "bytes": 1672,
+      "sha256": "8d2ea5524c83232f6dc9c6ea200a20447bc036af5669a42801699b43041f9096"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/ui/v3-firefox-unmatched.json",
+      "bytes": 2942,
+      "sha256": "e828c462bbfd6c9914793505a59e0dae4f075ad4379f247423dba03a75243b2e"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/ui/v3-webkit-art-fallback.json",
+      "bytes": 1468,
+      "sha256": "5b736e6564e51cb06ce4db0565fb8e37f939945bdfb73e9ade6464355256c3c4"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/ui/v3-webkit-delivered.json",
+      "bytes": 1661,
+      "sha256": "58537ac821941524e80c20551f8b60a07fe35e0602128fc7c235eb5bc5f9bb15"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/ui/v3-webkit-dirty-resume.json",
+      "bytes": 22251,
+      "sha256": "4ba0ca6057c0905d1a3098e76798758b4bdc5930c350a91ca29f81d97aedf7bf"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/ui/v3-webkit-full-book-fixture.json",
+      "bytes": 24773,
+      "sha256": "4267acbe68f97ea28e032659d9a56510a6d462315322154cc1dacb887f64e8e7"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/ui/v3-webkit-reduced-motion.json",
+      "bytes": 1670,
+      "sha256": "24535f67013e13349e0a0ea7e30e331ee57a48504bf16c36c848befeb6736e9c"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/ui/v3-webkit-unmatched.json",
+      "bytes": 2942,
+      "sha256": "81a13b72339b97d4f3587d3c58d1df29e912a11f40b719ba45fdd1059f3085d4"
     },
     {
       "path": "docs/evidence/T11-4-2-3g/post-checks.json",
       "bytes": 56510,
-      "sha256": "86757d96df92b8c74114158131bf4227e6ced69cf92af4ecb473b987826e6506"
+      "sha256": "282ebd70890879348950883e2d65434633ceed12db32ac235fda2be79fd04d81"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/preflight.json",
+      "bytes": 1277,
+      "sha256": "52b86f74c485ff653777feff2ce7642a1d1b3447b222a20e9b8f70c8a10d1804"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/preview-default.webp",
+      "bytes": 1153646,
+      "sha256": "5adf415d3a333e8bda717f12db9dfc55ff5bfab8e888fe80b16645ee7a67b412"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/preview-http.json",
+      "bytes": 9387,
+      "sha256": "f5ba889389897d106dc9bc72c6ad5551a870241c95ceb9dc6d0f7d6cbc041ff1"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/preview-image-proof.json",
+      "bytes": 381,
+      "sha256": "cbfa1dabd6f1210d274f3f6dac46b04c8581cbc90d2bfe180b4616e7dea3bef2"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/preview-smoke-states.json",
+      "bytes": 7093,
+      "sha256": "ee1082b36e7461b24fcacf1082546495b1f3dce2838aa2d17355f28c1ee3d432"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/preview-smoke.json",
+      "bytes": 805,
+      "sha256": "7362782eb1326e0a6c60063c2cfad20b39fad1ebb639bf6381f9c8d96080eb62"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/artifact-manifest.json",
+      "bytes": 83437,
+      "sha256": "a4c09afb6831266b8f34a48185393ad3ae6bd15f1a0503729ff1b08ec954111a"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/baseline.json",
+      "bytes": 45369,
+      "sha256": "a8e5cb6f2229e04b4c603c886670ff91322c29514728491dc7e74dabd145f788"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/book-real-work.webp",
+      "bytes": 401426,
+      "sha256": "9defbccf5a75f3a8937d816233207e8b0ef157c4bd72e473bd38dd0089b2fd71"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/config.ts.txt",
+      "bytes": 608,
+      "sha256": "a3045d7cad015beb5cbf04cc6625411838fb3c5318ea251797cfcee0a8cceb4f"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/console.log.gz",
+      "bytes": 2818,
+      "sha256": "148a61c7bd8b3a87400528be1a50614504e5c69b17d19c883925a5aaf11cd524"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/handover-1280.webp",
+      "bytes": 1232158,
+      "sha256": "6e0486fbe6b828820a50f5b3011c9b8c492a62f9ae7547decd196243d1e10c46"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/launch.json",
+      "bytes": 318,
+      "sha256": "d684d854d6432407ecd488853220ccc92d93abbaadc374721b48291a08ba13cf"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/replayed-states.json",
+      "bytes": 37315,
+      "sha256": "a255116aafb51c3202d7172a7d5c6d63015b54ff17deff48bf4821ab795be4a1"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/report.json",
+      "bytes": 121480,
+      "sha256": "e8af2b54cbc1e91ebeaca6ac9762c3a9c76133521cfd25cb11685ae135807009"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/runner.mjs.txt",
+      "bytes": 2074,
+      "sha256": "bec232dd946e328d38d2d7f9d9dbb006342162f8e573e4469c9dc41a01c11e20"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/screenshot-lossless.json",
+      "bytes": 1931,
+      "sha256": "996588b96c90d1e6d45467cc398c828e10f5db1860e8a5e37fe8da6bcc7da8f0"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/start.json",
+      "bytes": 473,
+      "sha256": "d36983f4ed41bc7270013e390b574dd14e72443a2a7f616575d87a5fc1c573d4"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/summary.json",
+      "bytes": 22628,
+      "sha256": "457b14e5c4efc7c54f11a8e0d3970ed38a17f471d14ab659fb860b20338fc183"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/terminal.json",
+      "bytes": 473,
+      "sha256": "c1ba93473008bfd5ddcc47647c6c9de7908bdbbd56f760408a024541746dd216"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-chromium-defeat.json",
+      "bytes": 4113,
+      "sha256": "4c740af2db5706fdfbaa4306b6e91ca01f8fe3947775402cf64d528a62a7b17a"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-chromium-merchant-3.json",
+      "bytes": 5280,
+      "sha256": "f41371dc579a72e5b4d4c58b4c3464f5cc6626740664537369afa4c4063b5829"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-chromium-merchant-6.json",
+      "bytes": 11155,
+      "sha256": "c365681b0542e8c333453847af838b8d939fc85663e5e1d413217fffe82f73fa"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-chromium-merchant-9.json",
+      "bytes": 17198,
+      "sha256": "60a987608d57b7955ae6bc2c67477c8900fece4e7d12d41555f5dac28a30bd8e"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-chromium-mode-continuity.json",
+      "bytes": 1417,
+      "sha256": "d9c0c6a5eaa2f7c9995f85bca6fdcf5c5f8252725776d713d2bf1b5c057fa77c"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-chromium-repaired.json",
+      "bytes": 5491,
+      "sha256": "5a2bbe7faeaeda35892e07e7f47aed90cba2adf0aa5636581ef8c52f34d6e855"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-chromium-supply-10.json",
+      "bytes": 19276,
+      "sha256": "e4929d2afb48e21ef19b7743cf0e5833fbce2e169a1663a98512213acbe9b31c"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-chromium-supply-4.json",
+      "bytes": 7339,
+      "sha256": "fdb63cfcd0d6dbc3e7dd6437b055bb78be580b418e4d1c31c5a3f67836a266a8"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-chromium-supply-7.json",
+      "bytes": 13227,
+      "sha256": "1a21a242f151579b0bfd79b1a09dabfb985c8cdad8e4b50781bd7be1bf80d13a"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-chromium-victory.json",
+      "bytes": 24779,
+      "sha256": "7760a43b64d8935ce103820af4959835dad9ca1a5c77b3c14700b97c6464b28f"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-firefox-defeat.json",
+      "bytes": 4113,
+      "sha256": "cf85a97c74472ac94504c6ae7149a4fe32d201d29c0846974baeb75ceae14e6e"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-firefox-merchant-3.json",
+      "bytes": 5280,
+      "sha256": "5761e1764d5ff2d97e1d16e9eaf8c224e5f93d1326173f6b3e258f53418b75ae"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-firefox-merchant-6.json",
+      "bytes": 11155,
+      "sha256": "08b053c81da97df3a0895c07e81aebd411eece34335b9331d338d9e5a8466790"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-firefox-merchant-9.json",
+      "bytes": 17198,
+      "sha256": "a5ce5f7fb7dbb70b03dbfaa89e2cdef3979d2a8a9fbc081c64171ccb83d6f560"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-firefox-mode-continuity.json",
+      "bytes": 1415,
+      "sha256": "655a028f21b86394d1a7c9e4dea438ee50b5dc380779712d8b490ac7796918b2"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-firefox-repaired.json",
+      "bytes": 5492,
+      "sha256": "53efdc1aaebdbf45f03b7f2ed75753bf869ba8b720173d0189efe561d2403efe"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-firefox-supply-10.json",
+      "bytes": 19276,
+      "sha256": "78eb00ea7fae87852962c6dce2bf6ffd06e215dcf6185c50dcb234e645b3431c"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-firefox-supply-4.json",
+      "bytes": 7339,
+      "sha256": "5ea30fa246d083a2490ce5c78090cd81b608bf6086d6287add057883cff96869"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-firefox-supply-7.json",
+      "bytes": 13227,
+      "sha256": "e0b26e0816c5ef1ee3499c417560357b250a2599c5773c8116671ad5eda852dd"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-firefox-victory.json",
+      "bytes": 24779,
+      "sha256": "ef8972057b71af4cce309e23ca54096dec4ba65a46c2973b38fbd66d98c1fd6d"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-webkit-defeat.json",
+      "bytes": 4113,
+      "sha256": "48d554adbd085f8c0affc55ffb7d02c080e02d55f45953334d241560a88527b3"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-webkit-merchant-3.json",
+      "bytes": 5280,
+      "sha256": "bb538e5976d100eefc91fb6231434aee880211b84328665dc1a1d9311821967a"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-webkit-merchant-6.json",
+      "bytes": 11155,
+      "sha256": "96ba36c8713095a9e30f643f25b18106516279b7404c6b7d28c357aa22e16765"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-webkit-merchant-9.json",
+      "bytes": 17198,
+      "sha256": "9f2f994693cdbd4267e5306b14ba89372affafd00b01ace31f832489ccc0fc3e"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-webkit-mode-continuity.json",
+      "bytes": 1417,
+      "sha256": "29cce936ce7c04a63ec8f346814a2b6434f6782c10eddebc2cea8cb4fbb4581b"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-webkit-repaired.json",
+      "bytes": 5492,
+      "sha256": "33869ccb50a53989a18c080a81d64addad53d515aeba9092af6f6653fb1d4c24"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-webkit-supply-10.json",
+      "bytes": 19276,
+      "sha256": "0166e86c1ccb621d3fd3e92eb09bcacaf8a1499b6bb97a9b931aae099c89403d"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-webkit-supply-4.json",
+      "bytes": 7339,
+      "sha256": "f9938abbbdee9f1f7a3257bc08d8af5879de85642c9e1e51ded570188f606257"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-webkit-supply-7.json",
+      "bytes": 13227,
+      "sha256": "c3368dfe16cd11c7bbc838787539784fb62253c05a51c24ba70658edd384d4d3"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-campaign-states/v3-webkit-victory.json",
+      "bytes": 24779,
+      "sha256": "edf80f896f9f16beede8224dc1d0c23bd56dbef3153b78e468a8f90bc685b8e9"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-hammer-states/v3-chromium-1280-geometry.json",
+      "bytes": 2039,
+      "sha256": "f4a7e067386652fc2f5e44814c6a010419ec7582a645c34dd4f313a1136e4a75"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-hammer-states/v3-chromium-1920-geometry.json",
+      "bytes": 1577,
+      "sha256": "a1596cae959fc1c8ffee075cca826386efe1577d33f5141bd5f8f65bfd200f60"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-hammer-states/v3-chromium-shapes.json",
+      "bytes": 3581,
+      "sha256": "8c4e6cb5197a220cf935d8a687d1f75ad502808c39fd92ad786ebb406d1149c3"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-hammer-states/v3-chromium-slow.json",
+      "bytes": 1132,
+      "sha256": "ffdef79d6347c8fb7bd37e23b4fc0a9f635d0d0dac136dec5ff218f8c2af3fcc"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-hammer-states/v3-firefox-1280-geometry.json",
+      "bytes": 1719,
+      "sha256": "aa1b2d33e7d4c73838226323a18dc079a925a36bb07f5c564b52ce57bdf95e66"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-hammer-states/v3-firefox-1920-geometry.json",
+      "bytes": 1505,
+      "sha256": "7f43c7f13c12ef6bcc3c6c34d124b389cd337c05c96ff68a2ff00375738535d1"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-hammer-states/v3-firefox-shapes.json",
+      "bytes": 3467,
+      "sha256": "5a1258a8890ef3d7d23b0074f19f7db33370d21fe8323bb085a00839582a7dcd"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-hammer-states/v3-firefox-slow.json",
+      "bytes": 1084,
+      "sha256": "212758c8ae9beb2bb3b4dadd71ac1317a0b34c553d0fb46632ade3f7e82b89a9"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-hammer-states/v3-webkit-1280-geometry.json",
+      "bytes": 1294,
+      "sha256": "a80b086353b9ca7278ceef90429b1b8737d98019b39ba8d4bd6638c706fe5e1c"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-hammer-states/v3-webkit-1920-geometry.json",
+      "bytes": 1294,
+      "sha256": "42a6fd6fe520947c9e64c2d54892103a221d165abdc6e631e61fb0b9856471a2"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-hammer-states/v3-webkit-shapes.json",
+      "bytes": 3471,
+      "sha256": "af6635cd0abc53aa180482984b5782a33871dbc5e1299755e6b59857ac4e5819"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-hammer-states/v3-webkit-slow.json",
+      "bytes": 1069,
+      "sha256": "182dbc43049c4ffe57363e237d9f1cc4a885f40c9ab08ba5562512d40780df88"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-impact-states/v3-chromium-clip-state.json",
+      "bytes": 1839,
+      "sha256": "3f83823515166a84b065c8860c5548d982b9fa5f2c5d10e30f84c2c20aaa17e5"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-impact-states/v3-chromium-contact.json",
+      "bytes": 3855,
+      "sha256": "0a017e131b25ba637661823cb14981cfb59fa3bca71f4bc7a2e77170c943c3c6"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-impact-states/v3-firefox-clip-state.json",
+      "bytes": 1839,
+      "sha256": "70d6e84cec2e1e91a812b706037266acca2466c93b815b76e4544130140bcc1a"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-impact-states/v3-firefox-contact.json",
+      "bytes": 3770,
+      "sha256": "b2319699468f1870e9fe5f05754b967947a58c9cfe79a05f805db6656f1a76ee"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-impact-states/v3-webkit-clip-state.json",
+      "bytes": 1839,
+      "sha256": "2ed4ac76aaab969f54b58bdac5e7a8c220a1b57bc3e075b61d3ad03f90af98c6"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-impact-states/v3-webkit-contact.json",
+      "bytes": 3342,
+      "sha256": "7169a9e419736cb5127ec0b9bfda0732bbbc2106a664eb610db5a4e563bd67cc"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-notebook-states/v3-chromium-art-fallback.json",
+      "bytes": 1468,
+      "sha256": "674942948e090ffe3efa21d7743aef296c3dd0be36a87a6a5f188983dabaa264"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-notebook-states/v3-chromium-delivered.json",
+      "bytes": 1661,
+      "sha256": "bc8fd69abfd13bafafe2157ad26a1f8ce228958a43bc9981cb2c4c0278363c50"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-notebook-states/v3-chromium-dirty-resume.json",
+      "bytes": 22344,
+      "sha256": "ff39c41ea8aab79489f95b213dec6e0f9e6a4035ec6c700ad502d34a8d7a9b10"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-notebook-states/v3-chromium-reduced-motion.json",
+      "bytes": 1671,
+      "sha256": "ace8a19f6ff8b5ffca74d8621d59d950105f62acc4ec8f34ee9a07e665dd54a3"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-notebook-states/v3-chromium-unmatched.json",
+      "bytes": 2942,
+      "sha256": "71752dc897b1833dac0d6bf965f5e8d29151158e4a4a4c55f42142ab2385dbbf"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-notebook-states/v3-firefox-art-fallback.json",
+      "bytes": 1468,
+      "sha256": "cf6dc2c3e527419ee99c4e63bf9d45ba4c66d7cd98d8c995741695496fb21c37"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-notebook-states/v3-firefox-delivered.json",
+      "bytes": 1661,
+      "sha256": "60bbee60ad0da434db48b293cd633e316e985ee19c3bb1c1bae23ba06128c19d"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-notebook-states/v3-firefox-dirty-resume.json",
+      "bytes": 22378,
+      "sha256": "2368f742f362e72ea68eed7c3853bb9ec8c28cd054e61c4b2f0d64d4ea76187e"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-notebook-states/v3-firefox-reduced-motion.json",
+      "bytes": 1672,
+      "sha256": "d66487ab570cddd3cb1509f0d11b4f9fb17c8a42648440b16af6d770ab1ac5dc"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-notebook-states/v3-firefox-unmatched.json",
+      "bytes": 2942,
+      "sha256": "8674331d79e58e7012343cac2b1b3d4b43237a3c5064ea3f564f1796ea0e0831"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-notebook-states/v3-webkit-art-fallback.json",
+      "bytes": 1468,
+      "sha256": "ccef064e5e4ac95812f972909c9d95193010bb1181f12af0e3dcac6ea5980736"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-notebook-states/v3-webkit-delivered.json",
+      "bytes": 1661,
+      "sha256": "39dab1acde0ffc755335908e8cbf061097628306cdb956b62cf16ef35ee7a7e3"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-notebook-states/v3-webkit-dirty-resume.json",
+      "bytes": 22251,
+      "sha256": "4ba0ca6057c0905d1a3098e76798758b4bdc5930c350a91ca29f81d97aedf7bf"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-notebook-states/v3-webkit-reduced-motion.json",
+      "bytes": 1672,
+      "sha256": "ac7dd9b810b54ed2b6dc7062dbf8e724de53225eb1e3c6d3e223516cf06def1e"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-notebook-states/v3-webkit-unmatched.json",
+      "bytes": 2942,
+      "sha256": "c988d516202ab62be22021c6ef673b1910a5ec22b0414652f0773c3b5ef904c8"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-scene-states/v3-chromium-defeat.json",
+      "bytes": 4106,
+      "sha256": "5b6e670de02a00c13c5edb4149c5f10cd73836a4ce8a7f07eb061aa7a90a9e9e"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-scene-states/v3-chromium-receipt.json",
+      "bytes": 1974,
+      "sha256": "1bb9738536363dc8271e5550e4975b3249022474eff1832b6b8e9ba9db2eb975"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-scene-states/v3-chromium-resize-focus.json",
+      "bytes": 4092,
+      "sha256": "a52fa7103f844a34908e6ca1b6b2f0b14b9e04d095590fe2436d39cc191d93d9"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-scene-states/v3-firefox-defeat.json",
+      "bytes": 4106,
+      "sha256": "8e273473c37fb4e62fa347420bdb28b332bb835cccfbba3bafa48e122ac82197"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-scene-states/v3-firefox-receipt.json",
+      "bytes": 1974,
+      "sha256": "92a89d8daf40a50b481651ede2a2b0452a1428f5d15f476f981d44b35b70345e"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-scene-states/v3-firefox-resize-focus.json",
+      "bytes": 4146,
+      "sha256": "05841f9881a680218c1da9836bb6902430e9db663493b7b33de8db62f05fc861"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-scene-states/v3-webkit-defeat.json",
+      "bytes": 4106,
+      "sha256": "1250639cd369b8466ce9ba7988bf9591a0f819c784fe38808e8573b764fa9636"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-scene-states/v3-webkit-receipt.json",
+      "bytes": 1974,
+      "sha256": "918c56c90d349a766071fe0c7874606e1d4d79685b0e059b67777ac3e6d94b85"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-scene-states/v3-webkit-resize-focus.json",
+      "bytes": 4092,
+      "sha256": "3fdd7d5d76dd9fe19ef77172561490eb402986cfac8e11b27bd67ee45a48b57c"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-chromium-broken.json",
+      "bytes": 2208,
+      "sha256": "5e426ece1aafdb5c2b0d48c869a0ea274d34626adbd095aafb03e7dc07ad0ee7"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-chromium-cracked.json",
+      "bytes": 2151,
+      "sha256": "054d629496dbee8d14760a49d61e1a225828e560a21c2abda894c0e3e092f2fe"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-chromium-experience-end.json",
+      "bytes": 5485,
+      "sha256": "522fb7beee01fd456101782ae47f0bb78978c7be257958d2d5585a09dccd775d"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-chromium-keyboard-end.json",
+      "bytes": 5131,
+      "sha256": "e4b1a6fc1e9c3d5be534cac3e34c2f03833fa06cbac27bd2f45f7c26883cc66e"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-chromium-recovered.json",
+      "bytes": 1420,
+      "sha256": "6985cfd88506a9fdbf72cc388ce5bfb964fdaa35ebe9273af8eb7118f5059846"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-chromium-reload.json",
+      "bytes": 1592,
+      "sha256": "c7d282c15ea66fb9fa682149fe0acb776b51ba7864efb6d1c1584b6f9cf59dd5"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-chromium-round-1.json",
+      "bytes": 2113,
+      "sha256": "b35346c82145d2504bfff91f009ddcab11660929102e0aabf2e8f3b75142dc47"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-chromium-round-2.json",
+      "bytes": 3440,
+      "sha256": "143ec8c816cd3a0897aa100199aa591e9a47c7fb6b7637c21c9fd3eaa2002d69"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-chromium-round-3.json",
+      "bytes": 5178,
+      "sha256": "9485ec3b139880520863fde20098759f8d8afbfb30d59fcd3108fc086413ddd4"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-firefox-broken.json",
+      "bytes": 2207,
+      "sha256": "6f9ceb77dc7a3304393a0164a8c4b967838abf3ec810a5eefcfa7aec73191a7c"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-firefox-cracked.json",
+      "bytes": 2150,
+      "sha256": "1ab1881b1960c8528c102fe12e9b239685835b84edd0287cf1c62e7270245135"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-firefox-experience-end.json",
+      "bytes": 5485,
+      "sha256": "852efacae55387df1429dba0d3f9eaf98a5cdf05cd5c069715b9d4ffe57e29e9"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-firefox-keyboard-end.json",
+      "bytes": 5131,
+      "sha256": "dd89c92b1705fe1ed196d89056d90c8329c3145a0f20c01310dc8212b84033cc"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-firefox-recovered.json",
+      "bytes": 1419,
+      "sha256": "4da5dfeb15701daba2ef096d0614c6d2bd9004ebe17a491b75ebd272e09d4c11"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-firefox-reload.json",
+      "bytes": 1592,
+      "sha256": "ce2d036113d43cb3b91d64a1ec8c477c29ddfc698cc9742453a0e02ca6812be5"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-firefox-round-1.json",
+      "bytes": 2113,
+      "sha256": "34cbb140ea64f787d0503947d94dafb3d947bd98d8a5860b0d2374422ac5a067"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-firefox-round-2.json",
+      "bytes": 3440,
+      "sha256": "c97bf4b7df44f3289454facef30bf8e19c0129327445d1806d92fc363e744c74"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-firefox-round-3.json",
+      "bytes": 5178,
+      "sha256": "9ca37cc6eb54715076c9cde601bb74ec866a681b79cd2cb6dc3f9cc68221b865"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-webkit-broken.json",
+      "bytes": 2208,
+      "sha256": "79e5c4b935b9b96d56ffaf73fedf0fbcfa428608af2c32a13e3ba6a6c19894fc"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-webkit-cracked.json",
+      "bytes": 2151,
+      "sha256": "a7faf432356685cba2391e1bf827ae00be768f7e03c4ed2e985e7880817cee3e"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-webkit-experience-end.json",
+      "bytes": 5485,
+      "sha256": "6f49ecbe72b122bfcb03e673c464a9dbf6fc6a1627cf5cc47cc67b120b98025a"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-webkit-keyboard-end.json",
+      "bytes": 5131,
+      "sha256": "bc96a5647fa809bd5af376055af37b3eb4525b07144880800e340f8d177e13c8"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-webkit-recovered.json",
+      "bytes": 1420,
+      "sha256": "ae2516d5115fd2401d0042dfff0a992ee95220920cfb2243e2b4bec2b64a06ea"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-webkit-reload.json",
+      "bytes": 1592,
+      "sha256": "f613ef405b23404986fd2d05bd1e780685e6348b221c997fa49e01a3b8e1a313"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-webkit-round-1.json",
+      "bytes": 2113,
+      "sha256": "8e9dd1c9aaeadb77dca4d7b2e88f8e245ce45a3f435e3e6be5196655889407e4"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-webkit-round-2.json",
+      "bytes": 3440,
+      "sha256": "4c93bcf5e01cbe694265746eb7e538f9687b297371e67f2deceb3caee11313f6"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-ui-states/v3-webkit-round-3.json",
+      "bytes": 5178,
+      "sha256": "a148f1f9c25e43832a6a63eafd430a2f2e6e33a2055bd8620f19b99209703b95"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-chromium-catalog-0-equipped.json",
+      "bytes": 4077,
+      "sha256": "ad7e6533eb8012d884d8b0aae59af88d032b728168ef0b5bebaa850f3b18560d"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-chromium-catalog-1-equipped.json",
+      "bytes": 4078,
+      "sha256": "abfb842aae6abae6a04937e780f442823a7a488c83f5134e8af4574aee425d10"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-chromium-catalog-2-equipped.json",
+      "bytes": 3907,
+      "sha256": "2ad6a6815c6e678d746f2c15becd9651ba55e775f906fcc472b95f9125f5e5f6"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-chromium-catalog-5-equipped.json",
+      "bytes": 4077,
+      "sha256": "6d578c0454f610545870b13f21ca88b75fa7fbe245864858515f3fd3a35a4ee2"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-chromium-catalog-7-equipped.json",
+      "bytes": 3905,
+      "sha256": "5fcabe85d15b317134529b21583559d0ec738f136edd4fd9df0db9e263a58c92"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-chromium-family-0-pixels.json",
+      "bytes": 361,
+      "sha256": "cc9f1848c926af7e95f6ad35dcaa4b025e03182401761288b73b6ddd055ea774"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-chromium-family-0.json",
+      "bytes": 1845,
+      "sha256": "7c4b6d66590a0249f4d8844c669ad5d91270ed2ae0d0426072058cf1f097563e"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-chromium-family-1-pixels.json",
+      "bytes": 363,
+      "sha256": "4634b7f7698697349cef424c753a20f8c6925e9f99abe07ea62195cb36bab067"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-chromium-family-1.json",
+      "bytes": 1845,
+      "sha256": "1f8e52a951aca5aa6bbb5e39032ea8762cf8061b20c4aa052744cee918fee84b"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-chromium-family-2-pixels.json",
+      "bytes": 361,
+      "sha256": "5058e69ae9db616d4b971eaeea7bb541d18bec258f2fcb4caacbf2823ff2efdf"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-chromium-family-2.json",
+      "bytes": 1845,
+      "sha256": "1d89c0d08b34bd5208964e3ad6b8b0901d2e69392f66c8d308b0e9376e4c90b2"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-chromium-three-props.json",
+      "bytes": 7338,
+      "sha256": "8b758a12031aff997f1ac3c87cfb5f9c02c1ef13dbc351b6f8f630422b0cb476"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-firefox-catalog-0-equipped.json",
+      "bytes": 4077,
+      "sha256": "9f422512c08b5187fb73321fac680c1bad4834bf6b40654b3ec733f200f5ec08"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-firefox-catalog-1-equipped.json",
+      "bytes": 4078,
+      "sha256": "fc2f044b6d2f0617cd43c62109df384a9b43fccf2e81c788fd18a073e4c19c74"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-firefox-catalog-2-equipped.json",
+      "bytes": 3907,
+      "sha256": "9d331d22a3c33c41e9936760857933d8e391960e9833a47f9dd365e824c016bf"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-firefox-catalog-5-equipped.json",
+      "bytes": 4076,
+      "sha256": "1868b1c164b86d9daa072d8121cd1b28d7ea89444967fb2c7dc3487dab6eb626"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-firefox-catalog-7-equipped.json",
+      "bytes": 3905,
+      "sha256": "e676ef18b58c72740e8c084b78369b2012a939c1d313703da0ce98bca5bb49e3"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-firefox-family-0-pixels.json",
+      "bytes": 361,
+      "sha256": "972cc3f80a961d1f891d736e15530595d9f426c6a2485763facb71bbe2dc479a"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-firefox-family-0.json",
+      "bytes": 1845,
+      "sha256": "512337ef5e145dd9471cb2cebb294d1e44e496370c0536f07efcb5e7e3334698"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-firefox-family-1-pixels.json",
+      "bytes": 361,
+      "sha256": "2ffce612742f1340e3cdf47b0ae82befb8879bf3d95feddfa5d8a88c46ec0cf6"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-firefox-family-1.json",
+      "bytes": 1845,
+      "sha256": "ffe60c233f550c7c145ec032ee0d04fe805822bf67a5909f2baf2b60b6cdd96a"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-firefox-family-2-pixels.json",
+      "bytes": 362,
+      "sha256": "b8b3413355a037d63c9c85869d1dfcea474ea67939d77b234693087a5ab4242c"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-firefox-family-2.json",
+      "bytes": 1845,
+      "sha256": "fa1ea08c2d177532a17294f49bcbebe9237b0be2bd143ffab4728fe23eb7213a"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-firefox-three-props.json",
+      "bytes": 7462,
+      "sha256": "081f1c8b331df108cb103d5ef800f5688e2c83ebef09c35d2c327bd2ee219638"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-webkit-catalog-0-equipped.json",
+      "bytes": 4076,
+      "sha256": "179ca1c4516ded89f86c7e3fb1f6f2e8d245b797e8d57dcd2798a0bcb10b133b"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-webkit-catalog-1-equipped.json",
+      "bytes": 4078,
+      "sha256": "8ea9dd082955243dd2949b65d03e51048487d345b3cb776d7dfcd55aa2511b8b"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-webkit-catalog-2-equipped.json",
+      "bytes": 3907,
+      "sha256": "4807fdf665d0c219bc378cefba99b9ebc0bcda3cf0947d64c0be9cec73e01133"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-webkit-catalog-5-equipped.json",
+      "bytes": 4077,
+      "sha256": "5a1d85bf79d0b5a184fda7482665f38359da57a7b8b1bda1016ab70de2749cfe"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-webkit-catalog-7-equipped.json",
+      "bytes": 3904,
+      "sha256": "8a4039124ce07bb35477f21136980aeed9b12708af3b53019b3e6a83f587f372"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-webkit-family-0-pixels.json",
+      "bytes": 368,
+      "sha256": "502431e722e1919f026c90560ab0307ea5fbd4e87e3a6a2d60fa18bb78c9c5bb"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-webkit-family-0.json",
+      "bytes": 1845,
+      "sha256": "74f6325cc2dd127ff5ffbc2f761e5d7e4923eaa96c8ae351cdde946127c81e4f"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-webkit-family-1-pixels.json",
+      "bytes": 367,
+      "sha256": "c6462aca90d18501b7d3ffb7407cbbb7ff1696b3e8636b0fbccf991ef71546b8"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-webkit-family-1.json",
+      "bytes": 1845,
+      "sha256": "091078dcb40d014411b757778398554692d38f03152ce00ad923b71a147c304c"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-webkit-family-2-pixels.json",
+      "bytes": 367,
+      "sha256": "b15f783ee5ffb870d1cfb7746dda89a49c294e49b84409b25fa945f7c21c7f29"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-webkit-family-2.json",
+      "bytes": 1845,
+      "sha256": "be6d4f2ee664ffa766596831b71c3afb5596d6aef8d29d5c553a278c1fd8eb3f"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/ui/v3-visual-states/v3-webkit-three-props.json",
+      "bytes": 7312,
+      "sha256": "c6640b1178b5fb503304bd4ec711f77ca31d6d2d00d9974504636be1173585cf"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/victory-1280.webp",
+      "bytes": 947120,
+      "sha256": "46d279b15773275425be61f5622db9bf3ad9974863168f66c22798c1ed0961bc"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/workshop-1280.webp",
+      "bytes": 1236566,
+      "sha256": "eb07cdb8458c4a4c8f4e221866aa788aaaa132c06bc47ddc2efe0ea0e373cf01"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/release/workshop-1920.webp",
+      "bytes": 2472758,
+      "sha256": "b68dcc5772dc11cab76512befb5d6e7df7134e60c11d0b2a91b5385e856412fc"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/runtime-compatibility.json",
+      "bytes": 7336,
+      "sha256": "6f57137577a65901f6939dcacda77cb1f5e03206adca7a7c16e48faccb150123"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/unit-final.json",
+      "bytes": 90496,
+      "sha256": "9f9caaea7d1ed6a749de587f813fcbe48f0ee222fe2328d873551b6ce4576e71"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/validation-startup-failure.json",
+      "bytes": 893,
+      "sha256": "b07a14f32ddf59d853061e4291c215c27b50c72b023ca77cdfe593a6f3d68ab7"
+    },
+    {
+      "path": "docs/reviews/R3-17-traveler-notebook.md",
+      "bytes": 8608,
+      "sha256": "ba77c2f2b584a72cd4536364922ff496d46c52ca2ae66a6824cee4d1fb09ede8"
+    },
+    {
+      "path": "docs/reviews/R4-final-audit.md",
+      "bytes": 17967,
+      "sha256": "314f001e5d6655bce748c7d4a9ae264b5d3ef63087f86769800bc00987e39905"
+    },
+    {
+      "path": "docs/v0.4-campaign.md",
+      "bytes": 4363,
+      "sha256": "15cd276536ece708ebf0273f10640f97ca5b644364785d285007d4c84ac4e9f5"
+    },
+    {
+      "path": "docs/v0.5-notebook-interface.md",
+      "bytes": 10589,
+      "sha256": "e19c6570b3bbc3cf6fb3bcfa7392ca13098af1e49cab8fd295ae497c9bba2306"
+    },
+    {
+      "path": "goal-1/plan.md",
+      "bytes": 78402,
+      "sha256": "6f2cb07ea4fc5e15b8956d686f80def3cadfbf2d24e0c54c61c1622952d255e6"
+    },
+    {
+      "path": "index.html",
+      "bytes": 540,
+      "sha256": "9d1b00a5647a5b82b7efee333fe1731f53d8b80ce227152311192ee0f2261234"
+    },
+    {
+      "path": "openspec/project.md",
+      "bytes": 6688,
+      "sha256": "f3a53e14cb3a160bdd5955dee1b5774240e488316f4d38f1b329c0c21f24f2f0"
     },
     {
       "path": "public/assets/d/customers-atlas-v2.webp",
@@ -21,10 +1147,65 @@
       "path": "public/assets/d/notebook-cover-v1.webp",
       "bytes": 429704,
       "sha256": "3dfa792ac46bd940091764ac62fea2813db991178ed56d2c6c7920ebd430b1f9"
+    },
+    {
+      "path": "scripts/v3-directed.mjs",
+      "bytes": 11206,
+      "sha256": "d49f329d54aa5aa684d7ba57df65dbb083e2167420eb7dcbea5816c82dc81c92"
+    },
+    {
+      "path": "src/presentation-v3/app.ts",
+      "bytes": 47017,
+      "sha256": "c0d94490d8a26c66d8945b1234614c53346fd009dd76af69984cfe2b83fa97b9"
+    },
+    {
+      "path": "src/presentation-v3/art.ts",
+      "bytes": 1455,
+      "sha256": "27b41bf3a87620d6b2bbd9d4b79d99e7244dee11a50850101a15d7df6acd3460"
+    },
+    {
+      "path": "src/presentation-v3/notebook-ui.ts",
+      "bytes": 7415,
+      "sha256": "5f2ffca5ed813fb0fb6dbe1c6e42c705cd360655633a6b8408736bd2f74f2b54"
+    },
+    {
+      "path": "src/presentation-v3/notebook.css",
+      "bytes": 10996,
+      "sha256": "6dad449af5240bfde36427c289ce5ec7f9e2c93569d3fe5ec89e9209112a1d7b"
+    },
+    {
+      "path": "src/presentation-v3/scene-feedback.ts",
+      "bytes": 4900,
+      "sha256": "6d4d9d8f3c22f1186d8e06bec7ffe2884b95b3ab13936a72c2a698ee025e7df4"
+    },
+    {
+      "path": "src/presentation-v3/scene.ts",
+      "bytes": 5489,
+      "sha256": "4a54b8ea740a65261b51997edd2d505c0b72abbe6bd6356d58effcf50fa5eb3f"
+    },
+    {
+      "path": "src/v3-main.ts",
+      "bytes": 428,
+      "sha256": "2e8096920941b94e9f2dbebe1a0cd33db8cd506c24d01e8df5acacc0b5358b60"
+    },
+    {
+      "path": "tests/e2e/v3-campaign.spec.ts",
+      "bytes": 12214,
+      "sha256": "c4b3336acb4c6ce1e923da4fbe5da2b64ddc7c714a324ffd622f6deb0e095ab9"
+    },
+    {
+      "path": "tests/e2e/v3-notebook.spec.ts",
+      "bytes": 17270,
+      "sha256": "4757eafb3c5b08be5b259a668d203f4a34415952811d38f3ff9d5a46b64143a7"
+    },
+    {
+      "path": "tests/model/v3-directed.test.mjs",
+      "bytes": 2904,
+      "sha256": "9a1c1fbd4550f314801777f4f522e802d3d6ac56ade249d521c04dd561b2d49d"
     }
   ],
-  "totalFiles": 4,
-  "totalBytes": 894553,
+  "totalFiles": 240,
+  "totalBytes": 18745618,
   "localMedia": {
     "manifest": "docs/evidence/T11-4-2-3g/release/artifact-manifest.json",
     "files": 282,
