@@ -1,0 +1,20 @@
+{
+  "observedAt": "2026-10-20T20:17:40.706Z",
+  "scope": "Actual exec terminal observations; original failed attempt retained, then corrected evidence-tool assertion and successful isolated before observation. No production/model input modified.",
+  "attempts": [
+    {
+      "directory": "tmp/T11-4-2-3i6/before-guidance-evidence",
+      "execSession": 94252,
+      "actualExitCode": 1,
+      "failure": "Evidence tool incorrectly expected zero coins after two genuine automatic raw-blade settlements; actual 60 correctly includes their 30+30 recovery. Failed before browser launch.",
+      "successReceipt": false
+    },
+    {
+      "directory": "tmp/T11-4-2-3i6/before-guidance-evidence-fixed",
+      "execSession": 71211,
+      "actualExitCode": 0,
+      "stdout": "{\"completed\":true,\"observations\":6,\"checkedStates\":4,\"errors\":[],\"output\":\"tmp/T11-4-2-3i6/before-guidance-evidence-fixed\"}",
+      "successReceipt": true
+    }
+  ]
+}

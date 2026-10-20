@@ -2,13 +2,15 @@
 
 一款面向现代 PC 浏览器的轮次制锻造游戏。每轮只有三件铁坯：点击落锤让它升值，在断裂前决定交货、留剑还是回收，靠手艺和商人升级撑过契约。
 
-**当前首页为 v0.7「重燃十二盏灯 · 山口终章」：[本机试玩](http://127.0.0.1:4179/)**。三章十二天主线已接通：十二种打造委托、三次商人、六种事件、配方和炉具成长、三种结局、人物后日谈、完整炉谱与合法解锁的行脚挑战。左键直接敲剑，合格后交给来客；余剑可卖、回收、留给明天或换手艺。界面沿已选 D「行脚灯炉」，文字和操作均为真实组件。[终章操作指南](docs/v0.7-final-chapter-guide.md)和[本轮技术复核](docs/reviews/T11-4-2-3i5-final-chapter.md)记录实际范围与验证边界。
+**当前首页为 v0.7「重燃十二盏灯 · 山口终章」：[本机试玩](http://127.0.0.1:4179/)**。三章十二天主线已接通：十二种打造委托、三次商人、六种事件、配方和炉具成长、三种结局、人物后日谈、完整炉谱与合法解锁的行脚挑战。左键直接敲剑，合格后交给来客；余剑可卖、回收、留给明天或换手艺。界面沿已选 D「行脚灯炉」，文字和操作均为真实组件。[终章操作指南](docs/v0.7-final-chapter-guide.md)、[终章技术复核](docs/reviews/T11-4-2-3i5-final-chapter.md)和[当前平衡／引导报告](docs/reviews/T11-4-2-3i6-v4-balance.md)记录实际范围与验证边界。
 
 刷新原标签页可见新标题；已有第8天进度可点“沿灯路，去下一天”，保留配方、手艺、留剑与随机状态。新行程使用独立v4存档；旧契约从“行旅种子与旧路”进入[旧版炉前](http://127.0.0.1:4179/v3.html)，旧D细锻和B版入口也保留。不会自动转换或清空旧档。
 
 终章要求两次连锻、裂护刃/无裂替代、旧剑接力/两柄新剑和最终无裂重锋；护灯剑交出后仍需收工，才按真实完成数与关键约定决定结局。“灯下归途”也可能已经做成护灯剑；未完成和未抵达分别记录。炉谱展示十二份最佳真实作品、配方熟练与手艺见闻，成功结局安全保存后才解锁挑战。明确不保存试玩不写入新炉谱，离开前可导出。
 
-[完整批准方案](docs/v0.7-complete-game-proposal.md)、[终章界面合同](docs/v0.7-final-chapter-interface.md)、[内核合同](docs/v0.7-core-contract.md)、[保存合同](docs/v0.7-persistence-contract.md)和[九张终章美术原件/提示词](design/d/v07-chapter3/README.md)可查；前两章说明和原件继续保留。整体目标仍在推进：千种子多策略平衡、最终广DPR/原生生命周期/音频性能矩阵、真人体验与最大复核尚未完成。本机预览未公网部署。
+开场与灯路回顾现在明确目标：守住第4、8、12天的关键约定，至少完成10项并保有契印，才能十二灯复明。关键日收工前会说明失约后果；护炉契保印不补约。旧刃回收没有架上剑时，可用新入口返回铁砧，选余剑点“留给明天”挂架后再回来确认，今日坯也可交换；导航不会自动交剑。
+
+[完整批准方案](docs/v0.7-complete-game-proposal.md)、[终章界面合同](docs/v0.7-final-chapter-interface.md)、[内核合同](docs/v0.7-core-contract.md)、[保存合同](docs/v0.7-persistence-contract.md)和[九张终章美术原件/提示词](design/d/v07-chapter3/README.md)可查；前两章说明和原件继续保留。30组共享1000种子的30,000终态已完成生产回放和另一次全量独立审计；固定7锤胜率28%，成长／留剑对胜率作用较弱、后期金币富余的风险如实保留，模型不代表真人满意。整体目标还包括最终广DPR/原生生命周期/音频性能矩阵、真人体验与最大复核。本机预览未公网部署。
 
 历史 [v0.6炉前](docs/v0.6-workshop-interface.md)和[R3.18](docs/reviews/R3-18-game-studio-forge-ui.md)保留原交付身份。[ForgeTax完整实况复核](docs/research/2026-10-19-forgetax-session-study.md)与Steam评论研究记录了参考依据；当前优化依据用户对主线、成长、内容的反馈推进。
 
@@ -107,7 +109,18 @@ npx playwright test --config playwright.v2.config.ts
 
 新版配置使用4182端口、单worker、无重试。R3.7首版基线为六个Chromium/Firefox/WebKit的DPR1/2项目各35项加原生Chrome两项，共212项；本次主界面二版新增视觉流程用例，实际枚举和结果以当前报告为准，不能把旧212称为新构建全量通过。每个项目都包含纯键盘十二轮、三商人、失败重开和组合保存故障；两种桌面尺寸由规格明确覆盖。输出`test-results/v2-release/`与`test-results/v2-release-report.json`，不会覆盖旧版/存储报告。原生Chrome窗口/缓存探测独立标记，不会伪标为Firefox/WebKit。运行中不要重建同一个dist；具体结果以技术验收报告为准。Playwright WebKit引擎不是在真实Safari产品上验收，Chromium也不等同真实Edge。[贡献说明](CONTRIBUTING.md)列出证据归档与边界。
 
-整局模拟与回放：
+当前 forge-v4 模型与独立审计（先构建，每个输出路径必须新建）：
+
+```bash
+npm run build
+node --test tests/model/v4-policy.test.mjs tests/model/v4-metrics.test.mjs tests/model/v4-model.test.mjs tests/model/v4-audit.test.mjs
+node scripts/v4-model.mjs --seeds 1000 --workers 6 --out tmp/my-v4-model --seed-prefix v4-balance
+node scripts/audit-v4-model.mjs --input tmp/my-v4-model --out tmp/my-v4-audit.json --seeds 1000 --prefix v4-balance --workers 6
+```
+
+30组含打法、消融、固定点击、负对照和镜像，并非30种独立玩法。每局完整journal／终态保存在gzip中；独立工具另外重放全部终态、核对经济与全部摘要。运行期间不得修改源、测试、配置、公开资源或构建；观察超时应继续读取原进程，不能重复启动。已归档批次绑定冻结提交`13538b0`，复核它须按[归档复现说明](docs/evidence/T11-4-2-3i6-model/README.md)恢复独立checkout和完整原构建，不能拿修改后的界面源码冒充原输入。策略和指标解释见[验证合同](docs/v0.7-balance-validation-contract.md)。
+
+历史 forge-v1 模拟与回放（会编译旧tmp/simulation；维护现有证据时在独立checkout复现）：
 
 ```bash
 npm run simulate -- --seeds 1000 --workers 6 --out tmp/my-verification

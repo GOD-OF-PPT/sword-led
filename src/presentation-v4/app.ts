@@ -13,7 +13,7 @@ import {element,enableKeyboardNavigation} from '../presentation/dom.js';
 import {V4_TEMPLATE} from './shell.js';
 import {createForgeRenderer} from './forge.js';
 import {noticeFromEvents} from './story.js';
-import {journeyScreen,journeyOutcome} from './journey.js';
+import {journeyScreen,journeyOutcome,CAMPAIGN_GOAL,isCriticalDay} from './journey.js';
 import {buildJourneyStage} from './stages.js';
 import {collectionBook,collectionWorkPage} from './collection-ui.js';
 import type {ForgeNotice} from './story.js';
@@ -120,7 +120,7 @@ export function mountV4(root:HTMLElement,port:V4Session){
  }
  function renderWorkshop(s:RunState){
   const v=getRunView(s),b=current(),active=v.blades.find(p=>p.blade.id===b?.id),strikeReady=!!active?.canStrike&&canAct()&&!busy;
-  text('v4-day',`${s.mode==='challenge'?'行脚挑战 · ':''}第${s.day}天 · ${v.chapter.title.split(' · ')[1]??v.chapter.title}`);text('v4-goal-name',`${v.commission.name} · ${v.commission.title}`);text('v4-goal-condition',v.commission.routes.map(r=>r.description).join(' 或 '));text('v4-goal-progress',v.commission.progress.complete?'✓ 今日委托已完成':v.commission.progress.routes.map(r=>`${r.count}/${r.required}`).join(' 或 '));
+  text('v4-day',`${s.mode==='challenge'?'行脚挑战 · ':''}第${s.day}天 · ${v.chapter.title.split(' · ')[1]??v.chapter.title}${isCriticalDay(s.day)?' · 关键约定':''}`);text('v4-goal-name',`${v.commission.name} · ${v.commission.title}`);text('v4-goal-condition',v.commission.routes.map(r=>r.description).join(' 或 '));text('v4-goal-progress',v.commission.progress.complete?'✓ 今日委托已完成':v.commission.progress.routes.map(r=>`${r.count}/${r.required}`).join(' 或 '));
   text('v4-seals',`${s.seals}/3`);text('v4-coins',fmt(s.coins));text('v4-value',b?fmt(b.value):'—');text('v4-condition',b?`${RECIPES[b.recipe].name} · ${b.status==='broken'?'断裂':b.cracked?'已有裂纹':'无裂纹'}`:'铁砧已空，安排这一炉收工');
   text('v4-craft-record',b?`等级 ${b.level} · 已完成安全连锻 ${b.bursts}次`:'');
   text('v4-risk',active?(active.odds.burst?'下一锤安全连锻，不会裂':`下一锤裂损 ${active.odds.crack/10}%${b?.cracked?' · 再裂会断':' · 首裂会掉价'}`):s.reserveId===b?.id?'这柄在剑架上，先取回再加工':'余剑已安排，可收工');
@@ -164,7 +164,16 @@ export function mountV4(root:HTMLElement,port:V4Session){
   const input=newInput(mode);const execute=(confirmed=false)=>{const r=port.startNewGame(input,{generation:snapshot.generation,confirmed});if(!r.ok){resultError(r.error);if(r.error==='collection_pending')saveDetails();return;}notice=null;continueGame();void audio.gesture();};
   const main=snapshot.load?.main;if(state()||main?.status==='invalid'||snapshot.load?.backup.status==='valid')confirm(mode==='challenge'?'带着炉谱，开启行脚挑战？':'另启一程？',`${mode==='challenge'?'挑战会重排章内委托，沿用相同锻造规则。':''}当前v4行程会被新旅程替换，合法旧主档会保留为备份。旧版契约不受影响；先导出想保留的进度。`,()=>execute(true));else execute();
  }
- function settle(){const s=state();if(!s)return;const p=getRunView(s).settlement;confirm('收好这一炉',`${p.complete?'主委托已完成。':p.protected?'护炉契会保住本次契印。':`尚未完成主委托，收工后契印为${p.sealsAfter}/3。`} 余下${p.remaining.length}柄回收${fmt(p.recovered)}金币；${s.reserveId?'剑架上的一柄会留下。':'这次没有留剑。'}`,()=>send({type:'settle'}));}
+ function settle(){
+  const s=state();if(!s)return;const p=getRunView(s).settlement,body=element('div');
+  body.append(element('p',p.complete?'今日主委托已完成。':p.protected?'护炉契这次只保住契印，不补回未完成的约定；本局护印机会随后用尽。':`尚未完成主委托，收工后契印为${p.sealsAfter}/3。`));
+  if(isCriticalDay(s.day)&&!p.complete)body.append(element('p','今天是关键约定。现在收工会留下失约的缺口；之后补回契印或完成其他单，也补不上这一站，无法达成“十二灯复明”。'));
+  if(p.sealsAfter===0)body.append(element('p','契印将归零，本局在这里停下；真实交付和成长留在这次行程，结束后可查看或导出。'));
+  else if(s.day===12)body.append(element('p','这是最后一站；收工后按沿途关键约定、至少10项完成和剩余契印判定这次结局。'));
+  else if(!p.complete)body.append(element('p',`仍可带着${p.sealsAfter}枚契印去下一天；这次失约会保留在灯路回顾里。`));
+  body.append(element('p',`余下${p.remaining.length}柄回收${fmt(p.recovered)}金币；${s.reserveId?'剑架上的一柄会留下。':'这次没有留剑。'}`));
+  confirm('收好这一炉',body,()=>send({type:'settle'}));
+ }
  function replaceTrait(trait:Trait,command:(old:Trait)=>Action,intro:HTMLElement|string,cancelLabel:string){
   const s=state();if(!s)return;const body=element('div');body.append(typeof intro==='string'?element('p',intro):intro,element('h3',`新手艺 · ${TRAITS[trait].name}`),traitArt(trait),element('p',TRAITS[trait].text));
   const grid=element('div',undefined,'v4-choice-grid');for(const old of s.traits){const card=element('article',undefined,'v4-card');card.append(traitArt(old),element('h3',TRAITS[old].name),element('p',TRAITS[old].text),action(`换下${TRAITS[old].name}`,()=>confirm('确定换手艺？',`${TRAITS[old].name}将离开行囊，换成${TRAITS[trait].name}。已经使用的本局护印不会恢复。`,()=>send(command(old)))));grid.append(card);}body.append(grid);openModal('行囊已满，换下哪一门？',body,[{label:cancelLabel,run:()=>closeModal()}],'replacement');
@@ -183,6 +192,7 @@ export function mountV4(root:HTMLElement,port:V4Session){
  }
  function journeyPanel(){
   const s=state();if(!s)return;const v=getRunView(s),partialRelay=v.commission.id===11&&!v.commission.progress.complete&&v.commission.progress.routes.some(r=>r.count>0),destination=partialRelay?11:s.day>=9?12:s.day>=5?8:4,outcome=journeyOutcome(s,destination),body=element('div',undefined,'v4-journey-review');
+  body.append(element('p',CAMPAIGN_GOAL));
   const figure=element('figure'),image=element('img');image.src=outcome.image;image.alt=outcome.commission.title+' · '+(outcome.complete?'委托已完成':`实际交付 ${outcome.progressText}`);image.dataset.journeyScene='true';image.className='v4-partial-journey-image';image.onerror=()=>{image.onerror=null;image.src='/assets/d/forge-backdrop-v2.webp';};figure.append(image,element('figcaption',`${outcome.commission.title} · ${outcome.complete?'已完成':outcome.progressText}`));body.append(figure);
   const works=element('div',undefined,'v4-journey-works');for(const b of outcome.matchedBlades){const card=element('div',undefined,'v4-journey-work');card.append(thumb(b),element('p',`${RECIPES[b.recipe].name} · 身价${fmt(b.value)} · 已交付`));works.append(card);}body.append(works);
   const lamps=element('ol',undefined,'v4-journey-lamps');
@@ -202,7 +212,40 @@ export function mountV4(root:HTMLElement,port:V4Session){
   openModal(`灯路回顾 · ${v.chapter.title}`,body,[{label:'回铁砧',primary:true,run:()=>closeModal()}],'journey');
  }
  function shop(){const s=state();if(!s)return;const market=getRunView(s).merchant;if(!market)return;const body=element('div',undefined,'v4-shop-grid');for(const t of market.offers){const card=element('article',undefined,'v4-card');card.append(traitArt(t.id),element('h3',t.name),element('p',t.text),action(t.sold?'已换走':t.owned?'已经带着':'用当前剑来换',()=>buyTrait(t.id),true,t.sold||t.owned||!current()||current()?.status!=='active'||current()?.id===s.reserveId));body.append(card);}const supply=element('article',undefined,'v4-card');supply.append(element('h3','下一批来料'),element('p',`${fmt(market.upgrade)}金币 · 后续底价提高50%，当前剑不变`),action(s.upgraded?'本次已备好':'准备更好的铁料',()=>confirm('为下一炉备料',`支付${fmt(market.upgrade)}金币，提高之后的新坯底价。`,()=>send({type:'upgrade'})),false,!market.canUpgrade));body.append(supply);const repair=element('article',undefined,'v4-card');repair.append(element('h3','补回一枚契印'),element('p',`${fmt(market.repair)}金币 · 每次到访限一次`),action('请商人修补',()=>confirm('修补契印',`支付${fmt(market.repair)}金币，契印加一（最多三枚）。`,()=>send({type:'repair'})),false,!market.canRepair));body.append(repair);openModal('行脚商人的炉边摊',body,[{label:'回铁砧',run:()=>closeModal()}],'shop');}
- function eventModal(){const s=state();if(!s)return;const v=getRunView(s).event;if(!v||v.status!=='available')return;const body=element('div');body.append(prop(v.id),element('p',v.request),element('p',v.result));const accept=(pieceId?:string)=>{const q=eventQuote(s,pieceId);if(!q.allowed){setStatus('当前对象或金币不满足这次选择。');return;}confirm(v.name,`${v.result}${q.cost?` 支付${fmt(q.cost)}金币。`:''}`,()=>send({type:'chooseEvent',choice:'accept',...(pieceId?{pieceId}:{})}));};if(v.piece!=='none'){const grid=element('div',undefined,'v4-choice-grid'),candidates=s.blades.filter(b=>b.status==='active'&&(v.piece==='reserve'?s.reserveId===b.id:s.reserveId!==b.id));for(const b of candidates){const card=element('div',undefined,'v4-card');card.dataset.eventPiece=b.id;card.append(thumb(b),element('p',`${b.suppliedDay<s.day?'此前留下':'今日来料'} · ${b.cracked?'已有裂纹':'完好'} · 锤势${b.charge}/6`),action(`选这柄 · ${RECIPES[b.recipe].name} ${fmt(b.value)}`,()=>accept(b.id)));grid.append(card);}if(!candidates.length)grid.append(element('p',v.piece==='reserve'?'剑架上没有留剑，可以拒绝这次交换。':'没有可交出的余剑，可以拒绝这次邀请。'));body.append(grid);}else{const q=eventQuote(s);body.append(action(q.cost?`接受 · ${fmt(q.cost)}金币`:'接受这次选择',()=>accept(),true,!q.allowed));if(!q.allowed)body.append(element('p',q.error==='already_owned'?'已有尚未消耗的保价资格。':'金币不足，可以保留当前资源。'));}openModal(v.name,body,[{label:'暂不决定',run:()=>closeModal()},{label:'拒绝，保留眼前资源',run:()=>{closeModal();send({type:'chooseEvent',choice:'decline'});}}],'event');}
+ function eventModal(){
+  const s=state();if(!s)return;const view=getRunView(s),v=view.event;if(!v||v.status!=='available')return;
+  const body=element('div');body.append(prop(v.id),element('p',v.request),element('p',`接受后：${v.result}`));
+  const choices:ModalAction[]=[{label:'暂不决定',run:()=>closeModal()},{label:'拒绝，保留眼前资源',run:()=>{closeModal();send({type:'chooseEvent',choice:'decline'});}}];
+  const accept=(pieceId?:string)=>{
+   const q=eventQuote(s,pieceId);if(!q.allowed){setStatus('当前对象或金币不满足这次选择。');return;}
+   const b=pieceId?s.blades.find(blade=>blade.id===pieceId):null,copy=element('div');
+   if(b)copy.append(thumb(b),element('p',`所选${RECIPES[b.recipe].name}身价${fmt(b.value)}。交出后不再兼作交付或留剑。`));
+   copy.append(element('p',v.result+(q.cost?` 支付${fmt(q.cost)}金币。`:'')));
+   if(v.id==='salvage'&&view.next?.commission.routes.some(route=>route.age==='old'))copy.append(element('p','明天的纸单含旧剑路线；换出后需另备留剑，或采用纸单上的其他路线。'));
+   confirm(v.name,copy,()=>send({type:'chooseEvent',choice:'accept',...(pieceId?{pieceId}:{})}));
+  };
+  if(v.piece!=='none'){
+   const grid=element('div',undefined,'v4-choice-grid'),candidates=s.blades.filter(b=>b.status==='active'&&(v.piece==='reserve'?s.reserveId===b.id:s.reserveId!==b.id));
+   for(const b of candidates){const card=element('div',undefined,'v4-card');card.dataset.eventPiece=b.id;card.append(thumb(b),element('p',`${b.suppliedDay<s.day?'此前留下':'今日来料'} · ${b.cracked?'已有裂纹':'完好'} · 锤势${b.charge}/6`),action(`选这柄 · ${RECIPES[b.recipe].name} ${fmt(b.value)}`,()=>accept(b.id)));grid.append(card);}
+   if(!candidates.length){
+    const spare=s.blades.some(b=>b.status==='active'&&b.id!==s.reserveId);
+    if(v.piece==='reserve'&&spare){
+     grid.append(element('p','剑架上还没有剑。可以先回铁砧选一柄愿意换出的余剑，点“留给明天”挂上剑架，再回来交换；今日铁坯也可以挂上。不想换时可拒绝。'));
+     choices.unshift({label:'回铁砧选剑挂上',primary:true,run:()=>{
+      closeModal();queueMicrotask(()=>{if(disposed||modal||route!=='game'||state()?.phase!=='workshop'||!canAct())return;
+       const target=current()?.status==='active'&&!button('v4-reserve').disabled?button('v4-reserve'):find('v4-inventory').querySelector<HTMLButtonElement>('button:not(:disabled)');
+       target?.focus({preventScroll:true});setStatus('选一柄余剑，点“留给明天”挂上剑架，再回旧刃回收确认交换。');
+      });
+     }});
+    }else grid.append(element('p',v.piece==='reserve'?'剑架和铁砧上都没有可换出的剑，可以拒绝这次交换。':'没有可交出的余剑，可以拒绝这次邀请。'));
+   }
+   body.append(grid);
+  }else{
+   const q=eventQuote(s);body.append(action(q.cost?`接受 · ${fmt(q.cost)}金币`:'接受这次选择',()=>accept(),true,!q.allowed));
+   if(!q.allowed)body.append(element('p',q.error==='already_owned'?'已有尚未消耗的保价资格。':'金币不足，可以保留当前资源。'));
+  }
+  openModal(v.name,body,choices,'event');
+ }
  function book(){const body=collectionBook(collection.data,{pending:collection.pending,problem:!!collection.problem,canStart:!button('v4-start').disabled,thumb,action,viewWork,challenge:()=>startNew('challenge')});openModal('炉谱 · 带得走的手艺',body,[{label:'收好炉谱',run:()=>closeModal()},{label:'导出炉谱',run:exportCollection}],'collection');}
  function viewWork(id:number){const work=collection.data.works.find(w=>w.commissionId===id);if(!work){book();return;}openModal(COMMISSIONS[id-1]!.title+' · 留名作品',collectionWorkPage(work,thumb),[{label:'回到炉谱',run:book},{label:'收好作品',run:()=>closeModal()}],'collection-work');}
  function settings(){const body=element('div'),muted=element('input'),volume=element('input'),less=element('input');muted.type='checkbox';muted.checked=prefs.value.muted;volume.type='range';volume.min='0';volume.max='100';volume.value=String(prefs.value.volume);less.type='checkbox';less.checked=prefs.value.reducedMotion;for(const [label,control]of [['静音',muted],['敲击音量',volume],['减弱动效',less]]as const){const row=element('label',undefined,'v4-setting-row');row.append(element('span',label),control);body.append(row);}muted.onchange=()=>preferences.update({muted:muted.checked});volume.oninput=()=>preferences.update({volume:Number(volume.value)});less.onchange=()=>preferences.update({reducedMotion:less.checked});const status=element('p');status.id='v4-preference-status';body.append(status,action('试听敲击声',()=>{audio.setMode('preview');void audio.preview();}));openModal('声音与动效',body,[{label:'保存失败时重试',run:()=>{preferences.retry();updatePreferenceStatus();}},{label:'收好',primary:true,run:()=>closeModal()}],'settings');updatePreferenceStatus();}

@@ -24,11 +24,21 @@ quality-final-memory357单测/29文件、strict/网页+SDK构建终态0，480质
 
 已先核原26789命令与旧HTTP，有意切换到71430/4179/新75文件快照tmp/previews/T11-4-2-3i5-mountain-pass。全部HTTP同最终构建；隔离实际3左键+交剑/刷新、实际第8天→9及护灯已成归途→炉谱/作品/真实导出，共14对象、0错误。未强刷用户标签/触碰用户档。主5a21ccb298af8516f57423dfd724041810b37ddc已push实际终态0，fresh远程main同SHA，private/main保持，375文件逐blob匹配，源推送后干净。回执曾ENOSPC，源码未变；整理尝试唯一临时PNG已按已推送相同副本恢复，没有新增归档/源码删除。tasks已按真实交付勾本task，文档回执另提交并在结束前再核实际push/远程/HEAD/blob/HTTP。这是上阶段交付边界；本轮整体goal ACTIVE并开始下一项3i.6。
 
-## 3i.6实际运行检查点
+## 3i.6实际交付检查点
 
-生产/policy/metrics最后Node18项终态0（session71269，29.047秒）；独立auditor最后8项终态0（agent54356，7.558秒），原副本/拒绝含1000命令精确终态和worker消息后异常。串行/4worker的30个v4-pilot样例原bytes、统计和witness完全一致；formal前2种子的60局preflight（wrapper81055/child81056，session46232）和60局独立audit（81136/81145，session20670）均实际exit0、首尾输入无漂移。旧v3数据不覆盖这里。
+本task的实现与技术验证已完成，当前正在提交/推送并核对远程，tasks暂不勾选直到真实交付。整个goal ACTIVE；下一项是T11.4.3，不能先做或宣称最大R4/真人H通过。
 
-当前唯一活跃模型：token v4-balance-formal-01，wrapper81355/child81356，exec session34179，dataset tmp/T11-4-2-3i6/formal，进程/日志在formal-process，实际start 2026-10-20T20:02:15.211Z。预期30,000 producer回放，尚无terminal则不能称完成/重启；每25片真实exit0后接收。不得改scripts/tests/src/public/config/dist/合同/profiles/资格依据直到实际terminal；更新本plan/tasks或tmp记录不影响输入。完整正式后必须独立审计同30,000，再按合同调查内容和引导，才能收尾本task。新增10个关键工具/依据的原字节和hash已复制frozen-tools，对应实际formal baseline。
+正式模型81355/81356/session34179于2026-10-20T21:05:47.851Z实际exit0，30000终态/30000正式回放；独立88377/88378/session93891于21:31:29.916Z实际exit0，另30000完整重放、2000镜像、全部账目/行/摘要相等，两批输入无漂移。collector98052实际exit0，封签docs/evidence/T11-4-2-3i6-model共98文件，root再核全部hash；60 fullrecord与60 rawrow重合，额外13个去重witness各经SDK/auditRecord回放，不是第三次30k。模型工具源13538b01dd3053f5befb09fd22a4ed446f5a6dc0已真实push，原341输入逐blob匹配；启动时工具未commit，运行中提交原字节不变。
+
+正式55/57特性正向；两个salvage接受/消费为0不回填。独立定向95344/95345实际exit0，1条8命令完整API journal/5拒绝/14观察校验，60+160+20=240，另外root终态回放1；26原件与核验JSON已归档。主统计固定7胜280/1000，普通基线975；成长/留剑胜率差小、后期金币富余如实保留，不宣称趣味/经济张力通过。
+
+全审计和模型封签后，才应用3展示TS：开场/手札目标、关键日标记、收工保印/关键失约/归零后果、旧刃挂剑导航与真身价确认。核心/保存/旧入口/公开规则和8SDK原字节保持；原341中338源不变，75运行73路径同，index更新及主JS改名。quality84373实际exit0：357/29、严格类型/双构建75，489执行输入稳定。
+
+成功引导27794（93256/93257）真实exit0，三引擎×两PC尺寸共42定向消费者，无漂移/页面错误，29文档/19唯一完整回放。首UI红94464因消费者漏匹配“完成”字，0完成；精确regex改动/原字节/hash保留，产品字节没变，后批独立全42过。归档再回放49次出现/21唯一（成功29+红11+before7+首工具误断言2），before主要fixture仍4。before旧工具误断言自动回收0而实际60，失败原件保留。docs/evidence/T11-4-2-3i6-guidance最终封签213/211索引、201原件副本，10 after+6 before代表PNG与全60正文及全部未复制PNG/runtime映射；root核完211hash。不是最终广DPR/原生生命周期/音频性能/真人验收。
+
+先核旧71430/4179命令与75HTTP再有意停止，原地址现96273/会话47596，快照tmp/previews/T11-4-2-3i6-guidance；独立测试4198/93125仍同快照。官方smoke28383实际exit0：75HTTP、3可信左键/交付/重载、原实际day8→9与护灯已成归途/作品/导出，14观察0错误；root另15份含实际导出回放。未读写用户页/profile/进度，没强刷现有页。docs/evidence/T11-4-2-3i6-preview保存该边界。源/产物/证据明细与局限见docs/reviews/T11-4-2-3i6-v4-balance.md。
+
+新鲜保护核验83文件匹配：原input/批准、21旧编译、58原美术和冻结index/编译依据；0316备份ref及commit保持。OpenSpec strict实际exit0。已备回滚为旧快照/新增revert，无规则或档迁移。当前仅剩源交付→真实push/fresh remote/全部Git blob→标任务/回执提交→结束本task；不停止在计划，也不预填未知源SHA。后续成长/留剑/经营动机可按真人与明确新规则身份设计迭代，不在forge-v4下偷改。
 
 ## 当前3i.6执行方案
 

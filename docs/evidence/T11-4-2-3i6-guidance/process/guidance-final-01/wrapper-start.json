@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "kind": "guidance-consumer-wrapper",
+  "token": "guidance-final-01",
+  "pid": 93187,
+  "childPid": null,
+  "startedAt": "2026-10-20T21:36:27.638Z",
+  "command": [
+    "/Users/gordon/.nvm/versions/node/v22.12.0/bin/node",
+    "tmp/T11-4-2-3i6/guidance-consumers.mjs",
+    "--ack-guidance-built",
+    "--url",
+    "http://127.0.0.1:4198/",
+    "--snapshot",
+    "tmp/previews/T11-4-2-3i6-guidance",
+    "--out",
+    "tmp/T11-4-2-3i6/guidance-final"
+  ],
+  "root": "/Users/gordon/githome/sword-led",
+  "consumerOut": "tmp/T11-4-2-3i6/guidance-final",
+  "snapshot": "tmp/previews/T11-4-2-3i6-guidance",
+  "baseURL": "http://127.0.0.1:4198",
+  "wrapper": {
+    "path": "tmp/T11-4-2-3i6/run-guidance.mjs",
+    "sha256": "2e1b422b39efbaeef2f03ed84fb5c4ce2034c5714f8e6b05d8de4accfc9ff338",
+    "bytes": 19542
+  },
+  "consumer": {
+    "path": "tmp/T11-4-2-3i6/guidance-consumers.mjs",
+    "sha256": "34310d1fc8e63c8291d37f696f13c05f66850a3b97177b346d1e64ebfd848502",
+    "bytes": 23877
+  },
+  "extraInputs": [
+    "tmp/T11-4-2-3i6/run-guidance.mjs",
+    "tmp/T11-4-2-3i6/guidance-consumers.mjs",
+    "tmp/previews/T11-4-2-3i6-guidance",
+    "docs/evidence/T11-4-2-3i1/witness-fixed/complete.json",
+    "tmp/previews/T11-4-2-3i5-mountain-pass/browser-session-BQdQqpuu.js",
+    "tmp/previews/T11-4-2-3i5-mountain-pass/core-CvAZnNjA.js",
+    "tmp/previews/T11-4-2-3i5-mountain-pass/rules-CAo3EZyg.js",
+    "tmp/previews/T11-4-2-3i5-mountain-pass/sword-led-core.js",
+    "tmp/previews/T11-4-2-3i5-mountain-pass/sword-led-session.js",
+    "tmp/previews/T11-4-2-3i5-mountain-pass/sword-led-v2.js",
+    "tmp/previews/T11-4-2-3i5-mountain-pass/sword-led-v3.js",
+    "tmp/previews/T11-4-2-3i5-mountain-pass/sword-led-v4.js"
+  ],
+  "officialPreview": {
+    "port": 4179,
+    "scope": "This wrapper neither contacts, starts, replaces, nor refreshes the official preview or any user browser."
+  },
+  "scope": "Actual wrapper start before input capture; child has not been forked.",
+  "validationComplete": false
+}

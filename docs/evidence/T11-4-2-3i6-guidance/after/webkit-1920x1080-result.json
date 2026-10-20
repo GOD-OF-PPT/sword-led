@@ -1,0 +1,78 @@
+{
+  "project": "webkit-1920x1080",
+  "browserVersion": "27.2",
+  "cases": [
+    {
+      "id": "opening-and-journey",
+      "scope": "Actual isolated new-game creation; zero gameplay commands; reading/cancelling keeps saved bytes unchanged.",
+      "screenshot": "screens/webkit-1920x1080/opening-full-goal.png",
+      "text": "screens/webkit-1920x1080/opening-full-goal.txt",
+      "journey": {
+        "screenshot": "screens/webkit-1920x1080/journey-full-goal.png",
+        "text": "screens/webkit-1920x1080/journey-full-goal.txt"
+      }
+    },
+    {
+      "id": "ordinary-settlement-cancel",
+      "scope": "Declared restored legal boundary. Confirmation is read and cancelled; no settlement command is sent.",
+      "body": "尚未完成主委托，收工后契印为2/3。\n\n仍可带着2枚契印去下一天；这次失约会保留在灯路回顾里。\n\n余下3柄回收30金币；这次没有留剑。",
+      "savedSlotsUnchanged": true,
+      "screenshot": "screens/webkit-1920x1080/ordinary-settlement.png",
+      "text": "screens/webkit-1920x1080/ordinary-settlement.txt"
+    },
+    {
+      "id": "critical-settlement-cancel",
+      "scope": "Declared restored legal boundary. Confirmation is read and cancelled; no settlement command is sent.",
+      "body": "尚未完成主委托，收工后契印为2/3。\n\n今天是关键约定。现在收工会留下失约的缺口；之后补回契印或完成其他单，也补不上这一站，无法达成“十二灯复明”。\n\n仍可带着2枚契印去下一天；这次失约会保留在灯路回顾里。\n\n余下3柄回收54金币；这次没有留剑。",
+      "savedSlotsUnchanged": true,
+      "screenshot": "screens/webkit-1920x1080/critical-settlement.png",
+      "text": "screens/webkit-1920x1080/critical-settlement.txt"
+    },
+    {
+      "id": "protectedCritical-settlement-cancel",
+      "scope": "Declared restored legal boundary. Confirmation is read and cancelled; no settlement command is sent.",
+      "body": "护炉契这次只保住契印，不补回未完成的约定；本局护印机会随后用尽。\n\n今天是关键约定。现在收工会留下失约的缺口；之后补回契印或完成其他单，也补不上这一站，无法达成“十二灯复明”。\n\n仍可带着3枚契印去下一天；这次失约会保留在灯路回顾里。\n\n余下3柄回收135金币；这次没有留剑。",
+      "savedSlotsUnchanged": true,
+      "screenshot": "screens/webkit-1920x1080/protectedCritical-settlement.png",
+      "text": "screens/webkit-1920x1080/protectedCritical-settlement.txt"
+    },
+    {
+      "id": "exhausted-settlement-cancel",
+      "scope": "Declared restored legal boundary. Confirmation is read and cancelled; no settlement command is sent.",
+      "body": "尚未完成主委托，收工后契印为0/3。\n\n今天是关键约定。现在收工会留下失约的缺口；之后补回契印或完成其他单，也补不上这一站，无法达成“十二灯复明”。\n\n契印将归零，本局在这里停下；真实交付和成长留在这次行程，结束后可查看或导出。\n\n余下3柄回收30金币；这次没有留剑。",
+      "savedSlotsUnchanged": true,
+      "screenshot": "screens/webkit-1920x1080/exhausted-settlement.png",
+      "text": "screens/webkit-1920x1080/exhausted-settlement.txt"
+    },
+    {
+      "id": "salvage-guided-exchange",
+      "scope": "Restored boundary → navigation/selection no commands → actual reserve → cancel preserves exact saved slots → actual unique 160 event acceptance.",
+      "navigationNoCommand": true,
+      "cancelSavedSlotsUnchanged": true,
+      "acceptedCommandCount": 2,
+      "coinDelta": 160,
+      "pieceId": "d3-1",
+      "body": "所选轻刃身价40。交出后不再兼作交付或留剑。\n\n160金币入袋，旧剑离开剑架，不再兼作交差或保险。",
+      "screenshot": "screens/webkit-1920x1080/salvage-no-reserve.png",
+      "text": "screens/webkit-1920x1080/salvage-no-reserve.txt",
+      "confirmation": {
+        "screenshot": "screens/webkit-1920x1080/salvage-confirm-values.png",
+        "text": "screens/webkit-1920x1080/salvage-confirm-values.txt"
+      },
+      "accepted": {
+        "screenshot": "screens/webkit-1920x1080/salvage-actual-once.png",
+        "text": "screens/webkit-1920x1080/salvage-actual-once.txt"
+      }
+    },
+    {
+      "id": "salvage-empty-cancel",
+      "scope": "Declared legal day3 boundary, then three actual SDK scrap commands produced an empty workshop before restoration. UI only opens/cancels the event; no UI economic command is sent.",
+      "body": "行商愿用160金币换走架上的旧剑。交出去，就没有这柄旧剑可作下一轮委托。\n\n接受后：160金币入袋，旧剑离开剑架，不再兼作交差或保险。\n\n剑架和铁砧上都没有可换出的剑，可以拒绝这次交换。",
+      "navigationAbsent": true,
+      "candidates": 0,
+      "savedSlotsUnchanged": true,
+      "screenshot": "screens/webkit-1920x1080/salvage-no-active-sword.png",
+      "text": "screens/webkit-1920x1080/salvage-no-active-sword.txt"
+    }
+  ]
+}

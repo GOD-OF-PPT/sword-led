@@ -1,0 +1,1212 @@
+{
+  "schemaVersion": 1,
+  "validationComplete": false,
+  "status": "awaiting-final-completion-receipt",
+  "completionGate": "Require collector exit 0, no COLLECTION-FAILED.json, a complete COMPLETED.json with validationComplete=true, matching manifest/index hashes, and every indexed file hash. Manifest or index alone never means success.",
+  "startedAt": "2026-10-20T21:31:46.331Z",
+  "finishedAt": "2026-10-20T21:31:58.832Z",
+  "root": "/Users/gordon/githome/sword-led",
+  "out": "docs/evidence/T11-4-2-3i6-model",
+  "formalToken": "v4-balance-formal-01",
+  "sourceCommit": "13538b01dd3053f5befb09fd22a4ed446f5a6dc0",
+  "scope": {
+    "producerTerminalReplays": 30000,
+    "independentTerminalReplays": 30000,
+    "additionalSdkWitnessReplays": 13,
+    "additionalIndependentWitnessReplays": 13,
+    "collectorFullThirdReplays": 0,
+    "preflightCases": 60,
+    "preflightIndependentReplays": 60,
+    "overlapCompleteRecords": 60,
+    "overlapRows": 60
+  },
+  "sourceInputs": 341,
+  "runtimeFiles": 75,
+  "formalRecords": {
+    "sha256": "bd9d97d8035a0780d584113020119cc28df2ceee108626dbcb1d349920c0fae6",
+    "bytes": 730837541
+  },
+  "formalRows": {
+    "sha256": "ea041bdc5c9fcd5d136d2ffb461b3d6cec73f7b2c75313ef5d13df8111776b6a",
+    "bytes": 168212992
+  },
+  "contentCoverage": {
+    "ending:victory": 21754,
+    "ending:return": 3335,
+    "ending:defeat": 4911,
+    "recipe:light:forged": 28000,
+    "recipe:guard:forged": 26999,
+    "recipe:heavy:forged": 25359,
+    "route:1:intact": 26385,
+    "route:2:light": 23540,
+    "route:3:burst": 23767,
+    "route:4:guard": 24820,
+    "route:5:old": 19722,
+    "route:5:new": 5626,
+    "route:6:cracked": 21232,
+    "route:7:heavy": 25260,
+    "route:8:two-light": 23899,
+    "route:9:two-bursts": 353,
+    "route:10:cracked": 1012,
+    "route:10:intact": 24281,
+    "route:11:old": 19828,
+    "route:11:two-new": 5476,
+    "route:12:finale": 23310,
+    "trait:steady:equipped": 24992,
+    "trait:ember:equipped": 24999,
+    "trait:inherit:equipped": 7163,
+    "trait:echo:equipped": 14126,
+    "trait:crackedEdge:equipped": 2122,
+    "trait:pardon:equipped": 16888,
+    "modification:windbox:equipped": 24991,
+    "modification:warmRack:equipped": 3000,
+    "modification:wideMouth:equipped": 24317,
+    "trigger:steady": 22948,
+    "trigger:ember": 21999,
+    "trigger:inherit": 1567,
+    "trigger:echo": 14126,
+    "trigger:crackedEdge": 1550,
+    "trigger:pardon": 8553,
+    "trigger:windbox": 24541,
+    "trigger:warmRack": 3000,
+    "trigger:wideMouth": 22966,
+    "trigger:loan": 15108,
+    "trigger:credit": 14622,
+    "trigger:shelter": 15547,
+    "event:donation:accepted": 15198,
+    "event:loan:accepted": 19695,
+    "event:salvage:accepted": 0,
+    "event:credit:accepted": 19453,
+    "event:shelter:accepted": 19771,
+    "event:rest:accepted": 20306,
+    "event:donation:consumed": 15198,
+    "event:loan:consumed": 15108,
+    "event:salvage:consumed": 0,
+    "event:credit:consumed": 14622,
+    "event:shelter:consumed": 15547,
+    "inherit:consumed": 1455,
+    "reserve:crossed": 23268,
+    "failure:after-chapter": 1902,
+    "challenge:reordered": 967
+  },
+  "missingFeatures": [
+    "event:salvage:accepted",
+    "event:salvage:consumed"
+  ],
+  "exemptCoverage": {
+    "event:rest:consumed": "Rest preserves existing resources; it has no consumable benefit."
+  },
+  "copies": [
+    {
+      "original": "tmp/T11-4-2-3i6/formal/records.jsonl.gz",
+      "destination": "formal/records.jsonl.gz",
+      "role": "Original complete formal data and frozen identities",
+      "source": {
+        "sha256": "fc429939d6ea791d789864023e9e315f873d5472cd2960024dc8b661f28d941a",
+        "bytes": 28515185
+      },
+      "copy": {
+        "sha256": "fc429939d6ea791d789864023e9e315f873d5472cd2960024dc8b661f28d941a",
+        "bytes": 28515185
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/formal/rows.jsonl.gz",
+      "destination": "formal/rows.jsonl.gz",
+      "role": "Original complete formal data and frozen identities",
+      "source": {
+        "sha256": "0a109c820afc2eb50ae6323e904ee1ac04439ea87f1e57ff54893860d98af067",
+        "bytes": 7330550
+      },
+      "copy": {
+        "sha256": "0a109c820afc2eb50ae6323e904ee1ac04439ea87f1e57ff54893860d98af067",
+        "bytes": 7330550
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/formal/summary.json",
+      "destination": "formal/summary.json",
+      "role": "Original complete formal data and frozen identities",
+      "source": {
+        "sha256": "4720e551b0b02a3d4d37c68aed7d51f0f61fe322ac4715eb5169ef4ade1e4cdc",
+        "bytes": 186273
+      },
+      "copy": {
+        "sha256": "4720e551b0b02a3d4d37c68aed7d51f0f61fe322ac4715eb5169ef4ade1e4cdc",
+        "bytes": 186273
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/formal/baseline.json",
+      "destination": "formal/baseline.json",
+      "role": "Original complete formal data and frozen identities",
+      "source": {
+        "sha256": "1e2472103b2939b30b2fdebae311a9c4628b4c7dbfb226633cdea69daffaacc7",
+        "bytes": 63627
+      },
+      "copy": {
+        "sha256": "1e2472103b2939b30b2fdebae311a9c4628b4c7dbfb226633cdea69daffaacc7",
+        "bytes": 63627
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/formal/after.json",
+      "destination": "formal/after.json",
+      "role": "Original complete formal data and frozen identities",
+      "source": {
+        "sha256": "fd7f93cd5218f6c46d4a735934dae4927e6a76bd7b8f7664674994c3c2d0558f",
+        "bytes": 63627
+      },
+      "copy": {
+        "sha256": "fd7f93cd5218f6c46d4a735934dae4927e6a76bd7b8f7664674994c3c2d0558f",
+        "bytes": 63627
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/formal/witness-victory.json",
+      "destination": "formal/witness-victory.json",
+      "role": "Original producer canonical ending witness",
+      "source": {
+        "sha256": "ec80845ff6129e19da6b9b6290cdbaaad1e0a0b506f517a882e12709384292ad",
+        "bytes": 32331
+      },
+      "copy": {
+        "sha256": "ec80845ff6129e19da6b9b6290cdbaaad1e0a0b506f517a882e12709384292ad",
+        "bytes": 32331
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/formal/witness-return.json",
+      "destination": "formal/witness-return.json",
+      "role": "Original producer canonical ending witness",
+      "source": {
+        "sha256": "86207dbb014b00cd991b507f49053bb3369bcfc60da6c716a0635337f45ef074",
+        "bytes": 32857
+      },
+      "copy": {
+        "sha256": "86207dbb014b00cd991b507f49053bb3369bcfc60da6c716a0635337f45ef074",
+        "bytes": 32857
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/formal/witness-defeat.json",
+      "destination": "formal/witness-defeat.json",
+      "role": "Original producer canonical ending witness",
+      "source": {
+        "sha256": "e598f9223a11557fbe42ce1be102762a00e7fb6163c18c8f9827f1cb41fc40b7",
+        "bytes": 13148
+      },
+      "copy": {
+        "sha256": "e598f9223a11557fbe42ce1be102762a00e7fb6163c18c8f9827f1cb41fc40b7",
+        "bytes": 13148
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/formal-audit.json",
+      "destination": "formal-audit.json",
+      "role": "Original independent full-30000 audit",
+      "source": {
+        "sha256": "0d0d6f6d954d81287aeaeec7365d8217b5bdc5e55994dfc57176b875cdda317a",
+        "bytes": 190571
+      },
+      "copy": {
+        "sha256": "0d0d6f6d954d81287aeaeec7365d8217b5bdc5e55994dfc57176b875cdda317a",
+        "bytes": 190571
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/preflight/records.jsonl.gz",
+      "destination": "preflight/records.jsonl.gz",
+      "role": "Original 60-case frozen formal-input preflight",
+      "source": {
+        "sha256": "46bd26b9243fefd3a60c065de7bd05883c07b7fed7829f2a1ab95052d43068b2",
+        "bytes": 66624
+      },
+      "copy": {
+        "sha256": "46bd26b9243fefd3a60c065de7bd05883c07b7fed7829f2a1ab95052d43068b2",
+        "bytes": 66624
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/preflight/rows.jsonl.gz",
+      "destination": "preflight/rows.jsonl.gz",
+      "role": "Original 60-case frozen formal-input preflight",
+      "source": {
+        "sha256": "1f204bba88a05f6e8669dbe3900cb747c3ea5e1afe2b999fcf68739d8c659f8e",
+        "bytes": 16247
+      },
+      "copy": {
+        "sha256": "1f204bba88a05f6e8669dbe3900cb747c3ea5e1afe2b999fcf68739d8c659f8e",
+        "bytes": 16247
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/preflight/summary.json",
+      "destination": "preflight/summary.json",
+      "role": "Original 60-case frozen formal-input preflight",
+      "source": {
+        "sha256": "efb67defc4bcd3589c27b759f76c93538771e81180674bff368f9c187e6f9da6",
+        "bytes": 179416
+      },
+      "copy": {
+        "sha256": "efb67defc4bcd3589c27b759f76c93538771e81180674bff368f9c187e6f9da6",
+        "bytes": 179416
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/preflight/baseline.json",
+      "destination": "preflight/baseline.json",
+      "role": "Original 60-case frozen formal-input preflight",
+      "source": {
+        "sha256": "f62da90b825afa70899109a7878b796530b3cd6242cfdd2410fe66f8ee1daf3e",
+        "bytes": 63627
+      },
+      "copy": {
+        "sha256": "f62da90b825afa70899109a7878b796530b3cd6242cfdd2410fe66f8ee1daf3e",
+        "bytes": 63627
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/preflight/after.json",
+      "destination": "preflight/after.json",
+      "role": "Original 60-case frozen formal-input preflight",
+      "source": {
+        "sha256": "288a860cc28a3341beb95ba5013b401f0b4278d4c39e1bdde92a9b236b55fb28",
+        "bytes": 63627
+      },
+      "copy": {
+        "sha256": "288a860cc28a3341beb95ba5013b401f0b4278d4c39e1bdde92a9b236b55fb28",
+        "bytes": 63627
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/preflight/witness-victory.json",
+      "destination": "preflight/witness-victory.json",
+      "role": "Original preflight ending witness",
+      "source": {
+        "sha256": "ec80845ff6129e19da6b9b6290cdbaaad1e0a0b506f517a882e12709384292ad",
+        "bytes": 32331
+      },
+      "copy": {
+        "sha256": "ec80845ff6129e19da6b9b6290cdbaaad1e0a0b506f517a882e12709384292ad",
+        "bytes": 32331
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/preflight/witness-return.json",
+      "destination": "preflight/witness-return.json",
+      "role": "Original preflight ending witness",
+      "source": {
+        "sha256": "492aeb5a530f3a5f7d01aa2ab144b244237ba399f5db1a98404d4938ebcbfb6c",
+        "bytes": 29278
+      },
+      "copy": {
+        "sha256": "492aeb5a530f3a5f7d01aa2ab144b244237ba399f5db1a98404d4938ebcbfb6c",
+        "bytes": 29278
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/preflight/witness-defeat.json",
+      "destination": "preflight/witness-defeat.json",
+      "role": "Original preflight ending witness",
+      "source": {
+        "sha256": "e598f9223a11557fbe42ce1be102762a00e7fb6163c18c8f9827f1cb41fc40b7",
+        "bytes": 13148
+      },
+      "copy": {
+        "sha256": "e598f9223a11557fbe42ce1be102762a00e7fb6163c18c8f9827f1cb41fc40b7",
+        "bytes": 13148
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/preflight-audit.json",
+      "destination": "preflight-audit.json",
+      "role": "Original independent 60-case preflight audit",
+      "source": {
+        "sha256": "281cb5794cf86ab531fe93ac159935d6d343c6730e033804b2b05759e2219df0",
+        "bytes": 182764
+      },
+      "copy": {
+        "sha256": "281cb5794cf86ab531fe93ac159935d6d343c6730e033804b2b05759e2219df0",
+        "bytes": 182764
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/formal-process/start.json",
+      "destination": "process/formal/start.json",
+      "role": "Original raw process output or actual execution receipt",
+      "source": {
+        "sha256": "465b09f478009137a764f987ace6adf196ab7a6abefeeee0132664e3419afd49",
+        "bytes": 520
+      },
+      "copy": {
+        "sha256": "465b09f478009137a764f987ace6adf196ab7a6abefeeee0132664e3419afd49",
+        "bytes": 520
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/formal-process/terminal.json",
+      "destination": "process/formal/terminal.json",
+      "role": "Original raw process output or actual execution receipt",
+      "source": {
+        "sha256": "978d05c818a2291c08f795e461b3342dd8d0388a5cb303e9150c2bdfa1f21c0a",
+        "bytes": 352
+      },
+      "copy": {
+        "sha256": "978d05c818a2291c08f795e461b3342dd8d0388a5cb303e9150c2bdfa1f21c0a",
+        "bytes": 352
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/formal-process/before.json",
+      "destination": "process/formal/before.json",
+      "role": "Original raw process output or actual execution receipt",
+      "source": {
+        "sha256": "b0a4d9f77b406a892e23603e5136f0fb330af50a2dac2d4f6d0694a006c79fe0",
+        "bytes": 63627
+      },
+      "copy": {
+        "sha256": "b0a4d9f77b406a892e23603e5136f0fb330af50a2dac2d4f6d0694a006c79fe0",
+        "bytes": 63627
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/formal-process/after.json",
+      "destination": "process/formal/after.json",
+      "role": "Original raw process output or actual execution receipt",
+      "source": {
+        "sha256": "ee0b01f744b33c64c467fdfd13bbe133737bfd949609d3c0c54166a84321fdfe",
+        "bytes": 63627
+      },
+      "copy": {
+        "sha256": "ee0b01f744b33c64c467fdfd13bbe133737bfd949609d3c0c54166a84321fdfe",
+        "bytes": 63627
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/formal-process/console.log",
+      "destination": "process/formal/console.log",
+      "role": "Original raw process output or actual execution receipt",
+      "source": {
+        "sha256": "6b2d2c66d0cb36ef099f8317d373870d592019471c4cdebc76247b78a4658160",
+        "bytes": 108032
+      },
+      "copy": {
+        "sha256": "6b2d2c66d0cb36ef099f8317d373870d592019471c4cdebc76247b78a4658160",
+        "bytes": 108032
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/formal-audit-process/start.json",
+      "destination": "process/formal-audit/start.json",
+      "role": "Original raw process output or actual execution receipt",
+      "source": {
+        "sha256": "96ea1b23cc7e1213e3a3d00eaaad7f48846c34051b218409a1196e96bd0d3332",
+        "bytes": 587
+      },
+      "copy": {
+        "sha256": "96ea1b23cc7e1213e3a3d00eaaad7f48846c34051b218409a1196e96bd0d3332",
+        "bytes": 587
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/formal-audit-process/terminal.json",
+      "destination": "process/formal-audit/terminal.json",
+      "role": "Original raw process output or actual execution receipt",
+      "source": {
+        "sha256": "e143278a54616a13831549b0e381d0e8e8e95405faaac467eeace9ab4ca371e1",
+        "bytes": 364
+      },
+      "copy": {
+        "sha256": "e143278a54616a13831549b0e381d0e8e8e95405faaac467eeace9ab4ca371e1",
+        "bytes": 364
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/formal-audit-process/before.json",
+      "destination": "process/formal-audit/before.json",
+      "role": "Original raw process output or actual execution receipt",
+      "source": {
+        "sha256": "6e12faa702d0965eca7363145f31cc5501508e9824241f391d78b1717727f706",
+        "bytes": 63627
+      },
+      "copy": {
+        "sha256": "6e12faa702d0965eca7363145f31cc5501508e9824241f391d78b1717727f706",
+        "bytes": 63627
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/formal-audit-process/after.json",
+      "destination": "process/formal-audit/after.json",
+      "role": "Original raw process output or actual execution receipt",
+      "source": {
+        "sha256": "454a1cef3bb5a752912bfc817d83756930198e0c7925f68fe4d4cc1eeb571b33",
+        "bytes": 63627
+      },
+      "copy": {
+        "sha256": "454a1cef3bb5a752912bfc817d83756930198e0c7925f68fe4d4cc1eeb571b33",
+        "bytes": 63627
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/formal-audit-process/console.log",
+      "destination": "process/formal-audit/console.log",
+      "role": "Original raw process output or actual execution receipt",
+      "source": {
+        "sha256": "a30510b7fe7cec37ea33a89a81c1f45ce2262ae7c591423dd1dc56c2bfd1b0ba",
+        "bytes": 122
+      },
+      "copy": {
+        "sha256": "a30510b7fe7cec37ea33a89a81c1f45ce2262ae7c591423dd1dc56c2bfd1b0ba",
+        "bytes": 122
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/preflight-process/start.json",
+      "destination": "process/preflight/start.json",
+      "role": "Original raw process output or actual execution receipt",
+      "source": {
+        "sha256": "30f319720463b283fb27b2dd86683f083d89007914c6db97f6c0c454641baa5d",
+        "bytes": 529
+      },
+      "copy": {
+        "sha256": "30f319720463b283fb27b2dd86683f083d89007914c6db97f6c0c454641baa5d",
+        "bytes": 529
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/preflight-process/terminal.json",
+      "destination": "process/preflight/terminal.json",
+      "role": "Original raw process output or actual execution receipt",
+      "source": {
+        "sha256": "242c3d722abf3a052a3461d2ba059cd3a4e526e8c6ca86fb88fb8f282b0a6b32",
+        "bytes": 352
+      },
+      "copy": {
+        "sha256": "242c3d722abf3a052a3461d2ba059cd3a4e526e8c6ca86fb88fb8f282b0a6b32",
+        "bytes": 352
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/preflight-process/before.json",
+      "destination": "process/preflight/before.json",
+      "role": "Original raw process output or actual execution receipt",
+      "source": {
+        "sha256": "6c160fc0c120f0167e333695e8aa56cef5e1c62e7f3673624a2327046b6fa332",
+        "bytes": 63627
+      },
+      "copy": {
+        "sha256": "6c160fc0c120f0167e333695e8aa56cef5e1c62e7f3673624a2327046b6fa332",
+        "bytes": 63627
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/preflight-process/after.json",
+      "destination": "process/preflight/after.json",
+      "role": "Original raw process output or actual execution receipt",
+      "source": {
+        "sha256": "99079875a2c63802512b404513db3a8d36081dd69bc4d337c297cf920490ca31",
+        "bytes": 63627
+      },
+      "copy": {
+        "sha256": "99079875a2c63802512b404513db3a8d36081dd69bc4d337c297cf920490ca31",
+        "bytes": 63627
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/preflight-process/console.log",
+      "destination": "process/preflight/console.log",
+      "role": "Original raw process output or actual execution receipt",
+      "source": {
+        "sha256": "57cd70b328ee4a661c14bb0cec3a642947bcae08a87ca4a44670741eeb4cba76",
+        "bytes": 2479
+      },
+      "copy": {
+        "sha256": "57cd70b328ee4a661c14bb0cec3a642947bcae08a87ca4a44670741eeb4cba76",
+        "bytes": 2479
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/preflight-audit-process/start.json",
+      "destination": "process/preflight-audit/start.json",
+      "role": "Original raw process output or actual execution receipt",
+      "source": {
+        "sha256": "133e801b4f601456d96379f38850397db2de93a91eae1a7f55bd85f9e618759f",
+        "bytes": 599
+      },
+      "copy": {
+        "sha256": "133e801b4f601456d96379f38850397db2de93a91eae1a7f55bd85f9e618759f",
+        "bytes": 599
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/preflight-audit-process/terminal.json",
+      "destination": "process/preflight-audit/terminal.json",
+      "role": "Original raw process output or actual execution receipt",
+      "source": {
+        "sha256": "bb6eb7df84969f97eba8774fe00e7a78513c07918e410775648eb07ab51704c3",
+        "bytes": 364
+      },
+      "copy": {
+        "sha256": "bb6eb7df84969f97eba8774fe00e7a78513c07918e410775648eb07ab51704c3",
+        "bytes": 364
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/preflight-audit-process/before.json",
+      "destination": "process/preflight-audit/before.json",
+      "role": "Original raw process output or actual execution receipt",
+      "source": {
+        "sha256": "1146bee7c57cab3585fa75212b015033a5b372ad6ce480fa6a2b657a1f645f7b",
+        "bytes": 63627
+      },
+      "copy": {
+        "sha256": "1146bee7c57cab3585fa75212b015033a5b372ad6ce480fa6a2b657a1f645f7b",
+        "bytes": 63627
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/preflight-audit-process/after.json",
+      "destination": "process/preflight-audit/after.json",
+      "role": "Original raw process output or actual execution receipt",
+      "source": {
+        "sha256": "28fd60329a67c095ef2c9211b6a67999ee3c07f0062032e3d4cef6ab98df9fa9",
+        "bytes": 63627
+      },
+      "copy": {
+        "sha256": "28fd60329a67c095ef2c9211b6a67999ee3c07f0062032e3d4cef6ab98df9fa9",
+        "bytes": 63627
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/preflight-audit-process/console.log",
+      "destination": "process/preflight-audit/console.log",
+      "role": "Original raw process output or actual execution receipt",
+      "source": {
+        "sha256": "e6f71ba581be5330beaa81369eff8b92c718957959f6b6b29388edf0cdeaa438",
+        "bytes": 119
+      },
+      "copy": {
+        "sha256": "e6f71ba581be5330beaa81369eff8b92c718957959f6b6b29388edf0cdeaa438",
+        "bytes": 119
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/model-source-commit.json",
+      "destination": "validation/model-source-commit.json",
+      "role": "Recorded source commit, prior successful push observation and frozen Git blob map; not a fresh remote query",
+      "source": {
+        "sha256": "22c957d613e63077ca69136d71c71392183d2e8afea54cefd2fe34cd59846eef",
+        "bytes": 77607
+      },
+      "copy": {
+        "sha256": "22c957d613e63077ca69136d71c71392183d2e8afea54cefd2fe34cd59846eef",
+        "bytes": 77607
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/node-unit-final.log",
+      "destination": "validation/node-unit-final.log",
+      "role": "Original 18-test producer, policy and metrics TAP",
+      "source": {
+        "sha256": "ec99099dfc784274e7f616d4a34cb09b12aebcf32892cfaebc4d03e4d352ba58",
+        "bytes": 9395
+      },
+      "copy": {
+        "sha256": "ec99099dfc784274e7f616d4a34cb09b12aebcf32892cfaebc4d03e4d352ba58",
+        "bytes": 9395
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/audit-node-unit-final-observed-receipt.json",
+      "destination": "validation/audit-node-unit-final-observed-receipt.json",
+      "role": "Observed 8-test auditor terminal; explicitly not reconstructed raw TAP",
+      "source": {
+        "sha256": "7a4769b81ccf906d22d9ce11b9a26b29d922d38a31c831374987b69f2e5b1d0b",
+        "bytes": 697
+      },
+      "copy": {
+        "sha256": "7a4769b81ccf906d22d9ce11b9a26b29d922d38a31c831374987b69f2e5b1d0b",
+        "bytes": 697
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/cache-recovery-observation.json",
+      "destination": "validation/cache-recovery-observation.json",
+      "role": "Recorded cache-space recovery observation",
+      "source": {
+        "sha256": "0926128d62e13c8bdb711f7010dc6c3d3cecd02f249a719e074b2064c2aa44a7",
+        "bytes": 604
+      },
+      "copy": {
+        "sha256": "0926128d62e13c8bdb711f7010dc6c3d3cecd02f249a719e074b2064c2aa44a7",
+        "bytes": 604
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/continuation-checkpoint.json",
+      "destination": "validation/continuation-checkpoint.json",
+      "role": "Recorded continuation checkpoint, not a terminal proof",
+      "source": {
+        "sha256": "8e46325a080d65bb367db05886a5f9d7e0e8f50baa9f6ff0fe276f3c6b5430d8",
+        "bytes": 1017
+      },
+      "copy": {
+        "sha256": "8e46325a080d65bb367db05886a5f9d7e0e8f50baa9f6ff0fe276f3c6b5430d8",
+        "bytes": 1017
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/run-process.mjs",
+      "destination": "tools/run-process.mjs",
+      "role": "Original execution wrapper; its original module-relative location must be restored",
+      "source": {
+        "sha256": "33085c42c3775e287c187441ef248f3ab113ba0127318c7b3a9b3ff28ea4c90b",
+        "bytes": 2608
+      },
+      "copy": {
+        "sha256": "33085c42c3775e287c187441ef248f3ab113ba0127318c7b3a9b3ff28ea4c90b",
+        "bytes": 2608
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/frozen-tools/index.json",
+      "destination": "frozen-tools/index.json",
+      "role": "Original ten-file snapshot index",
+      "source": {
+        "sha256": "d1397ae24aae5779b8cfa65da0b60c51c597af2a42be0c560c255d8d86156fa8",
+        "bytes": 2528
+      },
+      "copy": {
+        "sha256": "d1397ae24aae5779b8cfa65da0b60c51c597af2a42be0c560c255d8d86156fa8",
+        "bytes": 2528
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/frozen-tools/scripts__v4-model-policy.mjs",
+      "destination": "frozen-tools/scripts__v4-model-policy.mjs",
+      "role": "Original pre-edit frozen bytes with original logical path in index",
+      "source": {
+        "sha256": "eccb9847122483c4d462ae4d8e2bf515d1e9457a9bd35b198597ca16da6f55d3",
+        "bytes": 15778
+      },
+      "copy": {
+        "sha256": "eccb9847122483c4d462ae4d8e2bf515d1e9457a9bd35b198597ca16da6f55d3",
+        "bytes": 15778
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/frozen-tools/scripts__v4-model-policy.mjs",
+      "destination": "reproduction/source/scripts/v4-model-policy.mjs",
+      "role": "Same frozen bytes preserved at their logical repository paths for a restored checkout",
+      "source": {
+        "sha256": "eccb9847122483c4d462ae4d8e2bf515d1e9457a9bd35b198597ca16da6f55d3",
+        "bytes": 15778
+      },
+      "copy": {
+        "sha256": "eccb9847122483c4d462ae4d8e2bf515d1e9457a9bd35b198597ca16da6f55d3",
+        "bytes": 15778
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/frozen-tools/scripts__v4-model-metrics.mjs",
+      "destination": "frozen-tools/scripts__v4-model-metrics.mjs",
+      "role": "Original pre-edit frozen bytes with original logical path in index",
+      "source": {
+        "sha256": "de0c2585f3ef251bc3ca2f7c379b73cfd44bd446d6ee00cd8fc26789757636a6",
+        "bytes": 23868
+      },
+      "copy": {
+        "sha256": "de0c2585f3ef251bc3ca2f7c379b73cfd44bd446d6ee00cd8fc26789757636a6",
+        "bytes": 23868
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/frozen-tools/scripts__v4-model-metrics.mjs",
+      "destination": "reproduction/source/scripts/v4-model-metrics.mjs",
+      "role": "Same frozen bytes preserved at their logical repository paths for a restored checkout",
+      "source": {
+        "sha256": "de0c2585f3ef251bc3ca2f7c379b73cfd44bd446d6ee00cd8fc26789757636a6",
+        "bytes": 23868
+      },
+      "copy": {
+        "sha256": "de0c2585f3ef251bc3ca2f7c379b73cfd44bd446d6ee00cd8fc26789757636a6",
+        "bytes": 23868
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/frozen-tools/scripts__v4-model.mjs",
+      "destination": "frozen-tools/scripts__v4-model.mjs",
+      "role": "Original pre-edit frozen bytes with original logical path in index",
+      "source": {
+        "sha256": "30b3ec10e225b6978e1057226d7a2dfe89dac0b837f2c4afa51d930e85b5ffa5",
+        "bytes": 12365
+      },
+      "copy": {
+        "sha256": "30b3ec10e225b6978e1057226d7a2dfe89dac0b837f2c4afa51d930e85b5ffa5",
+        "bytes": 12365
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/frozen-tools/scripts__v4-model.mjs",
+      "destination": "reproduction/source/scripts/v4-model.mjs",
+      "role": "Same frozen bytes preserved at their logical repository paths for a restored checkout",
+      "source": {
+        "sha256": "30b3ec10e225b6978e1057226d7a2dfe89dac0b837f2c4afa51d930e85b5ffa5",
+        "bytes": 12365
+      },
+      "copy": {
+        "sha256": "30b3ec10e225b6978e1057226d7a2dfe89dac0b837f2c4afa51d930e85b5ffa5",
+        "bytes": 12365
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/frozen-tools/scripts__audit-v4-model.mjs",
+      "destination": "frozen-tools/scripts__audit-v4-model.mjs",
+      "role": "Original pre-edit frozen bytes with original logical path in index",
+      "source": {
+        "sha256": "5308389a6ccf132d62aeb55d9321227b6077d70a69a58deb2f8b169c9b8e0d0f",
+        "bytes": 33747
+      },
+      "copy": {
+        "sha256": "5308389a6ccf132d62aeb55d9321227b6077d70a69a58deb2f8b169c9b8e0d0f",
+        "bytes": 33747
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/frozen-tools/scripts__audit-v4-model.mjs",
+      "destination": "reproduction/source/scripts/audit-v4-model.mjs",
+      "role": "Same frozen bytes preserved at their logical repository paths for a restored checkout",
+      "source": {
+        "sha256": "5308389a6ccf132d62aeb55d9321227b6077d70a69a58deb2f8b169c9b8e0d0f",
+        "bytes": 33747
+      },
+      "copy": {
+        "sha256": "5308389a6ccf132d62aeb55d9321227b6077d70a69a58deb2f8b169c9b8e0d0f",
+        "bytes": 33747
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/frozen-tools/tests__model__v4-policy.test.mjs",
+      "destination": "frozen-tools/tests__model__v4-policy.test.mjs",
+      "role": "Original pre-edit frozen bytes with original logical path in index",
+      "source": {
+        "sha256": "f54312f1e2db319f82f7975896ad281a52a9f8999aecbec6349e63951102e4bd",
+        "bytes": 8423
+      },
+      "copy": {
+        "sha256": "f54312f1e2db319f82f7975896ad281a52a9f8999aecbec6349e63951102e4bd",
+        "bytes": 8423
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/frozen-tools/tests__model__v4-policy.test.mjs",
+      "destination": "reproduction/source/tests/model/v4-policy.test.mjs",
+      "role": "Same frozen bytes preserved at their logical repository paths for a restored checkout",
+      "source": {
+        "sha256": "f54312f1e2db319f82f7975896ad281a52a9f8999aecbec6349e63951102e4bd",
+        "bytes": 8423
+      },
+      "copy": {
+        "sha256": "f54312f1e2db319f82f7975896ad281a52a9f8999aecbec6349e63951102e4bd",
+        "bytes": 8423
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/frozen-tools/tests__model__v4-metrics.test.mjs",
+      "destination": "frozen-tools/tests__model__v4-metrics.test.mjs",
+      "role": "Original pre-edit frozen bytes with original logical path in index",
+      "source": {
+        "sha256": "005751c1e02f1ad46fabf1d9fb846aa8e2da25ea7a4de91022140f92f7669e06",
+        "bytes": 10329
+      },
+      "copy": {
+        "sha256": "005751c1e02f1ad46fabf1d9fb846aa8e2da25ea7a4de91022140f92f7669e06",
+        "bytes": 10329
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/frozen-tools/tests__model__v4-metrics.test.mjs",
+      "destination": "reproduction/source/tests/model/v4-metrics.test.mjs",
+      "role": "Same frozen bytes preserved at their logical repository paths for a restored checkout",
+      "source": {
+        "sha256": "005751c1e02f1ad46fabf1d9fb846aa8e2da25ea7a4de91022140f92f7669e06",
+        "bytes": 10329
+      },
+      "copy": {
+        "sha256": "005751c1e02f1ad46fabf1d9fb846aa8e2da25ea7a4de91022140f92f7669e06",
+        "bytes": 10329
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/frozen-tools/tests__model__v4-model.test.mjs",
+      "destination": "frozen-tools/tests__model__v4-model.test.mjs",
+      "role": "Original pre-edit frozen bytes with original logical path in index",
+      "source": {
+        "sha256": "057b426521954d634a45faf95db8af9e7f348ba14b253551bdde79483da725f4",
+        "bytes": 4694
+      },
+      "copy": {
+        "sha256": "057b426521954d634a45faf95db8af9e7f348ba14b253551bdde79483da725f4",
+        "bytes": 4694
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/frozen-tools/tests__model__v4-model.test.mjs",
+      "destination": "reproduction/source/tests/model/v4-model.test.mjs",
+      "role": "Same frozen bytes preserved at their logical repository paths for a restored checkout",
+      "source": {
+        "sha256": "057b426521954d634a45faf95db8af9e7f348ba14b253551bdde79483da725f4",
+        "bytes": 4694
+      },
+      "copy": {
+        "sha256": "057b426521954d634a45faf95db8af9e7f348ba14b253551bdde79483da725f4",
+        "bytes": 4694
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/frozen-tools/tests__model__v4-audit.test.mjs",
+      "destination": "frozen-tools/tests__model__v4-audit.test.mjs",
+      "role": "Original pre-edit frozen bytes with original logical path in index",
+      "source": {
+        "sha256": "177f142eab414bf0faf8301a409ecf484b40081aa345e1ebf3911d996bd347ba",
+        "bytes": 14877
+      },
+      "copy": {
+        "sha256": "177f142eab414bf0faf8301a409ecf484b40081aa345e1ebf3911d996bd347ba",
+        "bytes": 14877
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/frozen-tools/tests__model__v4-audit.test.mjs",
+      "destination": "reproduction/source/tests/model/v4-audit.test.mjs",
+      "role": "Same frozen bytes preserved at their logical repository paths for a restored checkout",
+      "source": {
+        "sha256": "177f142eab414bf0faf8301a409ecf484b40081aa345e1ebf3911d996bd347ba",
+        "bytes": 14877
+      },
+      "copy": {
+        "sha256": "177f142eab414bf0faf8301a409ecf484b40081aa345e1ebf3911d996bd347ba",
+        "bytes": 14877
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/frozen-tools/docs__v0.7-balance-validation-contract.md",
+      "destination": "frozen-tools/docs__v0.7-balance-validation-contract.md",
+      "role": "Original pre-edit frozen bytes with original logical path in index",
+      "source": {
+        "sha256": "355f5e57c6e027a1e431ac2ff0c96c9219ee7d31f3cc817fb8af540ced7ff7c5",
+        "bytes": 8687
+      },
+      "copy": {
+        "sha256": "355f5e57c6e027a1e431ac2ff0c96c9219ee7d31f3cc817fb8af540ced7ff7c5",
+        "bytes": 8687
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/frozen-tools/docs__v0.7-balance-validation-contract.md",
+      "destination": "reproduction/source/docs/v0.7-balance-validation-contract.md",
+      "role": "Same frozen bytes preserved at their logical repository paths for a restored checkout",
+      "source": {
+        "sha256": "355f5e57c6e027a1e431ac2ff0c96c9219ee7d31f3cc817fb8af540ced7ff7c5",
+        "bytes": 8687
+      },
+      "copy": {
+        "sha256": "355f5e57c6e027a1e431ac2ff0c96c9219ee7d31f3cc817fb8af540ced7ff7c5",
+        "bytes": 8687
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/frozen-tools/docs__v0.7-balance-profiles.json",
+      "destination": "frozen-tools/docs__v0.7-balance-profiles.json",
+      "role": "Original pre-edit frozen bytes with original logical path in index",
+      "source": {
+        "sha256": "515b0367c845555ba4659f0379818a7e26a222865220e96d55604d2653ad9b2c",
+        "bytes": 20080
+      },
+      "copy": {
+        "sha256": "515b0367c845555ba4659f0379818a7e26a222865220e96d55604d2653ad9b2c",
+        "bytes": 20080
+      }
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/frozen-tools/docs__v0.7-balance-profiles.json",
+      "destination": "reproduction/source/docs/v0.7-balance-profiles.json",
+      "role": "Same frozen bytes preserved at their logical repository paths for a restored checkout",
+      "source": {
+        "sha256": "515b0367c845555ba4659f0379818a7e26a222865220e96d55604d2653ad9b2c",
+        "bytes": 20080
+      },
+      "copy": {
+        "sha256": "515b0367c845555ba4659f0379818a7e26a222865220e96d55604d2653ad9b2c",
+        "bytes": 20080
+      }
+    },
+    {
+      "original": "scripts/release-fingerprint.mjs",
+      "destination": "reproduction/source/scripts/release-fingerprint.mjs",
+      "role": "Frozen runtime helper or original data/qualification/approved input",
+      "source": {
+        "sha256": "b769b83309f5c8410a12ba51cdd842a8e9b5abf0e5ed4f71372875452d95dcc7",
+        "bytes": 3481
+      },
+      "copy": {
+        "sha256": "b769b83309f5c8410a12ba51cdd842a8e9b5abf0e5ed4f71372875452d95dcc7",
+        "bytes": 3481
+      }
+    },
+    {
+      "original": "v3.html",
+      "destination": "reproduction/source/v3.html",
+      "role": "Frozen runtime helper or original data/qualification/approved input",
+      "source": {
+        "sha256": "40245839f2b81a6fd25782b1e1b8bf02bfb7cd5835413a5480634023c8b1ed1c",
+        "bytes": 414
+      },
+      "copy": {
+        "sha256": "40245839f2b81a6fd25782b1e1b8bf02bfb7cd5835413a5480634023c8b1ed1c",
+        "bytes": 414
+      }
+    },
+    {
+      "original": "legacy.html",
+      "destination": "reproduction/source/legacy.html",
+      "role": "Frozen runtime helper or original data/qualification/approved input",
+      "source": {
+        "sha256": "df194f1fc660f599175924dad894fc825d5961bf0652bd2437abd7fd6b18569e",
+        "bytes": 597
+      },
+      "copy": {
+        "sha256": "df194f1fc660f599175924dad894fc825d5961bf0652bd2437abd7fd6b18569e",
+        "bytes": 597
+      }
+    },
+    {
+      "original": "goal-1/input.md",
+      "destination": "reproduction/source/goal-1/input.md",
+      "role": "Frozen runtime helper or original data/qualification/approved input",
+      "source": {
+        "sha256": "b961f5c651df51121659687138cfe5edf125e25dadda11642136dfc6aaca852b",
+        "bytes": 1440
+      },
+      "copy": {
+        "sha256": "b961f5c651df51121659687138cfe5edf125e25dadda11642136dfc6aaca852b",
+        "bytes": 1440
+      }
+    },
+    {
+      "original": "docs/evidence/v07-approval/approved-proposal.md",
+      "destination": "reproduction/source/docs/evidence/v07-approval/approved-proposal.md",
+      "role": "Frozen runtime helper or original data/qualification/approved input",
+      "source": {
+        "sha256": "3eba82c2b60f126b49c772daea40df87fa631ecf979dbc5d7c0834b177c884fb",
+        "bytes": 14969
+      },
+      "copy": {
+        "sha256": "3eba82c2b60f126b49c772daea40df87fa631ecf979dbc5d7c0834b177c884fb",
+        "bytes": 14969
+      }
+    },
+    {
+      "original": "docs/evidence/T11-4-2-3i1/witness-fixed/complete.json",
+      "destination": "reproduction/source/docs/evidence/T11-4-2-3i1/witness-fixed/complete.json",
+      "role": "Frozen runtime helper or original data/qualification/approved input",
+      "source": {
+        "sha256": "25dd8053db4aa916017e01891f30ce067e0e0ce5da741e47c36f07a8a73cd3ae",
+        "bytes": 32284
+      },
+      "copy": {
+        "sha256": "25dd8053db4aa916017e01891f30ce067e0e0ce5da741e47c36f07a8a73cd3ae",
+        "bytes": 32284
+      }
+    },
+    {
+      "original": "dist/sword-led-v4.js",
+      "destination": "reproduction/runtime/sword-led-v4.js",
+      "role": "Original actual v4 public SDK and its static module dependencies; not the full 75-file web build",
+      "source": {
+        "sha256": "0525dd1f3642af2a1a54e397e6023cd9baf4dcccda4c5af3b9ed721a92ae89e5",
+        "bytes": 47405
+      },
+      "copy": {
+        "sha256": "0525dd1f3642af2a1a54e397e6023cd9baf4dcccda4c5af3b9ed721a92ae89e5",
+        "bytes": 47405
+      }
+    },
+    {
+      "original": "dist/core-CvAZnNjA.js",
+      "destination": "reproduction/runtime/core-CvAZnNjA.js",
+      "role": "Original actual v4 public SDK and its static module dependencies; not the full 75-file web build",
+      "source": {
+        "sha256": "d454eb5d786660f0a1132580582c6af8c2004b274337feb9f606cddbf76beb46",
+        "bytes": 21211
+      },
+      "copy": {
+        "sha256": "d454eb5d786660f0a1132580582c6af8c2004b274337feb9f606cddbf76beb46",
+        "bytes": 21211
+      }
+    },
+    {
+      "original": "dist/browser-session-BQdQqpuu.js",
+      "destination": "reproduction/runtime/browser-session-BQdQqpuu.js",
+      "role": "Original actual v4 public SDK and its static module dependencies; not the full 75-file web build",
+      "source": {
+        "sha256": "8ebc49f8c7ee292c6dd0181cf3e209a669c3224aa54e15c394d912a471dbdee5",
+        "bytes": 11605
+      },
+      "copy": {
+        "sha256": "8ebc49f8c7ee292c6dd0181cf3e209a669c3224aa54e15c394d912a471dbdee5",
+        "bytes": 11605
+      }
+    },
+    {
+      "original": "dist/rules-CAo3EZyg.js",
+      "destination": "reproduction/runtime/rules-CAo3EZyg.js",
+      "role": "Original actual v4 public SDK and its static module dependencies; not the full 75-file web build",
+      "source": {
+        "sha256": "758b82851aaf66fee126eabcc212cff0c95a2b9fed33f2a0e08b8bd52e5965ea",
+        "bytes": 1838
+      },
+      "copy": {
+        "sha256": "758b82851aaf66fee126eabcc212cff0c95a2b9fed33f2a0e08b8bd52e5965ea",
+        "bytes": 1838
+      }
+    },
+    {
+      "original": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i6/collect-model.mjs",
+      "logicalExecutionPath": "tmp/T11-4-2-3i6/collect-model.mjs",
+      "destination": "tools/collect-model.mjs",
+      "role": "The collector module actually executing; an archived copy needs explicit --root/--out when outside its original tmp path",
+      "source": {
+        "sha256": "965e46fba9159df42a6cf6bb62256cb5327602fd0249e66d30c530903dbe485b",
+        "bytes": 35597
+      },
+      "copy": {
+        "sha256": "965e46fba9159df42a6cf6bb62256cb5327602fd0249e66d30c530903dbe485b",
+        "bytes": 35597
+      }
+    }
+  ],
+  "generated": [
+    {
+      "path": "reproduction/sdk-import-closure.json",
+      "role": "Static SDK dependency closure with preserved basenames and actual hashes",
+      "sha256": "e21474032e6ee3d734e78a4b028a42f3063d524f6d75329b688e035c859505f6",
+      "bytes": 995
+    },
+    {
+      "path": "witnesses/balanced-steady--0000.json",
+      "role": "Additional selected-witness SDK replay and independent auditRecord replay; not another full dataset replay",
+      "sha256": "ec80845ff6129e19da6b9b6290cdbaaad1e0a0b506f517a882e12709384292ad",
+      "bytes": 32331
+    },
+    {
+      "path": "witnesses/balanced-steady--0001.json",
+      "role": "Additional selected-witness SDK replay and independent auditRecord replay; not another full dataset replay",
+      "sha256": "4183c76d032241468a2fb0db3c90f6ee5b631b62a0af12aa9fa828290345a45e",
+      "bytes": 32335
+    },
+    {
+      "path": "witnesses/balanced-steady--0002.json",
+      "role": "Additional selected-witness SDK replay and independent auditRecord replay; not another full dataset replay",
+      "sha256": "9989010ca84d3be56ab06c5102ac0c3e24ea2183b4a4211c551e05f8bde41f29",
+      "bytes": 31763
+    },
+    {
+      "path": "witnesses/balanced-steady--0011.json",
+      "role": "Additional selected-witness SDK replay and independent auditRecord replay; not another full dataset replay",
+      "sha256": "86207dbb014b00cd991b507f49053bb3369bcfc60da6c716a0635337f45ef074",
+      "bytes": 32857
+    },
+    {
+      "path": "witnesses/balanced-steady--0112.json",
+      "role": "Additional selected-witness SDK replay and independent auditRecord replay; not another full dataset replay",
+      "sha256": "47575f8c260329ca6a42fe9e1a5afcabbc25f7a1507c094ee16f28675a53159e",
+      "bytes": 31771
+    },
+    {
+      "path": "witnesses/balanced-steady--0117.json",
+      "role": "Additional selected-witness SDK replay and independent auditRecord replay; not another full dataset replay",
+      "sha256": "2472011c18442b4e84b625663059e5e9e75754f977d9b617c840b434240a4d80",
+      "bytes": 32583
+    },
+    {
+      "path": "witnesses/balanced-steady--0295.json",
+      "role": "Additional selected-witness SDK replay and independent auditRecord replay; not another full dataset replay",
+      "sha256": "8b6d9bcefa293fc88fbcf83a5231d184c8099a581dd27300c1e47e25dbebe11e",
+      "bytes": 32430
+    },
+    {
+      "path": "witnesses/low-hammer--0000.json",
+      "role": "Additional selected-witness SDK replay and independent auditRecord replay; not another full dataset replay",
+      "sha256": "492aeb5a530f3a5f7d01aa2ab144b244237ba399f5db1a98404d4938ebcbfb6c",
+      "bytes": 29278
+    },
+    {
+      "path": "witnesses/low-hammer--0001.json",
+      "role": "Additional selected-witness SDK replay and independent auditRecord replay; not another full dataset replay",
+      "sha256": "e598f9223a11557fbe42ce1be102762a00e7fb6163c18c8f9827f1cb41fc40b7",
+      "bytes": 13148
+    },
+    {
+      "path": "witnesses/burst-first--0000.json",
+      "role": "Additional selected-witness SDK replay and independent auditRecord replay; not another full dataset replay",
+      "sha256": "e8ac483e3d2fd2921ae0963f8a11552e60b9da0193f1898a154c975fd4d069a7",
+      "bytes": 37075
+    },
+    {
+      "path": "witnesses/cracked-commission--0000.json",
+      "role": "Additional selected-witness SDK replay and independent auditRecord replay; not another full dataset replay",
+      "sha256": "fff64c7950418b2c6cc497635d55eb848afcf9c2cc0b7e4cca3bf86625719d9b",
+      "bytes": 31870
+    },
+    {
+      "path": "witnesses/old-first--0000.json",
+      "role": "Additional selected-witness SDK replay and independent auditRecord replay; not another full dataset replay",
+      "sha256": "ce3af2fe5549309f6d0356cc41890af26edd148dc17b246ed49b5c52653d0dfe",
+      "bytes": 32334
+    },
+    {
+      "path": "witnesses/qualified-challenge--0000.json",
+      "role": "Additional selected-witness SDK replay and independent auditRecord replay; not another full dataset replay",
+      "sha256": "a8eaf89cbd3cc83e2203b68eef30bbffeebdeb9b0aaddce04384ff4a66d5c985",
+      "bytes": 32908
+    },
+    {
+      "path": "witnesses/index.json",
+      "role": "Selected feature proof, canonical source identities, explicit zero coverage and exemption",
+      "sha256": "93264c97bd2ef400faaa30af8cb6c771600d31d7df4c1cf242c5b68344b865ab",
+      "bytes": 184905
+    },
+    {
+      "path": "preflight-comparison.json",
+      "role": "Actual all-60 overlap comparison; no new model sample or third full replay",
+      "sha256": "c75886bf2bff2bb987289096943e0ad77277ecc94656e8507d4dbd42a27de433",
+      "bytes": 727
+    },
+    {
+      "path": "physical-collection-before.json",
+      "role": "Actual complete physical input check before collection, before any UI edits",
+      "sha256": "95494f20d1ed7b25b92c01d4f001358a613e9f1d4dbe6ad5c413431f57a9366d",
+      "bytes": 63627
+    },
+    {
+      "path": "physical-collection-after.json",
+      "role": "Actual complete physical input check after copying",
+      "sha256": "4f6330f146b6376c6d68391a55aa630f59426b288ef82a7756116fb576812258",
+      "bytes": 63627
+    },
+    {
+      "path": "README.md",
+      "role": "Reproduction instructions, exact evidence limits and mandatory machine completion gate",
+      "sha256": "10f3815ff739d9d3ee9daecf34117d870ebe15be4a42c388a90757665fc7f9ab",
+      "bytes": 3217
+    }
+  ],
+  "identityLimits": [
+    "The source commit receipt retains a prior push observation; this collector did not make a fresh remote query.",
+    "The selected-witness replays are additional checks of N representative journals, not a third full dataset replay.",
+    "The archived tools keep original bytes and logical paths but are not directly runnable under renamed archive paths.",
+    "The original auditor TAP exists only in tool history; its archived observation is not raw TAP."
+  ]
+}

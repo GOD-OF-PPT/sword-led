@@ -2,7 +2,7 @@ import {CHAPTERS,COMMISSIONS,EVENTS,RECIPES,TRAITS,getRunView,describeRoute} fro
 import type {Action,Blade,EventId,Modification,RunState} from '../core-v4/index.js';
 import type {CollectionState} from '../application/v4-collection.js';
 import {element} from '../presentation/dom.js';
-import {chapterFacts,endingFacts,journeyOutcome,journeyScreen} from './journey.js';
+import {chapterFacts,endingFacts,journeyOutcome,journeyScreen,CAMPAIGN_GOAL} from './journey.js';
 import type {JourneyScreen} from './journey.js';
 
 export interface JourneyStageContext {
@@ -98,7 +98,7 @@ export function buildJourneyStage(input:RunState,context:JourneyStageContext):Jo
     if(view.chapter.id===3)paragraph(`最后一位商人今天到来。炉具与沿途学会的手艺仍在；最终护灯剑需要：${describeRoute(COMMISSIONS[11]!.routes[0]!)}。`);
     actions.push(context.action('回到铁砧',context.leaveScene,true));
   }else if(mode==='opening'){
-    title=CHAPTERS[0]!.title;paragraph(CHAPTERS[0]!.opening);
+    title=CHAPTERS[0]!.title;paragraph(CHAPTERS[0]!.opening);paragraph(CAMPAIGN_GOAL);
     paragraph(view.commission.request);for(const route of view.commission.routes)paragraph(route.description);
     paragraph('左键敲击，见好就交。每次收工只按真实完成情况判定契印。');
     actions.push(context.commandAction('点火开炉',{type:'continue'}),context.commandAction('跳过开场',{type:'continue'},false));

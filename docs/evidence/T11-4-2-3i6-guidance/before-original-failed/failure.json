@@ -1,0 +1,47 @@
+{
+  "at": "2026-10-20T20:16:28.522Z",
+  "startedAt": "2026-10-20T20:16:27.268Z",
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n60 !== 0\n",
+  "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n60 !== 0\n\n    at file:///Users/gordon/githome/sword-led/tmp/T11-4-2-3i6/before-guidance.mjs:106:9",
+  "observations": [],
+  "errors": [],
+  "trials": [
+    {
+      "index": 0,
+      "seed": "v4-guidance-salvage-0",
+      "day": 3,
+      "phase": "workshop",
+      "event": "credit",
+      "status": "available",
+      "activeCandidates": 3
+    },
+    {
+      "index": 1,
+      "seed": "v4-guidance-salvage-1",
+      "day": 3,
+      "phase": "workshop",
+      "event": "credit",
+      "status": "available",
+      "activeCandidates": 3
+    },
+    {
+      "index": 2,
+      "seed": "v4-guidance-salvage-2",
+      "day": 3,
+      "phase": "workshop",
+      "event": "loan",
+      "status": "available",
+      "activeCandidates": 3
+    },
+    {
+      "index": 3,
+      "seed": "v4-guidance-salvage-3",
+      "day": 3,
+      "phase": "workshop",
+      "event": "salvage",
+      "status": "available",
+      "activeCandidates": 3
+    }
+  ],
+  "scope": "Failed before-change observation; no success receipt."
+}

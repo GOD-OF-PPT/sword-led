@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "kind": "observed-tool-terminal-receipt",
+  "command": "rtk proxy node --test tests/model/v4-audit.test.mjs",
+  "toolSessionId": 54356,
+  "observedExitCode": 0,
+  "tests": 8,
+  "pass": 8,
+  "fail": 0,
+  "cancelled": 0,
+  "skipped": 0,
+  "todo": 0,
+  "durationMs": 7557.544475,
+  "rawTapFile": null,
+  "rawTapAvailability": "The original TAP was observed in the conversation tool output and was not captured to a filesystem log. This receipt is an observation record, not reconstructed raw TAP.",
+  "scope": "Independent auditor unit and evidence-fixture tests; not the formal 30000-case production or its independent replay.",
+  "inputsChangedDuringObservedRun": false
+}

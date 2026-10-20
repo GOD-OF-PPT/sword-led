@@ -1,0 +1,1890 @@
+{
+  "originalOutput": "tmp/T11-4-2-3i6/guidance-final-v2",
+  "originalArtifactIndex": "after/artifact-index.json",
+  "originalFiles": 235,
+  "originalPngs": 60,
+  "copiedPngs": 10,
+  "notDeleted": true,
+  "files": [
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/artifact-index.json",
+      "destination": "after/artifact-index.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "671d04a00d7999721f35e9cece0292eb7dc7a9c23c0f752d148aa2543ddc3474",
+      "bytes": 38811
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/chromium-1280x720-result.json",
+      "destination": "after/chromium-1280x720-result.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "551997d186c275ba3d659467622b83015997c1c7df5e568f3ce4f6b504ac4103",
+      "bytes": 5162
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/chromium-1920x1080-result.json",
+      "destination": "after/chromium-1920x1080-result.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "085fe3eba3a5432ac3de4d3023b5667b223fe7cd9e3a9d4bd3d13c93ff5b040a",
+      "bytes": 5183
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/firefox-1280x720-result.json",
+      "destination": "after/firefox-1280x720-result.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "7574bb4ded6fc321f6f3b8d9b7079bc6abb7cf40a490150d91726ab8fa4b8b5f",
+      "bytes": 5134
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/firefox-1920x1080-result.json",
+      "destination": "after/firefox-1920x1080-result.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "c1fed14c6bd9af56b441dc812cdb699669c414dcb239c9c865a1c9db7b60efe4",
+      "bytes": 5155
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/guidance-consumers.mjs",
+      "destination": "after/guidance-consumers.mjs",
+      "status": "copied",
+      "reason": null,
+      "sha256": "280c85e95a503ddb57b5a530adeab3c64caf130dcd597d641e9a1572681e918e",
+      "bytes": 23888
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/historical-complete210.json",
+      "destination": "after/historical-complete210.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "25dd8053db4aa916017e01891f30ce067e0e0ce5da741e47c36f07a8a73cd3ae",
+      "bytes": 32284
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/result.json",
+      "destination": "after/result.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "cf466700f644fbcead2ccb0dccf9df8e355fc1af07e2fe2fec959b0284286af6",
+      "bytes": 33683
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/b/anvil-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "ed44b20b36a834581655f02c6e6660452b72a9742c37e1d97d3ab132413af9f1",
+      "bytes": 351706
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/b/hammer-heavy-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "3b9ed6d6aab155503af7ae167676fd88badcc2f859ee693823e1b68c4ae26714",
+      "bytes": 286032
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/b/hammer-light-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "4a294cde83b0765ba919c1943f151a9ad66c8aad5e163c1f3b81df2208b8bbf8",
+      "bytes": 153704
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/b/hammer-standard-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "604bc26957ac0dae08bec6160fbb1104dad6949676ed3df4bc254743fe392c03",
+      "bytes": 243778
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/b/manifest.json",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "7d97cba7f4cfd6df7656385c61db9096d1a1c5901b50202abda60b55cc52dc13",
+      "bytes": 16507
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/b/material-iron-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "891f332a7543e005bb4eecf9c8cbf9ed6fbb6e7acc60ef02c6a08d828cbdf8e9",
+      "bytes": 297192
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/b/material-meteorite-v3.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "bffe5da4cc1522fa9e16df68790d11fbf551659176210ecb04e66ea82da98f3a",
+      "bytes": 171384
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/b/material-steel-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "c5985ca938f459770ebe8e7e0f045db4a96768c20525c7a7f05d28ab3c070a4e",
+      "bytes": 297586
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/b/merchant-kit-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "9a7623f3b226fc1918b08054ccfd080d852a278f9c92a97219c9da72a40e1c72",
+      "bytes": 463234
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/b/tokens.css",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "6892f99cdee0107212fd750a058191d2933efefb8a4e7b05b8df35412132614e",
+      "bytes": 428
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/b/workshop-background-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "c8813b1438f61b6edbb8890d2df843ce7ac5732899a52edb9af67d1f8771497c",
+      "bytes": 387784
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/blade-cleaver-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "7ce0ae4d8fbd5b6f467d3ac487e1325807cbba993e0b2e0cd01875a96c8734db",
+      "bytes": 475570
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/blade-dao-v2.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "0849c54fc542d5781ce71c177e379f9336d012ed7dbc38250e0793ccaa642b48",
+      "bytes": 412412
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/blade-jian-v2.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "ece499d885fd4a7b74978fac75a547caa6eb40c335e1643364f955f6eca6582b",
+      "bytes": 354522
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/commission-guard-v2.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "0a8b9d04123e63d30163c7e486eb5e6917e67088ba6e8b3ca69eae8662f1a226",
+      "bytes": 542200
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/customers-atlas-v2.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "6d5f8b78b51863cda7143d506efcc9a344e6b69314737d66610bbd95ca8d3cf7",
+      "bytes": 399396
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/forge-backdrop-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "af03aec23b63729c2dc0e05abaaaa6004d2c692d233fcafdbf446166676896eb",
+      "bytes": 326918
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/forge-backdrop-v2.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "74d11a3a34a9f066933e5f5995cd1a3cfc37339495c48759a3bac4ecab8f0851",
+      "bytes": 367418
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/forge-pennant-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "5acb97d4d6eed7d50d2975e1d63e03bf5023f9cb4a8db8568ff8fa9660854a0a",
+      "bytes": 251572
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/guild-scroll-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "695295f4d69d86c6ea79e884482eee3b0d6ab1643c61a2d9f4aa2d235086204e",
+      "bytes": 322924
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/hammer-forge-v2.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "174462711969925c8bc6a3a27a043ddb69d8d4f0c4f543ed83be0cad8134186e",
+      "bytes": 142696
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/hammer-heavy-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "5609cf65ecc2a887f580d76be907d5c5196e202f500e9aa3806c20b39f883dd3",
+      "bytes": 239784
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/hammer-light-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "bb2f802ef48756af9ac0051c31194d5d8e32d8be11ed83e20d180cb973da4234",
+      "bytes": 181090
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/hammer-standard-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "30c2ab0bb57383aad563dcb78abf9b96d56d63c6665b3f945240f8ab27ff71e5",
+      "bytes": 173226
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/manifest.json",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "790ea270419a058df9d2aa2224f708847e9e271857b05311f7d098560b80e196",
+      "bytes": 6175
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/metal-atlas-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "d50d096a3951cf5a609fc0c81e48a38eb9eee0a97c3c05c47a674a5505d7dd67",
+      "bytes": 337260
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/notebook-cover-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "3dfa792ac46bd940091764ac62fea2813db991178ed56d2c6c7920ebd430b1f9",
+      "bytes": 429704
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/oil-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "cabe57bfa72e6d064cc8d31a4fe5f4b10ef1b9521d4a340905e3f48d4b7198c9",
+      "bytes": 244050
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/portraits-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "fe52ff958203125c4e40a8a7566e536e7f1b5488c51b6ecc7088e43fb9e42ec3",
+      "bytes": 566448
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/trait-props-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "11b900241ce1095845336ac8fe9c627a29e47d0a3ab8d2e9de63a91cb5496fff",
+      "bytes": 493826
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/v07/bridge-dark-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "50c8dff8b69fbaa954d61d225613c65223d76a2aecb9ca2d82f495dcd350fce4",
+      "bytes": 271780
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/v07/bridge-lit-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "ccd7d09fa51c4f79608930a9e6c95b929c39653202c8dde487797b471bd2577b",
+      "bytes": 297880
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/v07/events-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "73751392e87e97a1091c4f2416fcac04a5597af7ebdf0cc7ce5b411743bb67d2",
+      "bytes": 309280
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/v07/lantern-road-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "e3e3cb3a6b32c0b8fb8315fa4fa724a2facc09a7da153fdbe1153115734fa95a",
+      "bytes": 283948
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/v07/modifications-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "beef13d0c9321b759fa044c7c47cfdd936f09315af7ee5d618c3085b072fb3a5",
+      "bytes": 241522
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/v07-chapter2/cracked-work-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "bcb5323a59eb8bd53e9c18e7afc1ef87bc5f3e5bb1a78b78c959b940fc270fa5",
+      "bytes": 242632
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/v07-chapter2/rescue-path-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "28a1bd26b08d66fe6748a50263d28bd1404123bff6b87e3be91b98024b21531a",
+      "bytes": 362192
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/v07-chapter2/returning-blade-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "2ce00147936d876291eb708919f6bb8e6bf5fdc0ba64c08e21d50754ac4214da",
+      "bytes": 344334
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/v07-chapter2/twin-stations-dark-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "ec92cb07af0c13553b092c12089637c32ba4e2057c80f2f7d963ec5141273f01",
+      "bytes": 299396
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/v07-chapter2/twin-stations-lit-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "f168ab748d4146842603499af700379a459e60bb342171e99f1646f663ff1b33",
+      "bytes": 302458
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/v07-chapter2/twin-stations-one-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "50968b0df21187032042671427ca8f3721d45a5254db40c504682b24f7c6d44c",
+      "bytes": 294906
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/v07-chapter2/winter-forge-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "ff93be5848e112aa7c6b74a5a649cd5fc7341cf08faca03d1b218a4e3e7aca96",
+      "bytes": 197974
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/v07-chapter3/double-fire-work-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "c94b9d9f89749e2db6ff76ab463367e780e6f9e6afaf8dfe1991aeec027636fa",
+      "bytes": 204206
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/v07-chapter3/ending-embers-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "56b65cdaba916795e248f1a431b5b14b0d4fd2216de0df4ed69dfcff1fbee4cf",
+      "bytes": 156688
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/v07-chapter3/ending-homeward-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "6a2105c91f0937af28e22db22992d3b5707765dd2a456fad91151547d6602cb7",
+      "bytes": 309244
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/v07-chapter3/ending-twelve-lights-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "05cac8d98ff29b464374a5604e84fa844cd009a5a13e8cc85108eef1c3bafe8d",
+      "bytes": 294482
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/v07-chapter3/last-lantern-delivered-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "897c0bfc12bd387ebd8f5e3005991d0b9c1cc32dece3900973baddbd6a53a127",
+      "bytes": 290266
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/v07-chapter3/mountain-gap-held-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "af657ee742fe772738d2a12d37dccbd26546cf4bd833c6617674108713669421",
+      "bytes": 327434
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/v07-chapter3/mountain-pass-arrival-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "7330d00aa07ddd97eee6faa22185dbf6a3d1439f4ed6ee657650feb77d382e8b",
+      "bytes": 267342
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/v07-chapter3/relay-complete-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "aa750f3804dfc96aacb91437d87c86cbb0ca18d95cd563bfc9fc75ef826be01c",
+      "bytes": 271756
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/v07-chapter3/relay-one-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "e428afac55345140ed426767056010917e3bf42e791425f720f0c653864d051f",
+      "bytes": 263292
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/d/water-v1.webp",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "a0db1b1b4c9ee96d4ecc25f569b929aeda3e811bd457e5ad9f3792d1fff60c03",
+      "bytes": 266286
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/dom-DOqb_Hkx.js",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "119dba5e8680a3787c68231500b4d6ff25f45a5d1b86a716d47d717c997fcac6",
+      "bytes": 31619
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/input-B0NTSK-g.js",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "cceac72409a3cf52e0372a6bb3d4a39714e76d435608a135b8f6255a9194113d",
+      "bytes": 2339
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/legacy-BEbDMbhp.js",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "75f6a633da33d7b36a48950c282766269d096db6fe31ac62535d81448a44fdc2",
+      "bytes": 60374
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/legacy-CidoUqtJ.css",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "542a1875c5de6ec3b2fb043c7c5d2d7e6bcd19f35ebc0b6c82052c688703c12b",
+      "bytes": 20582
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/main-Cs7wa2SA.css",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "6b99917f0415ba0224264aa396cec96857869e3e65b8f40017b694ba51ead7a2",
+      "bytes": 34399
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/main-DhAm8t4z.js",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "c8cf624f16ffefa100319232c8afb81c16356fb9a65278127a1150a6195ddd2b",
+      "bytes": 113081
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/surface-C7W-Wbjp.js",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "de92b6b12ebde2d495883325c13977dd193b8298d8290c272d458fba3fcb68e5",
+      "bytes": 16960
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/v2-BgGChR3Q.css",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "08bd72f2215e57d65bcfb4b513abe29599a25b8e6613986ef44c8f1d1c32f9dd",
+      "bytes": 46808
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/v2-DiTiUVti.js",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "fe789e3fa036383f15c0801dc6ff8857b0e2b657136871d57e8773df08737d8f",
+      "bytes": 68646
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/v3-D_5nutBJ.css",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "6a09096d56bbd5e9b76e5ebbe1aa3e21f301c8c79b5593eb247cf897207704f7",
+      "bytes": 50525
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/assets/v3-DOzLDQhh.js",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "7ba92e0a6c4324fc66104ac76bdc3942645d3cb3ca67a59b04fb0d8b9cc165b1",
+      "bytes": 71187
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/browser-session-BQdQqpuu.js",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "8ebc49f8c7ee292c6dd0181cf3e209a669c3224aa54e15c394d912a471dbdee5",
+      "bytes": 11605
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/core-CvAZnNjA.js",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "d454eb5d786660f0a1132580582c6af8c2004b274337feb9f606cddbf76beb46",
+      "bytes": 21211
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/index.html",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "623289ccbea96e3e3d166b42df2b168ff33babce77dbfd2c76d1a77c7b69aada",
+      "bytes": 800
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/legacy.html",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "c294bea0c302de21dad37ecec258022e2c48e2b0d5e7a77f29e70643d6906208",
+      "bytes": 845
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/rules-CAo3EZyg.js",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "758b82851aaf66fee126eabcc212cff0c95a2b9fed33f2a0e08b8bd52e5965ea",
+      "bytes": 1838
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/sword-led-core.js",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "3a75d8229c7e0840bfc0272d76964e1fa91d5d4fbe6faeab3689636bbfb321c4",
+      "bytes": 126
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/sword-led-session.js",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "0fc2643db63596c9b55815db6bb4d0726a7a4d38a45db4102e7a8cfab25c35a8",
+      "bytes": 223
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/sword-led-v2.js",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "618dd6e0552c9290b9ee4e2aa93f19a36a22e051ee0c593d20c94e0ae3e36afb",
+      "bytes": 28145
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/sword-led-v3.js",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "0406b190bde0646a940fb6180086b4805a63530964f456afaafc08042bb18ab2",
+      "bytes": 11057
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/sword-led-v4.js",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "0525dd1f3642af2a1a54e397e6023cd9baf4dcccda4c5af3b9ed721a92ae89e5",
+      "bytes": 47405
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/v2.html",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "8f5d3130e5006b4dac80b34276a955fe54cc5aaf1d63b129c1678ffa00d41a33",
+      "bytes": 679
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime/v3.html",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "All runtime hashes and new index/main are archived separately; unchanged art/SDK are not duplicated.",
+      "sha256": "75573e0338030b812c32cb77c6c5b9430bd2f9f0564a1738c637f7d0ddafeabf",
+      "bytes": 653
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/runtime-before.json",
+      "destination": "after/runtime-before.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "a9b1666317dff163052a16a50b80c3c51d64dc12c33e8f954edca3a67ab3c27e",
+      "bytes": 11526
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1280x720/critical-settlement.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "536235c32825f1b7cc135c39cd49a5a70b6a493799d0714d2b016e42fab55919",
+      "bytes": 313058
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1280x720/critical-settlement.txt",
+      "destination": "after/screens/chromium-1280x720/critical-settlement.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "b358e0a1d6f79198414f171839579ce1edfb19bf48ee0533a133dee183d61756",
+      "bytes": 1009
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1280x720/exhausted-settlement.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "4b41e2135886b6edde036c90d183d1a9dc9a79c75364b5dbae98f128469bb5ce",
+      "bytes": 314276
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1280x720/exhausted-settlement.txt",
+      "destination": "after/screens/chromium-1280x720/exhausted-settlement.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "136aeb11574d62237331b01f7f1f0a95fd80ff9db0e44bca99a2ed77d7c92f76",
+      "bytes": 1029
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1280x720/journey-full-goal.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "fd5909f373b878431fcf0aea828c39731f571822e3e9adaefeca30e2bcc96759",
+      "bytes": 844384
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1280x720/journey-full-goal.txt",
+      "destination": "after/screens/chromium-1280x720/journey-full-goal.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "4b0aa2bc04e7ceb1a24a8c8e339f7affeaae3db17760975fd85c8ecbc1969254",
+      "bytes": 1296
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1280x720/opening-full-goal.png",
+      "destination": "after/screens/chromium-1280x720/opening-full-goal.png",
+      "status": "copied",
+      "reason": null,
+      "sha256": "2cef1ec0d2809c73ed8f609e6f0674662bc3c2ee5ec94dc6ad7ce5441c207afe",
+      "bytes": 912293
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1280x720/opening-full-goal.txt",
+      "destination": "after/screens/chromium-1280x720/opening-full-goal.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "02b0a3f5714a6550a6ef9489f934cfc870ac3e82c9539c60c96d931347505f80",
+      "bytes": 497
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1280x720/ordinary-settlement.png",
+      "destination": "after/screens/chromium-1280x720/ordinary-settlement.png",
+      "status": "copied",
+      "reason": null,
+      "sha256": "649537870d4328fbbfacaf85b1c34341207397094b1fd2b9ccc224cfa36880dd",
+      "bytes": 306288
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1280x720/ordinary-settlement.txt",
+      "destination": "after/screens/chromium-1280x720/ordinary-settlement.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "3057c634c93eb196787d44aa3636a7e9f6f253618b0b767959f804d8678a7ac0",
+      "bytes": 820
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1280x720/protectedCritical-settlement.png",
+      "destination": "after/screens/chromium-1280x720/protectedCritical-settlement.png",
+      "status": "copied",
+      "reason": null,
+      "sha256": "4b85f01de74dd3cad4952fc8eb3f1c969abdab8f7973487959f1182c28b05efb",
+      "bytes": 331788
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1280x720/protectedCritical-settlement.txt",
+      "destination": "after/screens/chromium-1280x720/protectedCritical-settlement.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "e224b442a140c12f00285e1074dbd91cd13c4cb2e4e583636c58e164b5001225",
+      "bytes": 1088
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1280x720/salvage-actual-once.png",
+      "destination": "after/screens/chromium-1280x720/salvage-actual-once.png",
+      "status": "copied",
+      "reason": null,
+      "sha256": "cc4cacae063d7979bfe429515197878cf0072c8f96be44d2db3921565a5b8bff",
+      "bytes": 1346528
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1280x720/salvage-actual-once.txt",
+      "destination": "after/screens/chromium-1280x720/salvage-actual-once.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "b93d9674ffc1bd420dea768d6e8b5194be1dc31d174c9c0f0d4d80ebf883c274",
+      "bytes": 766
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1280x720/salvage-confirm-values.png",
+      "destination": "after/screens/chromium-1280x720/salvage-confirm-values.png",
+      "status": "copied",
+      "reason": null,
+      "sha256": "75018ef27bc5d870250e51073af35f3366bf6cb5d92041a803f6c38cd2f9d010",
+      "bytes": 279527
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1280x720/salvage-confirm-values.txt",
+      "destination": "after/screens/chromium-1280x720/salvage-confirm-values.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "223a9364f0e3ca9c7f5327af33df3ed6b263a5a011d22b5aea09f1e75e5c2ba4",
+      "bytes": 864
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1280x720/salvage-no-active-sword.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "61374896420a18c1010e9b45521b1a023fb426d0fdb5e2f8e11007bf7acd832d",
+      "bytes": 283248
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1280x720/salvage-no-active-sword.txt",
+      "destination": "after/screens/chromium-1280x720/salvage-no-active-sword.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "a151039b6a97751a9f834b905be9e3a27cdcbcd3ce755874bb16f4d4b6cd9ddb",
+      "bytes": 869
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1280x720/salvage-no-reserve.png",
+      "destination": "after/screens/chromium-1280x720/salvage-no-reserve.png",
+      "status": "copied",
+      "reason": null,
+      "sha256": "8593e7b6669179c710289b019350090593402761e2ac122ca9005679b8034916",
+      "bytes": 305052
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1280x720/salvage-no-reserve.txt",
+      "destination": "after/screens/chromium-1280x720/salvage-no-reserve.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "96d1e997809b2a617c10c0ee46f7c400b9e5b91d2c57b5d3cf44a29e4e135b0f",
+      "bytes": 1077
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1920x1080/critical-settlement.png",
+      "destination": "after/screens/chromium-1920x1080/critical-settlement.png",
+      "status": "copied",
+      "reason": null,
+      "sha256": "a51b17bad9de9d20f1b4de8bb6abd7932eb89a85234aaa4c3945ac4f57b1210f",
+      "bytes": 688274
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1920x1080/critical-settlement.txt",
+      "destination": "after/screens/chromium-1920x1080/critical-settlement.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "b358e0a1d6f79198414f171839579ce1edfb19bf48ee0533a133dee183d61756",
+      "bytes": 1009
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1920x1080/exhausted-settlement.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "fe4dcf897104570718b92a7057c10ead478ced898d4045cf20b9a2f06ffde416",
+      "bytes": 689086
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1920x1080/exhausted-settlement.txt",
+      "destination": "after/screens/chromium-1920x1080/exhausted-settlement.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "136aeb11574d62237331b01f7f1f0a95fd80ff9db0e44bca99a2ed77d7c92f76",
+      "bytes": 1029
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1920x1080/journey-full-goal.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "fcc066dedf716ac0e2b8e631719fde8a38ee8a7310b677f31d39b2e0095691a1",
+      "bytes": 1052138
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1920x1080/journey-full-goal.txt",
+      "destination": "after/screens/chromium-1920x1080/journey-full-goal.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "4b0aa2bc04e7ceb1a24a8c8e339f7affeaae3db17760975fd85c8ecbc1969254",
+      "bytes": 1296
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1920x1080/opening-full-goal.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "b15239959500b113e77ccdc56669e082ee65e26a19024595a43a69f34be89dcb",
+      "bytes": 1575691
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1920x1080/opening-full-goal.txt",
+      "destination": "after/screens/chromium-1920x1080/opening-full-goal.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "02b0a3f5714a6550a6ef9489f934cfc870ac3e82c9539c60c96d931347505f80",
+      "bytes": 497
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1920x1080/ordinary-settlement.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "1ee52f7ada7d90eb5c259d536a0d23e2abbf0415dc862c73d4346e6f3bd76f0b",
+      "bytes": 684580
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1920x1080/ordinary-settlement.txt",
+      "destination": "after/screens/chromium-1920x1080/ordinary-settlement.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "3057c634c93eb196787d44aa3636a7e9f6f253618b0b767959f804d8678a7ac0",
+      "bytes": 820
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1920x1080/protectedCritical-settlement.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "435990ff793f7fbceaec61d4fa6190cad6b5a1aac675bb8eecd5af3bcbcd0605",
+      "bytes": 732385
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1920x1080/protectedCritical-settlement.txt",
+      "destination": "after/screens/chromium-1920x1080/protectedCritical-settlement.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "e224b442a140c12f00285e1074dbd91cd13c4cb2e4e583636c58e164b5001225",
+      "bytes": 1088
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1920x1080/salvage-actual-once.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "e419e04c7117dc605cdbaed69ec9d54fefcf369ed903abf7fc9ec6a38a524ea5",
+      "bytes": 2711823
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1920x1080/salvage-actual-once.txt",
+      "destination": "after/screens/chromium-1920x1080/salvage-actual-once.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "b93d9674ffc1bd420dea768d6e8b5194be1dc31d174c9c0f0d4d80ebf883c274",
+      "bytes": 766
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1920x1080/salvage-confirm-values.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "ec0d6a58954f44420482d7cd6ce8264ebb6b2eef1a6f83c8e695941f89017bae",
+      "bytes": 648391
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1920x1080/salvage-confirm-values.txt",
+      "destination": "after/screens/chromium-1920x1080/salvage-confirm-values.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "223a9364f0e3ca9c7f5327af33df3ed6b263a5a011d22b5aea09f1e75e5c2ba4",
+      "bytes": 864
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1920x1080/salvage-no-active-sword.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "9f20ae68a9e36e5739d1799396cc9047576e12dde50f311a4cd3b88d0b82b53b",
+      "bytes": 651721
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1920x1080/salvage-no-active-sword.txt",
+      "destination": "after/screens/chromium-1920x1080/salvage-no-active-sword.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "a151039b6a97751a9f834b905be9e3a27cdcbcd3ce755874bb16f4d4b6cd9ddb",
+      "bytes": 869
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1920x1080/salvage-no-reserve.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "88de802370cb34fb276d503e52d2d716804af51f092d26b22b9ea42f632aefcb",
+      "bytes": 670295
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/chromium-1920x1080/salvage-no-reserve.txt",
+      "destination": "after/screens/chromium-1920x1080/salvage-no-reserve.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "96d1e997809b2a617c10c0ee46f7c400b9e5b91d2c57b5d3cf44a29e4e135b0f",
+      "bytes": 1077
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1280x720/critical-settlement.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "638430ba8f36855176755a0602099a29087b86e34eca76f6830cd48ae14cb4ec",
+      "bytes": 799743
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1280x720/critical-settlement.txt",
+      "destination": "after/screens/firefox-1280x720/critical-settlement.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "b358e0a1d6f79198414f171839579ce1edfb19bf48ee0533a133dee183d61756",
+      "bytes": 1009
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1280x720/exhausted-settlement.png",
+      "destination": "after/screens/firefox-1280x720/exhausted-settlement.png",
+      "status": "copied",
+      "reason": null,
+      "sha256": "478139a7dd29e50fb52837f391678b96b40505b1a6ef9649c7f3ae1830913c22",
+      "bytes": 798597
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1280x720/exhausted-settlement.txt",
+      "destination": "after/screens/firefox-1280x720/exhausted-settlement.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "136aeb11574d62237331b01f7f1f0a95fd80ff9db0e44bca99a2ed77d7c92f76",
+      "bytes": 1029
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1280x720/journey-full-goal.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "4dd8004a66021aa29434c581f4169bfc89f6cf527f672bb95733ba4ee4441546",
+      "bytes": 1065229
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1280x720/journey-full-goal.txt",
+      "destination": "after/screens/firefox-1280x720/journey-full-goal.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "4b0aa2bc04e7ceb1a24a8c8e339f7affeaae3db17760975fd85c8ecbc1969254",
+      "bytes": 1296
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1280x720/opening-full-goal.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "92cb42590b135b0a2717e10594947d5fd5f8e45d64e06406f5197bc8aaba6aa8",
+      "bytes": 1020197
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1280x720/opening-full-goal.txt",
+      "destination": "after/screens/firefox-1280x720/opening-full-goal.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "02b0a3f5714a6550a6ef9489f934cfc870ac3e82c9539c60c96d931347505f80",
+      "bytes": 497
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1280x720/ordinary-settlement.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "035655a3fd47b6e83e1762426cd9fd7bc898c3036aea3ea26c9be730bec5d6d8",
+      "bytes": 809498
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1280x720/ordinary-settlement.txt",
+      "destination": "after/screens/firefox-1280x720/ordinary-settlement.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "3057c634c93eb196787d44aa3636a7e9f6f253618b0b767959f804d8678a7ac0",
+      "bytes": 820
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1280x720/protectedCritical-settlement.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "0036cbd2f81157039eb1981155135381f99cc4c30e317cb81518d8ad1a70e12d",
+      "bytes": 812226
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1280x720/protectedCritical-settlement.txt",
+      "destination": "after/screens/firefox-1280x720/protectedCritical-settlement.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "e224b442a140c12f00285e1074dbd91cd13c4cb2e4e583636c58e164b5001225",
+      "bytes": 1088
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1280x720/salvage-actual-once.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "f477927f6f5e5551d93c26715c3b6eba1da2dde7b8362482e3100b42b3c918da",
+      "bytes": 1573546
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1280x720/salvage-actual-once.txt",
+      "destination": "after/screens/firefox-1280x720/salvage-actual-once.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "b93d9674ffc1bd420dea768d6e8b5194be1dc31d174c9c0f0d4d80ebf883c274",
+      "bytes": 766
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1280x720/salvage-confirm-values.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "31f9f73f8e1e9a582fc8f5d11c61dc8698d20dd858dd578bf9a934cad724c57b",
+      "bytes": 728783
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1280x720/salvage-confirm-values.txt",
+      "destination": "after/screens/firefox-1280x720/salvage-confirm-values.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "223a9364f0e3ca9c7f5327af33df3ed6b263a5a011d22b5aea09f1e75e5c2ba4",
+      "bytes": 864
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1280x720/salvage-no-active-sword.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "15f6c9ae2a744f62df52e004c88be99f5c4a8a36134f29887261604ca5a4503c",
+      "bytes": 705178
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1280x720/salvage-no-active-sword.txt",
+      "destination": "after/screens/firefox-1280x720/salvage-no-active-sword.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "a151039b6a97751a9f834b905be9e3a27cdcbcd3ce755874bb16f4d4b6cd9ddb",
+      "bytes": 869
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1280x720/salvage-no-reserve.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "b62d9acdfd9c2ffed3bdfc02ff4854c1ec81d85a3bf977165e5ea569c26207ad",
+      "bytes": 719595
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1280x720/salvage-no-reserve.txt",
+      "destination": "after/screens/firefox-1280x720/salvage-no-reserve.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "96d1e997809b2a617c10c0ee46f7c400b9e5b91d2c57b5d3cf44a29e4e135b0f",
+      "bytes": 1077
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1920x1080/critical-settlement.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "6de536564b603bf7c17778a02181df14b3972a6f39179b3826dc9e3ff912424d",
+      "bytes": 1795768
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1920x1080/critical-settlement.txt",
+      "destination": "after/screens/firefox-1920x1080/critical-settlement.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "b358e0a1d6f79198414f171839579ce1edfb19bf48ee0533a133dee183d61756",
+      "bytes": 1009
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1920x1080/exhausted-settlement.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "57261a046a4eb40d2c82b6c717416e2869d7299a0d1a1390a880941de2792484",
+      "bytes": 1793120
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1920x1080/exhausted-settlement.txt",
+      "destination": "after/screens/firefox-1920x1080/exhausted-settlement.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "136aeb11574d62237331b01f7f1f0a95fd80ff9db0e44bca99a2ed77d7c92f76",
+      "bytes": 1029
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1920x1080/journey-full-goal.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "59c7e78db536a85c60797c347e174075242bca56a836aeff0d829338792ef4ba",
+      "bytes": 1508905
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1920x1080/journey-full-goal.txt",
+      "destination": "after/screens/firefox-1920x1080/journey-full-goal.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "4b0aa2bc04e7ceb1a24a8c8e339f7affeaae3db17760975fd85c8ecbc1969254",
+      "bytes": 1296
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1920x1080/opening-full-goal.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "45816c1de900ee9a744b622f15980979518a0d453681237f76cc57492cdac790",
+      "bytes": 1727988
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1920x1080/opening-full-goal.txt",
+      "destination": "after/screens/firefox-1920x1080/opening-full-goal.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "02b0a3f5714a6550a6ef9489f934cfc870ac3e82c9539c60c96d931347505f80",
+      "bytes": 497
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1920x1080/ordinary-settlement.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "2b34353a8f2ff19c9f06c3380f6f75f7a0a13899a6ba180d670351a89f1b60b8",
+      "bytes": 1790491
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1920x1080/ordinary-settlement.txt",
+      "destination": "after/screens/firefox-1920x1080/ordinary-settlement.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "3057c634c93eb196787d44aa3636a7e9f6f253618b0b767959f804d8678a7ac0",
+      "bytes": 820
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1920x1080/protectedCritical-settlement.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "7bf4a797a79ba8343a12c7a6d69bd13412bd95baa8e218acfc3318261e65b84f",
+      "bytes": 1802684
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1920x1080/protectedCritical-settlement.txt",
+      "destination": "after/screens/firefox-1920x1080/protectedCritical-settlement.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "e224b442a140c12f00285e1074dbd91cd13c4cb2e4e583636c58e164b5001225",
+      "bytes": 1088
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1920x1080/salvage-actual-once.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "fab5153451b564e9d6fca7423b3537feffb283c4cead008f3272dbe8858c4e33",
+      "bytes": 3117987
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1920x1080/salvage-actual-once.txt",
+      "destination": "after/screens/firefox-1920x1080/salvage-actual-once.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "b93d9674ffc1bd420dea768d6e8b5194be1dc31d174c9c0f0d4d80ebf883c274",
+      "bytes": 766
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1920x1080/salvage-confirm-values.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "4e009e2eedf52967d4915c6844807e7b3c6ffbec3294a8667cb808c67861da48",
+      "bytes": 1702219
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1920x1080/salvage-confirm-values.txt",
+      "destination": "after/screens/firefox-1920x1080/salvage-confirm-values.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "223a9364f0e3ca9c7f5327af33df3ed6b263a5a011d22b5aea09f1e75e5c2ba4",
+      "bytes": 864
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1920x1080/salvage-no-active-sword.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "6338a02389a3f66e17388a75aad608bc349b4dde79efac770065907194bdc088",
+      "bytes": 1684059
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1920x1080/salvage-no-active-sword.txt",
+      "destination": "after/screens/firefox-1920x1080/salvage-no-active-sword.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "a151039b6a97751a9f834b905be9e3a27cdcbcd3ce755874bb16f4d4b6cd9ddb",
+      "bytes": 869
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1920x1080/salvage-no-reserve.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "628bfd78996275d835e86f769a8081a7f63f6df64879530f21c70e30c02fabed",
+      "bytes": 1688311
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/firefox-1920x1080/salvage-no-reserve.txt",
+      "destination": "after/screens/firefox-1920x1080/salvage-no-reserve.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "96d1e997809b2a617c10c0ee46f7c400b9e5b91d2c57b5d3cf44a29e4e135b0f",
+      "bytes": 1077
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1280x720/critical-settlement.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "ef8af18d42e0a92af2c5f0b9b39510f2a7da7ee89bd6200881b4455a42d8d0a4",
+      "bytes": 878091
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1280x720/critical-settlement.txt",
+      "destination": "after/screens/webkit-1280x720/critical-settlement.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "28f62ee40d46689375db5e8f28fa7122c5024cff6fbd45e9fa558c56d2a1b123",
+      "bytes": 1008
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1280x720/exhausted-settlement.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "2ece9e198837ab2c5172d84f315d9d982afec75f8a028a03305eca1d561a90a7",
+      "bytes": 877173
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1280x720/exhausted-settlement.txt",
+      "destination": "after/screens/webkit-1280x720/exhausted-settlement.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "8e2829adc1a90bdc5e523266831fd179eb4c3b7a8718656823b5fbd857947bbf",
+      "bytes": 1028
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1280x720/journey-full-goal.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "5b779b8bd8dadc720dc97b3c5abfe9dac28f8aee24f6df1c2cc8177423c1185b",
+      "bytes": 1075884
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1280x720/journey-full-goal.txt",
+      "destination": "after/screens/webkit-1280x720/journey-full-goal.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "4b0aa2bc04e7ceb1a24a8c8e339f7affeaae3db17760975fd85c8ecbc1969254",
+      "bytes": 1296
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1280x720/opening-full-goal.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "6f3fa482db73a56faa2496fc2e802f1e14dcdeb623e6fe21d9074691ac0f7575",
+      "bytes": 1217747
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1280x720/opening-full-goal.txt",
+      "destination": "after/screens/webkit-1280x720/opening-full-goal.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "02b0a3f5714a6550a6ef9489f934cfc870ac3e82c9539c60c96d931347505f80",
+      "bytes": 497
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1280x720/ordinary-settlement.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "30466a8354a259956ff8cdb8d4772e327967f34ef5c8ec0afd23283669c80d4c",
+      "bytes": 892271
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1280x720/ordinary-settlement.txt",
+      "destination": "after/screens/webkit-1280x720/ordinary-settlement.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "160a004321bcbbfb389382d7bda01700e7027d5efe17e5a848edce109731f20f",
+      "bytes": 819
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1280x720/protectedCritical-settlement.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "fec5efbdfae2f7a5133352e274e996114a5cd6707c84197c65aa97b5fbfca50a",
+      "bytes": 890381
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1280x720/protectedCritical-settlement.txt",
+      "destination": "after/screens/webkit-1280x720/protectedCritical-settlement.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "b5607af679ba7d82680fc862d859337a3acfc5384b4cb00c161429810956969e",
+      "bytes": 1087
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1280x720/salvage-actual-once.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "6a33ca7fcb6047c6cf5b94ea162cf98c1b68b7235b89b03fae8fba5c724b9fcd",
+      "bytes": 1709052
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1280x720/salvage-actual-once.txt",
+      "destination": "after/screens/webkit-1280x720/salvage-actual-once.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "9c2b41fcf1e8da96781432fffd68d1566fcae483eac4659cc8d3ab13db4fad49",
+      "bytes": 765
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1280x720/salvage-confirm-values.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "b1be8eb27edb8b6da6ae0e4387a1c5e48eccccee61809dc509ba898cbac58967",
+      "bytes": 800112
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1280x720/salvage-confirm-values.txt",
+      "destination": "after/screens/webkit-1280x720/salvage-confirm-values.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "b0306f019b2997f2bc0f948f7fa1078504f6a0a0128959014b41a3c2f79deaf6",
+      "bytes": 864
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1280x720/salvage-no-active-sword.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "acd1234ef67986b8558968bee073b1d13e596e88a4180c327d4eae08bf339a2d",
+      "bytes": 773189
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1280x720/salvage-no-active-sword.txt",
+      "destination": "after/screens/webkit-1280x720/salvage-no-active-sword.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "13770136ca42519bf5a87c760bc855e8450803de80ff538361510ac954a075a5",
+      "bytes": 868
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1280x720/salvage-no-reserve.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "ad1328350ff75e517cc99502db1ca00429bce202cc02c4e7149f895379832344",
+      "bytes": 791691
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1280x720/salvage-no-reserve.txt",
+      "destination": "after/screens/webkit-1280x720/salvage-no-reserve.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "45d2c0469d143afabeba38722ff0b325d128b2858ddbaa343edf90d2afa7c63e",
+      "bytes": 1076
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1920x1080/critical-settlement.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "74cafb0a2416fcd30f8d4587d32a1b8127afbdfd36e0425c4c23507168e60cd1",
+      "bytes": 2079644
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1920x1080/critical-settlement.txt",
+      "destination": "after/screens/webkit-1920x1080/critical-settlement.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "28f62ee40d46689375db5e8f28fa7122c5024cff6fbd45e9fa558c56d2a1b123",
+      "bytes": 1008
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1920x1080/exhausted-settlement.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "208c47c2d3f83dc31c6e5b3cdc9e12512b1d96a378bf255b6fecc18f884af145",
+      "bytes": 2076941
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1920x1080/exhausted-settlement.txt",
+      "destination": "after/screens/webkit-1920x1080/exhausted-settlement.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "8e2829adc1a90bdc5e523266831fd179eb4c3b7a8718656823b5fbd857947bbf",
+      "bytes": 1028
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1920x1080/journey-full-goal.png",
+      "destination": "after/screens/webkit-1920x1080/journey-full-goal.png",
+      "status": "copied",
+      "reason": null,
+      "sha256": "a1d7db52a25b6c7f269a138a7d8264e3e8640e3962472c81aca2938fe469a90d",
+      "bytes": 1619466
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1920x1080/journey-full-goal.txt",
+      "destination": "after/screens/webkit-1920x1080/journey-full-goal.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "4b0aa2bc04e7ceb1a24a8c8e339f7affeaae3db17760975fd85c8ecbc1969254",
+      "bytes": 1296
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1920x1080/opening-full-goal.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "e6e9d0f7c070ab1a4040e5a3a6b62ff7bcff4064727e8b2b2848927e5df27200",
+      "bytes": 2248514
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1920x1080/opening-full-goal.txt",
+      "destination": "after/screens/webkit-1920x1080/opening-full-goal.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "02b0a3f5714a6550a6ef9489f934cfc870ac3e82c9539c60c96d931347505f80",
+      "bytes": 497
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1920x1080/ordinary-settlement.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "30e0261241be73bdaa233392db4879c0e801021820f08ed55e7c6bcf4d259be2",
+      "bytes": 2090565
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1920x1080/ordinary-settlement.txt",
+      "destination": "after/screens/webkit-1920x1080/ordinary-settlement.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "160a004321bcbbfb389382d7bda01700e7027d5efe17e5a848edce109731f20f",
+      "bytes": 819
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1920x1080/protectedCritical-settlement.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "3332151daef309a3589db80e5ec7515548d5e301f9f4cc1819c691337868bc33",
+      "bytes": 2083194
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1920x1080/protectedCritical-settlement.txt",
+      "destination": "after/screens/webkit-1920x1080/protectedCritical-settlement.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "b5607af679ba7d82680fc862d859337a3acfc5384b4cb00c161429810956969e",
+      "bytes": 1087
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1920x1080/salvage-actual-once.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "8398894ab122ab4a994f133ca2844e4c7017eb354e9ecf238f6ff048643b3f40",
+      "bytes": 3569218
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1920x1080/salvage-actual-once.txt",
+      "destination": "after/screens/webkit-1920x1080/salvage-actual-once.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "9c2b41fcf1e8da96781432fffd68d1566fcae483eac4659cc8d3ab13db4fad49",
+      "bytes": 765
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1920x1080/salvage-confirm-values.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "602667d1e1b8ed7aa69bc86a94ec27844ecf4fc8af0ba582c894f2baf8e3372f",
+      "bytes": 1991532
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1920x1080/salvage-confirm-values.txt",
+      "destination": "after/screens/webkit-1920x1080/salvage-confirm-values.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "b0306f019b2997f2bc0f948f7fa1078504f6a0a0128959014b41a3c2f79deaf6",
+      "bytes": 864
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1920x1080/salvage-no-active-sword.png",
+      "destination": "after/screens/webkit-1920x1080/salvage-no-active-sword.png",
+      "status": "copied",
+      "reason": null,
+      "sha256": "7d0bdf6728e0912b7f9d2f487f77126d1acee52fc80cc90050fffb227871db10",
+      "bytes": 1965217
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1920x1080/salvage-no-active-sword.txt",
+      "destination": "after/screens/webkit-1920x1080/salvage-no-active-sword.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "13770136ca42519bf5a87c760bc855e8450803de80ff538361510ac954a075a5",
+      "bytes": 868
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1920x1080/salvage-no-reserve.png",
+      "destination": null,
+      "status": "retained-at-original-local-path",
+      "reason": "Representative PNG selection; all 60 original PNGs remain unmodified locally.",
+      "sha256": "11595db1a5313a0c60b484c4997503d7fa4c55d072141c00b2389638edc2d5b1",
+      "bytes": 1965365
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/screens/webkit-1920x1080/salvage-no-reserve.txt",
+      "destination": "after/screens/webkit-1920x1080/salvage-no-reserve.txt",
+      "status": "copied",
+      "reason": null,
+      "sha256": "45d2c0469d143afabeba38722ff0b325d128b2858ddbaa343edf90d2afa7c63e",
+      "bytes": 1076
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/chromium-1280x720-actual-opening.json",
+      "destination": "after/states/chromium-1280x720-actual-opening.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "eee5f793c1b7fc6fec572e7b2c32f0acf741afaabaccd56966317baed6a0837f",
+      "bytes": 2945
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/chromium-1280x720-actual-ui-exchanged.json",
+      "destination": "after/states/chromium-1280x720-actual-ui-exchanged.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "b4db849c8020400e901364554ce73053c29c06653f22e1fbf5aa3ba842a608c9",
+      "bytes": 6861
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/chromium-1280x720-actual-ui-reserved.json",
+      "destination": "after/states/chromium-1280x720-actual-ui-reserved.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "1c58354e52ad6b4248110efd099099adcec6160a2c828f3f0fe41b2f5a43a039",
+      "bytes": 6588
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/chromium-1920x1080-actual-opening.json",
+      "destination": "after/states/chromium-1920x1080-actual-opening.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "c85f0e0957a10223c679c6b2a5fa92ff3d248b615aea9e8ebab5dc62131d2333",
+      "bytes": 2945
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/chromium-1920x1080-actual-ui-exchanged.json",
+      "destination": "after/states/chromium-1920x1080-actual-ui-exchanged.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "b4db849c8020400e901364554ce73053c29c06653f22e1fbf5aa3ba842a608c9",
+      "bytes": 6861
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/chromium-1920x1080-actual-ui-reserved.json",
+      "destination": "after/states/chromium-1920x1080-actual-ui-reserved.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "1c58354e52ad6b4248110efd099099adcec6160a2c828f3f0fe41b2f5a43a039",
+      "bytes": 6588
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/core-forecast-critical.json",
+      "destination": "after/states/core-forecast-critical.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "924baf639f638d226bfd0037e93e0cbc05c570184ee02936cfc3f3a5dc5b05e9",
+      "bytes": 11381
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/core-forecast-exhausted.json",
+      "destination": "after/states/core-forecast-exhausted.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "5f6cdc45c893aea9730bc6602d5f709291fdeffb5cdd3eac5cadf1c426e3804a",
+      "bytes": 9696
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/core-forecast-ordinary.json",
+      "destination": "after/states/core-forecast-ordinary.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "4bf4f273cd789d6711043fe8f68ddf81315d18cb5ed559ca21063303838d7597",
+      "bytes": 6087
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/core-forecast-protectedCritical.json",
+      "destination": "after/states/core-forecast-protectedCritical.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "e1e658b98d8d59dee1009b5f47425e9767685ec38c4f3ea5fd15b523e62ffa38",
+      "bytes": 22891
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/firefox-1280x720-actual-opening.json",
+      "destination": "after/states/firefox-1280x720-actual-opening.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "afc6b874ab9d1a1be128bc40a3170d5a146a37dc40caf4b7b795d6d6e3c20fe4",
+      "bytes": 2945
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/firefox-1280x720-actual-ui-exchanged.json",
+      "destination": "after/states/firefox-1280x720-actual-ui-exchanged.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "b4db849c8020400e901364554ce73053c29c06653f22e1fbf5aa3ba842a608c9",
+      "bytes": 6861
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/firefox-1280x720-actual-ui-reserved.json",
+      "destination": "after/states/firefox-1280x720-actual-ui-reserved.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "1c58354e52ad6b4248110efd099099adcec6160a2c828f3f0fe41b2f5a43a039",
+      "bytes": 6588
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/firefox-1920x1080-actual-opening.json",
+      "destination": "after/states/firefox-1920x1080-actual-opening.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "7e1b85593015e26e7111f99aed0f769482d139607319bcac7ff8a8e46f06e75c",
+      "bytes": 2945
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/firefox-1920x1080-actual-ui-exchanged.json",
+      "destination": "after/states/firefox-1920x1080-actual-ui-exchanged.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "b4db849c8020400e901364554ce73053c29c06653f22e1fbf5aa3ba842a608c9",
+      "bytes": 6861
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/firefox-1920x1080-actual-ui-reserved.json",
+      "destination": "after/states/firefox-1920x1080-actual-ui-reserved.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "1c58354e52ad6b4248110efd099099adcec6160a2c828f3f0fe41b2f5a43a039",
+      "bytes": 6588
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/fixture-critical.json",
+      "destination": "after/states/fixture-critical.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "02eddaa898fb5270f3feed664bf0da70da50bade9b4aff926403d8837c0d20fd",
+      "bytes": 10850
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/fixture-exhausted.json",
+      "destination": "after/states/fixture-exhausted.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "dcda8e0a0d9a910254807f2fc2cbd0b30d9de12c88e68c1ec4db491002fe5b3b",
+      "bytes": 9205
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/fixture-ordinary.json",
+      "destination": "after/states/fixture-ordinary.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "d10cdcfd044ffb37705f9593876b951e831d1fe1011dc1b8262ac550a1e2a524",
+      "bytes": 5595
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/fixture-protectedCritical.json",
+      "destination": "after/states/fixture-protectedCritical.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "40111f8e22463e6078c2514c4f4aa109fc59f915a4dbe9fc4833320e850f3164",
+      "bytes": 22358
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/fixture-salvage.json",
+      "destination": "after/states/fixture-salvage.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "5d9de8367599c6e6d2c54ab7edf627392aa4f77ac1c231e7bf0c484bfd1ac32f",
+      "bytes": 6488
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/fixture-salvageEmpty.json",
+      "destination": "after/states/fixture-salvageEmpty.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "446efb7b472cf849eb9dde3de59111030971f7793818cf04a51377e10605ccae",
+      "bytes": 6690
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/webkit-1280x720-actual-opening.json",
+      "destination": "after/states/webkit-1280x720-actual-opening.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "0db42e1e1ae0a599698ddc39532b7046181aa3e27fbb60a974cc0ef822fca1ed",
+      "bytes": 2945
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/webkit-1280x720-actual-ui-exchanged.json",
+      "destination": "after/states/webkit-1280x720-actual-ui-exchanged.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "b4db849c8020400e901364554ce73053c29c06653f22e1fbf5aa3ba842a608c9",
+      "bytes": 6861
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/webkit-1280x720-actual-ui-reserved.json",
+      "destination": "after/states/webkit-1280x720-actual-ui-reserved.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "1c58354e52ad6b4248110efd099099adcec6160a2c828f3f0fe41b2f5a43a039",
+      "bytes": 6588
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/webkit-1920x1080-actual-opening.json",
+      "destination": "after/states/webkit-1920x1080-actual-opening.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "7ba26a0e677fa929ab72a8b645ae7a66b313b108e81f8b0adb0c370fbf346db1",
+      "bytes": 2945
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/webkit-1920x1080-actual-ui-exchanged.json",
+      "destination": "after/states/webkit-1920x1080-actual-ui-exchanged.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "b4db849c8020400e901364554ce73053c29c06653f22e1fbf5aa3ba842a608c9",
+      "bytes": 6861
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states/webkit-1920x1080-actual-ui-reserved.json",
+      "destination": "after/states/webkit-1920x1080-actual-ui-reserved.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "1c58354e52ad6b4248110efd099099adcec6160a2c828f3f0fe41b2f5a43a039",
+      "bytes": 6588
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/states-index.json",
+      "destination": "after/states-index.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "e4beab90ae5089d1d01b7c1cef5f3092008260bd8d1e75f42e43eed9ae485c6f",
+      "bytes": 8588
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/webkit-1280x720-result.json",
+      "destination": "after/webkit-1280x720-result.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "f75471386cc64db0fdea36c8284db8e36bb792fec830ea3f39c263a52db6fcdb",
+      "bytes": 5112
+    },
+    {
+      "original": "tmp/T11-4-2-3i6/guidance-final-v2/webkit-1920x1080-result.json",
+      "destination": "after/webkit-1920x1080-result.json",
+      "status": "copied",
+      "reason": null,
+      "sha256": "abf373f04bcbf9e253c8501189e7f0d048eda93e4afd1304443413e38a4a0ed5",
+      "bytes": 5133
+    }
+  ]
+}

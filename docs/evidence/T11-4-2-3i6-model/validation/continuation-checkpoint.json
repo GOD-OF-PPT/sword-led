@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-20T20:31:59.605199+00:00",
+  "classification": "progress and verified wait",
+  "previousGoalTurn": "progress: completed final chapter and pushed source plus receipt",
+  "task": "3i.6 active, not complete",
+  "modelSourceCommit": "13538b01dd3053f5befb09fd22a4ed446f5a6dc0",
+  "formal": {
+    "token": "v4-balance-formal-01",
+    "execSession": 34179,
+    "wrapperPid": 81355,
+    "childPid": 81356,
+    "verifiedLiveAt": "2026-10-20 20:30:13 UTC",
+    "lastVerifiedCompleted": 13000,
+    "expected": 30000,
+    "parentRssKiB": 495000,
+    "processDirectory": "tmp/T11-4-2-3i6/formal-process",
+    "dataset": "tmp/T11-4-2-3i6/formal",
+    "terminalNotObserved": true
+  },
+  "next": "Poll the same actual session or live PIDs, never restart on observation timeout. After producer terminal0 run full independent audit of all30000 before any source changes. Then inspect stats and missing features, implement already documented gameplay guidance, verify and publish task receipt. No goal completion."
+}

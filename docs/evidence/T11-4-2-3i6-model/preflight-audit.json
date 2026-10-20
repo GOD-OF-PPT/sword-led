@@ -1,0 +1,8845 @@
+{
+  "schemaVersion": 1,
+  "rulesVersion": "forge-v4",
+  "seedPrefix": "v4-balance",
+  "seeds": 2,
+  "cases": 60,
+  "producerReplayedFinalStates": 60,
+  "independentReplayedFinalStates": 60,
+  "mirrorComparisons": 4,
+  "rowsSha256": "734885a28f1f552accaa2889e2e2b86b483c3147efd4dc59e88fb198848a387d",
+  "uncompressedRecordsSha256": "76fff6ea93f7ebd3c4868f7a2c1ffffc9ce57b43eb15372e8b6eb42141bcb213",
+  "baselineSha256": "f62da90b825afa70899109a7878b796530b3cd6242cfdd2410fe66f8ee1daf3e",
+  "sourceFiles": 341,
+  "buildFiles": 75,
+  "qualification": {
+    "source": "docs/evidence/T11-4-2-3i1/witness-fixed/complete.json",
+    "stateSha256": "ed3d9ae47e0e8ae70b0f0eed62550aaa5acb912e518e3e1c65d5f9871bdccbcc",
+    "eligibility": {
+      "recipes": [
+        "light",
+        "guard",
+        "heavy"
+      ],
+      "challenge": true
+    }
+  },
+  "statistics": {
+    "balanced-steady": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 2,
+        "return": 0,
+        "defeat": 0
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 2,
+      "finalBladeMade": 2,
+      "missingCritical": {
+        "4": 0,
+        "8": 0,
+        "12": 0
+      },
+      "totals": {
+        "commands": 424,
+        "strikes": 276,
+        "normalHits": 264,
+        "burstActions": 12,
+        "bursts": 12,
+        "internalHits": 308,
+        "cracks": 6,
+        "broken": 0,
+        "upgrades": 6,
+        "repairs": 0,
+        "reserves": 4,
+        "retrieves": 4,
+        "deliveredCount": 66,
+        "commissionedCount": 24,
+        "sales": 710053,
+        "recoveredCoins": 0,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 5700,
+        "tradeValue": 320,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 212,
+          "p10": 212,
+          "p50": 212,
+          "p90": 212,
+          "max": 212,
+          "mean": 212
+        },
+        "coins": {
+          "min": 259331,
+          "p10": 259331,
+          "p50": 259331,
+          "p90": 259331,
+          "max": 445022,
+          "mean": 352176.5
+        },
+        "seals": {
+          "min": 3,
+          "p10": 3,
+          "p50": 3,
+          "p90": 3,
+          "max": 3,
+          "mean": 3
+        },
+        "peak": {
+          "min": 80121,
+          "p10": 80121,
+          "p50": 80121,
+          "p90": 80121,
+          "max": 230250,
+          "mean": 155185.5
+        },
+        "met": {
+          "min": 11,
+          "p10": 11,
+          "p50": 11,
+          "p90": 11,
+          "max": 11,
+          "mean": 11
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "light": 2
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "burst": 2
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "guard": 2
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "new": 0
+          }
+        },
+        {
+          "id": 6,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 2
+          }
+        },
+        {
+          "id": 7,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "heavy": 2
+          }
+        },
+        {
+          "id": 8,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "two-light": 2
+          }
+        },
+        {
+          "id": 9,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 0,
+            "intact": 2
+          }
+        },
+        {
+          "id": 11,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "two-new": 0
+          }
+        },
+        {
+          "id": 12,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "finale": 2
+          }
+        }
+      ],
+      "traits": {
+        "steady": 2,
+        "ember": 2,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2
+      },
+      "modifications": {
+        "windbox": 2,
+        "warmRack": 0,
+        "wideMouth": 2
+      },
+      "triggers": {
+        "steady": 6,
+        "ember": 44,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2,
+        "windbox": 30,
+        "warmRack": 0,
+        "wideMouth": 32,
+        "loan": 3,
+        "credit": 1,
+        "shelter": 5
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 3,
+          "coins": -120
+        },
+        "salvage": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 1,
+          "coins": -540
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 5,
+          "coins": -80
+        },
+        "rest": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "balanced-ember": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 2,
+        "return": 0,
+        "defeat": 0
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 2,
+      "finalBladeMade": 2,
+      "missingCritical": {
+        "4": 0,
+        "8": 0,
+        "12": 0
+      },
+      "totals": {
+        "commands": 424,
+        "strikes": 276,
+        "normalHits": 264,
+        "burstActions": 12,
+        "bursts": 12,
+        "internalHits": 308,
+        "cracks": 6,
+        "broken": 0,
+        "upgrades": 6,
+        "repairs": 0,
+        "reserves": 4,
+        "retrieves": 4,
+        "deliveredCount": 66,
+        "commissionedCount": 24,
+        "sales": 710053,
+        "recoveredCoins": 0,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 5700,
+        "tradeValue": 320,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 212,
+          "p10": 212,
+          "p50": 212,
+          "p90": 212,
+          "max": 212,
+          "mean": 212
+        },
+        "coins": {
+          "min": 259331,
+          "p10": 259331,
+          "p50": 259331,
+          "p90": 259331,
+          "max": 445022,
+          "mean": 352176.5
+        },
+        "seals": {
+          "min": 3,
+          "p10": 3,
+          "p50": 3,
+          "p90": 3,
+          "max": 3,
+          "mean": 3
+        },
+        "peak": {
+          "min": 80121,
+          "p10": 80121,
+          "p50": 80121,
+          "p90": 80121,
+          "max": 230250,
+          "mean": 155185.5
+        },
+        "met": {
+          "min": 11,
+          "p10": 11,
+          "p50": 11,
+          "p90": 11,
+          "max": 11,
+          "mean": 11
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "light": 2
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "burst": 2
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "guard": 2
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "new": 0
+          }
+        },
+        {
+          "id": 6,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 2
+          }
+        },
+        {
+          "id": 7,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "heavy": 2
+          }
+        },
+        {
+          "id": 8,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "two-light": 2
+          }
+        },
+        {
+          "id": 9,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 0,
+            "intact": 2
+          }
+        },
+        {
+          "id": 11,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "two-new": 0
+          }
+        },
+        {
+          "id": 12,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "finale": 2
+          }
+        }
+      ],
+      "traits": {
+        "steady": 2,
+        "ember": 2,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2
+      },
+      "modifications": {
+        "windbox": 2,
+        "warmRack": 0,
+        "wideMouth": 2
+      },
+      "triggers": {
+        "steady": 6,
+        "ember": 44,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2,
+        "windbox": 30,
+        "warmRack": 0,
+        "wideMouth": 32,
+        "loan": 3,
+        "credit": 1,
+        "shelter": 5
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 3,
+          "coins": -120
+        },
+        "salvage": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 1,
+          "coins": -540
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 5,
+          "coins": -80
+        },
+        "rest": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "low-hammer": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 0,
+        "return": 1,
+        "defeat": 1
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 1,
+      "finalBladeMade": 0,
+      "missingCritical": {
+        "4": 2,
+        "8": 1,
+        "12": 2
+      },
+      "totals": {
+        "commands": 237,
+        "strikes": 135,
+        "normalHits": 135,
+        "burstActions": 0,
+        "bursts": 0,
+        "internalHits": 135,
+        "cracks": 0,
+        "broken": 0,
+        "upgrades": 4,
+        "repairs": 2,
+        "reserves": 0,
+        "retrieves": 0,
+        "deliveredCount": 47,
+        "commissionedCount": 11,
+        "sales": 34256,
+        "recoveredCoins": 0,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 4490,
+        "tradeValue": 200,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 72,
+          "p10": 72,
+          "p50": 72,
+          "p90": 72,
+          "max": 165,
+          "mean": 118.5
+        },
+        "coins": {
+          "min": 2925,
+          "p10": 2925,
+          "p50": 2925,
+          "p90": 2925,
+          "max": 26841,
+          "mean": 14883
+        },
+        "seals": {
+          "min": 0,
+          "p10": 0,
+          "p50": 0,
+          "p90": 0,
+          "max": 1,
+          "mean": 0.5
+        },
+        "peak": {
+          "min": 503,
+          "p10": 503,
+          "p50": 503,
+          "p90": 503,
+          "max": 5949,
+          "mean": 3226
+        },
+        "met": {
+          "min": 2,
+          "p10": 2,
+          "p50": 2,
+          "p90": 2,
+          "max": 7,
+          "mean": 4.5
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "light": 2
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "burst": 0
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "guard": 0
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 1,
+          "routes": {
+            "old": 0,
+            "new": 1
+          }
+        },
+        {
+          "id": 6,
+          "reached": 1,
+          "met": 0,
+          "routes": {
+            "cracked": 0
+          }
+        },
+        {
+          "id": 7,
+          "reached": 1,
+          "met": 1,
+          "routes": {
+            "heavy": 1
+          }
+        },
+        {
+          "id": 8,
+          "reached": 1,
+          "met": 1,
+          "routes": {
+            "two-light": 1
+          }
+        },
+        {
+          "id": 9,
+          "reached": 1,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 1,
+          "met": 1,
+          "routes": {
+            "cracked": 0,
+            "intact": 1
+          }
+        },
+        {
+          "id": 11,
+          "reached": 1,
+          "met": 1,
+          "routes": {
+            "old": 0,
+            "two-new": 1
+          }
+        },
+        {
+          "id": 12,
+          "reached": 1,
+          "met": 0,
+          "routes": {
+            "finale": 0
+          }
+        }
+      ],
+      "traits": {
+        "steady": 2,
+        "ember": 2,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 1
+      },
+      "modifications": {
+        "windbox": 2,
+        "warmRack": 0,
+        "wideMouth": 1
+      },
+      "triggers": {
+        "steady": 0,
+        "ember": 0,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 1,
+        "windbox": 12,
+        "warmRack": 0,
+        "wideMouth": 0,
+        "loan": 0,
+        "credit": 0,
+        "shelter": 3
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 1,
+          "declined": 1,
+          "unaffordable": 0,
+          "consumed": 1,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": -60
+        },
+        "salvage": {
+          "offered": 1,
+          "accepted": 0,
+          "declined": 1,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": -540
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 3,
+          "coins": -80
+        },
+        "rest": {
+          "offered": 0,
+          "accepted": 0,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "burst-first": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 2,
+        "return": 0,
+        "defeat": 0
+      },
+      "twelveOfTwelve": 1,
+      "reachedDay12": 2,
+      "finalBladeMade": 2,
+      "missingCritical": {
+        "4": 0,
+        "8": 0,
+        "12": 0
+      },
+      "totals": {
+        "commands": 577,
+        "strikes": 422,
+        "normalHits": 374,
+        "burstActions": 48,
+        "bursts": 48,
+        "internalHits": 536,
+        "cracks": 16,
+        "broken": 2,
+        "upgrades": 6,
+        "repairs": 0,
+        "reserves": 4,
+        "retrieves": 4,
+        "deliveredCount": 64,
+        "commissionedCount": 25,
+        "sales": 1699695,
+        "recoveredCoins": 252,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 5700,
+        "tradeValue": 320,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 286,
+          "p10": 286,
+          "p50": 286,
+          "p90": 286,
+          "max": 291,
+          "mean": 288.5
+        },
+        "coins": {
+          "min": 519942,
+          "p10": 519942,
+          "p50": 519942,
+          "p90": 519942,
+          "max": 1174305,
+          "mean": 847123.5
+        },
+        "seals": {
+          "min": 3,
+          "p10": 3,
+          "p50": 3,
+          "p90": 3,
+          "max": 3,
+          "mean": 3
+        },
+        "peak": {
+          "min": 124726,
+          "p10": 124726,
+          "p50": 124726,
+          "p90": 124726,
+          "max": 889046,
+          "mean": 506886
+        },
+        "met": {
+          "min": 11,
+          "p10": 11,
+          "p50": 11,
+          "p90": 11,
+          "max": 12,
+          "mean": 11.5
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "light": 2
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "burst": 2
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "guard": 2
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "new": 0
+          }
+        },
+        {
+          "id": 6,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 2
+          }
+        },
+        {
+          "id": 7,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "heavy": 2
+          }
+        },
+        {
+          "id": 8,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "two-light": 2
+          }
+        },
+        {
+          "id": 9,
+          "reached": 2,
+          "met": 1,
+          "routes": {
+            "two-bursts": 1
+          }
+        },
+        {
+          "id": 10,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 0,
+            "intact": 2
+          }
+        },
+        {
+          "id": 11,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "two-new": 0
+          }
+        },
+        {
+          "id": 12,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "finale": 2
+          }
+        }
+      ],
+      "traits": {
+        "steady": 2,
+        "ember": 2,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2
+      },
+      "modifications": {
+        "windbox": 2,
+        "warmRack": 0,
+        "wideMouth": 2
+      },
+      "triggers": {
+        "steady": 13,
+        "ember": 162,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 1,
+        "windbox": 23,
+        "warmRack": 0,
+        "wideMouth": 72,
+        "loan": 3,
+        "credit": 2,
+        "shelter": 6
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 3,
+          "coins": -120
+        },
+        "salvage": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": -540
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 6,
+          "coins": -80
+        },
+        "rest": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "cracked-commission": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 2,
+        "return": 0,
+        "defeat": 0
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 2,
+      "finalBladeMade": 2,
+      "missingCritical": {
+        "4": 0,
+        "8": 0,
+        "12": 0
+      },
+      "totals": {
+        "commands": 413,
+        "strikes": 265,
+        "normalHits": 256,
+        "burstActions": 9,
+        "bursts": 9,
+        "internalHits": 289,
+        "cracks": 8,
+        "broken": 2,
+        "upgrades": 6,
+        "repairs": 0,
+        "reserves": 4,
+        "retrieves": 4,
+        "deliveredCount": 63,
+        "commissionedCount": 24,
+        "sales": 352410,
+        "recoveredCoins": 180,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 5700,
+        "tradeValue": 680,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 203,
+          "p10": 203,
+          "p50": 203,
+          "p90": 203,
+          "max": 210,
+          "mean": 206.5
+        },
+        "coins": {
+          "min": 157054,
+          "p10": 157054,
+          "p50": 157054,
+          "p90": 157054,
+          "max": 189836,
+          "mean": 173445
+        },
+        "seals": {
+          "min": 2,
+          "p10": 2,
+          "p50": 2,
+          "p90": 2,
+          "max": 2,
+          "mean": 2
+        },
+        "peak": {
+          "min": 66487,
+          "p10": 66487,
+          "p50": 66487,
+          "p90": 66487,
+          "max": 84746,
+          "mean": 75616.5
+        },
+        "met": {
+          "min": 11,
+          "p10": 11,
+          "p50": 11,
+          "p90": 11,
+          "max": 11,
+          "mean": 11
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "light": 2
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "burst": 2
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "guard": 2
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "new": 0
+          }
+        },
+        {
+          "id": 6,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 2
+          }
+        },
+        {
+          "id": 7,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "heavy": 2
+          }
+        },
+        {
+          "id": 8,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "two-light": 2
+          }
+        },
+        {
+          "id": 9,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 0,
+            "intact": 2
+          }
+        },
+        {
+          "id": 11,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "two-new": 0
+          }
+        },
+        {
+          "id": 12,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "finale": 2
+          }
+        }
+      ],
+      "traits": {
+        "steady": 2,
+        "ember": 2,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 2,
+        "pardon": 0
+      },
+      "modifications": {
+        "windbox": 2,
+        "warmRack": 0,
+        "wideMouth": 2
+      },
+      "triggers": {
+        "steady": 8,
+        "ember": 33,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 4,
+        "pardon": 0,
+        "windbox": 24,
+        "warmRack": 0,
+        "wideMouth": 24,
+        "loan": 3,
+        "credit": 1,
+        "shelter": 5
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 3,
+          "coins": -120
+        },
+        "salvage": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 1,
+          "coins": -540
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 5,
+          "coins": -80
+        },
+        "rest": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "old-first": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 2,
+        "return": 0,
+        "defeat": 0
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 2,
+      "finalBladeMade": 2,
+      "missingCritical": {
+        "4": 0,
+        "8": 0,
+        "12": 0
+      },
+      "totals": {
+        "commands": 424,
+        "strikes": 276,
+        "normalHits": 264,
+        "burstActions": 12,
+        "bursts": 12,
+        "internalHits": 308,
+        "cracks": 6,
+        "broken": 0,
+        "upgrades": 6,
+        "repairs": 0,
+        "reserves": 4,
+        "retrieves": 4,
+        "deliveredCount": 66,
+        "commissionedCount": 24,
+        "sales": 658384,
+        "recoveredCoins": 0,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 5700,
+        "tradeValue": 320,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 212,
+          "p10": 212,
+          "p50": 212,
+          "p90": 212,
+          "max": 212,
+          "mean": 212
+        },
+        "coins": {
+          "min": 236884,
+          "p10": 236884,
+          "p50": 236884,
+          "p90": 236884,
+          "max": 415800,
+          "mean": 326342
+        },
+        "seals": {
+          "min": 3,
+          "p10": 3,
+          "p50": 3,
+          "p90": 3,
+          "max": 3,
+          "mean": 3
+        },
+        "peak": {
+          "min": 72827,
+          "p10": 72827,
+          "p50": 72827,
+          "p90": 72827,
+          "max": 209392,
+          "mean": 141109.5
+        },
+        "met": {
+          "min": 11,
+          "p10": 11,
+          "p50": 11,
+          "p90": 11,
+          "max": 11,
+          "mean": 11
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "light": 2
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "burst": 2
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "guard": 2
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "new": 0
+          }
+        },
+        {
+          "id": 6,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 2
+          }
+        },
+        {
+          "id": 7,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "heavy": 2
+          }
+        },
+        {
+          "id": 8,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "two-light": 2
+          }
+        },
+        {
+          "id": 9,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 0,
+            "intact": 2
+          }
+        },
+        {
+          "id": 11,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "two-new": 0
+          }
+        },
+        {
+          "id": 12,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "finale": 2
+          }
+        }
+      ],
+      "traits": {
+        "steady": 2,
+        "ember": 2,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2
+      },
+      "modifications": {
+        "windbox": 0,
+        "warmRack": 2,
+        "wideMouth": 2
+      },
+      "triggers": {
+        "steady": 6,
+        "ember": 44,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2,
+        "windbox": 0,
+        "warmRack": 4,
+        "wideMouth": 32,
+        "loan": 3,
+        "credit": 1,
+        "shelter": 5
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 3,
+          "coins": -120
+        },
+        "salvage": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 1,
+          "coins": -540
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 5,
+          "coins": -80
+        },
+        "rest": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "new-only": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 2,
+        "return": 0,
+        "defeat": 0
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 2,
+      "finalBladeMade": 2,
+      "missingCritical": {
+        "4": 0,
+        "8": 0,
+        "12": 0
+      },
+      "totals": {
+        "commands": 414,
+        "strikes": 274,
+        "normalHits": 262,
+        "burstActions": 12,
+        "bursts": 12,
+        "internalHits": 306,
+        "cracks": 7,
+        "broken": 0,
+        "upgrades": 6,
+        "repairs": 0,
+        "reserves": 0,
+        "retrieves": 0,
+        "deliveredCount": 66,
+        "commissionedCount": 26,
+        "sales": 730577,
+        "recoveredCoins": 0,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 5700,
+        "tradeValue": 320,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 207,
+          "p10": 207,
+          "p50": 207,
+          "p90": 207,
+          "max": 207,
+          "mean": 207
+        },
+        "coins": {
+          "min": 269753,
+          "p10": 269753,
+          "p50": 269753,
+          "p90": 269753,
+          "max": 455124,
+          "mean": 362438.5
+        },
+        "seals": {
+          "min": 3,
+          "p10": 3,
+          "p50": 3,
+          "p90": 3,
+          "max": 3,
+          "mean": 3
+        },
+        "peak": {
+          "min": 84770,
+          "p10": 84770,
+          "p50": 84770,
+          "p90": 84770,
+          "max": 230250,
+          "mean": 157510
+        },
+        "met": {
+          "min": 11,
+          "p10": 11,
+          "p50": 11,
+          "p90": 11,
+          "max": 11,
+          "mean": 11
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "light": 2
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "burst": 2
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "guard": 2
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 0,
+            "new": 2
+          }
+        },
+        {
+          "id": 6,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 2
+          }
+        },
+        {
+          "id": 7,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "heavy": 2
+          }
+        },
+        {
+          "id": 8,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "two-light": 2
+          }
+        },
+        {
+          "id": 9,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 0,
+            "intact": 2
+          }
+        },
+        {
+          "id": 11,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 0,
+            "two-new": 2
+          }
+        },
+        {
+          "id": 12,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "finale": 2
+          }
+        }
+      ],
+      "traits": {
+        "steady": 2,
+        "ember": 2,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2
+      },
+      "modifications": {
+        "windbox": 2,
+        "warmRack": 0,
+        "wideMouth": 2
+      },
+      "triggers": {
+        "steady": 7,
+        "ember": 44,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2,
+        "windbox": 27,
+        "warmRack": 0,
+        "wideMouth": 32,
+        "loan": 3,
+        "credit": 1,
+        "shelter": 5
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 3,
+          "coins": -120
+        },
+        "salvage": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 1,
+          "coins": -540
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 5,
+          "coins": -80
+        },
+        "rest": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "fixed-3": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 0,
+        "return": 1,
+        "defeat": 1
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 1,
+      "finalBladeMade": 0,
+      "missingCritical": {
+        "4": 2,
+        "8": 1,
+        "12": 2
+      },
+      "totals": {
+        "commands": 245,
+        "strikes": 141,
+        "normalHits": 141,
+        "burstActions": 0,
+        "bursts": 0,
+        "internalHits": 141,
+        "cracks": 0,
+        "broken": 0,
+        "upgrades": 4,
+        "repairs": 2,
+        "reserves": 1,
+        "retrieves": 1,
+        "deliveredCount": 47,
+        "commissionedCount": 11,
+        "sales": 35212,
+        "recoveredCoins": 0,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 4490,
+        "tradeValue": 200,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 72,
+          "p10": 72,
+          "p50": 72,
+          "p90": 72,
+          "max": 173,
+          "mean": 122.5
+        },
+        "coins": {
+          "min": 2925,
+          "p10": 2925,
+          "p50": 2925,
+          "p90": 2925,
+          "max": 27797,
+          "mean": 15361
+        },
+        "seals": {
+          "min": 0,
+          "p10": 0,
+          "p50": 0,
+          "p90": 0,
+          "max": 1,
+          "mean": 0.5
+        },
+        "peak": {
+          "min": 503,
+          "p10": 503,
+          "p50": 503,
+          "p90": 503,
+          "max": 3594,
+          "mean": 2048.5
+        },
+        "met": {
+          "min": 2,
+          "p10": 2,
+          "p50": 2,
+          "p90": 2,
+          "max": 7,
+          "mean": 4.5
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "light": 2
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "burst": 0
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "guard": 0
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 1,
+          "routes": {
+            "old": 0,
+            "new": 1
+          }
+        },
+        {
+          "id": 6,
+          "reached": 1,
+          "met": 0,
+          "routes": {
+            "cracked": 0
+          }
+        },
+        {
+          "id": 7,
+          "reached": 1,
+          "met": 1,
+          "routes": {
+            "heavy": 1
+          }
+        },
+        {
+          "id": 8,
+          "reached": 1,
+          "met": 1,
+          "routes": {
+            "two-light": 1
+          }
+        },
+        {
+          "id": 9,
+          "reached": 1,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 1,
+          "met": 1,
+          "routes": {
+            "cracked": 0,
+            "intact": 1
+          }
+        },
+        {
+          "id": 11,
+          "reached": 1,
+          "met": 1,
+          "routes": {
+            "old": 0,
+            "two-new": 1
+          }
+        },
+        {
+          "id": 12,
+          "reached": 1,
+          "met": 0,
+          "routes": {
+            "finale": 0
+          }
+        }
+      ],
+      "traits": {
+        "steady": 2,
+        "ember": 2,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 1
+      },
+      "modifications": {
+        "windbox": 2,
+        "warmRack": 0,
+        "wideMouth": 1
+      },
+      "triggers": {
+        "steady": 0,
+        "ember": 0,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 1,
+        "windbox": 13,
+        "warmRack": 0,
+        "wideMouth": 0,
+        "loan": 0,
+        "credit": 0,
+        "shelter": 3
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 1,
+          "declined": 1,
+          "unaffordable": 0,
+          "consumed": 1,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": -60
+        },
+        "salvage": {
+          "offered": 1,
+          "accepted": 0,
+          "declined": 1,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": -540
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 3,
+          "coins": -80
+        },
+        "rest": {
+          "offered": 0,
+          "accepted": 0,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "fixed-6": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 0,
+        "return": 2,
+        "defeat": 0
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 2,
+      "finalBladeMade": 0,
+      "missingCritical": {
+        "4": 0,
+        "8": 1,
+        "12": 2
+      },
+      "totals": {
+        "commands": 553,
+        "strikes": 402,
+        "normalHits": 402,
+        "burstActions": 0,
+        "bursts": 0,
+        "internalHits": 402,
+        "cracks": 12,
+        "broken": 2,
+        "upgrades": 6,
+        "repairs": 4,
+        "reserves": 4,
+        "retrieves": 4,
+        "deliveredCount": 65,
+        "commissionedCount": 18,
+        "sales": 198641,
+        "recoveredCoins": 145,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 6700,
+        "tradeValue": 320,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 274,
+          "p10": 274,
+          "p50": 274,
+          "p90": 274,
+          "max": 279,
+          "mean": 276.5
+        },
+        "coins": {
+          "min": 91007,
+          "p10": 91007,
+          "p50": 91007,
+          "p90": 91007,
+          "max": 101079,
+          "mean": 96043
+        },
+        "seals": {
+          "min": 1,
+          "p10": 1,
+          "p50": 1,
+          "p90": 1,
+          "max": 1,
+          "mean": 1
+        },
+        "peak": {
+          "min": 8670,
+          "p10": 8670,
+          "p50": 8670,
+          "p90": 8670,
+          "max": 18122,
+          "mean": 13396
+        },
+        "met": {
+          "min": 7,
+          "p10": 7,
+          "p50": 7,
+          "p90": 7,
+          "max": 7,
+          "mean": 7
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "light": 0
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "burst": 0
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "guard": 2
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 0,
+            "new": 2
+          }
+        },
+        {
+          "id": 6,
+          "reached": 2,
+          "met": 1,
+          "routes": {
+            "cracked": 1
+          }
+        },
+        {
+          "id": 7,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "heavy": 2
+          }
+        },
+        {
+          "id": 8,
+          "reached": 2,
+          "met": 1,
+          "routes": {
+            "two-light": 1
+          }
+        },
+        {
+          "id": 9,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 0,
+            "intact": 2
+          }
+        },
+        {
+          "id": 11,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 0,
+            "two-new": 2
+          }
+        },
+        {
+          "id": 12,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "finale": 0
+          }
+        }
+      ],
+      "traits": {
+        "steady": 2,
+        "ember": 2,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2
+      },
+      "modifications": {
+        "windbox": 2,
+        "warmRack": 0,
+        "wideMouth": 2
+      },
+      "triggers": {
+        "steady": 7,
+        "ember": 0,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2,
+        "windbox": 23,
+        "warmRack": 0,
+        "wideMouth": 0,
+        "loan": 3,
+        "credit": 1,
+        "shelter": 6
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 1,
+          "declined": 1,
+          "unaffordable": 0,
+          "consumed": 1,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 3,
+          "coins": -120
+        },
+        "salvage": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 1,
+          "coins": -540
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 6,
+          "coins": -80
+        },
+        "rest": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "fixed-7": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 1,
+        "return": 1,
+        "defeat": 0
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 2,
+      "finalBladeMade": 2,
+      "missingCritical": {
+        "4": 0,
+        "8": 0,
+        "12": 0
+      },
+      "totals": {
+        "commands": 594,
+        "strikes": 450,
+        "normalHits": 388,
+        "burstActions": 62,
+        "bursts": 62,
+        "internalHits": 593,
+        "cracks": 12,
+        "broken": 2,
+        "upgrades": 6,
+        "repairs": 2,
+        "reserves": 4,
+        "retrieves": 2,
+        "deliveredCount": 62,
+        "commissionedCount": 23,
+        "sales": 1321768,
+        "recoveredCoins": 55,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 6000,
+        "tradeValue": 320,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 297,
+          "p10": 297,
+          "p50": 297,
+          "p90": 297,
+          "max": 297,
+          "mean": 297
+        },
+        "coins": {
+          "min": 639470,
+          "p10": 639470,
+          "p50": 639470,
+          "p90": 639470,
+          "max": 676353,
+          "mean": 657911.5
+        },
+        "seals": {
+          "min": 2,
+          "p10": 2,
+          "p50": 2,
+          "p90": 2,
+          "max": 3,
+          "mean": 2.5
+        },
+        "peak": {
+          "min": 124726,
+          "p10": 124726,
+          "p50": 124726,
+          "p90": 124726,
+          "max": 132612,
+          "mean": 128669
+        },
+        "met": {
+          "min": 9,
+          "p10": 9,
+          "p50": 9,
+          "p90": 9,
+          "max": 10,
+          "mean": 9.5
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "light": 0
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "burst": 2
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "guard": 2
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 0,
+            "new": 2
+          }
+        },
+        {
+          "id": 6,
+          "reached": 2,
+          "met": 1,
+          "routes": {
+            "cracked": 1
+          }
+        },
+        {
+          "id": 7,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "heavy": 2
+          }
+        },
+        {
+          "id": 8,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "two-light": 2
+          }
+        },
+        {
+          "id": 9,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 0,
+            "intact": 2
+          }
+        },
+        {
+          "id": 11,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 0,
+            "two-new": 2
+          }
+        },
+        {
+          "id": 12,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "finale": 2
+          }
+        }
+      ],
+      "traits": {
+        "steady": 2,
+        "ember": 2,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2
+      },
+      "modifications": {
+        "windbox": 2,
+        "warmRack": 0,
+        "wideMouth": 2
+      },
+      "triggers": {
+        "steady": 9,
+        "ember": 199,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2,
+        "windbox": 25,
+        "warmRack": 0,
+        "wideMouth": 88,
+        "loan": 3,
+        "credit": 1,
+        "shelter": 6
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 3,
+          "coins": -120
+        },
+        "salvage": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 1,
+          "coins": -540
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 6,
+          "coins": -80
+        },
+        "rest": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "fixed-10": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 0,
+        "return": 2,
+        "defeat": 0
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 2,
+      "finalBladeMade": 2,
+      "missingCritical": {
+        "4": 0,
+        "8": 2,
+        "12": 0
+      },
+      "totals": {
+        "commands": 783,
+        "strikes": 648,
+        "normalHits": 585,
+        "burstActions": 63,
+        "bursts": 63,
+        "internalHits": 788,
+        "cracks": 40,
+        "broken": 15,
+        "upgrades": 6,
+        "repairs": 4,
+        "reserves": 4,
+        "retrieves": 2,
+        "deliveredCount": 51,
+        "commissionedCount": 20,
+        "sales": 3655847,
+        "recoveredCoins": 875,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 7150,
+        "tradeValue": 320,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 389,
+          "p10": 389,
+          "p50": 389,
+          "p90": 389,
+          "max": 394,
+          "mean": 391.5
+        },
+        "coins": {
+          "min": 1754478,
+          "p10": 1754478,
+          "p50": 1754478,
+          "p90": 1754478,
+          "max": 1895094,
+          "mean": 1824786
+        },
+        "seals": {
+          "min": 2,
+          "p10": 2,
+          "p50": 2,
+          "p90": 2,
+          "max": 2,
+          "mean": 2
+        },
+        "peak": {
+          "min": 557807,
+          "p10": 557807,
+          "p50": 557807,
+          "p90": 557807,
+          "max": 557821,
+          "mean": 557814
+        },
+        "met": {
+          "min": 7,
+          "p10": 7,
+          "p50": 7,
+          "p90": 7,
+          "max": 9,
+          "mean": 8
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 1,
+          "routes": {
+            "intact": 1
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "light": 0
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "burst": 2
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "guard": 2
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 0,
+            "new": 2
+          }
+        },
+        {
+          "id": 6,
+          "reached": 2,
+          "met": 1,
+          "routes": {
+            "cracked": 1
+          }
+        },
+        {
+          "id": 7,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "heavy": 2
+          }
+        },
+        {
+          "id": 8,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "two-light": 0
+          }
+        },
+        {
+          "id": 9,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 2,
+            "intact": 0
+          }
+        },
+        {
+          "id": 11,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 0,
+            "two-new": 2
+          }
+        },
+        {
+          "id": 12,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "finale": 2
+          }
+        }
+      ],
+      "traits": {
+        "steady": 2,
+        "ember": 2,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2
+      },
+      "modifications": {
+        "windbox": 2,
+        "warmRack": 0,
+        "wideMouth": 2
+      },
+      "triggers": {
+        "steady": 32,
+        "ember": 187,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2,
+        "windbox": 31,
+        "warmRack": 0,
+        "wideMouth": 88,
+        "loan": 3,
+        "credit": 2,
+        "shelter": 9
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 3,
+          "coins": -120
+        },
+        "salvage": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": -540
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 9,
+          "coins": -80
+        },
+        "rest": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "without-reserve": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 2,
+        "return": 0,
+        "defeat": 0
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 2,
+      "finalBladeMade": 2,
+      "missingCritical": {
+        "4": 0,
+        "8": 0,
+        "12": 0
+      },
+      "totals": {
+        "commands": 414,
+        "strikes": 274,
+        "normalHits": 262,
+        "burstActions": 12,
+        "bursts": 12,
+        "internalHits": 306,
+        "cracks": 7,
+        "broken": 0,
+        "upgrades": 6,
+        "repairs": 0,
+        "reserves": 0,
+        "retrieves": 0,
+        "deliveredCount": 66,
+        "commissionedCount": 26,
+        "sales": 730577,
+        "recoveredCoins": 0,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 5700,
+        "tradeValue": 320,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 207,
+          "p10": 207,
+          "p50": 207,
+          "p90": 207,
+          "max": 207,
+          "mean": 207
+        },
+        "coins": {
+          "min": 269753,
+          "p10": 269753,
+          "p50": 269753,
+          "p90": 269753,
+          "max": 455124,
+          "mean": 362438.5
+        },
+        "seals": {
+          "min": 3,
+          "p10": 3,
+          "p50": 3,
+          "p90": 3,
+          "max": 3,
+          "mean": 3
+        },
+        "peak": {
+          "min": 84770,
+          "p10": 84770,
+          "p50": 84770,
+          "p90": 84770,
+          "max": 230250,
+          "mean": 157510
+        },
+        "met": {
+          "min": 11,
+          "p10": 11,
+          "p50": 11,
+          "p90": 11,
+          "max": 11,
+          "mean": 11
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "light": 2
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "burst": 2
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "guard": 2
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 0,
+            "new": 2
+          }
+        },
+        {
+          "id": 6,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 2
+          }
+        },
+        {
+          "id": 7,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "heavy": 2
+          }
+        },
+        {
+          "id": 8,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "two-light": 2
+          }
+        },
+        {
+          "id": 9,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 0,
+            "intact": 2
+          }
+        },
+        {
+          "id": 11,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 0,
+            "two-new": 2
+          }
+        },
+        {
+          "id": 12,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "finale": 2
+          }
+        }
+      ],
+      "traits": {
+        "steady": 2,
+        "ember": 2,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2
+      },
+      "modifications": {
+        "windbox": 2,
+        "warmRack": 0,
+        "wideMouth": 2
+      },
+      "triggers": {
+        "steady": 7,
+        "ember": 44,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2,
+        "windbox": 27,
+        "warmRack": 0,
+        "wideMouth": 32,
+        "loan": 3,
+        "credit": 1,
+        "shelter": 5
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 3,
+          "coins": -120
+        },
+        "salvage": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 1,
+          "coins": -540
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 5,
+          "coins": -80
+        },
+        "rest": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "without-upgrades": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 2,
+        "return": 0,
+        "defeat": 0
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 2,
+      "finalBladeMade": 2,
+      "missingCritical": {
+        "4": 0,
+        "8": 0,
+        "12": 0
+      },
+      "totals": {
+        "commands": 445,
+        "strikes": 303,
+        "normalHits": 289,
+        "burstActions": 14,
+        "bursts": 14,
+        "internalHits": 340,
+        "cracks": 4,
+        "broken": 0,
+        "upgrades": 0,
+        "repairs": 0,
+        "reserves": 4,
+        "retrieves": 4,
+        "deliveredCount": 66,
+        "commissionedCount": 24,
+        "sales": 585044,
+        "recoveredCoins": 0,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 740,
+        "tradeValue": 240,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 220,
+          "p10": 220,
+          "p50": 220,
+          "p90": 220,
+          "max": 225,
+          "mean": 222.5
+        },
+        "coins": {
+          "min": 212339,
+          "p10": 212339,
+          "p50": 212339,
+          "p90": 212339,
+          "max": 371965,
+          "mean": 292152
+        },
+        "seals": {
+          "min": 3,
+          "p10": 3,
+          "p50": 3,
+          "p90": 3,
+          "max": 3,
+          "mean": 3
+        },
+        "peak": {
+          "min": 73480,
+          "p10": 73480,
+          "p50": 73480,
+          "p90": 73480,
+          "max": 198489,
+          "mean": 135984.5
+        },
+        "met": {
+          "min": 11,
+          "p10": 11,
+          "p50": 11,
+          "p90": 11,
+          "max": 11,
+          "mean": 11
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "light": 2
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "burst": 2
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "guard": 2
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "new": 0
+          }
+        },
+        {
+          "id": 6,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 2
+          }
+        },
+        {
+          "id": 7,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "heavy": 2
+          }
+        },
+        {
+          "id": 8,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "two-light": 2
+          }
+        },
+        {
+          "id": 9,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 0,
+            "intact": 2
+          }
+        },
+        {
+          "id": 11,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "two-new": 0
+          }
+        },
+        {
+          "id": 12,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "finale": 2
+          }
+        }
+      ],
+      "traits": {
+        "steady": 2,
+        "ember": 2,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2
+      },
+      "modifications": {
+        "windbox": 2,
+        "warmRack": 0,
+        "wideMouth": 2
+      },
+      "triggers": {
+        "steady": 4,
+        "ember": 51,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2,
+        "windbox": 23,
+        "warmRack": 0,
+        "wideMouth": 36,
+        "loan": 3,
+        "credit": 1,
+        "shelter": 5
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 3,
+          "coins": -120
+        },
+        "salvage": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 1,
+          "coins": -540
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 5,
+          "coins": -80
+        },
+        "rest": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "without-traits": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 2,
+        "return": 0,
+        "defeat": 0
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 2,
+      "finalBladeMade": 2,
+      "missingCritical": {
+        "4": 0,
+        "8": 0,
+        "12": 0
+      },
+      "totals": {
+        "commands": 432,
+        "strikes": 286,
+        "normalHits": 274,
+        "burstActions": 12,
+        "bursts": 12,
+        "internalHits": 306,
+        "cracks": 7,
+        "broken": 0,
+        "upgrades": 6,
+        "repairs": 0,
+        "reserves": 4,
+        "retrieves": 4,
+        "deliveredCount": 70,
+        "commissionedCount": 24,
+        "sales": 474078,
+        "recoveredCoins": 0,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 5700,
+        "tradeValue": 0,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 216,
+          "p10": 216,
+          "p50": 216,
+          "p90": 216,
+          "max": 216,
+          "mean": 216
+        },
+        "coins": {
+          "min": 183977,
+          "p10": 183977,
+          "p50": 183977,
+          "p90": 183977,
+          "max": 284401,
+          "mean": 234189
+        },
+        "seals": {
+          "min": 2,
+          "p10": 2,
+          "p50": 2,
+          "p90": 2,
+          "max": 2,
+          "mean": 2
+        },
+        "peak": {
+          "min": 55256,
+          "p10": 55256,
+          "p50": 55256,
+          "p90": 55256,
+          "max": 164427,
+          "mean": 109841.5
+        },
+        "met": {
+          "min": 11,
+          "p10": 11,
+          "p50": 11,
+          "p90": 11,
+          "max": 11,
+          "mean": 11
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "light": 2
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "burst": 2
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "guard": 2
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "new": 0
+          }
+        },
+        {
+          "id": 6,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 2
+          }
+        },
+        {
+          "id": 7,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "heavy": 2
+          }
+        },
+        {
+          "id": 8,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "two-light": 2
+          }
+        },
+        {
+          "id": 9,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 0,
+            "intact": 2
+          }
+        },
+        {
+          "id": 11,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "two-new": 0
+          }
+        },
+        {
+          "id": 12,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "finale": 2
+          }
+        }
+      ],
+      "traits": {
+        "steady": 0,
+        "ember": 0,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 0
+      },
+      "modifications": {
+        "windbox": 2,
+        "warmRack": 0,
+        "wideMouth": 2
+      },
+      "triggers": {
+        "steady": 0,
+        "ember": 0,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 0,
+        "windbox": 29,
+        "warmRack": 0,
+        "wideMouth": 24,
+        "loan": 6,
+        "credit": 1,
+        "shelter": 4
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 6,
+          "coins": -120
+        },
+        "salvage": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 1,
+          "coins": -540
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 4,
+          "coins": -80
+        },
+        "rest": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "without-repair": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 2,
+        "return": 0,
+        "defeat": 0
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 2,
+      "finalBladeMade": 2,
+      "missingCritical": {
+        "4": 0,
+        "8": 0,
+        "12": 0
+      },
+      "totals": {
+        "commands": 424,
+        "strikes": 276,
+        "normalHits": 264,
+        "burstActions": 12,
+        "bursts": 12,
+        "internalHits": 308,
+        "cracks": 6,
+        "broken": 0,
+        "upgrades": 6,
+        "repairs": 0,
+        "reserves": 4,
+        "retrieves": 4,
+        "deliveredCount": 66,
+        "commissionedCount": 24,
+        "sales": 710053,
+        "recoveredCoins": 0,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 5700,
+        "tradeValue": 320,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 212,
+          "p10": 212,
+          "p50": 212,
+          "p90": 212,
+          "max": 212,
+          "mean": 212
+        },
+        "coins": {
+          "min": 259331,
+          "p10": 259331,
+          "p50": 259331,
+          "p90": 259331,
+          "max": 445022,
+          "mean": 352176.5
+        },
+        "seals": {
+          "min": 3,
+          "p10": 3,
+          "p50": 3,
+          "p90": 3,
+          "max": 3,
+          "mean": 3
+        },
+        "peak": {
+          "min": 80121,
+          "p10": 80121,
+          "p50": 80121,
+          "p90": 80121,
+          "max": 230250,
+          "mean": 155185.5
+        },
+        "met": {
+          "min": 11,
+          "p10": 11,
+          "p50": 11,
+          "p90": 11,
+          "max": 11,
+          "mean": 11
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "light": 2
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "burst": 2
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "guard": 2
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "new": 0
+          }
+        },
+        {
+          "id": 6,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 2
+          }
+        },
+        {
+          "id": 7,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "heavy": 2
+          }
+        },
+        {
+          "id": 8,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "two-light": 2
+          }
+        },
+        {
+          "id": 9,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 0,
+            "intact": 2
+          }
+        },
+        {
+          "id": 11,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "two-new": 0
+          }
+        },
+        {
+          "id": 12,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "finale": 2
+          }
+        }
+      ],
+      "traits": {
+        "steady": 2,
+        "ember": 2,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2
+      },
+      "modifications": {
+        "windbox": 2,
+        "warmRack": 0,
+        "wideMouth": 2
+      },
+      "triggers": {
+        "steady": 6,
+        "ember": 44,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2,
+        "windbox": 30,
+        "warmRack": 0,
+        "wideMouth": 32,
+        "loan": 3,
+        "credit": 1,
+        "shelter": 5
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 3,
+          "coins": -120
+        },
+        "salvage": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 1,
+          "coins": -540
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 5,
+          "coins": -80
+        },
+        "rest": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "without-optional-growth": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 2,
+        "return": 0,
+        "defeat": 0
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 2,
+      "finalBladeMade": 2,
+      "missingCritical": {
+        "4": 0,
+        "8": 0,
+        "12": 0
+      },
+      "totals": {
+        "commands": 466,
+        "strikes": 326,
+        "normalHits": 308,
+        "burstActions": 18,
+        "bursts": 18,
+        "internalHits": 354,
+        "cracks": 11,
+        "broken": 2,
+        "upgrades": 0,
+        "repairs": 0,
+        "reserves": 4,
+        "retrieves": 4,
+        "deliveredCount": 70,
+        "commissionedCount": 24,
+        "sales": 170481,
+        "recoveredCoins": 80,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 0,
+        "tradeValue": 0,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 230,
+          "p10": 230,
+          "p50": 230,
+          "p90": 230,
+          "max": 236,
+          "mean": 233
+        },
+        "coins": {
+          "min": 53713,
+          "p10": 53713,
+          "p50": 53713,
+          "p90": 53713,
+          "max": 116848,
+          "mean": 85280.5
+        },
+        "seals": {
+          "min": 2,
+          "p10": 2,
+          "p50": 2,
+          "p90": 2,
+          "max": 2,
+          "mean": 2
+        },
+        "peak": {
+          "min": 13616,
+          "p10": 13616,
+          "p50": 13616,
+          "p90": 13616,
+          "max": 52359,
+          "mean": 32987.5
+        },
+        "met": {
+          "min": 11,
+          "p10": 11,
+          "p50": 11,
+          "p90": 11,
+          "max": 11,
+          "mean": 11
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "light": 2
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "burst": 2
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "guard": 2
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "new": 0
+          }
+        },
+        {
+          "id": 6,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 2
+          }
+        },
+        {
+          "id": 7,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "heavy": 2
+          }
+        },
+        {
+          "id": 8,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "two-light": 2
+          }
+        },
+        {
+          "id": 9,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 0,
+            "intact": 2
+          }
+        },
+        {
+          "id": 11,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "two-new": 0
+          }
+        },
+        {
+          "id": 12,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "finale": 2
+          }
+        }
+      ],
+      "traits": {
+        "steady": 0,
+        "ember": 0,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 0
+      },
+      "modifications": {
+        "windbox": 2,
+        "warmRack": 0,
+        "wideMouth": 2
+      },
+      "triggers": {
+        "steady": 0,
+        "ember": 0,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 0,
+        "windbox": 22,
+        "warmRack": 0,
+        "wideMouth": 30,
+        "loan": 0,
+        "credit": 0,
+        "shelter": 0
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "salvage": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 0,
+          "declined": 1,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "rest": {
+          "offered": 1,
+          "accepted": 0,
+          "declined": 1,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "decline-events": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 2,
+        "return": 0,
+        "defeat": 0
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 2,
+      "finalBladeMade": 2,
+      "missingCritical": {
+        "4": 0,
+        "8": 0,
+        "12": 0
+      },
+      "totals": {
+        "commands": 435,
+        "strikes": 285,
+        "normalHits": 273,
+        "burstActions": 12,
+        "bursts": 12,
+        "internalHits": 317,
+        "cracks": 5,
+        "broken": 0,
+        "upgrades": 6,
+        "repairs": 0,
+        "reserves": 4,
+        "retrieves": 4,
+        "deliveredCount": 68,
+        "commissionedCount": 24,
+        "sales": 769597,
+        "recoveredCoins": 0,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 4960,
+        "tradeValue": 320,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 216,
+          "p10": 216,
+          "p50": 216,
+          "p90": 216,
+          "max": 219,
+          "mean": 217.5
+        },
+        "coins": {
+          "min": 221959,
+          "p10": 221959,
+          "p50": 221959,
+          "p90": 221959,
+          "max": 542678,
+          "mean": 382318.5
+        },
+        "seals": {
+          "min": 3,
+          "p10": 3,
+          "p50": 3,
+          "p90": 3,
+          "max": 3,
+          "mean": 3
+        },
+        "peak": {
+          "min": 61171,
+          "p10": 61171,
+          "p50": 61171,
+          "p90": 61171,
+          "max": 230182,
+          "mean": 145676.5
+        },
+        "met": {
+          "min": 11,
+          "p10": 11,
+          "p50": 11,
+          "p90": 11,
+          "max": 11,
+          "mean": 11
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "light": 2
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "burst": 2
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "guard": 2
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "new": 0
+          }
+        },
+        {
+          "id": 6,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 2
+          }
+        },
+        {
+          "id": 7,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "heavy": 2
+          }
+        },
+        {
+          "id": 8,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "two-light": 2
+          }
+        },
+        {
+          "id": 9,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 0,
+            "intact": 2
+          }
+        },
+        {
+          "id": 11,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "two-new": 0
+          }
+        },
+        {
+          "id": 12,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "finale": 2
+          }
+        }
+      ],
+      "traits": {
+        "steady": 2,
+        "ember": 2,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2
+      },
+      "modifications": {
+        "windbox": 2,
+        "warmRack": 0,
+        "wideMouth": 2
+      },
+      "triggers": {
+        "steady": 5,
+        "ember": 44,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2,
+        "windbox": 28,
+        "warmRack": 0,
+        "wideMouth": 32,
+        "loan": 0,
+        "credit": 0,
+        "shelter": 0
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "salvage": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 0,
+          "declined": 1,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "rest": {
+          "offered": 1,
+          "accepted": 0,
+          "declined": 1,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "warm-wide": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 2,
+        "return": 0,
+        "defeat": 0
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 2,
+      "finalBladeMade": 2,
+      "missingCritical": {
+        "4": 0,
+        "8": 0,
+        "12": 0
+      },
+      "totals": {
+        "commands": 424,
+        "strikes": 276,
+        "normalHits": 264,
+        "burstActions": 12,
+        "bursts": 12,
+        "internalHits": 308,
+        "cracks": 6,
+        "broken": 0,
+        "upgrades": 6,
+        "repairs": 0,
+        "reserves": 4,
+        "retrieves": 4,
+        "deliveredCount": 66,
+        "commissionedCount": 24,
+        "sales": 658384,
+        "recoveredCoins": 0,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 5700,
+        "tradeValue": 320,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 212,
+          "p10": 212,
+          "p50": 212,
+          "p90": 212,
+          "max": 212,
+          "mean": 212
+        },
+        "coins": {
+          "min": 236884,
+          "p10": 236884,
+          "p50": 236884,
+          "p90": 236884,
+          "max": 415800,
+          "mean": 326342
+        },
+        "seals": {
+          "min": 3,
+          "p10": 3,
+          "p50": 3,
+          "p90": 3,
+          "max": 3,
+          "mean": 3
+        },
+        "peak": {
+          "min": 72827,
+          "p10": 72827,
+          "p50": 72827,
+          "p90": 72827,
+          "max": 209392,
+          "mean": 141109.5
+        },
+        "met": {
+          "min": 11,
+          "p10": 11,
+          "p50": 11,
+          "p90": 11,
+          "max": 11,
+          "mean": 11
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "light": 2
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "burst": 2
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "guard": 2
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "new": 0
+          }
+        },
+        {
+          "id": 6,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 2
+          }
+        },
+        {
+          "id": 7,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "heavy": 2
+          }
+        },
+        {
+          "id": 8,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "two-light": 2
+          }
+        },
+        {
+          "id": 9,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 0,
+            "intact": 2
+          }
+        },
+        {
+          "id": 11,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "two-new": 0
+          }
+        },
+        {
+          "id": 12,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "finale": 2
+          }
+        }
+      ],
+      "traits": {
+        "steady": 2,
+        "ember": 2,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2
+      },
+      "modifications": {
+        "windbox": 0,
+        "warmRack": 2,
+        "wideMouth": 2
+      },
+      "triggers": {
+        "steady": 6,
+        "ember": 44,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2,
+        "windbox": 0,
+        "warmRack": 4,
+        "wideMouth": 32,
+        "loan": 3,
+        "credit": 1,
+        "shelter": 5
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 3,
+          "coins": -120
+        },
+        "salvage": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 1,
+          "coins": -540
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 5,
+          "coins": -80
+        },
+        "rest": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "wind-warm": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 2,
+        "return": 0,
+        "defeat": 0
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 2,
+      "finalBladeMade": 2,
+      "missingCritical": {
+        "4": 0,
+        "8": 0,
+        "12": 0
+      },
+      "totals": {
+        "commands": 424,
+        "strikes": 276,
+        "normalHits": 264,
+        "burstActions": 12,
+        "bursts": 12,
+        "internalHits": 300,
+        "cracks": 8,
+        "broken": 0,
+        "upgrades": 6,
+        "repairs": 0,
+        "reserves": 4,
+        "retrieves": 4,
+        "deliveredCount": 66,
+        "commissionedCount": 24,
+        "sales": 318892,
+        "recoveredCoins": 0,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 5700,
+        "tradeValue": 320,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 212,
+          "p10": 212,
+          "p50": 212,
+          "p90": 212,
+          "max": 212,
+          "mean": 212
+        },
+        "coins": {
+          "min": 137637,
+          "p10": 137637,
+          "p50": 137637,
+          "p90": 137637,
+          "max": 175555,
+          "mean": 156596
+        },
+        "seals": {
+          "min": 3,
+          "p10": 3,
+          "p50": 3,
+          "p90": 3,
+          "max": 3,
+          "mean": 3
+        },
+        "peak": {
+          "min": 33371,
+          "p10": 33371,
+          "p50": 33371,
+          "p90": 33371,
+          "max": 60851,
+          "mean": 47111
+        },
+        "met": {
+          "min": 11,
+          "p10": 11,
+          "p50": 11,
+          "p90": 11,
+          "max": 11,
+          "mean": 11
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "light": 2
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "burst": 2
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "guard": 2
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "new": 0
+          }
+        },
+        {
+          "id": 6,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 2
+          }
+        },
+        {
+          "id": 7,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "heavy": 2
+          }
+        },
+        {
+          "id": 8,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "two-light": 2
+          }
+        },
+        {
+          "id": 9,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 1,
+            "intact": 1
+          }
+        },
+        {
+          "id": 11,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "two-new": 0
+          }
+        },
+        {
+          "id": 12,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "finale": 2
+          }
+        }
+      ],
+      "traits": {
+        "steady": 2,
+        "ember": 2,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2
+      },
+      "modifications": {
+        "windbox": 2,
+        "warmRack": 2,
+        "wideMouth": 0
+      },
+      "triggers": {
+        "steady": 8,
+        "ember": 36,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2,
+        "windbox": 25,
+        "warmRack": 2,
+        "wideMouth": 0,
+        "loan": 3,
+        "credit": 2,
+        "shelter": 5
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 3,
+          "coins": -120
+        },
+        "salvage": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": -540
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 5,
+          "coins": -80
+        },
+        "rest": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "prefer-inherit": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 2,
+        "return": 0,
+        "defeat": 0
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 2,
+      "finalBladeMade": 2,
+      "missingCritical": {
+        "4": 0,
+        "8": 0,
+        "12": 0
+      },
+      "totals": {
+        "commands": 642,
+        "strikes": 502,
+        "normalHits": 458,
+        "burstActions": 44,
+        "bursts": 44,
+        "internalHits": 607,
+        "cracks": 30,
+        "broken": 8,
+        "upgrades": 6,
+        "repairs": 0,
+        "reserves": 4,
+        "retrieves": 4,
+        "deliveredCount": 57,
+        "commissionedCount": 24,
+        "sales": 3337336,
+        "recoveredCoins": 552,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 5700,
+        "tradeValue": 680,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 320,
+          "p10": 320,
+          "p50": 320,
+          "p90": 320,
+          "max": 322,
+          "mean": 321
+        },
+        "coins": {
+          "min": 1641843,
+          "p10": 1641843,
+          "p50": 1641843,
+          "p90": 1641843,
+          "max": 1690345,
+          "mean": 1666094
+        },
+        "seals": {
+          "min": 2,
+          "p10": 2,
+          "p50": 2,
+          "p90": 2,
+          "max": 2,
+          "mean": 2
+        },
+        "peak": {
+          "min": 636862,
+          "p10": 636862,
+          "p50": 636862,
+          "p90": 636862,
+          "max": 763768,
+          "mean": 700315
+        },
+        "met": {
+          "min": 11,
+          "p10": 11,
+          "p50": 11,
+          "p90": 11,
+          "max": 11,
+          "mean": 11
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "light": 2
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "burst": 2
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "guard": 2
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "new": 0
+          }
+        },
+        {
+          "id": 6,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 2
+          }
+        },
+        {
+          "id": 7,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "heavy": 2
+          }
+        },
+        {
+          "id": 8,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "two-light": 2
+          }
+        },
+        {
+          "id": 9,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 0,
+            "intact": 2
+          }
+        },
+        {
+          "id": 11,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "two-new": 0
+          }
+        },
+        {
+          "id": 12,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "finale": 2
+          }
+        }
+      ],
+      "traits": {
+        "steady": 2,
+        "ember": 2,
+        "inherit": 2,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 0
+      },
+      "modifications": {
+        "windbox": 2,
+        "warmRack": 0,
+        "wideMouth": 2
+      },
+      "triggers": {
+        "steady": 24,
+        "ember": 149,
+        "inherit": 4,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 0,
+        "windbox": 24,
+        "warmRack": 0,
+        "wideMouth": 68,
+        "loan": 3,
+        "credit": 2,
+        "shelter": 5
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 3,
+          "coins": -120
+        },
+        "salvage": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": -540
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 5,
+          "coins": -80
+        },
+        "rest": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "risky-no-inherit": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 2,
+        "return": 0,
+        "defeat": 0
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 2,
+      "finalBladeMade": 2,
+      "missingCritical": {
+        "4": 0,
+        "8": 0,
+        "12": 0
+      },
+      "totals": {
+        "commands": 656,
+        "strikes": 518,
+        "normalHits": 472,
+        "burstActions": 46,
+        "bursts": 46,
+        "internalHits": 629,
+        "cracks": 33,
+        "broken": 10,
+        "upgrades": 6,
+        "repairs": 0,
+        "reserves": 4,
+        "retrieves": 4,
+        "deliveredCount": 56,
+        "commissionedCount": 24,
+        "sales": 2593555,
+        "recoveredCoins": 759,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 5700,
+        "tradeValue": 320,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 324,
+          "p10": 324,
+          "p50": 324,
+          "p90": 324,
+          "max": 332,
+          "mean": 328
+        },
+        "coins": {
+          "min": 783325,
+          "p10": 783325,
+          "p50": 783325,
+          "p90": 783325,
+          "max": 1805289,
+          "mean": 1294307
+        },
+        "seals": {
+          "min": 3,
+          "p10": 3,
+          "p50": 3,
+          "p90": 3,
+          "max": 3,
+          "mean": 3
+        },
+        "peak": {
+          "min": 211820,
+          "p10": 211820,
+          "p50": 211820,
+          "p90": 211820,
+          "max": 923341,
+          "mean": 567580.5
+        },
+        "met": {
+          "min": 11,
+          "p10": 11,
+          "p50": 11,
+          "p90": 11,
+          "max": 11,
+          "mean": 11
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "light": 2
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "burst": 2
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "guard": 2
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "new": 0
+          }
+        },
+        {
+          "id": 6,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 2
+          }
+        },
+        {
+          "id": 7,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "heavy": 2
+          }
+        },
+        {
+          "id": 8,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "two-light": 2
+          }
+        },
+        {
+          "id": 9,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 0,
+            "intact": 2
+          }
+        },
+        {
+          "id": 11,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "two-new": 0
+          }
+        },
+        {
+          "id": 12,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "finale": 2
+          }
+        }
+      ],
+      "traits": {
+        "steady": 2,
+        "ember": 2,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2
+      },
+      "modifications": {
+        "windbox": 2,
+        "warmRack": 0,
+        "wideMouth": 2
+      },
+      "triggers": {
+        "steady": 27,
+        "ember": 157,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2,
+        "windbox": 28,
+        "warmRack": 0,
+        "wideMouth": 76,
+        "loan": 3,
+        "credit": 2,
+        "shelter": 5
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 3,
+          "coins": -120
+        },
+        "salvage": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": -540
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 5,
+          "coins": -80
+        },
+        "rest": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "prefer-crackedEdge": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 2,
+        "return": 0,
+        "defeat": 0
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 2,
+      "finalBladeMade": 2,
+      "missingCritical": {
+        "4": 0,
+        "8": 0,
+        "12": 0
+      },
+      "totals": {
+        "commands": 667,
+        "strikes": 507,
+        "normalHits": 462,
+        "burstActions": 45,
+        "bursts": 45,
+        "internalHits": 615,
+        "cracks": 32,
+        "broken": 12,
+        "upgrades": 6,
+        "repairs": 0,
+        "reserves": 4,
+        "retrieves": 4,
+        "deliveredCount": 53,
+        "commissionedCount": 24,
+        "sales": 3537292,
+        "recoveredCoins": 753,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 5700,
+        "tradeValue": 680,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 331,
+          "p10": 331,
+          "p50": 331,
+          "p90": 331,
+          "max": 336,
+          "mean": 333.5
+        },
+        "coins": {
+          "min": 1430886,
+          "p10": 1430886,
+          "p50": 1430886,
+          "p90": 1430886,
+          "max": 2101459,
+          "mean": 1766172.5
+        },
+        "seals": {
+          "min": 2,
+          "p10": 2,
+          "p50": 2,
+          "p90": 2,
+          "max": 2,
+          "mean": 2
+        },
+        "peak": {
+          "min": 439789,
+          "p10": 439789,
+          "p50": 439789,
+          "p90": 439789,
+          "max": 624850,
+          "mean": 532319.5
+        },
+        "met": {
+          "min": 11,
+          "p10": 11,
+          "p50": 11,
+          "p90": 11,
+          "max": 11,
+          "mean": 11
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "light": 2
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "burst": 2
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "guard": 2
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "new": 0
+          }
+        },
+        {
+          "id": 6,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 2
+          }
+        },
+        {
+          "id": 7,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "heavy": 2
+          }
+        },
+        {
+          "id": 8,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "two-light": 2
+          }
+        },
+        {
+          "id": 9,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 0,
+            "intact": 2
+          }
+        },
+        {
+          "id": 11,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "two-new": 0
+          }
+        },
+        {
+          "id": 12,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "finale": 2
+          }
+        }
+      ],
+      "traits": {
+        "steady": 2,
+        "ember": 2,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 2,
+        "pardon": 0
+      },
+      "modifications": {
+        "windbox": 2,
+        "warmRack": 0,
+        "wideMouth": 2
+      },
+      "triggers": {
+        "steady": 26,
+        "ember": 153,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 4,
+        "pardon": 0,
+        "windbox": 26,
+        "warmRack": 0,
+        "wideMouth": 72,
+        "loan": 3,
+        "credit": 2,
+        "shelter": 5
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 3,
+          "coins": -120
+        },
+        "salvage": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": -540
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 5,
+          "coins": -80
+        },
+        "rest": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "cracked-no-edge": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 2,
+        "return": 0,
+        "defeat": 0
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 2,
+      "finalBladeMade": 2,
+      "missingCritical": {
+        "4": 0,
+        "8": 0,
+        "12": 0
+      },
+      "totals": {
+        "commands": 676,
+        "strikes": 516,
+        "normalHits": 470,
+        "burstActions": 46,
+        "bursts": 46,
+        "internalHits": 627,
+        "cracks": 33,
+        "broken": 12,
+        "upgrades": 6,
+        "repairs": 0,
+        "reserves": 4,
+        "retrieves": 4,
+        "deliveredCount": 54,
+        "commissionedCount": 24,
+        "sales": 3411399,
+        "recoveredCoins": 807,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 5700,
+        "tradeValue": 320,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 336,
+          "p10": 336,
+          "p50": 336,
+          "p90": 336,
+          "max": 340,
+          "mean": 338
+        },
+        "coins": {
+          "min": 1142212,
+          "p10": 1142212,
+          "p50": 1142212,
+          "p90": 1142212,
+          "max": 2264294,
+          "mean": 1703253
+        },
+        "seals": {
+          "min": 3,
+          "p10": 3,
+          "p50": 3,
+          "p90": 3,
+          "max": 3,
+          "mean": 3
+        },
+        "peak": {
+          "min": 283823,
+          "p10": 283823,
+          "p50": 283823,
+          "p90": 283823,
+          "max": 595843,
+          "mean": 439833
+        },
+        "met": {
+          "min": 11,
+          "p10": 11,
+          "p50": 11,
+          "p90": 11,
+          "max": 11,
+          "mean": 11
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "light": 2
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "burst": 2
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "guard": 2
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "new": 0
+          }
+        },
+        {
+          "id": 6,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 2
+          }
+        },
+        {
+          "id": 7,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "heavy": 2
+          }
+        },
+        {
+          "id": 8,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "two-light": 2
+          }
+        },
+        {
+          "id": 9,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 0,
+            "intact": 2
+          }
+        },
+        {
+          "id": 11,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "two-new": 0
+          }
+        },
+        {
+          "id": 12,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "finale": 2
+          }
+        }
+      ],
+      "traits": {
+        "steady": 2,
+        "ember": 2,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2
+      },
+      "modifications": {
+        "windbox": 2,
+        "warmRack": 0,
+        "wideMouth": 2
+      },
+      "triggers": {
+        "steady": 27,
+        "ember": 157,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2,
+        "windbox": 26,
+        "warmRack": 0,
+        "wideMouth": 76,
+        "loan": 3,
+        "credit": 2,
+        "shelter": 5
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 3,
+          "coins": -120
+        },
+        "salvage": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": -540
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 5,
+          "coins": -80
+        },
+        "rest": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "duplicate": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 2,
+        "return": 0,
+        "defeat": 0
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 2,
+      "finalBladeMade": 2,
+      "missingCritical": {
+        "4": 0,
+        "8": 0,
+        "12": 0
+      },
+      "totals": {
+        "commands": 424,
+        "strikes": 276,
+        "normalHits": 264,
+        "burstActions": 12,
+        "bursts": 12,
+        "internalHits": 308,
+        "cracks": 6,
+        "broken": 0,
+        "upgrades": 6,
+        "repairs": 0,
+        "reserves": 4,
+        "retrieves": 4,
+        "deliveredCount": 66,
+        "commissionedCount": 24,
+        "sales": 710053,
+        "recoveredCoins": 0,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 5700,
+        "tradeValue": 320,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 212,
+          "p10": 212,
+          "p50": 212,
+          "p90": 212,
+          "max": 212,
+          "mean": 212
+        },
+        "coins": {
+          "min": 259331,
+          "p10": 259331,
+          "p50": 259331,
+          "p90": 259331,
+          "max": 445022,
+          "mean": 352176.5
+        },
+        "seals": {
+          "min": 3,
+          "p10": 3,
+          "p50": 3,
+          "p90": 3,
+          "max": 3,
+          "mean": 3
+        },
+        "peak": {
+          "min": 80121,
+          "p10": 80121,
+          "p50": 80121,
+          "p90": 80121,
+          "max": 230250,
+          "mean": 155185.5
+        },
+        "met": {
+          "min": 11,
+          "p10": 11,
+          "p50": 11,
+          "p90": 11,
+          "max": 11,
+          "mean": 11
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "light": 2
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "burst": 2
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "guard": 2
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "new": 0
+          }
+        },
+        {
+          "id": 6,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 2
+          }
+        },
+        {
+          "id": 7,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "heavy": 2
+          }
+        },
+        {
+          "id": 8,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "two-light": 2
+          }
+        },
+        {
+          "id": 9,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 0,
+            "intact": 2
+          }
+        },
+        {
+          "id": 11,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "two-new": 0
+          }
+        },
+        {
+          "id": 12,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "finale": 2
+          }
+        }
+      ],
+      "traits": {
+        "steady": 2,
+        "ember": 2,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2
+      },
+      "modifications": {
+        "windbox": 2,
+        "warmRack": 0,
+        "wideMouth": 2
+      },
+      "triggers": {
+        "steady": 6,
+        "ember": 44,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2,
+        "windbox": 30,
+        "warmRack": 0,
+        "wideMouth": 32,
+        "loan": 3,
+        "credit": 1,
+        "shelter": 5
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 3,
+          "coins": -120
+        },
+        "salvage": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 1,
+          "coins": -540
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 5,
+          "coins": -80
+        },
+        "rest": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "reload": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 2,
+        "return": 0,
+        "defeat": 0
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 2,
+      "finalBladeMade": 2,
+      "missingCritical": {
+        "4": 0,
+        "8": 0,
+        "12": 0
+      },
+      "totals": {
+        "commands": 424,
+        "strikes": 276,
+        "normalHits": 264,
+        "burstActions": 12,
+        "bursts": 12,
+        "internalHits": 308,
+        "cracks": 6,
+        "broken": 0,
+        "upgrades": 6,
+        "repairs": 0,
+        "reserves": 4,
+        "retrieves": 4,
+        "deliveredCount": 66,
+        "commissionedCount": 24,
+        "sales": 710053,
+        "recoveredCoins": 0,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 5700,
+        "tradeValue": 320,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 212,
+          "p10": 212,
+          "p50": 212,
+          "p90": 212,
+          "max": 212,
+          "mean": 212
+        },
+        "coins": {
+          "min": 259331,
+          "p10": 259331,
+          "p50": 259331,
+          "p90": 259331,
+          "max": 445022,
+          "mean": 352176.5
+        },
+        "seals": {
+          "min": 3,
+          "p10": 3,
+          "p50": 3,
+          "p90": 3,
+          "max": 3,
+          "mean": 3
+        },
+        "peak": {
+          "min": 80121,
+          "p10": 80121,
+          "p50": 80121,
+          "p90": 80121,
+          "max": 230250,
+          "mean": 155185.5
+        },
+        "met": {
+          "min": 11,
+          "p10": 11,
+          "p50": 11,
+          "p90": 11,
+          "max": 11,
+          "mean": 11
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "light": 2
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "burst": 2
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "guard": 2
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "new": 0
+          }
+        },
+        {
+          "id": 6,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 2
+          }
+        },
+        {
+          "id": 7,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "heavy": 2
+          }
+        },
+        {
+          "id": 8,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "two-light": 2
+          }
+        },
+        {
+          "id": 9,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 0,
+            "intact": 2
+          }
+        },
+        {
+          "id": 11,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "two-new": 0
+          }
+        },
+        {
+          "id": 12,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "finale": 2
+          }
+        }
+      ],
+      "traits": {
+        "steady": 2,
+        "ember": 2,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2
+      },
+      "modifications": {
+        "windbox": 2,
+        "warmRack": 0,
+        "wideMouth": 2
+      },
+      "triggers": {
+        "steady": 6,
+        "ember": 44,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2,
+        "windbox": 30,
+        "warmRack": 0,
+        "wideMouth": 32,
+        "loan": 3,
+        "credit": 1,
+        "shelter": 5
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 3,
+          "coins": -120
+        },
+        "salvage": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 1,
+          "coins": -540
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 5,
+          "coins": -80
+        },
+        "rest": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "raw": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 0,
+        "return": 0,
+        "defeat": 2
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 0,
+      "finalBladeMade": 0,
+      "missingCritical": {
+        "4": 2,
+        "8": 2,
+        "12": 2
+      },
+      "totals": {
+        "commands": 30,
+        "strikes": 0,
+        "normalHits": 0,
+        "burstActions": 0,
+        "bursts": 0,
+        "internalHits": 0,
+        "cracks": 0,
+        "broken": 0,
+        "upgrades": 0,
+        "repairs": 0,
+        "reserves": 0,
+        "retrieves": 0,
+        "deliveredCount": 18,
+        "commissionedCount": 0,
+        "sales": 720,
+        "recoveredCoins": 0,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 0,
+        "tradeValue": 0,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 15,
+          "p10": 15,
+          "p50": 15,
+          "p90": 15,
+          "max": 15,
+          "mean": 15
+        },
+        "coins": {
+          "min": 360,
+          "p10": 360,
+          "p50": 360,
+          "p90": 360,
+          "max": 360,
+          "mean": 360
+        },
+        "seals": {
+          "min": 0,
+          "p10": 0,
+          "p50": 0,
+          "p90": 0,
+          "max": 0,
+          "mean": 0
+        },
+        "peak": {
+          "min": 40,
+          "p10": 40,
+          "p50": 40,
+          "p90": 40,
+          "max": 40,
+          "mean": 40
+        },
+        "met": {
+          "min": 0,
+          "p10": 0,
+          "p50": 0,
+          "p90": 0,
+          "max": 0,
+          "mean": 0
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "intact": 0
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "light": 0
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "burst": 0
+          }
+        },
+        {
+          "id": 4,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "guard": 0
+          }
+        },
+        {
+          "id": 5,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "old": 0,
+            "new": 0
+          }
+        },
+        {
+          "id": 6,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "cracked": 0
+          }
+        },
+        {
+          "id": 7,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "heavy": 0
+          }
+        },
+        {
+          "id": 8,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "two-light": 0
+          }
+        },
+        {
+          "id": 9,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "cracked": 0,
+            "intact": 0
+          }
+        },
+        {
+          "id": 11,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "old": 0,
+            "two-new": 0
+          }
+        },
+        {
+          "id": 12,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "finale": 0
+          }
+        }
+      ],
+      "traits": {
+        "steady": 0,
+        "ember": 0,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 0
+      },
+      "modifications": {
+        "windbox": 0,
+        "warmRack": 0,
+        "wideMouth": 0
+      },
+      "triggers": {
+        "steady": 0,
+        "ember": 0,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 0,
+        "windbox": 0,
+        "warmRack": 0,
+        "wideMouth": 0,
+        "loan": 0,
+        "credit": 0,
+        "shelter": 0
+      },
+      "events": {
+        "donation": {
+          "offered": 1,
+          "accepted": 0,
+          "declined": 1,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 0,
+          "accepted": 0,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "salvage": {
+          "offered": 0,
+          "accepted": 0,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 0,
+          "accepted": 0,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 0,
+          "declined": 1,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "rest": {
+          "offered": 0,
+          "accepted": 0,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "scrap": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 0,
+        "return": 0,
+        "defeat": 2
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 0,
+      "finalBladeMade": 0,
+      "missingCritical": {
+        "4": 2,
+        "8": 2,
+        "12": 2
+      },
+      "totals": {
+        "commands": 30,
+        "strikes": 0,
+        "normalHits": 0,
+        "burstActions": 0,
+        "bursts": 0,
+        "internalHits": 0,
+        "cracks": 0,
+        "broken": 0,
+        "upgrades": 0,
+        "repairs": 0,
+        "reserves": 0,
+        "retrieves": 0,
+        "deliveredCount": 0,
+        "commissionedCount": 0,
+        "sales": 0,
+        "recoveredCoins": 180,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 0,
+        "tradeValue": 0,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 15,
+          "p10": 15,
+          "p50": 15,
+          "p90": 15,
+          "max": 15,
+          "mean": 15
+        },
+        "coins": {
+          "min": 90,
+          "p10": 90,
+          "p50": 90,
+          "p90": 90,
+          "max": 90,
+          "mean": 90
+        },
+        "seals": {
+          "min": 0,
+          "p10": 0,
+          "p50": 0,
+          "p90": 0,
+          "max": 0,
+          "mean": 0
+        },
+        "peak": {
+          "min": 40,
+          "p10": 40,
+          "p50": 40,
+          "p90": 40,
+          "max": 40,
+          "mean": 40
+        },
+        "met": {
+          "min": 0,
+          "p10": 0,
+          "p50": 0,
+          "p90": 0,
+          "max": 0,
+          "mean": 0
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "intact": 0
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "light": 0
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "burst": 0
+          }
+        },
+        {
+          "id": 4,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "guard": 0
+          }
+        },
+        {
+          "id": 5,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "old": 0,
+            "new": 0
+          }
+        },
+        {
+          "id": 6,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "cracked": 0
+          }
+        },
+        {
+          "id": 7,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "heavy": 0
+          }
+        },
+        {
+          "id": 8,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "two-light": 0
+          }
+        },
+        {
+          "id": 9,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "cracked": 0,
+            "intact": 0
+          }
+        },
+        {
+          "id": 11,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "old": 0,
+            "two-new": 0
+          }
+        },
+        {
+          "id": 12,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "finale": 0
+          }
+        }
+      ],
+      "traits": {
+        "steady": 0,
+        "ember": 0,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 0
+      },
+      "modifications": {
+        "windbox": 0,
+        "warmRack": 0,
+        "wideMouth": 0
+      },
+      "triggers": {
+        "steady": 0,
+        "ember": 0,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 0,
+        "windbox": 0,
+        "warmRack": 0,
+        "wideMouth": 0,
+        "loan": 0,
+        "credit": 0,
+        "shelter": 0
+      },
+      "events": {
+        "donation": {
+          "offered": 1,
+          "accepted": 0,
+          "declined": 1,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 0,
+          "accepted": 0,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "salvage": {
+          "offered": 0,
+          "accepted": 0,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 0,
+          "accepted": 0,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 0,
+          "declined": 1,
+          "unaffordable": 1,
+          "consumed": 0,
+          "coins": 0
+        },
+        "rest": {
+          "offered": 0,
+          "accepted": 0,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "blind": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 0,
+        "return": 0,
+        "defeat": 2
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 0,
+      "finalBladeMade": 0,
+      "missingCritical": {
+        "4": 2,
+        "8": 2,
+        "12": 2
+      },
+      "totals": {
+        "commands": 203,
+        "strikes": 191,
+        "normalHits": 174,
+        "burstActions": 17,
+        "bursts": 17,
+        "internalHits": 208,
+        "cracks": 18,
+        "broken": 18,
+        "upgrades": 0,
+        "repairs": 0,
+        "reserves": 0,
+        "retrieves": 0,
+        "deliveredCount": 0,
+        "commissionedCount": 0,
+        "sales": 0,
+        "recoveredCoins": 180,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 0,
+        "tradeValue": 0,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 100,
+          "p10": 100,
+          "p50": 100,
+          "p90": 100,
+          "max": 103,
+          "mean": 101.5
+        },
+        "coins": {
+          "min": 90,
+          "p10": 90,
+          "p50": 90,
+          "p90": 90,
+          "max": 90,
+          "mean": 90
+        },
+        "seals": {
+          "min": 0,
+          "p10": 0,
+          "p50": 0,
+          "p90": 0,
+          "max": 0,
+          "mean": 0
+        },
+        "peak": {
+          "min": 37863,
+          "p10": 37863,
+          "p50": 37863,
+          "p90": 37863,
+          "max": 41194,
+          "mean": 39528.5
+        },
+        "met": {
+          "min": 0,
+          "p10": 0,
+          "p50": 0,
+          "p90": 0,
+          "max": 0,
+          "mean": 0
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "intact": 0
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "light": 0
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "burst": 0
+          }
+        },
+        {
+          "id": 4,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "guard": 0
+          }
+        },
+        {
+          "id": 5,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "old": 0,
+            "new": 0
+          }
+        },
+        {
+          "id": 6,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "cracked": 0
+          }
+        },
+        {
+          "id": 7,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "heavy": 0
+          }
+        },
+        {
+          "id": 8,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "two-light": 0
+          }
+        },
+        {
+          "id": 9,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "cracked": 0,
+            "intact": 0
+          }
+        },
+        {
+          "id": 11,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "old": 0,
+            "two-new": 0
+          }
+        },
+        {
+          "id": 12,
+          "reached": 0,
+          "met": 0,
+          "routes": {
+            "finale": 0
+          }
+        }
+      ],
+      "traits": {
+        "steady": 0,
+        "ember": 0,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 0
+      },
+      "modifications": {
+        "windbox": 0,
+        "warmRack": 0,
+        "wideMouth": 0
+      },
+      "triggers": {
+        "steady": 0,
+        "ember": 0,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 0,
+        "windbox": 0,
+        "warmRack": 0,
+        "wideMouth": 0,
+        "loan": 0,
+        "credit": 0,
+        "shelter": 0
+      },
+      "events": {
+        "donation": {
+          "offered": 1,
+          "accepted": 0,
+          "declined": 1,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 0,
+          "accepted": 0,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "salvage": {
+          "offered": 0,
+          "accepted": 0,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 0,
+          "accepted": 0,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 0,
+          "declined": 1,
+          "unaffordable": 1,
+          "consumed": 0,
+          "coins": 0
+        },
+        "rest": {
+          "offered": 0,
+          "accepted": 0,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "qualified-story": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 2,
+        "return": 0,
+        "defeat": 0
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 2,
+      "finalBladeMade": 2,
+      "missingCritical": {
+        "4": 0,
+        "8": 0,
+        "12": 0
+      },
+      "totals": {
+        "commands": 424,
+        "strikes": 276,
+        "normalHits": 264,
+        "burstActions": 12,
+        "bursts": 12,
+        "internalHits": 308,
+        "cracks": 5,
+        "broken": 0,
+        "upgrades": 6,
+        "repairs": 0,
+        "reserves": 4,
+        "retrieves": 4,
+        "deliveredCount": 66,
+        "commissionedCount": 24,
+        "sales": 706035,
+        "recoveredCoins": 0,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 5700,
+        "tradeValue": 320,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 212,
+          "p10": 212,
+          "p50": 212,
+          "p90": 212,
+          "max": 212,
+          "mean": 212
+        },
+        "coins": {
+          "min": 258333,
+          "p10": 258333,
+          "p50": 258333,
+          "p90": 258333,
+          "max": 442002,
+          "mean": 350167.5
+        },
+        "seals": {
+          "min": 3,
+          "p10": 3,
+          "p50": 3,
+          "p90": 3,
+          "max": 3,
+          "mean": 3
+        },
+        "peak": {
+          "min": 80121,
+          "p10": 80121,
+          "p50": 80121,
+          "p90": 80121,
+          "max": 230250,
+          "mean": 155185.5
+        },
+        "met": {
+          "min": 11,
+          "p10": 11,
+          "p50": 11,
+          "p90": 11,
+          "max": 11,
+          "mean": 11
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "light": 2
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "burst": 2
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "guard": 2
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "new": 0
+          }
+        },
+        {
+          "id": 6,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 2
+          }
+        },
+        {
+          "id": 7,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "heavy": 2
+          }
+        },
+        {
+          "id": 8,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "two-light": 2
+          }
+        },
+        {
+          "id": 9,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 0,
+            "intact": 2
+          }
+        },
+        {
+          "id": 11,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "two-new": 0
+          }
+        },
+        {
+          "id": 12,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "finale": 2
+          }
+        }
+      ],
+      "traits": {
+        "steady": 2,
+        "ember": 2,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2
+      },
+      "modifications": {
+        "windbox": 2,
+        "warmRack": 0,
+        "wideMouth": 2
+      },
+      "triggers": {
+        "steady": 5,
+        "ember": 44,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2,
+        "windbox": 30,
+        "warmRack": 0,
+        "wideMouth": 32,
+        "loan": 3,
+        "credit": 1,
+        "shelter": 5
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 3,
+          "coins": -120
+        },
+        "salvage": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 1,
+          "coins": -540
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 5,
+          "coins": -80
+        },
+        "rest": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    },
+    "qualified-challenge": {
+      "cases": 2,
+      "outcomes": {
+        "victory": 2,
+        "return": 0,
+        "defeat": 0
+      },
+      "twelveOfTwelve": 0,
+      "reachedDay12": 2,
+      "finalBladeMade": 2,
+      "missingCritical": {
+        "4": 0,
+        "8": 0,
+        "12": 0
+      },
+      "totals": {
+        "commands": 433,
+        "strikes": 282,
+        "normalHits": 270,
+        "burstActions": 12,
+        "bursts": 12,
+        "internalHits": 314,
+        "cracks": 6,
+        "broken": 1,
+        "upgrades": 6,
+        "repairs": 0,
+        "reserves": 4,
+        "retrieves": 4,
+        "deliveredCount": 66,
+        "commissionedCount": 24,
+        "sales": 867262,
+        "recoveredCoins": 135,
+        "giftCoins": 0,
+        "eventIncome": 0,
+        "spentCoins": 5700,
+        "tradeValue": 320,
+        "atCap": 0
+      },
+      "distributions": {
+        "commands": {
+          "min": 213,
+          "p10": 213,
+          "p50": 213,
+          "p90": 213,
+          "max": 220,
+          "mean": 216.5
+        },
+        "coins": {
+          "min": 394861,
+          "p10": 394861,
+          "p50": 394861,
+          "p90": 394861,
+          "max": 466836,
+          "mean": 430848.5
+        },
+        "seals": {
+          "min": 3,
+          "p10": 3,
+          "p50": 3,
+          "p90": 3,
+          "max": 3,
+          "mean": 3
+        },
+        "peak": {
+          "min": 178176,
+          "p10": 178176,
+          "p50": 178176,
+          "p90": 178176,
+          "max": 230250,
+          "mean": 204213
+        },
+        "met": {
+          "min": 11,
+          "p10": 11,
+          "p50": 11,
+          "p90": 11,
+          "max": 11,
+          "mean": 11
+        }
+      },
+      "commissions": [
+        {
+          "id": 1,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "intact": 2
+          }
+        },
+        {
+          "id": 2,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "light": 2
+          }
+        },
+        {
+          "id": 3,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "burst": 2
+          }
+        },
+        {
+          "id": 4,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "guard": 2
+          }
+        },
+        {
+          "id": 5,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "new": 0
+          }
+        },
+        {
+          "id": 6,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 2
+          }
+        },
+        {
+          "id": 7,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "heavy": 2
+          }
+        },
+        {
+          "id": 8,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "two-light": 2
+          }
+        },
+        {
+          "id": 9,
+          "reached": 2,
+          "met": 0,
+          "routes": {
+            "two-bursts": 0
+          }
+        },
+        {
+          "id": 10,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "cracked": 0,
+            "intact": 2
+          }
+        },
+        {
+          "id": 11,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "old": 2,
+            "two-new": 0
+          }
+        },
+        {
+          "id": 12,
+          "reached": 2,
+          "met": 2,
+          "routes": {
+            "finale": 2
+          }
+        }
+      ],
+      "traits": {
+        "steady": 2,
+        "ember": 2,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2
+      },
+      "modifications": {
+        "windbox": 2,
+        "warmRack": 0,
+        "wideMouth": 2
+      },
+      "triggers": {
+        "steady": 6,
+        "ember": 44,
+        "inherit": 0,
+        "echo": 0,
+        "crackedEdge": 0,
+        "pardon": 2,
+        "windbox": 25,
+        "warmRack": 0,
+        "wideMouth": 32,
+        "loan": 3,
+        "credit": 2,
+        "shelter": 5
+      },
+      "events": {
+        "donation": {
+          "offered": 2,
+          "accepted": 1,
+          "declined": 1,
+          "unaffordable": 0,
+          "consumed": 1,
+          "coins": 0
+        },
+        "loan": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 3,
+          "coins": -120
+        },
+        "salvage": {
+          "offered": 2,
+          "accepted": 0,
+          "declined": 2,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        },
+        "credit": {
+          "offered": 2,
+          "accepted": 2,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 2,
+          "coins": -540
+        },
+        "shelter": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 5,
+          "coins": -80
+        },
+        "rest": {
+          "offered": 1,
+          "accepted": 1,
+          "declined": 0,
+          "unaffordable": 0,
+          "consumed": 0,
+          "coins": 0
+        }
+      }
+    }
+  },
+  "paired": {
+    "balanced-steady": {
+      "bothVictory": 2,
+      "baselineOnlyVictory": 0,
+      "controlOnlyVictory": 0,
+      "neitherVictory": 0,
+      "commandsDelta": {
+        "min": 0,
+        "p10": 0,
+        "p50": 0,
+        "p90": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "metDelta": {
+        "min": 0,
+        "p10": 0,
+        "p50": 0,
+        "p90": 0,
+        "max": 0,
+        "mean": 0
+      }
+    },
+    "low-hammer": {
+      "bothVictory": 0,
+      "baselineOnlyVictory": 2,
+      "controlOnlyVictory": 0,
+      "neitherVictory": 0,
+      "commandsDelta": {
+        "min": -140,
+        "p10": -140,
+        "p50": -140,
+        "p90": -140,
+        "max": -47,
+        "mean": -93.5
+      },
+      "metDelta": {
+        "min": -9,
+        "p10": -9,
+        "p50": -9,
+        "p90": -9,
+        "max": -4,
+        "mean": -6.5
+      }
+    },
+    "burst-first": {
+      "bothVictory": 2,
+      "baselineOnlyVictory": 0,
+      "controlOnlyVictory": 0,
+      "neitherVictory": 0,
+      "commandsDelta": {
+        "min": 74,
+        "p10": 74,
+        "p50": 74,
+        "p90": 74,
+        "max": 79,
+        "mean": 76.5
+      },
+      "metDelta": {
+        "min": 0,
+        "p10": 0,
+        "p50": 0,
+        "p90": 0,
+        "max": 1,
+        "mean": 0.5
+      }
+    },
+    "cracked-commission": {
+      "bothVictory": 2,
+      "baselineOnlyVictory": 0,
+      "controlOnlyVictory": 0,
+      "neitherVictory": 0,
+      "commandsDelta": {
+        "min": -9,
+        "p10": -9,
+        "p50": -9,
+        "p90": -9,
+        "max": -2,
+        "mean": -5.5
+      },
+      "metDelta": {
+        "min": 0,
+        "p10": 0,
+        "p50": 0,
+        "p90": 0,
+        "max": 0,
+        "mean": 0
+      }
+    },
+    "old-first": {
+      "bothVictory": 2,
+      "baselineOnlyVictory": 0,
+      "controlOnlyVictory": 0,
+      "neitherVictory": 0,
+      "commandsDelta": {
+        "min": 0,
+        "p10": 0,
+        "p50": 0,
+        "p90": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "metDelta": {
+        "min": 0,
+        "p10": 0,
+        "p50": 0,
+        "p90": 0,
+        "max": 0,
+        "mean": 0
+      }
+    },
+    "new-only": {
+      "bothVictory": 2,
+      "baselineOnlyVictory": 0,
+      "controlOnlyVictory": 0,
+      "neitherVictory": 0,
+      "commandsDelta": {
+        "min": -5,
+        "p10": -5,
+        "p50": -5,
+        "p90": -5,
+        "max": -5,
+        "mean": -5
+      },
+      "metDelta": {
+        "min": 0,
+        "p10": 0,
+        "p50": 0,
+        "p90": 0,
+        "max": 0,
+        "mean": 0
+      }
+    },
+    "fixed-3": {
+      "bothVictory": 0,
+      "baselineOnlyVictory": 2,
+      "controlOnlyVictory": 0,
+      "neitherVictory": 0,
+      "commandsDelta": {
+        "min": -140,
+        "p10": -140,
+        "p50": -140,
+        "p90": -140,
+        "max": -39,
+        "mean": -89.5
+      },
+      "metDelta": {
+        "min": -9,
+        "p10": -9,
+        "p50": -9,
+        "p90": -9,
+        "max": -4,
+        "mean": -6.5
+      }
+    },
+    "fixed-6": {
+      "bothVictory": 0,
+      "baselineOnlyVictory": 2,
+      "controlOnlyVictory": 0,
+      "neitherVictory": 0,
+      "commandsDelta": {
+        "min": 62,
+        "p10": 62,
+        "p50": 62,
+        "p90": 62,
+        "max": 67,
+        "mean": 64.5
+      },
+      "metDelta": {
+        "min": -4,
+        "p10": -4,
+        "p50": -4,
+        "p90": -4,
+        "max": -4,
+        "mean": -4
+      }
+    },
+    "fixed-7": {
+      "bothVictory": 1,
+      "baselineOnlyVictory": 1,
+      "controlOnlyVictory": 0,
+      "neitherVictory": 0,
+      "commandsDelta": {
+        "min": 85,
+        "p10": 85,
+        "p50": 85,
+        "p90": 85,
+        "max": 85,
+        "mean": 85
+      },
+      "metDelta": {
+        "min": -2,
+        "p10": -2,
+        "p50": -2,
+        "p90": -2,
+        "max": -1,
+        "mean": -1.5
+      }
+    },
+    "fixed-10": {
+      "bothVictory": 0,
+      "baselineOnlyVictory": 2,
+      "controlOnlyVictory": 0,
+      "neitherVictory": 0,
+      "commandsDelta": {
+        "min": 177,
+        "p10": 177,
+        "p50": 177,
+        "p90": 177,
+        "max": 182,
+        "mean": 179.5
+      },
+      "metDelta": {
+        "min": -4,
+        "p10": -4,
+        "p50": -4,
+        "p90": -4,
+        "max": -2,
+        "mean": -3
+      }
+    },
+    "without-reserve": {
+      "bothVictory": 2,
+      "baselineOnlyVictory": 0,
+      "controlOnlyVictory": 0,
+      "neitherVictory": 0,
+      "commandsDelta": {
+        "min": -5,
+        "p10": -5,
+        "p50": -5,
+        "p90": -5,
+        "max": -5,
+        "mean": -5
+      },
+      "metDelta": {
+        "min": 0,
+        "p10": 0,
+        "p50": 0,
+        "p90": 0,
+        "max": 0,
+        "mean": 0
+      }
+    },
+    "without-upgrades": {
+      "bothVictory": 2,
+      "baselineOnlyVictory": 0,
+      "controlOnlyVictory": 0,
+      "neitherVictory": 0,
+      "commandsDelta": {
+        "min": 8,
+        "p10": 8,
+        "p50": 8,
+        "p90": 8,
+        "max": 13,
+        "mean": 10.5
+      },
+      "metDelta": {
+        "min": 0,
+        "p10": 0,
+        "p50": 0,
+        "p90": 0,
+        "max": 0,
+        "mean": 0
+      }
+    },
+    "without-traits": {
+      "bothVictory": 2,
+      "baselineOnlyVictory": 0,
+      "controlOnlyVictory": 0,
+      "neitherVictory": 0,
+      "commandsDelta": {
+        "min": 4,
+        "p10": 4,
+        "p50": 4,
+        "p90": 4,
+        "max": 4,
+        "mean": 4
+      },
+      "metDelta": {
+        "min": 0,
+        "p10": 0,
+        "p50": 0,
+        "p90": 0,
+        "max": 0,
+        "mean": 0
+      }
+    },
+    "without-repair": {
+      "bothVictory": 2,
+      "baselineOnlyVictory": 0,
+      "controlOnlyVictory": 0,
+      "neitherVictory": 0,
+      "commandsDelta": {
+        "min": 0,
+        "p10": 0,
+        "p50": 0,
+        "p90": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "metDelta": {
+        "min": 0,
+        "p10": 0,
+        "p50": 0,
+        "p90": 0,
+        "max": 0,
+        "mean": 0
+      }
+    },
+    "without-optional-growth": {
+      "bothVictory": 2,
+      "baselineOnlyVictory": 0,
+      "controlOnlyVictory": 0,
+      "neitherVictory": 0,
+      "commandsDelta": {
+        "min": 18,
+        "p10": 18,
+        "p50": 18,
+        "p90": 18,
+        "max": 24,
+        "mean": 21
+      },
+      "metDelta": {
+        "min": 0,
+        "p10": 0,
+        "p50": 0,
+        "p90": 0,
+        "max": 0,
+        "mean": 0
+      }
+    },
+    "decline-events": {
+      "bothVictory": 2,
+      "baselineOnlyVictory": 0,
+      "controlOnlyVictory": 0,
+      "neitherVictory": 0,
+      "commandsDelta": {
+        "min": 4,
+        "p10": 4,
+        "p50": 4,
+        "p90": 4,
+        "max": 7,
+        "mean": 5.5
+      },
+      "metDelta": {
+        "min": 0,
+        "p10": 0,
+        "p50": 0,
+        "p90": 0,
+        "max": 0,
+        "mean": 0
+      }
+    },
+    "warm-wide": {
+      "bothVictory": 2,
+      "baselineOnlyVictory": 0,
+      "controlOnlyVictory": 0,
+      "neitherVictory": 0,
+      "commandsDelta": {
+        "min": 0,
+        "p10": 0,
+        "p50": 0,
+        "p90": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "metDelta": {
+        "min": 0,
+        "p10": 0,
+        "p50": 0,
+        "p90": 0,
+        "max": 0,
+        "mean": 0
+      }
+    },
+    "wind-warm": {
+      "bothVictory": 2,
+      "baselineOnlyVictory": 0,
+      "controlOnlyVictory": 0,
+      "neitherVictory": 0,
+      "commandsDelta": {
+        "min": 0,
+        "p10": 0,
+        "p50": 0,
+        "p90": 0,
+        "max": 0,
+        "mean": 0
+      },
+      "metDelta": {
+        "min": 0,
+        "p10": 0,
+        "p50": 0,
+        "p90": 0,
+        "max": 0,
+        "mean": 0
+      }
+    },
+    "prefer-inherit": {
+      "bothVictory": 2,
+      "baselineOnlyVictory": 0,
+      "controlOnlyVictory": 0,
+      "neitherVictory": 0,
+      "commandsDelta": {
+        "min": 108,
+        "p10": 108,
+        "p50": 108,
+        "p90": 108,
+        "max": 110,
+        "mean": 109
+      },
+      "metDelta": {
+        "min": 0,
+        "p10": 0,
+        "p50": 0,
+        "p90": 0,
+        "max": 0,
+        "mean": 0
+      }
+    },
+    "risky-no-inherit": {
+      "bothVictory": 2,
+      "baselineOnlyVictory": 0,
+      "controlOnlyVictory": 0,
+      "neitherVictory": 0,
+      "commandsDelta": {
+        "min": 112,
+        "p10": 112,
+        "p50": 112,
+        "p90": 112,
+        "max": 120,
+        "mean": 116
+      },
+      "metDelta": {
+        "min": 0,
+        "p10": 0,
+        "p50": 0,
+        "p90": 0,
+        "max": 0,
+        "mean": 0
+      }
+    },
+    "prefer-crackedEdge": {
+      "bothVictory": 2,
+      "baselineOnlyVictory": 0,
+      "controlOnlyVictory": 0,
+      "neitherVictory": 0,
+      "commandsDelta": {
+        "min": 119,
+        "p10": 119,
+        "p50": 119,
+        "p90": 119,
+        "max": 124,
+        "mean": 121.5
+      },
+      "metDelta": {
+        "min": 0,
+        "p10": 0,
+        "p50": 0,
+        "p90": 0,
+        "max": 0,
+        "mean": 0
+      }
+    },
+    "cracked-no-edge": {
+      "bothVictory": 2,
+      "baselineOnlyVictory": 0,
+      "controlOnlyVictory": 0,
+      "neitherVictory": 0,
+      "commandsDelta": {
+        "min": 124,
+        "p10": 124,
+        "p50": 124,
+        "p90": 124,
+        "max": 128,
+        "mean": 126
+      },
+      "metDelta": {
+        "min": 0,
+        "p10": 0,
+        "p50": 0,
+        "p90": 0,
+        "max": 0,
+        "mean": 0
+      }
+    },
+    "raw": {
+      "bothVictory": 0,
+      "baselineOnlyVictory": 2,
+      "controlOnlyVictory": 0,
+      "neitherVictory": 0,
+      "commandsDelta": {
+        "min": -197,
+        "p10": -197,
+        "p50": -197,
+        "p90": -197,
+        "max": -197,
+        "mean": -197
+      },
+      "metDelta": {
+        "min": -11,
+        "p10": -11,
+        "p50": -11,
+        "p90": -11,
+        "max": -11,
+        "mean": -11
+      }
+    },
+    "scrap": {
+      "bothVictory": 0,
+      "baselineOnlyVictory": 2,
+      "controlOnlyVictory": 0,
+      "neitherVictory": 0,
+      "commandsDelta": {
+        "min": -197,
+        "p10": -197,
+        "p50": -197,
+        "p90": -197,
+        "max": -197,
+        "mean": -197
+      },
+      "metDelta": {
+        "min": -11,
+        "p10": -11,
+        "p50": -11,
+        "p90": -11,
+        "max": -11,
+        "mean": -11
+      }
+    },
+    "blind": {
+      "bothVictory": 0,
+      "baselineOnlyVictory": 2,
+      "controlOnlyVictory": 0,
+      "neitherVictory": 0,
+      "commandsDelta": {
+        "min": -112,
+        "p10": -112,
+        "p50": -112,
+        "p90": -112,
+        "max": -109,
+        "mean": -110.5
+      },
+      "metDelta": {
+        "min": -11,
+        "p10": -11,
+        "p50": -11,
+        "p90": -11,
+        "max": -11,
+        "mean": -11
+      }
+    }
+  },
+  "contentCoverage": {
+    "ending:victory": 45,
+    "ending:return": 7,
+    "ending:defeat": 8,
+    "recipe:light:forged": 56,
+    "recipe:guard:forged": 54,
+    "recipe:heavy:forged": 52,
+    "route:1:intact": 53,
+    "route:2:light": 48,
+    "route:3:burst": 48,
+    "route:4:guard": 50,
+    "route:5:old": 40,
+    "route:5:new": 12,
+    "route:6:cracked": 47,
+    "route:7:heavy": 52,
+    "route:8:two-light": 49,
+    "route:9:two-bursts": 1,
+    "route:10:cracked": 3,
+    "route:10:intact": 49,
+    "route:11:old": 40,
+    "route:11:two-new": 12,
+    "route:12:finale": 48,
+    "trait:steady:equipped": 50,
+    "trait:ember:equipped": 50,
+    "trait:inherit:equipped": 2,
+    "trait:echo:equipped": 0,
+    "trait:crackedEdge:equipped": 4,
+    "trait:pardon:equipped": 45,
+    "modification:windbox:equipped": 50,
+    "modification:warmRack:equipped": 6,
+    "modification:wideMouth:equipped": 50,
+    "trigger:steady": 46,
+    "trigger:ember": 44,
+    "trigger:inherit": 2,
+    "trigger:echo": 0,
+    "trigger:crackedEdge": 4,
+    "trigger:pardon": 41,
+    "trigger:windbox": 50,
+    "trigger:warmRack": 6,
+    "trigger:wideMouth": 46,
+    "trigger:loan": 24,
+    "trigger:credit": 31,
+    "trigger:shelter": 25,
+    "event:donation:accepted": 44,
+    "event:loan:accepted": 48,
+    "event:salvage:accepted": 0,
+    "event:credit:accepted": 50,
+    "event:shelter:accepted": 25,
+    "event:rest:accepted": 23,
+    "event:donation:consumed": 44,
+    "event:loan:consumed": 24,
+    "event:salvage:consumed": 0,
+    "event:credit:consumed": 31,
+    "event:shelter:consumed": 25,
+    "inherit:consumed": 2,
+    "reserve:crossed": 47,
+    "failure:after-chapter": 2,
+    "challenge:reordered": 2
+  },
+  "missingFeatures": [
+    "trait:echo:equipped",
+    "trigger:echo",
+    "event:salvage:accepted",
+    "event:salvage:consumed"
+  ],
+  "exemptCoverage": {
+    "event:rest:consumed": "Rest preserves existing resources; it has no consumable benefit."
+  },
+  "witnesses": {
+    "ending:victory": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "recipe:light:forged": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "recipe:guard:forged": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "recipe:heavy:forged": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "route:1:intact": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "route:2:light": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "route:3:burst": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "route:4:guard": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "route:5:old": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "route:6:cracked": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "route:7:heavy": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "route:8:two-light": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "route:10:intact": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "route:11:old": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "route:12:finale": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "trait:steady:equipped": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "trait:ember:equipped": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "trait:pardon:equipped": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "modification:windbox:equipped": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "modification:wideMouth:equipped": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "trigger:steady": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "trigger:ember": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "trigger:pardon": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "trigger:windbox": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "trigger:wideMouth": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "trigger:shelter": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "event:donation:accepted": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "event:donation:consumed": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "event:loan:accepted": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "event:credit:accepted": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "event:shelter:accepted": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "event:shelter:consumed": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "reserve:crossed": {
+      "profile": "balanced-steady",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "306c6ddeed8cd45013fa1b82c2e81a6225c576290555f9658b5ed24f582d6dbd",
+      "commands": 212
+    },
+    "trigger:loan": {
+      "profile": "balanced-steady",
+      "index": 1,
+      "seed": "v4-balance-0001",
+      "phase": "victory",
+      "stateSha256": "edd402ed5f2471055ff47fb80cf904f802a3766678884e0720c97446a5c1ba28",
+      "commands": 212
+    },
+    "trigger:credit": {
+      "profile": "balanced-steady",
+      "index": 1,
+      "seed": "v4-balance-0001",
+      "phase": "victory",
+      "stateSha256": "edd402ed5f2471055ff47fb80cf904f802a3766678884e0720c97446a5c1ba28",
+      "commands": 212
+    },
+    "event:loan:consumed": {
+      "profile": "balanced-steady",
+      "index": 1,
+      "seed": "v4-balance-0001",
+      "phase": "victory",
+      "stateSha256": "edd402ed5f2471055ff47fb80cf904f802a3766678884e0720c97446a5c1ba28",
+      "commands": 212
+    },
+    "event:credit:consumed": {
+      "profile": "balanced-steady",
+      "index": 1,
+      "seed": "v4-balance-0001",
+      "phase": "victory",
+      "stateSha256": "edd402ed5f2471055ff47fb80cf904f802a3766678884e0720c97446a5c1ba28",
+      "commands": 212
+    },
+    "event:rest:accepted": {
+      "profile": "balanced-steady",
+      "index": 1,
+      "seed": "v4-balance-0001",
+      "phase": "victory",
+      "stateSha256": "edd402ed5f2471055ff47fb80cf904f802a3766678884e0720c97446a5c1ba28",
+      "commands": 212
+    },
+    "ending:return": {
+      "profile": "low-hammer",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "return",
+      "stateSha256": "0a82d660a28824effa0ba6ec6906ad9b7329a19c00f194345fdf4978bc7d06d9",
+      "commands": 165
+    },
+    "route:5:new": {
+      "profile": "low-hammer",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "return",
+      "stateSha256": "0a82d660a28824effa0ba6ec6906ad9b7329a19c00f194345fdf4978bc7d06d9",
+      "commands": 165
+    },
+    "route:11:two-new": {
+      "profile": "low-hammer",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "return",
+      "stateSha256": "0a82d660a28824effa0ba6ec6906ad9b7329a19c00f194345fdf4978bc7d06d9",
+      "commands": 165
+    },
+    "ending:defeat": {
+      "profile": "low-hammer",
+      "index": 1,
+      "seed": "v4-balance-0001",
+      "phase": "defeat",
+      "stateSha256": "6e34b598b65f1a0024a9eb0fcdb577b313bd8c02519fd6ebc381ce3b3528c80f",
+      "commands": 72
+    },
+    "failure:after-chapter": {
+      "profile": "low-hammer",
+      "index": 1,
+      "seed": "v4-balance-0001",
+      "phase": "defeat",
+      "stateSha256": "6e34b598b65f1a0024a9eb0fcdb577b313bd8c02519fd6ebc381ce3b3528c80f",
+      "commands": 72
+    },
+    "route:9:two-bursts": {
+      "profile": "burst-first",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "32b0dfe56898a61d5a1a22ad4c3dac0ce4506bb2d282477dca75c0a487cc83b5",
+      "commands": 286
+    },
+    "trait:crackedEdge:equipped": {
+      "profile": "cracked-commission",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "3c0d0d8bb724aa5ba4d8716d074d3f432aa35d8673df5bd1b16d23a6cdef87b1",
+      "commands": 203
+    },
+    "trigger:crackedEdge": {
+      "profile": "cracked-commission",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "3c0d0d8bb724aa5ba4d8716d074d3f432aa35d8673df5bd1b16d23a6cdef87b1",
+      "commands": 203
+    },
+    "modification:warmRack:equipped": {
+      "profile": "old-first",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "31ffa292cc73fafeafd043cc18ac2421afbe72a97efb4ba1f9183c5a41088082",
+      "commands": 212
+    },
+    "trigger:warmRack": {
+      "profile": "old-first",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "31ffa292cc73fafeafd043cc18ac2421afbe72a97efb4ba1f9183c5a41088082",
+      "commands": 212
+    },
+    "route:10:cracked": {
+      "profile": "fixed-10",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "return",
+      "stateSha256": "e27422ffd8337ec514ff674cf633a8fc77111a7f1381980a085aaf680c61d42d",
+      "commands": 394
+    },
+    "trait:inherit:equipped": {
+      "profile": "prefer-inherit",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "40713f6fe378609d7d06c373ff0811ebbffff8e7fc460d7cbacb15b4262c0421",
+      "commands": 322
+    },
+    "trigger:inherit": {
+      "profile": "prefer-inherit",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "40713f6fe378609d7d06c373ff0811ebbffff8e7fc460d7cbacb15b4262c0421",
+      "commands": 322
+    },
+    "inherit:consumed": {
+      "profile": "prefer-inherit",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "40713f6fe378609d7d06c373ff0811ebbffff8e7fc460d7cbacb15b4262c0421",
+      "commands": 322
+    },
+    "challenge:reordered": {
+      "profile": "qualified-challenge",
+      "index": 0,
+      "seed": "v4-balance-0000",
+      "phase": "victory",
+      "stateSha256": "8aabf33114c49feab0c8200ef7e9fe65cec8fa7254b28bd3cb2f1fb7b75dc3f9",
+      "commands": 220
+    }
+  }
+}

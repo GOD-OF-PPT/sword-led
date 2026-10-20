@@ -1,0 +1,11 @@
+# Guidance evidence
+
+This is six browser engine/size configurations and 42 targeted guidance consumers, not the final browser matrix, a complete UI playthrough, human enjoyment acceptance, or another 30000-case model replay. The original failed UI attempt completed zero projects and is retained alongside the exact regex-only correction. Quality passed 357 unit tests and strict/web/SDK build before that helper correction; application source and all 75 runtime files remained identical across the correction.
+
+The 28 indexed successful consumer state documents plus one historical source equal 29 output-state occurrences; all are copied along with the 28-entry index. Additional collector validation counts, failed diagnostic states, and before-state duplicates are listed in validation/checks.json, not conflated with the completed model audit. The corrected before observation has six screenshots and four primary logical states; its earlier tool mistake is retained.
+
+All 60 after PNGs remain at their original local paths. Ten representative after PNGs and all six corrected before PNGs are published here. Original complete artifact indexes, all text/result/state documents and exact original-path/hash mappings explain what was and was not duplicated. Neither this collector nor the wrapper deletes those originals. No 75-file old/new art runtime is duplicated: runtime-binding.json identifies every file, runtime-delta/ preserves current index/new main JS, and the sibling model archive and source checkout supply the unchanged SDK/art. Verify a rebuilt full runtime before reproduction.
+
+Archived tools retain original bytes; restore their original logical paths or pass explicit --root/--out to this collector from a restored checkout. This collection only hashes the already sealed model archive, not replays its 30000 journals. It made HTTP checks solely against the explicit 4198 target and did not start/replace/refresh official 4179 or any user browser.
+
+Completion gate: Require actual collector exit 0, no COLLECTION-FAILED.json, a complete COMPLETED.json with validationComplete=true, matching manifest/index hashes, and every indexed payload hash. Manifest/index alone never assert success.

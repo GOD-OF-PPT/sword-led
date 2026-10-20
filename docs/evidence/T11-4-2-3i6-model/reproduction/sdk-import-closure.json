@@ -1,0 +1,34 @@
+{
+  "scope": "The exact four-file local import/re-export closure of the actual model v4 SDK; not the eight overall SDK files or the 75-file web build.",
+  "roots": [
+    "sword-led-v4.js"
+  ],
+  "modules": {
+    "core-CvAZnNjA.js": {
+      "imports": [],
+      "sha256": "d454eb5d786660f0a1132580582c6af8c2004b274337feb9f606cddbf76beb46",
+      "bytes": 21211
+    },
+    "browser-session-BQdQqpuu.js": {
+      "imports": [
+        "core-CvAZnNjA.js"
+      ],
+      "sha256": "8ebc49f8c7ee292c6dd0181cf3e209a669c3224aa54e15c394d912a471dbdee5",
+      "bytes": 11605
+    },
+    "rules-CAo3EZyg.js": {
+      "imports": [],
+      "sha256": "758b82851aaf66fee126eabcc212cff0c95a2b9fed33f2a0e08b8bd52e5965ea",
+      "bytes": 1838
+    },
+    "sword-led-v4.js": {
+      "imports": [
+        "core-CvAZnNjA.js",
+        "browser-session-BQdQqpuu.js",
+        "rules-CAo3EZyg.js"
+      ],
+      "sha256": "0525dd1f3642af2a1a54e397e6023cd9baf4dcccda4c5af3b9ed721a92ae89e5",
+      "bytes": 47405
+    }
+  }
+}

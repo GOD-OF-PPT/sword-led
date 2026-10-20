@@ -1,6 +1,6 @@
 # 开发与验证约定
 
-默认`/`为已批准v0.7的生产第一章（forge-v4/schema4）；`/v3.html`保留旧炉前契约，`/v2.html`为旧D细锻，`/legacy.html`为B版。新旧独立key、同一个writer锁；不得用新解释器改写旧journal或自动转换旧档。见[首章界面](docs/v0.7-first-chapter-interface.md)、[核心](docs/v0.7-core-contract.md)和[保存合同](docs/v0.7-persistence-contract.md)。按[goal任务](goal-1/tasks.md)一次执行一项，后八天和最终验收仍在后续任务。
+默认`/`为已批准v0.7的三章十二天主线（forge-v4/schema4）；`/v3.html`保留旧炉前契约，`/v2.html`为旧D细锻，`/legacy.html`为B版。新旧独立key、同一个writer锁；不得用新解释器改写旧journal或自动转换旧档。见[终章界面](docs/v0.7-final-chapter-interface.md)、[核心](docs/v0.7-core-contract.md)和[保存合同](docs/v0.7-persistence-contract.md)。按[goal任务](goal-1/tasks.md)一次执行一项；最终浏览器广矩阵、真人体验和最大复核继续保留责任。
 
 安装使用`npm ci --registry=https://registry.npmjs.org/`，版本来自package-lock；不随手更新依赖，当前无运行时第三方依赖。`npm run dev`用于开发，生产检查运行`npm run check`。单元/严格类型/构建通过只证明相应工程条件，真人乐趣单独记录。
 
@@ -14,7 +14,7 @@ npm run test:cross
 npm run test:art
 ```
 
-当前`test:browser`构建一次后串行运行`playwright.v4-ui.config.ts`与`playwright.v4-storage.config.ts`；当前首章UI也可在已有构建上独立运行。首章实际45项与最后重复键6项的不同构建边界见[验证报告](docs/reviews/T11-4-2-3i3-first-chapter.md)，不要将48条逻辑覆盖说成一批48全绿。旧v3配置使用显式v3.html入口。
+当前`test:browser`构建一次后串行运行`playwright.v4-ui.config.ts`与`playwright.v4-storage.config.ts`；当前UI也可在已有构建上独立运行。首章历史45项与最后重复键6项的不同构建边界见[验证报告](docs/reviews/T11-4-2-3i3-first-chapter.md)，不要将48条逻辑覆盖说成一批48全绿；终章分批结果及本轮42项引导消费者分别见对应报告，不能拼成一批全量运行。旧v3配置使用显式v3.html入口。
 
 页面测试默认单worker/retries0，真实存储SDK与原生Chrome探测另记；不要通过重试隐藏失败。旧`playwright.cross.config.ts`是五项目定向配置，排除直接启动原生Chrome的规格；其DPR2项目只覆盖部分渲染/控件场景。旧D细锻完整配置为`playwright.v2.config.ts`：先构建一次，再运行`npx playwright test --config playwright.v2.config.ts`，六引擎/DPR项目各35项完整规格和一个原生Chrome项目两项，共212项。旧定向配置不能代替完整新版结果。各引擎版本与DPR要从实际运行环境获取，不能把引擎结果写成所有Safari/Edge/显卡均通过。
 
@@ -41,3 +41,5 @@ node scripts/collect-v2-cross.mjs --report test-results/v2-release-report.json -
 v2完整规模使用`npm run verify:v2 -- --seeds 1000 --workers 4 --out tmp/my-v2-1000`。workers范围1–8，1为同一batch函数的串行路径；默认4。固定29组合全部保留，25种子分片按原profile/seed顺序归并，每终态正式回放并记录状态hash，worker退出异常或源/编译产物变化则不写成功summary。会运行较久；不要在它运行时重新编译tmp/simulation或修改参与模拟的core/timing/policy/worker/锁文件。不要把合成输入误差分布称为真人准确率。T12原规模批次的终态以实际会话/summary为准，启动不等于通过。
 
 所有AI美术保存原图、实际提示词、来源/引用链与SHA；运行资源独立于整张概念图，文字由代码渲染。未获用户同意的风格不能默认为选定。旧图/旧存档/旧提交使用新增版本或revert保留；不强推覆盖历史，不提交.env、dist、tmp和node_modules。
+
+当前v4平衡工具是`scripts/v4-model.mjs`与`scripts/audit-v4-model.mjs`，完整命令见README；它们直接使用已构建SDK，不重编译旧tmp/simulation。正式策略、共享种子、资源账和特性计数见[事前合同](docs/v0.7-balance-validation-contract.md)，实际结果见[平衡／引导报告](docs/reviews/T11-4-2-3i6-v4-balance.md)。30组各1000不是30种独立打法；生产与独立两次全量回放、13条额外见证回放、定向缺项补证、UI恢复边界和真人反馈须分开计数。正式源与构建首尾冻结；改变公开规则须使用新的规则身份与明确兼容方案，不能为调平衡使已有forge-v4 journal失效。旧simulate/verify:v2会写tmp/simulation，复现旧批次先用独立checkout。

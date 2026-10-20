@@ -1,0 +1,21 @@
+{
+  "kind": "formal",
+  "token": "v4-balance-formal-01",
+  "pid": 81355,
+  "childPid": 81356,
+  "startedAt": "2026-10-20T20:02:15.211Z",
+  "command": [
+    "/Users/gordon/.nvm/versions/node/v22.12.0/bin/node",
+    "scripts/v4-model.mjs",
+    "--seeds",
+    "1000",
+    "--workers",
+    "6",
+    "--out",
+    "tmp/T11-4-2-3i6/formal",
+    "--seed-prefix",
+    "v4-balance"
+  ],
+  "resultFile": "tmp/T11-4-2-3i6/formal/summary.json",
+  "wrapperSha256": "33085c42c3775e287c187441ef248f3ab113ba0127318c7b3a9b3ff28ea4c90b"
+}

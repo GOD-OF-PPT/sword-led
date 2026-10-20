@@ -1,0 +1,226 @@
+[
+  {
+    "label": "fixture-ordinary",
+    "scope": "Declared legal journal restoration boundary; not a new full UI game.",
+    "sha256": "d0a3d66e8b53d0f801a3e972642942ed7e4b94ca7633b3e562d1f317bc10fb33",
+    "day": 2,
+    "phase": "workshop",
+    "revision": 16
+  },
+  {
+    "label": "fixture-critical",
+    "scope": "Declared legal journal restoration boundary; not a new full UI game.",
+    "sha256": "cfbdc3a89c3fb73db772966a075c6f56af658e7659b4e174cc1b81e203128639",
+    "day": 4,
+    "phase": "workshop",
+    "revision": 44
+  },
+  {
+    "label": "fixture-protectedCritical",
+    "scope": "Declared legal journal restoration boundary; not a new full UI game.",
+    "sha256": "cd864b7e1643f4a1b0485a6840598d3942af0407577d63b6c760198abeb9640b",
+    "day": 8,
+    "phase": "workshop",
+    "revision": 114
+  },
+  {
+    "label": "fixture-exhausted",
+    "scope": "Declared legal journal restoration boundary; not a new full UI game.",
+    "sha256": "14fbc3bbae822a95ac584b2f86d459e30231cd105d72e93fa1d29b25d681ae82",
+    "day": 4,
+    "phase": "workshop",
+    "revision": 20
+  },
+  {
+    "label": "fixture-salvage",
+    "scope": "Declared legal journal restoration boundary; not a new full UI game.",
+    "sha256": "a6fe7819b479939142b8e10a61176631a609ef694e1804d4aa864d70adb2157e",
+    "day": 3,
+    "phase": "workshop",
+    "revision": 5
+  },
+  {
+    "label": "fixture-salvageEmpty",
+    "scope": "Declared legal journal restoration boundary; not a new full UI game.",
+    "sha256": "9a03949fe43265b47c66f48108a8a8db02380f8a0381688bf5e12a1b0384970c",
+    "day": 3,
+    "phase": "workshop",
+    "revision": 8
+  },
+  {
+    "label": "core-forecast-ordinary",
+    "scope": "Actual formal SDK settlement used solely to prove the forecast; this action is never sent by the cancellation UI case.",
+    "sha256": "5849f735bb80fd820fd5939648a288da45544d2fb8469b5ff6a39f1a0bd644cd",
+    "day": 2,
+    "phase": "summary",
+    "revision": 17
+  },
+  {
+    "label": "core-forecast-critical",
+    "scope": "Actual formal SDK settlement used solely to prove the forecast; this action is never sent by the cancellation UI case.",
+    "sha256": "4ac9eb95719fe6656d8aa08b749fc406c6d7eeac994d0d1e85833adbfe76e61f",
+    "day": 4,
+    "phase": "chapter",
+    "revision": 45
+  },
+  {
+    "label": "core-forecast-protectedCritical",
+    "scope": "Actual formal SDK settlement used solely to prove the forecast; this action is never sent by the cancellation UI case.",
+    "sha256": "7a232bb26a5d5937e89823f3f7559aec25839859f5aa0e0d802809d856c2211b",
+    "day": 8,
+    "phase": "chapter",
+    "revision": 115
+  },
+  {
+    "label": "core-forecast-exhausted",
+    "scope": "Actual formal SDK settlement used solely to prove the forecast; this action is never sent by the cancellation UI case.",
+    "sha256": "67c7346a157eca7d2913c0931fcc6ecd2a529dfc1bf38b0dd670e9f53087cef9",
+    "day": 4,
+    "phase": "defeat",
+    "revision": 21
+  },
+  {
+    "label": "chromium-1280x720-actual-opening",
+    "scope": "Actual isolated UI creation, no restored state and no forging commands.",
+    "sha256": "7432548bf5b1ee84ee6a252bdf5069968386bd6a6009ac07c124baa9fa12a21c",
+    "day": 1,
+    "phase": "opening",
+    "revision": 0
+  },
+  {
+    "label": "chromium-1280x720-actual-ui-reserved",
+    "scope": "One actual reserve command after navigation; baseline was an explicitly restored legal boundary.",
+    "sha256": "80a14cfa7a01e61b037d59eb4a63705cb87a7d02e380f8d323ce54d954c9db70",
+    "day": 3,
+    "phase": "workshop",
+    "revision": 6
+  },
+  {
+    "label": "chromium-1280x720-actual-ui-exchanged",
+    "scope": "One actual reserve and one actual event acceptance from an explicitly restored legal boundary. Not a new full-game UI playthrough.",
+    "sha256": "37892224476f27143d520e6b993a7945e555e8b60d3e07f230228fead2d481d7",
+    "day": 3,
+    "phase": "workshop",
+    "revision": 7
+  },
+  {
+    "label": "chromium-1920x1080-actual-opening",
+    "scope": "Actual isolated UI creation, no restored state and no forging commands.",
+    "sha256": "a77e8541f8ee6d7b86b9238e89eb127bfbd52807ce131f31257529380fc2ae90",
+    "day": 1,
+    "phase": "opening",
+    "revision": 0
+  },
+  {
+    "label": "chromium-1920x1080-actual-ui-reserved",
+    "scope": "One actual reserve command after navigation; baseline was an explicitly restored legal boundary.",
+    "sha256": "80a14cfa7a01e61b037d59eb4a63705cb87a7d02e380f8d323ce54d954c9db70",
+    "day": 3,
+    "phase": "workshop",
+    "revision": 6
+  },
+  {
+    "label": "chromium-1920x1080-actual-ui-exchanged",
+    "scope": "One actual reserve and one actual event acceptance from an explicitly restored legal boundary. Not a new full-game UI playthrough.",
+    "sha256": "37892224476f27143d520e6b993a7945e555e8b60d3e07f230228fead2d481d7",
+    "day": 3,
+    "phase": "workshop",
+    "revision": 7
+  },
+  {
+    "label": "firefox-1280x720-actual-opening",
+    "scope": "Actual isolated UI creation, no restored state and no forging commands.",
+    "sha256": "7119979dd97e40ac7f440f86b8de1b6220263e9effb6d698334df11faf512bf9",
+    "day": 1,
+    "phase": "opening",
+    "revision": 0
+  },
+  {
+    "label": "firefox-1280x720-actual-ui-reserved",
+    "scope": "One actual reserve command after navigation; baseline was an explicitly restored legal boundary.",
+    "sha256": "80a14cfa7a01e61b037d59eb4a63705cb87a7d02e380f8d323ce54d954c9db70",
+    "day": 3,
+    "phase": "workshop",
+    "revision": 6
+  },
+  {
+    "label": "firefox-1280x720-actual-ui-exchanged",
+    "scope": "One actual reserve and one actual event acceptance from an explicitly restored legal boundary. Not a new full-game UI playthrough.",
+    "sha256": "37892224476f27143d520e6b993a7945e555e8b60d3e07f230228fead2d481d7",
+    "day": 3,
+    "phase": "workshop",
+    "revision": 7
+  },
+  {
+    "label": "firefox-1920x1080-actual-opening",
+    "scope": "Actual isolated UI creation, no restored state and no forging commands.",
+    "sha256": "5d0b9822aa0cf82fa66576f5264dbea9256112f0949d6cabde9a31f48ae48d6f",
+    "day": 1,
+    "phase": "opening",
+    "revision": 0
+  },
+  {
+    "label": "firefox-1920x1080-actual-ui-reserved",
+    "scope": "One actual reserve command after navigation; baseline was an explicitly restored legal boundary.",
+    "sha256": "80a14cfa7a01e61b037d59eb4a63705cb87a7d02e380f8d323ce54d954c9db70",
+    "day": 3,
+    "phase": "workshop",
+    "revision": 6
+  },
+  {
+    "label": "firefox-1920x1080-actual-ui-exchanged",
+    "scope": "One actual reserve and one actual event acceptance from an explicitly restored legal boundary. Not a new full-game UI playthrough.",
+    "sha256": "37892224476f27143d520e6b993a7945e555e8b60d3e07f230228fead2d481d7",
+    "day": 3,
+    "phase": "workshop",
+    "revision": 7
+  },
+  {
+    "label": "webkit-1280x720-actual-opening",
+    "scope": "Actual isolated UI creation, no restored state and no forging commands.",
+    "sha256": "5013b1d278db6a0874c6ec79d38fa907199e012106042606ff48c6e0c109017f",
+    "day": 1,
+    "phase": "opening",
+    "revision": 0
+  },
+  {
+    "label": "webkit-1280x720-actual-ui-reserved",
+    "scope": "One actual reserve command after navigation; baseline was an explicitly restored legal boundary.",
+    "sha256": "80a14cfa7a01e61b037d59eb4a63705cb87a7d02e380f8d323ce54d954c9db70",
+    "day": 3,
+    "phase": "workshop",
+    "revision": 6
+  },
+  {
+    "label": "webkit-1280x720-actual-ui-exchanged",
+    "scope": "One actual reserve and one actual event acceptance from an explicitly restored legal boundary. Not a new full-game UI playthrough.",
+    "sha256": "37892224476f27143d520e6b993a7945e555e8b60d3e07f230228fead2d481d7",
+    "day": 3,
+    "phase": "workshop",
+    "revision": 7
+  },
+  {
+    "label": "webkit-1920x1080-actual-opening",
+    "scope": "Actual isolated UI creation, no restored state and no forging commands.",
+    "sha256": "e1deb6562987b0442d1b97faf4ca4310af5a97a09edbeafd06ce29b3cf25c30e",
+    "day": 1,
+    "phase": "opening",
+    "revision": 0
+  },
+  {
+    "label": "webkit-1920x1080-actual-ui-reserved",
+    "scope": "One actual reserve command after navigation; baseline was an explicitly restored legal boundary.",
+    "sha256": "80a14cfa7a01e61b037d59eb4a63705cb87a7d02e380f8d323ce54d954c9db70",
+    "day": 3,
+    "phase": "workshop",
+    "revision": 6
+  },
+  {
+    "label": "webkit-1920x1080-actual-ui-exchanged",
+    "scope": "One actual reserve and one actual event acceptance from an explicitly restored legal boundary. Not a new full-game UI playthrough.",
+    "sha256": "37892224476f27143d520e6b993a7945e555e8b60d3e07f230228fead2d481d7",
+    "day": 3,
+    "phase": "workshop",
+    "revision": 7
+  }
+]

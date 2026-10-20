@@ -6,6 +6,9 @@ export type JourneyScreen='opening'|'workshop'|'receipt'|'chapter'|'complete'|'e
 const CHAPTER_TWO='/assets/d/v07-chapter2/';
 const CHAPTER_THREE='/assets/d/v07-chapter3/';
 
+export const CAMPAIGN_GOAL='守住第4、8、12天的关键约定，至少完成10项，并带着契印归来，才能让十二灯复明。';
+export const isCriticalDay=(day:number)=>[4,8,12].includes(day);
+
 /** A release boundary changes available presentation, never a saved phase or day. */
 export function journeyScreen(state:RunState,throughDay=12):JourneyScreen {
   if(state.day>throughDay)return 'future';

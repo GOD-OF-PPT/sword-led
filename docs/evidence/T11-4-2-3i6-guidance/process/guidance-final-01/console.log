@@ -1,0 +1,34 @@
+node:internal/modules/run_main:122
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The input did not match the regular expression /至少\s*10\s*项/. Input:
+
+'山路第一盏灯熄了。阿岚把旧巡剑放到铁砧旁：先让巡夜的人回家。\n' +
+  '\n' +
+  '守住第4、8、12天的关键约定，至少完成10项，并带着契印归来，才能让十二灯复明。\n' +
+  '\n' +
+  '巡夜的人要一柄无裂新剑，先点亮归家的第一站。\n' +
+  '\n' +
+  '一柄 · 无裂纹 · 身价≥100\n' +
+  '\n' +
+  '左键敲击，见好就交。每次收工只按真实完成情况判定契印。'
+
+    at fullGoal (file:///Users/gordon/githome/sword-led/tmp/T11-4-2-3i6/guidance-consumers.mjs:63:88)
+    at file:///Users/gordon/githome/sword-led/tmp/T11-4-2-3i6/guidance-consumers.mjs:106:170 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: '山路第一盏灯熄了。阿岚把旧巡剑放到铁砧旁：先让巡夜的人回家。\n' +
+    '\n' +
+    '守住第4、8、12天的关键约定，至少完成10项，并带着契印归来，才能让十二灯复明。\n' +
+    '\n' +
+    '巡夜的人要一柄无裂新剑，先点亮归家的第一站。\n' +
+    '\n' +
+    '一柄 · 无裂纹 · 身价≥100\n' +
+    '\n' +
+    '左键敲击，见好就交。每次收工只按真实完成情况判定契印。',
+  expected: /至少\s*10\s*项/,
+  operator: 'match'
+}
+
+Node.js v22.12.0
