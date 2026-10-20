@@ -1,0 +1,188 @@
+{
+  "scope": "Seed discovery through accepted public-SDK commands and visible event views. No injected resources, eligibility or phase.",
+  "limit": 192,
+  "attempts": [
+    {
+      "seed": "event-frontier-0",
+      "event": "rest",
+      "prefixCommands": 9
+    },
+    {
+      "seed": "event-frontier-1",
+      "event": "loan",
+      "prefixCommands": 9
+    },
+    {
+      "seed": "event-frontier-2",
+      "event": "loan",
+      "prefixCommands": 9
+    },
+    {
+      "seed": "event-frontier-3",
+      "event": "shelter",
+      "prefixCommands": 8
+    },
+    {
+      "seed": "event-frontier-4",
+      "event": "credit",
+      "prefixCommands": 9
+    },
+    {
+      "seed": "event-frontier-5",
+      "event": "salvage",
+      "prefixCommands": 8
+    },
+    {
+      "seed": "event-frontier-6",
+      "event": "donation",
+      "prefixCommands": 8
+    },
+    {
+      "seed": "event-frontier-7",
+      "event": "rest",
+      "prefixCommands": 9
+    },
+    {
+      "seed": "event-frontier-8",
+      "event": "salvage",
+      "prefixCommands": 9
+    },
+    {
+      "seed": "event-frontier-9",
+      "event": "donation",
+      "prefixCommands": 8
+    },
+    {
+      "seed": "event-frontier-10",
+      "event": "shelter",
+      "prefixCommands": 8
+    },
+    {
+      "seed": "event-frontier-11",
+      "event": "donation",
+      "prefixCommands": 8
+    },
+    {
+      "seed": "event-frontier-12",
+      "event": "shelter",
+      "prefixCommands": 8
+    },
+    {
+      "seed": "event-frontier-13",
+      "event": "salvage",
+      "prefixCommands": 9
+    },
+    {
+      "seed": "event-frontier-14",
+      "event": "loan",
+      "prefixCommands": 8
+    },
+    {
+      "seed": "event-frontier-15",
+      "event": "credit",
+      "prefixCommands": 9
+    },
+    {
+      "seed": "event-frontier-16",
+      "event": "salvage",
+      "prefixCommands": 9
+    },
+    {
+      "seed": "event-frontier-17",
+      "event": "loan",
+      "prefixCommands": 8
+    },
+    {
+      "seed": "event-frontier-18",
+      "event": "donation",
+      "prefixCommands": 9
+    },
+    {
+      "seed": "event-frontier-19",
+      "event": "loan",
+      "prefixCommands": 9
+    },
+    {
+      "seed": "event-frontier-20",
+      "event": "shelter",
+      "prefixCommands": 9
+    },
+    {
+      "seed": "event-frontier-21",
+      "event": "salvage",
+      "prefixCommands": 9
+    },
+    {
+      "seed": "event-frontier-22",
+      "event": "salvage",
+      "prefixCommands": 9
+    },
+    {
+      "seed": "event-frontier-23",
+      "event": "rest",
+      "prefixCommands": 9
+    },
+    {
+      "seed": "event-frontier-24",
+      "event": "shelter",
+      "prefixCommands": 8
+    },
+    {
+      "seed": "event-frontier-25",
+      "event": "loan",
+      "prefixCommands": 9
+    },
+    {
+      "seed": "event-frontier-26",
+      "event": "donation",
+      "prefixCommands": 9
+    },
+    {
+      "seed": "event-frontier-27",
+      "event": "salvage",
+      "prefixCommands": 8
+    },
+    {
+      "seed": "event-frontier-28",
+      "event": "loan",
+      "prefixCommands": 9
+    },
+    {
+      "seed": "event-frontier-29",
+      "event": "credit",
+      "prefixCommands": 8
+    },
+    {
+      "seed": "event-frontier-30",
+      "event": "rest",
+      "prefixCommands": 8
+    }
+  ],
+  "seeds": {
+    "rest": {
+      "seed": "event-frontier-30",
+      "prefixCommands": 8
+    },
+    "loan": {
+      "seed": "event-frontier-14",
+      "prefixCommands": 8
+    },
+    "shelter": {
+      "seed": "event-frontier-3",
+      "prefixCommands": 8
+    },
+    "credit": {
+      "seed": "event-frontier-29",
+      "prefixCommands": 8
+    },
+    "salvage": {
+      "seed": "event-frontier-5",
+      "prefixCommands": 8
+    },
+    "donation": {
+      "seed": "event-frontier-6",
+      "prefixCommands": 8
+    }
+  },
+  "sdkEntrySha256": "0525dd1f3642af2a1a54e397e6023cd9baf4dcccda4c5af3b9ed721a92ae89e5"
+}

@@ -1,0 +1,334 @@
+{
+  "schema": 1,
+  "generationMode": "built-in image_gen",
+  "sourceDimensions": {
+    "width": 1672,
+    "height": 941
+  },
+  "exportOperation": "format conversion only; no source painting, resize, crop, or compositing",
+  "commonTwinMaster": {
+    "path": "design/d/v07-chapter2/originals/twin-stations-dark-v1.png",
+    "bytes": 3080526,
+    "sha256": "864bd897e897d4ca158bc9ff21d13389ebb082f5629b258d42a57f5c71a58c0d"
+  },
+  "budget": {
+    "bytes": 2043892,
+    "MiB": 1.9492073059082031,
+    "targetBytes": 2097152,
+    "hardBudgetBytes": 2621440,
+    "targetMet": true,
+    "hardBudgetMet": true
+  },
+  "assets": [
+    {
+      "id": "winter-forge-v1",
+      "runtime": {
+        "path": "public/assets/d/v07-chapter2/winter-forge-v1.webp",
+        "bytes": 197974,
+        "sha256": "ff93be5848e112aa7c6b74a5a649cd5fc7341cf08faca03d1b218a4e3e7aca96"
+      },
+      "original": {
+        "path": "design/d/v07-chapter2/originals/winter-forge-v1.png",
+        "bytes": 2417964,
+        "sha256": "e4d3ace725b4e4efdb1f7a19734b55917db779d557b322ebf716bedf4f5a4d54"
+      },
+      "prompt": {
+        "path": "design/d/v07-chapter2/prompts/winter-forge-v1.txt",
+        "bytes": 1878,
+        "sha256": "aba1511ad0e1644189c6c56d24140c880934d694ae0628c8a95529915122756e"
+      },
+      "references": [
+        {
+          "path": "design/d/originals/forge-backdrop-v2.png",
+          "bytes": 2486831,
+          "sha256": "b4fa13ce25bd62965b597efba9370d14dc27b7d77b1b5cf9c79b13158e71a21b"
+        }
+      ],
+      "sourceRecord": {
+        "path": "design/d/v07-chapter2/winter-forge-v1-source.json",
+        "bytes": 1122,
+        "sha256": "8368d11adb67c730358fa97bff65d5df2326fa918c8e7e58272b949fa7959c28"
+      },
+      "export": {
+        "tool": "cwebp",
+        "quality": 78,
+        "method": 6,
+        "metadata": "none",
+        "resized": false,
+        "cropped": false,
+        "reproducedToMemorySha256": "ff93be5848e112aa7c6b74a5a649cd5fc7341cf08faca03d1b218a4e3e7aca96",
+        "encodedFromExactOriginalVerified": true
+      }
+    },
+    {
+      "id": "returning-blade-v1",
+      "runtime": {
+        "path": "public/assets/d/v07-chapter2/returning-blade-v1.webp",
+        "bytes": 344334,
+        "sha256": "2ce00147936d876291eb708919f6bb8e6bf5fdc0ba64c08e21d50754ac4214da"
+      },
+      "original": {
+        "path": "design/d/v07-chapter2/originals/returning-blade-v1.png",
+        "bytes": 3275125,
+        "sha256": "bfb0f1edc043af77f2f14d85b25e9068ed4119ea0f51d6813bb5d1c1119bf670"
+      },
+      "prompt": {
+        "path": "design/d/v07-chapter2/prompts/returning-blade-v1.txt",
+        "bytes": 2363,
+        "sha256": "f62eeca5515c11a66c0b3c9edee055cc0bc5b114b47c7ba29103c4c4aa3aefc7"
+      },
+      "references": [
+        {
+          "path": "design/d/reference-main-v2.png",
+          "bytes": 2605402,
+          "sha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+        },
+        {
+          "path": "design/d/v05/originals/customers-atlas-v2.png",
+          "bytes": 1937506,
+          "sha256": "fe613eab5a26f33eabbbc74a2332c6c471a1acc5dd14fea09091574b42db5f50"
+        },
+        {
+          "path": "design/d/v07-chapter2/originals/winter-forge-v1.png",
+          "bytes": 2417964,
+          "sha256": "e4d3ace725b4e4efdb1f7a19734b55917db779d557b322ebf716bedf4f5a4d54"
+        }
+      ],
+      "sourceRecord": {
+        "path": "design/d/v07-chapter2/returning-blade-v1-source.json",
+        "bytes": 1493,
+        "sha256": "bb285a44a89c687cac29d19b21578ab4b346f7c13dffc8ca307f5275b6361a8b"
+      },
+      "export": {
+        "tool": "cwebp",
+        "quality": 78,
+        "method": 6,
+        "metadata": "none",
+        "resized": false,
+        "cropped": false,
+        "reproducedToMemorySha256": "2ce00147936d876291eb708919f6bb8e6bf5fdc0ba64c08e21d50754ac4214da",
+        "encodedFromExactOriginalVerified": true
+      }
+    },
+    {
+      "id": "cracked-work-v1",
+      "runtime": {
+        "path": "public/assets/d/v07-chapter2/cracked-work-v1.webp",
+        "bytes": 242632,
+        "sha256": "bcb5323a59eb8bd53e9c18e7afc1ef87bc5f3e5bb1a78b78c959b940fc270fa5"
+      },
+      "original": {
+        "path": "design/d/v07-chapter2/originals/cracked-work-v1.png",
+        "bytes": 2679261,
+        "sha256": "f4fdebdfaadf48f4cdf84379895dfd6aa5b6a57fbc25ad492f165b450ddc03c3"
+      },
+      "prompt": {
+        "path": "design/d/v07-chapter2/prompts/cracked-work-v1.txt",
+        "bytes": 2131,
+        "sha256": "832e9f48122429a654451ee252865e81987d51503cb70e96a05dfe4c25b1e0c0"
+      },
+      "references": [
+        {
+          "path": "design/d/reference-main-v2.png",
+          "bytes": 2605402,
+          "sha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+        },
+        {
+          "path": "design/d/v05/originals/customers-atlas-v2.png",
+          "bytes": 1937506,
+          "sha256": "fe613eab5a26f33eabbbc74a2332c6c471a1acc5dd14fea09091574b42db5f50"
+        },
+        {
+          "path": "design/d/v07-chapter2/originals/winter-forge-v1.png",
+          "bytes": 2417964,
+          "sha256": "e4d3ace725b4e4efdb1f7a19734b55917db779d557b322ebf716bedf4f5a4d54"
+        }
+      ],
+      "sourceRecord": {
+        "path": "design/d/v07-chapter2/cracked-work-v1-source.json",
+        "bytes": 1484,
+        "sha256": "b1e8d690c6b31808cf4ef81b750ea61e7af9b4fe0f03562bf5a359770b45bef7"
+      },
+      "export": {
+        "tool": "cwebp",
+        "quality": 78,
+        "method": 6,
+        "metadata": "none",
+        "resized": false,
+        "cropped": false,
+        "reproducedToMemorySha256": "bcb5323a59eb8bd53e9c18e7afc1ef87bc5f3e5bb1a78b78c959b940fc270fa5",
+        "encodedFromExactOriginalVerified": true
+      }
+    },
+    {
+      "id": "rescue-path-v1",
+      "runtime": {
+        "path": "public/assets/d/v07-chapter2/rescue-path-v1.webp",
+        "bytes": 362192,
+        "sha256": "28a1bd26b08d66fe6748a50263d28bd1404123bff6b87e3be91b98024b21531a"
+      },
+      "original": {
+        "path": "design/d/v07-chapter2/originals/rescue-path-v1.png",
+        "bytes": 3486865,
+        "sha256": "7df0d37fdf640ea987c35d56b9bd0d3da140b977b2cc7925f224ad5ca0bae396"
+      },
+      "prompt": {
+        "path": "design/d/v07-chapter2/prompts/rescue-path-v1.txt",
+        "bytes": 2036,
+        "sha256": "bf1f79c11b23cdc9f414a1ec3a88192bdfc1facf86cbc2d5d1c2f63bae9f936b"
+      },
+      "references": [
+        {
+          "path": "design/d/reference-main-v2.png",
+          "bytes": 2605402,
+          "sha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+        },
+        {
+          "path": "design/d/v05/originals/customers-atlas-v2.png",
+          "bytes": 1937506,
+          "sha256": "fe613eab5a26f33eabbbc74a2332c6c471a1acc5dd14fea09091574b42db5f50"
+        },
+        {
+          "path": "design/d/v07-chapter2/originals/winter-forge-v1.png",
+          "bytes": 2417964,
+          "sha256": "e4d3ace725b4e4efdb1f7a19734b55917db779d557b322ebf716bedf4f5a4d54"
+        }
+      ],
+      "sourceRecord": {
+        "path": "design/d/v07-chapter2/rescue-path-v1-source.json",
+        "bytes": 1481,
+        "sha256": "7fd5b99cc0ed1a6f4d8b928378626b416a6d808ee068c1689b5b5b561ebe86d3"
+      },
+      "export": {
+        "tool": "cwebp",
+        "quality": 78,
+        "method": 6,
+        "metadata": "none",
+        "resized": false,
+        "cropped": false,
+        "reproducedToMemorySha256": "28a1bd26b08d66fe6748a50263d28bd1404123bff6b87e3be91b98024b21531a",
+        "encodedFromExactOriginalVerified": true
+      }
+    },
+    {
+      "id": "twin-stations-dark-v1",
+      "runtime": {
+        "path": "public/assets/d/v07-chapter2/twin-stations-dark-v1.webp",
+        "bytes": 299396,
+        "sha256": "ec92cb07af0c13553b092c12089637c32ba4e2057c80f2f7d963ec5141273f01"
+      },
+      "original": {
+        "path": "design/d/v07-chapter2/originals/twin-stations-dark-v1.png",
+        "bytes": 3080526,
+        "sha256": "864bd897e897d4ca158bc9ff21d13389ebb082f5629b258d42a57f5c71a58c0d"
+      },
+      "prompt": {
+        "path": "design/d/v07-chapter2/prompts/twin-stations-dark-v1.txt",
+        "bytes": 1759,
+        "sha256": "cebeebdfce7024258a56bfe74c66d7a1ecc6bc966a44fe90ac021865d97d3e91"
+      },
+      "references": [
+        {
+          "path": "design/d/v07-chapter2/originals/twin-stations-dark-v1-attempt1.png",
+          "bytes": 3124868,
+          "sha256": "d4f8bfa3cc1953620538c58064b1fc9ab31200e486a458e55d5e57d736635115"
+        }
+      ],
+      "sourceRecord": {
+        "path": "design/d/v07-chapter2/twin-stations-dark-v1-source.json",
+        "bytes": 1166,
+        "sha256": "f7df5929cd1eccda22a89553bd637a563b5541369a89ea4a49371fce6e79c46d"
+      },
+      "export": {
+        "tool": "cwebp",
+        "quality": 78,
+        "method": 6,
+        "metadata": "none",
+        "resized": false,
+        "cropped": false,
+        "reproducedToMemorySha256": "ec92cb07af0c13553b092c12089637c32ba4e2057c80f2f7d963ec5141273f01",
+        "encodedFromExactOriginalVerified": true
+      }
+    },
+    {
+      "id": "twin-stations-one-v1",
+      "runtime": {
+        "path": "public/assets/d/v07-chapter2/twin-stations-one-v1.webp",
+        "bytes": 294906,
+        "sha256": "50968b0df21187032042671427ca8f3721d45a5254db40c504682b24f7c6d44c"
+      },
+      "original": {
+        "path": "design/d/v07-chapter2/originals/twin-stations-one-v1.png",
+        "bytes": 3018667,
+        "sha256": "57f39234fcced37208553de49d26b64e19c34bcc049a0663fb903ce3c405200f"
+      },
+      "prompt": {
+        "path": "design/d/v07-chapter2/prompts/twin-stations-one-v1.txt",
+        "bytes": 1594,
+        "sha256": "13a64b4cf4a56d74aa2a4481e3fc266518a291b70630c81face48a21947d82c6"
+      },
+      "references": [
+        {
+          "path": "design/d/v07-chapter2/originals/twin-stations-dark-v1.png",
+          "bytes": 3080526,
+          "sha256": "864bd897e897d4ca158bc9ff21d13389ebb082f5629b258d42a57f5c71a58c0d"
+        }
+      ],
+      "sourceRecord": {
+        "path": "design/d/v07-chapter2/twin-stations-one-v1-source.json",
+        "bytes": 1154,
+        "sha256": "8363c41ebd8d3583dd43ed283203e4aa3de07562e5cbe3f2b84cca3d530a9a5d"
+      },
+      "export": {
+        "tool": "cwebp",
+        "quality": 78,
+        "method": 6,
+        "metadata": "none",
+        "resized": false,
+        "cropped": false,
+        "reproducedToMemorySha256": "50968b0df21187032042671427ca8f3721d45a5254db40c504682b24f7c6d44c",
+        "encodedFromExactOriginalVerified": true
+      }
+    },
+    {
+      "id": "twin-stations-lit-v1",
+      "runtime": {
+        "path": "public/assets/d/v07-chapter2/twin-stations-lit-v1.webp",
+        "bytes": 302458,
+        "sha256": "f168ab748d4146842603499af700379a459e60bb342171e99f1646f663ff1b33"
+      },
+      "original": {
+        "path": "design/d/v07-chapter2/originals/twin-stations-lit-v1.png",
+        "bytes": 3037007,
+        "sha256": "1de7621fced2122a622a5227e94e2c33cb40def5691a20a183b99f69b303fba3"
+      },
+      "prompt": {
+        "path": "design/d/v07-chapter2/prompts/twin-stations-lit-v1.txt",
+        "bytes": 1690,
+        "sha256": "e28a2c07cdc89270b3dbf6a410fee525eef49e91ccc972b084ac69cd60c0df9e"
+      },
+      "references": [
+        {
+          "path": "design/d/v07-chapter2/originals/twin-stations-dark-v1.png",
+          "bytes": 3080526,
+          "sha256": "864bd897e897d4ca158bc9ff21d13389ebb082f5629b258d42a57f5c71a58c0d"
+        }
+      ],
+      "sourceRecord": {
+        "path": "design/d/v07-chapter2/twin-stations-lit-v1-source.json",
+        "bytes": 1154,
+        "sha256": "9d68bb1df4808cec5335b62a6e015ee31071ed29075520dcc9d5c02f26d72cc6"
+      },
+      "export": {
+        "tool": "cwebp",
+        "quality": 78,
+        "method": 6,
+        "metadata": "none",
+        "resized": false,
+        "cropped": false,
+        "reproducedToMemorySha256": "f168ab748d4146842603499af700379a459e60bb342171e99f1646f663ff1b33",
+        "encodedFromExactOriginalVerified": true
+      }
+    }
+  ]
+}

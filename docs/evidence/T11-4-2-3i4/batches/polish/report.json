@@ -1,0 +1,910 @@
+{
+  "config": {
+    "argv": [
+      "/Users/gordon/.nvm/versions/node/v22.12.0/bin/node",
+      "/Users/gordon/githome/sword-led/node_modules/@playwright/test/cli.js",
+      "test",
+      "--config=/Users/gordon/githome/sword-led/playwright.v4-ui.config.ts",
+      "--output=/Users/gordon/githome/sword-led/tmp/T11-4-2-3i4/polish/work",
+      "--grep=keyboard-only two chapters|real eight-day journey|[01]-of-two surviving|a stale chapter button"
+    ],
+    "configFile": "/Users/gordon/githome/sword-led/playwright.v4-ui.config.ts",
+    "rootDir": "/Users/gordon/githome/sword-led/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i4/polish/work",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v4-chromium",
+        "name": "v4-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v4-*.spec.ts"
+        ],
+        "timeout": 180000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i4/polish/work",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v4-firefox",
+        "name": "v4-firefox",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v4-*.spec.ts"
+        ],
+        "timeout": 180000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i4/polish/work",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v4-webkit",
+        "name": "v4-webkit",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v4-*.spec.ts"
+        ],
+        "timeout": 180000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i4/polish/work",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v4-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v4-*.spec.ts",
+        "timeout": 180000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4198",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "launchOptions": {
+            "args": [
+              "--no-proxy-server"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v4-chromium"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i4/polish/work",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v4-firefox",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v4-*.spec.ts",
+        "timeout": 180000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4198",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0",
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "firefox"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v4-firefox"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i4/polish/work",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v4-webkit",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v4-*.spec.ts",
+        "timeout": 180000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4198",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+          "screen": {
+            "width": 1792,
+            "height": 1120
+          },
+          "deviceScaleFactor": 2,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "webkit"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v4-webkit"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i4/polish/report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 4198 --strictPort",
+      "url": "http://127.0.0.1:4198",
+      "reuseExistingServer": false,
+      "env": {
+        "NO_PROXY": "127.0.0.1,localhost",
+        "no_proxy": "127.0.0.1,localhost"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "v4-chapter.spec.ts",
+      "file": "v4-chapter.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "keyboard-only two chapters and distinct real failure retain honest outcomes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 58262,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T13:59:29.675Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "16fd34b5b9e026c8fbe7-d74d4a0eba57a5f83c75",
+          "file": "v4-chapter.spec.ts",
+          "line": 37,
+          "column": 1
+        },
+        {
+          "title": "keyboard-only two chapters and distinct real failure retain honest outcomes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-firefox",
+              "projectName": "v4-firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 67195,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T14:01:49.810Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "16fd34b5b9e026c8fbe7-492ed3f9397f4501ce3c",
+          "file": "v4-chapter.spec.ts",
+          "line": 37,
+          "column": 1
+        },
+        {
+          "title": "keyboard-only two chapters and distinct real failure retain honest outcomes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-webkit",
+              "projectName": "v4-webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 108230,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T14:04:32.134Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "16fd34b5b9e026c8fbe7-07f0ffda88a2ddec21a2",
+          "file": "v4-chapter.spec.ts",
+          "line": 37,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v4-second-chapter.spec.ts",
+      "file": "v4-second-chapter.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "real eight-day journey preserves old/cracked swords, heavy contact, partial refresh, two works and earned freedom",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 65620,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T14:00:28.480Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "heavy-slow-observation-before-cancel",
+                      "contentType": "application/json",
+                      "body": "eyJzdGF0ZSI6eyJydWxlc1ZlcnNpb24iOiJmb3JnZS12NCIsInJ1bklkIjoiMWM0ZjQ5YmMtNDA1MS00NTBiLTkyYTUtNTNmMDU3Nzg4ZDg4Iiwic2VlZCI6ImxhbnRlcm4td2l0bmVzcy0wIiwibW9kZSI6InN0b3J5IiwiaW5pdGlhbEVsaWdpYmlsaXR5Ijp7InJlY2lwZXMiOlsibGlnaHQiXSwiY2hhbGxlbmdlIjpmYWxzZX0sInJldmlzaW9uIjoxMDUsInBoYXNlIjoid29ya3Nob3AiLCJkYXkiOjcsImNvbW1pc3Npb25PcmRlciI6WzEsMiwzLDQsNSw2LDcsOCw5LDEwLDExLDEyXSwiY29pbnMiOjQzMTMzLCJzZWFscyI6Mywic3VwcGx5QmFzZSI6MTgwLCJ1cGdyYWRlQ291bnQiOjIsImluaGVyaXRhbmNlIjowLCJibGFkZXMiOlt7ImlkIjoiZDEtMSIsInNsb3QiOjEsInN1cHBsaWVkRGF5IjoxLCJyZWNpcGUiOiJsaWdodCIsInN0YXR1cyI6ImNvbW1pc3Npb25lZCIsImJhc2UiOjQwLCJ2YWx1ZSI6MTQ4LCJwZWFrIjoxNDgsImxldmVsIjozLCJjcmFja2VkIjpmYWxzZSwiaGl0cyI6MywiY2hhcmdlIjozLCJzdWNjZXNzZXMiOjMsIm5vcm1hbEdyZWF0cyI6MCwiYnVyc3RzIjowLCJmaW5hbGl6ZWREYXkiOjEsImNvbW1pc3Npb25JZCI6MX0seyJpZCI6ImQxLTIiLCJzbG90IjoyLCJzdXBwbGllZERheSI6MSwicmVjaXBlIjoibGlnaHQiLCJzdGF0dXMiOiJzb2xkIiwiYmFzZSI6NDAsInZhbHVlIjoyMDEsInBlYWsiOjIwMSwibGV2ZWwiOjQsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjozLCJjaGFyZ2UiOjMsInN1Y2Nlc3NlcyI6Mywibm9ybWFsR3JlYXRzIjoxLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6MSwiY29tbWlzc2lvbklkIjpudWxsfSx7ImlkIjoiZDEtMyIsInNsb3QiOjMsInN1cHBsaWVkRGF5IjoxLCJyZWNpcGUiOiJsaWdodCIsInN0YXR1cyI6InNvbGQiLCJiYXNlIjo0MCwidmFsdWUiOjE0OCwicGVhayI6MTQ4LCJsZXZlbCI6MywiY3JhY2tlZCI6ZmFsc2UsImhpdHMiOjMsImNoYXJnZSI6Mywic3VjY2Vzc2VzIjozLCJub3JtYWxHcmVhdHMiOjAsImJ1cnN0cyI6MCwiZmluYWxpemVkRGF5IjoxLCJjb21taXNzaW9uSWQiOm51bGx9LHsiaWQiOiJkMi0xIiwic2xvdCI6MSwic3VwcGxpZWREYXkiOjIsInJlY2lwZSI6ImxpZ2h0Iiwic3RhdHVzIjoiY29tbWlzc2lvbmVkIiwiYmFzZSI6NDAsInZhbHVlIjoyMjksInBlYWsiOjIyOSwibGV2ZWwiOjQsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjo0LCJjaGFyZ2UiOjQsInN1Y2Nlc3NlcyI6NCwibm9ybWFsR3JlYXRzIjowLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6MiwiY29tbWlzc2lvbklkIjoyfSx7ImlkIjoiZDItMiIsInNsb3QiOjIsInN1cHBsaWVkRGF5IjoyLCJyZWNpcGUiOiJsaWdodCIsInN0YXR1cyI6InNvbGQiLCJiYXNlIjo0MCwidmFsdWUiOjIwMSwicGVhayI6MjAxLCJsZXZlbCI6NCwiY3JhY2tlZCI6ZmFsc2UsImhpdHMiOjMsImNoYXJnZSI6Mywic3VjY2Vzc2VzIjozLCJub3JtYWxHcmVhdHMiOjEsImJ1cnN0cyI6MCwiZmluYWxpemVkRGF5IjoyLCJjb21taXNzaW9uSWQiOm51bGx9LHsiaWQiOiJkMi0zIiwic2xvdCI6Mywic3VwcGxpZWREYXkiOjIsInJlY2lwZSI6ImxpZ2h0Iiwic3RhdHVzIjoic29sZCIsImJhc2UiOjQwLCJ2YWx1ZSI6MTQ4LCJwZWFrIjoxNDgsImxldmVsIjozLCJjcmFja2VkIjpmYWxzZSwiaGl0cyI6MywiY2hhcmdlIjozLCJzdWNjZXNzZXMiOjMsIm5vcm1hbEdyZWF0cyI6MCwiYnVyc3RzIjowLCJmaW5hbGl6ZWREYXkiOjIsImNvbW1pc3Npb25JZCI6bnVsbH0seyJpZCI6ImQzLTEiLCJzbG90IjoxLCJzdXBwbGllZERheSI6MywicmVjaXBlIjoibGlnaHQiLCJzdGF0dXMiOiJ0cmFkZWQiLCJiYXNlIjo0MCwidmFsdWUiOjQwLCJwZWFrIjo0MCwibGV2ZWwiOjAsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjowLCJjaGFyZ2UiOjAsInN1Y2Nlc3NlcyI6MCwibm9ybWFsR3JlYXRzIjowLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6MywiY29tbWlzc2lvbklkIjpudWxsfSx7ImlkIjoiZDMtMiIsInNsb3QiOjIsInN1cHBsaWVkRGF5IjozLCJyZWNpcGUiOiJsaWdodCIsInN0YXR1cyI6ImNvbW1pc3Npb25lZCIsImJhc2UiOjQwLCJ2YWx1ZSI6MTMxNSwicGVhayI6MTMxNSwibGV2ZWwiOjgsImNyYWNrZWQiOnRydWUsImhpdHMiOjYsImNoYXJnZSI6MCwic3VjY2Vzc2VzIjo1LCJub3JtYWxHcmVhdHMiOjAsImJ1cnN0cyI6MSwiZmluYWxpemVkRGF5IjozLCJjb21taXNzaW9uSWQiOjN9LHsiaWQiOiJkMy0zIiwic2xvdCI6Mywic3VwcGxpZWREYXkiOjMsInJlY2lwZSI6ImxpZ2h0Iiwic3RhdHVzIjoiZG9uYXRlZCIsImJhc2UiOjQwLCJ2YWx1ZSI6NDAsInBlYWsiOjQwLCJsZXZlbCI6MCwiY3JhY2tlZCI6ZmFsc2UsImhpdHMiOjAsImNoYXJnZSI6MCwic3VjY2Vzc2VzIjowLCJub3JtYWxHcmVhdHMiOjAsImJ1cnN0cyI6MCwiZmluYWxpemVkRGF5IjozLCJjb21taXNzaW9uSWQiOm51bGx9LHsiaWQiOiJkNC0xIiwic2xvdCI6MSwic3VwcGxpZWREYXkiOjQsInJlY2lwZSI6Imd1YXJkIiwic3RhdHVzIjoiY29tbWlzc2lvbmVkIiwiYmFzZSI6NzIsInZhbHVlIjozODMsInBlYWsiOjM4MywibGV2ZWwiOjUsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjo1LCJjaGFyZ2UiOjUsInN1Y2Nlc3NlcyI6NSwibm9ybWFsR3JlYXRzIjowLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6NCwiY29tbWlzc2lvbklkIjo0fSx7ImlkIjoiZDQtMiIsInNsb3QiOjIsInN1cHBsaWVkRGF5Ijo0LCJyZWNpcGUiOiJndWFyZCIsInN0YXR1cyI6ImNvbW1pc3Npb25lZCIsImJhc2UiOjcyLCJ2YWx1ZSI6NTM2LCJwZWFrIjo1MzYsImxldmVsIjo2LCJjcmFja2VkIjpmYWxzZSwiaGl0cyI6NiwiY2hhcmdlIjo2LCJzdWNjZXNzZXMiOjYsIm5vcm1hbEdyZWF0cyI6MCwiYnVyc3RzIjowLCJmaW5hbGl6ZWREYXkiOjUsImNvbW1pc3Npb25JZCI6NX0seyJpZCI6ImQ0LTMiLCJzbG90IjozLCJzdXBwbGllZERheSI6NCwicmVjaXBlIjoiZ3VhcmQiLCJzdGF0dXMiOiJzb2xkIiwiYmFzZSI6NzIsInZhbHVlIjoyNzMsInBlYWsiOjI3MywibGV2ZWwiOjQsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjozLCJjaGFyZ2UiOjMsInN1Y2Nlc3NlcyI6Mywibm9ybWFsR3JlYXRzIjoxLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6NCwiY29tbWlzc2lvbklkIjpudWxsfSx7ImlkIjoiZDUtMSIsInNsb3QiOjEsInN1cHBsaWVkRGF5Ijo1LCJyZWNpcGUiOiJndWFyZCIsInN0YXR1cyI6InNvbGQiLCJiYXNlIjoxMjAsInZhbHVlIjozMjksInBlYWsiOjMyOSwibGV2ZWwiOjMsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjozLCJjaGFyZ2UiOjMsInN1Y2Nlc3NlcyI6Mywibm9ybWFsR3JlYXRzIjowLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6NSwiY29tbWlzc2lvbklkIjpudWxsfSx7ImlkIjoiZDUtMiIsInNsb3QiOjIsInN1cHBsaWVkRGF5Ijo1LCJyZWNpcGUiOiJndWFyZCIsInN0YXR1cyI6InNvbGQiLCJiYXNlIjoxMjAsInZhbHVlIjozMjksInBlYWsiOjMyOSwibGV2ZWwiOjMsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjozLCJjaGFyZ2UiOjMsInN1Y2Nlc3NlcyI6Mywibm9ybWFsR3JlYXRzIjowLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6NSwiY29tbWlzc2lvbklkIjpudWxsfSx7ImlkIjoiZDUtMyIsInNsb3QiOjMsInN1cHBsaWVkRGF5Ijo1LCJyZWNpcGUiOiJndWFyZCIsInN0YXR1cyI6InNvbGQiLCJiYXNlIjoxMjAsInZhbHVlIjozMjksInBlYWsiOjMyOSwibGV2ZWwiOjMsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjozLCJjaGFyZ2UiOjMsInN1Y2Nlc3NlcyI6Mywibm9ybWFsR3JlYXRzIjowLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6NSwiY29tbWlzc2lvbklkIjpudWxsfSx7ImlkIjoiZDYtMSIsInNsb3QiOjEsInN1cHBsaWVkRGF5Ijo2LCJyZWNpcGUiOiJndWFyZCIsInN0YXR1cyI6InRyYWRlZCIsImJhc2UiOjEyMCwidmFsdWUiOjEyMCwicGVhayI6MTIwLCJsZXZlbCI6MCwiY3JhY2tlZCI6ZmFsc2UsImhpdHMiOjAsImNoYXJnZSI6MCwic3VjY2Vzc2VzIjowLCJub3JtYWxHcmVhdHMiOjAsImJ1cnN0cyI6MCwiZmluYWxpemVkRGF5Ijo2LCJjb21taXNzaW9uSWQiOm51bGx9LHsiaWQiOiJkNi0yIiwic2xvdCI6Miwic3VwcGxpZWREYXkiOjYsInJlY2lwZSI6Imd1YXJkIiwic3RhdHVzIjoiY29tbWlzc2lvbmVkIiwiYmFzZSI6MTIwLCJ2YWx1ZSI6MzkyOTUsInBlYWsiOjM5Mjk1LCJsZXZlbCI6MTcsImNyYWNrZWQiOnRydWUsImhpdHMiOjExLCJjaGFyZ2UiOjUsInN1Y2Nlc3NlcyI6MTAsIm5vcm1hbEdyZWF0cyI6MywiYnVyc3RzIjoxLCJmaW5hbGl6ZWREYXkiOjYsImNvbW1pc3Npb25JZCI6Nn0seyJpZCI6ImQ2LTMiLCJzbG90IjozLCJzdXBwbGllZERheSI6NiwicmVjaXBlIjoiZ3VhcmQiLCJzdGF0dXMiOiJzb2xkIiwiYmFzZSI6MTIwLCJ2YWx1ZSI6MzI5LCJwZWFrIjozMjksImxldmVsIjozLCJjcmFja2VkIjpmYWxzZSwiaGl0cyI6MywiY2hhcmdlIjozLCJzdWNjZXNzZXMiOjMsIm5vcm1hbEdyZWF0cyI6MCwiYnVyc3RzIjowLCJmaW5hbGl6ZWREYXkiOjYsImNvbW1pc3Npb25JZCI6bnVsbH0seyJpZCI6ImQ3LTEiLCJzbG90IjoxLCJzdXBwbGllZERheSI6NywicmVjaXBlIjoiaGVhdnkiLCJzdGF0dXMiOiJhY3RpdmUiLCJiYXNlIjoxODAsInZhbHVlIjo5OTcsInBlYWsiOjk5NywibGV2ZWwiOjQsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjozLCJjaGFyZ2UiOjMsInN1Y2Nlc3NlcyI6Mywibm9ybWFsR3JlYXRzIjoxLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6bnVsbCwiY29tbWlzc2lvbklkIjpudWxsfSx7ImlkIjoiZDctMiIsInNsb3QiOjIsInN1cHBsaWVkRGF5Ijo3LCJyZWNpcGUiOiJoZWF2eSIsInN0YXR1cyI6ImFjdGl2ZSIsImJhc2UiOjE4MCwidmFsdWUiOjE4MCwicGVhayI6MTgwLCJsZXZlbCI6MCwiY3JhY2tlZCI6ZmFsc2UsImhpdHMiOjAsImNoYXJnZSI6MCwic3VjY2Vzc2VzIjowLCJub3JtYWxHcmVhdHMiOjAsImJ1cnN0cyI6MCwiZmluYWxpemVkRGF5IjpudWxsLCJjb21taXNzaW9uSWQiOm51bGx9LHsiaWQiOiJkNy0zIiwic2xvdCI6Mywic3VwcGxpZWREYXkiOjcsInJlY2lwZSI6ImhlYXZ5Iiwic3RhdHVzIjoiYWN0aXZlIiwiYmFzZSI6MTgwLCJ2YWx1ZSI6MTgwLCJwZWFrIjoxODAsImxldmVsIjowLCJjcmFja2VkIjpmYWxzZSwiaGl0cyI6MCwiY2hhcmdlIjowLCJzdWNjZXNzZXMiOjAsIm5vcm1hbEdyZWF0cyI6MCwiYnVyc3RzIjowLCJmaW5hbGl6ZWREYXkiOm51bGwsImNvbW1pc3Npb25JZCI6bnVsbH1dLCJyZXNlcnZlSWQiOm51bGwsImRheVNhbGVzIjowLCJkYXlSZWNvdmVyZWQiOjAsInRyYWl0cyI6WyJzdGVhZHkiLCJlbWJlciIsInBhcmRvbiJdLCJnaWZ0IjoiY2xhaW1lZCIsInBhcmRvblVzZWQiOmZhbHNlLCJjcmFja0d1YXJkIjpmYWxzZSwibW9kaWZpY2F0aW9ucyI6WyJ3aW5kYm94Il0sImNoYXB0ZXJDaG9pY2VzIjpbXSwic2hvcCI6W10sInNvbGQiOltdLCJ1cGdyYWRlZCI6ZmFsc2UsInJlcGFpcmVkIjpmYWxzZSwiZGF5QnVmZnMiOnsic3VwcGx5UGN0IjoxMDAsImxvYW4iOmZhbHNlLCJzaGVsdGVyIjpmYWxzZX0sInBlbmRpbmciOnsic3VwcGx5UGN0IjoxMDAsImxvYW4iOmZhbHNlLCJzaGVsdGVyIjpmYWxzZX0sImV2ZW50RGVjayI6WyJkb25hdGlvbiIsImNyZWRpdCIsInNhbHZhZ2UiLCJyZXN0Iiwic2hlbHRlciIsImxvYW4iXSwiZXZlbnRJZCI6InNhbHZhZ2UiLCJldmVudFN0YXR1cyI6ImF2YWlsYWJsZSIsImV2ZW50SGlzdG9yeSI6W3siZGF5IjozLCJpZCI6ImRvbmF0aW9uIiwiY2hvaWNlIjoiYWNjZXB0IiwicGllY2VJZCI6ImQzLTMiLCJjb2lucyI6MH0seyJkYXkiOjUsImlkIjoiY3JlZGl0IiwiY2hvaWNlIjoiYWNjZXB0IiwicGllY2VJZCI6bnVsbCwiY29pbnMiOi0xODB9XSwiaGlzdG9yeSI6W3siZGF5IjoxLCJjb21taXNzaW9uSWQiOjEsIm1ldCI6dHJ1ZSwicm91dGVJZCI6ImludGFjdCIsInBpZWNlSWRzIjpbImQxLTEiXSwic2FsZXMiOjQ5NywicmVjb3ZlcmVkIjowLCJyZWNvdmVyZWRJZHMiOltdLCJyZXNlcnZlSWQiOm51bGwsInNlYWxzQmVmb3JlIjozLCJzZWFsc0FmdGVyIjozLCJwcm90ZWN0ZWQiOmZhbHNlLCJtb2RpZmljYXRpb24iOm51bGx9LHsiZGF5IjoyLCJjb21taXNzaW9uSWQiOjIsIm1ldCI6dHJ1ZSwicm91dGVJZCI6ImxpZ2h0IiwicGllY2VJZHMiOlsiZDItMSJdLCJzYWxlcyI6NTc4LCJyZWNvdmVyZWQiOjAsInJlY292ZXJlZElkcyI6W10sInJlc2VydmVJZCI6bnVsbCwic2VhbHNCZWZvcmUiOjMsInNlYWxzQWZ0ZXIiOjMsInByb3RlY3RlZCI6ZmFsc2UsIm1vZGlmaWNhdGlvbiI6bnVsbH0seyJkYXkiOjMsImNvbW1pc3Npb25JZCI6MywibWV0Ijp0cnVlLCJyb3V0ZUlkIjoiYnVyc3QiLCJwaWVjZUlkcyI6WyJkMy0yIl0sInNhbGVzIjoxMzE1LCJyZWNvdmVyZWQiOjAsInJlY292ZXJlZElkcyI6W10sInJlc2VydmVJZCI6bnVsbCwic2VhbHNCZWZvcmUiOjMsInNlYWxzQWZ0ZXIiOjMsInByb3RlY3RlZCI6ZmFsc2UsIm1vZGlmaWNhdGlvbiI6bnVsbH0seyJkYXkiOjQsImNvbW1pc3Npb25JZCI6NCwibWV0Ijp0cnVlLCJyb3V0ZUlkIjoiZ3VhcmQiLCJwaWVjZUlkcyI6WyJkNC0xIl0sInNhbGVzIjo2NTYsInJlY292ZXJlZCI6MCwicmVjb3ZlcmVkSWRzIjpbXSwicmVzZXJ2ZUlkIjoiZDQtMiIsInNlYWxzQmVmb3JlIjozLCJzZWFsc0FmdGVyIjozLCJwcm90ZWN0ZWQiOmZhbHNlLCJtb2RpZmljYXRpb24iOiJ3aW5kYm94In0seyJkYXkiOjUsImNvbW1pc3Npb25JZCI6NSwibWV0Ijp0cnVlLCJyb3V0ZUlkIjoib2xkIiwicGllY2VJZHMiOlsiZDQtMiJdLCJzYWxlcyI6MTUyMywicmVjb3ZlcmVkIjowLCJyZWNvdmVyZWRJZHMiOltdLCJyZXNlcnZlSWQiOm51bGwsInNlYWxzQmVmb3JlIjozLCJzZWFsc0FmdGVyIjozLCJwcm90ZWN0ZWQiOmZhbHNlLCJtb2RpZmljYXRpb24iOm51bGx9LHsiZGF5Ijo2LCJjb21taXNzaW9uSWQiOjYsIm1ldCI6dHJ1ZSwicm91dGVJZCI6ImNyYWNrZWQiLCJwaWVjZUlkcyI6WyJkNi0yIl0sInNhbGVzIjozOTYyNCwicmVjb3ZlcmVkIjowLCJyZWNvdmVyZWRJZHMiOltdLCJyZXNlcnZlSWQiOm51bGwsInNlYWxzQmVmb3JlIjozLCJzZWFsc0FmdGVyIjozLCJwcm90ZWN0ZWQiOmZhbHNlLCJtb2RpZmljYXRpb24iOm51bGx9XSwicm5nIjp7ImZvcmdlIjp7InN0YXRlIjo0MTU1MDI5OTQwLCJkcmF3cyI6NzF9LCJzaG9wIjp7InN0YXRlIjo2NzY4MTE1NjYsImRyYXdzIjo0fSwiZXZlbnRzIjp7InN0YXRlIjoyMTk5Mjk4MTg4LCJkcmF3cyI6NX0sImNvbnRlbnQiOnsic3RhdGUiOjExNzY4Njk2ODcsImRyYXdzIjowfX0sImpvdXJuYWwiOlt7InR5cGUiOiJjb250aW51ZSJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkMS0xIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQxLTEifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDEtMSJ9LHsidHlwZSI6ImRlbGl2ZXIiLCJwaWVjZUlkIjoiZDEtMSJ9LHsidHJhaXRJZCI6InN0ZWFkeSIsInR5cGUiOiJjbGFpbUdpZnQifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDEtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkMS0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQxLTIifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQxLTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDEtMyJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkMS0zIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQxLTMifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQxLTMifSx7InR5cGUiOiJzZXR0bGUifSx7InR5cGUiOiJhZHZhbmNlIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQyLTEifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDItMSJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkMi0xIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQyLTEifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQyLTEifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDItMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkMi0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQyLTIifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQyLTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDItMyJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkMi0zIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQyLTMifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQyLTMifSx7InR5cGUiOiJzZXR0bGUifSx7InR5cGUiOiJhZHZhbmNlIn0seyJ0eXBlIjoidXBncmFkZSJ9LHsicGllY2VJZCI6ImQzLTEiLCJ0cmFpdElkIjoiZW1iZXIiLCJ0eXBlIjoiYnV5In0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQzLTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDMtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkMy0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQzLTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDMtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkMy0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQzLTIifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQzLTIifSx7InR5cGUiOiJjaG9vc2VFdmVudCIsImNob2ljZSI6ImFjY2VwdCIsInBpZWNlSWQiOiJkMy0zIn0seyJ0eXBlIjoic2V0dGxlIn0seyJ0eXBlIjoiYWR2YW5jZSJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNC0xIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ0LTEifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDQtMSJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNC0xIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ0LTEifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQ0LTEifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDQtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNC0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ0LTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDQtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNC0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ0LTIifSx7InR5cGUiOiJyZXNlcnZlIiwicGllY2VJZCI6ImQ0LTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDQtMyJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNC0zIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ0LTMifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQ0LTMifSx7InR5cGUiOiJzZXR0bGUifSx7InR5cGUiOiJjaG9vc2VNb2RpZmljYXRpb24iLCJtb2RpZmljYXRpb24iOiJ3aW5kYm94In0seyJ0eXBlIjoiYWR2YW5jZSJ9LHsidHlwZSI6InJlc2VydmUiLCJwaWVjZUlkIjoiZDQtMiJ9LHsidHlwZSI6ImRlbGl2ZXIiLCJwaWVjZUlkIjoiZDQtMiJ9LHsidHlwZSI6ImNob29zZUV2ZW50IiwiY2hvaWNlIjoiYWNjZXB0In0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ1LTEifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDUtMSJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNS0xIn0seyJ0eXBlIjoiZGVsaXZlciIsInBpZWNlSWQiOiJkNS0xIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ1LTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDUtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNS0yIn0seyJ0eXBlIjoiZGVsaXZlciIsInBpZWNlSWQiOiJkNS0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ1LTMifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDUtMyJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNS0zIn0seyJ0eXBlIjoiZGVsaXZlciIsInBpZWNlSWQiOiJkNS0zIn0seyJ0eXBlIjoic2V0dGxlIn0seyJ0eXBlIjoiYWR2YW5jZSJ9LHsidHlwZSI6InVwZ3JhZGUifSx7InBpZWNlSWQiOiJkNi0xIiwidHJhaXRJZCI6InBhcmRvbiIsInR5cGUiOiJidXkifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDYtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNi0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ2LTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDYtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNi0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ2LTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDYtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNi0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ2LTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDYtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNi0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ2LTIifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQ2LTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDYtMyJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNi0zIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ2LTMifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQ2LTMifSx7InR5cGUiOiJzZXR0bGUifSx7InR5cGUiOiJhZHZhbmNlIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ3LTEifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDctMSJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNy0xIn1dfSwicHJvYmUiOnsiZnJhbWVzIjpbeyJnYXAiOjU1LjA3NzQwNTM3MTQwMjIxLCJhbmdsZSI6OC4zNTgwODg3NzkxODAxNjMsInBpdm90R2FwIjowLjE3MjMyODEyMjE4MTU2MzA0LCJtZXRhbEdhcCI6NTUuMTUzMTU2NjE4NDQxNDcsInRpbWUiOjAsInNhbXBsZUNvc3RNcyI6MC41LCJwaGFzZSI6InN3aW5nIn0seyJnYXAiOjAuMzU2NzEzMzgwNjU2OTczLCJhbmdsZSI6MC4zNTgwOTM5NTkzMjM2NTMxLCJwaXZvdEdhcCI6MC4xNzIzMjgxMzYzMzM3NjMxNSwibWV0YWxHYXAiOjAuMzU1NTkzOTUwMzIwNTUzNjMsInRpbWUiOjI2NS4xOTk5OTk5ODgwNzkwNywic2FtcGxlQ29zdE1zIjowLjQwMDAwMDAwNTk2MDQ2NDUsInBoYXNlIjoiY29udGFjdCJ9LHsiZ2FwIjowLjM1NjcxMzM4MDY1Njk3MywiYW5nbGUiOjAuMzU4MDkzOTU5MzIzNjUzMSwicGl2b3RHYXAiOjAuMTcyMzI4MTM2MzMzNzYzMTUsIm1ldGFsR2FwIjowLjM1NTU5Mzk1MDMyMDU1MzYzLCJ0aW1lIjo1MTkuNzk5OTk5OTgyMTE4Niwic2FtcGxlQ29zdE1zIjowLjI5OTk5OTk4MjExODYwNjU3LCJwaGFzZSI6ImNvbnRhY3QifV0sImNvbXBsZXRlIjp0cnVlLCJzb3VyY2UiOiJodHRwOi8vMTI3LjAuMC4xOjQxOTgvYXNzZXRzL2QvaGFtbWVyLWZvcmdlLXYyLndlYnAiLCJzb3VyY2VBbHBoYSI6WzI0OSwyNTMsMjUzXSwiaW5wdXRUb0ZpcnN0U2FtcGxlTXMiOjI2NS43MDAwMDAwMTc4ODE0fX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fb301be85be72ca20411-32b4e1c561d939f0a129",
+          "file": "v4-second-chapter.spec.ts",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "real eight-day journey preserves old/cracked swords, heavy contact, partial refresh, two works and earned freedom",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-firefox",
+              "projectName": "v4-firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 71622,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T14:02:59.423Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "heavy-slow-observation-before-cancel",
+                      "contentType": "application/json",
+                      "body": "eyJzdGF0ZSI6eyJydWxlc1ZlcnNpb24iOiJmb3JnZS12NCIsInJ1bklkIjoiOWExMTIxNWQtZGZiYS00MjZhLWI1NGQtZTMwMTNjY2JhYTZhIiwic2VlZCI6ImxhbnRlcm4td2l0bmVzcy0wIiwibW9kZSI6InN0b3J5IiwiaW5pdGlhbEVsaWdpYmlsaXR5Ijp7InJlY2lwZXMiOlsibGlnaHQiXSwiY2hhbGxlbmdlIjpmYWxzZX0sInJldmlzaW9uIjoxMDUsInBoYXNlIjoid29ya3Nob3AiLCJkYXkiOjcsImNvbW1pc3Npb25PcmRlciI6WzEsMiwzLDQsNSw2LDcsOCw5LDEwLDExLDEyXSwiY29pbnMiOjQzMTMzLCJzZWFscyI6Mywic3VwcGx5QmFzZSI6MTgwLCJ1cGdyYWRlQ291bnQiOjIsImluaGVyaXRhbmNlIjowLCJibGFkZXMiOlt7ImlkIjoiZDEtMSIsInNsb3QiOjEsInN1cHBsaWVkRGF5IjoxLCJyZWNpcGUiOiJsaWdodCIsInN0YXR1cyI6ImNvbW1pc3Npb25lZCIsImJhc2UiOjQwLCJ2YWx1ZSI6MTQ4LCJwZWFrIjoxNDgsImxldmVsIjozLCJjcmFja2VkIjpmYWxzZSwiaGl0cyI6MywiY2hhcmdlIjozLCJzdWNjZXNzZXMiOjMsIm5vcm1hbEdyZWF0cyI6MCwiYnVyc3RzIjowLCJmaW5hbGl6ZWREYXkiOjEsImNvbW1pc3Npb25JZCI6MX0seyJpZCI6ImQxLTIiLCJzbG90IjoyLCJzdXBwbGllZERheSI6MSwicmVjaXBlIjoibGlnaHQiLCJzdGF0dXMiOiJzb2xkIiwiYmFzZSI6NDAsInZhbHVlIjoyMDEsInBlYWsiOjIwMSwibGV2ZWwiOjQsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjozLCJjaGFyZ2UiOjMsInN1Y2Nlc3NlcyI6Mywibm9ybWFsR3JlYXRzIjoxLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6MSwiY29tbWlzc2lvbklkIjpudWxsfSx7ImlkIjoiZDEtMyIsInNsb3QiOjMsInN1cHBsaWVkRGF5IjoxLCJyZWNpcGUiOiJsaWdodCIsInN0YXR1cyI6InNvbGQiLCJiYXNlIjo0MCwidmFsdWUiOjE0OCwicGVhayI6MTQ4LCJsZXZlbCI6MywiY3JhY2tlZCI6ZmFsc2UsImhpdHMiOjMsImNoYXJnZSI6Mywic3VjY2Vzc2VzIjozLCJub3JtYWxHcmVhdHMiOjAsImJ1cnN0cyI6MCwiZmluYWxpemVkRGF5IjoxLCJjb21taXNzaW9uSWQiOm51bGx9LHsiaWQiOiJkMi0xIiwic2xvdCI6MSwic3VwcGxpZWREYXkiOjIsInJlY2lwZSI6ImxpZ2h0Iiwic3RhdHVzIjoiY29tbWlzc2lvbmVkIiwiYmFzZSI6NDAsInZhbHVlIjoyMjksInBlYWsiOjIyOSwibGV2ZWwiOjQsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjo0LCJjaGFyZ2UiOjQsInN1Y2Nlc3NlcyI6NCwibm9ybWFsR3JlYXRzIjowLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6MiwiY29tbWlzc2lvbklkIjoyfSx7ImlkIjoiZDItMiIsInNsb3QiOjIsInN1cHBsaWVkRGF5IjoyLCJyZWNpcGUiOiJsaWdodCIsInN0YXR1cyI6InNvbGQiLCJiYXNlIjo0MCwidmFsdWUiOjIwMSwicGVhayI6MjAxLCJsZXZlbCI6NCwiY3JhY2tlZCI6ZmFsc2UsImhpdHMiOjMsImNoYXJnZSI6Mywic3VjY2Vzc2VzIjozLCJub3JtYWxHcmVhdHMiOjEsImJ1cnN0cyI6MCwiZmluYWxpemVkRGF5IjoyLCJjb21taXNzaW9uSWQiOm51bGx9LHsiaWQiOiJkMi0zIiwic2xvdCI6Mywic3VwcGxpZWREYXkiOjIsInJlY2lwZSI6ImxpZ2h0Iiwic3RhdHVzIjoic29sZCIsImJhc2UiOjQwLCJ2YWx1ZSI6MTQ4LCJwZWFrIjoxNDgsImxldmVsIjozLCJjcmFja2VkIjpmYWxzZSwiaGl0cyI6MywiY2hhcmdlIjozLCJzdWNjZXNzZXMiOjMsIm5vcm1hbEdyZWF0cyI6MCwiYnVyc3RzIjowLCJmaW5hbGl6ZWREYXkiOjIsImNvbW1pc3Npb25JZCI6bnVsbH0seyJpZCI6ImQzLTEiLCJzbG90IjoxLCJzdXBwbGllZERheSI6MywicmVjaXBlIjoibGlnaHQiLCJzdGF0dXMiOiJ0cmFkZWQiLCJiYXNlIjo0MCwidmFsdWUiOjQwLCJwZWFrIjo0MCwibGV2ZWwiOjAsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjowLCJjaGFyZ2UiOjAsInN1Y2Nlc3NlcyI6MCwibm9ybWFsR3JlYXRzIjowLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6MywiY29tbWlzc2lvbklkIjpudWxsfSx7ImlkIjoiZDMtMiIsInNsb3QiOjIsInN1cHBsaWVkRGF5IjozLCJyZWNpcGUiOiJsaWdodCIsInN0YXR1cyI6ImNvbW1pc3Npb25lZCIsImJhc2UiOjQwLCJ2YWx1ZSI6MTMxNSwicGVhayI6MTMxNSwibGV2ZWwiOjgsImNyYWNrZWQiOnRydWUsImhpdHMiOjYsImNoYXJnZSI6MCwic3VjY2Vzc2VzIjo1LCJub3JtYWxHcmVhdHMiOjAsImJ1cnN0cyI6MSwiZmluYWxpemVkRGF5IjozLCJjb21taXNzaW9uSWQiOjN9LHsiaWQiOiJkMy0zIiwic2xvdCI6Mywic3VwcGxpZWREYXkiOjMsInJlY2lwZSI6ImxpZ2h0Iiwic3RhdHVzIjoiZG9uYXRlZCIsImJhc2UiOjQwLCJ2YWx1ZSI6NDAsInBlYWsiOjQwLCJsZXZlbCI6MCwiY3JhY2tlZCI6ZmFsc2UsImhpdHMiOjAsImNoYXJnZSI6MCwic3VjY2Vzc2VzIjowLCJub3JtYWxHcmVhdHMiOjAsImJ1cnN0cyI6MCwiZmluYWxpemVkRGF5IjozLCJjb21taXNzaW9uSWQiOm51bGx9LHsiaWQiOiJkNC0xIiwic2xvdCI6MSwic3VwcGxpZWREYXkiOjQsInJlY2lwZSI6Imd1YXJkIiwic3RhdHVzIjoiY29tbWlzc2lvbmVkIiwiYmFzZSI6NzIsInZhbHVlIjozODMsInBlYWsiOjM4MywibGV2ZWwiOjUsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjo1LCJjaGFyZ2UiOjUsInN1Y2Nlc3NlcyI6NSwibm9ybWFsR3JlYXRzIjowLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6NCwiY29tbWlzc2lvbklkIjo0fSx7ImlkIjoiZDQtMiIsInNsb3QiOjIsInN1cHBsaWVkRGF5Ijo0LCJyZWNpcGUiOiJndWFyZCIsInN0YXR1cyI6ImNvbW1pc3Npb25lZCIsImJhc2UiOjcyLCJ2YWx1ZSI6NTM2LCJwZWFrIjo1MzYsImxldmVsIjo2LCJjcmFja2VkIjpmYWxzZSwiaGl0cyI6NiwiY2hhcmdlIjo2LCJzdWNjZXNzZXMiOjYsIm5vcm1hbEdyZWF0cyI6MCwiYnVyc3RzIjowLCJmaW5hbGl6ZWREYXkiOjUsImNvbW1pc3Npb25JZCI6NX0seyJpZCI6ImQ0LTMiLCJzbG90IjozLCJzdXBwbGllZERheSI6NCwicmVjaXBlIjoiZ3VhcmQiLCJzdGF0dXMiOiJzb2xkIiwiYmFzZSI6NzIsInZhbHVlIjoyNzMsInBlYWsiOjI3MywibGV2ZWwiOjQsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjozLCJjaGFyZ2UiOjMsInN1Y2Nlc3NlcyI6Mywibm9ybWFsR3JlYXRzIjoxLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6NCwiY29tbWlzc2lvbklkIjpudWxsfSx7ImlkIjoiZDUtMSIsInNsb3QiOjEsInN1cHBsaWVkRGF5Ijo1LCJyZWNpcGUiOiJndWFyZCIsInN0YXR1cyI6InNvbGQiLCJiYXNlIjoxMjAsInZhbHVlIjozMjksInBlYWsiOjMyOSwibGV2ZWwiOjMsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjozLCJjaGFyZ2UiOjMsInN1Y2Nlc3NlcyI6Mywibm9ybWFsR3JlYXRzIjowLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6NSwiY29tbWlzc2lvbklkIjpudWxsfSx7ImlkIjoiZDUtMiIsInNsb3QiOjIsInN1cHBsaWVkRGF5Ijo1LCJyZWNpcGUiOiJndWFyZCIsInN0YXR1cyI6InNvbGQiLCJiYXNlIjoxMjAsInZhbHVlIjozMjksInBlYWsiOjMyOSwibGV2ZWwiOjMsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjozLCJjaGFyZ2UiOjMsInN1Y2Nlc3NlcyI6Mywibm9ybWFsR3JlYXRzIjowLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6NSwiY29tbWlzc2lvbklkIjpudWxsfSx7ImlkIjoiZDUtMyIsInNsb3QiOjMsInN1cHBsaWVkRGF5Ijo1LCJyZWNpcGUiOiJndWFyZCIsInN0YXR1cyI6InNvbGQiLCJiYXNlIjoxMjAsInZhbHVlIjozMjksInBlYWsiOjMyOSwibGV2ZWwiOjMsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjozLCJjaGFyZ2UiOjMsInN1Y2Nlc3NlcyI6Mywibm9ybWFsR3JlYXRzIjowLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6NSwiY29tbWlzc2lvbklkIjpudWxsfSx7ImlkIjoiZDYtMSIsInNsb3QiOjEsInN1cHBsaWVkRGF5Ijo2LCJyZWNpcGUiOiJndWFyZCIsInN0YXR1cyI6InRyYWRlZCIsImJhc2UiOjEyMCwidmFsdWUiOjEyMCwicGVhayI6MTIwLCJsZXZlbCI6MCwiY3JhY2tlZCI6ZmFsc2UsImhpdHMiOjAsImNoYXJnZSI6MCwic3VjY2Vzc2VzIjowLCJub3JtYWxHcmVhdHMiOjAsImJ1cnN0cyI6MCwiZmluYWxpemVkRGF5Ijo2LCJjb21taXNzaW9uSWQiOm51bGx9LHsiaWQiOiJkNi0yIiwic2xvdCI6Miwic3VwcGxpZWREYXkiOjYsInJlY2lwZSI6Imd1YXJkIiwic3RhdHVzIjoiY29tbWlzc2lvbmVkIiwiYmFzZSI6MTIwLCJ2YWx1ZSI6MzkyOTUsInBlYWsiOjM5Mjk1LCJsZXZlbCI6MTcsImNyYWNrZWQiOnRydWUsImhpdHMiOjExLCJjaGFyZ2UiOjUsInN1Y2Nlc3NlcyI6MTAsIm5vcm1hbEdyZWF0cyI6MywiYnVyc3RzIjoxLCJmaW5hbGl6ZWREYXkiOjYsImNvbW1pc3Npb25JZCI6Nn0seyJpZCI6ImQ2LTMiLCJzbG90IjozLCJzdXBwbGllZERheSI6NiwicmVjaXBlIjoiZ3VhcmQiLCJzdGF0dXMiOiJzb2xkIiwiYmFzZSI6MTIwLCJ2YWx1ZSI6MzI5LCJwZWFrIjozMjksImxldmVsIjozLCJjcmFja2VkIjpmYWxzZSwiaGl0cyI6MywiY2hhcmdlIjozLCJzdWNjZXNzZXMiOjMsIm5vcm1hbEdyZWF0cyI6MCwiYnVyc3RzIjowLCJmaW5hbGl6ZWREYXkiOjYsImNvbW1pc3Npb25JZCI6bnVsbH0seyJpZCI6ImQ3LTEiLCJzbG90IjoxLCJzdXBwbGllZERheSI6NywicmVjaXBlIjoiaGVhdnkiLCJzdGF0dXMiOiJhY3RpdmUiLCJiYXNlIjoxODAsInZhbHVlIjo5OTcsInBlYWsiOjk5NywibGV2ZWwiOjQsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjozLCJjaGFyZ2UiOjMsInN1Y2Nlc3NlcyI6Mywibm9ybWFsR3JlYXRzIjoxLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6bnVsbCwiY29tbWlzc2lvbklkIjpudWxsfSx7ImlkIjoiZDctMiIsInNsb3QiOjIsInN1cHBsaWVkRGF5Ijo3LCJyZWNpcGUiOiJoZWF2eSIsInN0YXR1cyI6ImFjdGl2ZSIsImJhc2UiOjE4MCwidmFsdWUiOjE4MCwicGVhayI6MTgwLCJsZXZlbCI6MCwiY3JhY2tlZCI6ZmFsc2UsImhpdHMiOjAsImNoYXJnZSI6MCwic3VjY2Vzc2VzIjowLCJub3JtYWxHcmVhdHMiOjAsImJ1cnN0cyI6MCwiZmluYWxpemVkRGF5IjpudWxsLCJjb21taXNzaW9uSWQiOm51bGx9LHsiaWQiOiJkNy0zIiwic2xvdCI6Mywic3VwcGxpZWREYXkiOjcsInJlY2lwZSI6ImhlYXZ5Iiwic3RhdHVzIjoiYWN0aXZlIiwiYmFzZSI6MTgwLCJ2YWx1ZSI6MTgwLCJwZWFrIjoxODAsImxldmVsIjowLCJjcmFja2VkIjpmYWxzZSwiaGl0cyI6MCwiY2hhcmdlIjowLCJzdWNjZXNzZXMiOjAsIm5vcm1hbEdyZWF0cyI6MCwiYnVyc3RzIjowLCJmaW5hbGl6ZWREYXkiOm51bGwsImNvbW1pc3Npb25JZCI6bnVsbH1dLCJyZXNlcnZlSWQiOm51bGwsImRheVNhbGVzIjowLCJkYXlSZWNvdmVyZWQiOjAsInRyYWl0cyI6WyJzdGVhZHkiLCJlbWJlciIsInBhcmRvbiJdLCJnaWZ0IjoiY2xhaW1lZCIsInBhcmRvblVzZWQiOmZhbHNlLCJjcmFja0d1YXJkIjpmYWxzZSwibW9kaWZpY2F0aW9ucyI6WyJ3aW5kYm94Il0sImNoYXB0ZXJDaG9pY2VzIjpbXSwic2hvcCI6W10sInNvbGQiOltdLCJ1cGdyYWRlZCI6ZmFsc2UsInJlcGFpcmVkIjpmYWxzZSwiZGF5QnVmZnMiOnsic3VwcGx5UGN0IjoxMDAsImxvYW4iOmZhbHNlLCJzaGVsdGVyIjpmYWxzZX0sInBlbmRpbmciOnsic3VwcGx5UGN0IjoxMDAsImxvYW4iOmZhbHNlLCJzaGVsdGVyIjpmYWxzZX0sImV2ZW50RGVjayI6WyJkb25hdGlvbiIsImNyZWRpdCIsInNhbHZhZ2UiLCJyZXN0Iiwic2hlbHRlciIsImxvYW4iXSwiZXZlbnRJZCI6InNhbHZhZ2UiLCJldmVudFN0YXR1cyI6ImF2YWlsYWJsZSIsImV2ZW50SGlzdG9yeSI6W3siZGF5IjozLCJpZCI6ImRvbmF0aW9uIiwiY2hvaWNlIjoiYWNjZXB0IiwicGllY2VJZCI6ImQzLTMiLCJjb2lucyI6MH0seyJkYXkiOjUsImlkIjoiY3JlZGl0IiwiY2hvaWNlIjoiYWNjZXB0IiwicGllY2VJZCI6bnVsbCwiY29pbnMiOi0xODB9XSwiaGlzdG9yeSI6W3siZGF5IjoxLCJjb21taXNzaW9uSWQiOjEsIm1ldCI6dHJ1ZSwicm91dGVJZCI6ImludGFjdCIsInBpZWNlSWRzIjpbImQxLTEiXSwic2FsZXMiOjQ5NywicmVjb3ZlcmVkIjowLCJyZWNvdmVyZWRJZHMiOltdLCJyZXNlcnZlSWQiOm51bGwsInNlYWxzQmVmb3JlIjozLCJzZWFsc0FmdGVyIjozLCJwcm90ZWN0ZWQiOmZhbHNlLCJtb2RpZmljYXRpb24iOm51bGx9LHsiZGF5IjoyLCJjb21taXNzaW9uSWQiOjIsIm1ldCI6dHJ1ZSwicm91dGVJZCI6ImxpZ2h0IiwicGllY2VJZHMiOlsiZDItMSJdLCJzYWxlcyI6NTc4LCJyZWNvdmVyZWQiOjAsInJlY292ZXJlZElkcyI6W10sInJlc2VydmVJZCI6bnVsbCwic2VhbHNCZWZvcmUiOjMsInNlYWxzQWZ0ZXIiOjMsInByb3RlY3RlZCI6ZmFsc2UsIm1vZGlmaWNhdGlvbiI6bnVsbH0seyJkYXkiOjMsImNvbW1pc3Npb25JZCI6MywibWV0Ijp0cnVlLCJyb3V0ZUlkIjoiYnVyc3QiLCJwaWVjZUlkcyI6WyJkMy0yIl0sInNhbGVzIjoxMzE1LCJyZWNvdmVyZWQiOjAsInJlY292ZXJlZElkcyI6W10sInJlc2VydmVJZCI6bnVsbCwic2VhbHNCZWZvcmUiOjMsInNlYWxzQWZ0ZXIiOjMsInByb3RlY3RlZCI6ZmFsc2UsIm1vZGlmaWNhdGlvbiI6bnVsbH0seyJkYXkiOjQsImNvbW1pc3Npb25JZCI6NCwibWV0Ijp0cnVlLCJyb3V0ZUlkIjoiZ3VhcmQiLCJwaWVjZUlkcyI6WyJkNC0xIl0sInNhbGVzIjo2NTYsInJlY292ZXJlZCI6MCwicmVjb3ZlcmVkSWRzIjpbXSwicmVzZXJ2ZUlkIjoiZDQtMiIsInNlYWxzQmVmb3JlIjozLCJzZWFsc0FmdGVyIjozLCJwcm90ZWN0ZWQiOmZhbHNlLCJtb2RpZmljYXRpb24iOiJ3aW5kYm94In0seyJkYXkiOjUsImNvbW1pc3Npb25JZCI6NSwibWV0Ijp0cnVlLCJyb3V0ZUlkIjoib2xkIiwicGllY2VJZHMiOlsiZDQtMiJdLCJzYWxlcyI6MTUyMywicmVjb3ZlcmVkIjowLCJyZWNvdmVyZWRJZHMiOltdLCJyZXNlcnZlSWQiOm51bGwsInNlYWxzQmVmb3JlIjozLCJzZWFsc0FmdGVyIjozLCJwcm90ZWN0ZWQiOmZhbHNlLCJtb2RpZmljYXRpb24iOm51bGx9LHsiZGF5Ijo2LCJjb21taXNzaW9uSWQiOjYsIm1ldCI6dHJ1ZSwicm91dGVJZCI6ImNyYWNrZWQiLCJwaWVjZUlkcyI6WyJkNi0yIl0sInNhbGVzIjozOTYyNCwicmVjb3ZlcmVkIjowLCJyZWNvdmVyZWRJZHMiOltdLCJyZXNlcnZlSWQiOm51bGwsInNlYWxzQmVmb3JlIjozLCJzZWFsc0FmdGVyIjozLCJwcm90ZWN0ZWQiOmZhbHNlLCJtb2RpZmljYXRpb24iOm51bGx9XSwicm5nIjp7ImZvcmdlIjp7InN0YXRlIjo0MTU1MDI5OTQwLCJkcmF3cyI6NzF9LCJzaG9wIjp7InN0YXRlIjo2NzY4MTE1NjYsImRyYXdzIjo0fSwiZXZlbnRzIjp7InN0YXRlIjoyMTk5Mjk4MTg4LCJkcmF3cyI6NX0sImNvbnRlbnQiOnsic3RhdGUiOjExNzY4Njk2ODcsImRyYXdzIjowfX0sImpvdXJuYWwiOlt7InR5cGUiOiJjb250aW51ZSJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkMS0xIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQxLTEifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDEtMSJ9LHsidHlwZSI6ImRlbGl2ZXIiLCJwaWVjZUlkIjoiZDEtMSJ9LHsidHJhaXRJZCI6InN0ZWFkeSIsInR5cGUiOiJjbGFpbUdpZnQifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDEtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkMS0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQxLTIifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQxLTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDEtMyJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkMS0zIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQxLTMifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQxLTMifSx7InR5cGUiOiJzZXR0bGUifSx7InR5cGUiOiJhZHZhbmNlIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQyLTEifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDItMSJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkMi0xIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQyLTEifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQyLTEifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDItMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkMi0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQyLTIifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQyLTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDItMyJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkMi0zIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQyLTMifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQyLTMifSx7InR5cGUiOiJzZXR0bGUifSx7InR5cGUiOiJhZHZhbmNlIn0seyJ0eXBlIjoidXBncmFkZSJ9LHsicGllY2VJZCI6ImQzLTEiLCJ0cmFpdElkIjoiZW1iZXIiLCJ0eXBlIjoiYnV5In0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQzLTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDMtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkMy0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQzLTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDMtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkMy0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQzLTIifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQzLTIifSx7InR5cGUiOiJjaG9vc2VFdmVudCIsImNob2ljZSI6ImFjY2VwdCIsInBpZWNlSWQiOiJkMy0zIn0seyJ0eXBlIjoic2V0dGxlIn0seyJ0eXBlIjoiYWR2YW5jZSJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNC0xIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ0LTEifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDQtMSJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNC0xIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ0LTEifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQ0LTEifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDQtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNC0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ0LTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDQtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNC0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ0LTIifSx7InR5cGUiOiJyZXNlcnZlIiwicGllY2VJZCI6ImQ0LTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDQtMyJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNC0zIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ0LTMifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQ0LTMifSx7InR5cGUiOiJzZXR0bGUifSx7InR5cGUiOiJjaG9vc2VNb2RpZmljYXRpb24iLCJtb2RpZmljYXRpb24iOiJ3aW5kYm94In0seyJ0eXBlIjoiYWR2YW5jZSJ9LHsidHlwZSI6InJlc2VydmUiLCJwaWVjZUlkIjoiZDQtMiJ9LHsidHlwZSI6ImRlbGl2ZXIiLCJwaWVjZUlkIjoiZDQtMiJ9LHsidHlwZSI6ImNob29zZUV2ZW50IiwiY2hvaWNlIjoiYWNjZXB0In0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ1LTEifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDUtMSJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNS0xIn0seyJ0eXBlIjoiZGVsaXZlciIsInBpZWNlSWQiOiJkNS0xIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ1LTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDUtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNS0yIn0seyJ0eXBlIjoiZGVsaXZlciIsInBpZWNlSWQiOiJkNS0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ1LTMifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDUtMyJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNS0zIn0seyJ0eXBlIjoiZGVsaXZlciIsInBpZWNlSWQiOiJkNS0zIn0seyJ0eXBlIjoic2V0dGxlIn0seyJ0eXBlIjoiYWR2YW5jZSJ9LHsidHlwZSI6InVwZ3JhZGUifSx7InBpZWNlSWQiOiJkNi0xIiwidHJhaXRJZCI6InBhcmRvbiIsInR5cGUiOiJidXkifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDYtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNi0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ2LTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDYtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNi0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ2LTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDYtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNi0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ2LTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDYtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNi0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ2LTIifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQ2LTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDYtMyJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNi0zIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ2LTMifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQ2LTMifSx7InR5cGUiOiJzZXR0bGUifSx7InR5cGUiOiJhZHZhbmNlIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ3LTEifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDctMSJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNy0xIn1dfSwicHJvYmUiOnsiZnJhbWVzIjpbeyJnYXAiOjU1LjAwNDA5ODQ0NjI1NDg0LCJhbmdsZSI6OC4zNTgwODg5MDI0NDQ1OCwicGl2b3RHYXAiOjAuMTY2MzI4MTIxNzkzMDIyNjQsIm1ldGFsR2FwIjo1NS4xNTgzMDA1ODM1NTQ1OSwidGltZSI6MCwic2FtcGxlQ29zdE1zIjoyLCJwaGFzZSI6InN3aW5nIn0seyJnYXAiOjAuNDQwODkwNDIwODQ1ODM4LCJhbmdsZSI6MC4zNTgwOTM5NTkzMjM2NTMxLCJwaXZvdEdhcCI6MC4xNjYzMjgxMzY3NDI2MDg1NywibWV0YWxHYXAiOjAuMzYwODA4NTQzNjY5OTE4NDQsInRpbWUiOjM3Niwic2FtcGxlQ29zdE1zIjozLCJwaGFzZSI6ImNvbnRhY3QifSx7ImdhcCI6MC40NDA4OTA0MjA4NDU4MzgsImFuZ2xlIjowLjM1ODA5Mzk1OTMyMzY1MzEsInBpdm90R2FwIjowLjE2NjMyODEzNjc0MjYwODU3LCJtZXRhbEdhcCI6MC4zNjA4MDg1NDM2Njk5MTg0NCwidGltZSI6Njg4LCJzYW1wbGVDb3N0TXMiOjMsInBoYXNlIjoiY29udGFjdCJ9XSwiY29tcGxldGUiOnRydWUsInNvdXJjZSI6Imh0dHA6Ly8xMjcuMC4wLjE6NDE5OC9hc3NldHMvZC9oYW1tZXItZm9yZ2UtdjIud2VicCIsInNvdXJjZUFscGhhIjpbMjQ5LDI1MywyNTNdLCJpbnB1dFRvRmlyc3RTYW1wbGVNcyI6MjY5fX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fb301be85be72ca20411-88568e341b7ba35690d3",
+          "file": "v4-second-chapter.spec.ts",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "real eight-day journey preserves old/cracked swords, heavy contact, partial refresh, two works and earned freedom",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-webkit",
+              "projectName": "v4-webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 123035,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T14:06:20.916Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "heavy-slow-observation-before-cancel",
+                      "contentType": "application/json",
+                      "body": "eyJzdGF0ZSI6eyJydWxlc1ZlcnNpb24iOiJmb3JnZS12NCIsInJ1bklkIjoiMWFkYTY2Y2UtMTMzNi00MmExLWIzZjAtYWYwY2U3ZGZhZGIzIiwic2VlZCI6ImxhbnRlcm4td2l0bmVzcy0wIiwibW9kZSI6InN0b3J5IiwiaW5pdGlhbEVsaWdpYmlsaXR5Ijp7InJlY2lwZXMiOlsibGlnaHQiXSwiY2hhbGxlbmdlIjpmYWxzZX0sInJldmlzaW9uIjoxMDUsInBoYXNlIjoid29ya3Nob3AiLCJkYXkiOjcsImNvbW1pc3Npb25PcmRlciI6WzEsMiwzLDQsNSw2LDcsOCw5LDEwLDExLDEyXSwiY29pbnMiOjQzMTMzLCJzZWFscyI6Mywic3VwcGx5QmFzZSI6MTgwLCJ1cGdyYWRlQ291bnQiOjIsImluaGVyaXRhbmNlIjowLCJibGFkZXMiOlt7ImlkIjoiZDEtMSIsInNsb3QiOjEsInN1cHBsaWVkRGF5IjoxLCJyZWNpcGUiOiJsaWdodCIsInN0YXR1cyI6ImNvbW1pc3Npb25lZCIsImJhc2UiOjQwLCJ2YWx1ZSI6MTQ4LCJwZWFrIjoxNDgsImxldmVsIjozLCJjcmFja2VkIjpmYWxzZSwiaGl0cyI6MywiY2hhcmdlIjozLCJzdWNjZXNzZXMiOjMsIm5vcm1hbEdyZWF0cyI6MCwiYnVyc3RzIjowLCJmaW5hbGl6ZWREYXkiOjEsImNvbW1pc3Npb25JZCI6MX0seyJpZCI6ImQxLTIiLCJzbG90IjoyLCJzdXBwbGllZERheSI6MSwicmVjaXBlIjoibGlnaHQiLCJzdGF0dXMiOiJzb2xkIiwiYmFzZSI6NDAsInZhbHVlIjoyMDEsInBlYWsiOjIwMSwibGV2ZWwiOjQsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjozLCJjaGFyZ2UiOjMsInN1Y2Nlc3NlcyI6Mywibm9ybWFsR3JlYXRzIjoxLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6MSwiY29tbWlzc2lvbklkIjpudWxsfSx7ImlkIjoiZDEtMyIsInNsb3QiOjMsInN1cHBsaWVkRGF5IjoxLCJyZWNpcGUiOiJsaWdodCIsInN0YXR1cyI6InNvbGQiLCJiYXNlIjo0MCwidmFsdWUiOjE0OCwicGVhayI6MTQ4LCJsZXZlbCI6MywiY3JhY2tlZCI6ZmFsc2UsImhpdHMiOjMsImNoYXJnZSI6Mywic3VjY2Vzc2VzIjozLCJub3JtYWxHcmVhdHMiOjAsImJ1cnN0cyI6MCwiZmluYWxpemVkRGF5IjoxLCJjb21taXNzaW9uSWQiOm51bGx9LHsiaWQiOiJkMi0xIiwic2xvdCI6MSwic3VwcGxpZWREYXkiOjIsInJlY2lwZSI6ImxpZ2h0Iiwic3RhdHVzIjoiY29tbWlzc2lvbmVkIiwiYmFzZSI6NDAsInZhbHVlIjoyMjksInBlYWsiOjIyOSwibGV2ZWwiOjQsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjo0LCJjaGFyZ2UiOjQsInN1Y2Nlc3NlcyI6NCwibm9ybWFsR3JlYXRzIjowLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6MiwiY29tbWlzc2lvbklkIjoyfSx7ImlkIjoiZDItMiIsInNsb3QiOjIsInN1cHBsaWVkRGF5IjoyLCJyZWNpcGUiOiJsaWdodCIsInN0YXR1cyI6InNvbGQiLCJiYXNlIjo0MCwidmFsdWUiOjIwMSwicGVhayI6MjAxLCJsZXZlbCI6NCwiY3JhY2tlZCI6ZmFsc2UsImhpdHMiOjMsImNoYXJnZSI6Mywic3VjY2Vzc2VzIjozLCJub3JtYWxHcmVhdHMiOjEsImJ1cnN0cyI6MCwiZmluYWxpemVkRGF5IjoyLCJjb21taXNzaW9uSWQiOm51bGx9LHsiaWQiOiJkMi0zIiwic2xvdCI6Mywic3VwcGxpZWREYXkiOjIsInJlY2lwZSI6ImxpZ2h0Iiwic3RhdHVzIjoic29sZCIsImJhc2UiOjQwLCJ2YWx1ZSI6MTQ4LCJwZWFrIjoxNDgsImxldmVsIjozLCJjcmFja2VkIjpmYWxzZSwiaGl0cyI6MywiY2hhcmdlIjozLCJzdWNjZXNzZXMiOjMsIm5vcm1hbEdyZWF0cyI6MCwiYnVyc3RzIjowLCJmaW5hbGl6ZWREYXkiOjIsImNvbW1pc3Npb25JZCI6bnVsbH0seyJpZCI6ImQzLTEiLCJzbG90IjoxLCJzdXBwbGllZERheSI6MywicmVjaXBlIjoibGlnaHQiLCJzdGF0dXMiOiJ0cmFkZWQiLCJiYXNlIjo0MCwidmFsdWUiOjQwLCJwZWFrIjo0MCwibGV2ZWwiOjAsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjowLCJjaGFyZ2UiOjAsInN1Y2Nlc3NlcyI6MCwibm9ybWFsR3JlYXRzIjowLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6MywiY29tbWlzc2lvbklkIjpudWxsfSx7ImlkIjoiZDMtMiIsInNsb3QiOjIsInN1cHBsaWVkRGF5IjozLCJyZWNpcGUiOiJsaWdodCIsInN0YXR1cyI6ImNvbW1pc3Npb25lZCIsImJhc2UiOjQwLCJ2YWx1ZSI6MTMxNSwicGVhayI6MTMxNSwibGV2ZWwiOjgsImNyYWNrZWQiOnRydWUsImhpdHMiOjYsImNoYXJnZSI6MCwic3VjY2Vzc2VzIjo1LCJub3JtYWxHcmVhdHMiOjAsImJ1cnN0cyI6MSwiZmluYWxpemVkRGF5IjozLCJjb21taXNzaW9uSWQiOjN9LHsiaWQiOiJkMy0zIiwic2xvdCI6Mywic3VwcGxpZWREYXkiOjMsInJlY2lwZSI6ImxpZ2h0Iiwic3RhdHVzIjoiZG9uYXRlZCIsImJhc2UiOjQwLCJ2YWx1ZSI6NDAsInBlYWsiOjQwLCJsZXZlbCI6MCwiY3JhY2tlZCI6ZmFsc2UsImhpdHMiOjAsImNoYXJnZSI6MCwic3VjY2Vzc2VzIjowLCJub3JtYWxHcmVhdHMiOjAsImJ1cnN0cyI6MCwiZmluYWxpemVkRGF5IjozLCJjb21taXNzaW9uSWQiOm51bGx9LHsiaWQiOiJkNC0xIiwic2xvdCI6MSwic3VwcGxpZWREYXkiOjQsInJlY2lwZSI6Imd1YXJkIiwic3RhdHVzIjoiY29tbWlzc2lvbmVkIiwiYmFzZSI6NzIsInZhbHVlIjozODMsInBlYWsiOjM4MywibGV2ZWwiOjUsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjo1LCJjaGFyZ2UiOjUsInN1Y2Nlc3NlcyI6NSwibm9ybWFsR3JlYXRzIjowLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6NCwiY29tbWlzc2lvbklkIjo0fSx7ImlkIjoiZDQtMiIsInNsb3QiOjIsInN1cHBsaWVkRGF5Ijo0LCJyZWNpcGUiOiJndWFyZCIsInN0YXR1cyI6ImNvbW1pc3Npb25lZCIsImJhc2UiOjcyLCJ2YWx1ZSI6NTM2LCJwZWFrIjo1MzYsImxldmVsIjo2LCJjcmFja2VkIjpmYWxzZSwiaGl0cyI6NiwiY2hhcmdlIjo2LCJzdWNjZXNzZXMiOjYsIm5vcm1hbEdyZWF0cyI6MCwiYnVyc3RzIjowLCJmaW5hbGl6ZWREYXkiOjUsImNvbW1pc3Npb25JZCI6NX0seyJpZCI6ImQ0LTMiLCJzbG90IjozLCJzdXBwbGllZERheSI6NCwicmVjaXBlIjoiZ3VhcmQiLCJzdGF0dXMiOiJzb2xkIiwiYmFzZSI6NzIsInZhbHVlIjoyNzMsInBlYWsiOjI3MywibGV2ZWwiOjQsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjozLCJjaGFyZ2UiOjMsInN1Y2Nlc3NlcyI6Mywibm9ybWFsR3JlYXRzIjoxLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6NCwiY29tbWlzc2lvbklkIjpudWxsfSx7ImlkIjoiZDUtMSIsInNsb3QiOjEsInN1cHBsaWVkRGF5Ijo1LCJyZWNpcGUiOiJndWFyZCIsInN0YXR1cyI6InNvbGQiLCJiYXNlIjoxMjAsInZhbHVlIjozMjksInBlYWsiOjMyOSwibGV2ZWwiOjMsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjozLCJjaGFyZ2UiOjMsInN1Y2Nlc3NlcyI6Mywibm9ybWFsR3JlYXRzIjowLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6NSwiY29tbWlzc2lvbklkIjpudWxsfSx7ImlkIjoiZDUtMiIsInNsb3QiOjIsInN1cHBsaWVkRGF5Ijo1LCJyZWNpcGUiOiJndWFyZCIsInN0YXR1cyI6InNvbGQiLCJiYXNlIjoxMjAsInZhbHVlIjozMjksInBlYWsiOjMyOSwibGV2ZWwiOjMsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjozLCJjaGFyZ2UiOjMsInN1Y2Nlc3NlcyI6Mywibm9ybWFsR3JlYXRzIjowLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6NSwiY29tbWlzc2lvbklkIjpudWxsfSx7ImlkIjoiZDUtMyIsInNsb3QiOjMsInN1cHBsaWVkRGF5Ijo1LCJyZWNpcGUiOiJndWFyZCIsInN0YXR1cyI6InNvbGQiLCJiYXNlIjoxMjAsInZhbHVlIjozMjksInBlYWsiOjMyOSwibGV2ZWwiOjMsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjozLCJjaGFyZ2UiOjMsInN1Y2Nlc3NlcyI6Mywibm9ybWFsR3JlYXRzIjowLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6NSwiY29tbWlzc2lvbklkIjpudWxsfSx7ImlkIjoiZDYtMSIsInNsb3QiOjEsInN1cHBsaWVkRGF5Ijo2LCJyZWNpcGUiOiJndWFyZCIsInN0YXR1cyI6InRyYWRlZCIsImJhc2UiOjEyMCwidmFsdWUiOjEyMCwicGVhayI6MTIwLCJsZXZlbCI6MCwiY3JhY2tlZCI6ZmFsc2UsImhpdHMiOjAsImNoYXJnZSI6MCwic3VjY2Vzc2VzIjowLCJub3JtYWxHcmVhdHMiOjAsImJ1cnN0cyI6MCwiZmluYWxpemVkRGF5Ijo2LCJjb21taXNzaW9uSWQiOm51bGx9LHsiaWQiOiJkNi0yIiwic2xvdCI6Miwic3VwcGxpZWREYXkiOjYsInJlY2lwZSI6Imd1YXJkIiwic3RhdHVzIjoiY29tbWlzc2lvbmVkIiwiYmFzZSI6MTIwLCJ2YWx1ZSI6MzkyOTUsInBlYWsiOjM5Mjk1LCJsZXZlbCI6MTcsImNyYWNrZWQiOnRydWUsImhpdHMiOjExLCJjaGFyZ2UiOjUsInN1Y2Nlc3NlcyI6MTAsIm5vcm1hbEdyZWF0cyI6MywiYnVyc3RzIjoxLCJmaW5hbGl6ZWREYXkiOjYsImNvbW1pc3Npb25JZCI6Nn0seyJpZCI6ImQ2LTMiLCJzbG90IjozLCJzdXBwbGllZERheSI6NiwicmVjaXBlIjoiZ3VhcmQiLCJzdGF0dXMiOiJzb2xkIiwiYmFzZSI6MTIwLCJ2YWx1ZSI6MzI5LCJwZWFrIjozMjksImxldmVsIjozLCJjcmFja2VkIjpmYWxzZSwiaGl0cyI6MywiY2hhcmdlIjozLCJzdWNjZXNzZXMiOjMsIm5vcm1hbEdyZWF0cyI6MCwiYnVyc3RzIjowLCJmaW5hbGl6ZWREYXkiOjYsImNvbW1pc3Npb25JZCI6bnVsbH0seyJpZCI6ImQ3LTEiLCJzbG90IjoxLCJzdXBwbGllZERheSI6NywicmVjaXBlIjoiaGVhdnkiLCJzdGF0dXMiOiJhY3RpdmUiLCJiYXNlIjoxODAsInZhbHVlIjo5OTcsInBlYWsiOjk5NywibGV2ZWwiOjQsImNyYWNrZWQiOmZhbHNlLCJoaXRzIjozLCJjaGFyZ2UiOjMsInN1Y2Nlc3NlcyI6Mywibm9ybWFsR3JlYXRzIjoxLCJidXJzdHMiOjAsImZpbmFsaXplZERheSI6bnVsbCwiY29tbWlzc2lvbklkIjpudWxsfSx7ImlkIjoiZDctMiIsInNsb3QiOjIsInN1cHBsaWVkRGF5Ijo3LCJyZWNpcGUiOiJoZWF2eSIsInN0YXR1cyI6ImFjdGl2ZSIsImJhc2UiOjE4MCwidmFsdWUiOjE4MCwicGVhayI6MTgwLCJsZXZlbCI6MCwiY3JhY2tlZCI6ZmFsc2UsImhpdHMiOjAsImNoYXJnZSI6MCwic3VjY2Vzc2VzIjowLCJub3JtYWxHcmVhdHMiOjAsImJ1cnN0cyI6MCwiZmluYWxpemVkRGF5IjpudWxsLCJjb21taXNzaW9uSWQiOm51bGx9LHsiaWQiOiJkNy0zIiwic2xvdCI6Mywic3VwcGxpZWREYXkiOjcsInJlY2lwZSI6ImhlYXZ5Iiwic3RhdHVzIjoiYWN0aXZlIiwiYmFzZSI6MTgwLCJ2YWx1ZSI6MTgwLCJwZWFrIjoxODAsImxldmVsIjowLCJjcmFja2VkIjpmYWxzZSwiaGl0cyI6MCwiY2hhcmdlIjowLCJzdWNjZXNzZXMiOjAsIm5vcm1hbEdyZWF0cyI6MCwiYnVyc3RzIjowLCJmaW5hbGl6ZWREYXkiOm51bGwsImNvbW1pc3Npb25JZCI6bnVsbH1dLCJyZXNlcnZlSWQiOm51bGwsImRheVNhbGVzIjowLCJkYXlSZWNvdmVyZWQiOjAsInRyYWl0cyI6WyJzdGVhZHkiLCJlbWJlciIsInBhcmRvbiJdLCJnaWZ0IjoiY2xhaW1lZCIsInBhcmRvblVzZWQiOmZhbHNlLCJjcmFja0d1YXJkIjpmYWxzZSwibW9kaWZpY2F0aW9ucyI6WyJ3aW5kYm94Il0sImNoYXB0ZXJDaG9pY2VzIjpbXSwic2hvcCI6W10sInNvbGQiOltdLCJ1cGdyYWRlZCI6ZmFsc2UsInJlcGFpcmVkIjpmYWxzZSwiZGF5QnVmZnMiOnsic3VwcGx5UGN0IjoxMDAsImxvYW4iOmZhbHNlLCJzaGVsdGVyIjpmYWxzZX0sInBlbmRpbmciOnsic3VwcGx5UGN0IjoxMDAsImxvYW4iOmZhbHNlLCJzaGVsdGVyIjpmYWxzZX0sImV2ZW50RGVjayI6WyJkb25hdGlvbiIsImNyZWRpdCIsInNhbHZhZ2UiLCJyZXN0Iiwic2hlbHRlciIsImxvYW4iXSwiZXZlbnRJZCI6InNhbHZhZ2UiLCJldmVudFN0YXR1cyI6ImF2YWlsYWJsZSIsImV2ZW50SGlzdG9yeSI6W3siZGF5IjozLCJpZCI6ImRvbmF0aW9uIiwiY2hvaWNlIjoiYWNjZXB0IiwicGllY2VJZCI6ImQzLTMiLCJjb2lucyI6MH0seyJkYXkiOjUsImlkIjoiY3JlZGl0IiwiY2hvaWNlIjoiYWNjZXB0IiwicGllY2VJZCI6bnVsbCwiY29pbnMiOi0xODB9XSwiaGlzdG9yeSI6W3siZGF5IjoxLCJjb21taXNzaW9uSWQiOjEsIm1ldCI6dHJ1ZSwicm91dGVJZCI6ImludGFjdCIsInBpZWNlSWRzIjpbImQxLTEiXSwic2FsZXMiOjQ5NywicmVjb3ZlcmVkIjowLCJyZWNvdmVyZWRJZHMiOltdLCJyZXNlcnZlSWQiOm51bGwsInNlYWxzQmVmb3JlIjozLCJzZWFsc0FmdGVyIjozLCJwcm90ZWN0ZWQiOmZhbHNlLCJtb2RpZmljYXRpb24iOm51bGx9LHsiZGF5IjoyLCJjb21taXNzaW9uSWQiOjIsIm1ldCI6dHJ1ZSwicm91dGVJZCI6ImxpZ2h0IiwicGllY2VJZHMiOlsiZDItMSJdLCJzYWxlcyI6NTc4LCJyZWNvdmVyZWQiOjAsInJlY292ZXJlZElkcyI6W10sInJlc2VydmVJZCI6bnVsbCwic2VhbHNCZWZvcmUiOjMsInNlYWxzQWZ0ZXIiOjMsInByb3RlY3RlZCI6ZmFsc2UsIm1vZGlmaWNhdGlvbiI6bnVsbH0seyJkYXkiOjMsImNvbW1pc3Npb25JZCI6MywibWV0Ijp0cnVlLCJyb3V0ZUlkIjoiYnVyc3QiLCJwaWVjZUlkcyI6WyJkMy0yIl0sInNhbGVzIjoxMzE1LCJyZWNvdmVyZWQiOjAsInJlY292ZXJlZElkcyI6W10sInJlc2VydmVJZCI6bnVsbCwic2VhbHNCZWZvcmUiOjMsInNlYWxzQWZ0ZXIiOjMsInByb3RlY3RlZCI6ZmFsc2UsIm1vZGlmaWNhdGlvbiI6bnVsbH0seyJkYXkiOjQsImNvbW1pc3Npb25JZCI6NCwibWV0Ijp0cnVlLCJyb3V0ZUlkIjoiZ3VhcmQiLCJwaWVjZUlkcyI6WyJkNC0xIl0sInNhbGVzIjo2NTYsInJlY292ZXJlZCI6MCwicmVjb3ZlcmVkSWRzIjpbXSwicmVzZXJ2ZUlkIjoiZDQtMiIsInNlYWxzQmVmb3JlIjozLCJzZWFsc0FmdGVyIjozLCJwcm90ZWN0ZWQiOmZhbHNlLCJtb2RpZmljYXRpb24iOiJ3aW5kYm94In0seyJkYXkiOjUsImNvbW1pc3Npb25JZCI6NSwibWV0Ijp0cnVlLCJyb3V0ZUlkIjoib2xkIiwicGllY2VJZHMiOlsiZDQtMiJdLCJzYWxlcyI6MTUyMywicmVjb3ZlcmVkIjowLCJyZWNvdmVyZWRJZHMiOltdLCJyZXNlcnZlSWQiOm51bGwsInNlYWxzQmVmb3JlIjozLCJzZWFsc0FmdGVyIjozLCJwcm90ZWN0ZWQiOmZhbHNlLCJtb2RpZmljYXRpb24iOm51bGx9LHsiZGF5Ijo2LCJjb21taXNzaW9uSWQiOjYsIm1ldCI6dHJ1ZSwicm91dGVJZCI6ImNyYWNrZWQiLCJwaWVjZUlkcyI6WyJkNi0yIl0sInNhbGVzIjozOTYyNCwicmVjb3ZlcmVkIjowLCJyZWNvdmVyZWRJZHMiOltdLCJyZXNlcnZlSWQiOm51bGwsInNlYWxzQmVmb3JlIjozLCJzZWFsc0FmdGVyIjozLCJwcm90ZWN0ZWQiOmZhbHNlLCJtb2RpZmljYXRpb24iOm51bGx9XSwicm5nIjp7ImZvcmdlIjp7InN0YXRlIjo0MTU1MDI5OTQwLCJkcmF3cyI6NzF9LCJzaG9wIjp7InN0YXRlIjo2NzY4MTE1NjYsImRyYXdzIjo0fSwiZXZlbnRzIjp7InN0YXRlIjoyMTk5Mjk4MTg4LCJkcmF3cyI6NX0sImNvbnRlbnQiOnsic3RhdGUiOjExNzY4Njk2ODcsImRyYXdzIjowfX0sImpvdXJuYWwiOlt7InR5cGUiOiJjb250aW51ZSJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkMS0xIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQxLTEifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDEtMSJ9LHsidHlwZSI6ImRlbGl2ZXIiLCJwaWVjZUlkIjoiZDEtMSJ9LHsidHJhaXRJZCI6InN0ZWFkeSIsInR5cGUiOiJjbGFpbUdpZnQifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDEtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkMS0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQxLTIifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQxLTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDEtMyJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkMS0zIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQxLTMifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQxLTMifSx7InR5cGUiOiJzZXR0bGUifSx7InR5cGUiOiJhZHZhbmNlIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQyLTEifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDItMSJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkMi0xIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQyLTEifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQyLTEifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDItMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkMi0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQyLTIifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQyLTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDItMyJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkMi0zIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQyLTMifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQyLTMifSx7InR5cGUiOiJzZXR0bGUifSx7InR5cGUiOiJhZHZhbmNlIn0seyJ0eXBlIjoidXBncmFkZSJ9LHsicGllY2VJZCI6ImQzLTEiLCJ0cmFpdElkIjoiZW1iZXIiLCJ0eXBlIjoiYnV5In0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQzLTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDMtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkMy0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQzLTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDMtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkMy0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQzLTIifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQzLTIifSx7InR5cGUiOiJjaG9vc2VFdmVudCIsImNob2ljZSI6ImFjY2VwdCIsInBpZWNlSWQiOiJkMy0zIn0seyJ0eXBlIjoic2V0dGxlIn0seyJ0eXBlIjoiYWR2YW5jZSJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNC0xIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ0LTEifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDQtMSJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNC0xIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ0LTEifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQ0LTEifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDQtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNC0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ0LTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDQtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNC0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ0LTIifSx7InR5cGUiOiJyZXNlcnZlIiwicGllY2VJZCI6ImQ0LTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDQtMyJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNC0zIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ0LTMifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQ0LTMifSx7InR5cGUiOiJzZXR0bGUifSx7InR5cGUiOiJjaG9vc2VNb2RpZmljYXRpb24iLCJtb2RpZmljYXRpb24iOiJ3aW5kYm94In0seyJ0eXBlIjoiYWR2YW5jZSJ9LHsidHlwZSI6InJlc2VydmUiLCJwaWVjZUlkIjoiZDQtMiJ9LHsidHlwZSI6ImRlbGl2ZXIiLCJwaWVjZUlkIjoiZDQtMiJ9LHsidHlwZSI6ImNob29zZUV2ZW50IiwiY2hvaWNlIjoiYWNjZXB0In0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ1LTEifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDUtMSJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNS0xIn0seyJ0eXBlIjoiZGVsaXZlciIsInBpZWNlSWQiOiJkNS0xIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ1LTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDUtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNS0yIn0seyJ0eXBlIjoiZGVsaXZlciIsInBpZWNlSWQiOiJkNS0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ1LTMifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDUtMyJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNS0zIn0seyJ0eXBlIjoiZGVsaXZlciIsInBpZWNlSWQiOiJkNS0zIn0seyJ0eXBlIjoic2V0dGxlIn0seyJ0eXBlIjoiYWR2YW5jZSJ9LHsidHlwZSI6InVwZ3JhZGUifSx7InBpZWNlSWQiOiJkNi0xIiwidHJhaXRJZCI6InBhcmRvbiIsInR5cGUiOiJidXkifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDYtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNi0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ2LTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDYtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNi0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ2LTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDYtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNi0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ2LTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDYtMiJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNi0yIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ2LTIifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQ2LTIifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDYtMyJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNi0zIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ2LTMifSx7InR5cGUiOiJkZWxpdmVyIiwicGllY2VJZCI6ImQ2LTMifSx7InR5cGUiOiJzZXR0bGUifSx7InR5cGUiOiJhZHZhbmNlIn0seyJ0eXBlIjoic3RyaWtlIiwicGllY2VJZCI6ImQ3LTEifSx7InR5cGUiOiJzdHJpa2UiLCJwaWVjZUlkIjoiZDctMSJ9LHsidHlwZSI6InN0cmlrZSIsInBpZWNlSWQiOiJkNy0xIn1dfSwicHJvYmUiOnsiZnJhbWVzIjpbeyJnYXAiOjU0Ljg4OTMxMTMwOTk0NDYyNCwiYW5nbGUiOjguMzU4MDg4Nzc5MTgwMDgzLCJwaXZvdEdhcCI6MC4xNzE5MjExMTA4ODE5NTkwNSwibWV0YWxHYXAiOjU0LjU0NDAwMjczNjA1NjQzLCJ0aW1lIjowLCJzYW1wbGVDb3N0TXMiOjYsInBoYXNlIjoic3dpbmcifSx7ImdhcCI6MC4zODcyMzIxODA1MDI0OTU4NiwiYW5nbGUiOjAuMzU4MDkzOTU5MzIzNjUzMSwicGl2b3RHYXAiOjAuMTcxOTIxMTI1MDAwNzM4NTMsIm1ldGFsR2FwIjowLjI0NjIxODk1MDMyMDU1MzYzLCJ0aW1lIjozMjEsInNhbXBsZUNvc3RNcyI6NCwicGhhc2UiOiJjb250YWN0In0seyJnYXAiOjAuMzg3MjMyMTgwNTAyNDk1ODYsImFuZ2xlIjowLjM1ODA5Mzk1OTMyMzY1MzEsInBpdm90R2FwIjowLjE3MTkyMTEyNTAwMDczODUzLCJtZXRhbEdhcCI6MC4yNDYyMTg5NTAzMjA1NTM2MywidGltZSI6NTcyLCJzYW1wbGVDb3N0TXMiOjAsInBoYXNlIjoiY29udGFjdCJ9XSwiY29tcGxldGUiOnRydWUsInNvdXJjZSI6Imh0dHA6Ly8xMjcuMC4wLjE6NDE5OC9hc3NldHMvZC9oYW1tZXItZm9yZ2UtdjIud2VicCIsInNvdXJjZUFscGhhIjpbMjQ5LDI1MywyNTNdLCJpbnB1dFRvRmlyc3RTYW1wbGVNcyI6NDE1fX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fb301be85be72ca20411-90b0773ca855e0c9fa75",
+          "file": "v4-second-chapter.spec.ts",
+          "line": 17,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v4-second-saves.spec.ts",
+      "file": "v4-second-saves.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "second-chapter 0-of-two surviving settlement retains regret and offers only unowned facilities",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2059,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T14:01:34.144Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c87162423aefbf808b6c-6dec162814c51a24b1e0",
+          "file": "v4-second-saves.spec.ts",
+          "line": 35,
+          "column": 34
+        },
+        {
+          "title": "second-chapter 1-of-two surviving settlement retains regret and offers only unowned facilities",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6811,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeInViewport\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.v4-protection-receipt')\nExpected: in viewport\nReceived: viewport ratio 0\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeInViewport\" locator('.v4-protection-receipt') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.v4-protection-receipt')\u001b[22m\n\u001b[2m    14 × locator resolved to <p class=\"v4-protection-receipt\">护炉契保住了这次契印；本局不会再次保印，未完成的约定仍如实留下。</p>\u001b[22m\n\u001b[2m       - unexpected value \"viewport ratio 0\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeInViewport\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.v4-protection-receipt')\nExpected: in viewport\nReceived: viewport ratio 0\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeInViewport\" locator('.v4-protection-receipt') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.v4-protection-receipt')\u001b[22m\n\u001b[2m    14 × locator resolved to <p class=\"v4-protection-receipt\">护炉契保住了这次契印；本局不会再次保印，未完成的约定仍如实留下。</p>\u001b[22m\n\u001b[2m       - unexpected value \"viewport ratio 0\"\u001b[22m\n\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-second-saves.spec.ts:37:602",
+                    "location": {
+                      "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-second-saves.spec.ts",
+                      "column": 602,
+                      "line": 37
+                    },
+                    "snippet": "  35 | for(const count of [0,1]as const)test(`second-chapter ${count}-of-two surviving settlement retains regret and offers only unowned facilities`,async({page})=>{\n  36 |  const before=prefix(count===0?114:117);expect(getRunView(before).commission.progress.routes[0]?.count).toBe(count);await checkpoint(page,before);await commandV4(page,{type:'settle'});await expect(page.locator('#v4-stage-title')).toHaveText(count?'一站有灯，一站仍在风雪里':'双驿仍在等剑');await expect(page.locator('#v4-stage-image')).toHaveAttribute('src',`/assets/d/v07-chapter2/twin-stations-${count?'one':'dark'}-v1.webp`);await expect(page.locator('#v4-stage-copy .v4-delivery-works canvas[data-blade]')).toHaveCount(count);await expect(page.getByRole('button',{name:'装上风箱',exact:true})).toHaveCount(0);\n> 37 |  const choices=getRunView(await readV4(page)).chapterChoices;expect(choices).toHaveLength(2);const choice=choices.find(c=>c.id===(count?'warmRack':'wideMouth'))!;await page.getByRole('button',{name:'装上'+MODIFICATIONS[choice.id].name,exact:true}).click();const final=await saveV4(page,`second-partial-${count}-settled`);expect(final.history.at(-1)?.met).toBe(false);expect(final.seals).toBe(3);expect(final.pardonUsed).toBe(true);expect(final.history.at(-1)?.protected).toBe(true);await expect(page.locator('#v4-stage-copy')).toContainText('护炉契保住');await expect(page.locator('.v4-protection-receipt')).toBeInViewport({ratio:1});expect(final.modifications).toEqual(['windbox',choice.id]);await page.reload();await page.locator('#v4-continue').click();await expect(page.locator('#v4-stage-copy')).toContainText(`实际交付 ${count}/2`);expect(await readV4(page)).toEqual(final);await shotV4(page,`second-partial-${count}-receipt`);\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ^\n  38 | });\n  39 |\n  40 | test('a real second-chapter failure retains earned first-chapter growth and provides restart and export',async({page})=>{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-second-saves.spec.ts",
+                        "column": 602,
+                        "line": 37
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeInViewport\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.v4-protection-receipt')\nExpected: in viewport\nReceived: viewport ratio 0\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeInViewport\" locator('.v4-protection-receipt') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.v4-protection-receipt')\u001b[22m\n\u001b[2m    14 × locator resolved to <p class=\"v4-protection-receipt\">护炉契保住了这次契印；本局不会再次保印，未完成的约定仍如实留下。</p>\u001b[22m\n\u001b[2m       - unexpected value \"viewport ratio 0\"\u001b[22m\n\n\n  35 | for(const count of [0,1]as const)test(`second-chapter ${count}-of-two surviving settlement retains regret and offers only unowned facilities`,async({page})=>{\n  36 |  const before=prefix(count===0?114:117);expect(getRunView(before).commission.progress.routes[0]?.count).toBe(count);await checkpoint(page,before);await commandV4(page,{type:'settle'});await expect(page.locator('#v4-stage-title')).toHaveText(count?'一站有灯，一站仍在风雪里':'双驿仍在等剑');await expect(page.locator('#v4-stage-image')).toHaveAttribute('src',`/assets/d/v07-chapter2/twin-stations-${count?'one':'dark'}-v1.webp`);await expect(page.locator('#v4-stage-copy .v4-delivery-works canvas[data-blade]')).toHaveCount(count);await expect(page.getByRole('button',{name:'装上风箱',exact:true})).toHaveCount(0);\n> 37 |  const choices=getRunView(await readV4(page)).chapterChoices;expect(choices).toHaveLength(2);const choice=choices.find(c=>c.id===(count?'warmRack':'wideMouth'))!;await page.getByRole('button',{name:'装上'+MODIFICATIONS[choice.id].name,exact:true}).click();const final=await saveV4(page,`second-partial-${count}-settled`);expect(final.history.at(-1)?.met).toBe(false);expect(final.seals).toBe(3);expect(final.pardonUsed).toBe(true);expect(final.history.at(-1)?.protected).toBe(true);await expect(page.locator('#v4-stage-copy')).toContainText('护炉契保住');await expect(page.locator('.v4-protection-receipt')).toBeInViewport({ratio:1});expect(final.modifications).toEqual(['windbox',choice.id]);await page.reload();await page.locator('#v4-continue').click();await expect(page.locator('#v4-stage-copy')).toContainText(`实际交付 ${count}/2`);expect(await readV4(page)).toEqual(final);await shotV4(page,`second-partial-${count}-receipt`);\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ^\n  38 | });\n  39 |\n  40 | test('a real second-chapter failure retains earned first-chapter growth and provides restart and export',async({page})=>{\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-second-saves.spec.ts:37:602"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T14:01:36.217Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i4/polish/work/v4-second-saves-second-cha-43d87-ers-only-unowned-facilities-v4-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i4/polish/work/v4-second-saves-second-cha-43d87-ers-only-unowned-facilities-v4-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i4/polish/work/v4-second-saves-second-cha-43d87-ers-only-unowned-facilities-v4-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-second-saves.spec.ts",
+                    "column": 602,
+                    "line": 37
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c87162423aefbf808b6c-9b67648a6aa3bb831501",
+          "file": "v4-second-saves.spec.ts",
+          "line": 35,
+          "column": 34
+        },
+        {
+          "title": "a stale chapter button cannot adopt a later generation; same-revision buttons survive a book modal",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3261,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T14:01:45.214Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c87162423aefbf808b6c-1d8a51a40189a65ea206",
+          "file": "v4-second-saves.spec.ts",
+          "line": 62,
+          "column": 1
+        },
+        {
+          "title": "second-chapter 0-of-two surviving settlement retains regret and offers only unowned facilities",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-firefox",
+              "projectName": "v4-firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2538,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T14:04:11.094Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c87162423aefbf808b6c-569e73ec01bbddb5fbfa",
+          "file": "v4-second-saves.spec.ts",
+          "line": 35,
+          "column": 34
+        },
+        {
+          "title": "second-chapter 1-of-two surviving settlement retains regret and offers only unowned facilities",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-firefox",
+              "projectName": "v4-firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7311,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeInViewport\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.v4-protection-receipt')\nExpected: in viewport\nReceived: viewport ratio 0\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeInViewport\" locator('.v4-protection-receipt') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.v4-protection-receipt')\u001b[22m\n\u001b[2m    14 × locator resolved to <p class=\"v4-protection-receipt\">护炉契保住了这次契印；本局不会再次保印，未完成的约定仍如实留下。</p>\u001b[22m\n\u001b[2m       - unexpected value \"viewport ratio 0\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeInViewport\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.v4-protection-receipt')\nExpected: in viewport\nReceived: viewport ratio 0\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeInViewport\" locator('.v4-protection-receipt') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.v4-protection-receipt')\u001b[22m\n\u001b[2m    14 × locator resolved to <p class=\"v4-protection-receipt\">护炉契保住了这次契印；本局不会再次保印，未完成的约定仍如实留下。</p>\u001b[22m\n\u001b[2m       - unexpected value \"viewport ratio 0\"\u001b[22m\n\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-second-saves.spec.ts:37:602",
+                    "location": {
+                      "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-second-saves.spec.ts",
+                      "column": 602,
+                      "line": 37
+                    },
+                    "snippet": "  35 | for(const count of [0,1]as const)test(`second-chapter ${count}-of-two surviving settlement retains regret and offers only unowned facilities`,async({page})=>{\n  36 |  const before=prefix(count===0?114:117);expect(getRunView(before).commission.progress.routes[0]?.count).toBe(count);await checkpoint(page,before);await commandV4(page,{type:'settle'});await expect(page.locator('#v4-stage-title')).toHaveText(count?'一站有灯，一站仍在风雪里':'双驿仍在等剑');await expect(page.locator('#v4-stage-image')).toHaveAttribute('src',`/assets/d/v07-chapter2/twin-stations-${count?'one':'dark'}-v1.webp`);await expect(page.locator('#v4-stage-copy .v4-delivery-works canvas[data-blade]')).toHaveCount(count);await expect(page.getByRole('button',{name:'装上风箱',exact:true})).toHaveCount(0);\n> 37 |  const choices=getRunView(await readV4(page)).chapterChoices;expect(choices).toHaveLength(2);const choice=choices.find(c=>c.id===(count?'warmRack':'wideMouth'))!;await page.getByRole('button',{name:'装上'+MODIFICATIONS[choice.id].name,exact:true}).click();const final=await saveV4(page,`second-partial-${count}-settled`);expect(final.history.at(-1)?.met).toBe(false);expect(final.seals).toBe(3);expect(final.pardonUsed).toBe(true);expect(final.history.at(-1)?.protected).toBe(true);await expect(page.locator('#v4-stage-copy')).toContainText('护炉契保住');await expect(page.locator('.v4-protection-receipt')).toBeInViewport({ratio:1});expect(final.modifications).toEqual(['windbox',choice.id]);await page.reload();await page.locator('#v4-continue').click();await expect(page.locator('#v4-stage-copy')).toContainText(`实际交付 ${count}/2`);expect(await readV4(page)).toEqual(final);await shotV4(page,`second-partial-${count}-receipt`);\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ^\n  38 | });\n  39 |\n  40 | test('a real second-chapter failure retains earned first-chapter growth and provides restart and export',async({page})=>{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-second-saves.spec.ts",
+                        "column": 602,
+                        "line": 37
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeInViewport\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.v4-protection-receipt')\nExpected: in viewport\nReceived: viewport ratio 0\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeInViewport\" locator('.v4-protection-receipt') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.v4-protection-receipt')\u001b[22m\n\u001b[2m    14 × locator resolved to <p class=\"v4-protection-receipt\">护炉契保住了这次契印；本局不会再次保印，未完成的约定仍如实留下。</p>\u001b[22m\n\u001b[2m       - unexpected value \"viewport ratio 0\"\u001b[22m\n\n\n  35 | for(const count of [0,1]as const)test(`second-chapter ${count}-of-two surviving settlement retains regret and offers only unowned facilities`,async({page})=>{\n  36 |  const before=prefix(count===0?114:117);expect(getRunView(before).commission.progress.routes[0]?.count).toBe(count);await checkpoint(page,before);await commandV4(page,{type:'settle'});await expect(page.locator('#v4-stage-title')).toHaveText(count?'一站有灯，一站仍在风雪里':'双驿仍在等剑');await expect(page.locator('#v4-stage-image')).toHaveAttribute('src',`/assets/d/v07-chapter2/twin-stations-${count?'one':'dark'}-v1.webp`);await expect(page.locator('#v4-stage-copy .v4-delivery-works canvas[data-blade]')).toHaveCount(count);await expect(page.getByRole('button',{name:'装上风箱',exact:true})).toHaveCount(0);\n> 37 |  const choices=getRunView(await readV4(page)).chapterChoices;expect(choices).toHaveLength(2);const choice=choices.find(c=>c.id===(count?'warmRack':'wideMouth'))!;await page.getByRole('button',{name:'装上'+MODIFICATIONS[choice.id].name,exact:true}).click();const final=await saveV4(page,`second-partial-${count}-settled`);expect(final.history.at(-1)?.met).toBe(false);expect(final.seals).toBe(3);expect(final.pardonUsed).toBe(true);expect(final.history.at(-1)?.protected).toBe(true);await expect(page.locator('#v4-stage-copy')).toContainText('护炉契保住');await expect(page.locator('.v4-protection-receipt')).toBeInViewport({ratio:1});expect(final.modifications).toEqual(['windbox',choice.id]);await page.reload();await page.locator('#v4-continue').click();await expect(page.locator('#v4-stage-copy')).toContainText(`实际交付 ${count}/2`);expect(await readV4(page)).toEqual(final);await shotV4(page,`second-partial-${count}-receipt`);\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ^\n  38 | });\n  39 |\n  40 | test('a real second-chapter failure retains earned first-chapter growth and provides restart and export',async({page})=>{\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-second-saves.spec.ts:37:602"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T14:04:13.649Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i4/polish/work/v4-second-saves-second-cha-43d87-ers-only-unowned-facilities-v4-firefox/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i4/polish/work/v4-second-saves-second-cha-43d87-ers-only-unowned-facilities-v4-firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i4/polish/work/v4-second-saves-second-cha-43d87-ers-only-unowned-facilities-v4-firefox/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-second-saves.spec.ts",
+                    "column": 602,
+                    "line": 37
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c87162423aefbf808b6c-1a28f09c07bc10b1e695",
+          "file": "v4-second-saves.spec.ts",
+          "line": 35,
+          "column": 34
+        },
+        {
+          "title": "a stale chapter button cannot adopt a later generation; same-revision buttons survive a book modal",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-firefox",
+              "projectName": "v4-firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5479,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T14:04:23.138Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c87162423aefbf808b6c-2c706b6033d2dc2d3ed1",
+          "file": "v4-second-saves.spec.ts",
+          "line": 62,
+          "column": 1
+        },
+        {
+          "title": "second-chapter 0-of-two surviving settlement retains regret and offers only unowned facilities",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-webkit",
+              "projectName": "v4-webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4634,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T14:08:24.013Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c87162423aefbf808b6c-f3006a6021def29799da",
+          "file": "v4-second-saves.spec.ts",
+          "line": 35,
+          "column": 34
+        },
+        {
+          "title": "second-chapter 1-of-two surviving settlement retains regret and offers only unowned facilities",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-webkit",
+              "projectName": "v4-webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8742,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeInViewport\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.v4-protection-receipt')\nExpected: in viewport\nReceived: viewport ratio 0\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeInViewport\" locator('.v4-protection-receipt') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.v4-protection-receipt')\u001b[22m\n\u001b[2m    13 × locator resolved to <p class=\"v4-protection-receipt\">护炉契保住了这次契印；本局不会再次保印，未完成的约定仍如实留下。</p>\u001b[22m\n\u001b[2m       - unexpected value \"viewport ratio 0\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeInViewport\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.v4-protection-receipt')\nExpected: in viewport\nReceived: viewport ratio 0\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeInViewport\" locator('.v4-protection-receipt') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.v4-protection-receipt')\u001b[22m\n\u001b[2m    13 × locator resolved to <p class=\"v4-protection-receipt\">护炉契保住了这次契印；本局不会再次保印，未完成的约定仍如实留下。</p>\u001b[22m\n\u001b[2m       - unexpected value \"viewport ratio 0\"\u001b[22m\n\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-second-saves.spec.ts:37:602",
+                    "location": {
+                      "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-second-saves.spec.ts",
+                      "column": 602,
+                      "line": 37
+                    },
+                    "snippet": "  35 | for(const count of [0,1]as const)test(`second-chapter ${count}-of-two surviving settlement retains regret and offers only unowned facilities`,async({page})=>{\n  36 |  const before=prefix(count===0?114:117);expect(getRunView(before).commission.progress.routes[0]?.count).toBe(count);await checkpoint(page,before);await commandV4(page,{type:'settle'});await expect(page.locator('#v4-stage-title')).toHaveText(count?'一站有灯，一站仍在风雪里':'双驿仍在等剑');await expect(page.locator('#v4-stage-image')).toHaveAttribute('src',`/assets/d/v07-chapter2/twin-stations-${count?'one':'dark'}-v1.webp`);await expect(page.locator('#v4-stage-copy .v4-delivery-works canvas[data-blade]')).toHaveCount(count);await expect(page.getByRole('button',{name:'装上风箱',exact:true})).toHaveCount(0);\n> 37 |  const choices=getRunView(await readV4(page)).chapterChoices;expect(choices).toHaveLength(2);const choice=choices.find(c=>c.id===(count?'warmRack':'wideMouth'))!;await page.getByRole('button',{name:'装上'+MODIFICATIONS[choice.id].name,exact:true}).click();const final=await saveV4(page,`second-partial-${count}-settled`);expect(final.history.at(-1)?.met).toBe(false);expect(final.seals).toBe(3);expect(final.pardonUsed).toBe(true);expect(final.history.at(-1)?.protected).toBe(true);await expect(page.locator('#v4-stage-copy')).toContainText('护炉契保住');await expect(page.locator('.v4-protection-receipt')).toBeInViewport({ratio:1});expect(final.modifications).toEqual(['windbox',choice.id]);await page.reload();await page.locator('#v4-continue').click();await expect(page.locator('#v4-stage-copy')).toContainText(`实际交付 ${count}/2`);expect(await readV4(page)).toEqual(final);await shotV4(page,`second-partial-${count}-receipt`);\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ^\n  38 | });\n  39 |\n  40 | test('a real second-chapter failure retains earned first-chapter growth and provides restart and export',async({page})=>{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-second-saves.spec.ts",
+                        "column": 602,
+                        "line": 37
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeInViewport\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.v4-protection-receipt')\nExpected: in viewport\nReceived: viewport ratio 0\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeInViewport\" locator('.v4-protection-receipt') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.v4-protection-receipt')\u001b[22m\n\u001b[2m    13 × locator resolved to <p class=\"v4-protection-receipt\">护炉契保住了这次契印；本局不会再次保印，未完成的约定仍如实留下。</p>\u001b[22m\n\u001b[2m       - unexpected value \"viewport ratio 0\"\u001b[22m\n\n\n  35 | for(const count of [0,1]as const)test(`second-chapter ${count}-of-two surviving settlement retains regret and offers only unowned facilities`,async({page})=>{\n  36 |  const before=prefix(count===0?114:117);expect(getRunView(before).commission.progress.routes[0]?.count).toBe(count);await checkpoint(page,before);await commandV4(page,{type:'settle'});await expect(page.locator('#v4-stage-title')).toHaveText(count?'一站有灯，一站仍在风雪里':'双驿仍在等剑');await expect(page.locator('#v4-stage-image')).toHaveAttribute('src',`/assets/d/v07-chapter2/twin-stations-${count?'one':'dark'}-v1.webp`);await expect(page.locator('#v4-stage-copy .v4-delivery-works canvas[data-blade]')).toHaveCount(count);await expect(page.getByRole('button',{name:'装上风箱',exact:true})).toHaveCount(0);\n> 37 |  const choices=getRunView(await readV4(page)).chapterChoices;expect(choices).toHaveLength(2);const choice=choices.find(c=>c.id===(count?'warmRack':'wideMouth'))!;await page.getByRole('button',{name:'装上'+MODIFICATIONS[choice.id].name,exact:true}).click();const final=await saveV4(page,`second-partial-${count}-settled`);expect(final.history.at(-1)?.met).toBe(false);expect(final.seals).toBe(3);expect(final.pardonUsed).toBe(true);expect(final.history.at(-1)?.protected).toBe(true);await expect(page.locator('#v4-stage-copy')).toContainText('护炉契保住');await expect(page.locator('.v4-protection-receipt')).toBeInViewport({ratio:1});expect(final.modifications).toEqual(['windbox',choice.id]);await page.reload();await page.locator('#v4-continue').click();await expect(page.locator('#v4-stage-copy')).toContainText(`实际交付 ${count}/2`);expect(await readV4(page)).toEqual(final);await shotV4(page,`second-partial-${count}-receipt`);\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ^\n  38 | });\n  39 |\n  40 | test('a real second-chapter failure retains earned first-chapter growth and provides restart and export',async({page})=>{\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-second-saves.spec.ts:37:602"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T14:08:28.711Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i4/polish/work/v4-second-saves-second-cha-43d87-ers-only-unowned-facilities-v4-webkit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i4/polish/work/v4-second-saves-second-cha-43d87-ers-only-unowned-facilities-v4-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i4/polish/work/v4-second-saves-second-cha-43d87-ers-only-unowned-facilities-v4-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-second-saves.spec.ts",
+                    "column": 602,
+                    "line": 37
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c87162423aefbf808b6c-b9efb13987fc602b0e1c",
+          "file": "v4-second-saves.spec.ts",
+          "line": 35,
+          "column": 34
+        },
+        {
+          "title": "a stale chapter button cannot adopt a later generation; same-revision buttons survive a book modal",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-webkit",
+              "projectName": "v4-webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6699,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T14:08:39.372Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c87162423aefbf808b6c-62b063c8fb50bbf63192",
+          "file": "v4-second-saves.spec.ts",
+          "line": 62,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-20T13:59:27.932Z",
+    "duration": 558899.104,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}

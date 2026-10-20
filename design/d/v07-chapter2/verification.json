@@ -1,0 +1,714 @@
+{
+  "schema": 1,
+  "verifiedAt": "2026-10-20T12:47:42.367Z",
+  "allChecksPassed": true,
+  "budget": {
+    "bytes": 2043892,
+    "MiB": 1.9492073059082031,
+    "targetBytes": 2097152,
+    "hardBudgetBytes": 2621440,
+    "targetMet": true,
+    "hardBudgetMet": true
+  },
+  "visualReviewRecord": {
+    "path": "design/d/v07-chapter2/visual-review.json",
+    "bytes": 3201,
+    "sha256": "4fffec9138c667e5ac686b5011e6d8f9c086665dd351a0ba64118df93eda560d"
+  },
+  "checks": [
+    {
+      "id": "winter-forge-v1",
+      "sourceRecord": {
+        "path": "design/d/v07-chapter2/winter-forge-v1-source.json",
+        "bytes": 1122,
+        "sha256": "8368d11adb67c730358fa97bff65d5df2326fa918c8e7e58272b949fa7959c28"
+      },
+      "source": {
+        "path": "/Users/gordon/.codex/generated_images/01a158b8-4780-7183-bd8b-29edf17fb4e9/exec-cd9b77fc-da08-4adb-9169-4e43b9816f9b.png",
+        "bytes": 2417964,
+        "sha256": "e4d3ace725b4e4efdb1f7a19734b55917db779d557b322ebf716bedf4f5a4d54"
+      },
+      "original": {
+        "path": "design/d/v07-chapter2/originals/winter-forge-v1.png",
+        "bytes": 2417964,
+        "sha256": "e4d3ace725b4e4efdb1f7a19734b55917db779d557b322ebf716bedf4f5a4d54"
+      },
+      "prompt": {
+        "path": "design/d/v07-chapter2/prompts/winter-forge-v1.txt",
+        "bytes": 1878,
+        "sha256": "aba1511ad0e1644189c6c56d24140c880934d694ae0628c8a95529915122756e"
+      },
+      "references": [
+        {
+          "path": "design/d/originals/forge-backdrop-v2.png",
+          "bytes": 2486831,
+          "sha256": "b4fa13ce25bd62965b597efba9370d14dc27b7d77b1b5cf9c79b13158e71a21b"
+        }
+      ],
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bitDepth": 8,
+        "colorType": 2,
+        "interlace": 0,
+        "transparencyChunk": false,
+        "alpha": false
+      },
+      "exactSourceCopy": true,
+      "provenanceVerified": true,
+      "selection": "runtime",
+      "runtime": {
+        "path": "public/assets/d/v07-chapter2/winter-forge-v1.webp",
+        "bytes": 197974,
+        "sha256": "ff93be5848e112aa7c6b74a5a649cd5fc7341cf08faca03d1b218a4e3e7aca96"
+      },
+      "webp": {
+        "width": 1672,
+        "height": 941,
+        "alpha": false,
+        "animation": false,
+        "log": "File: public/assets/d/v07-chapter2/winter-forge-v1.webp\nRIFF HEADER:\n  File size: 197974\nChunk VP8  at offset     12, length 197962\n  Width: 1672\n  Height: 941\n  Alpha: 0\n  Animation: 0\n  Format: Lossy (1)\nSummary:\nNumber of frames: 1\nChunk type  :  VP8 VP8L VP8X ALPH ANIM ANMF(VP8 /VP8L/ALPH) ICCP EXIF  XMP\nChunk counts:    1    0    0    0    0    0    0    0    0     0    0    0 \nNo error detected.\n",
+        "decodedAlpha": {
+          "min": 255,
+          "max": 255
+        },
+        "decodedRGBASha256": "dc247973a0734b34890fcd2284628c13012dd34e320c28bdbcb80fc7c452c945"
+      },
+      "export": {
+        "tool": "cwebp",
+        "quality": 78,
+        "method": 6,
+        "metadata": "none",
+        "resized": false,
+        "cropped": false,
+        "reproducedToMemorySha256": "ff93be5848e112aa7c6b74a5a649cd5fc7341cf08faca03d1b218a4e3e7aca96",
+        "encodedFromExactOriginalVerified": true
+      },
+      "visualReview": {
+        "id": "winter-forge-v1",
+        "reviewedOriginalSha256": "e4d3ace725b4e4efdb1f7a19734b55917db779d557b322ebf716bedf4f5a4d54",
+        "reviewedRuntimeSha256": "ff93be5848e112aa7c6b74a5a649cd5fc7341cf08faca03d1b218a4e3e7aca96",
+        "noBlankOrCorruptRegions": true,
+        "noObjectionableCompressionArtifacts": true
+      }
+    },
+    {
+      "id": "returning-blade-v1",
+      "sourceRecord": {
+        "path": "design/d/v07-chapter2/returning-blade-v1-source.json",
+        "bytes": 1493,
+        "sha256": "bb285a44a89c687cac29d19b21578ab4b346f7c13dffc8ca307f5275b6361a8b"
+      },
+      "source": {
+        "path": "/Users/gordon/.codex/generated_images/01a158b8-4780-7183-bd8b-29edf17fb4e9/exec-6381dd73-dd10-431c-838d-da2fe1c43193.png",
+        "bytes": 3275125,
+        "sha256": "bfb0f1edc043af77f2f14d85b25e9068ed4119ea0f51d6813bb5d1c1119bf670"
+      },
+      "original": {
+        "path": "design/d/v07-chapter2/originals/returning-blade-v1.png",
+        "bytes": 3275125,
+        "sha256": "bfb0f1edc043af77f2f14d85b25e9068ed4119ea0f51d6813bb5d1c1119bf670"
+      },
+      "prompt": {
+        "path": "design/d/v07-chapter2/prompts/returning-blade-v1.txt",
+        "bytes": 2363,
+        "sha256": "f62eeca5515c11a66c0b3c9edee055cc0bc5b114b47c7ba29103c4c4aa3aefc7"
+      },
+      "references": [
+        {
+          "path": "design/d/reference-main-v2.png",
+          "bytes": 2605402,
+          "sha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+        },
+        {
+          "path": "design/d/v05/originals/customers-atlas-v2.png",
+          "bytes": 1937506,
+          "sha256": "fe613eab5a26f33eabbbc74a2332c6c471a1acc5dd14fea09091574b42db5f50"
+        },
+        {
+          "path": "design/d/v07-chapter2/originals/winter-forge-v1.png",
+          "bytes": 2417964,
+          "sha256": "e4d3ace725b4e4efdb1f7a19734b55917db779d557b322ebf716bedf4f5a4d54"
+        }
+      ],
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bitDepth": 8,
+        "colorType": 2,
+        "interlace": 0,
+        "transparencyChunk": false,
+        "alpha": false
+      },
+      "exactSourceCopy": true,
+      "provenanceVerified": true,
+      "selection": "runtime",
+      "runtime": {
+        "path": "public/assets/d/v07-chapter2/returning-blade-v1.webp",
+        "bytes": 344334,
+        "sha256": "2ce00147936d876291eb708919f6bb8e6bf5fdc0ba64c08e21d50754ac4214da"
+      },
+      "webp": {
+        "width": 1672,
+        "height": 941,
+        "alpha": false,
+        "animation": false,
+        "log": "File: public/assets/d/v07-chapter2/returning-blade-v1.webp\nRIFF HEADER:\n  File size: 344334\nChunk VP8  at offset     12, length 344322\n  Width: 1672\n  Height: 941\n  Alpha: 0\n  Animation: 0\n  Format: Lossy (1)\nSummary:\nNumber of frames: 1\nChunk type  :  VP8 VP8L VP8X ALPH ANIM ANMF(VP8 /VP8L/ALPH) ICCP EXIF  XMP\nChunk counts:    1    0    0    0    0    0    0    0    0     0    0    0 \nNo error detected.\n",
+        "decodedAlpha": {
+          "min": 255,
+          "max": 255
+        },
+        "decodedRGBASha256": "470850d6b82481fe0cf576a54e024baa156865157183de16a04749476d27794d"
+      },
+      "export": {
+        "tool": "cwebp",
+        "quality": 78,
+        "method": 6,
+        "metadata": "none",
+        "resized": false,
+        "cropped": false,
+        "reproducedToMemorySha256": "2ce00147936d876291eb708919f6bb8e6bf5fdc0ba64c08e21d50754ac4214da",
+        "encodedFromExactOriginalVerified": true
+      },
+      "visualReview": {
+        "id": "returning-blade-v1",
+        "reviewedOriginalSha256": "bfb0f1edc043af77f2f14d85b25e9068ed4119ea0f51d6813bb5d1c1119bf670",
+        "reviewedRuntimeSha256": "2ce00147936d876291eb708919f6bb8e6bf5fdc0ba64c08e21d50754ac4214da",
+        "noBlankOrCorruptRegions": true,
+        "noObjectionableCompressionArtifacts": true
+      }
+    },
+    {
+      "id": "cracked-work-v1",
+      "sourceRecord": {
+        "path": "design/d/v07-chapter2/cracked-work-v1-source.json",
+        "bytes": 1484,
+        "sha256": "b1e8d690c6b31808cf4ef81b750ea61e7af9b4fe0f03562bf5a359770b45bef7"
+      },
+      "source": {
+        "path": "/Users/gordon/.codex/generated_images/01a158b8-4780-7183-bd8b-29edf17fb4e9/exec-9ba4ec9c-c957-43b0-ab0b-93629ca04212.png",
+        "bytes": 2679261,
+        "sha256": "f4fdebdfaadf48f4cdf84379895dfd6aa5b6a57fbc25ad492f165b450ddc03c3"
+      },
+      "original": {
+        "path": "design/d/v07-chapter2/originals/cracked-work-v1.png",
+        "bytes": 2679261,
+        "sha256": "f4fdebdfaadf48f4cdf84379895dfd6aa5b6a57fbc25ad492f165b450ddc03c3"
+      },
+      "prompt": {
+        "path": "design/d/v07-chapter2/prompts/cracked-work-v1.txt",
+        "bytes": 2131,
+        "sha256": "832e9f48122429a654451ee252865e81987d51503cb70e96a05dfe4c25b1e0c0"
+      },
+      "references": [
+        {
+          "path": "design/d/reference-main-v2.png",
+          "bytes": 2605402,
+          "sha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+        },
+        {
+          "path": "design/d/v05/originals/customers-atlas-v2.png",
+          "bytes": 1937506,
+          "sha256": "fe613eab5a26f33eabbbc74a2332c6c471a1acc5dd14fea09091574b42db5f50"
+        },
+        {
+          "path": "design/d/v07-chapter2/originals/winter-forge-v1.png",
+          "bytes": 2417964,
+          "sha256": "e4d3ace725b4e4efdb1f7a19734b55917db779d557b322ebf716bedf4f5a4d54"
+        }
+      ],
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bitDepth": 8,
+        "colorType": 2,
+        "interlace": 0,
+        "transparencyChunk": false,
+        "alpha": false
+      },
+      "exactSourceCopy": true,
+      "provenanceVerified": true,
+      "selection": "runtime",
+      "runtime": {
+        "path": "public/assets/d/v07-chapter2/cracked-work-v1.webp",
+        "bytes": 242632,
+        "sha256": "bcb5323a59eb8bd53e9c18e7afc1ef87bc5f3e5bb1a78b78c959b940fc270fa5"
+      },
+      "webp": {
+        "width": 1672,
+        "height": 941,
+        "alpha": false,
+        "animation": false,
+        "log": "File: public/assets/d/v07-chapter2/cracked-work-v1.webp\nRIFF HEADER:\n  File size: 242632\nChunk VP8  at offset     12, length 242620\n  Width: 1672\n  Height: 941\n  Alpha: 0\n  Animation: 0\n  Format: Lossy (1)\nSummary:\nNumber of frames: 1\nChunk type  :  VP8 VP8L VP8X ALPH ANIM ANMF(VP8 /VP8L/ALPH) ICCP EXIF  XMP\nChunk counts:    1    0    0    0    0    0    0    0    0     0    0    0 \nNo error detected.\n",
+        "decodedAlpha": {
+          "min": 255,
+          "max": 255
+        },
+        "decodedRGBASha256": "2cc4d4e97625b680a7928b47558455e55457b0be7f4c7c376501940f3bd722d3"
+      },
+      "export": {
+        "tool": "cwebp",
+        "quality": 78,
+        "method": 6,
+        "metadata": "none",
+        "resized": false,
+        "cropped": false,
+        "reproducedToMemorySha256": "bcb5323a59eb8bd53e9c18e7afc1ef87bc5f3e5bb1a78b78c959b940fc270fa5",
+        "encodedFromExactOriginalVerified": true
+      },
+      "visualReview": {
+        "id": "cracked-work-v1",
+        "reviewedOriginalSha256": "f4fdebdfaadf48f4cdf84379895dfd6aa5b6a57fbc25ad492f165b450ddc03c3",
+        "reviewedRuntimeSha256": "bcb5323a59eb8bd53e9c18e7afc1ef87bc5f3e5bb1a78b78c959b940fc270fa5",
+        "noBlankOrCorruptRegions": true,
+        "noObjectionableCompressionArtifacts": true
+      }
+    },
+    {
+      "id": "rescue-path-v1",
+      "sourceRecord": {
+        "path": "design/d/v07-chapter2/rescue-path-v1-source.json",
+        "bytes": 1481,
+        "sha256": "7fd5b99cc0ed1a6f4d8b928378626b416a6d808ee068c1689b5b5b561ebe86d3"
+      },
+      "source": {
+        "path": "/Users/gordon/.codex/generated_images/01a158b8-4780-7183-bd8b-29edf17fb4e9/exec-d80c39cb-86ae-4c27-9fbe-2eb536ff8f09.png",
+        "bytes": 3486865,
+        "sha256": "7df0d37fdf640ea987c35d56b9bd0d3da140b977b2cc7925f224ad5ca0bae396"
+      },
+      "original": {
+        "path": "design/d/v07-chapter2/originals/rescue-path-v1.png",
+        "bytes": 3486865,
+        "sha256": "7df0d37fdf640ea987c35d56b9bd0d3da140b977b2cc7925f224ad5ca0bae396"
+      },
+      "prompt": {
+        "path": "design/d/v07-chapter2/prompts/rescue-path-v1.txt",
+        "bytes": 2036,
+        "sha256": "bf1f79c11b23cdc9f414a1ec3a88192bdfc1facf86cbc2d5d1c2f63bae9f936b"
+      },
+      "references": [
+        {
+          "path": "design/d/reference-main-v2.png",
+          "bytes": 2605402,
+          "sha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+        },
+        {
+          "path": "design/d/v05/originals/customers-atlas-v2.png",
+          "bytes": 1937506,
+          "sha256": "fe613eab5a26f33eabbbc74a2332c6c471a1acc5dd14fea09091574b42db5f50"
+        },
+        {
+          "path": "design/d/v07-chapter2/originals/winter-forge-v1.png",
+          "bytes": 2417964,
+          "sha256": "e4d3ace725b4e4efdb1f7a19734b55917db779d557b322ebf716bedf4f5a4d54"
+        }
+      ],
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bitDepth": 8,
+        "colorType": 2,
+        "interlace": 0,
+        "transparencyChunk": false,
+        "alpha": false
+      },
+      "exactSourceCopy": true,
+      "provenanceVerified": true,
+      "selection": "runtime",
+      "runtime": {
+        "path": "public/assets/d/v07-chapter2/rescue-path-v1.webp",
+        "bytes": 362192,
+        "sha256": "28a1bd26b08d66fe6748a50263d28bd1404123bff6b87e3be91b98024b21531a"
+      },
+      "webp": {
+        "width": 1672,
+        "height": 941,
+        "alpha": false,
+        "animation": false,
+        "log": "File: public/assets/d/v07-chapter2/rescue-path-v1.webp\nRIFF HEADER:\n  File size: 362192\nChunk VP8  at offset     12, length 362180\n  Width: 1672\n  Height: 941\n  Alpha: 0\n  Animation: 0\n  Format: Lossy (1)\nSummary:\nNumber of frames: 1\nChunk type  :  VP8 VP8L VP8X ALPH ANIM ANMF(VP8 /VP8L/ALPH) ICCP EXIF  XMP\nChunk counts:    1    0    0    0    0    0    0    0    0     0    0    0 \nNo error detected.\n",
+        "decodedAlpha": {
+          "min": 255,
+          "max": 255
+        },
+        "decodedRGBASha256": "717d8a81112c68e5ad6f1ff4cad2e8476782f3cc8fc94f34434581e3bd82c59f"
+      },
+      "export": {
+        "tool": "cwebp",
+        "quality": 78,
+        "method": 6,
+        "metadata": "none",
+        "resized": false,
+        "cropped": false,
+        "reproducedToMemorySha256": "28a1bd26b08d66fe6748a50263d28bd1404123bff6b87e3be91b98024b21531a",
+        "encodedFromExactOriginalVerified": true
+      },
+      "visualReview": {
+        "id": "rescue-path-v1",
+        "reviewedOriginalSha256": "7df0d37fdf640ea987c35d56b9bd0d3da140b977b2cc7925f224ad5ca0bae396",
+        "reviewedRuntimeSha256": "28a1bd26b08d66fe6748a50263d28bd1404123bff6b87e3be91b98024b21531a",
+        "noBlankOrCorruptRegions": true,
+        "noObjectionableCompressionArtifacts": true
+      }
+    },
+    {
+      "id": "twin-stations-dark-v1",
+      "sourceRecord": {
+        "path": "design/d/v07-chapter2/twin-stations-dark-v1-source.json",
+        "bytes": 1166,
+        "sha256": "f7df5929cd1eccda22a89553bd637a563b5541369a89ea4a49371fce6e79c46d"
+      },
+      "source": {
+        "path": "/Users/gordon/.codex/generated_images/01a158b8-4780-7183-bd8b-29edf17fb4e9/exec-c13a248d-5962-43d2-a5f2-82cc491c744f.png",
+        "bytes": 3080526,
+        "sha256": "864bd897e897d4ca158bc9ff21d13389ebb082f5629b258d42a57f5c71a58c0d"
+      },
+      "original": {
+        "path": "design/d/v07-chapter2/originals/twin-stations-dark-v1.png",
+        "bytes": 3080526,
+        "sha256": "864bd897e897d4ca158bc9ff21d13389ebb082f5629b258d42a57f5c71a58c0d"
+      },
+      "prompt": {
+        "path": "design/d/v07-chapter2/prompts/twin-stations-dark-v1.txt",
+        "bytes": 1759,
+        "sha256": "cebeebdfce7024258a56bfe74c66d7a1ecc6bc966a44fe90ac021865d97d3e91"
+      },
+      "references": [
+        {
+          "path": "design/d/v07-chapter2/originals/twin-stations-dark-v1-attempt1.png",
+          "bytes": 3124868,
+          "sha256": "d4f8bfa3cc1953620538c58064b1fc9ab31200e486a458e55d5e57d736635115"
+        }
+      ],
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bitDepth": 8,
+        "colorType": 2,
+        "interlace": 0,
+        "transparencyChunk": false,
+        "alpha": false
+      },
+      "exactSourceCopy": true,
+      "provenanceVerified": true,
+      "selection": "runtime",
+      "runtime": {
+        "path": "public/assets/d/v07-chapter2/twin-stations-dark-v1.webp",
+        "bytes": 299396,
+        "sha256": "ec92cb07af0c13553b092c12089637c32ba4e2057c80f2f7d963ec5141273f01"
+      },
+      "webp": {
+        "width": 1672,
+        "height": 941,
+        "alpha": false,
+        "animation": false,
+        "log": "File: public/assets/d/v07-chapter2/twin-stations-dark-v1.webp\nRIFF HEADER:\n  File size: 299396\nChunk VP8  at offset     12, length 299384\n  Width: 1672\n  Height: 941\n  Alpha: 0\n  Animation: 0\n  Format: Lossy (1)\nSummary:\nNumber of frames: 1\nChunk type  :  VP8 VP8L VP8X ALPH ANIM ANMF(VP8 /VP8L/ALPH) ICCP EXIF  XMP\nChunk counts:    1    0    0    0    0    0    0    0    0     0    0    0 \nNo error detected.\n",
+        "decodedAlpha": {
+          "min": 255,
+          "max": 255
+        },
+        "decodedRGBASha256": "c0508eef0516350f72b2aedebd73a70731cdb8a67572c831bafd032a095bce88"
+      },
+      "export": {
+        "tool": "cwebp",
+        "quality": 78,
+        "method": 6,
+        "metadata": "none",
+        "resized": false,
+        "cropped": false,
+        "reproducedToMemorySha256": "ec92cb07af0c13553b092c12089637c32ba4e2057c80f2f7d963ec5141273f01",
+        "encodedFromExactOriginalVerified": true
+      },
+      "visualReview": {
+        "id": "twin-stations-dark-v1",
+        "reviewedOriginalSha256": "864bd897e897d4ca158bc9ff21d13389ebb082f5629b258d42a57f5c71a58c0d",
+        "reviewedRuntimeSha256": "ec92cb07af0c13553b092c12089637c32ba4e2057c80f2f7d963ec5141273f01",
+        "noBlankOrCorruptRegions": true,
+        "noObjectionableCompressionArtifacts": true
+      }
+    },
+    {
+      "id": "twin-stations-one-v1",
+      "sourceRecord": {
+        "path": "design/d/v07-chapter2/twin-stations-one-v1-source.json",
+        "bytes": 1154,
+        "sha256": "8363c41ebd8d3583dd43ed283203e4aa3de07562e5cbe3f2b84cca3d530a9a5d"
+      },
+      "source": {
+        "path": "/Users/gordon/.codex/generated_images/01a15944-6214-7bb3-9a5b-a18a6e3bfc7f/exec-e759f496-c69e-4776-9856-69b0fee6346d.png",
+        "bytes": 3018667,
+        "sha256": "57f39234fcced37208553de49d26b64e19c34bcc049a0663fb903ce3c405200f"
+      },
+      "original": {
+        "path": "design/d/v07-chapter2/originals/twin-stations-one-v1.png",
+        "bytes": 3018667,
+        "sha256": "57f39234fcced37208553de49d26b64e19c34bcc049a0663fb903ce3c405200f"
+      },
+      "prompt": {
+        "path": "design/d/v07-chapter2/prompts/twin-stations-one-v1.txt",
+        "bytes": 1594,
+        "sha256": "13a64b4cf4a56d74aa2a4481e3fc266518a291b70630c81face48a21947d82c6"
+      },
+      "references": [
+        {
+          "path": "design/d/v07-chapter2/originals/twin-stations-dark-v1.png",
+          "bytes": 3080526,
+          "sha256": "864bd897e897d4ca158bc9ff21d13389ebb082f5629b258d42a57f5c71a58c0d"
+        }
+      ],
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bitDepth": 8,
+        "colorType": 2,
+        "interlace": 0,
+        "transparencyChunk": false,
+        "alpha": false
+      },
+      "exactSourceCopy": true,
+      "provenanceVerified": true,
+      "selection": "runtime",
+      "runtime": {
+        "path": "public/assets/d/v07-chapter2/twin-stations-one-v1.webp",
+        "bytes": 294906,
+        "sha256": "50968b0df21187032042671427ca8f3721d45a5254db40c504682b24f7c6d44c"
+      },
+      "webp": {
+        "width": 1672,
+        "height": 941,
+        "alpha": false,
+        "animation": false,
+        "log": "File: public/assets/d/v07-chapter2/twin-stations-one-v1.webp\nRIFF HEADER:\n  File size: 294906\nChunk VP8  at offset     12, length 294894\n  Width: 1672\n  Height: 941\n  Alpha: 0\n  Animation: 0\n  Format: Lossy (1)\nSummary:\nNumber of frames: 1\nChunk type  :  VP8 VP8L VP8X ALPH ANIM ANMF(VP8 /VP8L/ALPH) ICCP EXIF  XMP\nChunk counts:    1    0    0    0    0    0    0    0    0     0    0    0 \nNo error detected.\n",
+        "decodedAlpha": {
+          "min": 255,
+          "max": 255
+        },
+        "decodedRGBASha256": "c36616950768b6607b05e8ac37260e2c20032754c542e8f3fceef86d99486b3f"
+      },
+      "export": {
+        "tool": "cwebp",
+        "quality": 78,
+        "method": 6,
+        "metadata": "none",
+        "resized": false,
+        "cropped": false,
+        "reproducedToMemorySha256": "50968b0df21187032042671427ca8f3721d45a5254db40c504682b24f7c6d44c",
+        "encodedFromExactOriginalVerified": true
+      },
+      "visualReview": {
+        "id": "twin-stations-one-v1",
+        "reviewedOriginalSha256": "57f39234fcced37208553de49d26b64e19c34bcc049a0663fb903ce3c405200f",
+        "reviewedRuntimeSha256": "50968b0df21187032042671427ca8f3721d45a5254db40c504682b24f7c6d44c",
+        "noBlankOrCorruptRegions": true,
+        "noObjectionableCompressionArtifacts": true
+      }
+    },
+    {
+      "id": "twin-stations-lit-v1",
+      "sourceRecord": {
+        "path": "design/d/v07-chapter2/twin-stations-lit-v1-source.json",
+        "bytes": 1154,
+        "sha256": "9d68bb1df4808cec5335b62a6e015ee31071ed29075520dcc9d5c02f26d72cc6"
+      },
+      "source": {
+        "path": "/Users/gordon/.codex/generated_images/01a15944-6214-7bb3-9a5b-a18a6e3bfc7f/exec-dd792d85-f8b7-4b8e-ba98-e471fdd6f8f1.png",
+        "bytes": 3037007,
+        "sha256": "1de7621fced2122a622a5227e94e2c33cb40def5691a20a183b99f69b303fba3"
+      },
+      "original": {
+        "path": "design/d/v07-chapter2/originals/twin-stations-lit-v1.png",
+        "bytes": 3037007,
+        "sha256": "1de7621fced2122a622a5227e94e2c33cb40def5691a20a183b99f69b303fba3"
+      },
+      "prompt": {
+        "path": "design/d/v07-chapter2/prompts/twin-stations-lit-v1.txt",
+        "bytes": 1690,
+        "sha256": "e28a2c07cdc89270b3dbf6a410fee525eef49e91ccc972b084ac69cd60c0df9e"
+      },
+      "references": [
+        {
+          "path": "design/d/v07-chapter2/originals/twin-stations-dark-v1.png",
+          "bytes": 3080526,
+          "sha256": "864bd897e897d4ca158bc9ff21d13389ebb082f5629b258d42a57f5c71a58c0d"
+        }
+      ],
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bitDepth": 8,
+        "colorType": 2,
+        "interlace": 0,
+        "transparencyChunk": false,
+        "alpha": false
+      },
+      "exactSourceCopy": true,
+      "provenanceVerified": true,
+      "selection": "runtime",
+      "runtime": {
+        "path": "public/assets/d/v07-chapter2/twin-stations-lit-v1.webp",
+        "bytes": 302458,
+        "sha256": "f168ab748d4146842603499af700379a459e60bb342171e99f1646f663ff1b33"
+      },
+      "webp": {
+        "width": 1672,
+        "height": 941,
+        "alpha": false,
+        "animation": false,
+        "log": "File: public/assets/d/v07-chapter2/twin-stations-lit-v1.webp\nRIFF HEADER:\n  File size: 302458\nChunk VP8  at offset     12, length 302446\n  Width: 1672\n  Height: 941\n  Alpha: 0\n  Animation: 0\n  Format: Lossy (1)\nSummary:\nNumber of frames: 1\nChunk type  :  VP8 VP8L VP8X ALPH ANIM ANMF(VP8 /VP8L/ALPH) ICCP EXIF  XMP\nChunk counts:    1    0    0    0    0    0    0    0    0     0    0    0 \nNo error detected.\n",
+        "decodedAlpha": {
+          "min": 255,
+          "max": 255
+        },
+        "decodedRGBASha256": "442b13bef5869820427995adce0f80b724596f1df5111e4a732a4d55ec9253b5"
+      },
+      "export": {
+        "tool": "cwebp",
+        "quality": 78,
+        "method": 6,
+        "metadata": "none",
+        "resized": false,
+        "cropped": false,
+        "reproducedToMemorySha256": "f168ab748d4146842603499af700379a459e60bb342171e99f1646f663ff1b33",
+        "encodedFromExactOriginalVerified": true
+      },
+      "visualReview": {
+        "id": "twin-stations-lit-v1",
+        "reviewedOriginalSha256": "1de7621fced2122a622a5227e94e2c33cb40def5691a20a183b99f69b303fba3",
+        "reviewedRuntimeSha256": "f168ab748d4146842603499af700379a459e60bb342171e99f1646f663ff1b33",
+        "noBlankOrCorruptRegions": true,
+        "noObjectionableCompressionArtifacts": true
+      }
+    },
+    {
+      "id": "twin-stations-dark-v1-attempt1",
+      "sourceRecord": {
+        "path": "design/d/v07-chapter2/twin-stations-dark-v1-attempt1-source.json",
+        "bytes": 1337,
+        "sha256": "f2d79a4593cc11c326e77b74bfcf9e46ddaad8486481aed1f99d5dc7e98d5fca"
+      },
+      "source": {
+        "path": "/Users/gordon/.codex/generated_images/01a158b8-4780-7183-bd8b-29edf17fb4e9/exec-2a069e98-1fa7-4d90-aea7-982d972dc3e2.png",
+        "bytes": 3124868,
+        "sha256": "d4f8bfa3cc1953620538c58064b1fc9ab31200e486a458e55d5e57d736635115"
+      },
+      "original": {
+        "path": "design/d/v07-chapter2/originals/twin-stations-dark-v1-attempt1.png",
+        "bytes": 3124868,
+        "sha256": "d4f8bfa3cc1953620538c58064b1fc9ab31200e486a458e55d5e57d736635115"
+      },
+      "prompt": {
+        "path": "design/d/v07-chapter2/prompts/twin-stations-dark-v1-attempt1.txt",
+        "bytes": 2287,
+        "sha256": "121b0d9fa41db9a04cf3d6c78d4d93c299b236cd645922c661f7c212801568a2"
+      },
+      "references": [
+        {
+          "path": "design/d/reference-main-v2.png",
+          "bytes": 2605402,
+          "sha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+        },
+        {
+          "path": "design/d/v07/originals/lantern-road-v1.png",
+          "bytes": 2740479,
+          "sha256": "40a8cdbdc9288a1437c656257ee06054222647490d61d66c903486abf1ce77bc"
+        }
+      ],
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bitDepth": 8,
+        "colorType": 2,
+        "interlace": 0,
+        "transparencyChunk": false,
+        "alpha": false
+      },
+      "exactSourceCopy": true,
+      "provenanceVerified": true,
+      "selection": "preserved rejected framing attempt; not exported"
+    }
+  ],
+  "twinMasterComparison": {
+    "method": "read-only RGB8 PNG scanline decoding; numerical comparison supports visual review but does not prove identical geometry",
+    "one": {
+      "sky": {
+        "rectangleNormalized": [
+          0,
+          0,
+          1,
+          0.3
+        ],
+        "channelSamples": 1414512,
+        "meanAbsoluteChannelDifference": 4.600735094506091,
+        "rootMeanSquaredChannelDifference": 7.79361015315063,
+        "maximumChannelDifference": 197
+      },
+      "rightStation": {
+        "rectangleNormalized": [
+          0.58,
+          0.32,
+          0.85,
+          0.62
+        ],
+        "channelSamples": 381546,
+        "meanAbsoluteChannelDifference": 10.126341253741357,
+        "rootMeanSquaredChannelDifference": 15.857482397049083,
+        "maximumChannelDifference": 215
+      },
+      "centralMountain": {
+        "rectangleNormalized": [
+          0.43,
+          0.3,
+          0.57,
+          0.59
+        ],
+        "channelSamples": 191646,
+        "meanAbsoluteChannelDifference": 4.39866733456477,
+        "rootMeanSquaredChannelDifference": 6.959704656941118,
+        "maximumChannelDifference": 119
+      }
+    },
+    "lit": {
+      "sky": {
+        "rectangleNormalized": [
+          0,
+          0,
+          1,
+          0.3
+        ],
+        "channelSamples": 1414512,
+        "meanAbsoluteChannelDifference": 4.74814989197688,
+        "rootMeanSquaredChannelDifference": 8.25367750214609,
+        "maximumChannelDifference": 215
+      },
+      "centralMountain": {
+        "rectangleNormalized": [
+          0.43,
+          0.3,
+          0.57,
+          0.59
+        ],
+        "channelSamples": 191646,
+        "meanAbsoluteChannelDifference": 4.584045584045584,
+        "rootMeanSquaredChannelDifference": 7.337481145228128,
+        "maximumChannelDifference": 139
+      }
+    },
+    "visualReview": {
+      "complete": true,
+      "commonCamera": true,
+      "sameYRoad": true,
+      "sameSkyMountainsPineBuildingsRocks": true,
+      "darkStations": 0,
+      "oneStations": 1,
+      "litStations": 2,
+      "oneRestoredSide": "left",
+      "extraPeopleSwordsHammersTextUI": false,
+      "approximateCombinedStationBoundsNormalized": [
+        0.16,
+        0.32,
+        0.84,
+        0.62
+      ],
+      "displayRequirement": "show complete approximately 16:9 source with contain; do not use cover cropping"
+    }
+  }
+}

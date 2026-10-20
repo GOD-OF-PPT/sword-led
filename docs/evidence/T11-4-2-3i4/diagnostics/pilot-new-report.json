@@ -1,0 +1,1010 @@
+{
+  "config": {
+    "argv": [
+      "/Users/gordon/.nvm/versions/node/v22.12.0/bin/node",
+      "/Users/gordon/githome/sword-led/node_modules/.bin/playwright",
+      "test",
+      "--config=playwright.v4-ui.config.ts",
+      "--project=v4-chromium",
+      "tests/e2e/v4-second-chapter.spec.ts",
+      "tests/e2e/v4-second-events.spec.ts",
+      "tests/e2e/v4-second-saves.spec.ts"
+    ],
+    "configFile": "/Users/gordon/githome/sword-led/playwright.v4-ui.config.ts",
+    "rootDir": "/Users/gordon/githome/sword-led/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v4-ui",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v4-chromium",
+        "name": "v4-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v4-*.spec.ts"
+        ],
+        "timeout": 180000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v4-ui",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v4-firefox",
+        "name": "v4-firefox",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v4-*.spec.ts"
+        ],
+        "timeout": 180000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v4-ui",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v4-webkit",
+        "name": "v4-webkit",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v4-*.spec.ts"
+        ],
+        "timeout": 180000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v4-ui",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v4-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v4-*.spec.ts",
+        "timeout": 180000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4197",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "launchOptions": {
+            "args": [
+              "--no-proxy-server"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v4-chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "tmp/T11-4-2-3i4/pilot-new/report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "v4-second-chapter.spec.ts",
+      "file": "v4-second-chapter.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "real eight-day journey preserves old/cracked swords, heavy contact, partial refresh, two works and earned freedom",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 66534,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T12:39:35.016Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fb301be85be72ca20411-32b4e1c561d939f0a129",
+          "file": "v4-second-chapter.spec.ts",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "second-chapter warm-rack old-sword plan is a genuine complete UI journey",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 56777,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T12:40:42.161Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fb301be85be72ca20411-b147ae545ef043904615",
+          "file": "v4-second-chapter.spec.ts",
+          "line": 42,
+          "column": 42
+        },
+        {
+          "title": "second-chapter no-old-sword new-630 plan is a genuine complete UI journey",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 51303,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T12:41:38.965Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fb301be85be72ca20411-836ea7c150e6bc9ac225",
+          "file": "v4-second-chapter.spec.ts",
+          "line": 42,
+          "column": 42
+        }
+      ]
+    },
+    {
+      "title": "v4-second-events.spec.ts",
+      "file": "v4-second-events.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "real donation accept reaches its next day once and survives refresh without repeating the consequence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4362,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T12:42:30.331Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4d261b52855248d9f7f8-d42f9baa9c34a86e7e71",
+          "file": "v4-second-events.spec.ts",
+          "line": 25,
+          "column": 70
+        },
+        {
+          "title": "real donation decline reaches its next day once and survives refresh without repeating the consequence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4303,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T12:42:34.706Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4d261b52855248d9f7f8-3a35fb4e8f2799413838",
+          "file": "v4-second-events.spec.ts",
+          "line": 25,
+          "column": 70
+        },
+        {
+          "title": "real loan accept reaches its next day once and survives refresh without repeating the consequence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6547,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T12:42:39.031Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4d261b52855248d9f7f8-a784cb622f5af9f92da6",
+          "file": "v4-second-events.spec.ts",
+          "line": 25,
+          "column": 70
+        },
+        {
+          "title": "real loan decline reaches its next day once and survives refresh without repeating the consequence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4350,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T12:42:45.590Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4d261b52855248d9f7f8-0a449ae6378f1f614120",
+          "file": "v4-second-events.spec.ts",
+          "line": 25,
+          "column": 70
+        },
+        {
+          "title": "real salvage accept reaches its next day once and survives refresh without repeating the consequence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4585,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T12:42:49.960Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4d261b52855248d9f7f8-3ea85500e83a3de642a5",
+          "file": "v4-second-events.spec.ts",
+          "line": 25,
+          "column": 70
+        },
+        {
+          "title": "real salvage decline reaches its next day once and survives refresh without repeating the consequence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4700,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T12:42:54.560Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4d261b52855248d9f7f8-ab02870ea6457142cbd2",
+          "file": "v4-second-events.spec.ts",
+          "line": 25,
+          "column": 70
+        },
+        {
+          "title": "real credit accept reaches its next day once and survives refresh without repeating the consequence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12511,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T12:42:59.275Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4d261b52855248d9f7f8-5ca9c57ba23676213abb",
+          "file": "v4-second-events.spec.ts",
+          "line": 25,
+          "column": 70
+        },
+        {
+          "title": "real credit decline reaches its next day once and survives refresh without repeating the consequence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5423,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T12:43:11.806Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4d261b52855248d9f7f8-0a60872cb0fc554d261a",
+          "file": "v4-second-events.spec.ts",
+          "line": 25,
+          "column": 70
+        },
+        {
+          "title": "real shelter accept reaches its next day once and survives refresh without repeating the consequence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9548,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T12:43:17.257Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4d261b52855248d9f7f8-c8dbc5db64a9ebaff5b4",
+          "file": "v4-second-events.spec.ts",
+          "line": 25,
+          "column": 70
+        },
+        {
+          "title": "real shelter decline reaches its next day once and survives refresh without repeating the consequence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5180,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T12:43:26.846Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4d261b52855248d9f7f8-32c31d7567ccd9a79462",
+          "file": "v4-second-events.spec.ts",
+          "line": 25,
+          "column": 70
+        },
+        {
+          "title": "real rest accept reaches its next day once and survives refresh without repeating the consequence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4583,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T12:43:32.049Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4d261b52855248d9f7f8-4fba7ed2d506f3d2213e",
+          "file": "v4-second-events.spec.ts",
+          "line": 25,
+          "column": 70
+        },
+        {
+          "title": "real rest decline reaches its next day once and survives refresh without repeating the consequence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4389,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T12:43:36.645Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4d261b52855248d9f7f8-689feda40129339ce0cd",
+          "file": "v4-second-events.spec.ts",
+          "line": 25,
+          "column": 70
+        },
+        {
+          "title": "a genuinely delayed first gift can cancel and replace a full slot without paying a sword or renewing a used pardon",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 36581,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T12:43:41.054Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4d261b52855248d9f7f8-03be710a87504fa6d239",
+          "file": "v4-second-events.spec.ts",
+          "line": 74,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v4-second-saves.spec.ts",
+      "file": "v4-second-saves.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "a saved first-chapter summary advances explicitly; a saved day-nine journal stays preserved",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2580,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T12:44:17.689Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c87162423aefbf808b6c-1496a0d3747ec25d1e9d",
+          "file": "v4-second-saves.spec.ts",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "second-chapter combined write faults preserve both commissioned works and protect unsaved chapter growth",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2809,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T12:44:20.279Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c87162423aefbf808b6c-8655c5fbf527bf5c9c01",
+          "file": "v4-second-saves.spec.ts",
+          "line": 26,
+          "column": 1
+        },
+        {
+          "title": "second-chapter 0-of-two surviving settlement retains regret and offers only unowned facilities",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 282,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-second-saves.spec.ts:36:105",
+                    "location": {
+                      "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-second-saves.spec.ts",
+                      "column": 105,
+                      "line": 36
+                    },
+                    "snippet": "  34 |\n  35 | for(const count of [0,1]as const)test(`second-chapter ${count}-of-two surviving settlement retains regret and offers only unowned facilities`,async({page})=>{\n> 36 |  const before=prefix(count===0?113:117);expect(getRunView(before).commission.progress.routes[0]?.count).toBe(count);await checkpoint(page,before);await commandV4(page,{type:'settle'});await expect(page.locator('#v4-stage-title')).toHaveText(count?'一站有灯，一站仍在风雪里':'双驿仍在等剑');await expect(page.locator('#v4-stage-image')).toHaveAttribute('src',`/assets/d/v07-chapter2/twin-stations-${count?'one':'dark'}-v1.webp`);await expect(page.locator('#v4-stage-copy .v4-delivery-works canvas[data-blade]')).toHaveCount(count);await expect(page.getByRole('button',{name:'装上风箱',exact:true})).toHaveCount(0);\n     |                                                                                                         ^\n  37 |  const choices=getRunView(await readV4(page)).chapterChoices;expect(choices).toHaveLength(2);const choice=choices.find(c=>c.id===(count?'warmRack':'wideMouth'))!;await page.getByRole('button',{name:'装上'+MODIFICATIONS[choice.id].name,exact:true}).click();const final=await saveV4(page,`second-partial-${count}-settled`);expect(final.history.at(-1)?.met).toBe(false);expect(final.seals).toBe(2);expect(final.modifications).toEqual(['windbox',choice.id]);await page.reload();await page.locator('#v4-continue').click();await expect(page.locator('#v4-stage-copy')).toContainText(`实际交付 ${count}/2`);expect(await readV4(page)).toEqual(final);await shotV4(page,`second-partial-${count}-receipt`);\n  38 | });\n  39 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-second-saves.spec.ts",
+                        "column": 105,
+                        "line": 36
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  34 |\n  35 | for(const count of [0,1]as const)test(`second-chapter ${count}-of-two surviving settlement retains regret and offers only unowned facilities`,async({page})=>{\n> 36 |  const before=prefix(count===0?113:117);expect(getRunView(before).commission.progress.routes[0]?.count).toBe(count);await checkpoint(page,before);await commandV4(page,{type:'settle'});await expect(page.locator('#v4-stage-title')).toHaveText(count?'一站有灯，一站仍在风雪里':'双驿仍在等剑');await expect(page.locator('#v4-stage-image')).toHaveAttribute('src',`/assets/d/v07-chapter2/twin-stations-${count?'one':'dark'}-v1.webp`);await expect(page.locator('#v4-stage-copy .v4-delivery-works canvas[data-blade]')).toHaveCount(count);await expect(page.getByRole('button',{name:'装上风箱',exact:true})).toHaveCount(0);\n     |                                                                                                         ^\n  37 |  const choices=getRunView(await readV4(page)).chapterChoices;expect(choices).toHaveLength(2);const choice=choices.find(c=>c.id===(count?'warmRack':'wideMouth'))!;await page.getByRole('button',{name:'装上'+MODIFICATIONS[choice.id].name,exact:true}).click();const final=await saveV4(page,`second-partial-${count}-settled`);expect(final.history.at(-1)?.met).toBe(false);expect(final.seals).toBe(2);expect(final.modifications).toEqual(['windbox',choice.id]);await page.reload();await page.locator('#v4-continue').click();await expect(page.locator('#v4-stage-copy')).toContainText(`实际交付 ${count}/2`);expect(await readV4(page)).toEqual(final);await shotV4(page,`second-partial-${count}-receipt`);\n  38 | });\n  39 |\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-second-saves.spec.ts:36:105"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T12:44:23.100Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v4-ui/v4-second-saves-second-cha-d7d70-ers-only-unowned-facilities-v4-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v4-ui/v4-second-saves-second-cha-d7d70-ers-only-unowned-facilities-v4-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v4-ui/v4-second-saves-second-cha-d7d70-ers-only-unowned-facilities-v4-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-second-saves.spec.ts",
+                    "column": 105,
+                    "line": 36
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c87162423aefbf808b6c-6dec162814c51a24b1e0",
+          "file": "v4-second-saves.spec.ts",
+          "line": 35,
+          "column": 34
+        },
+        {
+          "title": "second-chapter 1-of-two surviving settlement retains regret and offers only unowned facilities",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2700,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m2\u001b[39m\nReceived: \u001b[31m3\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m2\u001b[39m\nReceived: \u001b[31m3\u001b[39m\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-second-saves.spec.ts:37:386",
+                    "location": {
+                      "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-second-saves.spec.ts",
+                      "column": 386,
+                      "line": 37
+                    },
+                    "snippet": "  35 | for(const count of [0,1]as const)test(`second-chapter ${count}-of-two surviving settlement retains regret and offers only unowned facilities`,async({page})=>{\n  36 |  const before=prefix(count===0?113:117);expect(getRunView(before).commission.progress.routes[0]?.count).toBe(count);await checkpoint(page,before);await commandV4(page,{type:'settle'});await expect(page.locator('#v4-stage-title')).toHaveText(count?'一站有灯，一站仍在风雪里':'双驿仍在等剑');await expect(page.locator('#v4-stage-image')).toHaveAttribute('src',`/assets/d/v07-chapter2/twin-stations-${count?'one':'dark'}-v1.webp`);await expect(page.locator('#v4-stage-copy .v4-delivery-works canvas[data-blade]')).toHaveCount(count);await expect(page.getByRole('button',{name:'装上风箱',exact:true})).toHaveCount(0);\n> 37 |  const choices=getRunView(await readV4(page)).chapterChoices;expect(choices).toHaveLength(2);const choice=choices.find(c=>c.id===(count?'warmRack':'wideMouth'))!;await page.getByRole('button',{name:'装上'+MODIFICATIONS[choice.id].name,exact:true}).click();const final=await saveV4(page,`second-partial-${count}-settled`);expect(final.history.at(-1)?.met).toBe(false);expect(final.seals).toBe(2);expect(final.modifications).toEqual(['windbox',choice.id]);await page.reload();await page.locator('#v4-continue').click();await expect(page.locator('#v4-stage-copy')).toContainText(`实际交付 ${count}/2`);expect(await readV4(page)).toEqual(final);await shotV4(page,`second-partial-${count}-receipt`);\n     |                                                                                                                                                                                                                                                                                                                                                                                                  ^\n  38 | });\n  39 |\n  40 | test('a real second-chapter failure retains earned first-chapter growth and provides restart and export',async({page})=>{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-second-saves.spec.ts",
+                        "column": 386,
+                        "line": 37
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m2\u001b[39m\nReceived: \u001b[31m3\u001b[39m\n\n  35 | for(const count of [0,1]as const)test(`second-chapter ${count}-of-two surviving settlement retains regret and offers only unowned facilities`,async({page})=>{\n  36 |  const before=prefix(count===0?113:117);expect(getRunView(before).commission.progress.routes[0]?.count).toBe(count);await checkpoint(page,before);await commandV4(page,{type:'settle'});await expect(page.locator('#v4-stage-title')).toHaveText(count?'一站有灯，一站仍在风雪里':'双驿仍在等剑');await expect(page.locator('#v4-stage-image')).toHaveAttribute('src',`/assets/d/v07-chapter2/twin-stations-${count?'one':'dark'}-v1.webp`);await expect(page.locator('#v4-stage-copy .v4-delivery-works canvas[data-blade]')).toHaveCount(count);await expect(page.getByRole('button',{name:'装上风箱',exact:true})).toHaveCount(0);\n> 37 |  const choices=getRunView(await readV4(page)).chapterChoices;expect(choices).toHaveLength(2);const choice=choices.find(c=>c.id===(count?'warmRack':'wideMouth'))!;await page.getByRole('button',{name:'装上'+MODIFICATIONS[choice.id].name,exact:true}).click();const final=await saveV4(page,`second-partial-${count}-settled`);expect(final.history.at(-1)?.met).toBe(false);expect(final.seals).toBe(2);expect(final.modifications).toEqual(['windbox',choice.id]);await page.reload();await page.locator('#v4-continue').click();await expect(page.locator('#v4-stage-copy')).toContainText(`实际交付 ${count}/2`);expect(await readV4(page)).toEqual(final);await shotV4(page,`second-partial-${count}-receipt`);\n     |                                                                                                                                                                                                                                                                                                                                                                                                  ^\n  38 | });\n  39 |\n  40 | test('a real second-chapter failure retains earned first-chapter growth and provides restart and export',async({page})=>{\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-second-saves.spec.ts:37:386"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T12:44:29.128Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v4-ui/v4-second-saves-second-cha-43d87-ers-only-unowned-facilities-v4-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v4-ui/v4-second-saves-second-cha-43d87-ers-only-unowned-facilities-v4-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v4-ui/v4-second-saves-second-cha-43d87-ers-only-unowned-facilities-v4-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-second-saves.spec.ts",
+                    "column": 386,
+                    "line": 37
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c87162423aefbf808b6c-9b67648a6aa3bb831501",
+          "file": "v4-second-saves.spec.ts",
+          "line": 35,
+          "column": 34
+        },
+        {
+          "title": "a real second-chapter failure retains earned first-chapter growth and provides restart and export",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3911,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T12:44:33.642Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c87162423aefbf808b6c-1cf682c0a4422054b20d",
+          "file": "v4-second-saves.spec.ts",
+          "line": 40,
+          "column": 1
+        },
+        {
+          "title": "a rejected writer lease explains the blocked title and allows explicit retry or memory play",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1963,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T12:44:37.895Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c87162423aefbf808b6c-69ffde2c5c479f55cdfc",
+          "file": "v4-second-saves.spec.ts",
+          "line": 44,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-20T12:39:33.592Z",
+    "duration": 306375.27999999997,
+    "expected": 20,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

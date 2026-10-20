@@ -1,4 +1,4 @@
-import {COMMISSIONS} from '../core-v4/index.js';
+import {COMMISSIONS,getRunView} from '../core-v4/index.js';
 import type {RunState,DomainEvent} from '../core-v4/index.js';
 
 export type FirstChapterScreen='opening'|'workshop'|'receipt'|'chapter'|'complete'|'defeat'|'future';
@@ -16,10 +16,12 @@ export function firstChapterFacts(s:RunState){
   bridgeResolved:!!bridge,chaptersEarned:s.history.some(h=>h.day===4&&h.sealsAfter>0),
   lamps:Array.from({length:4},(_,i)=>({day:i+1,title:COMMISSIONS[i]!.title,done:records.some(h=>h.day===i+1&&h.met)}))};
 }
-export interface ForgeNotice {title:string;copy:string;action:'gift'|'deliver'|'next'|'settle'|'resume'|'book'|'shop'|'none';label:string}
+export interface ForgeNotice {title:string;copy:string;action:'gift'|'deliver'|'next'|'settle'|'resume'|'book'|'shop'|'journey'|'none';label:string}
 export function noticeFromEvents(events:readonly DomainEvent[],s:RunState):ForgeNotice|null {
  const met=events.find(e=>e.type==='MainCompleted');
  if(met?.type==='MainCompleted')return{title:'这一站，有剑了',copy:COMMISSIONS[met.commissionId-1]!.success,action:s.gift==='available'?'gift':'settle',label:s.gift==='available'?'领一门手艺':'安排余剑与收工'};
+ const delivered=events.find(e=>e.type==='Delivered');
+ if(delivered?.type==='Delivered'&&delivered.matched){const progress=getRunView(s).commission.progress;return{title:'第一驿，接到剑了',copy:`${progress.routes.map(r=>`${r.count}/${r.required}`).join(' 或 ')} · 还要一柄各自合格的剑，第二站才会亮灯。已经交出的剑不会重复计数。`,action:'journey',label:'看看驿路的灯'};}
  const strike=events.find(e=>e.type==='Strike');
  if(strike?.type==='Strike'){
   const last=strike.hits.at(-1),b=s.blades.find(b=>b.id===strike.pieceId);

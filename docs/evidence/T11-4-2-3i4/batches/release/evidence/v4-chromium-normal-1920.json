@@ -1,0 +1,227 @@
+{
+  "probe": {
+    "frames": [
+      {
+        "gap": 55.70898074106549,
+        "angle": 8.358088779180163,
+        "pivotGap": 0.17232812218156304,
+        "metalGap": 55.14334091331318,
+        "time": 0,
+        "sampleCostMs": 0.29999998211860657,
+        "phase": "swing"
+      },
+      {
+        "gap": 55.70898074106549,
+        "angle": 8.358088779180163,
+        "pivotGap": 0.17232812218156304,
+        "metalGap": 55.14334091331318,
+        "time": 10.400000005960464,
+        "sampleCostMs": 0.19999998807907104,
+        "phase": "swing"
+      },
+      {
+        "gap": 31.562250953639808,
+        "angle": 4.863900703537898,
+        "pivotGap": 0.1723280711586566,
+        "metalGap": 31.08012875349914,
+        "time": 46.599999994039536,
+        "sampleCostMs": 0.29999998211860657,
+        "phase": "swing"
+      },
+      {
+        "gap": 55.70898074106549,
+        "angle": 8.358088779180163,
+        "pivotGap": 0.17232812218156304,
+        "metalGap": 55.14334091331318,
+        "time": 79.30000001192093,
+        "sampleCostMs": 0.30000001192092896,
+        "phase": "swing"
+      },
+      {
+        "gap": 0.411441812806728,
+        "angle": 0.3580939593236531,
+        "pivotGap": 0.17232813633376315,
+        "metalGap": 4.0434832450671365,
+        "time": 120.30000001192093,
+        "sampleCostMs": 0.30000001192092896,
+        "phase": "contact"
+      },
+      {
+        "gap": 0.411441812806728,
+        "angle": 0.3580939593236531,
+        "pivotGap": 0.17232813633376315,
+        "metalGap": 0.004542815379636522,
+        "time": 153.2000000178814,
+        "sampleCostMs": 0.4000000059604645,
+        "phase": "contact"
+      }
+    ],
+    "complete": true,
+    "source": "http://127.0.0.1:4198/assets/d/hammer-forge-v2.webp",
+    "sourceAlpha": [
+      249,
+      253,
+      253
+    ],
+    "inputToFirstSampleMs": 11.199999988079071
+  },
+  "state": {
+    "rulesVersion": "forge-v4",
+    "runId": "dcec1dc1-f859-4e8d-a042-b511a21a0450",
+    "seed": "lantern-witness-0",
+    "mode": "story",
+    "initialEligibility": {
+      "recipes": [
+        "light"
+      ],
+      "challenge": false
+    },
+    "revision": 3,
+    "phase": "workshop",
+    "day": 1,
+    "commissionOrder": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "coins": 0,
+    "seals": 3,
+    "supplyBase": 40,
+    "upgradeCount": 0,
+    "inheritance": 0,
+    "blades": [
+      {
+        "id": "d1-1",
+        "slot": 1,
+        "suppliedDay": 1,
+        "recipe": "light",
+        "status": "active",
+        "base": 40,
+        "value": 96,
+        "peak": 96,
+        "level": 2,
+        "cracked": false,
+        "hits": 2,
+        "charge": 2,
+        "successes": 2,
+        "normalGreats": 0,
+        "bursts": 0,
+        "finalizedDay": null,
+        "commissionId": null
+      },
+      {
+        "id": "d1-2",
+        "slot": 2,
+        "suppliedDay": 1,
+        "recipe": "light",
+        "status": "active",
+        "base": 40,
+        "value": 40,
+        "peak": 40,
+        "level": 0,
+        "cracked": false,
+        "hits": 0,
+        "charge": 0,
+        "successes": 0,
+        "normalGreats": 0,
+        "bursts": 0,
+        "finalizedDay": null,
+        "commissionId": null
+      },
+      {
+        "id": "d1-3",
+        "slot": 3,
+        "suppliedDay": 1,
+        "recipe": "light",
+        "status": "active",
+        "base": 40,
+        "value": 40,
+        "peak": 40,
+        "level": 0,
+        "cracked": false,
+        "hits": 0,
+        "charge": 0,
+        "successes": 0,
+        "normalGreats": 0,
+        "bursts": 0,
+        "finalizedDay": null,
+        "commissionId": null
+      }
+    ],
+    "reserveId": null,
+    "daySales": 0,
+    "dayRecovered": 0,
+    "traits": [],
+    "gift": "locked",
+    "pardonUsed": false,
+    "crackGuard": false,
+    "modifications": [],
+    "chapterChoices": [],
+    "shop": [],
+    "sold": [],
+    "upgraded": false,
+    "repaired": false,
+    "dayBuffs": {
+      "supplyPct": 100,
+      "loan": false,
+      "shelter": false
+    },
+    "pending": {
+      "supplyPct": 100,
+      "loan": false,
+      "shelter": false
+    },
+    "eventDeck": [
+      "donation",
+      "credit",
+      "salvage",
+      "rest",
+      "shelter",
+      "loan"
+    ],
+    "eventId": null,
+    "eventStatus": "none",
+    "eventHistory": [],
+    "history": [],
+    "rng": {
+      "forge": {
+        "state": 2331040427,
+        "draws": 2
+      },
+      "shop": {
+        "state": 1940482906,
+        "draws": 0
+      },
+      "events": {
+        "state": 2199298188,
+        "draws": 5
+      },
+      "content": {
+        "state": 1176869687,
+        "draws": 0
+      }
+    },
+    "journal": [
+      {
+        "type": "continue"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d1-1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d1-1"
+      }
+    ]
+  }
+}

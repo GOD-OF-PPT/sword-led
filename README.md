@@ -2,11 +2,11 @@
 
 一款面向现代 PC 浏览器的轮次制锻造游戏。每轮只有三件铁坯：点击落锤让它升值，在断裂前决定交货、留剑还是回收，靠手艺和商人升级撑过契约。
 
-**当前首页为 v0.7「重燃十二盏灯 · 第一章」：[本机试玩](http://127.0.0.1:4179/)**。已接入标题、开炉、四天不同委托、第三天商人/事件、渡口用途场景、首件炉具改造与跨局炉谱。左键直接敲剑，合格后交给来客；余剑可卖、回收、留给明天或换手艺。界面沿已选 D「行脚灯炉」，文字和操作均为真实组件。[首章玩法说明](docs/v0.7-first-chapter-guide.md)与[技术复核](docs/reviews/T11-4-2-3i3-first-chapter.md)记录实际流程和验证边界。
+**当前首页为 v0.7「重燃十二盏灯 · 风雪同行」：[本机试玩](http://127.0.0.1:4179/)**。已接入标题、开炉、前八天不同委托、两次商人、六种事件、渡口与雪线用途场景、两件炉具改造和跨局炉谱。左键直接敲剑，合格后交给来客；余剑可卖、回收、留给明天或换手艺。界面沿已选 D「行脚灯炉」，文字和操作均为真实组件。[首章说明](docs/v0.7-first-chapter-guide.md)、[第二章说明](docs/v0.7-second-chapter-guide.md)与[第二章技术复核](docs/reviews/T11-4-2-3i4-second-chapter.md)记录实际流程和验证边界。
 
 刷新原标签页可见新标题。新旅程使用独立 v4 存档；原契约请从标题“行旅种子与旧路”进入[旧版炉前](http://127.0.0.1:4179/v3.html)，旧 D 细锻和 B 版入口也保留。不会自动转换或清空旧档。
 
-本次开放第一章，结束于第4天改造后；后八天界面、全局结局和最终平衡仍在开发，完整游戏目标保持进行中。第一章达标/遗憾、配方资格和炉谱均来自真实保存记录，后续章节可沿该进度继续。[首章界面合同](docs/v0.7-first-chapter-interface.md)、[完整批准方案](docs/v0.7-complete-game-proposal.md)、[内核合同](docs/v0.7-core-contract.md)、[保存合同](docs/v0.7-persistence-contract.md)与[新美术原件/提示词](design/d/v07/README.md)可查。十二天纯内核与存储已实现，尚不能当作十二天生产界面或真人趣味性已通过。本机预览未公网部署。
+本次开放前两章，结束于第8天第二件炉具改造后；第9–12天界面、全局结局和最终平衡仍在开发，完整游戏目标保持进行中。第4天旧档可明确继续第5天。第5天有旧剑／新剑两条路线，第6天验收带裂作品，第7天借用重锋，第8天须分别交两柄合格轻刃，双驿按真实0／1／2显示。章节达标／遗憾、护印使用、配方资格和炉谱均来自真实保存记录，后续章节可沿该进度继续。[首章界面合同](docs/v0.7-first-chapter-interface.md)、[完整批准方案](docs/v0.7-complete-game-proposal.md)、[内核合同](docs/v0.7-core-contract.md)、[保存合同](docs/v0.7-persistence-contract.md)与[首章美术](design/d/v07/README.md)与[第二章美术原件/提示词](design/d/v07-chapter2/README.md)可查。十二天纯内核与存储已实现，尚不能当作十二天生产界面或真人趣味性已通过。本机预览未公网部署。
 
 历史 [v0.6炉前](docs/v0.6-workshop-interface.md)和[R3.18](docs/reviews/R3-18-game-studio-forge-ui.md)保留原交付身份。[ForgeTax完整实况复核](docs/research/2026-10-19-forgetax-session-study.md)与Steam评论研究记录了参考依据；当前优化依据用户对主线、成长、内容的反馈推进。
 
@@ -57,7 +57,7 @@ npm ci --registry=https://registry.npmjs.org/
 npm run dev
 ```
 
-打开终端显示的地址，默认`/`为v0.7第一章（forge-v4规则），`/v3.html`为旧版炉前，`/v2.html`为旧D细锻，`/legacy.html`为B版旧契约。生产版本用`npm run build`后`npm run preview`，默认端口4173。构建包含四个HTML、网页资源与core/session/v2/v3/v4 SDK及共享chunk，应整体保留dist，不提交dist或node_modules。v4已导出独立局档/炉谱会话，具体API见[保存合同](docs/v0.7-persistence-contract.md)；当前生产网页开放第一章。需要通过localhost或HTTPS运行。
+打开终端显示的地址，默认`/`为v0.7前两章（forge-v4规则），`/v3.html`为旧版炉前，`/v2.html`为旧D细锻，`/legacy.html`为B版旧契约。生产版本用`npm run build`后`npm run preview`，默认端口4173。构建包含四个HTML、网页资源与core/session/v2/v3/v4 SDK及共享chunk，应整体保留dist，不提交dist或node_modules。v4已导出独立局档/炉谱会话，具体API见[保存合同](docs/v0.7-persistence-contract.md)；当前生产网页开放前八天。需要通过localhost或HTTPS运行。
 
 | 操作 | 用法 |
 | --- | --- |
@@ -83,9 +83,9 @@ npm run test:browser
 npm run test:art
 ```
 
-当前首章回归在构建后运行 `npx playwright test --config playwright.v4-ui.config.ts`。保留的forge-v3界面回归可单独运行 `npx playwright test --config playwright.v3.config.ts`（Chromium/Firefox/WebKit须已安装）；不要在浏览器批次运行时重建共用dist。
+当前前两章回归在构建后运行 `npx playwright test --config playwright.v4-ui.config.ts`。保留的forge-v3界面回归可单独运行 `npx playwright test --config playwright.v3.config.ts`（Chromium/Firefox/WebKit须已安装）；不要在浏览器批次运行时重建共用dist。
 
-`check`运行单测、严格类型检查与双构建。`test:browser`一次构建后串行运行当前首章页面与v4/兼容存储SDK；也可分别用`test:e2e`/`test:storage:browser`。真实Chrome原生窗口/缓存探测采用隔离profile；测试只改变测试侧时钟/事件，不注入钱包/终局。美术检查使用独立设计页，不作为正式游戏验收。单项命令还包括`npm test`、`npm run typecheck`、`npm run build`和交互`test:watch`。
+`check`运行单测、严格类型检查与双构建。`test:browser`一次构建后串行运行当前前两章页面与v4/兼容存储SDK；也可分别用`test:e2e`/`test:storage:browser`。真实Chrome原生窗口/缓存探测采用隔离profile；测试只改变测试侧时钟/事件，不注入钱包/终局。美术检查使用独立设计页，不作为正式游戏验收。单项命令还包括`npm test`、`npm run typecheck`、`npm run build`和交互`test:watch`。
 
 保留的forge-v3界面配置可在同一构建上测试三种引擎：
 
@@ -114,7 +114,7 @@ npm run simulate -- --replay docs/evidence/T06/verify-v1.medium-victory.json
 
 默认53场景，每个最终状态都完整回放；输出统计JSON、逐局CSV.gz与胜负witness。已有输出不会覆盖；参数、输入误差假设和指标边界见模拟合同。T06 实测批次约18分钟，速度取决于设备，模型输入秒数不等于脚本耗时或真人整局时长。
 
-B旧版入口为`/legacy.html`，D细锻为`/v2.html`，v0.4为`/v3.html`，v0.7首章为`/`；开发服务还提供`/design/b/preview/index.html`美术校验页。`test:art`核对B风格的9张图片、alpha、288姿态、24材料帧和设计组件；D素材在新版UI/alpha规格中核对，两者证据分别记录。旧阶段机器证据归档工具为`node scripts/collect-ui-evidence.mjs --stage T10 --out <新的证据目录>`，已有证据不覆盖；归档前需生成最新unit/UI/storage报告。新版完整矩阵使用贡献说明中的v2 collector。
+B旧版入口为`/legacy.html`，D细锻为`/v2.html`，v0.4为`/v3.html`，v0.7前两章为`/`；开发服务还提供`/design/b/preview/index.html`美术校验页。`test:art`核对B风格的9张图片、alpha、288姿态、24材料帧和设计组件；D素材在新版UI/alpha规格中核对，两者证据分别记录。旧阶段机器证据归档工具为`node scripts/collect-ui-evidence.mjs --stage T10 --out <新的证据目录>`，已有证据不覆盖；归档前需生成最新unit/UI/storage报告。新版完整矩阵使用贡献说明中的v2 collector。
 
 构建后可在 Node 中调用同一个正式内核：
 

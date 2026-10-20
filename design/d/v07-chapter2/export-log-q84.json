@@ -1,0 +1,139 @@
+{
+  "tool": "cwebp",
+  "version": "1.6.0\nlibsharpyuv: 0.4.2",
+  "operation": "format conversion only; no resize or crop",
+  "quality": 84,
+  "method": 6,
+  "metadata": "none",
+  "bytes": 2575732,
+  "targetBytes": 2097152,
+  "hardBudgetBytes": 2621440,
+  "results": [
+    {
+      "id": "winter-forge-v1",
+      "source": "design/d/v07-chapter2/originals/winter-forge-v1.png",
+      "output": "public/assets/d/v07-chapter2/winter-forge-v1.webp",
+      "args": [
+        "-q",
+        "84",
+        "-m",
+        "6",
+        "-metadata",
+        "none",
+        "design/d/v07-chapter2/originals/winter-forge-v1.png",
+        "-o",
+        "public/assets/d/v07-chapter2/winter-forge-v1.webp"
+      ],
+      "bytes": 255216,
+      "log": "Saving file 'public/assets/d/v07-chapter2/winter-forge-v1.webp'\nFile:      design/d/v07-chapter2/originals/winter-forge-v1.png\nDimension: 1672 x 941\nOutput:    255216 bytes Y-U-V-All-PSNR 41.90 43.23 43.16   42.29 dB\n           (1.30 bpp)\nblock count:  intra4:       5871  (94.77%)\n              intra16:       324  (5.23%)\n              skipped:         3  (0.05%)\nbytes used:  header:            529  (0.2%)\n             mode-partition:  30448  (11.9%)\n Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total\n    macroblocks:  |       3%|      18%|      40%|      39%|    6195\n      quantizer:  |      21 |      19 |      16 |      11 |\n   filter level:  |       7 |       4 |       3 |      14 |"
+    },
+    {
+      "id": "returning-blade-v1",
+      "source": "design/d/v07-chapter2/originals/returning-blade-v1.png",
+      "output": "public/assets/d/v07-chapter2/returning-blade-v1.webp",
+      "args": [
+        "-q",
+        "84",
+        "-m",
+        "6",
+        "-metadata",
+        "none",
+        "design/d/v07-chapter2/originals/returning-blade-v1.png",
+        "-o",
+        "public/assets/d/v07-chapter2/returning-blade-v1.webp"
+      ],
+      "bytes": 434690,
+      "log": "Saving file 'public/assets/d/v07-chapter2/returning-blade-v1.webp'\nFile:      design/d/v07-chapter2/originals/returning-blade-v1.png\nDimension: 1672 x 941\nOutput:    434690 bytes Y-U-V-All-PSNR 40.27 40.91 41.34   40.54 dB\n           (2.21 bpp)\nblock count:  intra4:       6167  (99.55%)\n              intra16:        28  (0.45%)\n              skipped:         0  (0.00%)\nbytes used:  header:            456  (0.1%)\n             mode-partition:  37255  (8.6%)\n Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total\n    macroblocks:  |      13%|      30%|      40%|      17%|    6195\n      quantizer:  |      21 |      17 |      13 |       9 |\n   filter level:  |       7 |       4 |       2 |       0 |"
+    },
+    {
+      "id": "cracked-work-v1",
+      "source": "design/d/v07-chapter2/originals/cracked-work-v1.png",
+      "output": "public/assets/d/v07-chapter2/cracked-work-v1.webp",
+      "args": [
+        "-q",
+        "84",
+        "-m",
+        "6",
+        "-metadata",
+        "none",
+        "design/d/v07-chapter2/originals/cracked-work-v1.png",
+        "-o",
+        "public/assets/d/v07-chapter2/cracked-work-v1.webp"
+      ],
+      "bytes": 303904,
+      "log": "Saving file 'public/assets/d/v07-chapter2/cracked-work-v1.webp'\nFile:      design/d/v07-chapter2/originals/cracked-work-v1.png\nDimension: 1672 x 941\nOutput:    303904 bytes Y-U-V-All-PSNR 41.47 41.95 42.03   41.64 dB\n           (1.55 bpp)\nblock count:  intra4:       6057  (97.77%)\n              intra16:       138  (2.23%)\n              skipped:         0  (0.00%)\nbytes used:  header:            532  (0.2%)\n             mode-partition:  33097  (10.9%)\n Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total\n    macroblocks:  |       6%|      22%|      44%|      29%|    6195\n      quantizer:  |      21 |      18 |      15 |      11 |\n   filter level:  |       7 |       4 |       2 |      11 |"
+    },
+    {
+      "id": "rescue-path-v1",
+      "source": "design/d/v07-chapter2/originals/rescue-path-v1.png",
+      "output": "public/assets/d/v07-chapter2/rescue-path-v1.webp",
+      "args": [
+        "-q",
+        "84",
+        "-m",
+        "6",
+        "-metadata",
+        "none",
+        "design/d/v07-chapter2/originals/rescue-path-v1.png",
+        "-o",
+        "public/assets/d/v07-chapter2/rescue-path-v1.webp"
+      ],
+      "bytes": 453190,
+      "log": "Saving file 'public/assets/d/v07-chapter2/rescue-path-v1.webp'\nFile:      design/d/v07-chapter2/originals/rescue-path-v1.png\nDimension: 1672 x 941\nOutput:    453190 bytes Y-U-V-All-PSNR 40.00 41.22 41.89   40.46 dB\n           (2.30 bpp)\nblock count:  intra4:       6167  (99.55%)\n              intra16:        28  (0.45%)\n              skipped:         0  (0.00%)\nbytes used:  header:            453  (0.1%)\n             mode-partition:  38284  (8.4%)\n Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total\n    macroblocks:  |      18%|      32%|      40%|      10%|    6195\n      quantizer:  |      21 |      16 |      13 |       8 |\n   filter level:  |       7 |       4 |       2 |       6 |"
+    },
+    {
+      "id": "twin-stations-dark-v1",
+      "source": "design/d/v07-chapter2/originals/twin-stations-dark-v1.png",
+      "output": "public/assets/d/v07-chapter2/twin-stations-dark-v1.webp",
+      "args": [
+        "-q",
+        "84",
+        "-m",
+        "6",
+        "-metadata",
+        "none",
+        "design/d/v07-chapter2/originals/twin-stations-dark-v1.png",
+        "-o",
+        "public/assets/d/v07-chapter2/twin-stations-dark-v1.webp"
+      ],
+      "bytes": 376568,
+      "log": "Saving file 'public/assets/d/v07-chapter2/twin-stations-dark-v1.webp'\nFile:      design/d/v07-chapter2/originals/twin-stations-dark-v1.png\nDimension: 1672 x 941\nOutput:    376568 bytes Y-U-V-All-PSNR 40.66 41.25 42.47   41.01 dB\n           (1.91 bpp)\nblock count:  intra4:       6081  (98.16%)\n              intra16:       114  (1.84%)\n              skipped:         4  (0.06%)\nbytes used:  header:            434  (0.1%)\n             mode-partition:  36029  (9.6%)\n Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total\n    macroblocks:  |      10%|      31%|      41%|      18%|    6195\n      quantizer:  |      21 |      17 |      14 |       9 |\n   filter level:  |       7 |       4 |       2 |       7 |"
+    },
+    {
+      "id": "twin-stations-one-v1",
+      "source": "design/d/v07-chapter2/originals/twin-stations-one-v1.png",
+      "output": "public/assets/d/v07-chapter2/twin-stations-one-v1.webp",
+      "args": [
+        "-q",
+        "84",
+        "-m",
+        "6",
+        "-metadata",
+        "none",
+        "design/d/v07-chapter2/originals/twin-stations-one-v1.png",
+        "-o",
+        "public/assets/d/v07-chapter2/twin-stations-one-v1.webp"
+      ],
+      "bytes": 368994,
+      "log": "Saving file 'public/assets/d/v07-chapter2/twin-stations-one-v1.webp'\nFile:      design/d/v07-chapter2/originals/twin-stations-one-v1.png\nDimension: 1672 x 941\nOutput:    368994 bytes Y-U-V-All-PSNR 40.87 41.45 42.73   41.23 dB\n           (1.88 bpp)\nblock count:  intra4:       6104  (98.53%)\n              intra16:        91  (1.47%)\n              skipped:         2  (0.03%)\nbytes used:  header:            424  (0.1%)\n             mode-partition:  36514  (9.9%)\n Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total\n    macroblocks:  |       9%|      29%|      44%|      18%|    6195\n      quantizer:  |      21 |      17 |      14 |       9 |\n   filter level:  |       7 |       4 |       2 |       5 |"
+    },
+    {
+      "id": "twin-stations-lit-v1",
+      "source": "design/d/v07-chapter2/originals/twin-stations-lit-v1.png",
+      "output": "public/assets/d/v07-chapter2/twin-stations-lit-v1.webp",
+      "args": [
+        "-q",
+        "84",
+        "-m",
+        "6",
+        "-metadata",
+        "none",
+        "design/d/v07-chapter2/originals/twin-stations-lit-v1.png",
+        "-o",
+        "public/assets/d/v07-chapter2/twin-stations-lit-v1.webp"
+      ],
+      "bytes": 383170,
+      "log": "Saving file 'public/assets/d/v07-chapter2/twin-stations-lit-v1.webp'\nFile:      design/d/v07-chapter2/originals/twin-stations-lit-v1.png\nDimension: 1672 x 941\nOutput:    383170 bytes Y-U-V-All-PSNR 40.86 40.80 41.94   41.01 dB\n           (1.95 bpp)\nblock count:  intra4:       6090  (98.31%)\n              intra16:       105  (1.69%)\n              skipped:         2  (0.03%)\nbytes used:  header:            452  (0.1%)\n             mode-partition:  36696  (9.6%)\n Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total\n    macroblocks:  |      11%|      31%|      41%|      17%|    6195\n      quantizer:  |      21 |      17 |      13 |       9 |\n   filter level:  |       7 |       4 |       2 |       5 |"
+    }
+  ]
+}

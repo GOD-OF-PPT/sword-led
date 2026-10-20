@@ -1,0 +1,5 @@
+{
+  "initialExitCode": 1,
+  "reason": "System python3 had no PIL; generated partial archive moved intact to collector-initial-no-pillow, before any successful RGBA claim.",
+  "recovery": "Use configured bundled Python from load_workspace_dependencies; Pillow 12.3.0 import verified. No product, test, asset or build changes."
+}

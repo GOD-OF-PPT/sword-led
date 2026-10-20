@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "reviewedAt": "2026-10-20T12:47:35.442Z",
+  "reviewer": "Codex v07_art_finish",
+  "method": "Viewed each original PNG and each final runtime WebP with view_image at full image framing",
+  "assets": [
+    {
+      "id": "winter-forge-v1",
+      "reviewedOriginalSha256": "e4d3ace725b4e4efdb1f7a19734b55917db779d557b322ebf716bedf4f5a4d54",
+      "reviewedRuntimeSha256": "ff93be5848e112aa7c6b74a5a649cd5fc7341cf08faca03d1b218a4e3e7aca96",
+      "noBlankOrCorruptRegions": true,
+      "noObjectionableCompressionArtifacts": true
+    },
+    {
+      "id": "returning-blade-v1",
+      "reviewedOriginalSha256": "bfb0f1edc043af77f2f14d85b25e9068ed4119ea0f51d6813bb5d1c1119bf670",
+      "reviewedRuntimeSha256": "2ce00147936d876291eb708919f6bb8e6bf5fdc0ba64c08e21d50754ac4214da",
+      "noBlankOrCorruptRegions": true,
+      "noObjectionableCompressionArtifacts": true
+    },
+    {
+      "id": "cracked-work-v1",
+      "reviewedOriginalSha256": "f4fdebdfaadf48f4cdf84379895dfd6aa5b6a57fbc25ad492f165b450ddc03c3",
+      "reviewedRuntimeSha256": "bcb5323a59eb8bd53e9c18e7afc1ef87bc5f3e5bb1a78b78c959b940fc270fa5",
+      "noBlankOrCorruptRegions": true,
+      "noObjectionableCompressionArtifacts": true
+    },
+    {
+      "id": "rescue-path-v1",
+      "reviewedOriginalSha256": "7df0d37fdf640ea987c35d56b9bd0d3da140b977b2cc7925f224ad5ca0bae396",
+      "reviewedRuntimeSha256": "28a1bd26b08d66fe6748a50263d28bd1404123bff6b87e3be91b98024b21531a",
+      "noBlankOrCorruptRegions": true,
+      "noObjectionableCompressionArtifacts": true
+    },
+    {
+      "id": "twin-stations-dark-v1",
+      "reviewedOriginalSha256": "864bd897e897d4ca158bc9ff21d13389ebb082f5629b258d42a57f5c71a58c0d",
+      "reviewedRuntimeSha256": "ec92cb07af0c13553b092c12089637c32ba4e2057c80f2f7d963ec5141273f01",
+      "noBlankOrCorruptRegions": true,
+      "noObjectionableCompressionArtifacts": true
+    },
+    {
+      "id": "twin-stations-one-v1",
+      "reviewedOriginalSha256": "57f39234fcced37208553de49d26b64e19c34bcc049a0663fb903ce3c405200f",
+      "reviewedRuntimeSha256": "50968b0df21187032042671427ca8f3721d45a5254db40c504682b24f7c6d44c",
+      "noBlankOrCorruptRegions": true,
+      "noObjectionableCompressionArtifacts": true
+    },
+    {
+      "id": "twin-stations-lit-v1",
+      "reviewedOriginalSha256": "1de7621fced2122a622a5227e94e2c33cb40def5691a20a183b99f69b303fba3",
+      "reviewedRuntimeSha256": "f168ab748d4146842603499af700379a459e60bb342171e99f1646f663ff1b33",
+      "noBlankOrCorruptRegions": true,
+      "noObjectionableCompressionArtifacts": true
+    }
+  ],
+  "twinStations": {
+    "complete": true,
+    "commonCamera": true,
+    "sameYRoad": true,
+    "sameSkyMountainsPineBuildingsRocks": true,
+    "darkStations": 0,
+    "oneStations": 1,
+    "litStations": 2,
+    "oneRestoredSide": "left",
+    "extraPeopleSwordsHammersTextUI": false,
+    "approximateCombinedStationBoundsNormalized": [
+      0.16,
+      0.32,
+      0.84,
+      0.62
+    ],
+    "displayRequirement": "show complete approximately 16:9 source with contain; do not use cover cropping"
+  },
+  "limits": "Visual geography and lighting assessment; no claim of pixel-identical unchanged areas or actual UI business acceptance"
+}

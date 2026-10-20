@@ -6,7 +6,7 @@ import type {RunState} from '../../src/core-v4/index.js';
 import {installAudioProbe,audioProbe} from './audio-probe';
 import {installV4HammerProbe,installV4SlowFrames} from './v4-forge-probe';
 
-const dir='tmp/T11-4-2-3i3/forge-pilot';
+const dir=process.env.V4_EVIDENCE_ROOT??'tmp/T11-4-2-3i4/forge-ui';
 async function record(info:TestInfo,name:string,value:unknown){await mkdir(dir,{recursive:true});await writeFile(`${dir}/${info.project.name}-${name}.json`,JSON.stringify(value,null,2)+'\n');}
 async function read(page:Page):Promise<RunState>{const raw=await page.evaluate(()=>localStorage.getItem('sword-led.save.v4'));if(!raw)throw Error('No real v4 save');const parsed=validateRun(JSON.parse(raw).state);if(!parsed.ok)throw Error(parsed.detail);return parsed.state;}
 async function start(page:Page){await page.goto('/');await expect(page.locator('#v4-start')).toBeEnabled();await page.locator('#v4-title details summary').click();await page.locator('#v4-seed').fill('lantern-witness-0');await page.locator('#v4-start').click();await page.getByRole('button',{name:'点火开炉',exact:true}).click();await expect(page.locator('#v4-hit')).toBeEnabled();await page.locator('#v4-hammer img').evaluate(async(image:HTMLImageElement)=>{await image.decode();});await expect(page.locator('#v4-blade')).toHaveAttribute('data-illustrated','true');}

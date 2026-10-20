@@ -1,0 +1,46 @@
+import assert from 'node:assert/strict';
+import {readFile,readdir,writeFile,mkdir,copyFile,stat} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+import {gzipSync} from 'node:zlib';
+import * as sdk from '../../dist/sword-led-v4.js';
+import {changedInputs} from '../../scripts/release-fingerprint.mjs';
+const base='tmp/T11-4-2-3i4',out='docs/evidence/T11-4-2-3i4',sha=b=>createHash('sha256').update(b).digest('hex'),kinds=['release','repair','recheck','polish','scroll'];
+const batches=[];
+for(const kind of kinds){const run=base+'/'+kind,terminal=JSON.parse(await readFile(run+'/terminal.json')),baseline=JSON.parse(await readFile(run+'/baseline.json')),after=JSON.parse(await readFile(run+'/after.json'));assert.deepEqual(changedInputs(baseline,after),[]);if(kind==='release'){assert.equal(terminal.exitCode,130);assert.equal(terminal.stats.expected,39);assert.equal(terminal.stats.unexpected,1);assert.equal(terminal.stats.skipped,80);}else if(kind==='recheck'){assert.equal(terminal.stats.expected,79);assert.equal(terminal.stats.unexpected,1);assert.equal(terminal.stats.skipped,0);}else if(kind==='polish'){assert.equal(terminal.stats.expected,12);assert.equal(terminal.stats.unexpected,3);assert.equal(terminal.stats.skipped,0);}else{assert(terminal.validationComplete);assert.equal(terminal.stats.expected,kind==='repair'?1:6);}batches.push({kind,run,terminal,baseline});}
+const polishAllowed=new Set(['src/presentation-v4/app.ts','src/presentation-v4/stages.ts','src/presentation-v4/journey.css','tests/e2e/v4-heavy-probe.ts','tests/e2e/v4-second-chapter.spec.ts','tests/e2e/v4-second-saves.spec.ts',base+'/runner.mjs']);
+for(const b of batches.slice(1)){const diff=changedInputs(batches[0].baseline,b.baseline);assert(diff.every(p=>['polish','scroll'].includes(b.kind)?polishAllowed.has(p)||/^dist\/(?:index\.html|assets\/main-.*\.(?:js|css))$/.test(p):p===base+'/runner.mjs'),'Unexpected cross-batch drift '+diff.join(','));}
+await mkdir(out,{recursive:false});
+async function files(dir){const all=[];for(const e of await readdir(dir,{withFileTypes:true})){const p=dir+'/'+e.name;if(e.isDirectory())all.push(...await files(p));else if(e.isFile())all.push(p);}return all;}
+await mkdir(out+'/before-polish');for(const p of await files(base+'/before-polish'))await copyFile(p,out+'/before-polish/'+p.split('/').at(-1));await mkdir(out+'/before-scroll');for(const p of await files(base+'/before-scroll'))await copyFile(p,out+'/before-scroll/'+p.split('/').at(-1));
+const records=[],unique=new Set(),originals=[],coverage=new Map(),expectedCases=new Set();
+function inspect(v,path,pointer=''){
+ if(!v||typeof v!=='object')return;
+ if(v.rulesVersion==='forge-v4'&&typeof v.runId==='string'&&Array.isArray(v.journal)){const r=sdk.validateRun(v);assert(r.ok,path+pointer+': '+r.detail);assert.deepEqual(r.state,v);const hash=sha(Buffer.from(JSON.stringify(v)));unique.add(hash);records.push({path,pointer,runId:v.runId,revision:v.revision,day:v.day,phase:v.phase,sha256:hash});return;}
+ for(const[k,c]of Object.entries(v))inspect(c,path,pointer+'/'+k);
+}
+async function copy(p,target){await mkdir(target.slice(0,target.lastIndexOf('/')),{recursive:true});await copyFile(p,target);}
+for(const {kind,run} of batches){
+ for(const p of await files(run)){const data=await readFile(p),s=await stat(p);originals.push({path:p,bytes:s.size,sha256:sha(data)});if(p.endsWith('.json')&&!p.includes('/work/')){inspect(JSON.parse(data),p);await copy(p,out+'/batches/'+kind+'/'+p.slice(run.length+1));}}
+ await writeFile(out+'/batches/'+kind+'/browser-console.txt.gz',gzipSync(await readFile(run+'/console.log')));
+ const report=JSON.parse(await readFile(run+'/report.json'));
+ function walk(suites){for(const suite of suites??[]){for(const spec of suite.specs??[])for(const t of spec.tests??[]){const key=t.projectName+'/'+spec.title;if(kind==='release'||kind==='polish')expectedCases.add(key);const result=t.results[0];if(t.results.length===1&&result?.status==='passed'&&result.retry===0)coverage.set(key,{title:spec.title,project:t.projectName,batch:kind,duration:result.duration,status:result.status,retry:0});for(const r of t.results)for(const a of r.attachments??[])if(a.contentType==='application/json'&&a.body)inspect(JSON.parse(Buffer.from(a.body,'base64')),`report/${kind}/${key}/${a.name}`);}walk(suite.suites);}}
+ walk(report.suites);
+}
+assert.equal(expectedCases.size,123);assert.equal(coverage.size,123);for(const key of expectedCases)assert(coverage.has(key),key);
+const sourceCounts=Object.fromEntries(kinds.map(kind=>[kind,[...coverage.values()].filter(c=>c.batch===kind).length]));assert.deepEqual(sourceCounts,{release:35,repair:1,recheck:72,polish:9,scroll:6});
+const names=['two-stations-two-real-swords','one-station-real-review','full-rack-three-traits-gift-error-1280','full-rack-three-traits-gift-error-1920','second-partial-0-receipt','second-partial-1-receipt','second-both-backups-recovered','second-chapter-real-defeat'];
+const screens=[];await mkdir(out+'/screens');
+for(const name of names){let p=base+'/scroll/evidence/v4-chromium/'+name+'.png';if(!originals.some(f=>f.path===p))p=base+'/polish/evidence/v4-chromium/'+name+'.png';if(!originals.some(f=>f.path===p))p=base+'/release/evidence/v4-chromium/'+name+'.png';const target=out+'/screens/'+name+'.webp';assert(originals.some(f=>f.path===p),p);execFileSync('rtk',['proxy','cwebp','-quiet','-lossless','-exact',p,'-o',target]);screens.push({original:p,published:target,originalSha256:sha(await readFile(p)),publishedSha256:sha(await readFile(target))});}
+const py='import json,sys\nfrom PIL import Image\nfor r in json.loads(sys.argv[1]):\n a=Image.open(r["original"]).convert("RGBA"); b=Image.open(r["published"]).convert("RGBA")\n assert a.size==b.size and a.tobytes()==b.tobytes(),r["original"]\nprint("RGBA equal: "+str(len(json.loads(sys.argv[1]))))';execFileSync('rtk',['proxy','/Users/gordon/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3','-c',py,JSON.stringify(screens)]);
+for(const name of ['unit-final.json','build-comparison.json','integrity.json','npm-audit.json','pilot-command-error.json','qa-duplicate-inventory.json','qa-duplicate-cow-receipt.json','polish-unit.json','polish-unit-before.json','polish-scope.json','scroll-scope.json','collector-diagnostics.json'])await copy(base+'/'+name,out+'/'+name);
+await writeFile(out+'/build.txt.gz',gzipSync(await readFile(base+'/build.log')));await writeFile(out+'/build-polish-final.txt.gz',gzipSync(await readFile(base+'/build-polish-final.log')));await writeFile(out+'/build-scroll-final.txt.gz',gzipSync(await readFile(base+'/build-scroll-final.log')));
+for(const name of ['runner.mjs','collect.mjs','legacy.config.ts','check-integrity.mjs'])await copy(base+'/'+name,out+'/tools/'+name);
+for(const k of['release','repair','recheck','polish'])await copy(base+'/'+k+'/runner-executed.mjs',out+'/batches/'+k+'/runner-executed.mjs');
+for(const pilot of ['pilot-new','pilot-saves-final','pilot-external','stale-red'])await copy(base+'/'+pilot+'/report.json',out+'/diagnostics/'+pilot+'-report.json');
+for(const p of (await files(base)).filter(p=>!kinds.some(k=>p.startsWith(base+'/'+k+'/')))){const b=await readFile(p);originals.push({path:p,bytes:b.length,sha256:sha(b)});}
+await writeFile(out+'/actual-replay.json',JSON.stringify({at:new Date().toISOString(),sdkSha256:sha(await readFile('dist/sword-led-v4.js')),objects:records.length,uniqueStates:unique.size,scope:'All actual formal UI JSON and genuine report attachments, including retained infrastructure-failed batch, replayed through the unchanged SDK. Counts are state objects, not full games. Recovery fixtures are validated journal prefixes; full mouse/keyboard plans start at the real title.',records},null,2)+'\n');
+await writeFile(out+'/case-coverage.json',JSON.stringify({scope:'123 logical cases = 108 unaffected passes from original batches + 9 valid targeted passes + final 6 scroll corrections with visible protection, stale chapter identity and deterministic heavy cancellation. Original release was 39/1 infrastructure + interrupt; repair 1 passed; recheck 79/1 late busy observation. Not one all-green 123 batch. The 15-case polish batch had 12 passes and 3 clipped-note failures; only six protection views needed the final scroll correction. Original and final source/build boundaries remain explicit.',sourceCounts,cases:[...coverage.values()]},null,2)+'\n');
+await writeFile(out+'/screens.json',JSON.stringify({rgbaEqual:true,scope:'Native screenshots repackaged losslessly; originals retained locally.',screens},null,2)+'\n');
+await writeFile(out+'/local-originals.json',JSON.stringify({root:process.cwd(),scope:'Complete original diagnostics, reports, actual state JSON and native images remain local. Large QA traces/videos are indexed, not pushed. Original generated game art is published separately. Duplicate historic QA files were replaced only by independent copy-on-write clones with identical paths, bytes and permissions, and receipt mtime restored to millisecond precision.',files:originals},null,2)+'\n');
+console.log(JSON.stringify({cases:coverage.size,sourceCounts,objects:records.length,uniqueStates:unique.size,originals:originals.length,screens:screens.length}));
