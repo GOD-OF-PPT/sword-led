@@ -9,7 +9,7 @@ export function workshopHint(s:RunState,b:Blade|null){
  if(atCap(b))return{title:'名器已成',copy:'这柄剑已经封顶。交差把身价变成收入，或挂起保留。',target:'v3-deliver'};
  if(b.charge===6)return{title:'锤势已满 · 安全连锻',copy:'仍用鼠标左键。一口气落下安全锤；结束后原来的风险还在。',target:'v3-strike'};
  if(b.cracked)return{title:'裂纹不会自己消失',copy:'现在交差仍能收下这笔身价；再出现一次裂损，这柄剑就会断。',target:'v3-deliver'};
- if(missing===0)return{title:s.gift==='available'?'委托已成 · 带上新手艺':'今日委托已成',copy:s.gift==='available'?'纸单下方可免费领手艺。余剑也能挂起，为明天留一手。':merchantPresent(s)?'剩下的剑可交差、留到明天，或向商人换一门手艺。':'可以摇铃收工，也可以留一柄剑或继续争取更高身价。',target:s.gift==='available'?'v3-gift':'v3-settle'};
+ if(missing===0)return{title:s.gift==='available'?'委托已成 · 带上新手艺':'今日委托已成',copy:s.gift==='available'?'左下方可免费领手艺。余剑也能挂起，为明天留一手。':merchantPresent(s)?'剩下的剑可交差、留到明天，或向商人换一门手艺。':'可以摇铃收工，也可以留一柄剑或继续争取更高身价。',target:s.gift==='available'?'v3-gift':'v3-settle'};
  if(b.value>=missing)return{title:'这一柄，足够交差',copy:`交差即可补上今天还差的 ${missing.toLocaleString('zh-CN')}。收手，还是继续锻得更好？`,target:'v3-deliver'};
  if(s.round===1&&b.hits===0&&!s.journal.some(a=>a.type==='strike'))return{title:'第一锤 · 左键点剑身',copy:'无需长按或卡时机。先让铁坯增值，再决定什么时候收手。',target:'v3-hit'};
  if(s.round===1&&!s.journal.some(a=>a.type==='deliver'))return{title:'身价在剑上，交差才入账',copy:'继续落锤积攒身价；交差同时填订单、收金币。前三次普通锤没有裂损。',target:'v3-hit'};
@@ -27,4 +27,4 @@ export function roundStory(s:RunState){
  const pieces=element('div',undefined,'v3-story-pieces');for(const b of s.blades.filter(b=>b.suppliedRound===last.round||b.finalizedRound===last.round||b.id===last.reserveId))pieces.append(bladeCard(b));body.append(pieces);return body;
 }
 export function endStory(s:RunState){const hero=element('section',undefined,'v3-end-hero'),best=[...s.blades].sort((a,b)=>b.peak-a.peak)[0];hero.append(element('p',s.phase==='victory'?'炉火未熄 · 十二轮的作品留在这里':s.phase==='defeat'?'炉火可再燃 · 带着这次的经验再来':'三轮练手收炉 · 还有一段长路'));if(best){hero.append(bladeCard(best),element('small',`本局最高身价 ${best.peak.toLocaleString('zh-CN')} · 造型来自实际锻造`));}return hero;}
-export function helpStory(){const help=element('div',undefined,'v3-help-story');for(const[number,title,copy]of [['一','左键锻造','点中央剑身即可落锤。普通成功涨价，大成涨得更多；六格锤势换来安全连锻。'],['二','决定收手','交差填目标并收金币。首次裂损掉价，再裂才会断；留一柄剑可以跨轮作保险。'],['三','经营炉火','第3、6、9轮商人到场：用剑换手艺，用金币升级或补印记。摇铃收工前会先列清所有后果。']]){const step=element('section');step.append(element('i',number),element('h3',title),element('p',copy));help.append(step);}return help;}
+export function helpStory(){const help=element('div',undefined,'v3-help-story');for(const[number,title,copy]of [['一','左键锻造','点中央剑身即可落锤。普通成功涨价，大成涨得更多；六格锤势换来安全连锻。'],['二','决定收手','交差填主契约并收金币。来客只作建议，合意成品自动记入手札；留一柄剑可跨轮作保险。'],['三','经营炉火','第3、6、9轮商人到场：用剑换手艺，用金币升级或补印记。摇铃收工前会先列清所有后果。']]){const step=element('section');step.append(element('i',number),element('h3',title),element('p',copy));help.append(step);}return help;}

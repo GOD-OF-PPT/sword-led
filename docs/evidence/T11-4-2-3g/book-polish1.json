@@ -1,0 +1,970 @@
+{
+  "config": {
+    "argv": [
+      "/Users/gordon/.nvm/versions/node/v22.12.0/bin/node",
+      "/Users/gordon/githome/sword-led/node_modules/.bin/playwright",
+      "test",
+      "-c",
+      "playwright.v3.config.ts",
+      "tests/e2e/v3-notebook.spec.ts",
+      "--reporter=list,json"
+    ],
+    "configFile": "/Users/gordon/githome/sword-led/playwright.v3.config.ts",
+    "rootDir": "/Users/gordon/githome/sword-led/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v3-chromium",
+        "name": "v3-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v3-*.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v3-firefox",
+        "name": "v3-firefox",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v3-*.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v3-webkit",
+        "name": "v3-webkit",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v3-*.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v3-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v3-*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4186",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v3-chromium"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v3-firefox",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v3-*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4186",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "firefox"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v3-firefox"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v3-webkit",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v3-*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4186",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1792,
+            "height": 1120
+          },
+          "deviceScaleFactor": 2,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "webkit"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v3-webkit"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 4186 --strictPort",
+      "url": "http://127.0.0.1:4186",
+      "reuseExistingServer": false,
+      "env": {
+        "NO_PROXY": "127.0.0.1,localhost",
+        "no_proxy": "127.0.0.1,localhost"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "v3-notebook.spec.ts",
+      "file": "v3-notebook.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "traveler and optional two-page book are real, reachable and read-only at both desktop sizes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6382,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T02:55:30.505Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-5c6819d4763193ade419",
+          "file": "v3-notebook.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "actual matching delivery changes the customer pose and real work once; reload only redraws",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 3261,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m553.75\u001b[39m\nReceived:    \u001b[31m567.921875\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m553.75\u001b[39m\nReceived:    \u001b[31m567.921875\u001b[39m\n    at bookFits (/Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts:17:476)\n    at /Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts:28:406",
+                    "location": {
+                      "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts",
+                      "column": 476,
+                      "line": 17
+                    },
+                    "snippet": "  15 | async function save(page:Page,name:string){await writeFile(`${dir}/${test.info().project.name}-${name}.json`,JSON.stringify(await state(page),null,2)+'\\n');}\n  16 |\n> 17 | async function bookFits(page:Page){const layout=await page.locator(\".v3-book-nav\").evaluate(nav=>{const n=nav.getBoundingClientRect(),body=document.querySelector(\"#v3-dialog-body\")!.getBoundingClientRect(),actions=document.querySelector(\"#v3-dialog-actions\")!.getBoundingClientRect();return{bottom:n.bottom,bodyBottom:body.bottom,actionsTop:actions.top,scrollTop:document.querySelector(\"#v3-dialog-body\")!.scrollTop};});expect(layout.scrollTop).toBe(0);expect(layout.bottom).toBeLessThanOrEqual(layout.bodyBottom+.5);expect(layout.bottom).toBeLessThanOrEqual(layout.actionsTop+.5);}\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^\n  18 |\n  19 | test('traveler and optional two-page book are real, reachable and read-only at both desktop sizes',async({page},info)=>{\n  20 |  await open(page);await expect(page.locator('.customer-art-ready.book-art-ready')).toHaveCount(1);await expect(page.locator('#v3-edition')).toContainText('v0.5 来客手札');await expect(page.locator('#v3-customer-name')).toHaveText('阿岚 · 出锋');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts",
+                        "column": 476,
+                        "line": 17
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m553.75\u001b[39m\nReceived:    \u001b[31m567.921875\u001b[39m\n\n  15 | async function save(page:Page,name:string){await writeFile(`${dir}/${test.info().project.name}-${name}.json`,JSON.stringify(await state(page),null,2)+'\\n');}\n  16 |\n> 17 | async function bookFits(page:Page){const layout=await page.locator(\".v3-book-nav\").evaluate(nav=>{const n=nav.getBoundingClientRect(),body=document.querySelector(\"#v3-dialog-body\")!.getBoundingClientRect(),actions=document.querySelector(\"#v3-dialog-actions\")!.getBoundingClientRect();return{bottom:n.bottom,bodyBottom:body.bottom,actionsTop:actions.top,scrollTop:document.querySelector(\"#v3-dialog-body\")!.scrollTop};});expect(layout.scrollTop).toBe(0);expect(layout.bottom).toBeLessThanOrEqual(layout.bodyBottom+.5);expect(layout.bottom).toBeLessThanOrEqual(layout.actionsTop+.5);}\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^\n  18 |\n  19 | test('traveler and optional two-page book are real, reachable and read-only at both desktop sizes',async({page},info)=>{\n  20 |  await open(page);await expect(page.locator('.customer-art-ready.book-art-ready')).toHaveCount(1);await expect(page.locator('#v3-edition')).toContainText('v0.5 来客手札');await expect(page.locator('#v3-customer-name')).toHaveText('阿岚 · 出锋');\n    at bookFits (/Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts:17:476)\n    at /Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts:28:406"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T02:55:37.233Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v3/v3-notebook-actual-matchin-2e9bf-rk-once-reload-only-redraws-v3-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v3/v3-notebook-actual-matchin-2e9bf-rk-once-reload-only-redraws-v3-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v3/v3-notebook-actual-matchin-2e9bf-rk-once-reload-only-redraws-v3-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts",
+                    "column": 476,
+                    "line": 17
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-fa48c38aef629c9979ab",
+          "file": "v3-notebook.spec.ts",
+          "line": 26,
+          "column": 1
+        },
+        {
+          "title": "unmatched or overworked swords can still pay the original contract without another gate",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3440,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T02:55:42.165Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-cf6aaee0b505507af113",
+          "file": "v3-notebook.spec.ts",
+          "line": 31,
+          "column": 1
+        },
+        {
+          "title": "customer feedback cancels on pause and respects reduced motion without replaying or changing a save",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6381,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T02:55:45.957Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-e940762cc925b2eaef4e",
+          "file": "v3-notebook.spec.ts",
+          "line": 35,
+          "column": 1
+        },
+        {
+          "title": "missing new character and book art keeps readable advice, real forging and a usable notebook",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1586,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T02:55:52.352Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-1d80fe1eb1a0b5e9cec9",
+          "file": "v3-notebook.spec.ts",
+          "line": 39,
+          "column": 1
+        },
+        {
+          "title": "a resumed valid four-sword three-trait journal keeps controls unobscured while a real save fails and retries",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4153,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T02:55:53.951Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-4295d416cda3759c2df1",
+          "file": "v3-notebook.spec.ts",
+          "line": 43,
+          "column": 1
+        },
+        {
+          "title": "traveler and optional two-page book are real, reachable and read-only at both desktop sizes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6676,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T02:55:59.111Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-a44035a3cce74ca18550",
+          "file": "v3-notebook.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "actual matching delivery changes the customer pose and real work once; reload only redraws",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 4431,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m553.75\u001b[39m\nReceived:    \u001b[31m567.9500274658203\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m553.75\u001b[39m\nReceived:    \u001b[31m567.9500274658203\u001b[39m\n    at bookFits (/Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts:17:476)\n    at /Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts:28:406",
+                    "location": {
+                      "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts",
+                      "column": 476,
+                      "line": 17
+                    },
+                    "snippet": "  15 | async function save(page:Page,name:string){await writeFile(`${dir}/${test.info().project.name}-${name}.json`,JSON.stringify(await state(page),null,2)+'\\n');}\n  16 |\n> 17 | async function bookFits(page:Page){const layout=await page.locator(\".v3-book-nav\").evaluate(nav=>{const n=nav.getBoundingClientRect(),body=document.querySelector(\"#v3-dialog-body\")!.getBoundingClientRect(),actions=document.querySelector(\"#v3-dialog-actions\")!.getBoundingClientRect();return{bottom:n.bottom,bodyBottom:body.bottom,actionsTop:actions.top,scrollTop:document.querySelector(\"#v3-dialog-body\")!.scrollTop};});expect(layout.scrollTop).toBe(0);expect(layout.bottom).toBeLessThanOrEqual(layout.bodyBottom+.5);expect(layout.bottom).toBeLessThanOrEqual(layout.actionsTop+.5);}\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^\n  18 |\n  19 | test('traveler and optional two-page book are real, reachable and read-only at both desktop sizes',async({page},info)=>{\n  20 |  await open(page);await expect(page.locator('.customer-art-ready.book-art-ready')).toHaveCount(1);await expect(page.locator('#v3-edition')).toContainText('v0.5 来客手札');await expect(page.locator('#v3-customer-name')).toHaveText('阿岚 · 出锋');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts",
+                        "column": 476,
+                        "line": 17
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m553.75\u001b[39m\nReceived:    \u001b[31m567.9500274658203\u001b[39m\n\n  15 | async function save(page:Page,name:string){await writeFile(`${dir}/${test.info().project.name}-${name}.json`,JSON.stringify(await state(page),null,2)+'\\n');}\n  16 |\n> 17 | async function bookFits(page:Page){const layout=await page.locator(\".v3-book-nav\").evaluate(nav=>{const n=nav.getBoundingClientRect(),body=document.querySelector(\"#v3-dialog-body\")!.getBoundingClientRect(),actions=document.querySelector(\"#v3-dialog-actions\")!.getBoundingClientRect();return{bottom:n.bottom,bodyBottom:body.bottom,actionsTop:actions.top,scrollTop:document.querySelector(\"#v3-dialog-body\")!.scrollTop};});expect(layout.scrollTop).toBe(0);expect(layout.bottom).toBeLessThanOrEqual(layout.bodyBottom+.5);expect(layout.bottom).toBeLessThanOrEqual(layout.actionsTop+.5);}\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^\n  18 |\n  19 | test('traveler and optional two-page book are real, reachable and read-only at both desktop sizes',async({page},info)=>{\n  20 |  await open(page);await expect(page.locator('.customer-art-ready.book-art-ready')).toHaveCount(1);await expect(page.locator('#v3-edition')).toContainText('v0.5 来客手札');await expect(page.locator('#v3-customer-name')).toHaveText('阿岚 · 出锋');\n    at bookFits (/Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts:17:476)\n    at /Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts:28:406"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T02:56:08.825Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v3/v3-notebook-actual-matchin-2e9bf-rk-once-reload-only-redraws-v3-firefox/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v3/v3-notebook-actual-matchin-2e9bf-rk-once-reload-only-redraws-v3-firefox/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v3/v3-notebook-actual-matchin-2e9bf-rk-once-reload-only-redraws-v3-firefox/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts",
+                    "column": 476,
+                    "line": 17
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-3299c9f4e6256858ba8e",
+          "file": "v3-notebook.spec.ts",
+          "line": 26,
+          "column": 1
+        },
+        {
+          "title": "unmatched or overworked swords can still pay the original contract without another gate",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5639,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T02:56:15.181Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-5e708a74ff41665d6adb",
+          "file": "v3-notebook.spec.ts",
+          "line": 31,
+          "column": 1
+        },
+        {
+          "title": "customer feedback cancels on pause and respects reduced motion without replaying or changing a save",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7367,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T02:56:22.444Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-f17e06f27e2bfdc7fb00",
+          "file": "v3-notebook.spec.ts",
+          "line": 35,
+          "column": 1
+        },
+        {
+          "title": "missing new character and book art keeps readable advice, real forging and a usable notebook",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2100,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T02:56:29.832Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-c3ff094060d6497c55d0",
+          "file": "v3-notebook.spec.ts",
+          "line": 39,
+          "column": 1
+        },
+        {
+          "title": "a resumed valid four-sword three-trait journal keeps controls unobscured while a real save fails and retries",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4123,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T02:56:31.946Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-be6a6f26488cd67e9b46",
+          "file": "v3-notebook.spec.ts",
+          "line": 43,
+          "column": 1
+        },
+        {
+          "title": "traveler and optional two-page book are real, reachable and read-only at both desktop sizes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13891,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T02:56:37.579Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-daa8bb260e24234caf8c",
+          "file": "v3-notebook.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "actual matching delivery changes the customer pose and real work once; reload only redraws",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6054,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m553.75\u001b[39m\nReceived:    \u001b[31m567.921875\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m553.75\u001b[39m\nReceived:    \u001b[31m567.921875\u001b[39m\n    at bookFits (/Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts:17:476)\n    at /Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts:28:406",
+                    "location": {
+                      "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts",
+                      "column": 476,
+                      "line": 17
+                    },
+                    "snippet": "  15 | async function save(page:Page,name:string){await writeFile(`${dir}/${test.info().project.name}-${name}.json`,JSON.stringify(await state(page),null,2)+'\\n');}\n  16 |\n> 17 | async function bookFits(page:Page){const layout=await page.locator(\".v3-book-nav\").evaluate(nav=>{const n=nav.getBoundingClientRect(),body=document.querySelector(\"#v3-dialog-body\")!.getBoundingClientRect(),actions=document.querySelector(\"#v3-dialog-actions\")!.getBoundingClientRect();return{bottom:n.bottom,bodyBottom:body.bottom,actionsTop:actions.top,scrollTop:document.querySelector(\"#v3-dialog-body\")!.scrollTop};});expect(layout.scrollTop).toBe(0);expect(layout.bottom).toBeLessThanOrEqual(layout.bodyBottom+.5);expect(layout.bottom).toBeLessThanOrEqual(layout.actionsTop+.5);}\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^\n  18 |\n  19 | test('traveler and optional two-page book are real, reachable and read-only at both desktop sizes',async({page},info)=>{\n  20 |  await open(page);await expect(page.locator('.customer-art-ready.book-art-ready')).toHaveCount(1);await expect(page.locator('#v3-edition')).toContainText('v0.5 来客手札');await expect(page.locator('#v3-customer-name')).toHaveText('阿岚 · 出锋');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts",
+                        "column": 476,
+                        "line": 17
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m553.75\u001b[39m\nReceived:    \u001b[31m567.921875\u001b[39m\n\n  15 | async function save(page:Page,name:string){await writeFile(`${dir}/${test.info().project.name}-${name}.json`,JSON.stringify(await state(page),null,2)+'\\n');}\n  16 |\n> 17 | async function bookFits(page:Page){const layout=await page.locator(\".v3-book-nav\").evaluate(nav=>{const n=nav.getBoundingClientRect(),body=document.querySelector(\"#v3-dialog-body\")!.getBoundingClientRect(),actions=document.querySelector(\"#v3-dialog-actions\")!.getBoundingClientRect();return{bottom:n.bottom,bodyBottom:body.bottom,actionsTop:actions.top,scrollTop:document.querySelector(\"#v3-dialog-body\")!.scrollTop};});expect(layout.scrollTop).toBe(0);expect(layout.bottom).toBeLessThanOrEqual(layout.bodyBottom+.5);expect(layout.bottom).toBeLessThanOrEqual(layout.actionsTop+.5);}\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ^\n  18 |\n  19 | test('traveler and optional two-page book are real, reachable and read-only at both desktop sizes',async({page},info)=>{\n  20 |  await open(page);await expect(page.locator('.customer-art-ready.book-art-ready')).toHaveCount(1);await expect(page.locator('#v3-edition')).toContainText('v0.5 来客手札');await expect(page.locator('#v3-customer-name')).toHaveText('阿岚 · 出锋');\n    at bookFits (/Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts:17:476)\n    at /Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts:28:406"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T02:56:52.598Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v3/v3-notebook-actual-matchin-2e9bf-rk-once-reload-only-redraws-v3-webkit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v3/v3-notebook-actual-matchin-2e9bf-rk-once-reload-only-redraws-v3-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v3/v3-notebook-actual-matchin-2e9bf-rk-once-reload-only-redraws-v3-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts",
+                    "column": 476,
+                    "line": 17
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-65ce4f1216407363c82f",
+          "file": "v3-notebook.spec.ts",
+          "line": 26,
+          "column": 1
+        },
+        {
+          "title": "unmatched or overworked swords can still pay the original contract without another gate",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6351,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T02:57:00.677Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-ff5734cf99c5abc93365",
+          "file": "v3-notebook.spec.ts",
+          "line": 31,
+          "column": 1
+        },
+        {
+          "title": "customer feedback cancels on pause and respects reduced motion without replaying or changing a save",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8992,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T02:57:07.539Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-29d08625499ad164d7c6",
+          "file": "v3-notebook.spec.ts",
+          "line": 35,
+          "column": 1
+        },
+        {
+          "title": "missing new character and book art keeps readable advice, real forging and a usable notebook",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2799,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T02:57:16.547Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-db7ece94ef168a24b191",
+          "file": "v3-notebook.spec.ts",
+          "line": 39,
+          "column": 1
+        },
+        {
+          "title": "a resumed valid four-sword three-trait journal keeps controls unobscured while a real save fails and retries",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8022,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T02:57:19.367Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-3b8785edbf54032e3fec",
+          "file": "v3-notebook.spec.ts",
+          "line": 43,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-20T02:55:27.457Z",
+    "duration": 120130.19399999999,
+    "expected": 15,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}

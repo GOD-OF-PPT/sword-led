@@ -1,0 +1,11 @@
+Use case: stylized-concept
+Asset type: production game sprite atlas for the user-approved D traveling Chinese forge style.
+Input image: style and courier identity reference only; do not reproduce the UI or background.
+Create one SQUARE 1536x1536 transparent PNG sprite atlas with exactly THREE equal columns and TWO equal rows. Each of six cells is a tall 512x768 portrait cell, clean transparent outside the person, no lines, labels or panels. Keep every silhouette entirely within its own cell with 20px transparent side/top margins. Figures cropped at waist, consistent head/waist anchors and scale between expressions. No shadows outside the silhouette, no glow, no paper, no fake checkerboard.
+Column1: 阿岚, adult Chinese patrol guard, short dark tied hair, practical indigo lamellar vest and small faded rust-red scarf, strong calm face, clearly distinct from courier.
+Column2: 阿禾, adult young Chinese courier matching the reference's friendly traveler, tied dark hair, indigo weathered cloak, practical leather satchel strap, lively warm face. Preserve that design.
+Column3: 杜伯, older Chinese swordsmith, gray hair tied back, short gray beard, brown work apron over dark indigo shirt, rugged kind face.
+TOP row: relaxed waiting pose looking toward viewer-left (the anvil), hands visible at waist or one hand gesturing, attentive neutral expression.
+BOTTOM row: SAME character/identity/outfit/head anchor in the same column, delighted grateful expression and two open hands receiving a sword from viewer-left. Do NOT draw any sword or item in their hands; runtime animates the real weapon. Do not repeat the top row unchanged.
+Hand-painted game illustration, confident dark ink contours, tactile cloth/leather and worn metal, warm orange furnace light from viewer-left, subdued blue highlights. Mature friendly adventure mood, not chibi, not glossy 3D. Crisp readable silhouette for an on-screen height of260px.
+Constraints: exactly six isolated half-body sprites, three people each with waiting and thanks poses, all fingers and arms anatomically sensible, same framing per cell, no extra people, no lettering, no landscape or forge behind them. Truly transparent alpha background.

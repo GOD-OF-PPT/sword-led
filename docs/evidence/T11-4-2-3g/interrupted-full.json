@@ -1,0 +1,378 @@
+{
+  "session": 22916,
+  "handleNowMissing": true,
+  "testRunnerAbsentOnProcessInspection": true,
+  "exitCode": null,
+  "status": "interrupted without a complete test report",
+  "consolePassed": [
+    {
+      "index": 1,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-campaign.spec.ts:34:1 › default twelve-round campaign completes through three merchants, upgrades, replacement and reload with zero pointer events (2.2m)"
+    },
+    {
+      "index": 2,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-campaign.spec.ts:51:1 › twelve-round failure and merchant repair use real seals and coins (18.5s)"
+    },
+    {
+      "index": 3,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-campaign.spec.ts:55:1 › existing three-round save stays three rounds; explicit fresh campaign supports twelve and cancel preserves the old bytes (2.6s)"
+    },
+    {
+      "index": 4,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-hammer.spec.ts:4:1 › hammer strikes with a flat metal face and rotates around its grip at both desktop sizes (5.9s)"
+    },
+    {
+      "index": 5,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-hammer.spec.ts:9:1 › flat face follows actual opaque metal for all three shapes at rough and masterwork stages (15.6s)"
+    },
+    {
+      "index": 6,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-hammer.spec.ts:19:1 › slow presentation frames still show a flat contact; pause cancels the pending swing without another command (2.9s)"
+    },
+    {
+      "index": 7,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-impact.spec.ts:12:1 › left-down on the actual sword commits once, aim is cosmetic, hold/up/double-click/drag do not duplicate (1.9s)"
+    },
+    {
+      "index": 8,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-impact.spec.ts:20:1 › contact has real particles, ring, blade recoil and distinct native percussive sound; mute and reduced motion still work (2.4s)"
+    },
+    {
+      "index": 9,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-impact.spec.ts:26:1 › burst is atomic on left-down and late visual hits cannot survive pause, modal or reload (3.8s)"
+    },
+    {
+      "index": 10,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-impact.spec.ts:30:1 › large left-click target and keyboard alternatives remain visible at both desktop sizes (2.9s)"
+    },
+    {
+      "index": 11,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-impact.spec.ts:33:1 › record actual left-click growth and burst effects without injecting any game result (9.7s)"
+    },
+    {
+      "index": 12,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-notebook.spec.ts:17:1 › traveler and optional two-page book are real, reachable and read-only at both desktop sizes (4.3s)"
+    },
+    {
+      "index": 13,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-notebook.spec.ts:24:1 › actual matching delivery changes the customer pose and real work once; reload only redraws (3.5s)"
+    },
+    {
+      "index": 14,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-notebook.spec.ts:29:1 › unmatched or overworked swords can still pay the original contract without another gate (2.8s)"
+    },
+    {
+      "index": 15,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-notebook.spec.ts:33:1 › customer feedback cancels on pause and respects reduced motion without replaying or changing a save (6.4s)"
+    },
+    {
+      "index": 16,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-notebook.spec.ts:37:1 › missing new character and book art keeps readable advice, real forging and a usable notebook (1.6s)"
+    },
+    {
+      "index": 17,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-notebook.spec.ts:41:1 › a resumed valid four-sword three-trait journal keeps controls unobscured while a real save fails and retries (4.4s)"
+    },
+    {
+      "index": 18,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-playable.spec.ts:19:1 › primary hammer remains readable while hovered (1.1s)"
+    },
+    {
+      "index": 19,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-playable.spec.ts:24:1 › first click is live; keyboard has no timing requirement; reduced motion, pause and reload keep results (2.7s)"
+    },
+    {
+      "index": 20,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-playable.spec.ts:31:1 › actual three rounds, optional gift, insurance, merchant trade and upgrade; honest ending at two desktop sizes (12.8s)"
+    },
+    {
+      "index": 21,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-playable.spec.ts:53:1 › three misses really fail; restart respects a changed seed; invalid main recovers actual backup (3.0s)"
+    },
+    {
+      "index": 22,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-playable.spec.ts:57:1 › same-origin v2 writer blocks v3 safely; write refusal carries exact state into unsaved play (2.2s)"
+    },
+    {
+      "index": 23,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-playable.spec.ts:64:1 › real seeded burst survives interruption; crack then break and next-piece action are distinct (6.0s)"
+    },
+    {
+      "index": 24,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-playable.spec.ts:71:1 › menu seed survives resize and asynchronous asset arrivals before confirmed replacement (1.7s)"
+    },
+    {
+      "index": 25,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-playable.spec.ts:76:1 › keyboard completes all three rounds with zero pointer events and no timing recipe (10.4s)"
+    },
+    {
+      "index": 26,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-scene.spec.ts:10:1 › resizing four actual inventory pieces preserves the focused sword node and exact saved bytes (1.9s)"
+    },
+    {
+      "index": 27,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-scene.spec.ts:15:1 › physical workshop and three-step guide stay readable; help is optional and never changes a save (4.1s)"
+    },
+    {
+      "index": 28,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-scene.spec.ts:20:1 › accepted delivery has real sword flight, quota stamp, and honest pieces on the round receipt (3.6s)"
+    },
+    {
+      "index": 29,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-scene.spec.ts:24:1 › ceremony cancels on pause; reduced motion and rapid return never replay rewards or leave flying objects (5.3s)"
+    },
+    {
+      "index": 30,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-scene.spec.ts:27:1 › merchant staging and terminal trophies use actual props and blades; all story controls fit the small viewport (2.8s)"
+    },
+    {
+      "index": 31,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-visual.spec.ts:9:1 › three actual supplied weapons grow through five illustrated stages and reload the same appearance (20.5s)"
+    },
+    {
+      "index": 32,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-visual.spec.ts:21:1 › missing weapon art falls back to a usable native blade and keeps an accepted strike (1.4s)"
+    },
+    {
+      "index": 33,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-visual.spec.ts:24:1 › all six physical handcraft props appear in real merchant offers; equipped echo lights only on its third success (12.3s)"
+    },
+    {
+      "index": 34,
+      "project": "v3-chromium",
+      "case": "tests/e2e/v3-visual.spec.ts:37:1 › three equipped props keep the full workshop, merchant and settings inside both desktop viewports (6.2s)"
+    },
+    {
+      "index": 35,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-campaign.spec.ts:34:1 › default twelve-round campaign completes through three merchants, upgrades, replacement and reload with zero pointer events (2.4m)"
+    },
+    {
+      "index": 36,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-campaign.spec.ts:51:1 › twelve-round failure and merchant repair use real seals and coins (21.9s)"
+    },
+    {
+      "index": 37,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-campaign.spec.ts:55:1 › existing three-round save stays three rounds; explicit fresh campaign supports twelve and cancel preserves the old bytes (3.1s)"
+    },
+    {
+      "index": 38,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-hammer.spec.ts:4:1 › hammer strikes with a flat metal face and rotates around its grip at both desktop sizes (4.1s)"
+    },
+    {
+      "index": 39,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-hammer.spec.ts:9:1 › flat face follows actual opaque metal for all three shapes at rough and masterwork stages (17.2s)"
+    },
+    {
+      "index": 40,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-hammer.spec.ts:19:1 › slow presentation frames still show a flat contact; pause cancels the pending swing without another command (3.1s)"
+    },
+    {
+      "index": 41,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-impact.spec.ts:12:1 › left-down on the actual sword commits once, aim is cosmetic, hold/up/double-click/drag do not duplicate (2.4s)"
+    },
+    {
+      "index": 42,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-impact.spec.ts:20:1 › contact has real particles, ring, blade recoil and distinct native percussive sound; mute and reduced motion still work (3.0s)"
+    },
+    {
+      "index": 43,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-impact.spec.ts:26:1 › burst is atomic on left-down and late visual hits cannot survive pause, modal or reload (4.4s)"
+    },
+    {
+      "index": 44,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-impact.spec.ts:30:1 › large left-click target and keyboard alternatives remain visible at both desktop sizes (3.6s)"
+    },
+    {
+      "index": 45,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-impact.spec.ts:33:1 › record actual left-click growth and burst effects without injecting any game result (8.3s)"
+    },
+    {
+      "index": 46,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-notebook.spec.ts:17:1 › traveler and optional two-page book are real, reachable and read-only at both desktop sizes (3.7s)"
+    },
+    {
+      "index": 47,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-notebook.spec.ts:24:1 › actual matching delivery changes the customer pose and real work once; reload only redraws (3.8s)"
+    },
+    {
+      "index": 48,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-notebook.spec.ts:29:1 › unmatched or overworked swords can still pay the original contract without another gate (3.5s)"
+    },
+    {
+      "index": 49,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-notebook.spec.ts:33:1 › customer feedback cancels on pause and respects reduced motion without replaying or changing a save (7.2s)"
+    },
+    {
+      "index": 50,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-notebook.spec.ts:37:1 › missing new character and book art keeps readable advice, real forging and a usable notebook (2.0s)"
+    },
+    {
+      "index": 51,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-notebook.spec.ts:41:1 › a resumed valid four-sword three-trait journal keeps controls unobscured while a real save fails and retries (3.8s)"
+    },
+    {
+      "index": 52,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-playable.spec.ts:19:1 › primary hammer remains readable while hovered (1.3s)"
+    },
+    {
+      "index": 53,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-playable.spec.ts:24:1 › first click is live; keyboard has no timing requirement; reduced motion, pause and reload keep results (2.9s)"
+    },
+    {
+      "index": 54,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-playable.spec.ts:31:1 › actual three rounds, optional gift, insurance, merchant trade and upgrade; honest ending at two desktop sizes (15.2s)"
+    },
+    {
+      "index": 55,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-playable.spec.ts:53:1 › three misses really fail; restart respects a changed seed; invalid main recovers actual backup (3.6s)"
+    },
+    {
+      "index": 56,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-playable.spec.ts:57:1 › same-origin v2 writer blocks v3 safely; write refusal carries exact state into unsaved play (2.8s)"
+    },
+    {
+      "index": 57,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-playable.spec.ts:64:1 › real seeded burst survives interruption; crack then break and next-piece action are distinct (6.7s)"
+    },
+    {
+      "index": 58,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-playable.spec.ts:71:1 › menu seed survives resize and asynchronous asset arrivals before confirmed replacement (2.1s)"
+    },
+    {
+      "index": 59,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-playable.spec.ts:76:1 › keyboard completes all three rounds with zero pointer events and no timing recipe (12.1s)"
+    },
+    {
+      "index": 60,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-scene.spec.ts:10:1 › resizing four actual inventory pieces preserves the focused sword node and exact saved bytes (2.4s)"
+    },
+    {
+      "index": 61,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-scene.spec.ts:15:1 › physical workshop and three-step guide stay readable; help is optional and never changes a save (3.2s)"
+    },
+    {
+      "index": 62,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-scene.spec.ts:20:1 › accepted delivery has real sword flight, quota stamp, and honest pieces on the round receipt (3.7s)"
+    },
+    {
+      "index": 63,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-scene.spec.ts:24:1 › ceremony cancels on pause; reduced motion and rapid return never replay rewards or leave flying objects (6.2s)"
+    },
+    {
+      "index": 64,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-scene.spec.ts:27:1 › merchant staging and terminal trophies use actual props and blades; all story controls fit the small viewport (3.4s)"
+    },
+    {
+      "index": 65,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-visual.spec.ts:9:1 › three actual supplied weapons grow through five illustrated stages and reload the same appearance (16.2s)"
+    },
+    {
+      "index": 66,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-visual.spec.ts:21:1 › missing weapon art falls back to a usable native blade and keeps an accepted strike (1.4s)"
+    },
+    {
+      "index": 67,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-visual.spec.ts:24:1 › all six physical handcraft props appear in real merchant offers; equipped echo lights only on its third success (19.5s)"
+    },
+    {
+      "index": 68,
+      "project": "v3-firefox",
+      "case": "tests/e2e/v3-visual.spec.ts:37:1 › three equipped props keep the full workshop, merchant and settings inside both desktop viewports (7.3s)"
+    },
+    {
+      "index": 69,
+      "project": "v3-webkit",
+      "case": "tests/e2e/v3-campaign.spec.ts:34:1 › default twelve-round campaign completes through three merchants, upgrades, replacement and reload with zero pointer events (4.4m)"
+    }
+  ],
+  "consolePassedCount": 69,
+  "structuredReport": {
+    "purpose": "Earlier --list enumeration, not execution results",
+    "stats": {
+      "startTime": "2026-10-20T01:30:00.908Z",
+      "duration": 789.703,
+      "expected": 0,
+      "skipped": 102,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "sourceFingerprint": "tmp/T11-4-2-3g/release-before.json",
+  "preservedLocal": "tmp/T11-4-2-3g/interrupted-full",
+  "movedWorkingDirs": [
+    "v3-campaign-states",
+    "v3-hammer-states",
+    "v3-impact-states",
+    "v3-notebook-states",
+    "v3-scene-states",
+    "v3-ui-states",
+    "v3-visual-states"
+  ],
+  "consoleSha256": "bd6d11088a65dc8ff7dfe724cfa98b31806b44601a93427ff29839e65274a3ff"
+}

@@ -2,11 +2,13 @@
 
 一款面向现代 PC 浏览器的轮次制锻造游戏。每轮只有三件铁坯：点击落锤让它升值，在断裂前决定交货、留剑还是回收，靠手艺和商人升级撑过契约。
 
-**当前首页为 v0.4「行旅版」：[打开游戏](http://127.0.0.1:4179/)**。界面改为可见工坊、实物剑架、悬挂契纸、契印和十二轮路标；炉边提示会随真实锻造进度变化，也可主动打开三步图解。交差有剑影交接与达标短幕，挂剑、换手艺、升级、修补和新轮有明确反馈。商人摊位、每轮兵器去向与终局作品已接入完整流程。[行旅版说明](docs/v0.4-workshop-scene.md)与[R3.15复核](docs/reviews/R3-15-workshop-scene.md)记录实现和验证边界。
+**当前首页为 v0.5「来客手札」：[打开游戏](http://127.0.0.1:4179/)**。三位来客站在炉边，纸单显示一条可选打造建议、当前差项和明日预告。合意成品交到来客手中，留下短话和印签；右下手札可翻看这一炉真正交出的剑。手艺变为左下实体挂件，点开查看作用。菜单、暂停、收据和完整胜负都能回顾作品。[界面说明](docs/v0.5-notebook-interface.md)与[R3.17复核](docs/reviews/R3-17-traveler-notebook.md)记录实现和验证边界。
 
-保留已认可的左键操作、锤子方向/比例、三家族五阶段兵器和既有规则。暂停、隐藏、菜单会清理旧动效；减弱动效与静音继续可用。刷新原标签页应能看到“行旅版”。已有三轮档按原长度继续；要玩完整局，点“契约”→选“十二轮契约”→“开一炉新契约”，确认前可导出旧进度。新空档直接开启十二轮，[三轮练手](http://127.0.0.1:4179/?mode=3)也保留。
+刷新原标签页，左上应显示“v0.5 来客手札”。原进度直接续玩；已有三轮档按原长度继续，要玩完整局可在“契约”选择十二轮并明确新建，确认前可导出旧进度。新空档直接开启十二轮，[三轮练手](http://127.0.0.1:4179/?mode=3)也保留。仍然左键直接落锤，不合来客建议也能交差；原规则、锤姿、成长、静音和减弱动效保持。
 
-[完整实况复核](docs/research/2026-10-19-forgetax-session-study.md)、[批准方案](docs/v0.4-gameplay-proposal.md)、[完整契约](docs/v0.4-campaign.md)与[美术来源/提示词](design/d/scene-ui-manifest-v1.json)保留研究与实施身份。[新规则模型审计](docs/reviews/R4-v3-model-audit.md)已完成24条路线和2组一致性检查、各1000种子共26,000局：资源/回放通过，但固定七次点击和无手艺路线均全通关，经营取舍仍需优化。[后续1152局补证](docs/reviews/R3-16-purpose-and-directed-review.md)证实主动保险和带裂手艺有实际用途；只读来客/作品投影已完成，下一任务按[界面说明](docs/v0.5-notebook-interface.md)接人物/纸单/手札，当前试玩尚未替换为新图。整体趣味性、新版广矩阵与最终最大审查继续推进。`/v2.html`与`/legacy.html`保留旧模式和旧档；没有公网部署声明。
+![当前十二轮首页实机](docs/evidence/T11-4-2-3g/preview-default.webp)
+
+[完整实况复核](docs/research/2026-10-19-forgetax-session-study.md)、[批准方案](docs/v0.4-gameplay-proposal.md)、[完整契约](docs/v0.4-campaign.md)与[来客美术原件/提示词](design/d/v05/README.md)保留研究与实施身份。[26,000局模型审计](docs/reviews/R4-v3-model-audit.md)发现固定七次点击也能通关；[后续1152局补证](docs/reviews/R3-16-purpose-and-directed-review.md)证实主动保险和带裂手艺有实际用途。当前界面247单测和三引擎102场景及最后手札21项定向通过，整体趣味性、最终广矩阵与最大审查继续推进。界面v0.5仍使用forge-v3/schema3经济与原存档，手札不发额外奖励。`/v2.html`与`/legacy.html`保留旧模式和旧档；本机预览尚未公网部署。
 
 2026-10-18真人曾评价v0.2玩法/美术缺乏新意；已据ForgeTax及110条唯一Steam评论修订并取得明确v0.3批准。[核心证据](docs/reviews/R3-5-v2-core-and-playable.md)保留928局策略与原试玩结果，[D界面说明](docs/v0.3-d-interface.md)记录新接线与独立练习。[新版技术验收](docs/reviews/R3-7-v2-technical-acceptance.md)与[44AC映射](docs/v0.3-acceptance.md)分别记录实际矩阵、故障修复及待办。真人再玩和最大交付仍按T11.4.2–T12推进，技术通过不等于玩家满意。
 
@@ -83,14 +85,14 @@ npm run test:art
 
 `check`运行单测、严格类型检查与双构建。`test:browser`一次构建后串行运行正式页面与存储SDK；也可分别用`test:e2e`/`test:storage:browser`。真实Chrome原生窗口/缓存探测采用隔离profile；测试只改变测试侧时钟/事件，不注入钱包/终局。美术检查使用独立设计页，不作为正式游戏验收。单项命令还包括`npm test`、`npm run typecheck`、`npm run build`和交互`test:watch`。
 
-v0.4当前配置在同一构建上测试三种引擎：
+当前forge-v3规则与v0.5界面的配置可在同一构建上测试三种引擎：
 
 ```bash
 npm run build
 npx playwright test --config playwright.v3.config.ts
 ```
 
-使用4186端口、单worker、无重试；当前枚举84项：既有60项三轮操作/美术/恢复，9项完整十二轮/修补失败/新旧长度，新增15项场景/引导/真实反馈/取消/商人/终局与缩放保焦。完整局用原生Tab/Enter/Space逐命令对照正式内核，不能将这些检查当最终所有DPR/原生生命周期/性能矩阵。结果见[R3.15](docs/reviews/R3-15-workshop-scene.md)；完整84批次83过/1超时，同构建同限时单例复验通过，逐项覆盖审计保留两份真实报告。
+使用4186端口、单worker、无重试；当前枚举105项（三引擎各35），含21项来客/册页/无门槛交差/错误回退，以及此前84项锻造、成长、完整十二轮/失败/商人/保存和场景回归。完整局用原生Tab/Enter/Space逐命令对照正式内核。本次实测为主改版102项全过，最后册页专属CSS修补后21项全过；45个产物路径不变，主JS改名但内容同字节，不把这两份报告称为一次105全绿。报告见[R3.17](docs/reviews/R3-17-traveler-notebook.md)；最终全DPR/原生生命周期/组合故障/音频/性能矩阵另验。
 
 跨引擎工具：`npx playwright install firefox webkit`后可执行旧版/混合定向配置`npm run test:cross`。旧D细锻矩阵单独执行：
 

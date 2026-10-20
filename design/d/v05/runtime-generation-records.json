@@ -1,0 +1,87 @@
+{
+  "mode": "built-in image_gen",
+  "records": [
+    {
+      "name": "customers-atlas-v1",
+      "kind": "generate",
+      "source": {
+        "path": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-66a6c2c5-c6e6-45c2-8c3c-ab304ce70526.png",
+        "bytes": 2644316,
+        "sha256": "1aaa5b28cb4ccdc4cf055cc57688076bb178dba01d3ce654998258681967c5ce"
+      },
+      "reference": {
+        "path": "design/d/v05/main-customer-v1.png",
+        "bytes": 2660535,
+        "sha256": "b1e954fc1192ab5621619e192065cbd76e0ec8c0770bd02eec963617cb44a117"
+      },
+      "selected": false,
+      "reason": "True alpha but silhouettes crossed tile boundaries; original retained for repair provenance",
+      "project": {
+        "path": "design/d/v05/originals/customers-atlas-v1.png",
+        "bytes": 2644316,
+        "sha256": "1aaa5b28cb4ccdc4cf055cc57688076bb178dba01d3ce654998258681967c5ce"
+      },
+      "prompt": {
+        "path": "design/d/v05/customers-atlas-v1.prompt.txt",
+        "bytes": 2200,
+        "sha256": "94ea356b69d4854b0533030ee8d183646c9df3cdffc1fcc01853438a4d634bf3"
+      },
+      "promptSentSha256": "5f68b5033676929aa14eaeb6478a50353ab9e7ecc183a2510265cc8649b745ad",
+      "transparentBackground": true
+    },
+    {
+      "name": "customers-atlas-v2",
+      "kind": "edit",
+      "source": {
+        "path": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-e179d4d3-4ede-43ba-810e-8d423a53435c.png",
+        "bytes": 1937506,
+        "sha256": "fe613eab5a26f33eabbbc74a2332c6c471a1acc5dd14fea09091574b42db5f50"
+      },
+      "reference": {
+        "path": "design/d/v05/originals/customers-atlas-v1.png",
+        "bytes": 2644316,
+        "sha256": "1aaa5b28cb4ccdc4cf055cc57688076bb178dba01d3ce654998258681967c5ce"
+      },
+      "selected": true,
+      "project": {
+        "path": "design/d/v05/originals/customers-atlas-v2.png",
+        "bytes": 1937506,
+        "sha256": "fe613eab5a26f33eabbbc74a2332c6c471a1acc5dd14fea09091574b42db5f50"
+      },
+      "prompt": {
+        "path": "design/d/v05/customers-atlas-v2.prompt.txt",
+        "bytes": 1128,
+        "sha256": "30f03bba05ce6066994f2ead1dbdb00e1dca1bc7324c1037d8816f5bff415836"
+      },
+      "promptSentSha256": "c42210e3914db49a3bdf0f84d0679350a00955c174309d52bce32ea688f1fcce",
+      "transparentBackground": true
+    },
+    {
+      "name": "notebook-cover-v1",
+      "kind": "generate",
+      "source": {
+        "path": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-9f573898-2cf1-4308-b182-29594145d9bc.png",
+        "bytes": 2229229,
+        "sha256": "11ddfd1e77d11ab1880067a29f666555b6310f102848454bad6ce8e5a14c9325"
+      },
+      "reference": {
+        "path": "design/d/v05/main-customer-v1.png",
+        "bytes": 2660535,
+        "sha256": "b1e954fc1192ab5621619e192065cbd76e0ec8c0770bd02eec963617cb44a117"
+      },
+      "selected": true,
+      "project": {
+        "path": "design/d/v05/originals/notebook-cover-v1.png",
+        "bytes": 2229229,
+        "sha256": "11ddfd1e77d11ab1880067a29f666555b6310f102848454bad6ce8e5a14c9325"
+      },
+      "prompt": {
+        "path": "design/d/v05/notebook-cover-v1.prompt.txt",
+        "bytes": 1047,
+        "sha256": "994580d4a7c7d43029b5d9f2558f38b58e47492f9b9bf0b7907ae5c093236a58"
+      },
+      "promptSentSha256": "42d32085ae645a6f6ddca07666585a06ddd2c793e8442e4852b2f81b7446087c",
+      "transparentBackground": true
+    }
+  ]
+}

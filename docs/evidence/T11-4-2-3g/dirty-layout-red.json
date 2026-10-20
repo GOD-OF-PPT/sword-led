@@ -1,0 +1,243 @@
+{
+  "config": {
+    "argv": [
+      "/Users/gordon/.nvm/versions/node/v22.12.0/bin/node",
+      "/Users/gordon/githome/sword-led/node_modules/.bin/playwright",
+      "test",
+      "--config=playwright.v3.config.ts",
+      "--project=v3-chromium",
+      "tests/e2e/v3-notebook.spec.ts",
+      "--grep",
+      "resumed valid"
+    ],
+    "configFile": "/Users/gordon/githome/sword-led/playwright.v3.config.ts",
+    "rootDir": "/Users/gordon/githome/sword-led/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v3-chromium",
+        "name": "v3-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v3-*.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v3-firefox",
+        "name": "v3-firefox",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v3-*.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v3-webkit",
+        "name": "v3-webkit",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v3-*.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v3-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v3-*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4186",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v3-chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/v3-report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 4186 --strictPort",
+      "url": "http://127.0.0.1:4186",
+      "reuseExistingServer": false,
+      "env": {
+        "NO_PROXY": "127.0.0.1,localhost",
+        "no_proxy": "127.0.0.1,localhost"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "v3-notebook.spec.ts",
+      "file": "v3-notebook.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "a resumed valid four-sword three-trait journal keeps controls unobscured while a real save fails and retries",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 3054,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m4030.296875\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m4030.296875\u001b[39m\n    at /Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts:51:1296",
+                    "location": {
+                      "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts",
+                      "column": 1296,
+                      "line": 51
+                    },
+                    "snippet": "  49 |  await page.evaluate(()=>{const original=Storage.prototype.setItem;Reflect.set(window,'__restoreNotebookStorage',()=>{Storage.prototype.setItem=original;Reflect.deleteProperty(window,'__restoreNotebookStorage');});Storage.prototype.setItem=function(key,value){if(key==='sword-led.save.v3')throw new DOMException('test quota','QuotaExceededError');return original.call(this,key,value);};});\n  50 |  await page.locator('#v3-hit').click({position:{x:400,y:120}});await expect(page.locator('#v3-strike')).toHaveAttribute('aria-busy','false');await expect(page.locator('.v3-app')).toHaveClass(/save-issue/);await expect(page.locator('#v3-inventory button')).toHaveCount(4);const expected=applyCommand(fixture,{runId:fixture.runId,expectedRevision:fixture.revision,action:{type:'strike',pieceId:'r9-1'}});if(!expected.ok)throw Error(expected.error);\n> 51 |  const checks=[];for(const [width,height]of [[1280,720],[1920,1080]]){await page.setViewportSize({width:width!,height:height!});const boxes=await page.locator('#v3-inventory button,.v3-trait-item,#v3-notebook,#v3-strike,#v3-retry,#v3-settings summary').evaluateAll(nodes=>nodes.map(n=>{const b=n.getBoundingClientRect();return{kind:n.matches('.v3-trait-item')?'trait':n.hasAttribute('data-piece')?'sword':'other',x:b.x,y:b.y,w:b.width,h:b.height};}));for(const b of boxes){expect(b.w).toBeGreaterThanOrEqual(44);expect(b.h).toBeGreaterThanOrEqual(44);expect(b.y+b.h).toBeLessThanOrEqual(height!);}for(const sword of boxes.filter(b=>b.kind==='sword'))for(const trait of boxes.filter(b=>b.kind==='trait')){const overlap=Math.max(0,Math.min(sword.x+sword.w,trait.x+trait.w)-Math.max(sword.x,trait.x))*Math.max(0,Math.min(sword.y+sword.h,trait.y+trait.h)-Math.max(sword.y,trait.y));expect(overlap).toBe(0);}const reserveBox=await page.locator('.v3-reserve').boundingBox(),beltBox=await page.locator('.v3-belt').boundingBox();if(reserveBox&&beltBox){const overlap=Math.max(0,Math.min(reserveBox.x+reserveBox.width,beltBox.x+beltBox.width)-Math.max(reserveBox.x,beltBox.x))*Math.max(0,Math.min(reserveBox.y+reserveBox.height,beltBox.y+beltBox.height)-Math.max(reserveBox.y,beltBox.y));expect(overlap).toBe(0);}else await expect(page.locator('#v3-reserve-slot button')).toHaveCount(0);checks.push({width,height,boxes});await mkdir(dir,{recursive:true});await page.screenshot({path:`${dir}/${info.project.name}-dirty-layout-${width}.png`});}\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ^\n  52 |  const downloadPromise=page.waitForEvent('download');await page.locator('#v3-export').click();const download=await downloadPromise,file=await download.path();if(!file)throw Error('No export');const exported=JSON.parse(await readFile(file,'utf8'));const checked=validateRun(exported.state);if(!checked.ok)throw Error(checked.detail);expect(checked.state).toEqual(expected.state);\n  53 |  await page.evaluate(()=>{const restore=Reflect.get(window,'__restoreNotebookStorage');if(typeof restore==='function')restore();});await page.locator('#v3-retry').click();expect(await state(page)).toEqual(expected.state);await writeFile(`${dir}/${info.project.name}-dirty-resume.json`,JSON.stringify({fixtureRevision:fixture.revision,checks,state:await state(page)},null,2)+'\\n');\n  54 | });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts",
+                        "column": 1296,
+                        "line": 51
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m4030.296875\u001b[39m\n\n  49 |  await page.evaluate(()=>{const original=Storage.prototype.setItem;Reflect.set(window,'__restoreNotebookStorage',()=>{Storage.prototype.setItem=original;Reflect.deleteProperty(window,'__restoreNotebookStorage');});Storage.prototype.setItem=function(key,value){if(key==='sword-led.save.v3')throw new DOMException('test quota','QuotaExceededError');return original.call(this,key,value);};});\n  50 |  await page.locator('#v3-hit').click({position:{x:400,y:120}});await expect(page.locator('#v3-strike')).toHaveAttribute('aria-busy','false');await expect(page.locator('.v3-app')).toHaveClass(/save-issue/);await expect(page.locator('#v3-inventory button')).toHaveCount(4);const expected=applyCommand(fixture,{runId:fixture.runId,expectedRevision:fixture.revision,action:{type:'strike',pieceId:'r9-1'}});if(!expected.ok)throw Error(expected.error);\n> 51 |  const checks=[];for(const [width,height]of [[1280,720],[1920,1080]]){await page.setViewportSize({width:width!,height:height!});const boxes=await page.locator('#v3-inventory button,.v3-trait-item,#v3-notebook,#v3-strike,#v3-retry,#v3-settings summary').evaluateAll(nodes=>nodes.map(n=>{const b=n.getBoundingClientRect();return{kind:n.matches('.v3-trait-item')?'trait':n.hasAttribute('data-piece')?'sword':'other',x:b.x,y:b.y,w:b.width,h:b.height};}));for(const b of boxes){expect(b.w).toBeGreaterThanOrEqual(44);expect(b.h).toBeGreaterThanOrEqual(44);expect(b.y+b.h).toBeLessThanOrEqual(height!);}for(const sword of boxes.filter(b=>b.kind==='sword'))for(const trait of boxes.filter(b=>b.kind==='trait')){const overlap=Math.max(0,Math.min(sword.x+sword.w,trait.x+trait.w)-Math.max(sword.x,trait.x))*Math.max(0,Math.min(sword.y+sword.h,trait.y+trait.h)-Math.max(sword.y,trait.y));expect(overlap).toBe(0);}const reserveBox=await page.locator('.v3-reserve').boundingBox(),beltBox=await page.locator('.v3-belt').boundingBox();if(reserveBox&&beltBox){const overlap=Math.max(0,Math.min(reserveBox.x+reserveBox.width,beltBox.x+beltBox.width)-Math.max(reserveBox.x,beltBox.x))*Math.max(0,Math.min(reserveBox.y+reserveBox.height,beltBox.y+beltBox.height)-Math.max(reserveBox.y,beltBox.y));expect(overlap).toBe(0);}else await expect(page.locator('#v3-reserve-slot button')).toHaveCount(0);checks.push({width,height,boxes});await mkdir(dir,{recursive:true});await page.screenshot({path:`${dir}/${info.project.name}-dirty-layout-${width}.png`});}\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ^\n  52 |  const downloadPromise=page.waitForEvent('download');await page.locator('#v3-export').click();const download=await downloadPromise,file=await download.path();if(!file)throw Error('No export');const exported=JSON.parse(await readFile(file,'utf8'));const checked=validateRun(exported.state);if(!checked.ok)throw Error(checked.detail);expect(checked.state).toEqual(expected.state);\n  53 |  await page.evaluate(()=>{const restore=Reflect.get(window,'__restoreNotebookStorage');if(typeof restore==='function')restore();});await page.locator('#v3-retry').click();expect(await state(page)).toEqual(expected.state);await writeFile(`${dir}/${info.project.name}-dirty-resume.json`,JSON.stringify({fixtureRevision:fixture.revision,checks,state:await state(page)},null,2)+'\\n');\n  54 | });\n    at /Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts:51:1296"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T01:17:21.664Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v3/v3-notebook-a-resumed-vali-0af31-real-save-fails-and-retries-v3-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v3/v3-notebook-a-resumed-vali-0af31-real-save-fails-and-retries-v3-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v3/v3-notebook-a-resumed-vali-0af31-real-save-fails-and-retries-v3-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-notebook.spec.ts",
+                    "column": 1296,
+                    "line": 51
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-4295d416cda3759c2df1",
+          "file": "v3-notebook.spec.ts",
+          "line": 41,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-20T01:17:18.271Z",
+    "duration": 7696.689,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

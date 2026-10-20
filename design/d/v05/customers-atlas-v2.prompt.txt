@@ -1,0 +1,5 @@
+Use case: precise-object-edit
+Edit target: the provided six-character transparent sprite atlas.
+Preserve the six identities, outfits, expressions, poses, ink-painted D style, colors, transparency and the exact THREE columns by TWO rows square-atlas layout.
+Fix ONLY spacing and clipping: each character must be entirely contained inside its own equal cell, with a clearly empty transparent gutter around all four sides, at least24 pixels at1254x1254 canvas size. The current drawing crosses the vertical cell borders at one-third and two-thirds of the image. Scale each individual character drawing down about18% and recenter it within its cell; keep head/waist anchors consistent between its top waiting pose and bottom thanking pose. No silhouette, fingers, arm, clothing or shadow may touch or cross any cell boundary. Keep all hands visible, do not cut off fingers. Waist crop remains intentional but leave transparent pixels beneath the drawn waist line.
+Do not add borders, panels, labels, objects, swords or backgrounds. Do not change the characters into a different style. Keep the exterior genuinely transparent alpha.

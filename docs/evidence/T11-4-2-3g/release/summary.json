@@ -1,0 +1,638 @@
+{
+  "cases": 102,
+  "projects": {
+    "v3-chromium": 34,
+    "v3-firefox": 34,
+    "v3-webkit": 34
+  },
+  "stats": {
+    "startTime": "2026-10-20T02:10:43.645Z",
+    "duration": 1274001.757,
+    "expected": 102,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "caseResults": [
+    {
+      "file": "v3-campaign.spec.ts",
+      "title": "default twelve-round campaign completes through three merchants, upgrades, replacement and reload with zero pointer events",
+      "project": "v3-chromium",
+      "duration": 128606
+    },
+    {
+      "file": "v3-campaign.spec.ts",
+      "title": "twelve-round failure and merchant repair use real seals and coins",
+      "project": "v3-chromium",
+      "duration": 18746
+    },
+    {
+      "file": "v3-campaign.spec.ts",
+      "title": "existing three-round save stays three rounds; explicit fresh campaign supports twelve and cancel preserves the old bytes",
+      "project": "v3-chromium",
+      "duration": 2668
+    },
+    {
+      "file": "v3-campaign.spec.ts",
+      "title": "default twelve-round campaign completes through three merchants, upgrades, replacement and reload with zero pointer events",
+      "project": "v3-firefox",
+      "duration": 148688
+    },
+    {
+      "file": "v3-campaign.spec.ts",
+      "title": "twelve-round failure and merchant repair use real seals and coins",
+      "project": "v3-firefox",
+      "duration": 22374
+    },
+    {
+      "file": "v3-campaign.spec.ts",
+      "title": "existing three-round save stays three rounds; explicit fresh campaign supports twelve and cancel preserves the old bytes",
+      "project": "v3-firefox",
+      "duration": 3239
+    },
+    {
+      "file": "v3-campaign.spec.ts",
+      "title": "default twelve-round campaign completes through three merchants, upgrades, replacement and reload with zero pointer events",
+      "project": "v3-webkit",
+      "duration": 243717
+    },
+    {
+      "file": "v3-campaign.spec.ts",
+      "title": "twelve-round failure and merchant repair use real seals and coins",
+      "project": "v3-webkit",
+      "duration": 37769
+    },
+    {
+      "file": "v3-campaign.spec.ts",
+      "title": "existing three-round save stays three rounds; explicit fresh campaign supports twelve and cancel preserves the old bytes",
+      "project": "v3-webkit",
+      "duration": 5312
+    },
+    {
+      "file": "v3-hammer.spec.ts",
+      "title": "hammer strikes with a flat metal face and rotates around its grip at both desktop sizes",
+      "project": "v3-chromium",
+      "duration": 6263
+    },
+    {
+      "file": "v3-hammer.spec.ts",
+      "title": "flat face follows actual opaque metal for all three shapes at rough and masterwork stages",
+      "project": "v3-chromium",
+      "duration": 15599
+    },
+    {
+      "file": "v3-hammer.spec.ts",
+      "title": "slow presentation frames still show a flat contact; pause cancels the pending swing without another command",
+      "project": "v3-chromium",
+      "duration": 2830
+    },
+    {
+      "file": "v3-hammer.spec.ts",
+      "title": "hammer strikes with a flat metal face and rotates around its grip at both desktop sizes",
+      "project": "v3-firefox",
+      "duration": 4492
+    },
+    {
+      "file": "v3-hammer.spec.ts",
+      "title": "flat face follows actual opaque metal for all three shapes at rough and masterwork stages",
+      "project": "v3-firefox",
+      "duration": 17627
+    },
+    {
+      "file": "v3-hammer.spec.ts",
+      "title": "slow presentation frames still show a flat contact; pause cancels the pending swing without another command",
+      "project": "v3-firefox",
+      "duration": 3114
+    },
+    {
+      "file": "v3-hammer.spec.ts",
+      "title": "hammer strikes with a flat metal face and rotates around its grip at both desktop sizes",
+      "project": "v3-webkit",
+      "duration": 13468
+    },
+    {
+      "file": "v3-hammer.spec.ts",
+      "title": "flat face follows actual opaque metal for all three shapes at rough and masterwork stages",
+      "project": "v3-webkit",
+      "duration": 30131
+    },
+    {
+      "file": "v3-hammer.spec.ts",
+      "title": "slow presentation frames still show a flat contact; pause cancels the pending swing without another command",
+      "project": "v3-webkit",
+      "duration": 5591
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "left-down on the actual sword commits once, aim is cosmetic, hold/up/double-click/drag do not duplicate",
+      "project": "v3-chromium",
+      "duration": 1869
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "contact has real particles, ring, blade recoil and distinct native percussive sound; mute and reduced motion still work",
+      "project": "v3-chromium",
+      "duration": 2397
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "burst is atomic on left-down and late visual hits cannot survive pause, modal or reload",
+      "project": "v3-chromium",
+      "duration": 3896
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "large left-click target and keyboard alternatives remain visible at both desktop sizes",
+      "project": "v3-chromium",
+      "duration": 2889
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "record actual left-click growth and burst effects without injecting any game result",
+      "project": "v3-chromium",
+      "duration": 10105
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "left-down on the actual sword commits once, aim is cosmetic, hold/up/double-click/drag do not duplicate",
+      "project": "v3-firefox",
+      "duration": 2308
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "contact has real particles, ring, blade recoil and distinct native percussive sound; mute and reduced motion still work",
+      "project": "v3-firefox",
+      "duration": 2763
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "burst is atomic on left-down and late visual hits cannot survive pause, modal or reload",
+      "project": "v3-firefox",
+      "duration": 4575
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "large left-click target and keyboard alternatives remain visible at both desktop sizes",
+      "project": "v3-firefox",
+      "duration": 3784
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "record actual left-click growth and burst effects without injecting any game result",
+      "project": "v3-firefox",
+      "duration": 7824
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "left-down on the actual sword commits once, aim is cosmetic, hold/up/double-click/drag do not duplicate",
+      "project": "v3-webkit",
+      "duration": 3663
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "contact has real particles, ring, blade recoil and distinct native percussive sound; mute and reduced motion still work",
+      "project": "v3-webkit",
+      "duration": 4642
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "burst is atomic on left-down and late visual hits cannot survive pause, modal or reload",
+      "project": "v3-webkit",
+      "duration": 6714
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "large left-click target and keyboard alternatives remain visible at both desktop sizes",
+      "project": "v3-webkit",
+      "duration": 5065
+    },
+    {
+      "file": "v3-impact.spec.ts",
+      "title": "record actual left-click growth and burst effects without injecting any game result",
+      "project": "v3-webkit",
+      "duration": 8864
+    },
+    {
+      "file": "v3-notebook.spec.ts",
+      "title": "traveler and optional two-page book are real, reachable and read-only at both desktop sizes",
+      "project": "v3-chromium",
+      "duration": 4380
+    },
+    {
+      "file": "v3-notebook.spec.ts",
+      "title": "actual matching delivery changes the customer pose and real work once; reload only redraws",
+      "project": "v3-chromium",
+      "duration": 3474
+    },
+    {
+      "file": "v3-notebook.spec.ts",
+      "title": "unmatched or overworked swords can still pay the original contract without another gate",
+      "project": "v3-chromium",
+      "duration": 2805
+    },
+    {
+      "file": "v3-notebook.spec.ts",
+      "title": "customer feedback cancels on pause and respects reduced motion without replaying or changing a save",
+      "project": "v3-chromium",
+      "duration": 6254
+    },
+    {
+      "file": "v3-notebook.spec.ts",
+      "title": "missing new character and book art keeps readable advice, real forging and a usable notebook",
+      "project": "v3-chromium",
+      "duration": 1685
+    },
+    {
+      "file": "v3-notebook.spec.ts",
+      "title": "a resumed valid four-sword three-trait journal keeps controls unobscured while a real save fails and retries",
+      "project": "v3-chromium",
+      "duration": 4582
+    },
+    {
+      "file": "v3-notebook.spec.ts",
+      "title": "traveler and optional two-page book are real, reachable and read-only at both desktop sizes",
+      "project": "v3-firefox",
+      "duration": 3852
+    },
+    {
+      "file": "v3-notebook.spec.ts",
+      "title": "actual matching delivery changes the customer pose and real work once; reload only redraws",
+      "project": "v3-firefox",
+      "duration": 3731
+    },
+    {
+      "file": "v3-notebook.spec.ts",
+      "title": "unmatched or overworked swords can still pay the original contract without another gate",
+      "project": "v3-firefox",
+      "duration": 3609
+    },
+    {
+      "file": "v3-notebook.spec.ts",
+      "title": "customer feedback cancels on pause and respects reduced motion without replaying or changing a save",
+      "project": "v3-firefox",
+      "duration": 7232
+    },
+    {
+      "file": "v3-notebook.spec.ts",
+      "title": "missing new character and book art keeps readable advice, real forging and a usable notebook",
+      "project": "v3-firefox",
+      "duration": 1996
+    },
+    {
+      "file": "v3-notebook.spec.ts",
+      "title": "a resumed valid four-sword three-trait journal keeps controls unobscured while a real save fails and retries",
+      "project": "v3-firefox",
+      "duration": 4079
+    },
+    {
+      "file": "v3-notebook.spec.ts",
+      "title": "traveler and optional two-page book are real, reachable and read-only at both desktop sizes",
+      "project": "v3-webkit",
+      "duration": 9352
+    },
+    {
+      "file": "v3-notebook.spec.ts",
+      "title": "actual matching delivery changes the customer pose and real work once; reload only redraws",
+      "project": "v3-webkit",
+      "duration": 6158
+    },
+    {
+      "file": "v3-notebook.spec.ts",
+      "title": "unmatched or overworked swords can still pay the original contract without another gate",
+      "project": "v3-webkit",
+      "duration": 5258
+    },
+    {
+      "file": "v3-notebook.spec.ts",
+      "title": "customer feedback cancels on pause and respects reduced motion without replaying or changing a save",
+      "project": "v3-webkit",
+      "duration": 9255
+    },
+    {
+      "file": "v3-notebook.spec.ts",
+      "title": "missing new character and book art keeps readable advice, real forging and a usable notebook",
+      "project": "v3-webkit",
+      "duration": 3902
+    },
+    {
+      "file": "v3-notebook.spec.ts",
+      "title": "a resumed valid four-sword three-trait journal keeps controls unobscured while a real save fails and retries",
+      "project": "v3-webkit",
+      "duration": 9352
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "primary hammer remains readable while hovered",
+      "project": "v3-chromium",
+      "duration": 1030
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "first click is live; keyboard has no timing requirement; reduced motion, pause and reload keep results",
+      "project": "v3-chromium",
+      "duration": 2548
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "actual three rounds, optional gift, insurance, merchant trade and upgrade; honest ending at two desktop sizes",
+      "project": "v3-chromium",
+      "duration": 12794
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "three misses really fail; restart respects a changed seed; invalid main recovers actual backup",
+      "project": "v3-chromium",
+      "duration": 2694
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "same-origin v2 writer blocks v3 safely; write refusal carries exact state into unsaved play",
+      "project": "v3-chromium",
+      "duration": 2078
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "real seeded burst survives interruption; crack then break and next-piece action are distinct",
+      "project": "v3-chromium",
+      "duration": 6422
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "menu seed survives resize and asynchronous asset arrivals before confirmed replacement",
+      "project": "v3-chromium",
+      "duration": 1777
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "keyboard completes all three rounds with zero pointer events and no timing recipe",
+      "project": "v3-chromium",
+      "duration": 10667
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "primary hammer remains readable while hovered",
+      "project": "v3-firefox",
+      "duration": 1585
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "first click is live; keyboard has no timing requirement; reduced motion, pause and reload keep results",
+      "project": "v3-firefox",
+      "duration": 3795
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "actual three rounds, optional gift, insurance, merchant trade and upgrade; honest ending at two desktop sizes",
+      "project": "v3-firefox",
+      "duration": 15873
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "three misses really fail; restart respects a changed seed; invalid main recovers actual backup",
+      "project": "v3-firefox",
+      "duration": 3609
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "same-origin v2 writer blocks v3 safely; write refusal carries exact state into unsaved play",
+      "project": "v3-firefox",
+      "duration": 2892
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "real seeded burst survives interruption; crack then break and next-piece action are distinct",
+      "project": "v3-firefox",
+      "duration": 7695
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "menu seed survives resize and asynchronous asset arrivals before confirmed replacement",
+      "project": "v3-firefox",
+      "duration": 2144
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "keyboard completes all three rounds with zero pointer events and no timing recipe",
+      "project": "v3-firefox",
+      "duration": 12639
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "primary hammer remains readable while hovered",
+      "project": "v3-webkit",
+      "duration": 2831
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "first click is live; keyboard has no timing requirement; reduced motion, pause and reload keep results",
+      "project": "v3-webkit",
+      "duration": 5058
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "actual three rounds, optional gift, insurance, merchant trade and upgrade; honest ending at two desktop sizes",
+      "project": "v3-webkit",
+      "duration": 32010
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "three misses really fail; restart respects a changed seed; invalid main recovers actual backup",
+      "project": "v3-webkit",
+      "duration": 5296
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "same-origin v2 writer blocks v3 safely; write refusal carries exact state into unsaved play",
+      "project": "v3-webkit",
+      "duration": 5295
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "real seeded burst survives interruption; crack then break and next-piece action are distinct",
+      "project": "v3-webkit",
+      "duration": 10600
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "menu seed survives resize and asynchronous asset arrivals before confirmed replacement",
+      "project": "v3-webkit",
+      "duration": 3420
+    },
+    {
+      "file": "v3-playable.spec.ts",
+      "title": "keyboard completes all three rounds with zero pointer events and no timing recipe",
+      "project": "v3-webkit",
+      "duration": 17532
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "resizing four actual inventory pieces preserves the focused sword node and exact saved bytes",
+      "project": "v3-chromium",
+      "duration": 1824
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "physical workshop and three-step guide stay readable; help is optional and never changes a save",
+      "project": "v3-chromium",
+      "duration": 4062
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "accepted delivery has real sword flight, quota stamp, and honest pieces on the round receipt",
+      "project": "v3-chromium",
+      "duration": 3544
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "ceremony cancels on pause; reduced motion and rapid return never replay rewards or leave flying objects",
+      "project": "v3-chromium",
+      "duration": 5331
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "merchant staging and terminal trophies use actual props and blades; all story controls fit the small viewport",
+      "project": "v3-chromium",
+      "duration": 2847
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "resizing four actual inventory pieces preserves the focused sword node and exact saved bytes",
+      "project": "v3-firefox",
+      "duration": 2722
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "physical workshop and three-step guide stay readable; help is optional and never changes a save",
+      "project": "v3-firefox",
+      "duration": 3461
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "accepted delivery has real sword flight, quota stamp, and honest pieces on the round receipt",
+      "project": "v3-firefox",
+      "duration": 4261
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "ceremony cancels on pause; reduced motion and rapid return never replay rewards or leave flying objects",
+      "project": "v3-firefox",
+      "duration": 6146
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "merchant staging and terminal trophies use actual props and blades; all story controls fit the small viewport",
+      "project": "v3-firefox",
+      "duration": 3776
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "resizing four actual inventory pieces preserves the focused sword node and exact saved bytes",
+      "project": "v3-webkit",
+      "duration": 4117
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "physical workshop and three-step guide stay readable; help is optional and never changes a save",
+      "project": "v3-webkit",
+      "duration": 8168
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "accepted delivery has real sword flight, quota stamp, and honest pieces on the round receipt",
+      "project": "v3-webkit",
+      "duration": 6343
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "ceremony cancels on pause; reduced motion and rapid return never replay rewards or leave flying objects",
+      "project": "v3-webkit",
+      "duration": 7505
+    },
+    {
+      "file": "v3-scene.spec.ts",
+      "title": "merchant staging and terminal trophies use actual props and blades; all story controls fit the small viewport",
+      "project": "v3-webkit",
+      "duration": 5116
+    },
+    {
+      "file": "v3-visual.spec.ts",
+      "title": "three actual supplied weapons grow through five illustrated stages and reload the same appearance",
+      "project": "v3-chromium",
+      "duration": 20384
+    },
+    {
+      "file": "v3-visual.spec.ts",
+      "title": "missing weapon art falls back to a usable native blade and keeps an accepted strike",
+      "project": "v3-chromium",
+      "duration": 1241
+    },
+    {
+      "file": "v3-visual.spec.ts",
+      "title": "all six physical handcraft props appear in real merchant offers; equipped echo lights only on its third success",
+      "project": "v3-chromium",
+      "duration": 12085
+    },
+    {
+      "file": "v3-visual.spec.ts",
+      "title": "three equipped props keep the full workshop, merchant and settings inside both desktop viewports",
+      "project": "v3-chromium",
+      "duration": 6097
+    },
+    {
+      "file": "v3-visual.spec.ts",
+      "title": "three actual supplied weapons grow through five illustrated stages and reload the same appearance",
+      "project": "v3-firefox",
+      "duration": 16346
+    },
+    {
+      "file": "v3-visual.spec.ts",
+      "title": "missing weapon art falls back to a usable native blade and keeps an accepted strike",
+      "project": "v3-firefox",
+      "duration": 1448
+    },
+    {
+      "file": "v3-visual.spec.ts",
+      "title": "all six physical handcraft props appear in real merchant offers; equipped echo lights only on its third success",
+      "project": "v3-firefox",
+      "duration": 14335
+    },
+    {
+      "file": "v3-visual.spec.ts",
+      "title": "three equipped props keep the full workshop, merchant and settings inside both desktop viewports",
+      "project": "v3-firefox",
+      "duration": 7345
+    },
+    {
+      "file": "v3-visual.spec.ts",
+      "title": "three actual supplied weapons grow through five illustrated stages and reload the same appearance",
+      "project": "v3-webkit",
+      "duration": 25615
+    },
+    {
+      "file": "v3-visual.spec.ts",
+      "title": "missing weapon art falls back to a usable native blade and keeps an accepted strike",
+      "project": "v3-webkit",
+      "duration": 2772
+    },
+    {
+      "file": "v3-visual.spec.ts",
+      "title": "all six physical handcraft props appear in real merchant offers; equipped echo lights only on its third success",
+      "project": "v3-webkit",
+      "duration": 24198
+    },
+    {
+      "file": "v3-visual.spec.ts",
+      "title": "three equipped props keep the full workshop, merchant and settings inside both desktop viewports",
+      "project": "v3-webkit",
+      "duration": 11693
+    }
+  ],
+  "sourceInputs": 251,
+  "buildFiles": 48,
+  "sourceAndBuildMatch": true,
+  "replayedStateObjects": 114,
+  "actualFullKeyboardVictories": 3,
+  "victoryCommands": 188,
+  "rawWorkingFilesPreserved": true,
+  "representativeScreenshots": 5
+}

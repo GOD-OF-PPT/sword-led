@@ -1,0 +1,115 @@
+{
+  "task": "T11.4.2.3g",
+  "recordedAt": "2026-10-20T03:07:13.185Z",
+  "review": "docs/reviews/R3-17-traveler-notebook.md",
+  "uiVersion": "v0.5 来客手札",
+  "rulesVersion": "forge-v3",
+  "schemaVersion": 3,
+  "build": {
+    "session": 97399,
+    "exitCode": 0,
+    "rawGzip": "docs/evidence/T11-4-2-3g/polish/build.log.gz",
+    "strictBothConfigs": true
+  },
+  "unit": {
+    "session": 45551,
+    "exitCode": 0,
+    "tests": 247,
+    "files": 24,
+    "report": "docs/evidence/T11-4-2-3g/unit-final.json"
+  },
+  "tool": {
+    "session": 11608,
+    "exitCode": 0,
+    "tests": 5,
+    "currentSdkOverlapRows": 9
+  },
+  "browser": {
+    "currentEnumeration": {
+      "count": 105,
+      "files": 7,
+      "scope": "List only, not an execution result",
+      "proof": "polish/list-only.log.gz"
+    },
+    "currentBuildValidation": {
+      "full102": "release/summary.json (before book height repair)",
+      "book21": "polish/summary.json (latest)",
+      "unchangedOriginalPaths": 45,
+      "renamedMainJsBytesIdentical": true,
+      "onlyRuntimeChange": "Book dialog max-height",
+      "notOneFull105": true
+    },
+    "jobPid": 88889,
+    "token": "7bf7b634-1ab0-4e17-b1c3-d0e50ec454f4",
+    "exitCode": 0,
+    "historicalFullCases": 102,
+    "currentBookCases": 21,
+    "currentPolishReport": "docs/evidence/T11-4-2-3g/polish/summary.json",
+    "currentPolishReplayObjects": 18,
+    "unchangedBuildPaths": 45,
+    "renamedMainJsBytesIdentical": true,
+    "notOne102OnLatestBuild": true,
+    "projects": {
+      "v3-chromium": 34,
+      "v3-firefox": 34,
+      "v3-webkit": 34
+    },
+    "stats": {
+      "startTime": "2026-10-20T02:10:43.645Z",
+      "duration": 1274001.757,
+      "expected": 102,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "retries": 0,
+    "changedInputs": [],
+    "replayedStateObjects": 114,
+    "independentPreviewObjects": 4,
+    "not118DistinctGames": true,
+    "keyboardVictories": 3,
+    "commandsPerVictory": 188,
+    "fullSixDprOrNativeProductCertification": false
+  },
+  "art": {
+    "runtimeBytes": 829100,
+    "budget": 1048576,
+    "exactAlpha": true,
+    "originalPNGs": 3,
+    "referenceIsNotRuntime": true
+  },
+  "compatibility": "docs/evidence/T11-4-2-3g/runtime-compatibility.json",
+  "preview": {
+    "url": "http://127.0.0.1:4179/",
+    "pid": 96174,
+    "snapshot": "tmp/previews/T11-4-2-3g-polish",
+    "all48HTTPFilesMatch": true,
+    "replacedVerifiedOwnServer90863": true,
+    "smoke": "docs/evidence/T11-4-2-3g/polish/preview-smoke.json",
+    "oldServiceAlreadyStopped": true,
+    "forcedUserTabReload": false,
+    "publicDeployment": false
+  },
+  "documents": {
+    "markdownFiles": 0,
+    "localLinks": 0
+  },
+  "scan": {
+    "textFiles": 2,
+    "decodedGzip": 0,
+    "hits": []
+  },
+  "inputSha256": "b961f5c651df51121659687138cfe5edf125e25dadda11642136dfc6aaca852b",
+  "limitations": [
+    "Human gameplay/art/audio acceptance H remains open.",
+    "Final six-DPR/native lifecycle/compound faults/audio/performance and maximum R4 remain open.",
+    "Initial interrupted69/list-only0 and startup config failure0 are preserved separately, not counted in final102.",
+    "Large original browser media remain local; manifests give exact paths and hashes."
+  ],
+  "publication": {
+    "manifest": "docs/evidence/T11-4-2-3g/publication-manifest.json",
+    "files": 4,
+    "bytes": 894553
+  },
+  "taskReview": "Passed for this technical UI scope; not overall goal completion."
+}

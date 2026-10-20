@@ -1,0 +1,35 @@
+{
+  "url": "http://127.0.0.1:4179/",
+  "edition": "v0.5 来客手札",
+  "defaultRoundLimit": 12,
+  "steps": [
+    {
+      "action": "strike",
+      "revision": 1,
+      "forgeDraws": 1
+    },
+    {
+      "action": "strike",
+      "revision": 2,
+      "forgeDraws": 2
+    },
+    {
+      "action": "strike",
+      "revision": 3,
+      "forgeDraws": 3
+    }
+  ],
+  "deliveredValue": 279,
+  "bookReadOnly": true,
+  "reloadExactSaveBytes": true,
+  "reloadNoReplay": true,
+  "audioStatusLabel": "点击后开启声音",
+  "notHumanHearingProof": true,
+  "pageConsoleHttpErrors": [],
+  "recording": {
+    "localPath": "tmp/T11-4-2-3g/preview-smoke/actual-flow.webm",
+    "bytes": 1330524,
+    "sha256": "e210f5ae770a395358c2918275ec362d0010725000185901981cb31d1057541b",
+    "silentPlaywrightVideo": true
+  }
+}

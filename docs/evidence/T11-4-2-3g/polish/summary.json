@@ -1,0 +1,136 @@
+{
+  "session": 1184,
+  "exitCode": 0,
+  "cases": 21,
+  "projects": {
+    "v3-chromium": 7,
+    "v3-firefox": 7,
+    "v3-webkit": 7
+  },
+  "stats": {
+    "startTime": "2026-10-20T02:58:46.519Z",
+    "duration": 133856.246,
+    "expected": 21,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "caseResults": [
+    {
+      "title": "a canonical completed twelve-round journal shows every filled spread and its navigation without scrolling",
+      "project": "v3-chromium",
+      "duration": 5812
+    },
+    {
+      "title": "traveler and optional two-page book are real, reachable and read-only at both desktop sizes",
+      "project": "v3-chromium",
+      "duration": 5855
+    },
+    {
+      "title": "actual matching delivery changes the customer pose and real work once; reload only redraws",
+      "project": "v3-chromium",
+      "duration": 5641
+    },
+    {
+      "title": "unmatched or overworked swords can still pay the original contract without another gate",
+      "project": "v3-chromium",
+      "duration": 2964
+    },
+    {
+      "title": "customer feedback cancels on pause and respects reduced motion without replaying or changing a save",
+      "project": "v3-chromium",
+      "duration": 6505
+    },
+    {
+      "title": "missing new character and book art keeps readable advice, real forging and a usable notebook",
+      "project": "v3-chromium",
+      "duration": 1523
+    },
+    {
+      "title": "a resumed valid four-sword three-trait journal keeps controls unobscured while a real save fails and retries",
+      "project": "v3-chromium",
+      "duration": 4113
+    },
+    {
+      "title": "a canonical completed twelve-round journal shows every filled spread and its navigation without scrolling",
+      "project": "v3-firefox",
+      "duration": 6285
+    },
+    {
+      "title": "traveler and optional two-page book are real, reachable and read-only at both desktop sizes",
+      "project": "v3-firefox",
+      "duration": 5165
+    },
+    {
+      "title": "actual matching delivery changes the customer pose and real work once; reload only redraws",
+      "project": "v3-firefox",
+      "duration": 4798
+    },
+    {
+      "title": "unmatched or overworked swords can still pay the original contract without another gate",
+      "project": "v3-firefox",
+      "duration": 3436
+    },
+    {
+      "title": "customer feedback cancels on pause and respects reduced motion without replaying or changing a save",
+      "project": "v3-firefox",
+      "duration": 6940
+    },
+    {
+      "title": "missing new character and book art keeps readable advice, real forging and a usable notebook",
+      "project": "v3-firefox",
+      "duration": 1843
+    },
+    {
+      "title": "a resumed valid four-sword three-trait journal keeps controls unobscured while a real save fails and retries",
+      "project": "v3-firefox",
+      "duration": 3589
+    },
+    {
+      "title": "a canonical completed twelve-round journal shows every filled spread and its navigation without scrolling",
+      "project": "v3-webkit",
+      "duration": 10222
+    },
+    {
+      "title": "traveler and optional two-page book are real, reachable and read-only at both desktop sizes",
+      "project": "v3-webkit",
+      "duration": 13131
+    },
+    {
+      "title": "actual matching delivery changes the customer pose and real work once; reload only redraws",
+      "project": "v3-webkit",
+      "duration": 11402
+    },
+    {
+      "title": "unmatched or overworked swords can still pay the original contract without another gate",
+      "project": "v3-webkit",
+      "duration": 5228
+    },
+    {
+      "title": "customer feedback cancels on pause and respects reduced motion without replaying or changing a save",
+      "project": "v3-webkit",
+      "duration": 8965
+    },
+    {
+      "title": "missing new character and book art keeps readable advice, real forging and a usable notebook",
+      "project": "v3-webkit",
+      "duration": 2964
+    },
+    {
+      "title": "a resumed valid four-sword three-trait journal keeps controls unobscured while a real save fails and retries",
+      "project": "v3-webkit",
+      "duration": 8065
+    }
+  ],
+  "sourceInputs": 249,
+  "buildFiles": 48,
+  "changedInputs": [],
+  "replayedStateObjects": 18,
+  "bookCasesCover": [
+    "Both sizes, empty and real work with no initial scroll or obscured nav",
+    "Completed twelve-round canonical saved journal, all six spreads, not another GUI victory",
+    "Matching/unmatched delivery, reload, pause/reduced, art fallback, four swords/three traits/write failure"
+  ],
+  "historical102RetainedAt": "../release",
+  "compatibility": "compatibility.json"
+}

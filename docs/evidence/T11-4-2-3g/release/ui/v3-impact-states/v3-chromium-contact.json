@@ -1,0 +1,175 @@
+{
+  "effects": {
+    "particles": 36,
+    "animations": 28,
+    "outcome": "success"
+  },
+  "sound": {
+    "contexts": 1,
+    "constructors": 1,
+    "states": [
+      "running"
+    ],
+    "active": 3,
+    "starts": 3,
+    "stops": 3,
+    "maxActive": 3,
+    "frequencies": [
+      139,
+      947,
+      2381
+    ],
+    "peak": 0.0016163638792932034
+  },
+  "contact": {
+    "frames": [
+      {
+        "gap": 24.076805840955604,
+        "angle": 8.358088779180111,
+        "pivotGap": 0.1718876676888253,
+        "headHeight": 76.27016379928325,
+        "metalGap": 10000,
+        "time": 15.300000011920929
+      },
+      {
+        "gap": 24.076805840955604,
+        "angle": 8.358088779180111,
+        "pivotGap": 0.1718876676888253,
+        "headHeight": 76.27016379928325,
+        "metalGap": 10000,
+        "time": 19.400000005960464
+      },
+      {
+        "gap": 24.076805840955604,
+        "angle": 8.358088779180111,
+        "pivotGap": 0.1718876676888253,
+        "headHeight": 76.27016379928325,
+        "metalGap": 10000,
+        "time": 52
+      },
+      {
+        "gap": 20.875540762788468,
+        "angle": 7.294754820953614,
+        "pivotGap": 0.17188763525628406,
+        "headHeight": 76.27014940828177,
+        "metalGap": 10000,
+        "time": 73.69999998807907
+      },
+      {
+        "gap": 0.1074294126752531,
+        "angle": 0.35809395932347515,
+        "pivotGap": 0.17188768180486041,
+        "headHeight": 76.27017006285682,
+        "metalGap": 0.4254150390625,
+        "time": 97.19999998807907
+      },
+      {
+        "gap": 0.1074294126752531,
+        "angle": 0.35809395932347515,
+        "pivotGap": 0.17188768180486041,
+        "headHeight": 76.27017006285682,
+        "metalGap": 2.5612030029296875,
+        "time": 117.30000001192093
+      }
+    ],
+    "complete": true,
+    "source": "http://127.0.0.1:4186/assets/d/hammer-forge-v2.webp",
+    "sourceAlpha": [
+      249,
+      253,
+      253
+    ],
+    "gap": 0.1074294126752531,
+    "best": {
+      "gap": 0.1074294126752531,
+      "angle": 0.35809395932347515,
+      "pivotGap": 0.17188768180486041,
+      "headHeight": 76.27017006285682,
+      "metalGap": 0.4254150390625,
+      "time": 97.19999998807907
+    }
+  },
+  "state": {
+    "rulesVersion": "forge-v3",
+    "runId": "v3-1792462424220",
+    "seed": "行脚新炉",
+    "roundLimit": 3,
+    "revision": 1,
+    "phase": "workshop",
+    "round": 1,
+    "coins": 0,
+    "seals": 3,
+    "base": 40,
+    "blades": [
+      {
+        "id": "r1-1",
+        "suppliedRound": 1,
+        "status": "active",
+        "base": 40,
+        "value": 58,
+        "peak": 58,
+        "level": 1,
+        "cracked": false,
+        "hits": 1,
+        "charge": 1,
+        "successes": 1,
+        "finalizedRound": null
+      },
+      {
+        "id": "r1-2",
+        "suppliedRound": 1,
+        "status": "active",
+        "base": 40,
+        "value": 40,
+        "peak": 40,
+        "level": 0,
+        "cracked": false,
+        "hits": 0,
+        "charge": 0,
+        "successes": 0,
+        "finalizedRound": null
+      },
+      {
+        "id": "r1-3",
+        "suppliedRound": 1,
+        "status": "active",
+        "base": 40,
+        "value": 40,
+        "peak": 40,
+        "level": 0,
+        "cracked": false,
+        "hits": 0,
+        "charge": 0,
+        "successes": 0,
+        "finalizedRound": null
+      }
+    ],
+    "reserveId": null,
+    "delivered": 0,
+    "traits": [],
+    "gift": "locked",
+    "pardonUsed": false,
+    "pendingInheritance": 0,
+    "shop": [],
+    "sold": [],
+    "upgraded": false,
+    "repaired": false,
+    "history": [],
+    "rng": {
+      "forge": {
+        "state": 3022150949,
+        "draws": 1
+      },
+      "shop": {
+        "state": 1526952265,
+        "draws": 0
+      }
+    },
+    "journal": [
+      {
+        "type": "strike",
+        "pieceId": "r1-1"
+      }
+    ]
+  }
+}

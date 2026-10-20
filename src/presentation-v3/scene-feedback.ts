@@ -17,14 +17,14 @@ export function createSceneFeedback(root:HTMLElement,layer:HTMLElement,host:Host
  function fly(kind:string,b:Blade,targetId:string){
   if(host.reduced())return;
   const from=root.querySelector('#v3-blade')?.getBoundingClientRect(),to=root.querySelector('#'+targetId)?.getBoundingClientRect();if(!from||!to||!from.width||!to.width)return;
-  const node=element('div',undefined,'v3-flying-blade'),canvas=element('canvas');node.dataset.sceneCue=kind;node.append(canvas);node.style.left=`${from.x+from.width*.5}px`;node.style.top=`${from.y+from.height*.6}px`;node.style.setProperty('--flight-x',`${to.x+to.width*.5-from.x-from.width*.5}px`);node.style.setProperty('--flight-y',`${to.y+to.height*.5-from.y-from.height*.6}px`);
+  const node=element('div',undefined,'v3-flying-blade'),canvas=element('canvas');node.dataset.sceneCue=kind;node.append(canvas);node.style.left=`${from.x+from.width*.5}px`;node.style.top=`${from.y+from.height*.6}px`;node.style.setProperty('--flight-x',`${to.x+to.width*.5-from.x-from.width*.5}px`);node.style.setProperty('--flight-y',`${to.y+to.height*(targetId==='v3-customer-figure'?0.65:0.5)-from.y-from.height*.6}px`);
   show(node,[{opacity:.95,transform:'translate(-50%,-50%) scale(1)'},{opacity:1,offset:.22,transform:'translate(-50%,-70%) scale(1.06)'},{opacity:0,transform:'translate(calc(-50% + var(--flight-x)),calc(-50% + var(--flight-y))) scale(.28)'}],620);host.draw(canvas,b);
  }
  function pulse(id:string){const node=root.querySelector<HTMLElement>('#'+id);if(!node||host.reduced()||document.hidden)return;const ring=element('div',undefined,'v3-target-halo'),box=node.getBoundingClientRect();ring.style.left=`${box.x}px`;ring.style.top=`${box.y}px`;ring.style.width=`${box.width}px`;ring.style.height=`${box.height}px`;show(ring,[{opacity:1,transform:'scale(.97)'},{opacity:0,transform:'scale(1.08)'}],700);}
- return{reset,play(events:readonly DomainEvent[],s:RunState){
+ return{reset,play(events:readonly DomainEvent[],s:RunState,deliveryTarget='v3-order-paper'){
   if(document.hidden)return;
   for(const event of events){
-   if(event.type==='Delivered'){const b=s.blades.find(b=>b.id===event.pieceId);if(b)fly('delivery',b,'v3-order-paper');pulse('v3-wallet');const met=s.delivered>=quotaFor(s.round)&&s.delivered-event.amount<quotaFor(s.round);banner(met?'met':'delivery',met?'委托达成！':`交差 +${event.amount.toLocaleString('zh-CN')}`,met?'印记保住了 · 余剑可以留一手':'身价已变成金币，也计入今天的目标');if(met)pulse('v3-order-paper');}
+   if(event.type==='Delivered'){const b=s.blades.find(b=>b.id===event.pieceId);if(b)fly('delivery',b,deliveryTarget);pulse('v3-wallet');const met=s.delivered>=quotaFor(s.round)&&s.delivered-event.amount<quotaFor(s.round);banner(met?'met':'delivery',met?'委托达成！':`交差 +${event.amount.toLocaleString('zh-CN')}`,met?'印记保住了 · 余剑可以留一手':'身价已变成金币，也计入今天的目标');if(met)pulse('v3-order-paper');}
    else if(event.type==='Reserved'){const b=s.blades.find(b=>b.id===event.pieceId);if(b&&s.reserveId===b.id){fly('reserve',b,'v3-reserve-slot');banner('reserve','好剑归架','身价、裂纹和锤势原样保留');}else banner('retrieve','留剑重上铁砧','原来的风险仍在，取下不会重置');}
    else if(event.type==='Traded'){const b=s.blades.find(b=>b.id===event.pieceId);if(b)fly('trade',b,'v3-traits');}
    else if(event.type==='Trait'){banner('trait',event.traitId?`${TRAITS[event.traitId].name} · 已入袋`:'补给已收下',event.traitId?TRAITS[event.traitId].text:'两门赠品都已持有，金币已到账');pulse('v3-traits');}

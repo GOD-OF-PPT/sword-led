@@ -1,0 +1,77 @@
+{
+  "pngs": [
+    {
+      "path": "design/d/v05/originals/customers-atlas-v1.png",
+      "bytes": 2644316,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "pngCRCValid": true,
+      "chunks": [
+        "IHDR",
+        "caBX",
+        "IDAT",
+        "IEND"
+      ],
+      "sha256": "1aaa5b28cb4ccdc4cf055cc57688076bb178dba01d3ce654998258681967c5ce"
+    },
+    {
+      "path": "design/d/v05/originals/customers-atlas-v2.png",
+      "bytes": 1937506,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "pngCRCValid": true,
+      "chunks": [
+        "IHDR",
+        "caBX",
+        "IDAT",
+        "IEND"
+      ],
+      "sha256": "fe613eab5a26f33eabbbc74a2332c6c471a1acc5dd14fea09091574b42db5f50"
+    },
+    {
+      "path": "design/d/v05/originals/notebook-cover-v1.png",
+      "bytes": 2229229,
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "pngCRCValid": true,
+      "chunks": [
+        "IHDR",
+        "caBX",
+        "IDAT",
+        "IEND"
+      ],
+      "sha256": "11ddfd1e77d11ab1880067a29f666555b6310f102848454bad6ce8e5a14c9325"
+    }
+  ],
+  "runtimeBytes": 829100,
+  "runtimeBudget": 1048576,
+  "poseWaistAlignment": [
+    {
+      "customer": "guard",
+      "sourceWaistDeltaAfterPoseOffset": 1.4299999999999997,
+      "fractionOfCell": 0.0022807017543859643
+    },
+    {
+      "customer": "courier",
+      "sourceWaistDeltaAfterPoseOffset": 1.4299999999999997,
+      "fractionOfCell": 0.0022807017543859643
+    },
+    {
+      "customer": "smith",
+      "sourceWaistDeltaAfterPoseOffset": 1.4299999999999997,
+      "fractionOfCell": 0.0022807017543859643
+    }
+  ],
+  "requestedCanvasWas1536Actual1254Recorded": true,
+  "alphaEqualityScope": "Source PNG vs runtime WebP exact alpha, RGB intentionally encoded at q88",
+  "selectedAtlas": "customers-atlas-v2"
+}

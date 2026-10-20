@@ -1,0 +1,142 @@
+{
+  "assets": [
+    {
+      "name": "customers-atlas-v2",
+      "source": "design/d/v05/originals/customers-atlas-v2.png",
+      "runtime": "public/assets/d/customers-atlas-v2.webp",
+      "width": 1254,
+      "height": 1254,
+      "runtimeBytes": 399396,
+      "sourceSha256": "fe613eab5a26f33eabbbc74a2332c6c471a1acc5dd14fea09091574b42db5f50",
+      "runtimeSha256": "6d5f8b78b51863cda7143d506efcc9a344e6b69314737d66610bbd95ca8d3cf7",
+      "alphaEqual": true,
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sourceRects": [
+        {
+          "customer": "guard",
+          "pose": "waiting",
+          "rect": [
+            0,
+            0,
+            418,
+            627
+          ],
+          "visibleBounds": [
+            43,
+            124,
+            400,
+            600
+          ]
+        },
+        {
+          "customer": "courier",
+          "pose": "waiting",
+          "rect": [
+            418,
+            0,
+            418,
+            627
+          ],
+          "visibleBounds": [
+            56,
+            119,
+            392,
+            600
+          ]
+        },
+        {
+          "customer": "smith",
+          "pose": "waiting",
+          "rect": [
+            836,
+            0,
+            418,
+            627
+          ],
+          "visibleBounds": [
+            30,
+            118,
+            375,
+            600
+          ]
+        },
+        {
+          "customer": "guard",
+          "pose": "thanks",
+          "rect": [
+            0,
+            627,
+            418,
+            627
+          ],
+          "visibleBounds": [
+            41,
+            54,
+            399,
+            545
+          ]
+        },
+        {
+          "customer": "courier",
+          "pose": "thanks",
+          "rect": [
+            418,
+            627,
+            418,
+            627
+          ],
+          "visibleBounds": [
+            63,
+            52,
+            400,
+            545
+          ]
+        },
+        {
+          "customer": "smith",
+          "pose": "thanks",
+          "rect": [
+            836,
+            627,
+            418,
+            627
+          ],
+          "visibleBounds": [
+            33,
+            54,
+            385,
+            545
+          ]
+        }
+      ],
+      "splitAlphaMax": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "notebook-cover-v1",
+      "source": "design/d/v05/originals/notebook-cover-v1.png",
+      "runtime": "public/assets/d/notebook-cover-v1.webp",
+      "width": 1254,
+      "height": 1254,
+      "runtimeBytes": 429704,
+      "sourceSha256": "11ddfd1e77d11ab1880067a29f666555b6310f102848454bad6ce8e5a14c9325",
+      "runtimeSha256": "3dfa792ac46bd940091764ac62fea2813db991178ed56d2c6c7920ebd430b1f9",
+      "alphaEqual": true,
+      "alphaExtrema": [
+        0,
+        255
+      ]
+    }
+  ],
+  "runtimeTotal": 829100,
+  "budget": 1048576,
+  "transparentBackgroundRequested": true,
+  "mode": "built-in image_gen",
+  "atlasThanksOffsetYFraction": 0.09,
+  "unselectedV1LocalAndProjectPreserved": true
+}

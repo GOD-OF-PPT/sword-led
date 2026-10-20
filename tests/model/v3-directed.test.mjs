@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {evaluate,DIRECTED,choose,run} from '../../scripts/v3-directed.mjs';
+import {evaluate,DIRECTED,choose,run,verifyHistoricalDependencies} from '../../scripts/v3-directed.mjs';
 import {observe} from '../../scripts/v3-model-policy.mjs';
 test('directed profiles use genuine commands, stop and replay deterministically',()=>{
  assert.equal(new Set(DIRECTED.map(p=>p.id)).size,9);
@@ -20,4 +20,11 @@ test('high-value carry can be retrieved as soon as it covers the visible gap',()
 test('invalid profile/seed/CLI range cannot create a run or output',async()=>{
  for(const [id,index]of [['wrong',0],['baseline',-1],['baseline',128]])assert.throws(()=>evaluate(id,index));
  await assert.rejects(run({out:'should-not-exist',seeds:129,workers:4}));await assert.rejects(run({out:'should-not-exist',seeds:1,workers:5}));
+});
+
+test('historical model guard permits unrelated UI evolution but rejects every used source or SDK drift',()=>{
+ const old={sourceHashes:{'src/core/random.ts':{sha256:'a'},'src/core-v3/game.ts':{sha256:'b'},'scripts/v3-model-policy.mjs':{sha256:'c'},'package-lock.json':{sha256:'d'},'src/presentation-v3/app.ts':{sha256:'old-ui'}},buildFiles:Object.fromEntries(Array.from({length:6},(_,i)=>[`dist/sdk-${i}.js`,{sha256:String(i)}]))};
+ const current=structuredClone(old);current.sourceHashes['src/presentation-v3/app.ts'].sha256='new-ui';current.buildFiles['dist/assets/new-main.js']={sha256:'new'};assert.deepEqual(verifyHistoricalDependencies(old,current),{modelSources:4,sdkFiles:6});
+ for(const file of ['src/core/random.ts','src/core-v3/game.ts','scripts/v3-model-policy.mjs','package-lock.json']){const changed=structuredClone(current);changed.sourceHashes[file].sha256='wrong';assert.throws(()=>verifyHistoricalDependencies(old,changed));}
+ const changed=structuredClone(current);changed.buildFiles['dist/sdk-1.js'].sha256='wrong';assert.throws(()=>verifyHistoricalDependencies(old,changed));
 });

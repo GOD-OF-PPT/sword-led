@@ -1,0 +1,63 @@
+/* Optional travelers and real works stay in the workshop; the contract HUD owns the quota. */
+.v3-app{height:100dvh;min-height:720px}.v3-workshop{min-height:0}.v3-order.v3-visitors{align-self:stretch;display:flex;flex-direction:column;min-height:0;position:relative}
+.v3-visitors .v3-commission{flex:0 0 auto;min-height:0;padding:49px 36px 29px;display:flex;flex-direction:column;gap:5px}
+.v3-visitors .v3-commission h2{display:flex;align-items:center;justify-content:space-between;gap:5px;font-size:27px;line-height:1.25;margin:0;white-space:nowrap}
+.v3-visitors .v3-commission h2 small{font:12px/1.4 sans-serif;color:#73512e;white-space:nowrap}
+.v3-visitors .v3-commission>strong{font:700 18px/1.55 KaiTi,STKaiti,serif;white-space:normal;margin:0;color:#48301c}
+.v3-visitors .v3-commission>p{margin:0;font-size:13px;line-height:1.55}
+#v3-next-customer{border-top:1px solid #8c613e55;padding-top:5px;color:#634222}#v3-deficit{color:#493421;line-height:1.5}
+#v3-deficit::before{content:'主契约 · '}.v3-a11y-note{position:absolute!important;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.v3-paper-mark{position:absolute;right:29px;bottom:22px;transform:rotate(-14deg);font:700 23px/31px KaiTi,STKaiti,serif;border:2px solid #9a3d2b;color:#91382a;width:34px;height:34px;text-align:center;opacity:.85}
+.v3-customer-figure{position:relative;flex:1;min-height:90px;max-height:450px;display:flex;align-items:flex-end;justify-content:center;pointer-events:none;filter:drop-shadow(0 7px 5px #0008)}
+.v3-customer-sprite,.v3-customer-fallback{position:absolute;bottom:0;height:100%;aspect-ratio:2/3;max-width:100%;background-repeat:no-repeat;background-size:300% 200%;background-image:url('/assets/d/customers-atlas-v2.webp')}
+.v3-customer-sprite{display:none;height:120%;max-width:none}.customer-art-ready .v3-customer-sprite{display:block}.customer-art-ready .v3-customer-fallback{display:none}
+[data-customer=guard]>.v3-customer-sprite{background-position:0 0}[data-customer=courier]>.v3-customer-sprite{background-position:50% 0}[data-customer=smith]>.v3-customer-sprite{background-position:100% 0}
+[data-customer=guard][data-pose=thanks]>.v3-customer-sprite{background-position:0 100%}[data-customer=courier][data-pose=thanks]>.v3-customer-sprite{background-position:50% 100%}[data-customer=smith][data-pose=thanks]>.v3-customer-sprite{background-position:100% 100%}
+.v3-customer-fallback{aspect-ratio:1;background-image:url('/assets/d/portraits-v1.webp');background-size:200% 200%;height:90%;max-height:230px}
+[data-customer=guard]>.v3-customer-fallback{background-position:0 0}[data-customer=courier]>.v3-customer-fallback{background-position:100% 0}[data-customer=smith]>.v3-customer-fallback{background-position:0 100%}
+#v3-customer-talk{position:absolute;bottom:7%;left:0;right:0;margin:0;text-align:center;color:#ffebc1;background:#13292eed;border:1px solid #d4aa62;padding:8px 12px;font:700 17px/1.5 KaiTi,STKaiti,serif;filter:drop-shadow(0 4px 5px #0008)}#v3-customer-talk:empty{display:none}
+.v3-customer-motive{text-align:center;color:#f2d6a5;text-shadow:0 2px 3px #000;font:15px/1.6 KaiTi,STKaiti,serif;margin:0;min-height:24px}
+.v3-visitor-footer{display:flex;align-items:flex-end;justify-content:space-around;gap:8px;flex:0 0 120px;min-height:0;margin-top:auto}
+.v3-visitors #v3-shop{width:105px;flex:0 0 105px;margin:0 0 8px;min-height:52px;font-size:18px;padding:5px 10px}
+#v3-notebook{position:relative;flex:1;max-width:180px;height:120px;min-width:120px;padding:0;border:0;background:transparent;box-shadow:none;filter:drop-shadow(0 4px 5px #0009)}
+.book-art-ready #v3-notebook{background:url('/assets/d/notebook-cover-v1.webp') center top/contain no-repeat}#v3-notebook:hover:enabled{background-color:transparent;filter:brightness(1.18) drop-shadow(0 4px 5px #0009)}
+#v3-notebook>span{position:absolute;left:55%;top:40%;transform:translate(-50%,-50%) rotate(-18deg);font:700 22px/1.2 KaiTi,STKaiti,serif;color:#38271b;background:#ecd3a5;padding:3px 4px}
+.book-art-ready #v3-notebook>span{background:transparent}#v3-notebook>small{position:absolute;bottom:0;left:0;right:0;font-size:12px;color:#ffe3ae;background:#11242bd9;padding:4px}
+.v3-workshop>.v3-belt{position:absolute;bottom:0;left:0;width:275px;padding:0 5px 0;z-index:8}.v3-belt h3{font:14px/1.5 KaiTi,STKaiti,serif;letter-spacing:1px;text-align:left;margin-bottom:4px}
+#v3-traits{display:flex;gap:8px;align-items:flex-end}.v3-belt button.v3-trait-item{position:relative;display:flex;flex-direction:column;gap:0;flex:0 0 75px;width:75px;min-height:90px;padding:3px 2px 6px;margin:0;background:radial-gradient(ellipse,#36423a88,transparent 75%);border:0;box-shadow:none;text-align:center}
+.v3-belt .v3-trait-art{width:62px;height:62px}.v3-belt .v3-trait-item b{font:14px/1.4 KaiTi,STKaiti,serif;white-space:nowrap}.v3-belt .v3-trait-item small{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.v3-belt .v3-empty-traits{margin:0;font-size:12px}.v3-belt .v3-empty-traits .v3-trait-art{width:48px;height:48px}
+.v3-belt #v3-gift{margin-top:4px}.v3-belt #v3-gift button{min-height:44px;max-width:260px;width:100%;font-size:12px;background:#734027;color:#fff0c8;border-color:#c59b61;padding:5px 8px;line-height:1.5}
+.v3-notebook-summary{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:8px 0;padding:8px 10px;border-top:1px solid #c49e5566;border-bottom:1px solid #c49e5566;background:linear-gradient(90deg,#223c3d99,transparent)}
+.v3-notebook-summary>b{font:700 18px KaiTi,STKaiti,serif;color:#ffe4a9}.v3-notebook-summary>p{flex:1;font-size:12px;line-height:1.6;margin:0;min-width:220px}.v3-notebook-summary>button{font-size:13px;min-height:44px}
+dialog[data-kind=notebook]{width:min(980px,94vw);background:#172c32;border:2px solid #b38c4f;box-shadow:inset 0 0 0 5px #25383a,0 15px 70px #000b}
+.v3-book-heading{font:700 24px/1.5 KaiTi,STKaiti,serif;color:#ffe1a5;text-align:center}.v3-book-explainer{font-size:13px;line-height:1.7;color:#f0d8b1;margin-bottom:14px}
+.v3-notebook-pages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:4px}
+.v3-notebook-pages>article{position:relative;min-height:220px;padding:18px 22px;background:linear-gradient(105deg,#d2b787,#f2dfb7 12%,#e9cea0 92%,#ba986a);color:#392a1e;border:1px solid #9b7947;box-shadow:inset 7px 0 10px #5b42282b,0 3px 6px #0005;text-shadow:none}
+.v3-notebook-pages h3{font:700 24px/1.5 KaiTi,STKaiti,serif;color:#46301f;margin:0 0 5px}.v3-notebook-pages canvas{display:block;width:100%;height:85px}.v3-notebook-pages b{font:700 18px KaiTi,STKaiti,serif}.v3-notebook-pages p{font-size:13px;line-height:1.7;margin:5px 0}.v3-notebook-pages small{font-size:12px;line-height:1.5;color:#68482b}.v3-notebook-pages [data-notebook-status=unseen]{background:linear-gradient(100deg,#baa47f,#d4bd96);color:#5d4a34}
+.v3-work-mark{position:absolute;right:15px;bottom:12px;font:700 24px/35px KaiTi,STKaiti,serif;width:38px;height:38px;border:2px solid #9b3c29;color:#913b27;text-align:center;transform:rotate(-12deg)}
+@media(max-height:780px){
+ .v3-visitors .v3-commission{padding:38px 29px 24px;gap:3px}.v3-visitors .v3-commission h2{font-size:22px}.v3-visitors .v3-commission>strong{font-size:14px;line-height:1.45}.v3-visitors .v3-commission>p{font-size:12px;line-height:1.45}#v3-next-customer{padding-top:3px}#v3-deficit{font-size:12px}.v3-paper-mark{font-size:19px;width:28px;height:28px;line-height:25px;right:21px;bottom:13px}
+ .v3-customer-figure{max-height:270px;min-height:80px}.v3-customer-motive{font-size:12px;line-height:1.5;min-height:18px}.v3-visitor-footer{flex-basis:90px}.v3-visitors #v3-shop{min-height:44px;flex-basis:88px;width:88px;font-size:16px;padding:3px 5px;margin-bottom:4px}#v3-notebook{height:90px;min-width:115px;max-width:155px}#v3-notebook>span{font-size:17px}#v3-notebook>small{font-size:12px;padding:2px}
+ #v3-customer-talk{font-size:14px;padding:6px 8px}.v3-workshop>.v3-belt{width:250px}.v3-belt h3{font-size:12px;margin-bottom:2px}.v3-belt button.v3-trait-item{flex-basis:65px;width:65px;min-height:68px;padding:0 1px 3px}.v3-belt .v3-trait-art{width:44px;height:44px}.v3-belt .v3-trait-item b{font-size:13px}.v3-belt #v3-gift button{font-size:12px}.v3-belt .v3-empty-traits .v3-trait-art{width:40px;height:40px}
+ .save-issue .v3-customer-motive{display:none}.save-issue .v3-rack button{min-height:80px}.save-issue .v3-rack .v3-weapon-thumb{height:32px}.save-issue .v3-reserve button{min-height:60px}.save-issue .v3-customer-figure{max-height:180px}
+ .v3-notebook-summary{padding:5px 8px;gap:5px}.v3-notebook-summary>b{font-size:16px}.v3-notebook-summary>p{min-width:210px}.v3-notebook-pages>article{min-height:205px;padding:14px 18px}.v3-notebook-pages h3{font-size:21px}.v3-notebook-pages canvas{height:70px}
+}
+
+[data-pose=thanks]>.v3-customer-sprite{transform:translateY(9%)}
+.v3-commission[data-notebook-complete=true] #v3-deficit{padding-right:30px}
+.save-issue .v3-rack:has(#v3-inventory>button:nth-child(4)) .v3-reserve{display:none}
+
+/* A two-page spread keeps the notebook a book rather than an endless dashboard. */
+dialog[data-kind=notebook]{border-radius:6px 12px 12px 6px;box-shadow:inset 7px 0 0 #354248,inset 0 0 0 5px #25383a,0 15px 70px #000b}
+.v3-notebook-pages{position:relative;gap:6px;background:#725632;padding:3px;border:1px solid #9b7847;box-shadow:0 5px 12px #0008}
+.v3-notebook-pages::after{content:'';position:absolute;top:3px;bottom:3px;left:calc(50% - 5px);width:10px;background:linear-gradient(90deg,#6e503b99,#30261eee,#8f704499);pointer-events:none}
+.v3-notebook-pages>article{min-height:320px;border:0;box-shadow:inset -7px 0 14px #5b42282b}
+.v3-notebook-pages>article:nth-child(even){background:linear-gradient(255deg,#d2b787,#f2dfb7 12%,#e9cea0 92%,#ba986a);box-shadow:inset 7px 0 14px #5b42282b}
+.v3-notebook-pages canvas{height:135px}.v3-book-person{display:none;float:right;width:65px;height:96px;background:url('/assets/d/customers-atlas-v2.webp') no-repeat;background-size:300% 200%;margin:0 -9px 3px 7px;filter:drop-shadow(0 3px 2px #6c4a3044)}
+.customer-art-ready .v3-book-person{display:block}.v3-book-person[data-customer=guard]{background-position:0 100%}.v3-book-person[data-customer=courier]{background-position:50% 100%}.v3-book-person[data-customer=smith]{background-position:100% 100%}
+.v3-book-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:12px;color:#ffe4ad}.v3-book-nav button{display:inline-block!important;margin:0!important;min-height:44px}.v3-book-spread-label{font:17px KaiTi,STKaiti,serif}
+@media(max-height:780px){.v3-notebook-pages>article{min-height:250px}.v3-notebook-pages canvas{height:100px}.v3-book-heading{font-size:19px;margin-bottom:5px}.v3-book-explainer{font-size:12px;margin-bottom:8px}.v3-book-person{width:53px;height:79px}.v3-book-nav{margin-top:8px}}
+
+/* Reserve the title/actions first, then let the filled spread use the remaining dialog height. */
+dialog[data-kind=notebook] #v3-dialog-body{max-height:calc(88vh - 160px)}

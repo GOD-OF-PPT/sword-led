@@ -22,6 +22,15 @@ export const DIRECTED=Object.freeze([
  {id:'aggressive-no-traits',config:{...original('aggressive-ember'),traits:false}},
 ].map(Object.freeze));
 export const hash=b=>createHash('sha256').update(typeof b==='string'||b instanceof Uint8Array?b:JSON.stringify(b)).digest('hex');
+/** UI builds can evolve; only the actual policy/core/SDK dependencies bind these old comparisons. */
+export function verifyHistoricalDependencies(old,current){
+ const sourceEntries=Object.entries(old.sourceHashes).filter(([p])=>p.startsWith('src/core/')||p.startsWith('src/core-v3/')||p==='scripts/v3-model-policy.mjs'||p==='package-lock.json');
+ const sdkEntries=Object.entries(old.buildFiles).filter(([p])=>p.startsWith('dist/')&&p.split('/').length===2&&p.endsWith('.js'));
+ assert(sourceEntries.length>0);assert.equal(sdkEntries.length,6);
+ for(const [p,digest]of sourceEntries)assert.deepEqual(current.sourceHashes[p],digest,`Historical model dependency changed: ${p}`);
+ for(const [p,digest]of sdkEntries)assert.deepEqual(current.buildFiles[p],digest,`Historical SDK changed: ${p}`);
+ return{modelSources:sourceEntries.length,sdkFiles:sdkEntries.length};
+}
 export function choose(v,p,context){
  const ordinary=decide(v,p.config,context.clicks);
  if(!p.carry||v.phase!=='workshop'||['claimGift','buy','upgrade','repair'].includes(ordinary?.type))return ordinary;
@@ -71,8 +80,9 @@ function slice(input){
 }
 export async function run({out,seeds=128,workers=4}){
  if(!out||!Number.isInteger(seeds)||seeds<1||seeds>128||!Number.isInteger(workers)||workers<1||workers>4)throw Error('Use new output, seeds 1..128, workers 1..4');
- const baseline=await captureFingerprint(),old=JSON.parse(await readFile('docs/evidence/T12-v3/baseline.json'));
- for(const group of ['sourceHashes','buildFiles'])for(const [p,digest]of Object.entries(old[group]))assert.deepEqual(baseline[group][p],digest,`Historical input changed: ${p}`);
+ const baseline=await captureFingerprint(),oldBytes=await readFile('docs/evidence/T12-v3/baseline.json'),old=JSON.parse(oldBytes);
+ assert.equal(hash(oldBytes),JSON.parse(await readFile('docs/evidence/T12-v3/summary.json')).baselineSha256,'Historical baseline bytes changed');
+ verifyHistoricalDependencies(old,baseline);
  await mkdir(out,{recursive:false});await writeFile(`${out}/baseline.json`,JSON.stringify(baseline,null,2)+'\n',{flag:'wx'});
  const begin=performance.now(),inputs=DIRECTED.flatMap(p=>Array.from({length:Math.ceil(seeds/16)},(_,i)=>({profile:p.id,start:i*16,count:Math.min(16,seeds-i*16),kind:'v3-directed'}))),groups=[],witnesses={},live=new Set();let cursor=0,completed=0,failed=false;
  try{await Promise.all(Array.from({length:Math.min(workers,inputs.length)},async()=>{

@@ -10,9 +10,9 @@ export function traitArt(id:Trait){
 /** Asset callbacks invalidate presentation only; disposal detaches every owned callback. */
 export function loadV3Art(ready:()=>void,problem:()=>void){
   let disposed=false;const images=new Map<string,HTMLImageElement>();
-  for(const name of [...V3_BLADES,'metal-atlas-v1']){
+  for(const name of [...V3_BLADES,'metal-atlas-v1','customers-atlas-v2','notebook-cover-v1']){
     const image=new Image();images.set(name,image);image.onload=()=>{if(!disposed)ready();};image.onerror=()=>{if(!disposed)problem();};image.src=`/assets/d/${name}.webp`;
   }
   const get=(name:string)=>{const image=images.get(name);return image?.complete&&image.naturalWidth>0?image:undefined;};
-  return{texture:()=>get('metal-atlas-v1'),weapon:(family:number)=>get(V3_BLADES[family]??V3_BLADES[0]),dispose(){disposed=true;for(const image of images.values()){image.onload=null;image.onerror=null;}}};
+  return{texture:()=>get('metal-atlas-v1'),weapon:(family:number)=>get(V3_BLADES[family]??V3_BLADES[0]),customersReady:()=>!!get('customers-atlas-v2'),coverReady:()=>!!get('notebook-cover-v1'),dispose(){disposed=true;for(const image of images.values()){image.onload=null;image.onerror=null;}}};
 }

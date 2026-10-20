@@ -1,0 +1,40 @@
+{
+  "scope": "T11.4.2.3g sources, all runtime art/originals/prompts, structured reports and eight representative lossless screenshots, including corrected initial book navigation. Large raw browser media remain local and hashed by release/artifact-manifest.json.",
+  "excludedSelfAndVerification": true,
+  "files": [
+    {
+      "path": "docs/evidence/T11-4-2-3g/check-publication.mjs.txt",
+      "bytes": 8943,
+      "sha256": "8c2cb538e3e992dbc598753d2b332cc1e0ad7c5e0d56b0dfc36ed498fee03d19"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/post-checks.json",
+      "bytes": 56510,
+      "sha256": "86757d96df92b8c74114158131bf4227e6ced69cf92af4ecb473b987826e6506"
+    },
+    {
+      "path": "public/assets/d/customers-atlas-v2.webp",
+      "bytes": 399396,
+      "sha256": "6d5f8b78b51863cda7143d506efcc9a344e6b69314737d66610bbd95ca8d3cf7"
+    },
+    {
+      "path": "public/assets/d/notebook-cover-v1.webp",
+      "bytes": 429704,
+      "sha256": "3dfa792ac46bd940091764ac62fea2813db991178ed56d2c6c7920ebd430b1f9"
+    }
+  ],
+  "totalFiles": 4,
+  "totalBytes": 894553,
+  "localMedia": {
+    "manifest": "docs/evidence/T11-4-2-3g/release/artifact-manifest.json",
+    "files": 282,
+    "bytes": 538013380,
+    "allPresentAndMatching": true
+  },
+  "silentPreviewVideo": {
+    "localPath": "tmp/T11-4-2-3g/preview-smoke2/actual-flow.webm",
+    "bytes": 1367552,
+    "sha256": "4e943ff981c405082fe257dc0851607d5d7563f07f6d3446fc141a944b103509",
+    "silentPlaywrightVideo": true
+  }
+}

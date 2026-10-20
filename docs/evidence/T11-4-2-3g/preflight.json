@@ -1,0 +1,53 @@
+{
+  "initialPilot": {
+    "session": 23191,
+    "exit": 0,
+    "cases": 5,
+    "project": "v3-chromium",
+    "elapsedSeconds": 24.7,
+    "reportLocal": "tmp/T11-4-2-3g/pilot1/report.json"
+  },
+  "dirtyInitial": {
+    "session": 40934,
+    "exit": 0,
+    "cases": 1,
+    "scope": "Interactive boxes passed, later visual review found empty-reserve text overlap; not sufficient as final layout proof"
+  },
+  "dirtyRegression": {
+    "session": 85108,
+    "exit": 1,
+    "cases": 1,
+    "overlapArea": 4030.296875,
+    "rawLocal": "tmp/T11-4-2-3g/dirty-layout-red"
+  },
+  "dirtyGreen": {
+    "session": 22810,
+    "exit": 0,
+    "cases": 3,
+    "elapsedSeconds": 36.9,
+    "projects": [
+      "v3-chromium",
+      "v3-firefox",
+      "v3-webkit"
+    ],
+    "scope": "Empty rack can collapse during error/four swords; actual stored sword remains available; export/retry preserve accepted state"
+  },
+  "unit": {
+    "session": 31340,
+    "exit": 0,
+    "tests": 247
+  },
+  "modelTool": {
+    "session": 11608,
+    "exit": 0,
+    "tests": 5,
+    "logLocal": "tmp/T11-4-2-3g/directed-tool-tests.txt"
+  },
+  "currentSdkPilot": {
+    "session": 1714,
+    "exit": 0,
+    "cases": 9,
+    "allRowsEqualPriorDirectedFirstSeed": true,
+    "logLocal": "tmp/T11-4-2-3g/tool-current.log"
+  }
+}
