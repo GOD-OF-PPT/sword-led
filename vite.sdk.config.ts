@@ -12,6 +12,7 @@ export default defineConfig({
         'sword-led-session': fileURLToPath(new URL('./src/persistence/index.ts', import.meta.url)),
         'sword-led-v2': fileURLToPath(new URL('./src/v2-sdk.ts', import.meta.url)),
         'sword-led-v3': fileURLToPath(new URL('./src/v3-sdk.ts', import.meta.url)),
+        'sword-led-v4': fileURLToPath(new URL('./src/v4-sdk.ts', import.meta.url)),
       },
       formats: ['es'],
       fileName: (_format, entryName) => `${entryName}.js`,

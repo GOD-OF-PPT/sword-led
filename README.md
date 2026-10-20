@@ -8,7 +8,7 @@
 
 ![当前v0.6炉前首页实机](docs/evidence/T11-4-2-3h/polish/preview-default.webp)
 
-[完整实况复核](docs/research/2026-10-19-forgetax-session-study.md)、[批准方案](docs/v0.4-gameplay-proposal.md)、[十二轮规则](docs/v0.4-campaign.md)与[来客美术原件/提示词](design/d/v05/README.md)保留研究与实施身份。[26,000局模型审计](docs/reviews/R4-v3-model-audit.md)发现固定七次点击也能通关；[后续1152局补证](docs/reviews/R3-16-purpose-and-directed-review.md)证实主动保险和带裂手艺有实际用途，但不证明整体乐趣。用户最新仍认为缺少主线/成长/内容；[v0.7完整游戏提案](docs/v0.7-complete-game-proposal.md)提出三章十二天、不同打造委托、配方/改造、事件与跨局炉谱，**已获明确确认，待分阶段开发**。当前v0.6继续forge-v3/schema3，旧模式/档和历史证据保留；整体H、最终广矩阵与最大审查未完成。本机预览未公网部署。
+[完整实况复核](docs/research/2026-10-19-forgetax-session-study.md)、[批准方案](docs/v0.4-gameplay-proposal.md)、[十二轮规则](docs/v0.4-campaign.md)与[来客美术原件/提示词](design/d/v05/README.md)保留研究与实施身份。[26,000局模型审计](docs/reviews/R4-v3-model-audit.md)发现固定七次点击也能通关；[后续1152局补证](docs/reviews/R3-16-purpose-and-directed-review.md)证实主动保险和带裂手艺有实际用途，但不证明整体乐趣。用户最新仍认为缺少主线/成长/内容；[v0.7完整游戏提案](docs/v0.7-complete-game-proposal.md)已获明确确认，**全部十二天的独立玩法内核已实现，存档/炉谱与生产界面接线继续分阶段开发**。详见[内核合同](docs/v0.7-core-contract.md)和[R3.19复核](docs/reviews/R3-19-lantern-core.md)。当前v0.6网页继续forge-v3/schema3，旧模式/档和历史证据保留；整体H、最终广矩阵与最大审查未完成。本机预览未公网部署。
 
 2026-10-18真人曾评价v0.2玩法/美术缺乏新意；已据ForgeTax及110条唯一Steam评论修订并取得明确v0.3批准。[核心证据](docs/reviews/R3-5-v2-core-and-playable.md)保留928局策略与原试玩结果，[D界面说明](docs/v0.3-d-interface.md)记录新接线与独立练习。[新版技术验收](docs/reviews/R3-7-v2-technical-acceptance.md)与[44AC映射](docs/v0.3-acceptance.md)分别记录实际矩阵、故障修复及待办。真人再玩和最大交付仍按T11.4.2–T12推进，技术通过不等于玩家满意。
 
@@ -57,7 +57,7 @@ npm ci --registry=https://registry.npmjs.org/
 npm run dev
 ```
 
-打开终端显示的地址，默认`/`为v0.6炉前（forge-v3规则），`/v2.html`为旧D细锻，`/legacy.html`为B版旧契约。生产版本用`npm run build`后`npm run preview`，默认端口4173。构建包含三个HTML、网页资源与core/session/v2/v3 SDK及共享chunk，应整体保留dist，不提交dist或node_modules。需要通过localhost或HTTPS运行。
+打开终端显示的地址，默认`/`为v0.6炉前（forge-v3规则），`/v2.html`为旧D细锻，`/legacy.html`为B版旧契约。生产版本用`npm run build`后`npm run preview`，默认端口4173。构建包含三个HTML、网页资源与core/session/v2/v3/v4 SDK及共享chunk，应整体保留dist，不提交dist或node_modules。v4目前只导出纯内核。需要通过localhost或HTTPS运行。
 
 | 操作 | 用法 |
 | --- | --- |

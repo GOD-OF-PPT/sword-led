@@ -1,0 +1,386 @@
+{
+  "at": "2026-10-20T08:14:52.326Z",
+  "scope": "All original task files retained locally, including incomplete pre-fix witness-final; do not treat incomplete run as positive evidence.",
+  "files": [
+    {
+      "path": "tmp/T11-4-2-3i1/before.json",
+      "bytes": 44696,
+      "sha256": "2bb149c468240edbaa813c0ad753849dcbbb7f33582ccc6c6b8a160fdf096c29"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/boundaries/at-limit.json",
+      "bytes": 120298,
+      "sha256": "065a58abad6f2495d749a5fdec0bbec0beeb82247c086cc87d63a7fa8e1081db"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/boundaries/exit.json",
+      "bytes": 124423,
+      "sha256": "42815686a294a0f2f5338577c7e894c2244329d459bfef82120d51bc8fccba85"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/boundaries/summary.json",
+      "bytes": 263,
+      "sha256": "4735d44b890a66aab39ede6db089f88d73090692b02aeb5a8bb87fa4c168091f"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/build-final.log",
+      "bytes": 1764,
+      "sha256": "3ad9b7b876acee04b5b1e3426af96421303ed1406c5a66d9497ddc4ebdb8e161"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/build-fixed.log",
+      "bytes": 1764,
+      "sha256": "8d9c88b1a48864e609926fdf21cf02337f5a9ec91058a1fc55ec845bf2a0d9c2"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/build-initial.log",
+      "bytes": 1764,
+      "sha256": "bea58c1d3853614228fcc8782a1d8c1e2d6b0de832bb7a1a445c475d0718215a"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/build-release.log",
+      "bytes": 1765,
+      "sha256": "98d0da95e1ea5532efc30f112e394eb5603c76bafe1a8a73b595f5f3dbbc956e"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/compat-fixed/artifacts/.last-run.json",
+      "bytes": 45,
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/compat-fixed/report.json",
+      "bytes": 10419,
+      "sha256": "4dc53af601fa72754a89ca3fd8bc6523eb2f6994bf975072547bb73f0338c91a"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/compat-fixed.config.ts",
+      "bytes": 749,
+      "sha256": "b089a1e641938235d7f8a8d0bfa473649223a3ddc00f06b0b558fbb717ac26f5"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/compat-fixed.log",
+      "bytes": 558,
+      "sha256": "036dd5ff00a87f0804c69a6d365b92c3b2261d58fc07465a6cee162f634386cf"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/compatibility-initial.json",
+      "bytes": 832,
+      "sha256": "ab21558166a4e55d158645fbffc02ca91159e61342c4cd232c946a03c18035c1"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/initial-unit.json",
+      "bytes": 19913,
+      "sha256": "48b0363110fa21e1113ccf1359f55a8b67300ccb2e029d117afcd6be89de957e"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/initial-unit.log",
+      "bytes": 89,
+      "sha256": "2dc74c61daed3f6f2e30f9b661c62df3860c19eab66312303d82ed7d57df65ef"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/legacy-replay.json",
+      "bytes": 100529,
+      "sha256": "634325c9c9beba2869016edb9715d9401ad3eed4f6c14671f0d26937b2fb26e6"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/legacy-replay.mjs",
+      "bytes": 2070,
+      "sha256": "d9ed6e495456d3395518b8404936ad31b27220fa05d6e266a40460b3c29fbe8e"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/negative-zero/game-before.ts.txt",
+      "bytes": 16698,
+      "sha256": "079445a6cf1d01dec4d8c2ff4e7bc0c46f36697bf46318e99ad06a44558c6a93"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/negative-zero/red.json",
+      "bytes": 429,
+      "sha256": "d6e1843e161e3da062a89c0e51f1e3803f9a598d9d6ed944a53e3fdf3472ed24"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/negative-zero/sdk-before.js",
+      "bytes": 35916,
+      "sha256": "cbdfbe449502e7d703a8a51f7016969b2624c01e1a273abf0f552589fe622339"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/policy-compile.json",
+      "bytes": 188,
+      "sha256": "74d03e4080b0c3a6929fa72bc4e127b03f173211a01a2ee67ae8f7fd96c4affc"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/policy-compile.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/sdk-browser/artifacts/.last-run.json",
+      "bytes": 45,
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/sdk-browser/artifacts/native-cache-native-CDP-re-ed4b4-reads-the-other-window-save-chromium-storage/attachments/native-bfcache-evidence-de83af46476625d2bd3d5a94d4fe66807810b310.json",
+      "bytes": 1151,
+      "sha256": "0f7937811221850792e8a828803fb1c45ee129449790d22b8682d5f63c6b1797"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/sdk-browser/artifacts/native-cache-native-CDP-re-ed4b4-reads-the-other-window-save-chromium-storage/native-bfcache-evidence.json",
+      "bytes": 1151,
+      "sha256": "0f7937811221850792e8a828803fb1c45ee129449790d22b8682d5f63c6b1797"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/sdk-browser/baseline.json",
+      "bytes": 47327,
+      "sha256": "a2a1642fa8bcca8458183891ed70997ea9837abc221be213141eb2562e126d69"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/sdk-browser/console.log",
+      "bytes": 1874,
+      "sha256": "bbfb594e2f0d92a4651c7ebb1f6c499627c785302f6396c0ebc7f9f3f98dc92a"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/sdk-browser/enumeration.log",
+      "bytes": 1535,
+      "sha256": "baadc1bfd48c2a556dbde5b360e6b9098649b5c9d321e19612acd8439aea81cc"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/sdk-browser/report.json",
+      "bytes": 20027,
+      "sha256": "059ea90d96df5ce5b25bb8fa75aa7b4096836c357abee19d660618477e2ec527"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/sdk-browser/start.json",
+      "bytes": 113,
+      "sha256": "7e29dd673215d6814137fdffaa0a9ca5361011c70f4de195a3fe722357b21c8f"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/sdk-browser/terminal.json",
+      "bytes": 368,
+      "sha256": "e8bcb95c190e5330b2a1a62c368122681f800c8ee70d49f5e807ca0981497f4d"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/sdk-browser.config.ts",
+      "bytes": 672,
+      "sha256": "dc5112b3cdbb374e364e9b95cc99c4aaed23a0b41d2985d4f3198e5820fa8bf5"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/unit-all.json",
+      "bytes": 110697,
+      "sha256": "cb24efb55ac477c9bebd3f76c49626671bbdf0be8bef3e154c4298a2189f46c7"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/unit-all.log",
+      "bytes": 85,
+      "sha256": "ea419c07efb2a09cc3dd0f2b707935903c239d37bcbce986195f4bb04e5fe000"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/unit-fixed.json",
+      "bytes": 111087,
+      "sha256": "533481caf4d28fd9249bab2e0195a16c177554cad7c0d58542ea862261e94715"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/unit-fixed.log",
+      "bytes": 87,
+      "sha256": "3ac1d6af9d7fbbb7290b824b6044beed298fccc3003593119b4ee2897d127fcc"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-final/attempts.json",
+      "bytes": 120,
+      "sha256": "218c3ca0f3ca2446a3ce46de90641da8ff111ebec1558aafe54e5f10e62765f2"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-final/challenge.json",
+      "bytes": 32652,
+      "sha256": "91a669c2b5e85909a3c79967ec8a9aeea5379a0dcaa1d5391a80f4b19d9d59ed"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-final/chapter-defeat-commands.json",
+      "bytes": 9230,
+      "sha256": "530cf49a2d5562ac0f11c9fc5f1a2aaa0a2370f01acea37227c294212572f5fc"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-final/chapter-defeat.json",
+      "bytes": 16169,
+      "sha256": "a6eb4d34087163791f509c90670164f8ca03bc76f8920d6750e5a845168b3cb9"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-final/complete-commands.json",
+      "bytes": 28713,
+      "sha256": "fefd56116ba4a7a1a7748e51a25d3d6dcaa5c391fdbfb779980764c8b623a39a"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-final/complete.json",
+      "bytes": 32284,
+      "sha256": "25dd8053db4aa916017e01891f30ce067e0e0ce5da741e47c36f07a8a73cd3ae"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-final/defeat-commands.json",
+      "bytes": 675,
+      "sha256": "2f1a8286d23d509326ce677f9036bb98ca1c37ef9889ff929b192880728ef507"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-final/defeat.json",
+      "bytes": 6263,
+      "sha256": "b4555abc5e224f3e1d1902b6d0c79990f1862d93b2919440e81eca08552c6cdf"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-final/return-commands.json",
+      "bytes": 26453,
+      "sha256": "872c8220fae33f45a116ea8b11aca5261f51fec2735433d175a2c45bab088335"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-final/return.json",
+      "bytes": 31307,
+      "sha256": "c3f6e1f852e7c8297745310c836b17a0ccf6bb7354b30a64c4eee75967b04181"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-fixed/attempts.json",
+      "bytes": 120,
+      "sha256": "218c3ca0f3ca2446a3ce46de90641da8ff111ebec1558aafe54e5f10e62765f2"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-fixed/challenge.json",
+      "bytes": 32652,
+      "sha256": "91a669c2b5e85909a3c79967ec8a9aeea5379a0dcaa1d5391a80f4b19d9d59ed"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-fixed/chapter-defeat-commands.json",
+      "bytes": 9230,
+      "sha256": "530cf49a2d5562ac0f11c9fc5f1a2aaa0a2370f01acea37227c294212572f5fc"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-fixed/chapter-defeat.json",
+      "bytes": 16169,
+      "sha256": "a6eb4d34087163791f509c90670164f8ca03bc76f8920d6750e5a845168b3cb9"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-fixed/complete-commands.json",
+      "bytes": 28713,
+      "sha256": "fefd56116ba4a7a1a7748e51a25d3d6dcaa5c391fdbfb779980764c8b623a39a"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-fixed/complete.json",
+      "bytes": 32284,
+      "sha256": "25dd8053db4aa916017e01891f30ce067e0e0ce5da741e47c36f07a8a73cd3ae"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-fixed/defeat-commands.json",
+      "bytes": 675,
+      "sha256": "2f1a8286d23d509326ce677f9036bb98ca1c37ef9889ff929b192880728ef507"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-fixed/defeat.json",
+      "bytes": 6263,
+      "sha256": "b4555abc5e224f3e1d1902b6d0c79990f1862d93b2919440e81eca08552c6cdf"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-fixed/event-credit.json",
+      "bytes": 28333,
+      "sha256": "841b3cb3d190fcebc91dcb7bfdc4c78c96610f72177ac1dadff70d2ab76e008b"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-fixed/event-donation.json",
+      "bytes": 18304,
+      "sha256": "405bb6dccb7c942cd041d51d774939f75cac074c092d327debddad7b8d43c26b"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-fixed/event-loan.json",
+      "bytes": 63509,
+      "sha256": "d22bd12eb5e8e64d3cb931d6061ffa8624dda256398792bc64892196ae72892a"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-fixed/event-rest.json",
+      "bytes": 54048,
+      "sha256": "469b325267a0fd7cdf1d1232462f366331344da02eaf4457ff8c846b57253fd9"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-fixed/event-salvage.json",
+      "bytes": 40657,
+      "sha256": "880581a5d123d323cc532defe21015d36d19e9f56ed63be4f6c905d17daa1f82"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-fixed/event-shelter.json",
+      "bytes": 63831,
+      "sha256": "d0525cc658ef58bea0bf2baf407eb6ad3a24c12ee2da4274649247af2efa0cf8"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-fixed/event-trials.json",
+      "bytes": 324,
+      "sha256": "aa552d15e8f060edaaee1184d105cd6021c962f69338aad058c3eef212f80a0d"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-fixed/return-commands.json",
+      "bytes": 26453,
+      "sha256": "872c8220fae33f45a116ea8b11aca5261f51fec2735433d175a2c45bab088335"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-fixed/return.json",
+      "bytes": 31307,
+      "sha256": "c3f6e1f852e7c8297745310c836b17a0ccf6bb7354b30a64c4eee75967b04181"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-fixed/summary.json",
+      "bytes": 24743,
+      "sha256": "187f336379025566066c67ec47bf33d909e5c662501c2b96272eee181dc3a7e4"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-fixed/warm-rack.json",
+      "bytes": 26303,
+      "sha256": "e963dfb6872ccfe85258366e8abc3bb8b040a7de33bf13c4d48ff1dbd41a640e"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-initial/attempts.json",
+      "bytes": 120,
+      "sha256": "218c3ca0f3ca2446a3ce46de90641da8ff111ebec1558aafe54e5f10e62765f2"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-initial/challenge.json",
+      "bytes": 32652,
+      "sha256": "91a669c2b5e85909a3c79967ec8a9aeea5379a0dcaa1d5391a80f4b19d9d59ed"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-initial/chapter-defeat-commands.json",
+      "bytes": 9230,
+      "sha256": "530cf49a2d5562ac0f11c9fc5f1a2aaa0a2370f01acea37227c294212572f5fc"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-initial/chapter-defeat.json",
+      "bytes": 16169,
+      "sha256": "a6eb4d34087163791f509c90670164f8ca03bc76f8920d6750e5a845168b3cb9"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-initial/complete-commands.json",
+      "bytes": 28713,
+      "sha256": "fefd56116ba4a7a1a7748e51a25d3d6dcaa5c391fdbfb779980764c8b623a39a"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-initial/complete.json",
+      "bytes": 32284,
+      "sha256": "25dd8053db4aa916017e01891f30ce067e0e0ce5da741e47c36f07a8a73cd3ae"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-initial/defeat-commands.json",
+      "bytes": 675,
+      "sha256": "2f1a8286d23d509326ce677f9036bb98ca1c37ef9889ff929b192880728ef507"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-initial/defeat.json",
+      "bytes": 6263,
+      "sha256": "b4555abc5e224f3e1d1902b6d0c79990f1862d93b2919440e81eca08552c6cdf"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-initial/return-commands.json",
+      "bytes": 26453,
+      "sha256": "872c8220fae33f45a116ea8b11aca5261f51fec2735433d175a2c45bab088335"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-initial/return.json",
+      "bytes": 31307,
+      "sha256": "c3f6e1f852e7c8297745310c836b17a0ccf6bb7354b30a64c4eee75967b04181"
+    },
+    {
+      "path": "tmp/T11-4-2-3i1/witness-initial/summary.json",
+      "bytes": 23902,
+      "sha256": "07183df7e4be422e4a565d7ebd39be842543109cc55d2e35ad0e3326e8fd4e23"
+    }
+  ]
+}

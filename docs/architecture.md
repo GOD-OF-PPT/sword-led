@@ -1,5 +1,7 @@
 # 代码架构与玩法内核约定
 
+> 已批准v0.7新增独立`core-v4`与`sword-led-v4.js`纯SDK：model/content定义内容和状态，rules提供条件/报价，game处理唯一Accepted命令，view派生只读预览/炉谱集合，validate从创建资格快照和完整journal重建。复用既有整数随机/冻结/JSON守护，不改旧解释器；[内核合同](v0.7-core-contract.md)和[R3.19](reviews/R3-19-lantern-core.md)记录实际验证。当前网页仍为v0.6，v4存储/炉谱落盘与生产界面尚待后续任务。
+
 > 行旅版新增`presentation-v3/scene.ts`只读提示/旅程/兵器故事，以及`scene-feedback.ts`有界表现控制器。DOM缓存按run/generation与显示状态保留节点，尺寸变化只重绘缩略图；Accepted反馈不发经济命令，见[场景接线](v0.4-workshop-scene.md)。
 
 > 当前默认版本为forge-v3/schema3，见[v0.4实施提案](v0.4-gameplay-proposal.md)与[完整契约接线](v0.4-campaign.md)。`core-v3`的createRun/applyCommand/validateRun及只读规则投影是唯一计价/随机来源；`application/v3-persistence.ts`接已有generic会话、独立主备key和共用writer锁。`presentation-v3/app.ts`管理意图与页面，`campaign.ts`只读手艺状态/契约统计，appearance/blade/art负责兵器道具，impact/hammer/surface负责接触表现。菜单长度仅为草稿，新建后以正式保存的roundLimit为准；URL不改旧档。

@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.simulation.json",
+  "compilerOptions": {"outDir":"./tmp/v4-witness-build"},
+  "include": ["scripts/v4-policy.ts"]
+}
