@@ -1,8 +1,8 @@
 # 《锤下求生》游戏设计文档
 
-> 最新方向为已批准的[v0.7《重燃十二盏灯》](v0.7-complete-game-proposal.md)：真实兵器条件的十二个主委托、三章成长、配方/炉具/事件与三结局。其[独立内核](v0.7-core-contract.md)已实现并回放验证，独立存档/炉谱和实际第一章生产场景已接通，后八天界面与全部结局仍在实施；旧v0.6/forge-v3保留在v3.html。技术可达不代表真人趣味性已通过。
+> 现行设计为已批准的[v0.7《重燃十二盏灯》](v0.7-complete-game-proposal.md)：十二个真实条件委托、三章成长、三配方/炉具/事件、三结局与行脚挑战。独立内核/存档、三章生产场景和完整炉谱已接线；具体打造与结局见[终章指南](v0.7-final-chapter-guide.md)，实际交付与验收状态见[README](../README.md)。旧v0.6/forge-v3保留在v3.html；技术可达不代填真人趣味性。
 
-> 当前默认规则为已批准的forge-v3/schema3，见[v0.4完整规则与算例](v0.4-gameplay-proposal.md)、[基础玩法](v0.4-playable.md)和[十二轮契约](v0.4-campaign.md)。点击即增值、两次裂损、六格连锻、交差/保险剑/剑换手艺，替换默认时机/加工多轴操作。旧两版解释器/档/入口继续保留；下面为历史v0.2设计，不能用旧数值或模型结论证明新玩法。
+> 历史forge-v3/schema3（/v3.html）见[v0.4完整规则与算例](v0.4-gameplay-proposal.md)、[基础玩法](v0.4-playable.md)和[十二轮契约](v0.4-campaign.md)。旧三版解释器/档/入口继续保留；下面为历史v0.2设计，不能用旧数值或模型结论证明v0.7玩法。
 
 > 版本范围：本文保留forge-v1/旧契约规则。真人反馈后已批准并实施forge-v2，见[v0.3提案](v0.3-gameplay-proposal.md)、[核心说明](v0.3-core-and-preview.md)和[D完整界面](v0.3-d-interface.md)。D全流程及212技术矩阵已交付；新版真人复验、原规模补验和最大审查见[R4检查点](reviews/R4-final-audit.md)，仍未全部完成。
 

@@ -1,0 +1,17 @@
+{
+  "token": "v07-final-memory-01",
+  "pid": 64559,
+  "childPid": 64561,
+  "startedAt": "2026-10-20T18:25:15.670Z",
+  "command": [
+    "/Users/gordon/.nvm/versions/node/v22.12.0/bin/node",
+    "/Users/gordon/githome/sword-led/node_modules/@playwright/test/cli.js",
+    "test",
+    "--config=playwright.v4-ui.config.ts",
+    "--output=/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/final-memory/work",
+    "tests/e2e/v4-final.spec.ts",
+    "--grep",
+    "explicit restored-ending"
+  ],
+  "runnerSha256": "780f419db7e41c1455962878bc73abf847b39a7edfd4555c35d65731af28b665"
+}

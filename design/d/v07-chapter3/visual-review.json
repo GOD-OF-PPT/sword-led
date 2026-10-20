@@ -1,0 +1,96 @@
+{
+  "schema": 1,
+  "reviewedAt": "2026-10-20T17:22:26.414Z",
+  "reviewer": "Codex v07_art_finish",
+  "method": "Viewed all nine generated original PNGs and all nine final q72 runtime WebPs individually with view_image; compared q60 arrival/double-fire/gap and selected q72 for finer line and mist detail",
+  "assets": [
+    {
+      "id": "mountain-pass-arrival-v1",
+      "originalSha256": "503385e41f42a8d96c452ef5880574e62450a5d194c3f597f6437e64d2f6d88f",
+      "runtimeSha256": "7330d00aa07ddd97eee6faa22185dbf6a3d1439f4ed6ee657650feb77d382e8b",
+      "reviewedActualFinalQ72": true,
+      "noBlankOrCorruptAreas": true,
+      "acceptableCharacterAndLineReadability": true
+    },
+    {
+      "id": "double-fire-work-v1",
+      "originalSha256": "8b492b0493f71bb43a1b55ba14e786d897dbd5b3c475c1e6ab45be2f863c1e26",
+      "runtimeSha256": "c94b9d9f89749e2db6ff76ab463367e780e6f9e6afaf8dfe1991aeec027636fa",
+      "reviewedActualFinalQ72": true,
+      "noBlankOrCorruptAreas": true,
+      "acceptableCharacterAndLineReadability": true
+    },
+    {
+      "id": "mountain-gap-held-v1",
+      "originalSha256": "4e2c79723c1dc507b12728692dbaf4af975cf8c4d387ae814224b34450d3ea15",
+      "runtimeSha256": "af657ee742fe772738d2a12d37dccbd26546cf4bd833c6617674108713669421",
+      "reviewedActualFinalQ72": true,
+      "noBlankOrCorruptAreas": true,
+      "acceptableCharacterAndLineReadability": true
+    },
+    {
+      "id": "relay-one-v1",
+      "originalSha256": "7b3bff24cec82fa6f5bf2ccb120c5495b0f055e0b2996471ce3f028fdefab8c2",
+      "runtimeSha256": "e428afac55345140ed426767056010917e3bf42e791425f720f0c653864d051f",
+      "reviewedActualFinalQ72": true,
+      "noBlankOrCorruptAreas": true,
+      "acceptableCharacterAndLineReadability": true
+    },
+    {
+      "id": "relay-complete-v1",
+      "originalSha256": "924dfe7b6a4257e8ef1a944d482541ee137fff98ba1c1f5e48488549f98e5350",
+      "runtimeSha256": "aa750f3804dfc96aacb91437d87c86cbb0ca18d95cd563bfc9fc75ef826be01c",
+      "reviewedActualFinalQ72": true,
+      "noBlankOrCorruptAreas": true,
+      "acceptableCharacterAndLineReadability": true
+    },
+    {
+      "id": "last-lantern-delivered-v1",
+      "originalSha256": "fef3b214f54d1b66a2ca7ec7ebe8cfbdeaf116194bbdc46b14b73ca3e19ad8a1",
+      "runtimeSha256": "897c0bfc12bd387ebd8f5e3005991d0b9c1cc32dece3900973baddbd6a53a127",
+      "reviewedActualFinalQ72": true,
+      "noBlankOrCorruptAreas": true,
+      "acceptableCharacterAndLineReadability": true
+    },
+    {
+      "id": "ending-twelve-lights-v1",
+      "originalSha256": "345fd14c724a394fe2d03370d0128a0b6f4f1527c63ac2d49cc8f43cecd4765b",
+      "runtimeSha256": "05cac8d98ff29b464374a5604e84fa844cd009a5a13e8cc85108eef1c3bafe8d",
+      "reviewedActualFinalQ72": true,
+      "noBlankOrCorruptAreas": true,
+      "acceptableCharacterAndLineReadability": true
+    },
+    {
+      "id": "ending-homeward-v1",
+      "originalSha256": "d1a261b6793b2934eb38f8de79ba1a955a250e4c91c3182cee06da0768039db3",
+      "runtimeSha256": "6a2105c91f0937af28e22db22992d3b5707765dd2a456fad91151547d6602cb7",
+      "reviewedActualFinalQ72": true,
+      "noBlankOrCorruptAreas": true,
+      "acceptableCharacterAndLineReadability": true
+    },
+    {
+      "id": "ending-embers-v1",
+      "originalSha256": "ab6d78944aba37bb6d8908f5c9fb0dec2a46359ff46978c31d27931399b4ee1a",
+      "runtimeSha256": "56b65cdaba916795e248f1a431b5b14b0d4fd2216de0df4ed69dfcff1fbee4cf",
+      "reviewedActualFinalQ72": true,
+      "noBlankOrCorruptAreas": true,
+      "acceptableCharacterAndLineReadability": true
+    }
+  ],
+  "observations": {
+    "relayCommonCameraGeographyAndCharacterGroundPositions": true,
+    "relayOneShelterLanternLitApproachLanternDark": true,
+    "relayCompleteBothExistingLanternsLitLocalOnwardPathVisible": true,
+    "relayQuantityAndActualWeaponsNotBaked": true,
+    "generatedEditNotPixelIdenticalMask": true,
+    "localLastLanternDistinctFromVictoryPanorama": true,
+    "homewardAllowsFinalBladeAlreadyMade": true,
+    "embersNeutralForAnyChapterAndEarnedWorksNotDestroyed": true,
+    "noBakedTextUIOrFixedBladeData": true,
+    "victoryShowsConnectedNetworkNotDailyCompletionCounter": true,
+    "paintedLampCountNotUsedOrVerifiedAsBusinessProgress": true,
+    "fullContainRequiredToPreserveFiguresAndLanterns": true,
+    "nativeSizeException": "last-lantern-delivered-v1 is 1673x940; eight others 1672x941; no source or runtime crop/resize"
+  },
+  "limits": "Art review only; actual live UI conditions, keyboard accessibility and business state acceptance remain with controller"
+}

@@ -1,0 +1,320 @@
+[
+  {
+    "key": "v4-chromium|v4-final-visual.spec.ts|existing legal endings show complete factual art, visible actions and real collection pages at both PC sizes",
+    "project": "v4-chromium",
+    "file": "v4-final-visual.spec.ts",
+    "title": "existing legal endings show complete factual art, visible actions and real collection pages at both PC sizes",
+    "batch": "pilot",
+    "status": "passed",
+    "attempts": 1,
+    "durationMs": 8821,
+    "evidenceRole": "historical-diagnostic",
+    "coverageContribution": 0,
+    "errors": []
+  },
+  {
+    "key": "v4-chromium|v4-second-saves.spec.ts|a saved first-chapter summary advances explicitly; a saved day-nine journal resumes the final chapter unchanged",
+    "project": "v4-chromium",
+    "file": "v4-second-saves.spec.ts",
+    "title": "a saved first-chapter summary advances explicitly; a saved day-nine journal resumes the final chapter unchanged",
+    "batch": "pilot",
+    "status": "passed",
+    "attempts": 1,
+    "durationMs": 3005,
+    "evidenceRole": "historical-diagnostic",
+    "coverageContribution": 0,
+    "errors": []
+  },
+  {
+    "key": "v4-chromium|v4-final-visual.spec.ts|existing legal endings show complete factual art, visible actions and real collection pages at both PC sizes",
+    "project": "v4-chromium",
+    "file": "v4-final-visual.spec.ts",
+    "title": "existing legal endings show complete factual art, visible actions and real collection pages at both PC sizes",
+    "batch": "pilot-listen",
+    "status": "passed",
+    "attempts": 1,
+    "durationMs": 9074,
+    "evidenceRole": "historical-diagnostic",
+    "coverageContribution": 0,
+    "errors": []
+  },
+  {
+    "key": "v4-chromium|v4-second-saves.spec.ts|a saved first-chapter summary advances explicitly; a saved day-nine journal resumes the final chapter unchanged",
+    "project": "v4-chromium",
+    "file": "v4-second-saves.spec.ts",
+    "title": "a saved first-chapter summary advances explicitly; a saved day-nine journal resumes the final chapter unchanged",
+    "batch": "pilot-listen",
+    "status": "passed",
+    "attempts": 1,
+    "durationMs": 2982,
+    "evidenceRole": "historical-diagnostic",
+    "coverageContribution": 0,
+    "errors": []
+  },
+  {
+    "key": "v4-chromium|v4-final.spec.ts|a fresh twelve-day victory safely earns challenge, then a genuine reordered challenge reaches its own honest ending",
+    "project": "v4-chromium",
+    "file": "v4-final.spec.ts",
+    "title": "a fresh twelve-day victory safely earns challenge, then a genuine reordered challenge reaches its own honest ending",
+    "batch": "release",
+    "status": "failed",
+    "attempts": 1,
+    "durationMs": 290737,
+    "evidenceRole": "historical-diagnostic",
+    "coverageContribution": 0,
+    "errors": [
+      {
+        "location": {
+          "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts",
+          "column": 37,
+          "line": 20
+        },
+        "message": "Error: ENOSPC: no space left on device, open '/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/release/evidence/final/v4-chromium/a07af96de166431eb13c-ced574deb8ee76f0c963/challenge-eleven-real-commissions.json'\n\n  18 | async function record(page:Page,info:TestInfo,label:string,screenshot=false){\n  19 |   const state=await readV4(page),dir=`${process.env.V4_FINAL_EVIDENCE_ROOT??'tmp/T11-4-2-3i5/final-ui'}/${info.project.name}/${info.testId.replace(/[^\\w-]/g,'_')}`;\n> 20 |   await mkdir(dir,{recursive:true});await writeFile(`${dir}/${label}.json`,JSON.stringify(state,null,2)+'\\n');\n     |                                     ^\n  21 |   const profile=await page.evaluate(()=>localStorage.getItem('sword-led.collection.v1'));if(profile!==null)await writeFile(`${dir}/${label}-collection-envelope.json`,profile);\n  22 |   if(screenshot&&info.project.name.toLowerCase().includes('chrom')){await page.locator('#v4-stage-image').evaluate(async node=>{if(node.checkVisibility())await Promise.allSettled(node.getAnimations().map(animation=>animation.finished));});await page.screenshot({path:`${dir}/${label}.png`});}\n  23 |   return state;\n    at record (/Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts:20:37)\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts:46:383"
+      },
+      {
+        "message": "Error: apiRequestContext._wrapApiCall: ENOSPC: no space left on device, copyfile '/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/release/work/.playwright-artifacts-0/traces/a07af96de166431eb13c-ced574deb8ee76f0c963-recording1.network' -> '/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/release/work/.playwright-artifacts-0/traces/a07af96de166431eb13c-ced574deb8ee76f0c963-recording1-pwnetcopy-1.network'"
+      },
+      {
+        "message": "Error: browserContext._wrapApiCall: ENOSPC: no space left on device, write"
+      },
+      {
+        "message": "Error: ENOSPC: no space left on device, open '/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/release/work/.playwright-artifacts-0/1f44d59f15883700465095e419474b4e.zip'"
+      }
+    ]
+  },
+  {
+    "key": "v4-chromium|v4-final.spec.ts|a complete keyboard homeward route and an independent six-command failure retain their real outcomes",
+    "project": "v4-chromium",
+    "file": "v4-final.spec.ts",
+    "title": "a complete keyboard homeward route and an independent six-command failure retain their real outcomes",
+    "batch": "release",
+    "status": "passed",
+    "attempts": 1,
+    "durationMs": 103003,
+    "evidenceRole": "historical-diagnostic",
+    "coverageContribution": 0,
+    "errors": []
+  },
+  {
+    "key": "v4-chromium|v4-final.spec.ts|a fresh two-new route keeps relay quantities, winning pieces and final delivery distinct",
+    "project": "v4-chromium",
+    "file": "v4-final.spec.ts",
+    "title": "a fresh two-new route keeps relay quantities, winning pieces and final delivery distinct",
+    "batch": "release",
+    "status": "failed",
+    "attempts": 1,
+    "durationMs": 124606,
+    "evidenceRole": "historical-diagnostic",
+    "coverageContribution": 0,
+    "errors": [
+      {
+        "location": {
+          "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts",
+          "column": 3,
+          "line": 20
+        },
+        "message": "Error: ENOENT: no such file or directory, mkdir '/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/release/evidence/final/v4-chromium/a07af96de166431eb13c-ab1240fc12bfdf6e1768'\n\n  18 | async function record(page:Page,info:TestInfo,label:string,screenshot=false){\n  19 |   const state=await readV4(page),dir=`${process.env.V4_FINAL_EVIDENCE_ROOT??'tmp/T11-4-2-3i5/final-ui'}/${info.project.name}/${info.testId.replace(/[^\\w-]/g,'_')}`;\n> 20 |   await mkdir(dir,{recursive:true});await writeFile(`${dir}/${label}.json`,JSON.stringify(state,null,2)+'\\n');\n     |   ^\n  21 |   const profile=await page.evaluate(()=>localStorage.getItem('sword-led.collection.v1'));if(profile!==null)await writeFile(`${dir}/${label}-collection-envelope.json`,profile);\n  22 |   if(screenshot&&info.project.name.toLowerCase().includes('chrom')){await page.locator('#v4-stage-image').evaluate(async node=>{if(node.checkVisibility())await Promise.allSettled(node.getAnimations().map(animation=>animation.finished));});await page.screenshot({path:`${dir}/${label}.png`});}\n  23 |   return state;\n    at record (/Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts:20:3)\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts:62:416"
+      },
+      {
+        "message": "Error: apiRequestContext._wrapApiCall: ENOSPC: no space left on device, copyfile '/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/release/work/.playwright-artifacts-1/traces/a07af96de166431eb13c-ab1240fc12bfdf6e1768-recording3.network' -> '/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/release/work/.playwright-artifacts-1/traces/a07af96de166431eb13c-ab1240fc12bfdf6e1768-recording3-pwnetcopy-1.network'"
+      },
+      {
+        "message": "Error: browserContext._wrapApiCall: ENOSPC: no space left on device, write"
+      },
+      {
+        "message": "Error: ENOSPC: no space left on device, rename '/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/release/work/.playwright-artifacts-1/522ce1d10b3973b68487fb59baeb2033.zip' -> '/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/release/work/v4-final-a-fresh-two-new-r-2d17a-and-final-delivery-distinct-v4-chromium/trace.zip'"
+      }
+    ]
+  },
+  {
+    "key": "v4-chromium|v4-final.spec.ts|a fresh mixed-return route keeps relay quantities, winning pieces and final delivery distinct",
+    "project": "v4-chromium",
+    "file": "v4-final.spec.ts",
+    "title": "a fresh mixed-return route keeps relay quantities, winning pieces and final delivery distinct",
+    "batch": "release",
+    "status": "passed",
+    "attempts": 1,
+    "durationMs": 120500,
+    "evidenceRole": "historical-diagnostic",
+    "coverageContribution": 0,
+    "errors": []
+  },
+  {
+    "key": "v4-chromium|v4-final.spec.ts|explicit restored-ending boundaries keep unknown future collection bytes and block readonly challenge starts",
+    "project": "v4-chromium",
+    "file": "v4-final.spec.ts",
+    "title": "explicit restored-ending boundaries keep unknown future collection bytes and block readonly challenge starts",
+    "batch": "release",
+    "status": "passed",
+    "attempts": 1,
+    "durationMs": 6261,
+    "evidenceRole": "historical-diagnostic",
+    "coverageContribution": 0,
+    "errors": []
+  },
+  {
+    "key": "v4-firefox|v4-final.spec.ts|a fresh twelve-day victory safely earns challenge, then a genuine reordered challenge reaches its own honest ending",
+    "project": "v4-firefox",
+    "file": "v4-final.spec.ts",
+    "title": "a fresh twelve-day victory safely earns challenge, then a genuine reordered challenge reaches its own honest ending",
+    "batch": "release",
+    "status": "interrupted",
+    "attempts": 1,
+    "durationMs": 50089,
+    "evidenceRole": "historical-diagnostic",
+    "coverageContribution": 0,
+    "errors": [
+      {
+        "location": {
+          "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-helpers.ts",
+          "column": 292,
+          "line": 22
+        },
+        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#v4-strike')\nExpected: \u001b[32m\"\u001b[7mfals\u001b[27me\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mtru\u001b[27me\"\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('#v4-strike') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#v4-strike')\u001b[22m\n\u001b[2m    5 × locator resolved to <button tabindex=\"0\" type=\"button\" id=\"v4-strike\" aria-busy=\"true\" class=\"v4-strike-button\">落锤 · 空格</button>\u001b[22m\n\u001b[2m      - unexpected value \"true\"\u001b[22m\n\u001b[2m  - Test ended.\u001b[22m\n\n\n   at v4-helpers.ts:22\n\n  20 |  switch(action.type){\n  21 |   case'continue':await act(page.getByRole('button',{name:'点火开炉',exact:true}));break;\n> 22 |   case'strike':await expect(page.locator('#v4-strike')).toHaveAttribute('aria-busy','false');if(keys){await keyTo(page,page.locator('#v4-strike'));await page.keyboard.press('Space');}else await page.locator('#v4-hit').click({position:{x:250,y:170}});await expect(page.locator('#v4-strike')).toHaveAttribute('aria-busy','false');break;\n     |                                                                                                                                                                                                                                                                                                    ^\n  23 |   case'deliver':await act(page.locator('#v4-deliver'));break;\n  24 |   case'reserve':await act(before.reserveId===action.pieceId?page.locator('#v4-reserve-slot button'):page.locator('#v4-reserve'));break;\n  25 |   case'scrap':await act(page.locator('#v4-scrap'));await confirm();break;\n    at commandV4 (/Users/gordon/githome/sword-led/tests/e2e/v4-helpers.ts:22:292)\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts:34:43"
+      }
+    ]
+  },
+  {
+    "key": "v4-firefox|v4-final.spec.ts|a complete keyboard homeward route and an independent six-command failure retain their real outcomes",
+    "project": "v4-firefox",
+    "file": "v4-final.spec.ts",
+    "title": "a complete keyboard homeward route and an independent six-command failure retain their real outcomes",
+    "batch": "release",
+    "status": "not-run",
+    "attempts": 0,
+    "durationMs": 0,
+    "evidenceRole": "historical-diagnostic",
+    "coverageContribution": 0,
+    "errors": []
+  },
+  {
+    "key": "v4-firefox|v4-final.spec.ts|a fresh two-new route keeps relay quantities, winning pieces and final delivery distinct",
+    "project": "v4-firefox",
+    "file": "v4-final.spec.ts",
+    "title": "a fresh two-new route keeps relay quantities, winning pieces and final delivery distinct",
+    "batch": "release",
+    "status": "not-run",
+    "attempts": 0,
+    "durationMs": 0,
+    "evidenceRole": "historical-diagnostic",
+    "coverageContribution": 0,
+    "errors": []
+  },
+  {
+    "key": "v4-firefox|v4-final.spec.ts|a fresh mixed-return route keeps relay quantities, winning pieces and final delivery distinct",
+    "project": "v4-firefox",
+    "file": "v4-final.spec.ts",
+    "title": "a fresh mixed-return route keeps relay quantities, winning pieces and final delivery distinct",
+    "batch": "release",
+    "status": "not-run",
+    "attempts": 0,
+    "durationMs": 0,
+    "evidenceRole": "historical-diagnostic",
+    "coverageContribution": 0,
+    "errors": []
+  },
+  {
+    "key": "v4-firefox|v4-final.spec.ts|explicit restored-ending boundaries keep unknown future collection bytes and block readonly challenge starts",
+    "project": "v4-firefox",
+    "file": "v4-final.spec.ts",
+    "title": "explicit restored-ending boundaries keep unknown future collection bytes and block readonly challenge starts",
+    "batch": "release",
+    "status": "not-run",
+    "attempts": 0,
+    "durationMs": 0,
+    "evidenceRole": "historical-diagnostic",
+    "coverageContribution": 0,
+    "errors": []
+  },
+  {
+    "key": "v4-webkit|v4-final.spec.ts|a fresh twelve-day victory safely earns challenge, then a genuine reordered challenge reaches its own honest ending",
+    "project": "v4-webkit",
+    "file": "v4-final.spec.ts",
+    "title": "a fresh twelve-day victory safely earns challenge, then a genuine reordered challenge reaches its own honest ending",
+    "batch": "release",
+    "status": "not-run",
+    "attempts": 0,
+    "durationMs": 0,
+    "evidenceRole": "historical-diagnostic",
+    "coverageContribution": 0,
+    "errors": []
+  },
+  {
+    "key": "v4-webkit|v4-final.spec.ts|a complete keyboard homeward route and an independent six-command failure retain their real outcomes",
+    "project": "v4-webkit",
+    "file": "v4-final.spec.ts",
+    "title": "a complete keyboard homeward route and an independent six-command failure retain their real outcomes",
+    "batch": "release",
+    "status": "not-run",
+    "attempts": 0,
+    "durationMs": 0,
+    "evidenceRole": "historical-diagnostic",
+    "coverageContribution": 0,
+    "errors": []
+  },
+  {
+    "key": "v4-webkit|v4-final.spec.ts|a fresh two-new route keeps relay quantities, winning pieces and final delivery distinct",
+    "project": "v4-webkit",
+    "file": "v4-final.spec.ts",
+    "title": "a fresh two-new route keeps relay quantities, winning pieces and final delivery distinct",
+    "batch": "release",
+    "status": "not-run",
+    "attempts": 0,
+    "durationMs": 0,
+    "evidenceRole": "historical-diagnostic",
+    "coverageContribution": 0,
+    "errors": []
+  },
+  {
+    "key": "v4-webkit|v4-final.spec.ts|a fresh mixed-return route keeps relay quantities, winning pieces and final delivery distinct",
+    "project": "v4-webkit",
+    "file": "v4-final.spec.ts",
+    "title": "a fresh mixed-return route keeps relay quantities, winning pieces and final delivery distinct",
+    "batch": "release",
+    "status": "not-run",
+    "attempts": 0,
+    "durationMs": 0,
+    "evidenceRole": "historical-diagnostic",
+    "coverageContribution": 0,
+    "errors": []
+  },
+  {
+    "key": "v4-webkit|v4-final.spec.ts|explicit restored-ending boundaries keep unknown future collection bytes and block readonly challenge starts",
+    "project": "v4-webkit",
+    "file": "v4-final.spec.ts",
+    "title": "explicit restored-ending boundaries keep unknown future collection bytes and block readonly challenge starts",
+    "batch": "release",
+    "status": "not-run",
+    "attempts": 0,
+    "durationMs": 0,
+    "evidenceRole": "historical-diagnostic",
+    "coverageContribution": 0,
+    "errors": []
+  },
+  {
+    "key": "v4-chromium|v4-final.spec.ts|a fresh twelve-day victory safely earns challenge, then a genuine reordered challenge reaches its own honest ending",
+    "project": "v4-chromium",
+    "file": "v4-final.spec.ts",
+    "title": "a fresh twelve-day victory safely earns challenge, then a genuine reordered challenge reaches its own honest ending",
+    "batch": "repair",
+    "status": "passed",
+    "attempts": 1,
+    "durationMs": 189537,
+    "evidenceRole": "historical-diagnostic",
+    "coverageContribution": 0,
+    "errors": []
+  },
+  {
+    "key": "v4-chromium|v4-final.spec.ts|a fresh two-new route keeps relay quantities, winning pieces and final delivery distinct",
+    "project": "v4-chromium",
+    "file": "v4-final.spec.ts",
+    "title": "a fresh two-new route keeps relay quantities, winning pieces and final delivery distinct",
+    "batch": "repair",
+    "status": "passed",
+    "attempts": 1,
+    "durationMs": 94720,
+    "evidenceRole": "historical-diagnostic",
+    "coverageContribution": 0,
+    "errors": []
+  }
+]

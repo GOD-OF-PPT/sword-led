@@ -1,15 +1,16 @@
-.v4-app[data-chapter="2"] .v4-workshop {
+.v4-app[data-chapter="2"] .v4-workshop,
+.v4-app[data-chapter="3"] .v4-workshop {
   background-color: #20343c;
   background-image: url('/assets/d/v07-chapter2/winter-forge-v1.webp'), url('/assets/d/forge-backdrop-v2.webp');
 }
-.v4-stage:has(.v4-twin-outcome) .v4-stage-view {
+.v4-stage:has(.v4-twin-outcome, .v4-scene-panorama) .v4-stage-view {
   height: auto;
   aspect-ratio: 16 / 9;
   max-height: none;
   align-self: center;
   border-radius: 3px;
 }
-.v4-stage:has(.v4-twin-outcome) #v4-stage-image { object-fit: contain; }
+.v4-stage:has(.v4-twin-outcome, .v4-scene-panorama) #v4-stage-image { object-fit: contain; }
 .v4-journey-copy > p + p { margin-top: 12px; }
 .v4-journey-copy > h3, .v4-journey-copy section > h3 { color: #f5d99d; font-size: 23px; margin: 15px 0 7px; }
 .v4-journey-copy .v4-blade-thumb { display: block; width: min(100%, 340px); height: auto; aspect-ratio: 30/11; margin: 8px auto; }
@@ -75,3 +76,18 @@
 .v4-journey-copy .v4-protection-receipt { padding: 8px 12px; border-left: 2px solid #deb46a; background: #a27b2f1c; color: #ffe1a8; font-size: 14px; }
 
 .v4-stage-copy { overflow-anchor: none; }
+
+.v4-ending-memories { margin-top: 24px; border-top: 1px solid #b2945a80; }
+.v4-ending-listen { margin: 10px 0 4px; min-height: 44px; font: 17px var(--v4-display); }
+.v4-ending-listen + p { margin-top: 8px; }
+.v4-ending-person { margin-top: 8px; border-bottom: 1px solid #b2945a50; }
+.v4-ending-person > summary { min-height: 44px; padding: 12px 4px; color: #f0d69e; cursor: pointer; font: 19px/1.5 var(--v4-display); }
+.v4-ending-person > summary:hover { color: #ffe9b8; background: #bfa46716; }
+.v4-ending-person > summary:focus-visible { outline: 2px solid #f5ca79; outline-offset: -2px; }
+.v4-ending-memory { padding: 6px 12px 15px; margin-bottom: 10px; border-left: 2px solid #b5975a60; }
+.v4-ending-memory[data-result="met"] { border-left-color: #7ba392; }
+.v4-ending-memory[data-result="missed"] { border-left-color: #b97d54; }
+.v4-ending-memory[data-result="unreached"] { opacity: .8; }
+.v4-ending-memory h4 { margin: 7px 0; color: #eed9ae; font-size: 16px; }
+.v4-ending-memory p { margin: 7px 0; font-size: 13px; line-height: 1.8; }
+.v4-ending-memory .v4-delivery-works { margin: 10px 0; }

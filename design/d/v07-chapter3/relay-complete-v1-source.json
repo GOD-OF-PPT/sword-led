@@ -1,0 +1,35 @@
+{
+  "mode": "built-in image_gen",
+  "id": "relay-complete-v1",
+  "intent": "direct-master-edit",
+  "usage": "commission 11 completed old-work OR two-new-work route",
+  "condition": "core commission 11 complete; quantity and winning/matched pieceIds shown separately",
+  "sourcePath": "/Users/gordon/.codex/generated_images/01a15944-6214-7bb3-9a5b-a18a6e3bfc7f/exec-3d571e17-c3ea-4ebd-acb2-c00741ab27e8.png",
+  "source": {
+    "path": "/Users/gordon/.codex/generated_images/01a15944-6214-7bb3-9a5b-a18a6e3bfc7f/exec-3d571e17-c3ea-4ebd-acb2-c00741ab27e8.png",
+    "bytes": 3083143,
+    "sha256": "924dfe7b6a4257e8ef1a944d482541ee137fff98ba1c1f5e48488549f98e5350"
+  },
+  "original": {
+    "path": "design/d/v07-chapter3/originals/relay-complete-v1.png",
+    "bytes": 3083143,
+    "sha256": "924dfe7b6a4257e8ef1a944d482541ee137fff98ba1c1f5e48488549f98e5350"
+  },
+  "prompt": {
+    "path": "design/d/v07-chapter3/prompts/relay-complete-v1.txt",
+    "bytes": 1743,
+    "sha256": "e5672c219fc60f0a111c6dc968cd21ecbd7bba2c04c5fbc31deefad3cdab8e84"
+  },
+  "references": [
+    {
+      "path": "design/d/v07-chapter3/originals/mountain-pass-arrival-v1.png",
+      "bytes": 3159659,
+      "sha256": "503385e41f42a8d96c452ef5880574e62450a5d194c3f597f6437e64d2f6d88f"
+    }
+  ],
+  "width": 1672,
+  "height": 941,
+  "bitDepth": 8,
+  "colorType": 2,
+  "transparent_background": false
+}

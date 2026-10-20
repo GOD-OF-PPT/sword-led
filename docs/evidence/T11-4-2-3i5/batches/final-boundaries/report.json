@@ -1,0 +1,809 @@
+{
+  "config": {
+    "argv": [
+      "/Users/gordon/.nvm/versions/node/v22.12.0/bin/node",
+      "/Users/gordon/githome/sword-led/node_modules/@playwright/test/cli.js",
+      "test",
+      "--config=playwright.v4-ui.config.ts",
+      "--output=/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/final-boundaries/work",
+      "tests/e2e/v4-final.spec.ts",
+      "tests/e2e/v4-final-visual.spec.ts",
+      "tests/e2e/v4-second-saves.spec.ts",
+      "--grep",
+      "explicit restored-ending|existing legal endings|a saved first-chapter|an external day-nine"
+    ],
+    "configFile": "/Users/gordon/githome/sword-led/playwright.v4-ui.config.ts",
+    "rootDir": "/Users/gordon/githome/sword-led/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/final-boundaries/work",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v4-chromium",
+        "name": "v4-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v4-*.spec.ts"
+        ],
+        "timeout": 180000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/final-boundaries/work",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v4-firefox",
+        "name": "v4-firefox",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v4-*.spec.ts"
+        ],
+        "timeout": 180000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/final-boundaries/work",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v4-webkit",
+        "name": "v4-webkit",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v4-*.spec.ts"
+        ],
+        "timeout": 180000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/final-boundaries/work",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v4-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v4-*.spec.ts",
+        "timeout": 180000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4198",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "launchOptions": {
+            "args": [
+              "--no-proxy-server"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v4-chromium"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/final-boundaries/work",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v4-firefox",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v4-*.spec.ts",
+        "timeout": 180000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4198",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0",
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "firefox"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v4-firefox"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/final-boundaries/work",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v4-webkit",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v4-*.spec.ts",
+        "timeout": 180000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4198",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+          "screen": {
+            "width": 1792,
+            "height": 1120
+          },
+          "deviceScaleFactor": 2,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "webkit"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v4-webkit"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/final-boundaries/report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 4198 --strictPort",
+      "url": "http://127.0.0.1:4198",
+      "reuseExistingServer": false,
+      "env": {
+        "NO_PROXY": "127.0.0.1,localhost",
+        "no_proxy": "127.0.0.1,localhost"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "v4-final-visual.spec.ts",
+      "file": "v4-final-visual.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "existing legal endings show complete factual art, visible actions and real collection pages at both PC sizes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9181,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:20:20.265Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "662a45c4af9e040b9346-6dd320cd2251188749cf",
+          "file": "v4-final-visual.spec.ts",
+          "line": 8,
+          "column": 1
+        },
+        {
+          "title": "existing legal endings show complete factual art, visible actions and real collection pages at both PC sizes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-firefox",
+              "projectName": "v4-firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11705,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:21:38.904Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "662a45c4af9e040b9346-167f98599be408b70259",
+          "file": "v4-final-visual.spec.ts",
+          "line": 8,
+          "column": 1
+        },
+        {
+          "title": "existing legal endings show complete factual art, visible actions and real collection pages at both PC sizes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-webkit",
+              "projectName": "v4-webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 18542,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:23:05.836Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "662a45c4af9e040b9346-362b9979d070903c5d89",
+          "file": "v4-final-visual.spec.ts",
+          "line": 8,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v4-final.spec.ts",
+      "file": "v4-final.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "explicit restored-ending boundaries keep unknown future collection bytes and block readonly challenge starts",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 61014,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts",
+                        "column": 107,
+                        "line": 84
+                      },
+                      "message": "Error: page.waitForEvent: Test ended.\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n\n  82 |     const temporary=await memoryContext.newPage();observe(temporary);await temporary.goto('/');await expect(temporary.locator('#v4-save-summary')).toContainText('只读');await temporary.locator('#v4-save-open').click();await temporary.getByRole('button',{name:'保留当前局，不保存续玩',exact:true}).click();await temporary.getByRole('button',{name:'确认',exact:true}).click();await expect(temporary.locator('#v4-stage-title')).toHaveText('十二灯复明');await expect(temporary.locator('#v4-stage-copy')).toContainText('新的作品、章节与成长不会写入炉谱');await expect(temporary.locator('#v4-stage-copy')).not.toContainText('安全保存的作品、章节');await expect(temporary.getByRole('button',{name:'行脚挑战，再走一程',exact:true})).toHaveCount(0);\n  83 |     const saved=await temporary.evaluate(()=>({run:localStorage.getItem('sword-led.save.v4'),profile:localStorage.getItem('sword-led.collection.v1')}));expect(saved).toEqual({run:fixture.run,profile:null});\n> 84 |     await temporary.getByRole('button',{name:'导出这次行程',exact:true}).click();const exportDownload=temporary.waitForEvent('download');await temporary.getByRole('button',{name:'导出当前行程',exact:true}).click();const exportedPath=await(await exportDownload).path();if(!exportedPath)throw Error('Missing temporary ending export');const exported=api.validateRun(JSON.parse(readFileSync(exportedPath,'utf8')));if(!exported.ok)throw Error(exported.detail);expect(exported.state).toEqual(complete);\n     |                                                                                                           ^\n  85 |     await writeFile(memoryDir+'/explicit-memory-ending-export.json',JSON.stringify(exported.state,null,2)+'\\n');await writeFile(memoryDir+'/explicit-memory-ending-preserved-storage.json',JSON.stringify(saved,null,2)+'\\n');expect(errors.get(holder)).toEqual([]);expect(errors.get(temporary)).toEqual([]);\n  86 |   }finally{await memoryContext.close();}\n  87 |   const futureContext=await browser.newContext({baseURL:info.project.use.baseURL??'http://127.0.0.1:4198'});try{\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts:84:107"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts",
+                        "column": 12,
+                        "line": 86
+                      },
+                      "message": "Error: browserContext.close: Target page, context or browser has been closed\n\n  84 |     await temporary.getByRole('button',{name:'导出这次行程',exact:true}).click();const exportDownload=temporary.waitForEvent('download');await temporary.getByRole('button',{name:'导出当前行程',exact:true}).click();const exportedPath=await(await exportDownload).path();if(!exportedPath)throw Error('Missing temporary ending export');const exported=api.validateRun(JSON.parse(readFileSync(exportedPath,'utf8')));if(!exported.ok)throw Error(exported.detail);expect(exported.state).toEqual(complete);\n  85 |     await writeFile(memoryDir+'/explicit-memory-ending-export.json',JSON.stringify(exported.state,null,2)+'\\n');await writeFile(memoryDir+'/explicit-memory-ending-preserved-storage.json',JSON.stringify(saved,null,2)+'\\n');expect(errors.get(holder)).toEqual([]);expect(errors.get(temporary)).toEqual([]);\n> 86 |   }finally{await memoryContext.close();}\n     |            ^\n  87 |   const futureContext=await browser.newContext({baseURL:info.project.use.baseURL??'http://127.0.0.1:4198'});try{\n  88 |     const future=await futureContext.newPage();observe(future);const parsed=JSON.parse(fixture.collection)as{schemaVersion:number};parsed.schemaVersion=999;const raw=JSON.stringify(parsed);await future.addInitScript(({run,collection})=>{localStorage.setItem('sword-led.save.v4',run);localStorage.setItem('sword-led.collection.v1',collection);},{run:fixture.run,collection:raw});await future.goto('/');await expect(future.locator('#v4-continue')).toBeEnabled();await cannotChallenge(future);await future.locator('#v4-title-collection').click();await cannotChallenge(future);await future.getByRole('button',{name:'收好炉谱',exact:true}).click();await future.locator('#v4-continue').click();await expect(future.locator('#v4-stage-title')).toHaveText('十二灯复明');await expect(future.getByRole('button',{name:'行脚挑战，再走一程',exact:true})).toHaveCount(0);expect(await future.evaluate(()=>localStorage.getItem('sword-led.collection.v1'))).toBe(raw);expect(await readV4(future)).toEqual(complete);expect(errors.get(future)).toEqual([]);await record(future,info,'future-collection-restored-boundary');\n  89 |   }finally{await futureContext.close();}\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts:86:12"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:20:36.331Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/final-boundaries/work/v4-final-explicit-restored-5cd5e-k-readonly-challenge-starts-v4-chromium/test-failed-3.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/final-boundaries/work/v4-final-explicit-restored-5cd5e-k-readonly-challenge-starts-v4-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/final-boundaries/work/v4-final-explicit-restored-5cd5e-k-readonly-challenge-starts-v4-chromium/test-failed-2.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/final-boundaries/work/v4-final-explicit-restored-5cd5e-k-readonly-challenge-starts-v4-chromium/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a07af96de166431eb13c-67332b34e323f1d2035f",
+          "file": "v4-final.spec.ts",
+          "line": 74,
+          "column": 1
+        },
+        {
+          "title": "explicit restored-ending boundaries keep unknown future collection bytes and block readonly challenge starts",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-firefox",
+              "projectName": "v4-firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 60390,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts",
+                        "column": 107,
+                        "line": 84
+                      },
+                      "message": "Error: page.waitForEvent: Test ended.\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n\n  82 |     const temporary=await memoryContext.newPage();observe(temporary);await temporary.goto('/');await expect(temporary.locator('#v4-save-summary')).toContainText('只读');await temporary.locator('#v4-save-open').click();await temporary.getByRole('button',{name:'保留当前局，不保存续玩',exact:true}).click();await temporary.getByRole('button',{name:'确认',exact:true}).click();await expect(temporary.locator('#v4-stage-title')).toHaveText('十二灯复明');await expect(temporary.locator('#v4-stage-copy')).toContainText('新的作品、章节与成长不会写入炉谱');await expect(temporary.locator('#v4-stage-copy')).not.toContainText('安全保存的作品、章节');await expect(temporary.getByRole('button',{name:'行脚挑战，再走一程',exact:true})).toHaveCount(0);\n  83 |     const saved=await temporary.evaluate(()=>({run:localStorage.getItem('sword-led.save.v4'),profile:localStorage.getItem('sword-led.collection.v1')}));expect(saved).toEqual({run:fixture.run,profile:null});\n> 84 |     await temporary.getByRole('button',{name:'导出这次行程',exact:true}).click();const exportDownload=temporary.waitForEvent('download');await temporary.getByRole('button',{name:'导出当前行程',exact:true}).click();const exportedPath=await(await exportDownload).path();if(!exportedPath)throw Error('Missing temporary ending export');const exported=api.validateRun(JSON.parse(readFileSync(exportedPath,'utf8')));if(!exported.ok)throw Error(exported.detail);expect(exported.state).toEqual(complete);\n     |                                                                                                           ^\n  85 |     await writeFile(memoryDir+'/explicit-memory-ending-export.json',JSON.stringify(exported.state,null,2)+'\\n');await writeFile(memoryDir+'/explicit-memory-ending-preserved-storage.json',JSON.stringify(saved,null,2)+'\\n');expect(errors.get(holder)).toEqual([]);expect(errors.get(temporary)).toEqual([]);\n  86 |   }finally{await memoryContext.close();}\n  87 |   const futureContext=await browser.newContext({baseURL:info.project.use.baseURL??'http://127.0.0.1:4198'});try{\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts:84:107"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts",
+                        "column": 195,
+                        "line": 84
+                      },
+                      "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '导出当前行程', exact: true })\u001b[22m\n\n\n  82 |     const temporary=await memoryContext.newPage();observe(temporary);await temporary.goto('/');await expect(temporary.locator('#v4-save-summary')).toContainText('只读');await temporary.locator('#v4-save-open').click();await temporary.getByRole('button',{name:'保留当前局，不保存续玩',exact:true}).click();await temporary.getByRole('button',{name:'确认',exact:true}).click();await expect(temporary.locator('#v4-stage-title')).toHaveText('十二灯复明');await expect(temporary.locator('#v4-stage-copy')).toContainText('新的作品、章节与成长不会写入炉谱');await expect(temporary.locator('#v4-stage-copy')).not.toContainText('安全保存的作品、章节');await expect(temporary.getByRole('button',{name:'行脚挑战，再走一程',exact:true})).toHaveCount(0);\n  83 |     const saved=await temporary.evaluate(()=>({run:localStorage.getItem('sword-led.save.v4'),profile:localStorage.getItem('sword-led.collection.v1')}));expect(saved).toEqual({run:fixture.run,profile:null});\n> 84 |     await temporary.getByRole('button',{name:'导出这次行程',exact:true}).click();const exportDownload=temporary.waitForEvent('download');await temporary.getByRole('button',{name:'导出当前行程',exact:true}).click();const exportedPath=await(await exportDownload).path();if(!exportedPath)throw Error('Missing temporary ending export');const exported=api.validateRun(JSON.parse(readFileSync(exportedPath,'utf8')));if(!exported.ok)throw Error(exported.detail);expect(exported.state).toEqual(complete);\n     |                                                                                                                                                                                                   ^\n  85 |     await writeFile(memoryDir+'/explicit-memory-ending-export.json',JSON.stringify(exported.state,null,2)+'\\n');await writeFile(memoryDir+'/explicit-memory-ending-preserved-storage.json',JSON.stringify(saved,null,2)+'\\n');expect(errors.get(holder)).toEqual([]);expect(errors.get(temporary)).toEqual([]);\n  86 |   }finally{await memoryContext.close();}\n  87 |   const futureContext=await browser.newContext({baseURL:info.project.use.baseURL??'http://127.0.0.1:4198'});try{\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts:84:195"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:22:01.881Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/final-boundaries/work/v4-final-explicit-restored-5cd5e-k-readonly-challenge-starts-v4-firefox/test-failed-3.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/final-boundaries/work/v4-final-explicit-restored-5cd5e-k-readonly-challenge-starts-v4-firefox/test-failed-2.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/final-boundaries/work/v4-final-explicit-restored-5cd5e-k-readonly-challenge-starts-v4-firefox/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/final-boundaries/work/v4-final-explicit-restored-5cd5e-k-readonly-challenge-starts-v4-firefox/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a07af96de166431eb13c-1aa367b75e02fd393f9d",
+          "file": "v4-final.spec.ts",
+          "line": 74,
+          "column": 1
+        },
+        {
+          "title": "explicit restored-ending boundaries keep unknown future collection bytes and block readonly challenge starts",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-webkit",
+              "projectName": "v4-webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 60804,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts",
+                        "column": 107,
+                        "line": 84
+                      },
+                      "message": "Error: page.waitForEvent: Test ended.\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n\n  82 |     const temporary=await memoryContext.newPage();observe(temporary);await temporary.goto('/');await expect(temporary.locator('#v4-save-summary')).toContainText('只读');await temporary.locator('#v4-save-open').click();await temporary.getByRole('button',{name:'保留当前局，不保存续玩',exact:true}).click();await temporary.getByRole('button',{name:'确认',exact:true}).click();await expect(temporary.locator('#v4-stage-title')).toHaveText('十二灯复明');await expect(temporary.locator('#v4-stage-copy')).toContainText('新的作品、章节与成长不会写入炉谱');await expect(temporary.locator('#v4-stage-copy')).not.toContainText('安全保存的作品、章节');await expect(temporary.getByRole('button',{name:'行脚挑战，再走一程',exact:true})).toHaveCount(0);\n  83 |     const saved=await temporary.evaluate(()=>({run:localStorage.getItem('sword-led.save.v4'),profile:localStorage.getItem('sword-led.collection.v1')}));expect(saved).toEqual({run:fixture.run,profile:null});\n> 84 |     await temporary.getByRole('button',{name:'导出这次行程',exact:true}).click();const exportDownload=temporary.waitForEvent('download');await temporary.getByRole('button',{name:'导出当前行程',exact:true}).click();const exportedPath=await(await exportDownload).path();if(!exportedPath)throw Error('Missing temporary ending export');const exported=api.validateRun(JSON.parse(readFileSync(exportedPath,'utf8')));if(!exported.ok)throw Error(exported.detail);expect(exported.state).toEqual(complete);\n     |                                                                                                           ^\n  85 |     await writeFile(memoryDir+'/explicit-memory-ending-export.json',JSON.stringify(exported.state,null,2)+'\\n');await writeFile(memoryDir+'/explicit-memory-ending-preserved-storage.json',JSON.stringify(saved,null,2)+'\\n');expect(errors.get(holder)).toEqual([]);expect(errors.get(temporary)).toEqual([]);\n  86 |   }finally{await memoryContext.close();}\n  87 |   const futureContext=await browser.newContext({baseURL:info.project.use.baseURL??'http://127.0.0.1:4198'});try{\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts:84:107"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts",
+                        "column": 12,
+                        "line": 86
+                      },
+                      "message": "Error: browserContext.close: Test ended.\nBrowser logs:\n\n<launching> /Users/gordon/Library/Caches/ms-playwright/webkit-2370/pw_run.sh --inspector-pipe --headless --no-startup-window\n<launched> pid=64133\n[pid=64133] <gracefully close start>\n\n  84 |     await temporary.getByRole('button',{name:'导出这次行程',exact:true}).click();const exportDownload=temporary.waitForEvent('download');await temporary.getByRole('button',{name:'导出当前行程',exact:true}).click();const exportedPath=await(await exportDownload).path();if(!exportedPath)throw Error('Missing temporary ending export');const exported=api.validateRun(JSON.parse(readFileSync(exportedPath,'utf8')));if(!exported.ok)throw Error(exported.detail);expect(exported.state).toEqual(complete);\n  85 |     await writeFile(memoryDir+'/explicit-memory-ending-export.json',JSON.stringify(exported.state,null,2)+'\\n');await writeFile(memoryDir+'/explicit-memory-ending-preserved-storage.json',JSON.stringify(saved,null,2)+'\\n');expect(errors.get(holder)).toEqual([]);expect(errors.get(temporary)).toEqual([]);\n> 86 |   }finally{await memoryContext.close();}\n     |            ^\n  87 |   const futureContext=await browser.newContext({baseURL:info.project.use.baseURL??'http://127.0.0.1:4198'});try{\n  88 |     const future=await futureContext.newPage();observe(future);const parsed=JSON.parse(fixture.collection)as{schemaVersion:number};parsed.schemaVersion=999;const raw=JSON.stringify(parsed);await future.addInitScript(({run,collection})=>{localStorage.setItem('sword-led.save.v4',run);localStorage.setItem('sword-led.collection.v1',collection);},{run:fixture.run,collection:raw});await future.goto('/');await expect(future.locator('#v4-continue')).toBeEnabled();await cannotChallenge(future);await future.locator('#v4-title-collection').click();await cannotChallenge(future);await future.getByRole('button',{name:'收好炉谱',exact:true}).click();await future.locator('#v4-continue').click();await expect(future.locator('#v4-stage-title')).toHaveText('十二灯复明');await expect(future.getByRole('button',{name:'行脚挑战，再走一程',exact:true})).toHaveCount(0);expect(await future.evaluate(()=>localStorage.getItem('sword-led.collection.v1'))).toBe(raw);expect(await readV4(future)).toEqual(complete);expect(errors.get(future)).toEqual([]);await record(future,info,'future-collection-restored-boundary');\n  89 |   }finally{await futureContext.close();}\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts:86:12"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:23:43.652Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/final-boundaries/work/v4-final-explicit-restored-5cd5e-k-readonly-challenge-starts-v4-webkit/test-failed-3.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/final-boundaries/work/v4-final-explicit-restored-5cd5e-k-readonly-challenge-starts-v4-webkit/test-failed-2.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/final-boundaries/work/v4-final-explicit-restored-5cd5e-k-readonly-challenge-starts-v4-webkit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/final-boundaries/work/v4-final-explicit-restored-5cd5e-k-readonly-challenge-starts-v4-webkit/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a07af96de166431eb13c-be474d7b146e0fedc4e9",
+          "file": "v4-final.spec.ts",
+          "line": 74,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v4-second-saves.spec.ts",
+      "file": "v4-second-saves.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "a saved first-chapter summary advances explicitly; a saved day-nine journal resumes the final chapter unchanged",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2934,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:20:29.824Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c87162423aefbf808b6c-07cb2444ccc8b3c445be",
+          "file": "v4-second-saves.spec.ts",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "an external day-nine save invalidates an old second-chapter confirmation and explicit reread keeps the external journal",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2514,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:20:32.771Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c87162423aefbf808b6c-e4a0f10879074fbfc480",
+          "file": "v4-second-saves.spec.ts",
+          "line": 58,
+          "column": 1
+        },
+        {
+          "title": "a saved first-chapter summary advances explicitly; a saved day-nine journal resumes the final chapter unchanged",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-firefox",
+              "projectName": "v4-firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3978,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:21:53.101Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c87162423aefbf808b6c-682b3d1360f29d90c42d",
+          "file": "v4-second-saves.spec.ts",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "an external day-nine save invalidates an old second-chapter confirmation and explicit reread keeps the external journal",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-firefox",
+              "projectName": "v4-firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3145,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:21:57.098Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c87162423aefbf808b6c-75028f41e3a29b08d0f6",
+          "file": "v4-second-saves.spec.ts",
+          "line": 58,
+          "column": 1
+        },
+        {
+          "title": "a saved first-chapter summary advances explicitly; a saved day-nine journal resumes the final chapter unchanged",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-webkit",
+              "projectName": "v4-webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5490,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:23:25.958Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c87162423aefbf808b6c-590c7c3b3f7806e78b3c",
+          "file": "v4-second-saves.spec.ts",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "an external day-nine save invalidates an old second-chapter confirmation and explicit reread keeps the external journal",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-webkit",
+              "projectName": "v4-webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11088,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T18:23:31.466Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c87162423aefbf808b6c-9539395178dbce53d46f",
+          "file": "v4-second-saves.spec.ts",
+          "line": 58,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-20T18:20:18.321Z",
+    "duration": 266719.24100000004,
+    "expected": 9,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}

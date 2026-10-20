@@ -1,0 +1,45 @@
+{
+  "mode": "built-in image_gen",
+  "id": "last-lantern-delivered-v1",
+  "intent": "generate",
+  "usage": "commission 12 local delivery result before global settlement",
+  "condition": "real commission 12 MainCompleted; must not imply victory phase",
+  "sourcePath": "/Users/gordon/.codex/generated_images/01a15944-6214-7bb3-9a5b-a18a6e3bfc7f/exec-dfea876a-68a9-4ff0-a618-3202eb28ac6d.png",
+  "source": {
+    "path": "/Users/gordon/.codex/generated_images/01a15944-6214-7bb3-9a5b-a18a6e3bfc7f/exec-dfea876a-68a9-4ff0-a618-3202eb28ac6d.png",
+    "bytes": 3171146,
+    "sha256": "fef3b214f54d1b66a2ca7ec7ebe8cfbdeaf116194bbdc46b14b73ca3e19ad8a1"
+  },
+  "original": {
+    "path": "design/d/v07-chapter3/originals/last-lantern-delivered-v1.png",
+    "bytes": 3171146,
+    "sha256": "fef3b214f54d1b66a2ca7ec7ebe8cfbdeaf116194bbdc46b14b73ca3e19ad8a1"
+  },
+  "prompt": {
+    "path": "design/d/v07-chapter3/prompts/last-lantern-delivered-v1.txt",
+    "bytes": 2115,
+    "sha256": "f4b617f9616960ea5357f65858b1403e7a949c39149e94bccb1a65a12602ab8f"
+  },
+  "references": [
+    {
+      "path": "design/d/reference-main-v2.png",
+      "bytes": 2605402,
+      "sha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+    },
+    {
+      "path": "design/d/v05/originals/customers-atlas-v2.png",
+      "bytes": 1937506,
+      "sha256": "fe613eab5a26f33eabbbc74a2332c6c471a1acc5dd14fea09091574b42db5f50"
+    },
+    {
+      "path": "design/d/v07-chapter3/originals/mountain-pass-arrival-v1.png",
+      "bytes": 3159659,
+      "sha256": "503385e41f42a8d96c452ef5880574e62450a5d194c3f597f6437e64d2f6d88f"
+    }
+  ],
+  "width": 1673,
+  "height": 940,
+  "bitDepth": 8,
+  "colorType": 2,
+  "transparent_background": false
+}

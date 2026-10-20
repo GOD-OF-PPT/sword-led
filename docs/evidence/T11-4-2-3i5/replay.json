@@ -1,0 +1,2264 @@
+{
+  "summary": {
+    "at": "2026-10-20T18:59:38.348Z",
+    "batches": [
+      "pilot",
+      "pilot-listen",
+      "release",
+      "repair",
+      "final-boundaries",
+      "final-memory",
+      "final-journeys"
+    ],
+    "finalCoverageBatches": {
+      "final-boundaries": 9,
+      "final-memory": 3,
+      "final-journeys": 12
+    },
+    "historicalBatches": [
+      "pilot",
+      "pilot-listen",
+      "release",
+      "repair"
+    ],
+    "logicalCases": 24,
+    "projects": 3,
+    "casesPerProject": 8,
+    "sourceFiles": 478,
+    "buildFiles": 75,
+    "finalSourceIdentity": "26425e1db3ee87304cdf85d57998ec44a98bffb933f19f0b8b9651ed115653a9",
+    "finalRuntimeIdentity": "bdc02738beab2534ff583b68909c7ed2823052c930818b6f0e492f29457a9dfa",
+    "actualRunObjects": 97,
+    "finalRunObjects": 69,
+    "historicalRunObjects": 28,
+    "uniqueRunStates": 64,
+    "actualCollectionEnvelopes": 55,
+    "finalCollectionEnvelopes": 39,
+    "declaredFutureEnvelopes": 4,
+    "memoryStorageObservationObjects": 3,
+    "finalMemoryEndingExports": 3,
+    "screens": 8,
+    "diagnosticCases": 15,
+    "unparseableEvidenceFiles": 0,
+    "scope": "Twenty-four logical cases are covered by nine genuinely passing boundary cases, three repaired memory/boundary cases and twelve journey cases on the same 75 runtime files. The sole final input difference is the exact reconstructed test-only direct-download correction. This is not a single all-green twenty-four-case batch: the original three memory test failures remain diagnostic. Older release/repair/pilot batches retain their own input/runtime hashes and red/green history, contribute zero final coverage, and may use another runtime. Restored memory endings, visual fixtures, memory openings and early failures are not additional full twelve-day UI runs. All recorded run objects replay through the current SDK; collection envelopes are validated, while preserved-storage observations are separate records."
+  },
+  "actualStates": [
+    {
+      "path": "tmp/T11-4-2-3i5/pilot/evidence/v4-chromium/c87162423aefbf808b6c-07cb2444ccc8b3c445be/ninth-day-resumed-unchanged.json",
+      "batch": "pilot",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "92e83b8ab2e9cc4283aa7b6957f5de5dcc0ccefe9e9983b69b9327310c2d1bd6",
+      "normalizedStateSha256": "b50c8f8c1d72ae9fc84e868feb14194a08f37235a68ca07d726f0323103ccd0e",
+      "phase": "workshop",
+      "day": 9,
+      "revision": 127,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/pilot/evidence/v4-chromium/c87162423aefbf808b6c-07cb2444ccc8b3c445be/old-summary-explicit-advance.json",
+      "batch": "pilot",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "e25268cbb07dd3a5a6f0bab268a86c6ad37356fbee25afb2fbe4b2cca2185408",
+      "normalizedStateSha256": "f488321380c4f1e811c205cc54090d2057c1433b1922c6b10b55a886258b9816",
+      "phase": "workshop",
+      "day": 5,
+      "revision": 64,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/pilot/evidence/v4-chromium/ending-visual/complete-state.json",
+      "batch": "pilot",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "25dd8053db4aa916017e01891f30ce067e0e0ce5da741e47c36f07a8a73cd3ae",
+      "normalizedStateSha256": "ed3d9ae47e0e8ae70b0f0eed62550aaa5acb912e518e3e1c65d5f9871bdccbcc",
+      "phase": "victory",
+      "day": 12,
+      "revision": 210,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/pilot/evidence/v4-chromium/ending-visual/defeat-state.json",
+      "batch": "pilot",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "b4555abc5e224f3e1d1902b6d0c79990f1862d93b2919440e81eca08552c6cdf",
+      "normalizedStateSha256": "782aa237eda91310b7641a4da3526830fdb0cb5e660cb0e0879b102eb65576e5",
+      "phase": "defeat",
+      "day": 3,
+      "revision": 6,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/pilot/evidence/v4-chromium/ending-visual/return-state.json",
+      "batch": "pilot",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "c3f6e1f852e7c8297745310c836b17a0ccf6bb7354b30a64c4eee75967b04181",
+      "normalizedStateSha256": "4a36cb697b8bb49154f723fda97ec3d31febef3fe2c5a92de0d6e972c532cd65",
+      "phase": "return",
+      "day": 12,
+      "revision": 194,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/pilot-listen/evidence/v4-chromium/c87162423aefbf808b6c-07cb2444ccc8b3c445be/ninth-day-resumed-unchanged.json",
+      "batch": "pilot-listen",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "92e83b8ab2e9cc4283aa7b6957f5de5dcc0ccefe9e9983b69b9327310c2d1bd6",
+      "normalizedStateSha256": "b50c8f8c1d72ae9fc84e868feb14194a08f37235a68ca07d726f0323103ccd0e",
+      "phase": "workshop",
+      "day": 9,
+      "revision": 127,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/pilot-listen/evidence/v4-chromium/c87162423aefbf808b6c-07cb2444ccc8b3c445be/old-summary-explicit-advance.json",
+      "batch": "pilot-listen",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "e25268cbb07dd3a5a6f0bab268a86c6ad37356fbee25afb2fbe4b2cca2185408",
+      "normalizedStateSha256": "f488321380c4f1e811c205cc54090d2057c1433b1922c6b10b55a886258b9816",
+      "phase": "workshop",
+      "day": 5,
+      "revision": 64,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/pilot-listen/evidence/v4-chromium/ending-visual/complete-state.json",
+      "batch": "pilot-listen",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "25dd8053db4aa916017e01891f30ce067e0e0ce5da741e47c36f07a8a73cd3ae",
+      "normalizedStateSha256": "ed3d9ae47e0e8ae70b0f0eed62550aaa5acb912e518e3e1c65d5f9871bdccbcc",
+      "phase": "victory",
+      "day": 12,
+      "revision": 210,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/pilot-listen/evidence/v4-chromium/ending-visual/defeat-state.json",
+      "batch": "pilot-listen",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "b4555abc5e224f3e1d1902b6d0c79990f1862d93b2919440e81eca08552c6cdf",
+      "normalizedStateSha256": "782aa237eda91310b7641a4da3526830fdb0cb5e660cb0e0879b102eb65576e5",
+      "phase": "defeat",
+      "day": 3,
+      "revision": 6,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/pilot-listen/evidence/v4-chromium/ending-visual/return-state.json",
+      "batch": "pilot-listen",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "c3f6e1f852e7c8297745310c836b17a0ccf6bb7354b30a64c4eee75967b04181",
+      "normalizedStateSha256": "4a36cb697b8bb49154f723fda97ec3d31febef3fe2c5a92de0d6e972c532cd65",
+      "phase": "return",
+      "day": 12,
+      "revision": 194,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/release/evidence/final/v4-chromium/a07af96de166431eb13c-33e0447b67517d6a3069/mixed-return-final-real-outcome.json",
+      "batch": "release",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "5e510a1a0380bf2ebf009ad45cb1a2fd6dc7a7b32eafc65a36922ac6cac60b32",
+      "normalizedStateSha256": "e6e798d0389571a2c6071e24ab030a69ccc9a97ca24b15ee1a436d132356718d",
+      "phase": "return",
+      "day": 12,
+      "revision": 213,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/release/evidence/final/v4-chromium/a07af96de166431eb13c-33e0447b67517d6a3069/mixed-return-relay-one-real-new-sword.json",
+      "batch": "release",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "f1c4d7092f389ca62bb55e68d23b4657ce81f5405746fc2565bc1c98216bcc1b",
+      "normalizedStateSha256": "ffc69b25db50bd606d887fa0d06a2ea04c95493cdc8f9258994883f718f110a8",
+      "phase": "workshop",
+      "day": 11,
+      "revision": 180,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/release/evidence/final/v4-chromium/a07af96de166431eb13c-33e0447b67517d6a3069/mixed-return-relay-winning-receipt.json",
+      "batch": "release",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "6af644736e1710867f969dd19074fa768a59d4cf71439c3362762e1bdf666a36",
+      "normalizedStateSha256": "fb2f3f0b2d423ba876f00f0f52830feaf7b69f8291c02888f5ae256997bc42b2",
+      "phase": "workshop",
+      "day": 11,
+      "revision": 182,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/release/evidence/final/v4-chromium/a07af96de166431eb13c-361cf116ea03d39d46e3/keyboard-homeward.json",
+      "batch": "release",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "fecc1e342bad1c580c60d2f5062e9c061d3ed6dca90bd965cc6b4e253f9673ea",
+      "normalizedStateSha256": "2b240e60a68fd0d0f9e2f34c402ba3c1a285c0906f367fcbda58906cb33e033d",
+      "phase": "return",
+      "day": 12,
+      "revision": 194,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/release/evidence/final/v4-chromium/a07af96de166431eb13c-361cf116ea03d39d46e3/keyboard-independent-failure.json",
+      "batch": "release",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "e962d738a7bdd98b9fe1d14a6e51d0a2593cddc000ac81c8bbe6db31b6d08dd7",
+      "normalizedStateSha256": "94ee7091c69c6cb2db242d77482eef1b4d47e833e9224ae774c196311855134f",
+      "phase": "defeat",
+      "day": 3,
+      "revision": 6,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/release/evidence/final/v4-chromium/a07af96de166431eb13c-67332b34e323f1d2035f/explicit-memory-challenge-opening.json",
+      "batch": "release",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "bc0b6a2f66ad7669265a2fbe06eb5a6bfceb09899d8d5f6b5ba7734ec5d2c3e9",
+      "normalizedStateSha256": "5d78d1002835fa3a41a3c9e8cb5374b4c10bbb1c9a83bb94d3b10e11049eb713",
+      "phase": "opening",
+      "day": 1,
+      "revision": 0,
+      "mode": "challenge",
+      "sampleScope": "explicit-memory-challenge-opening"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/release/evidence/final/v4-chromium/a07af96de166431eb13c-67332b34e323f1d2035f/future-collection-restored-boundary.json",
+      "batch": "release",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "25dd8053db4aa916017e01891f30ce067e0e0ce5da741e47c36f07a8a73cd3ae",
+      "normalizedStateSha256": "ed3d9ae47e0e8ae70b0f0eed62550aaa5acb912e518e3e1c65d5f9871bdccbcc",
+      "phase": "victory",
+      "day": 12,
+      "revision": 210,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/release/evidence/final/v4-chromium/a07af96de166431eb13c-67332b34e323f1d2035f/restored-single-relay-history-after-advance.json",
+      "batch": "release",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "eb765d3759496883037577280ac6577731b9006e121c3003066974e4bca4e368",
+      "normalizedStateSha256": "469651b9bdb3c67f9cedb21c85cad661474363d51157bb274ae73facc4e60189",
+      "phase": "workshop",
+      "day": 12,
+      "revision": 182,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/release/evidence/final/v4-chromium/a07af96de166431eb13c-ced574deb8ee76f0c963/challenge-earned-opening.json",
+      "batch": "release",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "d2cb6ec1d8a02eccc8e5a086cf09dc3a16259f9d5cf2df9edbd84e885ca15540",
+      "normalizedStateSha256": "a1cf15fa0c1ef1121eca627a3e7d63d6eca19ae7ef9008be93bf89659e91aa44",
+      "phase": "opening",
+      "day": 1,
+      "revision": 0,
+      "mode": "challenge",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/release/evidence/final/v4-chromium/a07af96de166431eb13c-ced574deb8ee76f0c963/saved-day-eight-before-continuing.json",
+      "batch": "release",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "0b721a642b7d6e4db99f946055d62112e256e1f7aa269eba0429f01b756ae9a3",
+      "normalizedStateSha256": "f0f68ce08716cc5c15c93ee112ceffd68ba77319fa44ca50e5b6d21d9536306d",
+      "phase": "summary",
+      "day": 8,
+      "revision": 126,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/release/evidence/final/v4-chromium/a07af96de166431eb13c-ced574deb8ee76f0c963/victory-main-saved-collection-pending.json",
+      "batch": "release",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "3a147e059c59f136fe3057b3c17bb69a8f419ebe7060bac7be8935d66fa55b62",
+      "normalizedStateSha256": "13c950ae84a927857ce6f9dc55c6189950c13a60640c104388f8ee1852b044f5",
+      "phase": "victory",
+      "day": 12,
+      "revision": 210,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/repair/evidence/final/v4-chromium/a07af96de166431eb13c-ab1240fc12bfdf6e1768/two-new-final-real-outcome.json",
+      "batch": "repair",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "09f1b4a344356989eaa770b940060096dae16790817e29192bfc3dc788e7191e",
+      "normalizedStateSha256": "849bae679c2386fd8a2954b375aa5aa446555ef8ac8bbd7ef27bdecd54ecdbc6",
+      "phase": "victory",
+      "day": 12,
+      "revision": 208,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/repair/evidence/final/v4-chromium/a07af96de166431eb13c-ab1240fc12bfdf6e1768/two-new-relay-one-real-new-sword.json",
+      "batch": "repair",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "0ade9d41732b5bf485cd605de036943bf0c27c2507cc8417430edc68b3c96392",
+      "normalizedStateSha256": "b382ef347bc57659ec0573812944e72383a312c938cff3f7451131797d69fba7",
+      "phase": "workshop",
+      "day": 11,
+      "revision": 180,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/repair/evidence/final/v4-chromium/a07af96de166431eb13c-ab1240fc12bfdf6e1768/two-new-relay-winning-receipt.json",
+      "batch": "repair",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "8523c85f5015337f5bf76a3b7f6604eeb3de0e746d2f7e966dc04d376b38aabc",
+      "normalizedStateSha256": "5f1d71030d37ede153b5fefaccd2b92a4c9b8b5c7eddcd752e498404a3659d2e",
+      "phase": "workshop",
+      "day": 11,
+      "revision": 184,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/repair/evidence/final/v4-chromium/a07af96de166431eb13c-ced574deb8ee76f0c963/challenge-earned-opening.json",
+      "batch": "repair",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "3a495e0a47b34d80805373e51b997bd0baa503257b86f45fc5a880d7f6fb6a12",
+      "normalizedStateSha256": "96a9e9651bdd787d84595a0bcbc1c41f50fcdc8b81282de0668bce2b0f7dc9f0",
+      "phase": "opening",
+      "day": 1,
+      "revision": 0,
+      "mode": "challenge",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/repair/evidence/final/v4-chromium/a07af96de166431eb13c-ced574deb8ee76f0c963/challenge-eleven-real-commissions.json",
+      "batch": "repair",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "4f7bd077555fd76e0484f7988e4360b7a7fb055b6ca5a9c1745dbcea04611684",
+      "normalizedStateSha256": "260bca63b2e014e5fc4b488c2e78c2cab5d9d9cb40e5c5132f8410295ffcb910",
+      "phase": "victory",
+      "day": 12,
+      "revision": 216,
+      "mode": "challenge",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/repair/evidence/final/v4-chromium/a07af96de166431eb13c-ced574deb8ee76f0c963/saved-day-eight-before-continuing.json",
+      "batch": "repair",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "d91fc6ac3f57b443bcb6cc34230cc1b739a33b562f6ad67741fb21cc5f6091aa",
+      "normalizedStateSha256": "b712be47a7496b2bb3d63b41299e407442c899168827b3dfc4f4cf0c47fbb72b",
+      "phase": "summary",
+      "day": 8,
+      "revision": 126,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/repair/evidence/final/v4-chromium/a07af96de166431eb13c-ced574deb8ee76f0c963/victory-main-saved-collection-pending.json",
+      "batch": "repair",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "72cc8d96e47ba8be3415848ee91167af8eb19ea798fecee9512d49be4a2d76b7",
+      "normalizedStateSha256": "4e9deea3ab5e6562d64e664eab7ad20e60f458075089eb2c985018fc50bc44cd",
+      "phase": "victory",
+      "day": 12,
+      "revision": 210,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-boundaries/evidence/final/v4-chromium/a07af96de166431eb13c-67332b34e323f1d2035f/explicit-memory-challenge-opening.json",
+      "batch": "final-boundaries",
+      "evidenceRole": "final-runtime",
+      "sha256": "03ab2b6f65c164c34d6c735319675ed817e858502b6012df7eb72531717b291d",
+      "normalizedStateSha256": "85cf5e2039cc11281ed6a359e2279541316b50e78d49d3c5397dc6549910c3ef",
+      "phase": "opening",
+      "day": 1,
+      "revision": 0,
+      "mode": "challenge",
+      "sampleScope": "explicit-memory-challenge-opening"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-boundaries/evidence/final/v4-firefox/a07af96de166431eb13c-1aa367b75e02fd393f9d/explicit-memory-challenge-opening.json",
+      "batch": "final-boundaries",
+      "evidenceRole": "final-runtime",
+      "sha256": "b8228cbbf09876d7b873d9de01327b70fa026715670e37d1da2e64eb7c17f8fb",
+      "normalizedStateSha256": "3c5df484b7022b48f4d1065719660bdf9fc67e37ebacf7deac0869855865635b",
+      "phase": "opening",
+      "day": 1,
+      "revision": 0,
+      "mode": "challenge",
+      "sampleScope": "explicit-memory-challenge-opening"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-boundaries/evidence/final/v4-webkit/a07af96de166431eb13c-be474d7b146e0fedc4e9/explicit-memory-challenge-opening.json",
+      "batch": "final-boundaries",
+      "evidenceRole": "final-runtime",
+      "sha256": "1d4191012265e61359c9c9d57e1b745a555d428d43e6f15ac9c44d9acb6f4832",
+      "normalizedStateSha256": "8e30ae5944ce94cd21c28157db6dbccec40a84a4f79c0a600a477fcad723b410",
+      "phase": "opening",
+      "day": 1,
+      "revision": 0,
+      "mode": "challenge",
+      "sampleScope": "explicit-memory-challenge-opening"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-boundaries/evidence/v4-chromium/c87162423aefbf808b6c-07cb2444ccc8b3c445be/ninth-day-resumed-unchanged.json",
+      "batch": "final-boundaries",
+      "evidenceRole": "final-runtime",
+      "sha256": "92e83b8ab2e9cc4283aa7b6957f5de5dcc0ccefe9e9983b69b9327310c2d1bd6",
+      "normalizedStateSha256": "b50c8f8c1d72ae9fc84e868feb14194a08f37235a68ca07d726f0323103ccd0e",
+      "phase": "workshop",
+      "day": 9,
+      "revision": 127,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-boundaries/evidence/v4-chromium/c87162423aefbf808b6c-07cb2444ccc8b3c445be/old-summary-explicit-advance.json",
+      "batch": "final-boundaries",
+      "evidenceRole": "final-runtime",
+      "sha256": "e25268cbb07dd3a5a6f0bab268a86c6ad37356fbee25afb2fbe4b2cca2185408",
+      "normalizedStateSha256": "f488321380c4f1e811c205cc54090d2057c1433b1922c6b10b55a886258b9816",
+      "phase": "workshop",
+      "day": 5,
+      "revision": 64,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-boundaries/evidence/v4-chromium/c87162423aefbf808b6c-e4a0f10879074fbfc480/second-old-confirmation-cancelled-by-external-save.json",
+      "batch": "final-boundaries",
+      "evidenceRole": "final-runtime",
+      "sha256": "92e83b8ab2e9cc4283aa7b6957f5de5dcc0ccefe9e9983b69b9327310c2d1bd6",
+      "normalizedStateSha256": "b50c8f8c1d72ae9fc84e868feb14194a08f37235a68ca07d726f0323103ccd0e",
+      "phase": "workshop",
+      "day": 9,
+      "revision": 127,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-boundaries/evidence/v4-chromium/ending-visual/complete-state.json",
+      "batch": "final-boundaries",
+      "evidenceRole": "final-runtime",
+      "sha256": "25dd8053db4aa916017e01891f30ce067e0e0ce5da741e47c36f07a8a73cd3ae",
+      "normalizedStateSha256": "ed3d9ae47e0e8ae70b0f0eed62550aaa5acb912e518e3e1c65d5f9871bdccbcc",
+      "phase": "victory",
+      "day": 12,
+      "revision": 210,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-boundaries/evidence/v4-chromium/ending-visual/defeat-state.json",
+      "batch": "final-boundaries",
+      "evidenceRole": "final-runtime",
+      "sha256": "b4555abc5e224f3e1d1902b6d0c79990f1862d93b2919440e81eca08552c6cdf",
+      "normalizedStateSha256": "782aa237eda91310b7641a4da3526830fdb0cb5e660cb0e0879b102eb65576e5",
+      "phase": "defeat",
+      "day": 3,
+      "revision": 6,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-boundaries/evidence/v4-chromium/ending-visual/return-state.json",
+      "batch": "final-boundaries",
+      "evidenceRole": "final-runtime",
+      "sha256": "c3f6e1f852e7c8297745310c836b17a0ccf6bb7354b30a64c4eee75967b04181",
+      "normalizedStateSha256": "4a36cb697b8bb49154f723fda97ec3d31febef3fe2c5a92de0d6e972c532cd65",
+      "phase": "return",
+      "day": 12,
+      "revision": 194,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-boundaries/evidence/v4-firefox/c87162423aefbf808b6c-682b3d1360f29d90c42d/ninth-day-resumed-unchanged.json",
+      "batch": "final-boundaries",
+      "evidenceRole": "final-runtime",
+      "sha256": "92e83b8ab2e9cc4283aa7b6957f5de5dcc0ccefe9e9983b69b9327310c2d1bd6",
+      "normalizedStateSha256": "b50c8f8c1d72ae9fc84e868feb14194a08f37235a68ca07d726f0323103ccd0e",
+      "phase": "workshop",
+      "day": 9,
+      "revision": 127,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-boundaries/evidence/v4-firefox/c87162423aefbf808b6c-682b3d1360f29d90c42d/old-summary-explicit-advance.json",
+      "batch": "final-boundaries",
+      "evidenceRole": "final-runtime",
+      "sha256": "e25268cbb07dd3a5a6f0bab268a86c6ad37356fbee25afb2fbe4b2cca2185408",
+      "normalizedStateSha256": "f488321380c4f1e811c205cc54090d2057c1433b1922c6b10b55a886258b9816",
+      "phase": "workshop",
+      "day": 5,
+      "revision": 64,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-boundaries/evidence/v4-firefox/c87162423aefbf808b6c-75028f41e3a29b08d0f6/second-old-confirmation-cancelled-by-external-save.json",
+      "batch": "final-boundaries",
+      "evidenceRole": "final-runtime",
+      "sha256": "92e83b8ab2e9cc4283aa7b6957f5de5dcc0ccefe9e9983b69b9327310c2d1bd6",
+      "normalizedStateSha256": "b50c8f8c1d72ae9fc84e868feb14194a08f37235a68ca07d726f0323103ccd0e",
+      "phase": "workshop",
+      "day": 9,
+      "revision": 127,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-boundaries/evidence/v4-firefox/ending-visual/complete-state.json",
+      "batch": "final-boundaries",
+      "evidenceRole": "final-runtime",
+      "sha256": "25dd8053db4aa916017e01891f30ce067e0e0ce5da741e47c36f07a8a73cd3ae",
+      "normalizedStateSha256": "ed3d9ae47e0e8ae70b0f0eed62550aaa5acb912e518e3e1c65d5f9871bdccbcc",
+      "phase": "victory",
+      "day": 12,
+      "revision": 210,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-boundaries/evidence/v4-firefox/ending-visual/defeat-state.json",
+      "batch": "final-boundaries",
+      "evidenceRole": "final-runtime",
+      "sha256": "b4555abc5e224f3e1d1902b6d0c79990f1862d93b2919440e81eca08552c6cdf",
+      "normalizedStateSha256": "782aa237eda91310b7641a4da3526830fdb0cb5e660cb0e0879b102eb65576e5",
+      "phase": "defeat",
+      "day": 3,
+      "revision": 6,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-boundaries/evidence/v4-firefox/ending-visual/return-state.json",
+      "batch": "final-boundaries",
+      "evidenceRole": "final-runtime",
+      "sha256": "c3f6e1f852e7c8297745310c836b17a0ccf6bb7354b30a64c4eee75967b04181",
+      "normalizedStateSha256": "4a36cb697b8bb49154f723fda97ec3d31febef3fe2c5a92de0d6e972c532cd65",
+      "phase": "return",
+      "day": 12,
+      "revision": 194,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-boundaries/evidence/v4-webkit/c87162423aefbf808b6c-590c7c3b3f7806e78b3c/ninth-day-resumed-unchanged.json",
+      "batch": "final-boundaries",
+      "evidenceRole": "final-runtime",
+      "sha256": "92e83b8ab2e9cc4283aa7b6957f5de5dcc0ccefe9e9983b69b9327310c2d1bd6",
+      "normalizedStateSha256": "b50c8f8c1d72ae9fc84e868feb14194a08f37235a68ca07d726f0323103ccd0e",
+      "phase": "workshop",
+      "day": 9,
+      "revision": 127,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-boundaries/evidence/v4-webkit/c87162423aefbf808b6c-590c7c3b3f7806e78b3c/old-summary-explicit-advance.json",
+      "batch": "final-boundaries",
+      "evidenceRole": "final-runtime",
+      "sha256": "e25268cbb07dd3a5a6f0bab268a86c6ad37356fbee25afb2fbe4b2cca2185408",
+      "normalizedStateSha256": "f488321380c4f1e811c205cc54090d2057c1433b1922c6b10b55a886258b9816",
+      "phase": "workshop",
+      "day": 5,
+      "revision": 64,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-boundaries/evidence/v4-webkit/c87162423aefbf808b6c-9539395178dbce53d46f/second-old-confirmation-cancelled-by-external-save.json",
+      "batch": "final-boundaries",
+      "evidenceRole": "final-runtime",
+      "sha256": "92e83b8ab2e9cc4283aa7b6957f5de5dcc0ccefe9e9983b69b9327310c2d1bd6",
+      "normalizedStateSha256": "b50c8f8c1d72ae9fc84e868feb14194a08f37235a68ca07d726f0323103ccd0e",
+      "phase": "workshop",
+      "day": 9,
+      "revision": 127,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-boundaries/evidence/v4-webkit/ending-visual/complete-state.json",
+      "batch": "final-boundaries",
+      "evidenceRole": "final-runtime",
+      "sha256": "25dd8053db4aa916017e01891f30ce067e0e0ce5da741e47c36f07a8a73cd3ae",
+      "normalizedStateSha256": "ed3d9ae47e0e8ae70b0f0eed62550aaa5acb912e518e3e1c65d5f9871bdccbcc",
+      "phase": "victory",
+      "day": 12,
+      "revision": 210,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-boundaries/evidence/v4-webkit/ending-visual/defeat-state.json",
+      "batch": "final-boundaries",
+      "evidenceRole": "final-runtime",
+      "sha256": "b4555abc5e224f3e1d1902b6d0c79990f1862d93b2919440e81eca08552c6cdf",
+      "normalizedStateSha256": "782aa237eda91310b7641a4da3526830fdb0cb5e660cb0e0879b102eb65576e5",
+      "phase": "defeat",
+      "day": 3,
+      "revision": 6,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-boundaries/evidence/v4-webkit/ending-visual/return-state.json",
+      "batch": "final-boundaries",
+      "evidenceRole": "final-runtime",
+      "sha256": "c3f6e1f852e7c8297745310c836b17a0ccf6bb7354b30a64c4eee75967b04181",
+      "normalizedStateSha256": "4a36cb697b8bb49154f723fda97ec3d31febef3fe2c5a92de0d6e972c532cd65",
+      "phase": "return",
+      "day": 12,
+      "revision": 194,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-memory/evidence/final/v4-chromium/a07af96de166431eb13c-67332b34e323f1d2035f/explicit-memory-challenge-opening.json",
+      "batch": "final-memory",
+      "evidenceRole": "final-runtime",
+      "sha256": "f4605b36b7acc91089be6724d6981063dce029b1637d03d889c63375ed6f8f81",
+      "normalizedStateSha256": "a0a5edd8f2e07bee966fcb2903faa8d2ab2f91ce8590413e619124e43d42e17b",
+      "phase": "opening",
+      "day": 1,
+      "revision": 0,
+      "mode": "challenge",
+      "sampleScope": "explicit-memory-challenge-opening"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-memory/evidence/final/v4-chromium/a07af96de166431eb13c-67332b34e323f1d2035f/explicit-memory-ending-export.json",
+      "batch": "final-memory",
+      "evidenceRole": "final-runtime",
+      "sha256": "25dd8053db4aa916017e01891f30ce067e0e0ce5da741e47c36f07a8a73cd3ae",
+      "normalizedStateSha256": "ed3d9ae47e0e8ae70b0f0eed62550aaa5acb912e518e3e1c65d5f9871bdccbcc",
+      "phase": "victory",
+      "day": 12,
+      "revision": 210,
+      "mode": "story",
+      "sampleScope": "explicit-restored-memory-ending-export"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-memory/evidence/final/v4-chromium/a07af96de166431eb13c-67332b34e323f1d2035f/future-collection-restored-boundary.json",
+      "batch": "final-memory",
+      "evidenceRole": "final-runtime",
+      "sha256": "25dd8053db4aa916017e01891f30ce067e0e0ce5da741e47c36f07a8a73cd3ae",
+      "normalizedStateSha256": "ed3d9ae47e0e8ae70b0f0eed62550aaa5acb912e518e3e1c65d5f9871bdccbcc",
+      "phase": "victory",
+      "day": 12,
+      "revision": 210,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-memory/evidence/final/v4-chromium/a07af96de166431eb13c-67332b34e323f1d2035f/restored-single-relay-history-after-advance.json",
+      "batch": "final-memory",
+      "evidenceRole": "final-runtime",
+      "sha256": "eb765d3759496883037577280ac6577731b9006e121c3003066974e4bca4e368",
+      "normalizedStateSha256": "469651b9bdb3c67f9cedb21c85cad661474363d51157bb274ae73facc4e60189",
+      "phase": "workshop",
+      "day": 12,
+      "revision": 182,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-memory/evidence/final/v4-firefox/a07af96de166431eb13c-1aa367b75e02fd393f9d/explicit-memory-challenge-opening.json",
+      "batch": "final-memory",
+      "evidenceRole": "final-runtime",
+      "sha256": "977605d7c0b76bf2de94646520083432a11bc1dc805336b38ee859f2a8c5f6fc",
+      "normalizedStateSha256": "a15303d18836c78fdfdb8a7a3f848a50710a0550c9c2b712815b637d5e760242",
+      "phase": "opening",
+      "day": 1,
+      "revision": 0,
+      "mode": "challenge",
+      "sampleScope": "explicit-memory-challenge-opening"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-memory/evidence/final/v4-firefox/a07af96de166431eb13c-1aa367b75e02fd393f9d/explicit-memory-ending-export.json",
+      "batch": "final-memory",
+      "evidenceRole": "final-runtime",
+      "sha256": "25dd8053db4aa916017e01891f30ce067e0e0ce5da741e47c36f07a8a73cd3ae",
+      "normalizedStateSha256": "ed3d9ae47e0e8ae70b0f0eed62550aaa5acb912e518e3e1c65d5f9871bdccbcc",
+      "phase": "victory",
+      "day": 12,
+      "revision": 210,
+      "mode": "story",
+      "sampleScope": "explicit-restored-memory-ending-export"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-memory/evidence/final/v4-firefox/a07af96de166431eb13c-1aa367b75e02fd393f9d/future-collection-restored-boundary.json",
+      "batch": "final-memory",
+      "evidenceRole": "final-runtime",
+      "sha256": "25dd8053db4aa916017e01891f30ce067e0e0ce5da741e47c36f07a8a73cd3ae",
+      "normalizedStateSha256": "ed3d9ae47e0e8ae70b0f0eed62550aaa5acb912e518e3e1c65d5f9871bdccbcc",
+      "phase": "victory",
+      "day": 12,
+      "revision": 210,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-memory/evidence/final/v4-firefox/a07af96de166431eb13c-1aa367b75e02fd393f9d/restored-single-relay-history-after-advance.json",
+      "batch": "final-memory",
+      "evidenceRole": "final-runtime",
+      "sha256": "eb765d3759496883037577280ac6577731b9006e121c3003066974e4bca4e368",
+      "normalizedStateSha256": "469651b9bdb3c67f9cedb21c85cad661474363d51157bb274ae73facc4e60189",
+      "phase": "workshop",
+      "day": 12,
+      "revision": 182,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-memory/evidence/final/v4-webkit/a07af96de166431eb13c-be474d7b146e0fedc4e9/explicit-memory-challenge-opening.json",
+      "batch": "final-memory",
+      "evidenceRole": "final-runtime",
+      "sha256": "233c8a46b7a1ae8bc245b795797203eb461b8c29d1ff09c7ddd311e20e4d6668",
+      "normalizedStateSha256": "f87b20249ed81591abdb7a38e268890ab557970c5c7f03d759b4aecdd6499bc0",
+      "phase": "opening",
+      "day": 1,
+      "revision": 0,
+      "mode": "challenge",
+      "sampleScope": "explicit-memory-challenge-opening"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-memory/evidence/final/v4-webkit/a07af96de166431eb13c-be474d7b146e0fedc4e9/explicit-memory-ending-export.json",
+      "batch": "final-memory",
+      "evidenceRole": "final-runtime",
+      "sha256": "25dd8053db4aa916017e01891f30ce067e0e0ce5da741e47c36f07a8a73cd3ae",
+      "normalizedStateSha256": "ed3d9ae47e0e8ae70b0f0eed62550aaa5acb912e518e3e1c65d5f9871bdccbcc",
+      "phase": "victory",
+      "day": 12,
+      "revision": 210,
+      "mode": "story",
+      "sampleScope": "explicit-restored-memory-ending-export"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-memory/evidence/final/v4-webkit/a07af96de166431eb13c-be474d7b146e0fedc4e9/future-collection-restored-boundary.json",
+      "batch": "final-memory",
+      "evidenceRole": "final-runtime",
+      "sha256": "25dd8053db4aa916017e01891f30ce067e0e0ce5da741e47c36f07a8a73cd3ae",
+      "normalizedStateSha256": "ed3d9ae47e0e8ae70b0f0eed62550aaa5acb912e518e3e1c65d5f9871bdccbcc",
+      "phase": "victory",
+      "day": 12,
+      "revision": 210,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-memory/evidence/final/v4-webkit/a07af96de166431eb13c-be474d7b146e0fedc4e9/restored-single-relay-history-after-advance.json",
+      "batch": "final-memory",
+      "evidenceRole": "final-runtime",
+      "sha256": "eb765d3759496883037577280ac6577731b9006e121c3003066974e4bca4e368",
+      "normalizedStateSha256": "469651b9bdb3c67f9cedb21c85cad661474363d51157bb274ae73facc4e60189",
+      "phase": "workshop",
+      "day": 12,
+      "revision": 182,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-chromium/a07af96de166431eb13c-33e0447b67517d6a3069/mixed-return-final-real-outcome.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "ca4dd8198344267ff4944ad929001d36d188e179f1ef3d4494200fa3f3d1f9e8",
+      "normalizedStateSha256": "41c0c1923c6f23e2bf2cb3294d12de7c6711710968d3d6bc8105b1203b2a80bf",
+      "phase": "return",
+      "day": 12,
+      "revision": 213,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-chromium/a07af96de166431eb13c-33e0447b67517d6a3069/mixed-return-relay-one-real-new-sword.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "e8376a88792fb93a718660d0023de6ba7ca076c9d60d513d7939e046479c060a",
+      "normalizedStateSha256": "7948be1ce7cbf68bceb833878f3eff67f59d8b66ea030aceb1c32f934395ed2f",
+      "phase": "workshop",
+      "day": 11,
+      "revision": 180,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-chromium/a07af96de166431eb13c-33e0447b67517d6a3069/mixed-return-relay-winning-receipt.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "ce919663f60c60aed4a3e08d189f2d065bca132966c98cf8d31e4e9fe2901f1d",
+      "normalizedStateSha256": "f3a63766a54d0e5bd3c701d1b02d056668a75d053e62641ddf719ae368459943",
+      "phase": "workshop",
+      "day": 11,
+      "revision": 182,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-chromium/a07af96de166431eb13c-361cf116ea03d39d46e3/keyboard-homeward.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "e723d64ce866b94333335017def011e0ff2777e497649227f98f692955778098",
+      "normalizedStateSha256": "a94b37aee640cfad7ce3415f5eaff108232303548b9cf87f79fcef3a5ba155f2",
+      "phase": "return",
+      "day": 12,
+      "revision": 194,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-chromium/a07af96de166431eb13c-361cf116ea03d39d46e3/keyboard-independent-failure.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "4ba20ef43edc8bc84b30bc3a5d82518a572bba8b53fb708f5ad79363586e107a",
+      "normalizedStateSha256": "050ae3526851b32bc01ec5488cd3cb80b589a7f0649f3d3b6145466ce81c5cc7",
+      "phase": "defeat",
+      "day": 3,
+      "revision": 6,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-chromium/a07af96de166431eb13c-ab1240fc12bfdf6e1768/two-new-final-real-outcome.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "15a94244e00d0a17c04d7f638a7f9556009274aff3133666866c9b6eacbe5314",
+      "normalizedStateSha256": "f0e46c5a56bd14adf6820386aea57ff8c24a6608eed8f5618b131d970bf1f756",
+      "phase": "victory",
+      "day": 12,
+      "revision": 208,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-chromium/a07af96de166431eb13c-ab1240fc12bfdf6e1768/two-new-relay-one-real-new-sword.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "c61bd7fd2ea524de66496eabbb90fef36c259e487db2abfccaea4ed37a8e79a1",
+      "normalizedStateSha256": "6654f3131d8fcb50a7a7d99e9bf0d9fac04db9ce547863549b24bbf9afcc86db",
+      "phase": "workshop",
+      "day": 11,
+      "revision": 180,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-chromium/a07af96de166431eb13c-ab1240fc12bfdf6e1768/two-new-relay-winning-receipt.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "bc052eeb5079841ca2291d7b4e398838981ca47de0f5ea182c4b6fef634a954d",
+      "normalizedStateSha256": "04c736b7f1c06c691543288a5d5a70bf4c3e03e2ae51a7c2bd309e463069cb79",
+      "phase": "workshop",
+      "day": 11,
+      "revision": 184,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-chromium/a07af96de166431eb13c-ced574deb8ee76f0c963/challenge-earned-opening.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "2dfbe79f53b90ef93b00fa9e81564878927fd829a0653ef647f7d06e71022d12",
+      "normalizedStateSha256": "7582c03515158526abfe38af3538bdf340fd60e74d5b7d0e684b85c4a928928a",
+      "phase": "opening",
+      "day": 1,
+      "revision": 0,
+      "mode": "challenge",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-chromium/a07af96de166431eb13c-ced574deb8ee76f0c963/challenge-eleven-real-commissions.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "fd4cc94bbdbfd98afb376a08fce6c3125a3f53d5dfab225565dbd0e521fe6737",
+      "normalizedStateSha256": "e1169ab7f272766babc6b6f02120ab410bd29f4f38ebe171bc08c4b2ec332393",
+      "phase": "victory",
+      "day": 12,
+      "revision": 216,
+      "mode": "challenge",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-chromium/a07af96de166431eb13c-ced574deb8ee76f0c963/saved-day-eight-before-continuing.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "b21a531aa43601263f57596b85fd5c272d7912e0acedfb9eb905bef72b4e814e",
+      "normalizedStateSha256": "eb2f81f0b2d74c66d8acc7c98c7649409ec565c633e186806e1820bbd2b5c826",
+      "phase": "summary",
+      "day": 8,
+      "revision": 126,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-chromium/a07af96de166431eb13c-ced574deb8ee76f0c963/victory-main-saved-collection-pending.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "fc9dc0fa1d02d4bf2e8eb2ca4a3a57adedb00c2da33fde593bb6a76df845a428",
+      "normalizedStateSha256": "7ce0920131f380d9499dc2ec927f114acf13bc632dbd3cbd4eb5d2c7427aad2a",
+      "phase": "victory",
+      "day": 12,
+      "revision": 210,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-firefox/a07af96de166431eb13c-21b3114b68bab2e52974/keyboard-homeward.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "d8384b6058577de9894a1f8f4853272c0285c1c58e12198a06777c9eed6334e6",
+      "normalizedStateSha256": "1d7e58e6b82a148a28d9996e1755086c34a46283ac647ba2e9235e1e1eb53548",
+      "phase": "return",
+      "day": 12,
+      "revision": 194,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-firefox/a07af96de166431eb13c-21b3114b68bab2e52974/keyboard-independent-failure.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "aea615c8f8727c58afde260bb07709fcfdc469d36f3f3faa2f46cea578bb721f",
+      "normalizedStateSha256": "d63de791ac731954060f71b07f17b6939d555ca8d6450b206a057b5c397fd2f4",
+      "phase": "defeat",
+      "day": 3,
+      "revision": 6,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-firefox/a07af96de166431eb13c-33765d77357d0733f1fe/mixed-return-final-real-outcome.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "4e2be3e55c157ffe2515463b61328758c2854a4f596587c34cff20abca99bfa6",
+      "normalizedStateSha256": "ad93fcdfe1b00f2c3a25a9ae7981b9c10a5203045a5d6ec166ce7cf91004a64c",
+      "phase": "return",
+      "day": 12,
+      "revision": 213,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-firefox/a07af96de166431eb13c-33765d77357d0733f1fe/mixed-return-relay-one-real-new-sword.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "e3fe11bc66d8169439e1af3f6b9d1058e75ecbfe6285df2608e59946745132f7",
+      "normalizedStateSha256": "4f6958ee9c56a9a670bef6f83a3e67093f2436d793846e9096a6d548d7bd8627",
+      "phase": "workshop",
+      "day": 11,
+      "revision": 180,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-firefox/a07af96de166431eb13c-33765d77357d0733f1fe/mixed-return-relay-winning-receipt.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "55a5cc66f6f36fcd7c78f720757d7c7a3a852db3876a03d7caed88659dc9c9d0",
+      "normalizedStateSha256": "1647c96691e90825120fa62da23af27cf7da9ef44726b4d0c7c30ce3d952fa9e",
+      "phase": "workshop",
+      "day": 11,
+      "revision": 182,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-firefox/a07af96de166431eb13c-983fe1a35de3f5c16c30/challenge-earned-opening.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "3fe39fcc8a541f563dc9f76c7c8fe9bb9bb00338aa6e77f1d59626c62dcea7b2",
+      "normalizedStateSha256": "2ad957d5581f279695250ce071eb1505bbefe0cbcd64dae17628aa57d10f43d6",
+      "phase": "opening",
+      "day": 1,
+      "revision": 0,
+      "mode": "challenge",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-firefox/a07af96de166431eb13c-983fe1a35de3f5c16c30/challenge-eleven-real-commissions.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "e03c63c6e25a465b8a3b70856013d8a0837465dccca5b11aa507c34d3c5acfe6",
+      "normalizedStateSha256": "5ffe786c07659056856910b2957d02bc5b052ff83176408192c438f887db4b86",
+      "phase": "victory",
+      "day": 12,
+      "revision": 216,
+      "mode": "challenge",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-firefox/a07af96de166431eb13c-983fe1a35de3f5c16c30/saved-day-eight-before-continuing.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "6bd5f19864357168a2de8df74d66f07640bf65748b54816c21aa24fd022dd551",
+      "normalizedStateSha256": "a7669f8f893471a05f663e8f59e9113deb47aa07b0130ef9d3a3b4dbb8d504f1",
+      "phase": "summary",
+      "day": 8,
+      "revision": 126,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-firefox/a07af96de166431eb13c-983fe1a35de3f5c16c30/victory-main-saved-collection-pending.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "b4caa4e83a20c55ff0429f088ac5428fab0a0432f04dba6c68bb75c942872cc0",
+      "normalizedStateSha256": "bb85fac9ec671f18f35fa2cc1502d9dca1da736c573e719eae401574b8c8415e",
+      "phase": "victory",
+      "day": 12,
+      "revision": 210,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-firefox/a07af96de166431eb13c-d6140cbcb3acb5c292ad/two-new-final-real-outcome.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "2692e4f9a33bb40ba1238c3ee533ab8007ddb030af381de716586350922ba1e1",
+      "normalizedStateSha256": "fcb18ed6d4fcf4beb637cf95b2e1912a50cea83d55ad501a29d9d2449098701f",
+      "phase": "victory",
+      "day": 12,
+      "revision": 208,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-firefox/a07af96de166431eb13c-d6140cbcb3acb5c292ad/two-new-relay-one-real-new-sword.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "95ec74c953158ab87dd13cbbc1369dc53c78728608637067a008872dcb194b53",
+      "normalizedStateSha256": "f78d4bb63dadb550e124efb91a877e2e86a31cad28afb6a84a8728c32efb8960",
+      "phase": "workshop",
+      "day": 11,
+      "revision": 180,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-firefox/a07af96de166431eb13c-d6140cbcb3acb5c292ad/two-new-relay-winning-receipt.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "35ec566544573da8cd6e52b6c34beecfa36dd9f629e3d75530f152cbad3e01d8",
+      "normalizedStateSha256": "428d0e28dc47f7b0abcfaa33ee680896c4e54d0229eee328f734b9d30c90aa46",
+      "phase": "workshop",
+      "day": 11,
+      "revision": 184,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-webkit/a07af96de166431eb13c-38e9579bfcfefb465bc4/challenge-earned-opening.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "ebaa64b3aeaf8d9a5dbbed826ea56fa107213a1ab1d251390d4bf0361fc02744",
+      "normalizedStateSha256": "fbaf12cfbdeb2c14e7b2aaaca4c44a57b28333f7c80cd3869d53a3462b244b4f",
+      "phase": "opening",
+      "day": 1,
+      "revision": 0,
+      "mode": "challenge",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-webkit/a07af96de166431eb13c-38e9579bfcfefb465bc4/challenge-eleven-real-commissions.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "1e70d1fe5b8a2eb22f7f951fcb4c76a5f225ffb414d134488f8905dacddba5f0",
+      "normalizedStateSha256": "d8972081453e5be96d7ac13c548f8452b1c12d76f5525153a7fc5ffec63624e6",
+      "phase": "victory",
+      "day": 12,
+      "revision": 216,
+      "mode": "challenge",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-webkit/a07af96de166431eb13c-38e9579bfcfefb465bc4/saved-day-eight-before-continuing.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "052525abdb31e5e14afd44320a9bd7b466eb21d2096849c56fef518f7e80e114",
+      "normalizedStateSha256": "91e418ff90a72201f6559fc9e4164a7d2a2c7057cefbe8466172483e74b1cab1",
+      "phase": "summary",
+      "day": 8,
+      "revision": 126,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-webkit/a07af96de166431eb13c-38e9579bfcfefb465bc4/victory-main-saved-collection-pending.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "d86e82a38381d66f0940b650ec4748d13595ce46a1d69eb72cfd5ec9d0bd81d7",
+      "normalizedStateSha256": "920eb63d131ed2a2314ae9132a7891e29b05cfbc317dd11cd5d0825218f3348c",
+      "phase": "victory",
+      "day": 12,
+      "revision": 210,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-webkit/a07af96de166431eb13c-4ddeac172e31eda31f5a/keyboard-homeward.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "a694944d4d44024c982d954f89ddf8183f44ef101c5d0ddbe7657f7b32079d4b",
+      "normalizedStateSha256": "afa94e07578c5081cbd3539eacdf6628f02dd9939c57370de0dd904ece47011e",
+      "phase": "return",
+      "day": 12,
+      "revision": 194,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-webkit/a07af96de166431eb13c-4ddeac172e31eda31f5a/keyboard-independent-failure.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "0930caca6a5de62facde955aa2037c7993fd274d322eb6d499b2d0f14eaff43b",
+      "normalizedStateSha256": "50058044486502051a981e66f75d0d540608d82f064d791de82e5a784e13a9b9",
+      "phase": "defeat",
+      "day": 3,
+      "revision": 6,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-webkit/a07af96de166431eb13c-789721cbf5cce5eb6ead/two-new-final-real-outcome.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "0500d287cd6cea48e8e38e2accc93f0e992c7d2e3bb0151a0ea70984efe4ec36",
+      "normalizedStateSha256": "6c24031db551315b73093bd86c680e9370505b9b87890276dd22e01d590adcab",
+      "phase": "victory",
+      "day": 12,
+      "revision": 208,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-webkit/a07af96de166431eb13c-789721cbf5cce5eb6ead/two-new-relay-one-real-new-sword.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "b16b9aca428e6d9f87e3021f5f6fbff78486d9cf0f0983fafeac02ed0b3f63ed",
+      "normalizedStateSha256": "c991211b67f0f818de95e9b0027206a74d45a8a1fce4d8638a64415b8be86afb",
+      "phase": "workshop",
+      "day": 11,
+      "revision": 180,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-webkit/a07af96de166431eb13c-789721cbf5cce5eb6ead/two-new-relay-winning-receipt.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "122faff58b445cb5651f73037462f871a2507d57aededcf7e78d9ad488356f53",
+      "normalizedStateSha256": "1331c72bbb1ed4826ce47695e08934ed9618311dd3295fc3212888601fb00226",
+      "phase": "workshop",
+      "day": 11,
+      "revision": 184,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-webkit/a07af96de166431eb13c-d8c6a705c5144753dd9a/mixed-return-final-real-outcome.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "8b4e414684dcaaf859cb5a1b5616081964d1b4241d211fd90ee46199c3359f3d",
+      "normalizedStateSha256": "15d2b5a39dc9e583e8b441d315bd01d3a6b65006df9ad90141843c0ffce95f3c",
+      "phase": "return",
+      "day": 12,
+      "revision": 213,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-webkit/a07af96de166431eb13c-d8c6a705c5144753dd9a/mixed-return-relay-one-real-new-sword.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "949701ba157a419a1ce4c5515184e739ecc186fc540f1128a2152be59b4efe0a",
+      "normalizedStateSha256": "469cf29afd3b7d85ac1be413e8aada6d6b8c9c095092412cc2d5f9024e247722",
+      "phase": "workshop",
+      "day": 11,
+      "revision": 180,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-webkit/a07af96de166431eb13c-d8c6a705c5144753dd9a/mixed-return-relay-winning-receipt.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "b7f2cb4c8664f71768342a086f3c7c0e616448ab3ec8b3cac341f6f794aa3aa2",
+      "normalizedStateSha256": "7ff41a390f1bafb22b7128fc9171bf46959c5d7ee30e90ee70fc8e0395ab96ed",
+      "phase": "workshop",
+      "day": 11,
+      "revision": 182,
+      "mode": "story",
+      "sampleScope": "recorded-run-state"
+    }
+  ],
+  "collections": [
+    {
+      "path": "tmp/T11-4-2-3i5/release/evidence/final/v4-chromium/a07af96de166431eb13c-33e0447b67517d6a3069/mixed-return-final-real-outcome-collection-envelope.json",
+      "batch": "release",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "15fbb6eb0cf976f9803a12a876265e62b25dec0c323c0370db4c785b885b646e",
+      "works": 11,
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/release/evidence/final/v4-chromium/a07af96de166431eb13c-33e0447b67517d6a3069/mixed-return-relay-one-real-new-sword-collection-envelope.json",
+      "batch": "release",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "9b774663507af5472ee3e3a8b7b6709109b1debee236a3b5e1faf677248cae0a",
+      "works": 9,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/release/evidence/final/v4-chromium/a07af96de166431eb13c-33e0447b67517d6a3069/mixed-return-relay-winning-receipt-collection-envelope.json",
+      "batch": "release",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "9b774663507af5472ee3e3a8b7b6709109b1debee236a3b5e1faf677248cae0a",
+      "works": 9,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/release/evidence/final/v4-chromium/a07af96de166431eb13c-361cf116ea03d39d46e3/keyboard-homeward-collection-envelope.json",
+      "batch": "release",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "18545e8fde48e3383551f66476f5a6900ffec9fadcafc19ad5b0d1a6906df382",
+      "works": 11,
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/release/evidence/final/v4-chromium/a07af96de166431eb13c-361cf116ea03d39d46e3/keyboard-independent-failure-collection-envelope.json",
+      "batch": "release",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "18545e8fde48e3383551f66476f5a6900ffec9fadcafc19ad5b0d1a6906df382",
+      "works": 11,
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/release/evidence/final/v4-chromium/a07af96de166431eb13c-67332b34e323f1d2035f/restored-single-relay-history-after-advance-collection-envelope.json",
+      "batch": "release",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "d91d85601a39a1f8b82b187edc5e81105824f7f97cad43ba9a210cb541b117df",
+      "works": 10,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/release/evidence/final/v4-chromium/a07af96de166431eb13c-ced574deb8ee76f0c963/challenge-earned-opening-collection-envelope.json",
+      "batch": "release",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "c1252fbd7cf08ff7329184bb001d0cd4618bbc39a4227e2fef80e4d4f7c261f6",
+      "works": 12,
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "challenge": true
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/release/evidence/final/v4-chromium/a07af96de166431eb13c-ced574deb8ee76f0c963/saved-day-eight-before-continuing-collection-envelope.json",
+      "batch": "release",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "d226c868c13c5aed86c0ab76ecffe715a7e3ede93a4253aa71771c0bbf8bfb95",
+      "works": 8,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/release/evidence/final/v4-chromium/a07af96de166431eb13c-ced574deb8ee76f0c963/victory-main-saved-collection-pending-collection-envelope.json",
+      "batch": "release",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "6108ff92a150070117576d66a3249b26ef5cba7dfd3a44e00405d472aeafe251",
+      "works": 11,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/repair/evidence/final/v4-chromium/a07af96de166431eb13c-ab1240fc12bfdf6e1768/two-new-final-real-outcome-collection-envelope.json",
+      "batch": "repair",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "a5ccc678dd18839f20ef4c85c0350b62f485772db12aabf031c5e0b6bc59b1b5",
+      "works": 12,
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "challenge": true
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/repair/evidence/final/v4-chromium/a07af96de166431eb13c-ab1240fc12bfdf6e1768/two-new-relay-one-real-new-sword-collection-envelope.json",
+      "batch": "repair",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "24ffd86f2ecd090bde09af1943a7fe16d3ba02db76b093c1f758227b3e6c4510",
+      "works": 10,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/repair/evidence/final/v4-chromium/a07af96de166431eb13c-ab1240fc12bfdf6e1768/two-new-relay-winning-receipt-collection-envelope.json",
+      "batch": "repair",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "24ffd86f2ecd090bde09af1943a7fe16d3ba02db76b093c1f758227b3e6c4510",
+      "works": 10,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/repair/evidence/final/v4-chromium/a07af96de166431eb13c-ced574deb8ee76f0c963/challenge-earned-opening-collection-envelope.json",
+      "batch": "repair",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "e07004b94f2a402fb24d15199b23b3425de6d6385f05483ec9774b1fc252501d",
+      "works": 12,
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "challenge": true
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/repair/evidence/final/v4-chromium/a07af96de166431eb13c-ced574deb8ee76f0c963/challenge-eleven-real-commissions-collection-envelope.json",
+      "batch": "repair",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "a315fdccdb088c792bbc7d10c5203390d01c607ddfb5ea4801804dba9f3660c2",
+      "works": 12,
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "challenge": true
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/repair/evidence/final/v4-chromium/a07af96de166431eb13c-ced574deb8ee76f0c963/saved-day-eight-before-continuing-collection-envelope.json",
+      "batch": "repair",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "e60cc6c1835ae86cf2eabae5c2e6e2ef75ad0d2e5aa18166a0b78d8b7442569d",
+      "works": 8,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/repair/evidence/final/v4-chromium/a07af96de166431eb13c-ced574deb8ee76f0c963/victory-main-saved-collection-pending-collection-envelope.json",
+      "batch": "repair",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "3378a7445f9b45b4a3ed9d0885ff2cc9046a0e45e9a12b02e06a3ef28a953f77",
+      "works": 11,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-memory/evidence/final/v4-chromium/a07af96de166431eb13c-67332b34e323f1d2035f/restored-single-relay-history-after-advance-collection-envelope.json",
+      "batch": "final-memory",
+      "evidenceRole": "final-runtime",
+      "sha256": "d91d85601a39a1f8b82b187edc5e81105824f7f97cad43ba9a210cb541b117df",
+      "works": 10,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-memory/evidence/final/v4-firefox/a07af96de166431eb13c-1aa367b75e02fd393f9d/restored-single-relay-history-after-advance-collection-envelope.json",
+      "batch": "final-memory",
+      "evidenceRole": "final-runtime",
+      "sha256": "d91d85601a39a1f8b82b187edc5e81105824f7f97cad43ba9a210cb541b117df",
+      "works": 10,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-memory/evidence/final/v4-webkit/a07af96de166431eb13c-be474d7b146e0fedc4e9/restored-single-relay-history-after-advance-collection-envelope.json",
+      "batch": "final-memory",
+      "evidenceRole": "final-runtime",
+      "sha256": "d91d85601a39a1f8b82b187edc5e81105824f7f97cad43ba9a210cb541b117df",
+      "works": 10,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-chromium/a07af96de166431eb13c-33e0447b67517d6a3069/mixed-return-final-real-outcome-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "5de92da44e07bd440019d11bdad5df5eae78d47c5114c37101326cd8ff09decb",
+      "works": 11,
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-chromium/a07af96de166431eb13c-33e0447b67517d6a3069/mixed-return-relay-one-real-new-sword-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "e0f1a5c0de14ddb3bae70425b36b87aaa73221259e7a01e2f7aac9124fed7288",
+      "works": 9,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-chromium/a07af96de166431eb13c-33e0447b67517d6a3069/mixed-return-relay-winning-receipt-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "e0f1a5c0de14ddb3bae70425b36b87aaa73221259e7a01e2f7aac9124fed7288",
+      "works": 9,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-chromium/a07af96de166431eb13c-361cf116ea03d39d46e3/keyboard-homeward-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "8b4de674d79624fb0b674f0ac0bebff56984b82319f8bd94d1be20e4607fc604",
+      "works": 11,
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-chromium/a07af96de166431eb13c-361cf116ea03d39d46e3/keyboard-independent-failure-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "8b4de674d79624fb0b674f0ac0bebff56984b82319f8bd94d1be20e4607fc604",
+      "works": 11,
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-chromium/a07af96de166431eb13c-ab1240fc12bfdf6e1768/two-new-final-real-outcome-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "43fb42de47f3f7eda0effdffce8ffad4cef6c899b867546d2d41f9a6e22c39ae",
+      "works": 12,
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "challenge": true
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-chromium/a07af96de166431eb13c-ab1240fc12bfdf6e1768/two-new-relay-one-real-new-sword-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "36e3e8c04a04f40574103ac25f514ff0a5775c4b6ac760ea1fdd885701e01ad0",
+      "works": 10,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-chromium/a07af96de166431eb13c-ab1240fc12bfdf6e1768/two-new-relay-winning-receipt-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "36e3e8c04a04f40574103ac25f514ff0a5775c4b6ac760ea1fdd885701e01ad0",
+      "works": 10,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-chromium/a07af96de166431eb13c-ced574deb8ee76f0c963/challenge-earned-opening-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "c6442b2847de01210b2ab3aeee766c170d84cbf4986ec748a6cdbec1c461edb4",
+      "works": 12,
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "challenge": true
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-chromium/a07af96de166431eb13c-ced574deb8ee76f0c963/challenge-eleven-real-commissions-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "ac088c74d77771a2ae9bb3898a25742abd3b778a32f532a4b332bf5d2e81f19c",
+      "works": 12,
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "challenge": true
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-chromium/a07af96de166431eb13c-ced574deb8ee76f0c963/saved-day-eight-before-continuing-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "1b5a8f118d35968d80eadf3c1e46b373745ede3ad71bbd32dda06f52ecc2eed9",
+      "works": 8,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-chromium/a07af96de166431eb13c-ced574deb8ee76f0c963/victory-main-saved-collection-pending-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "97c94e1d0630bbd88b31ec3d1ce4f5b22661ffbc8bc1c295a4afb0830878cf7e",
+      "works": 11,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-firefox/a07af96de166431eb13c-21b3114b68bab2e52974/keyboard-homeward-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "4322f24b59abae292ed77be7cdfb5c20ef24af0836814e427a33bd59de3498d8",
+      "works": 11,
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-firefox/a07af96de166431eb13c-21b3114b68bab2e52974/keyboard-independent-failure-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "4322f24b59abae292ed77be7cdfb5c20ef24af0836814e427a33bd59de3498d8",
+      "works": 11,
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-firefox/a07af96de166431eb13c-33765d77357d0733f1fe/mixed-return-final-real-outcome-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "f0f400ee0a5f41547066d4c2ab93466146dc9a3b6b927667ba3ef277d315ef54",
+      "works": 11,
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-firefox/a07af96de166431eb13c-33765d77357d0733f1fe/mixed-return-relay-one-real-new-sword-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "16a8acb57de471a7c6cd2d6d9cafbb0fdb2cdc0704c99fa41513f57a520bd302",
+      "works": 9,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-firefox/a07af96de166431eb13c-33765d77357d0733f1fe/mixed-return-relay-winning-receipt-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "16a8acb57de471a7c6cd2d6d9cafbb0fdb2cdc0704c99fa41513f57a520bd302",
+      "works": 9,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-firefox/a07af96de166431eb13c-983fe1a35de3f5c16c30/challenge-earned-opening-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "60ca686e291927e892f974eb9a6596c7ec403ce3a2f51b2e59c2e6515d6591ca",
+      "works": 12,
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "challenge": true
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-firefox/a07af96de166431eb13c-983fe1a35de3f5c16c30/challenge-eleven-real-commissions-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "42277ca715c2d751d649a5b52cb341b4e18cb998cc9bbe3752de353b03d39149",
+      "works": 12,
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "challenge": true
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-firefox/a07af96de166431eb13c-983fe1a35de3f5c16c30/saved-day-eight-before-continuing-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "022f351ed58960177124d9d57281edd9f07927e0528b29ecb053c5761feac5a7",
+      "works": 8,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-firefox/a07af96de166431eb13c-983fe1a35de3f5c16c30/victory-main-saved-collection-pending-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "30ce592aaacdb6ca8e8d3265adf784d8b94df7d10d92604249f00744893cf07c",
+      "works": 11,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-firefox/a07af96de166431eb13c-d6140cbcb3acb5c292ad/two-new-final-real-outcome-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "f01391cda6a24ec5bbdac1795d99268a4d05fa85cca5537ae4b1d729983629b4",
+      "works": 12,
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "challenge": true
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-firefox/a07af96de166431eb13c-d6140cbcb3acb5c292ad/two-new-relay-one-real-new-sword-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "a57a11fa006f52d4ba30e6b19824315c5d586b4aac064a3ff7643b0c3ab01565",
+      "works": 10,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-firefox/a07af96de166431eb13c-d6140cbcb3acb5c292ad/two-new-relay-winning-receipt-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "a57a11fa006f52d4ba30e6b19824315c5d586b4aac064a3ff7643b0c3ab01565",
+      "works": 10,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-webkit/a07af96de166431eb13c-38e9579bfcfefb465bc4/challenge-earned-opening-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "9f646317f6970ae3d53cd76e94c5fdf37d66a0b51d88c68a85d7a95e6249d34a",
+      "works": 12,
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "challenge": true
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-webkit/a07af96de166431eb13c-38e9579bfcfefb465bc4/challenge-eleven-real-commissions-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "e902a97ae8f5b0caac249067e7e84347df0e6b15c21717df579f4547af0a3d09",
+      "works": 12,
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "challenge": true
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-webkit/a07af96de166431eb13c-38e9579bfcfefb465bc4/saved-day-eight-before-continuing-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "0e32872f2731b6cf972894b793271db81d56160fa4a8d04eff12fd340547402b",
+      "works": 8,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-webkit/a07af96de166431eb13c-38e9579bfcfefb465bc4/victory-main-saved-collection-pending-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "a03569882e4706289c86117d6a316be2f1109cae091c6cf3aa655882a21cb264",
+      "works": 11,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-webkit/a07af96de166431eb13c-4ddeac172e31eda31f5a/keyboard-homeward-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "f33763908f3579405ff5288ce711cc3257acbdf21fbcfa53ae3aeeed9aa8c6cc",
+      "works": 11,
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-webkit/a07af96de166431eb13c-4ddeac172e31eda31f5a/keyboard-independent-failure-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "f33763908f3579405ff5288ce711cc3257acbdf21fbcfa53ae3aeeed9aa8c6cc",
+      "works": 11,
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-webkit/a07af96de166431eb13c-789721cbf5cce5eb6ead/two-new-final-real-outcome-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "5c88856c54e2de55d223e5be5e734e98a8732919cb910fbdcee913d6fe3d08ea",
+      "works": 12,
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "challenge": true
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-webkit/a07af96de166431eb13c-789721cbf5cce5eb6ead/two-new-relay-one-real-new-sword-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "54503ac355c5950da26533f134eae0cb8f8e58492f6a2723ed5d0f8429274497",
+      "works": 10,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-webkit/a07af96de166431eb13c-789721cbf5cce5eb6ead/two-new-relay-winning-receipt-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "54503ac355c5950da26533f134eae0cb8f8e58492f6a2723ed5d0f8429274497",
+      "works": 10,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-webkit/a07af96de166431eb13c-d8c6a705c5144753dd9a/mixed-return-final-real-outcome-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "e4a580694f78feacfc5aeccc1e37ef1a4d0c4accea8768c3aa6eebc8c8fd9801",
+      "works": 11,
+      "chapters": [
+        1,
+        2,
+        3
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-webkit/a07af96de166431eb13c-d8c6a705c5144753dd9a/mixed-return-relay-one-real-new-sword-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "b45ed9d5355d72faf5a0e23f27c7bd3dc471adcdd0051ec8f0102653fbc1efc2",
+      "works": 9,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-journeys/evidence/final/v4-webkit/a07af96de166431eb13c-d8c6a705c5144753dd9a/mixed-return-relay-winning-receipt-collection-envelope.json",
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "sha256": "b45ed9d5355d72faf5a0e23f27c7bd3dc471adcdd0051ec8f0102653fbc1efc2",
+      "works": 9,
+      "chapters": [
+        1,
+        2
+      ],
+      "challenge": false
+    }
+  ],
+  "negativeCollections": [
+    {
+      "path": "tmp/T11-4-2-3i5/release/evidence/final/v4-chromium/a07af96de166431eb13c-67332b34e323f1d2035f/future-collection-restored-boundary-collection-envelope.json",
+      "batch": "release",
+      "evidenceRole": "historical-diagnostic",
+      "sha256": "d700f01b93ddb666b1a302f5cd259e807a32e9948a7f85ae4f1ee553b76f1e6c",
+      "status": "invalid",
+      "expectedSchema": 999
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-memory/evidence/final/v4-chromium/a07af96de166431eb13c-67332b34e323f1d2035f/future-collection-restored-boundary-collection-envelope.json",
+      "batch": "final-memory",
+      "evidenceRole": "final-runtime",
+      "sha256": "d700f01b93ddb666b1a302f5cd259e807a32e9948a7f85ae4f1ee553b76f1e6c",
+      "status": "invalid",
+      "expectedSchema": 999
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-memory/evidence/final/v4-firefox/a07af96de166431eb13c-1aa367b75e02fd393f9d/future-collection-restored-boundary-collection-envelope.json",
+      "batch": "final-memory",
+      "evidenceRole": "final-runtime",
+      "sha256": "d700f01b93ddb666b1a302f5cd259e807a32e9948a7f85ae4f1ee553b76f1e6c",
+      "status": "invalid",
+      "expectedSchema": 999
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-memory/evidence/final/v4-webkit/a07af96de166431eb13c-be474d7b146e0fedc4e9/future-collection-restored-boundary-collection-envelope.json",
+      "batch": "final-memory",
+      "evidenceRole": "final-runtime",
+      "sha256": "d700f01b93ddb666b1a302f5cd259e807a32e9948a7f85ae4f1ee553b76f1e6c",
+      "status": "invalid",
+      "expectedSchema": 999
+    }
+  ],
+  "storageRecords": [
+    {
+      "path": "tmp/T11-4-2-3i5/final-memory/evidence/final/v4-chromium/a07af96de166431eb13c-67332b34e323f1d2035f/explicit-memory-ending-preserved-storage.json",
+      "batch": "final-memory",
+      "evidenceRole": "final-runtime",
+      "sha256": "d65f0cbd0d131e1091b978f1c19378d323b225353b84e528c429e78df8a10dcc",
+      "storedRunPhase": "victory",
+      "profileIsNull": true,
+      "scope": "Observed persistent storage while viewing an explicitly restored ending in memory; this record is not a RunState or collection envelope."
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-memory/evidence/final/v4-firefox/a07af96de166431eb13c-1aa367b75e02fd393f9d/explicit-memory-ending-preserved-storage.json",
+      "batch": "final-memory",
+      "evidenceRole": "final-runtime",
+      "sha256": "d65f0cbd0d131e1091b978f1c19378d323b225353b84e528c429e78df8a10dcc",
+      "storedRunPhase": "victory",
+      "profileIsNull": true,
+      "scope": "Observed persistent storage while viewing an explicitly restored ending in memory; this record is not a RunState or collection envelope."
+    },
+    {
+      "path": "tmp/T11-4-2-3i5/final-memory/evidence/final/v4-webkit/a07af96de166431eb13c-be474d7b146e0fedc4e9/explicit-memory-ending-preserved-storage.json",
+      "batch": "final-memory",
+      "evidenceRole": "final-runtime",
+      "sha256": "d65f0cbd0d131e1091b978f1c19378d323b225353b84e528c429e78df8a10dcc",
+      "storedRunPhase": "victory",
+      "profileIsNull": true,
+      "scope": "Observed persistent storage while viewing an explicitly restored ending in memory; this record is not a RunState or collection envelope."
+    }
+  ],
+  "diagnosticCases": [
+    {
+      "key": "v4-chromium|v4-final.spec.ts|a fresh twelve-day victory safely earns challenge, then a genuine reordered challenge reaches its own honest ending",
+      "project": "v4-chromium",
+      "file": "v4-final.spec.ts",
+      "title": "a fresh twelve-day victory safely earns challenge, then a genuine reordered challenge reaches its own honest ending",
+      "batch": "release",
+      "status": "failed",
+      "attempts": 1,
+      "durationMs": 290737,
+      "evidenceRole": "historical-diagnostic",
+      "coverageContribution": 0,
+      "errors": [
+        {
+          "location": {
+            "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts",
+            "column": 37,
+            "line": 20
+          },
+          "message": "Error: ENOSPC: no space left on device, open '/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/release/evidence/final/v4-chromium/a07af96de166431eb13c-ced574deb8ee76f0c963/challenge-eleven-real-commissions.json'\n\n  18 | async function record(page:Page,info:TestInfo,label:string,screenshot=false){\n  19 |   const state=await readV4(page),dir=`${process.env.V4_FINAL_EVIDENCE_ROOT??'tmp/T11-4-2-3i5/final-ui'}/${info.project.name}/${info.testId.replace(/[^\\w-]/g,'_')}`;\n> 20 |   await mkdir(dir,{recursive:true});await writeFile(`${dir}/${label}.json`,JSON.stringify(state,null,2)+'\\n');\n     |                                     ^\n  21 |   const profile=await page.evaluate(()=>localStorage.getItem('sword-led.collection.v1'));if(profile!==null)await writeFile(`${dir}/${label}-collection-envelope.json`,profile);\n  22 |   if(screenshot&&info.project.name.toLowerCase().includes('chrom')){await page.locator('#v4-stage-image').evaluate(async node=>{if(node.checkVisibility())await Promise.allSettled(node.getAnimations().map(animation=>animation.finished));});await page.screenshot({path:`${dir}/${label}.png`});}\n  23 |   return state;\n    at record (/Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts:20:37)\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts:46:383"
+        },
+        {
+          "message": "Error: apiRequestContext._wrapApiCall: ENOSPC: no space left on device, copyfile '/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/release/work/.playwright-artifacts-0/traces/a07af96de166431eb13c-ced574deb8ee76f0c963-recording1.network' -> '/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/release/work/.playwright-artifacts-0/traces/a07af96de166431eb13c-ced574deb8ee76f0c963-recording1-pwnetcopy-1.network'"
+        },
+        {
+          "message": "Error: browserContext._wrapApiCall: ENOSPC: no space left on device, write"
+        },
+        {
+          "message": "Error: ENOSPC: no space left on device, open '/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/release/work/.playwright-artifacts-0/1f44d59f15883700465095e419474b4e.zip'"
+        }
+      ]
+    },
+    {
+      "key": "v4-chromium|v4-final.spec.ts|a fresh two-new route keeps relay quantities, winning pieces and final delivery distinct",
+      "project": "v4-chromium",
+      "file": "v4-final.spec.ts",
+      "title": "a fresh two-new route keeps relay quantities, winning pieces and final delivery distinct",
+      "batch": "release",
+      "status": "failed",
+      "attempts": 1,
+      "durationMs": 124606,
+      "evidenceRole": "historical-diagnostic",
+      "coverageContribution": 0,
+      "errors": [
+        {
+          "location": {
+            "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts",
+            "column": 3,
+            "line": 20
+          },
+          "message": "Error: ENOENT: no such file or directory, mkdir '/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/release/evidence/final/v4-chromium/a07af96de166431eb13c-ab1240fc12bfdf6e1768'\n\n  18 | async function record(page:Page,info:TestInfo,label:string,screenshot=false){\n  19 |   const state=await readV4(page),dir=`${process.env.V4_FINAL_EVIDENCE_ROOT??'tmp/T11-4-2-3i5/final-ui'}/${info.project.name}/${info.testId.replace(/[^\\w-]/g,'_')}`;\n> 20 |   await mkdir(dir,{recursive:true});await writeFile(`${dir}/${label}.json`,JSON.stringify(state,null,2)+'\\n');\n     |   ^\n  21 |   const profile=await page.evaluate(()=>localStorage.getItem('sword-led.collection.v1'));if(profile!==null)await writeFile(`${dir}/${label}-collection-envelope.json`,profile);\n  22 |   if(screenshot&&info.project.name.toLowerCase().includes('chrom')){await page.locator('#v4-stage-image').evaluate(async node=>{if(node.checkVisibility())await Promise.allSettled(node.getAnimations().map(animation=>animation.finished));});await page.screenshot({path:`${dir}/${label}.png`});}\n  23 |   return state;\n    at record (/Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts:20:3)\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts:62:416"
+        },
+        {
+          "message": "Error: apiRequestContext._wrapApiCall: ENOSPC: no space left on device, copyfile '/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/release/work/.playwright-artifacts-1/traces/a07af96de166431eb13c-ab1240fc12bfdf6e1768-recording3.network' -> '/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/release/work/.playwright-artifacts-1/traces/a07af96de166431eb13c-ab1240fc12bfdf6e1768-recording3-pwnetcopy-1.network'"
+        },
+        {
+          "message": "Error: browserContext._wrapApiCall: ENOSPC: no space left on device, write"
+        },
+        {
+          "message": "Error: ENOSPC: no space left on device, rename '/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/release/work/.playwright-artifacts-1/522ce1d10b3973b68487fb59baeb2033.zip' -> '/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/release/work/v4-final-a-fresh-two-new-r-2d17a-and-final-delivery-distinct-v4-chromium/trace.zip'"
+        }
+      ]
+    },
+    {
+      "key": "v4-firefox|v4-final.spec.ts|a fresh twelve-day victory safely earns challenge, then a genuine reordered challenge reaches its own honest ending",
+      "project": "v4-firefox",
+      "file": "v4-final.spec.ts",
+      "title": "a fresh twelve-day victory safely earns challenge, then a genuine reordered challenge reaches its own honest ending",
+      "batch": "release",
+      "status": "interrupted",
+      "attempts": 1,
+      "durationMs": 50089,
+      "evidenceRole": "historical-diagnostic",
+      "coverageContribution": 0,
+      "errors": [
+        {
+          "location": {
+            "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-helpers.ts",
+            "column": 292,
+            "line": 22
+          },
+          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#v4-strike')\nExpected: \u001b[32m\"\u001b[7mfals\u001b[27me\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mtru\u001b[27me\"\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('#v4-strike') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#v4-strike')\u001b[22m\n\u001b[2m    5 × locator resolved to <button tabindex=\"0\" type=\"button\" id=\"v4-strike\" aria-busy=\"true\" class=\"v4-strike-button\">落锤 · 空格</button>\u001b[22m\n\u001b[2m      - unexpected value \"true\"\u001b[22m\n\u001b[2m  - Test ended.\u001b[22m\n\n\n   at v4-helpers.ts:22\n\n  20 |  switch(action.type){\n  21 |   case'continue':await act(page.getByRole('button',{name:'点火开炉',exact:true}));break;\n> 22 |   case'strike':await expect(page.locator('#v4-strike')).toHaveAttribute('aria-busy','false');if(keys){await keyTo(page,page.locator('#v4-strike'));await page.keyboard.press('Space');}else await page.locator('#v4-hit').click({position:{x:250,y:170}});await expect(page.locator('#v4-strike')).toHaveAttribute('aria-busy','false');break;\n     |                                                                                                                                                                                                                                                                                                    ^\n  23 |   case'deliver':await act(page.locator('#v4-deliver'));break;\n  24 |   case'reserve':await act(before.reserveId===action.pieceId?page.locator('#v4-reserve-slot button'):page.locator('#v4-reserve'));break;\n  25 |   case'scrap':await act(page.locator('#v4-scrap'));await confirm();break;\n    at commandV4 (/Users/gordon/githome/sword-led/tests/e2e/v4-helpers.ts:22:292)\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts:34:43"
+        }
+      ]
+    },
+    {
+      "key": "v4-firefox|v4-final.spec.ts|a complete keyboard homeward route and an independent six-command failure retain their real outcomes",
+      "project": "v4-firefox",
+      "file": "v4-final.spec.ts",
+      "title": "a complete keyboard homeward route and an independent six-command failure retain their real outcomes",
+      "batch": "release",
+      "status": "not-run",
+      "attempts": 0,
+      "durationMs": 0,
+      "evidenceRole": "historical-diagnostic",
+      "coverageContribution": 0,
+      "errors": []
+    },
+    {
+      "key": "v4-firefox|v4-final.spec.ts|a fresh two-new route keeps relay quantities, winning pieces and final delivery distinct",
+      "project": "v4-firefox",
+      "file": "v4-final.spec.ts",
+      "title": "a fresh two-new route keeps relay quantities, winning pieces and final delivery distinct",
+      "batch": "release",
+      "status": "not-run",
+      "attempts": 0,
+      "durationMs": 0,
+      "evidenceRole": "historical-diagnostic",
+      "coverageContribution": 0,
+      "errors": []
+    },
+    {
+      "key": "v4-firefox|v4-final.spec.ts|a fresh mixed-return route keeps relay quantities, winning pieces and final delivery distinct",
+      "project": "v4-firefox",
+      "file": "v4-final.spec.ts",
+      "title": "a fresh mixed-return route keeps relay quantities, winning pieces and final delivery distinct",
+      "batch": "release",
+      "status": "not-run",
+      "attempts": 0,
+      "durationMs": 0,
+      "evidenceRole": "historical-diagnostic",
+      "coverageContribution": 0,
+      "errors": []
+    },
+    {
+      "key": "v4-firefox|v4-final.spec.ts|explicit restored-ending boundaries keep unknown future collection bytes and block readonly challenge starts",
+      "project": "v4-firefox",
+      "file": "v4-final.spec.ts",
+      "title": "explicit restored-ending boundaries keep unknown future collection bytes and block readonly challenge starts",
+      "batch": "release",
+      "status": "not-run",
+      "attempts": 0,
+      "durationMs": 0,
+      "evidenceRole": "historical-diagnostic",
+      "coverageContribution": 0,
+      "errors": []
+    },
+    {
+      "key": "v4-webkit|v4-final.spec.ts|a fresh twelve-day victory safely earns challenge, then a genuine reordered challenge reaches its own honest ending",
+      "project": "v4-webkit",
+      "file": "v4-final.spec.ts",
+      "title": "a fresh twelve-day victory safely earns challenge, then a genuine reordered challenge reaches its own honest ending",
+      "batch": "release",
+      "status": "not-run",
+      "attempts": 0,
+      "durationMs": 0,
+      "evidenceRole": "historical-diagnostic",
+      "coverageContribution": 0,
+      "errors": []
+    },
+    {
+      "key": "v4-webkit|v4-final.spec.ts|a complete keyboard homeward route and an independent six-command failure retain their real outcomes",
+      "project": "v4-webkit",
+      "file": "v4-final.spec.ts",
+      "title": "a complete keyboard homeward route and an independent six-command failure retain their real outcomes",
+      "batch": "release",
+      "status": "not-run",
+      "attempts": 0,
+      "durationMs": 0,
+      "evidenceRole": "historical-diagnostic",
+      "coverageContribution": 0,
+      "errors": []
+    },
+    {
+      "key": "v4-webkit|v4-final.spec.ts|a fresh two-new route keeps relay quantities, winning pieces and final delivery distinct",
+      "project": "v4-webkit",
+      "file": "v4-final.spec.ts",
+      "title": "a fresh two-new route keeps relay quantities, winning pieces and final delivery distinct",
+      "batch": "release",
+      "status": "not-run",
+      "attempts": 0,
+      "durationMs": 0,
+      "evidenceRole": "historical-diagnostic",
+      "coverageContribution": 0,
+      "errors": []
+    },
+    {
+      "key": "v4-webkit|v4-final.spec.ts|a fresh mixed-return route keeps relay quantities, winning pieces and final delivery distinct",
+      "project": "v4-webkit",
+      "file": "v4-final.spec.ts",
+      "title": "a fresh mixed-return route keeps relay quantities, winning pieces and final delivery distinct",
+      "batch": "release",
+      "status": "not-run",
+      "attempts": 0,
+      "durationMs": 0,
+      "evidenceRole": "historical-diagnostic",
+      "coverageContribution": 0,
+      "errors": []
+    },
+    {
+      "key": "v4-webkit|v4-final.spec.ts|explicit restored-ending boundaries keep unknown future collection bytes and block readonly challenge starts",
+      "project": "v4-webkit",
+      "file": "v4-final.spec.ts",
+      "title": "explicit restored-ending boundaries keep unknown future collection bytes and block readonly challenge starts",
+      "batch": "release",
+      "status": "not-run",
+      "attempts": 0,
+      "durationMs": 0,
+      "evidenceRole": "historical-diagnostic",
+      "coverageContribution": 0,
+      "errors": []
+    },
+    {
+      "key": "v4-chromium|v4-final.spec.ts|explicit restored-ending boundaries keep unknown future collection bytes and block readonly challenge starts",
+      "project": "v4-chromium",
+      "file": "v4-final.spec.ts",
+      "title": "explicit restored-ending boundaries keep unknown future collection bytes and block readonly challenge starts",
+      "batch": "final-boundaries",
+      "status": "timedOut",
+      "attempts": 1,
+      "durationMs": 61014,
+      "evidenceRole": "final-runtime-failed-case",
+      "coverageContribution": 0,
+      "errors": [
+        {
+          "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+        },
+        {
+          "location": {
+            "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts",
+            "column": 107,
+            "line": 84
+          },
+          "message": "Error: page.waitForEvent: Test ended.\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n\n  82 |     const temporary=await memoryContext.newPage();observe(temporary);await temporary.goto('/');await expect(temporary.locator('#v4-save-summary')).toContainText('只读');await temporary.locator('#v4-save-open').click();await temporary.getByRole('button',{name:'保留当前局，不保存续玩',exact:true}).click();await temporary.getByRole('button',{name:'确认',exact:true}).click();await expect(temporary.locator('#v4-stage-title')).toHaveText('十二灯复明');await expect(temporary.locator('#v4-stage-copy')).toContainText('新的作品、章节与成长不会写入炉谱');await expect(temporary.locator('#v4-stage-copy')).not.toContainText('安全保存的作品、章节');await expect(temporary.getByRole('button',{name:'行脚挑战，再走一程',exact:true})).toHaveCount(0);\n  83 |     const saved=await temporary.evaluate(()=>({run:localStorage.getItem('sword-led.save.v4'),profile:localStorage.getItem('sword-led.collection.v1')}));expect(saved).toEqual({run:fixture.run,profile:null});\n> 84 |     await temporary.getByRole('button',{name:'导出这次行程',exact:true}).click();const exportDownload=temporary.waitForEvent('download');await temporary.getByRole('button',{name:'导出当前行程',exact:true}).click();const exportedPath=await(await exportDownload).path();if(!exportedPath)throw Error('Missing temporary ending export');const exported=api.validateRun(JSON.parse(readFileSync(exportedPath,'utf8')));if(!exported.ok)throw Error(exported.detail);expect(exported.state).toEqual(complete);\n     |                                                                                                           ^\n  85 |     await writeFile(memoryDir+'/explicit-memory-ending-export.json',JSON.stringify(exported.state,null,2)+'\\n');await writeFile(memoryDir+'/explicit-memory-ending-preserved-storage.json',JSON.stringify(saved,null,2)+'\\n');expect(errors.get(holder)).toEqual([]);expect(errors.get(temporary)).toEqual([]);\n  86 |   }finally{await memoryContext.close();}\n  87 |   const futureContext=await browser.newContext({baseURL:info.project.use.baseURL??'http://127.0.0.1:4198'});try{\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts:84:107"
+        },
+        {
+          "location": {
+            "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts",
+            "column": 12,
+            "line": 86
+          },
+          "message": "Error: browserContext.close: Target page, context or browser has been closed\n\n  84 |     await temporary.getByRole('button',{name:'导出这次行程',exact:true}).click();const exportDownload=temporary.waitForEvent('download');await temporary.getByRole('button',{name:'导出当前行程',exact:true}).click();const exportedPath=await(await exportDownload).path();if(!exportedPath)throw Error('Missing temporary ending export');const exported=api.validateRun(JSON.parse(readFileSync(exportedPath,'utf8')));if(!exported.ok)throw Error(exported.detail);expect(exported.state).toEqual(complete);\n  85 |     await writeFile(memoryDir+'/explicit-memory-ending-export.json',JSON.stringify(exported.state,null,2)+'\\n');await writeFile(memoryDir+'/explicit-memory-ending-preserved-storage.json',JSON.stringify(saved,null,2)+'\\n');expect(errors.get(holder)).toEqual([]);expect(errors.get(temporary)).toEqual([]);\n> 86 |   }finally{await memoryContext.close();}\n     |            ^\n  87 |   const futureContext=await browser.newContext({baseURL:info.project.use.baseURL??'http://127.0.0.1:4198'});try{\n  88 |     const future=await futureContext.newPage();observe(future);const parsed=JSON.parse(fixture.collection)as{schemaVersion:number};parsed.schemaVersion=999;const raw=JSON.stringify(parsed);await future.addInitScript(({run,collection})=>{localStorage.setItem('sword-led.save.v4',run);localStorage.setItem('sword-led.collection.v1',collection);},{run:fixture.run,collection:raw});await future.goto('/');await expect(future.locator('#v4-continue')).toBeEnabled();await cannotChallenge(future);await future.locator('#v4-title-collection').click();await cannotChallenge(future);await future.getByRole('button',{name:'收好炉谱',exact:true}).click();await future.locator('#v4-continue').click();await expect(future.locator('#v4-stage-title')).toHaveText('十二灯复明');await expect(future.getByRole('button',{name:'行脚挑战，再走一程',exact:true})).toHaveCount(0);expect(await future.evaluate(()=>localStorage.getItem('sword-led.collection.v1'))).toBe(raw);expect(await readV4(future)).toEqual(complete);expect(errors.get(future)).toEqual([]);await record(future,info,'future-collection-restored-boundary');\n  89 |   }finally{await futureContext.close();}\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts:86:12"
+        }
+      ]
+    },
+    {
+      "key": "v4-firefox|v4-final.spec.ts|explicit restored-ending boundaries keep unknown future collection bytes and block readonly challenge starts",
+      "project": "v4-firefox",
+      "file": "v4-final.spec.ts",
+      "title": "explicit restored-ending boundaries keep unknown future collection bytes and block readonly challenge starts",
+      "batch": "final-boundaries",
+      "status": "timedOut",
+      "attempts": 1,
+      "durationMs": 60390,
+      "evidenceRole": "final-runtime-failed-case",
+      "coverageContribution": 0,
+      "errors": [
+        {
+          "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+        },
+        {
+          "location": {
+            "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts",
+            "column": 107,
+            "line": 84
+          },
+          "message": "Error: page.waitForEvent: Test ended.\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n\n  82 |     const temporary=await memoryContext.newPage();observe(temporary);await temporary.goto('/');await expect(temporary.locator('#v4-save-summary')).toContainText('只读');await temporary.locator('#v4-save-open').click();await temporary.getByRole('button',{name:'保留当前局，不保存续玩',exact:true}).click();await temporary.getByRole('button',{name:'确认',exact:true}).click();await expect(temporary.locator('#v4-stage-title')).toHaveText('十二灯复明');await expect(temporary.locator('#v4-stage-copy')).toContainText('新的作品、章节与成长不会写入炉谱');await expect(temporary.locator('#v4-stage-copy')).not.toContainText('安全保存的作品、章节');await expect(temporary.getByRole('button',{name:'行脚挑战，再走一程',exact:true})).toHaveCount(0);\n  83 |     const saved=await temporary.evaluate(()=>({run:localStorage.getItem('sword-led.save.v4'),profile:localStorage.getItem('sword-led.collection.v1')}));expect(saved).toEqual({run:fixture.run,profile:null});\n> 84 |     await temporary.getByRole('button',{name:'导出这次行程',exact:true}).click();const exportDownload=temporary.waitForEvent('download');await temporary.getByRole('button',{name:'导出当前行程',exact:true}).click();const exportedPath=await(await exportDownload).path();if(!exportedPath)throw Error('Missing temporary ending export');const exported=api.validateRun(JSON.parse(readFileSync(exportedPath,'utf8')));if(!exported.ok)throw Error(exported.detail);expect(exported.state).toEqual(complete);\n     |                                                                                                           ^\n  85 |     await writeFile(memoryDir+'/explicit-memory-ending-export.json',JSON.stringify(exported.state,null,2)+'\\n');await writeFile(memoryDir+'/explicit-memory-ending-preserved-storage.json',JSON.stringify(saved,null,2)+'\\n');expect(errors.get(holder)).toEqual([]);expect(errors.get(temporary)).toEqual([]);\n  86 |   }finally{await memoryContext.close();}\n  87 |   const futureContext=await browser.newContext({baseURL:info.project.use.baseURL??'http://127.0.0.1:4198'});try{\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts:84:107"
+        },
+        {
+          "location": {
+            "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts",
+            "column": 195,
+            "line": 84
+          },
+          "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '导出当前行程', exact: true })\u001b[22m\n\n\n  82 |     const temporary=await memoryContext.newPage();observe(temporary);await temporary.goto('/');await expect(temporary.locator('#v4-save-summary')).toContainText('只读');await temporary.locator('#v4-save-open').click();await temporary.getByRole('button',{name:'保留当前局，不保存续玩',exact:true}).click();await temporary.getByRole('button',{name:'确认',exact:true}).click();await expect(temporary.locator('#v4-stage-title')).toHaveText('十二灯复明');await expect(temporary.locator('#v4-stage-copy')).toContainText('新的作品、章节与成长不会写入炉谱');await expect(temporary.locator('#v4-stage-copy')).not.toContainText('安全保存的作品、章节');await expect(temporary.getByRole('button',{name:'行脚挑战，再走一程',exact:true})).toHaveCount(0);\n  83 |     const saved=await temporary.evaluate(()=>({run:localStorage.getItem('sword-led.save.v4'),profile:localStorage.getItem('sword-led.collection.v1')}));expect(saved).toEqual({run:fixture.run,profile:null});\n> 84 |     await temporary.getByRole('button',{name:'导出这次行程',exact:true}).click();const exportDownload=temporary.waitForEvent('download');await temporary.getByRole('button',{name:'导出当前行程',exact:true}).click();const exportedPath=await(await exportDownload).path();if(!exportedPath)throw Error('Missing temporary ending export');const exported=api.validateRun(JSON.parse(readFileSync(exportedPath,'utf8')));if(!exported.ok)throw Error(exported.detail);expect(exported.state).toEqual(complete);\n     |                                                                                                                                                                                                   ^\n  85 |     await writeFile(memoryDir+'/explicit-memory-ending-export.json',JSON.stringify(exported.state,null,2)+'\\n');await writeFile(memoryDir+'/explicit-memory-ending-preserved-storage.json',JSON.stringify(saved,null,2)+'\\n');expect(errors.get(holder)).toEqual([]);expect(errors.get(temporary)).toEqual([]);\n  86 |   }finally{await memoryContext.close();}\n  87 |   const futureContext=await browser.newContext({baseURL:info.project.use.baseURL??'http://127.0.0.1:4198'});try{\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts:84:195"
+        }
+      ]
+    },
+    {
+      "key": "v4-webkit|v4-final.spec.ts|explicit restored-ending boundaries keep unknown future collection bytes and block readonly challenge starts",
+      "project": "v4-webkit",
+      "file": "v4-final.spec.ts",
+      "title": "explicit restored-ending boundaries keep unknown future collection bytes and block readonly challenge starts",
+      "batch": "final-boundaries",
+      "status": "timedOut",
+      "attempts": 1,
+      "durationMs": 60804,
+      "evidenceRole": "final-runtime-failed-case",
+      "coverageContribution": 0,
+      "errors": [
+        {
+          "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+        },
+        {
+          "location": {
+            "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts",
+            "column": 107,
+            "line": 84
+          },
+          "message": "Error: page.waitForEvent: Test ended.\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n\n  82 |     const temporary=await memoryContext.newPage();observe(temporary);await temporary.goto('/');await expect(temporary.locator('#v4-save-summary')).toContainText('只读');await temporary.locator('#v4-save-open').click();await temporary.getByRole('button',{name:'保留当前局，不保存续玩',exact:true}).click();await temporary.getByRole('button',{name:'确认',exact:true}).click();await expect(temporary.locator('#v4-stage-title')).toHaveText('十二灯复明');await expect(temporary.locator('#v4-stage-copy')).toContainText('新的作品、章节与成长不会写入炉谱');await expect(temporary.locator('#v4-stage-copy')).not.toContainText('安全保存的作品、章节');await expect(temporary.getByRole('button',{name:'行脚挑战，再走一程',exact:true})).toHaveCount(0);\n  83 |     const saved=await temporary.evaluate(()=>({run:localStorage.getItem('sword-led.save.v4'),profile:localStorage.getItem('sword-led.collection.v1')}));expect(saved).toEqual({run:fixture.run,profile:null});\n> 84 |     await temporary.getByRole('button',{name:'导出这次行程',exact:true}).click();const exportDownload=temporary.waitForEvent('download');await temporary.getByRole('button',{name:'导出当前行程',exact:true}).click();const exportedPath=await(await exportDownload).path();if(!exportedPath)throw Error('Missing temporary ending export');const exported=api.validateRun(JSON.parse(readFileSync(exportedPath,'utf8')));if(!exported.ok)throw Error(exported.detail);expect(exported.state).toEqual(complete);\n     |                                                                                                           ^\n  85 |     await writeFile(memoryDir+'/explicit-memory-ending-export.json',JSON.stringify(exported.state,null,2)+'\\n');await writeFile(memoryDir+'/explicit-memory-ending-preserved-storage.json',JSON.stringify(saved,null,2)+'\\n');expect(errors.get(holder)).toEqual([]);expect(errors.get(temporary)).toEqual([]);\n  86 |   }finally{await memoryContext.close();}\n  87 |   const futureContext=await browser.newContext({baseURL:info.project.use.baseURL??'http://127.0.0.1:4198'});try{\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts:84:107"
+        },
+        {
+          "location": {
+            "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts",
+            "column": 12,
+            "line": 86
+          },
+          "message": "Error: browserContext.close: Test ended.\nBrowser logs:\n\n<launching> /Users/gordon/Library/Caches/ms-playwright/webkit-2370/pw_run.sh --inspector-pipe --headless --no-startup-window\n<launched> pid=64133\n[pid=64133] <gracefully close start>\n\n  84 |     await temporary.getByRole('button',{name:'导出这次行程',exact:true}).click();const exportDownload=temporary.waitForEvent('download');await temporary.getByRole('button',{name:'导出当前行程',exact:true}).click();const exportedPath=await(await exportDownload).path();if(!exportedPath)throw Error('Missing temporary ending export');const exported=api.validateRun(JSON.parse(readFileSync(exportedPath,'utf8')));if(!exported.ok)throw Error(exported.detail);expect(exported.state).toEqual(complete);\n  85 |     await writeFile(memoryDir+'/explicit-memory-ending-export.json',JSON.stringify(exported.state,null,2)+'\\n');await writeFile(memoryDir+'/explicit-memory-ending-preserved-storage.json',JSON.stringify(saved,null,2)+'\\n');expect(errors.get(holder)).toEqual([]);expect(errors.get(temporary)).toEqual([]);\n> 86 |   }finally{await memoryContext.close();}\n     |            ^\n  87 |   const futureContext=await browser.newContext({baseURL:info.project.use.baseURL??'http://127.0.0.1:4198'});try{\n  88 |     const future=await futureContext.newPage();observe(future);const parsed=JSON.parse(fixture.collection)as{schemaVersion:number};parsed.schemaVersion=999;const raw=JSON.stringify(parsed);await future.addInitScript(({run,collection})=>{localStorage.setItem('sword-led.save.v4',run);localStorage.setItem('sword-led.collection.v1',collection);},{run:fixture.run,collection:raw});await future.goto('/');await expect(future.locator('#v4-continue')).toBeEnabled();await cannotChallenge(future);await future.locator('#v4-title-collection').click();await cannotChallenge(future);await future.getByRole('button',{name:'收好炉谱',exact:true}).click();await future.locator('#v4-continue').click();await expect(future.locator('#v4-stage-title')).toHaveText('十二灯复明');await expect(future.getByRole('button',{name:'行脚挑战，再走一程',exact:true})).toHaveCount(0);expect(await future.evaluate(()=>localStorage.getItem('sword-led.collection.v1'))).toBe(raw);expect(await readV4(future)).toEqual(complete);expect(errors.get(future)).toEqual([]);await record(future,info,'future-collection-restored-boundary');\n  89 |   }finally{await futureContext.close();}\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-final.spec.ts:86:12"
+        }
+      ]
+    }
+  ],
+  "unparseableEvidence": []
+}

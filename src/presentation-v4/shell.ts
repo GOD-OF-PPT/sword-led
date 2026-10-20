@@ -3,7 +3,7 @@ export const V4_TEMPLATE = `
 <div class="v4-app" data-screen="title">
   <section id="v4-title" class="v4-title-screen" aria-labelledby="v4-main-title">
     <div class="v4-title-copy">
-      <p class="v4-edition">重燃十二盏灯 · 风雪同行</p>
+      <p class="v4-edition">重燃十二盏灯 · 山口终章</p>
       <h1 id="v4-main-title">锤下<span>求生</span></h1>
       <p class="v4-title-line">一炉火，一柄剑，一程未熄的灯。</p>
       <div class="v4-title-actions">
@@ -12,6 +12,7 @@ export const V4_TEMPLATE = `
       </div>
       <div class="v4-title-links">
         <button id="v4-title-collection" class="v4-text-button" type="button">翻开炉谱</button>
+        <button id="v4-title-challenge" class="v4-text-button" type="button" hidden>行脚挑战</button>
         <button id="v4-title-settings" class="v4-text-button" type="button">炉边设置</button>
       </div>
       <details class="v4-journey-options">
@@ -63,6 +64,7 @@ export const V4_TEMPLATE = `
 
     <section class="v4-blade-reading" aria-label="当前剑的身价与状况">
       <p class="v4-value-line"><span>剑价</span><strong id="v4-value"></strong><span id="v4-condition"></span></p>
+      <p id="v4-craft-record"></p>
       <div class="v4-next-hit"><p id="v4-risk"></p><p id="v4-charge"></p></div>
       <button id="v4-strike" class="v4-strike-button" type="button">落锤<span>左键剑身 / 空格</span></button>
     </section>

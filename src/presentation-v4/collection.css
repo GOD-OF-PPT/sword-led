@@ -1,0 +1,17 @@
+.v4-collection-recipes { border-block: 1px solid #846643; padding-block: 12px; margin-block: 14px; }
+.v4-collection-recipes > p { margin-block: 8px; }
+.v4-collection-recipes small { display: block; margin-top: 3px; }
+.v4-collection-traits > summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; text-decoration: underline; }
+.v4-collection-traits .v4-card > img { max-height: 72px; width: 100%; object-fit: contain; }
+.v4-collection-warning { font-weight: 700; }
+.v4-book-grid .v4-card > button { width: 100%; min-height: 44px; margin-top: 8px; }
+.v4-work-page img { width: 100%; max-height: 230px; aspect-ratio: 16/9; object-fit: contain; background: #17232b; }
+.v4-work-scene > summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; text-decoration: underline; }
+#v4-dialog-body { overflow-anchor: none; }
+.v4-work-receipt { border-top: 1px solid #846643; padding-block: 12px; }
+.v4-work-receipt > canvas { width: 100%; max-width: 360px; height: auto; display: block; margin-inline: auto; }
+#v4-title-challenge { min-height: 44px; }
+#v4-craft-record { font-size: 12px; color: #fff0d1; }
+.v4-journey-deliveries { grid-column: 1/-1; }
+.v4-journey-deliveries > summary { min-height: 44px; display: flex; align-items: center; cursor: pointer; text-decoration: underline; }
+.v4-journey-deliveries .v4-journey-work { display: block; }

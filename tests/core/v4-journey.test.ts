@@ -2,7 +2,7 @@ import {describe,expect,it,vi} from 'vitest';
 import {readFileSync} from 'node:fs';
 import {applyCommand,createRun,getRunView,validateRun} from '../../src/core-v4/index.js';
 import type {Action,RunState} from '../../src/core-v4/index.js';
-import {chapterFacts,journeyOutcome,journeyScreen} from '../../src/presentation-v4/journey.js';
+import {chapterFacts,commissionImage,endingFacts,journeyOutcome,journeyScreen} from '../../src/presentation-v4/journey.js';
 import {buildJourneyStage} from '../../src/presentation-v4/stages.js';
 import {awardsForTrustedRun} from '../../src/application/v4-collection.js';
 
@@ -36,8 +36,10 @@ describe('eight-day factual journey projections using accepted journal prefixes'
     const fifth=take(fourth,{type:'advance'});
     expect(journeyScreen(fifth)).toBe('workshop');
     expect(journeyScreen(fifth,4)).toBe('future');
-    expect(journeyScreen(eighthSummary)).toBe('complete');
-    expect(journeyScreen(take(eighthSummary,{type:'advance'}))).toBe('future');
+    expect(journeyScreen(eighthSummary,8)).toBe('complete');
+    expect(journeyScreen(take(eighthSummary,{type:'advance'}),8)).toBe('future');
+    expect(journeyScreen(eighthSummary)).toBe('receipt');
+    expect(journeyScreen(take(eighthSummary,{type:'advance'}))).toBe('workshop');
   });
   it('shows a real second-chapter defeat instead of hiding it behind the former day-four cutoff',()=>{
     let state=take(fourth,{type:'advance'});
@@ -59,7 +61,7 @@ describe('eight-day factual journey projections using accepted journal prefixes'
     expect(dark).toMatchObject({count:0,required:2,complete:false,pieceIds:[],progressText:'0/2'});
     expect(dark.image).toContain('twin-stations-dark-v1.webp');
     expect(partial).toMatchObject({count:1,required:2,complete:false,progressText:'1/2'});
-    expect(partial.pieceIds).toHaveLength(1);expect(partial.image).toContain('twin-stations-one-v1.webp');
+    expect(partial.pieceIds).toHaveLength(0);expect(partial.matchedPieceIds).toHaveLength(1);expect(partial.image).toContain('twin-stations-one-v1.webp');
     expect(complete).toMatchObject({count:2,required:2,complete:true,progressText:'2/2'});
     expect(complete.image).toContain('twin-stations-lit-v1.webp');
     expect(new Set(complete.pieceIds).size).toBe(2);
@@ -78,7 +80,7 @@ describe('eight-day factual journey projections using accepted journal prefixes'
     const current=journeyOutcome(summary,8),historical=journeyOutcome(later,8);
     expect(current).toMatchObject({count:1,complete:false,settled:true,met:false});
     expect(historical).toMatchObject({count:1,complete:false,settled:true,met:false});
-    expect(historical.pieceIds).toEqual(current.pieceIds);
+    expect(historical.pieceIds).toEqual([]);expect(historical.matchedPieceIds).toEqual(current.matchedPieceIds);expect(historical.matchedBlades).toHaveLength(1);
     expect(historical.image).toContain('twin-stations-one-v1.webp');
     expect(validateRun(later).ok).toBe(true);
   });
@@ -128,6 +130,114 @@ describe('eight-day factual journey projections using accepted journal prefixes'
       expect(stage.mode).toBe('complete');expect(stage.title).toBe('第二程，走完了');
       expect(JSON.stringify(restored)).toBe(before);expect(validateRun(restored).ok).toBe(true);
       expect(Object.isFrozen(restored.history)).toBe(false);expect(Object.isFrozen(restored.history[0])).toBe(false);expect(Object.isFrozen(restored.blades[0])).toBe(false);
+    }finally{vi.unstubAllGlobals();}
+  });
+});
+
+function replayWitness(name:string,change:(action:Action,state:RunState)=>Action=action=>action){
+  const saved=JSON.parse(readFileSync(`docs/evidence/T11-4-2-3i1/witness-fixed/${name}.json`,'utf8')) as RunState;
+  const created=createRun({runId:saved.runId,seed:saved.seed,mode:saved.mode,eligibility:saved.initialEligibility});
+  if(!created.ok)throw Error(created.error);
+  return saved.journal.reduce((state,action)=>take(state,change(action,state)),created.state);
+}
+function replayFinalSwordReturn(){
+  const firstSnowSword=witness.history.find(record=>record.commissionId===8)!.pieceIds[0]!;
+  // The later guild sale would otherwise become the second qualifying delivery after the skipped receipt.
+  return replayWitness('complete',(action,state)=>state.day===8&&action.type==='deliver'&&action.pieceId!==firstSnowSword?{type:'scrap',pieceId:action.pieceId}:action);
+}
+const eleventh=find(s=>s.day===11&&s.phase==='workshop');
+function newRelayBlade(state:RunState,pieceId:string){
+  state=take(state,{type:'setRecipe',pieceId,recipe:'light'});
+  state=take(state,{type:'strike',pieceId});state=take(state,{type:'strike',pieceId});
+  return take(state,{type:'deliver',pieceId});
+}
+
+describe('final chapter, actual route receipts and core-decided endings',()=>{
+  it('keeps both new-sword relay progress and a later old-sword winning receipt',()=>{
+    const first=newRelayBlade(eleventh,'d11-1');
+    expect(journeyOutcome(first,11)).toMatchObject({complete:false,routeId:null,pieceIds:[],matchedPieceIds:['d11-1'],progressText:'0/1 或 1/2'});
+    expect(journeyOutcome(first,11).image).toContain('relay-one-v1.webp');
+    const old=take(take(first,{type:'reserve',pieceId:'d10-2'}),{type:'deliver',pieceId:'d10-2'});
+    const outcome=journeyOutcome(old,11);
+    expect(outcome).toMatchObject({complete:true,routeId:'old',pieceIds:['d10-2'],matchedPieceIds:['d11-1','d10-2'],progressText:'1/1 或 1/2'});
+    expect(outcome.blades.map(b=>b.id)).toEqual(['d10-2']);
+    expect(outcome.matchedBlades.map(b=>b.id)).toEqual(['d11-1','d10-2']);
+    const settled=take(old,{type:'settle'}),historical=journeyOutcome(take(settled,{type:'advance'}),11);
+    expect(historical.pieceIds).toEqual(outcome.pieceIds);expect(historical.matchedPieceIds).toEqual(outcome.matchedPieceIds);
+    expect(validateRun(settled).ok).toBe(true);
+  });
+  it('retains a single new relay sword after a missed settlement, and requires a second distinct new sword',()=>{
+    const first=newRelayBlade(eleventh,'d11-1'),settled=take(first,{type:'settle'}),later=take(settled,{type:'advance'});
+    expect(journeyOutcome(later,11)).toMatchObject({complete:false,pieceIds:[],matchedPieceIds:['d11-1'],count:1,required:2,settled:true,met:false});
+    expect(journeyOutcome(later,11).image).toContain('relay-one-v1.webp');
+    const complete=newRelayBlade(first,'d11-2');
+    expect(journeyOutcome(complete,11)).toMatchObject({complete:true,routeId:'two-new',pieceIds:['d11-1','d11-2'],matchedPieceIds:['d11-1','d11-2']});
+    expect(journeyOutcome(complete,11).image).toContain('relay-complete-v1.webp');
+    expect(validateRun(later).ok).toBe(true);expect(validateRun(complete).ok).toBe(true);
+  });
+  it('uses commission IDs and actual delivered days in a reordered challenge with eleven completed commissions',()=>{
+    const challenge=replayWitness('challenge'),facts=endingFacts(challenge)!;
+    expect(challenge.phase).toBe('victory');expect(journeyScreen(challenge)).toBe('ending');
+    expect(facts).toMatchObject({phase:'victory',completed:11,missingCritical:[],finalBladeMade:true});
+    expect(journeyOutcome(challenge,11)).toMatchObject({day:9,routeId:'old',pieceIds:['d8-3'],complete:true});
+    expect(journeyOutcome(challenge,11).image).toContain('relay-complete-v1.webp');
+    expect(facts.people.find(p=>p.name==='杜伯')!.records.find(r=>r.commissionId===9)).toMatchObject({day:10,status:'missed'});
+    expect(facts.people.find(p=>p.name==='阿禾')!.records.find(r=>r.commissionId===11)).toMatchObject({day:9,status:'met'});
+  });
+  it('leaves final sword delivery in the workshop and enters the ending only on settlement',()=>{
+    const before=find(s=>s.day===12&&s.phase==='workshop'&&getRunView(s).commission.progress.complete);
+    expect(journeyScreen(before)).toBe('workshop');expect(endingFacts(before)).toBeNull();
+    expect(journeyOutcome(before,12).image).toContain('last-lantern-delivered-v1.webp');
+    const final=take(before,{type:'settle'});
+    expect(journeyScreen(final)).toBe('ending');expect(endingFacts(final)!.image).toContain('ending-twelve-lights-v1.webp');
+    expect(endingFacts(final)).toMatchObject({completed:12,missingCritical:[],finalBladeMade:true});
+  });
+  it('distinguishes a missing final sword from a return that already made the final sword',()=>{
+    const without=replayWitness('return'),withFinal=replayFinalSwordReturn();
+    expect(without.phase).toBe('return');expect(withFinal.phase).toBe('return');
+    expect(endingFacts(without)).toMatchObject({completed:11,missingCritical:[12],finalBladeMade:false});
+    expect(endingFacts(withFinal)).toMatchObject({completed:11,missingCritical:[8],finalBladeMade:true});
+    expect(endingFacts(withFinal)!.image).toContain('ending-homeward-v1.webp');
+    expect(endingFacts(withFinal)!.works.find(w=>w.commissionId===12)!.blades[0]!.level).toBeGreaterThanOrEqual(9);
+    expect(validateRun(withFinal).ok).toBe(true);
+  });
+  it('does not turn unreached stations or earlier missed deliveries into saved works',()=>{
+    const defeat=replayWitness('defeat'),facts=endingFacts(defeat)!;
+    expect(journeyScreen(defeat)).toBe('defeat');expect(facts.phase).toBe('defeat');
+    expect(facts.works).toEqual([]);expect(facts.lamps.filter(l=>l.status==='missed')).toHaveLength(3);
+    expect(facts.lamps.filter(l=>l.status==='unreached')).toHaveLength(9);
+    expect(facts.people.find(p=>p.name==='阿岚')).toMatchObject({completed:0,missed:1,unreached:3});
+    expect(facts.image).toContain('ending-embers-v1.webp');
+  });
+  it('returns immutable ending copies without freezing or changing a legal serialized caller',()=>{
+    const restored=JSON.parse(JSON.stringify(witness)) as RunState,before=JSON.stringify(restored),facts=endingFacts(restored)!;
+    expect(JSON.stringify(restored)).toBe(before);expect(Object.isFrozen(restored.blades[0])).toBe(false);
+    expect(Object.isFrozen(facts)).toBe(true);expect(Object.isFrozen(facts.lamps[0]!.matchedBlades)).toBe(true);
+    expect(facts.works[0]!.blades[0]).not.toBe(restored.blades.find(b=>b.id===facts.works[0]!.pieceIds[0]));
+    expect(facts.completed).toBe(getRunView(structuredClone(restored)).ending!.completed);
+    expect(commissionImage(11,{complete:true,routeId:'old',count:1,required:1})).toContain('relay-complete-v1.webp');
+    expect(()=>commissionImage(99,{complete:false})).toThrow(RangeError);
+  });
+  it('builds a true day-eight continuation, neutral third-chapter arrival and legal ending challenge intent',()=>{
+    const labels:string[]=[],texts:string[]=[];
+    vi.stubGlobal('document',{createElement:()=>({dataset:{},classList:{add(){}},append(){},matches:()=>false,set textContent(copy:string){texts.push(copy);}})});
+    try{
+      const node=()=>document.createElement('div'),action=(label:string)=>{labels.push(label);return node();},startChallenge=vi.fn();
+      const context={throughDay:12 as const,collection:{data:awardsForTrustedRun(witness),pending:false,problem:null},action,commandAction:action,thumb:node,prop:node,leaveScene(){},book(){},toTitle(){},exportRun(){},startChallenge};
+      const receipt=buildJourneyStage(eighthSummary,context);
+      expect(receipt.mode).toBe('receipt');expect(labels).toContain('沿灯路，去下一天');
+      const intro=buildJourneyStage(take(eighthSummary,{type:'advance'}),{...context,chapterIntro:true});
+      expect(intro.image).toContain('mountain-pass-arrival-v1.webp');expect(intro.title).toContain('第三章');
+      const ending=buildJourneyStage(witness,context);
+      expect(ending.mode).toBe('ending');expect(ending.title).toBe('十二灯复明');expect(labels).toContain('行脚挑战，再走一程');
+      labels.length=0;
+      buildJourneyStage(witness,{...context,collection:{...context.collection,pending:true}});
+      expect(labels).not.toContain('行脚挑战，再走一程');
+      expect(startChallenge).not.toHaveBeenCalled();
+      texts.length=0;
+      const madeButReturn=replayFinalSwordReturn();
+      buildJourneyStage(madeButReturn,context);
+      expect(texts.join('\n')).toContain('山口护灯剑已经做成');expect(texts.join('\n')).not.toContain('山口护灯剑尚未做成');
     }finally{vi.unstubAllGlobals();}
   });
 });

@@ -1,0 +1,180 @@
+{
+  "tool": "cwebp",
+  "version": "1.6.0\nlibsharpyuv: 0.4.2",
+  "quality": 64,
+  "method": 6,
+  "metadata": "none",
+  "resized": false,
+  "cropped": false,
+  "creativePostprocessing": false,
+  "bytes": 2169088,
+  "MiB": 2.068603515625,
+  "targetBytes": 2097152,
+  "hardBudgetBytes": 2621440,
+  "targetMet": false,
+  "hardBudgetMet": true,
+  "results": [
+    {
+      "id": "mountain-pass-arrival-v1",
+      "source": "design/d/v07-chapter3/originals/mountain-pass-arrival-v1.png",
+      "output": "public/assets/d/v07-chapter3/mountain-pass-arrival-v1.webp",
+      "args": [
+        "-q",
+        "64",
+        "-m",
+        "6",
+        "-metadata",
+        "none",
+        "design/d/v07-chapter3/originals/mountain-pass-arrival-v1.png",
+        "-o",
+        "public/assets/d/v07-chapter3/mountain-pass-arrival-v1.webp"
+      ],
+      "bytes": 240556,
+      "log": "Saving file 'public/assets/d/v07-chapter3/mountain-pass-arrival-v1.webp'\nFile:      design/d/v07-chapter3/originals/mountain-pass-arrival-v1.png\nDimension: 1672 x 941\nOutput:    240556 bytes Y-U-V-All-PSNR 36.02 37.54 39.46   36.68 dB\n           (1.22 bpp)\nblock count:  intra4:       5850  (94.43%)\n              intra16:       345  (5.57%)\n              skipped:        44  (0.71%)\nbytes used:  header:            262  (0.1%)\n             mode-partition:  30568  (12.7%)\n Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total\n    macroblocks:  |      12%|      29%|      40%|      19%|    6195\n      quantizer:  |      42 |      35 |      29 |      20 |\n   filter level:  |      12 |       7 |       5 |      18 |"
+    },
+    {
+      "id": "double-fire-work-v1",
+      "source": "design/d/v07-chapter3/originals/double-fire-work-v1.png",
+      "output": "public/assets/d/v07-chapter3/double-fire-work-v1.webp",
+      "args": [
+        "-q",
+        "64",
+        "-m",
+        "6",
+        "-metadata",
+        "none",
+        "design/d/v07-chapter3/originals/double-fire-work-v1.png",
+        "-o",
+        "public/assets/d/v07-chapter3/double-fire-work-v1.webp"
+      ],
+      "bytes": 186300,
+      "log": "Saving file 'public/assets/d/v07-chapter3/double-fire-work-v1.webp'\nFile:      design/d/v07-chapter3/originals/double-fire-work-v1.png\nDimension: 1672 x 941\nOutput:    186300 bytes Y-U-V-All-PSNR 37.60 38.30 38.26   37.82 dB\n           (0.95 bpp)\nblock count:  intra4:       5845  (94.35%)\n              intra16:       350  (5.65%)\n              skipped:         5  (0.08%)\nbytes used:  header:            293  (0.2%)\n             mode-partition:  28095  (15.1%)\n Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total\n    macroblocks:  |       6%|      18%|      44%|      32%|    6195\n      quantizer:  |      42 |      37 |      31 |      24 |\n   filter level:  |      12 |       8 |      20 |      21 |"
+    },
+    {
+      "id": "mountain-gap-held-v1",
+      "source": "design/d/v07-chapter3/originals/mountain-gap-held-v1.png",
+      "output": "public/assets/d/v07-chapter3/mountain-gap-held-v1.webp",
+      "args": [
+        "-q",
+        "64",
+        "-m",
+        "6",
+        "-metadata",
+        "none",
+        "design/d/v07-chapter3/originals/mountain-gap-held-v1.png",
+        "-o",
+        "public/assets/d/v07-chapter3/mountain-gap-held-v1.webp"
+      ],
+      "bytes": 300170,
+      "log": "Saving file 'public/assets/d/v07-chapter3/mountain-gap-held-v1.webp'\nFile:      design/d/v07-chapter3/originals/mountain-gap-held-v1.png\nDimension: 1672 x 941\nOutput:    300170 bytes Y-U-V-All-PSNR 35.45 36.21 37.21   35.82 dB\n           (1.53 bpp)\nblock count:  intra4:       6093  (98.35%)\n              intra16:       102  (1.65%)\n              skipped:         9  (0.15%)\nbytes used:  header:            313  (0.1%)\n             mode-partition:  34191  (11.4%)\n Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total\n    macroblocks:  |      21%|      35%|      33%|      10%|    6195\n      quantizer:  |      41 |      33 |      26 |      18 |\n   filter level:  |      12 |       7 |       5 |       8 |"
+    },
+    {
+      "id": "relay-one-v1",
+      "source": "design/d/v07-chapter3/originals/relay-one-v1.png",
+      "output": "public/assets/d/v07-chapter3/relay-one-v1.webp",
+      "args": [
+        "-q",
+        "64",
+        "-m",
+        "6",
+        "-metadata",
+        "none",
+        "design/d/v07-chapter3/originals/relay-one-v1.png",
+        "-o",
+        "public/assets/d/v07-chapter3/relay-one-v1.webp"
+      ],
+      "bytes": 236548,
+      "log": "Saving file 'public/assets/d/v07-chapter3/relay-one-v1.webp'\nFile:      design/d/v07-chapter3/originals/relay-one-v1.png\nDimension: 1672 x 941\nOutput:    236548 bytes Y-U-V-All-PSNR 36.27 37.23 39.00   36.78 dB\n           (1.20 bpp)\nblock count:  intra4:       5864  (94.66%)\n              intra16:       331  (5.34%)\n              skipped:        42  (0.68%)\nbytes used:  header:            274  (0.1%)\n             mode-partition:  30862  (13.0%)\n Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total\n    macroblocks:  |      11%|      29%|      43%|      18%|    6195\n      quantizer:  |      42 |      36 |      29 |      20 |\n   filter level:  |      12 |       8 |       6 |      18 |"
+    },
+    {
+      "id": "relay-complete-v1",
+      "source": "design/d/v07-chapter3/originals/relay-complete-v1.png",
+      "output": "public/assets/d/v07-chapter3/relay-complete-v1.webp",
+      "args": [
+        "-q",
+        "64",
+        "-m",
+        "6",
+        "-metadata",
+        "none",
+        "design/d/v07-chapter3/originals/relay-complete-v1.png",
+        "-o",
+        "public/assets/d/v07-chapter3/relay-complete-v1.webp"
+      ],
+      "bytes": 246086,
+      "log": "Saving file 'public/assets/d/v07-chapter3/relay-complete-v1.webp'\nFile:      design/d/v07-chapter3/originals/relay-complete-v1.png\nDimension: 1672 x 941\nOutput:    246086 bytes Y-U-V-All-PSNR 36.25 37.23 38.88   36.75 dB\n           (1.25 bpp)\nblock count:  intra4:       5892  (95.11%)\n              intra16:       303  (4.89%)\n              skipped:        30  (0.48%)\nbytes used:  header:            283  (0.1%)\n             mode-partition:  31179  (12.7%)\n Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total\n    macroblocks:  |      10%|      30%|      43%|      17%|    6195\n      quantizer:  |      42 |      35 |      29 |      20 |\n   filter level:  |      12 |       7 |       5 |      23 |"
+    },
+    {
+      "id": "last-lantern-delivered-v1",
+      "source": "design/d/v07-chapter3/originals/last-lantern-delivered-v1.png",
+      "output": "public/assets/d/v07-chapter3/last-lantern-delivered-v1.webp",
+      "args": [
+        "-q",
+        "64",
+        "-m",
+        "6",
+        "-metadata",
+        "none",
+        "design/d/v07-chapter3/originals/last-lantern-delivered-v1.png",
+        "-o",
+        "public/assets/d/v07-chapter3/last-lantern-delivered-v1.webp"
+      ],
+      "bytes": 265616,
+      "log": "Saving file 'public/assets/d/v07-chapter3/last-lantern-delivered-v1.webp'\nFile:      design/d/v07-chapter3/originals/last-lantern-delivered-v1.png\nDimension: 1673 x 940\nOutput:    265616 bytes Y-U-V-All-PSNR 36.11 37.16 37.85   36.52 dB\n           (1.35 bpp)\nblock count:  intra4:       6031  (97.35%)\n              intra16:       164  (2.65%)\n              skipped:         0  (0.00%)\nbytes used:  header:            367  (0.1%)\n             mode-partition:  31838  (12.0%)\n Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total\n    macroblocks:  |      12%|      27%|      41%|      20%|    6195\n      quantizer:  |      42 |      35 |      28 |      20 |\n   filter level:  |      12 |       7 |       5 |      27 |"
+    },
+    {
+      "id": "ending-twelve-lights-v1",
+      "source": "design/d/v07-chapter3/originals/ending-twelve-lights-v1.png",
+      "output": "public/assets/d/v07-chapter3/ending-twelve-lights-v1.webp",
+      "args": [
+        "-q",
+        "64",
+        "-m",
+        "6",
+        "-metadata",
+        "none",
+        "design/d/v07-chapter3/originals/ending-twelve-lights-v1.png",
+        "-o",
+        "public/assets/d/v07-chapter3/ending-twelve-lights-v1.webp"
+      ],
+      "bytes": 267678,
+      "log": "Saving file 'public/assets/d/v07-chapter3/ending-twelve-lights-v1.webp'\nFile:      design/d/v07-chapter3/originals/ending-twelve-lights-v1.png\nDimension: 1672 x 941\nOutput:    267678 bytes Y-U-V-All-PSNR 35.70 36.07 37.44   36.01 dB\n           (1.36 bpp)\nblock count:  intra4:       5976  (96.46%)\n              intra16:       219  (3.54%)\n              skipped:         9  (0.15%)\nbytes used:  header:            328  (0.1%)\n             mode-partition:  31912  (11.9%)\n Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total\n    macroblocks:  |      21%|      28%|      31%|      20%|    6195\n      quantizer:  |      42 |      34 |      27 |      19 |\n   filter level:  |      12 |       7 |       6 |       8 |"
+    },
+    {
+      "id": "ending-homeward-v1",
+      "source": "design/d/v07-chapter3/originals/ending-homeward-v1.png",
+      "output": "public/assets/d/v07-chapter3/ending-homeward-v1.webp",
+      "args": [
+        "-q",
+        "64",
+        "-m",
+        "6",
+        "-metadata",
+        "none",
+        "design/d/v07-chapter3/originals/ending-homeward-v1.png",
+        "-o",
+        "public/assets/d/v07-chapter3/ending-homeward-v1.webp"
+      ],
+      "bytes": 283978,
+      "log": "Saving file 'public/assets/d/v07-chapter3/ending-homeward-v1.webp'\nFile:      design/d/v07-chapter3/originals/ending-homeward-v1.png\nDimension: 1672 x 941\nOutput:    283978 bytes Y-U-V-All-PSNR 35.63 36.04 36.98   35.90 dB\n           (1.44 bpp)\nblock count:  intra4:       5919  (95.54%)\n              intra16:       276  (4.46%)\n              skipped:        21  (0.34%)\nbytes used:  header:            319  (0.1%)\n             mode-partition:  32368  (11.4%)\n Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total\n    macroblocks:  |      21%|      31%|      33%|      15%|    6195\n      quantizer:  |      42 |      34 |      26 |      18 |\n   filter level:  |      12 |       7 |      11 |      21 |"
+    },
+    {
+      "id": "ending-embers-v1",
+      "source": "design/d/v07-chapter3/originals/ending-embers-v1.png",
+      "output": "public/assets/d/v07-chapter3/ending-embers-v1.webp",
+      "args": [
+        "-q",
+        "64",
+        "-m",
+        "6",
+        "-metadata",
+        "none",
+        "design/d/v07-chapter3/originals/ending-embers-v1.png",
+        "-o",
+        "public/assets/d/v07-chapter3/ending-embers-v1.webp"
+      ],
+      "bytes": 142156,
+      "log": "Saving file 'public/assets/d/v07-chapter3/ending-embers-v1.webp'\nFile:      design/d/v07-chapter3/originals/ending-embers-v1.png\nDimension: 1672 x 941\nOutput:    142156 bytes Y-U-V-All-PSNR 38.15 40.05 39.86   38.67 dB\n           (0.72 bpp)\nblock count:  intra4:       5424  (87.55%)\n              intra16:       771  (12.45%)\n              skipped:         6  (0.10%)\nbytes used:  header:            257  (0.2%)\n             mode-partition:  24322  (17.1%)\n Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total\n    macroblocks:  |       2%|      16%|      37%|      44%|    6195\n      quantizer:  |      42 |      39 |      33 |      25 |\n   filter level:  |      12 |       8 |      14 |      22 |"
+    }
+  ]
+}

@@ -21,7 +21,7 @@ export function noticeFromEvents(events:readonly DomainEvent[],s:RunState):Forge
  const met=events.find(e=>e.type==='MainCompleted');
  if(met?.type==='MainCompleted')return{title:'这一站，有剑了',copy:COMMISSIONS[met.commissionId-1]!.success,action:s.gift==='available'?'gift':'settle',label:s.gift==='available'?'领一门手艺':'安排余剑与收工'};
  const delivered=events.find(e=>e.type==='Delivered');
- if(delivered?.type==='Delivered'&&delivered.matched){const progress=getRunView(s).commission.progress;return{title:'第一驿，接到剑了',copy:`${progress.routes.map(r=>`${r.count}/${r.required}`).join(' 或 ')} · 还要一柄各自合格的剑，第二站才会亮灯。已经交出的剑不会重复计数。`,action:'journey',label:'看看驿路的灯'};}
+ if(delivered?.type==='Delivered'&&delivered.matched){const view=getRunView(s),progress=view.commission.progress,relay=view.commission.id===11;return{title:relay?'接力的第一柄，已经交出':'第一驿，接到剑了',copy:`${progress.routes.map(r=>`${r.count}/${r.required}`).join(' 或 ')} · ${relay?'还可再交一柄合格新剑，或用一柄合格旧剑完成另一条路线。':'还要一柄各自合格的剑，第二站才会亮灯。'}已经交出的剑不会重复计数。`,action:'journey',label:relay?'看看这次接力':'看看驿路的灯'};}
  const strike=events.find(e=>e.type==='Strike');
  if(strike?.type==='Strike'){
   const last=strike.hits.at(-1),b=s.blades.find(b=>b.id===strike.pieceId);

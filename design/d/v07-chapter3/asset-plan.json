@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "referenceRoots": {"style":"design/d/reference-main-v2.png","characters":"design/d/v05/originals/customers-atlas-v2.png","winter":"design/d/v07-chapter2/originals/twin-stations-dark-v1.png","forge":"design/d/originals/forge-backdrop-v2.png"},
+  "assets": [
+    {"id":"mountain-pass-arrival-v1","intent":"generate","usage":"third-chapter neutral opening; unresolved mountain-pass context; relay common master","condition":"actual third-chapter entry or unresolved context only","references":["design/d/reference-main-v2.png","design/d/v05/originals/customers-atlas-v2.png","design/d/v07-chapter2/originals/twin-stations-dark-v1.png"]},
+    {"id":"double-fire-work-v1","intent":"generate","usage":"commission 9 actual completed use","condition":"real commissionId 9 completion with core winning work","references":["design/d/reference-main-v2.png","design/d/v05/originals/customers-atlas-v2.png","design/d/v07-chapter2/originals/winter-forge-v1.png"]},
+    {"id":"mountain-gap-held-v1","intent":"generate","usage":"commission 10 completed use for either legal crack route","condition":"real commissionId 10 completion; actual blade rendered independently","references":["design/d/reference-main-v2.png","design/d/v05/originals/customers-atlas-v2.png","design/d/v07-chapter3/originals/mountain-pass-arrival-v1.png"]},
+    {"id":"relay-one-v1","intent":"direct-master-edit","usage":"commission 11 partial new-work route","condition":"one new matched work and commission incomplete","references":["design/d/v07-chapter3/originals/mountain-pass-arrival-v1.png"]},
+    {"id":"relay-complete-v1","intent":"direct-master-edit","usage":"commission 11 completed old-work OR two-new-work route","condition":"core commission 11 complete; quantity and winning/matched pieceIds shown separately","references":["design/d/v07-chapter3/originals/mountain-pass-arrival-v1.png"]},
+    {"id":"last-lantern-delivered-v1","intent":"generate","usage":"commission 12 local delivery result before global settlement","condition":"real commission 12 MainCompleted; must not imply victory phase","references":["design/d/reference-main-v2.png","design/d/v05/originals/customers-atlas-v2.png","design/d/v07-chapter3/originals/mountain-pass-arrival-v1.png"]},
+    {"id":"ending-twelve-lights-v1","intent":"generate","usage":"actual victory ending; network connected, actual daily results remain distinct","condition":"core phase victory only","references":["design/d/reference-main-v2.png","design/d/v05/originals/customers-atlas-v2.png","design/d/v07-chapter3/originals/mountain-pass-arrival-v1.png"]},
+    {"id":"ending-homeward-v1","intent":"generate","usage":"actual surviving return ending, including final blade already made","condition":"core phase return only","references":["design/d/reference-main-v2.png","design/d/v05/originals/customers-atlas-v2.png","design/d/v07-chapter3/originals/mountain-pass-arrival-v1.png"]},
+    {"id":"ending-embers-v1","intent":"direct-forge-edit","usage":"actual defeat ending in any chapter without destroying earned work","condition":"core phase defeat only","references":["design/d/originals/forge-backdrop-v2.png"]}
+  ]
+}

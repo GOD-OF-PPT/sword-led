@@ -1,0 +1,17 @@
+{
+  "token": "v07-final-journeys-01",
+  "pid": 64946,
+  "childPid": 64947,
+  "startedAt": "2026-10-20T18:27:11.177Z",
+  "command": [
+    "/Users/gordon/.nvm/versions/node/v22.12.0/bin/node",
+    "/Users/gordon/githome/sword-led/node_modules/@playwright/test/cli.js",
+    "test",
+    "--config=playwright.v4-ui.config.ts",
+    "--output=/Users/gordon/githome/sword-led/tmp/T11-4-2-3i5/final-journeys/work",
+    "tests/e2e/v4-final.spec.ts",
+    "--grep",
+    "a fresh|a complete keyboard"
+  ],
+  "runnerSha256": "780f419db7e41c1455962878bc73abf847b39a7edfd4555c35d65731af28b665"
+}

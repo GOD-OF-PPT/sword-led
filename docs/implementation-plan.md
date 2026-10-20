@@ -1,8 +1,8 @@
 # 游戏实施方案与确认范围
 
-> 用户已明确批准[v0.7完整方案](v0.7-complete-game-proposal.md)。3i.1已实现十二天全部纯核内容、成长/事件/三结局和正式回放；3i.2已接通[独立v4存档与幂等炉谱](v0.7-persistence-contract.md)。[R3.19](reviews/R3-19-lantern-core.md)及[保存验证](reviews/T11-4-2-3i2-save-validation.md)保留实际范围。3i.3已接入[生产首章界面](v0.7-first-chapter-interface.md)，开放标题到四天委托/渡口结果/首改造及炉谱；后八天/全局结局/挑战仍继续开发，不将首章切片称完整十二天交付。原始目标、完整内容/美术、1000种子、最终技术矩阵与真人门槛继续保留。
+> 现行实施依据是用户已明确批准的[v0.7完整方案](v0.7-complete-game-proposal.md)。独立内核、[v4存档/炉谱](v0.7-persistence-contract.md)、三章十二天生产场景、三结局与挑战已接入；接口见[终章合同](v0.7-final-chapter-interface.md)，操作见[终章指南](v0.7-final-chapter-guide.md)，正式交付/验收范围以[README](../README.md)和goal任务记录为准。v4的1000种子、最终DPR/原生/音频性能矩阵、真人H和最大R4仍为独立待办，不以代码接通或旧版本绿测代替。
 
-> 当前默认入口采用已明确批准的[v0.4提案](v0.4-gameplay-proposal.md)，确认原话在[批准记录](decisions/2026-10-19-v04-approval.json)。现已从三轮切片推进到[完整十二轮](v0.4-campaign.md)：即时增值、两段裂损、安全连锻、保险剑、三商人/构筑/升级、胜负与账本。原三轮档保持长度，菜单确认新建才替换；最终新规则规模、广矩阵、整体真人反馈和最大R4仍在目标清单，不重复申请已获实施/美术确认。
+> 历史v0.4入口为/v3.html，采用已批准的[v0.4提案](v0.4-gameplay-proposal.md)，确认原话在[批准记录](decisions/2026-10-19-v04-approval.json)。其[十二轮契约](v0.4-campaign.md)、原三轮档与独立解释器继续保留。下面v0.2/v0.3记录不作为现行首页的规则或操作说明，不重复申请已获实施/美术确认。
 
 > 版本范围：本文为v0.2已确认实施记录；新增v0.3以[批准提案](v0.3-gameplay-proposal.md)、[核心/存档接线](v0.3-core-and-preview.md)和goal T11.2–T12为准。独立试玩已实现，不将旧方案的数值/模拟自动套用新版。
 

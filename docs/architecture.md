@@ -1,12 +1,12 @@
 # 代码架构与玩法内核约定
 
-> 3i.2已新增`application/v4-persistence.ts`与`v4-collection.ts`，接独立schema4局档和schema1炉谱主备槽，复用同一个writer lease与generic会话；已保存合法局才同步永久集合，未保存成果只保护来源，错误/重试/导出分别报告。共享RuleAdapter仅增加可选isTerminal（默认旧语义，v4加入return）。[保存合同](v0.7-persistence-contract.md)和[验证报告](reviews/T11-4-2-3i2-save-validation.md)记录实际消费者；3i.3已接入`presentation-v4/app.ts`主控、静态shell/styles、只读forge和story投影，默认v4首章；旧v3移至v3.html，后八天界面继续后续任务。
+> 现行v4：`application/v4-persistence.ts`与`v4-collection.ts`管理独立schema4局档、schema1炉谱与同源writer lease；已保存合法局才同步永久集合。`presentation-v4/app.ts`唯一发命令/保存/持输入身份，forge只绘制，journey只投影实际历史/结局，stages和collection-ui返回DOM与明确意图。三章、真实数量/替代路线、三结局与挑战按同一个核心预览接线；[终章合同](v0.7-final-chapter-interface.md)和[操作指南](v0.7-final-chapter-guide.md)给出现行入口与范围，最终验收状态见[README](../README.md)。
 
-> 已批准v0.7新增独立`core-v4`与`sword-led-v4.js`：model/content定义内容和状态，rules提供条件/报价，game处理唯一Accepted命令，view派生只读预览/炉谱集合，validate从创建资格快照和完整journal重建。复用既有整数随机/冻结/JSON守护，不改旧解释器；[内核合同](v0.7-core-contract.md)和[R3.19](reviews/R3-19-lantern-core.md)记录3i.1纯核验证。v4存储已在3i.2接通，当前生产网页开放第一章；后八天、结局与挑战界面另项，旧v0.6在v3.html保留。
+> `core-v4`与`sword-led-v4.js`：model/content定义内容和状态，rules提供条件/报价，game处理Accepted命令，view派生预览/炉谱集合，validate从创建资格和完整journal重建。价格、随机、委托和胜负只由核心决定；前端不造RunState、不复制判定或发奖。复用整数随机/冻结/JSON守护，不改旧解释器；[内核合同](v0.7-core-contract.md)、[保存合同](v0.7-persistence-contract.md)保留各阶段API与证据，旧v0.6在v3.html继续原档。
 
 > 行旅版新增`presentation-v3/scene.ts`只读提示/旅程/兵器故事，以及`scene-feedback.ts`有界表现控制器。DOM缓存按run/generation与显示状态保留节点，尺寸变化只重绘缩略图；Accepted反馈不发经济命令，见[场景接线](v0.4-workshop-scene.md)。
 
-> 当前默认版本为forge-v3/schema3，见[v0.4实施提案](v0.4-gameplay-proposal.md)与[完整契约接线](v0.4-campaign.md)。`core-v3`的createRun/applyCommand/validateRun及只读规则投影是唯一计价/随机来源；`application/v3-persistence.ts`接已有generic会话、独立主备key和共用writer锁。`presentation-v3/app.ts`管理意图与页面，`campaign.ts`只读手艺状态/契约统计，appearance/blade/art负责兵器道具，impact/hammer/surface负责接触表现。菜单长度仅为草稿，新建后以正式保存的roundLimit为准；URL不改旧档。
+> 历史forge-v3/schema3（/v3.html）见[v0.4实施提案](v0.4-gameplay-proposal.md)与[完整契约接线](v0.4-campaign.md)。其独立core-v3、application/v3-persistence与presentation-v3继续处理旧规则/旧档，和v4共用writer锁。后文v1/v2/v3的分层、计时与数值描述均为相应版本记录，不重解释v4的Accepted journal。
 
 > 版本范围：本文保留v1分层。v2新增core-v2与独立入口，并从既有存储/会话提取类型化规则适配口，详见[v0.3核心说明](v0.3-core-and-preview.md)。原版解释器与旧档继续保留。
 

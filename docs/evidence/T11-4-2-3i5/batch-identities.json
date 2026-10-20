@@ -1,0 +1,230 @@
+{
+  "finalCoverageBatches": {
+    "final-boundaries": 9,
+    "final-memory": 3,
+    "final-journeys": 12
+  },
+  "finalSourceIdentity": "26425e1db3ee87304cdf85d57998ec44a98bffb933f19f0b8b9651ed115653a9",
+  "finalRuntimeIdentity": "bdc02738beab2534ff583b68909c7ed2823052c930818b6f0e492f29457a9dfa",
+  "traceEditProof": {
+    "file": "tests/e2e/v4-final.spec.ts",
+    "oldSha256": "062c25d9d0d708b0e82fcfed2f9b82c5313efceea4ecb92889a4d8cfe635cc7e",
+    "newSha256": "3c52f57e39ae12197515cc5ce384c350abf1517ca03ebf2f5ef6e9ed25737917",
+    "insertionOffset": 450,
+    "scope": "Historical release-to-repair trace setting only; no equivalence to the final runtime is inferred.",
+    "originalAndRepairRuntimeMatch": true
+  },
+  "memoryEditProof": {
+    "file": "tests/e2e/v4-final.spec.ts",
+    "beforeSha256": "0f7cb4f1aa64f9c90c3f834b02552b379e973bbfbf63a0f6eb998db4f49df250",
+    "afterSha256": "af3d659c4433d50b3c673d10635873a90ffb77bcbc57455c4f6f0904f2decc9f",
+    "old": "await temporary.getByRole('button',{name:'导出这次行程',exact:true}).click();const exportDownload=temporary.waitForEvent('download');await temporary.getByRole('button',{name:'导出当前行程',exact:true}).click();",
+    "new": "const exportDownload=temporary.waitForEvent('download');await temporary.getByRole('button',{name:'导出这次行程',exact:true}).click();",
+    "scope": "Test-only correction: wait for the actual direct export download before clicking its action; the old script incorrectly waited for an unrelated save-modal button. No production, assertion, timeout or command-economy change. Three former boundary failures retained; nine other cases remain valid on the same runtime."
+  },
+  "batches": [
+    {
+      "batch": "pilot",
+      "evidenceRole": "historical-diagnostic",
+      "coverageContribution": 0,
+      "terminalValidationComplete": true,
+      "exitCode": 0,
+      "stats": {
+        "startTime": "2026-10-20T17:33:34.225Z",
+        "duration": 14653.311,
+        "expected": 2,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "sourceStableWithinBatch": true,
+      "buildStableWithinBatch": true,
+      "sourceIdentity": "f5b1fd98a3d72577d5f2ef76df9d7bc505018b984f9d90d881654a10dcca25ff",
+      "buildIdentity": "0ce39dd6c7d55540d54f3b8476998e0687ba18581ed9e2c8a9aacb96868f5fa8",
+      "sourceMatchesFinal": false,
+      "runtimeMatchesFinal": false,
+      "sourceDifferencesFromFinal": [
+        "src/presentation-v4/app.ts",
+        "src/presentation-v4/journey.css",
+        "src/presentation-v4/stages.ts",
+        "tests/e2e/v4-final-visual.spec.ts",
+        "tests/e2e/v4-final.spec.ts",
+        "tests/e2e/v4-second-saves.spec.ts"
+      ],
+      "runtimeDifferencesFromFinal": [
+        "dist/assets/main-Cs7wa2SA.css",
+        "dist/assets/main-DUAkKPfG.css",
+        "dist/assets/main-DYDg36dL.js",
+        "dist/assets/main-nr1F7AK6.js",
+        "dist/index.html"
+      ]
+    },
+    {
+      "batch": "pilot-listen",
+      "evidenceRole": "historical-diagnostic",
+      "coverageContribution": 0,
+      "terminalValidationComplete": true,
+      "exitCode": 0,
+      "stats": {
+        "startTime": "2026-10-20T17:40:27.400Z",
+        "duration": 14969.787,
+        "expected": 2,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "sourceStableWithinBatch": true,
+      "buildStableWithinBatch": true,
+      "sourceIdentity": "866d8d1cc3d121a5a13d614bd1ceb9080ab380f9623f436a8987d20b0c82640e",
+      "buildIdentity": "a3110ddebd13ddfc2923f9baa284b27c2736ce6f55ec3f333194c9caa7727552",
+      "sourceMatchesFinal": false,
+      "runtimeMatchesFinal": false,
+      "sourceDifferencesFromFinal": [
+        "src/presentation-v4/app.ts",
+        "src/presentation-v4/stages.ts",
+        "tests/e2e/v4-final.spec.ts",
+        "tests/e2e/v4-second-saves.spec.ts"
+      ],
+      "runtimeDifferencesFromFinal": [
+        "dist/assets/main-Co7WdmFv.js",
+        "dist/assets/main-DYDg36dL.js",
+        "dist/index.html"
+      ]
+    },
+    {
+      "batch": "release",
+      "evidenceRole": "historical-diagnostic",
+      "coverageContribution": 0,
+      "terminalValidationComplete": false,
+      "exitCode": 130,
+      "stats": {
+        "startTime": "2026-10-20T17:45:45.348Z",
+        "duration": 713263.0360000001,
+        "expected": 3,
+        "skipped": 10,
+        "unexpected": 2,
+        "flaky": 0
+      },
+      "sourceStableWithinBatch": true,
+      "buildStableWithinBatch": true,
+      "sourceIdentity": "866d8d1cc3d121a5a13d614bd1ceb9080ab380f9623f436a8987d20b0c82640e",
+      "buildIdentity": "a3110ddebd13ddfc2923f9baa284b27c2736ce6f55ec3f333194c9caa7727552",
+      "sourceMatchesFinal": false,
+      "runtimeMatchesFinal": false,
+      "sourceDifferencesFromFinal": [
+        "src/presentation-v4/app.ts",
+        "src/presentation-v4/stages.ts",
+        "tests/e2e/v4-final.spec.ts",
+        "tests/e2e/v4-second-saves.spec.ts"
+      ],
+      "runtimeDifferencesFromFinal": [
+        "dist/assets/main-Co7WdmFv.js",
+        "dist/assets/main-DYDg36dL.js",
+        "dist/index.html"
+      ]
+    },
+    {
+      "batch": "repair",
+      "evidenceRole": "historical-diagnostic",
+      "coverageContribution": 0,
+      "terminalValidationComplete": true,
+      "exitCode": 0,
+      "stats": {
+        "startTime": "2026-10-20T18:03:26.880Z",
+        "duration": 286768.504,
+        "expected": 2,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "sourceStableWithinBatch": true,
+      "buildStableWithinBatch": true,
+      "sourceIdentity": "eca71a664f1e4c5df6f6b55b4920acebe9af68e37237680a9129e9c3442ec21e",
+      "buildIdentity": "a3110ddebd13ddfc2923f9baa284b27c2736ce6f55ec3f333194c9caa7727552",
+      "sourceMatchesFinal": false,
+      "runtimeMatchesFinal": false,
+      "sourceDifferencesFromFinal": [
+        "src/presentation-v4/app.ts",
+        "src/presentation-v4/stages.ts",
+        "tests/e2e/v4-final.spec.ts",
+        "tests/e2e/v4-second-saves.spec.ts"
+      ],
+      "runtimeDifferencesFromFinal": [
+        "dist/assets/main-Co7WdmFv.js",
+        "dist/assets/main-DYDg36dL.js",
+        "dist/index.html"
+      ]
+    },
+    {
+      "batch": "final-boundaries",
+      "evidenceRole": "final-runtime",
+      "coverageContribution": 9,
+      "terminalValidationComplete": false,
+      "exitCode": 1,
+      "stats": {
+        "startTime": "2026-10-20T18:20:18.321Z",
+        "duration": 266719.24100000004,
+        "expected": 9,
+        "skipped": 0,
+        "unexpected": 3,
+        "flaky": 0
+      },
+      "sourceStableWithinBatch": true,
+      "buildStableWithinBatch": true,
+      "sourceIdentity": "640e917d066e92443fd40fbf0f1733518a6c2010c962a0a0217827b0e76e0881",
+      "buildIdentity": "bdc02738beab2534ff583b68909c7ed2823052c930818b6f0e492f29457a9dfa",
+      "sourceMatchesFinal": false,
+      "runtimeMatchesFinal": true,
+      "sourceDifferencesFromFinal": [
+        "tests/e2e/v4-final.spec.ts"
+      ],
+      "runtimeDifferencesFromFinal": []
+    },
+    {
+      "batch": "final-memory",
+      "evidenceRole": "final-runtime",
+      "coverageContribution": 3,
+      "terminalValidationComplete": true,
+      "exitCode": 0,
+      "stats": {
+        "startTime": "2026-10-20T18:25:16.665Z",
+        "duration": 40181.310000000005,
+        "expected": 3,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "sourceStableWithinBatch": true,
+      "buildStableWithinBatch": true,
+      "sourceIdentity": "26425e1db3ee87304cdf85d57998ec44a98bffb933f19f0b8b9651ed115653a9",
+      "buildIdentity": "bdc02738beab2534ff583b68909c7ed2823052c930818b6f0e492f29457a9dfa",
+      "sourceMatchesFinal": true,
+      "runtimeMatchesFinal": true,
+      "sourceDifferencesFromFinal": [],
+      "runtimeDifferencesFromFinal": []
+    },
+    {
+      "batch": "final-journeys",
+      "evidenceRole": "final-runtime",
+      "coverageContribution": 12,
+      "terminalValidationComplete": true,
+      "exitCode": 0,
+      "stats": {
+        "startTime": "2026-10-20T18:27:12.110Z",
+        "duration": 1870645.231,
+        "expected": 12,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "sourceStableWithinBatch": true,
+      "buildStableWithinBatch": true,
+      "sourceIdentity": "26425e1db3ee87304cdf85d57998ec44a98bffb933f19f0b8b9651ed115653a9",
+      "buildIdentity": "bdc02738beab2534ff583b68909c7ed2823052c930818b6f0e492f29457a9dfa",
+      "sourceMatchesFinal": true,
+      "runtimeMatchesFinal": true,
+      "sourceDifferencesFromFinal": [],
+      "runtimeDifferencesFromFinal": []
+    }
+  ]
+}

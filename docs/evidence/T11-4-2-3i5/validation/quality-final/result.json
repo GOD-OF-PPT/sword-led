@@ -1,0 +1,47 @@
+{
+  "results": [
+    {
+      "name": "unit",
+      "pid": 52671,
+      "startedAt": "2026-10-20T17:21:53.189Z",
+      "finishedAt": "2026-10-20T17:22:01.987Z",
+      "exitCode": 0,
+      "signal": null,
+      "command": [
+        "rtk",
+        "proxy",
+        "npm",
+        "test",
+        "--",
+        "--maxWorkers=4",
+        "--reporter=json",
+        "--outputFile=tmp/T11-4-2-3i5/quality-final/unit.json"
+      ]
+    },
+    {
+      "name": "build",
+      "pid": 52747,
+      "startedAt": "2026-10-20T17:22:01.988Z",
+      "finishedAt": "2026-10-20T17:22:06.014Z",
+      "exitCode": 0,
+      "signal": null,
+      "command": [
+        "rtk",
+        "proxy",
+        "npm",
+        "run",
+        "build"
+      ]
+    }
+  ],
+  "sourceFiles": 353,
+  "buildFiles": 75,
+  "changedInputs": [],
+  "unit": {
+    "total": 357,
+    "passed": 357,
+    "failed": 0,
+    "files": 29
+  },
+  "scope": "All source/test/script/configuration/public-runtime assets and actual witness inputs captured before the final unit suite and unchanged through the sequential production build. Unit/build do not consume design metadata, which the artist is finishing separately; complete original art metadata is frozen for the subsequent browser/asset verification. Build-file differences before/after are expected."
+}

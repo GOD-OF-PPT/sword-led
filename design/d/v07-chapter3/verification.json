@@ -1,0 +1,976 @@
+{
+  "schema": 1,
+  "verifiedAt": "2026-10-20T17:28:15.129Z",
+  "allChecksPassed": true,
+  "budget": {
+    "bytes": 2384710,
+    "MiB": 2.2742366790771484,
+    "targetBytes": 2097152,
+    "hardBudgetBytes": 2621440,
+    "targetMet": false,
+    "targetVarianceBytes": 287558,
+    "hardBudgetMet": true,
+    "qualityDecision": "q72 selected after actual q60 runtime inspection; coordinator explicitly prioritized visual quality within the 2.5MiB hard budget over the 2MiB soft target"
+  },
+  "visualReviewRecord": {
+    "path": "design/d/v07-chapter3/visual-review.json",
+    "bytes": 4538,
+    "sha256": "e65f182de1bf7503c78b01bf374285e2b20e957f669ee5d7b5a047401cb30715"
+  },
+  "relayCommonMaster": {
+    "path": "design/d/v07-chapter3/originals/mountain-pass-arrival-v1.png",
+    "bytes": 3159659,
+    "sha256": "503385e41f42a8d96c452ef5880574e62450a5d194c3f597f6437e64d2f6d88f"
+  },
+  "checks": [
+    {
+      "id": "mountain-pass-arrival-v1",
+      "intent": "generate",
+      "usage": "third-chapter neutral opening; unresolved mountain-pass context; relay common master",
+      "condition": "actual third-chapter entry or unresolved context only",
+      "references": [
+        {
+          "path": "design/d/reference-main-v2.png",
+          "bytes": 2605402,
+          "sha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+        },
+        {
+          "path": "design/d/v05/originals/customers-atlas-v2.png",
+          "bytes": 1937506,
+          "sha256": "fe613eab5a26f33eabbbc74a2332c6c471a1acc5dd14fea09091574b42db5f50"
+        },
+        {
+          "path": "design/d/v07-chapter2/originals/twin-stations-dark-v1.png",
+          "bytes": 3080526,
+          "sha256": "864bd897e897d4ca158bc9ff21d13389ebb082f5629b258d42a57f5c71a58c0d"
+        }
+      ],
+      "sourceRecord": {
+        "path": "design/d/v07-chapter3/mountain-pass-arrival-v1-source.json",
+        "bytes": 1729,
+        "sha256": "5229a6a71070c0835818a0f4094b73aa644eba28bc58e0852f5f8a1ce1f4db1e"
+      },
+      "source": {
+        "path": "/Users/gordon/.codex/generated_images/01a15944-6214-7bb3-9a5b-a18a6e3bfc7f/exec-8db4ab74-4103-4fb9-887e-a8d30215cfc5.png",
+        "bytes": 3159659,
+        "sha256": "503385e41f42a8d96c452ef5880574e62450a5d194c3f597f6437e64d2f6d88f"
+      },
+      "original": {
+        "path": "design/d/v07-chapter3/originals/mountain-pass-arrival-v1.png",
+        "bytes": 3159659,
+        "sha256": "503385e41f42a8d96c452ef5880574e62450a5d194c3f597f6437e64d2f6d88f"
+      },
+      "prompt": {
+        "path": "design/d/v07-chapter3/prompts/mountain-pass-arrival-v1.txt",
+        "bytes": 2613,
+        "sha256": "174421d3f86dbe70d8c98aeaa1e620364030191c147ff5471ee353473eed083c"
+      },
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bitDepth": 8,
+        "colorType": 2,
+        "interlace": 0,
+        "transparencyChunk": false,
+        "alpha": false
+      },
+      "runtime": {
+        "path": "public/assets/d/v07-chapter3/mountain-pass-arrival-v1.webp",
+        "bytes": 267342,
+        "sha256": "7330d00aa07ddd97eee6faa22185dbf6a3d1439f4ed6ee657650feb77d382e8b"
+      },
+      "webp": {
+        "width": 1672,
+        "height": 941,
+        "alpha": false,
+        "animation": false,
+        "decodedAlpha": {
+          "min": 255,
+          "max": 255
+        },
+        "decodedRGBASha256": "7453961c02214d179125a9b65092df33dc69f27c9dacccf1c89c118b9ddc6efb",
+        "log": "File: public/assets/d/v07-chapter3/mountain-pass-arrival-v1.webp\nRIFF HEADER:\n  File size: 267342\nChunk VP8  at offset     12, length 267330\n  Width: 1672\n  Height: 941\n  Alpha: 0\n  Animation: 0\n  Format: Lossy (1)\nSummary:\nNumber of frames: 1\nChunk type  :  VP8 VP8L VP8X ALPH ANIM ANMF(VP8 /VP8L/ALPH) ICCP EXIF  XMP\nChunk counts:    1    0    0    0    0    0    0    0    0     0    0    0 \nNo error detected.\n"
+      },
+      "exactSourceCopy": true,
+      "sourceToRuntimeReproducedInMemory": true,
+      "visualReview": {
+        "id": "mountain-pass-arrival-v1",
+        "originalSha256": "503385e41f42a8d96c452ef5880574e62450a5d194c3f597f6437e64d2f6d88f",
+        "runtimeSha256": "7330d00aa07ddd97eee6faa22185dbf6a3d1439f4ed6ee657650feb77d382e8b",
+        "reviewedActualFinalQ72": true,
+        "noBlankOrCorruptAreas": true,
+        "acceptableCharacterAndLineReadability": true
+      },
+      "export": {
+        "tool": "cwebp",
+        "quality": 72,
+        "method": 6,
+        "metadata": "none",
+        "resized": false,
+        "cropped": false,
+        "creativePostprocessing": false,
+        "rawReencodeLog": {
+          "path": "design/d/v07-chapter3/verification/encoder-logs/mountain-pass-arrival-v1.stderr.log.gz",
+          "bytes": 388,
+          "sha256": "1ab92b19e28448a501d55e1dfcaf6d3e43cbef6632042fd48da99394d0a7c443",
+          "uncompressedBytes": 671,
+          "uncompressedSha256": "051da7eec9acafa6673217034d5fd861d447bad460b4fe86338ba00d16485b30",
+          "command": [
+            "cwebp",
+            "-q",
+            "72",
+            "-m",
+            "6",
+            "-metadata",
+            "none",
+            "design/d/v07-chapter3/originals/mountain-pass-arrival-v1.png",
+            "-o",
+            "-"
+          ]
+        }
+      }
+    },
+    {
+      "id": "double-fire-work-v1",
+      "intent": "generate",
+      "usage": "commission 9 actual completed use",
+      "condition": "real commissionId 9 completion with core winning work",
+      "references": [
+        {
+          "path": "design/d/reference-main-v2.png",
+          "bytes": 2605402,
+          "sha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+        },
+        {
+          "path": "design/d/v05/originals/customers-atlas-v2.png",
+          "bytes": 1937506,
+          "sha256": "fe613eab5a26f33eabbbc74a2332c6c471a1acc5dd14fea09091574b42db5f50"
+        },
+        {
+          "path": "design/d/v07-chapter2/originals/winter-forge-v1.png",
+          "bytes": 2417964,
+          "sha256": "e4d3ace725b4e4efdb1f7a19734b55917db779d557b322ebf716bedf4f5a4d54"
+        }
+      ],
+      "sourceRecord": {
+        "path": "design/d/v07-chapter3/double-fire-work-v1-source.json",
+        "bytes": 1657,
+        "sha256": "c49d9fa2ee13eec32dc299993060ad1f6bd1dc9700eb618e1f6063b7198078d8"
+      },
+      "source": {
+        "path": "/Users/gordon/.codex/generated_images/01a15944-6214-7bb3-9a5b-a18a6e3bfc7f/exec-0acf6d50-9f39-4c74-b633-99fb15f3d7c0.png",
+        "bytes": 2586466,
+        "sha256": "8b492b0493f71bb43a1b55ba14e786d897dbd5b3c475c1e6ab45be2f863c1e26"
+      },
+      "original": {
+        "path": "design/d/v07-chapter3/originals/double-fire-work-v1.png",
+        "bytes": 2586466,
+        "sha256": "8b492b0493f71bb43a1b55ba14e786d897dbd5b3c475c1e6ab45be2f863c1e26"
+      },
+      "prompt": {
+        "path": "design/d/v07-chapter3/prompts/double-fire-work-v1.txt",
+        "bytes": 2134,
+        "sha256": "abb05f5e46005e2d059c44cd4d9fc86a851687d3d0c0f1c5bf1fc47780e8963d"
+      },
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bitDepth": 8,
+        "colorType": 2,
+        "interlace": 0,
+        "transparencyChunk": false,
+        "alpha": false
+      },
+      "runtime": {
+        "path": "public/assets/d/v07-chapter3/double-fire-work-v1.webp",
+        "bytes": 204206,
+        "sha256": "c94b9d9f89749e2db6ff76ab463367e780e6f9e6afaf8dfe1991aeec027636fa"
+      },
+      "webp": {
+        "width": 1672,
+        "height": 941,
+        "alpha": false,
+        "animation": false,
+        "decodedAlpha": {
+          "min": 255,
+          "max": 255
+        },
+        "decodedRGBASha256": "1e1ff32dfbd4e02500965382af6366756f5caf010b0e4767bc928af83b87705f",
+        "log": "File: public/assets/d/v07-chapter3/double-fire-work-v1.webp\nRIFF HEADER:\n  File size: 204206\nChunk VP8  at offset     12, length 204194\n  Width: 1672\n  Height: 941\n  Alpha: 0\n  Animation: 0\n  Format: Lossy (1)\nSummary:\nNumber of frames: 1\nChunk type  :  VP8 VP8L VP8X ALPH ANIM ANMF(VP8 /VP8L/ALPH) ICCP EXIF  XMP\nChunk counts:    1    0    0    0    0    0    0    0    0     0    0    0 \nNo error detected.\n"
+      },
+      "exactSourceCopy": true,
+      "sourceToRuntimeReproducedInMemory": true,
+      "visualReview": {
+        "id": "double-fire-work-v1",
+        "originalSha256": "8b492b0493f71bb43a1b55ba14e786d897dbd5b3c475c1e6ab45be2f863c1e26",
+        "runtimeSha256": "c94b9d9f89749e2db6ff76ab463367e780e6f9e6afaf8dfe1991aeec027636fa",
+        "reviewedActualFinalQ72": true,
+        "noBlankOrCorruptAreas": true,
+        "acceptableCharacterAndLineReadability": true
+      },
+      "export": {
+        "tool": "cwebp",
+        "quality": 72,
+        "method": 6,
+        "metadata": "none",
+        "resized": false,
+        "cropped": false,
+        "creativePostprocessing": false,
+        "rawReencodeLog": {
+          "path": "design/d/v07-chapter3/verification/encoder-logs/double-fire-work-v1.stderr.log.gz",
+          "bytes": 380,
+          "sha256": "29e7f751fa2265ff6a7cfb3c8d4cb6a71458ae01eb6cf4b5b7fe7188bb70d448",
+          "uncompressedBytes": 666,
+          "uncompressedSha256": "e042387d85514843ce7fdead059d20b3cd577cb4acb3d8595313b62b85376a07",
+          "command": [
+            "cwebp",
+            "-q",
+            "72",
+            "-m",
+            "6",
+            "-metadata",
+            "none",
+            "design/d/v07-chapter3/originals/double-fire-work-v1.png",
+            "-o",
+            "-"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mountain-gap-held-v1",
+      "intent": "generate",
+      "usage": "commission 10 completed use for either legal crack route",
+      "condition": "real commissionId 10 completion; actual blade rendered independently",
+      "references": [
+        {
+          "path": "design/d/reference-main-v2.png",
+          "bytes": 2605402,
+          "sha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+        },
+        {
+          "path": "design/d/v05/originals/customers-atlas-v2.png",
+          "bytes": 1937506,
+          "sha256": "fe613eab5a26f33eabbbc74a2332c6c471a1acc5dd14fea09091574b42db5f50"
+        },
+        {
+          "path": "design/d/v07-chapter3/originals/mountain-pass-arrival-v1.png",
+          "bytes": 3159659,
+          "sha256": "503385e41f42a8d96c452ef5880574e62450a5d194c3f597f6437e64d2f6d88f"
+        }
+      ],
+      "sourceRecord": {
+        "path": "design/d/v07-chapter3/mountain-gap-held-v1-source.json",
+        "bytes": 1707,
+        "sha256": "db90d5243acd684e9629e312a13e7abcada6c312234333fdc44e02dcdfcaf84a"
+      },
+      "source": {
+        "path": "/Users/gordon/.codex/generated_images/01a15944-6214-7bb3-9a5b-a18a6e3bfc7f/exec-755a128b-67ef-4757-8ac6-0679307f8f35.png",
+        "bytes": 3439631,
+        "sha256": "4e2c79723c1dc507b12728692dbaf4af975cf8c4d387ae814224b34450d3ea15"
+      },
+      "original": {
+        "path": "design/d/v07-chapter3/originals/mountain-gap-held-v1.png",
+        "bytes": 3439631,
+        "sha256": "4e2c79723c1dc507b12728692dbaf4af975cf8c4d387ae814224b34450d3ea15"
+      },
+      "prompt": {
+        "path": "design/d/v07-chapter3/prompts/mountain-gap-held-v1.txt",
+        "bytes": 1988,
+        "sha256": "7e676f5e2b4bf065211469040a7fe3ff7f243d827fa795b03c54134467b3e168"
+      },
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bitDepth": 8,
+        "colorType": 2,
+        "interlace": 0,
+        "transparencyChunk": false,
+        "alpha": false
+      },
+      "runtime": {
+        "path": "public/assets/d/v07-chapter3/mountain-gap-held-v1.webp",
+        "bytes": 327434,
+        "sha256": "af657ee742fe772738d2a12d37dccbd26546cf4bd833c6617674108713669421"
+      },
+      "webp": {
+        "width": 1672,
+        "height": 941,
+        "alpha": false,
+        "animation": false,
+        "decodedAlpha": {
+          "min": 255,
+          "max": 255
+        },
+        "decodedRGBASha256": "ace5a7e2ee5ed1dbcca850bdc8119a20a71746d09b80043eea7c5b5ca55d564c",
+        "log": "File: public/assets/d/v07-chapter3/mountain-gap-held-v1.webp\nRIFF HEADER:\n  File size: 327434\nChunk VP8  at offset     12, length 327422\n  Width: 1672\n  Height: 941\n  Alpha: 0\n  Animation: 0\n  Format: Lossy (1)\nSummary:\nNumber of frames: 1\nChunk type  :  VP8 VP8L VP8X ALPH ANIM ANMF(VP8 /VP8L/ALPH) ICCP EXIF  XMP\nChunk counts:    1    0    0    0    0    0    0    0    0     0    0    0 \nNo error detected.\n"
+      },
+      "exactSourceCopy": true,
+      "sourceToRuntimeReproducedInMemory": true,
+      "visualReview": {
+        "id": "mountain-gap-held-v1",
+        "originalSha256": "4e2c79723c1dc507b12728692dbaf4af975cf8c4d387ae814224b34450d3ea15",
+        "runtimeSha256": "af657ee742fe772738d2a12d37dccbd26546cf4bd833c6617674108713669421",
+        "reviewedActualFinalQ72": true,
+        "noBlankOrCorruptAreas": true,
+        "acceptableCharacterAndLineReadability": true
+      },
+      "export": {
+        "tool": "cwebp",
+        "quality": 72,
+        "method": 6,
+        "metadata": "none",
+        "resized": false,
+        "cropped": false,
+        "creativePostprocessing": false,
+        "rawReencodeLog": {
+          "path": "design/d/v07-chapter3/verification/encoder-logs/mountain-gap-held-v1.stderr.log.gz",
+          "bytes": 381,
+          "sha256": "86825841d67f9ac89715bf7c1751e7a91e9726381881d230158b0099329b3c17",
+          "uncompressedBytes": 667,
+          "uncompressedSha256": "bebd665ce2d7f1bc4b74eb4a2d2f142cf01004a0f5e25e588ca79a6859269ed5",
+          "command": [
+            "cwebp",
+            "-q",
+            "72",
+            "-m",
+            "6",
+            "-metadata",
+            "none",
+            "design/d/v07-chapter3/originals/mountain-gap-held-v1.png",
+            "-o",
+            "-"
+          ]
+        }
+      }
+    },
+    {
+      "id": "relay-one-v1",
+      "intent": "direct-master-edit",
+      "usage": "commission 11 partial new-work route",
+      "condition": "one new matched work and commission incomplete",
+      "references": [
+        {
+          "path": "design/d/v07-chapter3/originals/mountain-pass-arrival-v1.png",
+          "bytes": 3159659,
+          "sha256": "503385e41f42a8d96c452ef5880574e62450a5d194c3f597f6437e64d2f6d88f"
+        }
+      ],
+      "sourceRecord": {
+        "path": "design/d/v07-chapter3/relay-one-v1-source.json",
+        "bytes": 1300,
+        "sha256": "82ee2d8dbca91839884d1f0a1a078978749bc65cf06c81be9586305708d26913"
+      },
+      "source": {
+        "path": "/Users/gordon/.codex/generated_images/01a15944-6214-7bb3-9a5b-a18a6e3bfc7f/exec-87fb3afd-7e87-4ae2-ae7c-d540bbf3c42c.png",
+        "bytes": 3032038,
+        "sha256": "7b3bff24cec82fa6f5bf2ccb120c5495b0f055e0b2996471ce3f028fdefab8c2"
+      },
+      "original": {
+        "path": "design/d/v07-chapter3/originals/relay-one-v1.png",
+        "bytes": 3032038,
+        "sha256": "7b3bff24cec82fa6f5bf2ccb120c5495b0f055e0b2996471ce3f028fdefab8c2"
+      },
+      "prompt": {
+        "path": "design/d/v07-chapter3/prompts/relay-one-v1.txt",
+        "bytes": 1637,
+        "sha256": "2b95425f798b53e4103164f46b984a65bf0bbd4c00812b81d7ef8393a53da3de"
+      },
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bitDepth": 8,
+        "colorType": 2,
+        "interlace": 0,
+        "transparencyChunk": false,
+        "alpha": false
+      },
+      "runtime": {
+        "path": "public/assets/d/v07-chapter3/relay-one-v1.webp",
+        "bytes": 263292,
+        "sha256": "e428afac55345140ed426767056010917e3bf42e791425f720f0c653864d051f"
+      },
+      "webp": {
+        "width": 1672,
+        "height": 941,
+        "alpha": false,
+        "animation": false,
+        "decodedAlpha": {
+          "min": 255,
+          "max": 255
+        },
+        "decodedRGBASha256": "3ec05ad7af3c2c2b6160566f16c06a09d3e18f0d29d736768b6b029bed2dd5d4",
+        "log": "File: public/assets/d/v07-chapter3/relay-one-v1.webp\nRIFF HEADER:\n  File size: 263292\nChunk VP8  at offset     12, length 263280\n  Width: 1672\n  Height: 941\n  Alpha: 0\n  Animation: 0\n  Format: Lossy (1)\nSummary:\nNumber of frames: 1\nChunk type  :  VP8 VP8L VP8X ALPH ANIM ANMF(VP8 /VP8L/ALPH) ICCP EXIF  XMP\nChunk counts:    1    0    0    0    0    0    0    0    0     0    0    0 \nNo error detected.\n"
+      },
+      "exactSourceCopy": true,
+      "sourceToRuntimeReproducedInMemory": true,
+      "visualReview": {
+        "id": "relay-one-v1",
+        "originalSha256": "7b3bff24cec82fa6f5bf2ccb120c5495b0f055e0b2996471ce3f028fdefab8c2",
+        "runtimeSha256": "e428afac55345140ed426767056010917e3bf42e791425f720f0c653864d051f",
+        "reviewedActualFinalQ72": true,
+        "noBlankOrCorruptAreas": true,
+        "acceptableCharacterAndLineReadability": true
+      },
+      "export": {
+        "tool": "cwebp",
+        "quality": 72,
+        "method": 6,
+        "metadata": "none",
+        "resized": false,
+        "cropped": false,
+        "creativePostprocessing": false,
+        "rawReencodeLog": {
+          "path": "design/d/v07-chapter3/verification/encoder-logs/relay-one-v1.stderr.log.gz",
+          "bytes": 378,
+          "sha256": "edf8eb9b6e49a4395147789d5369628da09cec87f02f214cecbf0d5dbc9d8342",
+          "uncompressedBytes": 659,
+          "uncompressedSha256": "eafd9b792d2252f2926c59083edeb0e6a3affdbab40750b9aad1d6c1da1b44a1",
+          "command": [
+            "cwebp",
+            "-q",
+            "72",
+            "-m",
+            "6",
+            "-metadata",
+            "none",
+            "design/d/v07-chapter3/originals/relay-one-v1.png",
+            "-o",
+            "-"
+          ]
+        }
+      }
+    },
+    {
+      "id": "relay-complete-v1",
+      "intent": "direct-master-edit",
+      "usage": "commission 11 completed old-work OR two-new-work route",
+      "condition": "core commission 11 complete; quantity and winning/matched pieceIds shown separately",
+      "references": [
+        {
+          "path": "design/d/v07-chapter3/originals/mountain-pass-arrival-v1.png",
+          "bytes": 3159659,
+          "sha256": "503385e41f42a8d96c452ef5880574e62450a5d194c3f597f6437e64d2f6d88f"
+        }
+      ],
+      "sourceRecord": {
+        "path": "design/d/v07-chapter3/relay-complete-v1-source.json",
+        "bytes": 1370,
+        "sha256": "f193389fb2df37a90a9c627a8fd48c3bea904f3f3c20b4313bacbf3b9a42b47b"
+      },
+      "source": {
+        "path": "/Users/gordon/.codex/generated_images/01a15944-6214-7bb3-9a5b-a18a6e3bfc7f/exec-3d571e17-c3ea-4ebd-acb2-c00741ab27e8.png",
+        "bytes": 3083143,
+        "sha256": "924dfe7b6a4257e8ef1a944d482541ee137fff98ba1c1f5e48488549f98e5350"
+      },
+      "original": {
+        "path": "design/d/v07-chapter3/originals/relay-complete-v1.png",
+        "bytes": 3083143,
+        "sha256": "924dfe7b6a4257e8ef1a944d482541ee137fff98ba1c1f5e48488549f98e5350"
+      },
+      "prompt": {
+        "path": "design/d/v07-chapter3/prompts/relay-complete-v1.txt",
+        "bytes": 1743,
+        "sha256": "e5672c219fc60f0a111c6dc968cd21ecbd7bba2c04c5fbc31deefad3cdab8e84"
+      },
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bitDepth": 8,
+        "colorType": 2,
+        "interlace": 0,
+        "transparencyChunk": false,
+        "alpha": false
+      },
+      "runtime": {
+        "path": "public/assets/d/v07-chapter3/relay-complete-v1.webp",
+        "bytes": 271756,
+        "sha256": "aa750f3804dfc96aacb91437d87c86cbb0ca18d95cd563bfc9fc75ef826be01c"
+      },
+      "webp": {
+        "width": 1672,
+        "height": 941,
+        "alpha": false,
+        "animation": false,
+        "decodedAlpha": {
+          "min": 255,
+          "max": 255
+        },
+        "decodedRGBASha256": "440b98efd553e7a91fbbe44383df727348eafc74bfa32b309fdf125ca831c0ee",
+        "log": "File: public/assets/d/v07-chapter3/relay-complete-v1.webp\nRIFF HEADER:\n  File size: 271756\nChunk VP8  at offset     12, length 271744\n  Width: 1672\n  Height: 941\n  Alpha: 0\n  Animation: 0\n  Format: Lossy (1)\nSummary:\nNumber of frames: 1\nChunk type  :  VP8 VP8L VP8X ALPH ANIM ANMF(VP8 /VP8L/ALPH) ICCP EXIF  XMP\nChunk counts:    1    0    0    0    0    0    0    0    0     0    0    0 \nNo error detected.\n"
+      },
+      "exactSourceCopy": true,
+      "sourceToRuntimeReproducedInMemory": true,
+      "visualReview": {
+        "id": "relay-complete-v1",
+        "originalSha256": "924dfe7b6a4257e8ef1a944d482541ee137fff98ba1c1f5e48488549f98e5350",
+        "runtimeSha256": "aa750f3804dfc96aacb91437d87c86cbb0ca18d95cd563bfc9fc75ef826be01c",
+        "reviewedActualFinalQ72": true,
+        "noBlankOrCorruptAreas": true,
+        "acceptableCharacterAndLineReadability": true
+      },
+      "export": {
+        "tool": "cwebp",
+        "quality": 72,
+        "method": 6,
+        "metadata": "none",
+        "resized": false,
+        "cropped": false,
+        "creativePostprocessing": false,
+        "rawReencodeLog": {
+          "path": "design/d/v07-chapter3/verification/encoder-logs/relay-complete-v1.stderr.log.gz",
+          "bytes": 381,
+          "sha256": "0edad0991c81b2507c2ba1224833379161704ef2ae74fbba361a3dea166e21d8",
+          "uncompressedBytes": 664,
+          "uncompressedSha256": "416458f977dd33effc0a620d409bed7a568af83a79ada21306b410d97a8cf857",
+          "command": [
+            "cwebp",
+            "-q",
+            "72",
+            "-m",
+            "6",
+            "-metadata",
+            "none",
+            "design/d/v07-chapter3/originals/relay-complete-v1.png",
+            "-o",
+            "-"
+          ]
+        }
+      }
+    },
+    {
+      "id": "last-lantern-delivered-v1",
+      "intent": "generate",
+      "usage": "commission 12 local delivery result before global settlement",
+      "condition": "real commission 12 MainCompleted; must not imply victory phase",
+      "references": [
+        {
+          "path": "design/d/reference-main-v2.png",
+          "bytes": 2605402,
+          "sha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+        },
+        {
+          "path": "design/d/v05/originals/customers-atlas-v2.png",
+          "bytes": 1937506,
+          "sha256": "fe613eab5a26f33eabbbc74a2332c6c471a1acc5dd14fea09091574b42db5f50"
+        },
+        {
+          "path": "design/d/v07-chapter3/originals/mountain-pass-arrival-v1.png",
+          "bytes": 3159659,
+          "sha256": "503385e41f42a8d96c452ef5880574e62450a5d194c3f597f6437e64d2f6d88f"
+        }
+      ],
+      "sourceRecord": {
+        "path": "design/d/v07-chapter3/last-lantern-delivered-v1-source.json",
+        "bytes": 1720,
+        "sha256": "3b7100868ac05b6035c16c88439636c8f4a6f618295c7ca7337255edc52d1d1a"
+      },
+      "source": {
+        "path": "/Users/gordon/.codex/generated_images/01a15944-6214-7bb3-9a5b-a18a6e3bfc7f/exec-dfea876a-68a9-4ff0-a618-3202eb28ac6d.png",
+        "bytes": 3171146,
+        "sha256": "fef3b214f54d1b66a2ca7ec7ebe8cfbdeaf116194bbdc46b14b73ca3e19ad8a1"
+      },
+      "original": {
+        "path": "design/d/v07-chapter3/originals/last-lantern-delivered-v1.png",
+        "bytes": 3171146,
+        "sha256": "fef3b214f54d1b66a2ca7ec7ebe8cfbdeaf116194bbdc46b14b73ca3e19ad8a1"
+      },
+      "prompt": {
+        "path": "design/d/v07-chapter3/prompts/last-lantern-delivered-v1.txt",
+        "bytes": 2115,
+        "sha256": "f4b617f9616960ea5357f65858b1403e7a949c39149e94bccb1a65a12602ab8f"
+      },
+      "png": {
+        "width": 1673,
+        "height": 940,
+        "bitDepth": 8,
+        "colorType": 2,
+        "interlace": 0,
+        "transparencyChunk": false,
+        "alpha": false
+      },
+      "runtime": {
+        "path": "public/assets/d/v07-chapter3/last-lantern-delivered-v1.webp",
+        "bytes": 290266,
+        "sha256": "897c0bfc12bd387ebd8f5e3005991d0b9c1cc32dece3900973baddbd6a53a127"
+      },
+      "webp": {
+        "width": 1673,
+        "height": 940,
+        "alpha": false,
+        "animation": false,
+        "decodedAlpha": {
+          "min": 255,
+          "max": 255
+        },
+        "decodedRGBASha256": "57076e16fca3a6ca74c759e9a530e180d7f2fc0f1cd66acdc9e272318fabb16e",
+        "log": "File: public/assets/d/v07-chapter3/last-lantern-delivered-v1.webp\nRIFF HEADER:\n  File size: 290266\nChunk VP8  at offset     12, length 290254\n  Width: 1673\n  Height: 940\n  Alpha: 0\n  Animation: 0\n  Format: Lossy (1)\nSummary:\nNumber of frames: 1\nChunk type  :  VP8 VP8L VP8X ALPH ANIM ANMF(VP8 /VP8L/ALPH) ICCP EXIF  XMP\nChunk counts:    1    0    0    0    0    0    0    0    0     0    0    0 \nNo error detected.\n"
+      },
+      "exactSourceCopy": true,
+      "sourceToRuntimeReproducedInMemory": true,
+      "visualReview": {
+        "id": "last-lantern-delivered-v1",
+        "originalSha256": "fef3b214f54d1b66a2ca7ec7ebe8cfbdeaf116194bbdc46b14b73ca3e19ad8a1",
+        "runtimeSha256": "897c0bfc12bd387ebd8f5e3005991d0b9c1cc32dece3900973baddbd6a53a127",
+        "reviewedActualFinalQ72": true,
+        "noBlankOrCorruptAreas": true,
+        "acceptableCharacterAndLineReadability": true
+      },
+      "export": {
+        "tool": "cwebp",
+        "quality": 72,
+        "method": 6,
+        "metadata": "none",
+        "resized": false,
+        "cropped": false,
+        "creativePostprocessing": false,
+        "rawReencodeLog": {
+          "path": "design/d/v07-chapter3/verification/encoder-logs/last-lantern-delivered-v1.stderr.log.gz",
+          "bytes": 387,
+          "sha256": "ab676bf5388e74170208880b68f6d84f8414fb99ddc5bea3bdd6c5a1b598713d",
+          "uncompressedBytes": 672,
+          "uncompressedSha256": "ec88d98e6a50d6b9fb23feda6080db21926219fcfa06670d6a0cd79d13f291cb",
+          "command": [
+            "cwebp",
+            "-q",
+            "72",
+            "-m",
+            "6",
+            "-metadata",
+            "none",
+            "design/d/v07-chapter3/originals/last-lantern-delivered-v1.png",
+            "-o",
+            "-"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ending-twelve-lights-v1",
+      "intent": "generate",
+      "usage": "actual victory ending; network connected, actual daily results remain distinct",
+      "condition": "core phase victory only",
+      "references": [
+        {
+          "path": "design/d/reference-main-v2.png",
+          "bytes": 2605402,
+          "sha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+        },
+        {
+          "path": "design/d/v05/originals/customers-atlas-v2.png",
+          "bytes": 1937506,
+          "sha256": "fe613eab5a26f33eabbbc74a2332c6c471a1acc5dd14fea09091574b42db5f50"
+        },
+        {
+          "path": "design/d/v07-chapter3/originals/mountain-pass-arrival-v1.png",
+          "bytes": 3159659,
+          "sha256": "503385e41f42a8d96c452ef5880574e62450a5d194c3f597f6437e64d2f6d88f"
+        }
+      ],
+      "sourceRecord": {
+        "path": "design/d/v07-chapter3/ending-twelve-lights-v1-source.json",
+        "bytes": 1693,
+        "sha256": "0ccf9865cd20d9a3223be6a2f4df1ebb0aeef40a3204e56abb64d168992d9ab0"
+      },
+      "source": {
+        "path": "/Users/gordon/.codex/generated_images/01a15944-6214-7bb3-9a5b-a18a6e3bfc7f/exec-dfd945be-3a60-4660-ba00-76c12aab77a3.png",
+        "bytes": 3284585,
+        "sha256": "345fd14c724a394fe2d03370d0128a0b6f4f1527c63ac2d49cc8f43cecd4765b"
+      },
+      "original": {
+        "path": "design/d/v07-chapter3/originals/ending-twelve-lights-v1.png",
+        "bytes": 3284585,
+        "sha256": "345fd14c724a394fe2d03370d0128a0b6f4f1527c63ac2d49cc8f43cecd4765b"
+      },
+      "prompt": {
+        "path": "design/d/v07-chapter3/prompts/ending-twelve-lights-v1.txt",
+        "bytes": 2313,
+        "sha256": "1563d3ca468236b7e0962182e05c54fcd5d079869956e2f5bd3644a4944255b0"
+      },
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bitDepth": 8,
+        "colorType": 2,
+        "interlace": 0,
+        "transparencyChunk": false,
+        "alpha": false
+      },
+      "runtime": {
+        "path": "public/assets/d/v07-chapter3/ending-twelve-lights-v1.webp",
+        "bytes": 294482,
+        "sha256": "05cac8d98ff29b464374a5604e84fa844cd009a5a13e8cc85108eef1c3bafe8d"
+      },
+      "webp": {
+        "width": 1672,
+        "height": 941,
+        "alpha": false,
+        "animation": false,
+        "decodedAlpha": {
+          "min": 255,
+          "max": 255
+        },
+        "decodedRGBASha256": "89f5e0c6adeb857c3707aa8191be20b9960e439806eaced57f3ddbe95fdda7c6",
+        "log": "File: public/assets/d/v07-chapter3/ending-twelve-lights-v1.webp\nRIFF HEADER:\n  File size: 294482\nChunk VP8  at offset     12, length 294470\n  Width: 1672\n  Height: 941\n  Alpha: 0\n  Animation: 0\n  Format: Lossy (1)\nSummary:\nNumber of frames: 1\nChunk type  :  VP8 VP8L VP8X ALPH ANIM ANMF(VP8 /VP8L/ALPH) ICCP EXIF  XMP\nChunk counts:    1    0    0    0    0    0    0    0    0     0    0    0 \nNo error detected.\n"
+      },
+      "exactSourceCopy": true,
+      "sourceToRuntimeReproducedInMemory": true,
+      "visualReview": {
+        "id": "ending-twelve-lights-v1",
+        "originalSha256": "345fd14c724a394fe2d03370d0128a0b6f4f1527c63ac2d49cc8f43cecd4765b",
+        "runtimeSha256": "05cac8d98ff29b464374a5604e84fa844cd009a5a13e8cc85108eef1c3bafe8d",
+        "reviewedActualFinalQ72": true,
+        "noBlankOrCorruptAreas": true,
+        "acceptableCharacterAndLineReadability": true
+      },
+      "export": {
+        "tool": "cwebp",
+        "quality": 72,
+        "method": 6,
+        "metadata": "none",
+        "resized": false,
+        "cropped": false,
+        "creativePostprocessing": false,
+        "rawReencodeLog": {
+          "path": "design/d/v07-chapter3/verification/encoder-logs/ending-twelve-lights-v1.stderr.log.gz",
+          "bytes": 382,
+          "sha256": "eea267d908ac0f388ba61e5e612bd70305afb4f996a9f41e2738c7e15623b435",
+          "uncompressedBytes": 670,
+          "uncompressedSha256": "a11c25d3af5a41e43a99725803e9f9521670e0461414fb6348340e4a61a616cf",
+          "command": [
+            "cwebp",
+            "-q",
+            "72",
+            "-m",
+            "6",
+            "-metadata",
+            "none",
+            "design/d/v07-chapter3/originals/ending-twelve-lights-v1.png",
+            "-o",
+            "-"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ending-homeward-v1",
+      "intent": "generate",
+      "usage": "actual surviving return ending, including final blade already made",
+      "condition": "core phase return only",
+      "references": [
+        {
+          "path": "design/d/reference-main-v2.png",
+          "bytes": 2605402,
+          "sha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+        },
+        {
+          "path": "design/d/v05/originals/customers-atlas-v2.png",
+          "bytes": 1937506,
+          "sha256": "fe613eab5a26f33eabbbc74a2332c6c471a1acc5dd14fea09091574b42db5f50"
+        },
+        {
+          "path": "design/d/v07-chapter3/originals/mountain-pass-arrival-v1.png",
+          "bytes": 3159659,
+          "sha256": "503385e41f42a8d96c452ef5880574e62450a5d194c3f597f6437e64d2f6d88f"
+        }
+      ],
+      "sourceRecord": {
+        "path": "design/d/v07-chapter3/ending-homeward-v1-source.json",
+        "bytes": 1665,
+        "sha256": "819b3d5c477a32456f66c9222c828693d92af8c646d2608eb495fd3dff6d968f"
+      },
+      "source": {
+        "path": "/Users/gordon/.codex/generated_images/01a15944-6214-7bb3-9a5b-a18a6e3bfc7f/exec-f9569add-d209-4842-942c-38213c9bc610.png",
+        "bytes": 3285066,
+        "sha256": "d1a261b6793b2934eb38f8de79ba1a955a250e4c91c3182cee06da0768039db3"
+      },
+      "original": {
+        "path": "design/d/v07-chapter3/originals/ending-homeward-v1.png",
+        "bytes": 3285066,
+        "sha256": "d1a261b6793b2934eb38f8de79ba1a955a250e4c91c3182cee06da0768039db3"
+      },
+      "prompt": {
+        "path": "design/d/v07-chapter3/prompts/ending-homeward-v1.txt",
+        "bytes": 2166,
+        "sha256": "c7cc750cb1f1c10f51683b6e81097af62814b3a3eebabe23e443628fde819cdb"
+      },
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bitDepth": 8,
+        "colorType": 2,
+        "interlace": 0,
+        "transparencyChunk": false,
+        "alpha": false
+      },
+      "runtime": {
+        "path": "public/assets/d/v07-chapter3/ending-homeward-v1.webp",
+        "bytes": 309244,
+        "sha256": "6a2105c91f0937af28e22db22992d3b5707765dd2a456fad91151547d6602cb7"
+      },
+      "webp": {
+        "width": 1672,
+        "height": 941,
+        "alpha": false,
+        "animation": false,
+        "decodedAlpha": {
+          "min": 255,
+          "max": 255
+        },
+        "decodedRGBASha256": "b8df0831765d2473af17335bccd44786915b12af17a5141a82ef9d217ee60292",
+        "log": "File: public/assets/d/v07-chapter3/ending-homeward-v1.webp\nRIFF HEADER:\n  File size: 309244\nChunk VP8  at offset     12, length 309232\n  Width: 1672\n  Height: 941\n  Alpha: 0\n  Animation: 0\n  Format: Lossy (1)\nSummary:\nNumber of frames: 1\nChunk type  :  VP8 VP8L VP8X ALPH ANIM ANMF(VP8 /VP8L/ALPH) ICCP EXIF  XMP\nChunk counts:    1    0    0    0    0    0    0    0    0     0    0    0 \nNo error detected.\n"
+      },
+      "exactSourceCopy": true,
+      "sourceToRuntimeReproducedInMemory": true,
+      "visualReview": {
+        "id": "ending-homeward-v1",
+        "originalSha256": "d1a261b6793b2934eb38f8de79ba1a955a250e4c91c3182cee06da0768039db3",
+        "runtimeSha256": "6a2105c91f0937af28e22db22992d3b5707765dd2a456fad91151547d6602cb7",
+        "reviewedActualFinalQ72": true,
+        "noBlankOrCorruptAreas": true,
+        "acceptableCharacterAndLineReadability": true
+      },
+      "export": {
+        "tool": "cwebp",
+        "quality": 72,
+        "method": 6,
+        "metadata": "none",
+        "resized": false,
+        "cropped": false,
+        "creativePostprocessing": false,
+        "rawReencodeLog": {
+          "path": "design/d/v07-chapter3/verification/encoder-logs/ending-homeward-v1.stderr.log.gz",
+          "bytes": 382,
+          "sha256": "d44edb48c249c421b07f1ce91be0e66d4d0f8ce0f0ed3db945c4debdd05feb54",
+          "uncompressedBytes": 665,
+          "uncompressedSha256": "9fdb0c2f044f2a78a044780101fda78dbd6ddc555fd9047464d731e31c1e3e32",
+          "command": [
+            "cwebp",
+            "-q",
+            "72",
+            "-m",
+            "6",
+            "-metadata",
+            "none",
+            "design/d/v07-chapter3/originals/ending-homeward-v1.png",
+            "-o",
+            "-"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ending-embers-v1",
+      "intent": "direct-forge-edit",
+      "usage": "actual defeat ending in any chapter without destroying earned work",
+      "condition": "core phase defeat only",
+      "references": [
+        {
+          "path": "design/d/originals/forge-backdrop-v2.png",
+          "bytes": 2486831,
+          "sha256": "b4fa13ce25bd62965b597efba9370d14dc27b7d77b1b5cf9c79b13158e71a21b"
+        }
+      ],
+      "sourceRecord": {
+        "path": "design/d/v07-chapter3/ending-embers-v1-source.json",
+        "bytes": 1297,
+        "sha256": "d10baba87ac7aaf18fb8ba4053bdd8f61ec765707f0a177a4ca3fe6422dc9340"
+      },
+      "source": {
+        "path": "/Users/gordon/.codex/generated_images/01a15944-6214-7bb3-9a5b-a18a6e3bfc7f/exec-f813071c-755e-4b99-ad38-9d66701c7a2f.png",
+        "bytes": 2331835,
+        "sha256": "ab6d78944aba37bb6d8908f5c9fb0dec2a46359ff46978c31d27931399b4ee1a"
+      },
+      "original": {
+        "path": "design/d/v07-chapter3/originals/ending-embers-v1.png",
+        "bytes": 2331835,
+        "sha256": "ab6d78944aba37bb6d8908f5c9fb0dec2a46359ff46978c31d27931399b4ee1a"
+      },
+      "prompt": {
+        "path": "design/d/v07-chapter3/prompts/ending-embers-v1.txt",
+        "bytes": 1851,
+        "sha256": "430a925b66f32f186ea06c0dace060fbd36f4e31b708a36cf8508c546cc73d3e"
+      },
+      "png": {
+        "width": 1672,
+        "height": 941,
+        "bitDepth": 8,
+        "colorType": 2,
+        "interlace": 0,
+        "transparencyChunk": false,
+        "alpha": false
+      },
+      "runtime": {
+        "path": "public/assets/d/v07-chapter3/ending-embers-v1.webp",
+        "bytes": 156688,
+        "sha256": "56b65cdaba916795e248f1a431b5b14b0d4fd2216de0df4ed69dfcff1fbee4cf"
+      },
+      "webp": {
+        "width": 1672,
+        "height": 941,
+        "alpha": false,
+        "animation": false,
+        "decodedAlpha": {
+          "min": 255,
+          "max": 255
+        },
+        "decodedRGBASha256": "efa5cad9cafd6d2df37586a8aca801fd3b93f4c80ccecc8ff296bad18914d31b",
+        "log": "File: public/assets/d/v07-chapter3/ending-embers-v1.webp\nRIFF HEADER:\n  File size: 156688\nChunk VP8  at offset     12, length 156676\n  Width: 1672\n  Height: 941\n  Alpha: 0\n  Animation: 0\n  Format: Lossy (1)\nSummary:\nNumber of frames: 1\nChunk type  :  VP8 VP8L VP8X ALPH ANIM ANMF(VP8 /VP8L/ALPH) ICCP EXIF  XMP\nChunk counts:    1    0    0    0    0    0    0    0    0     0    0    0 \nNo error detected.\n"
+      },
+      "exactSourceCopy": true,
+      "sourceToRuntimeReproducedInMemory": true,
+      "visualReview": {
+        "id": "ending-embers-v1",
+        "originalSha256": "ab6d78944aba37bb6d8908f5c9fb0dec2a46359ff46978c31d27931399b4ee1a",
+        "runtimeSha256": "56b65cdaba916795e248f1a431b5b14b0d4fd2216de0df4ed69dfcff1fbee4cf",
+        "reviewedActualFinalQ72": true,
+        "noBlankOrCorruptAreas": true,
+        "acceptableCharacterAndLineReadability": true
+      },
+      "export": {
+        "tool": "cwebp",
+        "quality": 72,
+        "method": 6,
+        "metadata": "none",
+        "resized": false,
+        "cropped": false,
+        "creativePostprocessing": false,
+        "rawReencodeLog": {
+          "path": "design/d/v07-chapter3/verification/encoder-logs/ending-embers-v1.stderr.log.gz",
+          "bytes": 380,
+          "sha256": "f11a8936a4592b1e2e362b16ff3fcbea125ce84748284b7a6549b3e7e1ff73a2",
+          "uncompressedBytes": 664,
+          "uncompressedSha256": "61960623e8e1062439a10f7acda4e4c643607a833e5df1f08a0a952e3741bea1",
+          "command": [
+            "cwebp",
+            "-q",
+            "72",
+            "-m",
+            "6",
+            "-metadata",
+            "none",
+            "design/d/v07-chapter3/originals/ending-embers-v1.png",
+            "-o",
+            "-"
+          ]
+        }
+      }
+    }
+  ],
+  "visualObservations": {
+    "relayCommonCameraGeographyAndCharacterGroundPositions": true,
+    "relayOneShelterLanternLitApproachLanternDark": true,
+    "relayCompleteBothExistingLanternsLitLocalOnwardPathVisible": true,
+    "relayQuantityAndActualWeaponsNotBaked": true,
+    "generatedEditNotPixelIdenticalMask": true,
+    "localLastLanternDistinctFromVictoryPanorama": true,
+    "homewardAllowsFinalBladeAlreadyMade": true,
+    "embersNeutralForAnyChapterAndEarnedWorksNotDestroyed": true,
+    "noBakedTextUIOrFixedBladeData": true,
+    "victoryShowsConnectedNetworkNotDailyCompletionCounter": true,
+    "paintedLampCountNotUsedOrVerifiedAsBusinessProgress": true,
+    "fullContainRequiredToPreserveFiguresAndLanterns": true,
+    "nativeSizeException": "last-lantern-delivered-v1 is 1673x940; eight others 1672x941; no source or runtime crop/resize"
+  },
+  "scope": "Art provenance, format, opacity, visual review and exact transcoding only; not actual UI business acceptance"
+}
