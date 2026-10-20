@@ -9,8 +9,8 @@
       "sha256": "b6a6d18795747ae57dcaad5fde086e388e04ddb0c07e0560ea1e393134b33aaf"
     },
     "docs/reviews/R3-16-purpose-and-directed-review.md": {
-      "bytes": 9401,
-      "sha256": "ce51a88aa4a55fef3623009ce534c68d4ab93e7a9a9f4b88afef9d244476a652"
+      "bytes": 9845,
+      "sha256": "6f0b881728457010bdc193b4d20505d4fe86cbf65f46709b39e8c8487184d3e9"
     },
     "docs/reviews/R4-final-audit.md": {
       "bytes": 17465,
@@ -140,28 +140,28 @@
       "bytes": 308,
       "sha256": "efeff583dc39d034608ca036dbef416a20f8f43913f547cf5a5c6c28e8530132"
     },
-    "docs/evidence/T11-4-2-3f/typecheck-output.txt": {
-      "bytes": 104,
-      "sha256": "8de39632936045451d147e420094a4205184734a15622ebbae7648332e748cfb"
-    },
     "docs/evidence/T11-4-2-3f/unit-release.json": {
       "bytes": 90450,
       "sha256": "fc83e1ec1b1cfadf0867159ce6b2a79ceaaf6d06c1460f37c36dae3f8d298edd"
     },
     "docs/evidence/T11-4-2-3f/verification.json": {
-      "bytes": 2191,
-      "sha256": "48baa0e6c090818092659b9c786f523abb189d4c3a9580da8f38533a39387889"
+      "bytes": 2857,
+      "sha256": "3eb580e4cf4d0c35e8707744c687fb1ba34de0820de2b22e08cf444bbaec4129"
     },
     "docs/evidence/T11-4-2-3f/visual-economy-example.json": {
       "bytes": 7040,
       "sha256": "1c410e8551d1d40db159ca36b672d675b7f864a89248e10ef653fb09e07a9082"
+    },
+    "docs/evidence/T11-4-2-3f/typecheck-output.txt.gz": {
+      "bytes": 95,
+      "sha256": "486578d9b426505476b93146f2653f72e68416bbdc6e5e082b3d0e93fa365f97"
     }
   },
-  "payloadBytes": 3442020,
+  "payloadBytes": 3443121,
   "payloadFiles": 39,
   "markdownFiles": 13,
   "localLinks": 116,
-  "decodedArchives": 1,
+  "decodedArchives": 2,
   "credentialFindings": 0,
   "inputSha256": "b961f5c651df51121659687138cfe5edf125e25dadda11642136dfc6aaca852b",
   "scope": "One D layout reference, typed read-only notebook and existing-rule evidence; actual scene integration remains T3g"
