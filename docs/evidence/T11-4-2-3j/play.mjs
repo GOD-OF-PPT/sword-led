@@ -1,0 +1,56 @@
+import {chromium,expect} from '@playwright/test';
+import assert from 'node:assert/strict';
+import {mkdir,readFile,writeFile} from 'node:fs/promises';
+import * as sdk from '../../dist/sword-led-v4.js';
+const out=process.argv[2]??'tmp/T11-4-2-3j/play-01',url=process.argv[3]??'http://127.0.0.1:4205';
+const layoutOnly=process.argv.includes('--layout');
+await mkdir(out,{recursive:false});
+const browser=await chromium.launch(),context=await browser.newContext({viewport:{width:1280,height:720},deviceScaleFactor:1}),page=await context.newPage(),errors=[],observations=[];
+page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+async function read(){const raw=await page.evaluate(()=>localStorage.getItem('sword-led.save.v4'));assert(raw);const value=sdk.validateRun(JSON.parse(raw).state);assert(value.ok,value.detail);return value.state;}
+async function shot(name){await page.screenshot({path:`${out}/${name}.png`});}
+async function record(name){const s=await read();observations.push({name,state:s});await writeFile(`${out}/states.json`,JSON.stringify(observations,null,2));return s;}
+async function confirm(){await page.locator('#v4-dialog-actions').getByRole('button',{name:'确认',exact:true}).click();}
+async function drag(piece,target,{cancel=false,picture=null,keys=false}={}){const source=page.locator(`#v4-inventory button[data-piece="${piece}"]`),sb=await source.boundingBox(),tb=await page.locator(target).boundingBox();assert(sb&&tb);await page.mouse.move(sb.x+sb.width/2,sb.y+sb.height/2);await page.mouse.down();await page.mouse.move(tb.x+tb.width/2,tb.y+tb.height/2,{steps:14});await expect(page.locator('.v4-handoff-ghost')).toBeVisible();if(picture)await shot(picture);if(keys){await page.keyboard.press('Enter');await page.keyboard.press('Space');}if(cancel)await page.keyboard.press('Escape');await page.mouse.up();await expect(page.locator('.v4-handoff-ghost')).toHaveCount(0);}
+async function choose(id){const piece=page.locator(`#v4-inventory button[data-piece="${id}"]`);if(await piece.count()&&await piece.getAttribute('aria-pressed')!=='true')await piece.click();}
+async function command(action,{drop=false,unselected=false}={}){const before=await read(),expected=sdk.applyCommand(before,{runId:before.runId,expectedRevision:before.revision,action});assert(expected.ok,`${action.type}:${expected.error}`);if(action.pieceId&&action.type!=='chooseEvent'&&!unselected)await choose(action.pieceId);
+switch(action.type){
+case'continue':await page.getByRole('button',{name:'点火开炉',exact:true}).click();break;
+case'strike':await expect(page.locator('#v4-strike')).toHaveAttribute('aria-busy','false');await page.locator('#v4-hit').click({position:{x:250,y:170}});await expect(page.locator('#v4-strike')).toHaveAttribute('aria-busy','false');break;
+case'deliver':if(drop)await drag(action.pieceId,'.v4-objective',{keys:true,picture:'handoff-1280'});else await page.locator('#v4-deliver').click();break;
+case'reserve':if(drop)await drag(action.pieceId,'#v4-reserve-zone');else await page.locator(before.reserveId===action.pieceId?'#v4-reserve-slot button':'#v4-reserve').click();if(before.reserveId&&before.reserveId!==action.pieceId)await confirm();break;
+case'settle':await page.locator('#v4-settle').click();await confirm();break;
+case'advance':await page.getByRole('button',{name:'沿灯路，去下一天',exact:true}).click();break;
+case'claimGift':await page.locator('#v4-gift button').click();await page.getByRole('button',{name:'学会'+sdk.TRAITS[action.traitId].name,exact:true}).click();break;
+case'upgrade':await page.locator('#v4-shop').click();await shot('merchant-1280');await page.getByRole('button',{name:'准备更好的铁料',exact:true}).click();await confirm();break;
+case'buy':await page.locator('#v4-shop').click();await page.locator('#v4-dialog-body article').filter({has:page.getByRole('heading',{name:sdk.TRAITS[action.traitId].name,exact:true})}).getByRole('button').click();await confirm();break;
+case'chooseEvent':await page.locator('#v4-event-open').click();await page.locator(`#v4-dialog-body [data-event-piece="${action.pieceId}"] button`).click();await confirm();break;
+case'chooseModification':await page.getByRole('button',{name:'装上'+sdk.MODIFICATIONS[action.modification].name,exact:true}).click();break;
+default:throw Error('Unhandled '+action.type);
+}
+await expect.poll(async()=>(await read()).revision).toBe(expected.state.revision);assert.deepEqual(await read(),expected.state);return expected.state;}
+try{
+await page.goto(url);await expect(page.locator('#v4-start')).toBeEnabled();await page.locator('.v4-journey-options summary').click();await page.locator('#v4-seed').fill('lantern-witness-0');await page.locator('#v4-start').click();await expect(page.locator('#v4-stage-title')).toContainText('第一章');
+const witness=JSON.parse(await readFile('docs/evidence/T11-4-2-3i1/witness-fixed/complete.json','utf8')),actions=witness.journal.slice(0,layoutOnly?5:63);
+await command(actions[0]);await record('fresh-open');await shot('forge-1280');await page.setViewportSize({width:1920,height:1080});await shot('forge-1920');await page.setViewportSize({width:1280,height:720});
+const before=await read();await drag('d1-1','.v4-objective',{picture:'blocked-handoff-1280'});assert.deepEqual(await read(),before);await expect(page.locator('#v4-notice-title')).toHaveText('再看一眼纸单');await page.locator('#v4-notice-dismiss').click();
+await drag('d1-1','#v4-reserve-zone',{cancel:true});assert.deepEqual(await read(),before);assert.equal(await page.locator('#v4-dialog').evaluate(e=>e.open),false);
+for(let i=1;i<actions.length;i++){
+ if(i===4)await choose('d1-2');
+ await command(actions[i],{drop:i===4||actions[i].type==='reserve',unselected:i===4});
+ if(i===4){await expect(page.locator('#v4-workshop')).toBeVisible();await expect(page.locator('#v4-inline-delivery')).toBeVisible();await record('drag-unselected-delivered-stays-at-forge');await shot('receipt-1280');await page.setViewportSize({width:1920,height:1080});await shot('receipt-1920');await page.setViewportSize({width:1280,height:720});await page.locator('#v4-inline-review').click();await expect(page.locator('#v4-dialog-title')).toContainText('第一门手艺');await page.getByRole('button',{name:'稍后再领',exact:true}).click();
+ await command({type:'reserve',pieceId:'d1-2'},{drop:true});const reserved=await read();await drag('d1-3','#v4-reserve-zone');await expect(page.locator('#v4-dialog-title')).toHaveText('换一柄留剑？');assert.deepEqual(await read(),reserved);await shot('rack-swap-confirm-1280');await page.getByRole('button',{name:'再想想',exact:true}).click();assert.deepEqual(await read(),reserved);await command({type:'reserve',pieceId:'d1-3'},{drop:true});await command({type:'reserve',pieceId:'d1-3'});await record('rack-swap-and-retrieve');}
+ if(i===30){await page.locator('#v4-next-plan').click();await shot('tomorrow-1280');await page.getByRole('button',{name:'回炉边，自己拿主意',exact:true}).click();}
+ if(i===57){await record('real-rack-reserve');await page.locator('#v4-next-plan').click();await shot('reserved-tomorrow-1280');await page.getByRole('button',{name:'回炉边，自己拿主意',exact:true}).click();}
+ if(i===38){await shot('ready-burst-1280');}
+ if(i===39){await shot('burst-result-1280');}
+}
+await record(layoutOnly?'final-layout-after-first-delivery':'chapter-one-complete');await shot(layoutOnly?'after-first-delivery-1280':'chapter-end-1280');
+// A historical, validated journal prefix checks the changed partial-receipt view; this is not another whole-game playthrough.
+const partialFile='docs/evidence/T11-4-2-3i5/objects/final-journeys/final/v4-chromium/a07af96de166431eb13c-33e0447b67517d6a3069/mixed-return-relay-one-real-new-sword.json',partial=JSON.parse(await readFile(partialFile,'utf8'));assert(sdk.validateRun(partial).ok);
+const created=sdk.createRun({runId:partial.runId,seed:partial.seed,mode:partial.mode,eligibility:partial.initialEligibility});assert(created.ok);let prefix=created.state;for(const action of partial.journal.slice(0,-1)){const r=sdk.applyCommand(prefix,{runId:prefix.runId,expectedRevision:prefix.revision,action});assert(r.ok);prefix=r.state;}assert.equal(prefix.day,11);assert(sdk.validateRun(prefix).ok);
+const values=new Map(),repository=sdk.createV4SaveRepository(()=>({getItem:key=>values.get(key)??null,setItem:(key,value)=>values.set(key,value),removeItem:key=>values.delete(key)}));repository.load();assert(repository.write(prefix).ok);
+const lateContext=await browser.newContext({viewport:{width:1280,height:720}});await lateContext.addInitScript(raw=>localStorage.setItem('sword-led.save.v4',raw),values.get('sword-led.save.v4'));const late=await lateContext.newPage();late.on('pageerror',e=>errors.push(e.message));await late.goto(url);await expect(late.locator('#v4-continue')).toBeEnabled();await late.locator('#v4-continue').click();const delivery=partial.journal.at(-1);await late.locator(`#v4-inventory button[data-piece="${delivery.pieceId}"]`).click();await late.locator('#v4-deliver').click();await expect(late.locator('#v4-goal-progress')).toContainText('1/2');await expect(late.locator('#v4-inline-delivery')).toBeHidden();await expect(late.locator('#v4-notice-title')).toHaveText('先送到了一柄');const lateState=JSON.parse(await late.evaluate(()=>localStorage.getItem('sword-led.save.v4'))).state;assert.deepEqual(lateState,partial);observations.push({name:'restored-late-prefix-one-real-delivery',state:lateState});await writeFile(`${out}/states.json`,JSON.stringify(observations,null,2));await late.screenshot({path:`${out}/partial-relay-1280.png`});await late.setViewportSize({width:1920,height:1080});await late.screenshot({path:`${out}/partial-relay-1920.png`});await lateContext.close();
+assert.equal(errors.length,0,errors.join('\n'));await writeFile(`${out}/result.json`,JSON.stringify({ok:true,url,browser:'isolated Chromium',scope:'one chapter and direct handoff smoke, not a compatibility matrix',chapterActions:actions.length,extraReserveActions:3,latePartial:{source:partialFile,method:'validated historical journal prefix plus one real UI delivery, not a twelve-day playthrough'},observations:observations.length,errors},null,2));
+console.log(JSON.stringify({ok:true,out,chapterActions:actions.length,extraReserveActions:3,observations:observations.length}));
+}catch(error){await shot('failure');await writeFile(`${out}/failure.json`,JSON.stringify({message:String(error),stack:error.stack,errors},null,2));throw error;}finally{await browser.close();}

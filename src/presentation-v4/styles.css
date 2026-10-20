@@ -314,3 +314,197 @@ canvas.v4-card-art { height: 105px; }
 [data-screen=stage] .v4-save-banner { top: auto; bottom: 16px; left: 6%; right: auto; width: min(500px, 40vw); }
 .v4-traits button[data-triggered=true] { box-shadow: 0 0 17px #f3c26088, inset 0 0 18px #dfab5644; border-bottom: 2px solid #f2c478; }
 .v4-traits button > small { display: block; color: #fff1c7; margin-top: 3px; }
+
+/* The working bench: a weapon between its owner, the waiting rack and the forge. */
+.v4-workshop {
+  --bench-edge: 26px;
+  --bench-customer: 246px;
+  background-position: center 48%;
+}
+.v4-workshop::before {
+  background: linear-gradient(180deg, #08171a84, transparent 28%, transparent 64%, #061417d9), radial-gradient(ellipse at 49% 54%, transparent 32%, #07171a61);
+}
+.v4-bench-mark { position: absolute; top: 22px; left: 28px; color: #edce93; text-shadow: 0 3px 8px #020b0e; pointer-events: none; }
+.v4-bench-mark strong { display: block; font: 700 35px/1.2 var(--v4-display); letter-spacing: 3px; }
+.v4-bench-mark span { display: block; margin: 6px 0 0 4px; font: 12px/1.4 var(--v4-display); color: #d4b988; letter-spacing: 7px; }
+.v4-workshop .v4-purse { top: 25px; left: 230px; right: auto; gap: 21px; padding: 3px 0 9px; border: 0; background: none; text-shadow: 0 2px 5px #000; }
+.v4-workshop .v4-resource { gap: 8px; }
+.v4-workshop .v4-resource > span { font-size: 13px; color: #d4bea0; }
+.v4-workshop .v4-resource strong { font-size: 23px; }
+.v4-app[data-screen=workshop] .v4-tools { top: 22px; right: 25px; gap: 4px; }
+.v4-app[data-screen=workshop] .v4-tools button { min-width: 44px; padding: 8px 10px; border-color: #b699604a; background: #10232ad6; box-shadow: 0 3px 9px #020b0d47; font-size: 13px; color: #e4d0ab; }
+
+.v4-workshop .v4-rack { left: 24px; top: 17%; bottom: 15%; width: 186px; padding: 0 12px; }
+.v4-workshop .v4-rack::before, .v4-workshop .v4-rack::after { top: 37px; bottom: 24px; width: 12px; border-color: #9d764949; background: repeating-linear-gradient(88deg, #382a20, #6b4e31 3px, #382d23 5px, #51402a 8px); box-shadow: 2px 3px 7px #0009; }
+.v4-workshop .v4-rack::before { left: -2px; transform: rotate(-1deg); }
+.v4-workshop .v4-rack::after { right: -2px; transform: rotate(1deg); }
+.v4-workshop .v4-rack h2 { display: inline-block; padding: 5px 12px 7px; border-top: 1px solid #a37e4c; color: #f0d29a; background: linear-gradient(90deg, transparent, #3b2d20d9 12%, #3b2d20e8 88%, transparent); font-size: 20px; letter-spacing: 4px; }
+.v4-workshop .v4-rack-hint { margin-top: 3px; color: #cbb994; font-size: 12px; line-height: 18px; white-space: nowrap; text-shadow: 0 2px 4px #041014; }
+.v4-workshop .v4-inventory { gap: 7px; margin-top: 10px; }
+.v4-workshop .v4-inventory > button { position: relative; min-height: 58px; padding: 3px 4px 7px; border: 1px solid transparent; border-radius: 0; background: linear-gradient(0deg, #0c1d23d9, #11272b0d 85%); box-shadow: none; color: #f0ddba; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-variant-numeric: tabular-nums; }
+.v4-workshop .v4-inventory > button::after { content: ""; position: absolute; z-index: -1; height: 8px; bottom: 21px; left: -12px; right: -12px; border-top: 1px solid #ba925d7a; background: linear-gradient(#7b5b37, #362a20 65%); box-shadow: 0 6px 5px #02080b88; transform: skewX(-4deg); pointer-events: none; }
+.v4-workshop .v4-inventory > button:hover:enabled { border-color: #b6945959; background: radial-gradient(ellipse at 50% 60%, #c58b3838, #11272b1c 80%); }
+.v4-workshop .v4-inventory > button[aria-pressed=true] { border-color: #d9ab5b; background: radial-gradient(ellipse at 50% 48%, #b7813e38, #10242be8 90%); box-shadow: inset 3px 0 #f1c778, 0 0 16px #df9b2926; }
+.v4-workshop .v4-inventory canvas { height: 32px; transform: rotate(-3deg); }
+.v4-workshop .v4-kept-sword { position: relative; margin-top: 13px; padding: 9px 6px 4px; border: 1px dashed #b7a26e72; border-radius: 32% 3% 3% 3% / 8% 3% 3% 3%; background: linear-gradient(180deg, #0d2429b8, #17282a26); }
+.v4-workshop .v4-kept-sword h3 { color: #e6d5ae; font: 15px/1.4 var(--v4-display); letter-spacing: 1px; }
+.v4-workshop #v4-reserve-slot { min-height: 22px; margin-top: 5px; color: #d2c1a0; font-size: 12px; line-height: 1.5; }
+.v4-workshop #v4-reserve-slot > button { min-height: 52px; padding: 3px; border: 0; color: #f0d7a2; background: linear-gradient(0deg, #213a34b8, transparent); box-shadow: inset 0 -3px #94754366; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.v4-workshop #v4-reserve-slot canvas { height: 26px; }
+.v4-workshop .v4-next-plan { min-height: 44px; width: 100%; padding: 7px 4px 5px; color: #d5dfbb; font: 14px/1.4 var(--v4-display); border: 0; border-top: 1px solid #a3aa7452; background: none; box-shadow: none; }
+.v4-workshop .v4-next-plan::after { content: " ›"; color: #e3bb70; }
+.v4-workshop .v4-rack-actions { margin-top: 8px; gap: 4px; }
+.v4-workshop #v4-reserve { min-height: 44px; color: #dfdec1; border-color: #a0a77a8c; background: linear-gradient(110deg, #263b30ee, #142a29eb); font: 15px var(--v4-display); }
+.v4-workshop #v4-recipes > button { border-color: transparent; border-bottom-color: #ad956154; border-radius: 0; background: #10232980; font: 12px/1.3 var(--v4-display); }
+.v4-workshop #v4-recipes > button[aria-pressed=true] { border-color: #c6a25f99; color: #fff0c5; background: #675033bc; }
+
+.v4-workshop .v4-forge-plan { position: absolute; z-index: 6; left: 27%; right: 25%; top: 10.5%; padding: 8px 16px 12px; border-left: 2px solid #ba8e46; color: #ead5a8; background: linear-gradient(90deg, #10232ce3, #10232b88 80%, transparent); pointer-events: none; text-shadow: 0 2px 3px #051016; }
+.v4-forge-plan > strong { display: block; color: #efc67e; font: 19px/1.4 var(--v4-display); }
+.v4-forge-plan > p { margin-top: 4px; font-size: 13px; line-height: 1.6; }
+.v4-workshop .v4-forge-plan[data-tone=safe] { border-left-color: #9ec4a8; box-shadow: inset 7px 0 17px -10px #a5d8a4; }
+.v4-workshop .v4-forge-plan[data-tone=safe] > strong { color: #d6e3b6; }
+.v4-workshop .v4-forge-plan[data-tone=ready] { border-left-color: #ffd08a; box-shadow: inset 8px 0 19px -9px #efbb65; }
+.v4-workshop .v4-forge-plan[data-tone=ready] > strong { color: #ffe4a8; }
+.v4-workshop .v4-forge-plan[data-tone=danger] { border-left-color: #dd8d62; box-shadow: inset 8px 0 18px -9px #d2784d; }
+.v4-workshop .v4-forge-plan[data-tone=danger] > strong { color: #ffd0a6; }
+.v4-workshop .v4-blade-reading { left: 29%; bottom: 3.2%; width: 46%; min-height: 125px; padding: 8px 138px 9px 15px; background: linear-gradient(90deg, #0a2028bf, #0a1f2630 85%, transparent); }
+.v4-workshop .v4-value-line { gap: 10px; flex-wrap: wrap; }
+.v4-workshop #v4-value { color: #ffe4a4; font-size: 37px; }
+.v4-workshop #v4-condition { font-size: 12px; }
+.v4-workshop #v4-craft-record { margin-top: 1px; color: #e3d3b5; font-size: 12px; line-height: 1.5; }
+.v4-workshop .v4-next-hit { gap: 2px 12px; padding-right: 0; margin-top: 4px; font-size: 12px; line-height: 1.55; }
+.v4-workshop #v4-risk { color: #f5d5aa; }
+.v4-workshop #v4-charge { color: #d2c18e; }
+.v4-workshop #v4-charge i { display: none; }
+.v4-workshop .v4-strike-button { right: 0; bottom: 20px; min-height: 62px; width: 122px; padding: 8px; border-radius: 3px; font-size: 23px; background: linear-gradient(130deg, #704226ef, #352c21f7); border-color: #d2aa67; }
+.v4-ember-meter { display: flex; align-items: center; gap: 9px; width: max-content; margin-top: 7px; padding: 5px 12px 5px 7px; border-bottom: 3px solid #4d3826; background: linear-gradient(#081b2166, #3e3021a6); box-shadow: 0 5px 8px #020b0c70; }
+.v4-ember-meter > i { display: block; position: relative; width: 17px; height: 17px; border: 1px solid #8a745547; border-radius: 4px 7px 3px 6px; background: linear-gradient(130deg, #4c4d3e, #202c2b); box-shadow: inset 0 2px 3px #0007; transform: rotate(-9deg); }
+.v4-ember-meter > i:nth-child(even) { transform: rotate(12deg); }
+.v4-ember-meter > i[data-lit=true] { border-color: #f4b259; background: radial-gradient(ellipse at 45% 25%, #ffe4a7 7%, #e99a3d 45%, #9c3c19); box-shadow: 0 0 10px #e78d3a8c, inset 0 -2px #6d281b; }
+.v4-ember-meter[data-ready=true] { border-bottom-color: #e0a052; box-shadow: 0 3px 19px #d976333d; animation: v4-ember-breathe 2.4s ease-in-out infinite alternate; }
+.v4-ember-meter[data-ready=true] > i { background: radial-gradient(ellipse at 50% 35%, #fff6cd, #ffc473 48%, #c15d20); box-shadow: 0 0 14px #ffbd556e; }
+@keyframes v4-ember-breathe { from { box-shadow: 0 3px 12px #d976332d; } to { box-shadow: 0 3px 23px #e2a34d63; } }
+.v4-workshop:has(#v4-scene[data-reduced=true]) .v4-ember-meter[data-ready=true] { animation: none; }
+
+.v4-workshop .v4-customer { right: var(--bench-edge); top: 13.2%; bottom: 14%; width: var(--bench-customer); gap: 0; align-items: stretch; }
+.v4-workshop .v4-person-target { flex: 0 0 145px; min-height: 145px; width: 100%; }
+.v4-workshop .v4-customer-figure { inset: -8px 0 27px; }
+.v4-workshop .v4-customer-sprite { height: 122%; filter: drop-shadow(0 7px 7px #051318b3); }
+.v4-workshop .v4-customer-nameplate { left: 18%; right: 18%; bottom: 2px; padding: 4px 7px 5px; border: 0; background: radial-gradient(ellipse, #112a2ae8, #132a2c4d 70%, transparent 90%); }
+.v4-workshop .v4-customer-nameplate b { font-size: 21px; line-height: 1.2; }
+.v4-workshop .v4-customer-nameplate small { color: #d6c8a7; font-size: 12px; margin-top: 4px; }
+.v4-workshop .v4-objective { position: relative; top: auto; left: auto; width: 100%; padding: 13px 14px 12px; color: #37281b; border: 1px solid #96764c; border-top: 3px solid #8c6239; border-radius: 1px 1px 10% 1% / 1px 1px 3% 1%; background: linear-gradient(110deg, #e2c38e, #f0dab2 40%, #d9b783); box-shadow: 0 7px 14px #020b0d73, inset 0 0 0 3px #b38c5329; text-shadow: none; }
+.v4-workshop .v4-objective::before { content: ""; position: absolute; top: -7px; left: 24px; right: 24px; height: 5px; background: repeating-linear-gradient(90deg, #a4824f, #4c3620 4px, #926839 7px, #c39a65 10px); box-shadow: 0 2px 2px #0008; }
+.v4-workshop .v4-objective .v4-eyebrow { color: #78522e; font: 12px/1.5 var(--v4-display); letter-spacing: 1px; }
+.v4-workshop .v4-objective h1 { margin-top: 3px; color: #36251b; font-size: 23px; line-height: 1.3; }
+.v4-workshop #v4-goal-condition { margin-top: 7px; color: #4a3422; font-size: 13px; line-height: 1.55; }
+.v4-workshop .v4-goal-progress { margin-top: 8px; padding-top: 6px; border-top: 1px solid #8b66384d; color: #385642; font-size: 13px; font-weight: 700; }
+.v4-workshop .v4-customer-wish { position: absolute; width: 1px; height: 1px; min-height: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.v4-workshop .v4-deliver-button { width: 100%; min-height: 54px; margin-top: 12px; font-size: 24px; border-radius: 1px; }
+.v4-workshop .v4-visiting-actions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 6px; width: 100%; padding-top: 8px; }
+.v4-workshop .v4-visiting-actions button { min-height: 44px; padding: 7px 6px; color: #e0ceaa; font: 13px/1.4 var(--v4-display); border-color: #b08e5559; background: #142b2edb; box-shadow: 0 4px 8px #04101452; }
+.v4-workshop .v4-visiting-actions:has(#v4-event-open[hidden]) #v4-shop, .v4-workshop .v4-visiting-actions:has(#v4-shop[hidden]) #v4-event-open { grid-column: 1/-1; }
+.v4-workshop .v4-shop-help { margin-top: 6px; color: #decca6; font: 12px/1.55 var(--v4-display); text-shadow: 0 2px 4px #041015; }
+.v4-shop-help:empty, .v4-customer:has(#v4-shop[hidden]) .v4-shop-help { display: none; }
+.v4-inline-delivery { position: absolute; z-index: 9; top: 148px; left: -5px; right: -5px; padding: 16px 40px 13px 15px; color: #3c2b1c; background: linear-gradient(110deg, #e6c994, #f2dfb5 45%, #d4b47f); border: 1px solid #9c7846; border-top: 3px solid #6c804e; box-shadow: 0 9px 19px #020d127a; }
+.v4-inline-delivery::before { content: "收讫"; position: absolute; top: -16px; left: 15px; padding: 2px 6px; color: #e7d2a1; background: #6a4430; border: 1px solid #b78f57; font: 12px/1.5 var(--v4-display); transform: rotate(-5deg); }
+#v4-inline-image { float: left; width: 90px; height: 58px; margin: 1px 9px 7px 0; border: 1px solid #95734466; object-fit: cover; }
+#v4-inline-title { color: #3d2a1a; font-size: 21px; line-height: 1.3; }
+#v4-inline-copy { margin-top: 7px; color: #533b25; font-size: 12px; line-height: 1.7; }
+#v4-inline-review { clear: both; display: block; width: 100%; min-height: 44px; margin-top: 10px; padding: 7px 5px; color: #3d4e34; border-color: #7885529c; background: #f3e2b14d; box-shadow: none; font: 15px/1.4 var(--v4-display); }
+#v4-inline-dismiss { color: #755438; top: 4px; right: 1px; }
+.v4-workshop .v4-travel-props { left: 23px; bottom: 19px; width: 285px; gap: 8px; }
+.v4-workshop .v4-traits button { min-height: 61px; width: 59px; color: #ddcda9; background: radial-gradient(ellipse at 50% 90%, #563b2347, transparent 82%); }
+.v4-workshop .v4-traits canvas, .v4-workshop .v4-traits .v3-trait-art { width: 42px; height: 42px; }
+.v4-workshop .v4-travel-props .v4-gift { flex: 0 0 88px; width: 88px; }
+.v4-workshop .v4-gift > button { min-height: 61px; border-color: #a9854b8f; background: linear-gradient(120deg, #6b4c2bbd, #192f2cc4); }
+.v4-workshop .v4-furnishings { left: 21%; bottom: 24%; }
+.v4-workshop .v4-ground-action { left: 240px; bottom: 103px; min-height: 44px; padding: 8px 10px; font-size: 12px; border-color: #8e8a686e; background: #152725c9; }
+.v4-workshop .v4-settle-button { right: var(--bench-edge); bottom: 20px; width: var(--bench-customer); min-width: 0; min-height: 61px; padding: 9px 13px; font-size: 22px; }
+.v4-workshop[data-main-complete=true] .v4-objective::after { content: "已履约"; position: absolute; bottom: 9px; right: 11px; padding: 2px 5px; color: #8e3d25; border: 2px solid #a052335c; font: 13px/1.3 var(--v4-display); transform: rotate(-8deg); }
+.v4-workshop[data-main-complete=true] .v4-customer-figure[data-pose=receiving] .v4-customer-sprite { transform: translateX(-50%) translateY(-3px); filter: drop-shadow(0 0 13px #f0b15440) drop-shadow(0 7px 7px #051318b3); }
+.v4-workshop[data-main-complete=true] .v4-next-plan { color: #ffe1a2; border-top-color: #d3ae58a6; background: linear-gradient(90deg, transparent, #95713f33, transparent); }
+.v4-workshop[data-main-complete=true] .v4-settle-button { color: #342619; background: linear-gradient(115deg, #efd291, #cf9e56); border-color: #ebc37a; box-shadow: inset 0 0 0 3px #68452729, 0 0 23px #d5a33f2b; }
+.v4-app[data-screen=workshop] .v4-notice { left: 228px; right: auto; top: 23%; width: 280px; max-height: 170px; padding: 12px 36px 12px 12px; gap: 8px; transform: none; border-color: #c3a36b; border-radius: 9% 2% 2% 2% / 4% 2% 2% 2%; background: linear-gradient(120deg, #1c3538f7, #10262dfc); box-shadow: 0 9px 24px #0008; }
+.v4-app[data-screen=workshop] .v4-notice-mark { flex-basis: 7px; height: 20px; }
+.v4-app[data-screen=workshop] .v4-notice-content { display: flex; flex-direction: column; min-height: 0; }
+.v4-app[data-screen=workshop] .v4-notice h2 { font-size: 17px; }
+.v4-app[data-screen=workshop] .v4-notice p { overflow: auto; min-height: 0; font-size: 12px; line-height: 1.6; }
+.v4-app[data-screen=workshop] .v4-notice-content button { flex-shrink: 0; width: 100%; margin-top: 8px; }
+
+[data-handoff-target][data-handoff-state=allowed] { outline: 2px solid #f4cb7b; outline-offset: 7px; filter: drop-shadow(0 0 14px #edbd664a); }
+[data-handoff-target][data-handoff-state=blocked] { outline: 2px dashed #be7653; outline-offset: 5px; }
+.v4-handoff-dragging #v4-inventory button, .v4-handoff-dragging #v4-reserve-slot button { cursor: grabbing; }
+.v4-handoff-ghost { position: fixed; z-index: 10000; width: 188px; min-height: 72px; padding: 5px 10px; color: #ffe8b7; border: 1px solid #d6b16e; background: linear-gradient(120deg, #2d3e35ed, #10272afa); box-shadow: 0 16px 22px #0009, 0 0 13px #f8c1643b; transform: rotate(-5deg); pointer-events: none; }
+.v4-handoff-ghost canvas { display: block; width: 100%; height: 42px; }
+
+@media (min-width:1600px) {
+  .v4-workshop { --bench-edge: 48px; --bench-customer: 300px; }
+  .v4-bench-mark { left: 44px; top: 35px; }
+  .v4-bench-mark strong { font-size: 43px; }
+  .v4-workshop .v4-purse { left: 295px; top: 39px; }
+  .v4-workshop .v4-resource strong { font-size: 26px; }
+  .v4-app[data-screen=workshop] .v4-tools { top: 36px; right: 45px; gap: 7px; }
+  .v4-workshop .v4-rack { left: 45px; top: 20%; width: 218px; bottom: 16%; }
+  .v4-workshop .v4-rack h2 { font-size: 25px; }
+  .v4-workshop .v4-inventory { gap: 13px; margin-top: 18px; }
+  .v4-workshop .v4-inventory > button { min-height: 86px; font-size: 15px; }
+  .v4-workshop .v4-inventory canvas { height: 57px; }
+  .v4-workshop .v4-kept-sword { margin-top: 22px; padding: 13px 9px 5px; }
+  .v4-workshop .v4-kept-sword h3 { font-size: 18px; }
+  .v4-workshop #v4-reserve-slot > button { min-height: 80px; font-size: 14px; }
+  .v4-workshop #v4-reserve-slot canvas { height: 47px; }
+  .v4-workshop .v4-next-plan { font-size: 16px; }
+  .v4-workshop .v4-rack-actions { margin-top: 15px; gap: 7px; }
+  .v4-workshop .v4-forge-plan { top: 11%; left: 29%; right: 25%; padding: 12px 20px 15px; }
+  .v4-forge-plan > strong { font-size: 25px; }
+  .v4-forge-plan > p { margin-top: 6px; font-size: 16px; }
+  .v4-workshop .v4-person-target { flex-basis: 215px; min-height: 215px; }
+  .v4-workshop .v4-customer-figure { inset: -20px 0 33px; }
+  .v4-workshop .v4-customer-nameplate b { font-size: 26px; }
+  .v4-workshop .v4-objective { padding: 18px 19px 17px; }
+  .v4-workshop .v4-objective h1 { font-size: 29px; }
+  .v4-workshop .v4-objective .v4-eyebrow { font-size: 14px; }
+  .v4-workshop #v4-goal-condition { font-size: 15px; }
+  .v4-workshop .v4-goal-progress { font-size: 15px; }
+  .v4-workshop .v4-deliver-button { min-height: 65px; font-size: 28px; margin-top: 17px; }
+  .v4-workshop .v4-visiting-actions button { min-height: 49px; font-size: 16px; }
+  .v4-workshop .v4-shop-help { font-size: 14px; }
+  .v4-inline-delivery { top: 220px; padding: 20px 47px 17px 19px; }
+  #v4-inline-image { width: 110px; height: 72px; }
+  #v4-inline-title { font-size: 25px; }
+  #v4-inline-copy { font-size: 14px; }
+  .v4-workshop .v4-blade-reading { left: 31%; bottom: 5%; width: 43%; min-height: 158px; padding-right: 165px; }
+  .v4-workshop #v4-value { font-size: 49px; }
+  .v4-workshop #v4-condition, .v4-workshop #v4-craft-record, .v4-workshop .v4-next-hit { font-size: 14px; }
+  .v4-workshop .v4-strike-button { width: 145px; min-height: 72px; bottom: 26px; font-size: 28px; }
+  .v4-ember-meter { gap: 13px; margin-top: 10px; }
+  .v4-ember-meter > i { width: 22px; height: 22px; }
+  .v4-workshop .v4-travel-props { left: 49px; bottom: 35px; width: 330px; }
+  .v4-workshop .v4-traits button { width: 72px; min-height: 75px; font-size: 14px; }
+  .v4-workshop .v4-traits canvas, .v4-workshop .v4-traits .v3-trait-art { width: 54px; height: 54px; }
+  .v4-workshop .v4-travel-props .v4-gift { flex-basis: 98px; width: 98px; }
+  .v4-workshop .v4-gift > button { min-height: 75px; font-size: 13px; }
+  .v4-workshop .v4-ground-action { left: 292px; bottom: 145px; }
+  .v4-workshop .v4-settle-button { bottom: 36px; min-height: 76px; font-size: 25px; }
+  .v4-app[data-screen=workshop] .v4-notice { top: 23%; left: 292px; right: auto; width: 320px; max-height: 200px; padding: 15px 42px 15px 16px; }
+  .v4-app[data-screen=workshop] .v4-notice h2 { font-size: 21px; }
+  .v4-app[data-screen=workshop] .v4-notice p { font-size: 14px; }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .v4-handoff-ghost, [data-handoff-target] { transition: none; }
+  .v4-ember-meter[data-ready=true] { animation: none; }
+}
+
+/* A single message place above the anvil keeps both the customer and the moving hammer clear. */
+.v4-app[data-screen=workshop][data-has-notice=true] .v4-forge-plan { visibility: hidden; }
+.v4-app[data-screen=workshop] .v4-notice { top: 10.5%; left: 27%; right: 25%; width: auto; max-height: 108px; padding: 10px 45px 10px 13px; }
+.v4-app[data-screen=workshop] .v4-notice-content { flex: 1; display: grid; grid-template-columns: minmax(0,1fr) auto; column-gap: 13px; align-items: center; }
+.v4-app[data-screen=workshop] .v4-notice h2 { grid-column: 1; }
+.v4-app[data-screen=workshop] .v4-notice p { grid-column: 1; max-height: 3.2em; margin-top: 4px; }
+.v4-app[data-screen=workshop] .v4-notice-content button { grid-column: 2; grid-row: 1/3; width: auto; max-width: 112px; margin: 0; }
+@media (min-width:1600px) {
+ .v4-app[data-screen=workshop] .v4-notice { top: 11%; left: 29%; right: 25%; width: auto; max-height: 127px; padding: 12px 47px 13px 17px; }
+ .v4-app[data-screen=workshop] .v4-notice-content button { max-width: 140px; }
+}

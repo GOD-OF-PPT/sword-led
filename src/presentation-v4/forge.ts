@@ -44,7 +44,9 @@ export function createForgeRenderer(root:HTMLElement,host:ForgeHost){
   let disposed=false,epoch=0,frame:number|null=null,target:Blade|null=null,previous:Blade|null=null,visual:Blade|null=null;
   let playing:{event:Strike;index:number;touched:boolean;done:()=>void;epoch:number}|null=null;
   const animations=new Set<Animation>(),images=new Map<string,HTMLImageElement>();
-  const get=(name:string)=>{const item=images.get(name);return item?.complete&&item.naturalWidth>0?item:undefined;};
+  type Asset={name:string;url:string;image:HTMLImageElement;status:'idle'|'loading'|'ready'|'failed';attempt:number;detach:()=>void};
+  const assets=new Map<string,Asset>();
+  const get=(name:string)=>{const item=images.get(name);return assets.get(name)?.status==='ready'&&item?.complete&&item.naturalWidth>0?item:undefined;};
   const weapon=(blade:Blade|null)=>blade?get(V3_BLADES[FAMILY[blade.recipe]]!):undefined;
   const animate=(node:HTMLElement,frames:Keyframe[],ms:number,easing='ease-out')=>{
     if(disposed||host.reduced()||document.hidden)return;
@@ -69,9 +71,37 @@ export function createForgeRenderer(root:HTMLElement,host:ForgeHost){
     hc.strokeStyle='#2b3940';hc.lineWidth=32;for(let x=1175;x<1450;x+=44){hc.beginPath();hc.moveTo(x,456);hc.lineTo(x-36,574);hc.stroke();}
     const steel=hc.createLinearGradient(93,0,345,0);steel.addColorStop(0,'#b4b6a3');steel.addColorStop(.2,'#4b5555');steel.addColorStop(.75,'#303e44');steel.addColorStop(1,'#19292f');hc.fillStyle=steel;hc.strokeStyle='#d9c69b';hc.lineWidth=12;hc.beginPath();hc.roundRect(94,309,211,457,12);hc.fill();hc.stroke();hc.strokeStyle='#efa85d';hc.lineWidth=6;hc.beginPath();hc.moveTo(110,766);hc.lineTo(289,766);hc.stroke();
   }
-  const hammerReady=()=>{if(disposed)return;hammer.dataset.art='ready';host.ready();};
-  const hammerError=()=>{if(disposed)return;hammer.dataset.art='fallback';host.problem();};
-  image.addEventListener('load',hammerReady);image.addEventListener('error',hammerError);hammer.dataset.art='loading';image.src='/assets/d/hammer-forge-v2.webp';
+  function loadAsset(asset:Asset,retry=false){
+    if(disposed||asset.status==='loading')return;
+    asset.detach();asset.status='loading';const attempt=++asset.attempt;
+    if(asset.image===image)hammer.dataset.art='loading';
+    const current=()=>!disposed&&asset.attempt===attempt&&asset.status==='loading';
+    const ready=()=>{
+      // A queued event from an older request must not settle a newer, still-loading request.
+      if(!current()||!asset.image.complete||asset.image.naturalWidth===0)return;
+      asset.status='ready';asset.detach();if(asset.image===image)hammer.dataset.art='ready';render();host.ready();
+    };
+    const failed=()=>{
+      if(!current()||!asset.image.complete||asset.image.naturalWidth>0)return;
+      asset.status='failed';asset.detach();if(asset.image===image)hammer.dataset.art='fallback';render();host.problem();
+    };
+    asset.image.addEventListener('load',ready);asset.image.addEventListener('error',failed);
+    asset.detach=()=>{asset.image.removeEventListener('load',ready);asset.image.removeEventListener('error',failed);};
+    // Failed HTTP responses may be cached. The source path and original image remain unchanged.
+    asset.image.src=asset.url+(retry?`?retry=${attempt-1}`:'');
+  }
+  function registerAsset(name:string,item:HTMLImageElement){
+    const asset:Asset={name,url:`/assets/d/${name}.webp`,image:item,status:'idle',attempt:0,detach:()=>{}};
+    assets.set(name,asset);loadAsset(asset);
+  }
+  function assetStatus():{loading:boolean;failed:readonly string[]}{
+    return{loading:!disposed&&[...assets.values()].some(asset=>asset.status==='loading'),failed:Object.freeze(disposed?[]:[...assets.values()].filter(asset=>asset.status==='failed').map(asset=>asset.url))};
+  }
+  function retryAssets(){
+    if(disposed||assetStatus().loading)return;
+    for(const asset of assets.values())if(asset.status==='failed')loadAsset(asset,true);
+  }
+  registerAsset('hammer-forge-v2',image);
 
   function pinHit(){const point=impact.point();scene.style.setProperty('--hit-x',`${point.x*100}%`);scene.style.setProperty('--hit-y',`${point.y*100}%`);}
   function render(){
@@ -84,7 +114,7 @@ export function createForgeRenderer(root:HTMLElement,host:ForgeHost){
     paintBlade(canvas,visual?painted(visual):null,get('metal-atlas-v1'),weapon(visual));impact.refresh();
   }
   for(const name of [...V3_BLADES,'metal-atlas-v1','v07/modifications-v1','v07/events-v1']){
-    const item=new Image();images.set(name,item);item.onload=()=>{if(!disposed){render();host.ready();}};item.onerror=()=>{if(!disposed)host.problem();};item.src=`/assets/d/${name}.webp`;
+    const item=new Image();images.set(name,item);registerAsset(name,item);
   }
   const resize=typeof ResizeObserver==='undefined'?null:new ResizeObserver(()=>{if(!disposed)render();});resize?.observe(scene);
   const hidden=()=>{if(document.hidden)cancel();};document.addEventListener('visibilitychange',hidden);
@@ -142,10 +172,10 @@ export function createForgeRenderer(root:HTMLElement,host:ForgeHost){
     if(atlas&&index>=0){const sw=atlas.naturalWidth/3,sh=atlas.naturalHeight/rows,scale=Math.min(112/sw,112/sh),dw=sw*scale,dh=sh*scale;c.drawImage(atlas,index%3*sw,Math.floor(index/3)*sh,sw,sh,(120-dw)/2,(120-dh)/2,dw,dh);return;}
     paintPropFallback(c,id);
   }
-  return {draw,paintThumb,paintProp,play,
+  return {draw,paintThumb,paintProp,play,retryAssets,assetStatus,
     aim(point:StrikePoint|null){if(!disposed&&!playing)impact.aim(point);},
     preparing(value:boolean){if(!disposed)hammer.classList.toggle('preparing',value&&!playing);},cancel,
-    dispose(){if(disposed)return;cancel();disposed=true;resize?.disconnect();document.removeEventListener('visibilitychange',hidden);image.removeEventListener('load',hammerReady);image.removeEventListener('error',hammerError);for(const item of images.values()){item.onload=null;item.onerror=null;}images.clear();fallback.remove();}
+    dispose(){if(disposed)return;cancel();disposed=true;resize?.disconnect();document.removeEventListener('visibilitychange',hidden);for(const asset of assets.values()){asset.detach();asset.attempt++;if(asset.status==='loading')asset.image.removeAttribute('src');}assets.clear();images.clear();fallback.remove();}
   };
 }
 
