@@ -44,10 +44,12 @@ export function createPersistentSession(repository: SaveRepository, lease: Write
   return createAdaptedSession<RunState,CreateRunInput,ErrorCode,DomainEvent>(repository, lease, { createRun, applyCommand });
 }
 export interface RuleAdapter<S,I,E extends string,V> {
+  isTerminal?(state:S): boolean;
   createRun(input:I): {readonly ok:true;readonly state:S}|{readonly ok:false;readonly error:E};
   applyCommand(state:S,command:unknown): {readonly ok:true;readonly state:S;readonly events:readonly V[]}|{readonly ok:false;readonly state:S;readonly error:E;readonly events:readonly []};
 }
 export function createAdaptedSession<S extends {readonly phase:string},I,E extends string,V>(repository: SaveRepository<S>, lease: WriterLease, rules: RuleAdapter<S,I,E,V>): PersistentSession<S,I,E,V> {
+  const isTerminal = rules.isTerminal ?? ((value:S) => value.phase === 'victory' || value.phase === 'defeat');
   let generation = 0;
   let activationEpoch = 0;
   let mode: SessionMode = 'inactive';
@@ -76,7 +78,7 @@ export function createAdaptedSession<S extends {readonly phase:string},I,E exten
     publish();
   };
   const needsReplacement = (report: SaveReport<S>) =>
-    (report.main.status === 'valid' && report.main.state.phase !== 'victory' && report.main.state.phase !== 'defeat')
+    (report.main.status === 'valid' && !isTerminal(report.main.state))
     || report.main.status === 'invalid' || (report.main.status === 'empty' && report.backup.status === 'valid');
   const permission = (expected: number, allowConflict = false): SessionError | null => {
     if (mode === 'disposed') return 'disposed';
@@ -142,7 +144,7 @@ export function createAdaptedSession<S extends {readonly phase:string},I,E exten
       } else {
         const observed = repository.inspect();
         if (observed.main.status === 'unavailable') return fail('save_unavailable');
-        const localOngoing = state !== null && state.phase !== 'victory' && state.phase !== 'defeat';
+        const localOngoing = state !== null && !isTerminal(state);
         if ((needsReplacement(observed) || localOngoing || dirty) && decision.confirmed !== true) return fail('confirmation_required');
         load = repository.load();
         if (load.main.status === 'unavailable') { conflictAfterRead(); return fail('save_unavailable'); }

@@ -13,7 +13,7 @@
 
 ## Impact
 
-新增lantern-campaign能力、core-v4与独立SDK/codec，复用原持久化会话、同源writer锁、设置/音频、自然锤和D美术。3i.1已实现完整纯核/回放/SDK；codec/炉谱和实际界面仍待后续实施，不以本提案或v0.6事件签称游戏已完整。
+新增lantern-campaign能力、core-v4与独立SDK/codec，复用原持久化会话、同源writer锁、设置/音频、自然锤和D美术。3i.1/.2已实现完整纯核/回放/SDK和codec/炉谱；实际界面仍待后续实施，不以本提案或v0.6事件签称游戏已完整。
 
 ## Approval
 

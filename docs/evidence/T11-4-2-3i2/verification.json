@@ -1,0 +1,91 @@
+{
+  "at": "2026-10-20T09:29:34.287Z",
+  "unit": {
+    "startedAt": "2026-10-20T09:25:20.966Z",
+    "finishedAt": "2026-10-20T09:25:35.656Z",
+    "command": [
+      "./node_modules/.bin/vitest",
+      "run",
+      "--reporter=json",
+      "--outputFile=tmp/T11-4-2-3i2/unit-final.json"
+    ],
+    "code": 0,
+    "signal": null,
+    "total": 332,
+    "passed": 332,
+    "failed": 0,
+    "success": true,
+    "changedInputs": [],
+    "toolSession": 38247
+  },
+  "browser": {
+    "token": "v4-save-final-20261020-04",
+    "pid": 72174,
+    "childPid": 72175,
+    "startedAt": "2026-10-20T09:23:08.688Z",
+    "finishedAt": "2026-10-20T09:24:12.330Z",
+    "exitCode": 0,
+    "signal": null,
+    "error": null,
+    "reportError": null,
+    "stats": {
+      "startTime": "2026-10-20T09:23:10.362Z",
+      "duration": 61583.574,
+      "expected": 27,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "changedInputs": [],
+    "validationComplete": true,
+    "toolSession": 2454
+  },
+  "legacyUI": {
+    "token": "v4-legacy-ui-final-20261020-05",
+    "pid": 72740,
+    "childPid": 72741,
+    "startedAt": "2026-10-20T09:26:24.953Z",
+    "finishedAt": "2026-10-20T09:27:28.238Z",
+    "exitCode": 0,
+    "signal": null,
+    "error": null,
+    "reportError": null,
+    "stats": {
+      "startTime": "2026-10-20T09:26:26.239Z",
+      "duration": 61623.742999999995,
+      "expected": 9,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "changedInputs": [],
+    "validationComplete": true,
+    "toolSession": 30454
+  },
+  "build": {
+    "toolSession": 12553,
+    "code": 0
+  },
+  "lastStrict": {
+    "toolSession": 5471,
+    "code": 0
+  },
+  "historyReplay": {
+    "toolSession": 64265,
+    "objects": 327,
+    "code": 0
+  },
+  "storedBoundary": {
+    "toolSession": 63622,
+    "code": 0
+  },
+  "finalRunObjects": 77,
+  "finalCollectionObjects": 69,
+  "initial27FailureRetained": true,
+  "knownRemaining": [
+    "production v4 UI/art and complete content presentation",
+    "1000 seed balance",
+    "final browser matrix",
+    "human H and maximum R4"
+  ]
+}

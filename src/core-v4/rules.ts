@@ -27,7 +27,7 @@ export function strikeOdds(s:RunState,b:Blade){
  const burst=b.charge===6,great=burst?350:r.greatOdds+(b.cracked&&s.traits.includes('crackedEdge')?100:0);
  return{burst,crack:burst?0:normalCrack,great,success:1000-great-(burst?0:normalCrack),afterBurstCrack:normalCrack};
 }
-export function routeAssessment(s:RunState,b:Blade,r:RouteCondition){
+export function routeAssessment(s:Pick<RunState,'day'>,b:Blade,r:RouteCondition){
  const missing:string[]=[];
  if(r.recipe&&b.recipe!==r.recipe)missing.push(`需要${RECIPES[r.recipe].name}`);
  if(r.crack==='intact'&&b.cracked)missing.push('需要无裂纹');

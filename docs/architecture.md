@@ -1,6 +1,8 @@
 # 代码架构与玩法内核约定
 
-> 已批准v0.7新增独立`core-v4`与`sword-led-v4.js`纯SDK：model/content定义内容和状态，rules提供条件/报价，game处理唯一Accepted命令，view派生只读预览/炉谱集合，validate从创建资格快照和完整journal重建。复用既有整数随机/冻结/JSON守护，不改旧解释器；[内核合同](v0.7-core-contract.md)和[R3.19](reviews/R3-19-lantern-core.md)记录实际验证。当前网页仍为v0.6，v4存储/炉谱落盘与生产界面尚待后续任务。
+> 3i.2已新增`application/v4-persistence.ts`与`v4-collection.ts`，接独立schema4局档和schema1炉谱主备槽，复用同一个writer lease与generic会话；已保存合法局才同步永久集合，未保存成果只保护来源，错误/重试/导出分别报告。共享RuleAdapter仅增加可选isTerminal（默认旧语义，v4加入return）。[保存合同](v0.7-persistence-contract.md)和[验证报告](reviews/T11-4-2-3i2-save-validation.md)记录实际消费者；生产首章界面仍待3i.3。
+
+> 已批准v0.7新增独立`core-v4`与`sword-led-v4.js`：model/content定义内容和状态，rules提供条件/报价，game处理唯一Accepted命令，view派生只读预览/炉谱集合，validate从创建资格快照和完整journal重建。复用既有整数随机/冻结/JSON守护，不改旧解释器；[内核合同](v0.7-core-contract.md)和[R3.19](reviews/R3-19-lantern-core.md)记录3i.1纯核验证。当前网页仍为v0.6，v4存储已在3i.2接通，生产界面尚待后续任务。
 
 > 行旅版新增`presentation-v3/scene.ts`只读提示/旅程/兵器故事，以及`scene-feedback.ts`有界表现控制器。DOM缓存按run/generation与显示状态保留节点，尺寸变化只重绘缩略图；Accepted反馈不发经济命令，见[场景接线](v0.4-workshop-scene.md)。
 
