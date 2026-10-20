@@ -1,0 +1,31 @@
+import assert from 'node:assert/strict';
+import {chromium} from '@playwright/test';
+import {mkdir,writeFile,readFile,rename} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {applyCommand,validateRun} from '../../dist/sword-led-v3.js';
+const out='tmp/T11-4-2-3h/preview-events',published='docs/evidence/T11-4-2-3h/polish',key='sword-led.save.v3';
+await mkdir(out,{recursive:false});
+const browser=await chromium.launch(),context=await browser.newContext({viewport:{width:1280,height:720},recordVideo:{dir:out,size:{width:1280,height:720}}}),page=await context.newPage();
+const errors=[];page.on('pageerror',e=>errors.push({type:'page',message:e.message}));page.on('console',m=>{if(m.type()==='error')errors.push({type:'console',message:m.text()});});page.on('response',r=>{if(r.status()>=400)errors.push({type:'http',status:r.status(),url:r.url()});});
+const bytes=()=>page.evaluate(k=>localStorage.getItem(k),key);
+async function state(){const raw=await bytes();assert(raw);const r=validateRun(JSON.parse(raw).state);assert(r.ok);return r.state;}
+const states={},observations=[];
+try{
+ await page.goto('http://127.0.0.1:4179/');await page.locator('.customer-art-ready.book-art-ready').waitFor();await page.locator('#v3-hammer img').evaluate(async i=>{await i.decode();});await page.evaluate(()=>document.fonts.ready);states.first=await state();assert.equal(states.first.roundLimit,12);assert.match(await page.locator('#v3-edition').innerText(),/v0.6 炉前/);
+ await page.screenshot({path:out+'/fresh-1280.png'});await page.setViewportSize({width:1920,height:1080});await page.screenshot({path:out+'/fresh-1920.png'});await page.setViewportSize({width:1280,height:720});
+ const initialBytes=await bytes();await page.locator('#v3-customer-open').click();assert.match(await page.locator('#v3-dialog-body').innerText(),/阿岚/);await page.keyboard.press('Escape');assert.equal(await bytes(),initialBytes);
+ await page.locator('#v3-events').click();assert.match(await page.locator('.v3-forge-journey').innerText(),/十二轮契约/);await page.keyboard.press('Escape');assert.equal(await bytes(),initialBytes);
+ let expected=states.first;
+ async function accepted(action,perform){const r=applyCommand(expected,{runId:expected.runId,expectedRevision:expected.revision,action});assert(r.ok);await perform();assert.deepEqual(await state(),r.state);observations.push({action,revision:r.state.revision,round:r.state.round,forgeDraws:r.state.rng.forge.draws});expected=r.state;}
+ for(let i=0;i<3;i++)await accepted({type:'strike',pieceId:'r1-1'},async()=>{await page.locator('#v3-hit').click();await page.locator('#v3-strike[aria-busy="false"]').waitFor();});states.forged=await state();assert.equal(expected.rng.forge.draws,3);
+ const sale=expected.blades.find(b=>b.id==='r1-1').value;
+ await accepted({type:'deliver',pieceId:'r1-1'},()=>page.locator('#v3-deliver').click());states.delivered=await state();assert.equal(await page.locator('#v3-event').getAttribute('data-event'),'met');await page.locator('#v3-event').evaluate(e=>Promise.all(e.getAnimations().map(a=>a.finished.catch(()=>{}))));await page.screenshot({path:out+'/quota-1280.png'});
+ await page.locator('#v3-event').getByRole('button',{name:'领取免费手艺',exact:true}).click();await accepted({type:'claimGift',traitId:'steady'},()=>page.getByRole('button',{name:/^稳手护符 ·/}).click());assert.equal(await page.locator('#v3-event').getAttribute('data-event'),'trait');
+ await accepted({type:'strike',pieceId:'r1-2'},async()=>{await page.locator('#v3-hit').click();await page.locator('#v3-strike[aria-busy="false"]').waitFor();});assert.equal(await page.locator('#v3-event').getAttribute('data-event'),'trait');
+ const acceptedBytes=await bytes();await page.locator('#v3-event').getByRole('button',{name:'查看成长',exact:true}).click();assert.match(await page.locator('.v3-forge-journey').innerText(),/已带手艺 1\/3/);await page.screenshot({path:out+'/growth-1280.png'});await page.keyboard.press('Escape');assert.equal(await bytes(),acceptedBytes);
+ await page.locator('#v3-notebook').click();assert.equal(await page.locator('[data-notebook-round]').count(),12);await page.keyboard.press('Escape');assert.equal(await bytes(),acceptedBytes);
+ await page.reload();await page.locator('.customer-art-ready.book-art-ready').waitFor();states.reloaded=await state();assert.equal(await bytes(),acceptedBytes);assert.deepEqual(states.reloaded,expected);assert.equal(await page.locator('#v3-event').isVisible(),false);assert.equal(await page.locator('#v3-customer-figure').getAttribute('data-pose'),'waiting');assert.equal(await page.locator('#v3-customer-talk').innerText(),'');
+ await page.locator('#v3-events').click();const recovered=await page.locator('.v3-forge-journey').innerText();assert.match(recovered,/稳手护符/);assert.doesNotMatch(recovered,/本次打开页面后的重要事件/);await page.keyboard.press('Escape');assert.equal(await bytes(),acceptedBytes);assert.deepEqual(errors,[]);
+ await writeFile(published+'/preview-smoke-states.json',JSON.stringify(states,null,2)+'\n',{flag:'wx'});
+ await page.close();await context.close();const video=await page.video().path(),recordingPath=out+'/actual-flow.webm';await rename(video,recordingPath);const recording=await readFile(recordingPath),sha=createHash('sha256').update(recording).digest('hex');const result={at:new Date().toISOString(),url:'http://127.0.0.1:4179/',engine:'fresh isolated Chromium context',defaultRounds:12,actualAcceptedCommands:observations,firstThreeStrikeDraws:3,delivered:sale,giftClaimedOnce:true,ordinaryStrikePreservesNotice:true,viewingNeverWrites:true,reloadExactBytes:true,reloadNoOldEffects:true,saveDerivedGrowthAfterReload:true,errors,recording:{localPath:recordingPath,bytes:recording.length,sha256:sha,audioTrack:false,notHumanAudioAcceptance:true},screenshots:['fresh-1280.png','fresh-1920.png','quota-1280.png','growth-1280.png'].map(p=>out+'/'+p)};await writeFile(published+'/preview-smoke.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(result));
+}finally{await browser.close();}

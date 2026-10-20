@@ -1,0 +1,534 @@
+{
+  "config": {
+    "argv": [
+      "/Users/gordon/.nvm/versions/node/v22.12.0/bin/node",
+      "/Users/gordon/githome/sword-led/node_modules/@playwright/test/cli.js",
+      "test",
+      "--config=tmp/T11-4-2-3h/events-pilot2.config.ts",
+      "--grep",
+      "real next-round|workshop first frame"
+    ],
+    "configFile": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/events-pilot2.config.ts",
+    "rootDir": "/Users/gordon/githome/sword-led/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/events-pilot2/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v3-chromium",
+        "name": "v3-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v3-*.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/events-pilot2/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v3-firefox",
+        "name": "v3-firefox",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v3-*.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/events-pilot2/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v3-webkit",
+        "name": "v3-webkit",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v3-*.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/events-pilot2/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v3-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v3-*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4194",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v3-chromium"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/events-pilot2/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v3-firefox",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v3-*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4194",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "firefox"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v3-firefox"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/events-pilot2/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v3-webkit",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v3-*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4194",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1792,
+            "height": 1120
+          },
+          "deviceScaleFactor": 2,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "webkit"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v3-webkit"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/events-pilot2/report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 4194 --strictPort",
+      "url": "http://127.0.0.1:4194",
+      "cwd": "/Users/gordon/githome/sword-led/",
+      "reuseExistingServer": false,
+      "env": {
+        "NO_PROXY": "127.0.0.1,localhost",
+        "no_proxy": "127.0.0.1,localhost"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "v3-events.spec.ts",
+      "file": "v3-events.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "real next-round receipt, merchant arrival and upgrade notices stay readable at both desktop sizes",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2394,
+                  "error": {
+                    "message": "Error: #v3-deliver\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m167.4013671875\u001b[39m",
+                    "stack": "Error: #v3-deliver\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m167.4013671875\u001b[39m\n    at /Users/gordon/githome/sword-led/tests/e2e/v3-events.spec.ts:26:704",
+                    "location": {
+                      "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-events.spec.ts",
+                      "column": 704,
+                      "line": 26
+                    },
+                    "snippet": "  24 |  const route=JSON.parse(readFileSync('docs/evidence/T11-4-2-3d/route.json','utf8'))as{seed:string;actions:Action[]};const created=createRun({runId:'event-fixture',seed:route.seed,roundLimit:12});if(!created.ok)throw Error(created.error);let s:RunState=created.state;for(const action of route.actions){if(s.round===2&&s.phase==='summary')break;const r=applyCommand(s,{runId:s.runId,expectedRevision:s.revision,action});if(!r.ok)throw Error(r.error);s=r.state;}expect(s.phase).toBe('summary');expect(validateRun(s).ok).toBe(true);\n  25 |  await page.addInitScript(({key,state})=>localStorage.setItem(key,JSON.stringify({schemaVersion:3,rulesVersion:'forge-v3',savedAt:'2026-10-20T00:00:00.000Z',state})),{key,state:s});await mkdir(dir,{recursive:true});await page.goto('/');await expect(page.locator('.v3-next-round')).toContainText('第3轮目标 520');await expect(page.locator('.v3-next-round')).toContainText('商人到场');await page.getByRole('button',{name:'领取下一轮三柄剑',exact:true}).click();await expect(page.locator('#v3-event')).toHaveAttribute('data-event','merchant');\n> 26 |  for(const[width,height]of[[1280,720],[1920,1080]]){await page.setViewportSize({width:width!,height:height!});const measured=await page.locator('#v3-event').evaluate(e=>{const a=e.getBoundingClientRect();return{box:{x:a.x,y:a.y,w:a.width,h:a.height},targets:['#v3-hit','#v3-risk','#v3-deliver','#v3-store','#v3-settle'].map(id=>{const b=document.querySelector(id)!.getBoundingClientRect();return{id,overlap:Math.max(0,Math.min(a.right,b.right)-Math.max(a.left,b.left))*Math.max(0,Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top))};})};});expect(measured.box.y).toBeGreaterThan(0);expect(measured.box.y+measured.box.h).toBeLessThanOrEqual(height!);for(const x of measured.targets)expect(x.overlap,x.id).toBe(0);for(const b of await page.locator('#v3-event button').all()){const r=await b.boundingBox();expect(r!.height).toBeGreaterThanOrEqual(44);expect(r!.width).toBeGreaterThanOrEqual(44);}await capture(page,`merchant-${width}`);await writeFile(`${dir}/${info.project.name}-layout-${width}.json`,JSON.stringify(measured,null,2)+'\\n');}\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ^\n  27 |  await page.locator('#v3-event').getByRole('button',{name:'看看商人的货',exact:true}).click();await page.getByRole('button',{name:/升级炉具 ·/}).click();await page.getByRole('button',{name:'确认',exact:true}).click();await expect(page.locator('#v3-event')).toHaveAttribute('data-event','upgrade');await expect(page.locator('#v3-event')).toContainText('40 → 80');await capture(page,'upgrade');\n  28 | });\n  29 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-events.spec.ts",
+                        "column": 704,
+                        "line": 26
+                      },
+                      "message": "Error: #v3-deliver\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m167.4013671875\u001b[39m\n\n  24 |  const route=JSON.parse(readFileSync('docs/evidence/T11-4-2-3d/route.json','utf8'))as{seed:string;actions:Action[]};const created=createRun({runId:'event-fixture',seed:route.seed,roundLimit:12});if(!created.ok)throw Error(created.error);let s:RunState=created.state;for(const action of route.actions){if(s.round===2&&s.phase==='summary')break;const r=applyCommand(s,{runId:s.runId,expectedRevision:s.revision,action});if(!r.ok)throw Error(r.error);s=r.state;}expect(s.phase).toBe('summary');expect(validateRun(s).ok).toBe(true);\n  25 |  await page.addInitScript(({key,state})=>localStorage.setItem(key,JSON.stringify({schemaVersion:3,rulesVersion:'forge-v3',savedAt:'2026-10-20T00:00:00.000Z',state})),{key,state:s});await mkdir(dir,{recursive:true});await page.goto('/');await expect(page.locator('.v3-next-round')).toContainText('第3轮目标 520');await expect(page.locator('.v3-next-round')).toContainText('商人到场');await page.getByRole('button',{name:'领取下一轮三柄剑',exact:true}).click();await expect(page.locator('#v3-event')).toHaveAttribute('data-event','merchant');\n> 26 |  for(const[width,height]of[[1280,720],[1920,1080]]){await page.setViewportSize({width:width!,height:height!});const measured=await page.locator('#v3-event').evaluate(e=>{const a=e.getBoundingClientRect();return{box:{x:a.x,y:a.y,w:a.width,h:a.height},targets:['#v3-hit','#v3-risk','#v3-deliver','#v3-store','#v3-settle'].map(id=>{const b=document.querySelector(id)!.getBoundingClientRect();return{id,overlap:Math.max(0,Math.min(a.right,b.right)-Math.max(a.left,b.left))*Math.max(0,Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top))};})};});expect(measured.box.y).toBeGreaterThan(0);expect(measured.box.y+measured.box.h).toBeLessThanOrEqual(height!);for(const x of measured.targets)expect(x.overlap,x.id).toBe(0);for(const b of await page.locator('#v3-event button').all()){const r=await b.boundingBox();expect(r!.height).toBeGreaterThanOrEqual(44);expect(r!.width).toBeGreaterThanOrEqual(44);}await capture(page,`merchant-${width}`);await writeFile(`${dir}/${info.project.name}-layout-${width}.json`,JSON.stringify(measured,null,2)+'\\n');}\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ^\n  27 |  await page.locator('#v3-event').getByRole('button',{name:'看看商人的货',exact:true}).click();await page.getByRole('button',{name:/升级炉具 ·/}).click();await page.getByRole('button',{name:'确认',exact:true}).click();await expect(page.locator('#v3-event')).toHaveAttribute('data-event','upgrade');await expect(page.locator('#v3-event')).toContainText('40 → 80');await capture(page,'upgrade');\n  28 | });\n  29 |\n    at /Users/gordon/githome/sword-led/tests/e2e/v3-events.spec.ts:26:704"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T04:42:05.602Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/events-pilot2/artifacts/v3-events-real-next-round--0d408-dable-at-both-desktop-sizes-v3-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/events-pilot2/artifacts/v3-events-real-next-round--0d408-dable-at-both-desktop-sizes-v3-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/events-pilot2/artifacts/v3-events-real-next-round--0d408-dable-at-both-desktop-sizes-v3-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-events.spec.ts",
+                    "column": 704,
+                    "line": 26
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a8cf692b8fd5b3b71e6e-89fcd5a4ae0fd8981c42",
+          "file": "v3-events.spec.ts",
+          "line": 23,
+          "column": 1
+        },
+        {
+          "title": "real next-round receipt, merchant arrival and upgrade notices stay readable at both desktop sizes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6717,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T04:42:14.512Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8cf692b8fd5b3b71e6e-fa19b3d1c6237bb93049",
+          "file": "v3-events.spec.ts",
+          "line": 23,
+          "column": 1
+        },
+        {
+          "title": "real next-round receipt, merchant arrival and upgrade notices stay readable at both desktop sizes",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 4499,
+                  "error": {
+                    "message": "Error: #v3-deliver\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1033.5400390625\u001b[39m",
+                    "stack": "Error: #v3-deliver\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1033.5400390625\u001b[39m\n    at /Users/gordon/githome/sword-led/tests/e2e/v3-events.spec.ts:26:704",
+                    "location": {
+                      "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-events.spec.ts",
+                      "column": 704,
+                      "line": 26
+                    },
+                    "snippet": "  24 |  const route=JSON.parse(readFileSync('docs/evidence/T11-4-2-3d/route.json','utf8'))as{seed:string;actions:Action[]};const created=createRun({runId:'event-fixture',seed:route.seed,roundLimit:12});if(!created.ok)throw Error(created.error);let s:RunState=created.state;for(const action of route.actions){if(s.round===2&&s.phase==='summary')break;const r=applyCommand(s,{runId:s.runId,expectedRevision:s.revision,action});if(!r.ok)throw Error(r.error);s=r.state;}expect(s.phase).toBe('summary');expect(validateRun(s).ok).toBe(true);\n  25 |  await page.addInitScript(({key,state})=>localStorage.setItem(key,JSON.stringify({schemaVersion:3,rulesVersion:'forge-v3',savedAt:'2026-10-20T00:00:00.000Z',state})),{key,state:s});await mkdir(dir,{recursive:true});await page.goto('/');await expect(page.locator('.v3-next-round')).toContainText('第3轮目标 520');await expect(page.locator('.v3-next-round')).toContainText('商人到场');await page.getByRole('button',{name:'领取下一轮三柄剑',exact:true}).click();await expect(page.locator('#v3-event')).toHaveAttribute('data-event','merchant');\n> 26 |  for(const[width,height]of[[1280,720],[1920,1080]]){await page.setViewportSize({width:width!,height:height!});const measured=await page.locator('#v3-event').evaluate(e=>{const a=e.getBoundingClientRect();return{box:{x:a.x,y:a.y,w:a.width,h:a.height},targets:['#v3-hit','#v3-risk','#v3-deliver','#v3-store','#v3-settle'].map(id=>{const b=document.querySelector(id)!.getBoundingClientRect();return{id,overlap:Math.max(0,Math.min(a.right,b.right)-Math.max(a.left,b.left))*Math.max(0,Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top))};})};});expect(measured.box.y).toBeGreaterThan(0);expect(measured.box.y+measured.box.h).toBeLessThanOrEqual(height!);for(const x of measured.targets)expect(x.overlap,x.id).toBe(0);for(const b of await page.locator('#v3-event button').all()){const r=await b.boundingBox();expect(r!.height).toBeGreaterThanOrEqual(44);expect(r!.width).toBeGreaterThanOrEqual(44);}await capture(page,`merchant-${width}`);await writeFile(`${dir}/${info.project.name}-layout-${width}.json`,JSON.stringify(measured,null,2)+'\\n');}\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ^\n  27 |  await page.locator('#v3-event').getByRole('button',{name:'看看商人的货',exact:true}).click();await page.getByRole('button',{name:/升级炉具 ·/}).click();await page.getByRole('button',{name:'确认',exact:true}).click();await expect(page.locator('#v3-event')).toHaveAttribute('data-event','upgrade');await expect(page.locator('#v3-event')).toContainText('40 → 80');await capture(page,'upgrade');\n  28 | });\n  29 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-events.spec.ts",
+                        "column": 704,
+                        "line": 26
+                      },
+                      "message": "Error: #v3-deliver\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1033.5400390625\u001b[39m\n\n  24 |  const route=JSON.parse(readFileSync('docs/evidence/T11-4-2-3d/route.json','utf8'))as{seed:string;actions:Action[]};const created=createRun({runId:'event-fixture',seed:route.seed,roundLimit:12});if(!created.ok)throw Error(created.error);let s:RunState=created.state;for(const action of route.actions){if(s.round===2&&s.phase==='summary')break;const r=applyCommand(s,{runId:s.runId,expectedRevision:s.revision,action});if(!r.ok)throw Error(r.error);s=r.state;}expect(s.phase).toBe('summary');expect(validateRun(s).ok).toBe(true);\n  25 |  await page.addInitScript(({key,state})=>localStorage.setItem(key,JSON.stringify({schemaVersion:3,rulesVersion:'forge-v3',savedAt:'2026-10-20T00:00:00.000Z',state})),{key,state:s});await mkdir(dir,{recursive:true});await page.goto('/');await expect(page.locator('.v3-next-round')).toContainText('第3轮目标 520');await expect(page.locator('.v3-next-round')).toContainText('商人到场');await page.getByRole('button',{name:'领取下一轮三柄剑',exact:true}).click();await expect(page.locator('#v3-event')).toHaveAttribute('data-event','merchant');\n> 26 |  for(const[width,height]of[[1280,720],[1920,1080]]){await page.setViewportSize({width:width!,height:height!});const measured=await page.locator('#v3-event').evaluate(e=>{const a=e.getBoundingClientRect();return{box:{x:a.x,y:a.y,w:a.width,h:a.height},targets:['#v3-hit','#v3-risk','#v3-deliver','#v3-store','#v3-settle'].map(id=>{const b=document.querySelector(id)!.getBoundingClientRect();return{id,overlap:Math.max(0,Math.min(a.right,b.right)-Math.max(a.left,b.left))*Math.max(0,Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top))};})};});expect(measured.box.y).toBeGreaterThan(0);expect(measured.box.y+measured.box.h).toBeLessThanOrEqual(height!);for(const x of measured.targets)expect(x.overlap,x.id).toBe(0);for(const b of await page.locator('#v3-event button').all()){const r=await b.boundingBox();expect(r!.height).toBeGreaterThanOrEqual(44);expect(r!.width).toBeGreaterThanOrEqual(44);}await capture(page,`merchant-${width}`);await writeFile(`${dir}/${info.project.name}-layout-${width}.json`,JSON.stringify(measured,null,2)+'\\n');}\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ^\n  27 |  await page.locator('#v3-event').getByRole('button',{name:'看看商人的货',exact:true}).click();await page.getByRole('button',{name:/升级炉具 ·/}).click();await page.getByRole('button',{name:'确认',exact:true}).click();await expect(page.locator('#v3-event')).toHaveAttribute('data-event','upgrade');await expect(page.locator('#v3-event')).toContainText('40 → 80');await capture(page,'upgrade');\n  28 | });\n  29 |\n    at /Users/gordon/githome/sword-led/tests/e2e/v3-events.spec.ts:26:704"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T04:42:28.275Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/events-pilot2/artifacts/v3-events-real-next-round--0d408-dable-at-both-desktop-sizes-v3-webkit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/events-pilot2/artifacts/v3-events-real-next-round--0d408-dable-at-both-desktop-sizes-v3-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/events-pilot2/artifacts/v3-events-real-next-round--0d408-dable-at-both-desktop-sizes-v3-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-events.spec.ts",
+                    "column": 704,
+                    "line": 26
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a8cf692b8fd5b3b71e6e-0cac5cbc803f97f8a7b7",
+          "file": "v3-events.spec.ts",
+          "line": 23,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v3-immersive.spec.ts",
+      "file": "v3-immersive.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "workshop first frame protects the actual sword and keeps its persistent HUD below a quarter of each desktop viewport",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3301,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T04:42:09.966Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "40169f46e79ab2128595-06fe0c6617165eea99cd",
+          "file": "v3-immersive.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "workshop first frame protects the actual sword and keeps its persistent HUD below a quarter of each desktop viewport",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3565,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T04:42:23.116Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "40169f46e79ab2128595-a273c20e29ff537e0fd1",
+          "file": "v3-immersive.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "workshop first frame protects the actual sword and keeps its persistent HUD below a quarter of each desktop viewport",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14636,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T04:42:35.360Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "40169f46e79ab2128595-e9d66d70710c28d99fe1",
+          "file": "v3-immersive.spec.ts",
+          "line": 7,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-20T04:42:03.521Z",
+    "duration": 47249.587999999996,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

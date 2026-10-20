@@ -1,0 +1,35 @@
+{
+  "at": "2026-10-20T06:15:57.785Z",
+  "scope": "Three presentation strings only; no command, price, input, layout or state logic change. Full126 retains its original source identity.",
+  "changes": [
+    {
+      "file": "src/presentation-v3/forge-notices.ts",
+      "beforeSha256": "2c3fe15e043a77b380f51cb101129d028fe823cdae7e28182183187600e504ee",
+      "afterSha256": "2bda52a6ccd1c7edbf42e000e10f2b43a787e06e1d2f5b83e2f64564a824366b",
+      "literalReplacements": [
+        {
+          "file": "src/presentation-v3/forge-notices.ts",
+          "old": "当前身价 ${fmt(b.value)}，仍可交差。继续锤的风险不会因换剑或刷新而消失。",
+          "replacement": "那一记后身价 ${fmt(b.value)}，仍可交差。换剑或刷新不会重置风险；再裂会断。"
+        },
+        {
+          "file": "src/presentation-v3/forge-notices.ts",
+          "old": "交出 ${fmt(b.value)}，就能补上今天还差的 ${fmt(missing)}。身价尚在剑上，交差才计入目标。",
+          "replacement": "那一记后身价 ${fmt(b.value)}，已够补上当时缺口 ${fmt(missing)}。身价还在剑上，最新报价见交差按钮。"
+        }
+      ]
+    },
+    {
+      "file": "src/presentation-v3/app.ts",
+      "beforeSha256": "49a8847242fdc4e4c21341732529174de7199d0dc769672d8fd56541ab62e282",
+      "afterSha256": "8741e7aa06e0561d5d70074a9a51beb49677ce675c62aec4f8b25e4ca05a8178",
+      "literalReplacements": [
+        {
+          "file": "src/presentation-v3/app.ts",
+          "old": "将开启${contractName(modeDraft)}并替换当前v0.4进度；可以先导出。旧v0.2/v0.3档保留。",
+          "replacement": "将开启${contractName(modeDraft)}并替换当前炉前进度；可先导出。旧D细锻与B版进度保留。"
+        }
+      ]
+    }
+  ]
+}

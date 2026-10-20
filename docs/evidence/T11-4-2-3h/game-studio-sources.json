@@ -1,0 +1,44 @@
+{
+  "plugin": "game-studio@openai-curated-remote",
+  "localPackageVersion": "0.1.2",
+  "scope": "Read local skill guidance and apply frontend/playtest workflow; do not claim an external design service generated the UI.",
+  "route": "Established Canvas/DOM frontend, keep the pure simulation/session; PC-only user requirement overrides mobile defaults.",
+  "principles": [
+    "One primary status cluster, protect the playfield",
+    "Secondary wishes/rules/save tools open on request",
+    "Transient guidance, strong motion tied to genuine state changes",
+    "Play through actual input and inspect screenshots as well as DOM"
+  ],
+  "sources": [
+    {
+      "path": "/Users/gordon/.codex/plugins/cache/openai-curated-remote/game-studio/0.1.2/skills/game-studio/SKILL.md",
+      "bytes": 5396,
+      "sha256": "87c32773f787b338064e3b7cf5e237a46b5c12e9ffe082927349ebb9584fd15b"
+    },
+    {
+      "path": "/Users/gordon/.codex/plugins/cache/openai-curated-remote/game-studio/0.1.2/skills/game-ui-frontend/SKILL.md",
+      "bytes": 5060,
+      "sha256": "cd017fe0761207dcfd801f236490896cbf1cd6627ee267c801a19c7c780b7a01"
+    },
+    {
+      "path": "/Users/gordon/.codex/plugins/cache/openai-curated-remote/game-studio/0.1.2/skills/game-playtest/SKILL.md",
+      "bytes": 2912,
+      "sha256": "413f2453c602678962fab62446144f2929fcd5b9239f209c7889cc592d2b5be8"
+    },
+    {
+      "path": "/Users/gordon/.codex/plugins/cache/openai-curated-remote/game-studio/0.1.2/skills/web-game-foundations/SKILL.md",
+      "bytes": 4592,
+      "sha256": "ef35c1954fa07d10673c1a5a7749656319494fd0675dd2be9671e2dd3cbd7e1b"
+    },
+    {
+      "path": "/Users/gordon/.codex/plugins/cache/openai-curated-remote/game-studio/0.1.2/references/frontend-prompts.md",
+      "bytes": 3712,
+      "sha256": "3485139464cb56670bbdaef5f65bb0c657fc27b4c7106723005f5fe79aed0368"
+    },
+    {
+      "path": "/Users/gordon/.codex/plugins/cache/openai-curated-remote/game-studio/0.1.2/references/playtest-checklist.md",
+      "bytes": 1599,
+      "sha256": "d8a4119f3912064c1328f7c537ff5fa94004f3aa81acba33d518758bf7fb8a3c"
+    }
+  ]
+}

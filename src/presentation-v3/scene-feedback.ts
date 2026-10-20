@@ -24,7 +24,7 @@ export function createSceneFeedback(root:HTMLElement,layer:HTMLElement,host:Host
  return{reset,play(events:readonly DomainEvent[],s:RunState,deliveryTarget='v3-order-paper'){
   if(document.hidden)return;
   for(const event of events){
-   if(event.type==='Delivered'){const b=s.blades.find(b=>b.id===event.pieceId);if(b)fly('delivery',b,deliveryTarget);pulse('v3-wallet');const met=s.delivered>=quotaFor(s.round)&&s.delivered-event.amount<quotaFor(s.round);banner(met?'met':'delivery',met?'委托达成！':`交差 +${event.amount.toLocaleString('zh-CN')}`,met?'印记保住了 · 余剑可以留一手':'身价已变成金币，也计入今天的目标');if(met)pulse('v3-order-paper');}
+   if(event.type==='Delivered'){const b=s.blades.find(b=>b.id===event.pieceId);if(b)fly('delivery',b,deliveryTarget);pulse('v3-wallet');const met=s.delivered>=quotaFor(s.round)&&s.delivered-event.amount<quotaFor(s.round);banner(met?'met':'delivery',met?'委托达成！':`交差 +${event.amount.toLocaleString('zh-CN')}`,met?'印记保住了 · 余剑可以留一手':'身价已变成金币，也计入今天的目标');if(met)pulse('v3-notebook');}
    else if(event.type==='Reserved'){const b=s.blades.find(b=>b.id===event.pieceId);if(b&&s.reserveId===b.id){fly('reserve',b,'v3-reserve-slot');banner('reserve','好剑归架','身价、裂纹和锤势原样保留');}else banner('retrieve','留剑重上铁砧','原来的风险仍在，取下不会重置');}
    else if(event.type==='Traded'){const b=s.blades.find(b=>b.id===event.pieceId);if(b)fly('trade',b,'v3-traits');}
    else if(event.type==='Trait'){banner('trait',event.traitId?`${TRAITS[event.traitId].name} · 已入袋`:'补给已收下',event.traitId?TRAITS[event.traitId].text:'两门赠品都已持有，金币已到账');pulse('v3-traits');}

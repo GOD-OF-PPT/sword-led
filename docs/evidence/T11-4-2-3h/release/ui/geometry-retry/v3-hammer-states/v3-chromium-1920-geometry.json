@@ -1,0 +1,64 @@
+{
+  "probe": {
+    "frames": [
+      {
+        "gap": 35.78058446073581,
+        "angle": 8.358088779180083,
+        "pivotGap": 0.2586607151015993,
+        "headHeight": 110.76507879032278,
+        "metalGap": 10000,
+        "time": 0,
+        "sampleCostMs": 0.30000001192092896,
+        "phase": "idle"
+      },
+      {
+        "gap": 35.78058446073581,
+        "angle": 8.358088779180083,
+        "pivotGap": 0.2586607151015993,
+        "headHeight": 110.76507879032278,
+        "metalGap": 10000,
+        "time": 79.40000000596046,
+        "sampleCostMs": 0.20000001788139343,
+        "phase": "swing"
+      },
+      {
+        "gap": 0.7938149731269348,
+        "angle": 0.35809395932357113,
+        "pivotGap": 0.2586607363437186,
+        "headHeight": 110.76508788673979,
+        "metalGap": 0.9872205010775588,
+        "time": 95.59999999403954,
+        "sampleCostMs": 0.4000000059604645,
+        "phase": "contact"
+      },
+      {
+        "gap": 0.7938149731269348,
+        "angle": 0.35809395932357113,
+        "pivotGap": 0.2586607363437186,
+        "headHeight": 110.76508788673979,
+        "metalGap": 0.4587158992372906,
+        "time": 156.09999999403954,
+        "sampleCostMs": 0.5,
+        "phase": "contact"
+      }
+    ],
+    "complete": true,
+    "source": "http://127.0.0.1:4194/assets/d/hammer-forge-v2.webp",
+    "sourceAlpha": [
+      249,
+      253,
+      253
+    ],
+    "inputToFirstSampleMs": 4.800000011920929
+  },
+  "best": {
+    "gap": 0.7938149731269348,
+    "angle": 0.35809395932357113,
+    "pivotGap": 0.2586607363437186,
+    "headHeight": 110.76508788673979,
+    "metalGap": 0.9872205010775588,
+    "time": 95.59999999403954,
+    "sampleCostMs": 0.4000000059604645,
+    "phase": "contact"
+  }
+}

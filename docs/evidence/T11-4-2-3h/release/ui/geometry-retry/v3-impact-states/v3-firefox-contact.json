@@ -1,0 +1,191 @@
+{
+  "effects": {
+    "particles": 36,
+    "animations": 27,
+    "outcome": "success",
+    "observedAt": 944
+  },
+  "sound": {
+    "contexts": 1,
+    "constructors": 1,
+    "states": [
+      "running"
+    ],
+    "active": 3,
+    "starts": 3,
+    "stops": 3,
+    "maxActive": 3,
+    "frequencies": [
+      139,
+      947,
+      2381
+    ],
+    "peak": 0.0009569844696670771
+  },
+  "contact": {
+    "frames": [
+      {
+        "gap": 24.54380542327647,
+        "angle": 8.35808890244457,
+        "pivotGap": 0.16668767249458707,
+        "headHeight": 76.27016320769985,
+        "metalGap": 10000,
+        "time": 0,
+        "sampleCostMs": 1,
+        "phase": "idle"
+      },
+      {
+        "gap": 24.54380542327647,
+        "angle": 8.35808890244457,
+        "pivotGap": 0.16668767249458707,
+        "headHeight": 76.27016320769985,
+        "metalGap": 10000,
+        "time": 1,
+        "sampleCostMs": 0,
+        "phase": "idle"
+      },
+      {
+        "gap": 24.54380542327647,
+        "angle": 8.35808890244457,
+        "pivotGap": 0.16668767249458707,
+        "headHeight": 76.27016320769985,
+        "metalGap": 10000,
+        "time": 4,
+        "sampleCostMs": 0,
+        "phase": "swing"
+      },
+      {
+        "gap": 14.806037300810361,
+        "angle": 5.121364690444147,
+        "pivotGap": 0.16668763303838763,
+        "headHeight": 76.27014515399588,
+        "metalGap": 10000,
+        "time": 36,
+        "sampleCostMs": 0,
+        "phase": "swing"
+      },
+      {
+        "gap": 5.064802462936769,
+        "angle": 1.8862051284305383,
+        "pivotGap": 0.16668762412261143,
+        "headHeight": 76.27014107446051,
+        "metalGap": 5.489368658028582,
+        "time": 58,
+        "sampleCostMs": 1,
+        "phase": "swing"
+      },
+      {
+        "gap": 0.5245218593716324,
+        "angle": 0.35809395932347515,
+        "pivotGap": 0.16668768747645485,
+        "headHeight": 76.27017006285682,
+        "metalGap": 2.8861289731917736,
+        "time": 75,
+        "sampleCostMs": 3,
+        "phase": "contact"
+      }
+    ],
+    "complete": true,
+    "source": "http://127.0.0.1:4194/assets/d/hammer-forge-v2.webp",
+    "sourceAlpha": [
+      249,
+      253,
+      253
+    ],
+    "inputToFirstSampleMs": 16,
+    "gap": 0.5245218593716324,
+    "best": {
+      "gap": 0.5245218593716324,
+      "angle": 0.35809395932347515,
+      "pivotGap": 0.16668768747645485,
+      "headHeight": 76.27017006285682,
+      "metalGap": 2.8861289731917736,
+      "time": 75,
+      "sampleCostMs": 3,
+      "phase": "contact"
+    }
+  },
+  "state": {
+    "rulesVersion": "forge-v3",
+    "runId": "v3-1792476553435",
+    "seed": "行脚新炉",
+    "roundLimit": 3,
+    "revision": 1,
+    "phase": "workshop",
+    "round": 1,
+    "coins": 0,
+    "seals": 3,
+    "base": 40,
+    "blades": [
+      {
+        "id": "r1-1",
+        "suppliedRound": 1,
+        "status": "active",
+        "base": 40,
+        "value": 58,
+        "peak": 58,
+        "level": 1,
+        "cracked": false,
+        "hits": 1,
+        "charge": 1,
+        "successes": 1,
+        "finalizedRound": null
+      },
+      {
+        "id": "r1-2",
+        "suppliedRound": 1,
+        "status": "active",
+        "base": 40,
+        "value": 40,
+        "peak": 40,
+        "level": 0,
+        "cracked": false,
+        "hits": 0,
+        "charge": 0,
+        "successes": 0,
+        "finalizedRound": null
+      },
+      {
+        "id": "r1-3",
+        "suppliedRound": 1,
+        "status": "active",
+        "base": 40,
+        "value": 40,
+        "peak": 40,
+        "level": 0,
+        "cracked": false,
+        "hits": 0,
+        "charge": 0,
+        "successes": 0,
+        "finalizedRound": null
+      }
+    ],
+    "reserveId": null,
+    "delivered": 0,
+    "traits": [],
+    "gift": "locked",
+    "pardonUsed": false,
+    "pendingInheritance": 0,
+    "shop": [],
+    "sold": [],
+    "upgraded": false,
+    "repaired": false,
+    "history": [],
+    "rng": {
+      "forge": {
+        "state": 3022150949,
+        "draws": 1
+      },
+      "shop": {
+        "state": 1526952265,
+        "draws": 0
+      }
+    },
+    "journal": [
+      {
+        "type": "strike",
+        "pieceId": "r1-1"
+      }
+    ]
+  }
+}

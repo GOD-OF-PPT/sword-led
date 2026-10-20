@@ -1,0 +1,41 @@
+{
+  "at": "2026-10-20T06:03:06.125Z",
+  "files": [
+    {
+      "path": "tests/e2e/hammer-probe.ts",
+      "beforeSha256": "a04d5451f9ab2a2475597cd1026cbdeda32e03d1cd7722ea0cb0d67204a6237c",
+      "afterSha256": "b0730e35ca0155d2ee00bf65bf872ba859b0af05b9b6ed229d465698bb061b08"
+    },
+    {
+      "path": "tests/e2e/v3-impact.spec.ts",
+      "beforeSha256": "dc8a128d29ab1e3f272cad91e10b2971671456a39dc5d1eed01315a0d86d0596",
+      "afterSha256": "53c49be52e02f5cbc195359e93cf540540e34abda011b1188ad3f496f4643ac3"
+    },
+    {
+      "path": "tests/e2e/v3-visual.spec.ts",
+      "beforeSha256": "3e502b2f96fd5160a0770a4318e567df768895067bab728ad49dabddb6162379",
+      "afterSha256": "41440a98040feab6321776c4c546b6100246ed36ba9746d72cabe27c38015f23"
+    }
+  ],
+  "productionAnd48BuildFilesUnchanged": true,
+  "probeWindow": "3000ms from first completed independent geometry sample",
+  "latencyRetained": [
+    "inputToFirstSampleMs",
+    "per-frame sampleCostMs",
+    "phase"
+  ],
+  "unchangedThresholds": {
+    "gapLessThan": 6,
+    "angleAbsLessThan": 10,
+    "contactSamplesAtLeast": 2
+  },
+  "transientObservers": "Native MutationObserver captures actual running animations and trait class before automation protocol delay. No game clock, values, classes or animation methods are changed.",
+  "pendingVerification": false,
+  "verification": {
+    "affectedObserverCases": 15,
+    "geometryAndSoundAndTraitReport": "../release/geometry-retry/report.json",
+    "sameLimitCampaigns": 2,
+    "campaignReport": "../release/campaign-retry/report.json",
+    "newProductionChangesDuringObserverFix": 0
+  }
+}

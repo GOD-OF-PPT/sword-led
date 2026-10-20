@@ -1,0 +1,5 @@
+import {defineConfig} from '@playwright/test';
+import base from '../../playwright.v3.config.ts';
+import {fileURLToPath} from 'node:url';
+const root=fileURLToPath(new URL('../../',import.meta.url));
+export default defineConfig({...base,use:{...base.use,baseURL:'http://127.0.0.1:4194'},testDir:root+'tests/e2e',outputDir:root+'tmp/T11-4-2-3h/polish/artifacts',reporter:[['list'],['json',{outputFile:root+'tmp/T11-4-2-3h/polish/report.json'}]],webServer:{command:'npm run preview -- --port 4194 --strictPort',url:'http://127.0.0.1:4194',cwd:root,reuseExistingServer:false,env:{NO_PROXY:'127.0.0.1,localhost',no_proxy:'127.0.0.1,localhost'}}});

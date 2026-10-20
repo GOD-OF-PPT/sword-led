@@ -2,13 +2,13 @@
 
 一款面向现代 PC 浏览器的轮次制锻造游戏。每轮只有三件铁坯：点击落锤让它升值，在断裂前决定交货、留剑还是回收，靠手艺和商人升级撑过契约。
 
-**当前首页为 v0.5「来客手札」：[打开游戏](http://127.0.0.1:4179/)**。三位来客站在炉边，纸单显示一条可选打造建议、当前差项和明日预告。合意成品交到来客手中，留下短话和印签；右下手札可翻看这一炉真正交出的剑。手艺变为左下实体挂件，点开查看作用。菜单、暂停、收据和完整胜负都能回顾作品。[界面说明](docs/v0.5-notebook-interface.md)与[R3.17复核](docs/reviews/R3-17-traveler-notebook.md)记录实现和验证边界。
+**当前首页为 v0.6「炉前」：[打开本机预览](http://127.0.0.1:4179/)**。按用户指定的Game Studio UI/Playtest指导重排：中央剑与铁砧为操作主体，点击炉边来客看心愿，交剑靠近来客、留剑靠近剑架；保存/设置按需展开。重要事件签能读完、收起和进入下一步，“炉程”回看当前目标、真实成长与经历。原手札仍记录实际成品。[界面说明](docs/v0.6-workshop-interface.md)说明具体交互；[R3.18复核](docs/reviews/R3-18-game-studio-forge-ui.md)记录实际构建、失败与复验边界。
 
-刷新原标签页，左上应显示“v0.5 来客手札”。原进度直接续玩；已有三轮档按原长度继续，要玩完整局可在“契约”选择十二轮并明确新建，确认前可导出旧进度。新空档直接开启十二轮，[三轮练手](http://127.0.0.1:4179/?mode=3)也保留。仍然左键直接落锤，不合来客建议也能交差；原规则、锤姿、成长、静音和减弱动效保持。
+刷新原标签页，左上为“v0.6 炉前”。原进度直接续玩；已有三轮档按原长度继续，要玩十二轮可在“契约”选择并明确新建，确认前可导出旧进度。新空档默认十二轮，[三轮练手](http://127.0.0.1:4179/?mode=3)保留。仍然左键直接落锤，不合来客建议也能交差；原规则、锤姿、成长、静音和减弱动效保持。
 
-![当前十二轮首页实机](docs/evidence/T11-4-2-3g/preview-default.webp)
+![当前v0.6炉前首页实机](docs/evidence/T11-4-2-3h/polish/preview-default.webp)
 
-[完整实况复核](docs/research/2026-10-19-forgetax-session-study.md)、[批准方案](docs/v0.4-gameplay-proposal.md)、[完整契约](docs/v0.4-campaign.md)与[来客美术原件/提示词](design/d/v05/README.md)保留研究与实施身份。[26,000局模型审计](docs/reviews/R4-v3-model-audit.md)发现固定七次点击也能通关；[后续1152局补证](docs/reviews/R3-16-purpose-and-directed-review.md)证实主动保险和带裂手艺有实际用途。当前界面247单测和三引擎102场景及最后手札21项定向通过，整体趣味性、最终广矩阵与最大审查继续推进。界面v0.5仍使用forge-v3/schema3经济与原存档，手札不发额外奖励。`/v2.html`与`/legacy.html`保留旧模式和旧档；本机预览尚未公网部署。
+[完整实况复核](docs/research/2026-10-19-forgetax-session-study.md)、[批准方案](docs/v0.4-gameplay-proposal.md)、[十二轮规则](docs/v0.4-campaign.md)与[来客美术原件/提示词](design/d/v05/README.md)保留研究与实施身份。[26,000局模型审计](docs/reviews/R4-v3-model-audit.md)发现固定七次点击也能通关；[后续1152局补证](docs/reviews/R3-16-purpose-and-directed-review.md)证实主动保险和带裂手艺有实际用途，但不证明整体乐趣。用户最新仍认为缺少主线/成长/内容；[v0.7完整游戏提案](docs/v0.7-complete-game-proposal.md)提出三章十二天、不同打造委托、配方/改造、事件与跨局炉谱，**已获明确确认，待分阶段开发**。当前v0.6继续forge-v3/schema3，旧模式/档和历史证据保留；整体H、最终广矩阵与最大审查未完成。本机预览未公网部署。
 
 2026-10-18真人曾评价v0.2玩法/美术缺乏新意；已据ForgeTax及110条唯一Steam评论修订并取得明确v0.3批准。[核心证据](docs/reviews/R3-5-v2-core-and-playable.md)保留928局策略与原试玩结果，[D界面说明](docs/v0.3-d-interface.md)记录新接线与独立练习。[新版技术验收](docs/reviews/R3-7-v2-technical-acceptance.md)与[44AC映射](docs/v0.3-acceptance.md)分别记录实际矩阵、故障修复及待办。真人再玩和最大交付仍按T11.4.2–T12推进，技术通过不等于玩家满意。
 
@@ -57,7 +57,7 @@ npm ci --registry=https://registry.npmjs.org/
 npm run dev
 ```
 
-打开终端显示的地址，默认`/`为v0.4，`/v2.html`为旧D细锻，`/legacy.html`为B版旧契约。生产版本用`npm run build`后`npm run preview`，默认端口4173。构建包含三个HTML、网页资源与core/session/v2/v3 SDK及共享chunk，应整体保留dist，不提交dist或node_modules。需要通过localhost或HTTPS运行。
+打开终端显示的地址，默认`/`为v0.6炉前（forge-v3规则），`/v2.html`为旧D细锻，`/legacy.html`为B版旧契约。生产版本用`npm run build`后`npm run preview`，默认端口4173。构建包含三个HTML、网页资源与core/session/v2/v3 SDK及共享chunk，应整体保留dist，不提交dist或node_modules。需要通过localhost或HTTPS运行。
 
 | 操作 | 用法 |
 | --- | --- |
@@ -82,6 +82,8 @@ npm run check
 npm run test:browser
 npm run test:art
 ```
+
+当前forge-v3界面回归需在构建后单独运行 `npx playwright test --config playwright.v3.config.ts`（Chromium/Firefox/WebKit须已安装）；不要在浏览器批次运行时重建共用dist。
 
 `check`运行单测、严格类型检查与双构建。`test:browser`一次构建后串行运行正式页面与存储SDK；也可分别用`test:e2e`/`test:storage:browser`。真实Chrome原生窗口/缓存探测采用隔离profile；测试只改变测试侧时钟/事件，不注入钱包/终局。美术检查使用独立设计页，不作为正式游戏验收。单项命令还包括`npm test`、`npm run typecheck`、`npm run build`和交互`test:watch`。
 

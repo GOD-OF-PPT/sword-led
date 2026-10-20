@@ -1,0 +1,4785 @@
+{
+  "config": {
+    "argv": [
+      "/Users/gordon/.nvm/versions/node/v22.12.0/bin/node",
+      "/Users/gordon/githome/sword-led/node_modules/@playwright/test/cli.js",
+      "test",
+      "--config=/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final.config.ts"
+    ],
+    "configFile": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final.config.ts",
+    "rootDir": "/Users/gordon/githome/sword-led/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v3-chromium",
+        "name": "v3-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v3-*.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v3-firefox",
+        "name": "v3-firefox",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v3-*.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v3-webkit",
+        "name": "v3-webkit",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v3-*.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v3-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v3-*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4194",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v3-chromium"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v3-firefox",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v3-*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4194",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "firefox"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v3-firefox"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v3-webkit",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v3-*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4194",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1792,
+            "height": 1120
+          },
+          "deviceScaleFactor": 2,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "webkit"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v3-webkit"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final/report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 4194 --strictPort",
+      "url": "http://127.0.0.1:4194",
+      "cwd": "/Users/gordon/githome/sword-led/",
+      "reuseExistingServer": false,
+      "env": {
+        "NO_PROXY": "127.0.0.1,localhost",
+        "no_proxy": "127.0.0.1,localhost"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "v3-campaign.spec.ts",
+      "file": "v3-campaign.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "default twelve-round campaign completes through three merchants, upgrades, replacement and reload with zero pointer events",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 360000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 309338,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:08:42.764Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c86b427628d671b6f62e-8641613d9410902fa55b",
+          "file": "v3-campaign.spec.ts",
+          "line": 34,
+          "column": 1
+        },
+        {
+          "title": "twelve-round failure and merchant repair use real seals and coins",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 27325,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:13:53.750Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c86b427628d671b6f62e-21713c119b127075d36c",
+          "file": "v3-campaign.spec.ts",
+          "line": 51,
+          "column": 1
+        },
+        {
+          "title": "existing three-round save stays three rounds; explicit fresh campaign supports twelve and cancel preserves the old bytes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3586,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:14:21.112Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c86b427628d671b6f62e-5627cc2bd43a638059d3",
+          "file": "v3-campaign.spec.ts",
+          "line": 55,
+          "column": 1
+        },
+        {
+          "title": "default twelve-round campaign completes through three merchants, upgrades, replacement and reload with zero pointer events",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 360000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 263095,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:20:02.950Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c86b427628d671b6f62e-994b2755aa9f3fa1874a",
+          "file": "v3-campaign.spec.ts",
+          "line": 34,
+          "column": 1
+        },
+        {
+          "title": "twelve-round failure and merchant repair use real seals and coins",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 24067,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:24:31.183Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c86b427628d671b6f62e-ef048b42c691a89fba41",
+          "file": "v3-campaign.spec.ts",
+          "line": 51,
+          "column": 1
+        },
+        {
+          "title": "existing three-round save stays three rounds; explicit fresh campaign supports twelve and cancel preserves the old bytes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3383,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:24:55.260Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c86b427628d671b6f62e-c6bd5b51f6afbf68da79",
+          "file": "v3-campaign.spec.ts",
+          "line": 55,
+          "column": 1
+        },
+        {
+          "title": "default twelve-round campaign completes through three merchants, upgrades, replacement and reload with zero pointer events",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 360000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 375418,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 360000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 360000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 360000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-campaign.spec.ts",
+                        "column": 87,
+                        "line": 13
+                      },
+                      "message": "Error: locator.evaluate: Test timeout of 360000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#v3-strike')\u001b[22m\n\n\n  11 | const repairRoute=JSON.parse(readFileSync('docs/evidence/T11-4-2-3d/repair-route.json','utf8')) as Route;\n  12 | async function read(page:Page){const raw=await page.evaluate(()=>localStorage.getItem('sword-led.save.v3'));if(!raw)throw Error('No actual v3 save');const result=validateRun(JSON.parse(raw).state);if(!result.ok)throw Error(result.detail);return result.state;}\n> 13 | async function tabTo(page:Page,target:Locator){for(let i=0;i<100;i++){if(await target.evaluate(e=>e===document.activeElement))return;const back=await target.evaluate(e=>Boolean(document.activeElement&&(document.activeElement.compareDocumentPosition(e)&Node.DOCUMENT_POSITION_PRECEDING)));await page.keyboard.press(back?'Shift+Tab':'Tab');}throw Error('Not keyboard reachable');}\n     |                                                                                       ^\n  14 | async function activate(page:Page,target:Locator){await tabTo(page,target);await page.keyboard.press('Enter');}\n  15 | const confirm=(page:Page)=>activate(page,page.locator('#v3-dialog-actions').getByRole('button',{name:'确认',exact:true}));\n  16 | async function start(page:Page,seed:string){await page.goto('/');await expect(page.locator('#v3-workshop')).toBeVisible();await activate(page,page.locator('#v3-menu'));await tabTo(page,page.locator('#v3-seed'));await page.keyboard.press('ControlOrMeta+A');await page.keyboard.type(seed);await expect(page.locator('#v3-mode')).toHaveValue('12');await activate(page,page.getByRole('button',{name:'开一炉新契约'}));await confirm(page);expect((await read(page)).roundLimit).toBe(12);}\n    at tabTo (/Users/gordon/githome/sword-led/tests/e2e/v3-campaign.spec.ts:13:87)\n    at perform (/Users/gordon/githome/sword-led/tests/e2e/v3-campaign.spec.ts:21:23)\n    at /Users/gordon/githome/sword-led/tests/e2e/v3-campaign.spec.ts:39:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:28:55.733Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final/artifacts/v3-campaign-default-twelve-32aab-ad-with-zero-pointer-events-v3-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final/artifacts/v3-campaign-default-twelve-32aab-ad-with-zero-pointer-events-v3-webkit/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c86b427628d671b6f62e-cd8ba9fe6c506de5f12e",
+          "file": "v3-campaign.spec.ts",
+          "line": 34,
+          "column": 1
+        },
+        {
+          "title": "twelve-round failure and merchant repair use real seals and coins",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 72027,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:35:25.355Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c86b427628d671b6f62e-bd3dfb170dc505c279b8",
+          "file": "v3-campaign.spec.ts",
+          "line": 51,
+          "column": 1
+        },
+        {
+          "title": "existing three-round save stays three rounds; explicit fresh campaign supports twelve and cancel preserves the old bytes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9003,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:36:38.628Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c86b427628d671b6f62e-6ae0f4654322c7e4848d",
+          "file": "v3-campaign.spec.ts",
+          "line": 55,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v3-events.spec.ts",
+      "file": "v3-events.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "a real crack and break have durable actionable notices; ordinary hits and pause cannot erase them",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10074,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:14:24.763Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8cf692b8fd5b3b71e6e-4f1094dd4f0a59925961",
+          "file": "v3-events.spec.ts",
+          "line": 25,
+          "column": 1
+        },
+        {
+          "title": "quota notice leads to the actual free craft and saved growth; viewing and dismissing never changes the game",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4492,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:14:34.858Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8cf692b8fd5b3b71e6e-b89d08e4ba573c81ad05",
+          "file": "v3-events.spec.ts",
+          "line": 33,
+          "column": 1
+        },
+        {
+          "title": "real next-round receipt, merchant arrival and upgrade notices stay readable at both desktop sizes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13033,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:14:39.370Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8cf692b8fd5b3b71e6e-89fcd5a4ae0fd8981c42",
+          "file": "v3-events.spec.ts",
+          "line": 36,
+          "column": 1
+        },
+        {
+          "title": "a real crack and break have durable actionable notices; ordinary hits and pause cannot erase them",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9585,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:24:58.689Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8cf692b8fd5b3b71e6e-8a6e47f924d4c61c0a30",
+          "file": "v3-events.spec.ts",
+          "line": 25,
+          "column": 1
+        },
+        {
+          "title": "quota notice leads to the actual free craft and saved growth; viewing and dismissing never changes the game",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3480,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:25:08.287Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8cf692b8fd5b3b71e6e-6575d943eced4f86bc17",
+          "file": "v3-events.spec.ts",
+          "line": 33,
+          "column": 1
+        },
+        {
+          "title": "real next-round receipt, merchant arrival and upgrade notices stay readable at both desktop sizes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4985,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:25:11.786Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8cf692b8fd5b3b71e6e-fa19b3d1c6237bb93049",
+          "file": "v3-events.spec.ts",
+          "line": 36,
+          "column": 1
+        },
+        {
+          "title": "a real crack and break have durable actionable notices; ordinary hits and pause cannot erase them",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 28549,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:36:47.751Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8cf692b8fd5b3b71e6e-c5c0bde68e7d02f4ee2e",
+          "file": "v3-events.spec.ts",
+          "line": 25,
+          "column": 1
+        },
+        {
+          "title": "quota notice leads to the actual free craft and saved growth; viewing and dismissing never changes the game",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12297,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:37:16.331Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8cf692b8fd5b3b71e6e-f566b298ab5e895568b9",
+          "file": "v3-events.spec.ts",
+          "line": 33,
+          "column": 1
+        },
+        {
+          "title": "real next-round receipt, merchant arrival and upgrade notices stay readable at both desktop sizes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 31390,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:37:28.658Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a8cf692b8fd5b3b71e6e-0cac5cbc803f97f8a7b7",
+          "file": "v3-events.spec.ts",
+          "line": 36,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v3-hammer.spec.ts",
+      "file": "v3-hammer.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "hammer strikes with a flat metal face and rotates around its grip at both desktop sizes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7058,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:14:52.467Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f83ebcaaaeffaac8dc96-7ada93d63387d55971ca",
+          "file": "v3-hammer.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "flat face follows actual opaque metal for all three shapes at rough and masterwork stages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 29396,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:14:59.546Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f83ebcaaaeffaac8dc96-7ab4f7d2ca70e9ac6591",
+          "file": "v3-hammer.spec.ts",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "slow presentation frames still show a flat contact; pause cancels the pending swing without another command",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4351,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:15:28.964Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f83ebcaaaeffaac8dc96-9813be17983a16652121",
+          "file": "v3-hammer.spec.ts",
+          "line": 25,
+          "column": 1
+        },
+        {
+          "title": "hammer strikes with a flat metal face and rotates around its grip at both desktop sizes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4220,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:25:16.830Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f83ebcaaaeffaac8dc96-1a93b8d4525e3d97e42b",
+          "file": "v3-hammer.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "flat face follows actual opaque metal for all three shapes at rough and masterwork stages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 35233,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:25:21.069Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f83ebcaaaeffaac8dc96-ff050bd84255124fe0bb",
+          "file": "v3-hammer.spec.ts",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "slow presentation frames still show a flat contact; pause cancels the pending swing without another command",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3452,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:25:56.330Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f83ebcaaaeffaac8dc96-59387ae3e0a7bd5468b1",
+          "file": "v3-hammer.spec.ts",
+          "line": 25,
+          "column": 1
+        },
+        {
+          "title": "hammer strikes with a flat metal face and rotates around its grip at both desktop sizes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 33386,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:38:00.128Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f83ebcaaaeffaac8dc96-f6982e6ac3e25cd8bfa6",
+          "file": "v3-hammer.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "flat face follows actual opaque metal for all three shapes at rough and masterwork stages",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 75838,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m2\u001b[39m\nReceived:    \u001b[31m1\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m2\u001b[39m\nReceived:    \u001b[31m1\u001b[39m\n    at /Users/gordon/githome/sword-led/tests/e2e/v3-hammer.spec.ts:19:241",
+                    "location": {
+                      "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-hammer.spec.ts",
+                      "column": 241,
+                      "line": 19
+                    },
+                    "snippet": "  17 |    await expect(page.locator('#v3-strike')).toHaveAttribute('aria-busy','false');const before=await read(),blade=before.blades.find(b=>b.id===id)!;expect(blade.status).toBe('active');expect(rank==='rough'?blade.level===0:blade.level>=9).toBe(true);\n  18 |    await installHammerProbe(page);const box=await page.locator('#v3-hit').boundingBox();await page.mouse.click(box!.x+box!.width*.68,box!.y+box!.height*.6);await expect.poll(()=>page.evaluate(()=>window.v3HammerGeometry.complete)).toBe(true);const after=await read(),expected=applyCommand(before,{runId:before.runId,expectedRevision:before.revision,action:{type:'strike',pieceId:id}});if(!expected.ok)throw Error(expected.error);expect(after).toEqual(expected.state);expect(after.revision).toBe(before.revision+1);\n> 19 |    const probe=await page.evaluate(()=>window.v3HammerGeometry),best=probe.frames.reduce((a,b)=>b.gap<a.gap?b:a);samples.push({family,rank,width,before,after,probe,best});expect(probe.frames.filter(f=>f.gap<6&&Math.abs(f.angle)<10).length).toBeGreaterThanOrEqual(2);expect(best.gap).toBeLessThan(6);expect(best.metalGap).toBeLessThan(6);expect(Math.abs(best.angle)).toBeLessThan(10);await expect(page.locator('#v3-strike')).toHaveAttribute('aria-busy','false');\n     |                                                                                                                                                                                                                                                 ^\n  20 |   }\n  21 |  }\n  22 |  await writeFile(`${dir}/${info.project.name}-shapes.json`,JSON.stringify(samples,null,2)+'\\n');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-hammer.spec.ts",
+                        "column": 241,
+                        "line": 19
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m2\u001b[39m\nReceived:    \u001b[31m1\u001b[39m\n\n  17 |    await expect(page.locator('#v3-strike')).toHaveAttribute('aria-busy','false');const before=await read(),blade=before.blades.find(b=>b.id===id)!;expect(blade.status).toBe('active');expect(rank==='rough'?blade.level===0:blade.level>=9).toBe(true);\n  18 |    await installHammerProbe(page);const box=await page.locator('#v3-hit').boundingBox();await page.mouse.click(box!.x+box!.width*.68,box!.y+box!.height*.6);await expect.poll(()=>page.evaluate(()=>window.v3HammerGeometry.complete)).toBe(true);const after=await read(),expected=applyCommand(before,{runId:before.runId,expectedRevision:before.revision,action:{type:'strike',pieceId:id}});if(!expected.ok)throw Error(expected.error);expect(after).toEqual(expected.state);expect(after.revision).toBe(before.revision+1);\n> 19 |    const probe=await page.evaluate(()=>window.v3HammerGeometry),best=probe.frames.reduce((a,b)=>b.gap<a.gap?b:a);samples.push({family,rank,width,before,after,probe,best});expect(probe.frames.filter(f=>f.gap<6&&Math.abs(f.angle)<10).length).toBeGreaterThanOrEqual(2);expect(best.gap).toBeLessThan(6);expect(best.metalGap).toBeLessThan(6);expect(Math.abs(best.angle)).toBeLessThan(10);await expect(page.locator('#v3-strike')).toHaveAttribute('aria-busy','false');\n     |                                                                                                                                                                                                                                                 ^\n  20 |   }\n  21 |  }\n  22 |  await writeFile(`${dir}/${info.project.name}-shapes.json`,JSON.stringify(samples,null,2)+'\\n');\n    at /Users/gordon/githome/sword-led/tests/e2e/v3-hammer.spec.ts:19:241"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:38:33.585Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final/artifacts/v3-hammer-flat-face-follow-371b4-rough-and-masterwork-stages-v3-webkit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final/artifacts/v3-hammer-flat-face-follow-371b4-rough-and-masterwork-stages-v3-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final/artifacts/v3-hammer-flat-face-follow-371b4-rough-and-masterwork-stages-v3-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-hammer.spec.ts",
+                    "column": 241,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "f83ebcaaaeffaac8dc96-2fa11275aea4ce829d17",
+          "file": "v3-hammer.spec.ts",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "slow presentation frames still show a flat contact; pause cancels the pending swing without another command",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10445,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:39:57.117Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f83ebcaaaeffaac8dc96-8ed1db9b9c126def8270",
+          "file": "v3-hammer.spec.ts",
+          "line": 25,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v3-immersive.spec.ts",
+      "file": "v3-immersive.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "workshop first frame protects the actual sword and keeps its persistent HUD below a quarter of each desktop viewport",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6305,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:15:33.385Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "40169f46e79ab2128595-06fe0c6617165eea99cd",
+          "file": "v3-immersive.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "native keyboard opens the actual traveler wish and returns focus; an unmatched ordinary sword is still received once",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4286,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:15:39.724Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "40169f46e79ab2128595-5a1d105cbe9956478850",
+          "file": "v3-immersive.spec.ts",
+          "line": 12,
+          "column": 1
+        },
+        {
+          "title": "context hints end without hiding risk, and resize or optional viewing never replays an expired tip",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4584,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:15:44.038Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "40169f46e79ab2128595-c91c2e4db65e8873bcee",
+          "file": "v3-immersive.spec.ts",
+          "line": 16,
+          "column": 1
+        },
+        {
+          "title": "normal save tools are in pause; a real write failure exposes unobscured recovery and exports the exact accepted state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7542,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:15:48.654Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "40169f46e79ab2128595-5c1a3f2f03e01c4a7dbe",
+          "file": "v3-immersive.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "workshop first frame protects the actual sword and keeps its persistent HUD below a quarter of each desktop viewport",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2900,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:25:59.843Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "40169f46e79ab2128595-a273c20e29ff537e0fd1",
+          "file": "v3-immersive.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "native keyboard opens the actual traveler wish and returns focus; an unmatched ordinary sword is still received once",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2401,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:26:02.759Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "40169f46e79ab2128595-d2ff3aebddb00f8adcf7",
+          "file": "v3-immersive.spec.ts",
+          "line": 12,
+          "column": 1
+        },
+        {
+          "title": "context hints end without hiding risk, and resize or optional viewing never replays an expired tip",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2698,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:26:05.175Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "40169f46e79ab2128595-9f6147b0f3b1b3ee78cb",
+          "file": "v3-immersive.spec.ts",
+          "line": 16,
+          "column": 1
+        },
+        {
+          "title": "normal save tools are in pause; a real write failure exposes unobscured recovery and exports the exact accepted state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3371,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:26:07.891Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "40169f46e79ab2128595-d764569d7fd96648fc00",
+          "file": "v3-immersive.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "workshop first frame protects the actual sword and keeps its persistent HUD below a quarter of each desktop viewport",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13234,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:40:08.434Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "40169f46e79ab2128595-e9d66d70710c28d99fe1",
+          "file": "v3-immersive.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "native keyboard opens the actual traveler wish and returns focus; an unmatched ordinary sword is still received once",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10374,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:40:21.691Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "40169f46e79ab2128595-ce904d31a1ad81fc6553",
+          "file": "v3-immersive.spec.ts",
+          "line": 12,
+          "column": 1
+        },
+        {
+          "title": "context hints end without hiding risk, and resize or optional viewing never replays an expired tip",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11879,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:40:32.087Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "40169f46e79ab2128595-07f1552133d465f1331d",
+          "file": "v3-immersive.spec.ts",
+          "line": 16,
+          "column": 1
+        },
+        {
+          "title": "normal save tools are in pause; a real write failure exposes unobscured recovery and exports the exact accepted state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 26780,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:40:43.990Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "40169f46e79ab2128595-c0e2a8de5428b9929736",
+          "file": "v3-immersive.spec.ts",
+          "line": 19,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v3-impact.spec.ts",
+      "file": "v3-impact.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "left-down on the actual sword commits once, aim is cosmetic, hold/up/double-click/drag do not duplicate",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3404,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:15:56.270Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d232d6b3759930feec43-c67c023f867e2fb36dae",
+          "file": "v3-impact.spec.ts",
+          "line": 12,
+          "column": 1
+        },
+        {
+          "title": "contact has real particles, ring, blade recoil and distinct native percussive sound; mute and reduced motion still work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3987,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:15:59.697Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d232d6b3759930feec43-3f0538991ea715215b65",
+          "file": "v3-impact.spec.ts",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "burst is atomic on left-down and late visual hits cannot survive pause, modal or reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4795,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:16:03.703Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d232d6b3759930feec43-019f5b1a5782db1044e0",
+          "file": "v3-impact.spec.ts",
+          "line": 26,
+          "column": 1
+        },
+        {
+          "title": "large left-click target and keyboard alternatives remain visible at both desktop sizes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4631,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:16:08.513Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d232d6b3759930feec43-20d2f3ed7181d78ba656",
+          "file": "v3-impact.spec.ts",
+          "line": 30,
+          "column": 1
+        },
+        {
+          "title": "record actual left-click growth and burst effects without injecting any game result",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 20196,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:16:13.189Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "actual-left-click-effects",
+                      "contentType": "video/webm",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final/artifacts/v3-impact-record-actual-le-d01d8-t-injecting-any-game-result-v3-chromium/attachments/actual-left-click-effects-9d36def81dd4448350a45a76949d75d578d1e06e.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d232d6b3759930feec43-c80d23f238edf4de57ce",
+          "file": "v3-impact.spec.ts",
+          "line": 33,
+          "column": 1
+        },
+        {
+          "title": "left-down on the actual sword commits once, aim is cosmetic, hold/up/double-click/drag do not duplicate",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2209,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:26:11.315Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d232d6b3759930feec43-8881fc5131d4219ee297",
+          "file": "v3-impact.spec.ts",
+          "line": 12,
+          "column": 1
+        },
+        {
+          "title": "contact has real particles, ring, blade recoil and distinct native percussive sound; mute and reduced motion still work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2820,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:26:13.536Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d232d6b3759930feec43-6a7937bb627cfa524534",
+          "file": "v3-impact.spec.ts",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "burst is atomic on left-down and late visual hits cannot survive pause, modal or reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4032,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:26:16.373Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d232d6b3759930feec43-9717273324043e22c4d2",
+          "file": "v3-impact.spec.ts",
+          "line": 26,
+          "column": 1
+        },
+        {
+          "title": "large left-click target and keyboard alternatives remain visible at both desktop sizes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3002,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:26:20.417Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d232d6b3759930feec43-e6cd042e09f4095f726c",
+          "file": "v3-impact.spec.ts",
+          "line": 30,
+          "column": 1
+        },
+        {
+          "title": "record actual left-click growth and burst effects without injecting any game result",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8568,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:26:23.448Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "actual-left-click-effects",
+                      "contentType": "video/webm",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final/artifacts/v3-impact-record-actual-le-d01d8-t-injecting-any-game-result-v3-firefox/attachments/actual-left-click-effects-3eecce15be268d49742c1d7a3bae0d4593c524b9.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d232d6b3759930feec43-d139d249c721b4f53ab0",
+          "file": "v3-impact.spec.ts",
+          "line": 33,
+          "column": 1
+        },
+        {
+          "title": "left-down on the actual sword commits once, aim is cosmetic, hold/up/double-click/drag do not duplicate",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7228,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:41:10.887Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d232d6b3759930feec43-7726e6f72217f62295ee",
+          "file": "v3-impact.spec.ts",
+          "line": 12,
+          "column": 1
+        },
+        {
+          "title": "contact has real particles, ring, blade recoil and distinct native percussive sound; mute and reduced motion still work",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8500,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m10\u001b[39m\nReceived:   \u001b[31m0\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m10\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at /Users/gordon/githome/sword-led/tests/e2e/v3-impact.spec.ts:22:303",
+                    "location": {
+                      "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-impact.spec.ts",
+                      "column": 303,
+                      "line": 22
+                    },
+                    "snippet": "  20 | test('contact has real particles, ring, blade recoil and distinct native percussive sound; mute and reduced motion still work',async({page},info)=>{\n  21 |  await installAudioProbe(page);await open(page);await page.locator('#v3-settings summary').click();await expect.poll(async()=>(await audioProbe(page)).states).toContain('running');await page.locator('#v3-settings summary').click();const p=await point(page);await page.mouse.move(p.x,p.y);await installHammerProbe(page);await page.mouse.down();await expect(page.locator('#v3-scene')).toHaveAttribute('data-outcome',/success|great/);\n> 22 |  const effects=await page.locator('#v3-scene').evaluate(e=>({particles:e.querySelectorAll('#v3-sparks i').length,animations:e.getAnimations({subtree:true}).filter(a=>a.playState==='running').length,outcome:e.getAttribute('data-outcome')}));expect(effects.particles).toBe(36);expect(effects.animations).toBeGreaterThan(10);await page.mouse.up();const sound=await audioProbe(page);expect(sound.starts).toBe(3);expect(sound.frequencies).toEqual(effects.outcome==='great'?[89,631,1723]:[139,947,2381]);expect(sound.maxActive).toBeLessThanOrEqual(12);\n     |                                                                                                                                                                                                                                                                                                               ^\n  23 |  await expect.poll(()=>page.evaluate(()=>window.v3HammerGeometry.complete)).toBe(true);const geometry=await page.evaluate(()=>window.v3HammerGeometry),best=geometry.frames.reduce((a,b)=>b.gap<a.gap?b:a),contact={...geometry,gap:best.gap,best};await mkdir(dir,{recursive:true});await writeFile(`${dir}/${info.project.name}-contact.json`,JSON.stringify({effects,sound,contact,state:await read(page)},null,2)+'\\n');expect(contact.gap).toBeLessThan(6);await page.screenshot({path:`${dir}/${info.project.name}-contact.png`});\n  24 |  await page.locator('#v3-settings summary').click();await page.locator('#v3-muted').check();await page.locator('#v3-motion').check();await page.locator('#v3-settings summary').click();const starts=(await audioProbe(page)).starts;await expect(page.locator('#v3-hit')).toBeEnabled();await left(page);expect((await audioProbe(page)).starts).toBe(starts);expect((await audioProbe(page)).active).toBe(0);expect(await page.locator('#v3-scene').evaluate(e=>e.getAnimations({subtree:true}).filter(a=>a.playState==='running').length)).toBe(0);\n  25 | });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-impact.spec.ts",
+                        "column": 303,
+                        "line": 22
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m10\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\n  20 | test('contact has real particles, ring, blade recoil and distinct native percussive sound; mute and reduced motion still work',async({page},info)=>{\n  21 |  await installAudioProbe(page);await open(page);await page.locator('#v3-settings summary').click();await expect.poll(async()=>(await audioProbe(page)).states).toContain('running');await page.locator('#v3-settings summary').click();const p=await point(page);await page.mouse.move(p.x,p.y);await installHammerProbe(page);await page.mouse.down();await expect(page.locator('#v3-scene')).toHaveAttribute('data-outcome',/success|great/);\n> 22 |  const effects=await page.locator('#v3-scene').evaluate(e=>({particles:e.querySelectorAll('#v3-sparks i').length,animations:e.getAnimations({subtree:true}).filter(a=>a.playState==='running').length,outcome:e.getAttribute('data-outcome')}));expect(effects.particles).toBe(36);expect(effects.animations).toBeGreaterThan(10);await page.mouse.up();const sound=await audioProbe(page);expect(sound.starts).toBe(3);expect(sound.frequencies).toEqual(effects.outcome==='great'?[89,631,1723]:[139,947,2381]);expect(sound.maxActive).toBeLessThanOrEqual(12);\n     |                                                                                                                                                                                                                                                                                                               ^\n  23 |  await expect.poll(()=>page.evaluate(()=>window.v3HammerGeometry.complete)).toBe(true);const geometry=await page.evaluate(()=>window.v3HammerGeometry),best=geometry.frames.reduce((a,b)=>b.gap<a.gap?b:a),contact={...geometry,gap:best.gap,best};await mkdir(dir,{recursive:true});await writeFile(`${dir}/${info.project.name}-contact.json`,JSON.stringify({effects,sound,contact,state:await read(page)},null,2)+'\\n');expect(contact.gap).toBeLessThan(6);await page.screenshot({path:`${dir}/${info.project.name}-contact.png`});\n  24 |  await page.locator('#v3-settings summary').click();await page.locator('#v3-muted').check();await page.locator('#v3-motion').check();await page.locator('#v3-settings summary').click();const starts=(await audioProbe(page)).starts;await expect(page.locator('#v3-hit')).toBeEnabled();await left(page);expect((await audioProbe(page)).starts).toBe(starts);expect((await audioProbe(page)).active).toBe(0);expect(await page.locator('#v3-scene').evaluate(e=>e.getAnimations({subtree:true}).filter(a=>a.playState==='running').length)).toBe(0);\n  25 | });\n    at /Users/gordon/githome/sword-led/tests/e2e/v3-impact.spec.ts:22:303"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:41:18.160Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final/artifacts/v3-impact-contact-has-real-71f77-d-reduced-motion-still-work-v3-webkit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final/artifacts/v3-impact-contact-has-real-71f77-d-reduced-motion-still-work-v3-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final/artifacts/v3-impact-contact-has-real-71f77-d-reduced-motion-still-work-v3-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-impact.spec.ts",
+                    "column": 303,
+                    "line": 22
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d232d6b3759930feec43-96d3ea490344b83c772d",
+          "file": "v3-impact.spec.ts",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "burst is atomic on left-down and late visual hits cannot survive pause, modal or reload",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12515,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:41:30.773Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d232d6b3759930feec43-5e84944a312d1774236a",
+          "file": "v3-impact.spec.ts",
+          "line": 26,
+          "column": 1
+        },
+        {
+          "title": "large left-click target and keyboard alternatives remain visible at both desktop sizes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10588,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:41:43.975Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d232d6b3759930feec43-8238069aee4843eec5b2",
+          "file": "v3-impact.spec.ts",
+          "line": 30,
+          "column": 1
+        },
+        {
+          "title": "record actual left-click growth and burst effects without injecting any game result",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 27244,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:41:54.603Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "actual-left-click-effects",
+                      "contentType": "video/webm",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final/artifacts/v3-impact-record-actual-le-d01d8-t-injecting-any-game-result-v3-webkit/attachments/actual-left-click-effects-2238d1d7e03ef436dcc3d97baa1c1da781b8b9be.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d232d6b3759930feec43-4612904fb5205f38b66f",
+          "file": "v3-impact.spec.ts",
+          "line": 33,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v3-notebook.spec.ts",
+      "file": "v3-notebook.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "a canonical completed twelve-round journal shows every filled spread and its navigation without scrolling",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11471,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:16:33.536Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-4640698dbc136eea0405",
+          "file": "v3-notebook.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "traveler and optional two-page book are real, reachable and read-only at both desktop sizes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12382,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:16:45.034Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-5c6819d4763193ade419",
+          "file": "v3-notebook.spec.ts",
+          "line": 27,
+          "column": 1
+        },
+        {
+          "title": "actual matching delivery changes the customer pose and real work once; reload only redraws",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11773,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:16:57.433Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-fa48c38aef629c9979ab",
+          "file": "v3-notebook.spec.ts",
+          "line": 34,
+          "column": 1
+        },
+        {
+          "title": "unmatched or overworked swords can still pay the original contract without another gate",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5660,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:17:09.238Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-cf6aaee0b505507af113",
+          "file": "v3-notebook.spec.ts",
+          "line": 39,
+          "column": 1
+        },
+        {
+          "title": "customer feedback cancels on pause and respects reduced motion without replaying or changing a save",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7968,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:17:14.944Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-e940762cc925b2eaef4e",
+          "file": "v3-notebook.spec.ts",
+          "line": 43,
+          "column": 1
+        },
+        {
+          "title": "missing new character and book art keeps readable advice, real forging and a usable notebook",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2574,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:17:22.937Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-1d80fe1eb1a0b5e9cec9",
+          "file": "v3-notebook.spec.ts",
+          "line": 47,
+          "column": 1
+        },
+        {
+          "title": "a resumed valid four-sword three-trait journal keeps controls unobscured while a real save fails and retries",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6449,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:17:25.531Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-4295d416cda3759c2df1",
+          "file": "v3-notebook.spec.ts",
+          "line": 51,
+          "column": 1
+        },
+        {
+          "title": "a canonical completed twelve-round journal shows every filled spread and its navigation without scrolling",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4637,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:26:32.101Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-3c20a1a29d3ecbcc97c9",
+          "file": "v3-notebook.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "traveler and optional two-page book are real, reachable and read-only at both desktop sizes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4771,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:26:36.762Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-a44035a3cce74ca18550",
+          "file": "v3-notebook.spec.ts",
+          "line": 27,
+          "column": 1
+        },
+        {
+          "title": "actual matching delivery changes the customer pose and real work once; reload only redraws",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4803,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:26:41.555Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-3299c9f4e6256858ba8e",
+          "file": "v3-notebook.spec.ts",
+          "line": 34,
+          "column": 1
+        },
+        {
+          "title": "unmatched or overworked swords can still pay the original contract without another gate",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3787,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:26:46.372Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-5e708a74ff41665d6adb",
+          "file": "v3-notebook.spec.ts",
+          "line": 39,
+          "column": 1
+        },
+        {
+          "title": "customer feedback cancels on pause and respects reduced motion without replaying or changing a save",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6969,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:26:50.181Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-f17e06f27e2bfdc7fb00",
+          "file": "v3-notebook.spec.ts",
+          "line": 43,
+          "column": 1
+        },
+        {
+          "title": "missing new character and book art keeps readable advice, real forging and a usable notebook",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1776,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:26:57.174Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-c3ff094060d6497c55d0",
+          "file": "v3-notebook.spec.ts",
+          "line": 47,
+          "column": 1
+        },
+        {
+          "title": "a resumed valid four-sword three-trait journal keeps controls unobscured while a real save fails and retries",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3521,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:26:58.962Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-be6a6f26488cd67e9b46",
+          "file": "v3-notebook.spec.ts",
+          "line": 51,
+          "column": 1
+        },
+        {
+          "title": "a canonical completed twelve-round journal shows every filled spread and its navigation without scrolling",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14018,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:42:21.994Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-90eec23297d60f1625d5",
+          "file": "v3-notebook.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "traveler and optional two-page book are real, reachable and read-only at both desktop sizes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 25708,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:42:36.033Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-daa8bb260e24234caf8c",
+          "file": "v3-notebook.spec.ts",
+          "line": 27,
+          "column": 1
+        },
+        {
+          "title": "actual matching delivery changes the customer pose and real work once; reload only redraws",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 22727,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:43:01.763Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-65ce4f1216407363c82f",
+          "file": "v3-notebook.spec.ts",
+          "line": 34,
+          "column": 1
+        },
+        {
+          "title": "unmatched or overworked swords can still pay the original contract without another gate",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12719,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:43:24.519Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-ff5734cf99c5abc93365",
+          "file": "v3-notebook.spec.ts",
+          "line": 39,
+          "column": 1
+        },
+        {
+          "title": "customer feedback cancels on pause and respects reduced motion without replaying or changing a save",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 24964,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:43:37.266Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-29d08625499ad164d7c6",
+          "file": "v3-notebook.spec.ts",
+          "line": 43,
+          "column": 1
+        },
+        {
+          "title": "missing new character and book art keeps readable advice, real forging and a usable notebook",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8139,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:44:02.261Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-db7ece94ef168a24b191",
+          "file": "v3-notebook.spec.ts",
+          "line": 47,
+          "column": 1
+        },
+        {
+          "title": "a resumed valid four-sword three-trait journal keeps controls unobscured while a real save fails and retries",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 21941,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:44:10.433Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3ec77b43138efbed81e6-3b8785edbf54032e3fec",
+          "file": "v3-notebook.spec.ts",
+          "line": 51,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v3-playable.spec.ts",
+      "file": "v3-playable.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "primary hammer remains readable while hovered",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1591,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:17:32.070Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d0579f2e538736d01386-6241de2e13ba384cf071",
+          "file": "v3-playable.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "first click is live; keyboard has no timing requirement; reduced motion, pause and reload keep results",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2990,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:17:33.685Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d0579f2e538736d01386-c89d2559dfe3a0ec1d34",
+          "file": "v3-playable.spec.ts",
+          "line": 24,
+          "column": 1
+        },
+        {
+          "title": "actual three rounds, optional gift, insurance, merchant trade and upgrade; honest ending at two desktop sizes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 18754,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:17:36.695Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d0579f2e538736d01386-54b31e4c616580861c4b",
+          "file": "v3-playable.spec.ts",
+          "line": 31,
+          "column": 1
+        },
+        {
+          "title": "three misses really fail; restart respects a changed seed; invalid main recovers actual backup",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3632,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:17:55.466Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d0579f2e538736d01386-89eff139fb3836b38074",
+          "file": "v3-playable.spec.ts",
+          "line": 53,
+          "column": 1
+        },
+        {
+          "title": "same-origin v2 writer blocks v3 safely; write refusal carries exact state into unsaved play",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2824,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:17:59.122Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d0579f2e538736d01386-92d077d1ceba0841b0ad",
+          "file": "v3-playable.spec.ts",
+          "line": 57,
+          "column": 1
+        },
+        {
+          "title": "real seeded burst survives interruption; crack then break and next-piece action are distinct",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7414,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:18:01.977Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d0579f2e538736d01386-586ae37d9e5fc7fec28e",
+          "file": "v3-playable.spec.ts",
+          "line": 64,
+          "column": 1
+        },
+        {
+          "title": "menu seed survives resize and asynchronous asset arrivals before confirmed replacement",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1993,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:18:09.412Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d0579f2e538736d01386-7a2fe9f14f69b790e7d6",
+          "file": "v3-playable.spec.ts",
+          "line": 71,
+          "column": 1
+        },
+        {
+          "title": "keyboard completes all three rounds with zero pointer events and no timing recipe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12479,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:18:11.421Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d0579f2e538736d01386-1fb776f0fb2844251bed",
+          "file": "v3-playable.spec.ts",
+          "line": 76,
+          "column": 1
+        },
+        {
+          "title": "primary hammer remains readable while hovered",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1483,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:27:02.527Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d0579f2e538736d01386-a22828c99c5b74cdbe84",
+          "file": "v3-playable.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "first click is live; keyboard has no timing requirement; reduced motion, pause and reload keep results",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3323,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:27:04.029Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d0579f2e538736d01386-9d0c0b30a5bbc0ff291d",
+          "file": "v3-playable.spec.ts",
+          "line": 24,
+          "column": 1
+        },
+        {
+          "title": "actual three rounds, optional gift, insurance, merchant trade and upgrade; honest ending at two desktop sizes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 15228,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:27:07.379Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d0579f2e538736d01386-b1a80ced57c6fc01cecf",
+          "file": "v3-playable.spec.ts",
+          "line": 31,
+          "column": 1
+        },
+        {
+          "title": "three misses really fail; restart respects a changed seed; invalid main recovers actual backup",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3786,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:27:22.639Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d0579f2e538736d01386-2bd59df31b075f54c3b7",
+          "file": "v3-playable.spec.ts",
+          "line": 53,
+          "column": 1
+        },
+        {
+          "title": "same-origin v2 writer blocks v3 safely; write refusal carries exact state into unsaved play",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3629,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:27:26.448Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d0579f2e538736d01386-1990ee255c03206fa86f",
+          "file": "v3-playable.spec.ts",
+          "line": 57,
+          "column": 1
+        },
+        {
+          "title": "real seeded burst survives interruption; crack then break and next-piece action are distinct",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9710,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:27:30.093Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d0579f2e538736d01386-9ce34a13b4e2f232df78",
+          "file": "v3-playable.spec.ts",
+          "line": 64,
+          "column": 1
+        },
+        {
+          "title": "menu seed survives resize and asynchronous asset arrivals before confirmed replacement",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2613,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:27:39.827Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d0579f2e538736d01386-aa31e9376b01f6c11361",
+          "file": "v3-playable.spec.ts",
+          "line": 71,
+          "column": 1
+        },
+        {
+          "title": "keyboard completes all three rounds with zero pointer events and no timing recipe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14110,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:27:42.466Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d0579f2e538736d01386-a66f8dafa3dba15306be",
+          "file": "v3-playable.spec.ts",
+          "line": 76,
+          "column": 1
+        },
+        {
+          "title": "primary hammer remains readable while hovered",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5698,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:44:32.543Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d0579f2e538736d01386-25a90e790448186bca97",
+          "file": "v3-playable.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "first click is live; keyboard has no timing requirement; reduced motion, pause and reload keep results",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8700,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:44:38.291Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d0579f2e538736d01386-a35f8d7ad0df61db9e97",
+          "file": "v3-playable.spec.ts",
+          "line": 24,
+          "column": 1
+        },
+        {
+          "title": "actual three rounds, optional gift, insurance, merchant trade and upgrade; honest ending at two desktop sizes",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 68957,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-playable.spec.ts",
+                        "column": 67,
+                        "line": 47
+                      },
+                      "message": "Error: page.setViewportSize: Target page, context or browser has been closed\n\n  45 |   }\n  46 |   if(round===1){await page.getByRole('button',{name:'首次达标 · 领一门免费手艺'}).click();before=await read(page);await page.getByRole('button',{name:/稳手护符 ·/}).click();s=await expectCommand(before,page,{type:'claimGift',traitId:'steady'});}\n> 47 |   for(const [width,height]of [[1280,720],[1920,1080]]){await page.setViewportSize({width:width!,height:height!});for(const id of ['v3-value','v3-risk','v3-strike','v3-deliver','v3-settle']){const box=await page.locator('#'+id).boundingBox();expect(box).not.toBeNull();expect(box!.x).toBeGreaterThanOrEqual(0);expect(box!.y+box!.height).toBeLessThanOrEqual(height!);}\n     |                                                                   ^\n  48 |    if(round===3){await mkdir(reports,{recursive:true});await page.screenshot({path:`${reports}/${test.info().project.name}-forge-${width}.png`});}}\n  49 |   await saveState(page,`round-${round}`);s=await settle(page);if(round<3)await advance(page);\n  50 |  }\n    at /Users/gordon/githome/sword-led/tests/e2e/v3-playable.spec.ts:47:67"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:44:47.015Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final/artifacts/v3-playable-actual-three-r-f04cc-ending-at-two-desktop-sizes-v3-webkit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final/artifacts/v3-playable-actual-three-r-f04cc-ending-at-two-desktop-sizes-v3-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final/artifacts/v3-playable-actual-three-r-f04cc-ending-at-two-desktop-sizes-v3-webkit/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d0579f2e538736d01386-83f81a4ef8236d54c753",
+          "file": "v3-playable.spec.ts",
+          "line": 31,
+          "column": 1
+        },
+        {
+          "title": "three misses really fail; restart respects a changed seed; invalid main recovers actual backup",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12900,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:46:02.191Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d0579f2e538736d01386-408d8769bfaad1527584",
+          "file": "v3-playable.spec.ts",
+          "line": 53,
+          "column": 1
+        },
+        {
+          "title": "same-origin v2 writer blocks v3 safely; write refusal carries exact state into unsaved play",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 21701,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:46:15.698Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d0579f2e538736d01386-065a48ca6f4ecc553568",
+          "file": "v3-playable.spec.ts",
+          "line": 57,
+          "column": 1
+        },
+        {
+          "title": "real seeded burst survives interruption; crack then break and next-piece action are distinct",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 18631,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:46:37.426Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d0579f2e538736d01386-650ccbb50e4486a17435",
+          "file": "v3-playable.spec.ts",
+          "line": 64,
+          "column": 1
+        },
+        {
+          "title": "menu seed survives resize and asynchronous asset arrivals before confirmed replacement",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5860,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:46:56.094Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d0579f2e538736d01386-06c4f75cd2d654db5bb8",
+          "file": "v3-playable.spec.ts",
+          "line": 71,
+          "column": 1
+        },
+        {
+          "title": "keyboard completes all three rounds with zero pointer events and no timing recipe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 30493,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:47:01.977Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d0579f2e538736d01386-d8d0be73f76a7a49110d",
+          "file": "v3-playable.spec.ts",
+          "line": 76,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v3-scene.spec.ts",
+      "file": "v3-scene.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "resizing four actual inventory pieces preserves the focused sword node and exact saved bytes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2406,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:18:23.945Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f6a4d8b894875780f139-faf97dedbc892c449335",
+          "file": "v3-scene.spec.ts",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "physical workshop and three-step guide stay readable; help is optional and never changes a save",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5682,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:18:26.369Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f6a4d8b894875780f139-556102a8dcd0d038d122",
+          "file": "v3-scene.spec.ts",
+          "line": 15,
+          "column": 1
+        },
+        {
+          "title": "accepted delivery has real sword flight, quota stamp, and honest pieces on the round receipt",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4150,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:18:32.080Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f6a4d8b894875780f139-1034a2973f4d1dfc3e63",
+          "file": "v3-scene.spec.ts",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "ceremony cancels on pause; reduced motion and rapid return never replay rewards or leave flying objects",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5976,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:18:36.266Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f6a4d8b894875780f139-c6fb76a97891581ca352",
+          "file": "v3-scene.spec.ts",
+          "line": 24,
+          "column": 1
+        },
+        {
+          "title": "merchant staging and terminal trophies use actual props and blades; all story controls fit the small viewport",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4086,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:18:42.272Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f6a4d8b894875780f139-571abae6cdb43e0602cb",
+          "file": "v3-scene.spec.ts",
+          "line": 27,
+          "column": 1
+        },
+        {
+          "title": "resizing four actual inventory pieces preserves the focused sword node and exact saved bytes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2380,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:27:56.624Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f6a4d8b894875780f139-377afd78a4a02fcab53a",
+          "file": "v3-scene.spec.ts",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "physical workshop and three-step guide stay readable; help is optional and never changes a save",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3182,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:27:59.024Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f6a4d8b894875780f139-86356a4d66715479a0b4",
+          "file": "v3-scene.spec.ts",
+          "line": 15,
+          "column": 1
+        },
+        {
+          "title": "accepted delivery has real sword flight, quota stamp, and honest pieces on the round receipt",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3878,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:28:02.221Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f6a4d8b894875780f139-049a50215493263c48e8",
+          "file": "v3-scene.spec.ts",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "ceremony cancels on pause; reduced motion and rapid return never replay rewards or leave flying objects",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6115,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:28:06.117Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f6a4d8b894875780f139-485f5b14abbbbb093396",
+          "file": "v3-scene.spec.ts",
+          "line": 24,
+          "column": 1
+        },
+        {
+          "title": "merchant staging and terminal trophies use actual props and blades; all story controls fit the small viewport",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2786,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:28:12.250Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f6a4d8b894875780f139-fcc8a065247960e2ca41",
+          "file": "v3-scene.spec.ts",
+          "line": 27,
+          "column": 1
+        },
+        {
+          "title": "resizing four actual inventory pieces preserves the focused sword node and exact saved bytes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9790,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:47:32.540Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f6a4d8b894875780f139-d24cd2cda445b16a4163",
+          "file": "v3-scene.spec.ts",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "physical workshop and three-step guide stay readable; help is optional and never changes a save",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 17528,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:47:42.353Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f6a4d8b894875780f139-8f2dc431c9808864b5df",
+          "file": "v3-scene.spec.ts",
+          "line": 15,
+          "column": 1
+        },
+        {
+          "title": "accepted delivery has real sword flight, quota stamp, and honest pieces on the round receipt",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14036,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:47:59.902Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f6a4d8b894875780f139-ffa89be20c39bc909dd7",
+          "file": "v3-scene.spec.ts",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "ceremony cancels on pause; reduced motion and rapid return never replay rewards or leave flying objects",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 17368,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:48:13.954Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f6a4d8b894875780f139-c7bd7202ec40e70aad51",
+          "file": "v3-scene.spec.ts",
+          "line": 24,
+          "column": 1
+        },
+        {
+          "title": "merchant staging and terminal trophies use actual props and blades; all story controls fit the small viewport",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12202,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:48:31.338Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f6a4d8b894875780f139-39c7e692546675a926d7",
+          "file": "v3-scene.spec.ts",
+          "line": 27,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v3-visual.spec.ts",
+      "file": "v3-visual.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "three actual supplied weapons grow through five illustrated stages and reload the same appearance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 31234,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:18:46.423Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e21d4844817b5d65f48e-7c7df760ecdad5a004d8",
+          "file": "v3-visual.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "missing weapon art falls back to a usable native blade and keeps an accepted strike",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2692,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:19:17.683Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e21d4844817b5d65f48e-305c23439165dfc04cc5",
+          "file": "v3-visual.spec.ts",
+          "line": 21,
+          "column": 1
+        },
+        {
+          "title": "all six physical handcraft props appear in real merchant offers; equipped echo lights only on its third success",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 21465,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:19:20.397Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e21d4844817b5d65f48e-cccaf612c40518bd5063",
+          "file": "v3-visual.spec.ts",
+          "line": 24,
+          "column": 1
+        },
+        {
+          "title": "three equipped props keep the full workshop, merchant and settings inside both desktop viewports",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-chromium",
+              "projectName": "v3-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11709,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:19:41.888Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e21d4844817b5d65f48e-587f6a839e7bf9b251e3",
+          "file": "v3-visual.spec.ts",
+          "line": 37,
+          "column": 1
+        },
+        {
+          "title": "three actual supplied weapons grow through five illustrated stages and reload the same appearance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 15875,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:28:15.083Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e21d4844817b5d65f48e-7251d43d4468cd704deb",
+          "file": "v3-visual.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "missing weapon art falls back to a usable native blade and keeps an accepted strike",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1928,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:28:30.975Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e21d4844817b5d65f48e-89e4cfb8249b029ce36f",
+          "file": "v3-visual.spec.ts",
+          "line": 21,
+          "column": 1
+        },
+        {
+          "title": "all six physical handcraft props appear in real merchant offers; equipped echo lights only on its third success",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12839,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:28:32.921Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e21d4844817b5d65f48e-94ea1d543e28ae609104",
+          "file": "v3-visual.spec.ts",
+          "line": 24,
+          "column": 1
+        },
+        {
+          "title": "three equipped props keep the full workshop, merchant and settings inside both desktop viewports",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-firefox",
+              "projectName": "v3-firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6197,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:28:45.769Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e21d4844817b5d65f48e-20ca2ff3e7caeee40088",
+          "file": "v3-visual.spec.ts",
+          "line": 37,
+          "column": 1
+        },
+        {
+          "title": "three actual supplied weapons grow through five illustrated stages and reload the same appearance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 53880,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:48:43.596Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e21d4844817b5d65f48e-29ccae7757e119e32296",
+          "file": "v3-visual.spec.ts",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "missing weapon art falls back to a usable native blade and keeps an accepted strike",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3280,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:49:37.498Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e21d4844817b5d65f48e-abe5d4de56d923b322a3",
+          "file": "v3-visual.spec.ts",
+          "line": 21,
+          "column": 1
+        },
+        {
+          "title": "all six physical handcraft props appear in real merchant offers; equipped echo lights only on its third success",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 21514,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveClass\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#v3-traits [data-trait=\"echo\"]')\nExpected pattern: \u001b[32m/trait-triggered/\u001b[39m\nReceived string:  \u001b[31m\"v3-trait-item\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveClass\" locator('#v3-traits [data-trait=\"echo\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#v3-traits [data-trait=\"echo\"]')\u001b[22m\n\u001b[2m    11 × locator resolved to <button tabindex=\"0\" data-trait=\"echo\" class=\"v3-trait-item\" aria-label=\"回响锤纹 · 普通成功 0/3 · 第三次额外+25%\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"v3-trait-item\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveClass\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#v3-traits [data-trait=\"echo\"]')\nExpected pattern: \u001b[32m/trait-triggered/\u001b[39m\nReceived string:  \u001b[31m\"v3-trait-item\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveClass\" locator('#v3-traits [data-trait=\"echo\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#v3-traits [data-trait=\"echo\"]')\u001b[22m\n\u001b[2m    11 × locator resolved to <button tabindex=\"0\" data-trait=\"echo\" class=\"v3-trait-item\" aria-label=\"回响锤纹 · 普通成功 0/3 · 第三次额外+25%\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"v3-trait-item\"\u001b[22m\n\n    at /Users/gordon/githome/sword-led/tests/e2e/v3-visual.spec.ts:32:230",
+                    "location": {
+                      "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-visual.spec.ts",
+                      "column": 230,
+                      "line": 32
+                    },
+                    "snippet": "  30 |   await page.locator('#v3-shop').click();for(const id of recipe.shop)await expect(page.locator(`article[data-trait=\"${id}\"] .v3-trait-art`)).toBeVisible();await page.screenshot({path:`${dir}/${info.project.name}-${recipe.seed}-merchant.png`});\n  31 |   const id=recipe.shop.includes('echo')?'echo':recipe.shop[0]!;await page.locator(`article[data-trait=\"${id}\"] button`).click();await page.getByRole('button',{name:'确认',exact:true}).click();await expect(page.locator(`#v3-traits [data-trait=\"${id}\"] .v3-trait-art`)).toBeVisible();\n> 32 |   if(id==='echo'){for(let n=0;n<2;n++){await hit(page);await expect(page.locator('#v3-traits [data-trait=\"echo\"]')).not.toHaveClass(/trait-triggered/);}await hit(page);await expect(page.locator('#v3-traits [data-trait=\"echo\"]')).toHaveClass(/trait-triggered/);await expect(page.locator('#v3-result')).toContainText('回响锤纹触发');await page.screenshot({path:`${dir}/${info.project.name}-echo-trigger.png`});observedEcho=true;}\n     |                                                                                                                                                                                                                                      ^\n  33 |   const state=await read(page);await writeFile(`${dir}/${info.project.name}-${recipe.seed}-equipped.json`,JSON.stringify(state,null,2)+'\\n');\n  34 |  }\n  35 |  expect(observedEcho).toBe(true);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-visual.spec.ts",
+                        "column": 230,
+                        "line": 32
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveClass\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#v3-traits [data-trait=\"echo\"]')\nExpected pattern: \u001b[32m/trait-triggered/\u001b[39m\nReceived string:  \u001b[31m\"v3-trait-item\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveClass\" locator('#v3-traits [data-trait=\"echo\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#v3-traits [data-trait=\"echo\"]')\u001b[22m\n\u001b[2m    11 × locator resolved to <button tabindex=\"0\" data-trait=\"echo\" class=\"v3-trait-item\" aria-label=\"回响锤纹 · 普通成功 0/3 · 第三次额外+25%\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"v3-trait-item\"\u001b[22m\n\n\n  30 |   await page.locator('#v3-shop').click();for(const id of recipe.shop)await expect(page.locator(`article[data-trait=\"${id}\"] .v3-trait-art`)).toBeVisible();await page.screenshot({path:`${dir}/${info.project.name}-${recipe.seed}-merchant.png`});\n  31 |   const id=recipe.shop.includes('echo')?'echo':recipe.shop[0]!;await page.locator(`article[data-trait=\"${id}\"] button`).click();await page.getByRole('button',{name:'确认',exact:true}).click();await expect(page.locator(`#v3-traits [data-trait=\"${id}\"] .v3-trait-art`)).toBeVisible();\n> 32 |   if(id==='echo'){for(let n=0;n<2;n++){await hit(page);await expect(page.locator('#v3-traits [data-trait=\"echo\"]')).not.toHaveClass(/trait-triggered/);}await hit(page);await expect(page.locator('#v3-traits [data-trait=\"echo\"]')).toHaveClass(/trait-triggered/);await expect(page.locator('#v3-result')).toContainText('回响锤纹触发');await page.screenshot({path:`${dir}/${info.project.name}-echo-trigger.png`});observedEcho=true;}\n     |                                                                                                                                                                                                                                      ^\n  33 |   const state=await read(page);await writeFile(`${dir}/${info.project.name}-${recipe.seed}-equipped.json`,JSON.stringify(state,null,2)+'\\n');\n  34 |  }\n  35 |  expect(observedEcho).toBe(true);\n    at /Users/gordon/githome/sword-led/tests/e2e/v3-visual.spec.ts:32:230"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:49:40.792Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final/artifacts/v3-visual-all-six-physical-d5886-s-only-on-its-third-success-v3-webkit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final/artifacts/v3-visual-all-six-physical-d5886-s-only-on-its-third-success-v3-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/tmp/T11-4-2-3h/release-v06-final/artifacts/v3-visual-all-six-physical-d5886-s-only-on-its-third-success-v3-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/gordon/githome/sword-led/tests/e2e/v3-visual.spec.ts",
+                    "column": 230,
+                    "line": 32
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e21d4844817b5d65f48e-1b9651bc0794835fa2b6",
+          "file": "v3-visual.spec.ts",
+          "line": 24,
+          "column": 1
+        },
+        {
+          "title": "three equipped props keep the full workshop, merchant and settings inside both desktop viewports",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v3-webkit",
+              "projectName": "v3-webkit",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 28771,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T05:50:05.264Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e21d4844817b5d65f48e-fa34067a1deb1a3412ce",
+          "file": "v3-visual.spec.ts",
+          "line": 37,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-20T05:08:30.022Z",
+    "duration": 2524824.6399999997,
+    "expected": 121,
+    "skipped": 0,
+    "unexpected": 5,
+    "flaky": 0
+  }
+}
