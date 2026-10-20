@@ -4,7 +4,7 @@
 
 原始需求逐字保存在[input.md](input.md)，SHA256 b961f5c651df51121659687138cfe5edf125e25dadda11642136dfc6aaca852b。目标仍是完整PC网页锻造游戏、设计/实施文档、三套imagegen主界面及选定衍生美术、完整可玩流程、复核和GitHub提交推送；整个goal ACTIVE，未完成。
 
-当前唯一执行tasks.md的3i.6“v4平衡与全内容可达性”，基线bfd350ead03a6c6952c187f61a252fdf7ac031d8。上一阶段3i.5完成实施、双push与最后376文件/75HTTP读取核对，正式预览71430/4179保持山口终章。用户v0.7批准持续有效；本轮不静默改变已发布forge-v4规则或旧journal身份。
+本轮已完成tasks.md的3i.6“v4平衡与全内容可达性”，本task起点为bfd350ead03a6c6952c187f61a252fdf7ac031d8，主交付caada1201723362c57a66b72f8aeabe2beae12ec已真实推送；下一轮只执行T11.4.3，当前尚未开始。上一阶段3i.5完成实施、双push与最后376文件/75HTTP读取核对，正式预览71430/4179保持山口终章。用户v0.7批准持续有效；本轮不静默改变已发布forge-v4规则或旧journal身份。
 
 当前plan/tasks曾积累大量相互覆盖的历史检查点；其完整原字节已保存于[旧计划](history/2026-10-21-before-final-chapter-plan.md)和[旧任务执行记录](history/2026-10-21-before-final-chapter-tasks.md)，哈希见[归档索引](history/2026-10-21-archive-index.json)。本页只维护有效当前计划，历史成果/红绿/全部原任务未丢失。压缩后仍须全量读取input/plan/tasks这三份当前文件，再按需读明确引用的历史或合同，避免把旧“待批准/正在运行”当现状。
 
@@ -26,7 +26,7 @@ quality-final-memory357单测/29文件、strict/网页+SDK构建终态0，480质
 
 ## 3i.6实际交付检查点
 
-本task的实现与技术验证已完成，当前正在提交/推送并核对远程，tasks暂不勾选直到真实交付。整个goal ACTIVE；下一项是T11.4.3，不能先做或宣称最大R4/真人H通过。
+本task的实现与技术验证及主源交付已完成：caada1201723362c57a66b72f8aeabe2beae12ec，push49927实际0，fresh remote main一致，361文件实际committed blob完整读出并与59,830,039物理字节核对。任务已据真实交付勾选；交付回执/goals文档单独提交后再做最终读取核对。整个goal ACTIVE；下一项是T11.4.3，不能先做或宣称最大R4/真人H通过。
 
 正式模型81355/81356/session34179于2026-10-20T21:05:47.851Z实际exit0，30000终态/30000正式回放；独立88377/88378/session93891于21:31:29.916Z实际exit0，另30000完整重放、2000镜像、全部账目/行/摘要相等，两批输入无漂移。collector98052实际exit0，封签docs/evidence/T11-4-2-3i6-model共98文件，root再核全部hash；60 fullrecord与60 rawrow重合，额外13个去重witness各经SDK/auditRecord回放，不是第三次30k。模型工具源13538b01dd3053f5befb09fd22a4ed446f5a6dc0已真实push，原341输入逐blob匹配；启动时工具未commit，运行中提交原字节不变。
 
@@ -38,9 +38,9 @@ quality-final-memory357单测/29文件、strict/网页+SDK构建终态0，480质
 
 先核旧71430/4179命令与75HTTP再有意停止，原地址现96273/会话47596，快照tmp/previews/T11-4-2-3i6-guidance；独立测试4198/93125仍同快照。官方smoke28383实际exit0：75HTTP、3可信左键/交付/重载、原实际day8→9与护灯已成归途/作品/导出，14观察0错误；root另15份含实际导出回放。未读写用户页/profile/进度，没强刷现有页。docs/evidence/T11-4-2-3i6-preview保存该边界。源/产物/证据明细与局限见docs/reviews/T11-4-2-3i6-v4-balance.md。
 
-新鲜保护核验83文件匹配：原input/批准、21旧编译、58原美术和冻结index/编译依据；0316备份ref及commit保持。OpenSpec strict实际exit0。已备回滚为旧快照/新增revert，无规则或档迁移。当前仅剩源交付→真实push/fresh remote/全部Git blob→标任务/回执提交→结束本task；不停止在计划，也不预填未知源SHA。后续成长/留剑/经营动机可按真人与明确新规则身份设计迭代，不在forge-v4下偷改。
+新鲜保护核验83文件匹配：原input/批准、21旧编译、58原美术和冻结index/编译依据；0316备份ref及commit保持。OpenSpec strict实际exit0。已备回滚为旧快照/新增revert，无规则或档迁移。当前主源交付及实际push/fresh remote/全部361 Git blob已完成，记录在docs/evidence/T11-4-2-3i6-delivery.json；剩任务回执独立提交及其真实push/fresh remote/最终读取核对，然后结束本task。后续成长/留剑/经营动机可按真人与明确新规则身份设计迭代，不在forge-v4下偷改。
 
-## 当前3i.6执行方案
+## 3i.6执行方案与验收依据
 
 实施前合同已写于[平衡验证合同](../docs/v0.7-balance-validation-contract.md)，输入/风险/矩阵/验证/回滚均冻结于此，不把旧模型和单一路线witness算本轮完成。
 
@@ -66,6 +66,6 @@ quality-final-memory357单测/29文件、strict/网页+SDK构建终态0，480质
 
 风险包括只放开日期冒充终章、把护灯交付当全胜、挑战按日期画错用途、先新后旧误算两剑、未保存炉谱提前发资格、readonly/memory写盘越权、作品页滚动/焦点/裁切、原画或证据被清理、批次漂移与伪称全绿。各项由核心事实/唯一port、合法不同路线/具体恢复和失败、实机截图/键鼠/真实对象回放、明确档案身份验证；当前已知缺陷继续修复复验，不以测试数量代填玩家满意。GJ连续三次正式审查退回才按规则求指导，普通debug失败不等于三次退回。不能客观保证零bug，以本task可核验证据闭环，列未验证条件。
 
-回滚使用新增revert，保留全部旧档/key/原PNG/旧预览及Git备份，不强推或删除历史。当前3i.5完成后仍有3i.6的v4 1000共享种子/多策略/反退化/全部终态回放，T11.4.3的当前v4最终两尺寸/DPR/三引擎/原生生命周期/音频性能/故障矩阵，以及T12最大R4/原始五项/REPEAT和真人H。3i.5/.6/最终矩阵作为下一组三项全面review/debug；全部必要任务完成才update_goal complete。
+回滚使用新增revert，保留全部旧档/key/原PNG/旧预览及Git备份，不强推或删除历史。当前3i.6验证与引导交付后仍有T11.4.3的当前v4最终两尺寸/DPR/三引擎/原生生命周期/音频性能/故障矩阵，以及T12最大R4/原始五项/REPEAT和真人H。3i.5/.6/最终矩阵作为下一组三项全面review/debug；全部必要任务完成才update_goal complete。
 
 每次只执行一个task。结束前自问“你对当前实现100%有信心吗”，有据漏洞立即修复，不作绝对无缺陷宣称；提交交付物→标任务/记录自审与验证→任务回执提交→简报结束，由goal自动续轮。最新H为v0.6完整性未通过，v0.7实施批准不等于新玩法/听感或整个目标验收。
