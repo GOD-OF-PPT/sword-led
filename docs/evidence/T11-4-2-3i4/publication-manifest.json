@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "phase": "source-prepared",
-  "at": "2026-10-20T14:44:21.203Z",
+  "phase": "task-receipt",
+  "at": "2026-10-20T15:00:58.022Z",
   "base": "f2e7fbb6db8dbb7d33dd7cc8ccf01cb6ab72619c",
   "metadataFilesExcluded": [
     "docs/evidence/T11-4-2-3i4/publication-manifest.json",
@@ -2295,6 +2295,12 @@
       "gitBlob": "29196a04d84c909c0b22501a6c62f9fe8a8d75bd"
     },
     {
+      "path": "docs/evidence/T11-4-2-3i4/duplicate-cleanup.json",
+      "bytes": 147067,
+      "sha256": "d320392b244bb3efac22fb99135ce8576c31f3e82dc47add48a7ca97ba45b98f",
+      "gitBlob": "6e5de6822e99894b4047baf19b301d53037f4a83"
+    },
+    {
       "path": "docs/evidence/T11-4-2-3i4/heavy-contact-summary.json",
       "bytes": 2621,
       "sha256": "194640d3a6bc72ca4ecde9a9d2ffdd133c43bc482514e458679268374e627254",
@@ -2308,9 +2314,15 @@
     },
     {
       "path": "docs/evidence/T11-4-2-3i4/local-originals.json",
-      "bytes": 240028,
-      "sha256": "eb0ad4b1b9aae117d5510479476b78f22d7a1e48b4455aef6b04247194018091",
-      "gitBlob": "a374210b933fe584ebd7803d6e132ad5b0054e15"
+      "bytes": 289570,
+      "sha256": "ce824079897f7fed7d025351bc514e4347ad4a69428074c95bad93fb7260ff05",
+      "gitBlob": "e116908a85a5536d2faef43f48439e4ac6fd683a"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3i4/main-git-binding.json",
+      "bytes": 435,
+      "sha256": "0971e188fc7bf9bc3293123348d1e4a62b7c38bac7f5fb5b8311cd76d49a9e59",
+      "gitBlob": "70c516a40110dac0019905216d737ff6ca7dbc04"
     },
     {
       "path": "docs/evidence/T11-4-2-3i4/npm-audit.json",
@@ -2323,6 +2335,12 @@
       "bytes": 374,
       "sha256": "c70644c4703c2b8d960d484e674a42e183f159627edbe13ae840b95993b4acc3",
       "gitBlob": "d6ee44352b99b58bd54384df90ac9067e2e718dc"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3i4/openspec-receipt.txt.gz",
+      "bytes": 59,
+      "sha256": "891e89a82991408ec593830c497a9fda4e938f8529623477652313176f4adf61",
+      "gitBlob": "6e7db08296d78f1b2008fee2ebb32b91523fbf0f"
     },
     {
       "path": "docs/evidence/T11-4-2-3i4/openspec.txt.gz",
@@ -2530,9 +2548,9 @@
     },
     {
       "path": "docs/reviews/T11-4-2-3i4-second-chapter.md",
-      "bytes": 9515,
-      "sha256": "be740e381ee40c16415cbc1a151f1a0a1c21999ce30482a718a5dd8f48b536da",
-      "gitBlob": "5023c2aeedfd673e6a165a5b514b16adeb6d0c83"
+      "bytes": 10206,
+      "sha256": "6a01a2224d21092fe2e3e9a697d5e3237dfe128bd3ff00dac75130891479e987",
+      "gitBlob": "1e6132bed9385d052339aa4bf8af36afbe1eaa57"
     },
     {
       "path": "docs/v0.7-first-chapter-guide.md",
@@ -2554,9 +2572,21 @@
     },
     {
       "path": "goal-1/plan.md",
-      "bytes": 126506,
-      "sha256": "74e347dd19ca3dcd4950b91e8147d84eae1c9da80a4df02c9339de2fe6d14af7",
-      "gitBlob": "0dc5d5b1e1d3b8675086021409e3ff97975acf5a"
+      "bytes": 128674,
+      "sha256": "c674e0ac7d922b13ff4eaea4c32d25156ecb09e95487dcf590fe9980aff636a4",
+      "gitBlob": "831c5a1cd422180b13edb772174802419ecdd34f"
+    },
+    {
+      "path": "goal-1/tasks.md",
+      "bytes": 112458,
+      "sha256": "5338b53d281089233e63b2196dcd9feae5e7ef9dcbdfe7a7a612ec01c0cf4bf8",
+      "gitBlob": "517a6c0495ba86e342b258519b4916c5d61f2e54"
+    },
+    {
+      "path": "openspec/changes/add-lantern-campaign/tasks.md",
+      "bytes": 1271,
+      "sha256": "940f20acd95cb3b943a75d61f98d964b2d75bf518efa7a0f2b1cca1b2ca7a7a0",
+      "gitBlob": "9a0737f29d55cf3eb3918a185d97c8b88d8ffd4c"
     },
     {
       "path": "public/assets/d/v07-chapter2/cracked-work-v1.webp",
