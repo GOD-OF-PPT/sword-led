@@ -4,7 +4,7 @@
 
 原始需求逐字保存在[input.md](input.md)，SHA256 b961f5c651df51121659687138cfe5edf125e25dadda11642136dfc6aaca852b。目标仍是完整PC网页锻造游戏、设计/实施文档、三套imagegen主界面及选定衍生美术、完整可玩流程、复核和GitHub提交推送；整个goal ACTIVE，未完成。
 
-当前唯一执行新增T11.4.2.3j“Game Studio炉前交互与打造决策优化”。用户最新原话逐字保存在[优先级指示](feedback/2026-10-21-product-priority.md)：测试/兼容最低优先级，先交互/界面/玩法。T11.4.3立即暂缓，不启动矩阵或原生浏览器。上一goal turn仍为progress（3i.6双push与真实交付）；本轮已做范围调查及少量错误反馈接线，用户转向后15个未执行测试/配置草稿已原字节归档到tmp/drafts/T11-4-3-v4-before-product-priority-20261021，tracked测试仅在副本hash核对后按ef52f4c恢复；没有测试/浏览器/构建结果被冒称通过。保留已写app/forge的音频状态与画稿重试代码，随产品优化一起最小验证。官方4179仍96273服务上一已验证快照，未碰用户档；整个goal ACTIVE。
+T11.4.2.3j“Game Studio炉前交互与打造决策优化”已完成产品实现、R3.21与源交付：7cd1b4a4161eb9c5aedd4b73195cdd374f44dacc实际commit/push33078终态0，fresh远程main一致，28个变更文件实际Git blob全读匹配。官方4179已为21456/会话75114，服务不可变tmp/previews/T11-4-2-3j-handoff；75HTTP与最终产物一致，发布后3可信左键/1拖交及3保存对象回放成功，未触碰用户标签/profile/档。原始输入与批准、21旧编译/58美术及其他保护依据共83文件、0316备份保持。整体goal ACTIVE，真人趣味与最终最大review未代填。接下来继续交互、界面与玩法产品迭代；T11.4.3兼容/广矩阵按用户优先级暂缓。已保存的15个未执行草稿继续可恢复。
 
 当前plan/tasks曾积累大量相互覆盖的历史检查点；其完整原字节已保存于[旧计划](history/2026-10-21-before-final-chapter-plan.md)和[旧任务执行记录](history/2026-10-21-before-final-chapter-tasks.md)，哈希见[归档索引](history/2026-10-21-archive-index.json)。本页只维护有效当前计划，历史成果/红绿/全部原任务未丢失。压缩后仍须全量读取input/plan/tasks这三份当前文件，再按需读明确引用的历史或合同，避免把旧“待批准/正在运行”当现状。
 
@@ -59,7 +59,7 @@ quality-final-memory357单测/29文件、strict/网页+SDK构建终态0，480质
 
 ## 3i.6实际交付检查点
 
-本task的实现与技术验证及主源交付已完成：caada1201723362c57a66b72f8aeabe2beae12ec，push49927实际0，fresh remote main一致，361文件实际committed blob完整读出并与59,830,039物理字节核对。任务已据真实交付勾选；交付回执/goals文档单独提交后再做最终读取核对。整个goal ACTIVE；下一项是T11.4.3，不能先做或宣称最大R4/真人H通过。
+本task的实现与技术验证及主源交付已完成：caada1201723362c57a66b72f8aeabe2beae12ec，push49927实际0，fresh remote main一致，361文件实际committed blob完整读出并与59,830,039物理字节核对。任务已据真实交付勾选；交付回执/goals文档单独提交后再做最终读取核对。整个goal ACTIVE；当时下一项为T11.4.3；该项现按用户优先级暂缓，3j产品优化已交付，不能据此宣称最大R4/真人H通过。
 
 正式模型81355/81356/session34179于2026-10-20T21:05:47.851Z实际exit0，30000终态/30000正式回放；独立88377/88378/session93891于21:31:29.916Z实际exit0，另30000完整重放、2000镜像、全部账目/行/摘要相等，两批输入无漂移。collector98052实际exit0，封签docs/evidence/T11-4-2-3i6-model共98文件，root再核全部hash；60 fullrecord与60 rawrow重合，额外13个去重witness各经SDK/auditRecord回放，不是第三次30k。模型工具源13538b01dd3053f5befb09fd22a4ed446f5a6dc0已真实push，原341输入逐blob匹配；启动时工具未commit，运行中提交原字节不变。
 
