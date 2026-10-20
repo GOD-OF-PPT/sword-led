@@ -1,7 +1,11 @@
 {
-  "at": "2026-10-20T08:34:37.834Z",
+  "at": "2026-10-20T08:36:59.831Z",
   "base": "687fb892e2d6dc3f188df7c41a8ebda2ecba0a02",
-  "scope": "Full diff from fixed preceding task receipt including new files; manifest itself excluded to avoid recursive hash.",
+  "scope": "Final whole-task payload including source and receipt. This manifest excludes itself; final commit SHA checked externally to avoid recursion.",
+  "sourceCommit": "a872c99a01abf5e4123b8554c9a2a51dc0c9f945",
+  "sourcePushExitCode": 0,
+  "sourceRemoteVerified": true,
+  "sourceManifestSha256": "b366ddc3b05b3a562927498681906e41e9a2c64585f1510b8ae3cf7b2ba926a9",
   "payload": [
     {
       "path": "README.md",
@@ -199,6 +203,11 @@
       "sha256": "e8bcb95c190e5330b2a1a62c368122681f800c8ee70d49f5e807ca0981497f4d"
     },
     {
+      "path": "docs/evidence/T11-4-2-3i1/source-delivery.json",
+      "bytes": 537,
+      "sha256": "752f64ce85cf2eb244e40819e98f27e10d98ffa37924882f2cf56348d2e49607"
+    },
+    {
       "path": "docs/evidence/T11-4-2-3i1/unit-all.json",
       "bytes": 110697,
       "sha256": "cb24efb55ac477c9bebd3f76c49626671bbdf0be8bef3e154c4298a2189f46c7"
@@ -335,8 +344,13 @@
     },
     {
       "path": "goal-1/plan.md",
-      "bytes": 103049,
-      "sha256": "74081f9e5af1cdfb25a4c245d8254e515c102114caf5ad9d4a39549fbffd3b07"
+      "bytes": 104177,
+      "sha256": "267415d5e41d9a38592c850306dbce7f610c266d90173d40b42a4716f7390f9a"
+    },
+    {
+      "path": "goal-1/tasks.md",
+      "bytes": 101697,
+      "sha256": "3b759f88aecaa0b22ed307c384a29d788a35f055846583afd575263b33851759"
     },
     {
       "path": "openspec/changes/add-lantern-campaign/proposal.md",
@@ -424,8 +438,6 @@
       "sha256": "076e60c35aa563281efe9c05d6dc5274894e25682c1a25824c66f45a7bc58433"
     }
   ],
-  "files": 84,
-  "bytes": 1642503,
-  "stagedAllMatch": true,
-  "pushedYet": false
+  "files": 86,
+  "bytes": 1745865
 }
