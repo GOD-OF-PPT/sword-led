@@ -7,7 +7,7 @@ import {mkdir,writeFile} from 'node:fs/promises';
 const dir='tmp/v3-impact-states';
 declare global{interface Window{v3ImpactObservation:{particles:number;animations:number;outcome:string;observedAt:number}|null}}
 async function read(page:Page){const raw=await page.evaluate(()=>localStorage.getItem('sword-led.save.v3'));if(!raw)throw Error('No actual save');const r=validateRun(JSON.parse(raw).state);if(!r.ok)throw Error(r.detail);return r.state;}
-async function open(page:Page){await page.goto('/?mode=3');await expect(page.locator('#v3-hit')).toBeEnabled();}
+async function open(page:Page){await page.goto('/v3.html?mode=3');await expect(page.locator('#v3-hit')).toBeEnabled();}
 async function point(page:Page,x=.62,y=.6){const box=await page.locator('#v3-hit').boundingBox();if(!box)throw Error('No hit area');return{x:box.x+box.width*x,y:box.y+box.height*y};}
 async function left(page:Page){const before=await read(page),p=await point(page);await page.mouse.move(p.x,p.y);await page.mouse.down();const expected=applyCommand(before,{runId:before.runId,expectedRevision:before.revision,action:{type:'strike',pieceId:'r1-1'}});if(!expected.ok)throw Error(expected.error);expect(await read(page)).toEqual(expected.state);await page.mouse.up();await expect(page.locator('#v3-strike')).toHaveAttribute('aria-busy','false');return expected.state;}
 test('left-down on the actual sword commits once, aim is cosmetic, hold/up/double-click/drag do not duplicate',async({page})=>{

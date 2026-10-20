@@ -2,13 +2,13 @@
 
 一款面向现代 PC 浏览器的轮次制锻造游戏。每轮只有三件铁坯：点击落锤让它升值，在断裂前决定交货、留剑还是回收，靠手艺和商人升级撑过契约。
 
-**当前首页为 v0.6「炉前」：[打开本机预览](http://127.0.0.1:4179/)**。按用户指定的Game Studio UI/Playtest指导重排：中央剑与铁砧为操作主体，点击炉边来客看心愿，交剑靠近来客、留剑靠近剑架；保存/设置按需展开。重要事件签能读完、收起和进入下一步，“炉程”回看当前目标、真实成长与经历。原手札仍记录实际成品。[界面说明](docs/v0.6-workshop-interface.md)说明具体交互；[R3.18复核](docs/reviews/R3-18-game-studio-forge-ui.md)记录实际构建、失败与复验边界。
+**当前首页为 v0.7「重燃十二盏灯 · 第一章」：[本机试玩](http://127.0.0.1:4179/)**。已接入标题、开炉、四天不同委托、第三天商人/事件、渡口用途场景、首件炉具改造与跨局炉谱。左键直接敲剑，合格后交给来客；余剑可卖、回收、留给明天或换手艺。界面沿已选 D「行脚灯炉」，文字和操作均为真实组件。[首章玩法说明](docs/v0.7-first-chapter-guide.md)与[技术复核](docs/reviews/T11-4-2-3i3-first-chapter.md)记录实际流程和验证边界。
 
-刷新原标签页，左上为“v0.6 炉前”。原进度直接续玩；已有三轮档按原长度继续，要玩十二轮可在“契约”选择并明确新建，确认前可导出旧进度。新空档默认十二轮，[三轮练手](http://127.0.0.1:4179/?mode=3)保留。仍然左键直接落锤，不合来客建议也能交差；原规则、锤姿、成长、静音和减弱动效保持。
+刷新原标签页可见新标题。新旅程使用独立 v4 存档；原契约请从标题“行旅种子与旧路”进入[旧版炉前](http://127.0.0.1:4179/v3.html)，旧 D 细锻和 B 版入口也保留。不会自动转换或清空旧档。
 
-![当前v0.6炉前首页实机](docs/evidence/T11-4-2-3h/polish/preview-default.webp)
+本次开放第一章，结束于第4天改造后；后八天界面、全局结局和最终平衡仍在开发，完整游戏目标保持进行中。第一章达标/遗憾、配方资格和炉谱均来自真实保存记录，后续章节可沿该进度继续。[首章界面合同](docs/v0.7-first-chapter-interface.md)、[完整批准方案](docs/v0.7-complete-game-proposal.md)、[内核合同](docs/v0.7-core-contract.md)、[保存合同](docs/v0.7-persistence-contract.md)与[新美术原件/提示词](design/d/v07/README.md)可查。十二天纯内核与存储已实现，尚不能当作十二天生产界面或真人趣味性已通过。本机预览未公网部署。
 
-[完整实况复核](docs/research/2026-10-19-forgetax-session-study.md)、[批准方案](docs/v0.4-gameplay-proposal.md)、[十二轮规则](docs/v0.4-campaign.md)与[来客美术原件/提示词](design/d/v05/README.md)保留研究与实施身份。[26,000局模型审计](docs/reviews/R4-v3-model-audit.md)发现固定七次点击也能通关；[后续1152局补证](docs/reviews/R3-16-purpose-and-directed-review.md)证实主动保险和带裂手艺有实际用途，但不证明整体乐趣。用户最新仍认为缺少主线/成长/内容；[v0.7完整游戏提案](docs/v0.7-complete-game-proposal.md)已获明确确认，**全部十二天玩法内核及独立存档/炉谱已接通，生产界面继续分阶段开发**。详见[内核合同](docs/v0.7-core-contract.md)、[保存合同](docs/v0.7-persistence-contract.md)与[R3.19复核](docs/reviews/R3-19-lantern-core.md)。当前v0.6网页继续forge-v3/schema3，旧模式/档和历史证据保留；整体H、最终广矩阵与最大审查未完成。本机预览未公网部署。
+历史 [v0.6炉前](docs/v0.6-workshop-interface.md)和[R3.18](docs/reviews/R3-18-game-studio-forge-ui.md)保留原交付身份。[ForgeTax完整实况复核](docs/research/2026-10-19-forgetax-session-study.md)与Steam评论研究记录了参考依据；当前优化依据用户对主线、成长、内容的反馈推进。
 
 2026-10-18真人曾评价v0.2玩法/美术缺乏新意；已据ForgeTax及110条唯一Steam评论修订并取得明确v0.3批准。[核心证据](docs/reviews/R3-5-v2-core-and-playable.md)保留928局策略与原试玩结果，[D界面说明](docs/v0.3-d-interface.md)记录新接线与独立练习。[新版技术验收](docs/reviews/R3-7-v2-technical-acceptance.md)与[44AC映射](docs/v0.3-acceptance.md)分别记录实际矩阵、故障修复及待办。真人再玩和最大交付仍按T11.4.2–T12推进，技术通过不等于玩家满意。
 
@@ -57,16 +57,16 @@ npm ci --registry=https://registry.npmjs.org/
 npm run dev
 ```
 
-打开终端显示的地址，默认`/`为v0.6炉前（forge-v3规则），`/v2.html`为旧D细锻，`/legacy.html`为B版旧契约。生产版本用`npm run build`后`npm run preview`，默认端口4173。构建包含三个HTML、网页资源与core/session/v2/v3/v4 SDK及共享chunk，应整体保留dist，不提交dist或node_modules。v4已导出独立局档/炉谱会话，具体API见[保存合同](docs/v0.7-persistence-contract.md)；新主线网页接线继续开发。需要通过localhost或HTTPS运行。
+打开终端显示的地址，默认`/`为v0.7第一章（forge-v4规则），`/v3.html`为旧版炉前，`/v2.html`为旧D细锻，`/legacy.html`为B版旧契约。生产版本用`npm run build`后`npm run preview`，默认端口4173。构建包含四个HTML、网页资源与core/session/v2/v3/v4 SDK及共享chunk，应整体保留dist，不提交dist或node_modules。v4已导出独立局档/炉谱会话，具体API见[保存合同](docs/v0.7-persistence-contract.md)；当前生产网页开放第一章。需要通过localhost或HTTPS运行。
 
 | 操作 | 用法 |
 | --- | --- |
 | 落锤 | 中央剑身区域鼠标左键；键盘聚焦落锤后松开空格，或Enter激活；无需卡时机 |
 | 换剑 | 左侧剑架点击，或Tab/Shift+Tab移动后Enter选择 |
 | 暂停 | Esc或暂停按钮；后台/失焦取消准备，不偷扣资源 |
-| 交差/回收 | 交差计本轮目标和金币，回收只给底价的四分之一金币；处置后不可再加工 |
+| 交差/回收 | 满足委托条件的交剑才完成主目标；卖行会只得金币，回收只得底价的四分之一金币；处置后不可再加工 |
 | 操作设置 | 静音/音量、减弱动效自动独立保存；系统动效优先，失败可重试；旧细锻模式另有慢速时机 |
-| 声音 | 首次手势后启用；游戏顶部可静音，设置中可试听；暂停/后台/菜单会停止 |
+| 声音 | 首次手势后启用；打开设置可静音或试听；暂停/后台/菜单会停止 |
 
 每个接受动作后尝试保存，失败保留内存进度并提示重试；菜单继续会保留未保存工作副本。旧两版的独立教学与显式不保存试玩不写正式档。同源另一窗口只读，关闭占用窗口后可重新读取。
 
@@ -83,18 +83,18 @@ npm run test:browser
 npm run test:art
 ```
 
-当前forge-v3界面回归需在构建后单独运行 `npx playwright test --config playwright.v3.config.ts`（Chromium/Firefox/WebKit须已安装）；不要在浏览器批次运行时重建共用dist。
+当前首章回归在构建后运行 `npx playwright test --config playwright.v4-ui.config.ts`。保留的forge-v3界面回归可单独运行 `npx playwright test --config playwright.v3.config.ts`（Chromium/Firefox/WebKit须已安装）；不要在浏览器批次运行时重建共用dist。
 
-`check`运行单测、严格类型检查与双构建。`test:browser`一次构建后串行运行正式页面与存储SDK；也可分别用`test:e2e`/`test:storage:browser`。真实Chrome原生窗口/缓存探测采用隔离profile；测试只改变测试侧时钟/事件，不注入钱包/终局。美术检查使用独立设计页，不作为正式游戏验收。单项命令还包括`npm test`、`npm run typecheck`、`npm run build`和交互`test:watch`。
+`check`运行单测、严格类型检查与双构建。`test:browser`一次构建后串行运行当前首章页面与v4/兼容存储SDK；也可分别用`test:e2e`/`test:storage:browser`。真实Chrome原生窗口/缓存探测采用隔离profile；测试只改变测试侧时钟/事件，不注入钱包/终局。美术检查使用独立设计页，不作为正式游戏验收。单项命令还包括`npm test`、`npm run typecheck`、`npm run build`和交互`test:watch`。
 
-当前forge-v3规则与v0.5界面的配置可在同一构建上测试三种引擎：
+保留的forge-v3界面配置可在同一构建上测试三种引擎：
 
 ```bash
 npm run build
 npx playwright test --config playwright.v3.config.ts
 ```
 
-使用4186端口、单worker、无重试；当前枚举105项（三引擎各35），含21项来客/册页/无门槛交差/错误回退，以及此前84项锻造、成长、完整十二轮/失败/商人/保存和场景回归。完整局用原生Tab/Enter/Space逐命令对照正式内核。本次实测为主改版102项全过，最后册页专属CSS修补后21项全过；45个产物路径不变，主JS改名但内容同字节，不把这两份报告称为一次105全绿。报告见[R3.17](docs/reviews/R3-17-traveler-notebook.md)；最终全DPR/原生生命周期/组合故障/音频/性能矩阵另验。
+使用4186端口、单worker、无重试；v0.5阶段曾枚举105项（三引擎各35，当前清单以 --list 为准），含21项来客/册页/无门槛交差/错误回退，以及此前84项锻造、成长、完整十二轮/失败/商人/保存和场景回归。完整局用原生Tab/Enter/Space逐命令对照正式内核。对应历史主改版实测为102项全过，最后册页专属CSS修补后21项全过；45个产物路径不变，主JS改名但内容同字节，不把这两份报告称为一次105全绿。报告见[R3.17](docs/reviews/R3-17-traveler-notebook.md)；最终全DPR/原生生命周期/组合故障/音频/性能矩阵另验。
 
 跨引擎工具：`npx playwright install firefox webkit`后可执行旧版/混合定向配置`npm run test:cross`。旧D细锻矩阵单独执行：
 
@@ -114,7 +114,7 @@ npm run simulate -- --replay docs/evidence/T06/verify-v1.medium-victory.json
 
 默认53场景，每个最终状态都完整回放；输出统计JSON、逐局CSV.gz与胜负witness。已有输出不会覆盖；参数、输入误差假设和指标边界见模拟合同。T06 实测批次约18分钟，速度取决于设备，模型输入秒数不等于脚本耗时或真人整局时长。
 
-B旧版入口为`/legacy.html`，D细锻为`/v2.html`，v0.4为`/`；开发服务还提供`/design/b/preview/index.html`美术校验页。`test:art`核对B风格的9张图片、alpha、288姿态、24材料帧和设计组件；D素材在新版UI/alpha规格中核对，两者证据分别记录。旧阶段机器证据归档工具为`node scripts/collect-ui-evidence.mjs --stage T10 --out <新的证据目录>`，已有证据不覆盖；归档前需生成最新unit/UI/storage报告。新版完整矩阵使用贡献说明中的v2 collector。
+B旧版入口为`/legacy.html`，D细锻为`/v2.html`，v0.4为`/v3.html`，v0.7首章为`/`；开发服务还提供`/design/b/preview/index.html`美术校验页。`test:art`核对B风格的9张图片、alpha、288姿态、24材料帧和设计组件；D素材在新版UI/alpha规格中核对，两者证据分别记录。旧阶段机器证据归档工具为`node scripts/collect-ui-evidence.mjs --stage T10 --out <新的证据目录>`，已有证据不覆盖；归档前需生成最新unit/UI/storage报告。新版完整矩阵使用贡献说明中的v2 collector。
 
 构建后可在 Node 中调用同一个正式内核：
 

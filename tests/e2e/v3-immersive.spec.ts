@@ -1,7 +1,7 @@
 import{test,expect}from'@playwright/test';import type{Page,Locator}from'@playwright/test';import{mkdir,writeFile}from'node:fs/promises';import{validateRun,applyCommand}from'../../src/core-v3/index.js';
 const dir='tmp/v3-immersive-states',save='sword-led.save.v3';
 async function state(page:Page){const raw=await page.evaluate(key=>localStorage.getItem(key),save);if(!raw)throw Error('Missing actual save');const r=validateRun(JSON.parse(raw).state);if(!r.ok)throw Error(r.detail);return r.state;}
-async function open(page:Page){await mkdir(dir,{recursive:true});await page.goto('/');await expect(page.locator('#v3-strike')).toBeEnabled();await expect(page.locator('.customer-art-ready')).toHaveCount(1);}
+async function open(page:Page){await mkdir(dir,{recursive:true});await page.goto('/v3.html');await expect(page.locator('#v3-strike')).toBeEnabled();await expect(page.locator('.customer-art-ready')).toHaveCount(1);}
 async function tabTo(page:Page,target:Locator){for(let i=0;i<100;i++){if(await target.evaluate(e=>e===document.activeElement))return;const back=await target.evaluate(e=>Boolean(document.activeElement&&(document.activeElement.compareDocumentPosition(e)&Node.DOCUMENT_POSITION_PRECEDING)));await page.keyboard.press(back?'Shift+Tab':'Tab');}throw Error('Native keyboard could not reach control');}
 async function hit(page:Page){await page.locator('#v3-hit').click({position:{x:400,y:120}});await expect(page.locator('#v3-strike')).toHaveAttribute('aria-busy','false');}
 test('workshop first frame protects the actual sword and keeps its persistent HUD below a quarter of each desktop viewport',async({page},info)=>{

@@ -1,0 +1,609 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-20T10:20:07.206Z",
+  "mode": "built-in image_gen, one asset or targeted variant per call; no CLI/API fallback",
+  "intent": "Five actual production images for the approved first chapter, not UI concept replacements.",
+  "assets": [
+    {
+      "id": "lantern-road-v1",
+      "usage": "Title and opening; forge right, quiet mountain mist left.",
+      "original": {
+        "path": "design/d/v07/originals/lantern-road-v1.png",
+        "bytes": 2740479,
+        "sha256": "40a8cdbdc9288a1437c656257ee06054222647490d61d66c903486abf1ce77bc"
+      },
+      "runtime": {
+        "path": "public/assets/d/v07/lantern-road-v1.webp",
+        "bytes": 283948,
+        "sha256": "e3e3cb3a6b32c0b8fb8315fa4fa724a2facc09a7da153fdbe1153115734fa95a",
+        "url": "/assets/d/v07/lantern-road-v1.webp",
+        "width": 1672,
+        "height": 941
+      },
+      "prompt": {
+        "path": "design/d/v07/prompts/lantern-road-v1.txt",
+        "bytes": 1995,
+        "sha256": "d6fbfe1ac69b98799adccde1260d27af01d41031bc836af7e6c8e4c1a36262b3"
+      },
+      "provenance": {
+        "mode": "built-in image_gen",
+        "sourcePath": "/Users/gordon/.codex/generated_images/01a158b8-4780-7183-bd8b-29edf17fb4e9/exec-60068b25-bc07-46c8-9c97-a6561698bffe.png",
+        "original": "design/d/v07/originals/lantern-road-v1.png",
+        "prompt": "design/d/v07/prompts/lantern-road-v1.txt",
+        "references": [
+          {
+            "path": "design/d/reference-main-v2.png",
+            "bytes": 2605402,
+            "sha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+          },
+          {
+            "path": "design/v03/concepts/main-d-v1.png",
+            "bytes": 2349986,
+            "sha256": "e500a4607f1d3bf8b137038a8ca887d7c6ab28a12e7f76cd38386f55530d8701"
+          }
+        ],
+        "transparent_background": false,
+        "sourceFileHashMatchesWorkspace": true
+      },
+      "alpha": {
+        "genuineRGBA": false,
+        "original": {
+          "sha256": "01d47491cbeb600913ad9b969c467a20eee08ef528805ef7ff455d14d0b926e6",
+          "transparent": 0,
+          "translucent": 0,
+          "opaque": 1573352,
+          "transparentFraction": 0
+        },
+        "runtime": {
+          "sha256": "01d47491cbeb600913ad9b969c467a20eee08ef528805ef7ff455d14d0b926e6",
+          "transparent": 0,
+          "translucent": 0,
+          "opaque": 1573352,
+          "transparentFraction": 0
+        },
+        "pixelExactAfterWebP": true
+      },
+      "checks": {
+        "original": {
+          "path": "design/d/v07/verification/lantern-road-v1-original.json",
+          "bytes": 810,
+          "sha256": "698d6e90bf1036d8123c7db514d2a677a0c7c925afc7912db1855b905fab4e5c"
+        },
+        "runtime": {
+          "path": "design/d/v07/verification/lantern-road-v1-runtime.json",
+          "bytes": 821,
+          "sha256": "2f699af47159ed1b8e56c440a6afcfc3ee50edec608d28da6639af22539e52d1"
+        }
+      }
+    },
+    {
+      "id": "bridge-dark-v1",
+      "usage": "Day-four main commission missed: unlit crossing without restored patrol.",
+      "original": {
+        "path": "design/d/v07/originals/bridge-dark-v1.png",
+        "bytes": 2828330,
+        "sha256": "e1103ace3dafde290e71f28d3e9be55d64c8850f0af306defbf3fe0138bcc715"
+      },
+      "runtime": {
+        "path": "public/assets/d/v07/bridge-dark-v1.webp",
+        "bytes": 271780,
+        "sha256": "50c8dff8b69fbaa954d61d225613c65223d76a2aecb9ca2d82f495dcd350fce4",
+        "url": "/assets/d/v07/bridge-dark-v1.webp",
+        "width": 1672,
+        "height": 941
+      },
+      "prompt": {
+        "path": "design/d/v07/prompts/bridge-dark-v1.txt",
+        "bytes": 2246,
+        "sha256": "5c77580bbaa84a36449f467d5ad1f77e977224e61c327df57f7732fac0428139"
+      },
+      "provenance": {
+        "mode": "built-in image_gen",
+        "sourcePath": "/Users/gordon/.codex/generated_images/01a158b8-4780-7183-bd8b-29edf17fb4e9/exec-0aee4af4-d4a0-4f48-97e2-19d3daeb3a89.png",
+        "original": "design/d/v07/originals/bridge-dark-v1.png",
+        "prompt": "design/d/v07/prompts/bridge-dark-v1.txt",
+        "references": [
+          {
+            "path": "design/d/reference-main-v2.png",
+            "bytes": 2605402,
+            "sha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+          },
+          {
+            "path": "design/v03/concepts/main-d-v1.png",
+            "bytes": 2349986,
+            "sha256": "e500a4607f1d3bf8b137038a8ca887d7c6ab28a12e7f76cd38386f55530d8701"
+          }
+        ],
+        "transparent_background": false,
+        "sourceFileHashMatchesWorkspace": true
+      },
+      "alpha": {
+        "genuineRGBA": false,
+        "original": {
+          "sha256": "01d47491cbeb600913ad9b969c467a20eee08ef528805ef7ff455d14d0b926e6",
+          "transparent": 0,
+          "translucent": 0,
+          "opaque": 1573352,
+          "transparentFraction": 0
+        },
+        "runtime": {
+          "sha256": "01d47491cbeb600913ad9b969c467a20eee08ef528805ef7ff455d14d0b926e6",
+          "transparent": 0,
+          "translucent": 0,
+          "opaque": 1573352,
+          "transparentFraction": 0
+        },
+        "pixelExactAfterWebP": true
+      },
+      "checks": {
+        "original": {
+          "path": "design/d/v07/verification/bridge-dark-v1-original.json",
+          "bytes": 809,
+          "sha256": "87cd781236af2a57476efcd52c229d0118999a7499a7448a9d0fd579ecdf25dd"
+        },
+        "runtime": {
+          "path": "design/d/v07/verification/bridge-dark-v1-runtime.json",
+          "bytes": 820,
+          "sha256": "72c3b316fe72a33cc1a657ee7a7dc1fc076cf14fab184cba9e3a9c8b2cfaa720"
+        }
+      }
+    },
+    {
+      "id": "bridge-lit-v1",
+      "usage": "Day-four main commission met: same crossing, lanterns lit and patrol restored.",
+      "original": {
+        "path": "design/d/v07/originals/bridge-lit-v1.png",
+        "bytes": 2796720,
+        "sha256": "58eabb788ba421929b432b9f1d421efc337373eeebb034b3f4a98090e92f5f3b"
+      },
+      "runtime": {
+        "path": "public/assets/d/v07/bridge-lit-v1.webp",
+        "bytes": 297880,
+        "sha256": "ccd7d09fa51c4f79608930a9e6c95b929c39653202c8dde487797b471bd2577b",
+        "url": "/assets/d/v07/bridge-lit-v1.webp",
+        "width": 1672,
+        "height": 941
+      },
+      "prompt": {
+        "path": "design/d/v07/prompts/bridge-lit-v1.txt",
+        "bytes": 2084,
+        "sha256": "41c56b22c13c421a1fa1336f9bceeaa6852e98571a5b8413c7d6fdadeecb84bf"
+      },
+      "provenance": {
+        "mode": "built-in image_gen",
+        "sourcePath": "/Users/gordon/.codex/generated_images/01a158b8-4780-7183-bd8b-29edf17fb4e9/exec-a7450dd1-d887-4581-a18e-3d238757470d.png",
+        "original": "design/d/v07/originals/bridge-lit-v1.png",
+        "prompt": "design/d/v07/prompts/bridge-lit-v1.txt",
+        "references": [
+          {
+            "path": "design/d/v07/originals/bridge-dark-v1.png",
+            "bytes": 2828330,
+            "sha256": "e1103ace3dafde290e71f28d3e9be55d64c8850f0af306defbf3fe0138bcc715"
+          },
+          {
+            "path": "design/d/reference-main-v2.png",
+            "bytes": 2605402,
+            "sha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+          }
+        ],
+        "intent": "edit matching scene lighting and patrol",
+        "transparent_background": false,
+        "sourceFileHashMatchesWorkspace": true
+      },
+      "alpha": {
+        "genuineRGBA": false,
+        "original": {
+          "sha256": "01d47491cbeb600913ad9b969c467a20eee08ef528805ef7ff455d14d0b926e6",
+          "transparent": 0,
+          "translucent": 0,
+          "opaque": 1573352,
+          "transparentFraction": 0
+        },
+        "runtime": {
+          "sha256": "01d47491cbeb600913ad9b969c467a20eee08ef528805ef7ff455d14d0b926e6",
+          "transparent": 0,
+          "translucent": 0,
+          "opaque": 1573352,
+          "transparentFraction": 0
+        },
+        "pixelExactAfterWebP": true
+      },
+      "checks": {
+        "original": {
+          "path": "design/d/v07/verification/bridge-lit-v1-original.json",
+          "bytes": 808,
+          "sha256": "9b6849ab870f7598d9fa708b17d83b15cd73e985faac45834db0446f4cffb7d8"
+        },
+        "runtime": {
+          "path": "design/d/v07/verification/bridge-lit-v1-runtime.json",
+          "bytes": 819,
+          "sha256": "08d3531d2da8cb189e24a7c916590ec0effc1a4a8ad8482b1bcf7e1739b72df9"
+        }
+      }
+    },
+    {
+      "id": "modifications-v1",
+      "usage": "Three physical workshop upgrades.",
+      "original": {
+        "path": "design/d/v07/originals/modifications-v1.png",
+        "bytes": 1512946,
+        "sha256": "f43c111a98a907b816d505f2859b90113ca615ac97e767532acca3060ee73d79"
+      },
+      "runtime": {
+        "path": "public/assets/d/v07/modifications-v1.webp",
+        "bytes": 241522,
+        "sha256": "beef13d0c9321b759fa044c7c47cfdd936f09315af7ee5d618c3085b072fb3a5",
+        "url": "/assets/d/v07/modifications-v1.webp",
+        "width": 2172,
+        "height": 724
+      },
+      "prompt": {
+        "path": "design/d/v07/prompts/modifications-v1-grid-fix.txt",
+        "bytes": 1457,
+        "sha256": "ac661444da28340387c377b57f3d2a8b0084eab6e3f029092bd4b3285dd0b370"
+      },
+      "provenance": {
+        "mode": "built-in image_gen",
+        "sourcePath": "/Users/gordon/.codex/generated_images/01a158b8-4780-7183-bd8b-29edf17fb4e9/exec-c5a89898-0921-45ed-85da-d8381059031c.png",
+        "original": "design/d/v07/originals/modifications-v1.png",
+        "prompt": "design/d/v07/prompts/modifications-v1-grid-fix.txt",
+        "references": [
+          {
+            "path": "design/d/v07/originals/modifications-v1-attempt1.png",
+            "bytes": 1946293,
+            "sha256": "0bcea2bb31e40f2e85554c97553d6933a8dd29274a365af9ad70fcf8d6fb0a4f"
+          }
+        ],
+        "intent": "edit to align three equal cells with alpha gutters",
+        "transparent_background": true,
+        "sourceFileHashMatchesWorkspace": true
+      },
+      "alpha": {
+        "genuineRGBA": true,
+        "original": {
+          "sha256": "950226b54410a5591ee3214c52d62683cf62cb28bc56c625d0fb1d043227acbf",
+          "transparent": 961266,
+          "translucent": 608978,
+          "opaque": 2284,
+          "transparentFraction": 0.6112870486248894
+        },
+        "runtime": {
+          "sha256": "950226b54410a5591ee3214c52d62683cf62cb28bc56c625d0fb1d043227acbf",
+          "transparent": 961266,
+          "translucent": 608978,
+          "opaque": 2284,
+          "transparentFraction": 0.6112870486248894
+        },
+        "pixelExactAfterWebP": true
+      },
+      "checks": {
+        "original": {
+          "path": "design/d/v07/verification/modifications-v1-original.json",
+          "bytes": 1733,
+          "sha256": "9062158b227be127a017af34810a882b597d5cfa31aa7c92a30be00821e111c3"
+        },
+        "runtime": {
+          "path": "design/d/v07/verification/modifications-v1-runtime.json",
+          "bytes": 1744,
+          "sha256": "35187b076085bef5a3961b8773de479ec74d22138d321e6e3d02600ec426b7e6"
+        },
+        "composite": {
+          "path": "design/d/v07/verification/modifications-v1-composite.png",
+          "bytes": 491614,
+          "sha256": "61ea09fdda796d4f436bc338af1ee05cce924c0a7cfe8a2ea8998072d4d68d1c"
+        }
+      },
+      "atlas": {
+        "columns": 3,
+        "rows": 1,
+        "cellWidth": 724,
+        "cellHeight": 724,
+        "order": [
+          "windbox",
+          "warmRack",
+          "wideMouth"
+        ],
+        "slices": [
+          {
+            "id": "windbox",
+            "sourceRect": [
+              0,
+              0,
+              724,
+              724
+            ],
+            "meaningfulAlphaBounds": [
+              56,
+              115,
+              661,
+              511
+            ],
+            "maxAlphaOnCellEdge": 1
+          },
+          {
+            "id": "warmRack",
+            "sourceRect": [
+              724,
+              0,
+              724,
+              724
+            ],
+            "meaningfulAlphaBounds": [
+              743,
+              188,
+              683,
+              456
+            ],
+            "maxAlphaOnCellEdge": 0
+          },
+          {
+            "id": "wideMouth",
+            "sourceRect": [
+              1448,
+              0,
+              724,
+              724
+            ],
+            "meaningfulAlphaBounds": [
+              1496,
+              125,
+              590,
+              529
+            ],
+            "maxAlphaOnCellEdge": 0
+          }
+        ],
+        "edgeNote": "The generated foreground at alpha >16 does not touch any cell edge. A few residual generated pixels have alpha 1/255 on crop lines; they are retained unchanged. Actual Chromium composites over parchment and dark backgrounds are clean and show no neighboring foreground or opaque matte."
+      }
+    },
+    {
+      "id": "events-v1",
+      "usage": "Six meaningful event props; borrowed hammer and old-blade sale match current authored rules.",
+      "original": {
+        "path": "design/d/v07/originals/events-v1.png",
+        "bytes": 2365862,
+        "sha256": "273a6ccc5d6f70851b9af48880a4ee0499af341a1c16ff08753bdd327b7a8136"
+      },
+      "runtime": {
+        "path": "public/assets/d/v07/events-v1.webp",
+        "bytes": 309280,
+        "sha256": "73751392e87e97a1091c4f2416fcac04a5597af7ebdf0cc7ce5b411743bb67d2",
+        "url": "/assets/d/v07/events-v1.webp",
+        "width": 1536,
+        "height": 1024
+      },
+      "prompt": {
+        "path": "design/d/v07/prompts/events-v1.txt",
+        "bytes": 3017,
+        "sha256": "c22029c75d97e36413603d4676f920fe98e7838463aebe4e4a310d73a93a99bb"
+      },
+      "provenance": {
+        "mode": "built-in image_gen",
+        "sourcePath": "/Users/gordon/.codex/generated_images/01a158b8-4780-7183-bd8b-29edf17fb4e9/exec-fc6388fe-ecb5-45fc-b452-51aaf1b3c3a0.png",
+        "original": "design/d/v07/originals/events-v1.png",
+        "prompt": "design/d/v07/prompts/events-v1.txt",
+        "references": [
+          {
+            "path": "design/d/reference-main-v2.png",
+            "bytes": 2605402,
+            "sha256": "8851c2d361e032340bcd2f472bab827c83d7122987ee6c200fc387e6141ff949"
+          }
+        ],
+        "transparent_background": true,
+        "sourceFileHashMatchesWorkspace": true
+      },
+      "alpha": {
+        "genuineRGBA": true,
+        "original": {
+          "sha256": "4914899dee80ca66f070c6f970f5052a79b04ff85f1c3cdb8169ae1b977ba2af",
+          "transparent": 1011961,
+          "translucent": 560903,
+          "opaque": 0,
+          "transparentFraction": 0.6433874766031901
+        },
+        "runtime": {
+          "sha256": "4914899dee80ca66f070c6f970f5052a79b04ff85f1c3cdb8169ae1b977ba2af",
+          "transparent": 1011961,
+          "translucent": 560903,
+          "opaque": 0,
+          "transparentFraction": 0.6433874766031901
+        },
+        "pixelExactAfterWebP": true
+      },
+      "checks": {
+        "original": {
+          "path": "design/d/v07/verification/events-v1-original.json",
+          "bytes": 3306,
+          "sha256": "0ac584b405e0ce1abf849f1d2076425b9af2d864be7f0edc756e615737b98b2f"
+        },
+        "runtime": {
+          "path": "design/d/v07/verification/events-v1-runtime.json",
+          "bytes": 3317,
+          "sha256": "79c474891aa5e9f8c0a16284ca04e26aba3eb84dca00f3955bd0933a8f5ff10d"
+        },
+        "composite": {
+          "path": "design/d/v07/verification/events-v1-composite.png",
+          "bytes": 919552,
+          "sha256": "9f702d623b4188099a585cc1b5cbb08411fa55bbf587a26a319a14d5107a563a"
+        }
+      },
+      "atlas": {
+        "columns": 3,
+        "rows": 2,
+        "cellWidth": 512,
+        "cellHeight": 512,
+        "order": [
+          "donation",
+          "loan",
+          "salvage",
+          "credit",
+          "shelter",
+          "rest"
+        ],
+        "slices": [
+          {
+            "id": "donation",
+            "sourceRect": [
+              0,
+              0,
+              512,
+              512
+            ],
+            "meaningfulAlphaBounds": [
+              38,
+              48,
+              471,
+              450
+            ],
+            "maxAlphaOnCellEdge": 1
+          },
+          {
+            "id": "loan",
+            "sourceRect": [
+              512,
+              0,
+              512,
+              512
+            ],
+            "meaningfulAlphaBounds": [
+              566,
+              58,
+              442,
+              450
+            ],
+            "maxAlphaOnCellEdge": 1
+          },
+          {
+            "id": "salvage",
+            "sourceRect": [
+              1024,
+              0,
+              512,
+              512
+            ],
+            "meaningfulAlphaBounds": [
+              1052,
+              41,
+              447,
+              458
+            ],
+            "maxAlphaOnCellEdge": 1
+          },
+          {
+            "id": "credit",
+            "sourceRect": [
+              0,
+              512,
+              512,
+              512
+            ],
+            "meaningfulAlphaBounds": [
+              71,
+              566,
+              409,
+              380
+            ],
+            "maxAlphaOnCellEdge": 1
+          },
+          {
+            "id": "shelter",
+            "sourceRect": [
+              512,
+              512,
+              512,
+              512
+            ],
+            "meaningfulAlphaBounds": [
+              528,
+              603,
+              488,
+              336
+            ],
+            "maxAlphaOnCellEdge": 1
+          },
+          {
+            "id": "rest",
+            "sourceRect": [
+              1024,
+              512,
+              512,
+              512
+            ],
+            "meaningfulAlphaBounds": [
+              1062,
+              585,
+              453,
+              360
+            ],
+            "maxAlphaOnCellEdge": 1
+          }
+        ],
+        "edgeNote": "The generated foreground at alpha >16 does not touch any cell edge. A few residual generated pixels have alpha 1/255 on crop lines; they are retained unchanged. Actual Chromium composites over parchment and dark backgrounds are clean and show no neighboring foreground or opaque matte."
+      }
+    }
+  ],
+  "rejectedVariants": [
+    {
+      "original": {
+        "path": "design/d/v07/originals/modifications-v1-attempt1.png",
+        "bytes": 1946293,
+        "sha256": "0bcea2bb31e40f2e85554c97553d6933a8dd29274a365af9ad70fcf8d6fb0a4f"
+      },
+      "prompt": {
+        "path": "design/d/v07/prompts/modifications-v1.txt",
+        "bytes": 2434,
+        "sha256": "f37641996c467599fe94ef4e48f90116a70560c350c8c0aea8cf4868926e511b"
+      },
+      "provenance": {
+        "path": "design/d/v07/modifications-v1-attempt1-source.json",
+        "bytes": 483,
+        "sha256": "5e7baff75119edd96b46c2a673c01602415200db5454ea62c0d78a6c14f163ce"
+      },
+      "reason": "The initial bellows handle and rack crossed equal-grid boundaries. Replaced by a targeted image_gen alignment edit; original retained."
+    }
+  ],
+  "runtimeBudget": {
+    "totalBytes": 1404410,
+    "limitBytes": 2097152,
+    "passes": true
+  },
+  "conversion": {
+    "report": {
+      "path": "design/d/v07/verification/export.json",
+      "bytes": 2512,
+      "sha256": "9ad845c993c5440ee067535583304cd414fa025bfda9cabcdab6fc1df3552b14"
+    },
+    "log": {
+      "path": "design/d/v07/verification/export-log.txt",
+      "bytes": 4573,
+      "sha256": "45e0d1a1b2497016b4da6cd6085c1b53a82dffffdd481a50c70967f8d00bc825"
+    },
+    "cwebpVersion": "1.6.0\nlibsharpyuv: 0.4.2",
+    "alphaQuality": 100,
+    "resized": false,
+    "cropped": false,
+    "creativePostprocessing": false
+  },
+  "review": {
+    "bridgeSameGeography": true,
+    "bridgeLandmarks": [
+      "Foreground shield and rope",
+      "Near bridge post",
+      "Central bridge post",
+      "All bridge rails and planks",
+      "Right-bank timber gatehouse",
+      "Pine branches",
+      "Moored boat",
+      "Mountain silhouettes and river rocks"
+    ],
+    "bridgeDifferences": "Existing lanterns and gatehouse lighting; open gate and two small patrol/messenger figures in successful scene. Failed scene remains unlit and empty.",
+    "noBakedTextUIFrames": true,
+    "atlasOrderMatchesContent": true,
+    "actualChromiumComposites": {
+      "path": "design/d/v07/verification/composite-proof.json",
+      "bytes": 3857,
+      "sha256": "2d3747f6ff3b5f69bbf68931be479623c69fff05978f20670503a810b075d773"
+    },
+    "notes": "Inspection scripts decode PNG/filter rows and measure alpha; they do not edit generated art. Chromium render proof is QA only and does not replace source art."
+  }
+}

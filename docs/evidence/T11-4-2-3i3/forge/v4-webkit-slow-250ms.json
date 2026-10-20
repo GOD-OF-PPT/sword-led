@@ -1,0 +1,196 @@
+{
+  "probe": {
+    "frames": [
+      {
+        "gap": 53.44829902165445,
+        "angle": 8.358088779180102,
+        "pivotGap": 0.3727946917107044,
+        "metalGap": 52.78102055365855,
+        "time": 0,
+        "sampleCostMs": 5,
+        "phase": "swing"
+      },
+      {
+        "gap": 0.5897838862730316,
+        "angle": 0.35809395932357113,
+        "pivotGap": 0.37279472232592936,
+        "metalGap": 0.5017528044871824,
+        "time": 267,
+        "sampleCostMs": 3,
+        "phase": "contact"
+      },
+      {
+        "gap": 0.5897838862730316,
+        "angle": 0.35809395932357113,
+        "pivotGap": 0.37279472232592936,
+        "metalGap": 0.5017528044871824,
+        "time": 519,
+        "sampleCostMs": 2,
+        "phase": "contact"
+      }
+    ],
+    "complete": true,
+    "source": "http://127.0.0.1:4198/assets/d/hammer-forge-v2.webp",
+    "sourceAlpha": [
+      249,
+      253,
+      253
+    ],
+    "inputToFirstSampleMs": 305
+  },
+  "state": {
+    "rulesVersion": "forge-v4",
+    "runId": "e56cdf07-fc20-4e6a-bad9-30acb37f384e",
+    "seed": "lantern-witness-0",
+    "mode": "story",
+    "initialEligibility": {
+      "recipes": [
+        "light"
+      ],
+      "challenge": false
+    },
+    "revision": 2,
+    "phase": "workshop",
+    "day": 1,
+    "commissionOrder": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "coins": 0,
+    "seals": 3,
+    "supplyBase": 40,
+    "upgradeCount": 0,
+    "inheritance": 0,
+    "blades": [
+      {
+        "id": "d1-1",
+        "slot": 1,
+        "suppliedDay": 1,
+        "recipe": "light",
+        "status": "active",
+        "base": 40,
+        "value": 62,
+        "peak": 62,
+        "level": 1,
+        "cracked": false,
+        "hits": 1,
+        "charge": 1,
+        "successes": 1,
+        "normalGreats": 0,
+        "bursts": 0,
+        "finalizedDay": null,
+        "commissionId": null
+      },
+      {
+        "id": "d1-2",
+        "slot": 2,
+        "suppliedDay": 1,
+        "recipe": "light",
+        "status": "active",
+        "base": 40,
+        "value": 40,
+        "peak": 40,
+        "level": 0,
+        "cracked": false,
+        "hits": 0,
+        "charge": 0,
+        "successes": 0,
+        "normalGreats": 0,
+        "bursts": 0,
+        "finalizedDay": null,
+        "commissionId": null
+      },
+      {
+        "id": "d1-3",
+        "slot": 3,
+        "suppliedDay": 1,
+        "recipe": "light",
+        "status": "active",
+        "base": 40,
+        "value": 40,
+        "peak": 40,
+        "level": 0,
+        "cracked": false,
+        "hits": 0,
+        "charge": 0,
+        "successes": 0,
+        "normalGreats": 0,
+        "bursts": 0,
+        "finalizedDay": null,
+        "commissionId": null
+      }
+    ],
+    "reserveId": null,
+    "daySales": 0,
+    "dayRecovered": 0,
+    "traits": [],
+    "gift": "locked",
+    "pardonUsed": false,
+    "crackGuard": false,
+    "modifications": [],
+    "chapterChoices": [],
+    "shop": [],
+    "sold": [],
+    "upgraded": false,
+    "repaired": false,
+    "dayBuffs": {
+      "supplyPct": 100,
+      "loan": false,
+      "shelter": false
+    },
+    "pending": {
+      "supplyPct": 100,
+      "loan": false,
+      "shelter": false
+    },
+    "eventDeck": [
+      "donation",
+      "credit",
+      "salvage",
+      "rest",
+      "shelter",
+      "loan"
+    ],
+    "eventId": null,
+    "eventStatus": "none",
+    "eventHistory": [],
+    "history": [],
+    "rng": {
+      "forge": {
+        "state": 499474614,
+        "draws": 1
+      },
+      "shop": {
+        "state": 1940482906,
+        "draws": 0
+      },
+      "events": {
+        "state": 2199298188,
+        "draws": 5
+      },
+      "content": {
+        "state": 1176869687,
+        "draws": 0
+      }
+    },
+    "journal": [
+      {
+        "type": "continue"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d1-1"
+      }
+    ]
+  }
+}

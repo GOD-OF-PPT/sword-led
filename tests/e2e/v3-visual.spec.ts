@@ -9,7 +9,7 @@ async function hit(page:import('@playwright/test').Page){const before=await read
 function seedFor(family:number){for(let i=0;i<100;i++){const seed=`art-${family}-${i}`,created=createRun({runId:'visual-recipe',seed});if(!created.ok)throw Error('create');let s:RunState=created.state;for(let j=0;j<14;j++){const b=s.blades[family]!;if(b.status==='broken')break;if(b.level>=9)return seed;const result=applyCommand(s,{runId:s.runId,expectedRevision:s.revision,action:{type:'strike',pieceId:b.id}});if(!result.ok)break;s=result.state;}}throw Error('No real recipe');}
 test('three actual supplied weapons grow through five illustrated stages and reload the same appearance',async({page},info)=>{
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)errors.push(String(r.status())+' '+r.url());});await mkdir(dir,{recursive:true});
- await page.goto('/?mode=3');await expect(page.locator('#v3-hit')).toBeEnabled();
+ await page.goto('/v3.html?mode=3');await expect(page.locator('#v3-hit')).toBeEnabled();
  for(let family=0;family<3;family++){
   await page.locator('#v3-menu').click();await page.locator('#v3-seed').fill(seedFor(family));await page.getByRole('button',{name:'开一炉新契约'}).click();await page.getByRole('button',{name:'确认',exact:true}).click();await page.locator(`[data-piece="r1-${family+1}"]`).click();
   await expect(page.locator('#v3-blade')).toHaveAttribute('data-illustrated','true');await expect(page.locator('#v3-blade')).toHaveAttribute('data-family',String(family));
@@ -20,12 +20,12 @@ test('three actual supplied weapons grow through five illustrated stages and rel
  expect(errors).toEqual([]);
 });
 test('missing weapon art falls back to a usable native blade and keeps an accepted strike',async({page})=>{
- await page.route('**/assets/d/blade-*.webp',route=>route.abort());await page.goto('/?mode=3');await expect(page.locator('#v3-hit')).toBeEnabled();await expect(page.locator('#v3-note')).toContainText('画稿未加载');await expect(page.locator('#v3-blade')).toHaveAttribute('data-illustrated','false');await hit(page);await expect(page.locator('#v3-value')).not.toHaveText('40');
+ await page.route('**/assets/d/blade-*.webp',route=>route.abort());await page.goto('/v3.html?mode=3');await expect(page.locator('#v3-hit')).toBeEnabled();await expect(page.locator('#v3-note')).toContainText('画稿未加载');await expect(page.locator('#v3-blade')).toHaveAttribute('data-illustrated','false');await hit(page);await expect(page.locator('#v3-value')).not.toHaveText('40');
 });
 test('all six physical handcraft props appear in real merchant offers; equipped echo lights only on its third success',async({page},info)=>{
  const missing=new Set(['steady','ember','inherit','echo','crackedEdge','pardon']),recipes:{seed:string;shop:readonly string[]}[]=[];
  for(let i=0;i<40&&missing.size;i++){const seed=`catalog-${i}`,created=createRun({runId:'catalog',seed});if(!created.ok)throw Error('create');let s=created.state;for(const type of ['settle','advance','settle','advance']as const){const result=applyCommand(s,{runId:s.runId,expectedRevision:s.revision,action:{type}});if(!result.ok)throw Error(result.error);s=result.state;}if(s.shop.some(t=>missing.has(t))){recipes.push({seed,shop:s.shop});s.shop.forEach(t=>missing.delete(t));}}expect(missing.size).toBe(0);
- await mkdir(dir,{recursive:true});await page.goto('/?mode=3');await expect(page.locator('#v3-hit')).toBeEnabled();let observedEcho=false;
+ await mkdir(dir,{recursive:true});await page.goto('/v3.html?mode=3');await expect(page.locator('#v3-hit')).toBeEnabled();let observedEcho=false;
  for(const recipe of recipes){await page.locator('#v3-menu').click();await page.locator('#v3-seed').fill(recipe.seed);await page.getByRole('button',{name:'开一炉新契约'}).click();await page.getByRole('button',{name:'确认',exact:true}).click();
   for(let round=1;round<=2;round++){await page.locator('#v3-settle').click();await page.getByRole('button',{name:'确认',exact:true}).click();await page.getByRole('button',{name:'领取下一轮三柄剑'}).click();}expect((await read(page)).shop).toEqual(recipe.shop);
   await page.locator('#v3-shop').click();for(const id of recipe.shop)await expect(page.locator(`article[data-trait="${id}"] .v3-trait-art`)).toBeVisible();await page.screenshot({path:`${dir}/${info.project.name}-${recipe.seed}-merchant.png`});
@@ -40,7 +40,7 @@ test('all six physical handcraft props appear in real merchant offers; equipped 
  expect(observedEcho).toBe(true);
 });
 test('three equipped props keep the full workshop, merchant and settings inside both desktop viewports',async({page},info)=>{
- await page.goto('/?mode=3');await expect(page.locator('#v3-hit')).toBeEnabled();await page.locator('#v3-menu').click();await page.locator('#v3-seed').fill('three-props-5');await page.getByRole('button',{name:'开一炉新契约'}).click();await page.getByRole('button',{name:'确认',exact:true}).click();
+ await page.goto('/v3.html?mode=3');await expect(page.locator('#v3-hit')).toBeEnabled();await page.locator('#v3-menu').click();await page.locator('#v3-seed').fill('three-props-5');await page.getByRole('button',{name:'开一炉新契约'}).click();await page.getByRole('button',{name:'确认',exact:true}).click();
  while((await read(page)).blades[0]!.value<180)await hit(page);await page.locator('#v3-deliver').click();await page.getByRole('button',{name:'首次达标 · 领一门免费手艺'}).click();await page.getByRole('button',{name:/稳手护符 ·/}).click();
  for(let n=0;n<2;n++){await page.locator('#v3-settle').click();await page.getByRole('button',{name:'确认',exact:true}).click();await page.getByRole('button',{name:'领取下一轮三柄剑'}).click();}
  for(const id of ['inherit','pardon']){await page.locator('#v3-shop').click();await page.locator(`article[data-trait="${id}"] button`).click();await page.getByRole('button',{name:'确认',exact:true}).click();}expect((await read(page)).traits).toEqual(['steady','inherit','pardon']);

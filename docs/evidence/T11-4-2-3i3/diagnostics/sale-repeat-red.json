@@ -1,0 +1,241 @@
+{
+  "config": {
+    "argv": [
+      "/Users/gordon/.nvm/versions/node/v22.12.0/bin/node",
+      "/Users/gordon/githome/sword-led/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "playwright.v4-ui.config.ts",
+      "--project",
+      "v4-chromium",
+      "--grep",
+      "holding Enter on a sale"
+    ],
+    "configFile": "/Users/gordon/githome/sword-led/playwright.v4-ui.config.ts",
+    "rootDir": "/Users/gordon/githome/sword-led/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v4-ui",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v4-chromium",
+        "name": "v4-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v4-*.spec.ts"
+        ],
+        "timeout": 180000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v4-ui",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v4-firefox",
+        "name": "v4-firefox",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v4-*.spec.ts"
+        ],
+        "timeout": 180000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v4-ui",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v4-webkit",
+        "name": "v4-webkit",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v4-*.spec.ts"
+        ],
+        "timeout": 180000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v4-ui",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v4-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v4-*.spec.ts",
+        "timeout": 180000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4197",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "launchOptions": {
+            "args": [
+              "--no-proxy-server"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v4-chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "tmp/T11-4-2-3i3/pilot/sale-repeat-red.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "v4-navigation.spec.ts",
+      "file": "v4-navigation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "holding Enter on a sale cannot sell the next sword without a fresh press",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2526,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  7\u001b[39m\n\u001b[31m+ Received  + 15\u001b[39m\n\n\u001b[33m@@ -23,45 +23,45 @@\u001b[39m\n\u001b[2m        \"base\": 40,\u001b[22m\n\u001b[2m        \"bursts\": 0,\u001b[22m\n\u001b[2m        \"charge\": 0,\u001b[22m\n\u001b[2m        \"commissionId\": null,\u001b[22m\n\u001b[2m        \"cracked\": false,\u001b[22m\n\u001b[32m-       \"finalizedDay\": null,\u001b[39m\n\u001b[31m+       \"finalizedDay\": 1,\u001b[39m\n\u001b[2m        \"hits\": 0,\u001b[22m\n\u001b[2m        \"id\": \"d1-2\",\u001b[22m\n\u001b[2m        \"level\": 0,\u001b[22m\n\u001b[2m        \"normalGreats\": 0,\u001b[22m\n\u001b[2m        \"peak\": 40,\u001b[22m\n\u001b[2m        \"recipe\": \"light\",\u001b[22m\n\u001b[2m        \"slot\": 2,\u001b[22m\n\u001b[32m-       \"status\": \"active\",\u001b[39m\n\u001b[31m+       \"status\": \"sold\",\u001b[39m\n\u001b[2m        \"successes\": 0,\u001b[22m\n\u001b[2m        \"suppliedDay\": 1,\u001b[22m\n\u001b[2m        \"value\": 40,\u001b[22m\n\u001b[2m      },\u001b[22m\n\u001b[2m      Object {\u001b[22m\n\u001b[2m        \"base\": 40,\u001b[22m\n\u001b[2m        \"bursts\": 0,\u001b[22m\n\u001b[2m        \"charge\": 0,\u001b[22m\n\u001b[2m        \"commissionId\": null,\u001b[22m\n\u001b[2m        \"cracked\": false,\u001b[22m\n\u001b[32m-       \"finalizedDay\": null,\u001b[39m\n\u001b[31m+       \"finalizedDay\": 1,\u001b[39m\n\u001b[2m        \"hits\": 0,\u001b[22m\n\u001b[2m        \"id\": \"d1-3\",\u001b[22m\n\u001b[2m        \"level\": 0,\u001b[22m\n\u001b[2m        \"normalGreats\": 0,\u001b[22m\n\u001b[2m        \"peak\": 40,\u001b[22m\n\u001b[2m        \"recipe\": \"light\",\u001b[22m\n\u001b[2m        \"slot\": 3,\u001b[22m\n\u001b[32m-       \"status\": \"active\",\u001b[39m\n\u001b[31m+       \"status\": \"sold\",\u001b[39m\n\u001b[2m        \"successes\": 0,\u001b[22m\n\u001b[2m        \"suppliedDay\": 1,\u001b[22m\n\u001b[2m        \"value\": 40,\u001b[22m\n\u001b[2m      },\u001b[22m\n\u001b[2m    ],\u001b[22m\n\u001b[2m    \"chapterChoices\": Array [],\u001b[22m\n\u001b[32m-   \"coins\": 40,\u001b[39m\n\u001b[31m+   \"coins\": 120,\u001b[39m\n\u001b[2m    \"commissionOrder\": Array [\u001b[22m\n\u001b[2m      1,\u001b[22m\n\u001b[2m      2,\u001b[22m\n\u001b[2m      3,\u001b[22m\n\u001b[2m      4,\u001b[22m\n\u001b[33m@@ -80,11 +80,11 @@\u001b[39m\n\u001b[2m      \"loan\": false,\u001b[22m\n\u001b[2m      \"shelter\": false,\u001b[22m\n\u001b[2m      \"supplyPct\": 100,\u001b[22m\n\u001b[2m    },\u001b[22m\n\u001b[2m    \"dayRecovered\": 0,\u001b[22m\n\u001b[32m-   \"daySales\": 40,\u001b[39m\n\u001b[31m+   \"daySales\": 120,\u001b[39m\n\u001b[2m    \"eventDeck\": Array [\u001b[22m\n\u001b[2m      \"donation\",\u001b[22m\n\u001b[2m      \"credit\",\u001b[22m\n\u001b[2m      \"salvage\",\u001b[22m\n\u001b[2m      \"rest\",\u001b[22m\n\u001b[33m@@ -109,10 +109,18 @@\u001b[39m\n\u001b[2m      },\u001b[22m\n\u001b[2m      Object {\u001b[22m\n\u001b[2m        \"pieceId\": \"d1-1\",\u001b[22m\n\u001b[2m        \"type\": \"deliver\",\u001b[22m\n\u001b[2m      },\u001b[22m\n\u001b[31m+     Object {\u001b[39m\n\u001b[31m+       \"pieceId\": \"d1-2\",\u001b[39m\n\u001b[31m+       \"type\": \"deliver\",\u001b[39m\n\u001b[31m+     },\u001b[39m\n\u001b[31m+     Object {\u001b[39m\n\u001b[31m+       \"pieceId\": \"d1-3\",\u001b[39m\n\u001b[31m+       \"type\": \"deliver\",\u001b[39m\n\u001b[31m+     },\u001b[39m\n\u001b[2m    ],\u001b[22m\n\u001b[2m    \"mode\": \"story\",\u001b[22m\n\u001b[2m    \"modifications\": Array [],\u001b[22m\n\u001b[2m    \"pardonUsed\": false,\u001b[22m\n\u001b[2m    \"pending\": Object {\u001b[22m\n\u001b[33m@@ -121,11 +129,11 @@\u001b[39m\n\u001b[2m      \"supplyPct\": 100,\u001b[22m\n\u001b[2m    },\u001b[22m\n\u001b[2m    \"phase\": \"workshop\",\u001b[22m\n\u001b[2m    \"repaired\": false,\u001b[22m\n\u001b[2m    \"reserveId\": null,\u001b[22m\n\u001b[32m-   \"revision\": 2,\u001b[39m\n\u001b[31m+   \"revision\": 4,\u001b[39m\n\u001b[2m    \"rng\": Object {\u001b[22m\n\u001b[2m      \"content\": Object {\u001b[22m\n\u001b[2m        \"draws\": 0,\u001b[22m\n\u001b[2m        \"state\": 1176869687,\u001b[22m\n\u001b[2m      },\u001b[22m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  7\u001b[39m\n\u001b[31m+ Received  + 15\u001b[39m\n\n\u001b[33m@@ -23,45 +23,45 @@\u001b[39m\n\u001b[2m        \"base\": 40,\u001b[22m\n\u001b[2m        \"bursts\": 0,\u001b[22m\n\u001b[2m        \"charge\": 0,\u001b[22m\n\u001b[2m        \"commissionId\": null,\u001b[22m\n\u001b[2m        \"cracked\": false,\u001b[22m\n\u001b[32m-       \"finalizedDay\": null,\u001b[39m\n\u001b[31m+       \"finalizedDay\": 1,\u001b[39m\n\u001b[2m        \"hits\": 0,\u001b[22m\n\u001b[2m        \"id\": \"d1-2\",\u001b[22m\n\u001b[2m        \"level\": 0,\u001b[22m\n\u001b[2m        \"normalGreats\": 0,\u001b[22m\n\u001b[2m        \"peak\": 40,\u001b[22m\n\u001b[2m        \"recipe\": \"light\",\u001b[22m\n\u001b[2m        \"slot\": 2,\u001b[22m\n\u001b[32m-       \"status\": \"active\",\u001b[39m\n\u001b[31m+       \"status\": \"sold\",\u001b[39m\n\u001b[2m        \"successes\": 0,\u001b[22m\n\u001b[2m        \"suppliedDay\": 1,\u001b[22m\n\u001b[2m        \"value\": 40,\u001b[22m\n\u001b[2m      },\u001b[22m\n\u001b[2m      Object {\u001b[22m\n\u001b[2m        \"base\": 40,\u001b[22m\n\u001b[2m        \"bursts\": 0,\u001b[22m\n\u001b[2m        \"charge\": 0,\u001b[22m\n\u001b[2m        \"commissionId\": null,\u001b[22m\n\u001b[2m        \"cracked\": false,\u001b[22m\n\u001b[32m-       \"finalizedDay\": null,\u001b[39m\n\u001b[31m+       \"finalizedDay\": 1,\u001b[39m\n\u001b[2m        \"hits\": 0,\u001b[22m\n\u001b[2m        \"id\": \"d1-3\",\u001b[22m\n\u001b[2m        \"level\": 0,\u001b[22m\n\u001b[2m        \"normalGreats\": 0,\u001b[22m\n\u001b[2m        \"peak\": 40,\u001b[22m\n\u001b[2m        \"recipe\": \"light\",\u001b[22m\n\u001b[2m        \"slot\": 3,\u001b[22m\n\u001b[32m-       \"status\": \"active\",\u001b[39m\n\u001b[31m+       \"status\": \"sold\",\u001b[39m\n\u001b[2m        \"successes\": 0,\u001b[22m\n\u001b[2m        \"suppliedDay\": 1,\u001b[22m\n\u001b[2m        \"value\": 40,\u001b[22m\n\u001b[2m      },\u001b[22m\n\u001b[2m    ],\u001b[22m\n\u001b[2m    \"chapterChoices\": Array [],\u001b[22m\n\u001b[32m-   \"coins\": 40,\u001b[39m\n\u001b[31m+   \"coins\": 120,\u001b[39m\n\u001b[2m    \"commissionOrder\": Array [\u001b[22m\n\u001b[2m      1,\u001b[22m\n\u001b[2m      2,\u001b[22m\n\u001b[2m      3,\u001b[22m\n\u001b[2m      4,\u001b[22m\n\u001b[33m@@ -80,11 +80,11 @@\u001b[39m\n\u001b[2m      \"loan\": false,\u001b[22m\n\u001b[2m      \"shelter\": false,\u001b[22m\n\u001b[2m      \"supplyPct\": 100,\u001b[22m\n\u001b[2m    },\u001b[22m\n\u001b[2m    \"dayRecovered\": 0,\u001b[22m\n\u001b[32m-   \"daySales\": 40,\u001b[39m\n\u001b[31m+   \"daySales\": 120,\u001b[39m\n\u001b[2m    \"eventDeck\": Array [\u001b[22m\n\u001b[2m      \"donation\",\u001b[22m\n\u001b[2m      \"credit\",\u001b[22m\n\u001b[2m      \"salvage\",\u001b[22m\n\u001b[2m      \"rest\",\u001b[22m\n\u001b[33m@@ -109,10 +109,18 @@\u001b[39m\n\u001b[2m      },\u001b[22m\n\u001b[2m      Object {\u001b[22m\n\u001b[2m        \"pieceId\": \"d1-1\",\u001b[22m\n\u001b[2m        \"type\": \"deliver\",\u001b[22m\n\u001b[2m      },\u001b[22m\n\u001b[31m+     Object {\u001b[39m\n\u001b[31m+       \"pieceId\": \"d1-2\",\u001b[39m\n\u001b[31m+       \"type\": \"deliver\",\u001b[39m\n\u001b[31m+     },\u001b[39m\n\u001b[31m+     Object {\u001b[39m\n\u001b[31m+       \"pieceId\": \"d1-3\",\u001b[39m\n\u001b[31m+       \"type\": \"deliver\",\u001b[39m\n\u001b[31m+     },\u001b[39m\n\u001b[2m    ],\u001b[22m\n\u001b[2m    \"mode\": \"story\",\u001b[22m\n\u001b[2m    \"modifications\": Array [],\u001b[22m\n\u001b[2m    \"pardonUsed\": false,\u001b[22m\n\u001b[2m    \"pending\": Object {\u001b[22m\n\u001b[33m@@ -121,11 +129,11 @@\u001b[39m\n\u001b[2m      \"supplyPct\": 100,\u001b[22m\n\u001b[2m    },\u001b[22m\n\u001b[2m    \"phase\": \"workshop\",\u001b[22m\n\u001b[2m    \"repaired\": false,\u001b[22m\n\u001b[2m    \"reserveId\": null,\u001b[22m\n\u001b[32m-   \"revision\": 2,\u001b[39m\n\u001b[31m+   \"revision\": 4,\u001b[39m\n\u001b[2m    \"rng\": Object {\u001b[22m\n\u001b[2m      \"content\": Object {\u001b[22m\n\u001b[2m        \"draws\": 0,\u001b[22m\n\u001b[2m        \"state\": 1176869687,\u001b[22m\n\u001b[2m      },\u001b[22m\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-navigation.spec.ts:4:385",
+                    "location": {
+                      "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-navigation.spec.ts",
+                      "column": 385,
+                      "line": 4
+                    },
+                    "snippet": "  2 | import {startV4,commandV4,readV4,saveV4} from './v4-helpers.js';\n  3 | test('holding Enter on a sale cannot sell the next sword without a fresh press',async({page})=>{\n> 4 |  await startV4(page);await commandV4(page,{type:'continue'});await page.locator('#v4-deliver').focus();await page.keyboard.down('Enter');const one=await readV4(page);expect(one.coins).toBe(40);expect(one.blades.filter(b=>b.status==='sold')).toHaveLength(1);await page.keyboard.down('Enter');await page.keyboard.down('Enter');await page.keyboard.up('Enter');expect(await readV4(page)).toEqual(one);await page.keyboard.press('Enter');const two=await saveV4(page,'fresh-enter-sale');expect(two.coins).toBe(80);expect(two.blades.filter(b=>b.status==='sold')).toHaveLength(2);\n    |                                                                                                                                                                                                                                                                                                                                                                                                 ^\n  5 | });\n  6 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-navigation.spec.ts",
+                        "column": 385,
+                        "line": 4
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  7\u001b[39m\n\u001b[31m+ Received  + 15\u001b[39m\n\n\u001b[33m@@ -23,45 +23,45 @@\u001b[39m\n\u001b[2m        \"base\": 40,\u001b[22m\n\u001b[2m        \"bursts\": 0,\u001b[22m\n\u001b[2m        \"charge\": 0,\u001b[22m\n\u001b[2m        \"commissionId\": null,\u001b[22m\n\u001b[2m        \"cracked\": false,\u001b[22m\n\u001b[32m-       \"finalizedDay\": null,\u001b[39m\n\u001b[31m+       \"finalizedDay\": 1,\u001b[39m\n\u001b[2m        \"hits\": 0,\u001b[22m\n\u001b[2m        \"id\": \"d1-2\",\u001b[22m\n\u001b[2m        \"level\": 0,\u001b[22m\n\u001b[2m        \"normalGreats\": 0,\u001b[22m\n\u001b[2m        \"peak\": 40,\u001b[22m\n\u001b[2m        \"recipe\": \"light\",\u001b[22m\n\u001b[2m        \"slot\": 2,\u001b[22m\n\u001b[32m-       \"status\": \"active\",\u001b[39m\n\u001b[31m+       \"status\": \"sold\",\u001b[39m\n\u001b[2m        \"successes\": 0,\u001b[22m\n\u001b[2m        \"suppliedDay\": 1,\u001b[22m\n\u001b[2m        \"value\": 40,\u001b[22m\n\u001b[2m      },\u001b[22m\n\u001b[2m      Object {\u001b[22m\n\u001b[2m        \"base\": 40,\u001b[22m\n\u001b[2m        \"bursts\": 0,\u001b[22m\n\u001b[2m        \"charge\": 0,\u001b[22m\n\u001b[2m        \"commissionId\": null,\u001b[22m\n\u001b[2m        \"cracked\": false,\u001b[22m\n\u001b[32m-       \"finalizedDay\": null,\u001b[39m\n\u001b[31m+       \"finalizedDay\": 1,\u001b[39m\n\u001b[2m        \"hits\": 0,\u001b[22m\n\u001b[2m        \"id\": \"d1-3\",\u001b[22m\n\u001b[2m        \"level\": 0,\u001b[22m\n\u001b[2m        \"normalGreats\": 0,\u001b[22m\n\u001b[2m        \"peak\": 40,\u001b[22m\n\u001b[2m        \"recipe\": \"light\",\u001b[22m\n\u001b[2m        \"slot\": 3,\u001b[22m\n\u001b[32m-       \"status\": \"active\",\u001b[39m\n\u001b[31m+       \"status\": \"sold\",\u001b[39m\n\u001b[2m        \"successes\": 0,\u001b[22m\n\u001b[2m        \"suppliedDay\": 1,\u001b[22m\n\u001b[2m        \"value\": 40,\u001b[22m\n\u001b[2m      },\u001b[22m\n\u001b[2m    ],\u001b[22m\n\u001b[2m    \"chapterChoices\": Array [],\u001b[22m\n\u001b[32m-   \"coins\": 40,\u001b[39m\n\u001b[31m+   \"coins\": 120,\u001b[39m\n\u001b[2m    \"commissionOrder\": Array [\u001b[22m\n\u001b[2m      1,\u001b[22m\n\u001b[2m      2,\u001b[22m\n\u001b[2m      3,\u001b[22m\n\u001b[2m      4,\u001b[22m\n\u001b[33m@@ -80,11 +80,11 @@\u001b[39m\n\u001b[2m      \"loan\": false,\u001b[22m\n\u001b[2m      \"shelter\": false,\u001b[22m\n\u001b[2m      \"supplyPct\": 100,\u001b[22m\n\u001b[2m    },\u001b[22m\n\u001b[2m    \"dayRecovered\": 0,\u001b[22m\n\u001b[32m-   \"daySales\": 40,\u001b[39m\n\u001b[31m+   \"daySales\": 120,\u001b[39m\n\u001b[2m    \"eventDeck\": Array [\u001b[22m\n\u001b[2m      \"donation\",\u001b[22m\n\u001b[2m      \"credit\",\u001b[22m\n\u001b[2m      \"salvage\",\u001b[22m\n\u001b[2m      \"rest\",\u001b[22m\n\u001b[33m@@ -109,10 +109,18 @@\u001b[39m\n\u001b[2m      },\u001b[22m\n\u001b[2m      Object {\u001b[22m\n\u001b[2m        \"pieceId\": \"d1-1\",\u001b[22m\n\u001b[2m        \"type\": \"deliver\",\u001b[22m\n\u001b[2m      },\u001b[22m\n\u001b[31m+     Object {\u001b[39m\n\u001b[31m+       \"pieceId\": \"d1-2\",\u001b[39m\n\u001b[31m+       \"type\": \"deliver\",\u001b[39m\n\u001b[31m+     },\u001b[39m\n\u001b[31m+     Object {\u001b[39m\n\u001b[31m+       \"pieceId\": \"d1-3\",\u001b[39m\n\u001b[31m+       \"type\": \"deliver\",\u001b[39m\n\u001b[31m+     },\u001b[39m\n\u001b[2m    ],\u001b[22m\n\u001b[2m    \"mode\": \"story\",\u001b[22m\n\u001b[2m    \"modifications\": Array [],\u001b[22m\n\u001b[2m    \"pardonUsed\": false,\u001b[22m\n\u001b[2m    \"pending\": Object {\u001b[22m\n\u001b[33m@@ -121,11 +129,11 @@\u001b[39m\n\u001b[2m      \"supplyPct\": 100,\u001b[22m\n\u001b[2m    },\u001b[22m\n\u001b[2m    \"phase\": \"workshop\",\u001b[22m\n\u001b[2m    \"repaired\": false,\u001b[22m\n\u001b[2m    \"reserveId\": null,\u001b[22m\n\u001b[32m-   \"revision\": 2,\u001b[39m\n\u001b[31m+   \"revision\": 4,\u001b[39m\n\u001b[2m    \"rng\": Object {\u001b[22m\n\u001b[2m      \"content\": Object {\u001b[22m\n\u001b[2m        \"draws\": 0,\u001b[22m\n\u001b[2m        \"state\": 1176869687,\u001b[22m\n\u001b[2m      },\u001b[22m\n\n  2 | import {startV4,commandV4,readV4,saveV4} from './v4-helpers.js';\n  3 | test('holding Enter on a sale cannot sell the next sword without a fresh press',async({page})=>{\n> 4 |  await startV4(page);await commandV4(page,{type:'continue'});await page.locator('#v4-deliver').focus();await page.keyboard.down('Enter');const one=await readV4(page);expect(one.coins).toBe(40);expect(one.blades.filter(b=>b.status==='sold')).toHaveLength(1);await page.keyboard.down('Enter');await page.keyboard.down('Enter');await page.keyboard.up('Enter');expect(await readV4(page)).toEqual(one);await page.keyboard.press('Enter');const two=await saveV4(page,'fresh-enter-sale');expect(two.coins).toBe(80);expect(two.blades.filter(b=>b.status==='sold')).toHaveLength(2);\n    |                                                                                                                                                                                                                                                                                                                                                                                                 ^\n  5 | });\n  6 |\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-navigation.spec.ts:4:385"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T11:11:33.349Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v4-ui/v4-navigation-holding-Ente-89e63-sword-without-a-fresh-press-v4-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v4-ui/v4-navigation-holding-Ente-89e63-sword-without-a-fresh-press-v4-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v4-ui/v4-navigation-holding-Ente-89e63-sword-without-a-fresh-press-v4-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-navigation.spec.ts",
+                    "column": 385,
+                    "line": 4
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "adeb36ca07d4b31a1d6b-c094592034018e0a802e",
+          "file": "v4-navigation.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-20T11:11:32.188Z",
+    "duration": 4681.029,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

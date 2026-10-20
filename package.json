@@ -9,8 +9,8 @@
   "scripts": {
     "verify:v2": "tsc -p tsconfig.simulation.json && node tmp/simulation/scripts/v2-verify.js",
     "test:cross": "npm run build && playwright test --config playwright.cross.config.ts",
-    "test:browser": "npm run build && playwright test --config playwright.ui.config.ts && playwright test",
-    "test:e2e": "npm run build && playwright test --config playwright.ui.config.ts",
+    "test:browser": "npm run build && playwright test --config playwright.v4-ui.config.ts && playwright test --config playwright.v4-storage.config.ts",
+    "test:e2e": "npm run build && playwright test --config playwright.v4-ui.config.ts",
     "test:art": "npm run build && node scripts/art/verify.mjs",
     "simulate": "tsc -p tsconfig.simulation.json && node tmp/simulation/scripts/simulate.js",
     "dev": "vite --host 127.0.0.1",

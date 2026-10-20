@@ -1,0 +1,92 @@
+cwebp -q 82 -m 6 -alpha_q 100 design/d/v07/originals/lantern-road-v1.png -o public/assets/d/v07/lantern-road-v1.webp
+Saving file 'public/assets/d/v07/lantern-road-v1.webp'
+File:      design/d/v07/originals/lantern-road-v1.png
+Dimension: 1672 x 941
+Output:    283948 bytes Y-U-V-All-PSNR 40.24 41.09 41.18   40.52 dB
+           (1.44 bpp)
+block count:  intra4:       5899  (95.22%)
+              intra16:       296  (4.78%)
+              skipped:        15  (0.24%)
+bytes used:  header:            419  (0.1%)
+             mode-partition:  31146  (11.0%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       8%|      24%|      39%|      30%|    6195
+      quantizer:  |      24 |      21 |      17 |      12 |
+   filter level:  |       8 |       5 |       3 |      12 |
+
+cwebp -q 82 -m 6 -alpha_q 100 design/d/v07/originals/bridge-dark-v1.png -o public/assets/d/v07/bridge-dark-v1.webp
+Saving file 'public/assets/d/v07/bridge-dark-v1.webp'
+File:      design/d/v07/originals/bridge-dark-v1.png
+Dimension: 1672 x 941
+Output:    271780 bytes Y-U-V-All-PSNR 40.17 43.06 43.76   41.00 dB
+           (1.38 bpp)
+block count:  intra4:       6013  (97.06%)
+              intra16:       182  (2.94%)
+              skipped:         6  (0.10%)
+bytes used:  header:            310  (0.1%)
+             mode-partition:  31917  (11.7%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       4%|      23%|      40%|      32%|    6195
+      quantizer:  |      24 |      21 |      17 |      12 |
+   filter level:  |       8 |       4 |       3 |      12 |
+
+cwebp -q 82 -m 6 -alpha_q 100 design/d/v07/originals/bridge-lit-v1.png -o public/assets/d/v07/bridge-lit-v1.webp
+Saving file 'public/assets/d/v07/bridge-lit-v1.webp'
+File:      design/d/v07/originals/bridge-lit-v1.png
+Dimension: 1672 x 941
+Output:    297880 bytes Y-U-V-All-PSNR 40.25 41.51 41.99   40.69 dB
+           (1.51 bpp)
+block count:  intra4:       6044  (97.56%)
+              intra16:       151  (2.44%)
+              skipped:         1  (0.02%)
+bytes used:  header:            420  (0.1%)
+             mode-partition:  32644  (11.0%)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       7%|      24%|      41%|      29%|    6195
+      quantizer:  |      24 |      21 |      17 |      12 |
+   filter level:  |       8 |       5 |       3 |      15 |
+
+cwebp -q 84 -m 6 -alpha_q 100 design/d/v07/originals/modifications-v1.png -o public/assets/d/v07/modifications-v1.webp
+Saving file 'public/assets/d/v07/modifications-v1.webp'
+File:      design/d/v07/originals/modifications-v1.png
+Dimension: 2172 x 724 (with alpha)
+Output:    241522 bytes Y-U-V-All-PSNR 42.98 43.42 43.53   43.14 dB
+           (1.23 bpp)
+block count:  intra4:       2604  (41.62%)
+              intra16:      3652  (58.38%)
+              skipped:      3608  (57.67%)
+bytes used:  header:            493  (0.2%)
+             mode-partition:  16833  (7.0%)
+             transparency:    52725 (99.0 dB)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |       9%|      14%|      18%|      60%|    6256
+      quantizer:  |      21 |      20 |      17 |      12 |
+   filter level:  |       7 |       5 |       3 |       2 |
+Lossless-alpha compressed size: 52724 bytes
+  * Header size: 1411 bytes, image data size: 51313
+  * Lossless features used: PREDICTION
+  * Precision Bits: histogram=5 prediction=4 cache=0
+  * Palette size:   256
+
+cwebp -q 84 -m 6 -alpha_q 100 design/d/v07/originals/events-v1.png -o public/assets/d/v07/events-v1.webp
+Saving file 'public/assets/d/v07/events-v1.webp'
+File:      design/d/v07/originals/events-v1.png
+Dimension: 1536 x 1024 (with alpha)
+Output:    309280 bytes Y-U-V-All-PSNR 42.79 44.14 44.76   43.28 dB
+           (1.57 bpp)
+block count:  intra4:       2378  (38.70%)
+              intra16:      3766  (61.30%)
+              skipped:      1149  (18.70%)
+bytes used:  header:            533  (0.2%)
+             mode-partition:  16672  (5.4%)
+             transparency:   124342 (99.0 dB)
+ Residuals bytes  |segment 1|segment 2|segment 3|segment 4|  total
+    macroblocks:  |      12%|      14%|      16%|      58%|    6144
+      quantizer:  |      21 |      20 |      15 |      12 |
+   filter level:  |       7 |       5 |       2 |      12 |
+Lossless-alpha compressed size: 124341 bytes
+  * Header size: 2448 bytes, image data size: 121893
+  * Lossless features used: PREDICTION PALETTE
+  * Precision Bits: histogram=5 prediction=4 cache=0
+  * Palette size:   255
+

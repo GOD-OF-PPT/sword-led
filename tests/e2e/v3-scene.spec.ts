@@ -4,7 +4,7 @@ import {mkdir,writeFile} from 'node:fs/promises';
 import {applyCommand,validateRun} from '../../src/core-v3/index.js';
 const dir='tmp/v3-scene-states';
 async function read(page:Page){const raw=await page.evaluate(()=>localStorage.getItem('sword-led.save.v3'));const v=validateRun(JSON.parse(raw!).state);if(!v.ok)throw Error(v.detail);return v.state;}
-async function open(page:Page){await mkdir(dir,{recursive:true});await page.goto('/?mode=3');await expect(page.locator('#v3-hit')).toBeEnabled();}
+async function open(page:Page){await mkdir(dir,{recursive:true});await page.goto('/v3.html?mode=3');await expect(page.locator('#v3-hit')).toBeEnabled();}
 async function hit(page:Page){const before=await read(page),pieceId=(await page.locator('#v3-inventory button[aria-pressed=true]').getAttribute('data-piece'))!;await page.locator('#v3-hit').click({position:{x:400,y:120}});const r=applyCommand(before,{runId:before.runId,expectedRevision:before.revision,action:{type:'strike',pieceId}});if(!r.ok)throw Error(r.error);expect(await read(page)).toEqual(r.state);await expect(page.locator('#v3-strike')).toHaveAttribute('aria-busy','false');}
 async function qualify(page:Page){for(let n=0;n<8&&(await read(page)).blades[0]!.value<180;n++)await hit(page);expect((await read(page)).blades[0]!.value).toBeGreaterThanOrEqual(180);}
 test('resizing four actual inventory pieces preserves the focused sword node and exact saved bytes',async({page},info)=>{

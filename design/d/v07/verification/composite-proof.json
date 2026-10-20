@@ -1,0 +1,227 @@
+{
+  "method": "Actual Chromium canvas draws each equal sourceRect at 300px over parchment and dark backgrounds; screenshots are QA only, not production art.",
+  "proofs": [
+    {
+      "id": "modifications-v1",
+      "path": "design/d/v07/verification/modifications-v1-composite.png",
+      "width": 2172,
+      "height": 724,
+      "canvas": [
+        900,
+        600
+      ],
+      "samples": [
+        {
+          "bg": 0,
+          "row": 0,
+          "col": 0,
+          "pixel": [
+            233,
+            216,
+            181,
+            255
+          ]
+        },
+        {
+          "bg": 0,
+          "row": 0,
+          "col": 1,
+          "pixel": [
+            233,
+            216,
+            181,
+            255
+          ]
+        },
+        {
+          "bg": 0,
+          "row": 0,
+          "col": 2,
+          "pixel": [
+            233,
+            216,
+            181,
+            255
+          ]
+        },
+        {
+          "bg": 1,
+          "row": 0,
+          "col": 0,
+          "pixel": [
+            24,
+            32,
+            43,
+            255
+          ]
+        },
+        {
+          "bg": 1,
+          "row": 0,
+          "col": 1,
+          "pixel": [
+            24,
+            32,
+            43,
+            255
+          ]
+        },
+        {
+          "bg": 1,
+          "row": 0,
+          "col": 2,
+          "pixel": [
+            24,
+            32,
+            43,
+            255
+          ]
+        }
+      ]
+    },
+    {
+      "id": "events-v1",
+      "path": "design/d/v07/verification/events-v1-composite.png",
+      "width": 1536,
+      "height": 1024,
+      "canvas": [
+        900,
+        1200
+      ],
+      "samples": [
+        {
+          "bg": 0,
+          "row": 0,
+          "col": 0,
+          "pixel": [
+            233,
+            216,
+            181,
+            255
+          ]
+        },
+        {
+          "bg": 0,
+          "row": 0,
+          "col": 1,
+          "pixel": [
+            233,
+            216,
+            181,
+            255
+          ]
+        },
+        {
+          "bg": 0,
+          "row": 0,
+          "col": 2,
+          "pixel": [
+            233,
+            216,
+            181,
+            255
+          ]
+        },
+        {
+          "bg": 0,
+          "row": 1,
+          "col": 0,
+          "pixel": [
+            233,
+            216,
+            181,
+            255
+          ]
+        },
+        {
+          "bg": 0,
+          "row": 1,
+          "col": 1,
+          "pixel": [
+            233,
+            216,
+            181,
+            255
+          ]
+        },
+        {
+          "bg": 0,
+          "row": 1,
+          "col": 2,
+          "pixel": [
+            233,
+            216,
+            181,
+            255
+          ]
+        },
+        {
+          "bg": 1,
+          "row": 0,
+          "col": 0,
+          "pixel": [
+            24,
+            32,
+            43,
+            255
+          ]
+        },
+        {
+          "bg": 1,
+          "row": 0,
+          "col": 1,
+          "pixel": [
+            24,
+            32,
+            43,
+            255
+          ]
+        },
+        {
+          "bg": 1,
+          "row": 0,
+          "col": 2,
+          "pixel": [
+            24,
+            32,
+            43,
+            255
+          ]
+        },
+        {
+          "bg": 1,
+          "row": 1,
+          "col": 0,
+          "pixel": [
+            24,
+            32,
+            43,
+            255
+          ]
+        },
+        {
+          "bg": 1,
+          "row": 1,
+          "col": 1,
+          "pixel": [
+            24,
+            32,
+            43,
+            255
+          ]
+        },
+        {
+          "bg": 1,
+          "row": 1,
+          "col": 2,
+          "pixel": [
+            24,
+            32,
+            43,
+            255
+          ]
+        }
+      ]
+    }
+  ]
+}

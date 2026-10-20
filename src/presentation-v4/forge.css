@@ -1,0 +1,26 @@
+/* All coordinates use the measured sword canvas and the approved straight hammer. */
+#v4-scene{--aim-x:58%;--aim-y:60%;--hit-x:58%;--hit-y:60%;--hit-color:#ffbd6b;isolation:isolate;overflow:visible}
+#v4-blade{position:absolute;left:0;top:50%;width:100%;height:auto;aspect-ratio:11/4;translate:0 -50%;pointer-events:none;z-index:1}
+#v4-hit,#v4-hit:hover:enabled,#v4-hit:disabled{position:absolute;inset:0;z-index:3;width:100%;height:100%;padding:0;min-height:0;border:0;border-radius:12px;background:transparent;box-shadow:none;opacity:1;cursor:crosshair;color:#ffe4b0}
+#v4-hit:disabled{cursor:default}#v4-hit[aria-busy=true]{cursor:progress}#v4-hit:focus-visible{outline:2px solid #ffe7ad;outline-offset:-6px}
+#v4-hit .hit-hint{position:absolute;left:50%;bottom:6%;translate:-50% 0;max-width:95%;padding:6px 15px;border-radius:24px;background:#14272be8;color:#ffe3ab;border:1px solid #987c4c;font-size:12px;white-space:nowrap;pointer-events:none;box-shadow:0 3px 12px #0007}
+#v4-hammer{--hammer-width:clamp(235px,38vw,505px);position:absolute;z-index:5;width:var(--hammer-width);aspect-ratio:3/2;left:calc(var(--aim-x) - var(--face-x,.13020833)*var(--hammer-width));top:calc(var(--aim-y) - var(--face-y,.49869792)*var(--hammer-width));transform:rotate(8deg);transform-origin:var(--grip-x,89.84375%) var(--grip-y,50.29297%);pointer-events:none;filter:drop-shadow(0 10px 7px #0008);will-change:auto}
+#v4-hammer img,#v4-hammer .v4-hammer-fallback{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;pointer-events:none}
+#v4-hammer:not([data-art=ready]) img,#v4-hammer[data-art=ready] .v4-hammer-fallback{visibility:hidden}
+#v4-hammer[data-phase=swing],#v4-hammer[data-phase=contact],#v4-hammer[data-phase=rebound]{will-change:transform}
+#v4-hammer.preparing{transform:rotate(19deg)}
+#v4-scene[data-empty=true] #v4-hammer,#v4-scene[data-empty=true] #v4-reticle{visibility:hidden}
+#v4-reticle{position:absolute;z-index:4;left:var(--aim-x);top:var(--aim-y);width:17px;height:17px;border:1px solid #ffeac0;border-radius:2px;transform:translate(-50%,-50%) rotate(45deg);box-shadow:0 0 13px #ffb44d88;opacity:0;pointer-events:none}
+#v4-scene.aiming #v4-reticle{opacity:.85}#v4-scene.striking #v4-reticle{opacity:.15}
+#v4-impact-glow,#v4-impact-ring{position:absolute;z-index:2;left:var(--hit-x);top:var(--hit-y);transform:translate(-50%,-50%);opacity:0;pointer-events:none}
+#v4-impact-glow{width:240px;height:110px;background:radial-gradient(ellipse,var(--hit-color),transparent 70%);mix-blend-mode:screen}
+#v4-impact-ring{width:86px;height:44px;border:3px solid var(--hit-color);border-radius:50%;box-shadow:0 0 18px var(--hit-color)}
+#v4-sparks{position:absolute;z-index:6;left:var(--hit-x);top:var(--hit-y);width:1px;height:1px;pointer-events:none}
+#v4-sparks i{position:absolute;left:0;top:0;border-radius:1px;opacity:0;pointer-events:none}
+#v4-float{position:absolute;z-index:7;left:var(--hit-x);top:calc(var(--hit-y) - 14px);width:max-content;max-width:85%;font-size:clamp(21px,2.2vw,34px);font-weight:800;text-shadow:0 2px 4px #000,0 0 14px #762e14;opacity:0;color:#fff2cf;pointer-events:none;transform:translateX(-50%)}
+#v4-impact-badge{position:absolute;z-index:7;left:var(--hit-x);top:calc(var(--hit-y) - 62px);width:max-content;max-width:90%;transform:translateX(-50%);font:900 clamp(22px,2.1vw,32px)/1.3 KaiTi,STKaiti,serif;color:var(--hit-color);text-shadow:0 2px 4px #000,0 0 18px #c86420;opacity:0;pointer-events:none}
+#v4-scene.bursting{background:radial-gradient(ellipse at var(--hit-x) var(--hit-y),#ffbe3829,transparent 64%)}
+#v4-scene[data-outcome=great] #v4-impact-badge{font-size:clamp(25px,2.6vw,39px);color:#fff2ac}#v4-scene[data-outcome=crack] #v4-impact-badge,#v4-scene[data-outcome=broken] #v4-impact-badge{color:#ffae85}
+#v4-scene[data-reduced=true][data-outcome] #v4-float,#v4-scene[data-reduced=true][data-outcome] #v4-impact-badge{opacity:1}
+#v4-scene[data-reduced=true] #v4-impact-glow,#v4-scene[data-reduced=true] #v4-impact-ring,#v4-scene[data-reduced=true] #v4-sparks{display:none}
+@media(prefers-reduced-motion:reduce){#v4-hammer{filter:drop-shadow(0 7px 5px #0008)}#v4-impact-glow,#v4-impact-ring,#v4-sparks{display:none}}

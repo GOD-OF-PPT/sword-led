@@ -1,0 +1,241 @@
+{
+  "config": {
+    "argv": [
+      "/Users/gordon/.nvm/versions/node/v22.12.0/bin/node",
+      "/Users/gordon/githome/sword-led/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "playwright.v4-ui.config.ts",
+      "--project",
+      "v4-chromium",
+      "--grep",
+      "real first chapter connects"
+    ],
+    "configFile": "/Users/gordon/githome/sword-led/playwright.v4-ui.config.ts",
+    "rootDir": "/Users/gordon/githome/sword-led/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v4-ui",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v4-chromium",
+        "name": "v4-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v4-*.spec.ts"
+        ],
+        "timeout": 180000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v4-ui",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v4-firefox",
+        "name": "v4-firefox",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v4-*.spec.ts"
+        ],
+        "timeout": 180000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v4-ui",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v4-webkit",
+        "name": "v4-webkit",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v4-*.spec.ts"
+        ],
+        "timeout": 180000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v4-ui",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v4-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v4-*.spec.ts",
+        "timeout": 180000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4197",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "launchOptions": {
+            "args": [
+              "--no-proxy-server"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v4-chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "tmp/T11-4-2-3i3/pilot/prop-proportion-red.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "v4-chapter.spec.ts",
+      "file": "v4-chapter.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "real first chapter connects four commissions, shop, event, bridge, modification, saved collection and a fresh journey",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 33972,
+                  "error": {
+                    "message": "Error: {\"id\":\"windbox\",\"expected\":1.2941176470588236,\"actual\":2.5652173913043477,\"error\":0.9822134387351777}\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m0.07\u001b[39m\nReceived:   \u001b[31m0.9822134387351777\u001b[39m",
+                    "stack": "Error: {\"id\":\"windbox\",\"expected\":1.2941176470588236,\"actual\":2.5652173913043477,\"error\":0.9822134387351777}\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m0.07\u001b[39m\nReceived:   \u001b[31m0.9822134387351777\u001b[39m\n    at propProportions (/Users/gordon/githome/sword-led/tests/e2e/v4-chapter.spec.ts:17:61)\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-chapter.spec.ts:28:112",
+                    "location": {
+                      "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-chapter.spec.ts",
+                      "column": 61,
+                      "line": 17
+                    },
+                    "snippet": "  15 |   const ratio=(data:Uint8ClampedArray,w:number,h:number)=>{let minX=w,minY=h,maxX=0,maxY=0;for(let y=0;y<h;y++)for(let x=0;x<w;x++)if(data[(y*w+x)*4+3]!>32){minX=Math.min(minX,x);maxX=Math.max(maxX,x);minY=Math.min(minY,y);maxY=Math.max(maxY,y);}return(maxX-minX+1)/(maxY-minY+1);};\n  16 |   return nodes.map(n=>{const c=n as HTMLCanvasElement,index=['windbox','warmRack','wideMouth'].indexOf(c.dataset.prop!),w=image.naturalWidth/3,h=image.naturalHeight,expected=ratio(ctx.getImageData(index*w,0,w,h).data,w,h),actual=ratio(c.getContext('2d')!.getImageData(0,0,c.width,c.height).data,c.width,c.height);return{id:c.dataset.prop,expected,actual,error:Math.abs(actual/expected-1)};});\n> 17 |  });for(const r of ratios)expect(r.error,JSON.stringify(r)).toBeLessThan(.07);\n     |                                                             ^\n  18 | }\n  19 |\n  20 | test('real first chapter connects four commissions, shop, event, bridge, modification, saved collection and a fresh journey',async({page},info)=>{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-chapter.spec.ts",
+                        "column": 61,
+                        "line": 17
+                      },
+                      "message": "Error: {\"id\":\"windbox\",\"expected\":1.2941176470588236,\"actual\":2.5652173913043477,\"error\":0.9822134387351777}\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m0.07\u001b[39m\nReceived:   \u001b[31m0.9822134387351777\u001b[39m\n\n  15 |   const ratio=(data:Uint8ClampedArray,w:number,h:number)=>{let minX=w,minY=h,maxX=0,maxY=0;for(let y=0;y<h;y++)for(let x=0;x<w;x++)if(data[(y*w+x)*4+3]!>32){minX=Math.min(minX,x);maxX=Math.max(maxX,x);minY=Math.min(minY,y);maxY=Math.max(maxY,y);}return(maxX-minX+1)/(maxY-minY+1);};\n  16 |   return nodes.map(n=>{const c=n as HTMLCanvasElement,index=['windbox','warmRack','wideMouth'].indexOf(c.dataset.prop!),w=image.naturalWidth/3,h=image.naturalHeight,expected=ratio(ctx.getImageData(index*w,0,w,h).data,w,h),actual=ratio(c.getContext('2d')!.getImageData(0,0,c.width,c.height).data,c.width,c.height);return{id:c.dataset.prop,expected,actual,error:Math.abs(actual/expected-1)};});\n> 17 |  });for(const r of ratios)expect(r.error,JSON.stringify(r)).toBeLessThan(.07);\n     |                                                             ^\n  18 | }\n  19 |\n  20 | test('real first chapter connects four commissions, shop, event, bridge, modification, saved collection and a fresh journey',async({page},info)=>{\n    at propProportions (/Users/gordon/githome/sword-led/tests/e2e/v4-chapter.spec.ts:17:61)\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-chapter.spec.ts:28:112"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T10:55:18.398Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v4-ui/v4-chapter-real-first-chap-b5cdb-lection-and-a-fresh-journey-v4-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v4-ui/v4-chapter-real-first-chap-b5cdb-lection-and-a-fresh-journey-v4-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v4-ui/v4-chapter-real-first-chap-b5cdb-lection-and-a-fresh-journey-v4-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-chapter.spec.ts",
+                    "column": 61,
+                    "line": 17
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "16fd34b5b9e026c8fbe7-dbf1460ee5f77b046526",
+          "file": "v4-chapter.spec.ts",
+          "line": 20,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-20T10:55:16.787Z",
+    "duration": 43070.195999999996,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

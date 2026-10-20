@@ -1,0 +1,107 @@
+{
+  "toolVersion": "1.6.0\nlibsharpyuv: 0.4.2",
+  "records": [
+    {
+      "id": "lantern-road-v1",
+      "input": "design/d/v07/originals/lantern-road-v1.png",
+      "output": "public/assets/d/v07/lantern-road-v1.webp",
+      "command": [
+        "cwebp",
+        "-q",
+        "82",
+        "-m",
+        "6",
+        "-alpha_q",
+        "100",
+        "design/d/v07/originals/lantern-road-v1.png",
+        "-o",
+        "public/assets/d/v07/lantern-road-v1.webp"
+      ],
+      "exitCode": 0,
+      "bytes": 283948,
+      "elapsedMs": 636
+    },
+    {
+      "id": "bridge-dark-v1",
+      "input": "design/d/v07/originals/bridge-dark-v1.png",
+      "output": "public/assets/d/v07/bridge-dark-v1.webp",
+      "command": [
+        "cwebp",
+        "-q",
+        "82",
+        "-m",
+        "6",
+        "-alpha_q",
+        "100",
+        "design/d/v07/originals/bridge-dark-v1.png",
+        "-o",
+        "public/assets/d/v07/bridge-dark-v1.webp"
+      ],
+      "exitCode": 0,
+      "bytes": 271780,
+      "elapsedMs": 655
+    },
+    {
+      "id": "bridge-lit-v1",
+      "input": "design/d/v07/originals/bridge-lit-v1.png",
+      "output": "public/assets/d/v07/bridge-lit-v1.webp",
+      "command": [
+        "cwebp",
+        "-q",
+        "82",
+        "-m",
+        "6",
+        "-alpha_q",
+        "100",
+        "design/d/v07/originals/bridge-lit-v1.png",
+        "-o",
+        "public/assets/d/v07/bridge-lit-v1.webp"
+      ],
+      "exitCode": 0,
+      "bytes": 297880,
+      "elapsedMs": 593
+    },
+    {
+      "id": "modifications-v1",
+      "input": "design/d/v07/originals/modifications-v1.png",
+      "output": "public/assets/d/v07/modifications-v1.webp",
+      "command": [
+        "cwebp",
+        "-q",
+        "84",
+        "-m",
+        "6",
+        "-alpha_q",
+        "100",
+        "design/d/v07/originals/modifications-v1.png",
+        "-o",
+        "public/assets/d/v07/modifications-v1.webp"
+      ],
+      "exitCode": 0,
+      "bytes": 241522,
+      "elapsedMs": 6395
+    },
+    {
+      "id": "events-v1",
+      "input": "design/d/v07/originals/events-v1.png",
+      "output": "public/assets/d/v07/events-v1.webp",
+      "command": [
+        "cwebp",
+        "-q",
+        "84",
+        "-m",
+        "6",
+        "-alpha_q",
+        "100",
+        "design/d/v07/originals/events-v1.png",
+        "-o",
+        "public/assets/d/v07/events-v1.webp"
+      ],
+      "exitCode": 0,
+      "bytes": 309280,
+      "elapsedMs": 12094
+    }
+  ],
+  "totalBytes": 1404410,
+  "budgetBytes": 2097152
+}

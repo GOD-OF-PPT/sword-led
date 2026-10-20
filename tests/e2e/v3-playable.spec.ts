@@ -14,7 +14,7 @@ async function strike(page:Page,keyboard=false){const before=await read(page),pi
 async function confirm(page:Page){await expect(page.locator('#v3-dialog')).toBeVisible();await page.locator('#v3-dialog-actions').getByRole('button',{name:'确认',exact:true}).click();}
 async function settle(page:Page){const before=await read(page);await page.locator('#v3-settle').click();await confirm(page);return expectCommand(before,page,{type:'settle'});}
 async function advance(page:Page){const before=await read(page);await page.getByRole('button',{name:'领取下一轮三柄剑'}).click();return expectCommand(before,page,{type:'advance'});}
-async function open(page:Page){await page.goto('/?mode=3');await expect(page.locator('#v3-strike')).toBeEnabled();await expect(page.locator('#v3-workshop')).toBeVisible();}
+async function open(page:Page){await page.goto('/v3.html?mode=3');await expect(page.locator('#v3-strike')).toBeEnabled();await expect(page.locator('#v3-workshop')).toBeVisible();}
 async function saveState(page:Page,label:string){const s=await read(page);await mkdir(reports,{recursive:true});await writeFile(`${reports}/${test.info().project.name}-${label}.json`,JSON.stringify(s,null,2)+'\n');}
 test('primary hammer remains readable while hovered',async({page})=>{
  await open(page);await page.locator('#v3-strike').hover();
@@ -56,7 +56,7 @@ test('three misses really fail; restart respects a changed seed; invalid main re
 });
 test('same-origin v2 writer blocks v3 safely; write refusal carries exact state into unsaved play',async({page,context})=>{
  const old=await context.newPage();await old.goto('/v2.html');await expect(old.locator('#v2-new')).toBeEnabled();await old.locator('#v2-new').click();await old.locator('#v2-starters button').first().click();const oldBytes=await old.evaluate(()=>localStorage.getItem('sword-led.save.v2'));
- await page.goto('/?mode=3');await expect(page.locator('#v3-save-text')).toContainText('只读');await old.close();await page.locator('#v3-reread').click();await confirm(page); // no v3 main exists yet; use the explicit new-game menu
+ await page.goto('/v3.html?mode=3');await expect(page.locator('#v3-save-text')).toContainText('只读');await old.close();await page.locator('#v3-reread').click();await confirm(page); // no v3 main exists yet; use the explicit new-game menu
  await page.getByRole('button',{name:'开一炉新契约'}).click();await expect(page.locator('#v3-workshop')).toBeVisible();expect(await page.evaluate(()=>localStorage.getItem('sword-led.save.v2'))).toBe(oldBytes);
  await page.evaluate(()=>{const original=Storage.prototype.setItem;Storage.prototype.setItem=function(k,v){if(k==='sword-led.save.v3')throw new DOMException('quota','QuotaExceededError');return original.call(this,k,v);};});
  const before=await read(page);await page.locator('#v3-strike').click();await expect(page.locator('#v3-save-text')).toContainText('保存失败');expect(await read(page)).toEqual(before);await page.locator('#v3-memory').click();await confirm(page);await expect(page.locator('#v3-save-text')).toContainText('不保存');await expect(page.locator('#v3-value')).not.toHaveText('40');

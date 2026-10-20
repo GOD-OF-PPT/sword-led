@@ -1,0 +1,675 @@
+{
+  "config": {
+    "argv": [
+      "/Users/gordon/.nvm/versions/node/v22.12.0/bin/node",
+      "/Users/gordon/githome/sword-led/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "playwright.v4-ui.config.ts",
+      "--project",
+      "v4-chromium"
+    ],
+    "configFile": "/Users/gordon/githome/sword-led/playwright.v4-ui.config.ts",
+    "rootDir": "/Users/gordon/githome/sword-led/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v4-ui",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v4-chromium",
+        "name": "v4-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v4-*.spec.ts"
+        ],
+        "timeout": 180000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v4-ui",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v4-firefox",
+        "name": "v4-firefox",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v4-*.spec.ts"
+        ],
+        "timeout": 180000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v4-ui",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "v4-webkit",
+        "name": "v4-webkit",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v4-*.spec.ts"
+        ],
+        "timeout": 180000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/test-results/v4-ui",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "v4-chromium",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v4-*.spec.ts",
+        "timeout": 180000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4197",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "launchOptions": {
+            "args": [
+              "--no-proxy-server"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "v4-chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "tmp/T11-4-2-3i3/pilot/all-chromium-report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "v4-chapter.spec.ts",
+      "file": "v4-chapter.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "real first chapter connects four commissions, shop, event, bridge, modification, saved collection and a fresh journey",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 30373,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T10:29:33.141Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "actual-chapter",
+                      "contentType": "application/json",
+                      "body": "ewogICJmaW5hbCI6IHsKICAgICJydWxlc1ZlcnNpb24iOiAiZm9yZ2UtdjQiLAogICAgInJ1bklkIjogImI4M2ZkZmMxLTU2YWMtNDY1Yi1hNzQxLWQ0YmU2NTE2NTg1ZCIsCiAgICAic2VlZCI6ICJsYW50ZXJuLXdpdG5lc3MtMCIsCiAgICAibW9kZSI6ICJzdG9yeSIsCiAgICAiaW5pdGlhbEVsaWdpYmlsaXR5IjogewogICAgICAicmVjaXBlcyI6IFsKICAgICAgICAibGlnaHQiCiAgICAgIF0sCiAgICAgICJjaGFsbGVuZ2UiOiBmYWxzZQogICAgfSwKICAgICJyZXZpc2lvbiI6IDYzLAogICAgInBoYXNlIjogInN1bW1hcnkiLAogICAgImRheSI6IDQsCiAgICAiY29tbWlzc2lvbk9yZGVyIjogWwogICAgICAxLAogICAgICAyLAogICAgICAzLAogICAgICA0LAogICAgICA1LAogICAgICA2LAogICAgICA3LAogICAgICA4LAogICAgICA5LAogICAgICAxMCwKICAgICAgMTEsCiAgICAgIDEyCiAgICBdLAogICAgImNvaW5zIjogMjg2NiwKICAgICJzZWFscyI6IDMsCiAgICAic3VwcGx5QmFzZSI6IDcyLAogICAgInVwZ3JhZGVDb3VudCI6IDEsCiAgICAiaW5oZXJpdGFuY2UiOiAwLAogICAgImJsYWRlcyI6IFsKICAgICAgewogICAgICAgICJpZCI6ICJkMS0xIiwKICAgICAgICAic2xvdCI6IDEsCiAgICAgICAgInN1cHBsaWVkRGF5IjogMSwKICAgICAgICAicmVjaXBlIjogImxpZ2h0IiwKICAgICAgICAic3RhdHVzIjogImNvbW1pc3Npb25lZCIsCiAgICAgICAgImJhc2UiOiA0MCwKICAgICAgICAidmFsdWUiOiAxNDgsCiAgICAgICAgInBlYWsiOiAxNDgsCiAgICAgICAgImxldmVsIjogMywKICAgICAgICAiY3JhY2tlZCI6IGZhbHNlLAogICAgICAgICJoaXRzIjogMywKICAgICAgICAiY2hhcmdlIjogMywKICAgICAgICAic3VjY2Vzc2VzIjogMywKICAgICAgICAibm9ybWFsR3JlYXRzIjogMCwKICAgICAgICAiYnVyc3RzIjogMCwKICAgICAgICAiZmluYWxpemVkRGF5IjogMSwKICAgICAgICAiY29tbWlzc2lvbklkIjogMQogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogImQxLTIiLAogICAgICAgICJzbG90IjogMiwKICAgICAgICAic3VwcGxpZWREYXkiOiAxLAogICAgICAgICJyZWNpcGUiOiAibGlnaHQiLAogICAgICAgICJzdGF0dXMiOiAic29sZCIsCiAgICAgICAgImJhc2UiOiA0MCwKICAgICAgICAidmFsdWUiOiAyMDEsCiAgICAgICAgInBlYWsiOiAyMDEsCiAgICAgICAgImxldmVsIjogNCwKICAgICAgICAiY3JhY2tlZCI6IGZhbHNlLAogICAgICAgICJoaXRzIjogMywKICAgICAgICAiY2hhcmdlIjogMywKICAgICAgICAic3VjY2Vzc2VzIjogMywKICAgICAgICAibm9ybWFsR3JlYXRzIjogMSwKICAgICAgICAiYnVyc3RzIjogMCwKICAgICAgICAiZmluYWxpemVkRGF5IjogMSwKICAgICAgICAiY29tbWlzc2lvbklkIjogbnVsbAogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogImQxLTMiLAogICAgICAgICJzbG90IjogMywKICAgICAgICAic3VwcGxpZWREYXkiOiAxLAogICAgICAgICJyZWNpcGUiOiAibGlnaHQiLAogICAgICAgICJzdGF0dXMiOiAic29sZCIsCiAgICAgICAgImJhc2UiOiA0MCwKICAgICAgICAidmFsdWUiOiAxNDgsCiAgICAgICAgInBlYWsiOiAxNDgsCiAgICAgICAgImxldmVsIjogMywKICAgICAgICAiY3JhY2tlZCI6IGZhbHNlLAogICAgICAgICJoaXRzIjogMywKICAgICAgICAiY2hhcmdlIjogMywKICAgICAgICAic3VjY2Vzc2VzIjogMywKICAgICAgICAibm9ybWFsR3JlYXRzIjogMCwKICAgICAgICAiYnVyc3RzIjogMCwKICAgICAgICAiZmluYWxpemVkRGF5IjogMSwKICAgICAgICAiY29tbWlzc2lvbklkIjogbnVsbAogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogImQyLTEiLAogICAgICAgICJzbG90IjogMSwKICAgICAgICAic3VwcGxpZWREYXkiOiAyLAogICAgICAgICJyZWNpcGUiOiAibGlnaHQiLAogICAgICAgICJzdGF0dXMiOiAiY29tbWlzc2lvbmVkIiwKICAgICAgICAiYmFzZSI6IDQwLAogICAgICAgICJ2YWx1ZSI6IDIyOSwKICAgICAgICAicGVhayI6IDIyOSwKICAgICAgICAibGV2ZWwiOiA0LAogICAgICAgICJjcmFja2VkIjogZmFsc2UsCiAgICAgICAgImhpdHMiOiA0LAogICAgICAgICJjaGFyZ2UiOiA0LAogICAgICAgICJzdWNjZXNzZXMiOiA0LAogICAgICAgICJub3JtYWxHcmVhdHMiOiAwLAogICAgICAgICJidXJzdHMiOiAwLAogICAgICAgICJmaW5hbGl6ZWREYXkiOiAyLAogICAgICAgICJjb21taXNzaW9uSWQiOiAyCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiZDItMiIsCiAgICAgICAgInNsb3QiOiAyLAogICAgICAgICJzdXBwbGllZERheSI6IDIsCiAgICAgICAgInJlY2lwZSI6ICJsaWdodCIsCiAgICAgICAgInN0YXR1cyI6ICJzb2xkIiwKICAgICAgICAiYmFzZSI6IDQwLAogICAgICAgICJ2YWx1ZSI6IDIwMSwKICAgICAgICAicGVhayI6IDIwMSwKICAgICAgICAibGV2ZWwiOiA0LAogICAgICAgICJjcmFja2VkIjogZmFsc2UsCiAgICAgICAgImhpdHMiOiAzLAogICAgICAgICJjaGFyZ2UiOiAzLAogICAgICAgICJzdWNjZXNzZXMiOiAzLAogICAgICAgICJub3JtYWxHcmVhdHMiOiAxLAogICAgICAgICJidXJzdHMiOiAwLAogICAgICAgICJmaW5hbGl6ZWREYXkiOiAyLAogICAgICAgICJjb21taXNzaW9uSWQiOiBudWxsCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiZDItMyIsCiAgICAgICAgInNsb3QiOiAzLAogICAgICAgICJzdXBwbGllZERheSI6IDIsCiAgICAgICAgInJlY2lwZSI6ICJsaWdodCIsCiAgICAgICAgInN0YXR1cyI6ICJzb2xkIiwKICAgICAgICAiYmFzZSI6IDQwLAogICAgICAgICJ2YWx1ZSI6IDE0OCwKICAgICAgICAicGVhayI6IDE0OCwKICAgICAgICAibGV2ZWwiOiAzLAogICAgICAgICJjcmFja2VkIjogZmFsc2UsCiAgICAgICAgImhpdHMiOiAzLAogICAgICAgICJjaGFyZ2UiOiAzLAogICAgICAgICJzdWNjZXNzZXMiOiAzLAogICAgICAgICJub3JtYWxHcmVhdHMiOiAwLAogICAgICAgICJidXJzdHMiOiAwLAogICAgICAgICJmaW5hbGl6ZWREYXkiOiAyLAogICAgICAgICJjb21taXNzaW9uSWQiOiBudWxsCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiZDMtMSIsCiAgICAgICAgInNsb3QiOiAxLAogICAgICAgICJzdXBwbGllZERheSI6IDMsCiAgICAgICAgInJlY2lwZSI6ICJsaWdodCIsCiAgICAgICAgInN0YXR1cyI6ICJ0cmFkZWQiLAogICAgICAgICJiYXNlIjogNDAsCiAgICAgICAgInZhbHVlIjogNDAsCiAgICAgICAgInBlYWsiOiA0MCwKICAgICAgICAibGV2ZWwiOiAwLAogICAgICAgICJjcmFja2VkIjogZmFsc2UsCiAgICAgICAgImhpdHMiOiAwLAogICAgICAgICJjaGFyZ2UiOiAwLAogICAgICAgICJzdWNjZXNzZXMiOiAwLAogICAgICAgICJub3JtYWxHcmVhdHMiOiAwLAogICAgICAgICJidXJzdHMiOiAwLAogICAgICAgICJmaW5hbGl6ZWREYXkiOiAzLAogICAgICAgICJjb21taXNzaW9uSWQiOiBudWxsCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiZDMtMiIsCiAgICAgICAgInNsb3QiOiAyLAogICAgICAgICJzdXBwbGllZERheSI6IDMsCiAgICAgICAgInJlY2lwZSI6ICJsaWdodCIsCiAgICAgICAgInN0YXR1cyI6ICJjb21taXNzaW9uZWQiLAogICAgICAgICJiYXNlIjogNDAsCiAgICAgICAgInZhbHVlIjogMTMxNSwKICAgICAgICAicGVhayI6IDEzMTUsCiAgICAgICAgImxldmVsIjogOCwKICAgICAgICAiY3JhY2tlZCI6IHRydWUsCiAgICAgICAgImhpdHMiOiA2LAogICAgICAgICJjaGFyZ2UiOiAwLAogICAgICAgICJzdWNjZXNzZXMiOiA1LAogICAgICAgICJub3JtYWxHcmVhdHMiOiAwLAogICAgICAgICJidXJzdHMiOiAxLAogICAgICAgICJmaW5hbGl6ZWREYXkiOiAzLAogICAgICAgICJjb21taXNzaW9uSWQiOiAzCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiZDMtMyIsCiAgICAgICAgInNsb3QiOiAzLAogICAgICAgICJzdXBwbGllZERheSI6IDMsCiAgICAgICAgInJlY2lwZSI6ICJsaWdodCIsCiAgICAgICAgInN0YXR1cyI6ICJkb25hdGVkIiwKICAgICAgICAiYmFzZSI6IDQwLAogICAgICAgICJ2YWx1ZSI6IDQwLAogICAgICAgICJwZWFrIjogNDAsCiAgICAgICAgImxldmVsIjogMCwKICAgICAgICAiY3JhY2tlZCI6IGZhbHNlLAogICAgICAgICJoaXRzIjogMCwKICAgICAgICAiY2hhcmdlIjogMCwKICAgICAgICAic3VjY2Vzc2VzIjogMCwKICAgICAgICAibm9ybWFsR3JlYXRzIjogMCwKICAgICAgICAiYnVyc3RzIjogMCwKICAgICAgICAiZmluYWxpemVkRGF5IjogMywKICAgICAgICAiY29tbWlzc2lvbklkIjogbnVsbAogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogImQ0LTEiLAogICAgICAgICJzbG90IjogMSwKICAgICAgICAic3VwcGxpZWREYXkiOiA0LAogICAgICAgICJyZWNpcGUiOiAiZ3VhcmQiLAogICAgICAgICJzdGF0dXMiOiAiY29tbWlzc2lvbmVkIiwKICAgICAgICAiYmFzZSI6IDcyLAogICAgICAgICJ2YWx1ZSI6IDM4MywKICAgICAgICAicGVhayI6IDM4MywKICAgICAgICAibGV2ZWwiOiA1LAogICAgICAgICJjcmFja2VkIjogZmFsc2UsCiAgICAgICAgImhpdHMiOiA1LAogICAgICAgICJjaGFyZ2UiOiA1LAogICAgICAgICJzdWNjZXNzZXMiOiA1LAogICAgICAgICJub3JtYWxHcmVhdHMiOiAwLAogICAgICAgICJidXJzdHMiOiAwLAogICAgICAgICJmaW5hbGl6ZWREYXkiOiA0LAogICAgICAgICJjb21taXNzaW9uSWQiOiA0CiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAiZDQtMiIsCiAgICAgICAgInNsb3QiOiAyLAogICAgICAgICJzdXBwbGllZERheSI6IDQsCiAgICAgICAgInJlY2lwZSI6ICJndWFyZCIsCiAgICAgICAgInN0YXR1cyI6ICJhY3RpdmUiLAogICAgICAgICJiYXNlIjogNzIsCiAgICAgICAgInZhbHVlIjogNTM2LAogICAgICAgICJwZWFrIjogNTM2LAogICAgICAgICJsZXZlbCI6IDYsCiAgICAgICAgImNyYWNrZWQiOiBmYWxzZSwKICAgICAgICAiaGl0cyI6IDYsCiAgICAgICAgImNoYXJnZSI6IDYsCiAgICAgICAgInN1Y2Nlc3NlcyI6IDYsCiAgICAgICAgIm5vcm1hbEdyZWF0cyI6IDAsCiAgICAgICAgImJ1cnN0cyI6IDAsCiAgICAgICAgImZpbmFsaXplZERheSI6IG51bGwsCiAgICAgICAgImNvbW1pc3Npb25JZCI6IG51bGwKICAgICAgfSwKICAgICAgewogICAgICAgICJpZCI6ICJkNC0zIiwKICAgICAgICAic2xvdCI6IDMsCiAgICAgICAgInN1cHBsaWVkRGF5IjogNCwKICAgICAgICAicmVjaXBlIjogImd1YXJkIiwKICAgICAgICAic3RhdHVzIjogInNvbGQiLAogICAgICAgICJiYXNlIjogNzIsCiAgICAgICAgInZhbHVlIjogMjczLAogICAgICAgICJwZWFrIjogMjczLAogICAgICAgICJsZXZlbCI6IDQsCiAgICAgICAgImNyYWNrZWQiOiBmYWxzZSwKICAgICAgICAiaGl0cyI6IDMsCiAgICAgICAgImNoYXJnZSI6IDMsCiAgICAgICAgInN1Y2Nlc3NlcyI6IDMsCiAgICAgICAgIm5vcm1hbEdyZWF0cyI6IDEsCiAgICAgICAgImJ1cnN0cyI6IDAsCiAgICAgICAgImZpbmFsaXplZERheSI6IDQsCiAgICAgICAgImNvbW1pc3Npb25JZCI6IG51bGwKICAgICAgfQogICAgXSwKICAgICJyZXNlcnZlSWQiOiAiZDQtMiIsCiAgICAiZGF5U2FsZXMiOiA2NTYsCiAgICAiZGF5UmVjb3ZlcmVkIjogMCwKICAgICJ0cmFpdHMiOiBbCiAgICAgICJzdGVhZHkiLAogICAgICAiZW1iZXIiCiAgICBdLAogICAgImdpZnQiOiAiY2xhaW1lZCIsCiAgICAicGFyZG9uVXNlZCI6IGZhbHNlLAogICAgImNyYWNrR3VhcmQiOiBmYWxzZSwKICAgICJtb2RpZmljYXRpb25zIjogWwogICAgICAid2luZGJveCIKICAgIF0sCiAgICAiY2hhcHRlckNob2ljZXMiOiBbXSwKICAgICJzaG9wIjogW10sCiAgICAic29sZCI6IFtdLAogICAgInVwZ3JhZGVkIjogZmFsc2UsCiAgICAicmVwYWlyZWQiOiBmYWxzZSwKICAgICJkYXlCdWZmcyI6IHsKICAgICAgInN1cHBseVBjdCI6IDEyMCwKICAgICAgImxvYW4iOiBmYWxzZSwKICAgICAgInNoZWx0ZXIiOiBmYWxzZQogICAgfSwKICAgICJwZW5kaW5nIjogewogICAgICAic3VwcGx5UGN0IjogMTAwLAogICAgICAibG9hbiI6IGZhbHNlLAogICAgICAic2hlbHRlciI6IGZhbHNlCiAgICB9LAogICAgImV2ZW50RGVjayI6IFsKICAgICAgImRvbmF0aW9uIiwKICAgICAgImNyZWRpdCIsCiAgICAgICJzYWx2YWdlIiwKICAgICAgInJlc3QiLAogICAgICAic2hlbHRlciIsCiAgICAgICJsb2FuIgogICAgXSwKICAgICJldmVudElkIjogbnVsbCwKICAgICJldmVudFN0YXR1cyI6ICJub25lIiwKICAgICJldmVudEhpc3RvcnkiOiBbCiAgICAgIHsKICAgICAgICAiZGF5IjogMywKICAgICAgICAiaWQiOiAiZG9uYXRpb24iLAogICAgICAgICJjaG9pY2UiOiAiYWNjZXB0IiwKICAgICAgICAicGllY2VJZCI6ICJkMy0zIiwKICAgICAgICAiY29pbnMiOiAwCiAgICAgIH0KICAgIF0sCiAgICAiaGlzdG9yeSI6IFsKICAgICAgewogICAgICAgICJkYXkiOiAxLAogICAgICAgICJjb21taXNzaW9uSWQiOiAxLAogICAgICAgICJtZXQiOiB0cnVlLAogICAgICAgICJyb3V0ZUlkIjogImludGFjdCIsCiAgICAgICAgInBpZWNlSWRzIjogWwogICAgICAgICAgImQxLTEiCiAgICAgICAgXSwKICAgICAgICAic2FsZXMiOiA0OTcsCiAgICAgICAgInJlY292ZXJlZCI6IDAsCiAgICAgICAgInJlY292ZXJlZElkcyI6IFtdLAogICAgICAgICJyZXNlcnZlSWQiOiBudWxsLAogICAgICAgICJzZWFsc0JlZm9yZSI6IDMsCiAgICAgICAgInNlYWxzQWZ0ZXIiOiAzLAogICAgICAgICJwcm90ZWN0ZWQiOiBmYWxzZSwKICAgICAgICAibW9kaWZpY2F0aW9uIjogbnVsbAogICAgICB9LAogICAgICB7CiAgICAgICAgImRheSI6IDIsCiAgICAgICAgImNvbW1pc3Npb25JZCI6IDIsCiAgICAgICAgIm1ldCI6IHRydWUsCiAgICAgICAgInJvdXRlSWQiOiAibGlnaHQiLAogICAgICAgICJwaWVjZUlkcyI6IFsKICAgICAgICAgICJkMi0xIgogICAgICAgIF0sCiAgICAgICAgInNhbGVzIjogNTc4LAogICAgICAgICJyZWNvdmVyZWQiOiAwLAogICAgICAgICJyZWNvdmVyZWRJZHMiOiBbXSwKICAgICAgICAicmVzZXJ2ZUlkIjogbnVsbCwKICAgICAgICAic2VhbHNCZWZvcmUiOiAzLAogICAgICAgICJzZWFsc0FmdGVyIjogMywKICAgICAgICAicHJvdGVjdGVkIjogZmFsc2UsCiAgICAgICAgIm1vZGlmaWNhdGlvbiI6IG51bGwKICAgICAgfSwKICAgICAgewogICAgICAgICJkYXkiOiAzLAogICAgICAgICJjb21taXNzaW9uSWQiOiAzLAogICAgICAgICJtZXQiOiB0cnVlLAogICAgICAgICJyb3V0ZUlkIjogImJ1cnN0IiwKICAgICAgICAicGllY2VJZHMiOiBbCiAgICAgICAgICAiZDMtMiIKICAgICAgICBdLAogICAgICAgICJzYWxlcyI6IDEzMTUsCiAgICAgICAgInJlY292ZXJlZCI6IDAsCiAgICAgICAgInJlY292ZXJlZElkcyI6IFtdLAogICAgICAgICJyZXNlcnZlSWQiOiBudWxsLAogICAgICAgICJzZWFsc0JlZm9yZSI6IDMsCiAgICAgICAgInNlYWxzQWZ0ZXIiOiAzLAogICAgICAgICJwcm90ZWN0ZWQiOiBmYWxzZSwKICAgICAgICAibW9kaWZpY2F0aW9uIjogbnVsbAogICAgICB9LAogICAgICB7CiAgICAgICAgImRheSI6IDQsCiAgICAgICAgImNvbW1pc3Npb25JZCI6IDQsCiAgICAgICAgIm1ldCI6IHRydWUsCiAgICAgICAgInJvdXRlSWQiOiAiZ3VhcmQiLAogICAgICAgICJwaWVjZUlkcyI6IFsKICAgICAgICAgICJkNC0xIgogICAgICAgIF0sCiAgICAgICAgInNhbGVzIjogNjU2LAogICAgICAgICJyZWNvdmVyZWQiOiAwLAogICAgICAgICJyZWNvdmVyZWRJZHMiOiBbXSwKICAgICAgICAicmVzZXJ2ZUlkIjogImQ0LTIiLAogICAgICAgICJzZWFsc0JlZm9yZSI6IDMsCiAgICAgICAgInNlYWxzQWZ0ZXIiOiAzLAogICAgICAgICJwcm90ZWN0ZWQiOiBmYWxzZSwKICAgICAgICAibW9kaWZpY2F0aW9uIjogIndpbmRib3giCiAgICAgIH0KICAgIF0sCiAgICAicm5nIjogewogICAgICAiZm9yZ2UiOiB7CiAgICAgICAgInN0YXRlIjogMjU3OTIyODkxNSwKICAgICAgICAiZHJhd3MiOiA0MgogICAgICB9LAogICAgICAic2hvcCI6IHsKICAgICAgICAic3RhdGUiOiAxMzA4NjQ3MjM2LAogICAgICAgICJkcmF3cyI6IDIKICAgICAgfSwKICAgICAgImV2ZW50cyI6IHsKICAgICAgICAic3RhdGUiOiAyMTk5Mjk4MTg4LAogICAgICAgICJkcmF3cyI6IDUKICAgICAgfSwKICAgICAgImNvbnRlbnQiOiB7CiAgICAgICAgInN0YXRlIjogMTE3Njg2OTY4NywKICAgICAgICAiZHJhd3MiOiAwCiAgICAgIH0KICAgIH0sCiAgICAiam91cm5hbCI6IFsKICAgICAgewogICAgICAgICJ0eXBlIjogImNvbnRpbnVlIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICJkMS0xIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICJkMS0xIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICJkMS0xIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAiZGVsaXZlciIsCiAgICAgICAgInBpZWNlSWQiOiAiZDEtMSIKICAgICAgfSwKICAgICAgewogICAgICAgICJ0cmFpdElkIjogInN0ZWFkeSIsCiAgICAgICAgInR5cGUiOiAiY2xhaW1HaWZ0IgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICJkMS0yIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICJkMS0yIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICJkMS0yIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAiZGVsaXZlciIsCiAgICAgICAgInBpZWNlSWQiOiAiZDEtMiIKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiZDEtMyIKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiZDEtMyIKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiZDEtMyIKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogImRlbGl2ZXIiLAogICAgICAgICJwaWVjZUlkIjogImQxLTMiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJzZXR0bGUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJhZHZhbmNlIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICJkMi0xIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICJkMi0xIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICJkMi0xIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICJkMi0xIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAiZGVsaXZlciIsCiAgICAgICAgInBpZWNlSWQiOiAiZDItMSIKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiZDItMiIKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiZDItMiIKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiZDItMiIKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogImRlbGl2ZXIiLAogICAgICAgICJwaWVjZUlkIjogImQyLTIiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJzdHJpa2UiLAogICAgICAgICJwaWVjZUlkIjogImQyLTMiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJzdHJpa2UiLAogICAgICAgICJwaWVjZUlkIjogImQyLTMiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJzdHJpa2UiLAogICAgICAgICJwaWVjZUlkIjogImQyLTMiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJkZWxpdmVyIiwKICAgICAgICAicGllY2VJZCI6ICJkMi0zIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic2V0dGxlIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAiYWR2YW5jZSIKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogInVwZ3JhZGUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAicGllY2VJZCI6ICJkMy0xIiwKICAgICAgICAidHJhaXRJZCI6ICJlbWJlciIsCiAgICAgICAgInR5cGUiOiAiYnV5IgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICJkMy0yIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICJkMy0yIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICJkMy0yIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICJkMy0yIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICJkMy0yIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICJkMy0yIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICJkMy0yIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAiZGVsaXZlciIsCiAgICAgICAgInBpZWNlSWQiOiAiZDMtMiIKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogImNob29zZUV2ZW50IiwKICAgICAgICAiY2hvaWNlIjogImFjY2VwdCIsCiAgICAgICAgInBpZWNlSWQiOiAiZDMtMyIKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogInNldHRsZSIKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogImFkdmFuY2UiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJzdHJpa2UiLAogICAgICAgICJwaWVjZUlkIjogImQ0LTEiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJzdHJpa2UiLAogICAgICAgICJwaWVjZUlkIjogImQ0LTEiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJzdHJpa2UiLAogICAgICAgICJwaWVjZUlkIjogImQ0LTEiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJzdHJpa2UiLAogICAgICAgICJwaWVjZUlkIjogImQ0LTEiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJzdHJpa2UiLAogICAgICAgICJwaWVjZUlkIjogImQ0LTEiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJkZWxpdmVyIiwKICAgICAgICAicGllY2VJZCI6ICJkNC0xIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICJkNC0yIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICJkNC0yIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICJkNC0yIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICJkNC0yIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICJkNC0yIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAic3RyaWtlIiwKICAgICAgICAicGllY2VJZCI6ICJkNC0yIgogICAgICB9LAogICAgICB7CiAgICAgICAgInR5cGUiOiAicmVzZXJ2ZSIsCiAgICAgICAgInBpZWNlSWQiOiAiZDQtMiIKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiZDQtMyIKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiZDQtMyIKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogInN0cmlrZSIsCiAgICAgICAgInBpZWNlSWQiOiAiZDQtMyIKICAgICAgfSwKICAgICAgewogICAgICAgICJ0eXBlIjogImRlbGl2ZXIiLAogICAgICAgICJwaWVjZUlkIjogImQ0LTMiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJzZXR0bGUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAidHlwZSI6ICJjaG9vc2VNb2RpZmljYXRpb24iLAogICAgICAgICJtb2RpZmljYXRpb24iOiAid2luZGJveCIKICAgICAgfQogICAgXQogIH0sCiAgImNvbGxlY3RlZCI6IHsKICAgICJjaGFwdGVycyI6IFsKICAgICAgMQogICAgXSwKICAgICJtYXN0ZXJ5IjogW10sCiAgICAidHJhaXRzIjogWwogICAgICAic3RlYWR5IiwKICAgICAgImVtYmVyIgogICAgXSwKICAgICJjaGFsbGVuZ2UiOiBmYWxzZSwKICAgICJ3b3JrcyI6IFsKICAgICAgewogICAgICAgICJibGFkZXMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJiYXNlIjogNDAsCiAgICAgICAgICAgICJidXJzdHMiOiAwLAogICAgICAgICAgICAiY2hhcmdlIjogMywKICAgICAgICAgICAgImNvbW1pc3Npb25JZCI6IDEsCiAgICAgICAgICAgICJjcmFja2VkIjogZmFsc2UsCiAgICAgICAgICAgICJmaW5hbGl6ZWREYXkiOiAxLAogICAgICAgICAgICAiaGl0cyI6IDMsCiAgICAgICAgICAgICJpZCI6ICJkMS0xIiwKICAgICAgICAgICAgImxldmVsIjogMywKICAgICAgICAgICAgIm5vcm1hbEdyZWF0cyI6IDAsCiAgICAgICAgICAgICJwZWFrIjogMTQ4LAogICAgICAgICAgICAicmVjaXBlIjogImxpZ2h0IiwKICAgICAgICAgICAgInNsb3QiOiAxLAogICAgICAgICAgICAic3RhdHVzIjogImNvbW1pc3Npb25lZCIsCiAgICAgICAgICAgICJzdWNjZXNzZXMiOiAzLAogICAgICAgICAgICAic3VwcGxpZWREYXkiOiAxLAogICAgICAgICAgICAidmFsdWUiOiAxNDgKICAgICAgICAgIH0KICAgICAgICBdLAogICAgICAgICJjb21taXNzaW9uSWQiOiAxLAogICAgICAgICJkYXkiOiAxLAogICAgICAgICJyb3V0ZUlkIjogImludGFjdCIsCiAgICAgICAgInJ1bklkIjogImI4M2ZkZmMxLTU2YWMtNDY1Yi1hNzQxLWQ0YmU2NTE2NTg1ZCIKICAgICAgfSwKICAgICAgewogICAgICAgICJibGFkZXMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJiYXNlIjogNDAsCiAgICAgICAgICAgICJidXJzdHMiOiAwLAogICAgICAgICAgICAiY2hhcmdlIjogNCwKICAgICAgICAgICAgImNvbW1pc3Npb25JZCI6IDIsCiAgICAgICAgICAgICJjcmFja2VkIjogZmFsc2UsCiAgICAgICAgICAgICJmaW5hbGl6ZWREYXkiOiAyLAogICAgICAgICAgICAiaGl0cyI6IDQsCiAgICAgICAgICAgICJpZCI6ICJkMi0xIiwKICAgICAgICAgICAgImxldmVsIjogNCwKICAgICAgICAgICAgIm5vcm1hbEdyZWF0cyI6IDAsCiAgICAgICAgICAgICJwZWFrIjogMjI5LAogICAgICAgICAgICAicmVjaXBlIjogImxpZ2h0IiwKICAgICAgICAgICAgInNsb3QiOiAxLAogICAgICAgICAgICAic3RhdHVzIjogImNvbW1pc3Npb25lZCIsCiAgICAgICAgICAgICJzdWNjZXNzZXMiOiA0LAogICAgICAgICAgICAic3VwcGxpZWREYXkiOiAyLAogICAgICAgICAgICAidmFsdWUiOiAyMjkKICAgICAgICAgIH0KICAgICAgICBdLAogICAgICAgICJjb21taXNzaW9uSWQiOiAyLAogICAgICAgICJkYXkiOiAyLAogICAgICAgICJyb3V0ZUlkIjogImxpZ2h0IiwKICAgICAgICAicnVuSWQiOiAiYjgzZmRmYzEtNTZhYy00NjViLWE3NDEtZDRiZTY1MTY1ODVkIgogICAgICB9LAogICAgICB7CiAgICAgICAgImJsYWRlcyI6IFsKICAgICAgICAgIHsKICAgICAgICAgICAgImJhc2UiOiA0MCwKICAgICAgICAgICAgImJ1cnN0cyI6IDEsCiAgICAgICAgICAgICJjaGFyZ2UiOiAwLAogICAgICAgICAgICAiY29tbWlzc2lvbklkIjogMywKICAgICAgICAgICAgImNyYWNrZWQiOiB0cnVlLAogICAgICAgICAgICAiZmluYWxpemVkRGF5IjogMywKICAgICAgICAgICAgImhpdHMiOiA2LAogICAgICAgICAgICAiaWQiOiAiZDMtMiIsCiAgICAgICAgICAgICJsZXZlbCI6IDgsCiAgICAgICAgICAgICJub3JtYWxHcmVhdHMiOiAwLAogICAgICAgICAgICAicGVhayI6IDEzMTUsCiAgICAgICAgICAgICJyZWNpcGUiOiAibGlnaHQiLAogICAgICAgICAgICAic2xvdCI6IDIsCiAgICAgICAgICAgICJzdGF0dXMiOiAiY29tbWlzc2lvbmVkIiwKICAgICAgICAgICAgInN1Y2Nlc3NlcyI6IDUsCiAgICAgICAgICAgICJzdXBwbGllZERheSI6IDMsCiAgICAgICAgICAgICJ2YWx1ZSI6IDEzMTUKICAgICAgICAgIH0KICAgICAgICBdLAogICAgICAgICJjb21taXNzaW9uSWQiOiAzLAogICAgICAgICJkYXkiOiAzLAogICAgICAgICJyb3V0ZUlkIjogImJ1cnN0IiwKICAgICAgICAicnVuSWQiOiAiYjgzZmRmYzEtNTZhYy00NjViLWE3NDEtZDRiZTY1MTY1ODVkIgogICAgICB9LAogICAgICB7CiAgICAgICAgImJsYWRlcyI6IFsKICAgICAgICAgIHsKICAgICAgICAgICAgImJhc2UiOiA3MiwKICAgICAgICAgICAgImJ1cnN0cyI6IDAsCiAgICAgICAgICAgICJjaGFyZ2UiOiA1LAogICAgICAgICAgICAiY29tbWlzc2lvbklkIjogNCwKICAgICAgICAgICAgImNyYWNrZWQiOiBmYWxzZSwKICAgICAgICAgICAgImZpbmFsaXplZERheSI6IDQsCiAgICAgICAgICAgICJoaXRzIjogNSwKICAgICAgICAgICAgImlkIjogImQ0LTEiLAogICAgICAgICAgICAibGV2ZWwiOiA1LAogICAgICAgICAgICAibm9ybWFsR3JlYXRzIjogMCwKICAgICAgICAgICAgInBlYWsiOiAzODMsCiAgICAgICAgICAgICJyZWNpcGUiOiAiZ3VhcmQiLAogICAgICAgICAgICAic2xvdCI6IDEsCiAgICAgICAgICAgICJzdGF0dXMiOiAiY29tbWlzc2lvbmVkIiwKICAgICAgICAgICAgInN1Y2Nlc3NlcyI6IDUsCiAgICAgICAgICAgICJzdXBwbGllZERheSI6IDQsCiAgICAgICAgICAgICJ2YWx1ZSI6IDM4MwogICAgICAgICAgfQogICAgICAgIF0sCiAgICAgICAgImNvbW1pc3Npb25JZCI6IDQsCiAgICAgICAgImRheSI6IDQsCiAgICAgICAgInJvdXRlSWQiOiAiZ3VhcmQiLAogICAgICAgICJydW5JZCI6ICJiODNmZGZjMS01NmFjLTQ2NWItYTc0MS1kNGJlNjUxNjU4NWQiCiAgICAgIH0KICAgIF0KICB9LAogICJmcmVzaCI6IHsKICAgICJydWxlc1ZlcnNpb24iOiAiZm9yZ2UtdjQiLAogICAgInJ1bklkIjogIjY5YWIxODM2LTQ0NjktNGUwZS1iOGEzLTM5NmExZDQwMzA4NSIsCiAgICAic2VlZCI6ICLnga/ot68tYWViNGNkYTEiLAogICAgIm1vZGUiOiAic3RvcnkiLAogICAgImluaXRpYWxFbGlnaWJpbGl0eSI6IHsKICAgICAgInJlY2lwZXMiOiBbCiAgICAgICAgImxpZ2h0IiwKICAgICAgICAiZ3VhcmQiCiAgICAgIF0sCiAgICAgICJjaGFsbGVuZ2UiOiBmYWxzZQogICAgfSwKICAgICJyZXZpc2lvbiI6IDAsCiAgICAicGhhc2UiOiAib3BlbmluZyIsCiAgICAiZGF5IjogMSwKICAgICJjb21taXNzaW9uT3JkZXIiOiBbCiAgICAgIDEsCiAgICAgIDIsCiAgICAgIDMsCiAgICAgIDQsCiAgICAgIDUsCiAgICAgIDYsCiAgICAgIDcsCiAgICAgIDgsCiAgICAgIDksCiAgICAgIDEwLAogICAgICAxMSwKICAgICAgMTIKICAgIF0sCiAgICAiY29pbnMiOiAwLAogICAgInNlYWxzIjogMywKICAgICJzdXBwbHlCYXNlIjogNDAsCiAgICAidXBncmFkZUNvdW50IjogMCwKICAgICJpbmhlcml0YW5jZSI6IDAsCiAgICAiYmxhZGVzIjogWwogICAgICB7CiAgICAgICAgImlkIjogImQxLTEiLAogICAgICAgICJzbG90IjogMSwKICAgICAgICAic3VwcGxpZWREYXkiOiAxLAogICAgICAgICJyZWNpcGUiOiAiZ3VhcmQiLAogICAgICAgICJzdGF0dXMiOiAiYWN0aXZlIiwKICAgICAgICAiYmFzZSI6IDQwLAogICAgICAgICJ2YWx1ZSI6IDQwLAogICAgICAgICJwZWFrIjogNDAsCiAgICAgICAgImxldmVsIjogMCwKICAgICAgICAiY3JhY2tlZCI6IGZhbHNlLAogICAgICAgICJoaXRzIjogMCwKICAgICAgICAiY2hhcmdlIjogMCwKICAgICAgICAic3VjY2Vzc2VzIjogMCwKICAgICAgICAibm9ybWFsR3JlYXRzIjogMCwKICAgICAgICAiYnVyc3RzIjogMCwKICAgICAgICAiZmluYWxpemVkRGF5IjogbnVsbCwKICAgICAgICAiY29tbWlzc2lvbklkIjogbnVsbAogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogImQxLTIiLAogICAgICAgICJzbG90IjogMiwKICAgICAgICAic3VwcGxpZWREYXkiOiAxLAogICAgICAgICJyZWNpcGUiOiAiZ3VhcmQiLAogICAgICAgICJzdGF0dXMiOiAiYWN0aXZlIiwKICAgICAgICAiYmFzZSI6IDQwLAogICAgICAgICJ2YWx1ZSI6IDQwLAogICAgICAgICJwZWFrIjogNDAsCiAgICAgICAgImxldmVsIjogMCwKICAgICAgICAiY3JhY2tlZCI6IGZhbHNlLAogICAgICAgICJoaXRzIjogMCwKICAgICAgICAiY2hhcmdlIjogMCwKICAgICAgICAic3VjY2Vzc2VzIjogMCwKICAgICAgICAibm9ybWFsR3JlYXRzIjogMCwKICAgICAgICAiYnVyc3RzIjogMCwKICAgICAgICAiZmluYWxpemVkRGF5IjogbnVsbCwKICAgICAgICAiY29tbWlzc2lvbklkIjogbnVsbAogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogImQxLTMiLAogICAgICAgICJzbG90IjogMywKICAgICAgICAic3VwcGxpZWREYXkiOiAxLAogICAgICAgICJyZWNpcGUiOiAiZ3VhcmQiLAogICAgICAgICJzdGF0dXMiOiAiYWN0aXZlIiwKICAgICAgICAiYmFzZSI6IDQwLAogICAgICAgICJ2YWx1ZSI6IDQwLAogICAgICAgICJwZWFrIjogNDAsCiAgICAgICAgImxldmVsIjogMCwKICAgICAgICAiY3JhY2tlZCI6IGZhbHNlLAogICAgICAgICJoaXRzIjogMCwKICAgICAgICAiY2hhcmdlIjogMCwKICAgICAgICAic3VjY2Vzc2VzIjogMCwKICAgICAgICAibm9ybWFsR3JlYXRzIjogMCwKICAgICAgICAiYnVyc3RzIjogMCwKICAgICAgICAiZmluYWxpemVkRGF5IjogbnVsbCwKICAgICAgICAiY29tbWlzc2lvbklkIjogbnVsbAogICAgICB9CiAgICBdLAogICAgInJlc2VydmVJZCI6IG51bGwsCiAgICAiZGF5U2FsZXMiOiAwLAogICAgImRheVJlY292ZXJlZCI6IDAsCiAgICAidHJhaXRzIjogW10sCiAgICAiZ2lmdCI6ICJsb2NrZWQiLAogICAgInBhcmRvblVzZWQiOiBmYWxzZSwKICAgICJjcmFja0d1YXJkIjogZmFsc2UsCiAgICAibW9kaWZpY2F0aW9ucyI6IFtdLAogICAgImNoYXB0ZXJDaG9pY2VzIjogW10sCiAgICAic2hvcCI6IFtdLAogICAgInNvbGQiOiBbXSwKICAgICJ1cGdyYWRlZCI6IGZhbHNlLAogICAgInJlcGFpcmVkIjogZmFsc2UsCiAgICAiZGF5QnVmZnMiOiB7CiAgICAgICJzdXBwbHlQY3QiOiAxMDAsCiAgICAgICJsb2FuIjogZmFsc2UsCiAgICAgICJzaGVsdGVyIjogZmFsc2UKICAgIH0sCiAgICAicGVuZGluZyI6IHsKICAgICAgInN1cHBseVBjdCI6IDEwMCwKICAgICAgImxvYW4iOiBmYWxzZSwKICAgICAgInNoZWx0ZXIiOiBmYWxzZQogICAgfSwKICAgICJldmVudERlY2siOiBbCiAgICAgICJjcmVkaXQiLAogICAgICAic2FsdmFnZSIsCiAgICAgICJzaGVsdGVyIiwKICAgICAgImRvbmF0aW9uIiwKICAgICAgInJlc3QiLAogICAgICAibG9hbiIKICAgIF0sCiAgICAiZXZlbnRJZCI6IG51bGwsCiAgICAiZXZlbnRTdGF0dXMiOiAibm9uZSIsCiAgICAiZXZlbnRIaXN0b3J5IjogW10sCiAgICAiaGlzdG9yeSI6IFtdLAogICAgInJuZyI6IHsKICAgICAgImZvcmdlIjogewogICAgICAgICJzdGF0ZSI6IDMxMDM4NzYzNzEsCiAgICAgICAgImRyYXdzIjogMAogICAgICB9LAogICAgICAic2hvcCI6IHsKICAgICAgICAic3RhdGUiOiAyMjY1NDEzMzIwLAogICAgICAgICJkcmF3cyI6IDAKICAgICAgfSwKICAgICAgImV2ZW50cyI6IHsKICAgICAgICAic3RhdGUiOiA0MTMzNTYyNDg2LAogICAgICAgICJkcmF3cyI6IDUKICAgICAgfSwKICAgICAgImNvbnRlbnQiOiB7CiAgICAgICAgInN0YXRlIjogMzYwMDQ3OTU4NSwKICAgICAgICAiZHJhd3MiOiAwCiAgICAgIH0KICAgIH0sCiAgICAiam91cm5hbCI6IFtdCiAgfQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "16fd34b5b9e026c8fbe7-dbf1460ee5f77b046526",
+          "file": "v4-chapter.spec.ts",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "keyboard-only first chapter and distinct real failure retain honest outcomes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 26343,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T10:30:04.111Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "16fd34b5b9e026c8fbe7-bf12be72b721d8031a6d",
+          "file": "v4-chapter.spec.ts",
+          "line": 27,
+          "column": 1
+        },
+        {
+          "title": "unfulfilled bridge is dark; missed chapter retains growth, and recipe and reserve choices have real consequences",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 17651,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T10:30:30.471Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "16fd34b5b9e026c8fbe7-587c809d466ca35a0bfc",
+          "file": "v4-chapter.spec.ts",
+          "line": 35,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v4-forge.spec.ts",
+      "file": "v4-forge.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "v4 left-click lands the real flat hammer face on opaque steel at both desktop sizes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4188,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T10:30:48.181Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1894a7c8f5a239725257-54f0a26a534e69715ed0",
+          "file": "v4-forge.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "v4 250 ms presentation frames retain two contacts; busy Space and cancelled recoil never add a command",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4633,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T10:30:52.381Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1894a7c8f5a239725257-cc3f02c3171c31007c0c",
+          "file": "v4-forge.spec.ts",
+          "line": 23,
+          "column": 1
+        },
+        {
+          "title": "v4 normal sound is real, while saved mute and reduced motion keep an accepted strike quiet and still",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2266,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T10:30:57.031Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1894a7c8f5a239725257-e4e6b1e765f42403af11",
+          "file": "v4-forge.spec.ts",
+          "line": 31,
+          "column": 1
+        },
+        {
+          "title": "v4 first-chapter recipe silhouettes follow genuine light and day-four guard; heavy remains locked",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5913,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T10:30:59.316Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1894a7c8f5a239725257-9d39fce9c2612be5ffeb",
+          "file": "v4-forge.spec.ts",
+          "line": 37,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v4-recovery.spec.ts",
+      "file": "v4-recovery.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "combined chapter write faults retain accepted work and never claim pending collection as saved",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 30796,
+                  "error": {
+                    "message": "Error: Expected bounded plain JSON with safe integer fields.",
+                    "stack": "Error: Expected bounded plain JSON with safe integer fields.\n    at exported (/Users/gordon/githome/sword-led/tests/e2e/v4-recovery.spec.ts:6:389)\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-recovery.spec.ts:12:164",
+                    "location": {
+                      "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-recovery.spec.ts",
+                      "column": 389,
+                      "line": 6
+                    },
+                    "snippet": "  4 | import type {Page} from '@playwright/test';\n  5 | import {readFile} from 'node:fs/promises';\n> 6 | async function exported(page:Page){await page.locator('#v4-save-open').click();const promise=page.waitForEvent('download');await page.getByRole('button',{name:'导出当前行程',exact:true}).click();const dl=await promise,path=await dl.path();if(!path)throw Error('Missing export');const envelope=JSON.parse(await readFile(path,'utf8'));const result=validateRun(envelope.state);if(!result.ok)throw Error(result.detail);return result.state;}\n    |                                                                                                                                                                                                                                                                                                                                                                                                     ^\n  7 | test('combined chapter write faults retain accepted work and never claim pending collection as saved',async({page},info)=>{\n  8 |  await startV4(page);for(const action of chapterActions.slice(0,61))await commandV4(page,action);\n  9 |  const before=await readV4(page),bytes=await page.evaluate(()=>localStorage.getItem('sword-led.save.v4'));"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-recovery.spec.ts",
+                        "column": 389,
+                        "line": 6
+                      },
+                      "message": "Error: Expected bounded plain JSON with safe integer fields.\n\n  4 | import type {Page} from '@playwright/test';\n  5 | import {readFile} from 'node:fs/promises';\n> 6 | async function exported(page:Page){await page.locator('#v4-save-open').click();const promise=page.waitForEvent('download');await page.getByRole('button',{name:'导出当前行程',exact:true}).click();const dl=await promise,path=await dl.path();if(!path)throw Error('Missing export');const envelope=JSON.parse(await readFile(path,'utf8'));const result=validateRun(envelope.state);if(!result.ok)throw Error(result.detail);return result.state;}\n    |                                                                                                                                                                                                                                                                                                                                                                                                     ^\n  7 | test('combined chapter write faults retain accepted work and never claim pending collection as saved',async({page},info)=>{\n  8 |  await startV4(page);for(const action of chapterActions.slice(0,61))await commandV4(page,action);\n  9 |  const before=await readV4(page),bytes=await page.evaluate(()=>localStorage.getItem('sword-led.save.v4'));\n    at exported (/Users/gordon/githome/sword-led/tests/e2e/v4-recovery.spec.ts:6:389)\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-recovery.spec.ts:12:164"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T10:31:05.264Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v4-ui/v4-recovery-combined-chapt-65e1d-pending-collection-as-saved-v4-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v4-ui/v4-recovery-combined-chapt-65e1d-pending-collection-as-saved-v4-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v4-ui/v4-recovery-combined-chapt-65e1d-pending-collection-as-saved-v4-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-recovery.spec.ts",
+                    "column": 389,
+                    "line": 6
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c24e5566055959d898ad-1133692409ed2508b3df",
+          "file": "v4-recovery.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "corrupt main exposes dated backup; cancellation preserves bytes and confirmed recovery restores exact state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3761,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T10:31:44.973Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c24e5566055959d898ad-6f825b23645ce2a98e74",
+          "file": "v4-recovery.spec.ts",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "old v3 writer and new scene share a lease; handoff retains old bytes and enables explicit new play",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2987,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T10:31:49.140Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c24e5566055959d898ad-a2198ed8936eb9f5cf7c",
+          "file": "v4-recovery.spec.ts",
+          "line": 22,
+          "column": 1
+        },
+        {
+          "title": "new external save on empty title requires reread and never implicit replacement",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1793,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T10:31:52.146Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c24e5566055959d898ad-5806ee3b42cfd247fc2a",
+          "file": "v4-recovery.spec.ts",
+          "line": 26,
+          "column": 1
+        },
+        {
+          "title": "missing locks has explicit memory escape and neither game nor collection writes",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "v4-chromium",
+              "projectName": "v4-chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1856,
+                  "error": {
+                    "message": "Error: Expected bounded plain JSON with safe integer fields.",
+                    "stack": "Error: Expected bounded plain JSON with safe integer fields.\n    at exported (/Users/gordon/githome/sword-led/tests/e2e/v4-recovery.spec.ts:6:389)\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-recovery.spec.ts:31:583",
+                    "location": {
+                      "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-recovery.spec.ts",
+                      "column": 389,
+                      "line": 6
+                    },
+                    "snippet": "  4 | import type {Page} from '@playwright/test';\n  5 | import {readFile} from 'node:fs/promises';\n> 6 | async function exported(page:Page){await page.locator('#v4-save-open').click();const promise=page.waitForEvent('download');await page.getByRole('button',{name:'导出当前行程',exact:true}).click();const dl=await promise,path=await dl.path();if(!path)throw Error('Missing export');const envelope=JSON.parse(await readFile(path,'utf8'));const result=validateRun(envelope.state);if(!result.ok)throw Error(result.detail);return result.state;}\n    |                                                                                                                                                                                                                                                                                                                                                                                                     ^\n  7 | test('combined chapter write faults retain accepted work and never claim pending collection as saved',async({page},info)=>{\n  8 |  await startV4(page);for(const action of chapterActions.slice(0,61))await commandV4(page,action);\n  9 |  const before=await readV4(page),bytes=await page.evaluate(()=>localStorage.getItem('sword-led.save.v4'));"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-recovery.spec.ts",
+                        "column": 389,
+                        "line": 6
+                      },
+                      "message": "Error: Expected bounded plain JSON with safe integer fields.\n\n  4 | import type {Page} from '@playwright/test';\n  5 | import {readFile} from 'node:fs/promises';\n> 6 | async function exported(page:Page){await page.locator('#v4-save-open').click();const promise=page.waitForEvent('download');await page.getByRole('button',{name:'导出当前行程',exact:true}).click();const dl=await promise,path=await dl.path();if(!path)throw Error('Missing export');const envelope=JSON.parse(await readFile(path,'utf8'));const result=validateRun(envelope.state);if(!result.ok)throw Error(result.detail);return result.state;}\n    |                                                                                                                                                                                                                                                                                                                                                                                                     ^\n  7 | test('combined chapter write faults retain accepted work and never claim pending collection as saved',async({page},info)=>{\n  8 |  await startV4(page);for(const action of chapterActions.slice(0,61))await commandV4(page,action);\n  9 |  const before=await readV4(page),bytes=await page.evaluate(()=>localStorage.getItem('sword-led.save.v4'));\n    at exported (/Users/gordon/githome/sword-led/tests/e2e/v4-recovery.spec.ts:6:389)\n    at /Users/gordon/githome/sword-led/tests/e2e/v4-recovery.spec.ts:31:583"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-20T10:31:53.961Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v4-ui/v4-recovery-missing-locks--97c7d--game-nor-collection-writes-v4-chromium/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v4-ui/v4-recovery-missing-locks--97c7d--game-nor-collection-writes-v4-chromium/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/gordon/githome/sword-led/test-results/v4-ui/v4-recovery-missing-locks--97c7d--game-nor-collection-writes-v4-chromium/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/gordon/githome/sword-led/tests/e2e/v4-recovery.spec.ts",
+                    "column": 389,
+                    "line": 6
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c24e5566055959d898ad-3f8acee32e5078d92e47",
+          "file": "v4-recovery.spec.ts",
+          "line": 30,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-20T10:29:31.761Z",
+    "duration": 144495.94,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}
