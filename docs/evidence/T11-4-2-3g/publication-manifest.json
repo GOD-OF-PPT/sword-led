@@ -90,8 +90,8 @@
     },
     {
       "path": "docs/evidence/T11-4-2-3g/check-publication.mjs.txt",
-      "bytes": 9040,
-      "sha256": "ace791b9d9018cb34b29819829152b32ab93bcad71ccb7baae26246851023c28"
+      "bytes": 9461,
+      "sha256": "d99688258ae9b5179c91c03487ba61b137988617e27ec214f0703985f5f72840"
     },
     {
       "path": "docs/evidence/T11-4-2-3g/directed-tool-tests.txt.gz",
@@ -107,6 +107,11 @@
       "path": "docs/evidence/T11-4-2-3g/dirty-layout-red.json",
       "bytes": 17255,
       "sha256": "5df71019d012c36f4fa468ec8140ae4ad88169f216e6eaa84e49c7a5cb13923b"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/feature-tree-proof.json",
+      "bytes": 585,
+      "sha256": "0a3000e7a7f3f66ca9a191ee0ba2387ee27ef8e038025e9111be4cc944b32969"
     },
     {
       "path": "docs/evidence/T11-4-2-3g/interrupted-full.json",
@@ -162,6 +167,11 @@
       "path": "docs/evidence/T11-4-2-3g/polish/console.log.gz",
       "bytes": 834,
       "sha256": "146d41f1ac6ced97c440af2328aa1f5cda7c2a542ad092ed5464cd91487bad5d"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3g/polish/current-workshop-proof.json",
+      "bytes": 251,
+      "sha256": "ca2971d5abf7e4d07add92c66935e8127cc1fa4116208f1c939859c0259db85f"
     },
     {
       "path": "docs/evidence/T11-4-2-3g/polish/list-only.log.gz",
@@ -296,7 +306,7 @@
     {
       "path": "docs/evidence/T11-4-2-3g/post-checks.json",
       "bytes": 56510,
-      "sha256": "282ebd70890879348950883e2d65434633ceed12db32ac235fda2be79fd04d81"
+      "sha256": "619d6e43fa9c146d881f8f3015c1ec3f7566b496413c68cca5b9cdcd29299151"
     },
     {
       "path": "docs/evidence/T11-4-2-3g/preflight.json",
@@ -1125,13 +1135,23 @@
     },
     {
       "path": "goal-1/plan.md",
-      "bytes": 78402,
-      "sha256": "6f2cb07ea4fc5e15b8956d686f80def3cadfbf2d24e0c54c61c1622952d255e6"
+      "bytes": 78890,
+      "sha256": "0041125f72156103a7c20c0c67832d4db80e0151f37527e11de39e78de59ec10"
+    },
+    {
+      "path": "goal-1/tasks.md",
+      "bytes": 90214,
+      "sha256": "8fc003ce420a3ee78b073ceee93a072101f5c0748c3f65ac2bd5fbe08b6f324f"
     },
     {
       "path": "index.html",
       "bytes": 540,
       "sha256": "9d1b00a5647a5b82b7efee333fe1731f53d8b80ce227152311192ee0f2261234"
+    },
+    {
+      "path": "openspec/changes/simplify-forging-loop/tasks.md",
+      "bytes": 4727,
+      "sha256": "37708f97a2acbf4d01b84444a885a9aa22d09f52767dd7220ed57808cd26bb83"
     },
     {
       "path": "openspec/project.md",
@@ -1204,8 +1224,8 @@
       "sha256": "9a1c1fbd4550f314801777f4f522e802d3d6ac56ade249d521c04dd561b2d49d"
     }
   ],
-  "totalFiles": 240,
-  "totalBytes": 18745618,
+  "totalFiles": 244,
+  "totalBytes": 18842304,
   "localMedia": {
     "manifest": "docs/evidence/T11-4-2-3g/release/artifact-manifest.json",
     "files": 282,

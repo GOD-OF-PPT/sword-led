@@ -1,6 +1,17 @@
 {
   "task": "T11.4.2.3g",
-  "recordedAt": "2026-10-20T03:08:05.667Z",
+  "delivery": {
+    "featureCommits": [
+      "289d73991dac7294984f6cd62e9790b711c23081",
+      "a758521a599f31eb9a937a4c2abf891bc81b746e",
+      "ec8f4c36f68337ceb5439be023713db89b647866"
+    ],
+    "featureRemoteVerifiedSHA": "ec8f4c36f68337ceb5439be023713db89b647866",
+    "featureTreeProof": "feature-tree-proof.json",
+    "runtimeArtAlsoVerifiedInGitHubTree": true,
+    "receipt": "This record is committed separately; final receipt SHA is verified externally to avoid self-reference."
+  },
+  "recordedAt": "2026-10-20T03:11:26.953Z",
   "review": "docs/reviews/R3-17-traveler-notebook.md",
   "uiVersion": "v0.5 来客手札",
   "rulesVersion": "forge-v3",
@@ -91,11 +102,11 @@
     "publicDeployment": false
   },
   "documents": {
-    "markdownFiles": 9,
+    "markdownFiles": 11,
     "localLinks": 116
   },
   "scan": {
-    "textFiles": 229,
+    "textFiles": 233,
     "decodedGzip": 8,
     "hits": []
   },
@@ -108,8 +119,8 @@
   ],
   "publication": {
     "manifest": "docs/evidence/T11-4-2-3g/publication-manifest.json",
-    "files": 240,
-    "bytes": 18745618
+    "files": 244,
+    "bytes": 18842304
   },
   "taskReview": "Passed for this technical UI scope; not overall goal completion."
 }
