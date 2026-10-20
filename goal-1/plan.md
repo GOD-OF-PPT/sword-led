@@ -4,7 +4,7 @@
 
 原始需求逐字保存在[input.md](input.md)，SHA256 b961f5c651df51121659687138cfe5edf125e25dadda11642136dfc6aaca852b。目标仍是完整PC网页锻造游戏、设计/实施文档、三套imagegen主界面及选定衍生美术、完整可玩流程、复核和GitHub提交推送；整个goal ACTIVE，未完成。
 
-本轮已完成tasks.md的3i.5“第三章、三结局与跨局内容”；下一项3i.6尚未执行。已获明确批准“确认 v0.7，按完整方案分阶段实施”，D画风/直接左键/自然锤姿保持，不重复索要已获批准。基线2fec6a18c75f33c26d48da4c07f542369411d90d；前八天和R3.20已交付，本轮终章代码/九图已制作，实施、技术核对及源提交推送已完成。主预览已在本轮验证后有意切至71430的终章快照，不强刷用户标签。
+当前唯一执行tasks.md的3i.6“v4平衡与全内容可达性”，基线bfd350ead03a6c6952c187f61a252fdf7ac031d8。上一阶段3i.5完成实施、双push与最后376文件/75HTTP读取核对，正式预览71430/4179保持山口终章。用户v0.7批准持续有效；本轮不静默改变已发布forge-v4规则或旧journal身份。
 
 当前plan/tasks曾积累大量相互覆盖的历史检查点；其完整原字节已保存于[旧计划](history/2026-10-21-before-final-chapter-plan.md)和[旧任务执行记录](history/2026-10-21-before-final-chapter-tasks.md)，哈希见[归档索引](history/2026-10-21-archive-index.json)。本页只维护有效当前计划，历史成果/红绿/全部原任务未丢失。压缩后仍须全量读取input/plan/tasks这三份当前文件，再按需读明确引用的历史或合同，避免把旧“待批准/正在运行”当现状。
 
@@ -16,32 +16,37 @@
 - Game Studio UI/Playtest/Foundation沿已认可D“行脚灯炉”：一簇紧凑目标、大剑/砧/来客/剑架，主要动作敲/交/留/收工；规则/炉谱/长叙事主动展开，关键新结果有明确行动，动效不发奖，读档不补播。保留键鼠/焦点/44px/静音/减弱动效/错误恢复。
 - 新能力先合同与已批准OpenSpec；普通修复不另造审批。引用用户RTK/GJ/REPEAT和祖先适用AGENTS；全部shell经rtk，必要依赖复用，无新运行时依赖。
 
-## 当前验证与预览（2026-10-21）
+## 上阶段已验证基线（2026-10-21）
 
 quality-final-memory357单测/29文件、strict/网页+SDK构建终态0，480质量输入稳定、75运行文件。最终浏览器覆盖24唯一逻辑/每引擎8：final-boundaries9真过＋final-memory3修复过＋final-journeys12过；同75产物，478实际浏览器执行输入稳定，唯一测试输入差异由导出等待exact原文/替换/hash证明。原边界3条错误等待另一导出按钮、旧release ENOSPC及中断均保留原红，不冒称单批24全绿。全部wrapper/child已实际终态。
 
 收集器终态0；当前SDK回放97保存对象（最终69/历史28、64唯一状态）、校验55合法炉谱（最终39）、4明确未来负样例及3memory磁盘观测。8张代表图、所有具体源/构建/终态、来源与恢复收据在docs/evidence/T11-4-2-3i5。原8SDK/旧三入口仍同字节，66→75中63路径不变，只默认index/main JS/CSS及九图新增。原input/批准全文/21旧编译/0316备份/58美术冻结最终复核匹配。
 
-已先核原26789命令与旧HTTP，有意切换到71430/4179/新75文件快照tmp/previews/T11-4-2-3i5-mountain-pass。全部HTTP同最终构建；隔离实际3左键+交剑/刷新、实际第8天→9及护灯已成归途→炉谱/作品/真实导出，共14对象、0错误。未强刷用户标签/触碰用户档。主5a21ccb298af8516f57423dfd724041810b37ddc已push实际终态0，fresh远程main同SHA，private/main保持，375文件逐blob匹配，源推送后干净。回执曾ENOSPC，源码未变；整理尝试唯一临时PNG已按已推送相同副本恢复，没有新增归档/源码删除。tasks已按真实交付勾本task，文档回执另提交并在结束前再核实际push/远程/HEAD/blob/HTTP。整体goal ACTIVE，本轮不开始下一项。
+已先核原26789命令与旧HTTP，有意切换到71430/4179/新75文件快照tmp/previews/T11-4-2-3i5-mountain-pass。全部HTTP同最终构建；隔离实际3左键+交剑/刷新、实际第8天→9及护灯已成归途→炉谱/作品/真实导出，共14对象、0错误。未强刷用户标签/触碰用户档。主5a21ccb298af8516f57423dfd724041810b37ddc已push实际终态0，fresh远程main同SHA，private/main保持，375文件逐blob匹配，源推送后干净。回执曾ENOSPC，源码未变；整理尝试唯一临时PNG已按已推送相同副本恢复，没有新增归档/源码删除。tasks已按真实交付勾本task，文档回执另提交并在结束前再核实际push/远程/HEAD/blob/HTTP。这是上阶段交付边界；本轮整体goal ACTIVE并开始下一项3i.6。
 
-## 当前3i.5详细实施与交付
+## 3i.6实际运行检查点
 
-详细接口先于代码写于[终章合同](../docs/v0.7-final-chapter-interface.md)，操作说明在[终章指南](../docs/v0.7-final-chapter-guide.md)。范围：旧day8 summary显式继续9；第9–12天真实委托、最后商人/事件、护灯验剑；三结局和三位来客后日谈；12作品详情、配方熟练/手艺见闻和合法挑战入口。九张原创运行图目标2MiB、硬2.5MiB，最后选择q72总2,384,710字节以保细节（软目标未达、硬预算满足），原PNG/prompt/直接引用/hash保留。
+生产/policy/metrics最后Node18项终态0（session71269，29.047秒）；独立auditor最后8项终态0（agent54356，7.558秒），原副本/拒绝含1000命令精确终态和worker消息后异常。串行/4worker的30个v4-pilot样例原bytes、统计和witness完全一致；formal前2种子的60局preflight（wrapper81055/child81056，session46232）和60局独立audit（81136/81145，session20670）均实际exit0、首尾输入无漂移。旧v3数据不覆盖这里。
 
-journey/stages只投影实际commissionOrder/history/核心ending与DOM意图。护灯交付不等于胜利，收工才决定phase；victory可10或11项，return也可能已做成护灯剑，失败可在任意章。第11委托逐路线计数，winning pieceIds和所有matchedPieceIds分开，单新剑不冒称两柄；跨到第12天仍能回看部分/额外交付。作品详情读合法集合收据，不构造假的RunState或复制判定。
+当前唯一活跃模型：token v4-balance-formal-01，wrapper81355/child81356，exec session34179，dataset tmp/T11-4-2-3i6/formal，进程/日志在formal-process，实际start 2026-10-20T20:02:15.211Z。预期30,000 producer回放，尚无terminal则不能称完成/重启；每25片真实exit0后接收。不得改scripts/tests/src/public/config/dist/合同/profiles/资格依据直到实际terminal；更新本plan/tasks或tmp记录不影响输入。完整正式后必须独立审计同30,000，再按合同调查内容和引导，才能收尾本task。新增10个关键工具/依据的原字节和hash已复制frozen-tools，对应实际formal baseline。
 
-root app唯一控制新局确认/保存/输入/表现；challenge需合法已安全保存的资格，pending/problem/readonly不可给可执行入口，明确memory可用已有合法资格而不改磁盘。回看不发命令/资源；新页从顶部，嵌套作品回退焦点可见。实际level/bursts靠剑展示，D场景按真实委托/phase选图，完整contain保安全区，有失败回退。
+## 当前3i.6执行方案
 
-已写src/presentation-v4的journey/stages/collection-ui/app/shell/story及专属CSS和必要测试；无核心/保存合同变更。初轮355过2失败是测试只scrap第二柄后第三柄又合法补齐双驿，已保原诊断并改合法分支，19定向过。最后补了嵌套焦点/作品页继承160px滚动的实机缺陷，红绿诊断保留。正式最终quality98865已终态0：357单测/29文件、strict与网页/SDK双构建75文件，353实际执行输入前后无漂移。旧66产物中63路径同字节（含8SDK与旧三入口），仅默认index和main JS/CSS变化；后续浏览器仍须实际完成，不能将单测/构建当整局验收。
+实施前合同已写于[平衡验证合同](../docs/v0.7-balance-validation-contract.md)，输入/风险/矩阵/验证/回滚均冻结于此，不把旧模型和单一路线witness算本轮完成。
 
-验证按实际依赖执行：
-1. 最终unit/strict/网页+SDK构建顺序执行，事前捕获全部实际src/tests/scripts/config/public运行图和witness；unit/build不读design元数据，艺术家只在独立design补资料，完整design/public随后一起冻结进浏览器。活跃批次不改它消费的源/测试/构建；不因观察超时重启。
-2. 先Chromium的两尺寸三结局/真实作品页可读性与旧保存day9可玩边界pilot，实看后修复；没有源码变动时不重复已过case。再三引擎五个真实journey case及余引擎视觉/边界，总计划21逻辑例（未执行完成，不预填绿）。每批独立目录、实际PID/token/terminal/输入和产物指纹、零自动重试，红绿如实分批覆盖。
-3. 实际UI210胜→合法216挑战、194归途+6失败（键盘/0pointer）、208两新剑、213先新后旧且护灯已成仍return。恢复样例/未来炉谱/readonly/memory开局/单剑失约跨天仅算明确边界，不冒称额外整局。保存真实run与collection原文，当前编译SDK逐对象完整回放、集合领域校验；不注入钱、phase或资格，不偷看RNG。
-4. 独立核对全部9原图/运行图/预算/引用/alpha、两PC尺寸/按钮/无404和正文可见；旧8SDK/旧网页产物及原source按字节等价复用，有变化按依赖补消费者，不重跑无变化模型凑数。
-5. 完成报告、来源/凭证/依赖/文档和全差异发布清单/Git blob。验证后另建75左右文件的冻结预览，核实旧26789命令与旧HTTP后有意切换，全部HTTP同构建并隔离新鲜浏览器实际smoke，不动用户标签/存档。主交付push终态0及新远程同SHA后，标本task完成，另提交任务回执，再核干净/远程/全blob/预览，简报结束。
+1. 明确30组公开信息策略：28故事组包含五类获批打法、固定3/6/7/10、成长/事件消融、留剑/设施/冒险手艺配对、duplicate/reload镜像和raw/scrap/blind负对照；另同一合法赚取资格分别story/challenge。各组同v4-balance-0000..0999，正式30,000局；试跑用v4-pilot，不挑成功样本。
+2. 白名单观察和pure decide独立于RunState/kernel；不含seed/RNG/journal/eventDeck/runId，事件报价由runner经正式API公开。新MJS工具只调用现dist/sword-led-v4.js，不覆盖旧simulation编译。全部命令经applyCommand，拒绝/上限/非终态不是普通败局。
+3. 先独立审查合同和策略，完成小样串/多worker逐行一致、只读/篡改拒绝和worker消息后异常检查；策略冻结后用正式前两种做输入同一的preflight，再和主批首两行对照，不用于调策略。
+4. 正式6worker、25局一片，完整gzip保存每局创建资格/journal/终态与指标，producer每终态validateRun。实际wrapper/child/token/终态及源/SDK首尾指纹，真实exit0后才认worker结果；运行中不改消费的代码/脚本/测试/配置/SDK/依据，观察超时只重读同handle。
+5. 独立auditor不import策略/producer统计，重放全部30,000终态并独立重算逐命令账目、印记/供给/唯一去向/条件/成长/全部摘要；分清双回放，不冒称独立查两个witness等于再查30,000。各类witness固定profile顺序/最小seed，缺项另定向补证且单列。
+6. 数据按逐单/配方/路线/风险/资源/成长成本/真实触发/结局/配对差公开；固定7同时看victory与12/12，第9可跳单不当全局强制搏命。发现引导问题就实施可见投影修复并做对应消费者；若需数值修正先具体新身份/兼容提案，不偷改v4解释器。
+7. 全差异/文档/凭证/来源/原input与批准/旧编译/备份ref检查，模型与运行边界报告，提交push实终态和fresh远程核对，标本task/任务回执，再简报结束。整体goal/最终广矩阵/真人H/R4不提前完成。
+
+[杠精计划审查]通过：实际跑完整共享1000而非挑种子，包含弱/负策略与不可达风险；不删强制章末来造“无成长”，不以12/12不同替代固定7的胜率检查。规则身份约束和可跳单/机会成本明确；没有把模型当玩家满意。运行后如实报告任何退化和未完成门槛，继续修复或形成可审阅具体方案，不缩水或伪填绿。
 
 ## 磁盘与证据保存
+
+本轮初116MiB、子任务创建ENOSPC；npm cache verify78276实际终态0，清理6,779,524,860B缓存垃圾，校验10,641有效内容/5,729,896,778B，随后可用6.6GiB且工作区干净。仅官方安装器缓存维护，不动用户profile/存档/原件。长批采用流式gzip，保留完整终态但不录浏览器长trace。
 
 磁盘曾真实ENOSPC，先前大QA PNG试压只省7%已放弃，未动原件。为本轮测试，26份旧QA副本已和既存0316 Git备份的22个blob逐字节复核，并实测恢复一份5,689,571字节trace后再次移出；总逻辑384,579,335字节，statfs观测约745MB→1.12GB，不将全部差额归因整理。元数据、完整恢复映射和restore.mjs在tmp/T11-4-2-3i5/qa-git-archive，交付时纳入轻量证据。旧原路径可按映射从本机Git恢复，不覆盖已有不同文件；只承诺字节/mode/毫秒mtime，不声称xattr/亚毫秒时间。游戏源码、原画、用户档、旧预览、simulation和Git对象均未删除。
 
