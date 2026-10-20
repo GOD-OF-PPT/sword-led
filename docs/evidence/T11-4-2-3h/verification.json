@@ -1,6 +1,6 @@
 {
   "task": "T11.4.2.3h",
-  "recordedAt": "2026-10-20T06:36:21.131Z",
+  "recordedAt": "2026-10-20T06:45:46.335Z",
   "review": "docs/reviews/R3-18-game-studio-forge-ui.md",
   "rulesVersion": "forge-v3",
   "schemaVersion": 3,
@@ -35,11 +35,11 @@
     "publicDeployment": false
   },
   "documents": {
-    "files": 12,
+    "files": 13,
     "localLinks": 75
   },
   "scan": {
-    "textFiles": 385,
+    "textFiles": 389,
     "gzipFiles": 19,
     "hits": []
   },
@@ -51,8 +51,8 @@
   },
   "publication": {
     "manifest": "docs/evidence/T11-4-2-3h/publication-manifest.json",
-    "files": 397,
-    "bytes": 26446820
+    "files": 399,
+    "bytes": 26459146
   },
   "limitations": [
     "Human feedback still rejects demo completeness; v0.7 production work is the next task.",
@@ -61,6 +61,10 @@
     "Large raw browser artifacts remain local; only structured records and representative lossless images are published."
   ],
   "delivery": {
-    "receipt": "Source commit and task receipt are verified by subsequent remote SHA and Git blob checks; no self-referential commit hash."
+    "sourceCommit": "db0a5905b77aba6f1793a3b243dfd8ea904ff886",
+    "sourcePushExitCode": 0,
+    "sourceRemoteVerifiedSHA": "db0a5905b77aba6f1793a3b243dfd8ea904ff886",
+    "sourceTreeProof": "source-tree-proof.json",
+    "receipt": "Task receipt is verified externally after this record is committed, avoiding a self-referential hash."
   }
 }
