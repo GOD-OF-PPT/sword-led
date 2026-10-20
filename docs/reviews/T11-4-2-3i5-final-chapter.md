@@ -85,8 +85,10 @@
 | 本机预览 | 已核原26789命令/旧index后有意替换；新PID71430，`tmp/previews/T11-4-2-3i5-mountain-pass`。75HTTP逐文件同最终dist |
 | 实际预览smoke | 隔离新浏览器5接受命令含3次可信左键、交剑/原字节续玩；实际第8天档→第9天；实际护灯已成归途→后话/炉谱/作品/导出，14对象通过、0页面/资源错误。见[收据](../evidence/T11-4-2-3i5/preview/result.json)；未读写用户档/刷新用户标签 |
 | 来源/依赖/凭证 | 原PNG/prompt/引用与冻结核对通过；无核心、保存、包或依赖变更，npm audit0漏洞。暂存全文件/解压日志凭证扫描、本地文档链接及Git blob核对由[发布清单](../evidence/T11-4-2-3i5/publication-manifest.json)与[核验](../evidence/T11-4-2-3i5/verification.json)记录 |
-| Git提交/远程 | 主提交与实际push终态/新远程SHA、后续任务回执和干净状态记入[任务记录](../../goal-1/tasks.md)；预览不是公网部署 |
+| Git提交/远程 | 主5a21ccb298af8516f57423dfd724041810b37ddc，375文件；push49242实际终态0，fresh远程main同SHA，private/main保持，源推送后干净。[源交付回执](../evidence/T11-4-2-3i5/source-delivery.json)及[任务记录](../../goal-1/tasks.md)保留实况；文档回执另提交，结束前再核实际远程。预览不是公网部署 |
 
 复跑本轮网页范围时，先安装三引擎并顺序执行`npm test`、`npm run build`，再用Playwright v4配置选择`v4-final.spec.ts`、`v4-final-visual.spec.ts`和`v4-second-saves.spec.ts`，grep为`a fresh|a complete keyboard|explicit restored-ending|existing legal endings|a saved first-chapter|an external day-nine`。不要在运行同一dist的批次中重建；一次新24例运行是新的身份，不改写本轮9+3+12来源记录。
 
 本轮仅3i.5。3i.6的1000共享种子/策略与全终态回放、T11.4.3最终DPR/原生生命周期/音频性能/故障广矩阵、真人H及最大R4均保留未完成。当前小样路径、源码复核或推送均不替代这些责任，也不宣称玩家已认可整体乐趣。
+
+本task发布自审通过：373payload及两metadata逐Git blob匹配，19份Markdown/183本地链接、凭证模式扫描通过。回执写入遭实际ENOSPC，源仍干净且远程安全。整理尝试仅移出一张已核相同的临时QA副本，因映射目录创建失败立即恢复相同字节；没有完成新归档，不丢原件。后续文档不改变478执行输入/75运行文件。

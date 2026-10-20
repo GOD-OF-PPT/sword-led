@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "phase": "source-prepared",
-  "at": "2026-10-20T19:03:44.365Z",
+  "phase": "task-receipt",
+  "at": "2026-10-20T19:14:19.037Z",
   "base": "2fec6a18c75f33c26d48da4c07f542369411d90d",
   "metadataFilesExcluded": [
     "docs/evidence/T11-4-2-3i5/publication-manifest.json",
@@ -1659,6 +1659,12 @@
       "gitBlob": "9fcbe9f5b8b0395d20958f51e60968b93e8c7411"
     },
     {
+      "path": "docs/evidence/T11-4-2-3i5/source-delivery.json",
+      "bytes": 1435,
+      "sha256": "dcc9eeb5bb0b3bd728860c521ec46667a63022b3ba83189c1acc85102bdda0da",
+      "gitBlob": "2d82bc57eda15d89b4fc1408feb79e55198e5f0e"
+    },
+    {
       "path": "docs/evidence/T11-4-2-3i5/tools/check-publication.mjs",
       "bytes": 6667,
       "sha256": "647fcccaaf1c2ea78941e6a8f920b100d3f5b30e2321b649fb1683cb55ab2eb8",
@@ -2014,9 +2020,9 @@
     },
     {
       "path": "docs/reviews/T11-4-2-3i5-final-chapter.md",
-      "bytes": 13513,
-      "sha256": "0a70a2f0dcf407e95bb12f2587c207775583249d0f84a0f06d3d5679b04c8fc1",
-      "gitBlob": "37ee54eeef5339fc6e5b1638486aad613be1da2a"
+      "bytes": 14110,
+      "sha256": "cbb06f8ce223c0230cedaec26c340186ee018c6b74b9eeb43470f1d9fc4f899a",
+      "gitBlob": "3d3e3e54a1d1cd1751c3928a809146076b8d7e0a"
     },
     {
       "path": "docs/reviews/T11-4-2-3i5-independent-review.md",
@@ -2086,15 +2092,15 @@
     },
     {
       "path": "goal-1/plan.md",
-      "bytes": 10709,
-      "sha256": "ad4da39d2a181dd62939b8a39736b631639af6d9e24afe5c0dc374b981150f2a",
-      "gitBlob": "688a17a64dc7592871e649d69ec195de76fa60d8"
+      "bytes": 11082,
+      "sha256": "69c87b644158b407770ff5bfa6285717ed8584dd58f3cc22c55da057d946089e",
+      "gitBlob": "ab4170efd72a0f6518e9f70f201719218f07dcf1"
     },
     {
       "path": "goal-1/tasks.md",
-      "bytes": 9356,
-      "sha256": "9088b1e9dbd3c4ab453e952e2541519d4775562048b656a8d20f652743f21f42",
-      "gitBlob": "53240fcff925e38c27c29fdab5033d51f77c1dd9"
+      "bytes": 10207,
+      "sha256": "00af29540a9b0c79c6f96a8bda7fb428c676760ef74ecf12e1b6cfb458a6e163",
+      "gitBlob": "5a11f8732007ea7b2926797fec9b2f71b248b00a"
     },
     {
       "path": "openspec/changes/add-lantern-campaign/tasks.md",
