@@ -1,0 +1,27 @@
+{
+  "ok": true,
+  "url": "http://127.0.0.1:4210/",
+  "browser": "isolated Chromium",
+  "actions": 12,
+  "observations": 13,
+  "checks": [
+    {
+      "label": "d6 d6-1 visible payment",
+      "amount": 400,
+      "baseFeeDelta": 250,
+      "qualityBonus": 150,
+      "partial": false,
+      "paper": "✓ 这份约定已经交妥",
+      "notice": "这一记后身价为3426。再裂会断，先看看这柄是否仍合纸单。",
+      "inlinePayment": "实收 400 铜钱 · 酬劳250＋品质150"
+    },
+    {
+      "label": "already purchased and real repair shortfall reason",
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "captures": 4,
+  "scope": "Specific growth UI branch from archived real UI prefix; not another fresh full game",
+  "source": "docs/evidence/T11-4-2-3l4/ui/run-02/states.json.gz#a48-strike"
+}

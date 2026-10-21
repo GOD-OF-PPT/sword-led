@@ -5,6 +5,8 @@ import './presentation-v4/forge.css';
 import './presentation-v4/journey.css';
 import './presentation-v4/collection.css';
 import './presentation-v5/economy.css';
+import './presentation-v5/market-stall.css';
+import './presentation-v5/growth.css';
 const root=document.querySelector<HTMLElement>('#app');
 if(!root)throw Error('缺少灯炉入口');
 const app=mountV5(root,createV5BrowserSession(window));

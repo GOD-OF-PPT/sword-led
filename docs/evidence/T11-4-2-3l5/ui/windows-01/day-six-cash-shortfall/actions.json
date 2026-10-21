@@ -1,0 +1,355 @@
+[
+  {
+    "index": 0,
+    "day": 5,
+    "action": {
+      "type": "settle"
+    },
+    "accepted": true,
+    "revision": 50,
+    "coinsBefore": 374,
+    "coinsAfter": 434,
+    "events": [
+      {
+        "type": "EventChoice",
+        "record": {
+          "day": 5,
+          "id": "shelter",
+          "choice": "decline",
+          "pieceId": null,
+          "coins": 0
+        }
+      },
+      {
+        "type": "Settled",
+        "record": {
+          "day": 5,
+          "commissionId": 5,
+          "met": false,
+          "routeId": null,
+          "pieceIds": [],
+          "sales": 0,
+          "recovered": 60,
+          "baseFees": 0,
+          "marketSpent": 60,
+          "recoveredIds": [
+            "d5-1",
+            "d5-2"
+          ],
+          "reserveId": "d4-2",
+          "sealsBefore": 3,
+          "sealsAfter": 2,
+          "protected": false,
+          "modification": null
+        }
+      }
+    ]
+  },
+  {
+    "index": 1,
+    "day": 5,
+    "action": {
+      "type": "advance"
+    },
+    "accepted": true,
+    "revision": 51,
+    "coinsBefore": 434,
+    "coinsAfter": 434,
+    "events": [
+      {
+        "type": "Advanced"
+      }
+    ]
+  },
+  {
+    "index": 2,
+    "day": 6,
+    "action": {
+      "type": "strike",
+      "pieceId": "d6-1"
+    },
+    "accepted": true,
+    "revision": 52,
+    "coinsBefore": 434,
+    "coinsAfter": 434,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d6-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 120,
+            "after": 168,
+            "level": 1,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "index": 3,
+    "day": 6,
+    "action": {
+      "type": "strike",
+      "pieceId": "d6-1"
+    },
+    "accepted": true,
+    "revision": 53,
+    "coinsBefore": 434,
+    "coinsAfter": 434,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d6-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 168,
+            "after": 235,
+            "level": 2,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "index": 4,
+    "day": 6,
+    "action": {
+      "type": "strike",
+      "pieceId": "d6-1"
+    },
+    "accepted": true,
+    "revision": 54,
+    "coinsBefore": 434,
+    "coinsAfter": 434,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d6-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "great",
+            "before": 235,
+            "after": 458,
+            "level": 4,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "index": 5,
+    "day": 6,
+    "action": {
+      "type": "strike",
+      "pieceId": "d6-1"
+    },
+    "accepted": true,
+    "revision": 55,
+    "coinsBefore": 434,
+    "coinsAfter": 434,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d6-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 458,
+            "after": 641,
+            "level": 5,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "index": 6,
+    "day": 6,
+    "action": {
+      "type": "strike",
+      "pieceId": "d6-1"
+    },
+    "accepted": true,
+    "revision": 56,
+    "coinsBefore": 434,
+    "coinsAfter": 434,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d6-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 641,
+            "after": 897,
+            "level": 6,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "index": 7,
+    "day": 6,
+    "action": {
+      "type": "strike",
+      "pieceId": "d6-1"
+    },
+    "accepted": true,
+    "revision": 57,
+    "coinsBefore": 434,
+    "coinsAfter": 434,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d6-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 897,
+            "after": 1255,
+            "level": 7,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "index": 8,
+    "day": 6,
+    "action": {
+      "type": "strike",
+      "pieceId": "d6-1"
+    },
+    "accepted": true,
+    "revision": 58,
+    "coinsBefore": 434,
+    "coinsAfter": 434,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d6-1",
+        "burst": true,
+        "hits": [
+          {
+            "result": "success",
+            "before": 1255,
+            "after": 1757,
+            "level": 8,
+            "triggers": [],
+            "recoveryAmount": 0
+          },
+          {
+            "result": "great",
+            "before": 1757,
+            "after": 3426,
+            "level": 10,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "index": 9,
+    "day": 6,
+    "action": {
+      "type": "strike",
+      "pieceId": "d6-1"
+    },
+    "accepted": true,
+    "revision": 59,
+    "coinsBefore": 434,
+    "coinsAfter": 434,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d6-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "crack",
+            "before": 3426,
+            "after": 3426,
+            "level": 10,
+            "triggers": [
+              "steady"
+            ],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "index": 10,
+    "day": 6,
+    "action": {
+      "type": "deliver",
+      "pieceId": "d6-1"
+    },
+    "accepted": true,
+    "revision": 60,
+    "coinsBefore": 434,
+    "coinsAfter": 834,
+    "events": [
+      {
+        "type": "Delivered",
+        "pieceId": "d6-1",
+        "amount": 400,
+        "matched": true,
+        "commissionId": 6,
+        "pieceValue": 3426,
+        "baseFeeDelta": 250,
+        "qualityBonus": 150,
+        "marketRemaining": 0
+      },
+      {
+        "type": "MainCompleted",
+        "commissionId": 6,
+        "routeId": "cracked",
+        "pieceIds": [
+          "d6-1"
+        ]
+      }
+    ]
+  },
+  {
+    "index": 11,
+    "day": 6,
+    "action": {
+      "type": "upgrade"
+    },
+    "accepted": true,
+    "revision": 61,
+    "coinsBefore": 834,
+    "coinsAfter": 134,
+    "events": [
+      {
+        "type": "Upgraded"
+      }
+    ]
+  }
+]

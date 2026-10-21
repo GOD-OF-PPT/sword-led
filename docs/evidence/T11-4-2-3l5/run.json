@@ -1,0 +1,1435 @@
+{
+  "at": "2026-10-21T10:29:10.993810+00:00",
+  "task": "3l.5 = goal-2/T03; OpenSpec2.2-2.4 and R3.24",
+  "baselineHead": "8866026541d23075bb32db2869172c31d81729e3",
+  "main": {
+    "build": 70067,
+    "execution": 48426,
+    "actualExitCode": 0,
+    "commands": 142,
+    "observations": 145,
+    "completed": 12,
+    "seals": 3,
+    "coins": 2974
+  },
+  "windows": {
+    "build": 83547,
+    "execution": 64773,
+    "actualExitCode": 0,
+    "cases": 6,
+    "commands": 27,
+    "observations": 33
+  },
+  "finalTrade": {
+    "build": 5917,
+    "execution": 25142,
+    "actualExitCode": 0,
+    "commands": 3,
+    "observations": 4
+  },
+  "build": {
+    "finalExecution": 5917,
+    "actualExitCode": 0,
+    "initial90029NotBrowserConsumed": true,
+    "intermediate54126NotBrowserConsumed": true,
+    "initialTypechecks": {
+      "46389": {
+        "exitCode": 1,
+        "reason": "joint code not finished, unused imports/missing market module/nullable carry"
+      },
+      "21675": {
+        "exitCode": 1,
+        "reason": "intermediate market selection narrowing and nullable closure, corrected by owner before final builds"
+      }
+    },
+    "identityNote": "142-command main70067; footer/redraw corrected for windows83547; rule notification and paid-sword benefit corrected for final5917. Do not merge into one final-build full replay. Middle54126 terminal0 is from tool output; its raw log was superseded before archiving."
+  },
+  "review": "docs/reviews/R3-24-v08-growth-trade.md",
+  "uiMeta": "ui/run-meta.json",
+  "replay": {
+    "execution": 86780,
+    "actualExitCode": 0,
+    "occurrences": 182,
+    "uniqueStates": 175,
+    "collections": 176,
+    "uniqueCollections": 18,
+    "preserved": "85 originals /113 old sources /7 core-v5 /9 SDK outputs"
+  },
+  "publication": {
+    "pid": 14497,
+    "session": 64360,
+    "snapshot": "tmp/previews/T11-4-2-3l5-v08-trading",
+    "execution": 22405,
+    "actualExitCode": 0,
+    "httpFiles": 80,
+    "actualCommands": 6,
+    "realLeftClicks": 3,
+    "giftRuleNotice": true,
+    "savedStatesSeparate": 4,
+    "userProfileTouched": false
+  },
+  "openSpec": {
+    "execution": 2767,
+    "actualExitCode": 0,
+    "strict": "rebalance-workshop-economy"
+  },
+  "source": [
+    {
+      "path": "index.html",
+      "bytes": 565,
+      "sha256": "b34127447a399463ad4056c09fb86efae3efbf21268fe41b797593706488323e"
+    },
+    {
+      "path": "src/v5-main.ts",
+      "bytes": 633,
+      "sha256": "54d1c8e619f846e12c44199d020c59edb890b9f96335f0902a99f0402a10c5e4"
+    },
+    {
+      "path": "src/presentation-v5/app.ts",
+      "bytes": 88958,
+      "sha256": "28d8ee5d92af5da2130e607dc8b0a72c91b6842cb1ee751cfc038fd501297bcb"
+    },
+    {
+      "path": "src/presentation-v5/collection-ui.ts",
+      "bytes": 6324,
+      "sha256": "ac1bcd2049f50c72131a40f7b3a5e6b817aab3c2f1dc380e8eab135ff4d5bd63"
+    },
+    {
+      "path": "src/presentation-v5/commission-paper.ts",
+      "bytes": 10063,
+      "sha256": "533fb63e4374ce50ed84c0a24b46e4934541a73cbd138494120a436e037013c9"
+    },
+    {
+      "path": "src/presentation-v5/decisions.ts",
+      "bytes": 20454,
+      "sha256": "55e3283591e245b8aa44ecdecd92aba35844eff14cacd65d68c372c02a89f442"
+    },
+    {
+      "path": "src/presentation-v5/economy.css",
+      "bytes": 4589,
+      "sha256": "4916c851d821078ab00e04cd5feff4de2a9d08e95164fc0f984cf774842670c2"
+    },
+    {
+      "path": "src/presentation-v5/growth-options.ts",
+      "bytes": 10537,
+      "sha256": "563c54f6d417553eb9b55ee9fb67484d0510f7d925f10ae46535038fc687f503"
+    },
+    {
+      "path": "src/presentation-v5/growth.css",
+      "bytes": 2181,
+      "sha256": "fa0473a2196bb62bb0b2781923b0b9e3aac9a14da45b9ba28bb5da72ff49b37f"
+    },
+    {
+      "path": "src/presentation-v5/journey.ts",
+      "bytes": 9843,
+      "sha256": "0c58d786ccdfb640a10722bf3351e372460b08fb509b681850ae420b534eca4e"
+    },
+    {
+      "path": "src/presentation-v5/market-stall.css",
+      "bytes": 7081,
+      "sha256": "5cb31efe89e4d46864c5d7b634c6380de66ce44e9948dc9e8347ae48dc32a695"
+    },
+    {
+      "path": "src/presentation-v5/market-stall.ts",
+      "bytes": 11177,
+      "sha256": "547005dd24b9f795514d69ece049d8de6ff48ad7e8394e523e3a8132a254e3cb"
+    },
+    {
+      "path": "src/presentation-v5/shell.ts",
+      "bytes": 9200,
+      "sha256": "238587e185d5f327c1717316e67b8168330aa0327a6802b3e670c09c6aa33c99"
+    },
+    {
+      "path": "src/presentation-v5/stages.ts",
+      "bytes": 24561,
+      "sha256": "e29afb368d97770ba434a341b06b53a705ee9f43887e03f49eba1c30c059ec36"
+    },
+    {
+      "path": "src/presentation-v5/story.ts",
+      "bytes": 5803,
+      "sha256": "7b0a423678af45cf1b86ad12c1e7c29b805d1b96e0153f8c27326d2a2a22d0a8"
+    },
+    {
+      "path": "src/presentation-v5/workbench-feedback.ts",
+      "bytes": 9578,
+      "sha256": "ffdbec33fd0b25426b20e31aa6048668e552eac1e8c24e969805b11297ddce46"
+    }
+  ],
+  "buildFiles": [
+    {
+      "path": "dist/assets/b/anvil-v1.webp",
+      "bytes": 351706,
+      "sha256": "ed44b20b36a834581655f02c6e6660452b72a9742c37e1d97d3ab132413af9f1"
+    },
+    {
+      "path": "dist/assets/b/hammer-heavy-v1.webp",
+      "bytes": 286032,
+      "sha256": "3b9ed6d6aab155503af7ae167676fd88badcc2f859ee693823e1b68c4ae26714"
+    },
+    {
+      "path": "dist/assets/b/hammer-light-v1.webp",
+      "bytes": 153704,
+      "sha256": "4a294cde83b0765ba919c1943f151a9ad66c8aad5e163c1f3b81df2208b8bbf8"
+    },
+    {
+      "path": "dist/assets/b/hammer-standard-v1.webp",
+      "bytes": 243778,
+      "sha256": "604bc26957ac0dae08bec6160fbb1104dad6949676ed3df4bc254743fe392c03"
+    },
+    {
+      "path": "dist/assets/b/manifest.json",
+      "bytes": 16507,
+      "sha256": "7d97cba7f4cfd6df7656385c61db9096d1a1c5901b50202abda60b55cc52dc13"
+    },
+    {
+      "path": "dist/assets/b/material-iron-v1.webp",
+      "bytes": 297192,
+      "sha256": "891f332a7543e005bb4eecf9c8cbf9ed6fbb6e7acc60ef02c6a08d828cbdf8e9"
+    },
+    {
+      "path": "dist/assets/b/material-meteorite-v3.webp",
+      "bytes": 171384,
+      "sha256": "bffe5da4cc1522fa9e16df68790d11fbf551659176210ecb04e66ea82da98f3a"
+    },
+    {
+      "path": "dist/assets/b/material-steel-v1.webp",
+      "bytes": 297586,
+      "sha256": "c5985ca938f459770ebe8e7e0f045db4a96768c20525c7a7f05d28ab3c070a4e"
+    },
+    {
+      "path": "dist/assets/b/merchant-kit-v1.webp",
+      "bytes": 463234,
+      "sha256": "9a7623f3b226fc1918b08054ccfd080d852a278f9c92a97219c9da72a40e1c72"
+    },
+    {
+      "path": "dist/assets/b/tokens.css",
+      "bytes": 428,
+      "sha256": "6892f99cdee0107212fd750a058191d2933efefb8a4e7b05b8df35412132614e"
+    },
+    {
+      "path": "dist/assets/b/workshop-background-v1.webp",
+      "bytes": 387784,
+      "sha256": "c8813b1438f61b6edbb8890d2df843ce7ac5732899a52edb9af67d1f8771497c"
+    },
+    {
+      "path": "dist/assets/collection-CIHM6rhH.css",
+      "bytes": 58297,
+      "sha256": "3004f966496328dd2318e41224c23237274c83ef80f2634ab4e9261fa9e8ea63"
+    },
+    {
+      "path": "dist/assets/collection-DXo2JrVn.js",
+      "bytes": 51064,
+      "sha256": "faa5d749b6e4c3cdaa69ecd1b10875b532cb9c512af11f748b1159bacdf82059"
+    },
+    {
+      "path": "dist/assets/d/blade-cleaver-v1.webp",
+      "bytes": 475570,
+      "sha256": "7ce0ae4d8fbd5b6f467d3ac487e1325807cbba993e0b2e0cd01875a96c8734db"
+    },
+    {
+      "path": "dist/assets/d/blade-dao-v2.webp",
+      "bytes": 412412,
+      "sha256": "0849c54fc542d5781ce71c177e379f9336d012ed7dbc38250e0793ccaa642b48"
+    },
+    {
+      "path": "dist/assets/d/blade-jian-v2.webp",
+      "bytes": 354522,
+      "sha256": "ece499d885fd4a7b74978fac75a547caa6eb40c335e1643364f955f6eca6582b"
+    },
+    {
+      "path": "dist/assets/d/commission-guard-v2.webp",
+      "bytes": 542200,
+      "sha256": "0a8b9d04123e63d30163c7e486eb5e6917e67088ba6e8b3ca69eae8662f1a226"
+    },
+    {
+      "path": "dist/assets/d/customers-atlas-v2.webp",
+      "bytes": 399396,
+      "sha256": "6d5f8b78b51863cda7143d506efcc9a344e6b69314737d66610bbd95ca8d3cf7"
+    },
+    {
+      "path": "dist/assets/d/forge-backdrop-v1.webp",
+      "bytes": 326918,
+      "sha256": "af03aec23b63729c2dc0e05abaaaa6004d2c692d233fcafdbf446166676896eb"
+    },
+    {
+      "path": "dist/assets/d/forge-backdrop-v2.webp",
+      "bytes": 367418,
+      "sha256": "74d11a3a34a9f066933e5f5995cd1a3cfc37339495c48759a3bac4ecab8f0851"
+    },
+    {
+      "path": "dist/assets/d/forge-pennant-v1.webp",
+      "bytes": 251572,
+      "sha256": "5acb97d4d6eed7d50d2975e1d63e03bf5023f9cb4a8db8568ff8fa9660854a0a"
+    },
+    {
+      "path": "dist/assets/d/guild-scroll-v1.webp",
+      "bytes": 322924,
+      "sha256": "695295f4d69d86c6ea79e884482eee3b0d6ab1643c61a2d9f4aa2d235086204e"
+    },
+    {
+      "path": "dist/assets/d/hammer-forge-v2.webp",
+      "bytes": 142696,
+      "sha256": "174462711969925c8bc6a3a27a043ddb69d8d4f0c4f543ed83be0cad8134186e"
+    },
+    {
+      "path": "dist/assets/d/hammer-heavy-v1.webp",
+      "bytes": 239784,
+      "sha256": "5609cf65ecc2a887f580d76be907d5c5196e202f500e9aa3806c20b39f883dd3"
+    },
+    {
+      "path": "dist/assets/d/hammer-light-v1.webp",
+      "bytes": 181090,
+      "sha256": "bb2f802ef48756af9ac0051c31194d5d8e32d8be11ed83e20d180cb973da4234"
+    },
+    {
+      "path": "dist/assets/d/hammer-standard-v1.webp",
+      "bytes": 173226,
+      "sha256": "30c2ab0bb57383aad563dcb78abf9b96d56d63c6665b3f945240f8ab27ff71e5"
+    },
+    {
+      "path": "dist/assets/d/manifest.json",
+      "bytes": 6175,
+      "sha256": "790ea270419a058df9d2aa2224f708847e9e271857b05311f7d098560b80e196"
+    },
+    {
+      "path": "dist/assets/d/metal-atlas-v1.webp",
+      "bytes": 337260,
+      "sha256": "d50d096a3951cf5a609fc0c81e48a38eb9eee0a97c3c05c47a674a5505d7dd67"
+    },
+    {
+      "path": "dist/assets/d/notebook-cover-v1.webp",
+      "bytes": 429704,
+      "sha256": "3dfa792ac46bd940091764ac62fea2813db991178ed56d2c6c7920ebd430b1f9"
+    },
+    {
+      "path": "dist/assets/d/oil-v1.webp",
+      "bytes": 244050,
+      "sha256": "cabe57bfa72e6d064cc8d31a4fe5f4b10ef1b9521d4a340905e3f48d4b7198c9"
+    },
+    {
+      "path": "dist/assets/d/portraits-v1.webp",
+      "bytes": 566448,
+      "sha256": "fe52ff958203125c4e40a8a7566e536e7f1b5488c51b6ecc7088e43fb9e42ec3"
+    },
+    {
+      "path": "dist/assets/d/trait-props-v1.webp",
+      "bytes": 493826,
+      "sha256": "11b900241ce1095845336ac8fe9c627a29e47d0a3ab8d2e9de63a91cb5496fff"
+    },
+    {
+      "path": "dist/assets/d/v07/bridge-dark-v1.webp",
+      "bytes": 271780,
+      "sha256": "50c8dff8b69fbaa954d61d225613c65223d76a2aecb9ca2d82f495dcd350fce4"
+    },
+    {
+      "path": "dist/assets/d/v07/bridge-lit-v1.webp",
+      "bytes": 297880,
+      "sha256": "ccd7d09fa51c4f79608930a9e6c95b929c39653202c8dde487797b471bd2577b"
+    },
+    {
+      "path": "dist/assets/d/v07/events-v1.webp",
+      "bytes": 309280,
+      "sha256": "73751392e87e97a1091c4f2416fcac04a5597af7ebdf0cc7ce5b411743bb67d2"
+    },
+    {
+      "path": "dist/assets/d/v07/lantern-road-v1.webp",
+      "bytes": 283948,
+      "sha256": "e3e3cb3a6b32c0b8fb8315fa4fa724a2facc09a7da153fdbe1153115734fa95a"
+    },
+    {
+      "path": "dist/assets/d/v07/modifications-v1.webp",
+      "bytes": 241522,
+      "sha256": "beef13d0c9321b759fa044c7c47cfdd936f09315af7ee5d618c3085b072fb3a5"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter2/cracked-work-v1.webp",
+      "bytes": 242632,
+      "sha256": "bcb5323a59eb8bd53e9c18e7afc1ef87bc5f3e5bb1a78b78c959b940fc270fa5"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter2/rescue-path-v1.webp",
+      "bytes": 362192,
+      "sha256": "28a1bd26b08d66fe6748a50263d28bd1404123bff6b87e3be91b98024b21531a"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter2/returning-blade-v1.webp",
+      "bytes": 344334,
+      "sha256": "2ce00147936d876291eb708919f6bb8e6bf5fdc0ba64c08e21d50754ac4214da"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter2/twin-stations-dark-v1.webp",
+      "bytes": 299396,
+      "sha256": "ec92cb07af0c13553b092c12089637c32ba4e2057c80f2f7d963ec5141273f01"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter2/twin-stations-lit-v1.webp",
+      "bytes": 302458,
+      "sha256": "f168ab748d4146842603499af700379a459e60bb342171e99f1646f663ff1b33"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter2/twin-stations-one-v1.webp",
+      "bytes": 294906,
+      "sha256": "50968b0df21187032042671427ca8f3721d45a5254db40c504682b24f7c6d44c"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter2/winter-forge-v1.webp",
+      "bytes": 197974,
+      "sha256": "ff93be5848e112aa7c6b74a5a649cd5fc7341cf08faca03d1b218a4e3e7aca96"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter3/double-fire-work-v1.webp",
+      "bytes": 204206,
+      "sha256": "c94b9d9f89749e2db6ff76ab463367e780e6f9e6afaf8dfe1991aeec027636fa"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter3/ending-embers-v1.webp",
+      "bytes": 156688,
+      "sha256": "56b65cdaba916795e248f1a431b5b14b0d4fd2216de0df4ed69dfcff1fbee4cf"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter3/ending-homeward-v1.webp",
+      "bytes": 309244,
+      "sha256": "6a2105c91f0937af28e22db22992d3b5707765dd2a456fad91151547d6602cb7"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter3/ending-twelve-lights-v1.webp",
+      "bytes": 294482,
+      "sha256": "05cac8d98ff29b464374a5604e84fa844cd009a5a13e8cc85108eef1c3bafe8d"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter3/last-lantern-delivered-v1.webp",
+      "bytes": 290266,
+      "sha256": "897c0bfc12bd387ebd8f5e3005991d0b9c1cc32dece3900973baddbd6a53a127"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter3/mountain-gap-held-v1.webp",
+      "bytes": 327434,
+      "sha256": "af657ee742fe772738d2a12d37dccbd26546cf4bd833c6617674108713669421"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter3/mountain-pass-arrival-v1.webp",
+      "bytes": 267342,
+      "sha256": "7330d00aa07ddd97eee6faa22185dbf6a3d1439f4ed6ee657650feb77d382e8b"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter3/relay-complete-v1.webp",
+      "bytes": 271756,
+      "sha256": "aa750f3804dfc96aacb91437d87c86cbb0ca18d95cd563bfc9fc75ef826be01c"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter3/relay-one-v1.webp",
+      "bytes": 263292,
+      "sha256": "e428afac55345140ed426767056010917e3bf42e791425f720f0c653864d051f"
+    },
+    {
+      "path": "dist/assets/d/water-v1.webp",
+      "bytes": 266286,
+      "sha256": "a0db1b1b4c9ee96d4ecc25f569b929aeda3e811bd457e5ad9f3792d1fff60c03"
+    },
+    {
+      "path": "dist/assets/dom-BaJVJNb2.js",
+      "bytes": 31636,
+      "sha256": "47ec1b287670f3513efde632e4900b62b178de1bc902666b8f1ff19541cf3c15"
+    },
+    {
+      "path": "dist/assets/input-DM7dAKr9.js",
+      "bytes": 2339,
+      "sha256": "ce41f8c3076a2af8dee12f95298022af24789d888f43042cd7a66c283efd79e4"
+    },
+    {
+      "path": "dist/assets/legacy-CIZ29FwY.js",
+      "bytes": 60364,
+      "sha256": "4c31194da5e486d6d6b04df21c7fc4adb433dc14b5763ffddfa09cc479c588ca"
+    },
+    {
+      "path": "dist/assets/legacy-CidoUqtJ.css",
+      "bytes": 20582,
+      "sha256": "542a1875c5de6ec3b2fb043c7c5d2d7e6bcd19f35ebc0b6c82052c688703c12b"
+    },
+    {
+      "path": "dist/assets/main-B_5dsepO.css",
+      "bytes": 12021,
+      "sha256": "58180ec1894ab58761b86f401f16cfa772e6f0e5dd053ead07ba694184ee8d4e"
+    },
+    {
+      "path": "dist/assets/main-YRNJhQ5N.js",
+      "bytes": 170793,
+      "sha256": "2e57cecf38e4848fdd98a2e223ba7fdfc27abf06b675a6b1a65cdde808e94df5"
+    },
+    {
+      "path": "dist/assets/surface-DGP_7YNM.js",
+      "bytes": 16960,
+      "sha256": "316ca0ab0b9c5a25af3c4ad49a690518cfd56713f2c11af31efbb3597db2aac6"
+    },
+    {
+      "path": "dist/assets/v2-BgGChR3Q.css",
+      "bytes": 46808,
+      "sha256": "08bd72f2215e57d65bcfb4b513abe29599a25b8e6613986ef44c8f1d1c32f9dd"
+    },
+    {
+      "path": "dist/assets/v2-fAfB4s3Q.js",
+      "bytes": 68646,
+      "sha256": "d838f4b46859f2ba81c69812c167e34ec5677e3274efbf634266124a47f9e0fa"
+    },
+    {
+      "path": "dist/assets/v3-BvaeENJ_.js",
+      "bytes": 71184,
+      "sha256": "0c89387809edd68954a82829f77d40381da93892f83ae5fb90f2c3f97b02bf3a"
+    },
+    {
+      "path": "dist/assets/v3-D_5nutBJ.css",
+      "bytes": 50525,
+      "sha256": "6a09096d56bbd5e9b76e5ebbe1aa3e21f301c8c79b5593eb247cf897207704f7"
+    },
+    {
+      "path": "dist/assets/v4-0gzyf6sJ.js",
+      "bytes": 104240,
+      "sha256": "21d3e5f2df313ed14c227ac7ee8409f092d3f0c503a50fb8e2f91151c4604a25"
+    },
+    {
+      "path": "dist/browser-session-BQdQqpuu.js",
+      "bytes": 11605,
+      "sha256": "8ebc49f8c7ee292c6dd0181cf3e209a669c3224aa54e15c394d912a471dbdee5"
+    },
+    {
+      "path": "dist/core-CvAZnNjA.js",
+      "bytes": 21211,
+      "sha256": "d454eb5d786660f0a1132580582c6af8c2004b274337feb9f606cddbf76beb46"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 964,
+      "sha256": "0eee3a22a3830f9d5e94af73ac9a2eb709bf12f2c6da1399ae3fa5e9e9e73362"
+    },
+    {
+      "path": "dist/legacy.html",
+      "bytes": 845,
+      "sha256": "3e33171988f317e81a03390f45aa13bdd198c38a796506cb8c8b87945ba07184"
+    },
+    {
+      "path": "dist/rules-CAo3EZyg.js",
+      "bytes": 1838,
+      "sha256": "758b82851aaf66fee126eabcc212cff0c95a2b9fed33f2a0e08b8bd52e5965ea"
+    },
+    {
+      "path": "dist/sword-led-core.js",
+      "bytes": 126,
+      "sha256": "3a75d8229c7e0840bfc0272d76964e1fa91d5d4fbe6faeab3689636bbfb321c4"
+    },
+    {
+      "path": "dist/sword-led-session.js",
+      "bytes": 223,
+      "sha256": "0fc2643db63596c9b55815db6bb4d0726a7a4d38a45db4102e7a8cfab25c35a8"
+    },
+    {
+      "path": "dist/sword-led-v2.js",
+      "bytes": 28145,
+      "sha256": "618dd6e0552c9290b9ee4e2aa93f19a36a22e051ee0c593d20c94e0ae3e36afb"
+    },
+    {
+      "path": "dist/sword-led-v3.js",
+      "bytes": 11057,
+      "sha256": "0406b190bde0646a940fb6180086b4805a63530964f456afaafc08042bb18ab2"
+    },
+    {
+      "path": "dist/sword-led-v4.js",
+      "bytes": 47405,
+      "sha256": "0525dd1f3642af2a1a54e397e6023cd9baf4dcccda4c5af3b9ed721a92ae89e5"
+    },
+    {
+      "path": "dist/sword-led-v5.js",
+      "bytes": 93848,
+      "sha256": "77f420f6c1e897f6c6167b636f882f7340a92df81f565b7c7e17d3780cd042cc"
+    },
+    {
+      "path": "dist/v2.html",
+      "bytes": 679,
+      "sha256": "a24aa68704c009d4d43f2516e3064daed028eedb5a3fe350e0c0293e691952f0"
+    },
+    {
+      "path": "dist/v3.html",
+      "bytes": 653,
+      "sha256": "68a37ee4fc4c0a16282bfda57999a2164f88c3f86060d043794cf560a129e702"
+    },
+    {
+      "path": "dist/v4.html",
+      "bytes": 883,
+      "sha256": "75ff19dac4df70f07229beef9e8f68f428ccf39b53bcaddce0ba166e2659b4e6"
+    }
+  ],
+  "archiveMap": "archive-map.json",
+  "localPngOriginals": [
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d11-settlement-1280.png",
+      "bytes": 291894,
+      "sha256": "bb03e248dc61377de89e80a9190bae9bb5e20b44bd64174c0b45ca87cea71a8c"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d11-settlement-1920.png",
+      "bytes": 681199,
+      "sha256": "0792e02d24c0c420bf7516a05102df4036f30ce30f4c33b4ce44d72b4b101251"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d12-settlement-1280.png",
+      "bytes": 316626,
+      "sha256": "1fb6ab2337d8b338b3795fb18d11685886016093bb05f8d18f108e55d8337d24"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d12-settlement-1920.png",
+      "bytes": 712545,
+      "sha256": "95af3d3aa313b0e09110877610c9c4039b95065cdbe194877e078a82aa6040e4"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d3-accepted-upgrade-1280.png",
+      "bytes": 1321103,
+      "sha256": "835475bf00bf8216bdb5da4346805807e0824a71c6c2212660673bcad8a6889c"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d3-accepted-upgrade-1920.png",
+      "bytes": 2708205,
+      "sha256": "66ebe0c604a515852ee2a0697342959c9b6b63c4ce096d194bfddcd62a8bba3f"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d3-purse-exit-zero-scrap-cancel-1280.png",
+      "bytes": 312913,
+      "sha256": "7db81d8eda4b3781930b5f65fb7ccd0f0bc383a10d1765b315e9bac4f2b940f0"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d3-purse-exit-zero-scrap-cancel-1920.png",
+      "bytes": 692038,
+      "sha256": "99ee93c3cec62c8028f1497c605882b68220904c6dbb9dcd377c3f5e9d5842ef"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d3-shop-before-upgrade-1280.png",
+      "bytes": 339314,
+      "sha256": "efc9c2efd0799c870d0d764df4fdc4f20808651225618fcb9d18513cb1b987ab"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d3-shop-before-upgrade-1920.png",
+      "bytes": 706224,
+      "sha256": "ed87e2e37bb055c8e678ee8504a42ebbc06037e7624d7f576d18aca525d44ca8"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d3-stall-already-upgraded-1280.png",
+      "bytes": 332487,
+      "sha256": "bed3054ad00cb9f460769352485cfbdce9d6470e8b00f63d1b639d97099fe677"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d3-stall-already-upgraded-1920.png",
+      "bytes": 702126,
+      "sha256": "664710d9806dc054b5373679e974c5ab56172be14b1a1ba84b085a95eac3b4e8"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d3-stall-already-upgraded-repair-1280.png",
+      "bytes": 324034,
+      "sha256": "59708645b1bf094477fa21253fb5464e97fc31207e01a26f9e8507792cea2eef"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d3-stall-already-upgraded-repair-1920.png",
+      "bytes": 692966,
+      "sha256": "6967a53e93b05f64fd3ef3597963b4a9f2720171d39a71262b6abd8ba5ecf8bc"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d3-stall-opening-1280.png",
+      "bytes": 337012,
+      "sha256": "77c0332297e965d15712153c77db15b0790dcc347b86e3d157519c20a3d57a53"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d3-stall-opening-1920.png",
+      "bytes": 699678,
+      "sha256": "cf20bede2056e99621b5d7282ea00e0e5bd68936c6839b61da071414dde5704e"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d3-stall-opening-repair-1280.png",
+      "bytes": 322381,
+      "sha256": "e57f62196fd8179c438637a387d3d20fb62576c5a104268cfbbbd4cac0d2d9f8"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d3-stall-opening-repair-1920.png",
+      "bytes": 686725,
+      "sha256": "0a3d6def98165e57513c7e1c74f796002e16aeb67552cd4cbae0fee25b2f1edb"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d4-modification-choice-1280.png",
+      "bytes": 943934,
+      "sha256": "15698278d9f48f55318d1caea3e6c387e9c1c382ca52088795242b6f566e7b9b"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d4-modification-choice-1920.png",
+      "bytes": 1622178,
+      "sha256": "3bc8b0e3f34ca0b1fd89fc977b4f8bfda4b9d314b283e38137f4a6d40f29591d"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d4-settlement-1280.png",
+      "bytes": 275967,
+      "sha256": "a156cc56bf3f609920027a74fe475fea30a5d29d4e3c6cf95afb3272c9bb0ab7"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d4-settlement-1920.png",
+      "bytes": 641738,
+      "sha256": "eab0aa67d19e87a9467eac1a23d56c5e6c199b2e8423bf3cd145c0ee26750b5a"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d5-intro-1280.png",
+      "bytes": 672106,
+      "sha256": "12440776d7912c987d2aa8944fec760e29194f5d46c6efb7e338cf7733ddfcef"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d5-intro-1920.png",
+      "bytes": 1373842,
+      "sha256": "45385eb2f48437c50be4cd0278e7d44d7e8685a8432b8799ffe4545191c24797"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d6-accepted-upgrade-1280.png",
+      "bytes": 1316535,
+      "sha256": "0b8d95188f32dd4244f617a7faf9ad0aeef520c2bf41e627976e7c6a9cf98a26"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d6-accepted-upgrade-1920.png",
+      "bytes": 2690693,
+      "sha256": "94009ffb15ba7e7b375522a25bae401c0e62d177ad60c632275055e7a85c28ac"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d6-purse-exit-zero-scrap-cancel-1280.png",
+      "bytes": 323355,
+      "sha256": "291d90fb6ae5b8a2ce224a3ce9e65cf3796d4955dfdf11cf034773a55c0993e7"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d6-purse-exit-zero-scrap-cancel-1920.png",
+      "bytes": 722877,
+      "sha256": "34a3f859c54f2db3385d46611e55ddeda2d264350d9844f61cdb316bedae1476"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d6-shop-before-upgrade-1280.png",
+      "bytes": 344123,
+      "sha256": "f2971c5b57b48e9e22c3f49d18fe47dd534d2b42815b3022f51cf7a2d6fed101"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d6-shop-before-upgrade-1920.png",
+      "bytes": 728234,
+      "sha256": "6bfdde61b8ab1a401b4bca7cf4c47f6758c1933e03d9ab5d15b0cd70abc29090"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d6-stall-already-upgraded-1280.png",
+      "bytes": 337405,
+      "sha256": "f342f91e75409e1470ee3f19b4f1d796f142302168707a8f0a3cc48ade156e3d"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d6-stall-already-upgraded-1920.png",
+      "bytes": 721751,
+      "sha256": "3774d876cfd3ee2a51580cd5a1f7353088dec1c032126f1d295754bf4b08aa9a"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d6-stall-already-upgraded-repair-1280.png",
+      "bytes": 328980,
+      "sha256": "66b336f7cbb4685a905e711cef029a12dcbc54f495ec4078987d75a9f942fba0"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d6-stall-already-upgraded-repair-1920.png",
+      "bytes": 712579,
+      "sha256": "fbe44a3be15991855c257639b75c63e63b1e03ad4f3e7e01ae046469daa4d209"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d6-stall-opening-1280.png",
+      "bytes": 340740,
+      "sha256": "c1bea090a3e55352f18541da022ec1890f76b17d9218456a2cc65a79560e58d5"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d6-stall-opening-1920.png",
+      "bytes": 720749,
+      "sha256": "b9a67aa3be28090ac8ab10607cd8f50bacd746fc18781526c08cb7eeece668df"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d6-stall-opening-repair-1280.png",
+      "bytes": 326446,
+      "sha256": "c2289507ec17c5f0c59f565795152449fc56efba7800e2d8f100efeae31a5225"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d6-stall-opening-repair-1920.png",
+      "bytes": 707205,
+      "sha256": "381d5b05aaa503c5296644b5102283e0568b6da91c9006fe95844e78c342bb12"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d8-modification-choice-1280.png",
+      "bytes": 746054,
+      "sha256": "c180ac8368c872bd73afdb026be094e8aff7acd03c64dfa4ade98eeaa87ebd05"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d8-modification-choice-1920.png",
+      "bytes": 1543851,
+      "sha256": "bc5e145cdd5991cf22db81979ceb75a967e68f42d1fbf6e916f800a3ea628e7e"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d8-settlement-1280.png",
+      "bytes": 291654,
+      "sha256": "c7de239bb7b599faef93b872f4d1edeaa9e09d4dadfd5bd54b3cce2b35384937"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d8-settlement-1920.png",
+      "bytes": 684919,
+      "sha256": "953a1d4d3043242a56cffa195aa97e2edf979dbe97fe80cba7088a60bb9361e7"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d9-accepted-upgrade-1280.png",
+      "bytes": 1323213,
+      "sha256": "a9a5656ea4b1c70fdb4ff57d3cc31ab48e8e7445c7bd0d95b7db7739a61f920c"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d9-accepted-upgrade-1920.png",
+      "bytes": 2702767,
+      "sha256": "0df355a2984dd24d54b6c27df0ffdf0b63a6604876807eeace066a8560f337ac"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d9-intro-1280.png",
+      "bytes": 668258,
+      "sha256": "801d6976c22ec1bf2b7442d6cb248c4f185b43b5e5d653c3529a763edbec131f"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d9-intro-1920.png",
+      "bytes": 1372888,
+      "sha256": "5b4a986f3d7360f4d90677f65f378ba2059bc72345f3bd900527a201664c2648"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d9-purse-exit-zero-scrap-cancel-1280.png",
+      "bytes": 334720,
+      "sha256": "b6635a036eab37bc99f2003612c90dbb793b260570f5b31c1bd2c75ceed3e360"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d9-purse-exit-zero-scrap-cancel-1920.png",
+      "bytes": 734761,
+      "sha256": "f309062972a369e5f40529a866196df7ef08180c078c8fbb9064d3e36f122ece"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d9-shop-before-upgrade-1280.png",
+      "bytes": 347824,
+      "sha256": "b7ec84223962773a94568e6a7d391fd007b21c0323cc7beb21417f2449786fd0"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d9-shop-before-upgrade-1920.png",
+      "bytes": 733786,
+      "sha256": "3664471f1dbf82dd0db6dd274ab8539d6b910a168c4e91584419dd698c2ea9b4"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d9-stall-already-upgraded-1280.png",
+      "bytes": 340495,
+      "sha256": "e7f2d662b99a03e7562cd9db6e3d8f349c7db082a0e77a1fd263917d556ee47c"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d9-stall-already-upgraded-1920.png",
+      "bytes": 726664,
+      "sha256": "dd42c26b5f7e62dc36af8eea4506b1236d084c23496db6918a6bb2f3aa9675df"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d9-stall-already-upgraded-repair-1280.png",
+      "bytes": 331684,
+      "sha256": "f8b710568b7fe920669ec64edfb1d9dc1032f70c9c5cf31e932eae05ff4732a2"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d9-stall-already-upgraded-repair-1920.png",
+      "bytes": 716818,
+      "sha256": "282f1cdd1dae9b1b7cfe0b94e504583c9f124ee07883b8818af6a9c39a37ffa3"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d9-stall-opening-1280.png",
+      "bytes": 339491,
+      "sha256": "34c3e816898f8eb02290fcf57bb093f6b28455fa2fe374d9489c3962eb40ebcc"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d9-stall-opening-1920.png",
+      "bytes": 722128,
+      "sha256": "2bfde3cd035e2d113f1c9b878f0ee343907c1e10556de1280a7f9ca8319bae87"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d9-stall-opening-repair-1280.png",
+      "bytes": 331207,
+      "sha256": "34ed42982797d93aadc6b069e40255e44751f66c974936dd148953fd5d63a09f"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/d9-stall-opening-repair-1920.png",
+      "bytes": 713909,
+      "sha256": "ce5bf94cdf84be0bd3502b8ef6cd03b924a0be949444f36120d58e3c6076df38"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/full-loop-victory-1280.png",
+      "bytes": 745997,
+      "sha256": "b1c715e6eb82f58da0f2998688feaba2d9d4396fa6d503d1b8ed40a86ffb2673"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/full-loop-victory-1920.png",
+      "bytes": 1509683,
+      "sha256": "d8349daa27282d5c2e8ef7423901215705a6c905bf0a5dbd9d78a72f10f75ed3"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/warm-rack-candidate-preview-1280.png",
+      "bytes": 276782,
+      "sha256": "0031145c60caa7aa75b2314042882f67527524ab2a8362f2982fdf5f55039ecf"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/run-01/warm-rack-candidate-preview-1920.png",
+      "bytes": 662758,
+      "sha256": "d78f66ac65b2eeb68fb9a2e20a2a7d909bdee886d7e7a2fb6ba2b1bf29e30ed3"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/trade-final-01/specific-sword-trade/accepted-trade-factual-prop-1280.png",
+      "bytes": 1323615,
+      "sha256": "3bde33e22c06314517749979167c6d23401db5b963d4a675a5300ed4e638f3d6"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/trade-final-01/specific-sword-trade/accepted-trade-factual-prop-1920.png",
+      "bytes": 2686523,
+      "sha256": "f525a2f9e01a9f9182b39d0a29943db1e9dfca06b63c43c509cfa25a013ce25b"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/trade-final-01/specific-sword-trade/formed-sword-opportunity-comparison-1280.png",
+      "bytes": 371845,
+      "sha256": "b13ad98e290cff56662b529641b1f5652b6e15d855fc1a3e67cb6e456725622a"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/trade-final-01/specific-sword-trade/formed-sword-opportunity-comparison-1920.png",
+      "bytes": 740357,
+      "sha256": "1f05b034ce4edd96c317f83022d97fffa479f1e007210629c44f48198b18297c"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/trade-final-01/specific-sword-trade/raw-sword-choices-1280.png",
+      "bytes": 368532,
+      "sha256": "001afbd9a642d8542ca1b0be19aade5c102f6fba8ffa085edfd400de2a83cf19"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/trade-final-01/specific-sword-trade/raw-sword-choices-1920.png",
+      "bytes": 737328,
+      "sha256": "6ddba92c2b53d74c0da2a9da0945a6b14df489095cad353dacf27e32b2e9db0a"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/trade-final-01/specific-sword-trade/specific-trade-confirmation-1280.png",
+      "bytes": 283854,
+      "sha256": "f82cf340bd5b8dd9d97a31f8a4a01a0d1eb904fb7824967571f63eafbc86c929"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/trade-final-01/specific-sword-trade/specific-trade-confirmation-1920.png",
+      "bytes": 653387,
+      "sha256": "4c987547dfdede136d41e828de1bf43ecc96cf07e238b1b81fd7982986cf52de"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/windows-01/credit-real-first-crack/credit-accepted-waiting-1280.png",
+      "bytes": 1314204,
+      "sha256": "a5bbd99d8d1e1fd257d9745c1bda54489d5661fa661a1ce26d07217712893011"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/windows-01/credit-real-first-crack/credit-accepted-waiting-1920.png",
+      "bytes": 2675099,
+      "sha256": "8bd25dcbcd348305c3176274f4f966e2be4831c6f995ae7b2b3784a6b8cef861"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/windows-01/credit-real-first-crack/credit-actually-consumed-with-crack-1280.png",
+      "bytes": 1341891,
+      "sha256": "34fb11a74e9ab054ebcb2af9183a69ae05b56e1d351ad2d4d77ad5c6a68cc517"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/windows-01/credit-real-first-crack/credit-actually-consumed-with-crack-1920.png",
+      "bytes": 2732497,
+      "sha256": "bdc4ee1f7814a4e70b4f2de6bfd040693eea704d1470b2a4b0ed6fe99ead0aa3"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/windows-01/day-nine-unaffordable-benefit/unaffordable-benefit-kept-1280.png",
+      "bytes": 339359,
+      "sha256": "5db6c708f1acb643ef4d93e4a6555416b98b0b44a89190c23fba44330b7b0488"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/windows-01/day-nine-unaffordable-benefit/unaffordable-benefit-kept-1920.png",
+      "bytes": 723220,
+      "sha256": "66f78d0925eeb74ad4bed9c69443a09a5d2f41b18dcd8e1987e70e6312dfbcd4"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/windows-01/day-six-cash-shortfall/d6-shop-before-upgrade-1280.png",
+      "bytes": 345057,
+      "sha256": "f4d41e4889b22a5b53aaa685606349857099c883bd47c09b61056c24f1330e11"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/windows-01/day-six-cash-shortfall/d6-shop-before-upgrade-1920.png",
+      "bytes": 728802,
+      "sha256": "7faf2f0193fc01cd7a86b24a936245a714afe63f22842824d85f00f6d595d2a0"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/windows-01/day-six-cash-shortfall/real-two-seal-shortfall-1280.png",
+      "bytes": 326494,
+      "sha256": "6d94c86641bfdb31c20a5549db34faaa5f670475028a91c774fb966e1861dd32"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/windows-01/day-six-cash-shortfall/real-two-seal-shortfall-1920.png",
+      "bytes": 709726,
+      "sha256": "c45d8a58c81d090a78e512f696fc8e0b60b32beed1074711607b3f823cd567e8"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/windows-01/reduced-loan-pending-prop/reduced-loan-factual-pending-1280.png",
+      "bytes": 1322288,
+      "sha256": "ee286779854186a45ab163644587ef1fda4fc1377a5c1b7a1ea2501adc95d5b0"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/windows-01/reduced-loan-pending-prop/reduced-loan-factual-pending-1920.png",
+      "bytes": 2682073,
+      "sha256": "4c62dfe75bd38b1b11fbd835a4ab755bc857801949321ab5e4369e850a824119"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/windows-01/specific-sword-trade/accepted-trade-factual-prop-1280.png",
+      "bytes": 1321730,
+      "sha256": "d733edbfbce6fa338a801dad194b269fabe6421f4910709499f5895845da9589"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/windows-01/specific-sword-trade/accepted-trade-factual-prop-1920.png",
+      "bytes": 2684727,
+      "sha256": "52c4fae8a9b0a5e8268b6485fcac4c8ca92b2e8cb952d70190351d550a011c0d"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/windows-01/specific-sword-trade/formed-sword-opportunity-comparison-1280.png",
+      "bytes": 371755,
+      "sha256": "bd39498836a1ea1b6e0657a8761bacbbd3f7ef31be6ca2feac942f685570915f"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/windows-01/specific-sword-trade/formed-sword-opportunity-comparison-1920.png",
+      "bytes": 740242,
+      "sha256": "e4cadf9e91bc122660402fce72532d274ac2823c4029f6a2fb993976f854dc48"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/windows-01/specific-sword-trade/raw-sword-choices-1280.png",
+      "bytes": 368532,
+      "sha256": "001afbd9a642d8542ca1b0be19aade5c102f6fba8ffa085edfd400de2a83cf19"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/windows-01/specific-sword-trade/raw-sword-choices-1920.png",
+      "bytes": 737328,
+      "sha256": "6ddba92c2b53d74c0da2a9da0945a6b14df489095cad353dacf27e32b2e9db0a"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/windows-01/specific-sword-trade/specific-trade-confirmation-1280.png",
+      "bytes": 283690,
+      "sha256": "6de665b064bbde4eee0256e8399f3b6b90c11f31f6089da8077c38ead05f5c4d"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/windows-01/specific-sword-trade/specific-trade-confirmation-1920.png",
+      "bytes": 653209,
+      "sha256": "57f265add6f1074d4ef6d6706ef6c37a6cd950317942767f097fcd095be1d017"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/windows-01/warm-rack-packing/actual-packed-sword-1280.png",
+      "bytes": 1314897,
+      "sha256": "f4b2e6f4d996d260fe66a73e64740886deb61ef830e0f205aa3b9febc650a037"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/windows-01/warm-rack-packing/actual-packed-sword-1920.png",
+      "bytes": 2661043,
+      "sha256": "a472974e22ba39be4dc0a5c24a119403cad1d0aca2047bc46cc9a0a04825f827"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/windows-01/warm-rack-packing/unreserved-candidate-warming-canvas-1280.png",
+      "bytes": 280432,
+      "sha256": "c3431ca8957c6ba4c5f961ed0decaab8d7cb4f6b8e6552bd189cd0203761fab1"
+    },
+    {
+      "path": "tmp/T11-4-2-3l5/ui/windows-01/warm-rack-packing/unreserved-candidate-warming-canvas-1920.png",
+      "bytes": 666187,
+      "sha256": "31cdea4d8a5521091538a2c1142330aac37003abf00f59100b4587b57ad3e586"
+    }
+  ],
+  "producerOriginalRoot": "tmp/T11-4-2-3l5",
+  "producerNote": "Original scripts retain tmp working paths/imports. Restore archive-map original locations by identity or gzip decode to reproduce. Original local PNGs retained. Archived consumed source variants checked against corresponding source manifests. No injected wallet/false full games.",
+  "goalComplete": false,
+  "humanFunAcceptance": false,
+  "nextTask": "goal-2/T04 / originalT12 final whole-goal review and human H",
+  "payload": [
+    {
+      "path": "docs/evidence/T11-4-2-3l5/archive-map.json",
+      "bytes": 34612,
+      "sha256": "f5b8b9b08a84de4efae6c0f72460ec10492fb59cfc036e50be898cc333b47fb0"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/before-build.json",
+      "bytes": 2772,
+      "sha256": "7abf29eab964cd495043931596e25f1de3d860d99dfe7a028d765b541ec5c464"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/build.json",
+      "bytes": 16606,
+      "sha256": "cab85a88bb60903de3a0d47121c2cae373ec48719dc46fd0b4679bc0dd1f35dd"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/build.log.gz",
+      "bytes": 833,
+      "sha256": "c819840d343115a85cb2ab844bda9f162fb1e3e370e1444c768d515a5e194a5d"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/initial-before-build.json",
+      "bytes": 2772,
+      "sha256": "7abf29eab964cd495043931596e25f1de3d860d99dfe7a028d765b541ec5c464"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/initial-build.json",
+      "bytes": 13759,
+      "sha256": "48a340b3ffd893c5e94caa59b0451c551155eac8a0a1cc19e378f72a22aee264"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/initial-build.log.gz",
+      "bytes": 833,
+      "sha256": "c97c3799fe40c10be8e218678f20cf38787e4027034dbd879dc4a6c09694c54a"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/main-consumed-app.ts",
+      "bytes": 88922,
+      "sha256": "4a0511151ee2178ba6e6bfb34d5282b3d6cd387f2f405b7047fe50421e8055ba"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/main-consumed-build.json",
+      "bytes": 16562,
+      "sha256": "6016a9fa11485a6f2a115297d9b486d4c62adbfdcac21bf25e522bd44d4b4d06"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/main-consumed-build.log.gz",
+      "bytes": 835,
+      "sha256": "1b94d5d679c33a73b66f17fd2bc32e862001011561323e92f35ca351840e8ab0"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/preserved.json",
+      "bytes": 416,
+      "sha256": "d08c324555c84e5925af4a1684552b7575207ac1ac950cc714244db0e1345261"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/publish.mjs",
+      "bytes": 2838,
+      "sha256": "a8fd7e2a8979a83b9b8d56a2abbcfb901894853130f3ca5a02f6bd59dd534877"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/published.json",
+      "bytes": 27048,
+      "sha256": "22c42390cb1e303db6e355e6f8b19fb906c66317299be5776fec39fda1e46a83"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/replay.json",
+      "bytes": 107563,
+      "sha256": "27805bca8f7a57838caa5ca06980fa52f3640d8c7f8e6214abcdf2b9ceec7f8e"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/replay.mjs",
+      "bytes": 6241,
+      "sha256": "780fabab9f45d62217ac1195e8b4a78fcf5ab5b95ea2faf088f2187b7ca58786"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/review.md",
+      "bytes": 6787,
+      "sha256": "7899dd6d2777d25661234fc084c15952612edfa08c335c1bcbaa3099efed30e8"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/snapshot.json",
+      "bytes": 14015,
+      "sha256": "73dead535216241dc8a66995792fcbffaa7022ed1d70db00dc341bec183ab427"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/README.md",
+      "bytes": 5076,
+      "sha256": "062dceae8dbc91e1fa2ba6040478aba75aaa56238788e0bf18d7f1527288a70c"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/collect-meta.mjs",
+      "bytes": 4280,
+      "sha256": "f9908f017f694ec8e4c47226b4a15b27810a9ce4f46b20f3c02ffcaa54697e7b"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/geometry-summary.json",
+      "bytes": 2799,
+      "sha256": "1b232253a67436c1f2a55e6b916a054aa438c8d4304b57a54ed3f1ae548217b8"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/helpers.mjs",
+      "bytes": 10434,
+      "sha256": "7fced950460a84e7864c66bd86fc0c91c6130db956eaf2827054f8ab6a3eda2c"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/main-inputs.json",
+      "bytes": 602,
+      "sha256": "1e1e0dc254ea1b4e314a8541cd5aa577c33d57352d39dc6485cee5232af7fbf1"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/metadata-attempt-01.json",
+      "bytes": 440,
+      "sha256": "a4cfc6f1578d13e120e93810ccb3a208de1cf762cb891a3fe149f887abba0fbd"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/play.mjs",
+      "bytes": 5540,
+      "sha256": "3f0cd2b6a071fbb0a27570d95e6ea9d079530bb4fd8d336b0880d72af9adc9ca"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/run-01/actions.json",
+      "bytes": 76741,
+      "sha256": "a14d3fa1211f79dc0db5cd38fbe80ecc4bf2e091e2d506ad9cd5aed56fa61c4d"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/run-01/captures.json",
+      "bytes": 328458,
+      "sha256": "1a1fc6636aff01580e37cf83985fb1d4cb97defdeea3e92b467894615d34a5c1"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/run-01/d3-stall-opening-1280.png",
+      "bytes": 337012,
+      "sha256": "77c0332297e965d15712153c77db15b0790dcc347b86e3d157519c20a3d57a53"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/run-01/d9-accepted-upgrade-1280.png",
+      "bytes": 1323213,
+      "sha256": "a9a5656ea4b1c70fdb4ff57d3cc31ab48e8e7445c7bd0d95b7db7739a61f920c"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/run-01/d9-stall-opening-1280.png",
+      "bytes": 339491,
+      "sha256": "34c3e816898f8eb02290fcf57bb093f6b28455fa2fe374d9489c3962eb40ebcc"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/run-01/result.json",
+      "bytes": 6781,
+      "sha256": "d2b6c1b01cbb7f269e4c13d24f526c65c0265b92dadf99ed02128bc056387186"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/run-01/states.json.gz",
+      "bytes": 372671,
+      "sha256": "a97999efb8647e504fe0aa25fa1e6fa603fe72d3a59039e4dd0f2fa6a371a4c9"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/run-01/warm-rack-candidate-preview-1280.png",
+      "bytes": 276782,
+      "sha256": "0031145c60caa7aa75b2314042882f67527524ab2a8362f2982fdf5f55039ecf"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/run-meta.json",
+      "bytes": 5816,
+      "sha256": "1b53e013ac9c21be9f833e25b8517099953849d48bb3fee1d6026b802e209c34"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/trade-final-01/specific-sword-trade/accepted-trade-factual-prop-1280.png",
+      "bytes": 1323615,
+      "sha256": "3bde33e22c06314517749979167c6d23401db5b963d4a675a5300ed4e638f3d6"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/trade-final-01/specific-sword-trade/actions.json",
+      "bytes": 1562,
+      "sha256": "e6670a1900a5e8e7407aebabc35e9c33e18459633a052eb3e9de459090fcaeeb"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/trade-final-01/specific-sword-trade/captures.json",
+      "bytes": 48943,
+      "sha256": "71583edae3371dae0b90314f966609ff117b997e63fe2e5af0cecf3ff4a610bc"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/trade-final-01/specific-sword-trade/formed-sword-opportunity-comparison-1280.png",
+      "bytes": 371845,
+      "sha256": "b13ad98e290cff56662b529641b1f5652b6e15d855fc1a3e67cb6e456725622a"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/trade-final-01/specific-sword-trade/result.json",
+      "bytes": 565,
+      "sha256": "83409417400b9661fcd7b60cabaf2e78152317e78ca6050bbee7249c264586a6"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/trade-final-01/specific-sword-trade/states.json.gz",
+      "bytes": 3212,
+      "sha256": "143329d4e2d89a6aad98a6cc65900109177335f1803ec1e4698972affe8d9b75"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/trade-final-01/summary.json",
+      "bytes": 273,
+      "sha256": "8acd673e47090d2ba027033c358f8c9117aae5c3d411661d1496cc4b98d24abf"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/trade-final-inputs.json",
+      "bytes": 773,
+      "sha256": "7ffb2fb8f3e87cc036d16f8fbd80ecb919de0ec2ac3d4d892c06f28e85de101c"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/trade-final.mjs",
+      "bytes": 6276,
+      "sha256": "229080e35a4da79f46f480c2d02773e56307ee9009e67244a292e9ea085c81d3"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/credit-real-first-crack/actions.json",
+      "bytes": 5520,
+      "sha256": "41b505016e3e43f5263cbec5869afbfd38359fc3a1f2056c107813a1b0568e6a"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/credit-real-first-crack/captures.json",
+      "bytes": 12322,
+      "sha256": "74993b5d5c9e149c0de8e2a2525acd14ee08051f4a648f0d37edca667efaa27b"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/credit-real-first-crack/credit-actually-consumed-with-crack-1280.png",
+      "bytes": 1341891,
+      "sha256": "34fb11a74e9ab054ebcb2af9183a69ae05b56e1d351ad2d4d77ad5c6a68cc517"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/credit-real-first-crack/result.json",
+      "bytes": 635,
+      "sha256": "0dcb9d68a5493c1d2bc47747f64f135237196b4b334eace421b23117ae4caf7f"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/credit-real-first-crack/states.json.gz",
+      "bytes": 33408,
+      "sha256": "4f9179ebb101decb0ed54dc5c758654a4921d1004384db5bb0b581a45358b3d2"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/day-nine-unaffordable-benefit/captures.json",
+      "bytes": 13302,
+      "sha256": "9bfde172aa6ec12e18e9c2303cc505da9e3801f02bb2f9f3435af3c9afd54f73"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/day-nine-unaffordable-benefit/result.json",
+      "bytes": 456,
+      "sha256": "8cd1dae3af1808f3d27adcc6fc81e62268cb7d94c9779526354f6ef676007efd"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/day-nine-unaffordable-benefit/states.json.gz",
+      "bytes": 4425,
+      "sha256": "e399265263f60f90e3b5aba9418afdea263047412784c0a71cd697f0f888f843"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/day-six-cash-shortfall/actions.json",
+      "bytes": 6574,
+      "sha256": "80f33e5e08d264e5b42d9114e4e0a1d659ba7c2b0cef1b376621350707612d51"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/day-six-cash-shortfall/captures.json",
+      "bytes": 24374,
+      "sha256": "d4ef15f0f6f7c469aa19258f0b5ae9bb2bfc305d9139e49bbd66c582b670e3d9"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/day-six-cash-shortfall/real-two-seal-shortfall-1280.png",
+      "bytes": 326494,
+      "sha256": "6d94c86641bfdb31c20a5549db34faaa5f670475028a91c774fb966e1861dd32"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/day-six-cash-shortfall/result.json",
+      "bytes": 817,
+      "sha256": "2d1dab8ec3ba5a64dba76f92938acab3095061b6322e037771189bcb4d156eb9"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/day-six-cash-shortfall/states.json.gz",
+      "bytes": 7807,
+      "sha256": "d560354acae0ac8f0fc0e8b510f57fa56ab8f649bc71994c7517fa7568f1993d"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/reduced-loan-pending-prop/actions.json",
+      "bytes": 432,
+      "sha256": "c29ad89ede7f1a4b9846c481b0138b33dc14f7f2a813c4920b40aaa8d9dc46fb"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/reduced-loan-pending-prop/captures.json",
+      "bytes": 6981,
+      "sha256": "db1d97004d4ca5b05518c018b50711b18b177761f6a68ce19f668fc87ede9584"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/reduced-loan-pending-prop/reduced-loan-factual-pending-1280.png",
+      "bytes": 1322288,
+      "sha256": "ee286779854186a45ab163644587ef1fda4fc1377a5c1b7a1ea2501adc95d5b0"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/reduced-loan-pending-prop/result.json",
+      "bytes": 449,
+      "sha256": "f538b4d0f33d333c366d7fa57853bc01f8fae03bd6e0aead106ee5f7d6d64128"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/reduced-loan-pending-prop/states.json.gz",
+      "bytes": 8327,
+      "sha256": "c5512ede6138bf64982432074e46e8e132a0b4156db70fc0d45d192a50cf4e90"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/specific-sword-trade/actions.json",
+      "bytes": 1562,
+      "sha256": "e6670a1900a5e8e7407aebabc35e9c33e18459633a052eb3e9de459090fcaeeb"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/specific-sword-trade/captures.json",
+      "bytes": 48943,
+      "sha256": "291f26e699b52f06064b61e7cbd1df5136520b87bb03930c3759b343afebd890"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/specific-sword-trade/result.json",
+      "bytes": 565,
+      "sha256": "83409417400b9661fcd7b60cabaf2e78152317e78ca6050bbee7249c264586a6"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/specific-sword-trade/states.json.gz",
+      "bytes": 3219,
+      "sha256": "cfee6f5513b11abb56bc4fde198c03110cb6b99c5a63b02047de976f81aec737"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/summary.json",
+      "bytes": 815,
+      "sha256": "e93716c4e2c47897638454cb1d45a95c74cef431d3bc67eb06e9a0be7cb29a8e"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/warm-rack-packing/actions.json",
+      "bytes": 324,
+      "sha256": "20550944f6ca386e4289d6e52d0248dbd78ab06dc0accb375aa489768fc37af7"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/warm-rack-packing/captures.json",
+      "bytes": 18229,
+      "sha256": "93a270f7b138821b4c1275b57c353d4544ecf5807cd0c04fba25335ca8027f9a"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/warm-rack-packing/result.json",
+      "bytes": 1415,
+      "sha256": "86e8f9b9665d607f0256e4d16628e5c69cb9acea6ab504f7a94ed53b355b3f17"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/warm-rack-packing/states.json.gz",
+      "bytes": 3534,
+      "sha256": "963fbe8ba0ea86dd438bd988a0ae5ec0f28478965cc6272e82a340389107e46b"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/warm-rack-packing/unreserved-candidate-warming-canvas-1280.png",
+      "bytes": 280432,
+      "sha256": "c3431ca8957c6ba4c5f961ed0decaab8d7cb4f6b8e6552bd189cd0203761fab1"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/warm-rack-packing/unreserved-candidate-warming-canvas-1920.png",
+      "bytes": 666187,
+      "sha256": "31cdea4d8a5521091538a2c1142330aac37003abf00f59100b4587b57ad3e586"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-inputs.json",
+      "bytes": 771,
+      "sha256": "cc22883c0bd208bbd1e37e82520651e23376b4959501a0fe7faa45e73d1a1173"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows.mjs",
+      "bytes": 11538,
+      "sha256": "00d34f5b49d74780369d8ad6187269075c0f189dce59e060879e313ab736eee6"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/windows-consumed-app.ts",
+      "bytes": 88940,
+      "sha256": "61eea8d6d7c30bccc504bf14ac28d196f827131b416c09384aab61e4dd62774a"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/windows-consumed-build.json",
+      "bytes": 16573,
+      "sha256": "1a31162645100cc2945d1bd92f71ca86bbc440b0367d26895a781de2e2f53936"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/windows-consumed-build.log.gz",
+      "bytes": 834,
+      "sha256": "5f2eeb0e009f006a36de8d31d9875df13f899210f18b7137d20f0d600ea572a3"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/windows-consumed-growth-options.ts",
+      "bytes": 10225,
+      "sha256": "67ec7fc58e4a5ed03a1dcb0b1ba537c7ac0a9e667566fa5e378fad689608f50d"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/windows-consumed-market-stall.ts",
+      "bytes": 11197,
+      "sha256": "692ada840c92b197a51504e3aec5e1b61abefe7498928ea32baecb837e1879f9"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/windows-consumed-story.ts",
+      "bytes": 5807,
+      "sha256": "4b5b6c7d6d0448f368b41e09f8f56a3b47b9ed2b8408c3d2ae187db7d5ac4ef6"
+    }
+  ]
+}

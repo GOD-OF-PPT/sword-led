@@ -1,0 +1,87 @@
+[
+  {
+    "index": 0,
+    "day": 3,
+    "action": {
+      "type": "strike",
+      "pieceId": "d3-3"
+    },
+    "accepted": true,
+    "revision": 14,
+    "coinsBefore": 263,
+    "coinsAfter": 263,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d3-3",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 40,
+            "after": 62,
+            "level": 1,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "index": 1,
+    "day": 3,
+    "action": {
+      "type": "strike",
+      "pieceId": "d3-3"
+    },
+    "accepted": true,
+    "revision": 15,
+    "coinsBefore": 263,
+    "coinsAfter": 263,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d3-3",
+        "burst": false,
+        "hits": [
+          {
+            "result": "great",
+            "before": 62,
+            "after": 130,
+            "level": 3,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "index": 2,
+    "day": 3,
+    "action": {
+      "type": "buy",
+      "pieceId": "d3-3",
+      "traitId": "echo"
+    },
+    "accepted": true,
+    "revision": 16,
+    "coinsBefore": 263,
+    "coinsAfter": 263,
+    "events": [
+      {
+        "type": "Disposed",
+        "pieceId": "d3-3",
+        "disposition": "traded",
+        "amount": 0,
+        "marketRemaining": 60
+      },
+      {
+        "type": "Trait",
+        "traitId": "echo",
+        "compensation": 0
+      }
+    ]
+  }
+]

@@ -1,0 +1,23 @@
+/* Decisions stay around the actual paper, rack and merchant's counter. */
+.v5-app .v5-arrange-link { width: 100%; min-height: 44px; margin-top: 4px; padding: 5px 8px; color: #f7dfa7; border: 1px dashed #b89c62; background: #122f32e8; font: 15px/1.3 var(--v4-display); }
+.v5-app .v5-carry-plan details > summary { min-height: 44px; padding-block: 10px; cursor: pointer; }
+.v5-app .v5-carry-choices { display: flex; flex-wrap: wrap; align-items: stretch; gap: 8px; margin: 12px 0; }
+.v5-app .v5-carry-choices button { flex: 1 1 150px; min-height: 58px; }
+.v5-app .v5-carry-choices canvas { display: block; width: 132px; height: 48px; margin: 0 auto; }
+.v5-app .v5-carry-choices [aria-pressed=true] { outline: 2px solid #72512b; outline-offset: 2px; background: #c9ad74 !important; }
+.v5-app .v5-carry-preview { border-top: 1px dashed #886844; padding-top: 12px; }
+.v5-app .v5-packing-slots { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin: 10px 0; }
+.v5-app .v5-packing-slots > div { display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 112px; padding: 9px; background: #6e542211; border-block: 1px solid #8e73467a; }
+.v5-app .v5-packing-slots canvas { width: min(160px,100%); height: auto; }
+.v5-app .v5-new-blank::before { content: ''; display: block; width: 72%; height: 16px; margin: 15px 0; background: linear-gradient(175deg,#a1a19b,#3b4850 45%,#172e36 55%,#8c908e); border: 1px solid #334047; transform: skewX(-12deg); }
+.v5-app .v5-packing-slots span { margin-top: 3px; font-variant-numeric: tabular-nums; }
+.v5-app .v5-arrange > canvas { display: block; width: 210px; height: 77px; margin-inline: auto; }
+.v5-app .v4-furnishings [data-pending=true] { border-bottom-style: dashed; color: #e8c678; }
+.v5-app .v4-furnishings [data-effect] { font-size: 11px; }
+@media (max-width:1599px) {
+  .v5-app .v5-packing-slots { gap: 6px; }
+  .v5-app .v5-packing-slots > div { min-height: 94px; font-size: 13px; }
+  .v5-app .v4-furnishings { gap: 5px; }
+  .v5-app .v4-furnishings [data-effect] { width: 62px; min-height: 64px; }
+  .v5-app .v4-furnishings [data-effect] canvas { width: 48px; height: 48px; }
+}

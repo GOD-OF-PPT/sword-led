@@ -1,0 +1,72 @@
+/* A single object on the trader's cloth, with the offered sword beside it. */
+.v5-market-stall { --stall-green: #263f38; --stall-ink: #503b27; --stall-gold: #a78347; color: var(--stall-ink); font-variant-numeric: tabular-nums; }
+.v5-stall-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin: -3px 0 15px; }
+.v5-stall-heading > div > b { font: 23px/1.4 var(--v4-display); letter-spacing: 3px; }
+.v5-stall-heading p { margin: 3px 0 0; font-size: 13px; line-height: 1.6; }
+.v5-stall-purse { flex: 0 0 auto; display: flex; align-items: baseline; gap: 7px; padding: 6px 11px; border-bottom: 2px solid #a7834770; white-space: nowrap; }
+.v5-stall-purse strong { color: #60451f; font: 29px/1.1 var(--v4-display); }
+.v5-stall-purse small { color: #765a36; }
+.v5-stall-goods { display: flex; align-items: stretch; gap: 9px; padding: 10px 12px 12px; background: radial-gradient(ellipse at 50% 0, #48665b55, transparent 85%), var(--stall-green); border-block: 2px solid #907341; box-shadow: inset 0 -4px #112a2355; }
+#v4-dialog-body .v5-stall-good { flex: 1; min-width: 0; min-height: 102px; display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 9px 9px; border: 1px solid transparent; color: #e8d5ab; background: transparent; box-shadow: none; }
+#v4-dialog-body .v5-stall-good:hover:enabled { color: #ffebbc; background: #ae8c4530; border-color: #c9ab6f80; }
+#v4-dialog-body .v5-stall-good[aria-pressed=true] { border-color: #e6bd71; background: #b18c3a30; box-shadow: inset 0 0 0 1px #e2bb6740, 0 3px 7px #071b1a44; }
+.v5-stall-good b { font: 18px/1.4 var(--v4-display); }
+.v5-stall-good small { color: #e0c99b; font: 12px/1.5 "PingFang SC", "Microsoft YaHei", sans-serif; }
+.v5-market-stall .v3-trait-art { display: block; width: 58px; height: 58px; flex: 0 0 auto; margin: 0; background-image: url('/assets/d/trait-props-v1.webp'); background-size: 300% 200%; background-repeat: no-repeat; filter: drop-shadow(0 4px 3px #091b1a80); }
+.v5-stall-main { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 22px; padding-top: 18px; }
+.v5-stall-detail { min-width: 0; }
+.v5-stall-hero { display: flex; align-items: center; gap: 14px; margin-bottom: 13px; }
+.v5-stall-hero-art { flex: 0 0 88px; display: grid; place-items: center; min-height: 84px; background: radial-gradient(ellipse, #9b74432d, transparent 72%); }
+.v5-market-stall .v5-stall-hero-art .v3-trait-art { width: 83px; height: 83px; }
+.v5-stall-hero small { font-size: 12px; color: #796044; }
+#v4-dialog-body .v5-stall-hero h3 { margin: 2px 0 4px; font-size: 24px; }
+.v5-stall-rule { margin: 0; font-size: 13px; line-height: 1.7; }
+.v5-stall-purpose { display: block; color: #345441; font-size: 14px; line-height: 1.65; }
+.v5-stall-purpose-copy { margin: 5px 0 0; font-size: 13px; line-height: 1.7; }
+.v5-stall-cost { margin: 12px 0 7px; font-size: 13px; line-height: 1.6; color: #704523; }
+#v4-dialog-body .v5-stall-purchase { width: 100%; min-height: 46px; font-size: 19px; }
+.v5-stall-reason { margin: 6px 0 0; color: #725234; font-size: 12px; line-height: 1.7; }
+.v5-stall-rules { margin-top: 4px; }
+.v5-stall-rules summary { min-height: 44px; padding: 10px 0; cursor: pointer; font-size: 13px; color: #5a6548; }
+.v5-stall-rules p { margin: 0 0 8px; font-size: 12px; line-height: 1.8; }
+.v5-stall-payment { min-width: 0; padding-left: 20px; border-left: 1px dashed #9b7c4966; }
+#v4-dialog-body .v5-stall-payment h3 { margin: 0 0 9px; font-size: 20px; }
+.v5-stall-sword-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+#v4-dialog-body .v5-stall-sword { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-width: 0; min-height: 104px; padding: 7px 5px; background: #f6e2b855; border: 1px solid #a3824b55; box-shadow: none; }
+#v4-dialog-body .v5-stall-sword[aria-pressed=true] { border-color: #8c6232; background: #b7924d26; box-shadow: inset 0 0 0 1px #9c763f55; }
+.v5-stall-sword .v4-blade-thumb { display: block; width: 100%; height: auto; aspect-ratio: 30/11; margin: 0; }
+.v5-stall-sword b { font: 14px/1.5 var(--v4-display); text-align: center; }
+.v5-stall-sword small { font-size: 12px; line-height: 1.5; }
+.v5-stall-trade-reason { margin: 11px 0 0; font-size: 13px; line-height: 1.7; font-weight: 600; }
+.v5-stall-opportunities { margin: 8px 0 0; padding-left: 18px; color: #685035; font-size: 12px; line-height: 1.8; }
+.v5-stall-opportunities li + li { margin-top: 5px; }
+.v5-stall-cash-payment { padding: 18px 15px; border-bottom: 2px solid #b69152; background: #fff0c833; }
+.v5-stall-cash-payment > p { margin: 6px 0 0; }
+.v5-stall-cash-after { color: #345441; font: 24px/1.5 var(--v4-display); }
+.v5-stall-cash-note { color: #765c3c; font-size: 12px; line-height: 1.8; }
+.v5-stall-footnote { margin: 11px 0 0; padding-top: 8px; border-top: 1px solid #9b7c493d; font-size: 12px; color: #796247; line-height: 1.7; }
+.v5-stall-cash-art { position: relative; display: block; width: 64px; height: 58px; flex: 0 0 auto; filter: drop-shadow(0 4px 3px #071b1a60); }
+.v5-stall-upgrade i { position: absolute; left: 7px; top: 20px; width: 45px; height: 25px; background: url('/assets/d/metal-atlas-v1.webp') 0 40% / 300% 170%; clip-path: polygon(18% 0, 100% 0, 81% 100%, 0 100%); box-shadow: inset 0 3px #b4b5a980, inset 0 -5px #0e2423a3; transform: rotate(-9deg); }
+.v5-stall-upgrade i:nth-child(2) { left: 14px; top: 10px; transform: rotate(7deg); }
+.v5-stall-upgrade i:nth-child(3) { left: 3px; top: 27px; transform: rotate(3deg); }
+.v5-stall-repair { display: flex; align-items: center; justify-content: center; gap: 4px; }
+.v5-stall-repair i { display: grid; place-items: center; width: 25px; height: 32px; color: #e6c694; border: 2px solid #bb7f49; background: #923d2c; box-shadow: inset 0 0 0 1px #b56e46; font: 20px/1 var(--v4-display); font-style: normal; transform: rotate(-9deg); }
+.v5-stall-repair i:nth-child(2) { margin-top: -14px; transform: rotate(8deg); }
+.v5-stall-repair i:nth-child(3) { margin-left: -26px; margin-top: 27px; transform: rotate(3deg); }
+.v5-market-stall button:focus-visible, .v5-market-stall summary:focus-visible { outline: 2px solid #6e5328; outline-offset: 3px; }
+#v4-dialog-body .v5-stall-good:focus-visible { outline-color: #f0d399; }
+@media (max-height: 780px) {
+  .v5-stall-heading { margin-bottom: 10px; }
+  .v5-stall-goods { padding: 7px 9px 9px; }
+  #v4-dialog-body .v5-stall-good { min-height: 89px; padding: 4px 7px 6px; }
+  .v5-market-stall .v5-stall-good .v3-trait-art { width: 46px; height: 46px; }
+  .v5-stall-good .v5-stall-cash-art { height: 46px; }
+  .v5-stall-main { gap: 17px; padding-top: 13px; }
+  .v5-stall-payment { padding-left: 15px; }
+  .v5-stall-hero { gap: 9px; margin-bottom: 9px; }
+  .v5-stall-hero-art { flex-basis: 65px; min-height: 65px; }
+  .v5-market-stall .v5-stall-hero-art .v3-trait-art { width: 64px; height: 64px; }
+  .v5-stall-cost { margin-top: 8px; }
+  .v5-stall-sword-list { gap: 4px; }
+  #v4-dialog-body .v5-stall-sword { min-height: 94px; padding-inline: 3px; }
+}

@@ -2,7 +2,7 @@ import {decodeV4Save,V4_SAVE_KEY} from '../application/v4-persistence.js';
 import {collectionEligibility} from '../application/v5-collection.js';
 import type {V5Session,V5NewGameInput} from '../application/v5-persistence.js';
 import type {Action,Blade,RunState,Trait,Modification,EventId} from '../core-v5/index.js';
-import {getRunView,RECIPES,TRAITS,MODIFICATIONS,CHAPTERS,COMMISSIONS,eventQuote} from '../core-v5/index.js';
+import {getRunView,RECIPES,TRAITS,MODIFICATIONS,CHAPTERS,COMMISSIONS,eventQuote,JOURNAL_SOFT_LIMIT} from '../core-v5/index.js';
 import {bindDirectStrikeInput} from '../platform/direct-strike-input.js';
 import type {StrikePoint} from '../platform/direct-strike-input.js';
 import {sameInput} from '../platform/timing.js';
@@ -21,8 +21,10 @@ import {createCommissionPaper,commissionPaper} from './commission-paper.js';
 import type {FeedbackRect} from './workbench-feedback.js';
 import {createHandoff} from '../presentation-v4/handoff.js';
 import type {HandoffToken,HandoffTarget,HandoffOrigin} from '../presentation-v4/handoff.js';
-import {forgeDecisions,nextDayPlan,traitPurpose,upgradePlan} from './decisions.js';
+import {forgeDecisions,nextDayPlan,traitPurpose} from './decisions.js';
 import {noticeFromEvents} from './story.js';
+import {carryOption,cashOptions,tradeOption,tradePurpose} from './growth-options.js';
+import {createMarketStall} from './market-stall.js';
 import {journeyScreen,journeyOutcome,CAMPAIGN_GOAL,isCriticalDay} from './journey.js';
 import {buildJourneyStage} from './stages.js';
 import {collectionBook,collectionWorkPage} from './collection-ui.js';
@@ -90,7 +92,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
   feedback?.cancel();strikeReadout=command.type==='strike'&&moved?{runId:before.runId,revision:before.revision+1,generation:snapshot.generation,epoch,pieceId:moved.id,value:moved.value,level:moved.level}:null;
   const r=port.dispatch({runId:before.runId,expectedRevision:before.revision,action:command},snapshot.generation);
   if(!r.ok){strikeReadout=null;resultError(r.error);render();return false;}
-  const n=noticeFromEvents(r.events,r.state);notice=n?.subject?{...n,subject:{...n.subject,generation:snapshot.generation}}:n;
+  const n=noticeFromEvents(r.events,r.state,before);notice=n?.subject?{...n,subject:{...n.subject,generation:snapshot.generation}}:n;
   if(r.events.some(e=>e.type==='Opened'))notice={title:'炉火点着了',copy:'左键点剑身落锤。纸单下会写出实际收款，合格后再交给来客。',action:'none',label:''};
   if(r.events.some(e=>e.type==='Advanced')){const v=getRunView(r.state);notice=v.merchant?{title:'行脚商人到了',copy:'可以用一柄余剑换手艺，或为后续来料作准备。先看清今天要交什么。',action:'shop',label:'看看炉边摊'}:{title:'新的一天，新的约定',copy:v.commission.request,action:'none',label:''};}
   const strike=r.events.find(e=>e.type==='Strike');
@@ -120,11 +122,20 @@ export function mountV5(root:HTMLElement,port:V5Session){
     if((before.day===4&&r.state.day===5)||(before.day===8&&r.state.day===9))presentScene({kind:'intro',revision:r.state.revision});
    }
   }
-  render();
+  render();highlightGrowth(before,r.state,r.events);
   if(moved&&r.events.some(event=>event.type==='Delivered')){const delivered=r.events.find(event=>event.type==='Delivered');if(delivered?.type==='Delivered')feedback?.transfer({blade:moved,source,target:delivered.matched?'customer':'shop',copy:delivered.matched?`交到${getRunView(r.state).commission.name}手中 · +${fmt(delivered.amount)}铜钱`:`行会收下 · +${fmt(delivered.amount)}铜钱`});}
   else if(moved&&command.type==='reserve'&&r.state.reserveId===moved.id)feedback?.transfer({blade:moved,source,target:'rack',copy:r.state.day===12?'暂放本局剑架，不带入新局':'这柄留给明天'});
   else if(moved&&command.type==='buy')feedback?.transfer({blade:moved,source,target:'shop',copy:`换得${TRAITS[command.traitId].name}`});
   return true;
+ }
+ function highlightGrowth(before:RunState,after:RunState,events:readonly import('../core-v5/index.js').DomainEvent[]){
+  if(reduced()||document.hidden)return;
+  const nodes:HTMLElement[]=[];
+  if(before.coins!==after.coins)nodes.push(find('v4-coins'));
+  if(before.seals!==after.seals)nodes.push(find('v4-seals'));
+  for(const event of events)if(event.type==='Trait'&&event.traitId&&!before.traits.includes(event.traitId)&&after.traits.includes(event.traitId)){const node=root.querySelector<HTMLElement>(`[data-trait="${event.traitId}"]`);if(node)nodes.push(node);}
+  if(before.upgradeCount!==after.upgradeCount||before.crackGuard!==after.crackGuard||JSON.stringify(before.pending)!==JSON.stringify(after.pending))nodes.push(find('v4-modifications'));
+  for(const node of nodes)try{const animation=node.animate([{filter:'brightness(1)'},{filter:'brightness(1.8)',offset:.3},{filter:'brightness(1)'}],{duration:700,easing:'ease-out'});sceneAnimations.add(animation);void animation.finished.then(()=>sceneAnimations.delete(animation),()=>sceneAnimations.delete(animation));}catch{/* Factual receipts remain available. */}
  }
  function choose(id:string){if(busy||modal||handoff?.isDragging())return;input?.cancel();renderer?.cancel();feedback?.cancel();if(notice?.subject&&notice.subject.pieceId!==id)notice=null;epoch++;selectedId=id;render();button('v4-strike').focus({preventScroll:true});}
  function contactReadout(frame:ForgeContactFrame){
@@ -232,7 +243,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
   text('v4-deliver',active?.reserved?'先取回剑':quote?.matched?`交给${v.commission.name} · 收${fmt(quote.amount)}`:quote?.allowed?`卖给行会 · 收${fmt(quote.amount)}`:quote?.error==='market_exhausted'?'行会今日歇账':'先选一柄剑');
   text('v5-delivery-quote',active?.reserved?'从左侧取回，才可交付。':quote?.matched?`酬劳${fmt(quote.baseFeeDelta)} ＋ 品质${fmt(quote.qualityBonus)} · 收购余${fmt(v.market.remaining)}`:quote?.error==='market_exhausted'?'收购钱袋已空。可留剑、换手艺或明确回收。':quote?`作品身价${fmt(quote.pieceValue)} · 收购余${fmt(v.market.remaining)}`:'这柄已安排，换一柄或收工。');
   button('v4-deliver').disabled=!canAct()||busy||!quote?.allowed;
-  button('v4-deliver').setAttribute('aria-describedby','v5-delivery-quote');
+  button('v4-deliver').setAttribute('aria-describedby','v5-delivery-quote');show('v5-arrange',quote?.error==='market_exhausted');button('v5-arrange').disabled=!canAct()||busy;
   text('v4-reserve',s.reserveId===b?.id?'取回留剑':v.next?'留给明天':'暂放本局剑架');button('v4-reserve').disabled=!canAct()||busy||b?.status!=='active';button('v4-scrap').disabled=!canAct()||busy||!active||active.reserved;button('v4-settle').disabled=!canAct()||busy;
   text('v4-customer-name',v.commission.name);text('v4-talk',v.commission.progress.complete?v.commission.success:v.commission.request);find('v4-customer-figure').dataset.customer=v.commission.customer;find('v4-customer-figure').dataset.pose=v.commission.progress.complete?'receiving':'waiting';
   show('v4-shop',!!v.merchant);button('v4-shop').disabled=!canAct()||busy;show('v4-event-open',v.event?.status==='available');if(v.event)text('v4-event-open',`炉边来事 · ${v.event.name}`);button('v4-event-open').disabled=!canAct()||busy;
@@ -244,10 +255,23 @@ export function mountV5(root:HTMLElement,port:V5Session){
   if(!strikeReady&&b?.status==='broken')button('v4-hit').disabled=true;
  }
  function renderBelt(s:RunState){
-  const v=getRunView(s),key=JSON.stringify([s.runId,s.traits,s.gift,s.pardonUsed,s.modifications,lastTriggers,canAct(),busy]);if(key===beltKey)return;beltKey=key;
+  const v=getRunView(s),key=JSON.stringify([s.runId,s.traits,s.gift,s.pardonUsed,s.modifications,s.upgradeCount,s.day,s.pending,s.dayBuffs,s.crackGuard,s.blades.filter(b=>b.suppliedDay===s.day&&b.slot===1).map(b=>[b.hits,b.status]),lastTriggers,canAct(),busy]);if(key===beltKey)return;beltKey=key;
   find('v4-traits').replaceChildren(...v.traits.map(t=>{const triggered=lastTriggers.includes(t.id),n=action(t.name,()=>{const purpose=traitPurpose(t.id,getRunView(state()!)),body=element('div');body.append(element('p',t.text),element('h3',purpose.headline),element('p',purpose.copy));if(triggered)body.append(element('p','这门手艺在上一记中实际生效。'));openModal(t.name,body,[{label:'回铁砧',run:()=>closeModal()}]);});n.dataset.trait=t.id;n.dataset.used=String(t.used);if(t.used)n.append(element('small','本局已用'));n.dataset.triggered=String(triggered);n.title=t.text;n.prepend(traitArt(t.id));if(triggered)n.append(element('small','本锤生效'));return n;}));
   const gift=find('v4-gift');gift.replaceChildren();if(v.gift.status==='available')gift.append(action('首赠 · 选手艺',giftModal,true,!canAct()||busy));
   find('v4-modifications').replaceChildren(...v.modifications.map(m=>{const n=action(m.name,()=>openModal(m.name,m.text,[{label:'收好',run:()=>closeModal()}]));n.dataset.modification=m.id;n.dataset.triggered=String(lastTriggers.includes(m.id));n.prepend(prop(m.id));return n;}));
+  const effects:{id:EventId;label:string;copy:string;pending:boolean}[]=[];
+  const first=s.blades.find(b=>b.suppliedDay===s.day&&b.slot===1),firstName=first?`${RECIPES[first.recipe].name}（第${first.suppliedDay}天来料）`:'本日首柄新坯';
+  if(s.upgradeCount)effects.push({id:'donation',label:`备料${s.upgradeCount}次`,copy:`来料升级已累计${s.upgradeCount}次，眼前剑不变。${v.next?`明日普通新坯底价${fmt(v.next.normalBase)}，第一新坯含余温为${fmt(v.next.firstBase)}。`:'已是最后一炉，没有下一批来料。'}`,pending:false});
+  if(s.crackGuard)effects.push({id:'credit',label:'保价待用',copy:'下一次完好剑首裂保住身价，仍会留下裂纹；再次裂损仍会断。首裂时正式消耗。',pending:false});
+  else if(lastTriggers.includes('credit'))effects.push({id:'credit',label:'保价已用',copy:'这记首裂实际用掉保价，保住了本次身价；裂纹仍在，再裂仍会断。这不是一份新的待用资格。',pending:false});
+  for(const pending of[false,true]){
+   const buffs=pending?s.pending:s.dayBuffs,prefix=pending?'明日':'此炉';
+   if(buffs.supplyPct===120)effects.push({id:'donation',label:`${prefix}加料`,copy:pending?'护送加料待明日发坯：新坯底价＋20%，留剑则两柄，否则三柄；不作用于旧剑。':'今日新坯已按20%加料发出，底价已包含这份加成；同行旧剑没有额外增值。',pending});
+   if(buffs.loan)effects.push({id:'loan',label:pending?'借锤待明日':first&&first.hits>=3?'借锤已用完':'此炉借锤',copy:pending?'明日第一柄新坯前三记普通锤正收益＋10%，同行旧剑不受益。':`${firstName}的前三记普通锤正收益＋10%。${first?.status!=='active'?'这柄已离开铁砧。':`已经敲了${Math.min(first.hits,3)}/3记；安全连锻不消耗普通锤次数。`}`,pending});
+   if(buffs.shelter)effects.push({id:'shelter',label:`${prefix}炉棚`,copy:pending?'明日第一柄新坯当天裂损率降低3个百分点，同行旧剑不受益。':`${firstName}当天裂损率降低3个百分点，已计入该柄新坯的风险报价。${first?.status!=='active'?'这柄已离开铁砧。':''}`,pending});
+  }
+  for(const effect of effects){const node=action(effect.label,()=>openModal(effect.label,effect.copy,[{label:'回铁砧',run:()=>closeModal()}]));node.dataset.effect=effect.id;node.dataset.pending=String(effect.pending);node.dataset.triggered=String(lastTriggers.includes(effect.id));node.prepend(prop(effect.id));find('v4-modifications').append(node);}
+
  }
  function noticeSubjectCurrent(){const s=state(),subject=notice?.subject;return !subject||!!s&&subject.runId===s.runId&&subject.day===s.day&&subject.revision===s.revision&&(subject.generation===undefined||subject.generation===snapshot.generation);}
  function renderNotice(){
@@ -317,10 +341,10 @@ export function mountV5(root:HTMLElement,port:V5Session){
   else body.append(element('p',piece?.reserved?'先从剑架取回，才能交付。':'不合委托的剑仍可明确卖给行会，出售不会点亮今天这一站。'));
   openModal(v.commission.name+'的心愿',body,choices,'commission');
  }
- function buyTrait(trait:Trait){
-  const s=state(),b=current();if(!s||!b||b.status!=='active'||s.reserveId===b.id){setStatus('先从剑架选一柄未保留的剑。');return;}
+ function buyTrait(trait:Trait,pieceId=selectedId){
+  const s=state(),b=s?.blades.find(piece=>piece.id===pieceId);if(!s||!b||b.status!=='active'||s.reserveId===b.id){setStatus('先从剑架选一柄未保留的剑。');return;}
   const eligibility=getRunView(s).blades.find(piece=>piece.blade.id===b.id)?.barter;if(!eligibility?.allowed){resultError(eligibility?.error??'blade_unworked');return;}
-  const pay=b.id,purpose=traitPurpose(trait,getRunView(s)),body=element('div');body.append(thumb(b),element('p',`用这柄${RECIPES[b.recipe].name}（身价${fmt(b.value)}）换${TRAITS[trait].name}，不再兼作交付或留剑。`),element('b',purpose.headline),element('p',purpose.copy));
+  const pay=b.id,purpose=tradePurpose(trait,getRunView(s),b.id),body=element('div');body.append(...tradeOption(getRunView(s),b.id).opportunity.map(copy=>element('p',copy)),thumb(b),element('p',`用这柄${RECIPES[b.recipe].name}（身价${fmt(b.value)}）换${TRAITS[trait].name}，不再兼作交付或留剑。`),element('b',purpose.headline),element('p',purpose.copy));
   if(s.traits.length===3)replaceTrait(trait,old=>({type:'buy',pieceId:pay,traitId:trait,replaceId:old}),body,'不换，保留剑',`交出这柄${RECIPES[b.recipe].name}（身价${fmt(b.value)}），不能再交差、卖钱或留给明日。`);else confirm('用剑换手艺',body,()=>send({type:'buy',pieceId:pay,traitId:trait}));
  }
  function journeyPanel(){
@@ -344,26 +368,59 @@ export function mountV5(root:HTMLElement,port:V5Session){
   if(s.modifications.length)body.append(element('h3','已经装好的炉具'),...s.modifications.map(id=>element('p',`${MODIFICATIONS[id].name} · ${MODIFICATIONS[id].text}`)));
   openModal(`灯路回顾 · ${v.chapter.title}`,body,[{label:'回铁砧',primary:true,run:()=>closeModal()}],'journey');
  }
- function tomorrowPlan(){
-  const s=state();if(!s)return;const view=getRunView(s),plan=nextDayPlan(view),body=element('div',undefined,'v4-tomorrow-plan');
-  body.append(element('p',plan.headline),element('p',plan.copy));
-  for(const route of plan.routes)body.append(element('p',`${route.description}${route.reserveMatches?' · 架上的剑已合一柄要求':''}`));
-  if(plan.reserve){const kept=s.blades.find(b=>b.id===plan.reserve!.id);if(kept)body.append(thumb(kept),element('h3',plan.reserve.headline),element('p',plan.reserve.copy));}
-  if(plan.day!==null&&view.next){
-   body.append(element('p',`明日${view.next.oldCount?'一柄旧剑＋两柄新坯':'三柄新坯'}；新坯普通底价${fmt(view.next.normalBase)}，第一新坯实际底价${fmt(view.next.firstBase)}。`));
-   const candidates=view.blades.filter(piece=>!piece.reserved),ticket={runId:s.runId,revision:s.revision,generation:snapshot.generation};
-   if(candidates.length){const grid=element('div',undefined,'v4-choice-grid');for(const piece of candidates){const b=piece.blade,card=element('article',undefined,'v4-card');card.append(thumb(b),element('h3',`${RECIPES[b.recipe].name} · ${fmt(b.value)}`),element('p',plan.candidateIds.includes(b.id)?'按当前身价，已合明日一柄的要求。':'尚不合明日纸单；可留下另用，也可另选一柄。配方、裂纹与新旧条件不一定能靠多敲补回。'),action(s.reserveId?'换这柄留明日':'把这柄留明日',()=>{const valid=ticket.runId===state()?.runId&&ticket.revision===state()?.revision&&ticket.generation===snapshot.generation;closeModal();if(valid)reserveBlade(b.id);else resultError('stale_session');},false,!snapshot.active||snapshot.conflict||!['writer','memory'].includes(snapshot.mode)));grid.append(card);}body.append(grid);}
-  }
-  openModal(plan.day?`明日纸单 · 第${plan.day}天`:'最后一炉的打算',body,[{label:'回炉边，自己拿主意',primary:true,run:()=>closeModal()}],'tomorrow');
+ function tomorrowPlan(preferredPieceId=state()?.reserveId??selectedId){
+  const s=state();if(!s)return;const view=getRunView(s),plan=nextDayPlan(view),body=element('div',undefined,'v5-carry-plan');
+  body.append(element('p',plan.headline));
+  if(!view.next){body.append(element('p',plan.copy));openModal('最后一炉的打算',body,[{label:'回炉边，自己拿主意',primary:true,run:()=>closeModal()}],'tomorrow');return;}
+  const next=view.next,requirements=element('details');requirements.append(element('summary',`第${next.day}天 · ${next.commission.title} · 查看完整纸单`),element('p',next.commission.request),...plan.routes.map(route=>element('p',route.description)));body.append(requirements);
+  const tray=element('div',undefined,'v5-carry-choices'),preview=element('div',undefined,'v5-carry-preview'),ticket={runId:s.runId,revision:s.revision,generation:snapshot.generation};
+  let picked=view.blades.some(item=>item.blade.id===preferredPieceId)?preferredPieceId:null;
+  const selectors=new Map<string,HTMLButtonElement>();
+  const valid=()=>ticket.runId===state()?.runId&&ticket.revision===state()?.revision&&ticket.generation===snapshot.generation;
+  const draw=()=>{
+   tray.querySelector('[data-carry-none]')?.setAttribute('aria-pressed',String(picked===null));
+   for(const[id,node]of selectors)node.setAttribute('aria-pressed',String(id===picked));
+   preview.replaceChildren();const carry=picked?carryOption(view,picked,s.journal.length>=JOURNAL_SOFT_LIMIT):null;
+   const slots=element('div',undefined,'v5-packing-slots');
+   if(carry){const kept=element('div');kept.append(thumb(carry.blade),element('b',`${RECIPES[carry.blade.recipe].name} · 旧剑`),element('span',`${fmt(carry.valueNow)} → ${fmt(carry.valueNext)}`));slots.append(kept);}
+   for(let i=0;i<(carry?2:3);i++){const fresh=element('div',undefined,'v5-new-blank');fresh.append(element('b','新坯'),element('span',`底价 ${fmt(i===0?next.firstBase:next.normalBase)}`));slots.append(fresh);}
+   preview.append(element('h3',carry?'一柄旧剑 ＋ 两柄新坯':'三柄新坯'),slots,element('p',carry?carry.copy:'不挂留剑，明日领三柄新坯。取下或处置旧剑后也不会补第四柄。'));
+   if(carry)preview.append(element('p',carry.matching?'按确定的次日身价，已经合一柄要求；启程后仍需实际交剑。':`明日尚缺：${carry.missing.join('；')}`));
+   const commit=root.querySelector<HTMLButtonElement>('#v5-pack-confirm');
+   if(commit){commit.hidden=carry?carry.id===s.reserveId:!s.reserveId;commit.textContent=carry?(s.reserveId?'换这柄装箱':'把这柄装箱'):'取下旧剑，改领三新坯';commit.disabled=!!carry&&!carry.canReserve||!snapshot.active||snapshot.conflict||!['writer','memory'].includes(snapshot.mode);}
+   if(carry?.id===s.reserveId)preview.append(element('p','这柄已挂架。返回炉边可取回，明日新坯仍共两柄。'));
+   repaintProps();
+  };
+  const none=action('不带旧剑',()=>{picked=null;draw();});none.dataset.carryNone='true';tray.append(none);
+  for(const item of view.blades){const b=item.blade,node=action(`${RECIPES[b.recipe].name} · ${fmt(b.value)}${item.reserved?' · 已挂架':''}`,()=>{picked=b.id;draw();});node.dataset.carryPiece=b.id;node.prepend(thumb(b));selectors.set(b.id,node);tray.append(node);}
+  if(!view.blades.length)body.append(element('p','今日兵器已安排完，明日领三柄新坯。'));
+  body.append(tray,preview);openModal(`明日装箱 · 第${plan.day}天`,body,[{label:'回炉边，自己拿主意',run:()=>closeModal()},{label:'把这柄装箱',id:'v5-pack-confirm',primary:true,run:()=>{if(!valid()){closeModal();resultError('stale_session');return;}const carry=picked?carryOption(view,picked,s.journal.length>=JOURNAL_SOFT_LIMIT):null;closeModal();if(carry?.canReserve)reserveBlade(carry.id);else if(!carry&&s.reserveId)send({type:'reserve',pieceId:s.reserveId});}}],'tomorrow');draw();
  }
- function shop(){
-  const s=state();if(!s)return;const view=getRunView(s),market=view.merchant;if(!market)return;const body=element('div',undefined,'v4-shop-grid');
-  body.append(element('p',`行囊${fmt(view.coins)}铜钱 · 今日收购钱袋余${fmt(view.market.remaining)}，不影响主委托基础酬劳。`));
-  const offered=view.blades.find(piece=>piece.blade.id===current()?.id);
-  if(!offered?.barter.allowed)body.append(element('p','先选一柄等级至少3的成器来换；普通成功加1级、大成加2级，不必固定锤三次。'));
-  for(const t of market.offers){const purpose=traitPurpose(t.id,view),card=element('article',undefined,'v4-card');card.dataset.tone=purpose.tone;card.append(traitArt(t.id),element('h3',t.name),element('p',t.text),element('b',purpose.headline),element('p',purpose.copy),element('small',purpose.costCopy),action(t.sold?'已换走':t.owned?'已经带着':offered?.barter.allowed?`献${RECIPES[offered.blade.recipe].name} · 等级${offered.blade.level}`:'需要等级至少3的成器',()=>buyTrait(t.id),true,t.sold||t.owned||!offered?.barter.allowed));body.append(card);}
-  const quote=upgradePlan(view),supply=element('article',undefined,'v4-card');supply.append(element('h3','下一批来料'),element('b',quote.headline),element('p',quote.copy),action(s.upgraded?'本次已备好':'准备更好的铁料',()=>confirm('为下一炉备料',`${quote.headline}。${quote.copy}`,()=>send({type:'upgrade'})),false,!market.canUpgrade));body.append(supply);
-  const repair=element('article',undefined,'v4-card');repair.append(element('h3','补回一枚契印'),element('p',`${fmt(market.repair)}金币 · 每次到访限一次`),action('请商人修补',()=>confirm('修补契印',`支付${fmt(market.repair)}金币，契印加一（最多三枚）。`,()=>send({type:'repair'})),false,!market.canRepair));body.append(repair);openModal('行脚商人的炉边摊',body,[{label:'回铁砧',run:()=>closeModal()}],'shop');
+ function shop(preferredPieceId=selectedId){
+  const s=state();if(!s)return;const view=getRunView(s);if(!view.merchant)return;
+  const controls={upgraded:s.upgraded,repaired:s.repaired,recordLimited:s.journal.length>=JOURNAL_SOFT_LIMIT};
+  const ticket={runId:s.runId,revision:s.revision,generation:snapshot.generation};
+  const valid=()=>ticket.runId===state()?.runId&&ticket.revision===state()?.revision&&ticket.generation===snapshot.generation;
+  const body=createMarketStall(view,{selectedPieceId:preferredPieceId,thumb,action,growthControls:controls,
+   buy:(traitId,pieceId)=>{if(!valid()){resultError('stale_session');return;}buyTrait(traitId,pieceId);},
+   upgrade:()=>{if(!valid()){resultError('stale_session');return;}const quote=cashOptions(view,controls).upgrade;confirm('为下一炉备料',`${quote.currentBase} → ${quote.afterBase}。${quote.copy}`,()=>send({type:'upgrade'}));},
+   repair:()=>{if(!valid()){resultError('stale_session');return;}const quote=cashOptions(view,controls).repair;confirm('修补契印',`${quote.sealsBefore}/3 → ${quote.sealsAfter}/3。${quote.copy}`,()=>send({type:'repair'}));},
+  });openModal('行脚商人的炉边摊',body,[{label:'回铁砧',run:()=>closeModal()}],'shop');
+ }
+ function arrangeBlade(){
+  const s=state(),b=current();if(!s||!b)return;const v=getRunView(s),item=v.blades.find(p=>p.blade.id===b.id);if(!item)return;
+  const body=element('div',undefined,'v5-arrange');body.append(thumb(b),element('h3',`${RECIPES[b.recipe].name} · 身价${fmt(b.value)}`),element('p',`今日收购钱袋${fmt(v.market.remaining)}/${fmt(v.market.budget)}铜钱。作品再贵，也只按剩余钱袋付款；主委托基础酬劳独立。`));
+  const options:ModalAction[]=[{label:'先留在铁砧',run:()=>closeModal()}],ticket={runId:s.runId,revision:s.revision,generation:snapshot.generation};
+  const use=(run:()=>void)=>{const valid=ticket.runId===state()?.runId&&ticket.revision===state()?.revision&&ticket.generation===snapshot.generation;closeModal();if(valid)run();else resultError('stale_session');};
+  if(v.next&&!item.reserved){const carry=carryOption(v,b.id,s.journal.length>=JOURNAL_SOFT_LIMIT);if(carry)body.append(element('p',carry.copy));options.push({label:'看看明日装箱',run:()=>use(()=>tomorrowPlan(b.id))});}
+  if(v.merchant){body.append(element('p',item.barter.allowed?'这柄已成器，可以献剑换手艺；不消耗收购钱袋。':'献剑换手艺需等级至少3；挂架的剑要先取回。'));options.push({label:'去炉边摊比较',run:()=>use(()=>shop(b.id))});}
+  if(!item.reserved)options.push({label:`回收这柄 · 实得${fmt(item.recovery)}`,run:()=>use(()=>recycleBlade(b.id))});
+  body.append(element('p','收工也会回收未挂架的余剑。回收为0时仍会交出剑；取消后仍可继续打造。'));
+  openModal('钱袋封口了，安排这柄剑',body,options,'arrange');
+ }
+ function recycleBlade(pieceId=selectedId){
+  const s=state(),b=s?.blades.find(piece=>piece.id===pieceId);if(!s||!b)return;const item=getRunView(s).blades.find(piece=>piece.blade.id===b.id);if(!item||item.reserved)return;
+  confirm('回收这柄剑？',`这柄当前回收实得${fmt(item.recovery)}铜钱，受今日收购钱袋限制；回收后交出兵器，不计主委托，也不能再锻。`,()=>send({type:'scrap',pieceId:b.id}));
  }
  function eventModal(){
   const s=state();if(!s)return;const view=getRunView(s),sourceEvent=view.event;if(!sourceEvent||sourceEvent.status!=='available')return;
@@ -457,9 +514,9 @@ export function mountV5(root:HTMLElement,port:V5Session){
  input=bindDirectStrikeInput([button('v4-hit'),button('v4-strike')],{context:forgeIdentity,navigationContext:navigationIdentity,navigate:()=>{const b=current();if(b&&state()?.reserveId===b.id){setStatus(state()?.day===12?'先从剑架取回安排交付、出售或回收；本局剑架不会带入新局。':'先从剑架取回，或选择收工把它留给明天。');button('v4-reserve').focus({preventScroll:true});}else settle();},commit:(captured,point)=>{if(!sameInput(captured,forgeIdentity()))return;lastPoint=point;void audio.gesture();send({type:'strike',pieceId:captured.pieceId});},aim:p=>{if(canAct()&&!busy&&!handoff?.isDragging())renderer?.aim(p);},preparing:v=>renderer?.preparing(v)});
  button('v4-start').onclick=()=>startNew();button('v4-title-challenge').onclick=()=>startNew('challenge');button('v4-continue').onclick=continueGame;find<HTMLInputElement>('v4-seed').value=seedDraft;find<HTMLInputElement>('v4-seed').oninput=e=>{seedDraft=(e.currentTarget as HTMLInputElement).value;};
  for(const id of['v4-title-collection','v4-book'])button(id).onclick=book;for(const id of['v4-title-settings','v4-settings'])button(id).onclick=settings;
- for(const id of['v4-save-open','v4-save-details'])button(id).onclick=saveDetails;button('v4-menu').onclick=()=>route==='title'?continueGame():pause();button('v4-shop').onclick=shop;button('v4-event-open').onclick=eventModal;
+ for(const id of['v4-save-open','v4-save-details'])button(id).onclick=saveDetails;button('v4-menu').onclick=()=>route==='title'?continueGame():pause();button('v4-shop').onclick=()=>shop();button('v4-event-open').onclick=eventModal;
  button('v4-customer-open').onclick=()=>commissionDetails();
- button('v4-deliver').onclick=()=>{const b=current();if(b)send({type:'deliver',pieceId:b.id});};button('v4-reserve').onclick=()=>{const b=current();if(b)reserveBlade(b.id);};button('v4-scrap').onclick=()=>{const b=current();if(b)confirm('回收这柄剑？',`这柄当前回收实得${fmt(getRunView(state()!).blades.find(piece=>piece.blade.id===b.id)?.recovery??0)}铜钱，受今日收购钱袋限制；回收后交出兵器，不计主委托，也不能再锻。`,()=>send({type:'scrap',pieceId:b.id}));};button('v4-settle').onclick=settle;button('v4-next-plan').onclick=tomorrowPlan;
+ button('v4-deliver').onclick=()=>{const b=current();if(b)send({type:'deliver',pieceId:b.id});};button('v4-reserve').onclick=()=>{const b=current();if(b)reserveBlade(b.id);};button('v4-scrap').onclick=()=>recycleBlade();button('v4-settle').onclick=settle;button('v4-next-plan').onclick=()=>tomorrowPlan();button('v5-arrange').onclick=arrangeBlade;
  button('v4-inline-review').onclick=()=>{const s=state(),receipt=inlineDelivery;if(!s||!receipt)return;if(s.gift==='available'){giftModal();return;}presentScene({kind:'delivery',revision:s.revision,commissionId:receipt.commissionId,pieceIds:receipt.pieceIds});render();};
  button('v4-inline-dismiss').onclick=()=>{inlineDelivery=null;show('v4-inline-delivery',false);};
  button('v4-notice-dismiss').onclick=()=>{notice=null;renderNotice();};button('v4-notice-action').onclick=()=>{

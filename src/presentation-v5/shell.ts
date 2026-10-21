@@ -3,7 +3,7 @@ export const V5_TEMPLATE = `
 <div class="v4-app v5-app" data-screen="title" data-rules-version="forge-v5">
   <section id="v4-title" class="v4-title-screen" aria-labelledby="v4-main-title">
     <div class="v4-title-copy">
-      <p class="v4-edition">v0.8 十二灯行旅 · 三柄行囊</p>
+      <p class="v4-edition">v0.8 炉边交易 · 三柄行囊</p>
       <h1 id="v4-main-title">锤下<span>求生</span></h1>
       <p class="v4-title-line">一炉火，一柄剑，一程未熄的灯。</p>
       <div class="v4-title-actions">
@@ -27,7 +27,7 @@ export const V5_TEMPLATE = `
   </section>
 
   <main id="v4-workshop" class="v4-workshop" hidden aria-label="行脚灯炉">
-    <div class="v4-bench-mark" aria-hidden="true"><strong>锤下求生</strong><span>v0.8 十二灯行旅 · 三柄行囊</span></div>
+    <div class="v4-bench-mark" aria-hidden="true"><strong>锤下求生</strong><span>v0.8 炉边交易 · 三柄行囊</span></div>
     <div class="v4-purse" aria-label="契印与行囊">
       <div class="v4-resource v4-resource-seals"><span>契印</span><strong id="v4-seals"></strong></div>
       <div class="v4-resource v4-resource-coins"><span>铜钱</span><strong id="v4-coins"></strong></div>
@@ -104,6 +104,7 @@ export const V5_TEMPLATE = `
       </section>
       <button id="v4-deliver" class="v4-primary v4-deliver-button" type="button">把剑交给来客</button>
       <p id="v5-delivery-quote" class="v5-delivery-quote"></p>
+      <button id="v5-arrange" class="v5-arrange-link" type="button" hidden>钱袋已空 · 安排这柄剑</button>
       <div class="v4-visiting-actions">
         <button id="v4-shop" type="button" hidden>行脚商人的摊子</button>
         <button id="v4-event-open" type="button" hidden>炉边来信</button>

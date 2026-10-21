@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "url": "http://127.0.0.1:4210/",
+  "browser": "isolated Chromium",
+  "actions": 0,
+  "observations": 1,
+  "checks": [
+    {
+      "label": "unaffordable upgrade retains deterministic benefit preview",
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "captures": 2,
+  "scope": "Specific growth UI branch from archived real UI prefix; not another fresh full game",
+  "source": "docs/evidence/T11-4-2-3l4/ui/run-02/states.json.gz#a80-advance"
+}
