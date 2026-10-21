@@ -1,0 +1,331 @@
+{
+  "at": "2026-10-21T02:03:51.144535+00:00",
+  "sourceCommit": "f5907646d66a0b50fea944acb70a863e6a5f05de",
+  "sourcePushSession": 47869,
+  "sourcePushActualExitCode": 0,
+  "freshRemoteMain": "f5907646d66a0b50fea944acb70a863e6a5f05de",
+  "actualCommittedFiles": 63,
+  "verified": [
+    {
+      "path": "README.md",
+      "bytes": 17570,
+      "sha256": "db9a5491b6d41f65556b9cb9ac3864007fe77fd3061671ad435b7cdf5e76e465"
+    },
+    {
+      "path": "docs/decisions/2026-10-21-v08-approval.json",
+      "bytes": 891,
+      "sha256": "fc05c6520c1db95de4a04236c5681cf708e83399f5374d1f7e2a3a354b33b8e7"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/after/relay-1280-bounds.json",
+      "bytes": 1087,
+      "sha256": "89d8c93a0d7bb7ec9f895f972aab8092ae102f08dea5701c7ba044b9893af65b"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/after/relay-1920-bounds.json",
+      "bytes": 1092,
+      "sha256": "79af881f92f2b1af8e5e695648dedf44c0f94434bc4a51a8978cf0fa73ce0c25"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/after/result.json",
+      "bytes": 1051,
+      "sha256": "f9670eaabb154aaf8db2fdbfc9b2bec5d094844b96f92cced0966cdbdb8b5f70"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/after/states.json",
+      "bytes": 169162,
+      "sha256": "8501c1e932215fe0b66439a637f883cebfda62124c9a42e0463637d83cdf0017"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/after/two-stations-1280-bounds.json",
+      "bytes": 1062,
+      "sha256": "aab6d0cf02fcd4be9fd51bb8aa75af7f1a144e5816a41fb890aea86ca27a8c33"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/build.log",
+      "bytes": 1962,
+      "sha256": "4f584f98bc2a9bc295fcde8f7e3a2f3e7a38b2b877ae13ebbc11adfb4c41b207"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/crack-paper-inspection-1280.png",
+      "bytes": 245636,
+      "sha256": "5f0c6388e20ab9674a87cf5b26a66bc14b3b0013fa5889ceca21fcabd5fc247d"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/official-states.json",
+      "bytes": 10296,
+      "sha256": "bda3d38f3062d1033dd826fbf65c9c8e1f4682cb228500b897914703d4515be3"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old-charge-after.png",
+      "bytes": 1362116,
+      "sha256": "1fe5ea782353287d26f45487dec34b04bce9c2091da4562f1a892e4cb45a1a8c"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old-other-sword.png",
+      "bytes": 1317821,
+      "sha256": "46f612e0e1562fd9a03df92951f928477f0b3c1035464cb31c49189d5f1d700f"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old-stuck-after.png",
+      "bytes": 1354394,
+      "sha256": "10d6ed4793d15410c09e07315b0713b6bbbab7d2e73999bd9316a2c27d3ec3d3"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/README.md",
+      "bytes": 2592,
+      "sha256": "7843902b5f067d7ab785d6343253f34896bd1d39ea3039bd24b664e35c76634a"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/broken-next-busy-after.json",
+      "bytes": 23086,
+      "sha256": "3ef80b5a6e0e2f7fb72b028211d143691bbec53765d907442e90ab8f7324ff5e"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/broken-next-busy-broken.json",
+      "bytes": 23086,
+      "sha256": "3ef80b5a6e0e2f7fb72b028211d143691bbec53765d907442e90ab8f7324ff5e"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/broken-next-busy-envelope.json",
+      "bytes": 14013,
+      "sha256": "8e6defb61c1a21b284ce8803cc73e225b9b510d5da602cdb33f2a05a1f8eb225"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/broken-next-busy-prefix.json",
+      "bytes": 23030,
+      "sha256": "4af8d4bd603c83a392e1b77856d31d6366251e6e5f08f4a2be9719a01d3b19a4"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/broken-next-busy.json",
+      "bytes": 3430,
+      "sha256": "8b11d9940209e07c1b9fd90d70848f2c80b7662c5a327f529401819fab4cfb59"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/charge-consumed-after.json",
+      "bytes": 7879,
+      "sha256": "0047b7c40ebe04f6101e786b9e3f9e859c7d18e3bae9bd9de5c5c860a9e1ac69"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/charge-consumed-charged.json",
+      "bytes": 7816,
+      "sha256": "70ad29c7060fad2dd9b8c05be300f364b891ebf9333a6a1a9ba45730f8f2c9d3"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/charge-consumed-envelope.json",
+      "bytes": 4856,
+      "sha256": "e2106986de05290075707034672523fbe3aedaac52c0f7cb6fff326b868195d2"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/charge-consumed-prefix.json",
+      "bytes": 7755,
+      "sha256": "bf31fff276c6817d99b47d7383dc00737df8ef72dae4b65cbdcd224d2ad8e5d2"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/charge-consumed.json",
+      "bytes": 1992,
+      "sha256": "88dbfb621590351ae2bead322e0c4a1ad0e55da516d2ce2e7afd93117ff1b49f"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/process.json",
+      "bytes": 347,
+      "sha256": "359934f9d25bf972ae3964b0a85985cc1c8381dc7f95634630bd7640ad106db0"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/ready-to-other-sword-after.json",
+      "bytes": 2746,
+      "sha256": "b5768992c2689c66d192942801a69d6977ecb7a99fefaf2d4ead2e14af635f88"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/ready-to-other-sword-envelope.json",
+      "bytes": 1835,
+      "sha256": "12063c3c1f198516027c723e5b361e158f9d9d63ea580c8b30ce37dd116ce977"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/ready-to-other-sword-prefix.json",
+      "bytes": 2683,
+      "sha256": "407f083d5500779da6360b85f76f0f577c598f619d071d5636a0c968ee0b4199"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/ready-to-other-sword-qualified.json",
+      "bytes": 2746,
+      "sha256": "b5768992c2689c66d192942801a69d6977ecb7a99fefaf2d4ead2e14af635f88"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/ready-to-other-sword.json",
+      "bytes": 3023,
+      "sha256": "6cde45bb6487aea051995ef3fb62e31312c72c34aee1c52b22bf0cae1c0fdb81"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/repro-attempt01.mjs",
+      "bytes": 10075,
+      "sha256": "a26305a28ad781ad0d1f47c6fcc6225404fe12034af1c773fb7222d32af8f9af"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/repro.mjs",
+      "bytes": 10481,
+      "sha256": "9d79da6ccdfaec6dab6d1dc122848c9604341b5cc3047d18bdd4c69031bdc914"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/result.json",
+      "bytes": 10434,
+      "sha256": "8f22d8bf846bf277c643eb3f8250e0778852f9cd083df289155222a93cfa965a"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/run-02/charge-consumed-after.json",
+      "bytes": 10453,
+      "sha256": "05015808a67fb3aac079642727e93862e01f101b201bc42895f2f56339a23f74"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/run-02/charge-consumed-charged.json",
+      "bytes": 10389,
+      "sha256": "4a0cf41fa5b14f58282043665fb24f709b1f4faa232623f4c116bae925ac2446"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/run-02/charge-consumed-envelope.json",
+      "bytes": 6395,
+      "sha256": "2443253d603707cf73c4ba42f5d6c31b14803c372bc82411e785ef13d313435f"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/run-02/charge-consumed-prefix.json",
+      "bytes": 10328,
+      "sha256": "b117dc403faf79a1d96eb7b812a9fce4a93d5b8975189946d9b236d3ac713981"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/run-02/charge-consumed.json",
+      "bytes": 2058,
+      "sha256": "47e4daece36f812df3260e80f8afd49194020d63b883d14de8e422de64082688"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/run-02/process.json",
+      "bytes": 594,
+      "sha256": "b9170ccd4b95f0bbe953cbecad07ae4b2069e734d444f6281513571c37a6c827"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/run-02/result.json",
+      "bytes": 3050,
+      "sha256": "50001045dbf9b3959447a85a56ab47628461027ac63d059d906b1743bdf52e49"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/old/state-validation.json",
+      "bytes": 3115,
+      "sha256": "c0db7882b2fae55a17763818f676134c04688f11edeb33f27d5689ad6b4969a9"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/play.mjs",
+      "bytes": 10279,
+      "sha256": "70026674ce2ea4471195d599314bc8387508a423750108d53e8ca5165eedb248"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/published.json",
+      "bytes": 11207,
+      "sha256": "ca0635beb99fd12051bf2f828ae9358a8c44facc09a850319d8d2476377a4ad3"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/relay-1280.png",
+      "bytes": 1341809,
+      "sha256": "42092a0e888f96adc0108a499eda9854692598a9e351d58e675074f5c88c226d"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/relay-1920.png",
+      "bytes": 2702904,
+      "sha256": "d838f798fec7c9c0eae11c23f5abaeab19b7c021ab42a03da3b7299b47f2f620"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/run.json",
+      "bytes": 75306,
+      "sha256": "c1d0dd73a88c82c5022720999bc9985d67b102c6da6deac985a3ccd6cc400fe3"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/state-replay.json",
+      "bytes": 2231,
+      "sha256": "24595e0f79002a6dddd6d40d0a76bcfb26dc6dd206df80e885afcadcf263d9ea"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3m/two-stations-1280.png",
+      "bytes": 1348961,
+      "sha256": "5df00e5bf9ef06912f17904090f9ff0ec2a9aaaee1b57b4cfc1be96673524419"
+    },
+    {
+      "path": "docs/evidence/v08-approval/approved-proposal.md",
+      "bytes": 18451,
+      "sha256": "c6a605c29e29d83ee9f3bae6700270af96d749f30d29e6de2c17bfb14acd04aa"
+    },
+    {
+      "path": "docs/reviews/T11-4-2-3m-commission-flow.md",
+      "bytes": 3767,
+      "sha256": "1349d7df8c626efb0f8c69590771a85c23e6530f2a93b6c800e38bd67a226faa"
+    },
+    {
+      "path": "docs/v0.7-handoff-guide.md",
+      "bytes": 4019,
+      "sha256": "2a77e43cc24c6bcbef75c757aae9ba6036a700364e214d8a6a3325cccdaf803c"
+    },
+    {
+      "path": "docs/v0.8-workshop-economy-proposal.md",
+      "bytes": 18616,
+      "sha256": "6e936bd206e9157cf7e055bf093c10a283c3ff5d64f488ad5dec103738829aa2"
+    },
+    {
+      "path": "goal-1/plan.md",
+      "bytes": 36440,
+      "sha256": "e7ce1d5d28c14d10f882d1b5cf1e7a7ee0d31d2913315f5dc928d43c82c8c25e"
+    },
+    {
+      "path": "goal-1/tasks.md",
+      "bytes": 23706,
+      "sha256": "26508c2c0bdcfbd15c54499571877b3b0bd0ea4f03875893a78c155e246feea8"
+    },
+    {
+      "path": "openspec/changes/rebalance-workshop-economy/design.md",
+      "bytes": 6635,
+      "sha256": "7ab86a98bd1f91a64b7e56b5bbf199f00d902002c8781aee34e4a4633af0244e"
+    },
+    {
+      "path": "openspec/changes/rebalance-workshop-economy/proposal.md",
+      "bytes": 2638,
+      "sha256": "0e087f65a005b1717f4af41012b9ff01dc10cc1d3ce13c06eecc806deb64fb93"
+    },
+    {
+      "path": "openspec/changes/rebalance-workshop-economy/tasks.md",
+      "bytes": 3014,
+      "sha256": "5c41e8da56963afe947bf7a807554a21902bd2e2605421f4642b9b9bfd8db07c"
+    },
+    {
+      "path": "src/presentation-v4/app.ts",
+      "bytes": 72161,
+      "sha256": "70c256da9e7dfc4c61e73d6f50b60357ad122916b6fc248d8e9382fdb524a3c0"
+    },
+    {
+      "path": "src/presentation-v4/commission-paper.css",
+      "bytes": 4965,
+      "sha256": "8cadde8630f9e01a059040ad512964fef0e318f9468cdc4e5d795e2594cab5c1"
+    },
+    {
+      "path": "src/presentation-v4/commission-paper.ts",
+      "bytes": 10063,
+      "sha256": "8c000d135a41ec516640c558d84749b1cc2e9a91208a27cd611adf9f36cad184"
+    },
+    {
+      "path": "src/presentation-v4/shell.ts",
+      "bytes": 8632,
+      "sha256": "532743d08a753f9528106e80686c5a851d0ce32d20051ea20231b692ba170cd3"
+    },
+    {
+      "path": "src/presentation-v4/story.ts",
+      "bytes": 4128,
+      "sha256": "9cb7e8aa230039147967b3c3f2ccdefc2e5535d6e14c92f3cb9e3cd3319ac2a2"
+    },
+    {
+      "path": "src/presentation-v4/styles.css",
+      "bytes": 46940,
+      "sha256": "f70c90450433b179f7b00f867130b03b03f3a877f55249a8d0a74cdb52c87f21"
+    }
+  ],
+  "previewPid": 42797,
+  "previewSession": 59545,
+  "v08Approved": true,
+  "approvedProposalSha256": "c6a605c29e29d83ee9f3bae6700270af96d749f30d29e6de2c17bfb14acd04aa",
+  "v5ImplementationStarted": false,
+  "goalComplete": false
+}
