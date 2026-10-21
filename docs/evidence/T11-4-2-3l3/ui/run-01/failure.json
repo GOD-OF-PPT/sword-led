@@ -1,0 +1,17 @@
+{
+  "message": "Error: expect(locator).toContainText(expected) failed\n\nLocator: locator('#v5-delivery-quote')\nExpected substring: \"0\"\nReceived string:    \"收购钱袋已空。可留剑、换手艺或明确回收。\"\nTimeout: 5000ms\n\nCall log:\n  - Expect \"toContainText\" locator('#v5-delivery-quote') with timeout 5000ms\n  - waiting for locator('#v5-delivery-quote')\n    14 × locator resolved to <p id=\"v5-delivery-quote\" class=\"v5-delivery-quote\">收购钱袋已空。可留剑、换手艺或明确回收。</p>\n       - unexpected value \"收购钱袋已空。可留剑、换手艺或明确回收。\"\n",
+  "stack": "Error: expect(locator).toContainText(expected) failed\n\nLocator: locator('#v5-delivery-quote')\nExpected substring: \"0\"\nReceived string:    \"收购钱袋已空。可留剑、换手艺或明确回收。\"\nTimeout: 5000ms\n\nCall log:\n  - Expect \"toContainText\" locator('#v5-delivery-quote') with timeout 5000ms\n  - waiting for locator('#v5-delivery-quote')\n    14 × locator resolved to <p id=\"v5-delivery-quote\" class=\"v5-delivery-quote\">收购钱袋已空。可留剑、换手艺或明确回收。</p>\n       - unexpected value \"收购钱袋已空。可留剑、换手艺或明确回收。\"\n\n    at captureRawStack (/Users/gordon/githome/sword-led/node_modules/playwright-core/lib/coreBundle.js:9282:17)\n    at callMatcherAsStep (/Users/gordon/githome/sword-led/node_modules/playwright/lib/matchers/expect.js:13316:57)\n    at Object.toContainText (/Users/gordon/githome/sword-led/node_modules/playwright/lib/matchers/expect.js:13308:23)\n    at /Users/gordon/githome/sword-led/tmp/T11-4-2-3l3/ui/play.mjs:52:340\n    at async unchanged (/Users/gordon/githome/sword-led/tmp/T11-4-2-3l3/ui/play.mjs:17:65)\n    at async file:///Users/gordon/githome/sword-led/tmp/T11-4-2-3l3/ui/play.mjs:52:47",
+  "actions": 27,
+  "checks": [
+    {
+      "label": "d3-shop-raw",
+      "ok": true
+    },
+    {
+      "label": "d3-shop-formed",
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "body": "锤下求生\nv0.8 第一章 · 三柄行囊\n契印\n3/3\n铜钱\n423\n候火的剑\n\n拿起剑，拖给来客\n\n轻刃 · 40\n留一把，待明日\n留一柄，给明天\n\n明日新坯3 · 留一柄会占一位\n\n明日打算\n留给明天\n约定已交妥，今日收购钱袋也空了\n\n余剑现在卖不出金币，点出售不会收走剑。可以留到明日，占三柄来料中的一槽；当前等级0，升到等级3才可换手艺（不是敲满三锤）。主动回收现在实得0金币，会失去这柄剑。\n\n作品身价\n40\n轻刃 · 无裂纹\n\n等级 0 · 已完成安全连锻 0次\n\n下一锤裂损 0% · 首裂会掉价\n\n锤势 0/6\n\n落锤\n左键剑身 / 空格\n杜伯\n点来客，听听心愿\n\n杜伯听过成品的回响，替你重新接好了炉火。\n\n杜伯接过了剑\n\n杜伯听过成品的回响，替你重新接好了炉火。\n\n实收 150 铜钱 · 酬劳100＋品质50\n\n看看灯路\n×\n行会今日歇账\n\n收购钱袋已空。可留剑、换手艺或明确回收。\n\n行脚商人的摊子\n炉边来事 · 护送捐剑\n\n成器可换手艺 · 等级至少3\n\n稳手护符\n回收这柄剑\n收炉，准备启程\n行囊\n炉谱\n设置\n进度已收好\n\n安全连锻 ×2 · 锻成 · 这一记后身价 1,787"
+}

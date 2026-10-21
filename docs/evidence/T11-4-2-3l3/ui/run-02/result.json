@@ -1,0 +1,123 @@
+{
+  "ok": true,
+  "url": "http://127.0.0.1:4209/",
+  "browser": "isolated Chromium",
+  "method": "Empty fresh context; real title seed and pointer/buttons only; prior published legal guide fixed in advance; formal SDK replay equals each actual saved state; no injected save, economic commands or RNG adaptation",
+  "actions": 44,
+  "observations": 47,
+  "checks": [
+    {
+      "label": "d3-shop-raw",
+      "ok": true
+    },
+    {
+      "label": "d3-shop-formed",
+      "ok": true
+    },
+    {
+      "label": "empty purse ordinary sale disabled",
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "final": {
+    "runId": "bfdd0ea5-8168-451e-a96b-4c8b19776521",
+    "day": 4,
+    "phase": "summary",
+    "revision": 44,
+    "coins": 374,
+    "seals": 3,
+    "history": [
+      {
+        "day": 1,
+        "commissionId": 1,
+        "met": true,
+        "routeId": "intact",
+        "pieceIds": [
+          "d1-1"
+        ],
+        "sales": 120,
+        "recovered": 20,
+        "baseFees": 100,
+        "marketSpent": 40,
+        "recoveredIds": [
+          "d1-2",
+          "d1-3"
+        ],
+        "reserveId": null,
+        "sealsBefore": 3,
+        "sealsAfter": 3,
+        "protected": false,
+        "modification": null
+      },
+      {
+        "day": 2,
+        "commissionId": 2,
+        "met": true,
+        "routeId": "light",
+        "pieceIds": [
+          "d2-1"
+        ],
+        "sales": 103,
+        "recovered": 20,
+        "baseFees": 100,
+        "marketSpent": 23,
+        "recoveredIds": [
+          "d2-2",
+          "d2-3"
+        ],
+        "reserveId": null,
+        "sealsBefore": 3,
+        "sealsAfter": 3,
+        "protected": false,
+        "modification": null
+      },
+      {
+        "day": 3,
+        "commissionId": 3,
+        "met": true,
+        "routeId": "burst",
+        "pieceIds": [
+          "d3-2"
+        ],
+        "sales": 150,
+        "recovered": 10,
+        "baseFees": 100,
+        "marketSpent": 60,
+        "recoveredIds": [
+          "d3-3"
+        ],
+        "reserveId": null,
+        "sealsBefore": 3,
+        "sealsAfter": 3,
+        "protected": false,
+        "modification": null
+      },
+      {
+        "day": 4,
+        "commissionId": 4,
+        "met": true,
+        "routeId": "guard",
+        "pieceIds": [
+          "d4-1"
+        ],
+        "sales": 116,
+        "recovered": 15,
+        "baseFees": 100,
+        "marketSpent": 31,
+        "recoveredIds": [
+          "d4-3"
+        ],
+        "reserveId": "d4-2",
+        "sealsBefore": 3,
+        "sealsAfter": 3,
+        "protected": false,
+        "modification": "warmRack"
+      }
+    ],
+    "modifications": [
+      "warmRack"
+    ],
+    "reserveId": "d4-2"
+  }
+}
