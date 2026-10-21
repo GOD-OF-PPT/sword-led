@@ -2,7 +2,7 @@
 
 本目录逐字记录本次新输入，承接goal-1全部原始五项、已完成成果/待办/批准与验证责任，不重置进度或资金/规则。原始完整输入仍为goal-1/input.md，当前完整阶段表为goal-1/tasks.md。
 
-当前原生goal已于本轮get_goal实读active；以下paused/create拒绝为历史。继续责任见goal-4（复制原五项，不重建原生目标），当前只执行T01版本路由/当前纯键盘整局。
+当前原生goal已于本轮get_goal实读active；以下paused/create拒绝为历史。继续责任见goal-4（复制原五项，不重建原生目标），T01版本路由/当前纯键盘整局已完成并推送1b814345；下一项T02。
 
 应用原生goal仍为paused，create_goal已实际拒绝：cannot create a new goal because this thread has an unfinished goal; complete the existing goal first。没有可用resume目标工具，不能将未完成原goal标complete来换新目标。用户现已明确要求继续，因此本地实施继续；原生状态限制最后如实说明，不拿本目录假称原生goal已恢复。
 
