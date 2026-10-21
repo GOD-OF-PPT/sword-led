@@ -2,7 +2,7 @@
 
 一款面向现代 PC 浏览器的轮次制锻造游戏。每日只有三柄兵器：左键落锤让它升值，在断裂前决定交剑、留剑、换艺还是回收，带着炉火走完十二份约定。
 
-**当前默认版为 v0.8「炉边交易 · 三柄行囊」：[本机试玩](http://127.0.0.1:4179/)**。三章十二天、十二份委托、三次商人、两次炉具改造与三种结局均接真实经营和保存。作品身价与实际酬劳/品质分开，行会有限收购；留剑占次日三柄中的一位，等级至少3的成器可换手艺。[完整操作指南](docs/v0.8-twelve-lights-guide.md)说明流程与取舍。已有v0.8首章档可从第四天收据继续；原v0.7行程从标题“旧版十二灯行程”或[旧炉前](http://127.0.0.1:4179/v4.html)续玩，新旧局内金币和兵器不互迁。
+**当前默认版为 v0.8「炉边交易 · 三柄行囊」：[本机试玩](http://127.0.0.1:4179/)**。三章十二天、十二份委托、三次商人、两次炉具改造与三种结局均接真实经营和保存。作品身价与实际酬劳/品质分开，行会有限收购；留剑占次日三柄中的一位，等级至少3的成器可换手艺。[完整操作指南](docs/v0.8-twelve-lights-guide.md)说明流程与取舍。已有v0.8首章档可从第四天收据继续；原v0.7行程从标题“续走旧行程”或[旧炉前](http://127.0.0.1:4179/v4.html)续玩，新旧局内金币和兵器不互迁。
 
 刷新原标签页可见“v0.8 炉边交易 · 三柄行囊”。单双剑以独立剑位显示，旧剑／新剑明确任选一条；双剑分期收款，改走旧剑路线只补基础酬劳差额，已经交出的新剑仍有真实去向。达标提示可直接交出绑定的合格剑，裂纹提示打开实际差项，切剑后不会残留旧剑消息。连锻身价随真实接触逐记变化；跨阶亮出成器名，交出的原剑送到来客手中，刷新只恢复事实、不补发奖励。铁砧上方显示当前差项与风险，六格火星蓄满后下一锤安全连锻；“明日打算”列出真实纸单和一旧两新／三新坯，取下旧剑不补第四柄。第12天留架只暂存本局，不带入新局。旧契约仍可从“行旅种子与更早旧路”进入[旧版炉前](http://127.0.0.1:4179/v3.html)，旧D细锻和B版入口也保留。
 
@@ -12,7 +12,7 @@
 
 开场与灯路回顾现在明确目标：守住第4、8、12天的关键约定，至少完成10项并保有契印，才能十二灯复明。关键日收工前会说明失约后果；护炉契保印不补约。旧刃回收没有架上剑时，可用新入口返回铁砧，选余剑点“留给明天”挂架后再回来确认，今日坯也可交换；导航不会自动交剑。
 
-[v0.8批准方案](docs/v0.8-workshop-economy-proposal.md)、[正式核心API](docs/v0.8-core-api.md)、[保存/导入合同](docs/v0.8-persistence-contract.md)、[R3.23三项复核](docs/reviews/R3-23-v08-twelve-lights.md)及[R3.24成长交易复核](docs/reviews/R3-24-v08-growth-trade.md)记录当前实现。一个固定合法路线已真实走完十二天，另有首章续玩、归途、失败与合法挑战开局记录；流程可达不等于经营平衡或真人乐趣通过。历史v4的30,000终态及旧规则经济风险保留在[旧平衡报告](docs/reviews/T11-4-2-3i6-v4-balance.md)，不作为v5结论。[九张终章美术原件/提示词](design/d/v07-chapter3/README.md)及前两章原件保持。交互、界面与玩法继续优先，兼容广测后置；真人体验和最终最大复核仍待。本机预览未公网部署。
+[v0.8批准方案](docs/v0.8-workshop-economy-proposal.md)、[正式核心API](docs/v0.8-core-api.md)、[保存/导入合同](docs/v0.8-persistence-contract.md)、[R3.23三项复核](docs/reviews/R3-23-v08-twelve-lights.md)及[R3.24成长交易复核](docs/reviews/R3-24-v08-growth-trade.md)记录当前实现；[当前原五项交付复核](docs/reviews/R4-v5-delivery-review.md)汇总来源与尚未收到的真人反馈。一个固定合法路线已真实走完十二天，另有首章续玩、归途、失败与合法挑战开局记录；流程可达不等于经营平衡或真人乐趣通过。历史v4的30,000终态及旧规则经济风险保留在[旧平衡报告](docs/reviews/T11-4-2-3i6-v4-balance.md)，不作为v5结论。[九张终章美术原件/提示词](design/d/v07-chapter3/README.md)及前两章原件保持。交互、界面与玩法继续优先，兼容广测后置；真人体验和最终最大复核仍待。本机预览未公网部署。
 
 历史 [v0.6炉前](docs/v0.6-workshop-interface.md)和[R3.18](docs/reviews/R3-18-game-studio-forge-ui.md)保留原交付身份。[ForgeTax完整实况复核](docs/research/2026-10-19-forgetax-session-study.md)与Steam评论研究记录了参考依据；当前优化依据用户对主线、成长、内容的反馈推进。
 
@@ -135,23 +135,30 @@ npm run simulate -- --replay docs/evidence/T06/verify-v1.medium-victory.json
 
 B旧版入口为`/legacy.html`，D细锻为`/v2.html`，v0.4为`/v3.html`，v0.7三章十二天为`/v4.html`，v0.8三柄行囊为`/`；开发服务还提供`/design/b/preview/index.html`美术校验页。`test:art`核对B风格的9张图片、alpha、288姿态、24材料帧和设计组件；D素材在新版UI/alpha规格中核对，两者证据分别记录。旧阶段机器证据归档工具为`node scripts/collect-ui-evidence.mjs --stage T10 --out <新的证据目录>`，已有证据不覆盖；归档前需生成最新unit/UI/storage报告。新版完整矩阵使用贡献说明中的v2 collector。
 
-构建后可在 Node 中调用同一个正式内核：
+构建后可在 Node 中调用当前 forge-v5 正式内核（旧 SDK 保留给旧行程）：
 
 ```js
-import { createRun, applyCommand, getRunView } from './dist/sword-led-core.js';
+import { createRun, applyCommand, getRunView } from './dist/sword-led-v5.js';
 
 const created = createRun({ runId: 'example-run', seed: 'forge-demo' });
 if (!created.ok) throw new Error(created.error);
-const hit = applyCommand(created.state, {
+const opened = applyCommand(created.state, {
   runId: created.state.runId,
   expectedRevision: created.state.revision,
-  action: { type: 'strike', pieceId: '1:1', mode: 'standard', timingMark: 5000 },
+  action: { type: 'continue' },
+});
+if (!opened.ok) throw new Error(opened.error);
+const hit = applyCommand(opened.state, {
+  runId: opened.state.runId,
+  expectedRevision: opened.state.revision,
+  action: { type: 'strike', pieceId: 'd1-1' },
 });
 if (!hit.ok) throw new Error(hit.error);
-console.log(getRunView(hit.state).selected);
+const view = getRunView(hit.state);
+console.log(view.day, view.coins, view.blades[0].blade.value);
 ```
 
-动作拒绝不改变原状态、随机位置或修订号。只对内核创建或 validateRun 校验过的状态调用；浏览器使用持久化会话自动尝试保存每个 Accepted 动作，dirty/冲突/显式恢复见存档合同。
+动作拒绝不改变原状态、随机位置或修订号。只对内核创建或 validateRun 校验过的状态调用；浏览器使用 createV5BrowserSession 自动尝试保存 Accepted 动作，dirty/冲突/显式恢复见[当前保存合同](docs/v0.8-persistence-contract.md)。保存详情可分别导出合法的内存行程、炉谱，以及磁盘主/备局档原文。原文导出在损坏/未知版本或只读时也可用，逐槽记录读取失败；它用于先留存资料，不直接当合法局档导入。
 
 ## 素材与发布
 

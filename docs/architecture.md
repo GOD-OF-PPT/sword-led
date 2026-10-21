@@ -1,6 +1,12 @@
 # 代码架构与玩法内核约定
 
-> 现行v4：`application/v4-persistence.ts`与`v4-collection.ts`管理独立schema4局档、schema1炉谱与同源writer lease；已保存合法局才同步永久集合。`presentation-v4/app.ts`唯一发命令/保存/持输入身份，forge只绘制，journey只投影实际历史/结局，stages和collection-ui返回DOM与明确意图。三章、真实数量/替代路线、三结局与挑战按同一个核心预览接线；[终章合同](v0.7-final-chapter-interface.md)和[操作指南](v0.7-final-chapter-guide.md)给出现行入口与范围，最终验收状态见[README](../README.md)。
+> **现行默认版为forge-v5/schema5的v0.8三章十二天。** `src/v5-main.ts`装配`core-v5`、`application/v5-persistence.ts`、`v5-collection.ts`与`presentation-v5/app.ts`。纯核心负责唯一命令、整数计价/有限钱袋、三槽来料、随机与结局，`validateRun`按创建资格和完整journal重放；正式SDK为`sword-led-v5.js`。浏览器和SDK共用同一业务接口，UI选择、确认预览、动效和图片加载不发经济奖励。接口与边界见[当前核心API](v0.8-core-api.md)、[保存/导入合同](v0.8-persistence-contract.md)。
+
+> v5独立局档/备份与schema2带来源炉谱继续使用同源writer lease。只有安全保存的合法局才写持久炉谱；旧schema1主册/备份经显式预览和绑定来源的确认并集成长，旧作品保留forge-v4来源，旧钱包和局内兵器不迁移。当前局创建资格冻结，新增持久资格用于下次启程。局档和炉谱各自报告写入结果，不把两次写入称作原子事务。
+
+> `presentation-v5/app.ts`持输入/代际/确认身份，消费正式Accepted事件；`journey/stages`投影实际历史和三结局，`commission-paper`画实际收件位，`growth-options`只读比较留剑/现金/献艺，`market-stall`在弹层内选实物和献剑。Canvas复用`presentation-v4/forge.ts`及D独立素材/自然锤，只绘制真实兵器与接触反馈；默认交互是直接左键而非时机题。文字/焦点/按钮仍由DOM承载。当前操作与玩家流程见[十二灯指南](v0.8-twelve-lights-guide.md)，跨首章/后段/交易复核见[R3.24](reviews/R3-24-v08-growth-trade.md)。
+
+> **以下为旧版架构记录。** 原v4的`application/v4-persistence.ts`与`v4-collection.ts`管理schema4局档、schema1炉谱及同源writer lease；旧`presentation-v4/app.ts`从标题“续走旧行程”或 `/v4.html` 继续。其[终章合同](v0.7-final-chapter-interface.md)和[旧指南](v0.7-final-chapter-guide.md)保留对应版本范围，不能用来解释v5计价或存档。当前交付及未验真人乐趣见[README](../README.md)。
 
 > `core-v4`与`sword-led-v4.js`：model/content定义内容和状态，rules提供条件/报价，game处理Accepted命令，view派生预览/炉谱集合，validate从创建资格和完整journal重建。价格、随机、委托和胜负只由核心决定；前端不造RunState、不复制判定或发奖。复用整数随机/冻结/JSON守护，不改旧解释器；[内核合同](v0.7-core-contract.md)、[保存合同](v0.7-persistence-contract.md)保留各阶段API与证据，旧v0.6在v3.html继续原档。
 

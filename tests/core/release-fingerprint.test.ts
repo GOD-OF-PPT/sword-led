@@ -18,3 +18,24 @@ test('release fingerprint refuses changed builds, changed real test inputs and a
     writeFileSync(join(root,'review-notes.md'),'Review progress does not change executable inputs.');expect(run('verify').status).toBe(0);
   }finally{rmSync(root,{recursive:true,force:true});}
 },30000);
+
+test('all current root HTML entries and newly added entries are frozen without including review notes',()=>{
+  const root=mkdtempSync(join(tmpdir(),'sword-led-entry-fingerprint-')),script=resolve('scripts/release-fingerprint.mjs');
+  const run=(mode:string)=>spawnSync(process.execPath,[script,mode,'receipt.json'],{cwd:root,encoding:'utf8',timeout:10000});
+  try{
+    for(const dir of ['src','tests','scripts','public','dist','docs/evidence/T06'])mkdirSync(join(root,dir),{recursive:true});
+    for(const p of ['docs/evidence/T11-2/simulation/victory.json','docs/evidence/T11-3/polish-runtime/ui/d-keyboard-campaign.json','docs/evidence/T11-3/polish-runtime/ui/v2-three-round-contract.json']){mkdirSync(dirname(join(root,p)),{recursive:true});writeFileSync(join(root,p),'{}');}
+    writeFileSync(join(root,'dist/index.html'),'<main>built game</main>');
+    const entries=['index.html','v2.html','v3.html','v4.html','legacy.html'];
+    for(const name of entries)writeFileSync(join(root,name),`<main>${name}</main>`);
+    expect(run('capture').status).toBe(0);const receipt=readFileSync(join(root,'receipt.json'));
+    expect(Object.keys(JSON.parse(receipt.toString()).sourceHashes)).toEqual(expect.arrayContaining(entries));
+    for(const name of ['v3.html','v4.html','legacy.html']){
+      const path=join(root,name),original=readFileSync(path);writeFileSync(path,'<main>changed entry</main>');
+      const result=run('verify');expect(result.status).toBe(1);expect(JSON.parse(result.stdout).changed).toContain(name);writeFileSync(path,original);
+    }
+    writeFileSync(join(root,'next-game.html'),'<main>new entry</main>');const added=run('verify');expect(added.status).toBe(1);expect(JSON.parse(added.stdout).changed).toContain('next-game.html');
+    rmSync(join(root,'next-game.html'));writeFileSync(join(root,'review-notes.md'),'Review prose is not an executable entry.');expect(run('verify').status).toBe(0);
+    expect(run('capture').status).not.toBe(0);expect(readFileSync(join(root,'receipt.json'))).toEqual(receipt);
+  }finally{rmSync(root,{recursive:true,force:true});}
+},15000);

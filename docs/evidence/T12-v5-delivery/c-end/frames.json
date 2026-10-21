@@ -1,0 +1,975 @@
+[
+  {
+    "label": "01-title",
+    "body": "v0.8 炉边交易 · 三柄行囊\n\n锤下求生\n\n一炉火，一柄剑，一程未熄的灯。\n\n启程\n翻开炉谱\n炉边设置\n旧版十二灯行程\n行旅种子与更早旧路\n\n左键落锤，拖剑交客。好剑总有它要去的地方。\n\n本机存档",
+    "state": null,
+    "visible": [
+      {
+        "id": "v4-start",
+        "text": "启程",
+        "disabled": false,
+        "rect": {
+          "x": 115.1875,
+          "y": 306.296875,
+          "width": 210,
+          "height": 70,
+          "bottom": 376.296875
+        }
+      },
+      {
+        "id": "v4-title-collection",
+        "text": "翻开炉谱",
+        "disabled": false,
+        "rect": {
+          "x": 115.1875,
+          "y": 388.296875,
+          "width": 91,
+          "height": 45.1875,
+          "bottom": 433.484375
+        }
+      },
+      {
+        "id": "v4-title-settings",
+        "text": "炉边设置",
+        "disabled": false,
+        "rect": {
+          "x": 218.1875,
+          "y": 388.296875,
+          "width": 91,
+          "height": 45.1875,
+          "bottom": 433.484375
+        }
+      },
+      {
+        "id": "v4-save-open",
+        "text": "本机存档",
+        "disabled": false,
+        "rect": {
+          "x": 1178,
+          "y": 25,
+          "width": 78,
+          "height": 44,
+          "bottom": 69
+        }
+      }
+    ]
+  },
+  {
+    "label": "02-opening",
+    "body": "灯炉行记\n\n第一章 · 灯从炉起\n\n山路第一盏灯熄了。阿岚把旧巡剑放到铁砧旁：先让巡夜的人回家。\n\n守住第4、8、12天的关键约定，至少完成10项，并带着契印归来，才能让十二灯复明。\n\n巡夜的人要一柄无裂新剑，先点亮归家的第一站。\n\n一柄 · 无裂纹 · 身价≥100\n\n左键敲击，见好就交。每次收工只按真实完成情况判定契印。\n\n点火开炉\n跳过开场\n行囊\n炉谱\n设置\n进度已收好",
+    "state": {
+      "rulesVersion": "forge-v5",
+      "runId": "195dfa1f-5dd5-4043-82c8-7f30abd58477",
+      "seed": "灯路-b80a36a8",
+      "mode": "story",
+      "initialEligibility": {
+        "recipes": [
+          "light"
+        ],
+        "challenge": false
+      },
+      "revision": 0,
+      "phase": "opening",
+      "day": 1,
+      "commissionOrder": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "coins": 0,
+      "seals": 3,
+      "supplyBase": 40,
+      "upgradeCount": 0,
+      "inheritance": 0,
+      "blades": [
+        {
+          "id": "d1-1",
+          "slot": 1,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 40,
+          "peak": 40,
+          "level": 0,
+          "cracked": false,
+          "hits": 0,
+          "charge": 0,
+          "successes": 0,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        },
+        {
+          "id": "d1-2",
+          "slot": 2,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 40,
+          "peak": 40,
+          "level": 0,
+          "cracked": false,
+          "hits": 0,
+          "charge": 0,
+          "successes": 0,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        },
+        {
+          "id": "d1-3",
+          "slot": 3,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 40,
+          "peak": 40,
+          "level": 0,
+          "cracked": false,
+          "hits": 0,
+          "charge": 0,
+          "successes": 0,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        }
+      ],
+      "reserveId": null,
+      "daySales": 0,
+      "dayRecovered": 0,
+      "marketSpent": 0,
+      "traits": [],
+      "gift": "locked",
+      "pardonUsed": false,
+      "crackGuard": false,
+      "modifications": [],
+      "chapterChoices": [],
+      "shop": [],
+      "sold": [],
+      "upgraded": false,
+      "repaired": false,
+      "dayBuffs": {
+        "supplyPct": 100,
+        "loan": false,
+        "shelter": false
+      },
+      "pending": {
+        "supplyPct": 100,
+        "loan": false,
+        "shelter": false
+      },
+      "eventDeck": [
+        "donation",
+        "loan",
+        "shelter",
+        "rest",
+        "salvage",
+        "credit"
+      ],
+      "eventId": null,
+      "eventStatus": "none",
+      "eventHistory": [],
+      "history": [],
+      "rng": {
+        "forge": {
+          "state": 3258892492,
+          "draws": 0
+        },
+        "shop": {
+          "state": 992532805,
+          "draws": 0
+        },
+        "events": {
+          "state": 676703241,
+          "draws": 5
+        },
+        "content": {
+          "state": 1965430302,
+          "draws": 0
+        }
+      },
+      "journal": []
+    },
+    "visible": [
+      {
+        "id": "",
+        "text": "点火开炉",
+        "disabled": false,
+        "rect": {
+          "x": 700.234375,
+          "y": 521.375,
+          "width": 170,
+          "height": 51.046875,
+          "bottom": 572.421875
+        }
+      },
+      {
+        "id": "",
+        "text": "跳过开场",
+        "disabled": false,
+        "rect": {
+          "x": 880.234375,
+          "y": 521.375,
+          "width": 98,
+          "height": 51.046875,
+          "bottom": 572.421875
+        }
+      },
+      {
+        "id": "v4-menu",
+        "text": "行囊",
+        "disabled": false,
+        "rect": {
+          "x": 1001,
+          "y": 25,
+          "width": 48,
+          "height": 44,
+          "bottom": 69
+        }
+      },
+      {
+        "id": "v4-book",
+        "text": "炉谱",
+        "disabled": false,
+        "rect": {
+          "x": 1055,
+          "y": 25,
+          "width": 48,
+          "height": 44,
+          "bottom": 69
+        }
+      },
+      {
+        "id": "v4-settings",
+        "text": "设置",
+        "disabled": false,
+        "rect": {
+          "x": 1109,
+          "y": 25,
+          "width": 48,
+          "height": 44,
+          "bottom": 69
+        }
+      },
+      {
+        "id": "v4-save-open",
+        "text": "进度已收好",
+        "disabled": false,
+        "rect": {
+          "x": 1163,
+          "y": 25,
+          "width": 93,
+          "height": 44,
+          "bottom": 69
+        }
+      }
+    ]
+  },
+  {
+    "label": "03-first-forge",
+    "body": "锤下求生\nv0.8 炉边交易 · 三柄行囊\n契印\n3/3\n铜钱\n0\n候火的剑\n\n拿起剑，拖给来客\n\n轻刃 · 40\n轻刃 · 40\n轻刃 · 40\n留一把，待明日\n留一柄，给明天\n\n明日：新坯3\n\n明日打算\n留给明天\n\n作品身价\n40\n轻刃 · 无裂纹\n\n等级 0 · 已完成安全连锻 0次\n\n下一锤裂损 0% · 首裂会掉价\n\n锤势 0/6\n\n落锤\n左键剑身 / 空格\n阿岚\n点来客，听听心愿\n\n第1天 · 灯从炉起\n\n巡夜第一灯\n\n好剑有它要去的地方\n\n交付一柄无裂纹 · 身价≥100\n\n还差60身价\n\n待交\n\n合格后递给来客，才算交妥\n\n今日酬劳 100 · 已收0\n\n巡夜的人要一柄无裂新剑，先点亮归家的第一站。\n\n卖给行会 · 收10\n\n作品身价40 · 收购余60\n\n回收这柄剑\n收工，封炉\n行囊\n炉谱\n设置\n进度已收好\n炉火点着了\n\n左键点剑身落锤。纸单下会写出实际收款，合格后再交给来客。\n\n×",
+    "state": {
+      "rulesVersion": "forge-v5",
+      "runId": "195dfa1f-5dd5-4043-82c8-7f30abd58477",
+      "seed": "灯路-b80a36a8",
+      "mode": "story",
+      "initialEligibility": {
+        "recipes": [
+          "light"
+        ],
+        "challenge": false
+      },
+      "revision": 1,
+      "phase": "workshop",
+      "day": 1,
+      "commissionOrder": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "coins": 0,
+      "seals": 3,
+      "supplyBase": 40,
+      "upgradeCount": 0,
+      "inheritance": 0,
+      "blades": [
+        {
+          "id": "d1-1",
+          "slot": 1,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 40,
+          "peak": 40,
+          "level": 0,
+          "cracked": false,
+          "hits": 0,
+          "charge": 0,
+          "successes": 0,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        },
+        {
+          "id": "d1-2",
+          "slot": 2,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 40,
+          "peak": 40,
+          "level": 0,
+          "cracked": false,
+          "hits": 0,
+          "charge": 0,
+          "successes": 0,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        },
+        {
+          "id": "d1-3",
+          "slot": 3,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 40,
+          "peak": 40,
+          "level": 0,
+          "cracked": false,
+          "hits": 0,
+          "charge": 0,
+          "successes": 0,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        }
+      ],
+      "reserveId": null,
+      "daySales": 0,
+      "dayRecovered": 0,
+      "marketSpent": 0,
+      "traits": [],
+      "gift": "locked",
+      "pardonUsed": false,
+      "crackGuard": false,
+      "modifications": [],
+      "chapterChoices": [],
+      "shop": [],
+      "sold": [],
+      "upgraded": false,
+      "repaired": false,
+      "dayBuffs": {
+        "supplyPct": 100,
+        "loan": false,
+        "shelter": false
+      },
+      "pending": {
+        "supplyPct": 100,
+        "loan": false,
+        "shelter": false
+      },
+      "eventDeck": [
+        "donation",
+        "loan",
+        "shelter",
+        "rest",
+        "salvage",
+        "credit"
+      ],
+      "eventId": null,
+      "eventStatus": "none",
+      "eventHistory": [],
+      "history": [],
+      "rng": {
+        "forge": {
+          "state": 3258892492,
+          "draws": 0
+        },
+        "shop": {
+          "state": 992532805,
+          "draws": 0
+        },
+        "events": {
+          "state": 676703241,
+          "draws": 5
+        },
+        "content": {
+          "state": 1965430302,
+          "draws": 0
+        }
+      },
+      "journal": [
+        {
+          "type": "continue"
+        }
+      ]
+    },
+    "visible": [
+      {
+        "id": "",
+        "text": "轻刃 · 40",
+        "disabled": false,
+        "rect": {
+          "x": 36,
+          "y": 186.390625,
+          "width": 162,
+          "height": 62,
+          "bottom": 248.390625
+        }
+      },
+      {
+        "id": "",
+        "text": "轻刃 · 40",
+        "disabled": false,
+        "rect": {
+          "x": 36,
+          "y": 255.390625,
+          "width": 162,
+          "height": 62,
+          "bottom": 317.390625
+        }
+      },
+      {
+        "id": "",
+        "text": "轻刃 · 40",
+        "disabled": false,
+        "rect": {
+          "x": 36,
+          "y": 324.390625,
+          "width": 162,
+          "height": 62,
+          "bottom": 386.390625
+        }
+      },
+      {
+        "id": "v4-next-plan",
+        "text": "明日打算",
+        "disabled": false,
+        "rect": {
+          "x": 43,
+          "y": 474.78125,
+          "width": 148,
+          "height": 40,
+          "bottom": 514.78125
+        }
+      },
+      {
+        "id": "v4-reserve",
+        "text": "留给明天",
+        "disabled": false,
+        "rect": {
+          "x": 36,
+          "y": 527.78125,
+          "width": 162,
+          "height": 44,
+          "bottom": 571.78125
+        }
+      },
+      {
+        "id": "v4-hit",
+        "text": "",
+        "disabled": false,
+        "rect": {
+          "x": 166.390625,
+          "y": 172.796875,
+          "width": 857.609375,
+          "height": 417.609375,
+          "bottom": 590.40625
+        }
+      },
+      {
+        "id": "v4-strike",
+        "text": "落锤\n左键剑身 / 空格",
+        "disabled": false,
+        "rect": {
+          "x": 837.984375,
+          "y": 614.96875,
+          "width": 122,
+          "height": 62,
+          "bottom": 676.96875
+        }
+      },
+      {
+        "id": "v4-customer-open",
+        "text": "阿岚\n点来客，听听心愿",
+        "disabled": false,
+        "rect": {
+          "x": 1008,
+          "y": 95.03125,
+          "width": 246,
+          "height": 120,
+          "bottom": 215.03125
+        }
+      },
+      {
+        "id": "v4-deliver",
+        "text": "卖给行会 · 收10",
+        "disabled": false,
+        "rect": {
+          "x": 1008,
+          "y": 396.5625,
+          "width": 246,
+          "height": 50,
+          "bottom": 446.5625
+        }
+      },
+      {
+        "id": "v4-scrap",
+        "text": "回收这柄剑",
+        "disabled": false,
+        "rect": {
+          "x": 240,
+          "y": 573,
+          "width": 82,
+          "height": 44,
+          "bottom": 617
+        }
+      },
+      {
+        "id": "v4-settle",
+        "text": "收工，封炉",
+        "disabled": false,
+        "rect": {
+          "x": 1008,
+          "y": 639,
+          "width": 246,
+          "height": 61,
+          "bottom": 700
+        }
+      },
+      {
+        "id": "v4-menu",
+        "text": "行囊",
+        "disabled": false,
+        "rect": {
+          "x": 1012,
+          "y": 22,
+          "width": 48,
+          "height": 44,
+          "bottom": 66
+        }
+      },
+      {
+        "id": "v4-book",
+        "text": "炉谱",
+        "disabled": false,
+        "rect": {
+          "x": 1064,
+          "y": 22,
+          "width": 48,
+          "height": 44,
+          "bottom": 66
+        }
+      },
+      {
+        "id": "v4-settings",
+        "text": "设置",
+        "disabled": false,
+        "rect": {
+          "x": 1116,
+          "y": 22,
+          "width": 48,
+          "height": 44,
+          "bottom": 66
+        }
+      },
+      {
+        "id": "v4-save-open",
+        "text": "进度已收好",
+        "disabled": false,
+        "rect": {
+          "x": 1168,
+          "y": 22,
+          "width": 87,
+          "height": 44,
+          "bottom": 66
+        }
+      },
+      {
+        "id": "v4-notice-dismiss",
+        "text": "×",
+        "disabled": false,
+        "rect": {
+          "x": 913,
+          "y": 79.59375,
+          "width": 44,
+          "height": 44,
+          "bottom": 123.59375
+        }
+      }
+    ]
+  },
+  {
+    "label": "04-first-hit",
+    "body": "锤下求生\nv0.8 炉边交易 · 三柄行囊\n契印\n3/3\n铜钱\n0\n候火的剑\n\n拿起剑，拖给来客\n\n轻刃 · 62\n轻刃 · 40\n轻刃 · 40\n留一把，待明日\n留一柄，给明天\n\n明日：新坯3\n\n明日打算\n留给明天\n还差38身价\n\n再攒5记普通锤，剑撑住后才有安全连锻。下一记普通锤不会裂，不代表之后也一直安全。\n\n作品身价\n62\n轻刃 · 无裂纹\n\n等级 1 · 已完成安全连锻 0次\n\n下一锤裂损 0% · 首裂会掉价\n\n锤势 1/6\n\n落锤\n左键剑身 / 空格\n阿岚\n点来客，听听心愿\n\n第1天 · 灯从炉起\n\n巡夜第一灯\n\n好剑有它要去的地方\n\n交付一柄无裂纹 · 身价≥100\n\n还差38身价\n\n待交\n\n合格后递给来客，才算交妥\n\n今日酬劳 100 · 已收0\n\n巡夜的人要一柄无裂新剑，先点亮归家的第一站。\n\n卖给行会 · 收15\n\n作品身价62 · 收购余60\n\n回收这柄剑\n收工，封炉\n行囊\n炉谱\n设置\n进度已收好\n\n落锤 · 锻成 · 这一记后身价 62\n\n乌铁坯 → 初开锋",
+    "state": {
+      "rulesVersion": "forge-v5",
+      "runId": "195dfa1f-5dd5-4043-82c8-7f30abd58477",
+      "seed": "灯路-b80a36a8",
+      "mode": "story",
+      "initialEligibility": {
+        "recipes": [
+          "light"
+        ],
+        "challenge": false
+      },
+      "revision": 2,
+      "phase": "workshop",
+      "day": 1,
+      "commissionOrder": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "coins": 0,
+      "seals": 3,
+      "supplyBase": 40,
+      "upgradeCount": 0,
+      "inheritance": 0,
+      "blades": [
+        {
+          "id": "d1-1",
+          "slot": 1,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 62,
+          "peak": 62,
+          "level": 1,
+          "cracked": false,
+          "hits": 1,
+          "charge": 1,
+          "successes": 1,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        },
+        {
+          "id": "d1-2",
+          "slot": 2,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 40,
+          "peak": 40,
+          "level": 0,
+          "cracked": false,
+          "hits": 0,
+          "charge": 0,
+          "successes": 0,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        },
+        {
+          "id": "d1-3",
+          "slot": 3,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 40,
+          "peak": 40,
+          "level": 0,
+          "cracked": false,
+          "hits": 0,
+          "charge": 0,
+          "successes": 0,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        }
+      ],
+      "reserveId": null,
+      "daySales": 0,
+      "dayRecovered": 0,
+      "marketSpent": 0,
+      "traits": [],
+      "gift": "locked",
+      "pardonUsed": false,
+      "crackGuard": false,
+      "modifications": [],
+      "chapterChoices": [],
+      "shop": [],
+      "sold": [],
+      "upgraded": false,
+      "repaired": false,
+      "dayBuffs": {
+        "supplyPct": 100,
+        "loan": false,
+        "shelter": false
+      },
+      "pending": {
+        "supplyPct": 100,
+        "loan": false,
+        "shelter": false
+      },
+      "eventDeck": [
+        "donation",
+        "loan",
+        "shelter",
+        "rest",
+        "salvage",
+        "credit"
+      ],
+      "eventId": null,
+      "eventStatus": "none",
+      "eventHistory": [],
+      "history": [],
+      "rng": {
+        "forge": {
+          "state": 795491009,
+          "draws": 1
+        },
+        "shop": {
+          "state": 992532805,
+          "draws": 0
+        },
+        "events": {
+          "state": 676703241,
+          "draws": 5
+        },
+        "content": {
+          "state": 1965430302,
+          "draws": 0
+        }
+      },
+      "journal": [
+        {
+          "type": "continue"
+        },
+        {
+          "type": "strike",
+          "pieceId": "d1-1"
+        }
+      ]
+    },
+    "visible": [
+      {
+        "id": "",
+        "text": "轻刃 · 62",
+        "disabled": false,
+        "rect": {
+          "x": 36,
+          "y": 186.390625,
+          "width": 162,
+          "height": 62,
+          "bottom": 248.390625
+        }
+      },
+      {
+        "id": "",
+        "text": "轻刃 · 40",
+        "disabled": false,
+        "rect": {
+          "x": 36,
+          "y": 255.390625,
+          "width": 162,
+          "height": 62,
+          "bottom": 317.390625
+        }
+      },
+      {
+        "id": "",
+        "text": "轻刃 · 40",
+        "disabled": false,
+        "rect": {
+          "x": 36,
+          "y": 324.390625,
+          "width": 162,
+          "height": 62,
+          "bottom": 386.390625
+        }
+      },
+      {
+        "id": "v4-next-plan",
+        "text": "明日打算",
+        "disabled": false,
+        "rect": {
+          "x": 43,
+          "y": 474.78125,
+          "width": 148,
+          "height": 40,
+          "bottom": 514.78125
+        }
+      },
+      {
+        "id": "v4-reserve",
+        "text": "留给明天",
+        "disabled": false,
+        "rect": {
+          "x": 36,
+          "y": 527.78125,
+          "width": 162,
+          "height": 44,
+          "bottom": 571.78125
+        }
+      },
+      {
+        "id": "v4-hit",
+        "text": "",
+        "disabled": false,
+        "rect": {
+          "x": 166.390625,
+          "y": 172.796875,
+          "width": 857.609375,
+          "height": 417.609375,
+          "bottom": 590.40625
+        }
+      },
+      {
+        "id": "v4-strike",
+        "text": "落锤\n左键剑身 / 空格",
+        "disabled": false,
+        "rect": {
+          "x": 837.984375,
+          "y": 614.96875,
+          "width": 122,
+          "height": 62,
+          "bottom": 676.96875
+        }
+      },
+      {
+        "id": "v4-customer-open",
+        "text": "阿岚\n点来客，听听心愿",
+        "disabled": false,
+        "rect": {
+          "x": 1008,
+          "y": 95.03125,
+          "width": 246,
+          "height": 120,
+          "bottom": 215.03125
+        }
+      },
+      {
+        "id": "v4-deliver",
+        "text": "卖给行会 · 收15",
+        "disabled": false,
+        "rect": {
+          "x": 1008,
+          "y": 396.5625,
+          "width": 246,
+          "height": 50,
+          "bottom": 446.5625
+        }
+      },
+      {
+        "id": "v4-scrap",
+        "text": "回收这柄剑",
+        "disabled": false,
+        "rect": {
+          "x": 240,
+          "y": 573,
+          "width": 82,
+          "height": 44,
+          "bottom": 617
+        }
+      },
+      {
+        "id": "v4-settle",
+        "text": "收工，封炉",
+        "disabled": false,
+        "rect": {
+          "x": 1008,
+          "y": 639,
+          "width": 246,
+          "height": 61,
+          "bottom": 700
+        }
+      },
+      {
+        "id": "v4-menu",
+        "text": "行囊",
+        "disabled": false,
+        "rect": {
+          "x": 1012,
+          "y": 22,
+          "width": 48,
+          "height": 44,
+          "bottom": 66
+        }
+      },
+      {
+        "id": "v4-book",
+        "text": "炉谱",
+        "disabled": false,
+        "rect": {
+          "x": 1064,
+          "y": 22,
+          "width": 48,
+          "height": 44,
+          "bottom": 66
+        }
+      },
+      {
+        "id": "v4-settings",
+        "text": "设置",
+        "disabled": false,
+        "rect": {
+          "x": 1116,
+          "y": 22,
+          "width": 48,
+          "height": 44,
+          "bottom": 66
+        }
+      },
+      {
+        "id": "v4-save-open",
+        "text": "进度已收好",
+        "disabled": false,
+        "rect": {
+          "x": 1168,
+          "y": 22,
+          "width": 87,
+          "height": 44,
+          "bottom": 66
+        }
+      }
+    ]
+  }
+]

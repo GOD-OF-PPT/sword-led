@@ -5,7 +5,7 @@ import {pathToFileURL} from 'node:url';
 
 // These historical JSON inputs are read by the real UI/unit tests; reports and notes are not executable inputs.
 const fixtures=['docs/evidence/T06','docs/evidence/T11-2/simulation/victory.json','docs/evidence/T11-3/polish-runtime/ui/d-keyboard-campaign.json','docs/evidence/T11-3/polish-runtime/ui/v2-three-round-contract.json'];
-const config=/^(?:package.*\.json|tsconfig.*\.json|vite.*\.ts|vitest.*\.ts|playwright.*\.ts|index\.html|v2\.html|\.nvmrc|\.npmrc)$/;
+const config=/^(?:package.*\.json|tsconfig.*\.json|vite.*\.ts|vitest.*\.ts|playwright.*\.ts|[^/]+\.html|\.nvmrc|\.npmrc)$/;
 export async function captureFingerprint(root=process.cwd(),extraInputs=[]){
   const sourceHashes={},buildFiles={},sha=b=>createHash('sha256').update(b).digest('hex');
   async function file(path,target){const b=await readFile(join(root,path));target[path]={sha256:sha(b),bytes:b.length};}

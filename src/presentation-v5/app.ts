@@ -25,6 +25,7 @@ import {forgeDecisions,nextDayPlan,traitPurpose} from './decisions.js';
 import {noticeFromEvents} from './story.js';
 import {carryOption,cashOptions,tradeOption,tradePurpose} from './growth-options.js';
 import {createMarketStall} from './market-stall.js';
+import {readRawRunExport} from './raw-run-export.js';
 import {journeyScreen,journeyOutcome,CAMPAIGN_GOAL,isCriticalDay} from './journey.js';
 import {buildJourneyStage} from './stages.js';
 import {collectionBook,collectionWorkPage} from './collection-ui.js';
@@ -81,6 +82,13 @@ export function mountV5(root:HTMLElement,port:V5Session){
  function download(value:string,name:string){const blob=new Blob([value],{type:'application/json'}),url=URL.createObjectURL(blob),a=element('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
  function exportRun(){const value=port.exportRun();if(value)download(value,`灯炉行程-${state()!.runId}.json`);else setStatus('尚未启程，没有当前局可导出。');}
  function exportCollection(){download(port.exportCollection(),'灯炉炉谱.json');}
+ function exportRawRun(){
+  const bundle=readRawRunExport(()=>localStorage),failed=Object.values(bundle.slots).filter(slot=>!slot.ok).length;
+  download(JSON.stringify(bundle,null,2),'灯炉磁盘局档原文.json');
+  const message=failed?`已生成原文文件，但有${failed}个位置读取失败；文件中已分别标记，允许读取后可重试。`:'已生成主档与备份的原文文件；这是留存原文，不是可直接续玩的行程。';
+  setStatus(message);const output=root.querySelector('#v5-raw-export-status');if(output)output.textContent=message;
+ }
+
  function transferOrigin(pieceId:string):FeedbackRect|null{
   const node=pieceId===selectedId?find('v4-blade'):state()?.reserveId===pieceId?find('v4-reserve-slot').querySelector('canvas'):root.querySelector(`#v4-inventory button[data-piece="${pieceId}"] canvas`);
   const box=node?.getBoundingClientRect();return box&&box.width>0&&box.height>0?{left:box.left,top:box.top,width:box.width,height:box.height}:null;
@@ -302,7 +310,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
   if(disposed)return;
   if(mode==='challenge'&&(!collection.data.challenge||collection.pending||collection.problem)){resultError(collection.pending?'collection_pending':'challenge_locked');if(collection.pending||collection.problem)saveDetails();return;}
   const input=newInput(mode);const execute=(confirmed=false)=>{const r=port.startNewGame(input,{generation:snapshot.generation,confirmed});if(!r.ok){resultError(r.error);if(r.error==='collection_pending')saveDetails();return;}notice=null;continueGame();void audio.gesture();};
-  const main=snapshot.load?.main;if(state()||main?.status==='invalid'||snapshot.load?.backup.status==='valid')confirm(mode==='challenge'?'带着炉谱，开启行脚挑战？':'另启一程？',`${mode==='challenge'?'挑战会重排章内委托，沿用相同锻造规则。':''}当前新经营行程会被替换，合法旧主档会保留为备份。旧版十二灯行程保持原样，可从旧入口续玩；先导出想保留的进度。`,()=>execute(true));else execute();
+  const main=snapshot.load?.main;if(state()||main?.status==='invalid'||snapshot.load?.backup.status==='valid')confirm(mode==='challenge'?'带着炉谱，开启行脚挑战？':'另启一程？',`${mode==='challenge'?'挑战会重排章内委托，沿用相同锻造规则。':''}当前新经营行程会被替换，合法旧主档会保留为备份。旧版十二灯行程保持原样，可从旧入口续玩；先导出想保留的进度。${main?.status==='invalid'?' 当前损坏或较新版主档不会自动保留到备份，请先到保存详情导出磁盘局档原文。':''}`,()=>execute(true));else execute();
  }
  function settle(){
   const s=state();if(!s)return;const p=getRunView(s).settlement,body=element('div');
@@ -499,7 +507,9 @@ export function mountV5(root:HTMLElement,port:V5Session){
   const writer=snapshot.active&&snapshot.mode==='writer';
   body.append(action('重试保存本局',()=>{const r=port.retrySave(snapshot.generation);if(!r.ok)resultError(r.error);else setStatus('本局已保存。');closeModal();saveDetails();},false,!writer||snapshot.conflict||!s),action('重试保存炉谱',()=>{const r=port.retryCollection(snapshot.generation);if(!r.ok)resultError(r.error);else setStatus('炉谱已保存。');closeModal();saveDetails();},false,!writer));
   body.append(action('重新取得保存权 / 读取最新',()=>confirm('读取磁盘上的最新行程',snapshot.dirty?'尚未保存的本局会被磁盘进度替换，请先导出。':'将重新取得保存权并读取磁盘的最新行程。',()=>{void (async()=>{await port.activate();if(disposed)return;const snap=port.getSnapshot();if(snap.mode==='writer'&&snap.load?.main.status==='valid'){const r=port.resume({generation:snap.generation,confirmed:true});if(!r.ok)resultError(r.error);}render();})();})),action('导出当前行程',exportRun,false,!s),action('导出炉谱和原文',exportCollection));
-  if(run?.backup.status==='valid'){const b=run.backup;body.append(element('p',`局备份：第${b.state.day}天 · ${fmt(b.state.coins)}金币 · 保存于${new Date(b.savedAt).toLocaleString('zh-CN')}`),action('恢复这份局备份',()=>confirm('恢复局备份',`将用第${b.state.day}天、保存于${new Date(b.savedAt).toLocaleString('zh-CN')}的备份替换当前损坏主档。`,()=>{const r=port.recoverBackup({generation:snapshot.generation,confirmed:true});if(!r.ok)resultError(r.error);else continueGame();}),false,!writer||run.main.status==='valid'));}
+  const rawStatus=element('p','主档损坏或暂不识别时，也可先导出磁盘上的主档与备份原文，再决定恢复或重开。');rawStatus.id='v5-raw-export-status';rawStatus.setAttribute('role','status');
+  const rawButton=action('导出磁盘局档原文（主档与备份）',exportRawRun);rawButton.id='v5-export-raw-run';body.append(rawButton,rawStatus);
+  if(run?.backup.status==='valid'){const b=run.backup;body.append(element('p',`局备份：第${b.state.day}天 · ${fmt(b.state.coins)}金币 · 保存于${new Date(b.savedAt).toLocaleString('zh-CN')}`),action('恢复这份局备份',()=>confirm('恢复局备份',`将用第${b.state.day}天、保存于${new Date(b.savedAt).toLocaleString('zh-CN')}的备份替换当前主档（损坏或本版暂不识别）；原主档原文不会自动备份，可先取消并导出磁盘局档原文。`,()=>{const r=port.recoverBackup({generation:snapshot.generation,confirmed:true});if(!r.ok)resultError(r.error);else continueGame();}),false,!writer||run.main.status==='valid'));}
   if(c?.backup.status==='valid'){const b=c.backup;body.append(element('p',`炉谱备份：${b.state.works.length}件作品 · 保存于${new Date(b.savedAt).toLocaleString('zh-CN')}`),action('恢复这份炉谱备份',()=>confirm('恢复炉谱备份',`用${b.state.works.length}件作品的合法备份替换当前损坏或不兼容炉谱，并合并已知合法成果。建议先导出原文。`,()=>{const r=port.recoverCollectionBackup({generation:snapshot.generation,confirmed:true});if(!r.ok)resultError(r.error);else setStatus('炉谱备份已恢复。');}),false,!writer||c.main.status==='valid'||snapshot.dirty||snapshot.conflict));}
   body.append(element('h3','不保存试玩'),element('p','当前磁盘进度保持原样。明确转为不保存后，关闭/刷新会失去本次内存试玩，请先导出。'),action(s?'保留当前局，不保存续玩':'不保存，开一炉试玩',()=>confirm('本次不保存',s?'保留当前局继续，之后关闭页面会失去未写入磁盘的部分。':'开始临时主线，不写正式局档或炉谱。',()=>{const r=port.useMemory(s?null:newInput(),{generation:snapshot.generation,confirmed:true});if(!r.ok)resultError(r.error);else continueGame();})),action('不保存，另开一炉',()=>confirm('另开临时旅程','当前内存进度会被临时新局替换，磁盘原档仍保留；请先导出。',()=>{const r=port.useMemory(newInput(),{generation:snapshot.generation,confirmed:true});if(!r.ok)resultError(r.error);else continueGame();})));
   openModal('把行程收好',body,[{label:'回到当前页面',primary:true,run:()=>closeModal()}],'save');
