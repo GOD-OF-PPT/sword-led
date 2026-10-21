@@ -1,3 +1,7 @@
+@import './workbench-feedback.css';
+
+.v4-app[data-input-mode=pointer] #v4-hit:focus-visible { outline: none; }
+
 :root {
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
   color: #f9e6c3;

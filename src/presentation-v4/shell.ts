@@ -3,7 +3,7 @@ export const V4_TEMPLATE = `
 <div class="v4-app" data-screen="title">
   <section id="v4-title" class="v4-title-screen" aria-labelledby="v4-main-title">
     <div class="v4-title-copy">
-      <p class="v4-edition">重燃十二盏灯 · 炉前交接</p>
+      <p class="v4-edition">重燃十二盏灯 · 炉前成器</p>
       <h1 id="v4-main-title">锤下<span>求生</span></h1>
       <p class="v4-title-line">一炉火，一柄剑，一程未熄的灯。</p>
       <div class="v4-title-actions">
@@ -26,7 +26,7 @@ export const V4_TEMPLATE = `
   </section>
 
   <main id="v4-workshop" class="v4-workshop" hidden aria-label="行脚灯炉">
-    <div class="v4-bench-mark" aria-hidden="true"><strong>锤下求生</strong><span>炉前交接</span></div>
+    <div class="v4-bench-mark" aria-hidden="true"><strong>锤下求生</strong><span>炉前成器</span></div>
     <div class="v4-purse" aria-label="契印与行囊">
       <div class="v4-resource v4-resource-seals"><span>契印</span><strong id="v4-seals"></strong></div>
       <div class="v4-resource v4-resource-coins"><span>铜钱</span><strong id="v4-coins"></strong></div>

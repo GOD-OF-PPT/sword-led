@@ -1,0 +1,14 @@
+/* Real swords move between existing world anchors; this layer owns no controls. */
+.v4-customer-held { position: absolute; z-index: 3; width: clamp(112px, 10.5vw, 165px); left: 50%; top: 75%; transform: translate(-50%,-50%) rotate(-12deg); pointer-events: none; filter: drop-shadow(0 3px 3px #061317b3); }
+.v4-customer-held[hidden] { display: none; }
+.v4-customer-held > canvas { display: block; width: 100%; height: 48px; }
+.v4-customer-held > canvas + canvas { margin-top: -29px; transform: translate(9px,1px) rotate(13deg); }
+.v4-customer-held > canvas:nth-child(n+3) { transform: translate(-7px,2px) rotate(-7deg); }
+.v4-accepted-transfer { position: fixed; z-index: 950; pointer-events: none; transform-origin: 50% 50%; will-change: transform,opacity; filter: drop-shadow(0 5px 4px #041015a6); }
+.v4-accepted-transfer > .v4-feedback-blade { display: block; width: 100%; height: 54px; }
+.v4-transfer-caption { display: block; width: max-content; max-width: 250px; margin: -3px auto 0; color: #ffe0a1; font: 700 14px/1.4 KaiTi, STKaiti, serif; text-shadow: 0 2px 3px #041015, 0 0 8px #1c1711; }
+.v4-growth-reveal { position: fixed; z-index: 8; pointer-events: none; overflow: visible; }
+.v4-growth-sheen { position: absolute; inset: 0; width: 100%; height: 100%; filter: brightness(1.9) sepia(.65) saturate(1.35); mix-blend-mode: screen; pointer-events: none; }
+.v4-growth-caption { position: absolute; left: 53%; top: 36%; width: max-content; max-width: 88%; color: #ffe7ab; font: 700 clamp(16px,1.4vw,23px)/1.4 KaiTi,STKaiti,serif; letter-spacing: 2px; text-shadow: 0 2px 3px #041015, 0 0 9px #5e3b1e; transform: translateX(-50%); pointer-events: none; }
+.v4-growth-static .v4-growth-caption { color: #f3d8a4; }
+@media(prefers-reduced-motion:reduce) { .v4-accepted-transfer,.v4-growth-sheen { display: none; } }

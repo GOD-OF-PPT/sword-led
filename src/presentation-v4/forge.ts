@@ -1,4 +1,4 @@
-import type {Blade,DomainEvent,EventId,Modification,Recipe} from '../core-v4/index.js';
+import type {Blade,DomainEvent,EventId,Hit,Modification,Recipe} from '../core-v4/index.js';
 import type {Blade as PaintedBlade,Hit as PaintedHit} from '../core-v3/index.js';
 import type {Cue} from '../platform/audio.js';
 import type {StrikePoint} from '../platform/direct-strike-input.js';
@@ -9,7 +9,11 @@ import type {ImpactPoint} from '../presentation-v3/impact.js';
 import {bladeContact} from '../presentation-v3/surface.js';
 
 type Strike=Extract<DomainEvent,{type:'Strike'}>;
-interface ForgeHost {reduced():boolean;cue(cue:Cue):void;ready():void;problem():void}
+export interface ForgeContactFrame {
+  readonly pieceId:string;readonly hit:Hit;readonly index:number;readonly total:number;readonly burst:boolean;
+  readonly before:Blade;readonly after:Blade;
+}
+interface ForgeHost {reduced():boolean;cue(cue:Cue):void;ready():void;problem():void;contact?(frame:ForgeContactFrame):void}
 const FAMILY:Readonly<Record<Recipe,number>>=Object.freeze({light:0,guard:1,heavy:2});
 const MODS:readonly Modification[]=['windbox','warmRack','wideMouth'];
 const EVENTS:readonly EventId[]=['donation','loan','salvage','credit','shelter','rest'];
@@ -57,8 +61,10 @@ export function createForgeRenderer(root:HTMLElement,host:ForgeHost){
       if(disposed||!playing)return;
       const hit=playing.event.hits[playing.index];
       if(hit&&target){
+        const before=Object.freeze({...visual??target});
         visual={...target,value:hit.after,level:hit.level,cracked:hit.result==='crack'||hit.result==='broken'||(visual?.cracked??false),status:hit.result==='broken'?'broken':'active'};
         render();playing.touched=true;pinHit();
+        host.contact?.({pieceId:playing.event.pieceId,hit,index:playing.index,total:playing.event.hits.length,burst:playing.event.burst,before,after:Object.freeze({...visual})});
       }
       host.cue(cue);
     },project:point=>forgeContact(visual,point,!!weapon(visual),scene.getBoundingClientRect(),canvas.getBoundingClientRect())});
@@ -148,11 +154,12 @@ export function createForgeRenderer(root:HTMLElement,host:ForgeHost){
     if(playing&&blade?.id!==playing.event.pieceId)cancel();
     if(target!==blade)previous=target;target=blade;if(!playing){visual=blade;render();}
   }
-  function play(event:Strike,point:StrikePoint|null,done:()=>void){
+  function play(event:Strike,point:StrikePoint|null,done:()=>void,beforeBlade?:Blade){
     if(disposed)return;cancel();const own=++epoch;
     if(!target||target.id!==event.pieceId||!event.hits.length){host.problem();queueMicrotask(()=>{if(!disposed&&own===epoch)done();});return;}
     const first=event.hits[0]!;
-    visual=previous?.id===target.id&&previous.value===first.before?previous:{...target,value:first.before,cracked:first.result==='crack'?false:first.result==='broken'?true:target.cracked,status:'active'};
+    const suppliedBefore=beforeBlade?.id===target.id&&beforeBlade.value===first.before?beforeBlade:null;
+    visual=suppliedBefore??(previous?.id===target.id&&previous.value===first.before?previous:{...target,value:first.before,cracked:first.result==='crack'?false:first.result==='broken'?true:target.cracked,status:'active'});
     render();impact.start(point,event.burst);playing={event,index:0,touched:false,done,epoch:own};
     if(document.hidden){cancel();return;}
     if(host.reduced()){

@@ -7,12 +7,13 @@ export interface HandoffToken {
  readonly pieceId:string;
 }
 export interface HandoffPreview {readonly allowed:boolean;readonly label:string}
+export interface HandoffOrigin {readonly left:number;readonly top:number;readonly width:number;readonly height:number}
 export interface HandoffHost {
  /** Capture a readable identity only; beginning a gesture never changes the game. */
  capture(pieceId:string):HandoffToken|null;
  preview(token:HandoffToken,target:HandoffTarget):HandoffPreview;
  /** A drop intent, including a blocked target. Revalidate before any action or confirmation. */
- commit(token:HandoffToken,target:HandoffTarget):void;
+ commit(token:HandoffToken,target:HandoffTarget,origin?:HandoffOrigin):void;
 }
 interface Gesture {
  readonly pointerId:number;
@@ -96,9 +97,9 @@ export function createHandoff(root:HTMLElement,host:HandoffHost){
   const current=gesture;if(!current||event.pointerId!==current.pointerId||event.button!==0)return;
   if(!current.dragging){clearGesture();return;}
   event.preventDefault();event.stopPropagation();
-  let target:HandoffTarget|null=null;
-  try{if(root.isConnected)target=preview(event.clientX,event.clientY);}finally{clearGesture();}
-  try{if(target&&!disposed)host.commit(current.token,target);}finally{if(!disposed)suppressClick(current.pointerId);}
+  let target:HandoffTarget|null=null,origin:HandoffOrigin|undefined;
+  try{if(root.isConnected){target=preview(event.clientX,event.clientY);const box=ghost?.getBoundingClientRect();if(box)origin={left:box.left,top:box.top,width:box.width,height:box.height};}}finally{clearGesture();}
+  try{if(target&&!disposed)host.commit(current.token,target,origin);}finally{if(!disposed)suppressClick(current.pointerId);}
  }
  function cancelPointer(event:PointerEvent){if(gesture?.pointerId===event.pointerId)cancel();}
  function lostCapture(event:PointerEvent){if(gesture?.dragging&&gesture.pointerId===event.pointerId)cancel();}
