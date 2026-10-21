@@ -37,7 +37,7 @@ await page.evaluate(()=>{window.workbenchFrames=[];const value=document.querySel
 const before=await read();await drag('d1-1','.v4-objective',{picture:'blocked-handoff-1280'});assert.deepEqual(await read(),before);await expect(page.locator('#v4-notice-title')).toHaveText('再看一眼纸单');await page.locator('#v4-notice-dismiss').click();
 await drag('d1-1','#v4-reserve-zone',{cancel:true});assert.deepEqual(await read(),before);assert.equal(await page.locator('#v4-dialog').evaluate(e=>e.open),false);
 for(let i=1;i<actions.length;i++){
- 
+
  await command(actions[i],{drop:i===20||actions[i].type==='reserve',unselected:false});
  if(i===1||i===3){await expect(page.locator('.v4-growth-caption')).toBeVisible();await shot('growth-'+i+'-1280');}
  if(i===4){await expect(page.locator('.v4-accepted-transfer')).toBeVisible();await page.locator('.v4-accepted-transfer').evaluate(node=>{for(const animation of node.getAnimations()){animation.pause();animation.currentTime=180;}});await shot('real-transfer-mid-frame-1280');}

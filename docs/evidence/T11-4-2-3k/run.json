@@ -1947,8 +1947,8 @@
     },
     {
       "path": "docs/evidence/T11-4-2-3k/play.mjs",
-      "bytes": 14273,
-      "sha256": "a336757dbab81e898d4974620ab288b3c7b2409760983a0617a6def2bfa98eca"
+      "bytes": 14272,
+      "sha256": "0a33630cd0e4dee1bc7a35f60c44914d6ffe53db16225525dae4f856ba562c84"
     },
     {
       "path": "docs/evidence/T11-4-2-3k/real-transfer-mid-frame-1280.png",
@@ -1969,8 +1969,21 @@
       "path": "docs/evidence/T11-4-2-3k/restored-real-held-1920.png",
       "bytes": 2725859,
       "sha256": "ea8786d1ec4949fdb60869ae2a8f228922214f64a060132466e304f3b6c80424"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3k/play-raw-original.mjs.gz",
+      "bytes": 4323,
+      "sha256": "a74f133ce68c3a95e36464001fdcf77f8f2df9c510086fe2b26618cf3420fbd9"
     }
   ],
   "humanFunAccepted": false,
-  "compatibilityMatrixRun": false
+  "compatibilityMatrixRun": false,
+  "toolNormalization": {
+    "firstSourceCommit": "00526c8c02e1f105e418ac12c1d41e8e174d9cf6",
+    "reason": "staged whitespace check reported one trailing-space blank line in the copied raw play script; initial source commit was created before the result was gated",
+    "originalGzip": "play-raw-original.mjs.gz",
+    "decodedOriginalSha256": "a336757dbab81e898d4974620ab288b3c7b2409760983a0617a6def2bfa98eca",
+    "normalizedScriptSha256": "0a33630cd0e4dee1bc7a35f60c44914d6ffe53db16225525dae4f856ba562c84",
+    "change": "only line-end space removed from archived convenience script; original local producer and compressed raw bytes retained; no product or result changes"
+  }
 }
