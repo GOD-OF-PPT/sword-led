@@ -18,6 +18,19 @@ T11.4.2.3j“Game Studio炉前交互与打造决策优化”已完成产品实�
 
 3k“实物交接、成器瞬间与经营深化提案”已完成并源交付：00526c8c02e1f105e418ac12c1d41e8e174d9cf6真实commit/push74858终态0，fresh远程同SHA，35Git blob逐字节核对。官方32067/85938现服务tmp/previews/T11-4-2-3k-formed，75HTTP/3可信左键/1实际收剑/刷新持剑均通过；最后必要构建/短试玩完成，83保护与8SDK保持。v0.8具体提案已独立审查及OpenSpec严格通过，尚待用户具体批准；没有v5实施。当前只有待确认的3l新经营，已有授权3k工作全部完成，整体goal ACTIVE，H/最大R4未填，兼容后置。回执更新/原归档脚本尾空格正规化另提交，原字节gzip保留，最后核实际push/远程后结束。
 
+## 3l.2 执行计划：独立局档与带来源炉谱（代码修改前）
+
+当前唯一task为T11.4.2.3l.2，对应已批准OpenSpec1.2；上轮790b195已推送且工作区干净。纯核117fac8已完成，不再索确认，不并行开始首章UI。沿Game Studio Foundations保留模拟/持久化/画面边界，用户测试和兼容最低优先级，本轮仅必要保存/导入合同核对和一个PC浏览器SDK短消费，不跑兼容/性能/旧simulation/大型模型。
+
+1. 新增application/v5-persistence.ts，复用现SaveRepository/createAdaptedSession及同源sword-led.writer锁；独立schema5/V5_SAVE_KEY=sword-led.save.v5与backup.v5，正式validateRun仍完整v5 journal。原v1–v4核心/codec/key/session/public/原画保持，原网页默认继续v4，v5-sdk单独追加新port导出而旧SDK构建图保持。局档与炉谱写入仍是两个独立结果，不冒称原子事务。
+2. 新增v5-collection.ts，schema2/key collection.v2/backup.v2，状态仍chapters/mastery/traits/challenge/works；每单最佳作品增加rulesVersion:forge-v4或forge-v5来源。collectionFromRun根据实际rulesVersion分别完整校验v4/v5后提取，可信新会话走内部快路径；持久化作品校验有界收件形态和路线，不谎称每张收据内含journal。导入旧schema1须用旧validator，来源一律v4。merge为无奖、确定/交换/结合/幂等的并集与每单最佳，禁止钱包/印/升级/局内剑字段，旧高分作品不得改标v5。
+3. 显式导入API：LegacyCollectionSource只读readRaw两旧槽；createV5Session第4可选参数提供该source，浏览器factory自动提供。previewLegacyImport(source='main')只读旧codec并返回{ok,preview:{id,generation,source,savedAt,collection,merged},snapshot}，不写盘/不发奖/不改当前资格。内部保留准确所示raw、source、generation、runId/revision与规范化收据；importLegacyCollection({generation,confirmed,previewId})要求writer/lease/当前局已保存、当前私有票据和源raw逐字节相同。源变/上下文变拒绝并要求重新预览；确认不能提交客户端解锁/金额/作品。backup须显式选来源，不自动替换main。外部旧槽storage事件只清未消费预览，不自动导入。
+4. 确认后只并集已展示的旧解锁/作品；写失败保留已确认内存成果/pending，可retryCollection或导出，重试不再次取新源补隐式内容。已有局initialEligibility始终冻结，只有新建局从有效持久炉谱生成资格；collection_pending保护未持久成果不被新局覆盖。readonly/unsupported/memory不写持久炉谱，旧源读失败/未知版本零写。保留现局保存失败/来源冲突/备份恢复/导出/重试/代际/取消/监听清理；不顺带改旧通用port或旧兼容矩阵。
+5. 分工：root独占v5-persistence与SDK导出/接线；collection代理只写v5-collection；验证代理只新tests/core/v5-persistence.test.ts；独立review本新保存与预览确认链。所有分工均在本goal task，不开第二产品task。必要检查：正常新建/锤/续玩/双独立失败与重试导出、真实v4/v5来源作品、预览零写/明确确认/重复幂等/源变化/伪预览拒绝、资格冻结/无局资源迁移、同锁只读和memory、未知旧新raw保留。用已合法归档轨迹，不注钱包/伪终局；一个隔离Chromium通过正式新SDK+真实localStorage/Web Locks短消费与重载，不称首章UI试玩。
+6. 完成必要strict/build，75旧运行/旧SDK与原保护哈希核对；新core可复用已回放证据，不再跑整局大批。产出合同/实际记录/具体问题修复，源commit实际push/fresh远程/所变blob核对后勾task/回执并结束。3l.2是R3.22后新周期第一项；下一3l.3实际首章页面与OpenSpec1.4新核保存UI专项review，整体goal/H/最终R4仍未完成。回滚新增revert/旧不可变预览，保留v5/schema2新原件可导出，不删旧档/原画/封签证据。
+
+[杠精计划审查]通过：本项交付可用保存/续玩和显式来源导入，不把旧局金币混入新经营，也不以预览或未持久解锁授予新局资格。复用成熟port缩小范围，必要失败/来源绑定检查服务真实续玩，不复活低优先兼容大测；本项后直接首章产品接线。
+
 ## 3l.1 执行计划：已批准经营内核与正式报价（代码修改前）
 
 当前唯一task为T11.4.2.3l.1，对应已批准OpenSpec1.1。上轮回执ecd2cc2已推送，工作区干净；v0.8原答与全文/hash不变，不能重索批准。沿已显式使用Game Studio→Web Game Foundations，保留现Canvas/DOM、D原画和自然锤，本项只实施真正决定经营结果的纯核/正式SDK，随后独立保存与首章界面；不能把本项称为新界面已上线。

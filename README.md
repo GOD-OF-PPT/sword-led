@@ -16,7 +16,7 @@
 
 2026-10-18真人曾评价v0.2玩法/美术缺乏新意；已据ForgeTax及110条唯一Steam评论修订并取得明确v0.3批准。[核心证据](docs/reviews/R3-5-v2-core-and-playable.md)保留928局策略与原试玩结果，[D界面说明](docs/v0.3-d-interface.md)记录新接线与独立练习。[新版技术验收](docs/reviews/R3-7-v2-technical-acceptance.md)与[44AC映射](docs/v0.3-acceptance.md)分别记录实际矩阵、故障修复及待办。真人再玩和最大交付仍按T11.4.2–T12推进，技术通过不等于玩家满意。
 
-已批准v0.8的有限收购、三柄行囊和等级换艺现有[正式核心API](docs/v0.8-core-api.md)。新保存/炉谱与首章页面随后接入，当前试玩页继续v4。
+已批准v0.8的有限收购、三柄行囊和等级换艺现有[正式核心API](docs/v0.8-core-api.md)。独立保存/炉谱与显式旧作品导入已接[正式会话](docs/v0.8-persistence-contract.md)，下一步接首章页面；当前试玩页继续v4。
 
 ## 项目资料
 
