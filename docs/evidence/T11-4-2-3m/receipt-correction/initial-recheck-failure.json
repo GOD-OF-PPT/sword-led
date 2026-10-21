@@ -1,0 +1,23 @@
+{
+  "message": "Error: expect(locator).toHaveAttribute(expected) failed\n\nLocator:  locator('#v4-strike')\nExpected: \"true\"\nReceived: \"false\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toHaveAttribute\" locator('#v4-strike') with timeout 5000ms\n  - waiting for locator('#v4-strike')\n    14 × locator resolved to <button tabindex=\"0\" type=\"button\" id=\"v4-strike\" data-label=\"落锤\" aria-busy=\"false\" class=\"v4-strike-button\">…</button>\n       - unexpected value \"false\"\n",
+  "stack": "Error: expect(locator).toHaveAttribute(expected) failed\n\nLocator:  locator('#v4-strike')\nExpected: \"true\"\nReceived: \"false\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toHaveAttribute\" locator('#v4-strike') with timeout 5000ms\n  - waiting for locator('#v4-strike')\n    14 × locator resolved to <button tabindex=\"0\" type=\"button\" id=\"v4-strike\" data-label=\"落锤\" aria-busy=\"false\" class=\"v4-strike-button\">…</button>\n       - unexpected value \"false\"\n\n    at captureRawStack (/Users/gordon/githome/sword-led/node_modules/playwright-core/lib/coreBundle.js:9282:17)\n    at callMatcherAsStep (/Users/gordon/githome/sword-led/node_modules/playwright/lib/matchers/expect.js:13316:57)\n    at Object.toHaveAttribute (/Users/gordon/githome/sword-led/node_modules/playwright/lib/matchers/expect.js:13308:23)\n    at /Users/gordon/githome/sword-led/tmp/T11-4-2-3m/play.mjs:32:151",
+  "results": [
+    {
+      "case": "blocked drag message belongs to its sword and clears on selection",
+      "ok": true
+    },
+    {
+      "case": "consumed full-charge notice cleared",
+      "ok": true
+    },
+    {
+      "case": "ready notice directly delivers exactly bound sword",
+      "ok": true
+    },
+    {
+      "case": "switch clears old notice; paper directly hands qualified sword",
+      "ok": true
+    }
+  ],
+  "errors": []
+}

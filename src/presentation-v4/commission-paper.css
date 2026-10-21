@@ -35,6 +35,8 @@
 .v4-workshop .v4-customer[data-paper-layout=double] .v4-customer-nameplate { left: 15%; right: 15%; }
 .v4-workshop .v4-customer[data-paper-layout=double] .v4-customer-nameplate small { display: none; }
 .v4-workshop[data-main-complete=true] .v4-objective:has(#v4-order-routes)::after { content: none; }
+.v4-workshop .v4-customer:has(#v4-inline-delivery:not([hidden])) .v4-objective { display: none; }
+.v4-workshop .v4-customer #v4-inline-delivery { position: relative; top: auto; left: auto; right: auto; flex: 0 0 auto; }
 
 @media (min-width:1600px) {
  .v4-workshop .v4-objective:has(#v4-order-routes) { padding: 14px 16px 12px; }
