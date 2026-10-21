@@ -4,7 +4,7 @@
 
 原始需求逐字保存在[input.md](input.md)，SHA256 b961f5c651df51121659687138cfe5edf125e25dadda11642136dfc6aaca852b。目标仍是完整PC网页锻造游戏、设计/实施文档、三套imagegen主界面及选定衍生美术、完整可玩流程、复核和GitHub提交推送；整个goal ACTIVE，未完成。
 
-当前已明确获批v0.8：用户原话“确认 v0.8，开始首章实施”，原答与获批全文/hash在docs/decisions/2026-10-21-v08-approval.json及docs/evidence/v08-approval。不得再索同一确认。3m纸单/提示前置已交付 f590764，补充收件回执遮挡修补已源交付 00757fa7176a1264c5e26d11b806e5a650e38eb6，push58684实际0、fresh远程main同SHA、14Git blob核对。正式4179现PID62339/会话58313，服务不可变tmp/previews/T11-4-2-3m-orders-complete；75HTTP及真实锻造/交付/出售通过。补充严格构建5766实0、最终8定向流程61198实0、两PC尺寸实看/实际出售、85保护保持；原始红批和前次源身份保留于receipt-correction。当前下一唯一task为3l.1，直接实施已批准经营内核与正式报价，再接保存/炉谱与首章。3k/3m/3l.1第三项必须R3.22全面review/debug。整个goal ACTIVE，首章新UI/完整新经济尚未完成，兼容后置，H/最大R4未填。
+当前已明确获批v0.8，原答/冻结全文与批准hash不变，不得再索相同确认。3l.1现已完成：独立forge-v5纯核/SDK、正式经营报价/三槽/换艺门槛及R3.22已源交付117fac8ff1f13c1fd4fb93059370bffdf1a9a56d，push12857实0、fresh远程main同SHA、33Git blob相同；8定向规则、首种子12/12三结局与真实混路线、最后49表征/44唯一回放和28759构建通过。旧75运行/113源资源/85保护保持，新76产物仅增v5SDK。当前官方4179仍是62339/58313的v4 orders-complete快照，用户新存档/首章UI尚未接入；不以新SDK冒称新网页完成。下一唯一task是3l.2独立v5保存/schema2炉谱，再3l.3首章正式UI/实际四天和OpenSpec1.4专项review。3k/3m/3l.1第三项R3.22已完成，新的全局三项周期从3l.2计起。整体目标未完成，H/最终R4保留，兼容广测按用户优先级后置。
 
 当前plan/tasks曾积累大量相互覆盖的历史检查点；其完整原字节已保存于[旧计划](history/2026-10-21-before-final-chapter-plan.md)和[旧任务执行记录](history/2026-10-21-before-final-chapter-tasks.md)，哈希见[归档索引](history/2026-10-21-archive-index.json)。本页只维护有效当前计划，历史成果/红绿/全部原任务未丢失。压缩后仍须全量读取input/plan/tasks这三份当前文件，再按需读明确引用的历史或合同，避免把旧“待批准/正在运行”当现状。
 
