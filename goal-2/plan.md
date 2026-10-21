@@ -4,6 +4,12 @@
 
 应用原生goal仍为paused，create_goal已实际拒绝：cannot create a new goal because this thread has an unfinished goal; complete the existing goal first。没有可用resume目标工具，不能将未完成原goal标complete来换新目标。用户现已明确要求继续，因此本地实施继续；原生状态限制最后如实说明，不拿本目录假称原生goal已恢复。
 
+## 当前交付检查点
+
+T01首章/T02后段/T03成长经营均已实际源提交推送。最新434e360d26bd2620b033980b5de7436562b3fa78，66002实际push0/fresh远程/95blob一致；14497/64360原4179为炉边交易完整十二天。R3.24第三项全面debug及实际新整局142+六窗口27+最终献艺3分批通过，具体docs/reviews/R3-24-v08-growth-trade.md。下一唯一T04=原T12最大整体复核与H，未标全目标完成或原生goal恢复。
+
+## T01原实施计划（历史，保留原范围）
+
 当前唯一执行task为原3l.3：新v5保存与core已推送，开始首章正式页面/交互，接实际工资/奖金/钱袋、零售拒绝、等级献剑和三总槽，用已认可D/自然锤/左键/拖交，实机首章可玩并更新原4179。默认新v5入口，同时保留明确v4.html继续旧行程，不自动迁移钱包/兵器。所有原PNG/旧core/key/SDK及封签证据保持；新旧网页主包可因增加入口改变，不能用固定旧hash要求阻止合法UI接线。
 
 执行前将原3l.3具体分工/范围/风险/必要验证/回滚补入goal-1/plan.md，写完才改游戏代码。只本task内平行分工，root独占app控制；代理可独立新view投影、shell/经济CSS和炉谱来源页，互不改文件。保留旧v4全部模块；新presentation-v5使用现renderer/资产/输入，所需controller/view模块独立接新类型，不伪造rulesVersion骗类型。

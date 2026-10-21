@@ -1,0 +1,595 @@
+{
+  "at": "2026-10-21T10:31:22.536340+00:00",
+  "sourceCommit": "434e360d26bd2620b033980b5de7436562b3fa78",
+  "push": {
+    "execution": 66002,
+    "actualExitCode": 0,
+    "freshRemoteMain": "434e360d26bd2620b033980b5de7436562b3fa78"
+  },
+  "changedCommittedFiles": [
+    {
+      "path": "README.md",
+      "bytes": 18901,
+      "sha256": "bd13554dfaecc0950ff4e151a6a1c11578e805198989da0ddcfdcaebf4974b33",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/archive-map.json",
+      "bytes": 34612,
+      "sha256": "f5b8b9b08a84de4efae6c0f72460ec10492fb59cfc036e50be898cc333b47fb0",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/before-build.json",
+      "bytes": 2772,
+      "sha256": "7abf29eab964cd495043931596e25f1de3d860d99dfe7a028d765b541ec5c464",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/build.json",
+      "bytes": 16606,
+      "sha256": "cab85a88bb60903de3a0d47121c2cae373ec48719dc46fd0b4679bc0dd1f35dd",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/build.log.gz",
+      "bytes": 833,
+      "sha256": "c819840d343115a85cb2ab844bda9f162fb1e3e370e1444c768d515a5e194a5d",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/initial-before-build.json",
+      "bytes": 2772,
+      "sha256": "7abf29eab964cd495043931596e25f1de3d860d99dfe7a028d765b541ec5c464",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/initial-build.json",
+      "bytes": 13759,
+      "sha256": "48a340b3ffd893c5e94caa59b0451c551155eac8a0a1cc19e378f72a22aee264",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/initial-build.log.gz",
+      "bytes": 833,
+      "sha256": "c97c3799fe40c10be8e218678f20cf38787e4027034dbd879dc4a6c09694c54a",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/main-consumed-app.ts",
+      "bytes": 88922,
+      "sha256": "4a0511151ee2178ba6e6bfb34d5282b3d6cd387f2f405b7047fe50421e8055ba",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/main-consumed-build.json",
+      "bytes": 16562,
+      "sha256": "6016a9fa11485a6f2a115297d9b486d4c62adbfdcac21bf25e522bd44d4b4d06",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/main-consumed-build.log.gz",
+      "bytes": 835,
+      "sha256": "1b94d5d679c33a73b66f17fd2bc32e862001011561323e92f35ca351840e8ab0",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/preserved.json",
+      "bytes": 416,
+      "sha256": "d08c324555c84e5925af4a1684552b7575207ac1ac950cc714244db0e1345261",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/publish.mjs",
+      "bytes": 2838,
+      "sha256": "a8fd7e2a8979a83b9b8d56a2abbcfb901894853130f3ca5a02f6bd59dd534877",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/published.json",
+      "bytes": 27048,
+      "sha256": "22c42390cb1e303db6e355e6f8b19fb906c66317299be5776fec39fda1e46a83",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/replay.json",
+      "bytes": 107563,
+      "sha256": "27805bca8f7a57838caa5ca06980fa52f3640d8c7f8e6214abcdf2b9ceec7f8e",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/replay.mjs",
+      "bytes": 6241,
+      "sha256": "780fabab9f45d62217ac1195e8b4a78fcf5ab5b95ea2faf088f2187b7ca58786",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/review.md",
+      "bytes": 6787,
+      "sha256": "7899dd6d2777d25661234fc084c15952612edfa08c335c1bcbaa3099efed30e8",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/run.json",
+      "bytes": 53904,
+      "sha256": "aafdd3ee4537b353289b3be34e68cd4389df6cffde93baa16a06ece700518c47",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/snapshot.json",
+      "bytes": 14015,
+      "sha256": "73dead535216241dc8a66995792fcbffaa7022ed1d70db00dc341bec183ab427",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/README.md",
+      "bytes": 5076,
+      "sha256": "062dceae8dbc91e1fa2ba6040478aba75aaa56238788e0bf18d7f1527288a70c",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/collect-meta.mjs",
+      "bytes": 4280,
+      "sha256": "f9908f017f694ec8e4c47226b4a15b27810a9ce4f46b20f3c02ffcaa54697e7b",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/geometry-summary.json",
+      "bytes": 2799,
+      "sha256": "1b232253a67436c1f2a55e6b916a054aa438c8d4304b57a54ed3f1ae548217b8",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/helpers.mjs",
+      "bytes": 10434,
+      "sha256": "7fced950460a84e7864c66bd86fc0c91c6130db956eaf2827054f8ab6a3eda2c",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/main-inputs.json",
+      "bytes": 602,
+      "sha256": "1e1e0dc254ea1b4e314a8541cd5aa577c33d57352d39dc6485cee5232af7fbf1",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/metadata-attempt-01.json",
+      "bytes": 440,
+      "sha256": "a4cfc6f1578d13e120e93810ccb3a208de1cf762cb891a3fe149f887abba0fbd",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/play.mjs",
+      "bytes": 5540,
+      "sha256": "3f0cd2b6a071fbb0a27570d95e6ea9d079530bb4fd8d336b0880d72af9adc9ca",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/run-01/actions.json",
+      "bytes": 76741,
+      "sha256": "a14d3fa1211f79dc0db5cd38fbe80ecc4bf2e091e2d506ad9cd5aed56fa61c4d",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/run-01/captures.json",
+      "bytes": 328458,
+      "sha256": "1a1fc6636aff01580e37cf83985fb1d4cb97defdeea3e92b467894615d34a5c1",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/run-01/d3-stall-opening-1280.png",
+      "bytes": 337012,
+      "sha256": "77c0332297e965d15712153c77db15b0790dcc347b86e3d157519c20a3d57a53",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/run-01/d9-accepted-upgrade-1280.png",
+      "bytes": 1323213,
+      "sha256": "a9a5656ea4b1c70fdb4ff57d3cc31ab48e8e7445c7bd0d95b7db7739a61f920c",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/run-01/d9-stall-opening-1280.png",
+      "bytes": 339491,
+      "sha256": "34c3e816898f8eb02290fcf57bb093f6b28455fa2fe374d9489c3962eb40ebcc",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/run-01/result.json",
+      "bytes": 6781,
+      "sha256": "d2b6c1b01cbb7f269e4c13d24f526c65c0265b92dadf99ed02128bc056387186",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/run-01/states.json.gz",
+      "bytes": 372671,
+      "sha256": "a97999efb8647e504fe0aa25fa1e6fa603fe72d3a59039e4dd0f2fa6a371a4c9",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/run-01/warm-rack-candidate-preview-1280.png",
+      "bytes": 276782,
+      "sha256": "0031145c60caa7aa75b2314042882f67527524ab2a8362f2982fdf5f55039ecf",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/run-meta.json",
+      "bytes": 5816,
+      "sha256": "1b53e013ac9c21be9f833e25b8517099953849d48bb3fee1d6026b802e209c34",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/trade-final-01/specific-sword-trade/accepted-trade-factual-prop-1280.png",
+      "bytes": 1323615,
+      "sha256": "3bde33e22c06314517749979167c6d23401db5b963d4a675a5300ed4e638f3d6",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/trade-final-01/specific-sword-trade/actions.json",
+      "bytes": 1562,
+      "sha256": "e6670a1900a5e8e7407aebabc35e9c33e18459633a052eb3e9de459090fcaeeb",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/trade-final-01/specific-sword-trade/captures.json",
+      "bytes": 48943,
+      "sha256": "71583edae3371dae0b90314f966609ff117b997e63fe2e5af0cecf3ff4a610bc",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/trade-final-01/specific-sword-trade/formed-sword-opportunity-comparison-1280.png",
+      "bytes": 371845,
+      "sha256": "b13ad98e290cff56662b529641b1f5652b6e15d855fc1a3e67cb6e456725622a",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/trade-final-01/specific-sword-trade/result.json",
+      "bytes": 565,
+      "sha256": "83409417400b9661fcd7b60cabaf2e78152317e78ca6050bbee7249c264586a6",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/trade-final-01/specific-sword-trade/states.json.gz",
+      "bytes": 3212,
+      "sha256": "143329d4e2d89a6aad98a6cc65900109177335f1803ec1e4698972affe8d9b75",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/trade-final-01/summary.json",
+      "bytes": 273,
+      "sha256": "8acd673e47090d2ba027033c358f8c9117aae5c3d411661d1496cc4b98d24abf",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/trade-final-inputs.json",
+      "bytes": 773,
+      "sha256": "7ffb2fb8f3e87cc036d16f8fbd80ecb919de0ec2ac3d4d892c06f28e85de101c",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/trade-final.mjs",
+      "bytes": 6276,
+      "sha256": "229080e35a4da79f46f480c2d02773e56307ee9009e67244a292e9ea085c81d3",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/credit-real-first-crack/actions.json",
+      "bytes": 5520,
+      "sha256": "41b505016e3e43f5263cbec5869afbfd38359fc3a1f2056c107813a1b0568e6a",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/credit-real-first-crack/captures.json",
+      "bytes": 12322,
+      "sha256": "74993b5d5c9e149c0de8e2a2525acd14ee08051f4a648f0d37edca667efaa27b",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/credit-real-first-crack/credit-actually-consumed-with-crack-1280.png",
+      "bytes": 1341891,
+      "sha256": "34fb11a74e9ab054ebcb2af9183a69ae05b56e1d351ad2d4d77ad5c6a68cc517",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/credit-real-first-crack/result.json",
+      "bytes": 635,
+      "sha256": "0dcb9d68a5493c1d2bc47747f64f135237196b4b334eace421b23117ae4caf7f",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/credit-real-first-crack/states.json.gz",
+      "bytes": 33408,
+      "sha256": "4f9179ebb101decb0ed54dc5c758654a4921d1004384db5bb0b581a45358b3d2",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/day-nine-unaffordable-benefit/captures.json",
+      "bytes": 13302,
+      "sha256": "9bfde172aa6ec12e18e9c2303cc505da9e3801f02bb2f9f3435af3c9afd54f73",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/day-nine-unaffordable-benefit/result.json",
+      "bytes": 456,
+      "sha256": "8cd1dae3af1808f3d27adcc6fc81e62268cb7d94c9779526354f6ef676007efd",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/day-nine-unaffordable-benefit/states.json.gz",
+      "bytes": 4425,
+      "sha256": "e399265263f60f90e3b5aba9418afdea263047412784c0a71cd697f0f888f843",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/day-six-cash-shortfall/actions.json",
+      "bytes": 6574,
+      "sha256": "80f33e5e08d264e5b42d9114e4e0a1d659ba7c2b0cef1b376621350707612d51",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/day-six-cash-shortfall/captures.json",
+      "bytes": 24374,
+      "sha256": "d4ef15f0f6f7c469aa19258f0b5ae9bb2bfc305d9139e49bbd66c582b670e3d9",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/day-six-cash-shortfall/real-two-seal-shortfall-1280.png",
+      "bytes": 326494,
+      "sha256": "6d94c86641bfdb31c20a5549db34faaa5f670475028a91c774fb966e1861dd32",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/day-six-cash-shortfall/result.json",
+      "bytes": 817,
+      "sha256": "2d1dab8ec3ba5a64dba76f92938acab3095061b6322e037771189bcb4d156eb9",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/day-six-cash-shortfall/states.json.gz",
+      "bytes": 7807,
+      "sha256": "d560354acae0ac8f0fc0e8b510f57fa56ab8f649bc71994c7517fa7568f1993d",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/reduced-loan-pending-prop/actions.json",
+      "bytes": 432,
+      "sha256": "c29ad89ede7f1a4b9846c481b0138b33dc14f7f2a813c4920b40aaa8d9dc46fb",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/reduced-loan-pending-prop/captures.json",
+      "bytes": 6981,
+      "sha256": "db1d97004d4ca5b05518c018b50711b18b177761f6a68ce19f668fc87ede9584",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/reduced-loan-pending-prop/reduced-loan-factual-pending-1280.png",
+      "bytes": 1322288,
+      "sha256": "ee286779854186a45ab163644587ef1fda4fc1377a5c1b7a1ea2501adc95d5b0",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/reduced-loan-pending-prop/result.json",
+      "bytes": 449,
+      "sha256": "f538b4d0f33d333c366d7fa57853bc01f8fae03bd6e0aead106ee5f7d6d64128",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/reduced-loan-pending-prop/states.json.gz",
+      "bytes": 8327,
+      "sha256": "c5512ede6138bf64982432074e46e8e132a0b4156db70fc0d45d192a50cf4e90",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/specific-sword-trade/actions.json",
+      "bytes": 1562,
+      "sha256": "e6670a1900a5e8e7407aebabc35e9c33e18459633a052eb3e9de459090fcaeeb",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/specific-sword-trade/captures.json",
+      "bytes": 48943,
+      "sha256": "291f26e699b52f06064b61e7cbd1df5136520b87bb03930c3759b343afebd890",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/specific-sword-trade/result.json",
+      "bytes": 565,
+      "sha256": "83409417400b9661fcd7b60cabaf2e78152317e78ca6050bbee7249c264586a6",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/specific-sword-trade/states.json.gz",
+      "bytes": 3219,
+      "sha256": "cfee6f5513b11abb56bc4fde198c03110cb6b99c5a63b02047de976f81aec737",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/summary.json",
+      "bytes": 815,
+      "sha256": "e93716c4e2c47897638454cb1d45a95c74cef431d3bc67eb06e9a0be7cb29a8e",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/warm-rack-packing/actions.json",
+      "bytes": 324,
+      "sha256": "20550944f6ca386e4289d6e52d0248dbd78ab06dc0accb375aa489768fc37af7",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/warm-rack-packing/captures.json",
+      "bytes": 18229,
+      "sha256": "93a270f7b138821b4c1275b57c353d4544ecf5807cd0c04fba25335ca8027f9a",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/warm-rack-packing/result.json",
+      "bytes": 1415,
+      "sha256": "86e8f9b9665d607f0256e4d16628e5c69cb9acea6ab504f7a94ed53b355b3f17",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/warm-rack-packing/states.json.gz",
+      "bytes": 3534,
+      "sha256": "963fbe8ba0ea86dd438bd988a0ae5ec0f28478965cc6272e82a340389107e46b",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/warm-rack-packing/unreserved-candidate-warming-canvas-1280.png",
+      "bytes": 280432,
+      "sha256": "c3431ca8957c6ba4c5f961ed0decaab8d7cb4f6b8e6552bd189cd0203761fab1",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-01/warm-rack-packing/unreserved-candidate-warming-canvas-1920.png",
+      "bytes": 666187,
+      "sha256": "31cdea4d8a5521091538a2c1142330aac37003abf00f59100b4587b57ad3e586",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows-inputs.json",
+      "bytes": 771,
+      "sha256": "cc22883c0bd208bbd1e37e82520651e23376b4959501a0fe7faa45e73d1a1173",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/ui/windows.mjs",
+      "bytes": 11538,
+      "sha256": "00d34f5b49d74780369d8ad6187269075c0f189dce59e060879e313ab736eee6",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/windows-consumed-app.ts",
+      "bytes": 88940,
+      "sha256": "61eea8d6d7c30bccc504bf14ac28d196f827131b416c09384aab61e4dd62774a",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/windows-consumed-build.json",
+      "bytes": 16573,
+      "sha256": "1a31162645100cc2945d1bd92f71ca86bbc440b0367d26895a781de2e2f53936",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/windows-consumed-build.log.gz",
+      "bytes": 834,
+      "sha256": "5f2eeb0e009f006a36de8d31d9875df13f899210f18b7137d20f0d600ea572a3",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/windows-consumed-growth-options.ts",
+      "bytes": 10225,
+      "sha256": "67ec7fc58e4a5ed03a1dcb0b1ba537c7ac0a9e667566fa5e378fad689608f50d",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/windows-consumed-market-stall.ts",
+      "bytes": 11197,
+      "sha256": "692ada840c92b197a51504e3aec5e1b61abefe7498928ea32baecb837e1879f9",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l5/windows-consumed-story.ts",
+      "bytes": 5807,
+      "sha256": "4b5b6c7d6d0448f368b41e09f8f56a3b47b9ed2b8408c3d2ae187db7d5ac4ef6",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/implementation-plan.md",
+      "bytes": 15220,
+      "sha256": "594e8995cb71ffd4410e821de73ca7f6c7074715a3291ed184d8585f4fbe1ed0",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/reviews/R3-24-v08-growth-trade.md",
+      "bytes": 9028,
+      "sha256": "01056a9eb03c28c4eccf47eaf13b054371b76f8cfc795adb46dbb699244ba878",
+      "blobMatches": true
+    },
+    {
+      "path": "docs/v0.8-twelve-lights-guide.md",
+      "bytes": 6737,
+      "sha256": "8791b0be30e07471e2f2574e57034891af264d812c87fa875a4ab59088c2c0cb",
+      "blobMatches": true
+    },
+    {
+      "path": "goal-1/plan.md",
+      "bytes": 56890,
+      "sha256": "7befdbe96d8a4acb7d7efd745119afa791c91c14ea5a4e956ccf89325ed42acd",
+      "blobMatches": true
+    },
+    {
+      "path": "goal-2/tasks.md",
+      "bytes": 3855,
+      "sha256": "84ac11642521a129080daa6b4c9d9b0f1c1ae0d47f03b164571b1ea4a4f4a1e8",
+      "blobMatches": true
+    },
+    {
+      "path": "openspec/changes/rebalance-workshop-economy/proposal.md",
+      "bytes": 2758,
+      "sha256": "1d6fff3580ef624602f46fe00810fbf96f0ca46448a13843cb09883e9406d640",
+      "blobMatches": true
+    },
+    {
+      "path": "src/presentation-v5/app.ts",
+      "bytes": 88958,
+      "sha256": "28d8ee5d92af5da2130e607dc8b0a72c91b6842cb1ee751cfc038fd501297bcb",
+      "blobMatches": true
+    },
+    {
+      "path": "src/presentation-v5/growth-options.ts",
+      "bytes": 10537,
+      "sha256": "563c54f6d417553eb9b55ee9fb67484d0510f7d925f10ae46535038fc687f503",
+      "blobMatches": true
+    },
+    {
+      "path": "src/presentation-v5/growth.css",
+      "bytes": 2181,
+      "sha256": "fa0473a2196bb62bb0b2781923b0b9e3aac9a14da45b9ba28bb5da72ff49b37f",
+      "blobMatches": true
+    },
+    {
+      "path": "src/presentation-v5/market-stall.css",
+      "bytes": 7081,
+      "sha256": "5cb31efe89e4d46864c5d7b634c6380de66ce44e9948dc9e8347ae48dc32a695",
+      "blobMatches": true
+    },
+    {
+      "path": "src/presentation-v5/market-stall.ts",
+      "bytes": 11177,
+      "sha256": "547005dd24b9f795514d69ece049d8de6ff48ad7e8394e523e3a8132a254e3cb",
+      "blobMatches": true
+    },
+    {
+      "path": "src/presentation-v5/shell.ts",
+      "bytes": 9200,
+      "sha256": "238587e185d5f327c1717316e67b8168330aa0327a6802b3e670c09c6aa33c99",
+      "blobMatches": true
+    },
+    {
+      "path": "src/presentation-v5/story.ts",
+      "bytes": 5803,
+      "sha256": "7b0a423678af45cf1b86ad12c1e7c29b805d1b96e0153f8c27326d2a2a22d0a8",
+      "blobMatches": true
+    },
+    {
+      "path": "src/v5-main.ts",
+      "bytes": 633,
+      "sha256": "54d1c8e619f846e12c44199d020c59edb890b9f96335f0902a99f0402a10c5e4",
+      "blobMatches": true
+    }
+  ],
+  "hashMatches": {
+    "source": 16,
+    "runtime": 80,
+    "payload": 79
+  },
+  "official": {
+    "pid": 14497,
+    "session": 64360,
+    "indexMatched": true
+  },
+  "nativeGoal": "known paused; no resume tool; local authorized continuation",
+  "wholeGoalComplete": false,
+  "next": "goal-2/T04 / originalT12 whole-goal review and human H",
+  "note": "This precedes separate task-completion receipt commit; no unknown final self-SHA claimed."
+}
