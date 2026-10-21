@@ -18,6 +18,19 @@ T11.4.2.3j“Game Studio炉前交互与打造决策优化”已完成产品实�
 
 3k“实物交接、成器瞬间与经营深化提案”已完成并源交付：00526c8c02e1f105e418ac12c1d41e8e174d9cf6真实commit/push74858终态0，fresh远程同SHA，35Git blob逐字节核对。官方32067/85938现服务tmp/previews/T11-4-2-3k-formed，75HTTP/3可信左键/1实际收剑/刷新持剑均通过；最后必要构建/短试玩完成，83保护与8SDK保持。v0.8具体提案已独立审查及OpenSpec严格通过，尚待用户具体批准；没有v5实施。当前只有待确认的3l新经营，已有授权3k工作全部完成，整体goal ACTIVE，H/最大R4未填，兼容后置。回执更新/原归档脚本尾空格正规化另提交，原字节gzip保留，最后核实际push/远程后结束。
 
+## 3l.1 执行计划：已批准经营内核与正式报价（代码修改前）
+
+当前唯一task为T11.4.2.3l.1，对应已批准OpenSpec1.1。上轮回执ecd2cc2已推送，工作区干净；v0.8原答与全文/hash不变，不能重索批准。沿已显式使用Game Studio→Web Game Foundations，保留现Canvas/DOM、D原画和自然锤，本项只实施真正决定经营结果的纯核/正式SDK，随后独立保存与首章界面；不能把本项称为新界面已上线。
+
+1. 新增core-v5的model/game/rules/view/validate/index。冻结forge-v4文件和解释器；同义内容以只读re-export复用v4 content（三配方、12单、事件、改造、结局），v5独立rulesVersion与seed域，Accepted journal完整回放。RunState新增marketSpent，由advance后开炉重置；日记录留实际工资、钱袋消耗，回放校验拒绝任何伪造字段。没有DOM/时钟/外部RNG/存储。
+2. 规则接口统一：marketFor/marketRemaining提供章P/B；cumulativeBaseFee按整数交叉相乘比较实际route count/required；deliveryQuote返回作品身价、匹配路线/最低门槛、基础增量、品质奖金、普通出售报价、实际总额/预算消耗与拒绝原因；recoveryQuote统一base/4受限预算；barterAssessment检查实际active非reserve且level>=3。正式命令只消费这些函数，不接受客户端价格；partial/mixed路线不重复工资，空袋收件继续、普通0价拒售无journal，明确0回收/0断返仍接受。品质、出售、主动/断剑/收工回收共用一袋；唯一40/160仍独立。
+3. supply按reserve实际active对象发2或3新坯，slot1始终第一新坯，继承上限普通底价4倍且只消费一次；取下不补第四柄。warmRack、pending新料/loan/shelter等按真实新旧区分。原全部风险、12条件、3结局、商货/改造/事件/资格/软硬上限保持；交易等级门槛在equip前核验。DomainEvent对交付/处置/断裂披露实际付款组成，动画不发钱。view包含钱袋、各剑正式报价/换艺资格、封炉稳定顺序回收报价和明天新旧数量/留剑匹配，方便后续页面无重复算式。
+4. 分工在同一goal task内：root独占model/game/validate及SDK/build；代理只写新rules/view与内容re-export；另一代理独立写新经济必要用例/正式合法轨迹（不伪造RunState当验收），互不改旧模块。v5 SDK用独立Vite构建后追加到现build，避免改变旧共享chunk/旧8SDK；本轮不写保存port/collection/UI，不触碰用户档或官方预览。
+5. 验证只覆盖变化：严格类型/正式双旧构建+独立新SDK；新规则整数算例、首章合法journal与商人资格、共袋所有入口/归零拒售/新天恢复、三槽/继承/旧新混路线、三结局内容与实际轨迹、篡改/重复命令完整回放。小型有界确定性轨迹用于找合法关键窗口，不跑1000种子/旧simulation/广兼容/长性能。未改UI不跑同一v4浏览器批。R3.22同时复核3k/3m/本3l.1，核实可见提示所需字段、唯一去向/钱袋/旧文件保留，真实缺陷修复后再定向复验；不以核绿或6040上界称fun/H通过。
+6. 交付正式v5SDK/必要规则说明与真实数据、source/build身份、R3.22。提交实际push/远程核对后勾3l.1和OpenSpec1.1，记录杠精审查/回执再简报结束。旧默认仍运行已发布v4；下一task独立存档/炉谱，再首章真实界面，不再次优化v4纯表现。回滚新增revert，新SDK可保留，不改旧存档/原画/封签证据。3k/3m/3l.1为R3.21后3项，本项结束前必须R3.22；整个goal和最终R4/H继续未完成。
+
+[杠精计划审查]通过：实际新经营命令与报价统一，所有旧内容保持且新旧身份隔离；不以提案/更多文案代规则，不用模型或兼容测试拖延已批准首章。明确本项只是可执行内核，页面/保存留在紧接的独立task，不宣称用户已能玩到v0.8。
+
 ## 3m 执行计划：纸单路线与可执行提示（代码修改前）
 
 当前唯一task为T11.4.2.3m。上轮是progress：00526c8/1b0b234交付成器/实物连续反馈及v0.8具体方案，正式4179是32067/85938，工作区干净。v0.8具体问题仍待用户回答，goal continuation不是批准；本轮只修已授权v4交互和真实委托呈现，不修改新旧经济、供给、资格、RNG或存档，不再次索相同确认。仍按用户/Game Studio优先交互/界面/玩法，兼容和大型模型后置。

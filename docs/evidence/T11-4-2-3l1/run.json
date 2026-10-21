@@ -1,0 +1,666 @@
+{
+  "at": "2026-10-21T06:37:30.720689+00:00",
+  "task": "T11.4.2.3l.1 / approved OpenSpec1.1",
+  "approvalSnapshot": "docs/evidence/v08-approval/approved-proposal.md",
+  "approvedSha256": "c6a605c29e29d83ee9f3bae6700270af96d749f30d29e6de2c17bfb14acd04aa",
+  "scope": "forge-v5 pure core + formal quotes + replay + SDK; schema5 repository/schema2 collection/UI follow next tasks",
+  "build": {
+    "initialSession": 86601,
+    "afterTestsSession": 89216,
+    "finalSession": 28759,
+    "actualExitCodes": [
+      0,
+      0,
+      0
+    ],
+    "artifactFiles": 76
+  },
+  "unit": {
+    "actualExitCode": 0,
+    "passed": 8,
+    "durationMs": 577,
+    "log": "docs/evidence/T11-4-2-3l1/v5-economy-vitest.log",
+    "semanticScopeUnchangedByFinalPublicAgeWording": true,
+    "rawLog": {
+      "path": "docs/evidence/T11-4-2-3l1/v5-economy-vitest.raw.log.gz",
+      "decompressedSha256": "56d03cdebe8d8328ccb790b4a17399573098408e0cb19f6415786b4b3786ebdc",
+      "note": "Original stdout preserved; display .log only normalizes redundant trailing blank lines after staged whitespace check."
+    }
+  },
+  "journeys": {
+    "actualExitCode": 0,
+    "declaredSeedBound": 16,
+    "actualSeeds": 1,
+    "seed": "v5-economy-0",
+    "acceptedCommands": 142,
+    "completedCommissions": 12,
+    "receipts": 14,
+    "grossIncome": 5454,
+    "upgradeCosts": 2480,
+    "finalCoins": 2974,
+    "endings": [
+      "victory",
+      "return",
+      "defeat"
+    ],
+    "day8BaseFees": [
+      125,
+      125
+    ],
+    "day11MixedBaseFees": [
+      300,
+      300
+    ],
+    "producerBeforeFinalAgeWording": true,
+    "finalSdkFullReplaySucceeded": true
+  },
+  "oldSwordBranch": {
+    "actualExitCode": 0,
+    "baseFee": 250,
+    "warmRackValue": 710,
+    "newBlanks": 2,
+    "savedObservations": 3,
+    "finalRequestAndNextRequestUseEarlierAge": true
+  },
+  "finalReplay": {
+    "session": 42918,
+    "actualExitCode": 0,
+    "ok": true,
+    "savedObservations": 49,
+    "uniqueStates": 44,
+    "stateHashes": [
+      "26ff1c6011dade935eac1f54206989f7b8cd29efbe16ac03d9d8474f8b41b427",
+      "4162aab59eab08456cb41ae1aa7a2802757b52a487f1f85042b462d0f69575e0",
+      "fda028a4782d9278f247d7fb2ea9d1416bdcc1034d2be4e3ca4357aac6f040d6",
+      "81f3eeece3955d9d6cb9104b64124f6ff6edd309bf28dfb9ae7c65516e3a4334",
+      "0aa09d90cd4e4eb9c1adab826d6581bbd325e0758610d5fe67f22a427c4757ba",
+      "1449c331e3377c1d604bc138189c3cf3b8135beeabaab531a3574485f4e75f83",
+      "5b52ce42a331254d9b9f9e8620d71631ff8a66f75d668dc88d672172ce2ea209",
+      "7cea4f5067b138498fcafc9599463c4bb821316dd926a8c2e25a674dc68b0db7",
+      "f5b1f34bddc39b17c7e431e4c1f8c226ef665dc7222e858cd3f6181c9d2bc535",
+      "825ae09f38c9e84ecb4dcbb051c4607a8cc2c3cfcdffb3ac2cfe18a661236e31",
+      "da41da92c00ee059febf9832db2670edd1788c3344c797f05342b4f57d470bc9",
+      "35d40b7718540ca1e2689af2f83c56e4025e2a7ddaf4d07cffb75852546b5290",
+      "f41646d3bfecee75684b482abc7fd7e2106ed074ae9dcf08d06b89b54239d761",
+      "da446495788e3ecc3cbc23dfa723b6db9b4c31bbec05267d8605a4ccc8c83c94",
+      "f11d1116ae8fab22bfd679ce31d2e968013dea4a7702783834c8ef45f845ae15",
+      "a2d6c907daab027f6b3a3757f2764cbdcd42ef8068ed64624074f84e08cec851",
+      "1e8fd0d3d5c972f1a49f4732e1e8b84c4bb7d7d8b16dbffcde1bc9ad16f17118",
+      "d9938deefa2ce1f9234ec21b61cdd090c9de256328a1d3a85e13601aa728e1cf",
+      "645f9c32f8c7acf568f9dedd3abd506d67c246568becc345db4876c4b039ba67",
+      "5ff653fb7690b8d12380063a25929e29255da53c9490b9c5c3d66e53f21aa1c8",
+      "eecfb585f3b0692e7574149a70cf21b24cfde47f1843c45ff4ba2663b110a696",
+      "911e4fd4242f6355637d95edd40c896464f4b87416628a6c8a437c610aa171ba",
+      "bf7cc05888f67e8acd4664e171f54725912c74f73b47b2cb6f9ef19d8c22b1c5",
+      "c729f47ca3c42a6ab70602abee44a1013c8c0282a2ef5f74abb270874923e179",
+      "8a444aced127ab324abdc08582e4fb9e25ab9d121fb14fd947b599c3260c0018",
+      "4677754d5178d56f4a4b0048fe65b8de2204fa41209f771a9b273b830315ad23",
+      "16b05ef7b28e8bffb6965fd0b90fa8321eded16c2b35ef4460d36c12b7c87794",
+      "a2a466eda7a1136a306f50da04f88262f2f5e4df1f8faf78b3dc3ef4cc84773e",
+      "47eef2b79eb3e55ccb135a1abcb3d3ea4c6e34d967dadfb5ac79e8c2772dd565",
+      "427493c4c2c0da58aadc939e3d654fdcac20da6d155765d8d5052413058a025a",
+      "7387735ca3bb04e8861e092168129ca333011a0dc29df4d6d6ee3218602157f1",
+      "17d8882030217d574f55923926c7059cab8b49784206e3745ad99886fb723755",
+      "68bde34e61ddac2b4a860c422fbca8361d0258c41e4352e0c00f9950f0421bf2",
+      "344b84608e60b2ad3a166a91fa71c9a03987e640ad9bbfff322387c7decefd37",
+      "af9faee963beb492d896d44123c7995807db3f40485e13cdf39b1d91c2eff68b",
+      "2d7079b7b40ee7fd35d5d58c562cdf39f11c30e939c7c1a4496813fa0f951d06",
+      "02ceb008b31636d6d2a566bddc9c6f4be1f298fc3be88b94e2565a1e1d2aee84",
+      "7667ffc10b584fa52f95696d546b981eaa449eeda1406eb69af2e2407b5f64d0",
+      "f70e0c8de2f21d9b04849e361b5028ba937789971c29d11f8dadcb0726b0ab57",
+      "51fea945c2f73622d1feaec5a477416627ef7a3dbeeb72bcb118900a662c2e52",
+      "b2acaa6b2ec9d5d58a52c658c364c3d3e56f9a583c153efbea140adbd9e74e25",
+      "9172f85bd7875c3846599fb5e76ba0d0292cf9a569b1a5caf42a7c1929a9feff",
+      "187a094fce02d1ee9f31b4bf991c3c6cf3f3aaf08abc1f2e1ab1a6b14c86347e",
+      "8c270df68f99cc06b51706222443ebe22401a1871f1a91672a34ffef09747c76"
+    ],
+    "oldRuntimeFilesByteEqual": 75,
+    "oldSourcesByteEqual": 113,
+    "protectedFilesByteEqual": 85,
+    "unchangedContentGroups": 7,
+    "tamperRejections": 3,
+    "wrongIdentityRejections": 2,
+    "oldV4ReplayStillValid": true,
+    "crossRulesRejectedBothWays": true,
+    "notBrowserOrFunAcceptance": true
+  },
+  "review": "docs/reviews/R3-22-workshop-economy-core.md",
+  "source": [
+    {
+      "path": "package.json",
+      "bytes": 1389,
+      "sha256": "325a4a9c4aa42dcfdfcf05afbdfc64cbf46540423d7bf0d8267a8b92077a605e"
+    },
+    {
+      "path": "vite.v5-sdk.config.ts",
+      "bytes": 432,
+      "sha256": "79a1f6ece3624ec098d12d4a36e06228d607ad029d87f7def266fe4354fc3286"
+    },
+    {
+      "path": "src/v5-sdk.ts",
+      "bytes": 36,
+      "sha256": "06e6f4b0922bc115fa279a697f2875b72aacef8654b7bdff2b721f2caeb06f5e"
+    },
+    {
+      "path": "src/core-v5/content.ts",
+      "bytes": 39,
+      "sha256": "0a1227c76f5c7487d4c708b4ae394b16e3ba983d8b48a2049905199002f9adc2"
+    },
+    {
+      "path": "src/core-v5/game.ts",
+      "bytes": 17543,
+      "sha256": "859c925c7d50054efcfe68ad33b2a90f75f1f848db683bad95f638b8c49d6a7b"
+    },
+    {
+      "path": "src/core-v5/index.ts",
+      "bytes": 263,
+      "sha256": "3e30b8fe60d70f26a5ceff2b74312273d85bf00d2a24be59608089a6255a60cf"
+    },
+    {
+      "path": "src/core-v5/model.ts",
+      "bytes": 6407,
+      "sha256": "46e23115f8168e075501cfd7609da579dcfde15aa7b099f750da562f58d2cc8a"
+    },
+    {
+      "path": "src/core-v5/rules.ts",
+      "bytes": 7906,
+      "sha256": "870b10cbe82842e660225586def203bbed803b1e8db1fffed242141fb8c31bf8"
+    },
+    {
+      "path": "src/core-v5/validate.ts",
+      "bytes": 1467,
+      "sha256": "a44bf1607f9f2d44fb9b1595fef55623ef11129a86d23c88380057b25ebb520a"
+    },
+    {
+      "path": "src/core-v5/view.ts",
+      "bytes": 5823,
+      "sha256": "b77cd7085836549bd9e69ae23adfcde195e4474643565ccf7db699922027007e"
+    },
+    {
+      "path": "tests/core/v5-economy.test.ts",
+      "bytes": 12076,
+      "sha256": "62e595180dfa6b63e88d943b112c38ecae1af20a931ecd2aeb75e4ea9e9f2076"
+    }
+  ],
+  "buildFiles": [
+    {
+      "path": "dist/assets/b/anvil-v1.webp",
+      "bytes": 351706,
+      "sha256": "ed44b20b36a834581655f02c6e6660452b72a9742c37e1d97d3ab132413af9f1"
+    },
+    {
+      "path": "dist/assets/b/hammer-heavy-v1.webp",
+      "bytes": 286032,
+      "sha256": "3b9ed6d6aab155503af7ae167676fd88badcc2f859ee693823e1b68c4ae26714"
+    },
+    {
+      "path": "dist/assets/b/hammer-light-v1.webp",
+      "bytes": 153704,
+      "sha256": "4a294cde83b0765ba919c1943f151a9ad66c8aad5e163c1f3b81df2208b8bbf8"
+    },
+    {
+      "path": "dist/assets/b/hammer-standard-v1.webp",
+      "bytes": 243778,
+      "sha256": "604bc26957ac0dae08bec6160fbb1104dad6949676ed3df4bc254743fe392c03"
+    },
+    {
+      "path": "dist/assets/b/manifest.json",
+      "bytes": 16507,
+      "sha256": "7d97cba7f4cfd6df7656385c61db9096d1a1c5901b50202abda60b55cc52dc13"
+    },
+    {
+      "path": "dist/assets/b/material-iron-v1.webp",
+      "bytes": 297192,
+      "sha256": "891f332a7543e005bb4eecf9c8cbf9ed6fbb6e7acc60ef02c6a08d828cbdf8e9"
+    },
+    {
+      "path": "dist/assets/b/material-meteorite-v3.webp",
+      "bytes": 171384,
+      "sha256": "bffe5da4cc1522fa9e16df68790d11fbf551659176210ecb04e66ea82da98f3a"
+    },
+    {
+      "path": "dist/assets/b/material-steel-v1.webp",
+      "bytes": 297586,
+      "sha256": "c5985ca938f459770ebe8e7e0f045db4a96768c20525c7a7f05d28ab3c070a4e"
+    },
+    {
+      "path": "dist/assets/b/merchant-kit-v1.webp",
+      "bytes": 463234,
+      "sha256": "9a7623f3b226fc1918b08054ccfd080d852a278f9c92a97219c9da72a40e1c72"
+    },
+    {
+      "path": "dist/assets/b/tokens.css",
+      "bytes": 428,
+      "sha256": "6892f99cdee0107212fd750a058191d2933efefb8a4e7b05b8df35412132614e"
+    },
+    {
+      "path": "dist/assets/b/workshop-background-v1.webp",
+      "bytes": 387784,
+      "sha256": "c8813b1438f61b6edbb8890d2df843ce7ac5732899a52edb9af67d1f8771497c"
+    },
+    {
+      "path": "dist/assets/d/blade-cleaver-v1.webp",
+      "bytes": 475570,
+      "sha256": "7ce0ae4d8fbd5b6f467d3ac487e1325807cbba993e0b2e0cd01875a96c8734db"
+    },
+    {
+      "path": "dist/assets/d/blade-dao-v2.webp",
+      "bytes": 412412,
+      "sha256": "0849c54fc542d5781ce71c177e379f9336d012ed7dbc38250e0793ccaa642b48"
+    },
+    {
+      "path": "dist/assets/d/blade-jian-v2.webp",
+      "bytes": 354522,
+      "sha256": "ece499d885fd4a7b74978fac75a547caa6eb40c335e1643364f955f6eca6582b"
+    },
+    {
+      "path": "dist/assets/d/commission-guard-v2.webp",
+      "bytes": 542200,
+      "sha256": "0a8b9d04123e63d30163c7e486eb5e6917e67088ba6e8b3ca69eae8662f1a226"
+    },
+    {
+      "path": "dist/assets/d/customers-atlas-v2.webp",
+      "bytes": 399396,
+      "sha256": "6d5f8b78b51863cda7143d506efcc9a344e6b69314737d66610bbd95ca8d3cf7"
+    },
+    {
+      "path": "dist/assets/d/forge-backdrop-v1.webp",
+      "bytes": 326918,
+      "sha256": "af03aec23b63729c2dc0e05abaaaa6004d2c692d233fcafdbf446166676896eb"
+    },
+    {
+      "path": "dist/assets/d/forge-backdrop-v2.webp",
+      "bytes": 367418,
+      "sha256": "74d11a3a34a9f066933e5f5995cd1a3cfc37339495c48759a3bac4ecab8f0851"
+    },
+    {
+      "path": "dist/assets/d/forge-pennant-v1.webp",
+      "bytes": 251572,
+      "sha256": "5acb97d4d6eed7d50d2975e1d63e03bf5023f9cb4a8db8568ff8fa9660854a0a"
+    },
+    {
+      "path": "dist/assets/d/guild-scroll-v1.webp",
+      "bytes": 322924,
+      "sha256": "695295f4d69d86c6ea79e884482eee3b0d6ab1643c61a2d9f4aa2d235086204e"
+    },
+    {
+      "path": "dist/assets/d/hammer-forge-v2.webp",
+      "bytes": 142696,
+      "sha256": "174462711969925c8bc6a3a27a043ddb69d8d4f0c4f543ed83be0cad8134186e"
+    },
+    {
+      "path": "dist/assets/d/hammer-heavy-v1.webp",
+      "bytes": 239784,
+      "sha256": "5609cf65ecc2a887f580d76be907d5c5196e202f500e9aa3806c20b39f883dd3"
+    },
+    {
+      "path": "dist/assets/d/hammer-light-v1.webp",
+      "bytes": 181090,
+      "sha256": "bb2f802ef48756af9ac0051c31194d5d8e32d8be11ed83e20d180cb973da4234"
+    },
+    {
+      "path": "dist/assets/d/hammer-standard-v1.webp",
+      "bytes": 173226,
+      "sha256": "30c2ab0bb57383aad563dcb78abf9b96d56d63c6665b3f945240f8ab27ff71e5"
+    },
+    {
+      "path": "dist/assets/d/manifest.json",
+      "bytes": 6175,
+      "sha256": "790ea270419a058df9d2aa2224f708847e9e271857b05311f7d098560b80e196"
+    },
+    {
+      "path": "dist/assets/d/metal-atlas-v1.webp",
+      "bytes": 337260,
+      "sha256": "d50d096a3951cf5a609fc0c81e48a38eb9eee0a97c3c05c47a674a5505d7dd67"
+    },
+    {
+      "path": "dist/assets/d/notebook-cover-v1.webp",
+      "bytes": 429704,
+      "sha256": "3dfa792ac46bd940091764ac62fea2813db991178ed56d2c6c7920ebd430b1f9"
+    },
+    {
+      "path": "dist/assets/d/oil-v1.webp",
+      "bytes": 244050,
+      "sha256": "cabe57bfa72e6d064cc8d31a4fe5f4b10ef1b9521d4a340905e3f48d4b7198c9"
+    },
+    {
+      "path": "dist/assets/d/portraits-v1.webp",
+      "bytes": 566448,
+      "sha256": "fe52ff958203125c4e40a8a7566e536e7f1b5488c51b6ecc7088e43fb9e42ec3"
+    },
+    {
+      "path": "dist/assets/d/trait-props-v1.webp",
+      "bytes": 493826,
+      "sha256": "11b900241ce1095845336ac8fe9c627a29e47d0a3ab8d2e9de63a91cb5496fff"
+    },
+    {
+      "path": "dist/assets/d/v07/bridge-dark-v1.webp",
+      "bytes": 271780,
+      "sha256": "50c8dff8b69fbaa954d61d225613c65223d76a2aecb9ca2d82f495dcd350fce4"
+    },
+    {
+      "path": "dist/assets/d/v07/bridge-lit-v1.webp",
+      "bytes": 297880,
+      "sha256": "ccd7d09fa51c4f79608930a9e6c95b929c39653202c8dde487797b471bd2577b"
+    },
+    {
+      "path": "dist/assets/d/v07/events-v1.webp",
+      "bytes": 309280,
+      "sha256": "73751392e87e97a1091c4f2416fcac04a5597af7ebdf0cc7ce5b411743bb67d2"
+    },
+    {
+      "path": "dist/assets/d/v07/lantern-road-v1.webp",
+      "bytes": 283948,
+      "sha256": "e3e3cb3a6b32c0b8fb8315fa4fa724a2facc09a7da153fdbe1153115734fa95a"
+    },
+    {
+      "path": "dist/assets/d/v07/modifications-v1.webp",
+      "bytes": 241522,
+      "sha256": "beef13d0c9321b759fa044c7c47cfdd936f09315af7ee5d618c3085b072fb3a5"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter2/cracked-work-v1.webp",
+      "bytes": 242632,
+      "sha256": "bcb5323a59eb8bd53e9c18e7afc1ef87bc5f3e5bb1a78b78c959b940fc270fa5"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter2/rescue-path-v1.webp",
+      "bytes": 362192,
+      "sha256": "28a1bd26b08d66fe6748a50263d28bd1404123bff6b87e3be91b98024b21531a"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter2/returning-blade-v1.webp",
+      "bytes": 344334,
+      "sha256": "2ce00147936d876291eb708919f6bb8e6bf5fdc0ba64c08e21d50754ac4214da"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter2/twin-stations-dark-v1.webp",
+      "bytes": 299396,
+      "sha256": "ec92cb07af0c13553b092c12089637c32ba4e2057c80f2f7d963ec5141273f01"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter2/twin-stations-lit-v1.webp",
+      "bytes": 302458,
+      "sha256": "f168ab748d4146842603499af700379a459e60bb342171e99f1646f663ff1b33"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter2/twin-stations-one-v1.webp",
+      "bytes": 294906,
+      "sha256": "50968b0df21187032042671427ca8f3721d45a5254db40c504682b24f7c6d44c"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter2/winter-forge-v1.webp",
+      "bytes": 197974,
+      "sha256": "ff93be5848e112aa7c6b74a5a649cd5fc7341cf08faca03d1b218a4e3e7aca96"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter3/double-fire-work-v1.webp",
+      "bytes": 204206,
+      "sha256": "c94b9d9f89749e2db6ff76ab463367e780e6f9e6afaf8dfe1991aeec027636fa"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter3/ending-embers-v1.webp",
+      "bytes": 156688,
+      "sha256": "56b65cdaba916795e248f1a431b5b14b0d4fd2216de0df4ed69dfcff1fbee4cf"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter3/ending-homeward-v1.webp",
+      "bytes": 309244,
+      "sha256": "6a2105c91f0937af28e22db22992d3b5707765dd2a456fad91151547d6602cb7"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter3/ending-twelve-lights-v1.webp",
+      "bytes": 294482,
+      "sha256": "05cac8d98ff29b464374a5604e84fa844cd009a5a13e8cc85108eef1c3bafe8d"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter3/last-lantern-delivered-v1.webp",
+      "bytes": 290266,
+      "sha256": "897c0bfc12bd387ebd8f5e3005991d0b9c1cc32dece3900973baddbd6a53a127"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter3/mountain-gap-held-v1.webp",
+      "bytes": 327434,
+      "sha256": "af657ee742fe772738d2a12d37dccbd26546cf4bd833c6617674108713669421"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter3/mountain-pass-arrival-v1.webp",
+      "bytes": 267342,
+      "sha256": "7330d00aa07ddd97eee6faa22185dbf6a3d1439f4ed6ee657650feb77d382e8b"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter3/relay-complete-v1.webp",
+      "bytes": 271756,
+      "sha256": "aa750f3804dfc96aacb91437d87c86cbb0ca18d95cd563bfc9fc75ef826be01c"
+    },
+    {
+      "path": "dist/assets/d/v07-chapter3/relay-one-v1.webp",
+      "bytes": 263292,
+      "sha256": "e428afac55345140ed426767056010917e3bf42e791425f720f0c653864d051f"
+    },
+    {
+      "path": "dist/assets/d/water-v1.webp",
+      "bytes": 266286,
+      "sha256": "a0db1b1b4c9ee96d4ecc25f569b929aeda3e811bd457e5ad9f3792d1fff60c03"
+    },
+    {
+      "path": "dist/assets/dom-DOqb_Hkx.js",
+      "bytes": 31619,
+      "sha256": "119dba5e8680a3787c68231500b4d6ff25f45a5d1b86a716d47d717c997fcac6"
+    },
+    {
+      "path": "dist/assets/input-B0NTSK-g.js",
+      "bytes": 2339,
+      "sha256": "cceac72409a3cf52e0372a6bb3d4a39714e76d435608a135b8f6255a9194113d"
+    },
+    {
+      "path": "dist/assets/legacy-BEbDMbhp.js",
+      "bytes": 60374,
+      "sha256": "75f6a633da33d7b36a48950c282766269d096db6fe31ac62535d81448a44fdc2"
+    },
+    {
+      "path": "dist/assets/legacy-CidoUqtJ.css",
+      "bytes": 20582,
+      "sha256": "542a1875c5de6ec3b2fb043c7c5d2d7e6bcd19f35ebc0b6c82052c688703c12b"
+    },
+    {
+      "path": "dist/assets/main-CIHM6rhH.css",
+      "bytes": 58297,
+      "sha256": "3004f966496328dd2318e41224c23237274c83ef80f2634ab4e9261fa9e8ea63"
+    },
+    {
+      "path": "dist/assets/main-CzfxupWP.js",
+      "bytes": 154973,
+      "sha256": "b4de7cfc352cdee6fffaa9f1df281147a4f3dc59c19725a6ad421150d609b7f1"
+    },
+    {
+      "path": "dist/assets/surface-C7W-Wbjp.js",
+      "bytes": 16960,
+      "sha256": "de92b6b12ebde2d495883325c13977dd193b8298d8290c272d458fba3fcb68e5"
+    },
+    {
+      "path": "dist/assets/v2-BgGChR3Q.css",
+      "bytes": 46808,
+      "sha256": "08bd72f2215e57d65bcfb4b513abe29599a25b8e6613986ef44c8f1d1c32f9dd"
+    },
+    {
+      "path": "dist/assets/v2-DiTiUVti.js",
+      "bytes": 68646,
+      "sha256": "fe789e3fa036383f15c0801dc6ff8857b0e2b657136871d57e8773df08737d8f"
+    },
+    {
+      "path": "dist/assets/v3-DOzLDQhh.js",
+      "bytes": 71187,
+      "sha256": "7ba92e0a6c4324fc66104ac76bdc3942645d3cb3ca67a59b04fb0d8b9cc165b1"
+    },
+    {
+      "path": "dist/assets/v3-D_5nutBJ.css",
+      "bytes": 50525,
+      "sha256": "6a09096d56bbd5e9b76e5ebbe1aa3e21f301c8c79b5593eb247cf897207704f7"
+    },
+    {
+      "path": "dist/browser-session-BQdQqpuu.js",
+      "bytes": 11605,
+      "sha256": "8ebc49f8c7ee292c6dd0181cf3e209a669c3224aa54e15c394d912a471dbdee5"
+    },
+    {
+      "path": "dist/core-CvAZnNjA.js",
+      "bytes": 21211,
+      "sha256": "d454eb5d786660f0a1132580582c6af8c2004b274337feb9f606cddbf76beb46"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 800,
+      "sha256": "b0f2cbe93d8829e01527aaac83381a8c1e6e6f36c816adc67546e1c36a39d978"
+    },
+    {
+      "path": "dist/legacy.html",
+      "bytes": 845,
+      "sha256": "c294bea0c302de21dad37ecec258022e2c48e2b0d5e7a77f29e70643d6906208"
+    },
+    {
+      "path": "dist/rules-CAo3EZyg.js",
+      "bytes": 1838,
+      "sha256": "758b82851aaf66fee126eabcc212cff0c95a2b9fed33f2a0e08b8bd52e5965ea"
+    },
+    {
+      "path": "dist/sword-led-core.js",
+      "bytes": 126,
+      "sha256": "3a75d8229c7e0840bfc0272d76964e1fa91d5d4fbe6faeab3689636bbfb321c4"
+    },
+    {
+      "path": "dist/sword-led-session.js",
+      "bytes": 223,
+      "sha256": "0fc2643db63596c9b55815db6bb4d0726a7a4d38a45db4102e7a8cfab25c35a8"
+    },
+    {
+      "path": "dist/sword-led-v2.js",
+      "bytes": 28145,
+      "sha256": "618dd6e0552c9290b9ee4e2aa93f19a36a22e051ee0c593d20c94e0ae3e36afb"
+    },
+    {
+      "path": "dist/sword-led-v3.js",
+      "bytes": 11057,
+      "sha256": "0406b190bde0646a940fb6180086b4805a63530964f456afaafc08042bb18ab2"
+    },
+    {
+      "path": "dist/sword-led-v4.js",
+      "bytes": 47405,
+      "sha256": "0525dd1f3642af2a1a54e397e6023cd9baf4dcccda4c5af3b9ed721a92ae89e5"
+    },
+    {
+      "path": "dist/sword-led-v5.js",
+      "bytes": 44622,
+      "sha256": "486b7de66149d514ff0f3e1fca3a0ff8acaa5be07751949e5217a4f133483931"
+    },
+    {
+      "path": "dist/v2.html",
+      "bytes": 679,
+      "sha256": "8f5d3130e5006b4dac80b34276a955fe54cc5aaf1d63b129c1678ffa00d41a33"
+    },
+    {
+      "path": "dist/v3.html",
+      "bytes": 653,
+      "sha256": "75573e0338030b812c32cb77c6c5b9430bd2f9f0564a1738c637f7d0ddafeabf"
+    }
+  ],
+  "payload": [
+    {
+      "path": "docs/evidence/T11-4-2-3l1/baseline.json",
+      "bytes": 31875,
+      "sha256": "efcf0566c953a0d77aaeebc90920a6a4ee97e337a120aecf4ff75c5cd2d62824"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l1/build-final-process.json",
+      "bytes": 230,
+      "sha256": "d504edc2a9c7afa0c129edf94daeef5eaac33480cfcce83ab0a06a28b070d583"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l1/build-final.log",
+      "bytes": 2221,
+      "sha256": "8f557126459ea90b4286f295123a281afc3b203feabbf0ffc8317b9d672abe4c"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l1/journeys/attempts.json",
+      "bytes": 180,
+      "sha256": "c1759e47c9a0940f644363f3403a91fc5a0b38ec607d5173ceb2cb24db677c61"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l1/journeys/defeat.json",
+      "bytes": 7205,
+      "sha256": "6c7bde1c73193ad190317127c01026e5c02af083d1fdf8b3d947bd241a5f2d47"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l1/journeys/return.json",
+      "bytes": 27350,
+      "sha256": "2672ce3e17901f5e0d3a755314087ca37b945509dd452bff5c336366431770cb"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l1/journeys/victory.json",
+      "bytes": 923713,
+      "sha256": "430505d66d2832e59e8e6a927eca6cee20ad42136899c48db289d92199b4e901"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l1/journeys.mjs",
+      "bytes": 6908,
+      "sha256": "0e290dfe71db33a1fd70b7694d60fffc3bac818583d9d53b6d58e9fca84d020a"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l1/old-route.json",
+      "bytes": 42338,
+      "sha256": "3ba042a46f6d718af44aae51c3040b816ffd8b94c3b20c721a3653eef72eb00a"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l1/old-route.mjs",
+      "bytes": 2496,
+      "sha256": "5d6ca5f78d093ce24db5baeb0d61eda6328110a1ff3b798a84678c43e62b142a"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l1/v5-economy-vitest.log",
+      "bytes": 1614,
+      "sha256": "6a4c227fea215879d6dd79fbc4213a2c17eeb6fc5b576ff7ecc1f4f1e62303f2"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l1/v5-economy-vitest.raw.log.gz",
+      "bytes": 686,
+      "sha256": "25e375cbcf1ad5a62d7d6cc0c78eded6af0de3ea8257dd2e2b54e53db4f726d2"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l1/verified.json",
+      "bytes": 3550,
+      "sha256": "114c4c4b5274f657b8f79c9a6fdb4e577b210d89db88608dd15b6b10abe58e8d"
+    },
+    {
+      "path": "docs/evidence/T11-4-2-3l1/verify.mjs",
+      "bytes": 3077,
+      "sha256": "fd29085fb8994cfd43eead51885cfa554a3c02d159e946983083fb88f35fe622"
+    }
+  ],
+  "additionalLocalRaw": [
+    {
+      "path": "tmp/T11-4-2-3l1/before-request-build-final-process.json",
+      "bytes": 148,
+      "sha256": "8ca853f0ceebac36bffb10e0c56e6c823011ea80032226434605940385ef5502"
+    },
+    {
+      "path": "tmp/T11-4-2-3l1/before-request-build-final.log",
+      "bytes": 2221,
+      "sha256": "172b963fe11d7378c7f71a79ad3399ff3cf86cddca8db02b3a3a822694994993"
+    },
+    {
+      "path": "tmp/T11-4-2-3l1/before-request-old-route.json",
+      "bytes": 42338,
+      "sha256": "b4cf0b0cbcb53ff6eb369b357c410496cfda7df50d1c9905cbc535a9bb03e331"
+    }
+  ],
+  "previewChanged": false,
+  "userProfileTouched": false,
+  "humanFunAcceptance": false,
+  "goalComplete": false,
+  "producerReproduction": "Copy archived producers to tmp/T11-4-2-3l1/ after npm run build, run from repository root; source-relative SDK imports refer to dist at that original path. Outputs declare their paths. Existing outputs preserve evidence; use a fresh checkout/output directory for a new run.",
+  "openSpec": {
+    "session": 18354,
+    "actualExitCode": 0,
+    "strict": true
+  }
+}

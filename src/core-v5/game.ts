@@ -1,0 +1,141 @@
+import {freezeDeep} from '../core/immutable.js';
+import {canonicalJson} from '../core/validate.js';
+import {isRecord} from '../core/guards.js';
+import {hashUtf8,nextRandom} from '../core/random.js';
+import {RECIPE_IDS,MODIFICATION_IDS,EVENT_IDS,MERCHANTS,RECIPES,TRAIT_IDS} from './content.js';
+import {VALUE_CAP,LEVEL_CAP,JOURNAL_LIMIT,JOURNAL_SOFT_LIMIT,percent,recoveryQuote,deliveryQuote,marketFor,marketRemaining,cumulativeBaseFee,barterAssessment,atCap,unlockedRecipes,recommendedRecipe,supplyBaseFor,commissionFor,commissionProgress,settlementPreview,strikeOdds,merchantPresent,merchantFor,eventQuote} from './rules.js';
+import type {Action,Blade,CommandResult,CreateRunInput,DayBuffs,DomainEvent,Eligibility,ErrorCode,EventRecord,Hit,RunState,Trait,Trigger} from './model.js';
+type Mutable<T>=T extends readonly(infer U)[]?Mutable<U>[]:T extends object?{-readonly[K in keyof T]:Mutable<T[K]>}:T;
+const copy=<T>(v:T)=>structuredClone(v)as Mutable<T>;
+const fail=(s:RunState,error:ErrorCode):CommandResult=>({ok:false,state:s,error,events:[]});
+const blank=():DayBuffs=>({supplyPct:100,loan:false,shelter:false});
+const member=<T extends string>(v:unknown,ids:readonly T[]):v is T=>typeof v==='string'&&ids.some(id=>id===v);
+const keys=(v:Record<string,unknown>,names:readonly string[])=>Object.keys(v).sort().join(',')===[...names].sort().join(',');
+function draw(s:Mutable<RunState>,domain:keyof RunState['rng'],count:number){const r=nextRandom(s.rng[domain]);s.rng[domain]=r.stream;return Math.floor(r.value*count);}
+function shuffle<T>(s:Mutable<RunState>,domain:keyof RunState['rng'],items:readonly T[]){const a=[...items];for(let i=a.length-1;i>0;i--){const j=draw(s,domain,i+1);[a[i],a[j]]=[a[j]!,a[i]!];}return a;}
+function supply(s:Mutable<RunState>){
+ s.supplyBase=supplyBaseFor(s,s.day,s.dayBuffs.supplyPct);const bonus=Math.min(s.supplyBase*4,s.inheritance),recipe=recommendedRecipe(s);s.inheritance=0;
+ const count=s.blades.some(b=>b.id===s.reserveId&&b.status==='active')?2:3;s.marketSpent=0;
+ for(let slot=1;slot<=count;slot++){const base=s.supplyBase+(slot===1?bonus:0);s.blades.push({id:`d${s.day}-${slot}`,slot,suppliedDay:s.day,recipe,status:'active',base,value:base,peak:base,level:0,cracked:false,hits:0,charge:0,successes:0,normalGreats:0,bursts:0,finalizedDay:null,commissionId:null});}
+ s.shop=[];s.sold=[];s.upgraded=false;s.repaired=false;const merchant=MERCHANTS.find(m=>m.day===s.day);
+ if(merchant){const pool=merchant.pool.filter(id=>!s.traits.includes(id));while(pool.length&&s.shop.length<2)s.shop.push(pool.splice(draw(s,'shop',pool.length),1)[0]!);}
+ const index=[3,5,7,9,11].indexOf(s.day);s.eventId=index<0?null:s.eventDeck[index]!;s.eventStatus=s.eventId?'available':'none';
+}
+export function createRun(input:CreateRunInput):{ok:true;state:RunState}|{ok:false;error:ErrorCode}{
+ const encoded=canonicalJson(input);if(!encoded)return{ok:false,error:'invalid_command'};const p:unknown=JSON.parse(encoded);if(!isRecord(p))return{ok:false,error:'invalid_command'};
+ if(typeof p.runId!=='string'||!/^[A-Za-z0-9_-]{1,80}$/.test(p.runId))return{ok:false,error:'invalid_run_id'};
+ if(typeof p.seed!=='string')return{ok:false,error:'invalid_seed'};const seed=p.seed.normalize('NFC').trim();if(!seed||Array.from(seed).length>64)return{ok:false,error:'invalid_seed'};
+ if(p.mode!==undefined&&p.mode!=='story'&&p.mode!=='challenge')return{ok:false,error:'invalid_command'};
+ if(!keys(p,['runId','seed',...(p.mode===undefined?[]:['mode']),...(p.eligibility===undefined?[]:['eligibility'])]))return{ok:false,error:'invalid_command'};
+ let eligibility:Eligibility={recipes:['light'],challenge:false};
+ if(p.eligibility!==undefined){const e=p.eligibility;if(!isRecord(e)||!keys(e,['recipes','challenge'])||!Array.isArray(e.recipes)||e.recipes.length>3||!e.recipes.every(r=>member(r,RECIPE_IDS))||typeof e.challenge!=='boolean')return{ok:false,error:'invalid_command'};const recipes=e.recipes;eligibility={recipes:RECIPE_IDS.filter(r=>r==='light'||e.challenge||recipes.includes(r)),challenge:e.challenge};}
+ if(p.mode==='challenge'&&!eligibility.challenge)return{ok:false,error:'challenge_locked'};
+ const stream=(name:string)=>({state:hashUtf8(`${seed}|v5|${name}`),draws:0});
+ const s:Mutable<RunState>={rulesVersion:'forge-v5',runId:p.runId,seed,mode:p.mode??'story',initialEligibility:copy(eligibility),revision:0,phase:'opening',day:1,commissionOrder:Array.from({length:12},(_,i)=>i+1),coins:0,seals:3,supplyBase:40,upgradeCount:0,inheritance:0,blades:[],reserveId:null,daySales:0,dayRecovered:0,marketSpent:0,traits:[],gift:'locked',pardonUsed:false,crackGuard:false,modifications:[],chapterChoices:[],shop:[],sold:[],upgraded:false,repaired:false,dayBuffs:copy(blank()),pending:copy(blank()),eventDeck:[],eventId:null,eventStatus:'none',eventHistory:[],history:[],rng:{forge:stream('forge'),shop:stream('shop'),events:stream('events'),content:stream('content')},journal:[]};
+ s.eventDeck=shuffle(s,'events',EVENT_IDS);
+ if(s.mode==='challenge')for(const days of [[5,6,7],[9,10,11]]){const order=shuffle(s,'content',days);for(let i=0;i<days.length;i++)s.commissionOrder[days[i]!-1]=order[i]!;}
+ supply(s);return freezeDeep({ok:true,state:s});
+}
+export function parseAction(v:unknown):Action|null{
+ if(!isRecord(v))return null;
+ const piece=typeof v.pieceId==='string'&&v.pieceId.length<=32;
+ switch(v.type){
+  case'continue':case'upgrade':case'repair':case'settle':case'advance':return keys(v,['type'])?{type:v.type}:null;
+  case'strike':case'deliver':case'scrap':case'reserve':return piece&&keys(v,['type','pieceId'])?{type:v.type,pieceId:v.pieceId as string}:null;
+  case'setRecipe':return piece&&member(v.recipe,RECIPE_IDS)&&keys(v,['type','pieceId','recipe'])?{type:v.type,pieceId:v.pieceId as string,recipe:v.recipe}:null;
+  case'chooseModification':return member(v.modification,MODIFICATION_IDS)&&keys(v,['type','modification'])?{type:v.type,modification:v.modification}:null;
+  case'chooseEvent':return(v.choice==='accept'||v.choice==='decline')&&(v.pieceId===undefined||piece)&&keys(v,['type','choice',...(v.pieceId===undefined?[]:['pieceId'])])?{type:v.type,choice:v.choice,...(v.pieceId===undefined?{}:{pieceId:v.pieceId as string})}:null;
+  case'buy':case'claimGift':{
+   if(v.type==='buy'&&!piece)return null;if(!member(v.traitId,TRAIT_IDS)&&!(v.type==='claimGift'&&v.traitId===null))return null;
+   if(v.replaceId!==undefined&&!member(v.replaceId,TRAIT_IDS))return null;
+   if(!keys(v,['type','traitId',...(v.type==='buy'?['pieceId']:[]),...(v.replaceId===undefined?[]:['replaceId'])]))return null;
+   return v as unknown as Action;
+  }
+  default:return null;
+ }
+}
+function equip(s:Mutable<RunState>,id:Trait,replace:Trait|undefined):ErrorCode|null{
+ if(s.traits.includes(id))return'already_owned';if(s.traits.length===3){if(!replace||!s.traits.includes(replace))return'invalid_replacement';s.traits.splice(s.traits.indexOf(replace),1);}else if(replace!==undefined)return'invalid_replacement';s.traits.push(id);return null;
+}
+function hit(s:Mutable<RunState>,b:Mutable<Blade>,safe:boolean):Hit{
+ const odds=strikeOdds(s,b),ticket=draw(s,'forge',1000),before=b.value,triggers:Trigger[]=[];let recoveryAmount=0;
+ let result:Hit['result']=ticket<(safe?350:odds.great)?'great':!safe&&ticket<odds.great+odds.crack?'crack':'success';if(!safe)b.hits++;
+ if(!safe&&s.dayBuffs.shelter&&b.slot===1&&b.suppliedDay===s.day)triggers.push('shelter');
+ if(result==='crack'){
+  if(b.cracked){result='broken';b.value=0;b.status='broken';b.finalizedDay=s.day;const amount=recoveryQuote(s,b);s.coins+=amount;s.dayRecovered+=amount;s.marketSpent+=amount;recoveryAmount=amount;if(s.traits.includes('inherit')){s.inheritance+=Math.floor(b.peak/5);triggers.push('inherit');}}
+  else{b.cracked=true;const steady=s.traits.includes('steady'),credit=s.crackGuard;if(steady)triggers.push('steady');if(credit){triggers.push('credit');s.crackGuard=false;}if(!steady&&!credit)b.value=percent(b.value,80);}
+ }else{
+  const r=RECIPES[b.recipe];b.value=percent(b.value,result==='great'?r.great:r.success);b.level=Math.min(LEVEL_CAP,b.level+(result==='great'?2:1));
+  if(!safe){
+   if(result==='great'){if(b.normalGreats===0&&s.modifications.includes('windbox')){b.value=percent(b.value,110);triggers.push('windbox');}b.normalGreats++;}
+   b.successes++;if(s.traits.includes('echo')&&b.successes%3===0){b.value=percent(b.value,125);triggers.push('echo');}
+   if(s.dayBuffs.loan&&b.suppliedDay===s.day&&b.slot===1&&b.hits<=3){b.value=Math.min(VALUE_CAP,b.value+Math.floor((b.value-before)*10/100));triggers.push('loan');}
+   if(b.cracked&&result==='great'&&s.traits.includes('crackedEdge'))triggers.push('crackedEdge');
+  }
+ }
+ b.peak=Math.max(b.peak,b.value);if(!safe&&b.status==='active')b.charge=Math.min(6,b.charge+1);
+ return{result,before,after:b.value,level:b.level,triggers,recoveryAmount};
+}
+function resolveEvent(s:Mutable<RunState>,choice:'accept'|'decline',pieceId:string|undefined,events:DomainEvent[]){
+ const id=s.eventId!;let coins=0;
+ if(choice==='accept'){
+  const quote=eventQuote(s,pieceId);coins=quote.cost===0?0:-quote.cost;s.coins-=quote.cost;
+  switch(id){
+   case'donation':{const b=s.blades.find(b=>b.id===pieceId)!;b.status='donated';b.finalizedDay=s.day;s.pending.supplyPct=120;break;}
+   case'loan':s.pending.loan=true;break;
+   case'salvage':{const b=s.blades.find(b=>b.id===pieceId)!;b.status='bartered';b.finalizedDay=s.day;s.reserveId=null;s.coins+=160;coins+=160;break;}
+   case'credit':s.crackGuard=true;break;
+   case'shelter':s.pending.shelter=true;break;
+   case'rest':break;
+  }
+ }
+ const record:EventRecord={day:s.day,id,choice,pieceId:pieceId??null,coins};s.eventHistory.push(copy(record));s.eventStatus=choice==='accept'?'accepted':'declined';events.push({type:'EventChoice',record});
+}
+export function applyCommand(state:RunState,command:unknown):CommandResult{
+ if(state.rulesVersion!=='forge-v5')return fail(state,'wrong_rules');
+ const encoded=canonicalJson(command);if(!encoded)return fail(state,'invalid_command');const c:unknown=JSON.parse(encoded);
+ if(!isRecord(c)||!keys(c,['runId','expectedRevision','action']))return fail(state,'invalid_command');if(c.runId!==state.runId)return fail(state,'wrong_run');if(c.expectedRevision!==state.revision)return fail(state,'stale_revision');
+ const a=parseAction(c.action);if(!a)return fail(state,'invalid_command');
+ const phase=a.type==='continue'?'opening':a.type==='chooseModification'?'chapter':a.type==='advance'?'summary':'workshop';if(state.phase!==phase)return fail(state,'wrong_phase');
+ if(state.journal.length>=JOURNAL_LIMIT)return fail(state,'record_limit');
+ if(state.journal.length>=JOURNAL_SOFT_LIMIT&&(['strike','setRecipe','buy','claimGift','upgrade','repair'].includes(a.type)||a.type==='reserve'&&state.reserveId!==a.pieceId||a.type==='chooseEvent'&&a.choice==='accept'))return fail(state,'record_limit');
+ const s=copy(state),events:DomainEvent[]=[],b='pieceId'in a?s.blades.find(b=>b.id===a.pieceId):undefined;
+ if('pieceId'in a&&a.type!=='chooseEvent'&&(!b||b.status!=='active'))return fail(state,'piece_unavailable');
+ if('pieceId'in a&&a.type!=='chooseEvent'&&a.type!=='reserve'&&s.reserveId===a.pieceId)return fail(state,'reserved_piece');
+ switch(a.type){
+  case'continue':s.phase='workshop';events.push({type:'Opened'});break;
+  case'setRecipe':if(!b)return fail(state,'piece_unavailable');if(b.hits>0)return fail(state,'recipe_locked');if(!unlockedRecipes(s).includes(a.recipe))return fail(state,'recipe_unavailable');if(b.recipe===a.recipe)return fail(state,'unavailable');b.recipe=a.recipe;events.push({type:'Recipe',pieceId:b.id,recipe:b.recipe});break;
+  case'strike':{
+   if(!b)return fail(state,'piece_unavailable');if(atCap(b))return fail(state,'at_cap');const burst=b.charge===6,hits:Hit[]=[];
+   if(burst){const wide=b.bursts===0&&s.modifications.includes('wideMouth'),ember=s.traits.includes('ember'),count=2+Number(wide)+Number(ember);b.charge=0;b.bursts++;for(let i=0;i<count&&!atCap(b);i++){const h=hit(s,b,true);hits.push({...h,triggers:[...h.triggers,...(wide?['wideMouth'as const]:[]),...(ember?['ember'as const]:[])]});}}
+   else hits.push(hit(s,b,false));events.push({type:'Strike',pieceId:b.id,burst,hits});break;
+  }
+  case'deliver':{
+   if(!b)return fail(state,'piece_unavailable');const previous=commissionProgress(s),quote=deliveryQuote(s,b);if(!quote.allowed)return fail(state,quote.error!);const matched=quote.matched;b.status=matched?'commissioned':'sold';b.finalizedDay=s.day;b.commissionId=matched?commissionFor(s).id:null;s.coins+=quote.amount;s.daySales+=quote.amount;s.marketSpent+=quote.marketCost;events.push({type:'Delivered',pieceId:b.id,amount:quote.amount,matched,commissionId:commissionFor(s).id,pieceValue:b.value,baseFeeDelta:quote.baseFeeDelta,qualityBonus:quote.qualityBonus,marketRemaining:marketRemaining(s)});const after=commissionProgress(s);
+   if(!previous.complete&&after.complete){events.push({type:'MainCompleted',commissionId:after.commissionId,routeId:after.routeId!,pieceIds:after.pieceIds});if(s.gift==='locked'){s.gift='available';events.push({type:'GiftAvailable'});}}break;
+  }
+  case'scrap':{if(!b)return fail(state,'piece_unavailable');const amount=recoveryQuote(s,b);b.status='recycled';b.finalizedDay=s.day;s.coins+=amount;s.dayRecovered+=amount;s.marketSpent+=amount;events.push({type:'Disposed',pieceId:b.id,disposition:b.status,amount,marketRemaining:marketRemaining(s)});break;}
+  case'reserve':if(!b)return fail(state,'piece_unavailable');{const previousId=s.reserveId;s.reserveId=previousId===b.id?null:b.id;events.push({type:'Reserved',pieceId:b.id,previousId});}break;
+  case'claimGift':{
+   if(s.gift!=='available')return fail(state,'unavailable');let compensation=0;const options=(['steady','ember']as const).filter(t=>!s.traits.includes(t));
+   if(!options.length){if(a.traitId!==null||a.replaceId!==undefined)return fail(state,'unavailable');s.coins+=40;compensation=40;}
+   else{if(a.traitId===null||!options.some(t=>t===a.traitId))return fail(state,'unavailable');const error=equip(s,a.traitId,a.replaceId);if(error)return fail(state,error);}s.gift='claimed';events.push({type:'Trait',traitId:a.traitId,compensation});break;
+  }
+  case'buy':if(!merchantPresent(s))return fail(state,'no_shop');if(!s.shop.includes(a.traitId)||s.sold.includes(a.traitId))return fail(state,'sold_out');if(!b)return fail(state,'piece_unavailable');{const eligibility=barterAssessment(s,b);if(!eligibility.allowed)return fail(state,eligibility.error!);}{const error=equip(s,a.traitId,a.replaceId);if(error)return fail(state,error);}b.status='traded';b.finalizedDay=s.day;s.sold.push(a.traitId);events.push({type:'Disposed',pieceId:b.id,disposition:b.status,amount:0,marketRemaining:marketRemaining(s)},{type:'Trait',traitId:a.traitId,compensation:0});break;
+  case'upgrade':case'repair':{
+   const merchant=merchantFor(s);if(!merchantPresent(s)||!merchant)return fail(state,'no_shop');if(a.type==='upgrade'?s.upgraded:s.repaired||s.seals===3)return fail(state,'unavailable');const cost=a.type==='upgrade'?merchant.upgrade:merchant.repair;if(s.coins<cost)return fail(state,'insufficient_coins');s.coins-=cost;if(a.type==='upgrade'){s.upgradeCount++;s.upgraded=true;events.push({type:'Upgraded'});}else{s.seals++;s.repaired=true;events.push({type:'Repaired'});}break;
+  }
+  case'chooseEvent':if(s.eventStatus!=='available'||s.eventId===null)return fail(state,'unavailable');if(a.choice==='decline'&&a.pieceId!==undefined)return fail(state,'invalid_command');if(a.choice==='accept'){const q=eventQuote(s,a.pieceId);if(q.error)return fail(state,q.error);}resolveEvent(s,a.choice,a.pieceId,events);break;
+  case'settle':{
+   if(s.eventStatus==='available')resolveEvent(s,'decline',undefined,events);const p=settlementPreview(s),record={day:s.day,commissionId:commissionFor(s).id,met:p.complete,routeId:p.routeId,pieceIds:p.pieceIds,sales:s.daySales,recovered:s.dayRecovered+p.recovered,baseFees:cumulativeBaseFee(p,marketFor(s).baseFee),marketSpent:s.marketSpent+p.recovered,recoveredIds:p.remaining.map(b=>b.id),reserveId:s.reserveId,sealsBefore:s.seals,sealsAfter:p.sealsAfter,protected:p.protected,modification:null};
+   for(const b of s.blades)if(record.recoveredIds.includes(b.id)){b.status='recycled';b.finalizedDay=s.day;}s.coins+=p.recovered;s.dayRecovered+=p.recovered;s.marketSpent+=p.recovered;s.seals=p.sealsAfter;if(p.protected)s.pardonUsed=true;s.history.push(record);
+   s.phase=s.seals===0?'defeat':s.day===12?(s.history.filter(h=>h.met).length>=10&&[4,8,12].every(day=>s.history.some(h=>h.day===day&&h.met))?'victory':'return'):s.day===4||s.day===8?'chapter':'summary';
+   if(s.phase==='chapter')s.chapterChoices=s.day===4?['windbox','warmRack']:MODIFICATION_IDS.filter(id=>!s.modifications.includes(id));events.push({type:'Settled',record});break;
+  }
+  case'chooseModification':if(!s.chapterChoices.includes(a.modification)||s.modifications.includes(a.modification))return fail(state,'unavailable');s.modifications.push(a.modification);s.history.at(-1)!.modification=a.modification;s.chapterChoices=[];s.phase='summary';events.push({type:'Modification',modification:a.modification});break;
+  case'advance':{
+   const reserve=s.blades.find(b=>b.id===s.reserveId);if(reserve&&s.modifications.includes('warmRack')){reserve.value=percent(reserve.value,115);reserve.peak=Math.max(reserve.peak,reserve.value);}s.day++;s.phase='workshop';s.daySales=0;s.dayRecovered=0;s.dayBuffs=copy(s.pending);s.pending=copy(blank());supply(s);events.push({type:'Advanced'});break;
+  }
+ }
+ s.revision++;s.journal.push(a);return freezeDeep({ok:true,state:s,events});
+}

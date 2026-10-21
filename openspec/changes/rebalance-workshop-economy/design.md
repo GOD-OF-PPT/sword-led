@@ -2,7 +2,7 @@
 
 当前forge-v4/schema4与独立炉谱schema1已经提供三章十二天、实际兵器条件、三结局与直接落锤。`src/core-v4/game.ts:113`支付全部身价，`:18`始终发三新坯，`:123`交换无成器门槛。3i.6报告`docs/reviews/T11-4-2-3i6-v4-balance.md:154`记录终局钱富余；这些不能仅靠提示文案解决。
 
-本设计**已具体批准/实施尚未开始**。用户优先产品交互/界面/玩法，兼容广测最低；保留当前D美术与Canvas/DOM，按Game Studio Shared/Foundations保持模拟/展示边界。完整内容与预算算例在`docs/v0.8-workshop-economy-proposal.md`。
+本设计**已具体批准；1.1经营纯核已实施，后续保存/炉谱与首章页面待接入**。用户优先产品交互/界面/玩法，兼容广测最低；保留当前D美术与Canvas/DOM，按Game Studio Shared/Foundations保持模拟/展示边界。完整内容与预算算例在`docs/v0.8-workshop-economy-proposal.md`。
 
 ## Decisions
 
@@ -49,7 +49,7 @@ schema2炉谱使用`sword-led.collection.v2`及`sword-led.collection.backup.v2`�
 
 ## Migration and rollback
 
-待具体批准后分期实现，新默认上线前完成首章与一局的必要产品核对；v4默认在此之前保持。新入口显式新档，旧行程可继续/导出。回滚只新增revert/切旧不可变预览，不删除v5/schema2原件或旧档、原图、已封签证据。
+按已获具体批准分期实现，新默认上线前完成首章与一局的必要产品核对；v4默认在此之前保持。新入口显式新档，旧行程可继续/导出。回滚只新增revert/切旧不可变预览，不删除v5/schema2原件或旧档、原图、已封签证据。
 
 ## Verification boundary
 

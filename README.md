@@ -16,6 +16,8 @@
 
 2026-10-18真人曾评价v0.2玩法/美术缺乏新意；已据ForgeTax及110条唯一Steam评论修订并取得明确v0.3批准。[核心证据](docs/reviews/R3-5-v2-core-and-playable.md)保留928局策略与原试玩结果，[D界面说明](docs/v0.3-d-interface.md)记录新接线与独立练习。[新版技术验收](docs/reviews/R3-7-v2-technical-acceptance.md)与[44AC映射](docs/v0.3-acceptance.md)分别记录实际矩阵、故障修复及待办。真人再玩和最大交付仍按T11.4.2–T12推进，技术通过不等于玩家满意。
 
+已批准v0.8的有限收购、三柄行囊和等级换艺现有[正式核心API](docs/v0.8-core-api.md)。新保存/炉谱与首章页面随后接入，当前试玩页继续v4。
+
 ## 项目资料
 
 - [Steam玩法/评论研究](docs/research/2026-10-18-forging-games.md)：抽样方法、正负体验、具体评论回链和现版设计诊断。
@@ -61,7 +63,7 @@ npm ci --registry=https://registry.npmjs.org/
 npm run dev
 ```
 
-打开终端显示的地址，默认`/`为v0.7三章十二天（forge-v4规则），`/v3.html`为旧版炉前，`/v2.html`为旧D细锻，`/legacy.html`为B版旧契约。生产版本用`npm run build`后`npm run preview`，默认端口4173。构建包含四个HTML、网页资源与core/session/v2/v3/v4 SDK及共享chunk，应整体保留dist，不提交dist或node_modules。v4已导出独立局档/炉谱会话，具体API见[保存合同](docs/v0.7-persistence-contract.md)；当前生产网页已接通十二天和三结局。需要通过localhost或HTTPS运行。
+打开终端显示的地址，默认`/`为v0.7三章十二天（forge-v4规则），`/v3.html`为旧版炉前，`/v2.html`为旧D细锻，`/legacy.html`为B版旧契约。生产版本用`npm run build`后`npm run preview`，默认端口4173。构建包含四个HTML、网页资源与core/session/v2/v3/v4 SDK及共享chunk，并独立追加forge-v5纯核SDK，应整体保留dist，不提交dist或node_modules。v4已导出独立局档/炉谱会话，具体API见[保存合同](docs/v0.7-persistence-contract.md)；当前生产网页已接通十二天和三结局。需要通过localhost或HTTPS运行。
 
 | 操作 | 用法 |
 | --- | --- |
@@ -89,7 +91,7 @@ npm run test:art
 
 当前v4页面回归在构建后运行 `npx playwright test --config playwright.v4-ui.config.ts`。保留的forge-v3界面回归可单独运行 `npx playwright test --config playwright.v3.config.ts`（Chromium/Firefox/WebKit须已安装）；不要在浏览器批次运行时重建共用dist。
 
-`check`运行单测、严格类型检查与双构建。`test:browser`一次构建后串行运行当前v4页面与v4/兼容存储SDK；也可分别用`test:e2e`/`test:storage:browser`。真实Chrome原生窗口/缓存探测采用隔离profile；测试只改变测试侧时钟/事件，不注入钱包/终局。美术检查使用独立设计页，不作为正式游戏验收。单项命令还包括`npm test`、`npm run typecheck`、`npm run build`和交互`test:watch`。
+`check`运行单测、严格类型检查和网页/旧SDK/独立v5 SDK构建。`test:browser`一次构建后串行运行当前v4页面与v4/兼容存储SDK；也可分别用`test:e2e`/`test:storage:browser`。真实Chrome原生窗口/缓存探测采用隔离profile；测试只改变测试侧时钟/事件，不注入钱包/终局。美术检查使用独立设计页，不作为正式游戏验收。单项命令还包括`npm test`、`npm run typecheck`、`npm run build`和交互`test:watch`。
 
 保留的forge-v3界面配置可在同一构建上测试三种引擎：
 
