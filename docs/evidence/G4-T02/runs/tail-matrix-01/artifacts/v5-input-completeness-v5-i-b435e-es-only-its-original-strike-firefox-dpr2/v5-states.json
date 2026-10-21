@@ -1,0 +1,906 @@
+[
+  {
+    "label": "fresh-real-keyboard-title",
+    "state": {
+      "rulesVersion": "forge-v5",
+      "runId": "dc914883-645e-41dc-8a7e-bfe08b40a0f0",
+      "seed": "v5-economy-0",
+      "mode": "story",
+      "initialEligibility": {
+        "recipes": [
+          "light"
+        ],
+        "challenge": false
+      },
+      "revision": 0,
+      "phase": "opening",
+      "day": 1,
+      "commissionOrder": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "coins": 0,
+      "seals": 3,
+      "supplyBase": 40,
+      "upgradeCount": 0,
+      "inheritance": 0,
+      "blades": [
+        {
+          "id": "d1-1",
+          "slot": 1,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 40,
+          "peak": 40,
+          "level": 0,
+          "cracked": false,
+          "hits": 0,
+          "charge": 0,
+          "successes": 0,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        },
+        {
+          "id": "d1-2",
+          "slot": 2,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 40,
+          "peak": 40,
+          "level": 0,
+          "cracked": false,
+          "hits": 0,
+          "charge": 0,
+          "successes": 0,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        },
+        {
+          "id": "d1-3",
+          "slot": 3,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 40,
+          "peak": 40,
+          "level": 0,
+          "cracked": false,
+          "hits": 0,
+          "charge": 0,
+          "successes": 0,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        }
+      ],
+      "reserveId": null,
+      "daySales": 0,
+      "dayRecovered": 0,
+      "marketSpent": 0,
+      "traits": [],
+      "gift": "locked",
+      "pardonUsed": false,
+      "crackGuard": false,
+      "modifications": [],
+      "chapterChoices": [],
+      "shop": [],
+      "sold": [],
+      "upgraded": false,
+      "repaired": false,
+      "dayBuffs": {
+        "supplyPct": 100,
+        "loan": false,
+        "shelter": false
+      },
+      "pending": {
+        "supplyPct": 100,
+        "loan": false,
+        "shelter": false
+      },
+      "eventDeck": [
+        "donation",
+        "shelter",
+        "credit",
+        "loan",
+        "rest",
+        "salvage"
+      ],
+      "eventId": null,
+      "eventStatus": "none",
+      "eventHistory": [],
+      "history": [],
+      "rng": {
+        "forge": {
+          "state": 2427578858,
+          "draws": 0
+        },
+        "shop": {
+          "state": 1380130647,
+          "draws": 0
+        },
+        "events": {
+          "state": 1169050407,
+          "draws": 5
+        },
+        "content": {
+          "state": 561124140,
+          "draws": 0
+        }
+      },
+      "journal": []
+    },
+    "collection": null,
+    "raw": {
+      "save": "{\"schemaVersion\":5,\"rulesVersion\":\"forge-v5\",\"savedAt\":\"2026-10-21T17:52:38.236Z\",\"state\":{\"rulesVersion\":\"forge-v5\",\"runId\":\"dc914883-645e-41dc-8a7e-bfe08b40a0f0\",\"seed\":\"v5-economy-0\",\"mode\":\"story\",\"initialEligibility\":{\"recipes\":[\"light\"],\"challenge\":false},\"revision\":0,\"phase\":\"opening\",\"day\":1,\"commissionOrder\":[1,2,3,4,5,6,7,8,9,10,11,12],\"coins\":0,\"seals\":3,\"supplyBase\":40,\"upgradeCount\":0,\"inheritance\":0,\"blades\":[{\"id\":\"d1-1\",\"slot\":1,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"active\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null},{\"id\":\"d1-2\",\"slot\":2,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"active\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null},{\"id\":\"d1-3\",\"slot\":3,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"active\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null}],\"reserveId\":null,\"daySales\":0,\"dayRecovered\":0,\"marketSpent\":0,\"traits\":[],\"gift\":\"locked\",\"pardonUsed\":false,\"crackGuard\":false,\"modifications\":[],\"chapterChoices\":[],\"shop\":[],\"sold\":[],\"upgraded\":false,\"repaired\":false,\"dayBuffs\":{\"supplyPct\":100,\"loan\":false,\"shelter\":false},\"pending\":{\"supplyPct\":100,\"loan\":false,\"shelter\":false},\"eventDeck\":[\"donation\",\"shelter\",\"credit\",\"loan\",\"rest\",\"salvage\"],\"eventId\":null,\"eventStatus\":\"none\",\"eventHistory\":[],\"history\":[],\"rng\":{\"forge\":{\"state\":2427578858,\"draws\":0},\"shop\":{\"state\":1380130647,\"draws\":0},\"events\":{\"state\":1169050407,\"draws\":5},\"content\":{\"state\":561124140,\"draws\":0}},\"journal\":[]}}",
+      "collection": null
+    },
+    "metrics": {
+      "dpr": 2,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "focus": {
+        "id": "v4-stage-title",
+        "tag": "H1"
+      },
+      "canvas": {
+        "width": 300,
+        "height": 150,
+        "cssWidth": 0,
+        "cssHeight": 0,
+        "backingRatioX": null,
+        "backingRatioY": null,
+        "visible": false
+      }
+    }
+  },
+  {
+    "label": "accepted-1-continue",
+    "state": {
+      "rulesVersion": "forge-v5",
+      "runId": "dc914883-645e-41dc-8a7e-bfe08b40a0f0",
+      "seed": "v5-economy-0",
+      "mode": "story",
+      "initialEligibility": {
+        "recipes": [
+          "light"
+        ],
+        "challenge": false
+      },
+      "revision": 1,
+      "phase": "workshop",
+      "day": 1,
+      "commissionOrder": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "coins": 0,
+      "seals": 3,
+      "supplyBase": 40,
+      "upgradeCount": 0,
+      "inheritance": 0,
+      "blades": [
+        {
+          "id": "d1-1",
+          "slot": 1,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 40,
+          "peak": 40,
+          "level": 0,
+          "cracked": false,
+          "hits": 0,
+          "charge": 0,
+          "successes": 0,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        },
+        {
+          "id": "d1-2",
+          "slot": 2,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 40,
+          "peak": 40,
+          "level": 0,
+          "cracked": false,
+          "hits": 0,
+          "charge": 0,
+          "successes": 0,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        },
+        {
+          "id": "d1-3",
+          "slot": 3,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 40,
+          "peak": 40,
+          "level": 0,
+          "cracked": false,
+          "hits": 0,
+          "charge": 0,
+          "successes": 0,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        }
+      ],
+      "reserveId": null,
+      "daySales": 0,
+      "dayRecovered": 0,
+      "marketSpent": 0,
+      "traits": [],
+      "gift": "locked",
+      "pardonUsed": false,
+      "crackGuard": false,
+      "modifications": [],
+      "chapterChoices": [],
+      "shop": [],
+      "sold": [],
+      "upgraded": false,
+      "repaired": false,
+      "dayBuffs": {
+        "supplyPct": 100,
+        "loan": false,
+        "shelter": false
+      },
+      "pending": {
+        "supplyPct": 100,
+        "loan": false,
+        "shelter": false
+      },
+      "eventDeck": [
+        "donation",
+        "shelter",
+        "credit",
+        "loan",
+        "rest",
+        "salvage"
+      ],
+      "eventId": null,
+      "eventStatus": "none",
+      "eventHistory": [],
+      "history": [],
+      "rng": {
+        "forge": {
+          "state": 2427578858,
+          "draws": 0
+        },
+        "shop": {
+          "state": 1380130647,
+          "draws": 0
+        },
+        "events": {
+          "state": 1169050407,
+          "draws": 5
+        },
+        "content": {
+          "state": 561124140,
+          "draws": 0
+        }
+      },
+      "journal": [
+        {
+          "type": "continue"
+        }
+      ]
+    },
+    "collection": null,
+    "raw": {
+      "save": "{\"schemaVersion\":5,\"rulesVersion\":\"forge-v5\",\"savedAt\":\"2026-10-21T17:52:38.494Z\",\"state\":{\"rulesVersion\":\"forge-v5\",\"runId\":\"dc914883-645e-41dc-8a7e-bfe08b40a0f0\",\"seed\":\"v5-economy-0\",\"mode\":\"story\",\"initialEligibility\":{\"recipes\":[\"light\"],\"challenge\":false},\"revision\":1,\"phase\":\"workshop\",\"day\":1,\"commissionOrder\":[1,2,3,4,5,6,7,8,9,10,11,12],\"coins\":0,\"seals\":3,\"supplyBase\":40,\"upgradeCount\":0,\"inheritance\":0,\"blades\":[{\"id\":\"d1-1\",\"slot\":1,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"active\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null},{\"id\":\"d1-2\",\"slot\":2,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"active\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null},{\"id\":\"d1-3\",\"slot\":3,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"active\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null}],\"reserveId\":null,\"daySales\":0,\"dayRecovered\":0,\"marketSpent\":0,\"traits\":[],\"gift\":\"locked\",\"pardonUsed\":false,\"crackGuard\":false,\"modifications\":[],\"chapterChoices\":[],\"shop\":[],\"sold\":[],\"upgraded\":false,\"repaired\":false,\"dayBuffs\":{\"supplyPct\":100,\"loan\":false,\"shelter\":false},\"pending\":{\"supplyPct\":100,\"loan\":false,\"shelter\":false},\"eventDeck\":[\"donation\",\"shelter\",\"credit\",\"loan\",\"rest\",\"salvage\"],\"eventId\":null,\"eventStatus\":\"none\",\"eventHistory\":[],\"history\":[],\"rng\":{\"forge\":{\"state\":2427578858,\"draws\":0},\"shop\":{\"state\":1380130647,\"draws\":0},\"events\":{\"state\":1169050407,\"draws\":5},\"content\":{\"state\":561124140,\"draws\":0}},\"journal\":[{\"type\":\"continue\"}]}}",
+      "collection": null
+    },
+    "metrics": {
+      "dpr": 2,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "focus": {
+        "id": "v4-strike",
+        "tag": "BUTTON"
+      },
+      "canvas": {
+        "width": 1716,
+        "height": 624,
+        "cssWidth": 857.5999755859375,
+        "cssHeight": 311.8500061035156,
+        "backingRatioX": 2.0009328927832333,
+        "backingRatioY": 2.0009619617992542,
+        "visible": true
+      }
+    }
+  },
+  {
+    "label": "native-right-button-zero-commands",
+    "state": {
+      "rulesVersion": "forge-v5",
+      "runId": "dc914883-645e-41dc-8a7e-bfe08b40a0f0",
+      "seed": "v5-economy-0",
+      "mode": "story",
+      "initialEligibility": {
+        "recipes": [
+          "light"
+        ],
+        "challenge": false
+      },
+      "revision": 1,
+      "phase": "workshop",
+      "day": 1,
+      "commissionOrder": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "coins": 0,
+      "seals": 3,
+      "supplyBase": 40,
+      "upgradeCount": 0,
+      "inheritance": 0,
+      "blades": [
+        {
+          "id": "d1-1",
+          "slot": 1,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 40,
+          "peak": 40,
+          "level": 0,
+          "cracked": false,
+          "hits": 0,
+          "charge": 0,
+          "successes": 0,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        },
+        {
+          "id": "d1-2",
+          "slot": 2,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 40,
+          "peak": 40,
+          "level": 0,
+          "cracked": false,
+          "hits": 0,
+          "charge": 0,
+          "successes": 0,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        },
+        {
+          "id": "d1-3",
+          "slot": 3,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 40,
+          "peak": 40,
+          "level": 0,
+          "cracked": false,
+          "hits": 0,
+          "charge": 0,
+          "successes": 0,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        }
+      ],
+      "reserveId": null,
+      "daySales": 0,
+      "dayRecovered": 0,
+      "marketSpent": 0,
+      "traits": [],
+      "gift": "locked",
+      "pardonUsed": false,
+      "crackGuard": false,
+      "modifications": [],
+      "chapterChoices": [],
+      "shop": [],
+      "sold": [],
+      "upgraded": false,
+      "repaired": false,
+      "dayBuffs": {
+        "supplyPct": 100,
+        "loan": false,
+        "shelter": false
+      },
+      "pending": {
+        "supplyPct": 100,
+        "loan": false,
+        "shelter": false
+      },
+      "eventDeck": [
+        "donation",
+        "shelter",
+        "credit",
+        "loan",
+        "rest",
+        "salvage"
+      ],
+      "eventId": null,
+      "eventStatus": "none",
+      "eventHistory": [],
+      "history": [],
+      "rng": {
+        "forge": {
+          "state": 2427578858,
+          "draws": 0
+        },
+        "shop": {
+          "state": 1380130647,
+          "draws": 0
+        },
+        "events": {
+          "state": 1169050407,
+          "draws": 5
+        },
+        "content": {
+          "state": 561124140,
+          "draws": 0
+        }
+      },
+      "journal": [
+        {
+          "type": "continue"
+        }
+      ]
+    },
+    "collection": null,
+    "raw": {
+      "save": "{\"schemaVersion\":5,\"rulesVersion\":\"forge-v5\",\"savedAt\":\"2026-10-21T17:52:38.494Z\",\"state\":{\"rulesVersion\":\"forge-v5\",\"runId\":\"dc914883-645e-41dc-8a7e-bfe08b40a0f0\",\"seed\":\"v5-economy-0\",\"mode\":\"story\",\"initialEligibility\":{\"recipes\":[\"light\"],\"challenge\":false},\"revision\":1,\"phase\":\"workshop\",\"day\":1,\"commissionOrder\":[1,2,3,4,5,6,7,8,9,10,11,12],\"coins\":0,\"seals\":3,\"supplyBase\":40,\"upgradeCount\":0,\"inheritance\":0,\"blades\":[{\"id\":\"d1-1\",\"slot\":1,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"active\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null},{\"id\":\"d1-2\",\"slot\":2,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"active\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null},{\"id\":\"d1-3\",\"slot\":3,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"active\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null}],\"reserveId\":null,\"daySales\":0,\"dayRecovered\":0,\"marketSpent\":0,\"traits\":[],\"gift\":\"locked\",\"pardonUsed\":false,\"crackGuard\":false,\"modifications\":[],\"chapterChoices\":[],\"shop\":[],\"sold\":[],\"upgraded\":false,\"repaired\":false,\"dayBuffs\":{\"supplyPct\":100,\"loan\":false,\"shelter\":false},\"pending\":{\"supplyPct\":100,\"loan\":false,\"shelter\":false},\"eventDeck\":[\"donation\",\"shelter\",\"credit\",\"loan\",\"rest\",\"salvage\"],\"eventId\":null,\"eventStatus\":\"none\",\"eventHistory\":[],\"history\":[],\"rng\":{\"forge\":{\"state\":2427578858,\"draws\":0},\"shop\":{\"state\":1380130647,\"draws\":0},\"events\":{\"state\":1169050407,\"draws\":5},\"content\":{\"state\":561124140,\"draws\":0}},\"journal\":[{\"type\":\"continue\"}]}}",
+      "collection": null
+    },
+    "metrics": {
+      "dpr": 2,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "focus": {
+        "id": "v4-hit",
+        "tag": "BUTTON"
+      },
+      "canvas": {
+        "width": 1716,
+        "height": 624,
+        "cssWidth": 857.5999755859375,
+        "cssHeight": 311.8500061035156,
+        "backingRatioX": 2.0009328927832333,
+        "backingRatioY": 2.0009619617992542,
+        "visible": true
+      }
+    }
+  },
+  {
+    "label": "strike",
+    "state": {
+      "rulesVersion": "forge-v5",
+      "runId": "dc914883-645e-41dc-8a7e-bfe08b40a0f0",
+      "seed": "v5-economy-0",
+      "mode": "story",
+      "initialEligibility": {
+        "recipes": [
+          "light"
+        ],
+        "challenge": false
+      },
+      "revision": 2,
+      "phase": "workshop",
+      "day": 1,
+      "commissionOrder": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "coins": 0,
+      "seals": 3,
+      "supplyBase": 40,
+      "upgradeCount": 0,
+      "inheritance": 0,
+      "blades": [
+        {
+          "id": "d1-1",
+          "slot": 1,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 62,
+          "peak": 62,
+          "level": 1,
+          "cracked": false,
+          "hits": 1,
+          "charge": 1,
+          "successes": 1,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        },
+        {
+          "id": "d1-2",
+          "slot": 2,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 40,
+          "peak": 40,
+          "level": 0,
+          "cracked": false,
+          "hits": 0,
+          "charge": 0,
+          "successes": 0,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        },
+        {
+          "id": "d1-3",
+          "slot": 3,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 40,
+          "peak": 40,
+          "level": 0,
+          "cracked": false,
+          "hits": 0,
+          "charge": 0,
+          "successes": 0,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        }
+      ],
+      "reserveId": null,
+      "daySales": 0,
+      "dayRecovered": 0,
+      "marketSpent": 0,
+      "traits": [],
+      "gift": "locked",
+      "pardonUsed": false,
+      "crackGuard": false,
+      "modifications": [],
+      "chapterChoices": [],
+      "shop": [],
+      "sold": [],
+      "upgraded": false,
+      "repaired": false,
+      "dayBuffs": {
+        "supplyPct": 100,
+        "loan": false,
+        "shelter": false
+      },
+      "pending": {
+        "supplyPct": 100,
+        "loan": false,
+        "shelter": false
+      },
+      "eventDeck": [
+        "donation",
+        "shelter",
+        "credit",
+        "loan",
+        "rest",
+        "salvage"
+      ],
+      "eventId": null,
+      "eventStatus": "none",
+      "eventHistory": [],
+      "history": [],
+      "rng": {
+        "forge": {
+          "state": 4259144671,
+          "draws": 1
+        },
+        "shop": {
+          "state": 1380130647,
+          "draws": 0
+        },
+        "events": {
+          "state": 1169050407,
+          "draws": 5
+        },
+        "content": {
+          "state": 561124140,
+          "draws": 0
+        }
+      },
+      "journal": [
+        {
+          "type": "continue"
+        },
+        {
+          "type": "strike",
+          "pieceId": "d1-1"
+        }
+      ]
+    },
+    "collection": null,
+    "raw": {
+      "save": "{\"schemaVersion\":5,\"rulesVersion\":\"forge-v5\",\"savedAt\":\"2026-10-21T17:52:39.380Z\",\"state\":{\"rulesVersion\":\"forge-v5\",\"runId\":\"dc914883-645e-41dc-8a7e-bfe08b40a0f0\",\"seed\":\"v5-economy-0\",\"mode\":\"story\",\"initialEligibility\":{\"recipes\":[\"light\"],\"challenge\":false},\"revision\":2,\"phase\":\"workshop\",\"day\":1,\"commissionOrder\":[1,2,3,4,5,6,7,8,9,10,11,12],\"coins\":0,\"seals\":3,\"supplyBase\":40,\"upgradeCount\":0,\"inheritance\":0,\"blades\":[{\"id\":\"d1-1\",\"slot\":1,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"active\",\"base\":40,\"value\":62,\"peak\":62,\"level\":1,\"cracked\":false,\"hits\":1,\"charge\":1,\"successes\":1,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null},{\"id\":\"d1-2\",\"slot\":2,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"active\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null},{\"id\":\"d1-3\",\"slot\":3,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"active\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null}],\"reserveId\":null,\"daySales\":0,\"dayRecovered\":0,\"marketSpent\":0,\"traits\":[],\"gift\":\"locked\",\"pardonUsed\":false,\"crackGuard\":false,\"modifications\":[],\"chapterChoices\":[],\"shop\":[],\"sold\":[],\"upgraded\":false,\"repaired\":false,\"dayBuffs\":{\"supplyPct\":100,\"loan\":false,\"shelter\":false},\"pending\":{\"supplyPct\":100,\"loan\":false,\"shelter\":false},\"eventDeck\":[\"donation\",\"shelter\",\"credit\",\"loan\",\"rest\",\"salvage\"],\"eventId\":null,\"eventStatus\":\"none\",\"eventHistory\":[],\"history\":[],\"rng\":{\"forge\":{\"state\":4259144671,\"draws\":1},\"shop\":{\"state\":1380130647,\"draws\":0},\"events\":{\"state\":1169050407,\"draws\":5},\"content\":{\"state\":561124140,\"draws\":0}},\"journal\":[{\"type\":\"continue\"},{\"type\":\"strike\",\"pieceId\":\"d1-1\"}]}}",
+      "collection": null
+    },
+    "metrics": {
+      "dpr": 2,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "focus": {
+        "id": "v4-hit",
+        "tag": "BUTTON"
+      },
+      "canvas": {
+        "width": 1716,
+        "height": 624,
+        "cssWidth": 857.5999755859375,
+        "cssHeight": 311.8500061035156,
+        "backingRatioX": 2.0009328927832333,
+        "backingRatioY": 2.0009619617992542,
+        "visible": true
+      }
+    }
+  },
+  {
+    "label": "native-left-drag-release-no-second-strike",
+    "state": {
+      "rulesVersion": "forge-v5",
+      "runId": "dc914883-645e-41dc-8a7e-bfe08b40a0f0",
+      "seed": "v5-economy-0",
+      "mode": "story",
+      "initialEligibility": {
+        "recipes": [
+          "light"
+        ],
+        "challenge": false
+      },
+      "revision": 2,
+      "phase": "workshop",
+      "day": 1,
+      "commissionOrder": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "coins": 0,
+      "seals": 3,
+      "supplyBase": 40,
+      "upgradeCount": 0,
+      "inheritance": 0,
+      "blades": [
+        {
+          "id": "d1-1",
+          "slot": 1,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 62,
+          "peak": 62,
+          "level": 1,
+          "cracked": false,
+          "hits": 1,
+          "charge": 1,
+          "successes": 1,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        },
+        {
+          "id": "d1-2",
+          "slot": 2,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 40,
+          "peak": 40,
+          "level": 0,
+          "cracked": false,
+          "hits": 0,
+          "charge": 0,
+          "successes": 0,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        },
+        {
+          "id": "d1-3",
+          "slot": 3,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 40,
+          "peak": 40,
+          "level": 0,
+          "cracked": false,
+          "hits": 0,
+          "charge": 0,
+          "successes": 0,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        }
+      ],
+      "reserveId": null,
+      "daySales": 0,
+      "dayRecovered": 0,
+      "marketSpent": 0,
+      "traits": [],
+      "gift": "locked",
+      "pardonUsed": false,
+      "crackGuard": false,
+      "modifications": [],
+      "chapterChoices": [],
+      "shop": [],
+      "sold": [],
+      "upgraded": false,
+      "repaired": false,
+      "dayBuffs": {
+        "supplyPct": 100,
+        "loan": false,
+        "shelter": false
+      },
+      "pending": {
+        "supplyPct": 100,
+        "loan": false,
+        "shelter": false
+      },
+      "eventDeck": [
+        "donation",
+        "shelter",
+        "credit",
+        "loan",
+        "rest",
+        "salvage"
+      ],
+      "eventId": null,
+      "eventStatus": "none",
+      "eventHistory": [],
+      "history": [],
+      "rng": {
+        "forge": {
+          "state": 4259144671,
+          "draws": 1
+        },
+        "shop": {
+          "state": 1380130647,
+          "draws": 0
+        },
+        "events": {
+          "state": 1169050407,
+          "draws": 5
+        },
+        "content": {
+          "state": 561124140,
+          "draws": 0
+        }
+      },
+      "journal": [
+        {
+          "type": "continue"
+        },
+        {
+          "type": "strike",
+          "pieceId": "d1-1"
+        }
+      ]
+    },
+    "collection": null,
+    "raw": {
+      "save": "{\"schemaVersion\":5,\"rulesVersion\":\"forge-v5\",\"savedAt\":\"2026-10-21T17:52:39.380Z\",\"state\":{\"rulesVersion\":\"forge-v5\",\"runId\":\"dc914883-645e-41dc-8a7e-bfe08b40a0f0\",\"seed\":\"v5-economy-0\",\"mode\":\"story\",\"initialEligibility\":{\"recipes\":[\"light\"],\"challenge\":false},\"revision\":2,\"phase\":\"workshop\",\"day\":1,\"commissionOrder\":[1,2,3,4,5,6,7,8,9,10,11,12],\"coins\":0,\"seals\":3,\"supplyBase\":40,\"upgradeCount\":0,\"inheritance\":0,\"blades\":[{\"id\":\"d1-1\",\"slot\":1,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"active\",\"base\":40,\"value\":62,\"peak\":62,\"level\":1,\"cracked\":false,\"hits\":1,\"charge\":1,\"successes\":1,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null},{\"id\":\"d1-2\",\"slot\":2,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"active\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null},{\"id\":\"d1-3\",\"slot\":3,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"active\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null}],\"reserveId\":null,\"daySales\":0,\"dayRecovered\":0,\"marketSpent\":0,\"traits\":[],\"gift\":\"locked\",\"pardonUsed\":false,\"crackGuard\":false,\"modifications\":[],\"chapterChoices\":[],\"shop\":[],\"sold\":[],\"upgraded\":false,\"repaired\":false,\"dayBuffs\":{\"supplyPct\":100,\"loan\":false,\"shelter\":false},\"pending\":{\"supplyPct\":100,\"loan\":false,\"shelter\":false},\"eventDeck\":[\"donation\",\"shelter\",\"credit\",\"loan\",\"rest\",\"salvage\"],\"eventId\":null,\"eventStatus\":\"none\",\"eventHistory\":[],\"history\":[],\"rng\":{\"forge\":{\"state\":4259144671,\"draws\":1},\"shop\":{\"state\":1380130647,\"draws\":0},\"events\":{\"state\":1169050407,\"draws\":5},\"content\":{\"state\":561124140,\"draws\":0}},\"journal\":[{\"type\":\"continue\"},{\"type\":\"strike\",\"pieceId\":\"d1-1\"}]}}",
+      "collection": null
+    },
+    "metrics": {
+      "dpr": 2,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "focus": {
+        "id": "v4-hit",
+        "tag": "BUTTON"
+      },
+      "canvas": {
+        "width": 1716,
+        "height": 624,
+        "cssWidth": 857.5999755859375,
+        "cssHeight": 311.8500061035156,
+        "backingRatioX": 2.0009328927832333,
+        "backingRatioY": 2.0009619617992542,
+        "visible": true
+      }
+    }
+  }
+]

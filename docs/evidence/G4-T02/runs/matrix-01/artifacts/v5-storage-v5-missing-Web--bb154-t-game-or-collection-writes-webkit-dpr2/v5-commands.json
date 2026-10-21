@@ -1,0 +1,47 @@
+[
+  {
+    "runId": "67f3b707-f77d-4ef3-9a0e-b37348d65d2c",
+    "mode": "story",
+    "action": {
+      "type": "continue"
+    },
+    "day": 1,
+    "revision": 1,
+    "coinsBefore": 0,
+    "coinsAfter": 0,
+    "events": [
+      {
+        "type": "Opened"
+      }
+    ]
+  },
+  {
+    "runId": "67f3b707-f77d-4ef3-9a0e-b37348d65d2c",
+    "mode": "story",
+    "action": {
+      "type": "strike",
+      "pieceId": "d1-1"
+    },
+    "day": 1,
+    "revision": 2,
+    "coinsBefore": 0,
+    "coinsAfter": 0,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d1-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "great",
+            "before": 40,
+            "after": 84,
+            "level": 2,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,156 @@
+{
+  "rulesVersion": "forge-v5",
+  "runId": "bf9234be-b0c6-439c-80df-d83a97ca2c78",
+  "seed": "灯路-768b96e5",
+  "mode": "story",
+  "initialEligibility": {
+    "recipes": [
+      "light"
+    ],
+    "challenge": false
+  },
+  "revision": 2,
+  "phase": "workshop",
+  "day": 1,
+  "commissionOrder": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "coins": 0,
+  "seals": 3,
+  "supplyBase": 40,
+  "upgradeCount": 0,
+  "inheritance": 0,
+  "blades": [
+    {
+      "id": "d1-1",
+      "slot": 1,
+      "suppliedDay": 1,
+      "recipe": "light",
+      "status": "active",
+      "base": 40,
+      "value": 62,
+      "peak": 62,
+      "level": 1,
+      "cracked": false,
+      "hits": 1,
+      "charge": 1,
+      "successes": 1,
+      "normalGreats": 0,
+      "bursts": 0,
+      "finalizedDay": null,
+      "commissionId": null
+    },
+    {
+      "id": "d1-2",
+      "slot": 2,
+      "suppliedDay": 1,
+      "recipe": "light",
+      "status": "active",
+      "base": 40,
+      "value": 40,
+      "peak": 40,
+      "level": 0,
+      "cracked": false,
+      "hits": 0,
+      "charge": 0,
+      "successes": 0,
+      "normalGreats": 0,
+      "bursts": 0,
+      "finalizedDay": null,
+      "commissionId": null
+    },
+    {
+      "id": "d1-3",
+      "slot": 3,
+      "suppliedDay": 1,
+      "recipe": "light",
+      "status": "active",
+      "base": 40,
+      "value": 40,
+      "peak": 40,
+      "level": 0,
+      "cracked": false,
+      "hits": 0,
+      "charge": 0,
+      "successes": 0,
+      "normalGreats": 0,
+      "bursts": 0,
+      "finalizedDay": null,
+      "commissionId": null
+    }
+  ],
+  "reserveId": null,
+  "daySales": 0,
+  "dayRecovered": 0,
+  "marketSpent": 0,
+  "traits": [],
+  "gift": "locked",
+  "pardonUsed": false,
+  "crackGuard": false,
+  "modifications": [],
+  "chapterChoices": [],
+  "shop": [],
+  "sold": [],
+  "upgraded": false,
+  "repaired": false,
+  "dayBuffs": {
+    "supplyPct": 100,
+    "loan": false,
+    "shelter": false
+  },
+  "pending": {
+    "supplyPct": 100,
+    "loan": false,
+    "shelter": false
+  },
+  "eventDeck": [
+    "loan",
+    "shelter",
+    "salvage",
+    "rest",
+    "credit",
+    "donation"
+  ],
+  "eventId": null,
+  "eventStatus": "none",
+  "eventHistory": [],
+  "history": [],
+  "rng": {
+    "forge": {
+      "state": 1190434382,
+      "draws": 1
+    },
+    "shop": {
+      "state": 3612599314,
+      "draws": 0
+    },
+    "events": {
+      "state": 2459009108,
+      "draws": 5
+    },
+    "content": {
+      "state": 2341021871,
+      "draws": 0
+    }
+  },
+  "journal": [
+    {
+      "type": "continue"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d1-1"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "scope": "Restored replay-validated ending; native browser geometry, not a new full UI journey",
+  "phase": "defeat",
+  "metrics": {
+    "dpr": 2,
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "focus": {
+      "id": "v4-stage-title",
+      "tag": "H1"
+    },
+    "canvas": {
+      "width": 300,
+      "height": 150,
+      "cssWidth": 0,
+      "cssHeight": 0,
+      "backingRatioX": null,
+      "backingRatioY": null,
+      "visible": false
+    }
+  },
+  "actions": [
+    {
+      "label": "看看留下的炉谱",
+      "width": 195,
+      "height": 51.046875,
+      "left": 700.234375,
+      "right": 895.234375,
+      "top": 576.953125,
+      "bottom": 628,
+      "screenWidth": 1280,
+      "screenHeight": 720,
+      "unoccluded": true
+    },
+    {
+      "label": "回到路口，再开一炉",
+      "width": 178,
+      "height": 51.046875,
+      "left": 905.234375,
+      "right": 1083.234375,
+      "top": 576.953125,
+      "bottom": 628,
+      "screenWidth": 1280,
+      "screenHeight": 720,
+      "unoccluded": true
+    },
+    {
+      "label": "导出这次行程",
+      "width": 130,
+      "height": 49,
+      "left": 700.234375,
+      "right": 830.234375,
+      "top": 638,
+      "bottom": 687,
+      "screenWidth": 1280,
+      "screenHeight": 720,
+      "unoccluded": true
+    }
+  ]
+}

@@ -1,0 +1,1211 @@
+{
+  "ok": true,
+  "runs": [
+    "tail-matrix-01"
+  ],
+  "stateObjects": 222,
+  "uniqueStates": 85,
+  "actualSavedObservations": 216,
+  "rawMatches": 216,
+  "collectionObjects": 108,
+  "uniqueCollections": 5,
+  "negativeRunSlots": 0,
+  "negativeCollectionSlots": 0,
+  "files": [
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/.last-run.json",
+      "bytes": 45,
+      "sha256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-046d6-rk-pages-and-available-exit-chromium-dpr1/restored-return-1280-geometry.json",
+      "bytes": 1335,
+      "sha256": "30a2a29f514bfa7cccfd33db4d891240f30e6c6f07e67c02715ae612d61aab7d",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-046d6-rk-pages-and-available-exit-chromium-dpr1/restored-return-1920-geometry.json",
+      "bytes": 1345,
+      "sha256": "e31c8b50ac05ddb9da1f7dc75b41668e8ab701fe83f2b26ffeb13d8d693a49d7",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-046d6-rk-pages-and-available-exit-chromium-dpr1/v5-keyboard-result.json",
+      "bytes": 3718,
+      "sha256": "1f48e695eeef877e59267dcbeff3e179da04b064da28122472b8af7ac0f65110",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-046d6-rk-pages-and-available-exit-chromium-dpr1/v5-states.json",
+      "bytes": 66774,
+      "sha256": "b372fb5508a0f12874ee4f974c131d39462bdb0314225b2bc214b8f8dc8725e5",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-046d6-rk-pages-and-available-exit-chromium-dpr2/restored-return-1280-geometry.json",
+      "bytes": 1335,
+      "sha256": "6d0375eaa9f9fa58024aff88fec91d802cc8568508b213c34c02b151f1053ecc",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-046d6-rk-pages-and-available-exit-chromium-dpr2/restored-return-1920-geometry.json",
+      "bytes": 1345,
+      "sha256": "ba985326a0ee2a6b49f4e31685b0bc918761edcf71b9ad005e567c9dc27e1dc1",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-046d6-rk-pages-and-available-exit-chromium-dpr2/v5-keyboard-result.json",
+      "bytes": 3718,
+      "sha256": "a4bc918da9b2532a4236b850ab6166aa9b3bf66f4da50c40a4e93d9711b47fcb",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-046d6-rk-pages-and-available-exit-chromium-dpr2/v5-states.json",
+      "bytes": 66774,
+      "sha256": "b2b95e31e6da99d76ed059167c882b5dab609d763035f49a7d02f37d4be0c631",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-046d6-rk-pages-and-available-exit-firefox-dpr1/restored-return-1280-geometry.json",
+      "bytes": 1398,
+      "sha256": "17ccd616fa068c4ff08ff3f3f0e43cb0ddcaf4908c5b09736131627489ababad",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-046d6-rk-pages-and-available-exit-firefox-dpr1/restored-return-1920-geometry.json",
+      "bytes": 1462,
+      "sha256": "11fc47b21d43af4148c12bccea2bba578165ce3e2b173e15b492bf3b10538a14",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-046d6-rk-pages-and-available-exit-firefox-dpr1/v5-keyboard-result.json",
+      "bytes": 3717,
+      "sha256": "d7ba159d51c57a9b559c2e6ecd6961d9a589026619a207c7483ed6c69b931296",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-046d6-rk-pages-and-available-exit-firefox-dpr1/v5-states.json",
+      "bytes": 66774,
+      "sha256": "b372fb5508a0f12874ee4f974c131d39462bdb0314225b2bc214b8f8dc8725e5",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-046d6-rk-pages-and-available-exit-firefox-dpr2/restored-return-1280-geometry.json",
+      "bytes": 1398,
+      "sha256": "cd7511bff79292c4e2827ec90424941584cba041ec5f78651e1abb1a056db0ea",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-046d6-rk-pages-and-available-exit-firefox-dpr2/restored-return-1920-geometry.json",
+      "bytes": 1462,
+      "sha256": "5a61d1620d7f26397a65346634bec9a005d7384ed5031e3fa5f0e97ba49ee41d",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-046d6-rk-pages-and-available-exit-firefox-dpr2/v5-keyboard-result.json",
+      "bytes": 3717,
+      "sha256": "d812cf16976ed86ddc1a352e293c9e7165e5aa1bcce3514e5862ca3db1d98eb1",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-046d6-rk-pages-and-available-exit-firefox-dpr2/v5-states.json",
+      "bytes": 66774,
+      "sha256": "b2b95e31e6da99d76ed059167c882b5dab609d763035f49a7d02f37d4be0c631",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-046d6-rk-pages-and-available-exit-webkit-dpr1/restored-return-1280-geometry.json",
+      "bytes": 1335,
+      "sha256": "30a2a29f514bfa7cccfd33db4d891240f30e6c6f07e67c02715ae612d61aab7d",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-046d6-rk-pages-and-available-exit-webkit-dpr1/restored-return-1920-geometry.json",
+      "bytes": 1345,
+      "sha256": "e31c8b50ac05ddb9da1f7dc75b41668e8ab701fe83f2b26ffeb13d8d693a49d7",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-046d6-rk-pages-and-available-exit-webkit-dpr1/v5-keyboard-result.json",
+      "bytes": 3716,
+      "sha256": "2efef0f5fcf11ea0cb0559a5252ad675a654e5a5d22633c092f5ebb7527aca2b",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-046d6-rk-pages-and-available-exit-webkit-dpr1/v5-states.json",
+      "bytes": 66774,
+      "sha256": "b372fb5508a0f12874ee4f974c131d39462bdb0314225b2bc214b8f8dc8725e5",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-046d6-rk-pages-and-available-exit-webkit-dpr2/restored-return-1280-geometry.json",
+      "bytes": 1335,
+      "sha256": "6d0375eaa9f9fa58024aff88fec91d802cc8568508b213c34c02b151f1053ecc",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-046d6-rk-pages-and-available-exit-webkit-dpr2/restored-return-1920-geometry.json",
+      "bytes": 1345,
+      "sha256": "ba985326a0ee2a6b49f4e31685b0bc918761edcf71b9ad005e567c9dc27e1dc1",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-046d6-rk-pages-and-available-exit-webkit-dpr2/v5-keyboard-result.json",
+      "bytes": 3716,
+      "sha256": "0f12c53076d5dbfaa58ce002f5667f2e60fb550cb7fe25354f460f51bbf8aa6c",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-046d6-rk-pages-and-available-exit-webkit-dpr2/v5-states.json",
+      "bytes": 66774,
+      "sha256": "b2b95e31e6da99d76ed059167c882b5dab609d763035f49a7d02f37d4be0c631",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-chromium-dpr1/restored-victory-1280-geometry.json",
+      "bytes": 1591,
+      "sha256": "0011bc55489a9a818338169152ee237dea8c155c28165b179fc51a01ef2a85e9",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-chromium-dpr1/restored-victory-1920-geometry.json",
+      "bytes": 1634,
+      "sha256": "6b22f4e07bb570cd6840b8f59f3d08b03e16f2420a79f4408aff9b76d005aba9",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-chromium-dpr1/v5-keyboard-frames.json",
+      "bytes": 893,
+      "sha256": "4c36f34436901ca87c446d511e4a3d72d08e69bea9836e3955b7af0bf6834d18",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-chromium-dpr1/v5-keyboard-result.json",
+      "bytes": 6989,
+      "sha256": "93c3dba705d31800239e52e44ffe3b0439c17150895ac1d0a7a633a82abfd251",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-chromium-dpr1/v5-states.json",
+      "bytes": 70591,
+      "sha256": "b3bb2972048fa3e177323bd9cbb136e9ffbb405f508a2d7dd478440b56844170",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-chromium-dpr2/restored-victory-1280-geometry.json",
+      "bytes": 1591,
+      "sha256": "c32abc864e27f5cc57da46677519b6ddcebc53e96af7a5088f4f2387c80103cd",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-chromium-dpr2/restored-victory-1920-geometry.json",
+      "bytes": 1634,
+      "sha256": "3969c2cd6eb6abe2e2fd1ba2784b9dbe59209c27536108274a23f6414b45b198",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-chromium-dpr2/v5-keyboard-frames.json",
+      "bytes": 893,
+      "sha256": "bc77a788a61db54ead7a71bcb7bca2a681254cf77f9fac740213226131759e71",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-chromium-dpr2/v5-keyboard-result.json",
+      "bytes": 6989,
+      "sha256": "afa29bc05981824f46fe49cacc22bc79d12dc00849bf09e386a432ae35aacfe3",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-chromium-dpr2/v5-states.json",
+      "bytes": 70591,
+      "sha256": "e5b5a090e0eb9c0e689ee378dcc6ac289525ab0093097349b243d45d07e382d0",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-firefox-dpr1/restored-victory-1280-geometry.json",
+      "bytes": 1617,
+      "sha256": "b2375cf3e547b18dd6f2adb5e2774d63d30975dbc6d0bf1c648f4b6352635a5d",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-firefox-dpr1/restored-victory-1920-geometry.json",
+      "bytes": 1790,
+      "sha256": "8e865cc06cc3878fe2c27e378c9f32acf6a877d7a80c680ed72a74477c487856",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-firefox-dpr1/v5-keyboard-frames.json",
+      "bytes": 893,
+      "sha256": "4c36f34436901ca87c446d511e4a3d72d08e69bea9836e3955b7af0bf6834d18",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-firefox-dpr1/v5-keyboard-result.json",
+      "bytes": 6988,
+      "sha256": "72858851491e73821f5643007a7413be91940786e2c3d2e4e03809ce9e0d66bf",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-firefox-dpr1/v5-states.json",
+      "bytes": 70591,
+      "sha256": "b3bb2972048fa3e177323bd9cbb136e9ffbb405f508a2d7dd478440b56844170",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-firefox-dpr2/restored-victory-1280-geometry.json",
+      "bytes": 1617,
+      "sha256": "16003bc108319b0b6e1e0ef58ec9fe5c932e70e88c39987b670a866095ea644a",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-firefox-dpr2/restored-victory-1920-geometry.json",
+      "bytes": 1790,
+      "sha256": "af56c605163c8c355d5665e448671d67b394e54540a657cba9b8d1852d3e10eb",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-firefox-dpr2/v5-keyboard-frames.json",
+      "bytes": 893,
+      "sha256": "bc77a788a61db54ead7a71bcb7bca2a681254cf77f9fac740213226131759e71",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-firefox-dpr2/v5-keyboard-result.json",
+      "bytes": 6988,
+      "sha256": "25ff928c3c3831e3ef4881f47c270d55619e3f82ccbdb8bb9aee10bae0496301",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-firefox-dpr2/v5-states.json",
+      "bytes": 70591,
+      "sha256": "e5b5a090e0eb9c0e689ee378dcc6ac289525ab0093097349b243d45d07e382d0",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-webkit-dpr1/restored-victory-1280-geometry.json",
+      "bytes": 1591,
+      "sha256": "0011bc55489a9a818338169152ee237dea8c155c28165b179fc51a01ef2a85e9",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-webkit-dpr1/restored-victory-1920-geometry.json",
+      "bytes": 1634,
+      "sha256": "6b22f4e07bb570cd6840b8f59f3d08b03e16f2420a79f4408aff9b76d005aba9",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-webkit-dpr1/v5-keyboard-frames.json",
+      "bytes": 893,
+      "sha256": "4c36f34436901ca87c446d511e4a3d72d08e69bea9836e3955b7af0bf6834d18",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-webkit-dpr1/v5-keyboard-result.json",
+      "bytes": 7100,
+      "sha256": "256ee7160b6a964d54f926312f4a8f61193b29a2ffa9df0c34ed6725331c2f80",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-webkit-dpr1/v5-states.json",
+      "bytes": 70591,
+      "sha256": "b3bb2972048fa3e177323bd9cbb136e9ffbb405f508a2d7dd478440b56844170",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-webkit-dpr2/restored-victory-1280-geometry.json",
+      "bytes": 1591,
+      "sha256": "c32abc864e27f5cc57da46677519b6ddcebc53e96af7a5088f4f2387c80103cd",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-webkit-dpr2/restored-victory-1920-geometry.json",
+      "bytes": 1634,
+      "sha256": "3969c2cd6eb6abe2e2fd1ba2784b9dbe59209c27536108274a23f6414b45b198",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-webkit-dpr2/v5-keyboard-frames.json",
+      "bytes": 893,
+      "sha256": "bc77a788a61db54ead7a71bcb7bca2a681254cf77f9fac740213226131759e71",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-webkit-dpr2/v5-keyboard-result.json",
+      "bytes": 7100,
+      "sha256": "97356ddfc82526066a01882a44aca63d43309955d0d9c4b828e981f23fccc2aa",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-webkit-dpr2/v5-states.json",
+      "bytes": 70591,
+      "sha256": "e5b5a090e0eb9c0e689ee378dcc6ac289525ab0093097349b243d45d07e382d0",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-chromium-dpr1/restored-second-chapter-defeat-1280-geometry.json",
+      "bytes": 1322,
+      "sha256": "8cb3d0877ecfde62d1786d5a848d94545816380b4d15b3ddb7d073926f6228aa",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-chromium-dpr1/restored-second-chapter-defeat-1920-geometry.json",
+      "bytes": 1348,
+      "sha256": "bacdf7bc1f1d89d7e01c4529af463a10b002a986e5005213537273dfb55efb15",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-chromium-dpr1/v5-keyboard-result.json",
+      "bytes": 8295,
+      "sha256": "63542af34220a1bb5d370e85889088626cc8b55b87c32a257dc55366ac4589e1",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-chromium-dpr1/v5-states.json",
+      "bytes": 45950,
+      "sha256": "aebba56e3540256e7820f5ebc153ad116cb702a78d42f4c547d4c5cda47fe97b",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-chromium-dpr2/restored-second-chapter-defeat-1280-geometry.json",
+      "bytes": 1322,
+      "sha256": "1858b5f382fe92d3d4a0de2ebd1bc274660e409914f2aec23899f8fe3575a7ab",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-chromium-dpr2/restored-second-chapter-defeat-1920-geometry.json",
+      "bytes": 1348,
+      "sha256": "84be5325f981906c64a078c2ce0904e66dfacdf22dcd6a1d66eebedfa8abee2c",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-chromium-dpr2/v5-keyboard-result.json",
+      "bytes": 8295,
+      "sha256": "a0abda0ec2b7f4156ed6c03b8b8aacc33b6263b7969549f91588bc2075941435",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-chromium-dpr2/v5-states.json",
+      "bytes": 45948,
+      "sha256": "97c29646ed97c57715ca793328498982b239d5282300b36eeeaabab4f422c273",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-firefox-dpr1/restored-second-chapter-defeat-1280-geometry.json",
+      "bytes": 1356,
+      "sha256": "0fa86f0c397e596764c4f612acaac7d7f1161a556da6a6f84340621b3b7b2f90",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-firefox-dpr1/restored-second-chapter-defeat-1920-geometry.json",
+      "bytes": 1465,
+      "sha256": "dfd9cef8bfdbac6d67b437564971dcf75695aecd349f6816b67b527505f0392e",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-firefox-dpr1/v5-keyboard-result.json",
+      "bytes": 8294,
+      "sha256": "66017b706af805b435ada90f79682b30ff2a343f519a00a50fcf46c91f7e1b4c",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-firefox-dpr1/v5-states.json",
+      "bytes": 45946,
+      "sha256": "b0e188dfc1ad3b32e2d4184c66e64a396d9fb52f6278aa7b1340d57d7e7fe7d2",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-firefox-dpr2/restored-second-chapter-defeat-1280-geometry.json",
+      "bytes": 1356,
+      "sha256": "ce1d132b6c1403917515586ad8cc42701205141eef6cb81e181735ea77764f1e",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-firefox-dpr2/restored-second-chapter-defeat-1920-geometry.json",
+      "bytes": 1465,
+      "sha256": "dfe928df6ac1ea264ddf71ffb9b9333391ef0524878313d8ac99fb02544ed12d",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-firefox-dpr2/v5-keyboard-result.json",
+      "bytes": 8294,
+      "sha256": "b6566506675d83edaa028675b5d500049e0b1b80b5a84f4308a39f4689a4a145",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-firefox-dpr2/v5-states.json",
+      "bytes": 45942,
+      "sha256": "4a55da2295b31cda0b14fade6c76fed1ff98da7dbefd769c5bdccf5b406b7a28",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-webkit-dpr1/restored-second-chapter-defeat-1280-geometry.json",
+      "bytes": 1322,
+      "sha256": "8cb3d0877ecfde62d1786d5a848d94545816380b4d15b3ddb7d073926f6228aa",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-webkit-dpr1/restored-second-chapter-defeat-1920-geometry.json",
+      "bytes": 1348,
+      "sha256": "bacdf7bc1f1d89d7e01c4529af463a10b002a986e5005213537273dfb55efb15",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-webkit-dpr1/v5-keyboard-result.json",
+      "bytes": 8293,
+      "sha256": "6cbb28e3c39886ac8b482dc84bdd58d5352997c18f2664e275e86d77f7a06025",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-webkit-dpr1/v5-states.json",
+      "bytes": 45948,
+      "sha256": "1f65263746b7a1794ea5b4804ca3ef20ffe59f3feac62bddd69df97d18b3aba8",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-webkit-dpr2/restored-second-chapter-defeat-1280-geometry.json",
+      "bytes": 1322,
+      "sha256": "1858b5f382fe92d3d4a0de2ebd1bc274660e409914f2aec23899f8fe3575a7ab",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-webkit-dpr2/restored-second-chapter-defeat-1920-geometry.json",
+      "bytes": 1348,
+      "sha256": "84be5325f981906c64a078c2ce0904e66dfacdf22dcd6a1d66eebedfa8abee2c",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-webkit-dpr2/v5-keyboard-result.json",
+      "bytes": 8293,
+      "sha256": "f812d154ad0d801610c49382a8ed965b126ea293197b2c370aaa2259d63dab3f",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-webkit-dpr2/v5-states.json",
+      "bytes": 45948,
+      "sha256": "a5bc52f157ac0e276854950989d65ce921c01daf8a306a4550e08c6a9f5c0371",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a39a7-ad-and-cannot-protect-twice-chromium-dpr1/v5-commands.json",
+      "bytes": 2323,
+      "sha256": "b8797ce6423ce19148612d9bd0052ae577c17984467da0d1ac48567a59e61568",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a39a7-ad-and-cannot-protect-twice-chromium-dpr1/v5-keyboard-frames.json",
+      "bytes": 905,
+      "sha256": "ea6f9101167780d4ca2232f396e148f06388fcc7e15c7ab00caa1e7d96b5d3d1",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a39a7-ad-and-cannot-protect-twice-chromium-dpr1/v5-keyboard-result.json",
+      "bytes": 8380,
+      "sha256": "ce312c7ab7772acc4b0658b4a9c95974f7a48af058fcd255023830a046a13d7c",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a39a7-ad-and-cannot-protect-twice-chromium-dpr1/v5-states.json",
+      "bytes": 339579,
+      "sha256": "abc80a5b533433a793a2dcbdcb7505118f42f2f51e2c80f709e056b6e3811789",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a39a7-ad-and-cannot-protect-twice-chromium-dpr2/v5-commands.json",
+      "bytes": 2323,
+      "sha256": "b8797ce6423ce19148612d9bd0052ae577c17984467da0d1ac48567a59e61568",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a39a7-ad-and-cannot-protect-twice-chromium-dpr2/v5-keyboard-frames.json",
+      "bytes": 907,
+      "sha256": "9c8487ffe6213da06e411b7dc1272a64aef6f5772e87afc6f57a6621a3f6d283",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a39a7-ad-and-cannot-protect-twice-chromium-dpr2/v5-keyboard-result.json",
+      "bytes": 8380,
+      "sha256": "c560d1b23543b9e4692832cecf5878caecb8e47fbe12d06ab6357dc6a45adc90",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a39a7-ad-and-cannot-protect-twice-chromium-dpr2/v5-states.json",
+      "bytes": 339584,
+      "sha256": "cd573e0e5e60449c94e95d1e06fa2a3238fe6ba6ccc861ef81cff9c20ae0dd62",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a39a7-ad-and-cannot-protect-twice-firefox-dpr1/v5-commands.json",
+      "bytes": 2323,
+      "sha256": "b8797ce6423ce19148612d9bd0052ae577c17984467da0d1ac48567a59e61568",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a39a7-ad-and-cannot-protect-twice-firefox-dpr1/v5-keyboard-frames.json",
+      "bytes": 905,
+      "sha256": "ea6f9101167780d4ca2232f396e148f06388fcc7e15c7ab00caa1e7d96b5d3d1",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a39a7-ad-and-cannot-protect-twice-firefox-dpr1/v5-keyboard-result.json",
+      "bytes": 8379,
+      "sha256": "95c1a6942d6bb2f15dcdc075a1774e9847e9cdacd831e3175c6f3141db62b0a3",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a39a7-ad-and-cannot-protect-twice-firefox-dpr1/v5-states.json",
+      "bytes": 339595,
+      "sha256": "0f79b4d43e544f1c0ac6cff42cb951e7f2babc57c6cc02c3cff9098001df5c8b",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a39a7-ad-and-cannot-protect-twice-firefox-dpr2/v5-commands.json",
+      "bytes": 2323,
+      "sha256": "b8797ce6423ce19148612d9bd0052ae577c17984467da0d1ac48567a59e61568",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a39a7-ad-and-cannot-protect-twice-firefox-dpr2/v5-keyboard-frames.json",
+      "bytes": 907,
+      "sha256": "9c8487ffe6213da06e411b7dc1272a64aef6f5772e87afc6f57a6621a3f6d283",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a39a7-ad-and-cannot-protect-twice-firefox-dpr2/v5-keyboard-result.json",
+      "bytes": 8379,
+      "sha256": "14640c0f5fe3b2373fc77571acb8af11b36218e26859c8168a68d5e6bfd20e98",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a39a7-ad-and-cannot-protect-twice-firefox-dpr2/v5-states.json",
+      "bytes": 339600,
+      "sha256": "1d36e20ef99b243f7ca1462f4c51272b1594a7fd1fbb0fc092e09e51ae971288",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a39a7-ad-and-cannot-protect-twice-webkit-dpr1/v5-commands.json",
+      "bytes": 2323,
+      "sha256": "b8797ce6423ce19148612d9bd0052ae577c17984467da0d1ac48567a59e61568",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a39a7-ad-and-cannot-protect-twice-webkit-dpr1/v5-keyboard-frames.json",
+      "bytes": 905,
+      "sha256": "ea6f9101167780d4ca2232f396e148f06388fcc7e15c7ab00caa1e7d96b5d3d1",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a39a7-ad-and-cannot-protect-twice-webkit-dpr1/v5-keyboard-result.json",
+      "bytes": 8491,
+      "sha256": "919952b93a771cf969221b8f4284718d94e999ae4d29d44f8e31df76bdd3101e",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a39a7-ad-and-cannot-protect-twice-webkit-dpr1/v5-states.json",
+      "bytes": 339579,
+      "sha256": "ea8a1909fa4f9d06ff6df2ebff3db7a0768a1050b7fa68a3f2b62b8605064322",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a39a7-ad-and-cannot-protect-twice-webkit-dpr2/v5-commands.json",
+      "bytes": 2323,
+      "sha256": "b8797ce6423ce19148612d9bd0052ae577c17984467da0d1ac48567a59e61568",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a39a7-ad-and-cannot-protect-twice-webkit-dpr2/v5-keyboard-frames.json",
+      "bytes": 907,
+      "sha256": "9c8487ffe6213da06e411b7dc1272a64aef6f5772e87afc6f57a6621a3f6d283",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a39a7-ad-and-cannot-protect-twice-webkit-dpr2/v5-keyboard-result.json",
+      "bytes": 8491,
+      "sha256": "b321f471b2f1b0c3e896af331a4032ea60d2dc1b73686cbadc09af8baa60143e",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a39a7-ad-and-cannot-protect-twice-webkit-dpr2/v5-states.json",
+      "bytes": 339584,
+      "sha256": "b074ecb9c857c65ac62fe1e63f5c90d931a3f10fee621ac9868cc3e6bf1632bb",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-c4816-s-a-current-accepted-strike-chromium-dpr1/all-five-entry-old-slots.json",
+      "bytes": 29594,
+      "sha256": "b11102fef69b9e07fe0876aa42b54e1361d6aaccd476f1b488bf5a971107fd24",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-c4816-s-a-current-accepted-strike-chromium-dpr1/v5-commands.json",
+      "bytes": 837,
+      "sha256": "25e88b93d785eb8f9d5c25ab974278b5b7c48f62cc249860f79a8b21a0d2eaa9",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-c4816-s-a-current-accepted-strike-chromium-dpr1/v5-keyboard-result.json",
+      "bytes": 9591,
+      "sha256": "11c4f8786146f1c3f9bcf3bd91a4857571176ef206cc87e4464e6012ff1a99e9",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-c4816-s-a-current-accepted-strike-chromium-dpr1/v5-states.json",
+      "bytes": 29579,
+      "sha256": "27f19e88cf72a3b7cd2eab756319d45c69763e59e7958f9bd3b15924050ed668",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-c4816-s-a-current-accepted-strike-chromium-dpr2/all-five-entry-old-slots.json",
+      "bytes": 29594,
+      "sha256": "ab8afa8c80b44403b962f49fc1d10e22b1b8b38d5a89166e379e7c24aba26d0f",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-c4816-s-a-current-accepted-strike-chromium-dpr2/v5-commands.json",
+      "bytes": 837,
+      "sha256": "195e8f34e50647444fb5da15add4039f3c374a1871d9704adeb615d1b3b54f7b",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-c4816-s-a-current-accepted-strike-chromium-dpr2/v5-keyboard-result.json",
+      "bytes": 9591,
+      "sha256": "7e65d8f0cb03dd2c84c72e1400e7f1a08f5fadb866f227ebca8edfa9fcb747f7",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-c4816-s-a-current-accepted-strike-chromium-dpr2/v5-states.json",
+      "bytes": 29583,
+      "sha256": "3b68fa4e43cc66a67810337e16c0dacc5df7020b791b45c21d4ff2fcec63c50d",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-c4816-s-a-current-accepted-strike-firefox-dpr1/all-five-entry-old-slots.json",
+      "bytes": 29598,
+      "sha256": "6959b7d017aa5a1a990e24b1e23253ce6109d2012cb5302b0b9ea796a3c80e97",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-c4816-s-a-current-accepted-strike-firefox-dpr1/v5-commands.json",
+      "bytes": 837,
+      "sha256": "028bf72c1c65f5539a4df98708d6a04e410afb3dd39215c532306928d1191bb6",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-c4816-s-a-current-accepted-strike-firefox-dpr1/v5-keyboard-result.json",
+      "bytes": 9590,
+      "sha256": "b1f8a4a2bc80cb7173f81b029db2785312055f67961992a9003a0af74af97aae",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-c4816-s-a-current-accepted-strike-firefox-dpr1/v5-states.json",
+      "bytes": 29643,
+      "sha256": "f251884c5a3d14d762c4528da2ecc17dc698f07586783a9cdcafa0e5d5773ae8",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-c4816-s-a-current-accepted-strike-firefox-dpr2/all-five-entry-old-slots.json",
+      "bytes": 29594,
+      "sha256": "2c45e67012e72d2aef12b18a09cd820e5d0221848361c4c28fb7603d125fb690",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-c4816-s-a-current-accepted-strike-firefox-dpr2/v5-commands.json",
+      "bytes": 837,
+      "sha256": "47c9ed0c3a18c48b681730c00affcdbf3a499df1aeb8c484bbaa4944df0eb436",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-c4816-s-a-current-accepted-strike-firefox-dpr2/v5-keyboard-result.json",
+      "bytes": 9590,
+      "sha256": "f2e2312fbc29e23c26824278de881559beb2ac6e1dfba9715eef6ac8a2d16138",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-c4816-s-a-current-accepted-strike-firefox-dpr2/v5-states.json",
+      "bytes": 29647,
+      "sha256": "4bb2afd8d6fc1bad46de61701429d2ca738e822f631dcb53831d479384927d8d",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-c4816-s-a-current-accepted-strike-webkit-dpr1/all-five-entry-old-slots.json",
+      "bytes": 29596,
+      "sha256": "972720b44b3679736af00b6b27563a8a5f349802775627908bb88e03848c3028",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-c4816-s-a-current-accepted-strike-webkit-dpr1/v5-commands.json",
+      "bytes": 837,
+      "sha256": "1b13dea9d06907ca97f1b9a36bec59949b7fe81c58f1e503860e8a977684a1c3",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-c4816-s-a-current-accepted-strike-webkit-dpr1/v5-keyboard-result.json",
+      "bytes": 9589,
+      "sha256": "c98aca38c4f95ae27d57cb9c026d0419b082981aa226edc4ebf6018012f43c57",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-c4816-s-a-current-accepted-strike-webkit-dpr1/v5-states.json",
+      "bytes": 29579,
+      "sha256": "6b3c7c10eea20185585407317795b38e89ec6947335ab8cd5315d40f2aec2062",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-c4816-s-a-current-accepted-strike-webkit-dpr2/all-five-entry-old-slots.json",
+      "bytes": 29598,
+      "sha256": "ae9f596ac3630de9c3fa8794804751d2fbc72cb3fb50ebacc2c6f29b55a647ba",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-c4816-s-a-current-accepted-strike-webkit-dpr2/v5-commands.json",
+      "bytes": 837,
+      "sha256": "bbe47f2ed6b9b5c39a7dce8227d23da29208674a0cea151192e599207bfb4f71",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-c4816-s-a-current-accepted-strike-webkit-dpr2/v5-keyboard-result.json",
+      "bytes": 9589,
+      "sha256": "4b5995ca1c8cf8dfa74c1004709c98b3aefbc653281888b263103fcbe8ba5b1d",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-c4816-s-a-current-accepted-strike-webkit-dpr2/v5-states.json",
+      "bytes": 29583,
+      "sha256": "c8d7456b84d1d9aa2b675498c2d9ad660f6c0501a382ff8b113690b44f107aa2",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-d6b4f-ad-and-cannot-protect-twice-chromium-dpr1/v5-commands.json",
+      "bytes": 2361,
+      "sha256": "a1788daa3c3c18bf65bb17037f2af5bd3ca74a1d5bd2b497c8617251e8207956",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-d6b4f-ad-and-cannot-protect-twice-chromium-dpr1/v5-keyboard-frames.json",
+      "bytes": 905,
+      "sha256": "697f4ec716c3fcf7a8ea52622bc87e50ef5261728d6e00d9fb51edaad62da234",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-d6b4f-ad-and-cannot-protect-twice-chromium-dpr1/v5-keyboard-result.json",
+      "bytes": 8380,
+      "sha256": "52894bbbaa673ada151960999f3eda1f1ace42023158f14caba51863413bca16",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-d6b4f-ad-and-cannot-protect-twice-chromium-dpr1/v5-states.json",
+      "bytes": 331503,
+      "sha256": "0120b91949de53e73c29914ebcff626e82e13636a3939748a99e7c753b05e66c",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-d6b4f-ad-and-cannot-protect-twice-chromium-dpr2/v5-commands.json",
+      "bytes": 2361,
+      "sha256": "a1788daa3c3c18bf65bb17037f2af5bd3ca74a1d5bd2b497c8617251e8207956",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-d6b4f-ad-and-cannot-protect-twice-chromium-dpr2/v5-keyboard-frames.json",
+      "bytes": 907,
+      "sha256": "20c80a0c083b975e3de6cf7886a35769a59409c9c810e3a2f323557a8c47b34a",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-d6b4f-ad-and-cannot-protect-twice-chromium-dpr2/v5-keyboard-result.json",
+      "bytes": 8380,
+      "sha256": "1aaa4a93edae5ca07d731cac71c2e2b2a24b386691ff83aa4cb22c1625b935bd",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-d6b4f-ad-and-cannot-protect-twice-chromium-dpr2/v5-states.json",
+      "bytes": 331508,
+      "sha256": "95ee07213038255da3f520fa6e19093c16b39666ec31fe991343a0885453285b",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-d6b4f-ad-and-cannot-protect-twice-firefox-dpr1/v5-commands.json",
+      "bytes": 2361,
+      "sha256": "a1788daa3c3c18bf65bb17037f2af5bd3ca74a1d5bd2b497c8617251e8207956",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-d6b4f-ad-and-cannot-protect-twice-firefox-dpr1/v5-keyboard-frames.json",
+      "bytes": 905,
+      "sha256": "697f4ec716c3fcf7a8ea52622bc87e50ef5261728d6e00d9fb51edaad62da234",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-d6b4f-ad-and-cannot-protect-twice-firefox-dpr1/v5-keyboard-result.json",
+      "bytes": 8379,
+      "sha256": "a5560084cd9ad89b7c973f08bee0860bd2716925673681a8dd4dec16f3a4caa6",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-d6b4f-ad-and-cannot-protect-twice-firefox-dpr1/v5-states.json",
+      "bytes": 331519,
+      "sha256": "b711657e8e695f4462024b655eb08eabe06425f0e542b2cac109f8e6680d05b2",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-d6b4f-ad-and-cannot-protect-twice-firefox-dpr2/v5-commands.json",
+      "bytes": 2361,
+      "sha256": "a1788daa3c3c18bf65bb17037f2af5bd3ca74a1d5bd2b497c8617251e8207956",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-d6b4f-ad-and-cannot-protect-twice-firefox-dpr2/v5-keyboard-frames.json",
+      "bytes": 907,
+      "sha256": "20c80a0c083b975e3de6cf7886a35769a59409c9c810e3a2f323557a8c47b34a",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-d6b4f-ad-and-cannot-protect-twice-firefox-dpr2/v5-keyboard-result.json",
+      "bytes": 8379,
+      "sha256": "5a37105b3647a8960e982853da95a8d73b1d774a7e015e201cf143c0fa464865",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-d6b4f-ad-and-cannot-protect-twice-firefox-dpr2/v5-states.json",
+      "bytes": 331524,
+      "sha256": "fec9c2ab698ea947720f5380b5747ce65a2487ed14e6875a6f42c2a6e779bbe4",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-d6b4f-ad-and-cannot-protect-twice-webkit-dpr1/v5-commands.json",
+      "bytes": 2361,
+      "sha256": "a1788daa3c3c18bf65bb17037f2af5bd3ca74a1d5bd2b497c8617251e8207956",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-d6b4f-ad-and-cannot-protect-twice-webkit-dpr1/v5-keyboard-frames.json",
+      "bytes": 905,
+      "sha256": "697f4ec716c3fcf7a8ea52622bc87e50ef5261728d6e00d9fb51edaad62da234",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-d6b4f-ad-and-cannot-protect-twice-webkit-dpr1/v5-keyboard-result.json",
+      "bytes": 8491,
+      "sha256": "eedc4f9444370b091e61ae89eea70e34840c095388d6e01d330f80f84aec304c",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-d6b4f-ad-and-cannot-protect-twice-webkit-dpr1/v5-states.json",
+      "bytes": 331503,
+      "sha256": "3e63c63152e562fee21d09784ceb5f2a90d8f756dbf61bebac54c631c67b089e",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-d6b4f-ad-and-cannot-protect-twice-webkit-dpr2/v5-commands.json",
+      "bytes": 2361,
+      "sha256": "a1788daa3c3c18bf65bb17037f2af5bd3ca74a1d5bd2b497c8617251e8207956",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-d6b4f-ad-and-cannot-protect-twice-webkit-dpr2/v5-keyboard-frames.json",
+      "bytes": 907,
+      "sha256": "20c80a0c083b975e3de6cf7886a35769a59409c9c810e3a2f323557a8c47b34a",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-d6b4f-ad-and-cannot-protect-twice-webkit-dpr2/v5-keyboard-result.json",
+      "bytes": 8491,
+      "sha256": "7b2788392cef28ee332deaad93cb075ee9f382f3330005ef1c3a72b9e2eb120f",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-d6b4f-ad-and-cannot-protect-twice-webkit-dpr2/v5-states.json",
+      "bytes": 331508,
+      "sha256": "ca7c2da02fe1395225abeafa1ef18953c8eb22367eb2a0c6cdf1b99230415de1",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b435e-es-only-its-original-strike-chromium-dpr1/v5-commands.json",
+      "bytes": 837,
+      "sha256": "4ab753be007151777f76ff7793fcd3336b929342aadfcb02ea5219e270b89740",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b435e-es-only-its-original-strike-chromium-dpr1/v5-keyboard-frames.json",
+      "bytes": 995,
+      "sha256": "ac04ca08d407737a52fbbdafab95710b423ed0a0af975f8982cd16b612d28833",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b435e-es-only-its-original-strike-chromium-dpr1/v5-keyboard-result.json",
+      "bytes": 6414,
+      "sha256": "43bb57735872ae75a84b57e893316e9cadcb18d8004bafe63e221b7c19f45ff4",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b435e-es-only-its-original-strike-chromium-dpr1/v5-states.json",
+      "bytes": 29464,
+      "sha256": "ff6dac457ded884d9b22c500786d4ed7b93648abd8864e3f705084e8663c6d25",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b435e-es-only-its-original-strike-chromium-dpr2/v5-commands.json",
+      "bytes": 837,
+      "sha256": "bfa8795f61e880e7009d4481b4ade3a7d66ef805af0a950dfb300449dd6fb46a",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b435e-es-only-its-original-strike-chromium-dpr2/v5-keyboard-frames.json",
+      "bytes": 996,
+      "sha256": "efbecb5f6cb9b3a11f7717371e7d566eec167d27f5c1b3557cd0b330a88ad9ef",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b435e-es-only-its-original-strike-chromium-dpr2/v5-keyboard-result.json",
+      "bytes": 6414,
+      "sha256": "bb2788557006b66e2469478258bd7b6e675cf255c89bd4f5b4943b5873cdaa72",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b435e-es-only-its-original-strike-chromium-dpr2/v5-states.json",
+      "bytes": 29468,
+      "sha256": "9c57677d56624b38f76e045a2f7ff77c5b44f7d4df8c99095cafe5e3daa9d60d",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b435e-es-only-its-original-strike-firefox-dpr1/v5-commands.json",
+      "bytes": 837,
+      "sha256": "56e44959f341ad93ce62ea6edfb0ba459e2e80053959934b9409a905960f9448",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b435e-es-only-its-original-strike-firefox-dpr1/v5-keyboard-frames.json",
+      "bytes": 1027,
+      "sha256": "d5737ebc38e70f317464173448822e394034a4deb5ce9546e6f679af2c11ab00",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b435e-es-only-its-original-strike-firefox-dpr1/v5-keyboard-result.json",
+      "bytes": 6413,
+      "sha256": "257ae5eb4856b3538766ae1d58d379fe32b1aa7a2be7fedeaf682e1774bcf9cb",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b435e-es-only-its-original-strike-firefox-dpr1/v5-states.json",
+      "bytes": 29528,
+      "sha256": "c796f79147899c287d8882823c1b4a163e6d9a55affae1a614926e5c3992b54a",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b435e-es-only-its-original-strike-firefox-dpr2/v5-commands.json",
+      "bytes": 837,
+      "sha256": "d1e607c8a40095651c23bf96762952462c455b2aa8fbedfaa848d3af2b88fa0e",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b435e-es-only-its-original-strike-firefox-dpr2/v5-keyboard-frames.json",
+      "bytes": 1028,
+      "sha256": "91e61a73fbea93654273c3c39e066ead18e069c5f79ed8e44fe26231c3296c2c",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b435e-es-only-its-original-strike-firefox-dpr2/v5-keyboard-result.json",
+      "bytes": 6413,
+      "sha256": "0d9a88ab95dea01170916af131aed6520ae512314cc8f77c7da14285f36a9ff4",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b435e-es-only-its-original-strike-firefox-dpr2/v5-states.json",
+      "bytes": 29532,
+      "sha256": "a20b44c35142c1155da32116aa40600bc82a994b6e260701d28aeb0ff96e40d3",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b435e-es-only-its-original-strike-webkit-dpr1/v5-commands.json",
+      "bytes": 837,
+      "sha256": "6d000f23aaa6c93ae63cc0ef4ff8b852a02801f391b59527496be4edc06e1904",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b435e-es-only-its-original-strike-webkit-dpr1/v5-keyboard-frames.json",
+      "bytes": 995,
+      "sha256": "ac04ca08d407737a52fbbdafab95710b423ed0a0af975f8982cd16b612d28833",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b435e-es-only-its-original-strike-webkit-dpr1/v5-keyboard-result.json",
+      "bytes": 6412,
+      "sha256": "3dc84882ee27edeffbe57c357ec1b512a5114d89918f8be422b88f4cf18ae1dd",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b435e-es-only-its-original-strike-webkit-dpr1/v5-states.json",
+      "bytes": 29464,
+      "sha256": "82d19e1bd3a2275ab6c8ed31fe8b57652740a389682b43a16cfb05ceb7a2520b",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b435e-es-only-its-original-strike-webkit-dpr2/v5-commands.json",
+      "bytes": 837,
+      "sha256": "28c5a5ec72675ef904a8a80c46951fa837283f2e328c3b501b13bb869b655515",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b435e-es-only-its-original-strike-webkit-dpr2/v5-keyboard-frames.json",
+      "bytes": 996,
+      "sha256": "efbecb5f6cb9b3a11f7717371e7d566eec167d27f5c1b3557cd0b330a88ad9ef",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b435e-es-only-its-original-strike-webkit-dpr2/v5-keyboard-result.json",
+      "bytes": 6412,
+      "sha256": "8ec74f7f5d1fca5c0eaa845580fc809358a0dad9df5d94da56dc906b4782d8cb",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b435e-es-only-its-original-strike-webkit-dpr2/v5-states.json",
+      "bytes": 29468,
+      "sha256": "ea7cdd5c64a3505fba7f17a2019018b9bdeaa2e6246bad858698c7d56fc555fa",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b7cc0-rd-or-a-newly-confirmed-run-chromium-dpr1/v5-commands.json",
+      "bytes": 1107,
+      "sha256": "877d3526ec08af153eb9ecb9a96352f931ebcb1910da0a581e1d8189758df355",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b7cc0-rd-or-a-newly-confirmed-run-chromium-dpr1/v5-keyboard-frames.json",
+      "bytes": 921,
+      "sha256": "65911645f958af15405dd6f9cf7101b561c88ad8e35d91e51f10469d303b8ce6",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b7cc0-rd-or-a-newly-confirmed-run-chromium-dpr1/v5-keyboard-result.json",
+      "bytes": 6868,
+      "sha256": "8ca6d0060038cf9003dc0c326abf87d791834525b9743c06ae323ef61bac36da",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b7cc0-rd-or-a-newly-confirmed-run-chromium-dpr1/v5-states.json",
+      "bytes": 46876,
+      "sha256": "fbd1dbc4c5409c3ecd2b2259b06499a1c3ac77df37ad5654895c49912edd44d7",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b7cc0-rd-or-a-newly-confirmed-run-chromium-dpr2/v5-commands.json",
+      "bytes": 1107,
+      "sha256": "261954c8142e1f3e65284b2281496fcd7c97572036f6325ec8582193010cd8c5",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b7cc0-rd-or-a-newly-confirmed-run-chromium-dpr2/v5-keyboard-frames.json",
+      "bytes": 923,
+      "sha256": "a1f667f7081bb10371f7f7f0d525f91ab52401f5581557e041441e296dccda85",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b7cc0-rd-or-a-newly-confirmed-run-chromium-dpr2/v5-keyboard-result.json",
+      "bytes": 6868,
+      "sha256": "b331ec45a7b39890f4bde3afd175c8375096419b185ea52cb71ccf54815c0be3",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b7cc0-rd-or-a-newly-confirmed-run-chromium-dpr2/v5-states.json",
+      "bytes": 46883,
+      "sha256": "c8610eedd2362d1abeb4c4918a272e7cbd108eccdaf20d2cb7f32a8c29cfbe97",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b7cc0-rd-or-a-newly-confirmed-run-firefox-dpr1/v5-commands.json",
+      "bytes": 1107,
+      "sha256": "6cf4d7dab142d62103d945d6b627657fc135becf3ac1adf7faa2cfa9cdc383b5",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b7cc0-rd-or-a-newly-confirmed-run-firefox-dpr1/v5-keyboard-frames.json",
+      "bytes": 921,
+      "sha256": "65911645f958af15405dd6f9cf7101b561c88ad8e35d91e51f10469d303b8ce6",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b7cc0-rd-or-a-newly-confirmed-run-firefox-dpr1/v5-keyboard-result.json",
+      "bytes": 6867,
+      "sha256": "deac21c14307c691cdc1b3d439c167456e444ede20ad56cdf2b193d47b14b4ec",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b7cc0-rd-or-a-newly-confirmed-run-firefox-dpr1/v5-states.json",
+      "bytes": 46956,
+      "sha256": "e254c6a438b04287c355a2b745f7287a6325d2c1d924cadbaeaae774bda903d1",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b7cc0-rd-or-a-newly-confirmed-run-firefox-dpr2/v5-commands.json",
+      "bytes": 1107,
+      "sha256": "b915709294656ec7f2d07fbc3feb1954302a68192b7ba157339ca627ee7664de",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b7cc0-rd-or-a-newly-confirmed-run-firefox-dpr2/v5-keyboard-frames.json",
+      "bytes": 923,
+      "sha256": "a1f667f7081bb10371f7f7f0d525f91ab52401f5581557e041441e296dccda85",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b7cc0-rd-or-a-newly-confirmed-run-firefox-dpr2/v5-keyboard-result.json",
+      "bytes": 6867,
+      "sha256": "d03f4da0a50eabe57fe893aea0827e0a9034efc528a218c812bbe850dec9f361",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b7cc0-rd-or-a-newly-confirmed-run-firefox-dpr2/v5-states.json",
+      "bytes": 46963,
+      "sha256": "75013ef30a1eb81e6bf90a891fbc7c17507a451027860845bc410928adb26bf8",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b7cc0-rd-or-a-newly-confirmed-run-webkit-dpr1/v5-commands.json",
+      "bytes": 1107,
+      "sha256": "e663c348adfff3e8bcc0da14db75cf16e006ce65bf446eb3a404a47baaa201f7",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b7cc0-rd-or-a-newly-confirmed-run-webkit-dpr1/v5-keyboard-frames.json",
+      "bytes": 921,
+      "sha256": "65911645f958af15405dd6f9cf7101b561c88ad8e35d91e51f10469d303b8ce6",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b7cc0-rd-or-a-newly-confirmed-run-webkit-dpr1/v5-keyboard-result.json",
+      "bytes": 6866,
+      "sha256": "adf80da5ef6575f075abccf95fa60102b7c6eef06d4d5393e9423e1601cf60bb",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b7cc0-rd-or-a-newly-confirmed-run-webkit-dpr1/v5-states.json",
+      "bytes": 46876,
+      "sha256": "6dc61248daf36672ef38e01300f10c0d8dfe14b2115ea82fc9a4b96b4abab668",
+      "kind": "actual saved-state observations"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b7cc0-rd-or-a-newly-confirmed-run-webkit-dpr2/v5-commands.json",
+      "bytes": 1107,
+      "sha256": "f39d341107676e249366e9a2669d8737552ec30b21ba526f199851b9868695bd",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b7cc0-rd-or-a-newly-confirmed-run-webkit-dpr2/v5-keyboard-frames.json",
+      "bytes": 923,
+      "sha256": "a1f667f7081bb10371f7f7f0d525f91ab52401f5581557e041441e296dccda85",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b7cc0-rd-or-a-newly-confirmed-run-webkit-dpr2/v5-keyboard-result.json",
+      "bytes": 6866,
+      "sha256": "b2912fca8a7d014be14643b7ae80e9eb3a8be0e2a0eb7618572b4a0e11bc5794",
+      "kind": "metadata"
+    },
+    {
+      "path": "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-input-completeness-v5-i-b7cc0-rd-or-a-newly-confirmed-run-webkit-dpr2/v5-states.json",
+      "bytes": 46883,
+      "sha256": "6b98ca58b5da2af2cb5437c6ea54b1ce02da93fe328332cfaf512c551ec40806",
+      "kind": "actual saved-state observations"
+    }
+  ],
+  "scope": "Formal replay/codec checks of retained actual disk observations, downloads and explicitly labelled expected-state metadata. Counts are objects/observations, not fresh campaigns or proof of fun."
+}

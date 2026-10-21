@@ -1,0 +1,27 @@
+[
+  {
+    "action": {
+      "type": "chooseEvent",
+      "choice": "accept",
+      "pieceId": "d3-2"
+    },
+    "runId": "v5-event-donation",
+    "mode": "story",
+    "day": 3,
+    "revision": 11,
+    "coinsBefore": 159,
+    "coinsAfter": 159,
+    "events": [
+      {
+        "type": "EventChoice",
+        "record": {
+          "day": 3,
+          "id": "donation",
+          "choice": "accept",
+          "pieceId": "d3-2",
+          "coins": 0
+        }
+      }
+    ]
+  }
+]

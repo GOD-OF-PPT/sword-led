@@ -1,0 +1,76 @@
+[
+  {
+    "action": {
+      "type": "continue"
+    },
+    "runId": "fee768f0-9578-49b4-b3d3-a8522f687b05",
+    "mode": "story",
+    "day": 1,
+    "revision": 1,
+    "coinsBefore": 0,
+    "coinsAfter": 0,
+    "events": [
+      {
+        "type": "Opened"
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "strike",
+      "pieceId": "d1-1"
+    },
+    "runId": "fee768f0-9578-49b4-b3d3-a8522f687b05",
+    "mode": "story",
+    "day": 1,
+    "revision": 2,
+    "coinsBefore": 0,
+    "coinsAfter": 0,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d1-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 40,
+            "after": 62,
+            "level": 1,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "strike",
+      "pieceId": "d1-1"
+    },
+    "runId": "fee768f0-9578-49b4-b3d3-a8522f687b05",
+    "mode": "story",
+    "day": 1,
+    "revision": 3,
+    "coinsBefore": 0,
+    "coinsAfter": 0,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d1-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 62,
+            "after": 96,
+            "level": 2,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  }
+]

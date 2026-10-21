@@ -1,0 +1,79 @@
+{
+  "probe": {
+    "frames": [
+      {
+        "gap": 55.70898074106549,
+        "angle": 8.358088779180163,
+        "pivotGap": 0.17232812218156304,
+        "metalGap": 55.14334091331318,
+        "time": 0,
+        "sampleCostMs": 0.3999999761581421,
+        "phase": "swing"
+      },
+      {
+        "gap": 31.522184921057743,
+        "angle": 4.858107127436321,
+        "pivotGap": 0.17232808176133999,
+        "metalGap": 31.040362563886674,
+        "time": 40.30000001192093,
+        "sampleCostMs": 0.30000001192092896,
+        "phase": "swing"
+      },
+      {
+        "gap": 8.527138114556308,
+        "angle": 1.5344535093007265,
+        "pivotGap": 0.17232809508829414,
+        "metalGap": 8.329288079424146,
+        "time": 56.39999997615814,
+        "sampleCostMs": 0.3999999761581421,
+        "phase": "swing"
+      },
+      {
+        "gap": 0.411441812806728,
+        "angle": 0.3580939593236531,
+        "pivotGap": 0.17232813633376315,
+        "metalGap": 0.34718048878198715,
+        "time": 64.89999997615814,
+        "sampleCostMs": 0.19999998807907104,
+        "phase": "contact"
+      },
+      {
+        "gap": 0.411441812806728,
+        "angle": 0.3580939593236531,
+        "pivotGap": 0.17232813633376315,
+        "metalGap": 2.472302559094487,
+        "time": 82.39999997615814,
+        "sampleCostMs": 0.5,
+        "phase": "contact"
+      }
+    ],
+    "complete": true,
+    "source": "http://127.0.0.1:4245/assets/d/hammer-forge-v2.webp",
+    "sourceAlpha": [
+      249,
+      253,
+      253
+    ],
+    "inputToFirstSampleMs": 14.600000023841858
+  },
+  "metrics": {
+    "dpr": 1,
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "focus": {
+      "id": "v4-hit",
+      "tag": "BUTTON"
+    },
+    "canvas": {
+      "width": 1286,
+      "height": 468,
+      "cssWidth": 1286.40625,
+      "cssHeight": 467.78125,
+      "backingRatioX": 0.9996841977407992,
+      "backingRatioY": 1.0004676331084241,
+      "visible": true
+    }
+  }
+}

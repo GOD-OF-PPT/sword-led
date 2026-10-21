@@ -1,0 +1,26 @@
+{
+  "label": "preflight-02",
+  "startedAt": "2026-10-21T15:55:08.779020+00:00",
+  "command": [
+    "rtk",
+    "proxy",
+    "env",
+    "V5_REPORT=tmp/goal4-T02/runs/preflight-02/report.json",
+    "npx",
+    "playwright",
+    "test",
+    "--config",
+    "playwright.v5-ui.config.ts",
+    "--project",
+    "chromium-dpr1",
+    "--grep-invert",
+    "fresh two-new|fresh mixed-return|fresh keyboard story",
+    "--output",
+    "tmp/goal4-T02/runs/preflight-02/artifacts"
+  ],
+  "cwd": "/Users/gordon/githome/sword-led",
+  "status": "terminal",
+  "pid": 66885,
+  "completedAt": "2026-10-21T15:59:21.836834+00:00",
+  "actualExitCode": 1
+}

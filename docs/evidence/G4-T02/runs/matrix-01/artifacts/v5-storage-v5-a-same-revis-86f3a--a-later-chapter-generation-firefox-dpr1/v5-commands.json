@@ -1,0 +1,38 @@
+[
+  {
+    "runId": "v5-journey",
+    "mode": "story",
+    "action": {
+      "type": "chooseModification",
+      "modification": "warmRack"
+    },
+    "day": 4,
+    "revision": 44,
+    "coinsBefore": 374,
+    "coinsAfter": 374,
+    "events": [
+      {
+        "type": "Modification",
+        "modification": "warmRack"
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "chooseModification",
+      "modification": "windbox"
+    },
+    "runId": "v5-journey",
+    "mode": "story",
+    "day": 8,
+    "revision": 80,
+    "coinsBefore": 1097,
+    "coinsAfter": 1097,
+    "events": [
+      {
+        "type": "Modification",
+        "modification": "windbox"
+      }
+    ]
+  }
+]

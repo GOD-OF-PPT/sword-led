@@ -12,7 +12,7 @@
 
 开场与灯路回顾现在明确目标：守住第4、8、12天的关键约定，至少完成10项并保有契印，才能十二灯复明。关键日收工前会说明失约后果；护炉契保印不补约。旧刃回收没有架上剑时，可用新入口返回铁砧，选余剑点“留给明天”挂架后再回来确认，今日坯也可交换；导航不会自动交剑。
 
-[v0.8批准方案](docs/v0.8-workshop-economy-proposal.md)、[正式核心API](docs/v0.8-core-api.md)、[保存/导入合同](docs/v0.8-persistence-contract.md)、[R3.23三项复核](docs/reviews/R3-23-v08-twelve-lights.md)及[R3.24成长交易复核](docs/reviews/R3-24-v08-growth-trade.md)记录当前实现；[当前原五项交付复核](docs/reviews/R4-v5-delivery-review.md)汇总来源与尚未收到的真人反馈。一个固定合法路线已真实走完十二天，另有首章续玩、归途、失败与合法挑战开局记录；流程可达不等于经营平衡或真人乐趣通过。历史v4的30,000终态及旧规则经济风险保留在[旧平衡报告](docs/reviews/T11-4-2-3i6-v4-balance.md)，不作为v5结论。[九张终章美术原件/提示词](design/d/v07-chapter3/README.md)及前两章原件保持。交互、界面与玩法继续优先，兼容广测后置；真人体验和最终最大复核仍待。本机预览未公网部署。
+[v0.8批准方案](docs/v0.8-workshop-economy-proposal.md)、[正式核心API](docs/v0.8-core-api.md)、[保存/导入合同](docs/v0.8-persistence-contract.md)、[R3.23三项复核](docs/reviews/R3-23-v08-twelve-lights.md)及[R3.24成长交易复核](docs/reviews/R3-24-v08-growth-trade.md)记录当前实现；[当前原五项交付复核](docs/reviews/R4-v5-delivery-review.md)汇总来源与尚未收到的真人反馈。现有页面记录已包含键鼠完整故事、真实赚取资格后的完整重排挑战，以及两新剑、旧新混合、归途与独立失败；实际范围见[当前流程复核](docs/reviews/G4-T02-current-flows.md)。流程可达不等于经营平衡或真人乐趣通过。历史v4的30,000终态及旧规则经济风险保留在[旧平衡报告](docs/reviews/T11-4-2-3i6-v4-balance.md)，不作为v5结论。[九张终章美术原件/提示词](design/d/v07-chapter3/README.md)及前两章原件保持。交互、界面与玩法继续优先，兼容广测后置；真人体验和最终最大复核仍待。本机预览未公网部署。
 
 历史 [v0.6炉前](docs/v0.6-workshop-interface.md)和[R3.18](docs/reviews/R3-18-game-studio-forge-ui.md)保留原交付身份。[ForgeTax完整实况复核](docs/research/2026-10-19-forgetax-session-study.md)与Steam评论研究记录了参考依据；当前优化依据用户对主线、成长、内容的反馈推进。
 
@@ -91,7 +91,7 @@ npm run test:browser
 npm run test:art
 ```
 
-现行v5浏览器验证入口为 `npm run test:v5:browser`（或在已冻结构建上运行 `npx playwright test --config playwright.v5-ui.config.ts`）。配置明确Chromium/Firefox/WebKit × DPR1/2；当前用例和已执行范围见goal-4及报告，配置存在不表示六项目已经通过。只跑当前键盘链可选择 `--project chromium-dpr1`。旧v4用例明确进入 `/v4.html`，不会用v5首页去读v4存档。实际case清单以 `--list` 为准。
+现行v5浏览器验证入口为 `npm run test:v5:browser`（或在已冻结构建上运行 `npx playwright test --config playwright.v5-ui.config.ts`）。配置明确Chromium/Firefox/WebKit × DPR1/2；当前[验收映射](docs/v0.8-acceptance-map.md)逐项记录已执行范围，原生窗口、声音和性能另属后续检查。只跑当前键盘链可选择 `v5-keyboard.spec.ts --project chromium-dpr1`。旧v4用例明确进入 `/v4.html`，不会用v5首页去读v4存档。实际case清单以 `--list` 为准。
 
 保留的v4页面回归在构建后运行 `npx playwright test --config playwright.v4-ui.config.ts`。forge-v3界面回归可单独运行 `npx playwright test --config playwright.v3.config.ts`（Chromium/Firefox/WebKit须已安装）；这些旧配置不代表当前v5页面验收，不要在浏览器批次运行时重建共用dist。
 

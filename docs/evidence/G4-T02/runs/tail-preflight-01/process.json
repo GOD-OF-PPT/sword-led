@@ -1,0 +1,26 @@
+{
+  "label": "tail-preflight-01",
+  "startedAt": "2026-10-21T17:40:15.714372+00:00",
+  "command": [
+    "rtk",
+    "proxy",
+    "env",
+    "V5_REPORT=tmp/goal4-T02/runs/tail-preflight-01/report.json",
+    "npx",
+    "playwright",
+    "test",
+    "--config",
+    "playwright.v5-ui.config.ts",
+    "v5-completeness.spec.ts",
+    "v5-input-completeness.spec.ts",
+    "--project",
+    "chromium-dpr1",
+    "--output",
+    "tmp/goal4-T02/runs/tail-preflight-01/artifacts"
+  ],
+  "cwd": "/Users/gordon/githome/sword-led",
+  "status": "terminal",
+  "pid": 87650,
+  "completedAt": "2026-10-21T17:41:06.229290+00:00",
+  "actualExitCode": 1
+}

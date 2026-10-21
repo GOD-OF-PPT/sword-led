@@ -1,0 +1,543 @@
+{
+  "config": {
+    "argv": [
+      "/Users/gordon/.nvm/versions/node/v22.12.0/bin/node",
+      "/Users/gordon/githome/sword-led/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "playwright.v5-ui.config.ts",
+      "v5-completeness.spec.ts",
+      "v5-input-completeness.spec.ts",
+      "--project",
+      "chromium-dpr1",
+      "--output",
+      "tmp/goal4-T02/runs/tail-preflight-01/artifacts"
+    ],
+    "configFile": "/Users/gordon/githome/sword-led/playwright.v5-ui.config.ts",
+    "rootDir": "/Users/gordon/githome/sword-led/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/goal4-T02/runs/tail-preflight-01/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-dpr1",
+        "name": "chromium-dpr1",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v5-*.spec.ts"
+        ],
+        "timeout": 420000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/goal4-T02/runs/tail-preflight-01/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-dpr2",
+        "name": "chromium-dpr2",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v5-*.spec.ts"
+        ],
+        "timeout": 420000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/goal4-T02/runs/tail-preflight-01/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox-dpr1",
+        "name": "firefox-dpr1",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v5-*.spec.ts"
+        ],
+        "timeout": 420000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/goal4-T02/runs/tail-preflight-01/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox-dpr2",
+        "name": "firefox-dpr2",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v5-*.spec.ts"
+        ],
+        "timeout": 420000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/goal4-T02/runs/tail-preflight-01/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit-dpr1",
+        "name": "webkit-dpr1",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v5-*.spec.ts"
+        ],
+        "timeout": 420000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/goal4-T02/runs/tail-preflight-01/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit-dpr2",
+        "name": "webkit-dpr2",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v5-*.spec.ts"
+        ],
+        "timeout": 420000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/goal4-T02/runs/tail-preflight-01/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chromium-dpr1",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v5-*.spec.ts",
+        "timeout": 420000,
+        "use": {
+          "actionTimeout": 15000,
+          "navigationTimeout": 30000,
+          "baseURL": "http://127.0.0.1:4245",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "trace": "off",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "browserName": "chromium",
+          "launchOptions": {
+            "args": [
+              "--no-proxy-server"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium-dpr1"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "tmp/goal4-T02/runs/tail-preflight-01/report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 4245 --strictPort",
+      "url": "http://127.0.0.1:4245/",
+      "reuseExistingServer": false,
+      "env": {
+        "NO_PROXY": "127.0.0.1,localhost",
+        "no_proxy": "127.0.0.1,localhost"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "v5-completeness.spec.ts",
+      "file": "v5-completeness.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "v5 completeness: all five real entries preserve every old save slot across a current accepted strike",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 420000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-dpr1",
+              "projectName": "chromium-dpr1",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7169,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T17:40:21.584Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "acac96ed78e890dc3ffb-7e29b1b6ebcfc9f98901",
+          "file": "v5-completeness.spec.ts",
+          "line": 16,
+          "column": 1
+        },
+        {
+          "title": "v5 completeness restored victory: factual ending art, real memories, work pages and available exit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 420000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-dpr1",
+              "projectName": "chromium-dpr1",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5157,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T17:40:29.551Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "acac96ed78e890dc3ffb-47cf4b8845dbfff0e521",
+          "file": "v5-completeness.spec.ts",
+          "line": 50,
+          "column": 72
+        },
+        {
+          "title": "v5 completeness restored return: factual ending art, real memories, work pages and available exit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 420000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-dpr1",
+              "projectName": "chromium-dpr1",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3404,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T17:40:34.725Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "acac96ed78e890dc3ffb-08f86b6b8dad4e3011c3",
+          "file": "v5-completeness.spec.ts",
+          "line": 50,
+          "column": 72
+        },
+        {
+          "title": "v5 completeness restored second-chapter-defeat: factual ending art, real memories, work pages and available exit",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 420000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-dpr1",
+              "projectName": "chromium-dpr1",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7146,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).not.\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('[data-mastery=\"heavy\"]')\nExpected substring: not \u001b[32m\"可自由使用\"\u001b[39m\nReceived string: \u001b[31m\"重锋：随主线借用后解锁；走完相应章节即\u001b[7m可自由使用\u001b[27m交出等级≥9的合格名器，可留下熟练记录\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"not toContainText\" locator('[data-mastery=\"heavy\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-mastery=\"heavy\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <p data-mastery=\"heavy\">…</p>\u001b[22m\n\u001b[2m       - unexpected value \"重锋：随主线借用后解锁；走完相应章节即可自由使用交出等级≥9的合格名器，可留下熟练记录\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).not.\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('[data-mastery=\"heavy\"]')\nExpected substring: not \u001b[32m\"可自由使用\"\u001b[39m\nReceived string: \u001b[31m\"重锋：随主线借用后解锁；走完相应章节即\u001b[7m可自由使用\u001b[27m交出等级≥9的合格名器，可留下熟练记录\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"not toContainText\" locator('[data-mastery=\"heavy\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-mastery=\"heavy\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <p data-mastery=\"heavy\">…</p>\u001b[22m\n\u001b[2m       - unexpected value \"重锋：随主线借用后解锁；走完相应章节即可自由使用交出等级≥9的合格名器，可留下熟练记录\"\u001b[22m\n\n    at /Users/gordon/githome/sword-led/tests/e2e/v5-completeness.spec.ts:66:470",
+                    "location": {
+                      "file": "/Users/gordon/githome/sword-led/tests/e2e/v5-completeness.spec.ts",
+                      "column": 470,
+                      "line": 66
+                    },
+                    "snippet": "  64 |  }\n  65 |  if(kind==='second-chapter-defeat'){\n> 66 |   expect(before.collection?.chapters).toEqual([1]);expect(before.collection?.challenge).toBe(false);await expect(page.getByRole('button',{name:'沿灯路，去下一天',exact:true})).toHaveCount(0);await h.activate(page.getByRole('button',{name:'看看留下的炉谱',exact:true}));await expect(page.locator('[data-mastery=\"guard\"]')).toContainText('护刃：可自由使用');await expect(page.locator('[data-mastery=\"heavy\"]')).toContainText('随主线借用后解锁');await expect(page.locator('[data-mastery=\"heavy\"]')).not.toContainText('可自由使用');await h.activate(page.getByRole('button',{name:'收好炉谱',exact:true}));\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ^\n  67 |  }\n  68 |  expect((await h.read()).raw).toEqual(before.raw);expect((await h.read()).state).toEqual(source);\n  69 |  if(kind==='second-chapter-defeat'){"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v5-completeness.spec.ts",
+                        "column": 470,
+                        "line": 66
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).not.\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('[data-mastery=\"heavy\"]')\nExpected substring: not \u001b[32m\"可自由使用\"\u001b[39m\nReceived string: \u001b[31m\"重锋：随主线借用后解锁；走完相应章节即\u001b[7m可自由使用\u001b[27m交出等级≥9的合格名器，可留下熟练记录\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"not toContainText\" locator('[data-mastery=\"heavy\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-mastery=\"heavy\"]')\u001b[22m\n\u001b[2m    14 × locator resolved to <p data-mastery=\"heavy\">…</p>\u001b[22m\n\u001b[2m       - unexpected value \"重锋：随主线借用后解锁；走完相应章节即可自由使用交出等级≥9的合格名器，可留下熟练记录\"\u001b[22m\n\n\n  64 |  }\n  65 |  if(kind==='second-chapter-defeat'){\n> 66 |   expect(before.collection?.chapters).toEqual([1]);expect(before.collection?.challenge).toBe(false);await expect(page.getByRole('button',{name:'沿灯路，去下一天',exact:true})).toHaveCount(0);await h.activate(page.getByRole('button',{name:'看看留下的炉谱',exact:true}));await expect(page.locator('[data-mastery=\"guard\"]')).toContainText('护刃：可自由使用');await expect(page.locator('[data-mastery=\"heavy\"]')).toContainText('随主线借用后解锁');await expect(page.locator('[data-mastery=\"heavy\"]')).not.toContainText('可自由使用');await h.activate(page.getByRole('button',{name:'收好炉谱',exact:true}));\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ^\n  67 |  }\n  68 |  expect((await h.read()).raw).toEqual(before.raw);expect((await h.read()).state).toEqual(source);\n  69 |  if(kind==='second-chapter-defeat'){\n    at /Users/gordon/githome/sword-led/tests/e2e/v5-completeness.spec.ts:66:470"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T17:40:38.146Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/tmp/goal4-T02/runs/tail-preflight-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-chromium-dpr1/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/tmp/goal4-T02/runs/tail-preflight-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-chromium-dpr1/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/gordon/githome/sword-led/tests/e2e/v5-completeness.spec.ts",
+                    "column": 470,
+                    "line": 66
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "acac96ed78e890dc3ffb-fe3239a27a302105f774",
+          "file": "v5-completeness.spec.ts",
+          "line": 50,
+          "column": 72
+        },
+        {
+          "title": "v5 completeness restored twin 0/2: first actual pardon protects one miss, survives reload and cannot protect twice",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 420000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-dpr1",
+              "projectName": "chromium-dpr1",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6134,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T17:40:46.588Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "acac96ed78e890dc3ffb-d8039c47435bbb2410ea",
+          "file": "v5-completeness.spec.ts",
+          "line": 77,
+          "column": 34
+        },
+        {
+          "title": "v5 completeness restored twin 1/2: first actual pardon protects one miss, survives reload and cannot protect twice",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 420000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-dpr1",
+              "projectName": "chromium-dpr1",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6017,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T17:40:53.064Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "acac96ed78e890dc3ffb-445a78eb48ba16d2e11a",
+          "file": "v5-completeness.spec.ts",
+          "line": 77,
+          "column": 34
+        }
+      ]
+    },
+    {
+      "title": "v5-input-completeness.spec.ts",
+      "file": "v5-input-completeness.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "v5 input boundary: right button is ignored and native left drag releases only its original strike",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 420000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-dpr1",
+              "projectName": "chromium-dpr1",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3905,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T17:40:59.121Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0c8fd57a420c3a1c69b7-2fb6233f43dfba0c0af0",
+          "file": "v5-input-completeness.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "v5 input boundary: pending Space cannot follow a different sword or a newly confirmed run",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 420000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-dpr1",
+              "projectName": "chromium-dpr1",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2989,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T17:41:03.043Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0c8fd57a420c3a1c69b7-760531a38d8b4ba4f620",
+          "file": "v5-input-completeness.spec.ts",
+          "line": 29,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-21T17:40:18.104Z",
+    "duration": 48056.219000000005,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

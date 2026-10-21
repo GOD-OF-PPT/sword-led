@@ -1,0 +1,63 @@
+[
+  {
+    "action": {
+      "type": "continue"
+    },
+    "runId": "6661f53c-c5ca-4897-9626-c94f53f4d67e",
+    "mode": "story",
+    "day": 1,
+    "revision": 1,
+    "coinsBefore": 0,
+    "coinsAfter": 0,
+    "events": [
+      {
+        "type": "Opened"
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "continue"
+    },
+    "runId": "5bd8f9fa-a646-400b-820a-14bf0bab96b3",
+    "mode": "story",
+    "day": 1,
+    "revision": 1,
+    "coinsBefore": 0,
+    "coinsAfter": 0,
+    "events": [
+      {
+        "type": "Opened"
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "strike",
+      "pieceId": "d1-1"
+    },
+    "runId": "5bd8f9fa-a646-400b-820a-14bf0bab96b3",
+    "mode": "story",
+    "day": 1,
+    "revision": 2,
+    "coinsBefore": 0,
+    "coinsAfter": 0,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d1-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 40,
+            "after": 62,
+            "level": 1,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  }
+]

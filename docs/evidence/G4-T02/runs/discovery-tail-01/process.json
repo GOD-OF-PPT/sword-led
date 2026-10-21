@@ -1,0 +1,22 @@
+{
+  "label": "discovery-tail-01",
+  "startedAt": "2026-10-21T17:39:11.634044+00:00",
+  "command": [
+    "rtk",
+    "proxy",
+    "npx",
+    "playwright",
+    "test",
+    "--config",
+    "playwright.v5-ui.config.ts",
+    "v5-completeness.spec.ts",
+    "v5-input-completeness.spec.ts",
+    "--list",
+    "--reporter=list"
+  ],
+  "cwd": "/Users/gordon/githome/sword-led",
+  "status": "terminal",
+  "pid": 87289,
+  "completedAt": "2026-10-21T17:39:15.003790+00:00",
+  "actualExitCode": 0
+}

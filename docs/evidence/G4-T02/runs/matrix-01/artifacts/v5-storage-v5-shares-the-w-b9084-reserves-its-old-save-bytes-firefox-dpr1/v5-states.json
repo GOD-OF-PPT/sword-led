@@ -1,0 +1,192 @@
+[
+  {
+    "label": "accepted-1-strike",
+    "state": {
+      "rulesVersion": "forge-v5",
+      "runId": "v5-journey",
+      "seed": "v5-economy-0",
+      "mode": "story",
+      "initialEligibility": {
+        "recipes": [
+          "light"
+        ],
+        "challenge": false
+      },
+      "revision": 2,
+      "phase": "workshop",
+      "day": 1,
+      "commissionOrder": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "coins": 0,
+      "seals": 3,
+      "supplyBase": 40,
+      "upgradeCount": 0,
+      "inheritance": 0,
+      "blades": [
+        {
+          "id": "d1-1",
+          "slot": 1,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 62,
+          "peak": 62,
+          "level": 1,
+          "cracked": false,
+          "hits": 1,
+          "charge": 1,
+          "successes": 1,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        },
+        {
+          "id": "d1-2",
+          "slot": 2,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 40,
+          "peak": 40,
+          "level": 0,
+          "cracked": false,
+          "hits": 0,
+          "charge": 0,
+          "successes": 0,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        },
+        {
+          "id": "d1-3",
+          "slot": 3,
+          "suppliedDay": 1,
+          "recipe": "light",
+          "status": "active",
+          "base": 40,
+          "value": 40,
+          "peak": 40,
+          "level": 0,
+          "cracked": false,
+          "hits": 0,
+          "charge": 0,
+          "successes": 0,
+          "normalGreats": 0,
+          "bursts": 0,
+          "finalizedDay": null,
+          "commissionId": null
+        }
+      ],
+      "reserveId": null,
+      "daySales": 0,
+      "dayRecovered": 0,
+      "marketSpent": 0,
+      "traits": [],
+      "gift": "locked",
+      "pardonUsed": false,
+      "crackGuard": false,
+      "modifications": [],
+      "chapterChoices": [],
+      "shop": [],
+      "sold": [],
+      "upgraded": false,
+      "repaired": false,
+      "dayBuffs": {
+        "supplyPct": 100,
+        "loan": false,
+        "shelter": false
+      },
+      "pending": {
+        "supplyPct": 100,
+        "loan": false,
+        "shelter": false
+      },
+      "eventDeck": [
+        "donation",
+        "shelter",
+        "credit",
+        "loan",
+        "rest",
+        "salvage"
+      ],
+      "eventId": null,
+      "eventStatus": "none",
+      "eventHistory": [],
+      "history": [],
+      "rng": {
+        "forge": {
+          "state": 4259144671,
+          "draws": 1
+        },
+        "shop": {
+          "state": 1380130647,
+          "draws": 0
+        },
+        "events": {
+          "state": 1169050407,
+          "draws": 5
+        },
+        "content": {
+          "state": 561124140,
+          "draws": 0
+        }
+      },
+      "journal": [
+        {
+          "type": "continue"
+        },
+        {
+          "type": "strike",
+          "pieceId": "d1-1"
+        }
+      ]
+    },
+    "collection": {
+      "chapters": [],
+      "mastery": [],
+      "traits": [],
+      "challenge": false,
+      "works": []
+    },
+    "raw": {
+      "save": "{\"schemaVersion\":5,\"rulesVersion\":\"forge-v5\",\"savedAt\":\"2026-10-21T16:49:43.615Z\",\"state\":{\"rulesVersion\":\"forge-v5\",\"runId\":\"v5-journey\",\"seed\":\"v5-economy-0\",\"mode\":\"story\",\"initialEligibility\":{\"recipes\":[\"light\"],\"challenge\":false},\"revision\":2,\"phase\":\"workshop\",\"day\":1,\"commissionOrder\":[1,2,3,4,5,6,7,8,9,10,11,12],\"coins\":0,\"seals\":3,\"supplyBase\":40,\"upgradeCount\":0,\"inheritance\":0,\"blades\":[{\"id\":\"d1-1\",\"slot\":1,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"active\",\"base\":40,\"value\":62,\"peak\":62,\"level\":1,\"cracked\":false,\"hits\":1,\"charge\":1,\"successes\":1,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null},{\"id\":\"d1-2\",\"slot\":2,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"active\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null},{\"id\":\"d1-3\",\"slot\":3,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"active\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null}],\"reserveId\":null,\"daySales\":0,\"dayRecovered\":0,\"marketSpent\":0,\"traits\":[],\"gift\":\"locked\",\"pardonUsed\":false,\"crackGuard\":false,\"modifications\":[],\"chapterChoices\":[],\"shop\":[],\"sold\":[],\"upgraded\":false,\"repaired\":false,\"dayBuffs\":{\"supplyPct\":100,\"loan\":false,\"shelter\":false},\"pending\":{\"supplyPct\":100,\"loan\":false,\"shelter\":false},\"eventDeck\":[\"donation\",\"shelter\",\"credit\",\"loan\",\"rest\",\"salvage\"],\"eventId\":null,\"eventStatus\":\"none\",\"eventHistory\":[],\"history\":[],\"rng\":{\"forge\":{\"state\":4259144671,\"draws\":1},\"shop\":{\"state\":1380130647,\"draws\":0},\"events\":{\"state\":1169050407,\"draws\":5},\"content\":{\"state\":561124140,\"draws\":0}},\"journal\":[{\"type\":\"continue\"},{\"type\":\"strike\",\"pieceId\":\"d1-1\"}]}}",
+      "collection": "{\"schemaVersion\":2,\"rulesVersion\":\"forge-collection-v2\",\"savedAt\":\"2026-10-21T00:00:00.000Z\",\"state\":{\"chapters\":[],\"mastery\":[],\"traits\":[],\"challenge\":false,\"works\":[]}}"
+    },
+    "metrics": {
+      "dpr": 1,
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "focus": {
+        "id": "v4-hit",
+        "tag": "BUTTON"
+      },
+      "canvas": {
+        "width": 858,
+        "height": 312,
+        "cssWidth": 857.5999755859375,
+        "cssHeight": 311.8500061035156,
+        "backingRatioX": 1.0004664463916166,
+        "backingRatioY": 1.0004809808996271,
+        "visible": true
+      }
+    }
+  }
+]

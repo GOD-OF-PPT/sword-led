@@ -1,0 +1,20 @@
+{
+  "label": "discovery-01",
+  "startedAt": "2026-10-21T15:50:30.037730+00:00",
+  "command": [
+    "rtk",
+    "proxy",
+    "npx",
+    "playwright",
+    "test",
+    "--config",
+    "playwright.v5-ui.config.ts",
+    "--list",
+    "--reporter=list"
+  ],
+  "cwd": "/Users/gordon/githome/sword-led",
+  "status": "terminal",
+  "pid": 66118,
+  "completedAt": "2026-10-21T15:50:34.260247+00:00",
+  "actualExitCode": 0
+}

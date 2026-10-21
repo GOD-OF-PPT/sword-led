@@ -5,7 +5,7 @@ export default defineConfig({
  testDir:'./tests/e2e',testMatch:'v5-*.spec.ts',outputDir:'test-results/v5-ui',fullyParallel:false,
  workers:1,retries:0,timeout:420000,
  reporter:[['list'],['json',{outputFile:process.env.V5_REPORT??'test-results/v5-ui-report.json'}]],
- use:{baseURL:'http://127.0.0.1:4245',viewport:{width:1280,height:720},trace:'off',screenshot:'only-on-failure'},
+ use:{actionTimeout:15000,navigationTimeout:30000,baseURL:'http://127.0.0.1:4245',viewport:{width:1280,height:720},trace:'off',screenshot:'only-on-failure'},
  projects:engines.flatMap(([browserName,device])=>[1,2].map(deviceScaleFactor=>({
   name:`${browserName}-dpr${deviceScaleFactor}`,
   use:{...devices[device],browserName,viewport:{width:1280,height:720},deviceScaleFactor,

@@ -1,0 +1,78 @@
+[
+  {
+    "action": {
+      "type": "chooseEvent",
+      "choice": "accept"
+    },
+    "runId": "v5-event-rest",
+    "mode": "story",
+    "day": 3,
+    "revision": 11,
+    "coinsBefore": 159,
+    "coinsAfter": 159,
+    "events": [
+      {
+        "type": "EventChoice",
+        "record": {
+          "day": 3,
+          "id": "rest",
+          "choice": "accept",
+          "pieceId": null,
+          "coins": 0
+        }
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "settle"
+    },
+    "runId": "v5-event-rest",
+    "mode": "story",
+    "day": 3,
+    "revision": 12,
+    "coinsBefore": 159,
+    "coinsAfter": 179,
+    "events": [
+      {
+        "type": "Settled",
+        "record": {
+          "day": 3,
+          "commissionId": 3,
+          "met": false,
+          "routeId": null,
+          "pieceIds": [],
+          "sales": 0,
+          "recovered": 20,
+          "baseFees": 0,
+          "marketSpent": 20,
+          "recoveredIds": [
+            "d3-2",
+            "d3-3"
+          ],
+          "reserveId": "d3-1",
+          "sealsBefore": 2,
+          "sealsAfter": 1,
+          "protected": false,
+          "modification": null
+        }
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "advance"
+    },
+    "runId": "v5-event-rest",
+    "mode": "story",
+    "day": 3,
+    "revision": 13,
+    "coinsBefore": 179,
+    "coinsAfter": 179,
+    "events": [
+      {
+        "type": "Advanced"
+      }
+    ]
+  }
+]

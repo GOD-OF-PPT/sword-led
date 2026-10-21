@@ -1,0 +1,181 @@
+[
+  {
+    "action": {
+      "type": "advance"
+    },
+    "runId": "T02-chapter-two-failure",
+    "mode": "story",
+    "day": 4,
+    "revision": 39,
+    "coinsBefore": 389,
+    "coinsAfter": 389,
+    "events": [
+      {
+        "type": "Advanced"
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "settle"
+    },
+    "runId": "T02-chapter-two-failure",
+    "mode": "story",
+    "day": 5,
+    "revision": 40,
+    "coinsBefore": 389,
+    "coinsAfter": 479,
+    "events": [
+      {
+        "type": "EventChoice",
+        "record": {
+          "day": 5,
+          "id": "shelter",
+          "choice": "decline",
+          "pieceId": null,
+          "coins": 0
+        }
+      },
+      {
+        "type": "Settled",
+        "record": {
+          "day": 5,
+          "commissionId": 5,
+          "met": false,
+          "routeId": null,
+          "pieceIds": [],
+          "sales": 0,
+          "recovered": 90,
+          "baseFees": 0,
+          "marketSpent": 90,
+          "recoveredIds": [
+            "d5-1",
+            "d5-2",
+            "d5-3"
+          ],
+          "reserveId": null,
+          "sealsBefore": 3,
+          "sealsAfter": 2,
+          "protected": false,
+          "modification": null
+        }
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "advance"
+    },
+    "runId": "T02-chapter-two-failure",
+    "mode": "story",
+    "day": 5,
+    "revision": 41,
+    "coinsBefore": 479,
+    "coinsAfter": 479,
+    "events": [
+      {
+        "type": "Advanced"
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "settle"
+    },
+    "runId": "T02-chapter-two-failure",
+    "mode": "story",
+    "day": 6,
+    "revision": 42,
+    "coinsBefore": 479,
+    "coinsAfter": 569,
+    "events": [
+      {
+        "type": "Settled",
+        "record": {
+          "day": 6,
+          "commissionId": 6,
+          "met": false,
+          "routeId": null,
+          "pieceIds": [],
+          "sales": 0,
+          "recovered": 90,
+          "baseFees": 0,
+          "marketSpent": 90,
+          "recoveredIds": [
+            "d6-1",
+            "d6-2",
+            "d6-3"
+          ],
+          "reserveId": null,
+          "sealsBefore": 2,
+          "sealsAfter": 1,
+          "protected": false,
+          "modification": null
+        }
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "advance"
+    },
+    "runId": "T02-chapter-two-failure",
+    "mode": "story",
+    "day": 6,
+    "revision": 43,
+    "coinsBefore": 569,
+    "coinsAfter": 569,
+    "events": [
+      {
+        "type": "Advanced"
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "settle"
+    },
+    "runId": "T02-chapter-two-failure",
+    "mode": "story",
+    "day": 7,
+    "revision": 44,
+    "coinsBefore": 569,
+    "coinsAfter": 659,
+    "events": [
+      {
+        "type": "EventChoice",
+        "record": {
+          "day": 7,
+          "id": "credit",
+          "choice": "decline",
+          "pieceId": null,
+          "coins": 0
+        }
+      },
+      {
+        "type": "Settled",
+        "record": {
+          "day": 7,
+          "commissionId": 7,
+          "met": false,
+          "routeId": null,
+          "pieceIds": [],
+          "sales": 0,
+          "recovered": 90,
+          "baseFees": 0,
+          "marketSpent": 90,
+          "recoveredIds": [
+            "d7-1",
+            "d7-2",
+            "d7-3"
+          ],
+          "reserveId": null,
+          "sealsBefore": 1,
+          "sealsAfter": 0,
+          "protected": false,
+          "modification": null
+        }
+      }
+    ]
+  }
+]

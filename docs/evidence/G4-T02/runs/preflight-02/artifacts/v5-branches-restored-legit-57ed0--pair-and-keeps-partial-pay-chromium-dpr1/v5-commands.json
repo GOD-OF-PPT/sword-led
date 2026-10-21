@@ -1,0 +1,73 @@
+[
+  {
+    "action": {
+      "type": "settle"
+    },
+    "runId": "T02-twin-0",
+    "mode": "story",
+    "day": 8,
+    "revision": 71,
+    "coinsBefore": 747,
+    "coinsAfter": 882,
+    "events": [
+      {
+        "type": "Settled",
+        "record": {
+          "day": 8,
+          "commissionId": 8,
+          "met": false,
+          "routeId": null,
+          "pieceIds": [],
+          "sales": 0,
+          "recovered": 135,
+          "baseFees": 0,
+          "marketSpent": 135,
+          "recoveredIds": [
+            "d8-1",
+            "d8-2",
+            "d8-3"
+          ],
+          "reserveId": null,
+          "sealsBefore": 3,
+          "sealsAfter": 2,
+          "protected": false,
+          "modification": null
+        }
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "chooseModification",
+      "modification": "wideMouth"
+    },
+    "runId": "T02-twin-0",
+    "mode": "story",
+    "day": 8,
+    "revision": 72,
+    "coinsBefore": 882,
+    "coinsAfter": 882,
+    "events": [
+      {
+        "type": "Modification",
+        "modification": "wideMouth"
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "advance"
+    },
+    "runId": "T02-twin-0",
+    "mode": "story",
+    "day": 8,
+    "revision": 73,
+    "coinsBefore": 882,
+    "coinsAfter": 882,
+    "events": [
+      {
+        "type": "Advanced"
+      }
+    ]
+  }
+]

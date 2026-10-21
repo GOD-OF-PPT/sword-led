@@ -1,0 +1,985 @@
+{
+  "ok": true,
+  "scope": "Curation of duplicate archive copies only; no original evidence deleted, no screenshot edited/reencoded. All actual test failures remain archived.",
+  "selectedPNG": [
+    "tmp/goal4-T02/runs/matrix-01/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-webkit-dpr2/restored-twin-1-chapter-summary-1280.png",
+    "tmp/goal4-T02/runs/matrix-01/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-webkit-dpr2/restored-twin-1-chapter-summary-1920.png",
+    "tmp/goal4-T02/runs/matrix-01/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-chromium-dpr2/full-slot-real-replacement-1280.png",
+    "tmp/goal4-T02/runs/matrix-01/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-chromium-dpr2/full-slot-real-replacement-1920.png",
+    "tmp/goal4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-firefox-dpr2/changed-backup-requires-review-run-1280.png",
+    "tmp/goal4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-firefox-dpr2/changed-backup-requires-review-run-1920.png",
+    "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-046d6-rk-pages-and-available-exit-chromium-dpr1/restored-return-1280.png",
+    "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-9101c-rk-pages-and-available-exit-chromium-dpr1/restored-victory-1280.png",
+    "tmp/goal4-T02/runs/tail-matrix-01/artifacts/v5-completeness-v5-complet-a2d69-rk-pages-and-available-exit-chromium-dpr1/restored-second-chapter-defeat-1280.png",
+    "tmp/goal4-T02/webkit-1280-actual-wheel-growth-03.png",
+    "tmp/goal4-T02/webkit-1280-actual-wheel-growth.png"
+  ],
+  "redundantArchiveCopiesRemoved": [
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-chromium-dpr1/restored-twin-1-before-settlement-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-chromium-dpr1/restored-twin-1-before-settlement-1280.png",
+      "rawBytes": 1340221,
+      "rawSha256": "a0080d5f273510d117d2561a045affd65f987a2b12bdbc92e932a0d15a697115",
+      "archiveBytes": 1340221,
+      "archiveSha256": "a0080d5f273510d117d2561a045affd65f987a2b12bdbc92e932a0d15a697115",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-chromium-dpr1/restored-twin-1-chapter-summary-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-chromium-dpr1/restored-twin-1-chapter-summary-1920.png",
+      "rawBytes": 1505576,
+      "rawSha256": "36e6ea0aacad44d7f433ccb0950ecb2fb3d0c9016618ee4739706e5d23dce139",
+      "archiveBytes": 1505576,
+      "archiveSha256": "36e6ea0aacad44d7f433ccb0950ecb2fb3d0c9016618ee4739706e5d23dce139",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-chromium-dpr2/restored-twin-1-before-settlement-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-chromium-dpr2/restored-twin-1-before-settlement-1280.png",
+      "rawBytes": 4382807,
+      "rawSha256": "34742cd0ab4fd9e0ba935b9b025a2544fc091378525c2140f93e3566d616b829",
+      "archiveBytes": 4382807,
+      "archiveSha256": "34742cd0ab4fd9e0ba935b9b025a2544fc091378525c2140f93e3566d616b829",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-chromium-dpr2/restored-twin-1-chapter-summary-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-chromium-dpr2/restored-twin-1-chapter-summary-1920.png",
+      "rawBytes": 4643971,
+      "rawSha256": "743222a3174d675437ba4c1c9aa4b7d8c06eb8d6c42628d942cea138aeb06136",
+      "archiveBytes": 4643971,
+      "archiveSha256": "743222a3174d675437ba4c1c9aa4b7d8c06eb8d6c42628d942cea138aeb06136",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-firefox-dpr1/restored-twin-1-before-settlement-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-firefox-dpr1/restored-twin-1-before-settlement-1280.png",
+      "rawBytes": 1584419,
+      "rawSha256": "836358d35efb9f738b165a42f9113bf8685e2a3412e26692af9a1eeae99e82a6",
+      "archiveBytes": 1584419,
+      "archiveSha256": "836358d35efb9f738b165a42f9113bf8685e2a3412e26692af9a1eeae99e82a6",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-firefox-dpr1/restored-twin-1-chapter-summary-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-firefox-dpr1/restored-twin-1-chapter-summary-1920.png",
+      "rawBytes": 1482426,
+      "rawSha256": "d1099a51f06b866b36da00e85feef6344875a66be3807fd42dfd46c4d5b84423",
+      "archiveBytes": 1482426,
+      "archiveSha256": "d1099a51f06b866b36da00e85feef6344875a66be3807fd42dfd46c4d5b84423",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-firefox-dpr2/restored-twin-1-before-settlement-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-firefox-dpr2/restored-twin-1-before-settlement-1280.png",
+      "rawBytes": 4834046,
+      "rawSha256": "fd2c899833c7035511f2042db2cb767d04dd6ea278d27cd46d2516e0b522b93c",
+      "archiveBytes": 4834046,
+      "archiveSha256": "fd2c899833c7035511f2042db2cb767d04dd6ea278d27cd46d2516e0b522b93c",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-firefox-dpr2/restored-twin-1-chapter-summary-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-firefox-dpr2/restored-twin-1-chapter-summary-1920.png",
+      "rawBytes": 4613502,
+      "rawSha256": "364a547d837185185536861310b66de0fb825e391215ac6094e77206477761a8",
+      "archiveBytes": 4613502,
+      "archiveSha256": "364a547d837185185536861310b66de0fb825e391215ac6094e77206477761a8",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-webkit-dpr1/restored-twin-1-before-settlement-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-webkit-dpr1/restored-twin-1-before-settlement-1280.png",
+      "rawBytes": 1711997,
+      "rawSha256": "37cba7dbdcf5b79024ddb48173476f88b8c1d7ece3a65d1eb0261d1a70c73dfc",
+      "archiveBytes": 1711997,
+      "archiveSha256": "37cba7dbdcf5b79024ddb48173476f88b8c1d7ece3a65d1eb0261d1a70c73dfc",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-webkit-dpr1/restored-twin-1-chapter-summary-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-webkit-dpr1/restored-twin-1-chapter-summary-1920.png",
+      "rawBytes": 2174355,
+      "rawSha256": "f1d355928b47d1d1e53df8030e0e2a7df618f4fe63fce06c79ee92bf81ecd553",
+      "archiveBytes": 2174355,
+      "archiveSha256": "f1d355928b47d1d1e53df8030e0e2a7df618f4fe63fce06c79ee92bf81ecd553",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-webkit-dpr2/restored-twin-1-before-settlement-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-webkit-dpr2/restored-twin-1-before-settlement-1280.png",
+      "rawBytes": 5830442,
+      "rawSha256": "d5e29d178981bca61c11abaf0bba72c3d2229cfad86480fe72580d857f86fa22",
+      "archiveBytes": 5830442,
+      "archiveSha256": "d5e29d178981bca61c11abaf0bba72c3d2229cfad86480fe72580d857f86fa22",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-chromium-dpr1/loan-event-offer-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-chromium-dpr1/loan-event-offer-1280.png",
+      "rawBytes": 272042,
+      "rawSha256": "175d1dbe56704cb5c8f514b7ed6d1b1d6b6287abb556acf59f11de8bf7c333fa",
+      "archiveBytes": 272042,
+      "archiveSha256": "175d1dbe56704cb5c8f514b7ed6d1b1d6b6287abb556acf59f11de8bf7c333fa",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-chromium-dpr1/loan-event-offer-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-chromium-dpr1/loan-event-offer-1920.png",
+      "rawBytes": 641288,
+      "rawSha256": "70c2ea9670ca4e788c89ed62ef9180e02e13c1753b2bfac8a801519d74cafbb3",
+      "archiveBytes": 641288,
+      "archiveSha256": "70c2ea9670ca4e788c89ed62ef9180e02e13c1753b2bfac8a801519d74cafbb3",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-chromium-dpr2/loan-event-offer-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-chromium-dpr2/loan-event-offer-1280.png",
+      "rawBytes": 711043,
+      "rawSha256": "ffe638145dcfd8b4b96dd1b28e2239289e015483a730a3450461ae3d35c332d5",
+      "archiveBytes": 711043,
+      "archiveSha256": "ffe638145dcfd8b4b96dd1b28e2239289e015483a730a3450461ae3d35c332d5",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-chromium-dpr2/loan-event-offer-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-chromium-dpr2/loan-event-offer-1920.png",
+      "rawBytes": 1653122,
+      "rawSha256": "12c6e9e733d37776df7ffd04bf5a1109c27bddf5c3cdd8aef690f15bcfacc882",
+      "archiveBytes": 1653122,
+      "archiveSha256": "12c6e9e733d37776df7ffd04bf5a1109c27bddf5c3cdd8aef690f15bcfacc882",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-firefox-dpr1/loan-event-offer-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-firefox-dpr1/loan-event-offer-1280.png",
+      "rawBytes": 650533,
+      "rawSha256": "2c3dedac04e136a16c27177e83983a3b7bb803f16b2dd9117592f1acbdf48c65",
+      "archiveBytes": 650533,
+      "archiveSha256": "2c3dedac04e136a16c27177e83983a3b7bb803f16b2dd9117592f1acbdf48c65",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-firefox-dpr1/loan-event-offer-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-firefox-dpr1/loan-event-offer-1920.png",
+      "rawBytes": 1607059,
+      "rawSha256": "e2e3fd4280e2018da0a31bacf753b9013037dc7fb569716c7d42e6a9941c8016",
+      "archiveBytes": 1607059,
+      "archiveSha256": "e2e3fd4280e2018da0a31bacf753b9013037dc7fb569716c7d42e6a9941c8016",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-firefox-dpr2/loan-event-offer-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-firefox-dpr2/loan-event-offer-1280.png",
+      "rawBytes": 1848339,
+      "rawSha256": "254750d3562a150985a745b9658f6aeb5b52de5177f97306bff31b90202df1e7",
+      "archiveBytes": 1848339,
+      "archiveSha256": "254750d3562a150985a745b9658f6aeb5b52de5177f97306bff31b90202df1e7",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-firefox-dpr2/loan-event-offer-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-firefox-dpr2/loan-event-offer-1920.png",
+      "rawBytes": 4615031,
+      "rawSha256": "79105c0815b6590a0df6bcb852372e06a4675b6901c64666c4088d2626695928",
+      "archiveBytes": 4615031,
+      "archiveSha256": "79105c0815b6590a0df6bcb852372e06a4675b6901c64666c4088d2626695928",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-webkit-dpr1/loan-event-offer-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-webkit-dpr1/loan-event-offer-1280.png",
+      "rawBytes": 738202,
+      "rawSha256": "edffa38ca65f3a6ac8269c856a028d84a3986ee38fa8bcd2122743194487bbd2",
+      "archiveBytes": 738202,
+      "archiveSha256": "edffa38ca65f3a6ac8269c856a028d84a3986ee38fa8bcd2122743194487bbd2",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-webkit-dpr1/loan-event-offer-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-webkit-dpr1/loan-event-offer-1920.png",
+      "rawBytes": 1933488,
+      "rawSha256": "2e31871788ec455ca53a582059022571a4ee6b216d293bab9b7117be4c01a32e",
+      "archiveBytes": 1933488,
+      "archiveSha256": "2e31871788ec455ca53a582059022571a4ee6b216d293bab9b7117be4c01a32e",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-webkit-dpr2/loan-event-offer-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-webkit-dpr2/loan-event-offer-1280.png",
+      "rawBytes": 2381401,
+      "rawSha256": "1b0aadda80a6369282314c2abe3e24b72975aae8370c8c2ebafc35669d128bde",
+      "archiveBytes": 2381401,
+      "archiveSha256": "1b0aadda80a6369282314c2abe3e24b72975aae8370c8c2ebafc35669d128bde",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-webkit-dpr2/loan-event-offer-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-webkit-dpr2/loan-event-offer-1920.png",
+      "rawBytes": 6227357,
+      "rawSha256": "ecb78c04a5989cc9ad797c8e2d36726988d75fe77845544536479b832079d880",
+      "archiveBytes": 6227357,
+      "archiveSha256": "ecb78c04a5989cc9ad797c8e2d36726988d75fe77845544536479b832079d880",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-chromium-dpr1/real-used-pardon-reacquired-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-chromium-dpr1/real-used-pardon-reacquired-1280.png",
+      "rawBytes": 1351538,
+      "rawSha256": "96bb073e0d03f04adb68c972dde3c2e9d82b68557ff6eb46f47d3b2e13177863",
+      "archiveBytes": 1351538,
+      "archiveSha256": "96bb073e0d03f04adb68c972dde3c2e9d82b68557ff6eb46f47d3b2e13177863",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-chromium-dpr1/real-used-pardon-reacquired-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-chromium-dpr1/real-used-pardon-reacquired-1920.png",
+      "rawBytes": 2716499,
+      "rawSha256": "2e41ad0b89db601efcc047d95e00c25d0e9665a145f9d64ddcc58122c506c850",
+      "archiveBytes": 2716499,
+      "archiveSha256": "2e41ad0b89db601efcc047d95e00c25d0e9665a145f9d64ddcc58122c506c850",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-chromium-dpr2/real-used-pardon-reacquired-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-chromium-dpr2/real-used-pardon-reacquired-1280.png",
+      "rawBytes": 4425494,
+      "rawSha256": "f200add2c6b5ba486743c1f261bf15af68a58e3193a1ef4c71aaac3a9bc1d3b7",
+      "archiveBytes": 4425494,
+      "archiveSha256": "f200add2c6b5ba486743c1f261bf15af68a58e3193a1ef4c71aaac3a9bc1d3b7",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-chromium-dpr2/real-used-pardon-reacquired-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-chromium-dpr2/real-used-pardon-reacquired-1920.png",
+      "rawBytes": 8761513,
+      "rawSha256": "807275c7c3dfc627bfce3b9f58a0af5d938c496f4d7b97b104154b48e9397431",
+      "archiveBytes": 8761513,
+      "archiveSha256": "807275c7c3dfc627bfce3b9f58a0af5d938c496f4d7b97b104154b48e9397431",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-firefox-dpr1/real-used-pardon-reacquired-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-firefox-dpr1/real-used-pardon-reacquired-1280.png",
+      "rawBytes": 1597111,
+      "rawSha256": "d339afd4a2ed79fc11720941a0086943e9384de7757e2e90d7f5f3e489930bfc",
+      "archiveBytes": 1597111,
+      "archiveSha256": "d339afd4a2ed79fc11720941a0086943e9384de7757e2e90d7f5f3e489930bfc",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-firefox-dpr1/real-used-pardon-reacquired-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-firefox-dpr1/real-used-pardon-reacquired-1920.png",
+      "rawBytes": 3120264,
+      "rawSha256": "195c1cb819a358fe7445fea48fd0e72426058acb4fe495fa258f47e51109d9d0",
+      "archiveBytes": 3120264,
+      "archiveSha256": "195c1cb819a358fe7445fea48fd0e72426058acb4fe495fa258f47e51109d9d0",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-firefox-dpr2/real-used-pardon-reacquired-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-firefox-dpr2/real-used-pardon-reacquired-1280.png",
+      "rawBytes": 4875921,
+      "rawSha256": "5d79648dafdf726e32d0c26f8a91af3c5dd2382b4c3afccae1c2d67fdc75a3ed",
+      "archiveBytes": 4875921,
+      "archiveSha256": "5d79648dafdf726e32d0c26f8a91af3c5dd2382b4c3afccae1c2d67fdc75a3ed",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-firefox-dpr2/real-used-pardon-reacquired-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-firefox-dpr2/real-used-pardon-reacquired-1920.png",
+      "rawBytes": 9437846,
+      "rawSha256": "024fa910ffc3bf7b89ab08e302a6ac371be0c4d05b638159bd875c662f33e7c9",
+      "archiveBytes": 9437846,
+      "archiveSha256": "024fa910ffc3bf7b89ab08e302a6ac371be0c4d05b638159bd875c662f33e7c9",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-webkit-dpr1/real-used-pardon-reacquired-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-webkit-dpr1/real-used-pardon-reacquired-1280.png",
+      "rawBytes": 1721083,
+      "rawSha256": "3c5c15ddbcfed7bcbcf99e56e0f449b7ef84a40e0d3c53e1413cc947d5c31c56",
+      "archiveBytes": 1721083,
+      "archiveSha256": "3c5c15ddbcfed7bcbcf99e56e0f449b7ef84a40e0d3c53e1413cc947d5c31c56",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-webkit-dpr1/real-used-pardon-reacquired-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-webkit-dpr1/real-used-pardon-reacquired-1920.png",
+      "rawBytes": 3581977,
+      "rawSha256": "4b57fed778a654b959def0fdbb6a3663979ea68025076fc07278254e9bc8b74e",
+      "archiveBytes": 3581977,
+      "archiveSha256": "4b57fed778a654b959def0fdbb6a3663979ea68025076fc07278254e9bc8b74e",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-webkit-dpr2/real-used-pardon-reacquired-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-webkit-dpr2/real-used-pardon-reacquired-1280.png",
+      "rawBytes": 5861278,
+      "rawSha256": "43b61b3a5ea30a0f8a968596b42ce5988c233674135abd386527d140640cf5a0",
+      "archiveBytes": 5861278,
+      "archiveSha256": "43b61b3a5ea30a0f8a968596b42ce5988c233674135abd386527d140640cf5a0",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-webkit-dpr2/real-used-pardon-reacquired-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-webkit-dpr2/real-used-pardon-reacquired-1920.png",
+      "rawBytes": 12060799,
+      "rawSha256": "4c5bb26a3134dabd6fecabebe8f799c98896ec79bde8cb51ee8750cb8f0234df",
+      "archiveBytes": 12060799,
+      "archiveSha256": "4c5bb26a3134dabd6fecabebe8f799c98896ec79bde8cb51ee8750cb8f0234df",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-chromium-dpr1/full-slot-real-replacement-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-chromium-dpr1/full-slot-real-replacement-1280.png",
+      "rawBytes": 1318563,
+      "rawSha256": "89483b9702d8780c120c862b09a50342a71df0d5c15da9107a9d5a5406ccb23b",
+      "archiveBytes": 1318563,
+      "archiveSha256": "89483b9702d8780c120c862b09a50342a71df0d5c15da9107a9d5a5406ccb23b",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-chromium-dpr1/full-slot-real-replacement-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-chromium-dpr1/full-slot-real-replacement-1920.png",
+      "rawBytes": 2688196,
+      "rawSha256": "5d212dec89700c65dfd98f161877a797609f486a22b15d4635f07f3961e51c7f",
+      "archiveBytes": 2688196,
+      "archiveSha256": "5d212dec89700c65dfd98f161877a797609f486a22b15d4635f07f3961e51c7f",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-firefox-dpr1/full-slot-real-replacement-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-firefox-dpr1/full-slot-real-replacement-1280.png",
+      "rawBytes": 1544671,
+      "rawSha256": "269978c28b524500f52f788ef980f5805fc49733fc016da15a60f62fdcb221ab",
+      "archiveBytes": 1544671,
+      "archiveSha256": "269978c28b524500f52f788ef980f5805fc49733fc016da15a60f62fdcb221ab",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-firefox-dpr1/full-slot-real-replacement-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-firefox-dpr1/full-slot-real-replacement-1920.png",
+      "rawBytes": 3058642,
+      "rawSha256": "4a762ecc039a1775cb637b21fd9eb6de5aa47ee8ad9cc35b94a3728d83c2d3bf",
+      "archiveBytes": 3058642,
+      "archiveSha256": "4a762ecc039a1775cb637b21fd9eb6de5aa47ee8ad9cc35b94a3728d83c2d3bf",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-firefox-dpr2/full-slot-real-replacement-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-firefox-dpr2/full-slot-real-replacement-1280.png",
+      "rawBytes": 4699056,
+      "rawSha256": "4e6032e0c5a36ad427fac886ac3de3512104b2041411f61afa346e3189ecda0e",
+      "archiveBytes": 4699056,
+      "archiveSha256": "4e6032e0c5a36ad427fac886ac3de3512104b2041411f61afa346e3189ecda0e",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-firefox-dpr2/full-slot-real-replacement-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-firefox-dpr2/full-slot-real-replacement-1920.png",
+      "rawBytes": 9230275,
+      "rawSha256": "9bd69e24e54c4cb681ac25c009697c34c36b076ba31f8b3919c89a7dc0796392",
+      "archiveBytes": 9230275,
+      "archiveSha256": "9bd69e24e54c4cb681ac25c009697c34c36b076ba31f8b3919c89a7dc0796392",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-webkit-dpr1/full-slot-real-replacement-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-webkit-dpr1/full-slot-real-replacement-1280.png",
+      "rawBytes": 1702623,
+      "rawSha256": "fc1a2a62835adf5dc19f2d07191ef462ee22d9b72891372f06c7b07aa6f72f6a",
+      "archiveBytes": 1702623,
+      "archiveSha256": "fc1a2a62835adf5dc19f2d07191ef462ee22d9b72891372f06c7b07aa6f72f6a",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-webkit-dpr1/full-slot-real-replacement-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-webkit-dpr1/full-slot-real-replacement-1920.png",
+      "rawBytes": 3571300,
+      "rawSha256": "8be0f34549fcde60b1bff9e0a3a5c010e2c5df5c0c060b28017d1fa66638609e",
+      "archiveBytes": 3571300,
+      "archiveSha256": "8be0f34549fcde60b1bff9e0a3a5c010e2c5df5c0c060b28017d1fa66638609e",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-webkit-dpr2/full-slot-real-replacement-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-webkit-dpr2/full-slot-real-replacement-1280.png",
+      "rawBytes": 5802291,
+      "rawSha256": "75fa3f02fe978b444110f6c4da107654089830b976f59d79caaeed05e2be0653",
+      "archiveBytes": 5802291,
+      "archiveSha256": "75fa3f02fe978b444110f6c4da107654089830b976f59d79caaeed05e2be0653",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-webkit-dpr2/full-slot-real-replacement-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-webkit-dpr2/full-slot-real-replacement-1920.png",
+      "rawBytes": 11991413,
+      "rawSha256": "a9b18375ce32279c23dc77a77ec56ed7545d55b781e4ef998e2b10e0f8cfc1b1",
+      "archiveBytes": 11991413,
+      "archiveSha256": "a9b18375ce32279c23dc77a77ec56ed7545d55b781e4ef998e2b10e0f8cfc1b1",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-journeys-fresh-mixed-re-5236b-l-receipt-and-honest-ending-chromium-dpr1/fresh-mixed-return-ending-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-journeys-fresh-mixed-re-5236b-l-receipt-and-honest-ending-chromium-dpr1/fresh-mixed-return-ending-1280.png",
+      "rawBytes": 756587,
+      "rawSha256": "ecd51daf782198230a3b765f6da03f198db4a2d1ba5aa705fe5ebe488fffaa38",
+      "archiveBytes": 756587,
+      "archiveSha256": "ecd51daf782198230a3b765f6da03f198db4a2d1ba5aa705fe5ebe488fffaa38",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-journeys-fresh-mixed-re-5236b-l-receipt-and-honest-ending-chromium-dpr2/fresh-mixed-return-ending-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-journeys-fresh-mixed-re-5236b-l-receipt-and-honest-ending-chromium-dpr2/fresh-mixed-return-ending-1280.png",
+      "rawBytes": 2537630,
+      "rawSha256": "4feb6f0aa53bf8f1cb03952f7f475a0c531dd761f1b73c072f0d0ca98e8aa94a",
+      "archiveBytes": 2537630,
+      "archiveSha256": "4feb6f0aa53bf8f1cb03952f7f475a0c531dd761f1b73c072f0d0ca98e8aa94a",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-journeys-fresh-mixed-re-5236b-l-receipt-and-honest-ending-firefox-dpr1/fresh-mixed-return-ending-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-journeys-fresh-mixed-re-5236b-l-receipt-and-honest-ending-firefox-dpr1/fresh-mixed-return-ending-1280.png",
+      "rawBytes": 757757,
+      "rawSha256": "699c3e5fcda2b0448f5f33071773cfee3e79537ed5b21ca3851ac29ebdd70e76",
+      "archiveBytes": 757757,
+      "archiveSha256": "699c3e5fcda2b0448f5f33071773cfee3e79537ed5b21ca3851ac29ebdd70e76",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-journeys-fresh-mixed-re-5236b-l-receipt-and-honest-ending-firefox-dpr2/fresh-mixed-return-ending-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-journeys-fresh-mixed-re-5236b-l-receipt-and-honest-ending-firefox-dpr2/fresh-mixed-return-ending-1280.png",
+      "rawBytes": 2532487,
+      "rawSha256": "edc5d3b08147615bc683070e18ffd7202c35bc5b434791c8f446dd3909962019",
+      "archiveBytes": 2532487,
+      "archiveSha256": "edc5d3b08147615bc683070e18ffd7202c35bc5b434791c8f446dd3909962019",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-journeys-fresh-mixed-re-5236b-l-receipt-and-honest-ending-webkit-dpr1/fresh-mixed-return-ending-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-journeys-fresh-mixed-re-5236b-l-receipt-and-honest-ending-webkit-dpr1/fresh-mixed-return-ending-1280.png",
+      "rawBytes": 1073347,
+      "rawSha256": "0cf54199a0d0783510027c47cc89f203e43b508391871beaf7cfc9870cd54ab2",
+      "archiveBytes": 1073347,
+      "archiveSha256": "0cf54199a0d0783510027c47cc89f203e43b508391871beaf7cfc9870cd54ab2",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-journeys-fresh-mixed-re-5236b-l-receipt-and-honest-ending-webkit-dpr2/fresh-mixed-return-ending-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-journeys-fresh-mixed-re-5236b-l-receipt-and-honest-ending-webkit-dpr2/fresh-mixed-return-ending-1280.png",
+      "rawBytes": 3786111,
+      "rawSha256": "fb254040de4c976757d4576528db117c1b7c88e157ac03f396d8d59b4363ee73",
+      "archiveBytes": 3786111,
+      "archiveSha256": "fb254040de4c976757d4576528db117c1b7c88e157ac03f396d8d59b4363ee73",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-journeys-fresh-two-new--e7a0d-l-receipt-and-honest-ending-chromium-dpr1/fresh-two-new-ending-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-journeys-fresh-two-new--e7a0d-l-receipt-and-honest-ending-chromium-dpr1/fresh-two-new-ending-1920.png",
+      "rawBytes": 1509800,
+      "rawSha256": "f2de7a409ff93d50e64d221d42159d2a227735b7b358581c34d7d40dc65a9827",
+      "archiveBytes": 1509800,
+      "archiveSha256": "f2de7a409ff93d50e64d221d42159d2a227735b7b358581c34d7d40dc65a9827",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-journeys-fresh-two-new--e7a0d-l-receipt-and-honest-ending-chromium-dpr2/fresh-two-new-ending-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-journeys-fresh-two-new--e7a0d-l-receipt-and-honest-ending-chromium-dpr2/fresh-two-new-ending-1920.png",
+      "rawBytes": 4740111,
+      "rawSha256": "829212ad9c93d142d162c0933e05544f2176aca443eeb030291f66ca1d01c57d",
+      "archiveBytes": 4740111,
+      "archiveSha256": "829212ad9c93d142d162c0933e05544f2176aca443eeb030291f66ca1d01c57d",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-journeys-fresh-two-new--e7a0d-l-receipt-and-honest-ending-firefox-dpr1/fresh-two-new-ending-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-journeys-fresh-two-new--e7a0d-l-receipt-and-honest-ending-firefox-dpr1/fresh-two-new-ending-1920.png",
+      "rawBytes": 1472055,
+      "rawSha256": "80f2eee6807b6b3e0f9f73dc0ea8983249f1eea5228c52df51a89db7a1d74e57",
+      "archiveBytes": 1472055,
+      "archiveSha256": "80f2eee6807b6b3e0f9f73dc0ea8983249f1eea5228c52df51a89db7a1d74e57",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-journeys-fresh-two-new--e7a0d-l-receipt-and-honest-ending-firefox-dpr2/fresh-two-new-ending-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-journeys-fresh-two-new--e7a0d-l-receipt-and-honest-ending-firefox-dpr2/fresh-two-new-ending-1920.png",
+      "rawBytes": 4661901,
+      "rawSha256": "ecc420a7286874d81e49fc78c628ac0ab978a2c20b5e529ee13dcf326063f3f9",
+      "archiveBytes": 4661901,
+      "archiveSha256": "ecc420a7286874d81e49fc78c628ac0ab978a2c20b5e529ee13dcf326063f3f9",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-journeys-fresh-two-new--e7a0d-l-receipt-and-honest-ending-webkit-dpr1/fresh-two-new-ending-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-journeys-fresh-two-new--e7a0d-l-receipt-and-honest-ending-webkit-dpr1/fresh-two-new-ending-1920.png",
+      "rawBytes": 2194862,
+      "rawSha256": "262ee378bdde9b3aa0b57cdb43d948008a7135f6e3f360db6ec478be1fd6939a",
+      "archiveBytes": 2194862,
+      "archiveSha256": "262ee378bdde9b3aa0b57cdb43d948008a7135f6e3f360db6ec478be1fd6939a",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-journeys-fresh-two-new--e7a0d-l-receipt-and-honest-ending-webkit-dpr2/fresh-two-new-ending-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-journeys-fresh-two-new--e7a0d-l-receipt-and-honest-ending-webkit-dpr2/fresh-two-new-ending-1920.png",
+      "rawBytes": 7510038,
+      "rawSha256": "95ea23fb3eda8a1da64ae374175ba7b62d97bd1fdba17649406e215af7f5b5b0",
+      "archiveBytes": 7510038,
+      "archiveSha256": "95ea23fb3eda8a1da64ae374175ba7b62d97bd1fdba17649406e215af7f5b5b0",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-chromium-dpr1/keyboard-earned-challenge-victory-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-chromium-dpr1/keyboard-earned-challenge-victory-1280.png",
+      "rawBytes": 747052,
+      "rawSha256": "46d6dab0db8cfb9fa74d7db2c711db38981de32b59350e1be512cc31f8e1c674",
+      "archiveBytes": 747052,
+      "archiveSha256": "46d6dab0db8cfb9fa74d7db2c711db38981de32b59350e1be512cc31f8e1c674",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-chromium-dpr1/keyboard-earned-challenge-victory-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-chromium-dpr1/keyboard-earned-challenge-victory-1920.png",
+      "rawBytes": 1510351,
+      "rawSha256": "f6eb092438721702b61b7bf60165b1afa6538406e3a163d1a066ee867eef6c38",
+      "archiveBytes": 1510351,
+      "archiveSha256": "f6eb092438721702b61b7bf60165b1afa6538406e3a163d1a066ee867eef6c38",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-chromium-dpr2/keyboard-earned-challenge-victory-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-chromium-dpr2/keyboard-earned-challenge-victory-1280.png",
+      "rawBytes": 2531615,
+      "rawSha256": "61052e6b332aacaf24749da08933cfafd231e6c1d45d0818d23568709ebc2fde",
+      "archiveBytes": 2531615,
+      "archiveSha256": "61052e6b332aacaf24749da08933cfafd231e6c1d45d0818d23568709ebc2fde",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-chromium-dpr2/keyboard-earned-challenge-victory-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-chromium-dpr2/keyboard-earned-challenge-victory-1920.png",
+      "rawBytes": 4739527,
+      "rawSha256": "bb7bca216c769057ff2f40ee8a8657cef7f48f720e8eec119d24122a620d3446",
+      "archiveBytes": 4739527,
+      "archiveSha256": "bb7bca216c769057ff2f40ee8a8657cef7f48f720e8eec119d24122a620d3446",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-firefox-dpr1/keyboard-earned-challenge-victory-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-firefox-dpr1/keyboard-earned-challenge-victory-1280.png",
+      "rawBytes": 745999,
+      "rawSha256": "c6269fd1817fb5b73165aa29d1a298c9a94f936a910f41f215b3c7dddac403e7",
+      "archiveBytes": 745999,
+      "archiveSha256": "c6269fd1817fb5b73165aa29d1a298c9a94f936a910f41f215b3c7dddac403e7",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-firefox-dpr1/keyboard-earned-challenge-victory-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-firefox-dpr1/keyboard-earned-challenge-victory-1920.png",
+      "rawBytes": 1472386,
+      "rawSha256": "cb840fda38a455bdc8d24c45a1af49f00033464549cc574232113951404bdedb",
+      "archiveBytes": 1472386,
+      "archiveSha256": "cb840fda38a455bdc8d24c45a1af49f00033464549cc574232113951404bdedb",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-firefox-dpr2/keyboard-earned-challenge-victory-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-firefox-dpr2/keyboard-earned-challenge-victory-1280.png",
+      "rawBytes": 2485441,
+      "rawSha256": "41075f90b6ed989a9a70bba603c2a4c9dc8ce48b43aede27701f2ca9e80eafdd",
+      "archiveBytes": 2485441,
+      "archiveSha256": "41075f90b6ed989a9a70bba603c2a4c9dc8ce48b43aede27701f2ca9e80eafdd",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-firefox-dpr2/keyboard-earned-challenge-victory-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-firefox-dpr2/keyboard-earned-challenge-victory-1920.png",
+      "rawBytes": 4662665,
+      "rawSha256": "87587f62fcc2d5cf00908bcb880ddbfc7b95d977e63b84844f0073f81a3b7ee0",
+      "archiveBytes": 4662665,
+      "archiveSha256": "87587f62fcc2d5cf00908bcb880ddbfc7b95d977e63b84844f0073f81a3b7ee0",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-webkit-dpr1/keyboard-earned-challenge-victory-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-webkit-dpr1/keyboard-earned-challenge-victory-1280.png",
+      "rawBytes": 1060881,
+      "rawSha256": "d75c123879d2004a696b9c0b11b49f6596a13e26199d3e1297ca4dbae2d3bcee",
+      "archiveBytes": 1060881,
+      "archiveSha256": "d75c123879d2004a696b9c0b11b49f6596a13e26199d3e1297ca4dbae2d3bcee",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-webkit-dpr1/keyboard-earned-challenge-victory-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-webkit-dpr1/keyboard-earned-challenge-victory-1920.png",
+      "rawBytes": 2194720,
+      "rawSha256": "1e8f427ed68335f4622c54d7ffeb45bef94fd4f8a7300424524d1c6057c3d9f9",
+      "archiveBytes": 2194720,
+      "archiveSha256": "1e8f427ed68335f4622c54d7ffeb45bef94fd4f8a7300424524d1c6057c3d9f9",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-webkit-dpr2/keyboard-earned-challenge-victory-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-webkit-dpr2/keyboard-earned-challenge-victory-1280.png",
+      "rawBytes": 3766747,
+      "rawSha256": "5ae4f21bf75ec600b471d79df08f30109b65c4bd76de1f8671ce82e7e3d54f8f",
+      "archiveBytes": 3766747,
+      "archiveSha256": "5ae4f21bf75ec600b471d79df08f30109b65c4bd76de1f8671ce82e7e3d54f8f",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-webkit-dpr2/keyboard-earned-challenge-victory-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-webkit-dpr2/keyboard-earned-challenge-victory-1920.png",
+      "rawBytes": 7509900,
+      "rawSha256": "0988cd407fc9055f728cc1fde08c3fcc4da9883718daf3d3c34fd96bd8b2a278",
+      "archiveBytes": 7509900,
+      "archiveSha256": "0988cd407fc9055f728cc1fde08c3fcc4da9883718daf3d3c34fd96bd8b2a278",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-chromium-dpr1/changed-backup-requires-review-book-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-chromium-dpr1/changed-backup-requires-review-book-1280.png",
+      "rawBytes": 265898,
+      "rawSha256": "f4753191fca1a07c41ba0a583bd004eb64e7dab3b30673566107c7dd40f9d930",
+      "archiveBytes": 265898,
+      "archiveSha256": "f4753191fca1a07c41ba0a583bd004eb64e7dab3b30673566107c7dd40f9d930",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-chromium-dpr1/changed-backup-requires-review-book-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-chromium-dpr1/changed-backup-requires-review-book-1920.png",
+      "rawBytes": 655203,
+      "rawSha256": "b340c1986cd95bcb25a62cf8e722591b6cc893e7c48fe7ae7e85c874f2716b7e",
+      "archiveBytes": 655203,
+      "archiveSha256": "b340c1986cd95bcb25a62cf8e722591b6cc893e7c48fe7ae7e85c874f2716b7e",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-chromium-dpr2/changed-backup-requires-review-book-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-chromium-dpr2/changed-backup-requires-review-book-1280.png",
+      "rawBytes": 673095,
+      "rawSha256": "1c36c32b75f382ba44d88da6ab14a56a15b1b38b335414cc4523f9fd15f4e4b1",
+      "archiveBytes": 673095,
+      "archiveSha256": "1c36c32b75f382ba44d88da6ab14a56a15b1b38b335414cc4523f9fd15f4e4b1",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-chromium-dpr2/changed-backup-requires-review-book-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-chromium-dpr2/changed-backup-requires-review-book-1920.png",
+      "rawBytes": 1666893,
+      "rawSha256": "eaca99479c2b7b348234a0e9816d15c7068fbbb33e06126f93652db581cb5ebb",
+      "archiveBytes": 1666893,
+      "archiveSha256": "eaca99479c2b7b348234a0e9816d15c7068fbbb33e06126f93652db581cb5ebb",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-firefox-dpr1/changed-backup-requires-review-book-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-firefox-dpr1/changed-backup-requires-review-book-1280.png",
+      "rawBytes": 553369,
+      "rawSha256": "fc0e2563dad92bb423881f1d8ed3fd23cd657e45f47d2cec84f6ba187e035f66",
+      "archiveBytes": 553369,
+      "archiveSha256": "fc0e2563dad92bb423881f1d8ed3fd23cd657e45f47d2cec84f6ba187e035f66",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-firefox-dpr1/changed-backup-requires-review-book-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-firefox-dpr1/changed-backup-requires-review-book-1920.png",
+      "rawBytes": 1541186,
+      "rawSha256": "efcd273cd30b8b8c7b65b0b8e8a93a70f2320e8b98c34fde664446938703b2e7",
+      "archiveBytes": 1541186,
+      "archiveSha256": "efcd273cd30b8b8c7b65b0b8e8a93a70f2320e8b98c34fde664446938703b2e7",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-firefox-dpr2/changed-backup-requires-review-book-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-firefox-dpr2/changed-backup-requires-review-book-1280.png",
+      "rawBytes": 1536709,
+      "rawSha256": "4e2b86dc596685b1ab017c49b0e190bae250a7f69c05f5d61cfb315fbeef6725",
+      "archiveBytes": 1536709,
+      "archiveSha256": "4e2b86dc596685b1ab017c49b0e190bae250a7f69c05f5d61cfb315fbeef6725",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-firefox-dpr2/changed-backup-requires-review-book-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-firefox-dpr2/changed-backup-requires-review-book-1920.png",
+      "rawBytes": 4345622,
+      "rawSha256": "1adbdfb89d744c98dd72a45bddcb6d5ef8e92f68d27fd613f7c8ea86f5c536cc",
+      "archiveBytes": 4345622,
+      "archiveSha256": "1adbdfb89d744c98dd72a45bddcb6d5ef8e92f68d27fd613f7c8ea86f5c536cc",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-webkit-dpr1/changed-backup-requires-review-book-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-webkit-dpr1/changed-backup-requires-review-book-1280.png",
+      "rawBytes": 633576,
+      "rawSha256": "5b16a31173edc16ca7095702836e88f94c4792ce3d0560ecc585aefe79e5d460",
+      "archiveBytes": 633576,
+      "archiveSha256": "5b16a31173edc16ca7095702836e88f94c4792ce3d0560ecc585aefe79e5d460",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-webkit-dpr1/changed-backup-requires-review-book-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-webkit-dpr1/changed-backup-requires-review-book-1920.png",
+      "rawBytes": 1862610,
+      "rawSha256": "76080ce818dd905512730b773d2d1b7bd4d6fb4a7be9bea66dc8445902511997",
+      "archiveBytes": 1862610,
+      "archiveSha256": "76080ce818dd905512730b773d2d1b7bd4d6fb4a7be9bea66dc8445902511997",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-webkit-dpr2/changed-backup-requires-review-book-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-webkit-dpr2/changed-backup-requires-review-book-1280.png",
+      "rawBytes": 1965101,
+      "rawSha256": "2c875494ddf3b0a55c7b48f00c9b5855d61e6f3b3295dd7aa1847f00573e2109",
+      "archiveBytes": 1965101,
+      "archiveSha256": "2c875494ddf3b0a55c7b48f00c9b5855d61e6f3b3295dd7aa1847f00573e2109",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-webkit-dpr2/changed-backup-requires-review-book-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-webkit-dpr2/changed-backup-requires-review-book-1920.png",
+      "rawBytes": 5837145,
+      "rawSha256": "55060b091d2f06ad697931d2a631254fbb33cec1ba8789f298ded9ed73cd831a",
+      "archiveBytes": 5837145,
+      "archiveSha256": "55060b091d2f06ad697931d2a631254fbb33cec1ba8789f298ded9ed73cd831a",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-chromium-dpr1/changed-backup-requires-review-run-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-chromium-dpr1/changed-backup-requires-review-run-1280.png",
+      "rawBytes": 269729,
+      "rawSha256": "f4918d861c620a2b928b208c57147c1c833a1d1669d81c4c271a660e8bffa847",
+      "archiveBytes": 269729,
+      "archiveSha256": "f4918d861c620a2b928b208c57147c1c833a1d1669d81c4c271a660e8bffa847",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-chromium-dpr1/changed-backup-requires-review-run-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-chromium-dpr1/changed-backup-requires-review-run-1920.png",
+      "rawBytes": 658786,
+      "rawSha256": "c508ac221f7f57a5095c505876f9b051c888c41668f9ec91ef384270d31af15e",
+      "archiveBytes": 658786,
+      "archiveSha256": "c508ac221f7f57a5095c505876f9b051c888c41668f9ec91ef384270d31af15e",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-chromium-dpr2/changed-backup-requires-review-run-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-chromium-dpr2/changed-backup-requires-review-run-1280.png",
+      "rawBytes": 691636,
+      "rawSha256": "580efae31391878c00ec716d91aa9a018f5bc26fdc62858af0697aba50fe26c4",
+      "archiveBytes": 691636,
+      "archiveSha256": "580efae31391878c00ec716d91aa9a018f5bc26fdc62858af0697aba50fe26c4",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-chromium-dpr2/changed-backup-requires-review-run-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-chromium-dpr2/changed-backup-requires-review-run-1920.png",
+      "rawBytes": 1682185,
+      "rawSha256": "9dd7ad770f69f6ffb0e8972cc62748300af1d695a57c9c9e1cf3ed1c170b2e12",
+      "archiveBytes": 1682185,
+      "archiveSha256": "9dd7ad770f69f6ffb0e8972cc62748300af1d695a57c9c9e1cf3ed1c170b2e12",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-firefox-dpr1/changed-backup-requires-review-run-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-firefox-dpr1/changed-backup-requires-review-run-1280.png",
+      "rawBytes": 569535,
+      "rawSha256": "7d64db8a3a2a601d06ce41dc3a2e1bffc894554343821e5d1211e3df3e999e6f",
+      "archiveBytes": 569535,
+      "archiveSha256": "7d64db8a3a2a601d06ce41dc3a2e1bffc894554343821e5d1211e3df3e999e6f",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-firefox-dpr1/changed-backup-requires-review-run-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-firefox-dpr1/changed-backup-requires-review-run-1920.png",
+      "rawBytes": 1558919,
+      "rawSha256": "b73800c6a48e083f40f9e3f186385a682103ae022b01a5add9b2ac052da67d20",
+      "archiveBytes": 1558919,
+      "archiveSha256": "b73800c6a48e083f40f9e3f186385a682103ae022b01a5add9b2ac052da67d20",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-webkit-dpr1/changed-backup-requires-review-run-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-webkit-dpr1/changed-backup-requires-review-run-1280.png",
+      "rawBytes": 656431,
+      "rawSha256": "42edfc12862f1615a918265f89b7055cc05b50780d06698045906d04f7acfa8d",
+      "archiveBytes": 656431,
+      "archiveSha256": "42edfc12862f1615a918265f89b7055cc05b50780d06698045906d04f7acfa8d",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-webkit-dpr1/changed-backup-requires-review-run-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-webkit-dpr1/changed-backup-requires-review-run-1920.png",
+      "rawBytes": 1887932,
+      "rawSha256": "2f6cae3092dff56ac9f1b840afb1a7cf70dde7f04d86415404877724fed1ab73",
+      "archiveBytes": 1887932,
+      "archiveSha256": "2f6cae3092dff56ac9f1b840afb1a7cf70dde7f04d86415404877724fed1ab73",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-webkit-dpr2/changed-backup-requires-review-run-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-webkit-dpr2/changed-backup-requires-review-run-1280.png",
+      "rawBytes": 2042342,
+      "rawSha256": "e05d3b3a2e5bf0566228eced35a67f28b5875f00b22d24fcf4d0acebf4530072",
+      "archiveBytes": 2042342,
+      "archiveSha256": "e05d3b3a2e5bf0566228eced35a67f28b5875f00b22d24fcf4d0acebf4530072",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-webkit-dpr2/changed-backup-requires-review-run-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/matrix-01/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-webkit-dpr2/changed-backup-requires-review-run-1920.png",
+      "rawBytes": 5918009,
+      "rawSha256": "a5b32507cd46875d9c852f4fa7c5c98ea140d96bb5124e0990074c062a8213a6",
+      "archiveBytes": 5918009,
+      "archiveSha256": "a5b32507cd46875d9c852f4fa7c5c98ea140d96bb5124e0990074c062a8213a6",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/preflight-02/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-chromium-dpr1/restored-twin-1-before-settlement-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/preflight-02/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-chromium-dpr1/restored-twin-1-before-settlement-1280.png",
+      "rawBytes": 1340221,
+      "rawSha256": "a0080d5f273510d117d2561a045affd65f987a2b12bdbc92e932a0d15a697115",
+      "archiveBytes": 1340221,
+      "archiveSha256": "a0080d5f273510d117d2561a045affd65f987a2b12bdbc92e932a0d15a697115",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/preflight-02/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-chromium-dpr1/restored-twin-1-chapter-summary-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/preflight-02/artifacts/v5-branches-restored-legit-c7d88--pair-and-keeps-partial-pay-chromium-dpr1/restored-twin-1-chapter-summary-1920.png",
+      "rawBytes": 1505576,
+      "rawSha256": "36e6ea0aacad44d7f433ccb0950ecb2fb3d0c9016618ee4739706e5d23dce139",
+      "archiveBytes": 1505576,
+      "archiveSha256": "36e6ea0aacad44d7f433ccb0950ecb2fb3d0c9016618ee4739706e5d23dce139",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/preflight-02/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-chromium-dpr1/loan-event-offer-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/preflight-02/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-chromium-dpr1/loan-event-offer-1280.png",
+      "rawBytes": 272042,
+      "rawSha256": "175d1dbe56704cb5c8f514b7ed6d1b1d6b6287abb556acf59f11de8bf7c333fa",
+      "archiveBytes": 272042,
+      "archiveSha256": "175d1dbe56704cb5c8f514b7ed6d1b1d6b6287abb556acf59f11de8bf7c333fa",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/preflight-02/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-chromium-dpr1/loan-event-offer-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/preflight-02/artifacts/v5-events-v5-restored-boun-b5ffb-d-real-next-day-consequence-chromium-dpr1/loan-event-offer-1920.png",
+      "rawBytes": 641288,
+      "rawSha256": "70c2ea9670ca4e788c89ed62ef9180e02e13c1753b2bfac8a801519d74cafbb3",
+      "archiveBytes": 641288,
+      "archiveSha256": "70c2ea9670ca4e788c89ed62ef9180e02e13c1753b2bfac8a801519d74cafbb3",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/preflight-02/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-chromium-dpr1/real-used-pardon-reacquired-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/preflight-02/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-chromium-dpr1/real-used-pardon-reacquired-1280.png",
+      "rawBytes": 1351538,
+      "rawSha256": "96bb073e0d03f04adb68c972dde3c2e9d82b68557ff6eb46f47d3b2e13177863",
+      "archiveBytes": 1351538,
+      "archiveSha256": "96bb073e0d03f04adb68c972dde3c2e9d82b68557ff6eb46f47d3b2e13177863",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/preflight-02/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-chromium-dpr1/real-used-pardon-reacquired-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/preflight-02/artifacts/v5-interactions-v5-delayed-27ecf-s-spent-when-equipped-again-chromium-dpr1/real-used-pardon-reacquired-1920.png",
+      "rawBytes": 2716499,
+      "rawSha256": "2e41ad0b89db601efcc047d95e00c25d0e9665a145f9d64ddcc58122c506c850",
+      "archiveBytes": 2716499,
+      "archiveSha256": "2e41ad0b89db601efcc047d95e00c25d0e9665a145f9d64ddcc58122c506c850",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/preflight-02/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-chromium-dpr1/full-slot-real-replacement-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/preflight-02/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-chromium-dpr1/full-slot-real-replacement-1280.png",
+      "rawBytes": 1318430,
+      "rawSha256": "99c688742a59f8eead12f4289c25139f71c40b4e8f3cd87ebc4a189703a24462",
+      "archiveBytes": 1318430,
+      "archiveSha256": "99c688742a59f8eead12f4289c25139f71c40b4e8f3cd87ebc4a189703a24462",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/preflight-02/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-chromium-dpr1/full-slot-real-replacement-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/preflight-02/artifacts/v5-interactions-v5-full-sl-962f3-one-trait-without-cash-cost-chromium-dpr1/full-slot-real-replacement-1920.png",
+      "rawBytes": 2688195,
+      "rawSha256": "8f8600d56529a96613c4a4616962b93b3a68643403a7a8d90214f93d8d53edc3",
+      "archiveBytes": 2688195,
+      "archiveSha256": "8f8600d56529a96613c4a4616962b93b3a68643403a7a8d90214f93d8d53edc3",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/preflight-03/artifacts/v5-journeys-fresh-mixed-re-5236b-l-receipt-and-honest-ending-chromium-dpr1/fresh-mixed-return-ending-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/preflight-03/artifacts/v5-journeys-fresh-mixed-re-5236b-l-receipt-and-honest-ending-chromium-dpr1/fresh-mixed-return-ending-1280.png",
+      "rawBytes": 756587,
+      "rawSha256": "ecd51daf782198230a3b765f6da03f198db4a2d1ba5aa705fe5ebe488fffaa38",
+      "archiveBytes": 756587,
+      "archiveSha256": "ecd51daf782198230a3b765f6da03f198db4a2d1ba5aa705fe5ebe488fffaa38",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/preflight-03/artifacts/v5-journeys-fresh-two-new--e7a0d-l-receipt-and-honest-ending-chromium-dpr1/fresh-two-new-ending-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/preflight-03/artifacts/v5-journeys-fresh-two-new--e7a0d-l-receipt-and-honest-ending-chromium-dpr1/fresh-two-new-ending-1920.png",
+      "rawBytes": 1509800,
+      "rawSha256": "f2de7a409ff93d50e64d221d42159d2a227735b7b358581c34d7d40dc65a9827",
+      "archiveBytes": 1509800,
+      "archiveSha256": "f2de7a409ff93d50e64d221d42159d2a227735b7b358581c34d7d40dc65a9827",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/preflight-03/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-chromium-dpr1/keyboard-earned-challenge-victory-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/preflight-03/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-chromium-dpr1/keyboard-earned-challenge-victory-1280.png",
+      "rawBytes": 747052,
+      "rawSha256": "46d6dab0db8cfb9fa74d7db2c711db38981de32b59350e1be512cc31f8e1c674",
+      "archiveBytes": 747052,
+      "archiveSha256": "46d6dab0db8cfb9fa74d7db2c711db38981de32b59350e1be512cc31f8e1c674",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/preflight-03/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-chromium-dpr1/keyboard-earned-challenge-victory-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/preflight-03/artifacts/v5-keyboard-current-v5-fre-793f6-rdered-twelve-day-challenge-chromium-dpr1/keyboard-earned-challenge-victory-1920.png",
+      "rawBytes": 1510351,
+      "rawSha256": "f6eb092438721702b61b7bf60165b1afa6538406e3a163d1a066ee867eef6c38",
+      "archiveBytes": 1510351,
+      "archiveSha256": "f6eb092438721702b61b7bf60165b1afa6538406e3a163d1a066ee867eef6c38",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/preflight-03/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-chromium-dpr1/changed-backup-requires-review-book-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/preflight-03/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-chromium-dpr1/changed-backup-requires-review-book-1280.png",
+      "rawBytes": 265898,
+      "rawSha256": "f4753191fca1a07c41ba0a583bd004eb64e7dab3b30673566107c7dd40f9d930",
+      "archiveBytes": 265898,
+      "archiveSha256": "f4753191fca1a07c41ba0a583bd004eb64e7dab3b30673566107c7dd40f9d930",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/preflight-03/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-chromium-dpr1/changed-backup-requires-review-book-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/preflight-03/artifacts/v5-storage-v5-a-book-backu-73c77-older-recovery-confirmation-chromium-dpr1/changed-backup-requires-review-book-1920.png",
+      "rawBytes": 655203,
+      "rawSha256": "b340c1986cd95bcb25a62cf8e722591b6cc893e7c48fe7ae7e85c874f2716b7e",
+      "archiveBytes": 655203,
+      "archiveSha256": "b340c1986cd95bcb25a62cf8e722591b6cc893e7c48fe7ae7e85c874f2716b7e",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/preflight-03/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-chromium-dpr1/changed-backup-requires-review-run-1280.png",
+      "archive": "docs/evidence/G4-T02/runs/preflight-03/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-chromium-dpr1/changed-backup-requires-review-run-1280.png",
+      "rawBytes": 269729,
+      "rawSha256": "f4918d861c620a2b928b208c57147c1c833a1d1669d81c4c271a660e8bffa847",
+      "archiveBytes": 269729,
+      "archiveSha256": "f4918d861c620a2b928b208c57147c1c833a1d1669d81c4c271a660e8bffa847",
+      "encoding": "identity"
+    },
+    {
+      "original": "tmp/goal4-T02/runs/preflight-03/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-chromium-dpr1/changed-backup-requires-review-run-1920.png",
+      "archive": "docs/evidence/G4-T02/runs/preflight-03/artifacts/v5-storage-v5-a-run-backup-b67ba-older-recovery-confirmation-chromium-dpr1/changed-backup-requires-review-run-1920.png",
+      "rawBytes": 658786,
+      "rawSha256": "c508ac221f7f57a5095c505876f9b051c888c41668f9ec91ef384270d31af15e",
+      "archiveBytes": 658786,
+      "archiveSha256": "c508ac221f7f57a5095c505876f9b051c888c41668f9ec91ef384270d31af15e",
+      "encoding": "identity"
+    }
+  ],
+  "originalsStillRetained": 2839,
+  "archiveEntries": 1942,
+  "archiveBytes": 77067683
+}

@@ -1,0 +1,707 @@
+{
+  "label": "legacy-bound-source-and-retry",
+  "scope": "Restored legal boundary with actual UI/Storage faults; not a new complete campaign",
+  "state": {
+    "rulesVersion": "forge-v5",
+    "runId": "v5-journey",
+    "seed": "v5-economy-0",
+    "mode": "story",
+    "initialEligibility": {
+      "recipes": [
+        "light"
+      ],
+      "challenge": false
+    },
+    "revision": 1,
+    "phase": "workshop",
+    "day": 1,
+    "commissionOrder": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "coins": 0,
+    "seals": 3,
+    "supplyBase": 40,
+    "upgradeCount": 0,
+    "inheritance": 0,
+    "blades": [
+      {
+        "id": "d1-1",
+        "slot": 1,
+        "suppliedDay": 1,
+        "recipe": "light",
+        "status": "active",
+        "base": 40,
+        "value": 40,
+        "peak": 40,
+        "level": 0,
+        "cracked": false,
+        "hits": 0,
+        "charge": 0,
+        "successes": 0,
+        "normalGreats": 0,
+        "bursts": 0,
+        "finalizedDay": null,
+        "commissionId": null
+      },
+      {
+        "id": "d1-2",
+        "slot": 2,
+        "suppliedDay": 1,
+        "recipe": "light",
+        "status": "active",
+        "base": 40,
+        "value": 40,
+        "peak": 40,
+        "level": 0,
+        "cracked": false,
+        "hits": 0,
+        "charge": 0,
+        "successes": 0,
+        "normalGreats": 0,
+        "bursts": 0,
+        "finalizedDay": null,
+        "commissionId": null
+      },
+      {
+        "id": "d1-3",
+        "slot": 3,
+        "suppliedDay": 1,
+        "recipe": "light",
+        "status": "active",
+        "base": 40,
+        "value": 40,
+        "peak": 40,
+        "level": 0,
+        "cracked": false,
+        "hits": 0,
+        "charge": 0,
+        "successes": 0,
+        "normalGreats": 0,
+        "bursts": 0,
+        "finalizedDay": null,
+        "commissionId": null
+      }
+    ],
+    "reserveId": null,
+    "daySales": 0,
+    "dayRecovered": 0,
+    "marketSpent": 0,
+    "traits": [],
+    "gift": "locked",
+    "pardonUsed": false,
+    "crackGuard": false,
+    "modifications": [],
+    "chapterChoices": [],
+    "shop": [],
+    "sold": [],
+    "upgraded": false,
+    "repaired": false,
+    "dayBuffs": {
+      "supplyPct": 100,
+      "loan": false,
+      "shelter": false
+    },
+    "pending": {
+      "supplyPct": 100,
+      "loan": false,
+      "shelter": false
+    },
+    "eventDeck": [
+      "donation",
+      "shelter",
+      "credit",
+      "loan",
+      "rest",
+      "salvage"
+    ],
+    "eventId": null,
+    "eventStatus": "none",
+    "eventHistory": [],
+    "history": [],
+    "rng": {
+      "forge": {
+        "state": 2427578858,
+        "draws": 0
+      },
+      "shop": {
+        "state": 1380130647,
+        "draws": 0
+      },
+      "events": {
+        "state": 1169050407,
+        "draws": 5
+      },
+      "content": {
+        "state": 561124140,
+        "draws": 0
+      }
+    },
+    "journal": [
+      {
+        "type": "continue"
+      }
+    ]
+  },
+  "raw": {
+    "sword-led.save.v5": "{\"schemaVersion\":5,\"rulesVersion\":\"forge-v5\",\"savedAt\":\"2026-10-21T00:00:00.000Z\",\"state\":{\"rulesVersion\":\"forge-v5\",\"runId\":\"v5-journey\",\"seed\":\"v5-economy-0\",\"mode\":\"story\",\"initialEligibility\":{\"recipes\":[\"light\"],\"challenge\":false},\"revision\":1,\"phase\":\"workshop\",\"day\":1,\"commissionOrder\":[1,2,3,4,5,6,7,8,9,10,11,12],\"coins\":0,\"seals\":3,\"supplyBase\":40,\"upgradeCount\":0,\"inheritance\":0,\"blades\":[{\"id\":\"d1-1\",\"slot\":1,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"active\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null},{\"id\":\"d1-2\",\"slot\":2,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"active\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null},{\"id\":\"d1-3\",\"slot\":3,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"active\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null}],\"reserveId\":null,\"daySales\":0,\"dayRecovered\":0,\"marketSpent\":0,\"traits\":[],\"gift\":\"locked\",\"pardonUsed\":false,\"crackGuard\":false,\"modifications\":[],\"chapterChoices\":[],\"shop\":[],\"sold\":[],\"upgraded\":false,\"repaired\":false,\"dayBuffs\":{\"supplyPct\":100,\"loan\":false,\"shelter\":false},\"pending\":{\"supplyPct\":100,\"loan\":false,\"shelter\":false},\"eventDeck\":[\"donation\",\"shelter\",\"credit\",\"loan\",\"rest\",\"salvage\"],\"eventId\":null,\"eventStatus\":\"none\",\"eventHistory\":[],\"history\":[],\"rng\":{\"forge\":{\"state\":2427578858,\"draws\":0},\"shop\":{\"state\":1380130647,\"draws\":0},\"events\":{\"state\":1169050407,\"draws\":5},\"content\":{\"state\":561124140,\"draws\":0}},\"journal\":[{\"type\":\"continue\"}]}}",
+    "sword-led.save.backup.v5": null,
+    "sword-led.collection.v2": "{\"schemaVersion\":2,\"rulesVersion\":\"forge-collection-v2\",\"savedAt\":\"2026-10-21T16:37:20.202Z\",\"state\":{\"chapters\":[1],\"mastery\":[],\"traits\":[\"steady\",\"ember\"],\"challenge\":false,\"works\":[{\"blades\":[{\"base\":40,\"bursts\":0,\"charge\":3,\"commissionId\":1,\"cracked\":false,\"finalizedDay\":1,\"hits\":3,\"id\":\"d1-1\",\"level\":3,\"normalGreats\":0,\"peak\":148,\"recipe\":\"light\",\"slot\":1,\"status\":\"commissioned\",\"successes\":3,\"suppliedDay\":1,\"value\":148}],\"commissionId\":1,\"day\":1,\"routeId\":\"intact\",\"runId\":\"v4-witness-0\",\"rulesVersion\":\"forge-v4\"},{\"blades\":[{\"base\":40,\"bursts\":0,\"charge\":4,\"commissionId\":2,\"cracked\":false,\"finalizedDay\":2,\"hits\":4,\"id\":\"d2-1\",\"level\":4,\"normalGreats\":0,\"peak\":229,\"recipe\":\"light\",\"slot\":1,\"status\":\"commissioned\",\"successes\":4,\"suppliedDay\":2,\"value\":229}],\"commissionId\":2,\"day\":2,\"routeId\":\"light\",\"runId\":\"v4-witness-0\",\"rulesVersion\":\"forge-v4\"},{\"blades\":[{\"base\":40,\"bursts\":1,\"charge\":0,\"commissionId\":3,\"cracked\":true,\"finalizedDay\":3,\"hits\":6,\"id\":\"d3-2\",\"level\":8,\"normalGreats\":0,\"peak\":1315,\"recipe\":\"light\",\"slot\":2,\"status\":\"commissioned\",\"successes\":5,\"suppliedDay\":3,\"value\":1315}],\"commissionId\":3,\"day\":3,\"routeId\":\"burst\",\"runId\":\"v4-witness-0\",\"rulesVersion\":\"forge-v4\"},{\"blades\":[{\"base\":72,\"bursts\":0,\"charge\":5,\"commissionId\":4,\"cracked\":false,\"finalizedDay\":4,\"hits\":5,\"id\":\"d4-1\",\"level\":5,\"normalGreats\":0,\"peak\":383,\"recipe\":\"guard\",\"slot\":1,\"status\":\"commissioned\",\"successes\":5,\"suppliedDay\":4,\"value\":383}],\"commissionId\":4,\"day\":4,\"routeId\":\"guard\",\"runId\":\"v4-witness-0\",\"rulesVersion\":\"forge-v4\"}]}}",
+    "sword-led.collection.backup.v2": "{\"schemaVersion\":2,\"rulesVersion\":\"forge-collection-v2\",\"savedAt\":\"2026-10-21T00:00:00.000Z\",\"state\":{\"chapters\":[],\"mastery\":[],\"traits\":[],\"challenge\":false,\"works\":[]}}",
+    "sword-led.settings.v1": null,
+    "sword-led.collection.v1": "{\"schemaVersion\":1,\"rulesVersion\":\"forge-v4-collection-v1\",\"savedAt\":\"2026-10-21T00:00:00.000Z\",\"state\":{\"chapters\":[1,2,3],\"mastery\":[\"guard\",\"heavy\"],\"traits\":[\"steady\",\"ember\",\"pardon\"],\"challenge\":true,\"works\":[{\"commissionId\":1,\"day\":1,\"routeId\":\"intact\",\"blades\":[{\"id\":\"d1-1\",\"slot\":1,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":40,\"value\":148,\"peak\":148,\"level\":3,\"cracked\":false,\"hits\":3,\"charge\":3,\"successes\":3,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":1,\"commissionId\":1}],\"runId\":\"v4-witness-0\"},{\"commissionId\":2,\"day\":2,\"routeId\":\"light\",\"blades\":[{\"id\":\"d2-1\",\"slot\":1,\"suppliedDay\":2,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":40,\"value\":229,\"peak\":229,\"level\":4,\"cracked\":false,\"hits\":4,\"charge\":4,\"successes\":4,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":2,\"commissionId\":2}],\"runId\":\"v4-witness-0\"},{\"commissionId\":3,\"day\":3,\"routeId\":\"burst\",\"blades\":[{\"id\":\"d3-2\",\"slot\":2,\"suppliedDay\":3,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":40,\"value\":1315,\"peak\":1315,\"level\":8,\"cracked\":true,\"hits\":6,\"charge\":0,\"successes\":5,\"normalGreats\":0,\"bursts\":1,\"finalizedDay\":3,\"commissionId\":3}],\"runId\":\"v4-witness-0\"},{\"commissionId\":4,\"day\":4,\"routeId\":\"guard\",\"blades\":[{\"id\":\"d4-1\",\"slot\":1,\"suppliedDay\":4,\"recipe\":\"guard\",\"status\":\"commissioned\",\"base\":72,\"value\":383,\"peak\":383,\"level\":5,\"cracked\":false,\"hits\":5,\"charge\":5,\"successes\":5,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":4,\"commissionId\":4}],\"runId\":\"v4-witness-0\"},{\"commissionId\":5,\"day\":5,\"routeId\":\"old\",\"blades\":[{\"id\":\"d4-2\",\"slot\":2,\"suppliedDay\":4,\"recipe\":\"guard\",\"status\":\"commissioned\",\"base\":72,\"value\":536,\"peak\":536,\"level\":6,\"cracked\":false,\"hits\":6,\"charge\":6,\"successes\":6,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":5,\"commissionId\":5}],\"runId\":\"v4-witness-0\"},{\"commissionId\":6,\"day\":6,\"routeId\":\"cracked\",\"blades\":[{\"id\":\"d6-2\",\"slot\":2,\"suppliedDay\":6,\"recipe\":\"guard\",\"status\":\"commissioned\",\"base\":120,\"value\":39295,\"peak\":39295,\"level\":17,\"cracked\":true,\"hits\":11,\"charge\":5,\"successes\":10,\"normalGreats\":3,\"bursts\":1,\"finalizedDay\":6,\"commissionId\":6}],\"runId\":\"v4-witness-0\"},{\"commissionId\":7,\"day\":7,\"routeId\":\"heavy\",\"blades\":[{\"id\":\"d7-1\",\"slot\":1,\"suppliedDay\":7,\"recipe\":\"heavy\",\"status\":\"commissioned\",\"base\":180,\"value\":997,\"peak\":997,\"level\":4,\"cracked\":false,\"hits\":3,\"charge\":3,\"successes\":3,\"normalGreats\":1,\"bursts\":0,\"finalizedDay\":7,\"commissionId\":7}],\"runId\":\"v4-witness-0\"},{\"commissionId\":8,\"day\":8,\"routeId\":\"two-light\",\"blades\":[{\"id\":\"d8-1\",\"slot\":1,\"suppliedDay\":8,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":180,\"value\":432,\"peak\":432,\"level\":2,\"cracked\":false,\"hits\":2,\"charge\":2,\"successes\":2,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":8,\"commissionId\":8},{\"id\":\"d8-2\",\"slot\":2,\"suppliedDay\":8,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":180,\"value\":432,\"peak\":432,\"level\":2,\"cracked\":false,\"hits\":2,\"charge\":2,\"successes\":2,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":8,\"commissionId\":8}],\"runId\":\"v4-witness-0\"},{\"commissionId\":9,\"day\":9,\"routeId\":\"two-bursts\",\"blades\":[{\"id\":\"d9-2\",\"slot\":2,\"suppliedDay\":9,\"recipe\":\"guard\",\"status\":\"commissioned\",\"base\":360,\"value\":1233071,\"peak\":1233071,\"level\":24,\"cracked\":true,\"hits\":12,\"charge\":0,\"successes\":11,\"normalGreats\":3,\"bursts\":2,\"finalizedDay\":9,\"commissionId\":9}],\"runId\":\"v4-witness-0\"},{\"commissionId\":10,\"day\":10,\"routeId\":\"intact\",\"blades\":[{\"id\":\"d10-1\",\"slot\":1,\"suppliedDay\":10,\"recipe\":\"guard\",\"status\":\"commissioned\",\"base\":540,\"value\":2073,\"peak\":2073,\"level\":4,\"cracked\":false,\"hits\":4,\"charge\":4,\"successes\":4,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":10,\"commissionId\":10}],\"runId\":\"v4-witness-0\"},{\"commissionId\":11,\"day\":11,\"routeId\":\"old\",\"blades\":[{\"id\":\"d10-2\",\"slot\":2,\"suppliedDay\":10,\"recipe\":\"guard\",\"status\":\"commissioned\",\"base\":540,\"value\":2258,\"peak\":2258,\"level\":4,\"cracked\":false,\"hits\":2,\"charge\":2,\"successes\":2,\"normalGreats\":2,\"bursts\":0,\"finalizedDay\":11,\"commissionId\":11}],\"runId\":\"v4-witness-0\"},{\"commissionId\":12,\"day\":12,\"routeId\":\"finale\",\"blades\":[{\"id\":\"d12-1\",\"slot\":1,\"suppliedDay\":12,\"recipe\":\"heavy\",\"status\":\"commissioned\",\"base\":540,\"value\":66813,\"peak\":66813,\"level\":12,\"cracked\":false,\"hits\":6,\"charge\":0,\"successes\":6,\"normalGreats\":1,\"bursts\":1,\"finalizedDay\":12,\"commissionId\":12}],\"runId\":\"v4-witness-0\"}]}}",
+    "sword-led.collection.backup.v1": "{\"schemaVersion\":1,\"rulesVersion\":\"forge-v4-collection-v1\",\"savedAt\":\"2026-10-21T00:00:00.000Z\",\"state\":{\"chapters\":[1],\"mastery\":[],\"traits\":[\"steady\",\"ember\"],\"challenge\":false,\"works\":[{\"commissionId\":1,\"day\":1,\"routeId\":\"intact\",\"blades\":[{\"id\":\"d1-1\",\"slot\":1,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":40,\"value\":148,\"peak\":148,\"level\":3,\"cracked\":false,\"hits\":3,\"charge\":3,\"successes\":3,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":1,\"commissionId\":1}],\"runId\":\"v4-witness-0\"},{\"commissionId\":2,\"day\":2,\"routeId\":\"light\",\"blades\":[{\"id\":\"d2-1\",\"slot\":1,\"suppliedDay\":2,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":40,\"value\":229,\"peak\":229,\"level\":4,\"cracked\":false,\"hits\":4,\"charge\":4,\"successes\":4,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":2,\"commissionId\":2}],\"runId\":\"v4-witness-0\"},{\"commissionId\":3,\"day\":3,\"routeId\":\"burst\",\"blades\":[{\"id\":\"d3-2\",\"slot\":2,\"suppliedDay\":3,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":40,\"value\":1315,\"peak\":1315,\"level\":8,\"cracked\":true,\"hits\":6,\"charge\":0,\"successes\":5,\"normalGreats\":0,\"bursts\":1,\"finalizedDay\":3,\"commissionId\":3}],\"runId\":\"v4-witness-0\"},{\"commissionId\":4,\"day\":4,\"routeId\":\"guard\",\"blades\":[{\"id\":\"d4-1\",\"slot\":1,\"suppliedDay\":4,\"recipe\":\"guard\",\"status\":\"commissioned\",\"base\":72,\"value\":383,\"peak\":383,\"level\":5,\"cracked\":false,\"hits\":5,\"charge\":5,\"successes\":5,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":4,\"commissionId\":4}],\"runId\":\"v4-witness-0\"}]}}",
+    "sword-led.save.v1": null,
+    "sword-led.save.v2": null,
+    "sword-led.save.v3": null,
+    "sword-led.save.v4": null,
+    "sword-led.save.backup.v4": null
+  },
+  "writes": [
+    {
+      "key": "sword-led.collection.backup.v2",
+      "value": "{\"schemaVersion\":2,\"rulesVersion\":\"forge-collection-v2\",\"savedAt\":\"2026-10-21T00:00:00.000Z\",\"state\":{\"chapters\":[],\"mastery\":[],\"traits\":[],\"challenge\":false,\"works\":[]}}",
+      "accepted": true,
+      "operation": "set"
+    },
+    {
+      "key": "sword-led.collection.v2",
+      "value": "{\"schemaVersion\":2,\"rulesVersion\":\"forge-collection-v2\",\"savedAt\":\"2026-10-21T16:37:19.702Z\",\"state\":{\"chapters\":[1],\"mastery\":[],\"traits\":[\"steady\",\"ember\"],\"challenge\":false,\"works\":[{\"blades\":[{\"base\":40,\"bursts\":0,\"charge\":3,\"commissionId\":1,\"cracked\":false,\"finalizedDay\":1,\"hits\":3,\"id\":\"d1-1\",\"level\":3,\"normalGreats\":0,\"peak\":148,\"recipe\":\"light\",\"slot\":1,\"status\":\"commissioned\",\"successes\":3,\"suppliedDay\":1,\"value\":148}],\"commissionId\":1,\"day\":1,\"routeId\":\"intact\",\"runId\":\"v4-witness-0\",\"rulesVersion\":\"forge-v4\"},{\"blades\":[{\"base\":40,\"bursts\":0,\"charge\":4,\"commissionId\":2,\"cracked\":false,\"finalizedDay\":2,\"hits\":4,\"id\":\"d2-1\",\"level\":4,\"normalGreats\":0,\"peak\":229,\"recipe\":\"light\",\"slot\":1,\"status\":\"commissioned\",\"successes\":4,\"suppliedDay\":2,\"value\":229}],\"commissionId\":2,\"day\":2,\"routeId\":\"light\",\"runId\":\"v4-witness-0\",\"rulesVersion\":\"forge-v4\"},{\"blades\":[{\"base\":40,\"bursts\":1,\"charge\":0,\"commissionId\":3,\"cracked\":true,\"finalizedDay\":3,\"hits\":6,\"id\":\"d3-2\",\"level\":8,\"normalGreats\":0,\"peak\":1315,\"recipe\":\"light\",\"slot\":2,\"status\":\"commissioned\",\"successes\":5,\"suppliedDay\":3,\"value\":1315}],\"commissionId\":3,\"day\":3,\"routeId\":\"burst\",\"runId\":\"v4-witness-0\",\"rulesVersion\":\"forge-v4\"},{\"blades\":[{\"base\":72,\"bursts\":0,\"charge\":5,\"commissionId\":4,\"cracked\":false,\"finalizedDay\":4,\"hits\":5,\"id\":\"d4-1\",\"level\":5,\"normalGreats\":0,\"peak\":383,\"recipe\":\"guard\",\"slot\":1,\"status\":\"commissioned\",\"successes\":5,\"suppliedDay\":4,\"value\":383}],\"commissionId\":4,\"day\":4,\"routeId\":\"guard\",\"runId\":\"v4-witness-0\",\"rulesVersion\":\"forge-v4\"}]}}",
+      "accepted": false,
+      "operation": "set"
+    },
+    {
+      "key": "sword-led.collection.backup.v2",
+      "value": "{\"schemaVersion\":2,\"rulesVersion\":\"forge-collection-v2\",\"savedAt\":\"2026-10-21T00:00:00.000Z\",\"state\":{\"chapters\":[],\"mastery\":[],\"traits\":[],\"challenge\":false,\"works\":[]}}",
+      "accepted": true,
+      "operation": "set"
+    },
+    {
+      "key": "sword-led.collection.v2",
+      "value": "{\"schemaVersion\":2,\"rulesVersion\":\"forge-collection-v2\",\"savedAt\":\"2026-10-21T16:37:20.202Z\",\"state\":{\"chapters\":[1],\"mastery\":[],\"traits\":[\"steady\",\"ember\"],\"challenge\":false,\"works\":[{\"blades\":[{\"base\":40,\"bursts\":0,\"charge\":3,\"commissionId\":1,\"cracked\":false,\"finalizedDay\":1,\"hits\":3,\"id\":\"d1-1\",\"level\":3,\"normalGreats\":0,\"peak\":148,\"recipe\":\"light\",\"slot\":1,\"status\":\"commissioned\",\"successes\":3,\"suppliedDay\":1,\"value\":148}],\"commissionId\":1,\"day\":1,\"routeId\":\"intact\",\"runId\":\"v4-witness-0\",\"rulesVersion\":\"forge-v4\"},{\"blades\":[{\"base\":40,\"bursts\":0,\"charge\":4,\"commissionId\":2,\"cracked\":false,\"finalizedDay\":2,\"hits\":4,\"id\":\"d2-1\",\"level\":4,\"normalGreats\":0,\"peak\":229,\"recipe\":\"light\",\"slot\":1,\"status\":\"commissioned\",\"successes\":4,\"suppliedDay\":2,\"value\":229}],\"commissionId\":2,\"day\":2,\"routeId\":\"light\",\"runId\":\"v4-witness-0\",\"rulesVersion\":\"forge-v4\"},{\"blades\":[{\"base\":40,\"bursts\":1,\"charge\":0,\"commissionId\":3,\"cracked\":true,\"finalizedDay\":3,\"hits\":6,\"id\":\"d3-2\",\"level\":8,\"normalGreats\":0,\"peak\":1315,\"recipe\":\"light\",\"slot\":2,\"status\":\"commissioned\",\"successes\":5,\"suppliedDay\":3,\"value\":1315}],\"commissionId\":3,\"day\":3,\"routeId\":\"burst\",\"runId\":\"v4-witness-0\",\"rulesVersion\":\"forge-v4\"},{\"blades\":[{\"base\":72,\"bursts\":0,\"charge\":5,\"commissionId\":4,\"cracked\":false,\"finalizedDay\":4,\"hits\":5,\"id\":\"d4-1\",\"level\":5,\"normalGreats\":0,\"peak\":383,\"recipe\":\"guard\",\"slot\":1,\"status\":\"commissioned\",\"successes\":5,\"suppliedDay\":4,\"value\":383}],\"commissionId\":4,\"day\":4,\"routeId\":\"guard\",\"runId\":\"v4-witness-0\",\"rulesVersion\":\"forge-v4\"}]}}",
+      "accepted": true,
+      "operation": "set"
+    }
+  ],
+  "events": [
+    {
+      "key": "sword-led.collection.v1",
+      "value": "{\"schemaVersion\":1,\"rulesVersion\":\"forge-v4-collection-v1\",\"savedAt\":\"2026-10-21T00:00:00.000Z\",\"state\":{\"chapters\":[1],\"mastery\":[],\"traits\":[\"steady\",\"ember\"],\"challenge\":false,\"works\":[{\"commissionId\":1,\"day\":1,\"routeId\":\"intact\",\"blades\":[{\"id\":\"d1-1\",\"slot\":1,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":40,\"value\":148,\"peak\":148,\"level\":3,\"cracked\":false,\"hits\":3,\"charge\":3,\"successes\":3,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":1,\"commissionId\":1}],\"runId\":\"v4-witness-0\"},{\"commissionId\":2,\"day\":2,\"routeId\":\"light\",\"blades\":[{\"id\":\"d2-1\",\"slot\":1,\"suppliedDay\":2,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":40,\"value\":229,\"peak\":229,\"level\":4,\"cracked\":false,\"hits\":4,\"charge\":4,\"successes\":4,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":2,\"commissionId\":2}],\"runId\":\"v4-witness-0\"},{\"commissionId\":3,\"day\":3,\"routeId\":\"burst\",\"blades\":[{\"id\":\"d3-2\",\"slot\":2,\"suppliedDay\":3,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":40,\"value\":1315,\"peak\":1315,\"level\":8,\"cracked\":true,\"hits\":6,\"charge\":0,\"successes\":5,\"normalGreats\":0,\"bursts\":1,\"finalizedDay\":3,\"commissionId\":3}],\"runId\":\"v4-witness-0\"},{\"commissionId\":4,\"day\":4,\"routeId\":\"guard\",\"blades\":[{\"id\":\"d4-1\",\"slot\":1,\"suppliedDay\":4,\"recipe\":\"guard\",\"status\":\"commissioned\",\"base\":72,\"value\":383,\"peak\":383,\"level\":5,\"cracked\":false,\"hits\":5,\"charge\":5,\"successes\":5,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":4,\"commissionId\":4}],\"runId\":\"v4-witness-0\"}]}}",
+      "trusted": true
+    },
+    {
+      "key": "sword-led.collection.v1",
+      "value": "{\"schemaVersion\":1,\"rulesVersion\":\"forge-v4-collection-v1\",\"savedAt\":\"2026-10-21T00:00:00.000Z\",\"state\":{\"chapters\":[1,2,3],\"mastery\":[\"guard\",\"heavy\"],\"traits\":[\"steady\",\"ember\",\"pardon\"],\"challenge\":true,\"works\":[{\"commissionId\":1,\"day\":1,\"routeId\":\"intact\",\"blades\":[{\"id\":\"d1-1\",\"slot\":1,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":40,\"value\":148,\"peak\":148,\"level\":3,\"cracked\":false,\"hits\":3,\"charge\":3,\"successes\":3,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":1,\"commissionId\":1}],\"runId\":\"v4-witness-0\"},{\"commissionId\":2,\"day\":2,\"routeId\":\"light\",\"blades\":[{\"id\":\"d2-1\",\"slot\":1,\"suppliedDay\":2,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":40,\"value\":229,\"peak\":229,\"level\":4,\"cracked\":false,\"hits\":4,\"charge\":4,\"successes\":4,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":2,\"commissionId\":2}],\"runId\":\"v4-witness-0\"},{\"commissionId\":3,\"day\":3,\"routeId\":\"burst\",\"blades\":[{\"id\":\"d3-2\",\"slot\":2,\"suppliedDay\":3,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":40,\"value\":1315,\"peak\":1315,\"level\":8,\"cracked\":true,\"hits\":6,\"charge\":0,\"successes\":5,\"normalGreats\":0,\"bursts\":1,\"finalizedDay\":3,\"commissionId\":3}],\"runId\":\"v4-witness-0\"},{\"commissionId\":4,\"day\":4,\"routeId\":\"guard\",\"blades\":[{\"id\":\"d4-1\",\"slot\":1,\"suppliedDay\":4,\"recipe\":\"guard\",\"status\":\"commissioned\",\"base\":72,\"value\":383,\"peak\":383,\"level\":5,\"cracked\":false,\"hits\":5,\"charge\":5,\"successes\":5,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":4,\"commissionId\":4}],\"runId\":\"v4-witness-0\"},{\"commissionId\":5,\"day\":5,\"routeId\":\"old\",\"blades\":[{\"id\":\"d4-2\",\"slot\":2,\"suppliedDay\":4,\"recipe\":\"guard\",\"status\":\"commissioned\",\"base\":72,\"value\":536,\"peak\":536,\"level\":6,\"cracked\":false,\"hits\":6,\"charge\":6,\"successes\":6,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":5,\"commissionId\":5}],\"runId\":\"v4-witness-0\"},{\"commissionId\":6,\"day\":6,\"routeId\":\"cracked\",\"blades\":[{\"id\":\"d6-2\",\"slot\":2,\"suppliedDay\":6,\"recipe\":\"guard\",\"status\":\"commissioned\",\"base\":120,\"value\":39295,\"peak\":39295,\"level\":17,\"cracked\":true,\"hits\":11,\"charge\":5,\"successes\":10,\"normalGreats\":3,\"bursts\":1,\"finalizedDay\":6,\"commissionId\":6}],\"runId\":\"v4-witness-0\"},{\"commissionId\":7,\"day\":7,\"routeId\":\"heavy\",\"blades\":[{\"id\":\"d7-1\",\"slot\":1,\"suppliedDay\":7,\"recipe\":\"heavy\",\"status\":\"commissioned\",\"base\":180,\"value\":997,\"peak\":997,\"level\":4,\"cracked\":false,\"hits\":3,\"charge\":3,\"successes\":3,\"normalGreats\":1,\"bursts\":0,\"finalizedDay\":7,\"commissionId\":7}],\"runId\":\"v4-witness-0\"},{\"commissionId\":8,\"day\":8,\"routeId\":\"two-light\",\"blades\":[{\"id\":\"d8-1\",\"slot\":1,\"suppliedDay\":8,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":180,\"value\":432,\"peak\":432,\"level\":2,\"cracked\":false,\"hits\":2,\"charge\":2,\"successes\":2,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":8,\"commissionId\":8},{\"id\":\"d8-2\",\"slot\":2,\"suppliedDay\":8,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":180,\"value\":432,\"peak\":432,\"level\":2,\"cracked\":false,\"hits\":2,\"charge\":2,\"successes\":2,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":8,\"commissionId\":8}],\"runId\":\"v4-witness-0\"},{\"commissionId\":9,\"day\":9,\"routeId\":\"two-bursts\",\"blades\":[{\"id\":\"d9-2\",\"slot\":2,\"suppliedDay\":9,\"recipe\":\"guard\",\"status\":\"commissioned\",\"base\":360,\"value\":1233071,\"peak\":1233071,\"level\":24,\"cracked\":true,\"hits\":12,\"charge\":0,\"successes\":11,\"normalGreats\":3,\"bursts\":2,\"finalizedDay\":9,\"commissionId\":9}],\"runId\":\"v4-witness-0\"},{\"commissionId\":10,\"day\":10,\"routeId\":\"intact\",\"blades\":[{\"id\":\"d10-1\",\"slot\":1,\"suppliedDay\":10,\"recipe\":\"guard\",\"status\":\"commissioned\",\"base\":540,\"value\":2073,\"peak\":2073,\"level\":4,\"cracked\":false,\"hits\":4,\"charge\":4,\"successes\":4,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":10,\"commissionId\":10}],\"runId\":\"v4-witness-0\"},{\"commissionId\":11,\"day\":11,\"routeId\":\"old\",\"blades\":[{\"id\":\"d10-2\",\"slot\":2,\"suppliedDay\":10,\"recipe\":\"guard\",\"status\":\"commissioned\",\"base\":540,\"value\":2258,\"peak\":2258,\"level\":4,\"cracked\":false,\"hits\":2,\"charge\":2,\"successes\":2,\"normalGreats\":2,\"bursts\":0,\"finalizedDay\":11,\"commissionId\":11}],\"runId\":\"v4-witness-0\"},{\"commissionId\":12,\"day\":12,\"routeId\":\"finale\",\"blades\":[{\"id\":\"d12-1\",\"slot\":1,\"suppliedDay\":12,\"recipe\":\"heavy\",\"status\":\"commissioned\",\"base\":540,\"value\":66813,\"peak\":66813,\"level\":12,\"cracked\":false,\"hits\":6,\"charge\":0,\"successes\":6,\"normalGreats\":1,\"bursts\":1,\"finalizedDay\":12,\"commissionId\":12}],\"runId\":\"v4-witness-0\"}]}}",
+      "trusted": true
+    }
+  ],
+  "confirmedSnapshot": {
+    "chapters": [
+      1
+    ],
+    "mastery": [],
+    "traits": [
+      "steady",
+      "ember"
+    ],
+    "challenge": false,
+    "works": [
+      {
+        "blades": [
+          {
+            "base": 40,
+            "bursts": 0,
+            "charge": 3,
+            "commissionId": 1,
+            "cracked": false,
+            "finalizedDay": 1,
+            "hits": 3,
+            "id": "d1-1",
+            "level": 3,
+            "normalGreats": 0,
+            "peak": 148,
+            "recipe": "light",
+            "slot": 1,
+            "status": "commissioned",
+            "successes": 3,
+            "suppliedDay": 1,
+            "value": 148
+          }
+        ],
+        "commissionId": 1,
+        "day": 1,
+        "routeId": "intact",
+        "runId": "v4-witness-0",
+        "rulesVersion": "forge-v4"
+      },
+      {
+        "blades": [
+          {
+            "base": 40,
+            "bursts": 0,
+            "charge": 4,
+            "commissionId": 2,
+            "cracked": false,
+            "finalizedDay": 2,
+            "hits": 4,
+            "id": "d2-1",
+            "level": 4,
+            "normalGreats": 0,
+            "peak": 229,
+            "recipe": "light",
+            "slot": 1,
+            "status": "commissioned",
+            "successes": 4,
+            "suppliedDay": 2,
+            "value": 229
+          }
+        ],
+        "commissionId": 2,
+        "day": 2,
+        "routeId": "light",
+        "runId": "v4-witness-0",
+        "rulesVersion": "forge-v4"
+      },
+      {
+        "blades": [
+          {
+            "base": 40,
+            "bursts": 1,
+            "charge": 0,
+            "commissionId": 3,
+            "cracked": true,
+            "finalizedDay": 3,
+            "hits": 6,
+            "id": "d3-2",
+            "level": 8,
+            "normalGreats": 0,
+            "peak": 1315,
+            "recipe": "light",
+            "slot": 2,
+            "status": "commissioned",
+            "successes": 5,
+            "suppliedDay": 3,
+            "value": 1315
+          }
+        ],
+        "commissionId": 3,
+        "day": 3,
+        "routeId": "burst",
+        "runId": "v4-witness-0",
+        "rulesVersion": "forge-v4"
+      },
+      {
+        "blades": [
+          {
+            "base": 72,
+            "bursts": 0,
+            "charge": 5,
+            "commissionId": 4,
+            "cracked": false,
+            "finalizedDay": 4,
+            "hits": 5,
+            "id": "d4-1",
+            "level": 5,
+            "normalGreats": 0,
+            "peak": 383,
+            "recipe": "guard",
+            "slot": 1,
+            "status": "commissioned",
+            "successes": 5,
+            "suppliedDay": 4,
+            "value": 383
+          }
+        ],
+        "commissionId": 4,
+        "day": 4,
+        "routeId": "guard",
+        "runId": "v4-witness-0",
+        "rulesVersion": "forge-v4"
+      }
+    ]
+  },
+  "unshownSource": {
+    "chapters": [
+      1,
+      2,
+      3
+    ],
+    "mastery": [
+      "guard",
+      "heavy"
+    ],
+    "traits": [
+      "steady",
+      "ember",
+      "pardon"
+    ],
+    "challenge": true,
+    "works": [
+      {
+        "blades": [
+          {
+            "base": 40,
+            "bursts": 0,
+            "charge": 3,
+            "commissionId": 1,
+            "cracked": false,
+            "finalizedDay": 1,
+            "hits": 3,
+            "id": "d1-1",
+            "level": 3,
+            "normalGreats": 0,
+            "peak": 148,
+            "recipe": "light",
+            "slot": 1,
+            "status": "commissioned",
+            "successes": 3,
+            "suppliedDay": 1,
+            "value": 148
+          }
+        ],
+        "commissionId": 1,
+        "day": 1,
+        "routeId": "intact",
+        "runId": "v4-witness-0",
+        "rulesVersion": "forge-v4"
+      },
+      {
+        "blades": [
+          {
+            "base": 40,
+            "bursts": 0,
+            "charge": 4,
+            "commissionId": 2,
+            "cracked": false,
+            "finalizedDay": 2,
+            "hits": 4,
+            "id": "d2-1",
+            "level": 4,
+            "normalGreats": 0,
+            "peak": 229,
+            "recipe": "light",
+            "slot": 1,
+            "status": "commissioned",
+            "successes": 4,
+            "suppliedDay": 2,
+            "value": 229
+          }
+        ],
+        "commissionId": 2,
+        "day": 2,
+        "routeId": "light",
+        "runId": "v4-witness-0",
+        "rulesVersion": "forge-v4"
+      },
+      {
+        "blades": [
+          {
+            "base": 40,
+            "bursts": 1,
+            "charge": 0,
+            "commissionId": 3,
+            "cracked": true,
+            "finalizedDay": 3,
+            "hits": 6,
+            "id": "d3-2",
+            "level": 8,
+            "normalGreats": 0,
+            "peak": 1315,
+            "recipe": "light",
+            "slot": 2,
+            "status": "commissioned",
+            "successes": 5,
+            "suppliedDay": 3,
+            "value": 1315
+          }
+        ],
+        "commissionId": 3,
+        "day": 3,
+        "routeId": "burst",
+        "runId": "v4-witness-0",
+        "rulesVersion": "forge-v4"
+      },
+      {
+        "blades": [
+          {
+            "base": 72,
+            "bursts": 0,
+            "charge": 5,
+            "commissionId": 4,
+            "cracked": false,
+            "finalizedDay": 4,
+            "hits": 5,
+            "id": "d4-1",
+            "level": 5,
+            "normalGreats": 0,
+            "peak": 383,
+            "recipe": "guard",
+            "slot": 1,
+            "status": "commissioned",
+            "successes": 5,
+            "suppliedDay": 4,
+            "value": 383
+          }
+        ],
+        "commissionId": 4,
+        "day": 4,
+        "routeId": "guard",
+        "runId": "v4-witness-0",
+        "rulesVersion": "forge-v4"
+      },
+      {
+        "blades": [
+          {
+            "base": 72,
+            "bursts": 0,
+            "charge": 6,
+            "commissionId": 5,
+            "cracked": false,
+            "finalizedDay": 5,
+            "hits": 6,
+            "id": "d4-2",
+            "level": 6,
+            "normalGreats": 0,
+            "peak": 536,
+            "recipe": "guard",
+            "slot": 2,
+            "status": "commissioned",
+            "successes": 6,
+            "suppliedDay": 4,
+            "value": 536
+          }
+        ],
+        "commissionId": 5,
+        "day": 5,
+        "routeId": "old",
+        "runId": "v4-witness-0",
+        "rulesVersion": "forge-v4"
+      },
+      {
+        "blades": [
+          {
+            "base": 120,
+            "bursts": 1,
+            "charge": 5,
+            "commissionId": 6,
+            "cracked": true,
+            "finalizedDay": 6,
+            "hits": 11,
+            "id": "d6-2",
+            "level": 17,
+            "normalGreats": 3,
+            "peak": 39295,
+            "recipe": "guard",
+            "slot": 2,
+            "status": "commissioned",
+            "successes": 10,
+            "suppliedDay": 6,
+            "value": 39295
+          }
+        ],
+        "commissionId": 6,
+        "day": 6,
+        "routeId": "cracked",
+        "runId": "v4-witness-0",
+        "rulesVersion": "forge-v4"
+      },
+      {
+        "blades": [
+          {
+            "base": 180,
+            "bursts": 0,
+            "charge": 3,
+            "commissionId": 7,
+            "cracked": false,
+            "finalizedDay": 7,
+            "hits": 3,
+            "id": "d7-1",
+            "level": 4,
+            "normalGreats": 1,
+            "peak": 997,
+            "recipe": "heavy",
+            "slot": 1,
+            "status": "commissioned",
+            "successes": 3,
+            "suppliedDay": 7,
+            "value": 997
+          }
+        ],
+        "commissionId": 7,
+        "day": 7,
+        "routeId": "heavy",
+        "runId": "v4-witness-0",
+        "rulesVersion": "forge-v4"
+      },
+      {
+        "blades": [
+          {
+            "base": 180,
+            "bursts": 0,
+            "charge": 2,
+            "commissionId": 8,
+            "cracked": false,
+            "finalizedDay": 8,
+            "hits": 2,
+            "id": "d8-1",
+            "level": 2,
+            "normalGreats": 0,
+            "peak": 432,
+            "recipe": "light",
+            "slot": 1,
+            "status": "commissioned",
+            "successes": 2,
+            "suppliedDay": 8,
+            "value": 432
+          },
+          {
+            "base": 180,
+            "bursts": 0,
+            "charge": 2,
+            "commissionId": 8,
+            "cracked": false,
+            "finalizedDay": 8,
+            "hits": 2,
+            "id": "d8-2",
+            "level": 2,
+            "normalGreats": 0,
+            "peak": 432,
+            "recipe": "light",
+            "slot": 2,
+            "status": "commissioned",
+            "successes": 2,
+            "suppliedDay": 8,
+            "value": 432
+          }
+        ],
+        "commissionId": 8,
+        "day": 8,
+        "routeId": "two-light",
+        "runId": "v4-witness-0",
+        "rulesVersion": "forge-v4"
+      },
+      {
+        "blades": [
+          {
+            "base": 360,
+            "bursts": 2,
+            "charge": 0,
+            "commissionId": 9,
+            "cracked": true,
+            "finalizedDay": 9,
+            "hits": 12,
+            "id": "d9-2",
+            "level": 24,
+            "normalGreats": 3,
+            "peak": 1233071,
+            "recipe": "guard",
+            "slot": 2,
+            "status": "commissioned",
+            "successes": 11,
+            "suppliedDay": 9,
+            "value": 1233071
+          }
+        ],
+        "commissionId": 9,
+        "day": 9,
+        "routeId": "two-bursts",
+        "runId": "v4-witness-0",
+        "rulesVersion": "forge-v4"
+      },
+      {
+        "blades": [
+          {
+            "base": 540,
+            "bursts": 0,
+            "charge": 4,
+            "commissionId": 10,
+            "cracked": false,
+            "finalizedDay": 10,
+            "hits": 4,
+            "id": "d10-1",
+            "level": 4,
+            "normalGreats": 0,
+            "peak": 2073,
+            "recipe": "guard",
+            "slot": 1,
+            "status": "commissioned",
+            "successes": 4,
+            "suppliedDay": 10,
+            "value": 2073
+          }
+        ],
+        "commissionId": 10,
+        "day": 10,
+        "routeId": "intact",
+        "runId": "v4-witness-0",
+        "rulesVersion": "forge-v4"
+      },
+      {
+        "blades": [
+          {
+            "base": 540,
+            "bursts": 0,
+            "charge": 2,
+            "commissionId": 11,
+            "cracked": false,
+            "finalizedDay": 11,
+            "hits": 2,
+            "id": "d10-2",
+            "level": 4,
+            "normalGreats": 2,
+            "peak": 2258,
+            "recipe": "guard",
+            "slot": 2,
+            "status": "commissioned",
+            "successes": 2,
+            "suppliedDay": 10,
+            "value": 2258
+          }
+        ],
+        "commissionId": 11,
+        "day": 11,
+        "routeId": "old",
+        "runId": "v4-witness-0",
+        "rulesVersion": "forge-v4"
+      },
+      {
+        "blades": [
+          {
+            "base": 540,
+            "bursts": 1,
+            "charge": 0,
+            "commissionId": 12,
+            "cracked": false,
+            "finalizedDay": 12,
+            "hits": 6,
+            "id": "d12-1",
+            "level": 12,
+            "normalGreats": 1,
+            "peak": 66813,
+            "recipe": "heavy",
+            "slot": 1,
+            "status": "commissioned",
+            "successes": 6,
+            "suppliedDay": 12,
+            "value": 66813
+          }
+        ],
+        "commissionId": 12,
+        "day": 12,
+        "routeId": "finale",
+        "runId": "v4-witness-0",
+        "rulesVersion": "forge-v4"
+      }
+    ]
+  }
+}

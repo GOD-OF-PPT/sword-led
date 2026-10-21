@@ -1,0 +1,60 @@
+[
+  {
+    "action": {
+      "type": "strike",
+      "pieceId": "d1-1"
+    },
+    "runId": "v5-ui-boundary",
+    "mode": "story",
+    "day": 1,
+    "revision": 3,
+    "coinsBefore": 0,
+    "coinsAfter": 0,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d1-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 62,
+            "after": 96,
+            "level": 2,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "strike",
+      "pieceId": "d1-1"
+    },
+    "runId": "v5-ui-boundary",
+    "mode": "story",
+    "day": 1,
+    "revision": 4,
+    "coinsBefore": 0,
+    "coinsAfter": 0,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d1-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "great",
+            "before": 96,
+            "after": 201,
+            "level": 4,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,8 +1,9 @@
 import {test,expect} from '@playwright/test';
-import {KeyboardV5,v5Sdk,v5VictoryGuide} from './v5-helpers.js';
+import {KeyboardV5,v5Sdk,v5VictoryGuide,keyToV5} from './v5-helpers.js';
+import {buildJourney} from './v5-plans.js';
 
-test('current v5: native keyboard story victory, collection, reload and earned challenge opening',async({page},info)=>{
- const keyboard=new KeyboardV5(page,info);await keyboard.install();await keyboard.start();expect(v5VictoryGuide).toHaveLength(142);
+test('current v5: fresh keyboard story earns and completes a reordered twelve-day challenge',async({page},info)=>{
+ test.setTimeout(600000);const keyboard=new KeyboardV5(page,info);await keyboard.install();await keyboard.start();expect(v5VictoryGuide).toHaveLength(142);
  const merchants=new Set<number>();let recipeSwitches=0;
  for(const action of v5VictoryGuide){
   await keyboard.leaveIntro();const before=(await keyboard.read()).state;
@@ -24,7 +25,15 @@ test('current v5: native keyboard story victory, collection, reload and earned c
   await expect(page.locator('#v4-dialog-body [data-record]')).toHaveCount(12);await expect(page.locator('#v4-dialog-body [data-record][data-rules-version="forge-v5"]')).toHaveCount(12);await keyboard.capture('keyboard-earned-collection');
  });
  const earned=(await keyboard.read()).collection;expect(earned?.challenge).toBe(true);if(!earned)throw Error('No persisted earned collection');
- await keyboard.activate(page.locator('#v4-dialog-body').getByRole('button',{name:'开启行脚挑战',exact:true}));await keyboard.confirm();
+ await keyboard.activate(page.locator('#v4-dialog-actions').getByRole('button',{name:'收好炉谱',exact:true}));
+ await keyboard.activate(page.getByRole('button',{name:'回到路口，再开一炉',exact:true}));
+ if(!await page.locator('.v4-journey-options').evaluate(node=>(node as HTMLDetailsElement).open))await keyboard.activate(page.locator('.v4-journey-options summary'));await keyToV5(page,page.locator('#v4-seed'));await page.keyboard.press('ControlOrMeta+A');await page.keyboard.type('v5-economy-0');
+ await keyboard.activate(page.locator('#v4-title-challenge'));await keyboard.activate(page.getByRole('button',{name:'再想想',exact:true}));expect((await keyboard.read()).state).toEqual(victory.state);
+ await keyboard.activate(page.locator('#v4-title-challenge'));await keyboard.confirm();
  const challenge=await keyboard.record('keyboard-earned-challenge-created');expect(challenge.state.runId).not.toBe(victory.state.runId);expect(challenge.state.mode).toBe('challenge');expect(challenge.state.phase).toBe('opening');expect(challenge.state.revision).toBe(0);expect(challenge.state.coins).toBe(0);expect(challenge.state.initialEligibility).toEqual(v5Sdk.collectionEligibility(earned));
- const expected=v5Sdk.createRun({runId:challenge.state.runId,seed:challenge.state.seed,mode:'challenge',eligibility:v5Sdk.collectionEligibility(earned)});if(!expected.ok)throw Error(expected.error);expect(challenge.state).toEqual(expected.state);await keyboard.capture('keyboard-earned-challenge-opening');await keyboard.finish({storyGuideCommands:142,recipeSwitchCommands:recipeSwitches,challengeCreations:1,challengeDomainCommands:challenge.state.journal.length});
+ const expected=v5Sdk.createRun({runId:challenge.state.runId,seed:challenge.state.seed,mode:'challenge',eligibility:v5Sdk.collectionEligibility(earned)});if(!expected.ok)throw Error(expected.error);expect(challenge.state).toEqual(expected.state);await keyboard.capture('keyboard-earned-challenge-opening');
+ expect(challenge.state.seed).toBe('v5-economy-0');expect(challenge.state.commissionOrder).not.toEqual(Array.from({length:12},(_,index)=>index+1));const plan=buildJourney(v5Sdk,{runId:challenge.state.runId,seed:challenge.state.seed,mode:'challenge',eligibility:challenge.state.initialEligibility});expect(plan.state.phase).toBe('victory');expect(plan.state.history.every(day=>day.met)).toBe(true);
+ for(const action of plan.actions){const before=(await keyboard.read()).state;await keyboard.command(action);const current=(await keyboard.read()).state;if(action.type==='advance'&&[6,7,9,11].includes(current.day)){await keyboard.leaveIntro();await expect(page.locator('#v4-goal-name')).toContainText(v5Sdk.commissionFor(current).title);if(current.day===9)await expect(page.locator('#v4-shop')).toBeVisible();}if(action.type==='deliver'&&before.day===12)expect(current.phase).toBe('workshop');}
+ const final=await keyboard.record('keyboard-earned-challenge-victory');expect(final.state).toEqual(plan.state);expect(final.state.mode).toBe('challenge');expect(final.state.history.filter(day=>day.met)).toHaveLength(12);await keyboard.capture('keyboard-earned-challenge-victory');await keyboard.reload();await keyboard.activate(page.locator('#v4-continue'));const resumedChallenge=await keyboard.record('keyboard-challenge-victory-reload');expect(resumedChallenge.state).toEqual(final.state);expect(resumedChallenge.collection).toEqual(final.collection);
+ await keyboard.finish({freshUIJourneys:2,storyGuideCommands:142,recipeSwitchCommands:recipeSwitches,challengeCreations:1,challengeDomainCommands:plan.actions.length,storyEnding:'victory',challengeEnding:final.state.phase});
 });

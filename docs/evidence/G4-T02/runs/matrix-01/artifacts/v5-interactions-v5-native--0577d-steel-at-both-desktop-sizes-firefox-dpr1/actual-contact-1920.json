@@ -1,0 +1,70 @@
+{
+  "probe": {
+    "frames": [
+      {
+        "gap": 55.62167685141816,
+        "angle": 8.35808890244458,
+        "pivotGap": 0.16632812179302264,
+        "metalGap": 55.148577996164704,
+        "time": 0,
+        "sampleCostMs": 4,
+        "phase": "swing"
+      },
+      {
+        "gap": 5.515305050038734,
+        "angle": 1.1151821129371469,
+        "pivotGap": 0.16632818275819183,
+        "metalGap": 5.485832747306858,
+        "time": 50,
+        "sampleCostMs": 3,
+        "phase": "swing"
+      },
+      {
+        "gap": 0.4762654195299183,
+        "angle": 0.3580939593236531,
+        "pivotGap": 0.16632813674260857,
+        "metalGap": 0.9358184031950714,
+        "time": 155,
+        "sampleCostMs": 5,
+        "phase": "contact"
+      },
+      {
+        "gap": 0.4762654195299183,
+        "angle": 0.3580939593236531,
+        "pivotGap": 0.16632813674260857,
+        "metalGap": 0.35247489733569637,
+        "time": 285,
+        "sampleCostMs": 3,
+        "phase": "contact"
+      }
+    ],
+    "complete": true,
+    "source": "http://127.0.0.1:4245/assets/d/hammer-forge-v2.webp",
+    "sourceAlpha": [
+      249,
+      253,
+      253
+    ],
+    "inputToFirstSampleMs": 55
+  },
+  "metrics": {
+    "dpr": 1,
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "focus": {
+      "id": "v4-hit",
+      "tag": "BUTTON"
+    },
+    "canvas": {
+      "width": 1286,
+      "height": 468,
+      "cssWidth": 1286.4166259765625,
+      "cssHeight": 467.7833251953125,
+      "backingRatioX": 0.9996761344900637,
+      "backingRatioY": 1.0004631948019889,
+      "visible": true
+    }
+  }
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "runId": "v5-journey",
+    "mode": "story",
+    "action": {
+      "type": "settle"
+    },
+    "day": 8,
+    "revision": 79,
+    "coinsBefore": 1052,
+    "coinsAfter": 1097,
+    "events": [
+      {
+        "type": "Settled",
+        "record": {
+          "day": 8,
+          "commissionId": 8,
+          "met": true,
+          "routeId": "two-light",
+          "pieceIds": [
+            "d8-1",
+            "d8-2"
+          ],
+          "sales": 285,
+          "recovered": 45,
+          "baseFees": 250,
+          "marketSpent": 80,
+          "recoveredIds": [
+            "d8-3"
+          ],
+          "reserveId": null,
+          "sealsBefore": 3,
+          "sealsAfter": 3,
+          "protected": false,
+          "modification": null
+        }
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "chooseModification",
+      "modification": "windbox"
+    },
+    "runId": "v5-journey",
+    "mode": "story",
+    "day": 8,
+    "revision": 80,
+    "coinsBefore": 1097,
+    "coinsAfter": 1097,
+    "events": [
+      {
+        "type": "Modification",
+        "modification": "windbox"
+      }
+    ]
+  }
+]

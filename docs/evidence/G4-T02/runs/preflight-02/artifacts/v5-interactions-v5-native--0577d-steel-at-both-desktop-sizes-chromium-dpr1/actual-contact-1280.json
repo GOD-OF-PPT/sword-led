@@ -1,0 +1,79 @@
+{
+  "probe": {
+    "frames": [
+      {
+        "gap": 53.44996875019863,
+        "angle": 8.358088779180134,
+        "pivotGap": 0.37320944602106215,
+        "metalGap": 52.35945434761061,
+        "time": 0,
+        "sampleCostMs": 0.800000011920929,
+        "phase": "swing"
+      },
+      {
+        "gap": 30.212049392459132,
+        "angle": 4.868640002672758,
+        "pivotGap": 0.37320952331107754,
+        "metalGap": 29.213539179482495,
+        "time": 31.899999976158142,
+        "sampleCostMs": 0.699999988079071,
+        "phase": "swing"
+      },
+      {
+        "gap": 7.925850473761396,
+        "angle": 1.525456434877987,
+        "pivotGap": 0.3732093084122159,
+        "metalGap": 8.20840700806599,
+        "time": 48.59999996423721,
+        "sampleCostMs": 0.2999999523162842,
+        "phase": "swing"
+      },
+      {
+        "gap": 0.6477267269525563,
+        "angle": 0.35809395932357113,
+        "pivotGap": 0.3732094766703182,
+        "metalGap": 0.5798778044871824,
+        "time": 73.59999996423721,
+        "sampleCostMs": 0.2999999523162842,
+        "phase": "contact"
+      },
+      {
+        "gap": 0.6477267269525563,
+        "angle": 0.35809395932357113,
+        "pivotGap": 0.3732094766703182,
+        "metalGap": 0.5798778044871824,
+        "time": 79.89999997615814,
+        "sampleCostMs": 0.3999999761581421,
+        "phase": "contact"
+      }
+    ],
+    "complete": true,
+    "source": "http://127.0.0.1:4245/assets/d/hammer-forge-v2.webp",
+    "sourceAlpha": [
+      249,
+      253,
+      253
+    ],
+    "inputToFirstSampleMs": 19.19999998807907
+  },
+  "metrics": {
+    "dpr": 1,
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "focus": {
+      "id": "v4-hit",
+      "tag": "BUTTON"
+    },
+    "canvas": {
+      "width": 858,
+      "height": 312,
+      "cssWidth": 857.609375,
+      "cssHeight": 311.84375,
+      "backingRatioX": 1.000455481261501,
+      "backingRatioY": 1.0005010522096403,
+      "visible": true
+    }
+  }
+}

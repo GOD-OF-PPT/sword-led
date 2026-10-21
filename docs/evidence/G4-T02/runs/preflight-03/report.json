@@ -1,0 +1,600 @@
+{
+  "config": {
+    "argv": [
+      "/Users/gordon/.nvm/versions/node/v22.12.0/bin/node",
+      "/Users/gordon/githome/sword-led/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "playwright.v5-ui.config.ts",
+      "--project",
+      "chromium-dpr1",
+      "--grep",
+      "fresh two-new|fresh mixed-return|fresh keyboard story|combined run, collection|explicit donation accept|explicit rest accept|backup-only source change|pending Space",
+      "--output",
+      "tmp/goal4-T02/runs/preflight-03/artifacts"
+    ],
+    "configFile": "/Users/gordon/githome/sword-led/playwright.v5-ui.config.ts",
+    "rootDir": "/Users/gordon/githome/sword-led/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/goal4-T02/runs/preflight-03/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-dpr1",
+        "name": "chromium-dpr1",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v5-*.spec.ts"
+        ],
+        "timeout": 420000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/goal4-T02/runs/preflight-03/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-dpr2",
+        "name": "chromium-dpr2",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v5-*.spec.ts"
+        ],
+        "timeout": 420000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/goal4-T02/runs/preflight-03/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox-dpr1",
+        "name": "firefox-dpr1",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v5-*.spec.ts"
+        ],
+        "timeout": 420000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/goal4-T02/runs/preflight-03/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox-dpr2",
+        "name": "firefox-dpr2",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v5-*.spec.ts"
+        ],
+        "timeout": 420000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/goal4-T02/runs/preflight-03/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit-dpr1",
+        "name": "webkit-dpr1",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v5-*.spec.ts"
+        ],
+        "timeout": 420000
+      },
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/goal4-T02/runs/preflight-03/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit-dpr2",
+        "name": "webkit-dpr2",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "v5-*.spec.ts"
+        ],
+        "timeout": 420000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/goal4-T02/runs/preflight-03/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chromium-dpr1",
+        "testDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "v5-*.spec.ts",
+        "timeout": 420000,
+        "use": {
+          "actionTimeout": 15000,
+          "navigationTimeout": 30000,
+          "baseURL": "http://127.0.0.1:4245",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "trace": "off",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "browserName": "chromium",
+          "launchOptions": {
+            "args": [
+              "--no-proxy-server"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium-dpr1"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "tmp/goal4-T02/runs/preflight-03/report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 4245 --strictPort",
+      "url": "http://127.0.0.1:4245/",
+      "reuseExistingServer": false,
+      "env": {
+        "NO_PROXY": "127.0.0.1,localhost",
+        "no_proxy": "127.0.0.1,localhost"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "v5-events.spec.ts",
+      "file": "v5-events.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "v5 restored boundary: explicit donation accept, reload and real next-day consequence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 420000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-dpr1",
+              "projectName": "chromium-dpr1",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7174,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T16:04:03.484Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8006d83a6501dbd5395-494b37e96a646900d306",
+          "file": "v5-events.spec.ts",
+          "line": 7,
+          "column": 71
+        },
+        {
+          "title": "v5 restored boundary: explicit rest accept, reload and real next-day consequence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 420000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-dpr1",
+              "projectName": "chromium-dpr1",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5971,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T16:04:11.346Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b8006d83a6501dbd5395-918806cf020325a62166",
+          "file": "v5-events.spec.ts",
+          "line": 7,
+          "column": 71
+        }
+      ]
+    },
+    {
+      "title": "v5-interactions.spec.ts",
+      "file": "v5-interactions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "v5 pending Space is cancelled by real focus traversal and a settings modal; modal focus returns",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 420000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-dpr1",
+              "projectName": "chromium-dpr1",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2140,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T16:04:17.360Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cb821717d1f2aa29d2b2-6acbfebb057d2e2cf0fe",
+          "file": "v5-interactions.spec.ts",
+          "line": 19,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v5-journeys.spec.ts",
+      "file": "v5-journeys.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "fresh two-new: actual payments, partial reloads, final receipt and honest ending",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 360000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-dpr1",
+              "projectName": "chromium-dpr1",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 93315,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T16:04:19.533Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8b5043294f98f9379f8-8c4a0c11aa187c4ad8c2",
+          "file": "v5-journeys.spec.ts",
+          "line": 5,
+          "column": 54
+        },
+        {
+          "title": "fresh mixed-return: actual payments, partial reloads, final receipt and honest ending",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 360000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-dpr1",
+              "projectName": "chromium-dpr1",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 77360,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T16:05:52.865Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8b5043294f98f9379f8-b740f096f6dede6cb188",
+          "file": "v5-journeys.spec.ts",
+          "line": 5,
+          "column": 54
+        }
+      ]
+    },
+    {
+      "title": "v5-keyboard.spec.ts",
+      "file": "v5-keyboard.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "current v5: fresh keyboard story earns and completes a reordered twelve-day challenge",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 600000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-dpr1",
+              "projectName": "chromium-dpr1",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 205002,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T16:07:10.279Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ae2ac7fdef9f4a1b4159-870f83b478d40e4bf06f",
+          "file": "v5-keyboard.spec.ts",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "v5-storage.spec.ts",
+      "file": "v5-storage.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "v5 day-4 combined run, collection and settings faults retain accepted work and retry each layer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 420000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-dpr1",
+              "projectName": "chromium-dpr1",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4352,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T16:10:35.302Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "43fbed51a8926a17841c-7d233fcb2547187a6dc9",
+          "file": "v5-storage.spec.ts",
+          "line": 24,
+          "column": 31
+        },
+        {
+          "title": "v5 day-8 combined run, collection and settings faults retain accepted work and retry each layer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 420000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-dpr1",
+              "projectName": "chromium-dpr1",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4702,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T16:10:39.670Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "43fbed51a8926a17841c-0e02ffad8912766559fa",
+          "file": "v5-storage.spec.ts",
+          "line": 24,
+          "column": 31
+        },
+        {
+          "title": "v5 a run-backup-only source change invalidates an older recovery confirmation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 420000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-dpr1",
+              "projectName": "chromium-dpr1",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2452,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T16:10:44.391Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "43fbed51a8926a17841c-2732911086ef3370be87",
+          "file": "v5-storage.spec.ts",
+          "line": 67,
+          "column": 41
+        },
+        {
+          "title": "v5 a book-backup-only source change invalidates an older recovery confirmation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 420000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-dpr1",
+              "projectName": "chromium-dpr1",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2420,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T16:10:46.853Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "43fbed51a8926a17841c-a90430a088d5088ae9ed",
+          "file": "v5-storage.spec.ts",
+          "line": 67,
+          "column": 41
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-21T16:03:59.337Z",
+    "duration": 410111.83,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

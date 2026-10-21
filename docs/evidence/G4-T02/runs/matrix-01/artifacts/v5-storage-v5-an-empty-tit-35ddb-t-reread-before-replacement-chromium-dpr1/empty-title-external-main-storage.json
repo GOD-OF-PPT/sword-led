@@ -1,0 +1,660 @@
+{
+  "label": "empty-title-external-main",
+  "scope": "Restored legal boundary with actual UI/Storage faults; not a new complete campaign",
+  "state": {
+    "rulesVersion": "forge-v5",
+    "runId": "v5-journey",
+    "seed": "v5-economy-0",
+    "mode": "story",
+    "initialEligibility": {
+      "recipes": [
+        "light"
+      ],
+      "challenge": false
+    },
+    "revision": 45,
+    "phase": "workshop",
+    "day": 5,
+    "commissionOrder": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "coins": 374,
+    "seals": 3,
+    "supplyBase": 120,
+    "upgradeCount": 1,
+    "inheritance": 0,
+    "blades": [
+      {
+        "id": "d1-1",
+        "slot": 1,
+        "suppliedDay": 1,
+        "recipe": "light",
+        "status": "commissioned",
+        "base": 40,
+        "value": 201,
+        "peak": 201,
+        "level": 4,
+        "cracked": false,
+        "hits": 3,
+        "charge": 3,
+        "successes": 3,
+        "normalGreats": 1,
+        "bursts": 0,
+        "finalizedDay": 1,
+        "commissionId": 1
+      },
+      {
+        "id": "d1-2",
+        "slot": 2,
+        "suppliedDay": 1,
+        "recipe": "light",
+        "status": "recycled",
+        "base": 40,
+        "value": 40,
+        "peak": 40,
+        "level": 0,
+        "cracked": false,
+        "hits": 0,
+        "charge": 0,
+        "successes": 0,
+        "normalGreats": 0,
+        "bursts": 0,
+        "finalizedDay": 1,
+        "commissionId": null
+      },
+      {
+        "id": "d1-3",
+        "slot": 3,
+        "suppliedDay": 1,
+        "recipe": "light",
+        "status": "recycled",
+        "base": 40,
+        "value": 40,
+        "peak": 40,
+        "level": 0,
+        "cracked": false,
+        "hits": 0,
+        "charge": 0,
+        "successes": 0,
+        "normalGreats": 0,
+        "bursts": 0,
+        "finalizedDay": 1,
+        "commissionId": null
+      },
+      {
+        "id": "d2-1",
+        "slot": 1,
+        "suppliedDay": 2,
+        "recipe": "light",
+        "status": "commissioned",
+        "base": 40,
+        "value": 176,
+        "peak": 176,
+        "level": 4,
+        "cracked": false,
+        "hits": 2,
+        "charge": 2,
+        "successes": 2,
+        "normalGreats": 2,
+        "bursts": 0,
+        "finalizedDay": 2,
+        "commissionId": 2
+      },
+      {
+        "id": "d2-2",
+        "slot": 2,
+        "suppliedDay": 2,
+        "recipe": "light",
+        "status": "recycled",
+        "base": 40,
+        "value": 40,
+        "peak": 40,
+        "level": 0,
+        "cracked": false,
+        "hits": 0,
+        "charge": 0,
+        "successes": 0,
+        "normalGreats": 0,
+        "bursts": 0,
+        "finalizedDay": 2,
+        "commissionId": null
+      },
+      {
+        "id": "d2-3",
+        "slot": 3,
+        "suppliedDay": 2,
+        "recipe": "light",
+        "status": "recycled",
+        "base": 40,
+        "value": 40,
+        "peak": 40,
+        "level": 0,
+        "cracked": false,
+        "hits": 0,
+        "charge": 0,
+        "successes": 0,
+        "normalGreats": 0,
+        "bursts": 0,
+        "finalizedDay": 2,
+        "commissionId": null
+      },
+      {
+        "id": "d3-1",
+        "slot": 1,
+        "suppliedDay": 3,
+        "recipe": "light",
+        "status": "broken",
+        "base": 40,
+        "value": 0,
+        "peak": 311,
+        "level": 5,
+        "cracked": true,
+        "hits": 6,
+        "charge": 5,
+        "successes": 4,
+        "normalGreats": 1,
+        "bursts": 0,
+        "finalizedDay": 3,
+        "commissionId": null
+      },
+      {
+        "id": "d3-2",
+        "slot": 2,
+        "suppliedDay": 3,
+        "recipe": "light",
+        "status": "commissioned",
+        "base": 40,
+        "value": 1787,
+        "peak": 1787,
+        "level": 9,
+        "cracked": false,
+        "hits": 6,
+        "charge": 0,
+        "successes": 6,
+        "normalGreats": 1,
+        "bursts": 1,
+        "finalizedDay": 3,
+        "commissionId": 3
+      },
+      {
+        "id": "d3-3",
+        "slot": 3,
+        "suppliedDay": 3,
+        "recipe": "light",
+        "status": "recycled",
+        "base": 40,
+        "value": 40,
+        "peak": 40,
+        "level": 0,
+        "cracked": false,
+        "hits": 0,
+        "charge": 0,
+        "successes": 0,
+        "normalGreats": 0,
+        "bursts": 0,
+        "finalizedDay": 3,
+        "commissionId": null
+      },
+      {
+        "id": "d4-1",
+        "slot": 1,
+        "suppliedDay": 4,
+        "recipe": "guard",
+        "status": "commissioned",
+        "base": 60,
+        "value": 443,
+        "peak": 443,
+        "level": 6,
+        "cracked": false,
+        "hits": 5,
+        "charge": 5,
+        "successes": 5,
+        "normalGreats": 1,
+        "bursts": 0,
+        "finalizedDay": 4,
+        "commissionId": 4
+      },
+      {
+        "id": "d4-2",
+        "slot": 2,
+        "suppliedDay": 4,
+        "recipe": "guard",
+        "status": "active",
+        "base": 60,
+        "value": 710,
+        "peak": 710,
+        "level": 7,
+        "cracked": false,
+        "hits": 5,
+        "charge": 5,
+        "successes": 5,
+        "normalGreats": 2,
+        "bursts": 0,
+        "finalizedDay": null,
+        "commissionId": null
+      },
+      {
+        "id": "d4-3",
+        "slot": 3,
+        "suppliedDay": 4,
+        "recipe": "guard",
+        "status": "recycled",
+        "base": 60,
+        "value": 60,
+        "peak": 60,
+        "level": 0,
+        "cracked": false,
+        "hits": 0,
+        "charge": 0,
+        "successes": 0,
+        "normalGreats": 0,
+        "bursts": 0,
+        "finalizedDay": 4,
+        "commissionId": null
+      },
+      {
+        "id": "d5-1",
+        "slot": 1,
+        "suppliedDay": 5,
+        "recipe": "guard",
+        "status": "active",
+        "base": 120,
+        "value": 120,
+        "peak": 120,
+        "level": 0,
+        "cracked": false,
+        "hits": 0,
+        "charge": 0,
+        "successes": 0,
+        "normalGreats": 0,
+        "bursts": 0,
+        "finalizedDay": null,
+        "commissionId": null
+      },
+      {
+        "id": "d5-2",
+        "slot": 2,
+        "suppliedDay": 5,
+        "recipe": "guard",
+        "status": "active",
+        "base": 120,
+        "value": 120,
+        "peak": 120,
+        "level": 0,
+        "cracked": false,
+        "hits": 0,
+        "charge": 0,
+        "successes": 0,
+        "normalGreats": 0,
+        "bursts": 0,
+        "finalizedDay": null,
+        "commissionId": null
+      }
+    ],
+    "reserveId": "d4-2",
+    "daySales": 0,
+    "dayRecovered": 0,
+    "marketSpent": 0,
+    "traits": [
+      "steady"
+    ],
+    "gift": "claimed",
+    "pardonUsed": false,
+    "crackGuard": false,
+    "modifications": [
+      "warmRack"
+    ],
+    "chapterChoices": [],
+    "shop": [],
+    "sold": [],
+    "upgraded": false,
+    "repaired": false,
+    "dayBuffs": {
+      "supplyPct": 100,
+      "loan": false,
+      "shelter": false
+    },
+    "pending": {
+      "supplyPct": 100,
+      "loan": false,
+      "shelter": false
+    },
+    "eventDeck": [
+      "donation",
+      "shelter",
+      "credit",
+      "loan",
+      "rest",
+      "salvage"
+    ],
+    "eventId": "shelter",
+    "eventStatus": "available",
+    "eventHistory": [
+      {
+        "day": 3,
+        "id": "donation",
+        "choice": "decline",
+        "pieceId": null,
+        "coins": 0
+      }
+    ],
+    "history": [
+      {
+        "day": 1,
+        "commissionId": 1,
+        "met": true,
+        "routeId": "intact",
+        "pieceIds": [
+          "d1-1"
+        ],
+        "sales": 120,
+        "recovered": 20,
+        "baseFees": 100,
+        "marketSpent": 40,
+        "recoveredIds": [
+          "d1-2",
+          "d1-3"
+        ],
+        "reserveId": null,
+        "sealsBefore": 3,
+        "sealsAfter": 3,
+        "protected": false,
+        "modification": null
+      },
+      {
+        "day": 2,
+        "commissionId": 2,
+        "met": true,
+        "routeId": "light",
+        "pieceIds": [
+          "d2-1"
+        ],
+        "sales": 103,
+        "recovered": 20,
+        "baseFees": 100,
+        "marketSpent": 23,
+        "recoveredIds": [
+          "d2-2",
+          "d2-3"
+        ],
+        "reserveId": null,
+        "sealsBefore": 3,
+        "sealsAfter": 3,
+        "protected": false,
+        "modification": null
+      },
+      {
+        "day": 3,
+        "commissionId": 3,
+        "met": true,
+        "routeId": "burst",
+        "pieceIds": [
+          "d3-2"
+        ],
+        "sales": 150,
+        "recovered": 10,
+        "baseFees": 100,
+        "marketSpent": 60,
+        "recoveredIds": [
+          "d3-3"
+        ],
+        "reserveId": null,
+        "sealsBefore": 3,
+        "sealsAfter": 3,
+        "protected": false,
+        "modification": null
+      },
+      {
+        "day": 4,
+        "commissionId": 4,
+        "met": true,
+        "routeId": "guard",
+        "pieceIds": [
+          "d4-1"
+        ],
+        "sales": 116,
+        "recovered": 15,
+        "baseFees": 100,
+        "marketSpent": 31,
+        "recoveredIds": [
+          "d4-3"
+        ],
+        "reserveId": "d4-2",
+        "sealsBefore": 3,
+        "sealsAfter": 3,
+        "protected": false,
+        "modification": "warmRack"
+      }
+    ],
+    "rng": {
+      "forge": {
+        "state": 4003379883,
+        "draws": 29
+      },
+      "shop": {
+        "state": 748294977,
+        "draws": 2
+      },
+      "events": {
+        "state": 1169050407,
+        "draws": 5
+      },
+      "content": {
+        "state": 561124140,
+        "draws": 0
+      }
+    },
+    "journal": [
+      {
+        "type": "continue"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d1-1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d1-1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d1-1"
+      },
+      {
+        "type": "deliver",
+        "pieceId": "d1-1"
+      },
+      {
+        "traitId": "steady",
+        "type": "claimGift"
+      },
+      {
+        "type": "settle"
+      },
+      {
+        "type": "advance"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d2-1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d2-1"
+      },
+      {
+        "type": "deliver",
+        "pieceId": "d2-1"
+      },
+      {
+        "type": "settle"
+      },
+      {
+        "type": "advance"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d3-1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d3-1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d3-1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d3-1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d3-1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d3-1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d3-2"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d3-2"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d3-2"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d3-2"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d3-2"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d3-2"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d3-2"
+      },
+      {
+        "type": "deliver",
+        "pieceId": "d3-2"
+      },
+      {
+        "type": "upgrade"
+      },
+      {
+        "type": "settle"
+      },
+      {
+        "type": "advance"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d4-1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d4-1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d4-1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d4-1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d4-1"
+      },
+      {
+        "type": "deliver",
+        "pieceId": "d4-1"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d4-2"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d4-2"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d4-2"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d4-2"
+      },
+      {
+        "type": "strike",
+        "pieceId": "d4-2"
+      },
+      {
+        "type": "reserve",
+        "pieceId": "d4-2"
+      },
+      {
+        "type": "settle"
+      },
+      {
+        "type": "chooseModification",
+        "modification": "warmRack"
+      },
+      {
+        "type": "advance"
+      }
+    ]
+  },
+  "raw": {
+    "sword-led.save.v5": "{\"schemaVersion\":5,\"rulesVersion\":\"forge-v5\",\"savedAt\":\"2026-10-21T00:00:00.000Z\",\"state\":{\"rulesVersion\":\"forge-v5\",\"runId\":\"v5-journey\",\"seed\":\"v5-economy-0\",\"mode\":\"story\",\"initialEligibility\":{\"recipes\":[\"light\"],\"challenge\":false},\"revision\":45,\"phase\":\"workshop\",\"day\":5,\"commissionOrder\":[1,2,3,4,5,6,7,8,9,10,11,12],\"coins\":374,\"seals\":3,\"supplyBase\":120,\"upgradeCount\":1,\"inheritance\":0,\"blades\":[{\"id\":\"d1-1\",\"slot\":1,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":40,\"value\":201,\"peak\":201,\"level\":4,\"cracked\":false,\"hits\":3,\"charge\":3,\"successes\":3,\"normalGreats\":1,\"bursts\":0,\"finalizedDay\":1,\"commissionId\":1},{\"id\":\"d1-2\",\"slot\":2,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"recycled\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":1,\"commissionId\":null},{\"id\":\"d1-3\",\"slot\":3,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"recycled\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":1,\"commissionId\":null},{\"id\":\"d2-1\",\"slot\":1,\"suppliedDay\":2,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":40,\"value\":176,\"peak\":176,\"level\":4,\"cracked\":false,\"hits\":2,\"charge\":2,\"successes\":2,\"normalGreats\":2,\"bursts\":0,\"finalizedDay\":2,\"commissionId\":2},{\"id\":\"d2-2\",\"slot\":2,\"suppliedDay\":2,\"recipe\":\"light\",\"status\":\"recycled\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":2,\"commissionId\":null},{\"id\":\"d2-3\",\"slot\":3,\"suppliedDay\":2,\"recipe\":\"light\",\"status\":\"recycled\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":2,\"commissionId\":null},{\"id\":\"d3-1\",\"slot\":1,\"suppliedDay\":3,\"recipe\":\"light\",\"status\":\"broken\",\"base\":40,\"value\":0,\"peak\":311,\"level\":5,\"cracked\":true,\"hits\":6,\"charge\":5,\"successes\":4,\"normalGreats\":1,\"bursts\":0,\"finalizedDay\":3,\"commissionId\":null},{\"id\":\"d3-2\",\"slot\":2,\"suppliedDay\":3,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":40,\"value\":1787,\"peak\":1787,\"level\":9,\"cracked\":false,\"hits\":6,\"charge\":0,\"successes\":6,\"normalGreats\":1,\"bursts\":1,\"finalizedDay\":3,\"commissionId\":3},{\"id\":\"d3-3\",\"slot\":3,\"suppliedDay\":3,\"recipe\":\"light\",\"status\":\"recycled\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":3,\"commissionId\":null},{\"id\":\"d4-1\",\"slot\":1,\"suppliedDay\":4,\"recipe\":\"guard\",\"status\":\"commissioned\",\"base\":60,\"value\":443,\"peak\":443,\"level\":6,\"cracked\":false,\"hits\":5,\"charge\":5,\"successes\":5,\"normalGreats\":1,\"bursts\":0,\"finalizedDay\":4,\"commissionId\":4},{\"id\":\"d4-2\",\"slot\":2,\"suppliedDay\":4,\"recipe\":\"guard\",\"status\":\"active\",\"base\":60,\"value\":710,\"peak\":710,\"level\":7,\"cracked\":false,\"hits\":5,\"charge\":5,\"successes\":5,\"normalGreats\":2,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null},{\"id\":\"d4-3\",\"slot\":3,\"suppliedDay\":4,\"recipe\":\"guard\",\"status\":\"recycled\",\"base\":60,\"value\":60,\"peak\":60,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":4,\"commissionId\":null},{\"id\":\"d5-1\",\"slot\":1,\"suppliedDay\":5,\"recipe\":\"guard\",\"status\":\"active\",\"base\":120,\"value\":120,\"peak\":120,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null},{\"id\":\"d5-2\",\"slot\":2,\"suppliedDay\":5,\"recipe\":\"guard\",\"status\":\"active\",\"base\":120,\"value\":120,\"peak\":120,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null}],\"reserveId\":\"d4-2\",\"daySales\":0,\"dayRecovered\":0,\"marketSpent\":0,\"traits\":[\"steady\"],\"gift\":\"claimed\",\"pardonUsed\":false,\"crackGuard\":false,\"modifications\":[\"warmRack\"],\"chapterChoices\":[],\"shop\":[],\"sold\":[],\"upgraded\":false,\"repaired\":false,\"dayBuffs\":{\"supplyPct\":100,\"loan\":false,\"shelter\":false},\"pending\":{\"supplyPct\":100,\"loan\":false,\"shelter\":false},\"eventDeck\":[\"donation\",\"shelter\",\"credit\",\"loan\",\"rest\",\"salvage\"],\"eventId\":\"shelter\",\"eventStatus\":\"available\",\"eventHistory\":[{\"day\":3,\"id\":\"donation\",\"choice\":\"decline\",\"pieceId\":null,\"coins\":0}],\"history\":[{\"day\":1,\"commissionId\":1,\"met\":true,\"routeId\":\"intact\",\"pieceIds\":[\"d1-1\"],\"sales\":120,\"recovered\":20,\"baseFees\":100,\"marketSpent\":40,\"recoveredIds\":[\"d1-2\",\"d1-3\"],\"reserveId\":null,\"sealsBefore\":3,\"sealsAfter\":3,\"protected\":false,\"modification\":null},{\"day\":2,\"commissionId\":2,\"met\":true,\"routeId\":\"light\",\"pieceIds\":[\"d2-1\"],\"sales\":103,\"recovered\":20,\"baseFees\":100,\"marketSpent\":23,\"recoveredIds\":[\"d2-2\",\"d2-3\"],\"reserveId\":null,\"sealsBefore\":3,\"sealsAfter\":3,\"protected\":false,\"modification\":null},{\"day\":3,\"commissionId\":3,\"met\":true,\"routeId\":\"burst\",\"pieceIds\":[\"d3-2\"],\"sales\":150,\"recovered\":10,\"baseFees\":100,\"marketSpent\":60,\"recoveredIds\":[\"d3-3\"],\"reserveId\":null,\"sealsBefore\":3,\"sealsAfter\":3,\"protected\":false,\"modification\":null},{\"day\":4,\"commissionId\":4,\"met\":true,\"routeId\":\"guard\",\"pieceIds\":[\"d4-1\"],\"sales\":116,\"recovered\":15,\"baseFees\":100,\"marketSpent\":31,\"recoveredIds\":[\"d4-3\"],\"reserveId\":\"d4-2\",\"sealsBefore\":3,\"sealsAfter\":3,\"protected\":false,\"modification\":\"warmRack\"}],\"rng\":{\"forge\":{\"state\":4003379883,\"draws\":29},\"shop\":{\"state\":748294977,\"draws\":2},\"events\":{\"state\":1169050407,\"draws\":5},\"content\":{\"state\":561124140,\"draws\":0}},\"journal\":[{\"type\":\"continue\"},{\"type\":\"strike\",\"pieceId\":\"d1-1\"},{\"type\":\"strike\",\"pieceId\":\"d1-1\"},{\"type\":\"strike\",\"pieceId\":\"d1-1\"},{\"type\":\"deliver\",\"pieceId\":\"d1-1\"},{\"traitId\":\"steady\",\"type\":\"claimGift\"},{\"type\":\"settle\"},{\"type\":\"advance\"},{\"type\":\"strike\",\"pieceId\":\"d2-1\"},{\"type\":\"strike\",\"pieceId\":\"d2-1\"},{\"type\":\"deliver\",\"pieceId\":\"d2-1\"},{\"type\":\"settle\"},{\"type\":\"advance\"},{\"type\":\"strike\",\"pieceId\":\"d3-1\"},{\"type\":\"strike\",\"pieceId\":\"d3-1\"},{\"type\":\"strike\",\"pieceId\":\"d3-1\"},{\"type\":\"strike\",\"pieceId\":\"d3-1\"},{\"type\":\"strike\",\"pieceId\":\"d3-1\"},{\"type\":\"strike\",\"pieceId\":\"d3-1\"},{\"type\":\"strike\",\"pieceId\":\"d3-2\"},{\"type\":\"strike\",\"pieceId\":\"d3-2\"},{\"type\":\"strike\",\"pieceId\":\"d3-2\"},{\"type\":\"strike\",\"pieceId\":\"d3-2\"},{\"type\":\"strike\",\"pieceId\":\"d3-2\"},{\"type\":\"strike\",\"pieceId\":\"d3-2\"},{\"type\":\"strike\",\"pieceId\":\"d3-2\"},{\"type\":\"deliver\",\"pieceId\":\"d3-2\"},{\"type\":\"upgrade\"},{\"type\":\"settle\"},{\"type\":\"advance\"},{\"type\":\"strike\",\"pieceId\":\"d4-1\"},{\"type\":\"strike\",\"pieceId\":\"d4-1\"},{\"type\":\"strike\",\"pieceId\":\"d4-1\"},{\"type\":\"strike\",\"pieceId\":\"d4-1\"},{\"type\":\"strike\",\"pieceId\":\"d4-1\"},{\"type\":\"deliver\",\"pieceId\":\"d4-1\"},{\"type\":\"strike\",\"pieceId\":\"d4-2\"},{\"type\":\"strike\",\"pieceId\":\"d4-2\"},{\"type\":\"strike\",\"pieceId\":\"d4-2\"},{\"type\":\"strike\",\"pieceId\":\"d4-2\"},{\"type\":\"strike\",\"pieceId\":\"d4-2\"},{\"type\":\"reserve\",\"pieceId\":\"d4-2\"},{\"type\":\"settle\"},{\"type\":\"chooseModification\",\"modification\":\"warmRack\"},{\"type\":\"advance\"}]}}",
+    "sword-led.save.backup.v5": null,
+    "sword-led.collection.v2": "{\"schemaVersion\":2,\"rulesVersion\":\"forge-collection-v2\",\"savedAt\":\"2026-10-21T16:23:40.905Z\",\"state\":{\"chapters\":[1],\"mastery\":[\"light\"],\"traits\":[\"steady\"],\"challenge\":false,\"works\":[{\"commissionId\":1,\"day\":1,\"routeId\":\"intact\",\"blades\":[{\"id\":\"d1-1\",\"slot\":1,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":40,\"value\":201,\"peak\":201,\"level\":4,\"cracked\":false,\"hits\":3,\"charge\":3,\"successes\":3,\"normalGreats\":1,\"bursts\":0,\"finalizedDay\":1,\"commissionId\":1}],\"runId\":\"v5-journey\",\"rulesVersion\":\"forge-v5\"},{\"commissionId\":2,\"day\":2,\"routeId\":\"light\",\"blades\":[{\"id\":\"d2-1\",\"slot\":1,\"suppliedDay\":2,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":40,\"value\":176,\"peak\":176,\"level\":4,\"cracked\":false,\"hits\":2,\"charge\":2,\"successes\":2,\"normalGreats\":2,\"bursts\":0,\"finalizedDay\":2,\"commissionId\":2}],\"runId\":\"v5-journey\",\"rulesVersion\":\"forge-v5\"},{\"commissionId\":3,\"day\":3,\"routeId\":\"burst\",\"blades\":[{\"id\":\"d3-2\",\"slot\":2,\"suppliedDay\":3,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":40,\"value\":1787,\"peak\":1787,\"level\":9,\"cracked\":false,\"hits\":6,\"charge\":0,\"successes\":6,\"normalGreats\":1,\"bursts\":1,\"finalizedDay\":3,\"commissionId\":3}],\"runId\":\"v5-journey\",\"rulesVersion\":\"forge-v5\"},{\"commissionId\":4,\"day\":4,\"routeId\":\"guard\",\"blades\":[{\"id\":\"d4-1\",\"slot\":1,\"suppliedDay\":4,\"recipe\":\"guard\",\"status\":\"commissioned\",\"base\":60,\"value\":443,\"peak\":443,\"level\":6,\"cracked\":false,\"hits\":5,\"charge\":5,\"successes\":5,\"normalGreats\":1,\"bursts\":0,\"finalizedDay\":4,\"commissionId\":4}],\"runId\":\"v5-journey\",\"rulesVersion\":\"forge-v5\"}]}}",
+    "sword-led.collection.backup.v2": null,
+    "sword-led.settings.v1": null,
+    "sword-led.collection.v1": null,
+    "sword-led.collection.backup.v1": null,
+    "sword-led.save.v1": null,
+    "sword-led.save.v2": null,
+    "sword-led.save.v3": null,
+    "sword-led.save.v4": null,
+    "sword-led.save.backup.v4": null
+  },
+  "writes": [
+    {
+      "key": "sword-led.collection.v2",
+      "value": "{\"schemaVersion\":2,\"rulesVersion\":\"forge-collection-v2\",\"savedAt\":\"2026-10-21T16:23:40.905Z\",\"state\":{\"chapters\":[1],\"mastery\":[\"light\"],\"traits\":[\"steady\"],\"challenge\":false,\"works\":[{\"commissionId\":1,\"day\":1,\"routeId\":\"intact\",\"blades\":[{\"id\":\"d1-1\",\"slot\":1,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":40,\"value\":201,\"peak\":201,\"level\":4,\"cracked\":false,\"hits\":3,\"charge\":3,\"successes\":3,\"normalGreats\":1,\"bursts\":0,\"finalizedDay\":1,\"commissionId\":1}],\"runId\":\"v5-journey\",\"rulesVersion\":\"forge-v5\"},{\"commissionId\":2,\"day\":2,\"routeId\":\"light\",\"blades\":[{\"id\":\"d2-1\",\"slot\":1,\"suppliedDay\":2,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":40,\"value\":176,\"peak\":176,\"level\":4,\"cracked\":false,\"hits\":2,\"charge\":2,\"successes\":2,\"normalGreats\":2,\"bursts\":0,\"finalizedDay\":2,\"commissionId\":2}],\"runId\":\"v5-journey\",\"rulesVersion\":\"forge-v5\"},{\"commissionId\":3,\"day\":3,\"routeId\":\"burst\",\"blades\":[{\"id\":\"d3-2\",\"slot\":2,\"suppliedDay\":3,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":40,\"value\":1787,\"peak\":1787,\"level\":9,\"cracked\":false,\"hits\":6,\"charge\":0,\"successes\":6,\"normalGreats\":1,\"bursts\":1,\"finalizedDay\":3,\"commissionId\":3}],\"runId\":\"v5-journey\",\"rulesVersion\":\"forge-v5\"},{\"commissionId\":4,\"day\":4,\"routeId\":\"guard\",\"blades\":[{\"id\":\"d4-1\",\"slot\":1,\"suppliedDay\":4,\"recipe\":\"guard\",\"status\":\"commissioned\",\"base\":60,\"value\":443,\"peak\":443,\"level\":6,\"cracked\":false,\"hits\":5,\"charge\":5,\"successes\":5,\"normalGreats\":1,\"bursts\":0,\"finalizedDay\":4,\"commissionId\":4}],\"runId\":\"v5-journey\",\"rulesVersion\":\"forge-v5\"}]}}",
+      "accepted": true,
+      "operation": "set"
+    }
+  ],
+  "events": [
+    {
+      "key": "sword-led.save.v5",
+      "value": "{\"schemaVersion\":5,\"rulesVersion\":\"forge-v5\",\"savedAt\":\"2026-10-21T00:00:00.000Z\",\"state\":{\"rulesVersion\":\"forge-v5\",\"runId\":\"v5-journey\",\"seed\":\"v5-economy-0\",\"mode\":\"story\",\"initialEligibility\":{\"recipes\":[\"light\"],\"challenge\":false},\"revision\":45,\"phase\":\"workshop\",\"day\":5,\"commissionOrder\":[1,2,3,4,5,6,7,8,9,10,11,12],\"coins\":374,\"seals\":3,\"supplyBase\":120,\"upgradeCount\":1,\"inheritance\":0,\"blades\":[{\"id\":\"d1-1\",\"slot\":1,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":40,\"value\":201,\"peak\":201,\"level\":4,\"cracked\":false,\"hits\":3,\"charge\":3,\"successes\":3,\"normalGreats\":1,\"bursts\":0,\"finalizedDay\":1,\"commissionId\":1},{\"id\":\"d1-2\",\"slot\":2,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"recycled\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":1,\"commissionId\":null},{\"id\":\"d1-3\",\"slot\":3,\"suppliedDay\":1,\"recipe\":\"light\",\"status\":\"recycled\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":1,\"commissionId\":null},{\"id\":\"d2-1\",\"slot\":1,\"suppliedDay\":2,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":40,\"value\":176,\"peak\":176,\"level\":4,\"cracked\":false,\"hits\":2,\"charge\":2,\"successes\":2,\"normalGreats\":2,\"bursts\":0,\"finalizedDay\":2,\"commissionId\":2},{\"id\":\"d2-2\",\"slot\":2,\"suppliedDay\":2,\"recipe\":\"light\",\"status\":\"recycled\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":2,\"commissionId\":null},{\"id\":\"d2-3\",\"slot\":3,\"suppliedDay\":2,\"recipe\":\"light\",\"status\":\"recycled\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":2,\"commissionId\":null},{\"id\":\"d3-1\",\"slot\":1,\"suppliedDay\":3,\"recipe\":\"light\",\"status\":\"broken\",\"base\":40,\"value\":0,\"peak\":311,\"level\":5,\"cracked\":true,\"hits\":6,\"charge\":5,\"successes\":4,\"normalGreats\":1,\"bursts\":0,\"finalizedDay\":3,\"commissionId\":null},{\"id\":\"d3-2\",\"slot\":2,\"suppliedDay\":3,\"recipe\":\"light\",\"status\":\"commissioned\",\"base\":40,\"value\":1787,\"peak\":1787,\"level\":9,\"cracked\":false,\"hits\":6,\"charge\":0,\"successes\":6,\"normalGreats\":1,\"bursts\":1,\"finalizedDay\":3,\"commissionId\":3},{\"id\":\"d3-3\",\"slot\":3,\"suppliedDay\":3,\"recipe\":\"light\",\"status\":\"recycled\",\"base\":40,\"value\":40,\"peak\":40,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":3,\"commissionId\":null},{\"id\":\"d4-1\",\"slot\":1,\"suppliedDay\":4,\"recipe\":\"guard\",\"status\":\"commissioned\",\"base\":60,\"value\":443,\"peak\":443,\"level\":6,\"cracked\":false,\"hits\":5,\"charge\":5,\"successes\":5,\"normalGreats\":1,\"bursts\":0,\"finalizedDay\":4,\"commissionId\":4},{\"id\":\"d4-2\",\"slot\":2,\"suppliedDay\":4,\"recipe\":\"guard\",\"status\":\"active\",\"base\":60,\"value\":710,\"peak\":710,\"level\":7,\"cracked\":false,\"hits\":5,\"charge\":5,\"successes\":5,\"normalGreats\":2,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null},{\"id\":\"d4-3\",\"slot\":3,\"suppliedDay\":4,\"recipe\":\"guard\",\"status\":\"recycled\",\"base\":60,\"value\":60,\"peak\":60,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":4,\"commissionId\":null},{\"id\":\"d5-1\",\"slot\":1,\"suppliedDay\":5,\"recipe\":\"guard\",\"status\":\"active\",\"base\":120,\"value\":120,\"peak\":120,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null},{\"id\":\"d5-2\",\"slot\":2,\"suppliedDay\":5,\"recipe\":\"guard\",\"status\":\"active\",\"base\":120,\"value\":120,\"peak\":120,\"level\":0,\"cracked\":false,\"hits\":0,\"charge\":0,\"successes\":0,\"normalGreats\":0,\"bursts\":0,\"finalizedDay\":null,\"commissionId\":null}],\"reserveId\":\"d4-2\",\"daySales\":0,\"dayRecovered\":0,\"marketSpent\":0,\"traits\":[\"steady\"],\"gift\":\"claimed\",\"pardonUsed\":false,\"crackGuard\":false,\"modifications\":[\"warmRack\"],\"chapterChoices\":[],\"shop\":[],\"sold\":[],\"upgraded\":false,\"repaired\":false,\"dayBuffs\":{\"supplyPct\":100,\"loan\":false,\"shelter\":false},\"pending\":{\"supplyPct\":100,\"loan\":false,\"shelter\":false},\"eventDeck\":[\"donation\",\"shelter\",\"credit\",\"loan\",\"rest\",\"salvage\"],\"eventId\":\"shelter\",\"eventStatus\":\"available\",\"eventHistory\":[{\"day\":3,\"id\":\"donation\",\"choice\":\"decline\",\"pieceId\":null,\"coins\":0}],\"history\":[{\"day\":1,\"commissionId\":1,\"met\":true,\"routeId\":\"intact\",\"pieceIds\":[\"d1-1\"],\"sales\":120,\"recovered\":20,\"baseFees\":100,\"marketSpent\":40,\"recoveredIds\":[\"d1-2\",\"d1-3\"],\"reserveId\":null,\"sealsBefore\":3,\"sealsAfter\":3,\"protected\":false,\"modification\":null},{\"day\":2,\"commissionId\":2,\"met\":true,\"routeId\":\"light\",\"pieceIds\":[\"d2-1\"],\"sales\":103,\"recovered\":20,\"baseFees\":100,\"marketSpent\":23,\"recoveredIds\":[\"d2-2\",\"d2-3\"],\"reserveId\":null,\"sealsBefore\":3,\"sealsAfter\":3,\"protected\":false,\"modification\":null},{\"day\":3,\"commissionId\":3,\"met\":true,\"routeId\":\"burst\",\"pieceIds\":[\"d3-2\"],\"sales\":150,\"recovered\":10,\"baseFees\":100,\"marketSpent\":60,\"recoveredIds\":[\"d3-3\"],\"reserveId\":null,\"sealsBefore\":3,\"sealsAfter\":3,\"protected\":false,\"modification\":null},{\"day\":4,\"commissionId\":4,\"met\":true,\"routeId\":\"guard\",\"pieceIds\":[\"d4-1\"],\"sales\":116,\"recovered\":15,\"baseFees\":100,\"marketSpent\":31,\"recoveredIds\":[\"d4-3\"],\"reserveId\":\"d4-2\",\"sealsBefore\":3,\"sealsAfter\":3,\"protected\":false,\"modification\":\"warmRack\"}],\"rng\":{\"forge\":{\"state\":4003379883,\"draws\":29},\"shop\":{\"state\":748294977,\"draws\":2},\"events\":{\"state\":1169050407,\"draws\":5},\"content\":{\"state\":561124140,\"draws\":0}},\"journal\":[{\"type\":\"continue\"},{\"type\":\"strike\",\"pieceId\":\"d1-1\"},{\"type\":\"strike\",\"pieceId\":\"d1-1\"},{\"type\":\"strike\",\"pieceId\":\"d1-1\"},{\"type\":\"deliver\",\"pieceId\":\"d1-1\"},{\"traitId\":\"steady\",\"type\":\"claimGift\"},{\"type\":\"settle\"},{\"type\":\"advance\"},{\"type\":\"strike\",\"pieceId\":\"d2-1\"},{\"type\":\"strike\",\"pieceId\":\"d2-1\"},{\"type\":\"deliver\",\"pieceId\":\"d2-1\"},{\"type\":\"settle\"},{\"type\":\"advance\"},{\"type\":\"strike\",\"pieceId\":\"d3-1\"},{\"type\":\"strike\",\"pieceId\":\"d3-1\"},{\"type\":\"strike\",\"pieceId\":\"d3-1\"},{\"type\":\"strike\",\"pieceId\":\"d3-1\"},{\"type\":\"strike\",\"pieceId\":\"d3-1\"},{\"type\":\"strike\",\"pieceId\":\"d3-1\"},{\"type\":\"strike\",\"pieceId\":\"d3-2\"},{\"type\":\"strike\",\"pieceId\":\"d3-2\"},{\"type\":\"strike\",\"pieceId\":\"d3-2\"},{\"type\":\"strike\",\"pieceId\":\"d3-2\"},{\"type\":\"strike\",\"pieceId\":\"d3-2\"},{\"type\":\"strike\",\"pieceId\":\"d3-2\"},{\"type\":\"strike\",\"pieceId\":\"d3-2\"},{\"type\":\"deliver\",\"pieceId\":\"d3-2\"},{\"type\":\"upgrade\"},{\"type\":\"settle\"},{\"type\":\"advance\"},{\"type\":\"strike\",\"pieceId\":\"d4-1\"},{\"type\":\"strike\",\"pieceId\":\"d4-1\"},{\"type\":\"strike\",\"pieceId\":\"d4-1\"},{\"type\":\"strike\",\"pieceId\":\"d4-1\"},{\"type\":\"strike\",\"pieceId\":\"d4-1\"},{\"type\":\"deliver\",\"pieceId\":\"d4-1\"},{\"type\":\"strike\",\"pieceId\":\"d4-2\"},{\"type\":\"strike\",\"pieceId\":\"d4-2\"},{\"type\":\"strike\",\"pieceId\":\"d4-2\"},{\"type\":\"strike\",\"pieceId\":\"d4-2\"},{\"type\":\"strike\",\"pieceId\":\"d4-2\"},{\"type\":\"reserve\",\"pieceId\":\"d4-2\"},{\"type\":\"settle\"},{\"type\":\"chooseModification\",\"modification\":\"warmRack\"},{\"type\":\"advance\"}]}}",
+      "trusted": true
+    }
+  ]
+}

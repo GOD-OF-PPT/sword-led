@@ -1,0 +1,31 @@
+[
+  {
+    "action": {
+      "type": "strike",
+      "pieceId": "d1-1"
+    },
+    "runId": "v5-journey",
+    "mode": "story",
+    "day": 1,
+    "revision": 2,
+    "coinsBefore": 0,
+    "coinsAfter": 0,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d1-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 40,
+            "after": 62,
+            "level": 1,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  }
+]

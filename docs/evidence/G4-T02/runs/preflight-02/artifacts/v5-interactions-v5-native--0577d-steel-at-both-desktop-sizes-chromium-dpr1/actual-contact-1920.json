@@ -1,0 +1,88 @@
+{
+  "probe": {
+    "frames": [
+      {
+        "gap": 55.70898074106549,
+        "angle": 8.358088779180163,
+        "pivotGap": 0.17232812218156304,
+        "metalGap": 55.14334091331318,
+        "time": 0,
+        "sampleCostMs": 0.30000001192092896,
+        "phase": "swing"
+      },
+      {
+        "gap": 55.70898074106549,
+        "angle": 8.358088779180163,
+        "pivotGap": 0.17232812218156304,
+        "metalGap": 55.14334091331318,
+        "time": 10.599999964237213,
+        "sampleCostMs": 0.2999999523162842,
+        "phase": "swing"
+      },
+      {
+        "gap": 31.597467378865236,
+        "angle": 4.868992930496484,
+        "pivotGap": 0.17232806874800877,
+        "metalGap": 31.115079351726763,
+        "time": 45.19999998807907,
+        "sampleCostMs": 0.3999999761581421,
+        "phase": "swing"
+      },
+      {
+        "gap": 8.46801029406091,
+        "angle": 1.5259089777229076,
+        "pivotGap": 0.17232808638210056,
+        "metalGap": 8.271196278706952,
+        "time": 62.69999998807907,
+        "sampleCostMs": 0.30000001192092896,
+        "phase": "swing"
+      },
+      {
+        "gap": 0.411441812806728,
+        "angle": 0.3580939593236531,
+        "pivotGap": 0.17232813633376315,
+        "metalGap": 0.34718048878198715,
+        "time": 93.89999997615814,
+        "sampleCostMs": 0.30000001192092896,
+        "phase": "contact"
+      },
+      {
+        "gap": 0.411441812806728,
+        "angle": 0.3580939593236531,
+        "pivotGap": 0.17232813633376315,
+        "metalGap": 2.481152656750737,
+        "time": 114.80000001192093,
+        "sampleCostMs": 0.5,
+        "phase": "contact"
+      }
+    ],
+    "complete": true,
+    "source": "http://127.0.0.1:4245/assets/d/hammer-forge-v2.webp",
+    "sourceAlpha": [
+      249,
+      253,
+      253
+    ],
+    "inputToFirstSampleMs": 14.900000035762787
+  },
+  "metrics": {
+    "dpr": 1,
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "focus": {
+      "id": "v4-hit",
+      "tag": "BUTTON"
+    },
+    "canvas": {
+      "width": 1286,
+      "height": 468,
+      "cssWidth": 1286.40625,
+      "cssHeight": 467.78125,
+      "backingRatioX": 0.9996841977407992,
+      "backingRatioY": 1.0004676331084241,
+      "visible": true
+    }
+  }
+}

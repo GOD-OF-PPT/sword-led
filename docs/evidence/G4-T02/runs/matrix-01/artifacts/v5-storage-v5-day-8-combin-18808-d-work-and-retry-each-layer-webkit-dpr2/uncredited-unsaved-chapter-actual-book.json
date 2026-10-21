@@ -1,0 +1,224 @@
+{
+  "format": "sword-led.collection-export.v2",
+  "collection": {
+    "chapters": [
+      1
+    ],
+    "mastery": [
+      "light",
+      "guard"
+    ],
+    "traits": [
+      "steady"
+    ],
+    "challenge": false,
+    "works": [
+      {
+        "blades": [
+          {
+            "base": 40,
+            "bursts": 0,
+            "charge": 3,
+            "commissionId": 1,
+            "cracked": false,
+            "finalizedDay": 1,
+            "hits": 3,
+            "id": "d1-1",
+            "level": 4,
+            "normalGreats": 1,
+            "peak": 201,
+            "recipe": "light",
+            "slot": 1,
+            "status": "commissioned",
+            "successes": 3,
+            "suppliedDay": 1,
+            "value": 201
+          }
+        ],
+        "commissionId": 1,
+        "day": 1,
+        "routeId": "intact",
+        "rulesVersion": "forge-v5",
+        "runId": "v5-journey"
+      },
+      {
+        "blades": [
+          {
+            "base": 40,
+            "bursts": 0,
+            "charge": 2,
+            "commissionId": 2,
+            "cracked": false,
+            "finalizedDay": 2,
+            "hits": 2,
+            "id": "d2-1",
+            "level": 4,
+            "normalGreats": 2,
+            "peak": 176,
+            "recipe": "light",
+            "slot": 1,
+            "status": "commissioned",
+            "successes": 2,
+            "suppliedDay": 2,
+            "value": 176
+          }
+        ],
+        "commissionId": 2,
+        "day": 2,
+        "routeId": "light",
+        "rulesVersion": "forge-v5",
+        "runId": "v5-journey"
+      },
+      {
+        "blades": [
+          {
+            "base": 40,
+            "bursts": 1,
+            "charge": 0,
+            "commissionId": 3,
+            "cracked": false,
+            "finalizedDay": 3,
+            "hits": 6,
+            "id": "d3-2",
+            "level": 9,
+            "normalGreats": 1,
+            "peak": 1787,
+            "recipe": "light",
+            "slot": 2,
+            "status": "commissioned",
+            "successes": 6,
+            "suppliedDay": 3,
+            "value": 1787
+          }
+        ],
+        "commissionId": 3,
+        "day": 3,
+        "routeId": "burst",
+        "rulesVersion": "forge-v5",
+        "runId": "v5-journey"
+      },
+      {
+        "blades": [
+          {
+            "base": 60,
+            "bursts": 0,
+            "charge": 5,
+            "commissionId": 4,
+            "cracked": false,
+            "finalizedDay": 4,
+            "hits": 5,
+            "id": "d4-1",
+            "level": 6,
+            "normalGreats": 1,
+            "peak": 443,
+            "recipe": "guard",
+            "slot": 1,
+            "status": "commissioned",
+            "successes": 5,
+            "suppliedDay": 4,
+            "value": 443
+          }
+        ],
+        "commissionId": 4,
+        "day": 4,
+        "routeId": "guard",
+        "rulesVersion": "forge-v5",
+        "runId": "v5-journey"
+      },
+      {
+        "blades": [
+          {
+            "base": 120,
+            "bursts": 0,
+            "charge": 4,
+            "commissionId": 5,
+            "cracked": false,
+            "finalizedDay": 5,
+            "hits": 4,
+            "id": "d5-1",
+            "level": 6,
+            "normalGreats": 2,
+            "peak": 891,
+            "recipe": "guard",
+            "slot": 1,
+            "status": "commissioned",
+            "successes": 4,
+            "suppliedDay": 5,
+            "value": 891
+          }
+        ],
+        "commissionId": 5,
+        "day": 5,
+        "routeId": "new",
+        "rulesVersion": "forge-v5",
+        "runId": "v5-journey"
+      },
+      {
+        "blades": [
+          {
+            "base": 120,
+            "bursts": 1,
+            "charge": 1,
+            "commissionId": 6,
+            "cracked": true,
+            "finalizedDay": 6,
+            "hits": 7,
+            "id": "d6-1",
+            "level": 10,
+            "normalGreats": 1,
+            "peak": 3426,
+            "recipe": "guard",
+            "slot": 1,
+            "status": "commissioned",
+            "successes": 6,
+            "suppliedDay": 6,
+            "value": 3426
+          }
+        ],
+        "commissionId": 6,
+        "day": 6,
+        "routeId": "cracked",
+        "rulesVersion": "forge-v5",
+        "runId": "v5-journey"
+      },
+      {
+        "blades": [
+          {
+            "base": 180,
+            "bursts": 0,
+            "charge": 4,
+            "commissionId": 7,
+            "cracked": false,
+            "finalizedDay": 7,
+            "hits": 4,
+            "id": "d7-1",
+            "level": 4,
+            "normalGreats": 0,
+            "peak": 794,
+            "recipe": "heavy",
+            "slot": 1,
+            "status": "commissioned",
+            "successes": 4,
+            "suppliedDay": 7,
+            "value": 794
+          }
+        ],
+        "commissionId": 7,
+        "day": 7,
+        "routeId": "heavy",
+        "rulesVersion": "forge-v5",
+        "runId": "v5-journey"
+      }
+    ]
+  },
+  "stored": {
+    "main": {
+      "ok": true,
+      "raw": "{\"schemaVersion\":2,\"rulesVersion\":\"forge-collection-v2\",\"savedAt\":\"2026-10-21T00:00:00.000Z\",\"state\":{\"chapters\":[1],\"mastery\":[\"light\",\"guard\"],\"traits\":[\"steady\"],\"challenge\":false,\"works\":[{\"blades\":[{\"base\":40,\"bursts\":0,\"charge\":3,\"commissionId\":1,\"cracked\":false,\"finalizedDay\":1,\"hits\":3,\"id\":\"d1-1\",\"level\":4,\"normalGreats\":1,\"peak\":201,\"recipe\":\"light\",\"slot\":1,\"status\":\"commissioned\",\"successes\":3,\"suppliedDay\":1,\"value\":201}],\"commissionId\":1,\"day\":1,\"routeId\":\"intact\",\"rulesVersion\":\"forge-v5\",\"runId\":\"v5-journey\"},{\"blades\":[{\"base\":40,\"bursts\":0,\"charge\":2,\"commissionId\":2,\"cracked\":false,\"finalizedDay\":2,\"hits\":2,\"id\":\"d2-1\",\"level\":4,\"normalGreats\":2,\"peak\":176,\"recipe\":\"light\",\"slot\":1,\"status\":\"commissioned\",\"successes\":2,\"suppliedDay\":2,\"value\":176}],\"commissionId\":2,\"day\":2,\"routeId\":\"light\",\"rulesVersion\":\"forge-v5\",\"runId\":\"v5-journey\"},{\"blades\":[{\"base\":40,\"bursts\":1,\"charge\":0,\"commissionId\":3,\"cracked\":false,\"finalizedDay\":3,\"hits\":6,\"id\":\"d3-2\",\"level\":9,\"normalGreats\":1,\"peak\":1787,\"recipe\":\"light\",\"slot\":2,\"status\":\"commissioned\",\"successes\":6,\"suppliedDay\":3,\"value\":1787}],\"commissionId\":3,\"day\":3,\"routeId\":\"burst\",\"rulesVersion\":\"forge-v5\",\"runId\":\"v5-journey\"},{\"blades\":[{\"base\":60,\"bursts\":0,\"charge\":5,\"commissionId\":4,\"cracked\":false,\"finalizedDay\":4,\"hits\":5,\"id\":\"d4-1\",\"level\":6,\"normalGreats\":1,\"peak\":443,\"recipe\":\"guard\",\"slot\":1,\"status\":\"commissioned\",\"successes\":5,\"suppliedDay\":4,\"value\":443}],\"commissionId\":4,\"day\":4,\"routeId\":\"guard\",\"rulesVersion\":\"forge-v5\",\"runId\":\"v5-journey\"},{\"blades\":[{\"base\":120,\"bursts\":0,\"charge\":4,\"commissionId\":5,\"cracked\":false,\"finalizedDay\":5,\"hits\":4,\"id\":\"d5-1\",\"level\":6,\"normalGreats\":2,\"peak\":891,\"recipe\":\"guard\",\"slot\":1,\"status\":\"commissioned\",\"successes\":4,\"suppliedDay\":5,\"value\":891}],\"commissionId\":5,\"day\":5,\"routeId\":\"new\",\"rulesVersion\":\"forge-v5\",\"runId\":\"v5-journey\"},{\"blades\":[{\"base\":120,\"bursts\":1,\"charge\":1,\"commissionId\":6,\"cracked\":true,\"finalizedDay\":6,\"hits\":7,\"id\":\"d6-1\",\"level\":10,\"normalGreats\":1,\"peak\":3426,\"recipe\":\"guard\",\"slot\":1,\"status\":\"commissioned\",\"successes\":6,\"suppliedDay\":6,\"value\":3426}],\"commissionId\":6,\"day\":6,\"routeId\":\"cracked\",\"rulesVersion\":\"forge-v5\",\"runId\":\"v5-journey\"},{\"blades\":[{\"base\":180,\"bursts\":0,\"charge\":4,\"commissionId\":7,\"cracked\":false,\"finalizedDay\":7,\"hits\":4,\"id\":\"d7-1\",\"level\":4,\"normalGreats\":0,\"peak\":794,\"recipe\":\"heavy\",\"slot\":1,\"status\":\"commissioned\",\"successes\":4,\"suppliedDay\":7,\"value\":794}],\"commissionId\":7,\"day\":7,\"routeId\":\"heavy\",\"rulesVersion\":\"forge-v5\",\"runId\":\"v5-journey\"}]}}"
+    },
+    "backup": {
+      "ok": true,
+      "raw": null
+    }
+  }
+}

@@ -1,0 +1,752 @@
+[
+  {
+    "action": {
+      "type": "claimGift",
+      "traitId": "steady",
+      "replaceId": "pardon"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 7,
+    "revision": 63,
+    "coinsBefore": 905,
+    "coinsAfter": 905,
+    "events": [
+      {
+        "type": "Trait",
+        "traitId": "steady",
+        "compensation": 0
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "strike",
+      "pieceId": "d7-1"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 7,
+    "revision": 64,
+    "coinsBefore": 905,
+    "coinsAfter": 905,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d7-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 80,
+            "after": 116,
+            "level": 1,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "strike",
+      "pieceId": "d7-1"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 7,
+    "revision": 65,
+    "coinsBefore": 905,
+    "coinsAfter": 905,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d7-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 116,
+            "after": 168,
+            "level": 2,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "strike",
+      "pieceId": "d7-1"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 7,
+    "revision": 66,
+    "coinsBefore": 905,
+    "coinsAfter": 905,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d7-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 168,
+            "after": 303,
+            "level": 3,
+            "triggers": [
+              "echo"
+            ],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "strike",
+      "pieceId": "d7-1"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 7,
+    "revision": 67,
+    "coinsBefore": 905,
+    "coinsAfter": 905,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d7-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 303,
+            "after": 439,
+            "level": 4,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "strike",
+      "pieceId": "d7-1"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 7,
+    "revision": 68,
+    "coinsBefore": 905,
+    "coinsAfter": 905,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d7-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 439,
+            "after": 636,
+            "level": 5,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "strike",
+      "pieceId": "d7-1"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 7,
+    "revision": 69,
+    "coinsBefore": 905,
+    "coinsAfter": 905,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d7-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 636,
+            "after": 1152,
+            "level": 6,
+            "triggers": [
+              "echo"
+            ],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "deliver",
+      "pieceId": "d7-1"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 7,
+    "revision": 70,
+    "coinsBefore": 905,
+    "coinsAfter": 1233,
+    "events": [
+      {
+        "type": "Delivered",
+        "pieceId": "d7-1",
+        "amount": 328,
+        "matched": true,
+        "commissionId": 7,
+        "pieceValue": 1152,
+        "baseFeeDelta": 250,
+        "qualityBonus": 78,
+        "marketRemaining": 72
+      },
+      {
+        "type": "MainCompleted",
+        "commissionId": 7,
+        "routeId": "heavy",
+        "pieceIds": [
+          "d7-1"
+        ]
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "settle"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 7,
+    "revision": 71,
+    "coinsBefore": 1233,
+    "coinsAfter": 1273,
+    "events": [
+      {
+        "type": "EventChoice",
+        "record": {
+          "day": 7,
+          "id": "salvage",
+          "choice": "decline",
+          "pieceId": null,
+          "coins": 0
+        }
+      },
+      {
+        "type": "Settled",
+        "record": {
+          "day": 7,
+          "commissionId": 7,
+          "met": true,
+          "routeId": "heavy",
+          "pieceIds": [
+            "d7-1"
+          ],
+          "sales": 328,
+          "recovered": 40,
+          "baseFees": 250,
+          "marketSpent": 118,
+          "recoveredIds": [
+            "d7-2",
+            "d7-3"
+          ],
+          "reserveId": null,
+          "sealsBefore": 3,
+          "sealsAfter": 3,
+          "protected": false,
+          "modification": null
+        }
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "advance"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 7,
+    "revision": 72,
+    "coinsBefore": 1273,
+    "coinsAfter": 1273,
+    "events": [
+      {
+        "type": "Advanced"
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "strike",
+      "pieceId": "d8-1"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 8,
+    "revision": 73,
+    "coinsBefore": 1273,
+    "coinsAfter": 1273,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d8-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 80,
+            "after": 124,
+            "level": 1,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "strike",
+      "pieceId": "d8-1"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 8,
+    "revision": 74,
+    "coinsBefore": 1273,
+    "coinsAfter": 1273,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d8-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "great",
+            "before": 124,
+            "after": 260,
+            "level": 3,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "strike",
+      "pieceId": "d8-1"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 8,
+    "revision": 75,
+    "coinsBefore": 1273,
+    "coinsAfter": 1273,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d8-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 260,
+            "after": 503,
+            "level": 4,
+            "triggers": [
+              "echo"
+            ],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "deliver",
+      "pieceId": "d8-1"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 8,
+    "revision": 76,
+    "coinsBefore": 1273,
+    "coinsAfter": 1414,
+    "events": [
+      {
+        "type": "Delivered",
+        "pieceId": "d8-1",
+        "amount": 141,
+        "matched": true,
+        "commissionId": 8,
+        "pieceValue": 503,
+        "baseFeeDelta": 125,
+        "qualityBonus": 16,
+        "marketRemaining": 134
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "strike",
+      "pieceId": "d8-2"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 8,
+    "revision": 77,
+    "coinsBefore": 1414,
+    "coinsAfter": 1414,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d8-2",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 80,
+            "after": 124,
+            "level": 1,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "strike",
+      "pieceId": "d8-2"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 8,
+    "revision": 78,
+    "coinsBefore": 1414,
+    "coinsAfter": 1414,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d8-2",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 124,
+            "after": 192,
+            "level": 2,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "strike",
+      "pieceId": "d8-2"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 8,
+    "revision": 79,
+    "coinsBefore": 1414,
+    "coinsAfter": 1414,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d8-2",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 192,
+            "after": 371,
+            "level": 3,
+            "triggers": [
+              "echo"
+            ],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "strike",
+      "pieceId": "d8-2"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 8,
+    "revision": 80,
+    "coinsBefore": 1414,
+    "coinsAfter": 1414,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d8-2",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 371,
+            "after": 575,
+            "level": 4,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "deliver",
+      "pieceId": "d8-2"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 8,
+    "revision": 81,
+    "coinsBefore": 1414,
+    "coinsAfter": 1570,
+    "events": [
+      {
+        "type": "Delivered",
+        "pieceId": "d8-2",
+        "amount": 156,
+        "matched": true,
+        "commissionId": 8,
+        "pieceValue": 575,
+        "baseFeeDelta": 125,
+        "qualityBonus": 31,
+        "marketRemaining": 103
+      },
+      {
+        "type": "MainCompleted",
+        "commissionId": 8,
+        "routeId": "two-light",
+        "pieceIds": [
+          "d8-1",
+          "d8-2"
+        ]
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "settle"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 8,
+    "revision": 82,
+    "coinsBefore": 1570,
+    "coinsAfter": 1590,
+    "events": [
+      {
+        "type": "Settled",
+        "record": {
+          "day": 8,
+          "commissionId": 8,
+          "met": true,
+          "routeId": "two-light",
+          "pieceIds": [
+            "d8-1",
+            "d8-2"
+          ],
+          "sales": 297,
+          "recovered": 20,
+          "baseFees": 250,
+          "marketSpent": 67,
+          "recoveredIds": [
+            "d8-3"
+          ],
+          "reserveId": null,
+          "sealsBefore": 3,
+          "sealsAfter": 3,
+          "protected": false,
+          "modification": null
+        }
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "chooseModification",
+      "modification": "windbox"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 8,
+    "revision": 83,
+    "coinsBefore": 1590,
+    "coinsAfter": 1590,
+    "events": [
+      {
+        "type": "Modification",
+        "modification": "windbox"
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "advance"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 8,
+    "revision": 84,
+    "coinsBefore": 1590,
+    "coinsAfter": 1590,
+    "events": [
+      {
+        "type": "Advanced"
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "strike",
+      "pieceId": "d9-1"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 9,
+    "revision": 85,
+    "coinsBefore": 1590,
+    "coinsAfter": 1590,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d9-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 160,
+            "after": 224,
+            "level": 1,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "strike",
+      "pieceId": "d9-1"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 9,
+    "revision": 86,
+    "coinsBefore": 1590,
+    "coinsAfter": 1590,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d9-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 224,
+            "after": 313,
+            "level": 2,
+            "triggers": [],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "strike",
+      "pieceId": "d9-1"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 9,
+    "revision": 87,
+    "coinsBefore": 1590,
+    "coinsAfter": 1590,
+    "events": [
+      {
+        "type": "Strike",
+        "pieceId": "d9-1",
+        "burst": false,
+        "hits": [
+          {
+            "result": "success",
+            "before": 313,
+            "after": 547,
+            "level": 3,
+            "triggers": [
+              "echo"
+            ],
+            "recoveryAmount": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "buy",
+      "pieceId": "d9-1",
+      "traitId": "pardon",
+      "replaceId": "echo"
+    },
+    "runId": "v5-delayed-gift-fixture",
+    "mode": "story",
+    "day": 9,
+    "revision": 88,
+    "coinsBefore": 1590,
+    "coinsAfter": 1590,
+    "events": [
+      {
+        "type": "Disposed",
+        "pieceId": "d9-1",
+        "disposition": "traded",
+        "amount": 0,
+        "marketRemaining": 300
+      },
+      {
+        "type": "Trait",
+        "traitId": "pardon",
+        "compensation": 0
+      }
+    ]
+  }
+]

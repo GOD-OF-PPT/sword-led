@@ -1,0 +1,68 @@
+[
+  {
+    "action": {
+      "type": "continue"
+    },
+    "runId": "ac4927cd-c71e-45b1-a833-29043390b597",
+    "mode": "story",
+    "day": 1,
+    "revision": 1,
+    "coinsBefore": 0,
+    "coinsAfter": 0,
+    "events": [
+      {
+        "type": "Opened"
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "deliver",
+      "pieceId": "d1-1"
+    },
+    "runId": "ac4927cd-c71e-45b1-a833-29043390b597",
+    "mode": "story",
+    "day": 1,
+    "revision": 2,
+    "coinsBefore": 0,
+    "coinsAfter": 10,
+    "events": [
+      {
+        "type": "Delivered",
+        "pieceId": "d1-1",
+        "amount": 10,
+        "matched": false,
+        "commissionId": 1,
+        "pieceValue": 40,
+        "baseFeeDelta": 0,
+        "qualityBonus": 0,
+        "marketRemaining": 50
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "deliver",
+      "pieceId": "d1-2"
+    },
+    "runId": "ac4927cd-c71e-45b1-a833-29043390b597",
+    "mode": "story",
+    "day": 1,
+    "revision": 3,
+    "coinsBefore": 10,
+    "coinsAfter": 20,
+    "events": [
+      {
+        "type": "Delivered",
+        "pieceId": "d1-2",
+        "amount": 10,
+        "matched": false,
+        "commissionId": 1,
+        "pieceValue": 40,
+        "baseFeeDelta": 0,
+        "qualityBonus": 0,
+        "marketRemaining": 40
+      }
+    ]
+  }
+]

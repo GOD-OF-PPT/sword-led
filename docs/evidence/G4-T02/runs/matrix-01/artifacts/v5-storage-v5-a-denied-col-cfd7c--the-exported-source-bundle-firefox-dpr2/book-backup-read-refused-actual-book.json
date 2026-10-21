@@ -1,0 +1,78 @@
+{
+  "format": "sword-led.collection-export.v2",
+  "collection": {
+    "chapters": [],
+    "mastery": [],
+    "traits": [
+      "steady"
+    ],
+    "challenge": false,
+    "works": [
+      {
+        "blades": [
+          {
+            "base": 40,
+            "bursts": 0,
+            "charge": 3,
+            "commissionId": 1,
+            "cracked": false,
+            "finalizedDay": 1,
+            "hits": 3,
+            "id": "d1-1",
+            "level": 4,
+            "normalGreats": 1,
+            "peak": 201,
+            "recipe": "light",
+            "slot": 1,
+            "status": "commissioned",
+            "successes": 3,
+            "suppliedDay": 1,
+            "value": 201
+          }
+        ],
+        "commissionId": 1,
+        "day": 1,
+        "routeId": "intact",
+        "rulesVersion": "forge-v5",
+        "runId": "v5-journey"
+      },
+      {
+        "blades": [
+          {
+            "base": 40,
+            "bursts": 0,
+            "charge": 2,
+            "commissionId": 2,
+            "cracked": false,
+            "finalizedDay": 2,
+            "hits": 2,
+            "id": "d2-1",
+            "level": 4,
+            "normalGreats": 2,
+            "peak": 176,
+            "recipe": "light",
+            "slot": 1,
+            "status": "commissioned",
+            "successes": 2,
+            "suppliedDay": 2,
+            "value": 176
+          }
+        ],
+        "commissionId": 2,
+        "day": 2,
+        "routeId": "light",
+        "rulesVersion": "forge-v5",
+        "runId": "v5-journey"
+      }
+    ]
+  },
+  "stored": {
+    "main": {
+      "ok": true,
+      "raw": "{\"schemaVersion\":2,\"rulesVersion\":\"forge-collection-v2\",\"savedAt\":\"2026-10-21T00:00:00.000Z\",\"state\":{\"chapters\":[],\"mastery\":[],\"traits\":[\"steady\"],\"challenge\":false,\"works\":[{\"blades\":[{\"base\":40,\"bursts\":0,\"charge\":3,\"commissionId\":1,\"cracked\":false,\"finalizedDay\":1,\"hits\":3,\"id\":\"d1-1\",\"level\":4,\"normalGreats\":1,\"peak\":201,\"recipe\":\"light\",\"slot\":1,\"status\":\"commissioned\",\"successes\":3,\"suppliedDay\":1,\"value\":201}],\"commissionId\":1,\"day\":1,\"routeId\":\"intact\",\"rulesVersion\":\"forge-v5\",\"runId\":\"v5-journey\"},{\"blades\":[{\"base\":40,\"bursts\":0,\"charge\":2,\"commissionId\":2,\"cracked\":false,\"finalizedDay\":2,\"hits\":2,\"id\":\"d2-1\",\"level\":4,\"normalGreats\":2,\"peak\":176,\"recipe\":\"light\",\"slot\":1,\"status\":\"commissioned\",\"successes\":2,\"suppliedDay\":2,\"value\":176}],\"commissionId\":2,\"day\":2,\"routeId\":\"light\",\"rulesVersion\":\"forge-v5\",\"runId\":\"v5-journey\"}]}}"
+    },
+    "backup": {
+      "ok": false
+    }
+  }
+}

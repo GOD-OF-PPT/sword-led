@@ -1,0 +1,88 @@
+{
+  "probe": {
+    "frames": [
+      {
+        "gap": 55.70898074106549,
+        "angle": 8.358088779180163,
+        "pivotGap": 0.17232812218156304,
+        "metalGap": 55.14334091331318,
+        "time": 0,
+        "sampleCostMs": 0.30000001192092896,
+        "phase": "swing"
+      },
+      {
+        "gap": 55.70898074106549,
+        "angle": 8.358088779180163,
+        "pivotGap": 0.17232812218156304,
+        "metalGap": 55.14334091331318,
+        "time": 10,
+        "sampleCostMs": 0.3999999761581421,
+        "phase": "swing"
+      },
+      {
+        "gap": 55.70898074106549,
+        "angle": 8.358088779180163,
+        "pivotGap": 0.17232812218156304,
+        "metalGap": 55.14334091331318,
+        "time": 18,
+        "sampleCostMs": 0.30000001192092896,
+        "phase": "swing"
+      },
+      {
+        "gap": 31.659271292121296,
+        "angle": 4.87792890201263,
+        "pivotGap": 0.17232811686392788,
+        "metalGap": 31.17639684604967,
+        "time": 52.40000003576279,
+        "sampleCostMs": 0.5,
+        "phase": "swing"
+      },
+      {
+        "gap": 0.411441812806728,
+        "angle": 0.3580939593236531,
+        "pivotGap": 0.17232813633376315,
+        "metalGap": 0.34718048878198715,
+        "time": 71.5,
+        "sampleCostMs": 0.30000001192092896,
+        "phase": "contact"
+      },
+      {
+        "gap": 0.411441812806728,
+        "angle": 0.3580939593236531,
+        "pivotGap": 0.17232813633376315,
+        "metalGap": 4.047986152844487,
+        "time": 95.80000001192093,
+        "sampleCostMs": 0.6000000238418579,
+        "phase": "contact"
+      }
+    ],
+    "complete": true,
+    "source": "http://127.0.0.1:4245/assets/d/hammer-forge-v2.webp",
+    "sourceAlpha": [
+      249,
+      253,
+      253
+    ],
+    "inputToFirstSampleMs": 21
+  },
+  "metrics": {
+    "dpr": 2,
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "focus": {
+      "id": "v4-hit",
+      "tag": "BUTTON"
+    },
+    "canvas": {
+      "width": 2572,
+      "height": 936,
+      "cssWidth": 1286.40625,
+      "cssHeight": 467.78125,
+      "backingRatioX": 1.9993683954815984,
+      "backingRatioY": 2.0009352662168483,
+      "visible": true
+    }
+  }
+}

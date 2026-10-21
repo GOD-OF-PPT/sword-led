@@ -1,0 +1,40 @@
+[
+  {
+    "action": {
+      "type": "settle"
+    },
+    "runId": "v5-journey",
+    "mode": "story",
+    "day": 4,
+    "revision": 37,
+    "coinsBefore": 359,
+    "coinsAfter": 389,
+    "events": [
+      {
+        "type": "Settled",
+        "record": {
+          "day": 4,
+          "commissionId": 4,
+          "met": true,
+          "routeId": "guard",
+          "pieceIds": [
+            "d4-1"
+          ],
+          "sales": 116,
+          "recovered": 30,
+          "baseFees": 100,
+          "marketSpent": 46,
+          "recoveredIds": [
+            "d4-2",
+            "d4-3"
+          ],
+          "reserveId": null,
+          "sealsBefore": 3,
+          "sealsAfter": 3,
+          "protected": false,
+          "modification": null
+        }
+      }
+    ]
+  }
+]

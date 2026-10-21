@@ -1,0 +1,171 @@
+[
+  {
+    "action": {
+      "type": "continue"
+    },
+    "runId": "1a505886-0213-40f1-a891-a6fab5f61554",
+    "mode": "story",
+    "day": 1,
+    "revision": 1,
+    "coinsBefore": 0,
+    "coinsAfter": 0,
+    "events": [
+      {
+        "type": "Opened"
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "settle"
+    },
+    "runId": "1a505886-0213-40f1-a891-a6fab5f61554",
+    "mode": "story",
+    "day": 1,
+    "revision": 2,
+    "coinsBefore": 0,
+    "coinsAfter": 30,
+    "events": [
+      {
+        "type": "Settled",
+        "record": {
+          "day": 1,
+          "commissionId": 1,
+          "met": false,
+          "routeId": null,
+          "pieceIds": [],
+          "sales": 0,
+          "recovered": 30,
+          "baseFees": 0,
+          "marketSpent": 30,
+          "recoveredIds": [
+            "d1-1",
+            "d1-2",
+            "d1-3"
+          ],
+          "reserveId": null,
+          "sealsBefore": 3,
+          "sealsAfter": 2,
+          "protected": false,
+          "modification": null
+        }
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "advance"
+    },
+    "runId": "1a505886-0213-40f1-a891-a6fab5f61554",
+    "mode": "story",
+    "day": 1,
+    "revision": 3,
+    "coinsBefore": 30,
+    "coinsAfter": 30,
+    "events": [
+      {
+        "type": "Advanced"
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "settle"
+    },
+    "runId": "1a505886-0213-40f1-a891-a6fab5f61554",
+    "mode": "story",
+    "day": 2,
+    "revision": 4,
+    "coinsBefore": 30,
+    "coinsAfter": 60,
+    "events": [
+      {
+        "type": "Settled",
+        "record": {
+          "day": 2,
+          "commissionId": 2,
+          "met": false,
+          "routeId": null,
+          "pieceIds": [],
+          "sales": 0,
+          "recovered": 30,
+          "baseFees": 0,
+          "marketSpent": 30,
+          "recoveredIds": [
+            "d2-1",
+            "d2-2",
+            "d2-3"
+          ],
+          "reserveId": null,
+          "sealsBefore": 2,
+          "sealsAfter": 1,
+          "protected": false,
+          "modification": null
+        }
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "advance"
+    },
+    "runId": "1a505886-0213-40f1-a891-a6fab5f61554",
+    "mode": "story",
+    "day": 2,
+    "revision": 5,
+    "coinsBefore": 60,
+    "coinsAfter": 60,
+    "events": [
+      {
+        "type": "Advanced"
+      }
+    ]
+  },
+  {
+    "action": {
+      "type": "settle"
+    },
+    "runId": "1a505886-0213-40f1-a891-a6fab5f61554",
+    "mode": "story",
+    "day": 3,
+    "revision": 6,
+    "coinsBefore": 60,
+    "coinsAfter": 90,
+    "events": [
+      {
+        "type": "EventChoice",
+        "record": {
+          "day": 3,
+          "id": "loan",
+          "choice": "decline",
+          "pieceId": null,
+          "coins": 0
+        }
+      },
+      {
+        "type": "Settled",
+        "record": {
+          "day": 3,
+          "commissionId": 3,
+          "met": false,
+          "routeId": null,
+          "pieceIds": [],
+          "sales": 0,
+          "recovered": 30,
+          "baseFees": 0,
+          "marketSpent": 30,
+          "recoveredIds": [
+            "d3-1",
+            "d3-2",
+            "d3-3"
+          ],
+          "reserveId": null,
+          "sealsBefore": 1,
+          "sealsAfter": 0,
+          "protected": false,
+          "modification": null
+        }
+      }
+    ]
+  }
+]

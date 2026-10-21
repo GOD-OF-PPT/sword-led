@@ -1,0 +1,603 @@
+{
+  "input": {
+    "runId": "v5-delayed-gift-fixture",
+    "seed": "v5-delayed-gift-4"
+  },
+  "marketActions": [
+    {
+      "type": "continue"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d1-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d1-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d1-1"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "d1-1"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d2-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d2-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d2-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d2-1"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "d2-1"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-1"
+    },
+    {
+      "pieceId": "d3-1",
+      "traitId": "ember",
+      "type": "buy"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-2"
+    },
+    {
+      "pieceId": "d3-2",
+      "traitId": "echo",
+      "type": "buy"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-3"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "d3-3"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-1"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "d4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-2"
+    },
+    {
+      "type": "reserve",
+      "pieceId": "d4-2"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "chooseModification",
+      "modification": "warmRack"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "reserve",
+      "pieceId": "d4-2"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "d4-2"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d6-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d6-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d6-1"
+    },
+    {
+      "pieceId": "d6-1",
+      "traitId": "pardon",
+      "type": "buy"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d6-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d6-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d6-2"
+    }
+  ],
+  "giftActions": [
+    {
+      "type": "continue"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d1-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d1-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d1-1"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "d1-1"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d2-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d2-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d2-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d2-1"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "d2-1"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-1"
+    },
+    {
+      "pieceId": "d3-1",
+      "traitId": "ember",
+      "type": "buy"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-2"
+    },
+    {
+      "pieceId": "d3-2",
+      "traitId": "echo",
+      "type": "buy"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-3"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d3-3"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "d3-3"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-1"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "d4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-2"
+    },
+    {
+      "type": "reserve",
+      "pieceId": "d4-2"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "chooseModification",
+      "modification": "warmRack"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "reserve",
+      "pieceId": "d4-2"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "d4-2"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d6-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d6-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d6-1"
+    },
+    {
+      "pieceId": "d6-1",
+      "traitId": "pardon",
+      "type": "buy"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d6-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d6-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d6-2"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    }
+  ],
+  "paymentId": "d6-2",
+  "replacementOffer": "inherit",
+  "missing": "steady",
+  "replaceId": "pardon",
+  "afterGiftActions": [
+    {
+      "type": "strike",
+      "pieceId": "d7-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d7-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d7-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d7-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d7-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d7-1"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "d7-1"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d8-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d8-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d8-1"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "d8-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d8-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d8-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d8-2"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d8-2"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "d8-2"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "chooseModification",
+      "modification": "windbox"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d9-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d9-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d9-1"
+    }
+  ],
+  "reacquireAction": {
+    "type": "buy",
+    "pieceId": "d9-1",
+    "traitId": "pardon",
+    "replaceId": "echo"
+  },
+  "scope": "Finite SDK-generated legal boundary prefixes and real post-gift UI continuation; not injected resources or fresh whole UI games.",
+  "rejected": [
+    {
+      "index": 0,
+      "reason": "Error: no pardon9"
+    },
+    {
+      "index": 1,
+      "reason": "Error: day3 no echo"
+    },
+    {
+      "index": 2,
+      "reason": "Error: no pardon9"
+    },
+    {
+      "index": 3,
+      "reason": "Error: cannot meet day8"
+    }
+  ]
+}

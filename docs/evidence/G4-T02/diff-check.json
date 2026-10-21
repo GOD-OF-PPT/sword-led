@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-21T18:21:37.052690+00:00",
+  "defaultExitCode": 2,
+  "defaultDiagnostics": 92,
+  "scope": "All original generated error contexts intentionally retain their exact whitespace. One harmless blank EOF in already-frozen storage consumer retained to preserve executed bytes. No source/test normalization after execution.",
+  "authoredCodeCheck": {
+    "command": [
+      "git",
+      "-c",
+      "core.whitespace=-blank-at-eof",
+      "diff",
+      "--cached",
+      "--check",
+      "--",
+      ".",
+      ":(exclude)docs/evidence/G4-T02"
+    ],
+    "exitCode": 0,
+    "output": ""
+  },
+  "rawDiagnostic": "diff-default-original.txt"
+}
