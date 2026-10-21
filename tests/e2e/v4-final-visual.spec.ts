@@ -18,7 +18,7 @@ test('existing legal endings show complete factual art, visible actions and real
         const envelope=(schemaVersion:number,rulesVersion:string,value:unknown)=>JSON.stringify({schemaVersion,rulesVersion,savedAt:'2026-10-20T00:00:00.000Z',state:value});
         localStorage.setItem('sword-led.save.v4',envelope(4,'forge-v4',state));localStorage.setItem('sword-led.collection.v1',envelope(1,'forge-v4-collection-v1',awards));sessionStorage.setItem('ending-visual-seeded','yes');
       },{state,awards:awardsForTrustedRun(state)});
-      await page.goto('/');await page.locator('#v4-continue').click();
+      await page.goto('/v4.html');await page.locator('#v4-continue').click();
       await expect(page.locator('#v4-stage-copy [data-ending]')).toHaveAttribute('data-ending',state.phase);
       const bytes=await page.evaluate(()=>localStorage.getItem('sword-led.save.v4'));
       for(const width of [1280,1920]){

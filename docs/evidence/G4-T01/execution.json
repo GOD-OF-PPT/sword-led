@@ -1,0 +1,43 @@
+{
+  "at": "2026-10-21T14:46:44.895025+00:00",
+  "build": {
+    "execution": 62597,
+    "actualExitCode": 0
+  },
+  "discoverV5": {
+    "execution": 74989,
+    "actualExitCode": 0,
+    "cases": 6,
+    "executedHere": 1
+  },
+  "discoverV4": {
+    "execution": 42972,
+    "actualExitCode": 0,
+    "cases": 47
+  },
+  "legacySmoke": {
+    "execution": 30798,
+    "actualExitCode": 0,
+    "cases": 2
+  },
+  "v5Keyboard": {
+    "execution": 64095,
+    "actualExitCode": 0,
+    "project": "chromium-dpr1",
+    "cases": 1,
+    "accepted": 144,
+    "observations": 148,
+    "pointer": 0,
+    "keyboardClicks": 90,
+    "challenge": "earned opening only;0 journal"
+  },
+  "fingerprint": {
+    "source": 377,
+    "runtime": 80,
+    "matchesAtEnd": true
+  },
+  "runtimeMatchesOfficial": 80,
+  "protected": 85,
+  "sdkUnchanged": 9,
+  "note": "All process terminals observed; no test input/build edits during consumers. Six projects configured/listed, only currentChromium DPR1 keyboard case executed here."
+}

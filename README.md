@@ -91,6 +91,8 @@ npm run test:browser
 npm run test:art
 ```
 
+现行v5浏览器验证入口为 `npm run test:v5:browser`（或在已冻结构建上运行 `npx playwright test --config playwright.v5-ui.config.ts`）。配置明确Chromium/Firefox/WebKit × DPR1/2；当前用例和已执行范围见goal-4及报告，配置存在不表示六项目已经通过。只跑当前键盘链可选择 `--project chromium-dpr1`。旧v4用例明确进入 `/v4.html`，不会用v5首页去读v4存档。实际case清单以 `--list` 为准。
+
 保留的v4页面回归在构建后运行 `npx playwright test --config playwright.v4-ui.config.ts`。forge-v3界面回归可单独运行 `npx playwright test --config playwright.v3.config.ts`（Chromium/Firefox/WebKit须已安装）；这些旧配置不代表当前v5页面验收，不要在浏览器批次运行时重建共用dist。
 
 `check`运行单测、严格类型检查和网页/旧SDK/独立v5 SDK构建。`test:browser`一次构建后串行运行旧v4页面与v4/兼容存储SDK；也可分别用`test:e2e`/`test:storage:browser`。真实Chrome原生窗口/缓存探测采用隔离profile；测试只改变测试侧时钟/事件，不注入钱包/终局。美术检查使用独立设计页，不作为正式游戏验收。单项命令还包括`npm test`、`npm run typecheck`、`npm run build`和交互`test:watch`。
