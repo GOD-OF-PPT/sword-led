@@ -16,7 +16,8 @@ export function firstChapterFacts(s:RunState){
   bridgeResolved:!!bridge,chaptersEarned:s.history.some(h=>h.day===4&&h.sealsAfter>0),
   lamps:Array.from({length:4},(_,i)=>({day:i+1,title:COMMISSIONS[i]!.title,done:records.some(h=>h.day===i+1&&h.met)}))};
 }
-export interface ForgeNotice {title:string;copy:string;action:'gift'|'deliver'|'next'|'settle'|'resume'|'book'|'shop'|'journey'|'none';label:string}
+export interface NoticeSubject {runId:string;day:number;revision:number;pieceId:string;generation?:number}
+export interface ForgeNotice {title:string;copy:string;action:'gift'|'deliver'|'inspect'|'next'|'settle'|'resume'|'book'|'shop'|'journey'|'none';label:string;subject?:NoticeSubject}
 export function noticeFromEvents(events:readonly DomainEvent[],s:RunState):ForgeNotice|null {
  const met=events.find(e=>e.type==='MainCompleted');
  if(met?.type==='MainCompleted')return{title:'这一站，有剑了',copy:COMMISSIONS[met.commissionId-1]!.success,action:s.gift==='available'?'gift':'settle',label:s.gift==='available'?'领一门手艺':'安排余剑与收工'};
@@ -25,9 +26,10 @@ export function noticeFromEvents(events:readonly DomainEvent[],s:RunState):Forge
  const strike=events.find(e=>e.type==='Strike');
  if(strike?.type==='Strike'){
   const last=strike.hits.at(-1),b=s.blades.find(b=>b.id===strike.pieceId);
-  if(last?.result==='broken')return{title:'剑断了，炉火还在',copy:'断剑已按底价回收。换一柄继续，或保留现有成果收工。',action:'next',label:'换下一柄'};
-  if(last?.result==='crack')return{title:'裂纹出现了',copy:`这一记后身价为${last.after}。再裂会断，现在仍可收手交剑。`,action:'deliver',label:'看看能否交剑'};
-  if(b?.charge===6)return{title:'锤势已满',copy:'下一次落锤是安全连锻，不会出现裂损。',action:'none',label:'安全连锻'};
+  const subject={runId:s.runId,day:s.day,revision:s.revision,pieceId:strike.pieceId};
+  if(last?.result==='broken')return{title:'剑断了，炉火还在',copy:'断剑已按底价回收。左侧还有兵器时可继续，也可保留现有成果收工。',action:s.blades.some(piece=>piece.status==='active')?'next':'settle',label:s.blades.some(piece=>piece.status==='active')?'回到铁砧':'安排收工',subject};
+  if(last?.result==='crack')return{title:'裂纹出现了',copy:`这一记后身价为${last.after}。再裂会断，先看看这柄是否仍合纸单。`,action:'inspect',label:'看看这柄的差项',subject};
+  if(b?.charge===6)return{title:'锤势已满',copy:'下一次落锤是安全连锻，不会出现裂损。',action:'none',label:'安全连锻',subject};
  }
  const event=events.find(e=>e.type==='EventChoice');
  if(event?.type==='EventChoice')return{title:event.record.choice==='accept'?'选择已经记下':'这一晚，守住手里的剑',copy:event.record.choice==='accept'?'后果与资源已按本次选择结清，收工时可以回看。':'没有额外扣款，可以继续打造当前委托。',action:'none',label:''};

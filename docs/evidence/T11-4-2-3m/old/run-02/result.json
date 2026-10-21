@@ -1,0 +1,94 @@
+{
+  "ok": true,
+  "url": "http://127.0.0.1:4179/",
+  "serverPid": 32067,
+  "sdkFile": "tmp/previews/T11-4-2-3k-formed/sword-led-v4.js",
+  "sdkSha256": "0525dd1f3642af2a1a54e397e6023cd9baf4dcccda4c5af3b9ed721a92ae89e5",
+  "servedSdkSha256": "0525dd1f3642af2a1a54e397e6023cd9baf4dcccda4c5af3b9ed721a92ae89e5",
+  "witnessFile": "docs/evidence/T11-4-2-3i1/witness-fixed/complete.json",
+  "witnessSha256": "25dd8053db4aa916017e01891f30ce067e0e0ce5da741e47c36f07a8a73cd3ae",
+  "scope": "One follow-up old-version full-charge case; historical legal prefix and two accepted real UI strikes. Initial unconfirmed case is preserved separately.",
+  "results": [
+    {
+      "name": "charge-consumed",
+      "reproduced": true,
+      "method": "Historical legal prefix index 55; two real UI strikes; no field injection. Unlike day 3, this burst does not newly qualify the sword and mask the old notice.",
+      "prefixRevision": 55,
+      "acceptedActions": 2,
+      "chargedUI": {
+        "title": "锤势已满",
+        "copy": "下一次落锤是安全连锻，不会出现裂损。",
+        "noticeHidden": false,
+        "noticeAction": "安全连锻",
+        "actionDisabled": false,
+        "busy": "false",
+        "deliver": "卖给行会 · 536",
+        "deliverDisabled": false,
+        "focused": "v4-hit",
+        "selected": "d4-2",
+        "risk": "下一锤安全连锻，不会裂",
+        "trusted": [
+          {
+            "type": "click",
+            "isTrusted": true,
+            "target": "v4-continue",
+            "time": 331.19999998807907,
+            "busy": null
+          },
+          {
+            "type": "click",
+            "isTrusted": true,
+            "target": "v4-hit",
+            "time": 1298.9000000059605,
+            "busy": "true"
+          }
+        ]
+      },
+      "afterUI": {
+        "title": "锤势已满",
+        "copy": "下一次落锤是安全连锻，不会出现裂损。",
+        "noticeHidden": false,
+        "noticeAction": "安全连锻",
+        "actionDisabled": false,
+        "busy": "false",
+        "deliver": "卖给行会 · 2,851",
+        "deliverDisabled": false,
+        "focused": "v4-hit",
+        "selected": "d4-2",
+        "risk": "下一锤裂损 12% · 首裂会掉价",
+        "trusted": [
+          {
+            "type": "click",
+            "isTrusted": true,
+            "target": "v4-continue",
+            "time": 331.19999998807907,
+            "busy": null
+          },
+          {
+            "type": "click",
+            "isTrusted": true,
+            "target": "v4-hit",
+            "time": 1298.9000000059605,
+            "busy": "true"
+          },
+          {
+            "type": "click",
+            "isTrusted": true,
+            "target": "v4-hit",
+            "time": 2162.699999988079,
+            "busy": "true"
+          }
+        ]
+      },
+      "actualCharge": 0,
+      "ordinaryOdds": {
+        "burst": false,
+        "crack": 120,
+        "great": 150,
+        "success": 730,
+        "afterBurstCrack": 120
+      }
+    }
+  ],
+  "errors": []
+}

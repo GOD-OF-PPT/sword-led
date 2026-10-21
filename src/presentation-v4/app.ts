@@ -15,6 +15,7 @@ import {V4_TEMPLATE} from './shell.js';
 import {createForgeRenderer} from './forge.js';
 import type {ForgeContactFrame} from './forge.js';
 import {createWorkbenchFeedback} from './workbench-feedback.js';
+import {createCommissionPaper,commissionPaper} from './commission-paper.js';
 import type {FeedbackRect} from './workbench-feedback.js';
 import {createHandoff} from './handoff.js';
 import type {HandoffToken,HandoffTarget,HandoffOrigin} from './handoff.js';
@@ -44,6 +45,7 @@ export function mountV4(root:HTMLElement,port:V4Session){
  let origin:HTMLElement|null=null,modalKind='',seedDraft='',notice:ForgeNotice|null=null,sceneOverride:SceneOverride|null=null;
  let renderer:ReturnType<typeof createForgeRenderer>|null=null,input:ReturnType<typeof bindDirectStrikeInput>|null=null,handoff:ReturnType<typeof createHandoff>|null=null;
  let feedback:ReturnType<typeof createWorkbenchFeedback>|null=null;
+ let paper:ReturnType<typeof createCommissionPaper>|null=null;
  let strikeReadout:{runId:string;revision:number;generation:number;epoch:number;pieceId:string;value:number;level:number}|null=null;
  let inlineDelivery:{runId:string;day:number;commissionId:number;pieceIds:readonly string[]}|null=null;
  let lastPoint:StrikePoint|null=null,effectGeneration=0;
@@ -86,15 +88,14 @@ export function mountV4(root:HTMLElement,port:V4Session){
   feedback?.cancel();strikeReadout=command.type==='strike'&&moved?{runId:before.runId,revision:before.revision+1,generation:snapshot.generation,epoch,pieceId:moved.id,value:moved.value,level:moved.level}:null;
   const r=port.dispatch({runId:before.runId,expectedRevision:before.revision,action:command},snapshot.generation);
   if(!r.ok){strikeReadout=null;resultError(r.error);render();return false;}
-  const n=noticeFromEvents(r.events,r.state);if(n)notice=n;
+  const n=noticeFromEvents(r.events,r.state);notice=n?.subject?{...n,subject:{...n.subject,generation:snapshot.generation}}:n;
   if(r.events.some(e=>e.type==='Opened'))notice={title:'炉火点着了',copy:'鼠标左键点剑身即可落锤。看见“交给阿岚”，就能保住今天的委托。',action:'none',label:''};
   if(r.events.some(e=>e.type==='Advanced')){const v=getRunView(r.state);notice=v.merchant?{title:'行脚商人到了',copy:'可以用一柄余剑换手艺，或为后续来料作准备。先看清今天要交什么。',action:'shop',label:'看看炉边摊'}:{title:'新的一天，新的约定',copy:v.commission.request,action:'none',label:''};}
   const strike=r.events.find(e=>e.type==='Strike');
   if(strike?.type==='Strike'){
    lastTriggers=[];
-   if(!n&&notice?.title==='炉火点着了')notice=null;
    const wasReady=getRunView(before).blades.find(p=>p.blade.id===strike.pieceId)?.willCommission;
-   if(!n&&!wasReady&&getRunView(r.state).blades.find(p=>p.blade.id===strike.pieceId)?.willCommission){const view=getRunView(r.state),progress=view.commission.progress,multi=view.commission.routes.some(route=>route.count>1),oneMore=progress.routes.some(route=>route.required>1&&route.count===route.required-1);notice={title:'这柄剑，已经合格了',copy:multi?(view.commission.id===11?'这柄剑符合接力的一条路线；旧剑一柄或新剑两柄分别计数。交剑前可点来客查看当前差项。':oneMore?'再交这一柄，双驿需要的两柄就齐了。已经交出的剑不会重复计数。':'可以交出这一柄，再为另一条驿路准备下一柄。两柄各自合格，才算完成。'):'现在交给来客，就能保住这一站。也可以继续锻，承担下一锤的风险。',action:'deliver',label:'去交剑'};}
+   if(!n&&!wasReady&&getRunView(r.state).blades.find(p=>p.blade.id===strike.pieceId)?.willCommission){const view=getRunView(r.state),progress=view.commission.progress,multi=view.commission.routes.some(route=>route.count>1),oneMore=progress.routes.some(route=>route.required>1&&route.count===route.required-1);notice={title:'这柄剑，已经合格了',copy:multi?(view.commission.id===11?'这柄剑符合接力的一条路线；旧剑一柄或新剑两柄分别计数。':oneMore?'交出这一柄，双驿需要的两柄就齐了。':'先交出这一柄，再准备另一柄。两柄各自合格，才算完成。'):'现在交给来客，就能保住这一站。也可以继续锻，承担下一锤的风险。',action:'deliver',label:`交给${view.commission.name}`,subject:{runId:r.state.runId,day:r.state.day,revision:r.state.revision,pieceId:strike.pieceId,generation:snapshot.generation}};}
    busy=true;const token=++effectGeneration,b=r.state.blades.find(b=>b.id===strike.pieceId)!;renderer?.draw(b);
    renderer?.play(strike,lastPoint,()=>{if(disposed||token!==effectGeneration)return;busy=false;strikeReadout=null;if(current()?.status!=='active')nextBlade();render();},before.blades.find(piece=>piece.id===strike.pieceId));
    const h=strike.hits.at(-1);if(h)setStatus(`${strike.burst?'安全连锻 ×'+strike.hits.length:'落锤'} · ${h.result==='great'?'大成':h.result==='crack'?'出现裂纹':h.result==='broken'?'断剑回收':'锻成'} · 这一记后身价 ${fmt(h.after)}`);
@@ -123,7 +124,7 @@ export function mountV4(root:HTMLElement,port:V4Session){
   else if(moved&&command.type==='buy')feedback?.transfer({blade:moved,source,target:'shop',copy:`换得${TRAITS[command.traitId].name}`});
   return true;
  }
- function choose(id:string){if(busy||modal||handoff?.isDragging())return;input?.cancel();renderer?.cancel();feedback?.cancel();epoch++;selectedId=id;render();button('v4-strike').focus({preventScroll:true});}
+ function choose(id:string){if(busy||modal||handoff?.isDragging())return;input?.cancel();renderer?.cancel();feedback?.cancel();if(notice?.subject&&notice.subject.pieceId!==id)notice=null;epoch++;selectedId=id;render();button('v4-strike').focus({preventScroll:true});}
  function contactReadout(frame:ForgeContactFrame){
   const s=state(),reading=strikeReadout;if(!s||!reading||!busy||reading.runId!==s.runId||reading.revision!==s.revision||reading.generation!==snapshot.generation||reading.epoch!==epoch||reading.pieceId!==frame.pieceId)return;
   strikeReadout={...reading,value:frame.hit.after,level:frame.hit.level};lastTriggers=[...new Set(frame.hit.triggers)];
@@ -190,7 +191,7 @@ export function mountV4(root:HTMLElement,port:V4Session){
  }
  function commitHandoff(token:HandoffToken,target:HandoffTarget,origin?:HandoffOrigin){
   const b=handoffBlade(token),s=state();if(!b||!s)return;const preview=handoffPreview(token,target);
-  if(!preview.allowed){notice={title:'再看一眼纸单',copy:preview.label,action:'none',label:''};setStatus(preview.label);renderNotice();return;}
+  if(!preview.allowed){notice={title:'再看一眼纸单',copy:preview.label,action:'none',label:'',subject:{runId:s.runId,day:s.day,revision:s.revision,pieceId:b.id,generation:snapshot.generation}};setStatus(preview.label);renderNotice();return;}
   if(target==='customer'){send({type:'deliver',pieceId:b.id},origin);return;}
   reserveBlade(b.id,origin);
  }
@@ -211,7 +212,7 @@ export function mountV4(root:HTMLElement,port:V4Session){
   const decision=forgeDecisions(v,b?.id??null),tomorrow=nextDayPlan(v);text('v4-plan-line',decision.headline);text('v4-plan-copy',decision.copy);find('v4-plan-line').parentElement!.dataset.tone=decision.tone;
   text('v4-next-plan',tomorrow.reserve?.tone==='ready'?'明日已有合用的剑':v.next?'明日打算':'最后一炉的打算');button('v4-next-plan').disabled=busy;
   text('v4-shop-help',v.merchant?'余剑也能换手艺。看看哪门适合下一炉。':'');
-  text('v4-day',`${s.mode==='challenge'?'行脚挑战 · ':''}第${s.day}天 · ${v.chapter.title.split(' · ')[1]??v.chapter.title}${isCriticalDay(s.day)?' · 关键约定':''}`);text('v4-goal-name',`${v.commission.name} · ${v.commission.title}`);text('v4-goal-condition',v.commission.routes.map(r=>r.description).join(' 或 '));text('v4-goal-progress',v.commission.progress.complete?'✓ 今日委托已完成':v.commission.progress.routes.map(r=>`${r.count}/${r.required}`).join(' 或 '));
+  text('v4-day',`${s.mode==='challenge'?'行脚挑战 · ':''}第${s.day}天 · ${v.chapter.title.split(' · ')[1]??v.chapter.title}${isCriticalDay(s.day)?' · 关键约定':''}`);text('v4-goal-name',v.commission.title);paper?.render(v,b?.id??null,`${s.runId}/${snapshot.generation}`);
   text('v4-seals',`${s.seals}/3`);text('v4-coins',fmt(s.coins));text('v4-value',b?fmt(reading?.value??b.value):'—');text('v4-condition',b?`${RECIPES[b.recipe].name} · ${b.status==='broken'?'断裂':b.cracked?'已有裂纹':'无裂纹'}`:'铁砧已空，安排这一炉收工');
   text('v4-craft-record',b?`等级 ${reading?.level??b.level} · 已完成安全连锻 ${b.bursts}次`:'');
   text('v4-risk',active?(active.odds.burst?'下一锤安全连锻，不会裂':`下一锤裂损 ${active.odds.crack/10}%${b?.cracked?' · 再裂会断':' · 首裂会掉价'}`):s.reserveId===b?.id?'这柄在剑架上，先取回再加工':'余剑已安排，可收工');
@@ -236,7 +237,12 @@ export function mountV4(root:HTMLElement,port:V4Session){
   const gift=find('v4-gift');gift.replaceChildren();if(v.gift.status==='available')gift.append(action('首赠 · 选手艺',giftModal,true,!canAct()||busy));
   find('v4-modifications').replaceChildren(...v.modifications.map(m=>{const n=action(m.name,()=>openModal(m.name,m.text,[{label:'收好',run:()=>closeModal()}]));n.dataset.modification=m.id;n.dataset.triggered=String(lastTriggers.includes(m.id));n.prepend(prop(m.id));return n;}));
  }
- function renderNotice(){const visible=!!notice&&route==='game'&&(stageMode==='workshop'||paused);show('v4-notice',visible);root.firstElementChild?.setAttribute('data-has-notice',String(visible));if(!notice)return;button('v4-notice-action').disabled=!['book','journey','next','resume','none'].includes(notice.action)&&(!canAct()||busy);text('v4-notice-title',notice.title);text('v4-notice-copy',notice.copy);text('v4-notice-action',notice.label);button('v4-notice-action').hidden=notice.action==='none';}
+ function noticeSubjectCurrent(){const s=state(),subject=notice?.subject;return !subject||!!s&&subject.runId===s.runId&&subject.day===s.day&&subject.revision===s.revision&&(subject.generation===undefined||subject.generation===snapshot.generation);}
+ function renderNotice(){
+  if(!noticeSubjectCurrent())notice=null;
+  if(notice?.action==='deliver'){const piece=state()?getRunView(state()!).blades.find(p=>p.blade.id===notice?.subject?.pieceId):null;if(!piece?.willCommission||piece.reserved)notice=null;}
+  const visible=!!notice&&route==='game'&&(stageMode==='workshop'||paused);show('v4-notice',visible);root.firstElementChild?.setAttribute('data-has-notice',String(visible));if(!notice)return;button('v4-notice-action').disabled=!['book','journey','inspect','resume','none'].includes(notice.action)&&(!canAct()||busy);text('v4-notice-title',notice.title);text('v4-notice-copy',notice.copy);text('v4-notice-action',notice.label);button('v4-notice-action').hidden=notice.action==='none';
+ }
  function saveSummary(){
   const problems:string[]=[];if(snapshot.mode==='memory')problems.push('本次不保存，关闭页面会失去当前试玩');else if(snapshot.mode==='readonly')problems.push('另一窗口正在保存，本页只读');else if(snapshot.mode==='unsupported')problems.push('未取得保存锁，可不保存试玩');else if(snapshot.mode==='error')problems.push('保存权获取失败，可重试读取最新，或明确不保存试玩');else if(snapshot.conflict)problems.push('磁盘进度已更新，请先导出');else if(snapshot.dirty)problems.push('当前行程尚未保存');else if(snapshot.load?.main.status==='invalid'||snapshot.load?.main.status==='unavailable')problems.push('主档'+(SAVE_ERRORS[snapshot.load.main.error]??'不可读取'));else if(snapshot.load?.main.status==='empty'&&snapshot.load.backup.status==='valid')problems.push('发现可恢复的局备份');
   if(collection.pending||collection.problem)problems.push('炉谱'+(collection.problem?SAVE_ERRORS[collection.problem]??'待保存':'待保存'));
@@ -280,6 +286,19 @@ export function mountV4(root:HTMLElement,port:V4Session){
   if(!options.length){confirm('赠礼折成旅费','两门赠礼手艺都已学会，领取40金币。',()=>send({type:'claimGift',traitId:null}));return;}
   const claim=(id:Trait)=>{const now=state();if(!now)return;if(now.traits.length===3)replaceTrait(id,old=>({type:'claimGift',traitId:id,replaceId:old}),'这是一份未领的首赠，换槽不交剑、不花金币，也不会重置本局已用护印。','稍后再领');else{closeModal();send({type:'claimGift',traitId:id});}};
   const body=element('div',undefined,'v4-choice-grid'),view=getRunView(s);for(const id of options){const purpose=traitPurpose(id,view),card=element('article',undefined,'v4-card');card.append(traitArt(id),element('h3',TRAITS[id].name),element('p',TRAITS[id].text),element('b',purpose.headline),element('p',purpose.copy),action(`学会${TRAITS[id].name}`,()=>claim(id),true));body.append(card);}openModal('第一门手艺，自己挑',body,[{label:'稍后再领',run:()=>closeModal()}],'gift');
+ }
+ function commissionDetails(pieceId=selectedId){
+  const s=state();if(!s)return;const v=getRunView(s),model=commissionPaper(v,pieceId),piece=v.blades.find(p=>p.blade.id===pieceId),body=element('div');
+  body.append(element('p',v.commission.progress.complete?v.commission.success:v.commission.request),element('p',model.summary));
+  for(const route of model.routes){const row=element('section',undefined,'v4-commission-detail');row.append(element('h3',route.label),element('p',route.requirement),element('p',`${route.deliveredIds.length}/${route.required} 已交${route.inactive?' · 另一条已完成，无需再交':''}`));
+   for(const id of route.deliveredIds){const b=s.blades.find(value=>value.id===id);if(b)row.append(thumb(b));}
+   if(route.selected&&!model.complete)row.append(element('p',route.selected.matches?route.selected.copy:route.selected.missing.join('、')));body.append(row);
+  }
+  if(piece)body.append(element('h3','当前查看的这柄'),thumb(piece.blade),element('p',`${RECIPES[piece.blade.recipe].name} · 身价${fmt(piece.blade.value)}${piece.reserved?' · 挂在留剑架上':''}`));
+  const choices:ModalAction[]=[{label:'回铁砧',run:()=>closeModal()}];
+  if(piece?.willCommission&&!piece.reserved){const ticket={runId:s.runId,revision:s.revision,generation:snapshot.generation};choices.push({label:`交给${v.commission.name} · ${fmt(piece.blade.value)}`,primary:true,disabled:!snapshot.active||snapshot.conflict||!['writer','memory'].includes(snapshot.mode)||paused,run:()=>{const valid=ticket.runId===state()?.runId&&ticket.revision===state()?.revision&&ticket.generation===snapshot.generation;closeModal();const now=state(),currentPiece=now?getRunView(now).blades.find(p=>p.blade.id===pieceId):null;if(valid&&currentPiece?.willCommission&&!currentPiece.reserved)send({type:'deliver',pieceId});else resultError('stale_session');}});}
+  else body.append(element('p',piece?.reserved?'先从剑架取回，才能交付。':'不合委托的剑仍可明确卖给行会，出售不会点亮今天这一站。'));
+  openModal(v.commission.name+'的心愿',body,choices,'commission');
  }
  function buyTrait(trait:Trait){
   const s=state(),b=current();if(!s||!b||b.status!=='active'||s.reserveId===b.id){setStatus('先从剑架选一柄未保留的剑。');return;}
@@ -390,16 +409,25 @@ export function mountV4(root:HTMLElement,port:V4Session){
  function navigationIdentity():InputIdentity|null {const s=state();if(!s||!canAct()||busy||handoff?.isDragging()||stageMode!=='workshop'||forgeIdentity())return null;return{runId:s.runId,revision:s.revision,generation:snapshot.generation,epoch,pieceId:'navigation',mode:'standard',periodMs:1,rulesVersion:s.rulesVersion};}
  renderer=createForgeRenderer(root,{reduced,cue:cue=>audio.acceptedCue(cue),ready:()=>{render();repaintProps();updateArtworkStatus();},problem:artworkProblem,contact:contactReadout});
  feedback=createWorkbenchFeedback(root,{reduced,paintBlade:(canvas,blade)=>renderer?.paintThumb(canvas,blade)});
+ paper=createCommissionPaper(root,{thumb:id=>{const b=state()?.blades.find(piece=>piece.id===id);return b?thumb(b):null;}});
  handoff=createHandoff(root,{capture:pieceId=>{const s=state();if(!s)return null;const token={runId:s.runId,revision:s.revision,generation:snapshot.generation,epoch,pieceId};return handoffBlade(token)?token:null;},preview:handoffPreview,commit:commitHandoff});
  input=bindDirectStrikeInput([button('v4-hit'),button('v4-strike')],{context:forgeIdentity,navigationContext:navigationIdentity,navigate:()=>{const b=current();if(b&&state()?.reserveId===b.id){setStatus('先从剑架取回，或选择收工把它留给明天。');button('v4-reserve').focus({preventScroll:true});}else settle();},commit:(captured,point)=>{if(!sameInput(captured,forgeIdentity()))return;lastPoint=point;void audio.gesture();send({type:'strike',pieceId:captured.pieceId});},aim:p=>{if(canAct()&&!busy&&!handoff?.isDragging())renderer?.aim(p);},preparing:v=>renderer?.preparing(v)});
  button('v4-start').onclick=()=>startNew();button('v4-title-challenge').onclick=()=>startNew('challenge');button('v4-continue').onclick=continueGame;find<HTMLInputElement>('v4-seed').value=seedDraft;find<HTMLInputElement>('v4-seed').oninput=e=>{seedDraft=(e.currentTarget as HTMLInputElement).value;};
  for(const id of['v4-title-collection','v4-book'])button(id).onclick=book;for(const id of['v4-title-settings','v4-settings'])button(id).onclick=settings;
  for(const id of['v4-save-open','v4-save-details'])button(id).onclick=saveDetails;button('v4-menu').onclick=()=>route==='title'?continueGame():pause();button('v4-shop').onclick=shop;button('v4-event-open').onclick=eventModal;
- button('v4-customer-open').onclick=()=>{const s=state();if(!s)return;const v=getRunView(s),body=element('div');body.append(element('p',v.commission.progress.complete?v.commission.success:v.commission.request),...v.commission.routes.map(r=>element('p',r.description)));const selected=v.blades.find(p=>p.blade.id===selectedId);if(selected&&!selected.assessment.qualifies)body.append(element('h3','眼前这柄还差什么'),...selected.assessment.routes.map(r=>element('p',r.missing.join('、'))));body.append(element('p','不合委托的剑仍能卖给行会，但不会点亮今天这一站。'));openModal(v.commission.name+'的心愿',body,[{label:'回铁砧',run:()=>closeModal()}],'commission');};
+ button('v4-customer-open').onclick=()=>commissionDetails();
  button('v4-deliver').onclick=()=>{const b=current();if(b)send({type:'deliver',pieceId:b.id});};button('v4-reserve').onclick=()=>{const b=current();if(b)reserveBlade(b.id);};button('v4-scrap').onclick=()=>{const b=current();if(b)confirm('回收这柄剑？',`回收只得底价四分之一：${fmt(Math.floor(b.base/4))}金币，不计主委托，不能再锻造。`,()=>send({type:'scrap',pieceId:b.id}));};button('v4-settle').onclick=settle;button('v4-next-plan').onclick=tomorrowPlan;
  button('v4-inline-review').onclick=()=>{const s=state(),receipt=inlineDelivery;if(!s||!receipt)return;if(s.gift==='available'){giftModal();return;}presentScene({kind:'delivery',revision:s.revision,commissionId:receipt.commissionId,pieceIds:receipt.pieceIds});render();};
  button('v4-inline-dismiss').onclick=()=>{inlineDelivery=null;show('v4-inline-delivery',false);};
- button('v4-notice-dismiss').onclick=()=>{notice=null;renderNotice();};button('v4-notice-action').onclick=()=>{if(!notice)return;if(notice.action==='resume'){paused=false;notice=null;render();}else if(notice.action==='gift')giftModal();else if(notice.action==='settle')settle();else if(notice.action==='next'){nextBlade();render();button('v4-strike').focus({preventScroll:true});}else if(notice.action==='deliver')button('v4-deliver').focus({preventScroll:true});else if(notice.action==='book')book();else if(notice.action==='shop')shop();else if(notice.action==='journey')journeyPanel();};
+ button('v4-notice-dismiss').onclick=()=>{notice=null;renderNotice();};button('v4-notice-action').onclick=()=>{
+  const message=notice;if(!message||!noticeSubjectCurrent()){notice=null;renderNotice();return;}
+  if(message.action==='resume'){paused=false;notice=null;render();}
+  else if(message.action==='gift')giftModal();else if(message.action==='settle')settle();
+  else if(message.action==='next'){if(!canAct()||busy)return;cancelPresentation(false);epoch++;notice=null;nextBlade();render();button('v4-strike').focus({preventScroll:true});}
+  else if(message.action==='deliver'){const s=state(),pieceId=message.subject?.pieceId,piece=s?getRunView(s).blades.find(p=>p.blade.id===pieceId):null;if(pieceId&&piece?.willCommission&&!piece.reserved)send({type:'deliver',pieceId});else{notice=null;renderNotice();setStatus('这柄的状态已变化，请重新查看纸单。');}}
+  else if(message.action==='inspect')commissionDetails(message.subject?.pieceId);
+  else if(message.action==='book')book();else if(message.action==='shop')shop();else if(message.action==='journey')journeyPanel();
+ };
  dialog.addEventListener('cancel',e=>{e.preventDefault();closeModal();});
  const onVisibility=()=>{if(document.hidden){cancelPresentation();epoch++;paused=route==='game';if(modal)closeModal(false);audio.setMode('silent');}else{if(paused)notice={title:'炉火还在，已经为你暂停',copy:'刚才未完成的输入与动效已取消，已接受的成果保持。',action:'resume',label:'继续这一炉'};render();}};
  const onKey=(e:KeyboardEvent)=>{if(e.repeat&&(e.key==='Enter'||e.code==='Space')){e.preventDefault();return;}if(e.key==='Escape'&&!modal&&route==='game'){e.preventDefault();pause();}};
@@ -413,5 +441,5 @@ export function mountV4(root:HTMLElement,port:V4Session){
  const stopBook=port.subscribeCollection(value=>{collection=value;render();});
  const stopAudio=audio.subscribe(updateAudioStatus);
  render();void port.activate();
- return{async dispose(){if(disposed)return;disposed=true;cancelPresentation();stopRun();stopBook();stopPrefs();stopAudio();stageAssetGeneration++;stageArtwork.onload=null;stageArtwork.onerror=null;input?.dispose();handoff?.dispose();feedback?.dispose();renderer?.dispose();motion.removeEventListener('change',onMotion);document.removeEventListener('visibilitychange',onVisibility);window.removeEventListener('storage',onSettingsStorage);window.removeEventListener('blur',onBlur);root.removeEventListener('keydown',onKey);root.removeEventListener('pointerdown',onGesture,{capture:true});root.removeEventListener('keydown',onGesture,{capture:true});await Promise.allSettled([port.dispose(),audio.dispose()]);if(root.firstElementChild===ownRoot)root.replaceChildren();}};
+ return{async dispose(){if(disposed)return;disposed=true;cancelPresentation();stopRun();stopBook();stopPrefs();stopAudio();stageAssetGeneration++;stageArtwork.onload=null;stageArtwork.onerror=null;input?.dispose();handoff?.dispose();feedback?.dispose();paper?.dispose();renderer?.dispose();motion.removeEventListener('change',onMotion);document.removeEventListener('visibilitychange',onVisibility);window.removeEventListener('storage',onSettingsStorage);window.removeEventListener('blur',onBlur);root.removeEventListener('keydown',onKey);root.removeEventListener('pointerdown',onGesture,{capture:true});root.removeEventListener('keydown',onGesture,{capture:true});await Promise.allSettled([port.dispose(),audio.dispose()]);if(root.firstElementChild===ownRoot)root.replaceChildren();}};
 }

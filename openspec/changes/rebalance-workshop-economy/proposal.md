@@ -21,4 +21,4 @@
 
 ## Approval
 
-**待批准，未实施。** 用户原始要求“然后确认实施文档”（`goal-1/input.md:3`）；适用`/Users/gordon/openspec/AGENTS.md`规定“Do not start implementation until proposal is approved”。本次改变付款、供给、交易资格和保存合同，须具体批准；此前v0.7批准及D风格选择不重复询问。此门槛仅针对新v5规则，不暂停已经授权的v4表现优化。
+**已获用户明确批准，实施尚未开始。** 用户原始要求“然后确认实施文档”（`goal-1/input.md:3`）；适用`/Users/gordon/openspec/AGENTS.md`规定“Do not start implementation until proposal is approved”。本次改变付款、供给、交易资格和保存合同，已具体回复“确认 v0.8，开始首章实施”；原答/全文hash见docs/decisions/2026-10-21-v08-approval.json。此前v0.7批准及D风格选择不重复询问。此门槛仅针对新v5规则，不暂停已经授权的v4表现优化。

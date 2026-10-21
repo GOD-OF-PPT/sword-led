@@ -1,0 +1,58 @@
+/* A receipt belongs on the customer's existing paper, never over the anvil. */
+.v4-workshop .v4-objective:has(#v4-order-routes) { padding: 7px 11px; }
+.v4-workshop .v4-objective:has(#v4-order-routes) h1 { margin-top: 2px; font-size: 20px; line-height: 1.2; }
+.v4-workshop .v4-objective:has(#v4-order-routes) .v4-eyebrow { font-size: 11px; line-height: 1.3; }
+.v4-workshop .v4-objective:has(#v4-order-routes) #v4-goal-condition { margin-top: 3px; color: #78522f; font-size: 12px; line-height: 1.3; }
+.v4-workshop .v4-objective:has(#v4-order-routes) #v4-goal-progress { margin-top: 4px; padding-top: 4px; color: #3f5638; font-size: 12px; line-height: 1.3; }
+.v4-workshop .v4-objective:has(#v4-order-routes) #v4-goal-progress:empty { display: none; }
+#v4-order-routes { margin-top: 5px; }
+.v4-order-route { padding: 3px 5px 4px; border-left: 2px solid #99723c59; background: #b48a4b09; }
+.v4-order-row { display: flex; gap: 5px; align-items: center; }
+.v4-order-copy { flex: 1; min-width: 0; }
+.v4-order-title { color: #58402a; font-size: 12px; line-height: 1.35; }
+.v4-order-label { color: #48321e; font: 700 13px/1.25 var(--v4-display); }
+.v4-order-requirement { color: #58402a; font-size: 12px; line-height: 1.25; overflow-wrap: normal; }
+.v4-order-requirement::before { content: ' · '; color: #8f6a3c; }
+.v4-order-sockets { display: flex; flex: 0 0 auto; gap: 3px; align-items: center; }
+.v4-order-socket { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; width: 36px; height: 32px; border-bottom: 1px solid #8c673b7a; background: linear-gradient(transparent, #9e79341a); }
+.v4-order-socket[data-received=false]::before { content: ''; position: absolute; top: 6px; left: 4px; right: 4px; height: 4px; border: 1px dashed #9b7c4a9c; transform: rotate(-12deg); }
+.v4-order-socket canvas { position: absolute; inset: 0 0 auto; display: block; width: 36px; height: 20px; transform: rotate(-8deg); }
+.v4-order-socket-caption { color: #846539; font: 11px/1.2 var(--v4-display); letter-spacing: 1px; }
+.v4-order-socket[data-received=true] { border-color: #6f71499c; background: linear-gradient(transparent, #70814d21); }
+.v4-order-socket[data-received=true] .v4-order-socket-caption { color: #485c37; font-weight: 700; }
+.v4-order-selected { margin-top: 3px; color: #795330; font-size: 12px; line-height: 1.25; }
+.v4-order-route[data-selected-state=ready] { border-left-color: #7b8c49; background: #6f904218; box-shadow: inset 0 0 0 1px #7e8d493d; }
+.v4-order-route[data-selected-state=ready] .v4-order-selected { color: #3f5b32; font-weight: 700; }
+.v4-order-route[data-selected-state=reserved] .v4-order-selected { color: #526240; }
+.v4-order-route[data-selected-state=blocked] .v4-order-selected { color: #864527; }
+.v4-order-route[data-complete=true] { border-left-color: #677b44; background: #6f904218; }
+.v4-order-route[data-complete=true] .v4-order-selected { color: #3d5b31; }
+.v4-order-route[data-inactive=true] { opacity: .62; }
+.v4-order-or { display: flex; align-items: center; gap: 7px; margin: 1px 0; color: #8d683c; font: 11px/1 var(--v4-display); }
+.v4-order-or::before, .v4-order-or::after { content: ''; flex: 1; height: 1px; background: #9c783e4a; }
+.v4-workshop .v4-customer[data-paper-layout=double] .v4-person-target { flex-basis: 108px; min-height: 108px; }
+.v4-workshop .v4-customer[data-paper-layout=double] .v4-customer-figure { inset: -8px 0 24px; }
+.v4-workshop .v4-customer[data-paper-layout=double] .v4-customer-nameplate { left: 15%; right: 15%; }
+.v4-workshop .v4-customer[data-paper-layout=double] .v4-customer-nameplate small { display: none; }
+.v4-workshop[data-main-complete=true] .v4-objective:has(#v4-order-routes)::after { content: none; }
+
+@media (min-width:1600px) {
+ .v4-workshop .v4-objective:has(#v4-order-routes) { padding: 14px 16px 12px; }
+ .v4-workshop .v4-objective:has(#v4-order-routes) h1 { font-size: 27px; }
+ .v4-workshop .v4-objective:has(#v4-order-routes) .v4-eyebrow { font-size: 13px; }
+ .v4-workshop .v4-objective:has(#v4-order-routes) #v4-goal-condition { margin-top: 5px; font-size: 14px; }
+ .v4-workshop .v4-objective:has(#v4-order-routes) #v4-goal-progress { margin-top: 6px; padding-top: 6px; font-size: 14px; }
+ #v4-order-routes { margin-top: 7px; }
+ .v4-order-route { padding: 5px 7px 6px; }
+ .v4-order-label { font-size: 16px; }
+ .v4-order-title, .v4-order-requirement, .v4-order-selected { font-size: 14px; line-height: 1.3; }
+ .v4-order-selected { margin-top: 4px; }
+ .v4-order-row { gap: 7px; }
+ .v4-order-sockets { gap: 5px; }
+ .v4-order-socket { width: 44px; height: 40px; }
+ .v4-order-socket canvas { width: 44px; height: 25px; }
+ .v4-order-socket-caption { font-size: 13px; }
+ .v4-order-or { margin: 3px 0; font-size: 12px; }
+ .v4-workshop .v4-customer[data-paper-layout=double] .v4-person-target { flex-basis: 170px; min-height: 170px; }
+ .v4-workshop .v4-customer[data-paper-layout=double] .v4-customer-figure { inset: -12px 0 31px; }
+}

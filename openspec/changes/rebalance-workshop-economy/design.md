@@ -2,7 +2,7 @@
 
 当前forge-v4/schema4与独立炉谱schema1已经提供三章十二天、实际兵器条件、三结局与直接落锤。`src/core-v4/game.ts:113`支付全部身价，`:18`始终发三新坯，`:123`交换无成器门槛。3i.6报告`docs/reviews/T11-4-2-3i6-v4-balance.md:154`记录终局钱富余；这些不能仅靠提示文案解决。
 
-本设计**待批准/未实施**。用户优先产品交互/界面/玩法，兼容广测最低；保留当前D美术与Canvas/DOM，按Game Studio Shared/Foundations保持模拟/展示边界。完整内容与预算算例在`docs/v0.8-workshop-economy-proposal.md`。
+本设计**已具体批准/实施尚未开始**。用户优先产品交互/界面/玩法，兼容广测最低；保留当前D美术与Canvas/DOM，按Game Studio Shared/Foundations保持模拟/展示边界。完整内容与预算算例在`docs/v0.8-workshop-economy-proposal.md`。
 
 ## Decisions
 
@@ -57,4 +57,4 @@ schema2炉谱使用`sword-led.collection.v2`及`sword-led.collection.backup.v2`�
 
 ## Approval
 
-用户原始要求“然后确认实施文档”，适用OpenSpec明确“Do not start implementation until proposal is approved”。本提案未获确认；本目录任务全部保持待办，不以原v0.7批准或本提案校验通过启动v5核心。
+用户原始要求“然后确认实施文档”，适用OpenSpec明确“Do not start implementation until proposal is approved”。用户现已明确“确认 v0.8，开始首章实施”；批准原答/全文hash见docs/decisions/2026-10-21-v08-approval.json。仅确认项勾选，实施项仍待办，不以批准代替实现。

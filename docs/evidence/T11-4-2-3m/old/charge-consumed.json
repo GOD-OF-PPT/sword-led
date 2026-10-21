@@ -1,0 +1,80 @@
+{
+  "name": "charge-consumed",
+  "reproduced": false,
+  "method": "Historical legal prefix index 38; two real UI strikes; no field injection.",
+  "prefixRevision": 38,
+  "acceptedActions": 2,
+  "chargedUI": {
+    "title": "锤势已满",
+    "copy": "下一次落锤是安全连锻，不会出现裂损。",
+    "noticeHidden": false,
+    "noticeAction": "安全连锻",
+    "actionDisabled": false,
+    "busy": "false",
+    "deliver": "卖给行会 · 354",
+    "deliverDisabled": false,
+    "focused": "v4-hit",
+    "selected": "d3-2",
+    "risk": "下一锤安全连锻，不会裂",
+    "trusted": [
+      {
+        "type": "click",
+        "isTrusted": true,
+        "target": "v4-continue",
+        "time": 314.09999999403954,
+        "busy": null
+      },
+      {
+        "type": "click",
+        "isTrusted": true,
+        "target": "v4-hit",
+        "time": 1137.5,
+        "busy": "true"
+      }
+    ]
+  },
+  "afterUI": {
+    "title": "这柄剑，已经合格了",
+    "copy": "现在交给来客，就能保住这一站。也可以继续锻，承担下一锤的风险。",
+    "noticeHidden": false,
+    "noticeAction": "去交剑",
+    "actionDisabled": false,
+    "busy": "false",
+    "deliver": "交给杜伯",
+    "deliverDisabled": false,
+    "focused": "v4-hit",
+    "selected": "d3-2",
+    "risk": "下一锤裂损 26% · 再裂会断",
+    "trusted": [
+      {
+        "type": "click",
+        "isTrusted": true,
+        "target": "v4-continue",
+        "time": 314.09999999403954,
+        "busy": null
+      },
+      {
+        "type": "click",
+        "isTrusted": true,
+        "target": "v4-hit",
+        "time": 1137.5,
+        "busy": "true"
+      },
+      {
+        "type": "click",
+        "isTrusted": true,
+        "target": "v4-hit",
+        "time": 2005.9000000059605,
+        "busy": "true"
+      }
+    ]
+  },
+  "actualCharge": 0,
+  "ordinaryOdds": {
+    "burst": false,
+    "crack": 260,
+    "great": 150,
+    "success": 590,
+    "afterBurstCrack": 260
+  }
+}
