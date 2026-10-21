@@ -4,7 +4,7 @@
 
 原始需求逐字保存在[input.md](input.md)，SHA256 b961f5c651df51121659687138cfe5edf125e25dadda11642136dfc6aaca852b。目标仍是完整PC网页锻造游戏、设计/实施文档、三套imagegen主界面及选定衍生美术、完整可玩流程、复核和GitHub提交推送；目标未完成；本地按继续指令实施，原生goal仍paused（工具限制见goal-2/plan.md）。
 
-当前已明确获批v0.8，不再索同一确认；内核/保存/十二天与3l.5成长经营界面已交付。最新源434e360d26bd2620b033980b5de7436562b3fa78，push66002实际0/fresh远程一致/95变更blob匹配。实际70067整局142命令、83547六窗口27、5917最终献艺3分批通过；R3.24三项全面复核/debug闭环，182状态/175唯一完整回放，85保护/113旧源/7纯核/9SDK保持。原4179现14497/session64360服务炉边交易快照，80HTTP及发布6命令/4另列状态通过，旧档/原画保持。证据docs/evidence/T11-4-2-3l5/run.json。下一唯一goal-2/T04=原T12，按原五项/REPEAT/真实H及最大R4做最终全目标复核，不能以固定路线或本次UI修好代填fun。原生goal仍是已知paused/无resume，不用本地目录假称原生恢复；兼容测试后置。
+当前v0.8经营实施已完成，T12.3原五项/代码/C端/图源/交付检查点已推进并源交付b944df66e976af8aabe4bc56204b1a67d65e8a56（push7084实际0/fresh远程/61blob相同）。本轮补损坏/未知主档只读原文导出、恢复前提示及七类过期索引，9必要测试/严格构建/实际导出三case及最后文案定向通过；REPEAT仅补已有指纹工具所有根HTML，真实开始capture/终态verify匹配。原4179现45553/session90084新原文导出快照，80HTTP/6真实领域命令/原文下载通过；85保护/113旧源/7纯核/9SDK保持。记录docs/reviews/R4-v5-delivery-review.md与docs/evidence/T12-v5-delivery。原T12/goal-2T04父项仍未完成：最新H已可选询问但无新版实际乐趣答复，不能由技术结果代填；兼容/性能继续用户低优先级后置，不假标通过。原生goal再读仍paused，无resume工具，未虚标恢复/complete。下一是T12.4真实H与必要产品问题闭环；本轮已授权的实现/来源/交付工作均已做完。
 
 当前plan/tasks曾积累大量相互覆盖的历史检查点；其完整原字节已保存于[旧计划](history/2026-10-21-before-final-chapter-plan.md)和[旧任务执行记录](history/2026-10-21-before-final-chapter-tasks.md)，哈希见[归档索引](history/2026-10-21-archive-index.json)。本页只维护有效当前计划，历史成果/红绿/全部原任务未丢失。压缩后仍须全量读取input/plan/tasks这三份当前文件，再按需读明确引用的历史或合同，避免把旧“待批准/正在运行”当现状。
 
