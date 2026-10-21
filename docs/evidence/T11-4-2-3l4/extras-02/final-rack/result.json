@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "url": "http://127.0.0.1:4210/",
+  "browser": "isolated Chromium",
+  "actions": 3,
+  "observations": 4,
+  "checks": [
+    {
+      "label": "reserved navigation is zero economy",
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "captures": 2,
+  "scope": "final-day rack/nav conveys local-only retention; same reserve rule"
+}

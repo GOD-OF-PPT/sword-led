@@ -32,7 +32,7 @@ export function noticeFromEvents(events:readonly DomainEvent[],s:RunState):Forge
   if(b?.charge===6)return{title:'锤势已满',copy:'下一次落锤是安全连锻，不会出现裂损。',action:'none',label:'安全连锻',subject};
  }
  const reserved=events.find(e=>e.type==='Reserved');
- if(reserved?.type==='Reserved')return{title:s.reserveId===reserved.pieceId?'这一柄，留给明天':'剑已从架上取回',copy:s.reserveId===reserved.pieceId?'明日一柄旧剑＋两柄新坯。旧剑占一位，取下后也不补第四柄。':'可以继续打造或交给来客；今天的铁坯不会因此补发。',action:'none',label:''};
+ if(reserved?.type==='Reserved')return{title:s.reserveId===reserved.pieceId?(s.day===12?'暂放在本局剑架':'这一柄，留给明天'):'剑已从架上取回',copy:s.reserveId===reserved.pieceId?(s.day===12?'这是最后一炉。剑架只保留本局记录，不会把兵器带入新局。':'明日一柄旧剑＋两柄新坯。旧剑占一位，取下后也不补第四柄。'):'可以继续打造或交给来客；今天的铁坯不会因此补发。',action:'none',label:''};
  const event=events.find(e=>e.type==='EventChoice');
  if(event?.type==='EventChoice')return{title:event.record.choice==='accept'?'选择已经记下':'这一晚，守住手里的剑',copy:event.record.choice==='accept'?'后果与资源已按本次选择结清，收工时可以回看。':'没有额外扣款，可以继续打造当前委托。',action:'none',label:''};
  if(events.some(e=>e.type==='Trait'))return{title:'手艺已放进行囊',copy:'手艺会在符合条件的锤击中生效，可点挂件查看作用。',action:'none',label:''};

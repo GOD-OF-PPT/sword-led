@@ -1,4 +1,5 @@
 import {decodeV4Save,V4_SAVE_KEY} from '../application/v4-persistence.js';
+import {collectionEligibility} from '../application/v5-collection.js';
 import type {V5Session,V5NewGameInput} from '../application/v5-persistence.js';
 import type {Action,Blade,RunState,Trait,Modification,EventId} from '../core-v5/index.js';
 import {getRunView,RECIPES,TRAITS,MODIFICATIONS,CHAPTERS,COMMISSIONS,eventQuote} from '../core-v5/index.js';
@@ -121,7 +122,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
   }
   render();
   if(moved&&r.events.some(event=>event.type==='Delivered')){const delivered=r.events.find(event=>event.type==='Delivered');if(delivered?.type==='Delivered')feedback?.transfer({blade:moved,source,target:delivered.matched?'customer':'shop',copy:delivered.matched?`交到${getRunView(r.state).commission.name}手中 · +${fmt(delivered.amount)}铜钱`:`行会收下 · +${fmt(delivered.amount)}铜钱`});}
-  else if(moved&&command.type==='reserve'&&r.state.reserveId===moved.id)feedback?.transfer({blade:moved,source,target:'rack',copy:'这柄留给明天'});
+  else if(moved&&command.type==='reserve'&&r.state.reserveId===moved.id)feedback?.transfer({blade:moved,source,target:'rack',copy:r.state.day===12?'暂放本局剑架，不带入新局':'这柄留给明天'});
   else if(moved&&command.type==='buy')feedback?.transfer({blade:moved,source,target:'shop',copy:`换得${TRAITS[command.traitId].name}`});
   return true;
  }
@@ -165,7 +166,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
  function renderStage(s:RunState){
   const key=JSON.stringify([s.runId,s.revision,snapshot.generation,snapshot.active,snapshot.mode,snapshot.conflict,sceneOverride,collection.pending,collection.problem,collection.data]);
   if(stageKey===key)return;stageKey=key;
-  const presentation=buildJourneyStage(s,{throughDay:4,temporary:snapshot.mode==='memory',...(sceneOverride?.kind==='delivery'?{delivery:{commissionId:sceneOverride.commissionId,pieceIds:sceneOverride.pieceIds}}:{}),...(sceneOverride?.kind==='intro'?{chapterIntro:true}:{}),collection:{data:collection.data,pending:collection.pending,problem:collection.problem??null},action,commandAction,thumb,prop,leaveScene,book,toTitle,exportRun,...(snapshot.active&&!snapshot.conflict&&(snapshot.mode==='writer'||snapshot.mode==='memory')?{startChallenge:()=>startNew('challenge')}:{})});
+  const presentation=buildJourneyStage(s,{throughDay:12,temporary:snapshot.mode==='memory',...(sceneOverride?.kind==='delivery'?{delivery:{commissionId:sceneOverride.commissionId,pieceIds:sceneOverride.pieceIds}}:{}),...(sceneOverride?.kind==='intro'?{chapterIntro:true}:{}),collection:{data:collection.data,pending:collection.pending,problem:collection.problem??null},action,commandAction,thumb,prop,leaveScene,book,toTitle,exportRun,...(snapshot.active&&!snapshot.conflict&&(snapshot.mode==='writer'||snapshot.mode==='memory')?{startChallenge:()=>startNew('challenge')}:{})});
   const copy=find('v4-stage-copy'),pageIdentity=JSON.stringify([s.runId,s.revision,snapshot.generation,presentation.mode]),scrollTop=copy.dataset.journeyPage===pageIdentity?copy.scrollTop:0;
   text('v4-stage-title',presentation.title);copy.replaceChildren(presentation.body);copy.dataset.journeyPage=pageIdentity;copy.scrollTop=scrollTop;find('v4-stage-actions').replaceChildren(...presentation.actions);stageImage(presentation.image);find('v4-stage').dataset.scene=presentation.mode;find('v4-stage').dataset.chapter=String(getRunView(s).chapter.id);repaintProps();
   if((presentation.mode==='delivery'||presentation.mode==='intro')&&!reduced()&&!document.hidden){try{const a=find('v4-stage-image').animate([{opacity:.35,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],{duration:420,easing:'ease-out'});sceneAnimations.add(a);void a.finished.then(()=>sceneAnimations.delete(a),()=>sceneAnimations.delete(a));}catch{/* The factual outcome remains visible without animation support. */}}
@@ -187,7 +188,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
  function handoffPreview(token:HandoffToken,target:HandoffTarget){
   const b=handoffBlade(token),s=state();if(!b||!s)return{allowed:false,label:'这次选择已变化，请重新拿起眼前的剑。'};
   const v=getRunView(s),piece=v.blades.find(p=>p.blade.id===b.id);
-  if(target==='rack')return{allowed:true,label:s.reserveId?'换这柄留剑：明日一旧两新，不补第四柄':'留给明天：一旧两新，占一柄新坯位'};
+  if(target==='rack')return{allowed:true,label:!v.next?'暂放本局剑架，不带入新局':s.reserveId?'换这柄留剑：明日一旧两新，不补第四柄':'留给明天：一旧两新，占一柄新坯位'};
   if(piece?.willCommission)return{allowed:true,label:`交给${v.commission.name} · 实收${fmt(piece.quote.amount)}铜钱`};
   return{allowed:false,label:v.commission.progress.complete?'今天的约定已经完成。想换旅费，可点“卖给行会”。':piece?.assessment.routes.map(r=>r.missing.join('、')).filter(Boolean).join('；')||'这柄还不合纸单，再锻一锤或换柄剑。'};
  }
@@ -200,12 +201,13 @@ export function mountV5(root:HTMLElement,port:V5Session){
  function reserveBlade(pieceId:string,origin?:FeedbackRect){
   const s=state(),b=s?.blades.find(piece=>piece.id===pieceId);if(!s||!b||b.status!=='active')return;
   const old=s.blades.find(piece=>piece.id===s.reserveId);
+  if(s.day===12&&s.reserveId!==b.id){confirm('暂放在本局剑架？','这是最后一炉，没有次日新坯。挂架只保留在本局行程，不会带入新局；收工时也不会自动回收这柄。可以先返回安排交付、出售或回收。',()=>send({type:'reserve',pieceId:b.id},origin));return;}
   if(old&&old.id!==b.id)confirm('换一柄留剑？',`架上的${RECIPES[old.recipe].name}（${fmt(old.value)}）回到炉边，改留这柄${RECIPES[b.recipe].name}（${fmt(b.value)}）。两柄不会同时留到明天；留一柄就只发两柄新坯。`,()=>send({type:'reserve',pieceId:b.id},origin));
   else send({type:'reserve',pieceId:b.id},origin);
  }
  function renderInventory(s:RunState){
   const available=s.blades.filter(b=>b.status==='active'&&b.id!==s.reserveId),key=JSON.stringify([s.runId,snapshot.generation,selectedId,s.reserveId,available.map(b=>[b.id,b.recipe,b.value,b.level,b.cracked])]);
-  if(key!==inventoryKey){inventoryKey=key;const fragment=document.createDocumentFragment();for(const b of available){const n=action(`${RECIPES[b.recipe].name} · ${fmt(b.value)}`,()=>choose(b.id));n.dataset.piece=b.id;n.setAttribute('aria-pressed',String(b.id===selectedId));n.prepend(thumb(b));if(b.cracked)n.append(element('small','已有裂纹'));fragment.append(n);}find('v4-inventory').replaceChildren(fragment);const reserve=s.blades.find(b=>b.id===s.reserveId);const slot=find('v4-reserve-slot');if(reserve){const n=action(`取回 ${RECIPES[reserve.recipe].name} · ${fmt(reserve.value)}`,()=>send({type:'reserve',pieceId:reserve.id}));n.prepend(thumb(reserve));slot.replaceChildren(n);}else slot.replaceChildren(element('span','留一柄，给明天'));}
+  if(key!==inventoryKey){inventoryKey=key;const fragment=document.createDocumentFragment();for(const b of available){const n=action(`${RECIPES[b.recipe].name} · ${fmt(b.value)}`,()=>choose(b.id));n.dataset.piece=b.id;n.setAttribute('aria-pressed',String(b.id===selectedId));n.prepend(thumb(b));if(b.cracked)n.append(element('small','已有裂纹'));fragment.append(n);}find('v4-inventory').replaceChildren(fragment);const reserve=s.blades.find(b=>b.id===s.reserveId);const slot=find('v4-reserve-slot');if(reserve){const n=action(`取回 ${RECIPES[reserve.recipe].name} · ${fmt(reserve.value)}`,()=>send({type:'reserve',pieceId:reserve.id}));n.prepend(thumb(reserve));slot.replaceChildren(n);}else slot.replaceChildren(element('span',s.day===12?'最后一炉，不跨局留剑':'留一柄，给明天'));}
   for(const n of root.querySelectorAll<HTMLButtonElement>('#v4-inventory button,#v4-reserve-slot button'))n.disabled=!canAct()||busy;
  }
  function renderWorkshop(s:RunState){
@@ -214,8 +216,9 @@ export function mountV5(root:HTMLElement,port:V5Session){
   const decision=forgeDecisions(v,b?.id??null),tomorrow=nextDayPlan(v);text('v4-plan-line',decision.headline);text('v4-plan-copy',decision.copy);find('v4-plan-line').parentElement!.dataset.tone=decision.tone;
   text('v4-next-plan',tomorrow.reserve?.tone==='ready'?'明日已有合用的剑':v.next?'明日打算':'最后一炉的打算');button('v4-next-plan').disabled=busy;
   text('v4-shop-help',v.merchant?'成器可换手艺 · 等级至少3':'');
+  text('v5-rack-title',v.next?'留一把，待明日':'本局暂放的剑');find('v4-reserve-zone').setAttribute('aria-label',v.next?'留给明天的剑':'本局暂放的剑');
   text('v5-slot-plan',v.next?(v.next.oldCount?'明日：旧剑1 ＋ 新坯2':'明日：新坯3'):'最后一炉，没有次日来料');
-  find('v5-slot-plan').title='明日共三柄；留一柄旧剑会少一柄新坯，取下后不补发。';
+  find('v5-slot-plan').title=v.next?'明日共三柄；留一柄旧剑会少一柄新坯，取下后不补发。':'这是最后一炉，剑架上的剑不会带入新局。';
   text('v5-order-pay',v.commission.progress.complete?`酬劳已收 ${fmt(v.market.baseFeesPaid)}`:`今日酬劳 ${fmt(v.market.baseFee)} · 已收${fmt(v.market.baseFeesPaid)}`);
   text('v4-day',`${s.mode==='challenge'?'行脚挑战 · ':''}第${s.day}天 · ${v.chapter.title.split(' · ')[1]??v.chapter.title}${isCriticalDay(s.day)?' · 关键约定':''}`);text('v4-goal-name',v.commission.title);paper?.render(v,b?.id??null,`${s.runId}/${snapshot.generation}`);
   text('v4-seals',`${s.seals}/3`);text('v4-coins',fmt(s.coins));text('v4-value',b?fmt(reading?.value??b.value):'—');text('v4-condition',b?`${RECIPES[b.recipe].name} · ${b.status==='broken'?'断裂':b.cracked?'已有裂纹':'无裂纹'}`:'铁砧已空，安排这一炉收工');
@@ -230,7 +233,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
   text('v5-delivery-quote',active?.reserved?'从左侧取回，才可交付。':quote?.matched?`酬劳${fmt(quote.baseFeeDelta)} ＋ 品质${fmt(quote.qualityBonus)} · 收购余${fmt(v.market.remaining)}`:quote?.error==='market_exhausted'?'收购钱袋已空。可留剑、换手艺或明确回收。':quote?`作品身价${fmt(quote.pieceValue)} · 收购余${fmt(v.market.remaining)}`:'这柄已安排，换一柄或收工。');
   button('v4-deliver').disabled=!canAct()||busy||!quote?.allowed;
   button('v4-deliver').setAttribute('aria-describedby','v5-delivery-quote');
-  text('v4-reserve',s.reserveId===b?.id?'取回留剑':'留给明天');button('v4-reserve').disabled=!canAct()||busy||b?.status!=='active';button('v4-scrap').disabled=!canAct()||busy||!active||active.reserved;button('v4-settle').disabled=!canAct()||busy;
+  text('v4-reserve',s.reserveId===b?.id?'取回留剑':v.next?'留给明天':'暂放本局剑架');button('v4-reserve').disabled=!canAct()||busy||b?.status!=='active';button('v4-scrap').disabled=!canAct()||busy||!active||active.reserved;button('v4-settle').disabled=!canAct()||busy;
   text('v4-customer-name',v.commission.name);text('v4-talk',v.commission.progress.complete?v.commission.success:v.commission.request);find('v4-customer-figure').dataset.customer=v.commission.customer;find('v4-customer-figure').dataset.pose=v.commission.progress.complete?'receiving':'waiting';
   show('v4-shop',!!v.merchant);button('v4-shop').disabled=!canAct()||busy;show('v4-event-open',v.event?.status==='available');if(v.event)text('v4-event-open',`炉边来事 · ${v.event.name}`);button('v4-event-open').disabled=!canAct()||busy;
   const rkey=JSON.stringify([s.runId,b?.id,b?.hits,b?.recipe,v.recipes.map(r=>r.id),canAct(),busy]);if(rkey!==recipeKey){recipeKey=rkey;const list=find('v4-recipes');if(active?.canChangeRecipe&&v.recipes.length>1){list.replaceChildren(...v.recipes.map(r=>{const n=action(r.name,()=>send({type:'setRecipe',pieceId:b!.id,recipe:r.id}),false,!canAct()||busy||r.id===b!.recipe);n.dataset.recipe=r.id;n.setAttribute('aria-pressed',String(r.id===b!.recipe));return n;}));}else list.replaceChildren();}
@@ -260,7 +263,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
  function render(){
   if(disposed)return;
   const oldLink=find<HTMLAnchorElement>('v5-old-v4');
-  try{const old=decodeV4Save(localStorage.getItem(V4_SAVE_KEY));oldLink.textContent=old.status==='valid'?`继续旧版十二灯 · 第${old.state.day}天`:'旧版十二灯行程';}catch{oldLink.textContent='旧版十二灯行程';}const previousMode=stageMode,s=state(),work=route==='game'&&s&&journeyScreen(s,4)==='workshop'&&!sceneOverride;stageMode=route==='title'?'title':work?'workshop':'stage';root.firstElementChild?.setAttribute('data-screen',stageMode);root.firstElementChild?.setAttribute('data-chapter',s?String(getRunView(s).chapter.id):'1');
+  try{const old=decodeV4Save(localStorage.getItem(V4_SAVE_KEY));oldLink.textContent=old.status==='valid'?`继续旧版十二灯 · 第${old.state.day}天`:'旧版十二灯行程';}catch{oldLink.textContent='旧版十二灯行程';}const previousMode=stageMode,s=state(),work=route==='game'&&s&&journeyScreen(s,12)==='workshop'&&!sceneOverride;stageMode=route==='title'?'title':work?'workshop':'stage';root.firstElementChild?.setAttribute('data-screen',stageMode);root.firstElementChild?.setAttribute('data-chapter',s?String(getRunView(s).chapter.id):'1');
   show('v4-title',route==='title');show('v4-workshop',!!work);show('v4-stage',route==='game'&&!work&&!!s);show('v4-tools',true);show('v4-menu',route==='game');show('v4-book',route==='game');show('v4-settings',route==='game');
   button('v4-continue').hidden=!s;button('v4-continue').disabled=!snapshot.active;button('v4-start').disabled=!snapshot.active||snapshot.conflict||!['writer','memory'].includes(snapshot.mode)||snapshot.mode!=='memory'&&collection.pending||snapshot.mode!=='memory'&&snapshot.load?.main.status==='unavailable';text('v4-start',s?'另启一程':'启程');
   show('v4-title-challenge',collection.data.challenge);button('v4-title-challenge').disabled=button('v4-start').disabled||collection.pending||!!collection.problem;
@@ -363,7 +366,9 @@ export function mountV5(root:HTMLElement,port:V5Session){
   const repair=element('article',undefined,'v4-card');repair.append(element('h3','补回一枚契印'),element('p',`${fmt(market.repair)}金币 · 每次到访限一次`),action('请商人修补',()=>confirm('修补契印',`支付${fmt(market.repair)}金币，契印加一（最多三枚）。`,()=>send({type:'repair'})),false,!market.canRepair));body.append(repair);openModal('行脚商人的炉边摊',body,[{label:'回铁砧',run:()=>closeModal()}],'shop');
  }
  function eventModal(){
-  const s=state();if(!s)return;const view=getRunView(s),v=view.event;if(!v||v.status!=='available')return;
+  const s=state();if(!s)return;const view=getRunView(s),sourceEvent=view.event;if(!sourceEvent||sourceEvent.status!=='available')return;
+  const newBlankText=(copy:string)=>(sourceEvent.id==='loan'||sourceEvent.id==='shelter')?copy.replace(/(明天|明日)第一柄(?!新坯)/g,'$1第一柄新坯'):copy;
+  const v={...sourceEvent,request:newBlankText(sourceEvent.request),result:newBlankText(sourceEvent.result)};
   const body=element('div');body.append(prop(v.id),element('p',v.request),element('p',`接受后：${v.result}`));
   const choices:ModalAction[]=[{label:'暂不决定',run:()=>closeModal()},{label:'拒绝，保留眼前资源',run:()=>{closeModal();send({type:'chooseEvent',choice:'decline'});}}];
   const accept=(pieceId?:string)=>{
@@ -403,6 +408,8 @@ export function mountV5(root:HTMLElement,port:V5Session){
   if(!result.ok){resultError(result.error);openModal('这份旧炉谱暂未读到','旧原件仍保留，可以选择另一份来源。',[{label:'回炉谱',run:book},{label:source==='main'?'查看旧备份':'查看旧主册',run:()=>legacyImport(source==='main'?'backup':'main')}],'legacy-unavailable');return;}
   const shown=result.preview,body=element('div',undefined,'v5-import-preview');
   body.append(element('p',`来源：旧炉谱${shown.source==='main'?'主册':'备份'} · ${new Date(shown.savedAt).toLocaleString('zh-CN')}`),element('h3',`将带回${shown.collection.chapters.length}章见闻、${shown.collection.works.length}件作品`),element('p',`合并后炉谱保留${shown.merged.works.length}/12件最佳作品${shown.merged.challenge?'，行脚挑战已解锁':''}。同一委托只留较高身价，旧作品仍标记旧行程来源。`),element('p','这里只合并解锁与作品，不带入旧金币、契印、来料升级或局内兵器；当前行程的开局资格保持，下一次启程才使用已保存的新资格。'));
+  const sourceEligibility=collectionEligibility(shown.collection),mergedEligibility=collectionEligibility(shown.merged),unlocks=element('section',undefined,'v5-import-unlocks');
+  unlocks.append(element('h3','这份旧册的具体解锁'),element('p','章节：'+(shown.collection.chapters.map(id=>CHAPTERS[id-1]!.title).join('；')||'尚无')),element('p','按此册可用配方：'+sourceEligibility.recipes.map(id=>RECIPES[id].name).join('、')),element('p','配方熟练：'+(shown.collection.mastery.map(id=>RECIPES[id].name).join('、')||'尚无')),element('p','手艺见闻：'+(shown.collection.traits.map(id=>TRAITS[id].name).join('、')||'尚无')),element('p',`这份旧册的行脚挑战：${shown.collection.challenge?'已解锁':'未解锁'}`),element('p',`合并后可用配方：${mergedEligibility.recipes.map(id=>RECIPES[id].name).join('、')}；行脚挑战${mergedEligibility.challenge?'已解锁':'未解锁'}。`));body.append(unlocks);
   const works=element('details');works.append(element('summary','逐件看看将导入的作品'));
   for(const work of shown.collection.works){const row=element('section',undefined,'v4-commission-detail');row.append(element('h3',`${work.commissionId}. ${COMMISSIONS[work.commissionId-1]!.title}`),element('p','旧行程作品 · '+work.blades.map(b=>`${RECIPES[b.recipe].name} 身价${fmt(b.value)}`).join(' / ')));for(const b of work.blades)row.append(thumb(b));works.append(row);}body.append(works);
   const choices:ModalAction[]=[{label:'暂不导入',run:()=>closeModal()},{label:'确认导入这份炉谱',primary:true,disabled:!collection.writable,run:()=>{
@@ -447,7 +454,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
  feedback=createWorkbenchFeedback(root,{reduced,paintBlade:(canvas,blade)=>renderer?.paintThumb(canvas,blade)});
  paper=createCommissionPaper(root,{thumb:id=>{const b=state()?.blades.find(piece=>piece.id===id);return b?thumb(b):null;}});
  handoff=createHandoff(root,{capture:pieceId=>{const s=state();if(!s)return null;const token={runId:s.runId,revision:s.revision,generation:snapshot.generation,epoch,pieceId};return handoffBlade(token)?token:null;},preview:handoffPreview,commit:commitHandoff});
- input=bindDirectStrikeInput([button('v4-hit'),button('v4-strike')],{context:forgeIdentity,navigationContext:navigationIdentity,navigate:()=>{const b=current();if(b&&state()?.reserveId===b.id){setStatus('先从剑架取回，或选择收工把它留给明天。');button('v4-reserve').focus({preventScroll:true});}else settle();},commit:(captured,point)=>{if(!sameInput(captured,forgeIdentity()))return;lastPoint=point;void audio.gesture();send({type:'strike',pieceId:captured.pieceId});},aim:p=>{if(canAct()&&!busy&&!handoff?.isDragging())renderer?.aim(p);},preparing:v=>renderer?.preparing(v)});
+ input=bindDirectStrikeInput([button('v4-hit'),button('v4-strike')],{context:forgeIdentity,navigationContext:navigationIdentity,navigate:()=>{const b=current();if(b&&state()?.reserveId===b.id){setStatus(state()?.day===12?'先从剑架取回安排交付、出售或回收；本局剑架不会带入新局。':'先从剑架取回，或选择收工把它留给明天。');button('v4-reserve').focus({preventScroll:true});}else settle();},commit:(captured,point)=>{if(!sameInput(captured,forgeIdentity()))return;lastPoint=point;void audio.gesture();send({type:'strike',pieceId:captured.pieceId});},aim:p=>{if(canAct()&&!busy&&!handoff?.isDragging())renderer?.aim(p);},preparing:v=>renderer?.preparing(v)});
  button('v4-start').onclick=()=>startNew();button('v4-title-challenge').onclick=()=>startNew('challenge');button('v4-continue').onclick=continueGame;find<HTMLInputElement>('v4-seed').value=seedDraft;find<HTMLInputElement>('v4-seed').oninput=e=>{seedDraft=(e.currentTarget as HTMLInputElement).value;};
  for(const id of['v4-title-collection','v4-book'])button(id).onclick=book;for(const id of['v4-title-settings','v4-settings'])button(id).onclick=settings;
  for(const id of['v4-save-open','v4-save-details'])button(id).onclick=saveDetails;button('v4-menu').onclick=()=>route==='title'?continueGame():pause();button('v4-shop').onclick=shop;button('v4-event-open').onclick=eventModal;
@@ -470,7 +477,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
  const onGesture=(event:Event)=>{root.firstElementChild?.setAttribute('data-input-mode',event.type==='pointerdown'?'pointer':'keyboard');if(route==='game'&&!modal)void audio.gesture();};
  const onSettingsStorage=(e:StorageEvent)=>{if(e.key===SETTINGS_KEY||e.key===null)preferences.reload();};
  const onMotion=()=>{cancelPresentation(false);epoch++;render();updatePreferenceStatus();};
- const onBlur=()=>{cancelPresentation(false);epoch++;render();};
+ const onBlur=()=>{cancelPresentation(false);epoch++;if(modalKind==='legacy-import'){port.cancelLegacyImport();closeModal(false);setStatus('旧炉谱预览已收起，导入前请重新查看。');}render();};
  document.addEventListener('visibilitychange',onVisibility);root.addEventListener('keydown',onKey);root.addEventListener('pointerdown',onGesture,{capture:true});root.addEventListener('keydown',onGesture,{capture:true});window.addEventListener('storage',onSettingsStorage);window.addEventListener('blur',onBlur);motion.addEventListener('change',onMotion);
  const stopPrefs=preferences.subscribe(value=>{const changed=value.value.reducedMotion!==prefs.value.reducedMotion;prefs=value;if(changed){cancelPresentation(false);epoch++;}render();updatePreferenceStatus();});
  const stopRun=port.subscribe(value=>{const changed=value.generation!==snapshot.generation||value.state?.runId!==snapshot.state?.runId;snapshot=value;if(changed){cancelPresentation();notice=null;epoch++;stageKey='';inventoryKey='';recipeKey='';beltKey='';if(modal)closeModal();if(!current())nextBlade();}collection=port.getCollectionSnapshot();render();});

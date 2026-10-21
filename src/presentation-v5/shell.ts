@@ -3,7 +3,7 @@ export const V5_TEMPLATE = `
 <div class="v4-app v5-app" data-screen="title" data-rules-version="forge-v5">
   <section id="v4-title" class="v4-title-screen" aria-labelledby="v4-main-title">
     <div class="v4-title-copy">
-      <p class="v4-edition">v0.8 第一章 · 三柄行囊</p>
+      <p class="v4-edition">v0.8 十二灯行旅 · 三柄行囊</p>
       <h1 id="v4-main-title">锤下<span>求生</span></h1>
       <p class="v4-title-line">一炉火，一柄剑，一程未熄的灯。</p>
       <div class="v4-title-actions">
@@ -27,7 +27,7 @@ export const V5_TEMPLATE = `
   </section>
 
   <main id="v4-workshop" class="v4-workshop" hidden aria-label="行脚灯炉">
-    <div class="v4-bench-mark" aria-hidden="true"><strong>锤下求生</strong><span>v0.8 第一章 · 三柄行囊</span></div>
+    <div class="v4-bench-mark" aria-hidden="true"><strong>锤下求生</strong><span>v0.8 十二灯行旅 · 三柄行囊</span></div>
     <div class="v4-purse" aria-label="契印与行囊">
       <div class="v4-resource v4-resource-seals"><span>契印</span><strong id="v4-seals"></strong></div>
       <div class="v4-resource v4-resource-coins"><span>铜钱</span><strong id="v4-coins"></strong></div>
@@ -38,7 +38,7 @@ export const V5_TEMPLATE = `
       <p class="v4-rack-hint">拿起剑，拖给来客</p>
       <div id="v4-inventory" class="v4-inventory"></div>
       <section id="v4-reserve-zone" class="v4-kept-sword" data-handoff-target="rack" aria-label="留给明天的剑">
-        <h3>留一把，待明日</h3>
+        <h3 id="v5-rack-title">留一把，待明日</h3>
         <div id="v4-reserve-slot"></div>
         <p id="v5-slot-plan" class="v5-slot-plan"></p>
         <button id="v4-next-plan" class="v4-next-plan" type="button">明日打算</button>

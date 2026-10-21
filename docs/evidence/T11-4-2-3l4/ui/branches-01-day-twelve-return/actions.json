@@ -1,0 +1,39 @@
+[
+  {
+    "index": 0,
+    "day": 12,
+    "action": {
+      "type": "settle"
+    },
+    "accepted": true,
+    "revision": 129,
+    "coinsBefore": 2074,
+    "coinsAfter": 2374,
+    "events": [
+      {
+        "type": "Settled",
+        "record": {
+          "day": 12,
+          "commissionId": 12,
+          "met": false,
+          "routeId": null,
+          "pieceIds": [],
+          "sales": 0,
+          "recovered": 300,
+          "baseFees": 0,
+          "marketSpent": 300,
+          "recoveredIds": [
+            "d12-1",
+            "d12-2",
+            "d12-3"
+          ],
+          "reserveId": null,
+          "sealsBefore": 3,
+          "sealsAfter": 2,
+          "protected": false,
+          "modification": null
+        }
+      }
+    ]
+  }
+]

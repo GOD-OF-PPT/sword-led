@@ -25,6 +25,10 @@
 .v5-app .v5-import-preview { margin-top: 14px; padding-top: 12px; border-top: 1px solid #94744280; }
 .v5-app .v5-import-preview > p + p { margin-top: 7px; }
 .v5-app .v5-import-preview .v5-source-label { margin-top: 0; }
+.v5-app .v5-journey-details { margin-top: 14px; padding: 5px 0 9px; border-block: 1px solid #b2945a50; }
+.v5-app .v5-journey-details > summary { min-height: 44px; padding: 10px 4px; color: #f0d69e; cursor: pointer; font: 18px/1.5 var(--v4-display); }
+.v5-app .v5-journey-details > summary:focus-visible { outline: 2px solid #f5ca79; outline-offset: -2px; }
+.v5-app .v5-journey-details > p, .v5-app .v4-ending-person > p { margin: 9px 4px; color: #e7d8b7; font-size: 14px; line-height: 1.8; }
 
 @media (max-width: 1599px) {
   .v5-app .v4-workshop .v4-person-target { flex-basis: 120px; min-height: 120px; }

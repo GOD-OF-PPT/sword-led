@@ -40,7 +40,7 @@ export function collectionBook(data:CollectionState,context:BookContext):HTMLEle
     const work=data.works.find(w=>w.commissionId===c.id),card=element('article',undefined,'v4-card');card.dataset.record=String(c.id);
     card.append(element('h3',`${c.id}. ${c.title}`));
     if(work){card.dataset.rulesVersion=work.rulesVersion;card.append(sourceLabel(work));for(const b of work.blades)card.append(context.thumb(b));card.append(element('p',work.blades.map(b=>`${RECIPES[b.recipe].name} · 身价 ${fmt(b.value)}`).join(' / ')),element('small',`${c.name}的委托 · 第${work.day}天交付`),context.action('翻看这件作品',()=>context.viewWork(c.id)));}
-    else card.append(element('p','尚未留名'),element('small',c.request));grid.append(card);
+    else card.append(element('p','尚未留名'),element('small',c.request.replaceAll('昨日','此前')));grid.append(card);
   }
   body.append(grid,element('h3','下一程，换一种打造计划'));
   body.append(element('p',data.challenge?'十二灯复明的旅程已经留名。行脚挑战会重排章内委托，商人仍在第3、6、9天到访；配方与手艺需要重新安排。':'完成“十二灯复明”结局后开启行脚挑战；已经取得的章节与作品会一直留下。'));

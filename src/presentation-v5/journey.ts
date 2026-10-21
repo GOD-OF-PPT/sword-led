@@ -61,8 +61,9 @@ export function chapterFacts(state:RunState,chapterId:number) {
 
 /** Winning pieces and all matching deliveries stay distinct, including a missed multi-piece route. */
 export function journeyOutcome(state:RunState,commissionId:number) {
-  const commission=COMMISSIONS.find(c=>c.id===commissionId),position=state.commissionOrder.indexOf(commissionId);
-  if(!commission||position<0)throw new RangeError('Unknown journey commission');
+  const source=COMMISSIONS.find(c=>c.id===commissionId),position=state.commissionOrder.indexOf(commissionId);
+  if(!source||position<0)throw new RangeError('Unknown journey commission');
+  const commission={...source,request:source.request.replaceAll('昨日','此前')};
   const day=position+1,record=state.history.find(h=>h.day===day&&h.commissionId===commissionId);
   const current=day===state.day&&!record?commissionProgress(state):null;
   const deliveryOrder=new Map(state.journal.flatMap((a,i)=>a.type==='deliver'?[[a.pieceId,i] as const]:[]));
@@ -100,7 +101,14 @@ export function endingFacts(input:RunState) {
     {name:'杜伯',customer:'smith',commissionIds:[3,6,9,12]},
   ].map(person=>{
     const records=person.commissionIds.map(id=>lamps.find(lamp=>lamp.commissionId===id)!);
-    return {...person,records,completed:records.filter(r=>r.status==='met').length,
+    const completed=records.filter(record=>record.status==='met').length;
+    const met=(id:number)=>records.find(record=>record.commissionId===id)?.status==='met';
+    const reached=(id:number)=>records.find(record=>record.commissionId===id)?.status!=='unreached';
+    let afterword='';
+    if(person.customer==='guard')afterword=met(4)&&met(10)?'渡口有人巡守，山口也有剑守着。你送来的每一柄，我都交到了等它的人手里。':met(4)?'渡口的灯守住了。山口还没接上的那一段，我会记着，等你下次来。':met(10)?'缺口前的护刃已经在岗。渡口留下的遗憾，也不会因为这一柄好剑被抹去。':completed?'你已经做成的巡剑，我会继续带着。还没点亮的地方，等下一炉。':'这一程还没等到合格的巡剑。灯站还在这里，等你下一炉再来。';
+    if(person.customer==='courier')afterword=met(8)&&met(11)?'两条驿路都有了剑，最后的接力也送到了。归去的信，这回可以走同一条灯路。':met(8)?'双驿的两柄轻刃都到了。最后的接力还没接完，我会把这封信留着。':met(11)?'最后的接力接上了。双驿没能齐亮的那一夜，也留在信里。':records.some(record=>record.commissionId===8&&record.matchedBlades.length>0)?'你送到双驿的那一柄已经有人带走；另一站还在等，不能把一柄剑说成两柄。':completed?'送到过的剑和信，我都收妥了。没有走完的路，留待下一程。':'这次驿路还没等到合格的剑。信留着，下一程再接。';
+    if(person.customer==='smith')afterword=met(12)?'护灯剑已经送到。锻纹、火候，还有你肯停手的那一刻，这柄剑都记住了。':!reached(12)?'这一程还没走到护灯的山口。炉谱只记已经学会的手艺，不替你写下尚未走到的结果。':met(9)?'两次连锻的回响我听见了。最后的护灯剑还差一点，但学会的火候不会白费。':completed?'护灯剑还没有做成。已经交来的作品我会留下，让下一炉有个可回看的起点。':'这次还没有收到合格的作品。炉火可以再起，不必把没做成的剑说成成品。';
+    return {...person,records,afterword,completed,
       missed:records.filter(r=>r.status==='missed').length,unreached:records.filter(r=>r.status==='unreached').length};
   });
   const image=CHAPTER_THREE+(state.phase==='victory'?'ending-twelve-lights-v1.webp':state.phase==='return'?'ending-homeward-v1.webp':'ending-embers-v1.webp');

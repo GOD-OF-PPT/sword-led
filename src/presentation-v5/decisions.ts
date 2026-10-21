@@ -77,10 +77,10 @@ export function forgeDecisions(view: ForgeView, selectedId: string | null): Forg
   const spare = view.blades.find(piece => !piece.reserved);
   if (spare) return forgeNote({headline: selectedId ? '这柄已离开铁砧' : '挑一柄，接着打造', copy: '选另一柄继续；已经交出或碎掉的剑不会再回来。', tone: 'neutral'}, spare, 'select', '换下一柄');
   const reserve = view.blades.find(piece => piece.reserved);
-  if (reserve) return forgeNote({headline: '只剩剑架上的这一柄', copy: '可以取回再锻，也可以收工，把它带到明天。', tone: 'neutral'}, reserve, 'retrieve', '取回留剑');
+  if (reserve) return forgeNote({headline: '只剩剑架上的这一柄', copy: view.next ? '可以取回再锻，也可以收工，把它带到明天。' : '这是最后一炉，可取回安排交付、出售或回收；留在剑架的兵器不会带入新局。', tone: 'neutral'}, reserve, 'retrieve', '取回留剑');
   return forgeNote({headline: '这一炉的剑都安排好了', copy: '看看收成与契印，收工后再启程。', tone: 'neutral'}, undefined, 'settle', '收工，封炉');
  }
- if (item.reserved) return forgeNote({headline: '先取回，才能敲这柄', copy: '挂起的剑留给明天；取回后，才可继续打造或交给来客。', tone: 'neutral'}, item, 'retrieve', '取回留剑');
+ if (item.reserved) return forgeNote({headline: '先取回，才能敲这柄', copy: view.next ? '挂起的剑留给明天；取回后，才可继续打造或交给来客。' : '这柄暂放在本局剑架，不会带入新局；取回后可继续打造或交付。', tone: 'neutral'}, item, 'retrieve', '取回留剑');
  if (view.commission.progress.complete) return forgeNote({headline: view.market.remaining === 0 ? '约定已交妥，今日收购钱袋已空' : '今天的约定已经交妥', copy: `${view.market.remaining === 0 ? '这柄现在无法出售。' : paymentCopy(item)}${spareCopy(view,item)}`, tone: 'ready'}, item, view.next ? 'plan' : 'settle', view.next ? '看看明日纸单' : '收工，封炉');
  if (item.willCommission) {
   const matching = view.commission.routes.filter(route => item.assessment.routes.some(assessment => assessment.id === route.id && assessment.matches));

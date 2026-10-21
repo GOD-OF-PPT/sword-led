@@ -1,0 +1,526 @@
+[
+  {
+    "label": "d12-settlement",
+    "size": {
+      "width": 1280,
+      "height": 720
+    },
+    "bounds": [
+      {
+        "id": "v4-customer-zone",
+        "visible": true,
+        "rect": {
+          "x": 1008,
+          "y": 95.03125,
+          "width": 246,
+          "height": 524.171875,
+          "bottom": 619.203125
+        },
+        "centerOwned": false,
+        "disabled": false,
+        "scrollHeight": 524,
+        "clientHeight": 524,
+        "text": "杜伯\n点来客，听听心愿\n\n第12天 · 山口守灯 · 关键约定\n\n山口护灯\n\n好剑有它要去的地方\n\n交付一柄重锋 · 无裂纹 · 等级≥9 · 身价≥2,500\n\n还差9级，另有1项\n\n待交\n\n合格后递给来客，才算交妥\n\n今日酬劳 600 · 已收0\n\n无裂名器重锋，送到山口，护住最后的灯。\n\n卖给行会 · 收135\n\n作品身价540 · 收购余300"
+      },
+      {
+        "id": "v4-goal-name",
+        "visible": true,
+        "rect": {
+          "x": 1020,
+          "y": 241.328125,
+          "width": 222,
+          "height": 24,
+          "bottom": 265.328125
+        },
+        "centerOwned": false,
+        "disabled": false,
+        "scrollHeight": 24,
+        "clientHeight": 24,
+        "text": "山口护灯"
+      },
+      {
+        "id": "v4-order-routes",
+        "visible": true,
+        "rect": {
+          "x": 1020,
+          "y": 288.921875,
+          "width": 222,
+          "height": 57.4375,
+          "bottom": 346.359375
+        },
+        "centerOwned": false,
+        "disabled": false,
+        "scrollHeight": 57,
+        "clientHeight": 57,
+        "text": "交付一柄重锋 · 无裂纹 · 等级≥9 · 身价≥2,500\n\n还差9级，另有1项\n\n待交"
+      },
+      {
+        "id": "v4-inline-delivery",
+        "visible": false
+      },
+      {
+        "id": "v4-deliver",
+        "visible": true,
+        "rect": {
+          "x": 1008,
+          "y": 412.75,
+          "width": 246,
+          "height": 50,
+          "bottom": 462.75
+        },
+        "centerOwned": false,
+        "disabled": false,
+        "scrollHeight": 48,
+        "clientHeight": 48,
+        "text": "卖给行会 · 收135"
+      },
+      {
+        "id": "v4-settle",
+        "visible": true,
+        "rect": {
+          "x": 1008,
+          "y": 639,
+          "width": 246,
+          "height": 61,
+          "bottom": 700
+        },
+        "centerOwned": false,
+        "disabled": false,
+        "scrollHeight": 59,
+        "clientHeight": 59,
+        "text": "收工，封炉"
+      },
+      {
+        "id": "v4-event-open",
+        "visible": false
+      },
+      {
+        "id": "v4-shop",
+        "visible": false
+      },
+      {
+        "id": "v4-stage",
+        "visible": false
+      },
+      {
+        "id": "v4-stage-copy",
+        "visible": false
+      },
+      {
+        "id": "v4-stage-actions",
+        "visible": false
+      },
+      {
+        "id": "v4-dialog",
+        "visible": true,
+        "rect": {
+          "x": 190,
+          "y": 181.640625,
+          "width": 900,
+          "height": 356.71875,
+          "bottom": 538.359375
+        },
+        "centerOwned": true,
+        "disabled": false,
+        "scrollHeight": 355,
+        "clientHeight": 355,
+        "text": "收好这一炉\n\n尚未完成主委托，收工后契印为2/3。\n\n今天是关键约定。现在收工会留下失约的缺口；之后补回契印或完成其他单，也补不上这一站，无法达成“十二灯复明”。\n\n这是最后一站；收工后按沿途关键约定、至少10项完成和剩余契印判定这次结局。\n\n余下3柄共回收300铜钱；今日收购剩余300。\n\n重锋 · 身价540 → 回收135\n\n重锋 · 身价540 → 回收135\n\n重锋 · 身价540 → 回收30\n\n再想想\n确认"
+      },
+      {
+        "id": "v4-dialog-body",
+        "visible": true,
+        "rect": {
+          "x": 191,
+          "y": 247.78125,
+          "width": 898,
+          "height": 215.234375,
+          "bottom": 463.015625
+        },
+        "centerOwned": true,
+        "disabled": false,
+        "scrollHeight": 215,
+        "clientHeight": 215,
+        "text": "尚未完成主委托，收工后契印为2/3。\n\n今天是关键约定。现在收工会留下失约的缺口；之后补回契印或完成其他单，也补不上这一站，无法达成“十二灯复明”。\n\n这是最后一站；收工后按沿途关键约定、至少10项完成和剩余契印判定这次结局。\n\n余下3柄共回收300铜钱；今日收购剩余300。\n\n重锋 · 身价540 → 回收135\n\n重锋 · 身价540 → 回收135\n\n重锋 · 身价540 → 回收30"
+      },
+      {
+        "id": "v4-dialog-actions",
+        "visible": true,
+        "rect": {
+          "x": 191,
+          "y": 463.015625,
+          "width": 898,
+          "height": 74.34375,
+          "bottom": 537.359375
+        },
+        "centerOwned": true,
+        "disabled": false,
+        "scrollHeight": 73,
+        "clientHeight": 73,
+        "text": "再想想\n确认"
+      }
+    ]
+  },
+  {
+    "label": "d12-settlement",
+    "size": {
+      "width": 1920,
+      "height": 1080
+    },
+    "bounds": [
+      {
+        "id": "v4-customer-zone",
+        "visible": true,
+        "rect": {
+          "x": 1572,
+          "y": 142.546875,
+          "width": 300,
+          "height": 786.265625,
+          "bottom": 928.8125
+        },
+        "centerOwned": false,
+        "disabled": false,
+        "scrollHeight": 786,
+        "clientHeight": 786,
+        "text": "杜伯\n点来客，听听心愿\n\n第12天 · 山口守灯 · 关键约定\n\n山口护灯\n\n好剑有它要去的地方\n\n交付一柄重锋 · 无裂纹 · 等级≥9 · 身价≥2,500\n\n还差9级，另有1项\n\n待交\n\n合格后递给来客，才算交妥\n\n今日酬劳 600 · 已收0\n\n无裂名器重锋，送到山口，护住最后的灯。\n\n卖给行会 · 收135\n\n作品身价540 · 收购余300"
+      },
+      {
+        "id": "v4-goal-name",
+        "visible": true,
+        "rect": {
+          "x": 1589,
+          "y": 373.4375,
+          "width": 266,
+          "height": 32.390625,
+          "bottom": 405.828125
+        },
+        "centerOwned": false,
+        "disabled": false,
+        "scrollHeight": 32,
+        "clientHeight": 32,
+        "text": "山口护灯"
+      },
+      {
+        "id": "v4-order-routes",
+        "visible": true,
+        "rect": {
+          "x": 1589,
+          "y": 436.015625,
+          "width": 266,
+          "height": 71.5625,
+          "bottom": 507.578125
+        },
+        "centerOwned": false,
+        "disabled": false,
+        "scrollHeight": 72,
+        "clientHeight": 72,
+        "text": "交付一柄重锋 · 无裂纹 · 等级≥9 · 身价≥2,500\n\n还差9级，另有1项\n\n待交"
+      },
+      {
+        "id": "v4-inline-delivery",
+        "visible": false
+      },
+      {
+        "id": "v4-deliver",
+        "visible": true,
+        "rect": {
+          "x": 1572,
+          "y": 601.359375,
+          "width": 300,
+          "height": 65,
+          "bottom": 666.359375
+        },
+        "centerOwned": false,
+        "disabled": false,
+        "scrollHeight": 63,
+        "clientHeight": 63,
+        "text": "卖给行会 · 收135"
+      },
+      {
+        "id": "v4-settle",
+        "visible": true,
+        "rect": {
+          "x": 1572,
+          "y": 968,
+          "width": 300,
+          "height": 76,
+          "bottom": 1044
+        },
+        "centerOwned": false,
+        "disabled": false,
+        "scrollHeight": 74,
+        "clientHeight": 74,
+        "text": "收工，封炉"
+      },
+      {
+        "id": "v4-event-open",
+        "visible": false
+      },
+      {
+        "id": "v4-shop",
+        "visible": false
+      },
+      {
+        "id": "v4-stage",
+        "visible": false
+      },
+      {
+        "id": "v4-stage-copy",
+        "visible": false
+      },
+      {
+        "id": "v4-stage-actions",
+        "visible": false
+      },
+      {
+        "id": "v4-dialog",
+        "visible": true,
+        "rect": {
+          "x": 510,
+          "y": 342.734375,
+          "width": 900,
+          "height": 394.515625,
+          "bottom": 737.25
+        },
+        "centerOwned": true,
+        "disabled": false,
+        "scrollHeight": 393,
+        "clientHeight": 393,
+        "text": "收好这一炉\n\n尚未完成主委托，收工后契印为2/3。\n\n今天是关键约定。现在收工会留下失约的缺口；之后补回契印或完成其他单，也补不上这一站，无法达成“十二灯复明”。\n\n这是最后一站；收工后按沿途关键约定、至少10项完成和剩余契印判定这次结局。\n\n余下3柄共回收300铜钱；今日收购剩余300。\n\n重锋 · 身价540 → 回收135\n\n重锋 · 身价540 → 回收135\n\n重锋 · 身价540 → 回收30\n\n再想想\n确认"
+      },
+      {
+        "id": "v4-dialog-body",
+        "visible": true,
+        "rect": {
+          "x": 511,
+          "y": 428.671875,
+          "width": 898,
+          "height": 225.234375,
+          "bottom": 653.90625
+        },
+        "centerOwned": true,
+        "disabled": false,
+        "scrollHeight": 225,
+        "clientHeight": 225,
+        "text": "尚未完成主委托，收工后契印为2/3。\n\n今天是关键约定。现在收工会留下失约的缺口；之后补回契印或完成其他单，也补不上这一站，无法达成“十二灯复明”。\n\n这是最后一站；收工后按沿途关键约定、至少10项完成和剩余契印判定这次结局。\n\n余下3柄共回收300铜钱；今日收购剩余300。\n\n重锋 · 身价540 → 回收135\n\n重锋 · 身价540 → 回收135\n\n重锋 · 身价540 → 回收30"
+      },
+      {
+        "id": "v4-dialog-actions",
+        "visible": true,
+        "rect": {
+          "x": 511,
+          "y": 653.90625,
+          "width": 898,
+          "height": 82.34375,
+          "bottom": 736.25
+        },
+        "centerOwned": true,
+        "disabled": false,
+        "scrollHeight": 81,
+        "clientHeight": 81,
+        "text": "再想想\n确认"
+      }
+    ]
+  },
+  {
+    "label": "return-ending",
+    "size": {
+      "width": 1280,
+      "height": 720
+    },
+    "bounds": [
+      {
+        "id": "v4-customer-zone",
+        "visible": false
+      },
+      {
+        "id": "v4-goal-name",
+        "visible": false
+      },
+      {
+        "id": "v4-order-routes",
+        "visible": false
+      },
+      {
+        "id": "v4-inline-delivery",
+        "visible": false
+      },
+      {
+        "id": "v4-deliver",
+        "visible": false
+      },
+      {
+        "id": "v4-settle",
+        "visible": false
+      },
+      {
+        "id": "v4-event-open",
+        "visible": false
+      },
+      {
+        "id": "v4-shop",
+        "visible": false
+      },
+      {
+        "id": "v4-stage",
+        "visible": true,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 720,
+          "bottom": 720
+        },
+        "centerOwned": true,
+        "disabled": false,
+        "scrollHeight": 720,
+        "clientHeight": 720,
+        "text": "灯炉行记\n\n灯下归途\n\n炉火还在，有些约定仍未完成。带着这次的作品与手艺再上路。\n\n走到第12天 · 实际完成 11/12 项委托 · 契印 2/3\n\n听听三人的后话\n\n山口护灯剑尚未做成；这次归途保留已经完成的作品与手艺。\n\n尚未完成的关键约定：第12天 · 山口护灯。\n\n这一程的手艺与入袋账\n\n安全保存的作品、章节、配方熟练与手艺见闻都留在炉谱，可在下一程查看。\n\n灯下，三人的后话\n阿岚 · 完成4 · 失约0 · 未抵达0\n阿禾 · 完成4 · 失约0 · 未抵达0\n杜伯 · 完成3 · 失约1 · 未抵达0\n翻开完整炉谱\n回到路口，再开一炉\n导出这次行程"
+      },
+      {
+        "id": "v4-stage-copy",
+        "visible": true,
+        "rect": {
+          "x": 700.234375,
+          "y": 175.6875,
+          "width": 502.953125,
+          "height": 433.265625,
+          "bottom": 608.953125
+        },
+        "centerOwned": true,
+        "disabled": false,
+        "scrollHeight": 564,
+        "clientHeight": 433,
+        "text": "炉火还在，有些约定仍未完成。带着这次的作品与手艺再上路。\n\n走到第12天 · 实际完成 11/12 项委托 · 契印 2/3\n\n听听三人的后话\n\n山口护灯剑尚未做成；这次归途保留已经完成的作品与手艺。\n\n尚未完成的关键约定：第12天 · 山口护灯。\n\n这一程的手艺与入袋账\n\n安全保存的作品、章节、配方熟练与手艺见闻都留在炉谱，可在下一程查看。\n\n灯下，三人的后话\n阿岚 · 完成4 · 失约0 · 未抵达0\n阿禾 · 完成4 · 失约0 · 未抵达0\n杜伯 · 完成3 · 失约1 · 未抵达0"
+      },
+      {
+        "id": "v4-stage-actions",
+        "visible": true,
+        "rect": {
+          "x": 700.234375,
+          "y": 622.953125,
+          "width": 502.953125,
+          "height": 64.046875,
+          "bottom": 687
+        },
+        "centerOwned": true,
+        "disabled": false,
+        "scrollHeight": 63,
+        "clientHeight": 63,
+        "text": "翻开完整炉谱\n回到路口，再开一炉\n导出这次行程"
+      },
+      {
+        "id": "v4-dialog",
+        "visible": false
+      },
+      {
+        "id": "v4-dialog-body",
+        "visible": false
+      },
+      {
+        "id": "v4-dialog-actions",
+        "visible": false
+      }
+    ]
+  },
+  {
+    "label": "return-ending",
+    "size": {
+      "width": 1920,
+      "height": 1080
+    },
+    "bounds": [
+      {
+        "id": "v4-customer-zone",
+        "visible": false
+      },
+      {
+        "id": "v4-goal-name",
+        "visible": false
+      },
+      {
+        "id": "v4-order-routes",
+        "visible": false
+      },
+      {
+        "id": "v4-inline-delivery",
+        "visible": false
+      },
+      {
+        "id": "v4-deliver",
+        "visible": false
+      },
+      {
+        "id": "v4-settle",
+        "visible": false
+      },
+      {
+        "id": "v4-event-open",
+        "visible": false
+      },
+      {
+        "id": "v4-shop",
+        "visible": false
+      },
+      {
+        "id": "v4-stage",
+        "visible": true,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080,
+          "bottom": 1080
+        },
+        "centerOwned": true,
+        "disabled": false,
+        "scrollHeight": 1080,
+        "clientHeight": 1080,
+        "text": "灯炉行记\n\n灯下归途\n\n炉火还在，有些约定仍未完成。带着这次的作品与手艺再上路。\n\n走到第12天 · 实际完成 11/12 项委托 · 契印 2/3\n\n听听三人的后话\n\n山口护灯剑尚未做成；这次归途保留已经完成的作品与手艺。\n\n尚未完成的关键约定：第12天 · 山口护灯。\n\n这一程的手艺与入袋账\n\n安全保存的作品、章节、配方熟练与手艺见闻都留在炉谱，可在下一程查看。\n\n灯下，三人的后话\n阿岚 · 完成4 · 失约0 · 未抵达0\n阿禾 · 完成4 · 失约0 · 未抵达0\n杜伯 · 完成3 · 失约1 · 未抵达0\n翻开完整炉谱\n回到路口，再开一炉\n导出这次行程"
+      },
+      {
+        "id": "v4-stage-copy",
+        "visible": true,
+        "rect": {
+          "x": 1050.359375,
+          "y": 294.921875,
+          "width": 754.4375,
+          "height": 592.140625,
+          "bottom": 887.0625
+        },
+        "centerOwned": true,
+        "disabled": false,
+        "scrollHeight": 592,
+        "clientHeight": 592,
+        "text": "炉火还在，有些约定仍未完成。带着这次的作品与手艺再上路。\n\n走到第12天 · 实际完成 11/12 项委托 · 契印 2/3\n\n听听三人的后话\n\n山口护灯剑尚未做成；这次归途保留已经完成的作品与手艺。\n\n尚未完成的关键约定：第12天 · 山口护灯。\n\n这一程的手艺与入袋账\n\n安全保存的作品、章节、配方熟练与手艺见闻都留在炉谱，可在下一程查看。\n\n灯下，三人的后话\n阿岚 · 完成4 · 失约0 · 未抵达0\n阿禾 · 完成4 · 失约0 · 未抵达0\n杜伯 · 完成3 · 失约1 · 未抵达0"
+      },
+      {
+        "id": "v4-stage-actions",
+        "visible": true,
+        "rect": {
+          "x": 1050.359375,
+          "y": 909.0625,
+          "width": 754.4375,
+          "height": 69.046875,
+          "bottom": 978.109375
+        },
+        "centerOwned": true,
+        "disabled": false,
+        "scrollHeight": 68,
+        "clientHeight": 68,
+        "text": "翻开完整炉谱\n回到路口，再开一炉\n导出这次行程"
+      },
+      {
+        "id": "v4-dialog",
+        "visible": false
+      },
+      {
+        "id": "v4-dialog-body",
+        "visible": false
+      },
+      {
+        "id": "v4-dialog-actions",
+        "visible": false
+      }
+    ]
+  }
+]

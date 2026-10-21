@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "url": "http://127.0.0.1:4210/",
+  "browser": "isolated Chromium",
+  "actions": 0,
+  "observations": 2,
+  "checks": [
+    {
+      "label": "synthetic blur exercises controller cancellation, not native OS lifecycle",
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "captures": 0,
+  "scope": "all displayed unlock sets; canceled preview requires new preview before import",
+  "syntheticBlurNotNativeLifecycle": true
+}

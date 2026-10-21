@@ -1,0 +1,53 @@
+/* Coins stay beside the paper and rack, leaving the anvil for the player's sword. */
+.v5-app {
+  --v5-paper-ink: #62432a;
+  --v5-payment-ink: #3e5936;
+  --v5-warm-note: #e4cda2;
+}
+.v5-app .v4-edition { font-size: clamp(17px, 1.5vw, 23px); letter-spacing: 2px; }
+.v5-app .v5-old-journey { display: inline-flex; align-items: baseline; flex-wrap: wrap; gap: 3px 12px; min-height: 44px; margin-top: 8px; padding: 7px 3px; font: 17px/1.5 var(--v4-display); color: #ebd5a8; }
+.v5-app .v5-old-journey > span { color: #c5b497; font: 12px/1.5 "PingFang SC", "Microsoft YaHei", sans-serif; }
+.v5-app .v4-journey-options { margin-top: 3px; }
+.v5-app .v4-bench-mark > span { max-width: 198px; margin-top: 5px; letter-spacing: .7px; font-size: 11px; }
+.v5-app .v5-order-pay { margin-top: 4px; padding-top: 4px; border-top: 1px dashed #94703d70; color: var(--v5-paper-ink); font: 12px/1.4 var(--v4-display); font-variant-numeric: tabular-nums; }
+.v5-app .v5-delivery-quote { flex: 0 0 auto; margin: 4px 2px 0; color: var(--v5-warm-note); font-size: 12px; line-height: 1.45; text-shadow: 0 2px 3px #041014; font-variant-numeric: tabular-nums; }
+.v5-app .v5-delivery-quote[data-state=blocked] { color: #e0b295; }
+.v5-app .v5-delivery-quote[data-state=commission] { color: #e5dbaf; }
+.v5-app .v5-slot-plan { margin: 4px 0 2px; color: #d3d9b7; font: 12px/1.45 var(--v4-display); white-space: normal; overflow-wrap: anywhere; }
+.v5-app .v5-inline-payment { clear: both; margin-top: 6px; padding-top: 5px; border-top: 1px dashed #8e7c4d70; color: var(--v5-payment-ink); font: 700 14px/1.5 var(--v4-display); font-variant-numeric: tabular-nums; }
+.v5-app .v5-order-pay:empty, .v5-app .v5-delivery-quote:empty, .v5-app .v5-slot-plan:empty, .v5-app .v5-inline-payment:empty { display: none; }
+.v5-app .v5-payment-detail { margin-top: 9px; padding-top: 8px; border-top: 1px dashed #9b7b4a70; color: #e4d0a9; line-height: 1.6; font-variant-numeric: tabular-nums; }
+.v5-app .v5-payment-detail > p + p { margin-top: 5px; }
+.v5-app #v4-dialog .v5-payment-detail { color: var(--v5-paper-ink); }
+.v5-app .v5-source-label { display: block; width: fit-content; margin: 6px 0; padding: 2px 6px; color: #455535; border-left: 2px solid #758254; background: #60754a15; font: 12px/1.5 var(--v4-display); }
+.v5-app .v5-source-label[data-rules-version=forge-v4] { border-left-color: #a57d46; color: #77542e; background: #9c784315; }
+.v5-app .v5-book-provenance { margin: 6px 0 10px; color: #70583d; font-size: 12px; line-height: 1.6; }
+.v5-app .v5-import-preview { margin-top: 14px; padding-top: 12px; border-top: 1px solid #94744280; }
+.v5-app .v5-import-preview > p + p { margin-top: 7px; }
+.v5-app .v5-import-preview .v5-source-label { margin-top: 0; }
+.v5-app .v5-journey-details { margin-top: 14px; padding: 5px 0 9px; border-block: 1px solid #b2945a50; }
+.v5-app .v5-journey-details > summary { min-height: 44px; padding: 10px 4px; color: #f0d69e; cursor: pointer; font: 18px/1.5 var(--v4-display); }
+.v5-app .v5-journey-details > summary:focus-visible { outline: 2px solid #f5ca79; outline-offset: -2px; }
+.v5-app .v5-journey-details > p, .v5-app .v4-ending-person > p { margin: 9px 4px; color: #e7d8b7; font-size: 14px; line-height: 1.8; }
+
+@media (max-width: 1599px) {
+  .v5-app .v4-workshop .v4-person-target { flex-basis: 120px; min-height: 120px; }
+  .v5-app .v4-workshop .v4-customer[data-paper-layout=double] .v4-person-target { flex-basis: 96px; min-height: 96px; }
+  .v5-app .v4-workshop .v4-deliver-button { min-height: 50px; margin-top: 8px; font-size: 22px; }
+  .v5-app .v4-workshop .v4-visiting-actions { padding-top: 5px; }
+  .v5-app .v4-workshop .v4-shop-help { margin-top: 4px; line-height: 1.4; }
+  .v5-app .v4-workshop .v4-next-plan { min-height: 40px; padding-block: 5px; }
+  .v5-app .v4-workshop .v4-kept-sword { margin-top: 9px; padding-top: 7px; }
+  .v5-app .v4-workshop #v4-inline-copy { margin-top: 5px; line-height: 1.5; }
+  .v5-app .v4-workshop #v4-inline-review { min-height: 40px; margin-top: 6px; }
+}
+
+@media (min-width: 1600px) {
+  .v5-app .v4-bench-mark > span { max-width: 230px; font-size: 13px; letter-spacing: 1.2px; }
+  .v5-app .v5-order-pay { margin-top: 6px; padding-top: 6px; font-size: 14px; }
+  .v5-app .v5-delivery-quote { margin-top: 6px; font-size: 14px; }
+  .v5-app .v5-slot-plan { margin-top: 6px; font-size: 14px; }
+  .v5-app .v5-inline-payment { font-size: 16px; }
+  .v5-app .v4-workshop .v4-person-target { flex-basis: 195px; min-height: 195px; }
+  .v5-app .v4-workshop .v4-customer[data-paper-layout=double] .v4-person-target { flex-basis: 154px; min-height: 154px; }
+}
