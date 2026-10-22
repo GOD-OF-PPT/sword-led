@@ -137,3 +137,11 @@ T03 native-suspend-order01实际3过6红：3title+3newrun最终freshwave0；其�
 T03 audio03实际133过5红：四个20往返是旧outputGraph死认仅一个实例（已真实旧closed/断开、新唯一running/有wave），另一WebKit1 title是真native running-clock0：旧close1110已完成，新ctx2构造1142，native resume1143→1160完成，真实hit1220/3正确sources1299/contact1300后5秒clock仍0。无旧回调操作新ctx，不能用closebarrier或把5项全叫consumer。固定9曾过不当全修。本次只给真实V5 trusted非repeat capture增加已有runningfastpath的native.resume重申；gesture参数默认false保其他调用，commit仍false避免同input双call；fastpath保持即时ready、不建pending/不增epoch、不退休、不补cue，失败仅exact-current所有权可降级。初始/暂停/已挂pending路径不动，不宣称解决pending挂起。WebKit官方263627/276687有类似clock状态报告但多属移动端，不证明本PC同因；该候选仅根据本地观测验证，原严格wave门保持。
 
 T03 running-native-refresh-title01固定10次实际8过2红（原wave门，417/82结束全等），再次native.resume亦未稳定修复WebKit原生时钟。按用户“测试与兼容最低优先级”停止这条候选循环，明确保留声音未闭项，不暂停整个goal或取消剩余责任。所有不稳定产品实验与其legacy适配完整另存后，恢复精确已发布6d86音频、app原onGesture和legacy两个原consumer字节；当前试玩始终是build16，没有发布这些候选。测试的被动焦点/授权观察和按context完整graph验证保留。还原首脚本只完成audio/app后因legacy原件路径错而停止，build21随后实际0；之后按已确认路径完成legacy测试原件与例外记录修复，未改product产物，另做严格类型核对。须证实build21的82产物与已发布快照全等，原native04/cold01/coreload03则保持本版证据身份。继续剩余非声音21×6、旧版18、独立raw/联合复核；WebKit声音仍未关闭，T03/goal不冒记完成。
+
+### 本轮有界收尾（2026-10-23）
+
+non-audio-current02已实际终态125过1红，417源/82运行文件结束全等。唯一红是Firefox DPR2、1920极长合法档、pointer第4锤收尾真实回调81ms；p95/加载/输入/接触门均通过，页面可见有焦点，具体耗时根因未定位，不能写环境误判或已修。遵循用户测试最低优先级，本轮不再扩矩阵或继续声音/性能候选循环，保留原红与后续定向诊断责任，不改阈值或交付口径。
+
+legacy18实际14过4红：三项v2 late故障被早期准备手势消费，发生在暂停前starts0断言，不证明旧声补播；只在全部准备完成后以真实native suspend启动一次绑定目标context的held resume。原starts0/暂停后0/新局3不变，其他两项case原文不变。该最小consumer修正已在本轮全部126终态后激活，typecheck20实际0；legacy-target03三引擎目标case全过，v3 Chromium仍context teardown180秒失败，批次3过1红且结束417/82全等。保留原失败，不把旧入口关闭问题当当前v5通过，也不再复跑。
+
+接下来只完成一次明确选定终态证据的独立正式SDK/raw回放、三task联合审查和新增证据/源码推送。引用原文按SHA/压缩往返核对，所有原件保留；它是本轮delivered_with_gaps进度交付，不是T03[x]或goal complete。当前82生产字节与正式报价快照相同，无需再次重建或轮换4179；用户费用关系已经实际修正，T03残余和T04真实体验责任继续分别记录。

@@ -9,7 +9,27 @@ test('v2 actual accepted strike creates native waveform and mute/pause/menu/relo
 });
 
 test('v2 delayed native audio resume cannot sound the old accepted strike after a pause or new contract',async({page},info)=>{
-  await installAudioProbe(page,{defer:true});await openV2(page);await startV2(page);await strikeV2(page);expect((await audioProbe(page)).starts).toBe(0);const old=await readV2(page);await page.locator('#v2-pause').click();await page.evaluate(()=>window.audioTestProbe.releaseResume?.());await expect.poll(async()=>(await audioProbe(page)).states).toEqual(['suspended']);expect((await audioProbe(page)).starts).toBe(0);await page.locator('#v2-menu-button').click();await page.locator('#v2-new').click();await confirmV2(page);await page.locator('#v2-starters button:first-child').click();await page.locator('#v2-decline').click();await page.locator('#v2-strike').focus();await page.keyboard.down('Space');await expect.poll(async()=>(await audioProbe(page)).states).toEqual(['running']);await page.clock.runFor(350);await page.keyboard.up('Space');const fresh=await readV2(page);expect(fresh.runId).not.toBe(old.runId);expect(fresh.pieces[0]?.strikes).toBe(1);await expect.poll(async()=>(await audioProbe(page)).starts).toBe(3);await info.attach('v2-deferred-audio',{body:Buffer.from(JSON.stringify({old,fresh,probe:await audioProbe(page)},null,2)),contentType:'application/json'});
+  await installAudioProbe(page);await openV2(page);await startV2(page);
+  await page.locator('#v2-mode-standard').click();await page.locator('#v2-node-0').click();await expect(page.locator('#v2-strike')).toBeFocused();
+  await expect.poll(async()=>(await audioProbe(page)).states).toEqual(['running']);
+  const prepared=await audioProbe(page);expect(prepared.contexts).toBe(1);expect(prepared.starts).toBe(0);expect(prepared.active).toBe(0);
+  await page.evaluate(()=>window.audioTestProbe.armDeferResume());
+  const armed=await audioProbe(page);expect(armed.deferArmState).toBe('armed');expect(armed.states).toEqual(['suspended']);expect(armed.starts).toBe(0);
+  await page.keyboard.down('Space');
+  const held=await audioProbe(page);expect(held.deferArmState).toBe('held');expect(held.hasHeldResume).toBe(true);expect(held.states).toEqual(['suspended']);expect(held.starts).toBe(0);
+  await page.clock.runFor(350);await page.keyboard.up('Space');expect((await audioProbe(page)).starts).toBe(0);
+  const old=await readV2(page);expect(old.pieces[0]?.strikes).toBe(1);
+  await page.locator('#v2-pause').click();
+  await page.evaluate(()=>{const release=window.audioTestProbe.releaseResume;if(!release)throw new Error('Missing held target resume');return release();});
+  await expect.poll(async()=>(await audioProbe(page)).states).toEqual(['suspended']);
+  const released=await audioProbe(page);expect(released.deferArmState).toBe('released');expect(released.hasHeldResume).toBe(false);expect(released.contexts).toBe(1);expect(released.starts).toBe(0);expect(released.active).toBe(0);
+  await page.locator('#v2-menu-button').click();await page.locator('#v2-new').click();await confirmV2(page);
+  await page.locator('#v2-starters button:first-child').click();await page.locator('#v2-decline').click();await page.locator('#v2-strike').focus();await page.keyboard.down('Space');
+  await expect.poll(async()=>(await audioProbe(page)).states).toEqual(['running']);expect((await audioProbe(page)).starts).toBe(0);
+  await page.clock.runFor(350);await page.keyboard.up('Space');const fresh=await readV2(page);
+  expect(fresh.runId).not.toBe(old.runId);expect(fresh.pieces[0]?.strikes).toBe(1);await expect.poll(async()=>(await audioProbe(page)).starts).toBe(3);
+  const probe=await audioProbe(page);expect(probe.contexts).toBe(1);expect(probe.states).toEqual(['running']);expect(probe.deferArmState).toBe('released');
+  await info.attach('v2-deferred-audio',{body:Buffer.from(JSON.stringify({prepared,armed,held,old,released,fresh,probe},null,2)),contentType:'application/json'});
 });
 
 test('v2 native resume denial stays readable and never revokes an accepted sword',async({page,browserName})=>{
