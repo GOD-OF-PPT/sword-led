@@ -31,7 +31,12 @@
 - 新增进度归档：current-progress-archive01实际0，五项明确终态运行的1274份原文／诊断／所选截图已无损存入docs/evidence/G4-T03-current-progress，gzip往返及输入前后SHA一致；两张root实际查看的当前图及两张旧入口失败图保留，全部其他原件不删。未冒充全T03档案／验收。
 - 本轮交付：source b8016dcf3239b7e74a9d8f8e0c060a9861bc8d30实际提交／push0，fresh远程main与GitHub根tree均一致，五个测试／报告／清单／压缩回放blob原字节全等；见docs/evidence/G4-T03-current-progress/source-publication.json。1274份payload均明确入Git；报价试玩仍是相同82字节产物，无需轮换。回执另提交，T03／goal仍未完成。
 - [杠精审查] 本轮进度可交付，完整T03仍打回：原五项／费用反馈未缩水，测试未松门、没有新规则／占位／生产候选；报价已经实际发布。WebKit声音、FF2真实81ms与旧v3关闭余项未修，不以静态无新问题／有限回放／提交推送给T03[x]或goal complete。
-- 待完成：WebKit原生输出、FF2极长档81ms回调根因与旧v3 Chromium关闭问题仍明确未闭；本轮证据发布正在收尾。冷首屏／当前native6／资源与可读性／加载／独立原文回放已取得各自实际终态，不再误列未执行。T03保持未勾选，delivered_with_gaps不等于任务或goal完成；原件／失败保留，测试与兼容最低优先级，不扩范围。
+- 2026-10-23定向交互修缮：实际发现同设置内第二次试听复用挂起pending，first-red01在Chromium1复现resumeCalls仍1，418/82结束全等。仅当前v5试听按钮增加已有silence()后原preview，明确点击替换旧试听所有权。build22实际0；repair01三个现代引擎DPR1九次全部通过，含新重试／连续试听／跨设置授权，原波形门与旧声不补播保持，四槽原文相同而非统计API写次数。共享audio/core/SDK/原美术没有再改，80个运行文件原字节相同，只换v5 main和index引用。
+- 旧v3定向诊断：legacy-clock-cleanup01实际1，原body完成、显式clock.resume4.85ms完成后仍context teardown180秒；排除了“仅补await恢复Clock即可关闭”的具体候选，不能泛化根因。原消费者完整恢复，未奏效候选／原红保留，不重复跑。
+- 新交付：4179切至不可变G4-T03-preview-retry快照（PID4973/session67793），旧快照保留；published01实际0，82个HTTP原字节全等，真实3左键／合格交剑／领手艺／报价说明／导出原文／两次普通试听与原文不变，0页错误。root实际看两PC尺寸设置图。preview-retry-archive01实际0，明确五项运行的78份原文／诊断／原图无损往返，见docs/reviews/G4-T03-preview-retry.md；本次源与证据推送结果随后记录。
+- 计划内静音尾核：preview-retry-mute01另实际3/3通过（C/F/W DPR1），418/82结束全等；与九项是分开的实际批次。新增无损补档有明确run/end指纹，不把静音故障或原138完整范围缩减。构建/正式SDK/规则在两批间未变。
+- [杠精修缮审查] 本次明确重试修缮通过：真实首红已复现并最小修，token/epoch/旧finally/新授权只读审查无阻断，九次实际与发布验证有据；未把DPR1/三项当完整138、软件波形当扬声器或API写次数。原defer实际延迟native调用的归因问题已识别，纯完成延迟草稿仍未激活，不用新语义重写旧137/138。
+- 待完成：WebKit原复合故障的正确语义核对、FF2极长档81ms回调根因与旧v3 Chromium关闭问题仍明确未闭。冷首屏／当前native6／资源与可读性／加载／独立原文回放已取得各自实际终态，不再误列未执行。T03保持未勾选，delivered_with_gaps不等于任务或goal完成；原件／失败保留，测试与兼容最低优先级，不扩范围。
 
 ## T04 — 全目标最终审计与真实H闭环
 - [ ] 完成。原五项、全部必需gates、当前来源/交付/真人H和必要修缮有据才完成整个原生goal；不接受旧规则/旧反馈代填。

@@ -507,7 +507,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
   const sound=element('p');sound.id='v4-audio-status';sound.setAttribute('role','status');
   const art=element('section');art.id='v4-art-status';art.hidden=true;
   const artCopy=element('p');artCopy.id='v4-art-copy';artCopy.setAttribute('role','status');const retry=action('重试画稿',retryArtwork);retry.id='v4-art-retry';art.append(artCopy,retry);
-  body.append(status,sound,action('试听敲击声',()=>{audio.setMode('preview');void audio.preview();}),art);
+  body.append(status,sound,action('试听敲击声',()=>{audio.silence();audio.setMode('preview');void audio.preview();}),art);
   openModal('声音与动效',body,[{label:'保存失败时重试',run:()=>{preferences.retry();updatePreferenceStatus();}},{label:'收好',primary:true,run:()=>closeModal()}],'settings');
   updatePreferenceStatus();updateAudioStatus();updateArtworkStatus();
  }
