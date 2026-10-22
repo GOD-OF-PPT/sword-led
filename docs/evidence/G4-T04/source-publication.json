@@ -1,0 +1,428 @@
+{
+  "at": "2026-10-22T23:53:34.574365+00:00",
+  "sourceCommit": "b4b8476ae126784524fda77ce9b7486da64c0330",
+  "sourcePush": {
+    "label": "source-push-01",
+    "startedAt": "2026-10-22T23:52:12.780198+00:00",
+    "command": [
+      "rtk",
+      "proxy",
+      "git",
+      "push",
+      "origin",
+      "main"
+    ],
+    "cwd": "/Users/gordon/githome/sword-led",
+    "status": "terminal",
+    "pid": 32245,
+    "completedAt": "2026-10-22T23:52:21.266739+00:00",
+    "actualExitCode": 0
+  },
+  "freshRemoteMain": "b4b8476ae126784524fda77ce9b7486da64c0330",
+  "localRootTree": "69517672ff94f2a1f558ba637b09b0863e095677",
+  "gitHubRootTree": "69517672ff94f2a1f558ba637b09b0863e095677",
+  "rootTreeMatches": true,
+  "blobs": [
+    {
+      "path": "src/presentation-v5/copy.ts",
+      "gitBlob": "2d577e13b525784398d0da789e4cb8e1e82b539a",
+      "sha256": "338834d33f612a050a3f856ee70996a431757b265acfb5efa3c09853a76eefac",
+      "matches": true
+    },
+    {
+      "path": "src/presentation-v5/app.ts",
+      "gitBlob": "7f968a99e5eb6b35da36ac2b317ec49407d74ffb",
+      "sha256": "893960433ecd5a2dd46e7319ec8a4a2df86ab8563ac681f41aea4dd5a6c4e2fa",
+      "matches": true
+    },
+    {
+      "path": "src/presentation-v4/forge.ts",
+      "gitBlob": "818fa42cb49bcede8a76aca74d7c8cc07b97da83",
+      "sha256": "fa077227a7d9d6e254a7aa9de8785022dd58fcc907c2c59ed27cf62b842bc145",
+      "matches": true
+    },
+    {
+      "path": "tests/release-v5/t04-risk-language.spec.ts",
+      "gitBlob": "eb8d933b00ef61701284be6ddbe0d0a82f35d518",
+      "sha256": "071b9a15850a1f7e440072f0328fcd117a17425671f417e18ff67bc539d63044",
+      "matches": true
+    },
+    {
+      "path": "tests/fixtures/v5/t04-credit-prefix.json",
+      "gitBlob": "8cbfdaa954d4222b3df532482b387cf45e64a764",
+      "sha256": "ac2fee00ceb767856b1a3a2b3a1ffd27a09f218e47e013688ea299409467a75f",
+      "matches": true
+    },
+    {
+      "path": "docs/reviews/G4-T04-final-delivery.md",
+      "gitBlob": "2d16996472416ec2ccd926d2a3e58df6a2be3e05",
+      "sha256": "8a890b9f83b7ae312c9667c34d77d6f1a0ec7f823a6b06916fe7a651d6c9e42e",
+      "matches": true
+    },
+    {
+      "path": "docs/evidence/G4-T04/manifest.json",
+      "gitBlob": "f4f4f7950474a18bf2a1a1f8d608e52826e99437",
+      "sha256": "3031b7e7ff7be0fceb318186b4ef31ea7b976836a75794376f8bd40652ff7477",
+      "matches": true
+    },
+    {
+      "path": "docs/evidence/G4-T04/originals/tmp/goal4-T04/first-chapter-real-ui-run.json.gz",
+      "gitBlob": "4196200be4c5a1213f5c9901dc6b8d569beb8cbc",
+      "sha256": "086a56f8b65d658df92e867101f55ee55c079ecb5e6f4bdfa685fcda56f7fb3c",
+      "matches": true
+    },
+    {
+      "path": "docs/evidence/G4-T04/originals/tmp/goal4-T04/chapter-one-receipt-pc-1280.jpg",
+      "gitBlob": "0c894f3316092fcc88bc9782578b28acc2cdc449",
+      "sha256": "d4448a2623a960e477fdf2c588f109ea14f575787983b8055497db964590be07",
+      "matches": true
+    }
+  ],
+  "all138PayloadsAtCommit": true,
+  "cleanBeforeReceipt": true,
+  "officialPreview": {
+    "snapshot": "tmp/previews/G4-T04-workshop-copy-01",
+    "pid": 29157,
+    "session": 38280,
+    "build": "T04/build-01",
+    "runtimeFiles": 82,
+    "allDistSnapshotHttpBytesEqual": true,
+    "files": [
+      {
+        "path": "assets/b/anvil-v1.webp",
+        "sha256": "ed44b20b36a834581655f02c6e6660452b72a9742c37e1d97d3ab132413af9f1"
+      },
+      {
+        "path": "assets/b/hammer-heavy-v1.webp",
+        "sha256": "3b9ed6d6aab155503af7ae167676fd88badcc2f859ee693823e1b68c4ae26714"
+      },
+      {
+        "path": "assets/b/hammer-light-v1.webp",
+        "sha256": "4a294cde83b0765ba919c1943f151a9ad66c8aad5e163c1f3b81df2208b8bbf8"
+      },
+      {
+        "path": "assets/b/hammer-standard-v1.webp",
+        "sha256": "604bc26957ac0dae08bec6160fbb1104dad6949676ed3df4bc254743fe392c03"
+      },
+      {
+        "path": "assets/b/manifest.json",
+        "sha256": "7d97cba7f4cfd6df7656385c61db9096d1a1c5901b50202abda60b55cc52dc13"
+      },
+      {
+        "path": "assets/b/material-iron-v1.webp",
+        "sha256": "891f332a7543e005bb4eecf9c8cbf9ed6fbb6e7acc60ef02c6a08d828cbdf8e9"
+      },
+      {
+        "path": "assets/b/material-meteorite-v3.webp",
+        "sha256": "bffe5da4cc1522fa9e16df68790d11fbf551659176210ecb04e66ea82da98f3a"
+      },
+      {
+        "path": "assets/b/material-steel-v1.webp",
+        "sha256": "c5985ca938f459770ebe8e7e0f045db4a96768c20525c7a7f05d28ab3c070a4e"
+      },
+      {
+        "path": "assets/b/merchant-kit-v1.webp",
+        "sha256": "9a7623f3b226fc1918b08054ccfd080d852a278f9c92a97219c9da72a40e1c72"
+      },
+      {
+        "path": "assets/b/tokens.css",
+        "sha256": "6892f99cdee0107212fd750a058191d2933efefb8a4e7b05b8df35412132614e"
+      },
+      {
+        "path": "assets/b/workshop-background-v1.webp",
+        "sha256": "c8813b1438f61b6edbb8890d2df843ce7ac5732899a52edb9af67d1f8771497c"
+      },
+      {
+        "path": "assets/collection-CIHM6rhH.css",
+        "sha256": "3004f966496328dd2318e41224c23237274c83ef80f2634ab4e9261fa9e8ea63"
+      },
+      {
+        "path": "assets/collection-bmZdep7C.js",
+        "sha256": "9ec16c55a421dc470efa13b8d45bf9db282504387a6da12106918ed0cf68fe5b"
+      },
+      {
+        "path": "assets/d/blade-cleaver-v1.webp",
+        "sha256": "7ce0ae4d8fbd5b6f467d3ac487e1325807cbba993e0b2e0cd01875a96c8734db"
+      },
+      {
+        "path": "assets/d/blade-dao-v2.webp",
+        "sha256": "0849c54fc542d5781ce71c177e379f9336d012ed7dbc38250e0793ccaa642b48"
+      },
+      {
+        "path": "assets/d/blade-jian-v2.webp",
+        "sha256": "ece499d885fd4a7b74978fac75a547caa6eb40c335e1643364f955f6eca6582b"
+      },
+      {
+        "path": "assets/d/commission-guard-v2.webp",
+        "sha256": "0a8b9d04123e63d30163c7e486eb5e6917e67088ba6e8b3ca69eae8662f1a226"
+      },
+      {
+        "path": "assets/d/customers-atlas-v2.webp",
+        "sha256": "6d5f8b78b51863cda7143d506efcc9a344e6b69314737d66610bbd95ca8d3cf7"
+      },
+      {
+        "path": "assets/d/forge-backdrop-v1.webp",
+        "sha256": "af03aec23b63729c2dc0e05abaaaa6004d2c692d233fcafdbf446166676896eb"
+      },
+      {
+        "path": "assets/d/forge-backdrop-v2.webp",
+        "sha256": "74d11a3a34a9f066933e5f5995cd1a3cfc37339495c48759a3bac4ecab8f0851"
+      },
+      {
+        "path": "assets/d/forge-pennant-v1.webp",
+        "sha256": "5acb97d4d6eed7d50d2975e1d63e03bf5023f9cb4a8db8568ff8fa9660854a0a"
+      },
+      {
+        "path": "assets/d/guild-scroll-v1.webp",
+        "sha256": "695295f4d69d86c6ea79e884482eee3b0d6ab1643c61a2d9f4aa2d235086204e"
+      },
+      {
+        "path": "assets/d/hammer-forge-v2.webp",
+        "sha256": "174462711969925c8bc6a3a27a043ddb69d8d4f0c4f543ed83be0cad8134186e"
+      },
+      {
+        "path": "assets/d/hammer-heavy-v1.webp",
+        "sha256": "5609cf65ecc2a887f580d76be907d5c5196e202f500e9aa3806c20b39f883dd3"
+      },
+      {
+        "path": "assets/d/hammer-light-v1.webp",
+        "sha256": "bb2f802ef48756af9ac0051c31194d5d8e32d8be11ed83e20d180cb973da4234"
+      },
+      {
+        "path": "assets/d/hammer-standard-v1.webp",
+        "sha256": "30c2ab0bb57383aad563dcb78abf9b96d56d63c6665b3f945240f8ab27ff71e5"
+      },
+      {
+        "path": "assets/d/manifest.json",
+        "sha256": "790ea270419a058df9d2aa2224f708847e9e271857b05311f7d098560b80e196"
+      },
+      {
+        "path": "assets/d/metal-atlas-v1.webp",
+        "sha256": "d50d096a3951cf5a609fc0c81e48a38eb9eee0a97c3c05c47a674a5505d7dd67"
+      },
+      {
+        "path": "assets/d/notebook-cover-v1.webp",
+        "sha256": "3dfa792ac46bd940091764ac62fea2813db991178ed56d2c6c7920ebd430b1f9"
+      },
+      {
+        "path": "assets/d/oil-v1.webp",
+        "sha256": "cabe57bfa72e6d064cc8d31a4fe5f4b10ef1b9521d4a340905e3f48d4b7198c9"
+      },
+      {
+        "path": "assets/d/portraits-v1.webp",
+        "sha256": "fe52ff958203125c4e40a8a7566e536e7f1b5488c51b6ecc7088e43fb9e42ec3"
+      },
+      {
+        "path": "assets/d/trait-props-v1.webp",
+        "sha256": "11b900241ce1095845336ac8fe9c627a29e47d0a3ab8d2e9de63a91cb5496fff"
+      },
+      {
+        "path": "assets/d/v07/bridge-dark-v1.webp",
+        "sha256": "50c8dff8b69fbaa954d61d225613c65223d76a2aecb9ca2d82f495dcd350fce4"
+      },
+      {
+        "path": "assets/d/v07/bridge-lit-v1.webp",
+        "sha256": "ccd7d09fa51c4f79608930a9e6c95b929c39653202c8dde487797b471bd2577b"
+      },
+      {
+        "path": "assets/d/v07/events-v1.webp",
+        "sha256": "73751392e87e97a1091c4f2416fcac04a5597af7ebdf0cc7ce5b411743bb67d2"
+      },
+      {
+        "path": "assets/d/v07/lantern-road-v1.webp",
+        "sha256": "e3e3cb3a6b32c0b8fb8315fa4fa724a2facc09a7da153fdbe1153115734fa95a"
+      },
+      {
+        "path": "assets/d/v07/modifications-v1.webp",
+        "sha256": "beef13d0c9321b759fa044c7c47cfdd936f09315af7ee5d618c3085b072fb3a5"
+      },
+      {
+        "path": "assets/d/v07-chapter2/cracked-work-v1.webp",
+        "sha256": "bcb5323a59eb8bd53e9c18e7afc1ef87bc5f3e5bb1a78b78c959b940fc270fa5"
+      },
+      {
+        "path": "assets/d/v07-chapter2/rescue-path-v1.webp",
+        "sha256": "28a1bd26b08d66fe6748a50263d28bd1404123bff6b87e3be91b98024b21531a"
+      },
+      {
+        "path": "assets/d/v07-chapter2/returning-blade-v1.webp",
+        "sha256": "2ce00147936d876291eb708919f6bb8e6bf5fdc0ba64c08e21d50754ac4214da"
+      },
+      {
+        "path": "assets/d/v07-chapter2/twin-stations-dark-v1.webp",
+        "sha256": "ec92cb07af0c13553b092c12089637c32ba4e2057c80f2f7d963ec5141273f01"
+      },
+      {
+        "path": "assets/d/v07-chapter2/twin-stations-lit-v1.webp",
+        "sha256": "f168ab748d4146842603499af700379a459e60bb342171e99f1646f663ff1b33"
+      },
+      {
+        "path": "assets/d/v07-chapter2/twin-stations-one-v1.webp",
+        "sha256": "50968b0df21187032042671427ca8f3721d45a5254db40c504682b24f7c6d44c"
+      },
+      {
+        "path": "assets/d/v07-chapter2/winter-forge-v1.webp",
+        "sha256": "ff93be5848e112aa7c6b74a5a649cd5fc7341cf08faca03d1b218a4e3e7aca96"
+      },
+      {
+        "path": "assets/d/v07-chapter3/double-fire-work-v1.webp",
+        "sha256": "c94b9d9f89749e2db6ff76ab463367e780e6f9e6afaf8dfe1991aeec027636fa"
+      },
+      {
+        "path": "assets/d/v07-chapter3/ending-embers-v1.webp",
+        "sha256": "56b65cdaba916795e248f1a431b5b14b0d4fd2216de0df4ed69dfcff1fbee4cf"
+      },
+      {
+        "path": "assets/d/v07-chapter3/ending-homeward-v1.webp",
+        "sha256": "6a2105c91f0937af28e22db22992d3b5707765dd2a456fad91151547d6602cb7"
+      },
+      {
+        "path": "assets/d/v07-chapter3/ending-twelve-lights-v1.webp",
+        "sha256": "05cac8d98ff29b464374a5604e84fa844cd009a5a13e8cc85108eef1c3bafe8d"
+      },
+      {
+        "path": "assets/d/v07-chapter3/last-lantern-delivered-v1.webp",
+        "sha256": "897c0bfc12bd387ebd8f5e3005991d0b9c1cc32dece3900973baddbd6a53a127"
+      },
+      {
+        "path": "assets/d/v07-chapter3/mountain-gap-held-v1.webp",
+        "sha256": "af657ee742fe772738d2a12d37dccbd26546cf4bd833c6617674108713669421"
+      },
+      {
+        "path": "assets/d/v07-chapter3/mountain-pass-arrival-v1.webp",
+        "sha256": "7330d00aa07ddd97eee6faa22185dbf6a3d1439f4ed6ee657650feb77d382e8b"
+      },
+      {
+        "path": "assets/d/v07-chapter3/relay-complete-v1.webp",
+        "sha256": "aa750f3804dfc96aacb91437d87c86cbb0ca18d95cd563bfc9fc75ef826be01c"
+      },
+      {
+        "path": "assets/d/v07-chapter3/relay-one-v1.webp",
+        "sha256": "e428afac55345140ed426767056010917e3bf42e791425f720f0c653864d051f"
+      },
+      {
+        "path": "assets/d/water-v1.webp",
+        "sha256": "a0db1b1b4c9ee96d4ecc25f569b929aeda3e811bd457e5ad9f3792d1fff60c03"
+      },
+      {
+        "path": "assets/dom-_Gj4zwRX.js",
+        "sha256": "4d1195d7c837b770ff27341d2ddbfe82069f73f77664b6b2e2fd77bff138dbab"
+      },
+      {
+        "path": "assets/input-Csnfx8WT.js",
+        "sha256": "c3e1ea63bffee2b16ca5b15ebdba6cc3a6698e3986b577d061b06b10d332d1d4"
+      },
+      {
+        "path": "assets/legacy-6a5ggSZZ.js",
+        "sha256": "e1b32457a47fa7a7bcece8249e1a2880e3d03a96c0dd014b880572152db66adb"
+      },
+      {
+        "path": "assets/legacy-CidoUqtJ.css",
+        "sha256": "542a1875c5de6ec3b2fb043c7c5d2d7e6bcd19f35ebc0b6c82052c688703c12b"
+      },
+      {
+        "path": "assets/main-CHHEb8y7.css",
+        "sha256": "80a69cdb53584180eb37607168d2fbd990585020c5848c8709cc4fc089baccda"
+      },
+      {
+        "path": "assets/main-Cf9lIxaT.js",
+        "sha256": "2309ae5501dfd7092b7e16ec676284f901b50e129d00a4e5f3e87b7d72bed1aa"
+      },
+      {
+        "path": "assets/surface-BFcbf2qx.js",
+        "sha256": "c9804494ed5d8aa527b559a58548074637f755124f6f244da762dd4bf1d86cd0"
+      },
+      {
+        "path": "assets/v2-BZXpUCsX.js",
+        "sha256": "89a7366aa6e5870a7a2236ba71d910f7442a0f131d8815fe1d49766722a10028"
+      },
+      {
+        "path": "assets/v2-BgGChR3Q.css",
+        "sha256": "08bd72f2215e57d65bcfb4b513abe29599a25b8e6613986ef44c8f1d1c32f9dd"
+      },
+      {
+        "path": "assets/v3-B2PPc-K8.js",
+        "sha256": "44d85538596050995f6e3c3dbbf72f8069d8a2ff9d4980748ada29da314af63b"
+      },
+      {
+        "path": "assets/v3-D_5nutBJ.css",
+        "sha256": "6a09096d56bbd5e9b76e5ebbe1aa3e21f301c8c79b5593eb247cf897207704f7"
+      },
+      {
+        "path": "assets/v4-CpSVM-H-.js",
+        "sha256": "52dbdb771623c5dbefc4f3bbab2e97dcfd906e9f03a69270b98df458871afb09"
+      },
+      {
+        "path": "browser-session-BQdQqpuu.js",
+        "sha256": "8ebc49f8c7ee292c6dd0181cf3e209a669c3224aa54e15c394d912a471dbdee5"
+      },
+      {
+        "path": "core-CvAZnNjA.js",
+        "sha256": "d454eb5d786660f0a1132580582c6af8c2004b274337feb9f606cddbf76beb46"
+      },
+      {
+        "path": "favicon.ico",
+        "sha256": "da25888470751f1ee14d014bf1b4b2f28f9bd406012ca4745f4a872402720e63"
+      },
+      {
+        "path": "favicon.svg",
+        "sha256": "312f954b8a78cd7d2b571c406d2ee295c4f195e494491273bf44ba1bd5a3f0e7"
+      },
+      {
+        "path": "index.html",
+        "sha256": "e390d5775e9a036a43955c31cc9676fd2b32e49f2434ba0f1a238d65b0bb965e"
+      },
+      {
+        "path": "legacy.html",
+        "sha256": "9150e8250cd53658fca7ecc5f639e9188cd82cfd447a1ad78cce56a6966552da"
+      },
+      {
+        "path": "rules-CAo3EZyg.js",
+        "sha256": "758b82851aaf66fee126eabcc212cff0c95a2b9fed33f2a0e08b8bd52e5965ea"
+      },
+      {
+        "path": "sword-led-core.js",
+        "sha256": "3a75d8229c7e0840bfc0272d76964e1fa91d5d4fbe6faeab3689636bbfb321c4"
+      },
+      {
+        "path": "sword-led-session.js",
+        "sha256": "0fc2643db63596c9b55815db6bb4d0726a7a4d38a45db4102e7a8cfab25c35a8"
+      },
+      {
+        "path": "sword-led-v2.js",
+        "sha256": "618dd6e0552c9290b9ee4e2aa93f19a36a22e051ee0c593d20c94e0ae3e36afb"
+      },
+      {
+        "path": "sword-led-v3.js",
+        "sha256": "0406b190bde0646a940fb6180086b4805a63530964f456afaafc08042bb18ab2"
+      },
+      {
+        "path": "sword-led-v4.js",
+        "sha256": "0525dd1f3642af2a1a54e397e6023cd9baf4dcccda4c5af3b9ed721a92ae89e5"
+      },
+      {
+        "path": "sword-led-v5.js",
+        "sha256": "67a65a06214ae89e2c7f44ab379f5f7e403f2ee816a94e76bd8272e23b4a0f05"
+      },
+      {
+        "path": "v2.html",
+        "sha256": "690c522eb0d02cb292bdd591d7f4cdbf380899db0052e83f555d91d0465501b6"
+      },
+      {
+        "path": "v3.html",
+        "sha256": "2a4bc5c56205222492f500e4ebf59cc7adbfec05b5f29a294758641c6417bb42"
+      },
+      {
+        "path": "v4.html",
+        "sha256": "341d2c789ac6e3701b18d496e8069d53e308623729406d70119fed214023c5be"
+      }
+    ],
+    "publishedConsumerActualExitCode": 0
+  },
+  "originalFiveImplementationAndReviewRequirementsSatisfied": true,
+  "explicitOriginalApprovalsSatisfied": true,
+  "currentUnfixedMustfix": [],
+  "humanOverallPositiveEndorsement": false,
+  "humanFeedbackBoundary": "Original cost feedback received and repaired. No optional non-response or AI playthrough is human acceptance. No original requirement for a new positive approval after every patch.",
+  "completionRecordPendingReceiptCommit": true
+}
