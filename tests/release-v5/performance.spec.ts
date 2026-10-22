@@ -13,6 +13,14 @@ type Path=typeof paths[number];
 async function nativeInput(h:KeyboardV5,path:Path){
  if(path==='pointer')await h.page.locator('#v4-hit').click();else{await h.page.locator('#v4-strike').focus();await h.page.keyboard.press(path==='space'?'Space':'Enter');}
 }
+async function recordPageForeground(h:KeyboardV5,label:string){
+ const read=()=>h.page.evaluate(()=>({at:performance.now(),visibilityState:document.visibilityState,hidden:document.hidden,hasFocus:document.hasFocus()}));
+ const before=await read(),requested=process.env.V5_T03_BRING_TO_FRONT==='1';
+ // Optional owned-tab activation is explicitly recorded before measurement reset/first input.
+ // It does not preview audio, accept a game action, wait for focus, or retry a failed sample.
+ if(requested)await h.page.bringToFront();
+ const after=await read();await t03Record(h.info,label+'-foreground',{requested,operation:requested?'Playwright page.bringToFront once':'passive observation only',before,after,method:'Actual visibilityState/hidden/hasFocus on the page clock. Focus/blur/visibility events and per-RAF request/delivery state remain in runtime sample. No synthetic lifecycle event, window manipulation or causal host/GPU claim.'});
+}
 async function restoreTimed(h:KeyboardV5,source:RunState,label:string){
  const envelope=v5Envelopes(source);await h.page.waitForLoadState('networkidle');await h.page.goto('/assets/b/manifest.json');
  await h.page.evaluate(({envelope,keys})=>{for(const key of keys.filter(key=>key!=='sword-led.settings.v1'))localStorage.removeItem(key);localStorage.setItem('sword-led.save.v5',envelope.run);localStorage.setItem('sword-led.collection.v2',envelope.collection);},{envelope,keys:T03_KEYS});
@@ -29,7 +37,7 @@ async function restoreTimed(h:KeyboardV5,source:RunState,label:string){
   expect(pageProjectionReadyMs,'one real page-side Continue readiness observation').not.toBeNull();
   await h.page.locator('#v4-continue').click();await expect(h.page.locator('#v4-workshop')).toBeVisible();
   const continueEvents=await h.page.evaluate(()=>window.v5AcceptedDiagnostics.continueEvents);expect(continueEvents).toHaveLength(1);expect(continueEvents[0]).toMatchObject({trusted:true,workshopVisible:true});expect(continueEvents[0]!.cost).not.toBeNull();
-  const load={navigationToReadyMs,observedUpperMs:navigationToReadyMs,pageProjectionReadyMs,projection,observedAfterProjectionMs:pageProjectionReadyMs===null?null:navigationToReadyMs-pageProjectionReadyMs,bytes:Buffer.byteLength(envelope.run),journal:source.journal.length,continueEvents,continueMethod:'Page clock capture→bubble interval of the real Continue click. Product may initialize audio here; consumer does not preview, mute or warm it. Original post-Playwright observed upper bound remains alongside the first page-side visible/enabled projection.'};await t03Record(h.info,label+'-load',load);return load;
+  const load={navigationToReadyMs,observedUpperMs:navigationToReadyMs,pageProjectionReadyMs,projection,observedAfterProjectionMs:pageProjectionReadyMs===null?null:navigationToReadyMs-pageProjectionReadyMs,bytes:Buffer.byteLength(envelope.run),journal:source.journal.length,continueEvents,continueMethod:'Page clock capture→bubble interval of the real Continue click. Product may initialize audio here; consumer does not preview, mute or warm it. Original post-Playwright observed upper bound remains alongside the first page-side visible/enabled projection.'};await t03Record(h.info,label+'-load',load);await recordPageForeground(h,label);return load;
  }catch(error){await t03Record(h.info,label+'-load-failure',{error:String(error),navigationToReadyMs,raw:await readAcceptedRaw(h.page),runtime:await h.page.evaluate(()=>({sample:window.t03Runtime.sample(),continueReady:window.v5AcceptedDiagnostics.continueReady}))});throw error;}
 }
 function actualHandlers(sample:T03RuntimeSample,path:Path){return sample.handlers.filter(row=>row.trusted&&(path==='pointer'?row.type==='pointerdown'&&row.target==='button#v4-hit':path==='space'?row.type==='keyup'&&row.target==='window'&&row.key==='Space':row.type==='keydown'&&row.target==='button#v4-strike'&&row.key==='Enter'));}

@@ -39,11 +39,28 @@ async function prepared(page:Page,info:TestInfo,faults:AudioFaults={},fixture?:S
  return h;
 }
 function outputGraph(snapshot:ReleaseAudioSnapshot){
- expect(snapshot.contexts).toBe(1);const master=snapshot.nodes.find(node=>node.kind==='master'),destination=snapshot.nodes.find(node=>node.kind==='destination'),analyser=snapshot.nodes.find(node=>node.kind==='post-master-analyser');
- if(!master||!destination||!analyser)throw Error('Native master/destination/analyser missing');
- expect(snapshot.edges.some(edge=>edge.from===master.id&&edge.to===destination.id)).toBe(true);
- expect(snapshot.edges.some(edge=>edge.from===master.id&&edge.to===analyser.id)).toBe(true);
- for(const source of snapshot.sources){const envelope=snapshot.edges.find(edge=>edge.from===source.id);expect(envelope).toBeDefined();expect(snapshot.nodes.find(node=>node.id===envelope!.to)?.kind).toBe('envelope');expect(snapshot.edges.some(edge=>edge.from===envelope!.to&&edge.to===master.id)).toBe(true);}
+ expect(snapshot.contexts).toBeGreaterThan(0);expect(snapshot.states).toHaveLength(snapshot.contexts);expect(snapshot.contextClocks).toHaveLength(snapshot.contexts);
+ expect(snapshot.states.filter(state=>state!=='closed').length).toBeLessThanOrEqual(1);
+ const nodes=new Map(snapshot.nodes.map(node=>[node.id,node]));expect(nodes.size).toBe(snapshot.nodes.length);
+ for(const node of snapshot.nodes){expect(Number.isInteger(node.context)).toBe(true);expect(node.context).toBeGreaterThan(0);expect(node.context).toBeLessThanOrEqual(snapshot.contexts);}
+ for(const edge of snapshot.edges){const from=nodes.get(edge.from),to=nodes.get(edge.to);expect(from).toBeDefined();expect(to).toBeDefined();expect(from!.context).toBe(to!.context);}
+ expect(new Set(snapshot.sources.map(source=>source.id)).size).toBe(snapshot.sources.length);expect(snapshot.sources).toHaveLength(snapshot.starts);
+ for(let context=1;context<=snapshot.contexts;context++){
+  const clock=snapshot.contextClocks.find(value=>value.context===context);expect(clock).toBeDefined();expect(clock!.state).toBe(snapshot.states[context-1]);
+  if(context<snapshot.contexts)expect(snapshot.states[context-1]).toBe('closed');
+  const graph=snapshot.nodes.filter(node=>node.context===context),masters=graph.filter(node=>node.kind==='master'),destinations=graph.filter(node=>node.kind==='destination'),analysers=graph.filter(node=>node.kind==='post-master-analyser');
+  expect(masters).toHaveLength(1);expect(destinations).toHaveLength(1);expect(analysers).toHaveLength(1);const master=masters[0]!,destination=destinations[0]!,analyser=analysers[0]!;
+  const outputs=snapshot.edges.filter(edge=>edge.from===master.id);expect(outputs).toHaveLength(2);expect(outputs.map(edge=>edge.to).sort((a,b)=>a-b)).toEqual([destination.id,analyser.id].sort((a,b)=>a-b));
+  const sources=snapshot.sources.filter(source=>source.context===context);
+  if(snapshot.states[context-1]==='closed')expect(sources.every(source=>source.disconnected)).toBe(true);
+  for(const source of sources){
+   const oscillator=nodes.get(source.id);expect(oscillator).toMatchObject({id:source.id,kind:'oscillator',context});
+   const connections=snapshot.edges.filter(edge=>edge.from===source.id);expect(connections).toHaveLength(1);const envelope=nodes.get(connections[0]!.to);expect(envelope).toMatchObject({kind:'envelope',context});
+   const envelopes=snapshot.edges.filter(edge=>edge.from===envelope!.id);expect(envelopes).toHaveLength(1);expect(envelopes[0]!.to).toBe(master.id);
+   expect(source.path).toEqual({oscillator:source.id,envelope:envelope!.id,master:master.id,analyser:analyser.id,destination:destination.id});
+  }
+ }
+ for(const source of snapshot.sources)expect(nodes.get(source.id)?.context).toBe(source.context);
  expect(snapshot.maxActive).toBeLessThanOrEqual(12);
 }
 async function record(info:TestInfo,label:string,details:Record<string,unknown>){await writeFile(info.outputPath(`audio-${label}.json`),JSON.stringify({label,project:info.project.name,scope:'Native AudioContext graph, post-master waveform and trusted UI inputs. Named platform faults are test-only. No physical speaker/listening/OS-volume approval.',...details},null,2));}

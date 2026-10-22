@@ -121,3 +121,19 @@ T03当前build12实际验证：audio-cue-preflight02/99990 actual0（FF1有窗�
 付款UI01实际1（422/82 endfp matches）：普通出售/留剑/合格报价两尺寸和说明零写已消费，完成委托回执中的既有“收下第一门手艺”按钮只有40px，未达原44px交互门；定点把当前v5 #v4-inline-review min-height提至44，不改布局门/consumer或经济。golden02实际0（4908边、25路径、32检查点、174所有权检查，所有读入原字节保持），旧新v5SDK同值/输入隔离有限证明成立；不是性能或六项目证明。下一先完成付款小消费并发布产品进度，不让低优先级全矩阵阻塞已经修好的用户界面；T03余项仍明确保留且不勾选。
 
 付款03实际0，完整普通出售/委托/第8天分付158与127、留剑/钱袋耗尽、说明零写均过，422/82指纹保持；root人工实图发现1920交付按钮默认大字导致“铜钱”拆行，虽geometry未溢出也不应交付。只在当前v5宽屏主交付button用22px/nowrap，1280的18px保留；再做同一最小消费与人工看图，不扩测。
+
+## T03报价交付后的收尾（2026-10-22，基线15bad19）
+
+上轮是实际progress：报价UI source ca4d852与回执15bad19已推送，9blob及新82文件4179真实消费验证。用户的清晰度反馈已处理，不重复付款04/无关384；T03仍未完成。先核新分配优化后的原生短/1890长档FF DPR2实际加载，原3000/150/200与帧门保持；测试探针仅补真实可见/焦点和rAF请求/交付状态，必要显式bringToFront只作用于自有测量窗口，记录操作前后、不加等待或模拟事件。保留原红和既有身份，不能归因缓存/分配即已证明流畅。
+
+当前依赖变动所需尾项：原生6、音频23×6、legacy18、当前资源/生命周期/可读性两尺寸定向、性能剩余；受控调度和输入的既有通过保原身份并按独立golden/像素对照解释连续性。运行一批时固定source/consumer/dist，不并发浏览器或SDK重工作扰动性能。补一次真实冷首屏资源测量、正式归档raw独立回放及三task联合review，按实际失败修缮；全部责任有据前T03不[x]。回滚新增revert/保留预览快照，原件/失败不删，既有价格/规则/schema/美术不改。
+
+T03 audio02 actual137过1红、webkit-title-authority01固定3次2过1红，均417/82结束指纹相同。失败新Continue与hit真实userActivation/focus/visible均true；复现中fresh native resume在1318启动，而旧suspend1/3/5/6到1319–1320才settle，新resume随后始终悬挂。当前代码注释要求resume排在native suspend后，但实际直接调用own.resume，WebKit并非按期望序列完成。先最小实现真实promise顺序：仅当本context有已记录的未完suspend时，等该原生Promise完成且当前activation仍有效后调用resume；不是timer/sleep、合成授权或放宽门，不改音色/queue/玩法。保存旧a18+cuequeue当前源，更新现有audio例外SHA；原始baseline与所有首红保留。该有据修补仅先固定三次原title复验，再核受影响音频/生命周期/legacy，不预填全修或抹audio02那次after-suspend仍挂的历史差异。
+
+静态反证在build17后、任何consumer前发现：interrupted/suspended的旧native suspend可能需要新的resume才能settle，故无条件等它会堵住“真实新局先running后释放旧请求”的已有责任。收紧为只在原首红的running＋tracked pending suspend窗口串行；suspended/interrupted仍由真实手势立即resume。旧build17实验源另存，尚未运行不冒称实际回归；此条件已由A独立只读审查赞同，再build18后核title/newrun/freshpreview固定三次。
+
+T03 native-suspend-order01实际3过6红：3title+3newrun最终freshwave0；其中五次native已running/时钟推进，但旧suspend#3Promise永不settle，串行策略新增永久等待。保存该失败候选完整源，恢复精确6d86原cuequeue基础后采用资源归属修补：仅过期resume完成且无较新有效同context授权时退休该旧context；只own===current才stop/清ownmaster/currentrefs，关闭一次并移listener；不同新context不碰。下一真实gesture才新建并实际resume，普通已完成声音的pause仍suspend，较新合法newrun/preview接续不退休。之前retire曾在headless未解决输出clock而移除，本次根据新WebKit重复旧controlPromise证据重新验证，不宣称解决headless旧红。无timer/阈值/声音/规则更改；先原title/newrun/freshpreview固定3复验，其他全矩阵仍待现版依据。
+
+T03 audio03实际133过5红：四个20往返是旧outputGraph死认仅一个实例（已真实旧closed/断开、新唯一running/有wave），另一WebKit1 title是真native running-clock0：旧close1110已完成，新ctx2构造1142，native resume1143→1160完成，真实hit1220/3正确sources1299/contact1300后5秒clock仍0。无旧回调操作新ctx，不能用closebarrier或把5项全叫consumer。固定9曾过不当全修。本次只给真实V5 trusted非repeat capture增加已有runningfastpath的native.resume重申；gesture参数默认false保其他调用，commit仍false避免同input双call；fastpath保持即时ready、不建pending/不增epoch、不退休、不补cue，失败仅exact-current所有权可降级。初始/暂停/已挂pending路径不动，不宣称解决pending挂起。WebKit官方263627/276687有类似clock状态报告但多属移动端，不证明本PC同因；该候选仅根据本地观测验证，原严格wave门保持。
+
+T03 running-native-refresh-title01固定10次实际8过2红（原wave门，417/82结束全等），再次native.resume亦未稳定修复WebKit原生时钟。按用户“测试与兼容最低优先级”停止这条候选循环，明确保留声音未闭项，不暂停整个goal或取消剩余责任。所有不稳定产品实验与其legacy适配完整另存后，恢复精确已发布6d86音频、app原onGesture和legacy两个原consumer字节；当前试玩始终是build16，没有发布这些候选。测试的被动焦点/授权观察和按context完整graph验证保留。还原首脚本只完成audio/app后因legacy原件路径错而停止，build21随后实际0；之后按已确认路径完成legacy测试原件与例外记录修复，未改product产物，另做严格类型核对。须证实build21的82产物与已发布快照全等，原native04/cold01/coreload03则保持本版证据身份。继续剩余非声音21×6、旧版18、独立raw/联合复核；WebKit声音仍未关闭，T03/goal不冒记完成。

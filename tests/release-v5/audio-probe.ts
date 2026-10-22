@@ -8,11 +8,13 @@ interface SourceRecord {id:number;at:number;when:number;frequency:number;type:Os
 interface CaptureReset {serial:number;at:number;contexts:{context:number;currentTime:number;state:AudioContextState}[]}
 interface WaveformWindow {resetSerial:number;at:number;gapMs:number|null;context:number;currentTime:number;state:AudioContextState;peak:number;activeSourceIds:number[];masterGainValue:number;analyser:number;fftSize:number;windowDurationMs:number}
 interface MasterGainCall {resetSerial:number;at:number;context:number;currentTime:number;master:number;method:string;args:number[];valueBefore:number;valueAfter:number}
-interface AudioCapture {peak:number;samples:number;contacts:{at:number;outcome:string}[];inputs:{at:number;type:string;trusted:boolean}[];resetSerial:number;resetAt:number;resets:CaptureReset[];windows:WaveformWindow[];peakWindow:WaveformWindow|null;maxSampleGapMs:number;lastSampleAt:number|null}
-interface ButtonClickObservation {sequence:number;at:number;id:string;label:string;trusted:true;starts:number;activeSourceIds:number[]}
+interface AudioCapture {peak:number;samples:number;contacts:{at:number;outcome:string}[];inputs:({at:number;type:string;trusted:boolean}&AuthorityState)[];resetSerial:number;resetAt:number;resets:CaptureReset[];windows:WaveformWindow[];peakWindow:WaveformWindow|null;maxSampleGapMs:number;lastSampleAt:number|null}
+interface AuthorityState {hasFocus:boolean;visibilityState:DocumentVisibilityState;hidden:boolean;userActivation:{isActive:boolean;hasBeenActive:boolean}|null}
+interface TrustedInputObservation extends AuthorityState {at:number;type:string;targetId:string;label:string;key:string|null;code:string|null;button:number|null}
+interface ButtonClickObservation extends AuthorityState {sequence:number;at:number;id:string;label:string;trusted:true;starts:number;activeSourceIds:number[]}
 interface NativeContextClock {context:number;state:AudioContextState;currentTime:number;sampleRate:number;baseLatency:number|null;outputTimestamp:{contextTime:number|null;performanceTime:number|null}|{error:string}|null}
 interface NativeConstruction {context:number;superBeginAt:number;superReturnAt:number;state:AudioContextState;currentTime:number}
-interface NativeOperation {id:number;parent:number|null;kind:'resume'|'suspend'|'close';origin:'resume-call'|'suspend-call'|'close-call'|'held-release';phase:'request'|'held'|'native-start'|'settled'|'rejected'|'threw'|'fault-rejected';at:number;context:number;state:AudioContextState;currentTime:number;error?:string}
+interface NativeOperation extends AuthorityState {id:number;parent:number|null;kind:'resume'|'suspend'|'close';origin:'resume-call'|'suspend-call'|'close-call'|'held-release';phase:'request'|'held'|'native-start'|'settled'|'rejected'|'threw'|'fault-rejected';at:number;context:number;state:AudioContextState;currentTime:number;error?:string}
 interface ReleaseAudioProbe {
  contexts:AudioContext[];analysers:AnalyserNode[];active:Set<OscillatorNode>;nodes:NodeRecord[];
  edges:{from:number;to:number;at:number}[];sources:SourceRecord[];frequencies:number[];
@@ -20,7 +22,7 @@ interface ReleaseAudioProbe {
  deferred:boolean;faults:AudioFaults;releaseResume?:()=>Promise<void>;capture:AudioCapture;resetCapture():void;
  lifecycle:{at:number;type:string;trusted:boolean;hidden:boolean}[];
  states:{at:number;context:number;state:AudioContextState}[];
- buttonClicks:ButtonClickObservation[];
+ buttonClicks:ButtonClickObservation[];trustedInputs:TrustedInputObservation[];readAuthority():AuthorityState;
  operations:NativeOperation[];constructions:NativeConstruction[];masterGainCalls:MasterGainCall[];readClocks():NativeContextClock[];
 }
 declare global {interface Window {v5ReleaseAudio:ReleaseAudioProbe}}
@@ -28,8 +30,9 @@ declare global {interface Window {v5ReleaseAudio:ReleaseAudioProbe}}
 /** Self-contained initializer also serialized for the separately owned native Chrome/CDP consumer. */
 export function initializeReleaseAudioProbe(faults:AudioFaults={}){
   const NativeContext=window.AudioContext;
+  const authority=():AuthorityState=>{const activation=navigator.userActivation;return{hasFocus:document.hasFocus(),visibilityState:document.visibilityState,hidden:document.hidden,userActivation:activation?{isActive:activation.isActive,hasBeenActive:activation.hasBeenActive}:null};};
   const capture:AudioCapture={peak:0,samples:0,contacts:[],inputs:[],resetSerial:0,resetAt:performance.now(),resets:[],windows:[],peakWindow:null,maxSampleGapMs:0,lastSampleAt:null};
-  const probe:ReleaseAudioProbe={contexts:[],analysers:[],active:new Set(),nodes:[],edges:[],sources:[],frequencies:[],constructors:0,starts:0,stops:0,maxActive:0,resumeCalls:0,suspendCalls:0,closeCalls:0,deferred:false,faults:{...faults},capture,lifecycle:[],states:[],buttonClicks:[],operations:[],constructions:[],masterGainCalls:[],readClocks(){return this.contexts.map((context,index)=>{
+  const probe:ReleaseAudioProbe={contexts:[],analysers:[],active:new Set(),nodes:[],edges:[],sources:[],frequencies:[],constructors:0,starts:0,stops:0,maxActive:0,resumeCalls:0,suspendCalls:0,closeCalls:0,deferred:false,faults:{...faults},capture,lifecycle:[],states:[],buttonClicks:[],trustedInputs:[],readAuthority:authority,operations:[],constructions:[],masterGainCalls:[],readClocks(){return this.contexts.map((context,index)=>{
    let outputTimestamp:NativeContextClock['outputTimestamp']=null;
    try{if(typeof context.getOutputTimestamp==='function'){const stamp=context.getOutputTimestamp();outputTimestamp={contextTime:stamp.contextTime??null,performanceTime:stamp.performanceTime??null};}}catch(error){outputTimestamp={error:String(error)};}
    return{context:index+1,state:context.state,currentTime:context.currentTime,sampleRate:context.sampleRate,baseLatency:typeof context.baseLatency==='number'?context.baseLatency:null,outputTimestamp};
@@ -57,7 +60,7 @@ export function initializeReleaseAudioProbe(faults:AudioFaults={}){
    return{oscillator,envelope,master:masterId,analyser:outputs.find(id=>probe.nodes.some(node=>node.id===id&&node.kind==='post-master-analyser'))??null,destination:outputs.find(id=>probe.nodes.some(node=>node.id===id&&node.kind==='destination'))??null};
   }
   function operation(context:AudioContext,contextId:number,id:number,parent:number|null,kind:NativeOperation['kind'],origin:NativeOperation['origin'],phase:NativeOperation['phase'],error?:unknown){
-   const entry:NativeOperation={id,parent,kind,origin,phase,at:performance.now(),context:contextId,state:context.state,currentTime:context.currentTime};if(error!==undefined)entry.error=String(error);
+   const entry:NativeOperation={id,parent,kind,origin,phase,at:performance.now(),context:contextId,state:context.state,currentTime:context.currentTime,...authority()};if(error!==undefined)entry.error=String(error);
    probe.operations.push(entry);if(probe.operations.length>512)probe.operations.shift();
   }
   function observeNative(context:AudioContext,contextId:number,id:number,parent:number|null,kind:NativeOperation['kind'],origin:NativeOperation['origin'],run:()=>Promise<void>){
@@ -125,12 +128,16 @@ export function initializeReleaseAudioProbe(faults:AudioFaults={}){
   const observe=()=>observer.observe(document,{subtree:true,attributes:true,attributeFilter:['data-outcome']});
   observe();
   for(const type of ['pointerdown','keydown','keyup'])window.addEventListener(type,event=>{
+   if(event.isTrusted){
+    const target=event.composedPath().find(value=>value instanceof HTMLElement),element=target instanceof HTMLElement?target:null;
+    probe.trustedInputs.push({at:performance.now(),type,targetId:element?.id??'',label:(element?.textContent??'').replace(/\s+/g,' ').trim().slice(0,120),key:event instanceof KeyboardEvent?event.key:null,code:event instanceof KeyboardEvent?event.code:null,button:event instanceof MouseEvent?event.button:null,...authority()});if(probe.trustedInputs.length>256)probe.trustedInputs.shift();
+   }
    if(!event.composedPath().some(target=>target instanceof HTMLElement&&['v4-hit','v4-strike'].includes(target.id)))return;
-   capture.inputs.push({at:performance.now(),type,trusted:event.isTrusted});if(capture.inputs.length>128)capture.inputs.shift();
+   capture.inputs.push({at:performance.now(),type,trusted:event.isTrusted,...authority()});if(capture.inputs.length>128)capture.inputs.shift();
   },true);
   window.addEventListener('click',event=>{
    if(!event.isTrusted)return;const button=event.composedPath().find(target=>target instanceof HTMLButtonElement);if(!(button instanceof HTMLButtonElement))return;
-   probe.buttonClicks.push({sequence:++clickSequence,at:performance.now(),id:button.id,label:(button.textContent??'').replace(/\s+/g,' ').trim().slice(0,200),trusted:true,starts:probe.starts,activeSourceIds:[...probe.active].map(source=>ids.get(source)!)});
+   probe.buttonClicks.push({sequence:++clickSequence,at:performance.now(),id:button.id,label:(button.textContent??'').replace(/\s+/g,' ').trim().slice(0,200),trusted:true,starts:probe.starts,activeSourceIds:[...probe.active].map(source=>ids.get(source)!),...authority()});
    if(probe.buttonClicks.length>256)probe.buttonClicks.shift();
   },true);
   for(const type of ['blur','focus','pagehide','pageshow'])window.addEventListener(type,event=>{probe.lifecycle.push({at:performance.now(),type,trusted:event.isTrusted,hidden:document.hidden});});
@@ -155,7 +162,7 @@ export async function installReleaseAudioProbe(page:Page,options:AudioFaults={})
 export function releaseAudioProbeSource(options:AudioFaults={}){return `(${initializeReleaseAudioProbe.toString()})(${JSON.stringify(options)});`;}
 export function readReleaseAudioSnapshot(){
   const p=window.v5ReleaseAudio;
-  return{constructors:p.constructors,contexts:p.contexts.length,states:p.contexts.map(context=>context.state),contextClocks:p.readClocks(),constructions:p.constructions,starts:p.starts,stops:p.stops,active:p.active.size,maxActive:p.maxActive,resumeCalls:p.resumeCalls,suspendCalls:p.suspendCalls,closeCalls:p.closeCalls,frequencies:p.frequencies,nodes:p.nodes,edges:p.edges,sources:p.sources,statesObserved:p.states,lifecycle:p.lifecycle,buttonClicks:p.buttonClicks,operations:p.operations,masterGainCalls:p.masterGainCalls,captureResetSerial:p.capture.resetSerial,captureResetAt:p.capture.resetAt,captureResets:p.capture.resets,waveformWindows:p.capture.windows,peakWindow:p.capture.peakWindow,maxSampleGapMs:p.capture.maxSampleGapMs,capturedPeak:p.capture.peak,sampledWindows:p.capture.samples,contacts:p.capture.contacts,inputs:p.capture.inputs,deferred:p.deferred,hasDeferredResume:typeof p.releaseResume==='function',faults:p.faults};
+  return{constructors:p.constructors,contexts:p.contexts.length,states:p.contexts.map(context=>context.state),contextClocks:p.readClocks(),constructions:p.constructions,starts:p.starts,stops:p.stops,active:p.active.size,maxActive:p.maxActive,resumeCalls:p.resumeCalls,suspendCalls:p.suspendCalls,closeCalls:p.closeCalls,frequencies:p.frequencies,nodes:p.nodes,edges:p.edges,sources:p.sources,statesObserved:p.states,lifecycle:p.lifecycle,inputAuthority:p.readAuthority(),trustedInputs:p.trustedInputs,buttonClicks:p.buttonClicks,operations:p.operations,masterGainCalls:p.masterGainCalls,captureResetSerial:p.capture.resetSerial,captureResetAt:p.capture.resetAt,captureResets:p.capture.resets,waveformWindows:p.capture.windows,peakWindow:p.capture.peakWindow,maxSampleGapMs:p.capture.maxSampleGapMs,capturedPeak:p.capture.peak,sampledWindows:p.capture.samples,contacts:p.capture.contacts,inputs:p.capture.inputs,deferred:p.deferred,hasDeferredResume:typeof p.releaseResume==='function',faults:p.faults};
 }
 export async function releaseAudioSnapshot(page:Page){return page.evaluate(readReleaseAudioSnapshot);}
 export type ReleaseAudioSnapshot=Awaited<ReturnType<typeof releaseAudioSnapshot>>;
