@@ -1,0 +1,80 @@
+{
+  "at": "2026-10-22T15:08:23.042580+00:00",
+  "sourceCommit": "ca4d85247a217722ab1fe98b7746756e21db7523",
+  "freshRemoteMain": "ca4d85247a217722ab1fe98b7746756e21db7523",
+  "actualPushHandle": 43845,
+  "actualPushProcess": {
+    "label": "payment-source-push-01",
+    "startedAt": "2026-10-22T15:04:07.965839+00:00",
+    "command": [
+      "rtk",
+      "proxy",
+      "git",
+      "push",
+      "origin",
+      "main"
+    ],
+    "cwd": "/Users/gordon/githome/sword-led",
+    "status": "terminal",
+    "pid": 79249,
+    "completedAt": "2026-10-22T15:04:21.194035+00:00",
+    "actualExitCode": 0
+  },
+  "blobs": [
+    {
+      "path": "src/presentation-v5/payment-copy.ts",
+      "gitBlob": "3f5b0cc48b6cd33d34c17ba25c8aba6ac70023ec",
+      "sha256": "d06bda691e0e7ddd9859f80f976db89312ee84f37ca4e551bf149e5edcc892eb",
+      "matches": true
+    },
+    {
+      "path": "src/presentation-v5/app.ts",
+      "gitBlob": "241bc7b2477e5c8902ea20ca0ae3ca25f803e62b",
+      "sha256": "58da48d6c84b212043b9a3e2dbb63bfd70aceaacf7bad55d64ef002abaa76289",
+      "matches": true
+    },
+    {
+      "path": "src/presentation-v5/economy.css",
+      "gitBlob": "90a8650aae44db541b69c828647de5d08ac2fe96",
+      "sha256": "a621912f178181b4a172bfb394c72ad0a4d985ba48682f9fa79da92aeaf03372",
+      "matches": true
+    },
+    {
+      "path": "src/platform/audio.ts",
+      "gitBlob": "7f27e28fe99a5efbc53501db4901401218c75264",
+      "sha256": "6d86b2b4d4f4c35f32f8128110d66cb6f94587b870e3e27522d61f576119b263",
+      "matches": true
+    },
+    {
+      "path": "src/presentation-v4/forge.ts",
+      "gitBlob": "b8977de1ce56f35d02c57b73ba08a1bacf566460",
+      "sha256": "91905bd97d60bf57d5bea137836ba7f4a5855e98aa850916d1b09517e76270a2",
+      "matches": true
+    },
+    {
+      "path": "src/core-v5/game.ts",
+      "gitBlob": "aed6afa6eb512df59f3c80901eb6f772bd7893f2",
+      "sha256": "0d5306cd2dd750c8a90296dcd7fad6862d3ffd6b1bf0c5602059bd6700cdaa59",
+      "matches": true
+    },
+    {
+      "path": "docs/reviews/G4-T03-payment-progress.md",
+      "gitBlob": "535416dfe44df00e9f8186cec56af21b77d83264",
+      "sha256": "c54f9ddeaa1d7e3d217bf5b61816ff25e55466bd7f13bf2dbfef0dbe8e0f6073",
+      "matches": true
+    },
+    {
+      "path": "docs/evidence/G4-T03-payment-progress/manifest.json",
+      "gitBlob": "0e5694a68d00844398890e8b3798cae8755a28bd",
+      "sha256": "ef7481bde8076ba016e75e315767e6447d6d84ada2e28abe8902b00aafa456fd",
+      "matches": true
+    },
+    {
+      "path": "README.md",
+      "gitBlob": "16c54e7f07235fbe4c42c718e18312f5a4381ff9",
+      "sha256": "84d958e23a7a2855222929d8132de3ea530ce3fde9bcb7a214469dc78de38971",
+      "matches": true
+    }
+  ],
+  "wholeGoalComplete": false
+}

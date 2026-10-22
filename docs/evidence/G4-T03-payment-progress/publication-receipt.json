@@ -1,0 +1,119 @@
+{
+  "at": "2026-10-22T15:12:26.684038+00:00",
+  "sourceCommit": "ca4d85247a217722ab1fe98b7746756e21db7523",
+  "sourcePushActualExit": 0,
+  "githubBlobsMatched": 9,
+  "preview": {
+    "url": "http://127.0.0.1:4179/",
+    "session": 89058,
+    "pid": 79317,
+    "snapshot": "tmp/previews/G4-T03-payment-clarity",
+    "httpFilesMatched": 82,
+    "actualLeftClicks": 3,
+    "boundDelivery": 1,
+    "rawExport": true,
+    "quoteModalZeroWrite": true,
+    "pageErrors": []
+  },
+  "earlierSmokeFailure": "First published smoke inherited old steady trait display word 身价; current v5 UI intentionally says 估值. Consumer02 exact expected current term only; source/runtime unchanged; first failure preserved.",
+  "files": [
+    {
+      "source": "tmp/goal4-T03/payment-snapshot.json",
+      "archived": "docs/evidence/G4-T03-payment-progress/publication/payment-snapshot.json.gz",
+      "sha256": "eed3aee842c1f241a0c7a99a3b0022d61d44d08cd99caaddc7219af785f6b8e8",
+      "gzipSha256": "364dae79a019bf4392c464ab609e51ad5cbb16d3f7840f487b285432ec625e34"
+    },
+    {
+      "source": "tmp/goal4-T03/payment-published.json",
+      "archived": "docs/evidence/G4-T03-payment-progress/publication/payment-published.json.gz",
+      "sha256": "f2f33b26f8f18f816aa08b0fbfc218ba53c525c481201184b0a0fb7b9a715f5b",
+      "gzipSha256": "8405a2b4b3540c648f63b91731cb5d132e4d48669fe6cb65ca187ec353fe0e38"
+    },
+    {
+      "source": "tmp/goal4-T03/payment-published-raw-run.json",
+      "archived": "docs/evidence/G4-T03-payment-progress/publication/payment-published-raw-run.json.gz",
+      "sha256": "0c579a6454af4ae453fba1a1c3676c691e2c620f779f13f793f0fc48571deedf",
+      "gzipSha256": "f8a37d789078a1d90e0ef84e3cb54fabbbe1228864411601e5d6a86d7048bfae"
+    },
+    {
+      "source": "tmp/goal4-T03/payment-publish.mjs",
+      "archived": "docs/evidence/G4-T03-payment-progress/publication/payment-publish.mjs.gz",
+      "sha256": "7721ca181680abe43f88611bd6593c43b8bdf29051d994a964db8f843e0486cc",
+      "gzipSha256": "98fc2057e2030e9991a5cd364adfa3c949657cfcd40312a03fe0780c61f84b2c"
+    },
+    {
+      "source": "tmp/goal4-T03/payment-publish-02.mjs",
+      "archived": "docs/evidence/G4-T03-payment-progress/publication/payment-publish-02.mjs.gz",
+      "sha256": "c06f29f2702bae8e8622e42fcc85998cce6a713eacf7c241f3406096be379e50",
+      "gzipSha256": "85b740dcc5fad1f43b920145d6327c20b6241b98f62cd6c7fb39533abfa0ef14"
+    },
+    {
+      "source": "tmp/goal4-T03/check-payment-publication.py",
+      "archived": "docs/evidence/G4-T03-payment-progress/publication/check-payment-publication.py.gz",
+      "sha256": "84e46781b5f2764d91439e8a8f20a4d2dbc528845f4b5c8282911f11daa25fc6",
+      "gzipSha256": "771f641e1012f3a4950ef8c5bcda1864ac2bf859b4f6b8cafe77e1b9fc8d0300"
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-source-commit-01/process.json",
+      "archived": "docs/evidence/G4-T03-payment-progress/publication/runs/payment-source-commit-01/process.json.gz",
+      "sha256": "2abeea8026f6153601b49fc0834a510907a01ac1e181a738a91105afa9f02fd9",
+      "gzipSha256": "e6d8b90252cc423a19d41045c4ce55eb72efbeb2513a1df1e3d6bfca7eb547d8"
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-source-commit-01/stdout.log",
+      "archived": "docs/evidence/G4-T03-payment-progress/publication/runs/payment-source-commit-01/stdout.log.gz",
+      "sha256": "5afb624796badd7f4da328457d757132b860364c1715bcada01adde7baadf7b1",
+      "gzipSha256": "45b748387b766158c0ab5feabff1b926e95d621525dba165e12e9a7d9b55b70b"
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-source-push-01/process.json",
+      "archived": "docs/evidence/G4-T03-payment-progress/publication/runs/payment-source-push-01/process.json.gz",
+      "sha256": "02ab6b5da627502f0486b098c679bcba0accd2b2a3c97092c8ce50ae3c2d47e9",
+      "gzipSha256": "3898b35502eb0389b7509313000e388e42573394ca3f077f751556d679be8c0c"
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-source-push-01/stdout.log",
+      "archived": "docs/evidence/G4-T03-payment-progress/publication/runs/payment-source-push-01/stdout.log.gz",
+      "sha256": "8fb4daa96ba587df3642115e6e3f01a7e5b57681ab9038830b51f64078f7c258",
+      "gzipSha256": "1c9c6c257c8ec201f85bf8969dbaffcedcc29a86baaf59ab264aaec38271e797"
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-source-publication-01/process.json",
+      "archived": "docs/evidence/G4-T03-payment-progress/publication/runs/payment-source-publication-01/process.json.gz",
+      "sha256": "222f8ac8a7229be7631d67a172d5665f2a440a3914c230f64a39c07f29f3cff6",
+      "gzipSha256": "632bafa2e4ecf4bc6b19d5494d49337507e0f84a9b61b10c9da007b2ab05d715"
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-source-publication-01/stdout.log",
+      "archived": "docs/evidence/G4-T03-payment-progress/publication/runs/payment-source-publication-01/stdout.log.gz",
+      "sha256": "da2cb315ad9dcc943fad5bca6e067366e5e09c40c8e619be793fe3857461148c",
+      "gzipSha256": "fdfab4707a368990615259be953a0d351aa56cb90f6505d76279c769445ec7eb"
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-published-smoke-01/process.json",
+      "archived": "docs/evidence/G4-T03-payment-progress/publication/runs/payment-published-smoke-01/process.json.gz",
+      "sha256": "409529e374829e014f32749a128dd22f14b4fbb8356bc2fb750ca7d81af5f42d",
+      "gzipSha256": "03bd2cba6f3500bfc2dfff26e0352f5b89ffe77b8902582be2576deae0c4b5ce"
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-published-smoke-01/stdout.log",
+      "archived": "docs/evidence/G4-T03-payment-progress/publication/runs/payment-published-smoke-01/stdout.log.gz",
+      "sha256": "7d7094ea4f096556cefe83ecc571c929e69e48512200a05b324b541d0b5e8510",
+      "gzipSha256": "57aaa7bd2301289ffccd45d27010cc06ec6cf6b928832b774903559b0ee30698"
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-published-smoke-02/process.json",
+      "archived": "docs/evidence/G4-T03-payment-progress/publication/runs/payment-published-smoke-02/process.json.gz",
+      "sha256": "c4d270ca664c9acb59a08a319b83a7e8a0f80ff01e49775547b81ef069f8205c",
+      "gzipSha256": "0baa88f248b9d2c73fa9591a9e1876668b3f8ca9192ebf2c858679d85c48af78"
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-published-smoke-02/stdout.log",
+      "archived": "docs/evidence/G4-T03-payment-progress/publication/runs/payment-published-smoke-02/stdout.log.gz",
+      "sha256": "09de4b150bfb2172f233526c8721746d35b1819ae0f11db1c45c65ad25b214bb",
+      "gzipSha256": "5b49d383dbeaeb891f267bfe83feedcf1f6b2e1386871cadf20e374c0c9cff78"
+    }
+  ],
+  "taskComplete": false,
+  "wholeGoalComplete": false
+}
