@@ -69,7 +69,7 @@ export function carryOption(view: ForgeView, pieceId: string, recordLimited = fa
  const matches = routes.filter(route => route.matches), matching = matches.length > 0;
  const missing = matching ? [] : routes.length === 1 ? routes[0]!.missing
   : routes.map(route => `${describeRoute(route.route)}：${route.missing.join('、')}`);
- const valueCopy = blade.value === valueNext ? `明日身价${fmt(valueNext)}` : `余温架：${fmt(blade.value)}→${fmt(valueNext)}`;
+ const valueCopy = blade.value === valueNext ? `明日估值${fmt(valueNext)}` : `余温架：${fmt(blade.value)}→${fmt(valueNext)}`;
  const fitCopy = matching ? `符合${next.commission.name}的${matches.map(value => value.route.count > 1 ? '其中一柄要求' : '一柄交付要求').join('或')}`
   : `尚不能直接交付：${missing.join('；或')}`;
  return freezeDeep({id: pieceId, blade, valueNow: blade.value, valueNext, canReserve, matching, missing,

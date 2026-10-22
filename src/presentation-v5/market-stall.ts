@@ -1,6 +1,6 @@
 import {RECIPES,TRAITS} from '../core-v5/index.js';
 import type {Blade,Trait} from '../core-v5/index.js';
-import {element} from '../presentation/dom.js';
+import {element,workshopText} from './copy.js';
 import {traitArt} from '../presentation-v3/art.js';
 import type {ForgeView} from './decisions.js';
 import {cashOptions,tradeOption,tradePurpose} from './growth-options.js';
@@ -93,7 +93,7 @@ export function createMarketStall(view:ForgeView,context:MarketStallContext):HTM
     reason.hidden=false;rules.open=false;
     if(selection.kind==='trait'){
       const traitId=selection.id,offer=offers.find(item=>item.id===traitId)!,trait=TRAITS[traitId],purpose=tradePurpose(traitId,view,pieceId??''),trade=tradeOption(view,pieceId??'');
-      heroArt.replaceChildren(traitArt(traitId));eyebrow.textContent='一柄成器，换一门手艺';title.textContent=trait.name;rule.textContent=trait.text;
+      heroArt.replaceChildren(traitArt(traitId));eyebrow.textContent='一柄成器，换一门手艺';title.textContent=trait.name;rule.textContent=workshopText(trait.text);
       purposeHeading.textContent=purpose.headline;purposeCopy.textContent=purpose.copy;detail.dataset.tone=purpose.tone;
       shortCost.textContent=purpose.replacementRequired?'献出所选成器，并明确换下一门旧手艺。':'献出所选成器，装进手艺行囊。';
       rulesCopy.textContent=purpose.costCopy;
@@ -110,7 +110,7 @@ export function createMarketStall(view:ForgeView,context:MarketStallContext):HTM
       purposeHeading.textContent=upgrade?'只影响后续新坯，手上旧剑不涨价':'补契印，保不回已经失约的那一单';
       purposeCopy.textContent=option.copy;detail.dataset.tone=option.canBuy?'ready':'neutral';
       shortCost.textContent=option.price===null?'商人此刻没有这项报价。':`这次付${fmt(option.price)}铜钱 · 每次到访限一次`;
-      rulesCopy.textContent=upgrade?'备料不改变手上已有剑的身价。留一柄时，明日发两柄新坯；不留则发三柄。旧剑占用一个总名额，明日取下也不会补第四柄。':'最多三枚契印。补印不会替你完成第4、8、12天的关键约定，也不会补发未取得的作品或基础酬劳。';
+      rulesCopy.textContent=upgrade?'备料不改变手上已有剑的估值。留一柄时，明日发两柄新坯；不留则发三柄。旧剑占用一个总名额，明日取下也不会补第四柄。':'最多三枚契印。补印不会替你完成第4、8、12天的关键约定，也不会补发未取得的作品或基础酬劳。';
       purchase.textContent=upgrade?(context.growthControls?.upgraded?'本次已备好':'准备更好的铁料'):(context.growthControls?.repaired?'本次已修补':'请商人修补');purchase.disabled=!option.canBuy;
       reason.textContent=option.reason||'先看清付款后的行囊，再决定是否请商人动手。';
       cashBefore.textContent=`现在 ${fmt(view.coins)}铜钱`;

@@ -1,7 +1,7 @@
 import {CHAPTERS,COMMISSIONS,EVENTS,RECIPES,TRAITS,getRunView,describeRoute} from '../core-v5/index.js';
 import type {Action,Blade,EventId,Modification,RunState} from '../core-v5/index.js';
 import type {CollectionState} from '../application/v5-collection.js';
-import {element} from '../presentation/dom.js';
+import {element} from './copy.js';
 import {chapterFacts,endingFacts,journeyOutcome,journeyScreen,CAMPAIGN_GOAL} from './journey.js';
 import type {JourneyScreen} from './journey.js';
 

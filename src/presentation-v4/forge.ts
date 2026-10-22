@@ -13,7 +13,7 @@ export interface ForgeContactFrame {
   readonly pieceId:string;readonly hit:Hit;readonly index:number;readonly total:number;readonly burst:boolean;
   readonly before:Blade;readonly after:Blade;
 }
-interface ForgeHost {reduced():boolean;cue(cue:Cue):void;ready():void;problem():void;contact?(frame:ForgeContactFrame):void}
+interface ForgeHost {reduced():boolean;valueLabel?:string;cue(cue:Cue):void;ready():void;problem():void;contact?(frame:ForgeContactFrame):void}
 const FAMILY:Readonly<Record<Recipe,number>>=Object.freeze({light:0,guard:1,heavy:2});
 const MODS:readonly Modification[]=['windbox','warmRack','wideMouth'];
 const EVENTS:readonly EventId[]=['donation','loan','salvage','credit','shelter','rest'];
@@ -138,7 +138,7 @@ export function createForgeRenderer(root:HTMLElement,host:ForgeHost){
     const look=visual?forgeAppearance(visual):null;
     scene.dataset.empty=String(!visual);
     scene.dataset.reduced=String(host.reduced());
-    canvas.setAttribute('aria-label',visual?`${look!.name}，${look!.rank}，等级${visual.level}，身价${visual.value}，${visual.status==='broken'?'断裂':visual.cracked?'有裂纹':'完好'}；仅造型展示`:'空铁砧');
+    canvas.setAttribute('aria-label',visual?`${look!.name}，${look!.rank}，等级${visual.level}，${host.valueLabel??'身价'}${visual.value}，${visual.status==='broken'?'断裂':visual.cracked?'有裂纹':'完好'}；仅造型展示`:'空铁砧');
     if(!visual)for(const key of ['family','stage','illustrated','condition'])delete canvas.dataset[key];
     paintBladeProjection(canvas,visual);impact.refresh();
   }

@@ -1,0 +1,117 @@
+{
+  "input": {
+    "runId": "v5-event-credit",
+    "seed": "v5-event-credit-13",
+    "mode": "story"
+  },
+  "actions": [
+    {
+      "type": "continue"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d1-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d1-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d1-1"
+    },
+    {
+      "type": "deliver",
+      "pieceId": "d1-1"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "reserve",
+      "pieceId": "d3-1"
+    },
+    {
+      "type": "chooseEvent",
+      "choice": "accept"
+    },
+    {
+      "type": "settle"
+    },
+    {
+      "type": "advance"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-1"
+    },
+    {
+      "type": "strike",
+      "pieceId": "d4-1"
+    }
+  ],
+  "boundaries": {
+    "burst": 19,
+    "firstProtectedCrack": 22
+  },
+  "provenance": {
+    "source": "tmp/goal4-T02/runs/matrix-01/artifacts/v5-events-v5-restored-boun-d54c2-d-real-next-day-consequence-chromium-dpr1/v5-states.json",
+    "sha256": "2b5704a1d9f6c68e7060a269b045e07615cc0043ca0edc597e3439e98db274c0",
+    "labels": {
+      "burst": "accepted-9-strike",
+      "firstProtectedCrack": "accepted-12-strike",
+      "consumed": "accepted-13-strike",
+      "broken": "accepted-15-strike"
+    },
+    "scope": "Existing actual T02 credit journal. Every draft boundary is reconstructed and validated by the current frozen formal SDK, never assigned as an outcome."
+  }
+}

@@ -1,7 +1,7 @@
 import {CHAPTERS,COMMISSIONS,RECIPES,RECIPE_IDS,TRAITS,TRAIT_IDS,describeRoute} from '../core-v5/index.js';
 import type {Blade} from '../core-v5/index.js';
 import type {CollectionState,CollectionWork} from '../application/v5-collection.js';
-import {element} from '../presentation/dom.js';
+import {element} from './copy.js';
 import {traitArt} from '../presentation-v3/art.js';
 import {commissionImage} from './journey.js';
 

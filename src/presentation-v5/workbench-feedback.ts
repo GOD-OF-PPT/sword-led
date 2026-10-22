@@ -71,7 +71,7 @@ export function createWorkbenchFeedback(root:HTMLElement,host:FeedbackHost){
   if(key!==heldKey){
    heldKey=key;held.replaceChildren(...blades.map(blade=>canvas(blade)));held.hidden=blades.length===0;
    held.dataset.count=String(blades.length);figure.dataset.holding=String(blades.length>0);
-   held.setAttribute('aria-label',blades.length?`来客已收${blades.length}柄：${blades.map(blade=>`${RECIPES[blade.recipe].name}，身价${blade.value}`).join('；')}`:'来客尚未收剑');
+   held.setAttribute('aria-label',blades.length?`来客已收${blades.length}柄：${blades.map(blade=>`${RECIPES[blade.recipe].name}，估值${blade.value}`).join('；')}`:'来客尚未收剑');
   }
   for(const [index,node]of [...held.querySelectorAll<HTMLCanvasElement>('canvas')].entries()){
    const blade=blades[index];if(blade)paint(node,blade);

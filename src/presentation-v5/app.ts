@@ -13,7 +13,8 @@ import {createForgeAudio} from '../platform/audio.js';
 import type {AudioStatus} from '../platform/audio.js';
 import {IMPACT_SOUNDS} from '../presentation-v3/impact.js';
 import {traitArt} from '../presentation-v3/art.js';
-import {element,enableKeyboardNavigation} from '../presentation/dom.js';
+import {enableKeyboardNavigation} from '../presentation/dom.js';
+import {element,workshopText} from './copy.js';
 import {V5_TEMPLATE} from './shell.js';
 import {createForgeRenderer} from '../presentation-v4/forge.js';
 import type {ForgeContactFrame} from '../presentation-v4/forge.js';
@@ -45,7 +46,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
  root.innerHTML=V5_TEMPLATE;enableKeyboardNavigation(root);const ownRoot=root.firstElementChild;
  const find=<T extends HTMLElement>(id:string)=>{const n=root.querySelector<T>('#'+id);if(!n)throw Error('Missing '+id);return n;};
  const button=(id:string)=>find<HTMLButtonElement>(id),dialog=find<HTMLDialogElement>('v4-dialog'),stageArtwork=find<HTMLImageElement>('v4-stage-image');
- const text=(id:string,value:string)=>{const copy=value.replaceAll('身价','估值').replaceAll('金币','铜钱'),n=find(id);if(n.textContent!==copy)n.textContent=copy;};
+ const text=(id:string,value:string)=>{const copy=workshopText(value),n=find(id);if(n.textContent!==copy)n.textContent=copy;};
  const show=(id:string,value:boolean)=>{find(id).hidden=!value;};
  const preferences=createPreferences(()=>localStorage),audio=createForgeAudio(undefined,IMPACT_SOUNDS),motion=matchMedia('(prefers-reduced-motion: reduce)');
  let snapshot=port.getSnapshot(),collection=port.getCollectionSnapshot(),prefs=preferences.getSnapshot();
@@ -154,6 +155,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
  function contactReadout(frame:ForgeContactFrame){
   const s=state(),reading=strikeReadout;if(!s||!reading||!busy||reading.runId!==s.runId||reading.revision!==s.revision||reading.generation!==snapshot.generation||reading.epoch!==epoch||reading.pieceId!==frame.pieceId)return;
   strikeReadout={...reading,value:frame.hit.after,level:frame.hit.level};lastTriggers=[...new Set(frame.hit.triggers)];
+  text('v4-float',find('v4-float').textContent??'');
   text('v4-value',fmt(frame.hit.after));text('v4-craft-record',`等级 ${frame.hit.level} · 已完成安全连锻 ${frame.after.bursts}次`);renderBelt(s);feedback?.contact(frame);
  }
  function leaveScene(){cancelPresentation();epoch++;stageKey='';if(current()?.status!=='active')nextBlade();render();}
@@ -246,7 +248,8 @@ export function mountV5(root:HTMLElement,port:V5Session){
   text('v4-day',`${s.mode==='challenge'?'行脚挑战 · ':''}第${s.day}天 · ${v.chapter.title.split(' · ')[1]??v.chapter.title}${isCriticalDay(s.day)?' · 关键约定':''}`);text('v4-goal-name',v.commission.title);paper?.render(v,b?.id??null,`${s.runId}/${snapshot.generation}`);
   text('v4-seals',`${s.seals}/3`);text('v4-coins',fmt(s.coins));text('v4-value',b?fmt(reading?.value??b.value):'—');text('v4-condition',b?`${RECIPES[b.recipe].name} · ${b.status==='broken'?'断裂':b.cracked?'已有裂纹':'无裂纹'}`:'铁砧已空，安排这一炉收工');
   text('v4-craft-record',b?`等级 ${reading?.level??b.level} · 已完成安全连锻 ${b.bursts}次`:'');
-  text('v4-risk',active?(active.odds.burst?'下一锤安全连锻，不会裂':`下一锤裂损 ${active.odds.crack/10}%${b?.cracked?' · 再裂会断':' · 首裂会掉价'}`):s.reserveId===b?.id?'这柄在剑架上，先取回再加工':'余剑已安排，可收工');
+  const firstCrack=s.traits.includes('steady')||s.crackGuard?' · 首裂保价，仍留裂纹':' · 首裂会掉价';
+  text('v4-risk',active?(active.odds.burst?'下一锤安全连锻，不会裂':`下一锤裂损 ${active.odds.crack/10}%${b?.cracked?' · 再裂会断':firstCrack}`):s.reserveId===b?.id?'这柄在剑架上，先取回再加工':'余剑已安排，可收工');
   const charge=find('v4-charge');charge.replaceChildren(element('span',active?.odds.burst?'锤势已满':`锤势 ${b?.charge??0}/6`),...Array.from({length:6},(_,i)=>{const n=element('i');n.classList.toggle('filled',i<(b?.charge??0));return n;}));
   button('v4-hit').disabled=!canAct();button('v4-hit').setAttribute('aria-busy',String(busy));button('v4-strike').disabled=!canAct();
   const strikeLabel=active?.canStrike?(active.odds.burst?'安全连锻':'落锤'):active?.reserved?'先取回剑':'收工';
@@ -268,7 +271,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
  }
  function renderBelt(s:RunState){
   const v=getRunView(s),key=JSON.stringify([s.runId,s.traits,s.gift,s.pardonUsed,s.modifications,s.upgradeCount,s.day,s.pending,s.dayBuffs,s.crackGuard,s.blades.filter(b=>b.suppliedDay===s.day&&b.slot===1).map(b=>[b.hits,b.status]),lastTriggers,canAct(),busy]);if(key===beltKey)return;beltKey=key;
-  find('v4-traits').replaceChildren(...v.traits.map(t=>{const triggered=lastTriggers.includes(t.id),n=action(t.name,()=>{const purpose=traitPurpose(t.id,getRunView(state()!)),body=element('div');body.append(element('p',t.text),element('h3',purpose.headline),element('p',purpose.copy));if(triggered)body.append(element('p','这门手艺在上一记中实际生效。'));openModal(t.name,body,[{label:'回铁砧',run:()=>closeModal()}]);});n.dataset.trait=t.id;n.dataset.used=String(t.used);if(t.used)n.append(element('small','本局已用'));n.dataset.triggered=String(triggered);n.title=t.text;n.prepend(traitArt(t.id));if(triggered)n.append(element('small','本锤生效'));return n;}));
+  find('v4-traits').replaceChildren(...v.traits.map(t=>{const triggered=lastTriggers.includes(t.id),n=action(t.name,()=>{const purpose=traitPurpose(t.id,getRunView(state()!)),body=element('div');body.append(element('p',t.text),element('h3',purpose.headline),element('p',purpose.copy));if(triggered)body.append(element('p','这门手艺在上一记中实际生效。'));openModal(t.name,body,[{label:'回铁砧',run:()=>closeModal()}]);});n.dataset.trait=t.id;n.dataset.used=String(t.used);if(t.used)n.append(element('small','本局已用'));n.dataset.triggered=String(triggered);n.title=workshopText(t.text);n.prepend(traitArt(t.id));if(triggered)n.append(element('small','本锤生效'));return n;}));
   const gift=find('v4-gift');gift.replaceChildren();if(v.gift.status==='available')gift.append(action('首赠 · 选手艺',giftModal,true,!canAct()||busy));
   find('v4-modifications').replaceChildren(...v.modifications.map(m=>{const n=action(m.name,()=>openModal(m.name,m.text,[{label:'收好',run:()=>closeModal()}]));n.dataset.modification=m.id;n.dataset.triggered=String(lastTriggers.includes(m.id));n.prepend(prop(m.id));return n;}));
   const effects:{id:EventId;label:string;copy:string;pending:boolean}[]=[];
@@ -533,7 +536,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
  function pause(){paused=true;cancelPresentation();openModal('炉火为你留着','暂停时不会落锤或消耗资源。',[{label:'继续锻造',primary:true,run:()=>closeModal()},{label:'灯路回顾',run:journeyPanel,id:'v4-journey-open'},{label:'回标题',run:toTitle},{label:'看看保存状态',run:()=>saveDetails()}],'pause');}
  function forgeIdentity():InputIdentity|null {const s=state(),b=current();if(!s||!b||!canAct()||busy||handoff?.isDragging()||stageMode!=='workshop'||!getRunView(s).blades.find(p=>p.blade.id===b.id)?.canStrike)return null;return{runId:s.runId,revision:s.revision,generation:snapshot.generation,epoch,pieceId:b.id,mode:'standard',periodMs:1,rulesVersion:s.rulesVersion};}
  function navigationIdentity():InputIdentity|null {const s=state();if(!s||!canAct()||busy||handoff?.isDragging()||stageMode!=='workshop'||forgeIdentity())return null;return{runId:s.runId,revision:s.revision,generation:snapshot.generation,epoch,pieceId:'navigation',mode:'standard',periodMs:1,rulesVersion:s.rulesVersion};}
- renderer=createForgeRenderer(root,{reduced,cue:cue=>audio.acceptedCue(cue),ready:()=>{render();repaintProps();updateArtworkStatus();},problem:artworkProblem,contact:contactReadout});
+ renderer=createForgeRenderer(root,{reduced,valueLabel:'估值',cue:cue=>audio.acceptedCue(cue),ready:()=>{render();repaintProps();updateArtworkStatus();},problem:artworkProblem,contact:contactReadout});
  feedback=createWorkbenchFeedback(root,{reduced,paintBlade:(canvas,blade)=>renderer?.paintThumb(canvas,blade)});
  paper=createCommissionPaper(root,{thumb:id=>{const b=state()?.blades.find(piece=>piece.id===id);return b?thumb(b):null;}});
  handoff=createHandoff(root,{capture:pieceId=>{const s=state();if(!s)return null;const token={runId:s.runId,revision:s.revision,generation:snapshot.generation,epoch,pieceId};return handoffBlade(token)?token:null;},preview:handoffPreview,commit:commitHandoff});

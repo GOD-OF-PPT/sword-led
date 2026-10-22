@@ -1,6 +1,6 @@
 # 游戏实施方案与确认范围
 
-> 当前默认版本按已批准的[v0.8经营方案](v0.8-workshop-economy-proposal.md)实施，forge-v5/schema5与三章十二天、来源炉谱已接通；[当前操作指南](v0.8-twelve-lights-guide.md)和[R3.23复核](reviews/R3-23-v08-twelve-lights.md)说明实际范围。原v0.7从 `/v4.html` 继续，保留旧档。炉边交易、装箱和实际成长反馈按3l.5进一步完善；真人趣味与最终最大复核仍待推进；测试和兼容继续后置。
+> 当前默认版本按已批准的[v0.8经营方案](v0.8-workshop-economy-proposal.md)实施，forge-v5/schema5与三章十二天、来源炉谱已接通；[当前操作指南](v0.8-twelve-lights-guide.md)和[R3.23复核](reviews/R3-23-v08-twelve-lights.md)说明实际范围。原v0.7从 `/v4.html` 继续，保留旧档。炉边交易、装箱和实际成长反馈已接通；现代PC专项和三项联合复核见[T03收尾](reviews/G4-T03-final-technical-review.md)。当前进行全目标最大复核和按真实反馈修缮；没有把流程可达或技术检查当作用户对整体趣味性的认可。
 
 > 以下v0.7与v0.2为历史实施合同。v0.7依据用户已明确批准的[v0.7完整方案](v0.7-complete-game-proposal.md)。独立内核、[v4存档/炉谱](v0.7-persistence-contract.md)、三章十二天生产场景、三结局与挑战已接入；接口见[终章合同](v0.7-final-chapter-interface.md)，操作见[终章指南](v0.7-final-chapter-guide.md)，正式交付/验收范围以[README](../README.md)和goal任务记录为准。v4的1000种子、最终DPR/原生/音频性能矩阵、真人H和最大R4仍为独立待办，不以代码接通或旧版本绿测代替。
 

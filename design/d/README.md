@@ -1,8 +1,10 @@
 # D「行脚灯炉」正式美术与界面
 
+当前默认入口为 `/`，是沿 D 方向及用户指定近景稿实施的 v0.8 三章十二天；自然锤、真实兵器与来客纸单继续使用独立派生资源。操作见[当前指南](../../docs/v0.8-twelve-lights-guide.md)，实际交付范围见[当前技术复核](../../docs/reviews/G4-T03-final-technical-review.md)。`/v2.html` 保留 D 细锻旧版及原存档。以下保留首版与近景修订的来源、规则和当时交付记录，不作为现行版操作说明。
+
 2026-10-19修订：用户明确指出第一版构图未落实且流程不清晰，现依[最新指定稿](reference-main-v2.png)重做实际近景布局，研究与落地约定见[视觉修订](visual-revision-2026-10-19.md)。新增工坊背景和委托人物通过内置image_gen.imagegen生成，原PNG保存在`originals/forge-backdrop-v2.png`及`originals/commission-guard-v2.png`，完整实际提示词在`prompts/`对应文件；[新来源清单](revision-v2-manifest.json)含参考/原件/提示词/运行hash。九份实际运行素材共2,917,762字节，均低于原3MiB预算，两张新增导出的alpha与原PNG逐像素相同。下面八图/旧构图描述为首版记录，不能当作最新实际画面验收。
 
-本轮T11.3沿[用户选定D图](../v03/concepts/main-d-v1.png)派生。当前新版入口为`/v2.html`；旧B入口和存档保留。正式D使用[八份运行WebP](../../public/assets/d/manifest.json)，合计2,335,062字节，约2.23MiB。没有用概念整图作为点击界面。
+T11.3当时沿[用户选定D图](../v03/concepts/main-d-v1.png)派生，入口为`/v2.html`；旧B入口和存档保留。首版D使用[八份运行WebP](../../public/assets/d/manifest.json)，合计2,335,062字节，约2.23MiB。没有用概念整图作为点击界面。
 
 ## 来源与导出
 
@@ -36,4 +38,4 @@
 
 - [工坊原PNG](originals/forge-backdrop-v2.png)、[工坊完整prompt](prompts/forge-backdrop-v2.md)。
 - [委托人物原PNG](originals/commission-guard-v2.png)、[人物完整prompt](prompts/commission-guard-v2.md)。
-- [当前真实界面与验证](../../docs/reviews/R3-8-art-and-reference.md)。
+- [该阶段真实界面与验证](../../docs/reviews/R3-8-art-and-reference.md)。

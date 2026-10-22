@@ -1,8 +1,8 @@
 ## Context
 
-当前forge-v4/schema4与独立炉谱schema1已经提供三章十二天、实际兵器条件、三结局与直接落锤。`src/core-v4/game.ts:113`支付全部身价，`:18`始终发三新坯，`:123`交换无成器门槛。3i.6报告`docs/reviews/T11-4-2-3i6-v4-balance.md:154`记录终局钱富余；这些不能仅靠提示文案解决。
+提案基线forge-v4/schema4与独立炉谱schema1已经提供三章十二天、实际兵器条件、三结局与直接落锤。`src/core-v4/game.ts:113`支付全部身价，`:18`始终发三新坯，`:123`交换无成器门槛。3i.6报告`docs/reviews/T11-4-2-3i6-v4-balance.md:154`记录终局钱富余；这些不能仅靠提示文案解决。
 
-本设计**已具体批准；1.1经营纯核、1.2独立保存/炉谱和1.3首章页面已实施，中后段页面待接入**。用户优先产品交互/界面/玩法，兼容广测最低；保留当前D美术与Canvas/DOM，按Game Studio Shared/Foundations保持模拟/展示边界。完整内容与预算算例在`docs/v0.8-workshop-economy-proposal.md`。
+本设计**已具体批准，经营纯核、独立保存/炉谱、三章十二天及成长经营页面均已实施**。当前默认 `/` 为forge-v5/schema5，`/v4.html` 保留旧行程；操作见[当前指南](../../../docs/v0.8-twelve-lights-guide.md)，后续技术分批与限界见[联合技术复核](../../../docs/reviews/G4-T03-final-technical-review.md)。用户优先产品交互/界面/玩法，兼容广测最低；保留D美术与Canvas/DOM，按Game Studio Shared/Foundations保持模拟/展示边界。完整内容与预算算例在`docs/v0.8-workshop-economy-proposal.md`，实施不等于真人趣味认可。
 
 ## Decisions
 
@@ -49,12 +49,14 @@ schema2炉谱使用`sword-led.collection.v2`及`sword-led.collection.backup.v2`�
 
 ## Migration and rollback
 
-按已获具体批准分期实现，新默认上线前完成首章与一局的必要产品核对；v4默认在此之前保持。新入口显式新档，旧行程可继续/导出。回滚只新增revert/切旧不可变预览，不删除v5/schema2原件或旧档、原图、已封签证据。
+已按具体批准分期实施并切换默认入口；切换前的首章与一局必要核对保留其历史记录，当前完整范围见页首链接。新入口使用独立新档，旧行程可继续/导出。回滚只新增revert/切旧不可变预览，不删除v5/schema2原件或旧档、原图、已封签证据。
 
-## Verification boundary
+## Verification boundary（提案实施阶段）
 
 必要整数/正式命令检查覆盖付款最大比例、部分/混路线、所有预算消耗、零价、日重置、三槽与换艺、独立回放和导入幂等。严格构建后一个PC浏览器真实首章与合法中晚窗口、十二条件/三结局保留核对；截图说明为实际构建，不注钱/伪造未来进度。不启动大模型、六DPR/低版本兼容矩阵或原生性能检查；原最终QA责任未被取消或冒称通过。
 
+上段保留本提案实施阶段的验证安排；后续现代PC专项已由goal-4/T01–T03分批完成，具体范围、历史失败和限界以页首技术复核为准，不回写成提案时已执行。
+
 ## Approval
 
-用户原始要求“然后确认实施文档”，适用OpenSpec明确“Do not start implementation until proposal is approved”。用户现已明确“确认 v0.8，开始首章实施”；批准原答/全文hash见docs/decisions/2026-10-21-v08-approval.json。仅确认项勾选，实施项仍待办，不以批准代替实现。
+用户原始要求“然后确认实施文档”，适用OpenSpec明确“Do not start implementation until proposal is approved”。用户现已明确“确认 v0.8，开始首章实施”；批准原答/全文hash见docs/decisions/2026-10-21-v08-approval.json。批准与后续实施分别保留证据，当前完整页面已接通；不以批准代替实现，也不以技术验证代替真人趣味评价。
