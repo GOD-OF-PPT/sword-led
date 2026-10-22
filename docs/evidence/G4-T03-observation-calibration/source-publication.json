@@ -1,0 +1,76 @@
+{
+  "at": "2026-10-22T21:31:37.343014+00:00",
+  "sourceCommit": "2fd17e10ec6e96b9280ae15e9878aec96a79ba4a",
+  "sourcePush": {
+    "label": "calibration-source-push-01",
+    "startedAt": "2026-10-22T21:30:11.839622+00:00",
+    "command": [
+      "rtk",
+      "proxy",
+      "git",
+      "push",
+      "origin",
+      "main"
+    ],
+    "cwd": "/Users/gordon/githome/sword-led",
+    "status": "terminal",
+    "pid": 12684,
+    "completedAt": "2026-10-22T21:30:29.732388+00:00",
+    "actualExitCode": 0
+  },
+  "freshRemoteMain": "2fd17e10ec6e96b9280ae15e9878aec96a79ba4a",
+  "gitHubRootTree": "fdcc870def5232248f36b8ed4c49de8c76d684b4",
+  "localRootTree": "fdcc870def5232248f36b8ed4c49de8c76d684b4",
+  "rootTreeMatches": true,
+  "blobs": [
+    {
+      "path": "tests/release-v5/audio-probe.ts",
+      "gitBlob": "8c5dfcb66783b5cac160fa5ad52a51db13fecc4e",
+      "sha256": "712d822f846bfa8cf3f91100551f370c8d48394aa871806a8e41d022c0b9d6ef",
+      "matches": true
+    },
+    {
+      "path": "tests/release-v5/performance.spec.ts",
+      "gitBlob": "96520877807c2ebfcc0d9ca3ecc65009878ee077",
+      "sha256": "c19262565f2533c74718709c5ff55a66355feb31fb7118a0a90a51672482d957",
+      "matches": true
+    },
+    {
+      "path": "tests/release-v5/resilience-probe.ts",
+      "gitBlob": "7c3d0ff598ef4cc76e3edcffe5e16f6003e81b64",
+      "sha256": "456965a52c1a2753fbbdac70c9b94eb2895129dd4e174da6b0a0ceb625b62890",
+      "matches": true
+    },
+    {
+      "path": "docs/reviews/G4-T03-observation-calibration.md",
+      "gitBlob": "3a228b7f786067c2f76c30f21f5c07a03b43d6f5",
+      "sha256": "b9c1cb83823f12f1bcfccd795d6fdaebb3d60a7dac6fa490eb75fb0ff2c852e0",
+      "matches": true
+    },
+    {
+      "path": "docs/evidence/G4-T03-observation-calibration/manifest.json",
+      "gitBlob": "18483a55a1ceab96c1d2671eed5dca9f53c4a165",
+      "sha256": "ae978a8f2db78c3b516f1e54c42cbed9d54818879403f82a01618d58165ccdd7",
+      "matches": true
+    },
+    {
+      "path": "docs/evidence/G4-T03-observation-calibration/originals/tmp/goal4-T03/profiles/ff2-pressure-profiler-02/independent-profile-extract.json.gz",
+      "gitBlob": "1255d892f3e2cbabfe206af93120c1385e51d0b4",
+      "sha256": "6c5a9dd068eea1b244e27e27223d8722e4d5055b876baf178fd926ed70c161c4",
+      "matches": true
+    }
+  ],
+  "cleanBeforeReceipt": true,
+  "payloads": 330,
+  "productionChanged": false,
+  "officialPreviewPreserved": {
+    "snapshot": "tmp/previews/G4-T03-preview-retry",
+    "current82Identical": true,
+    "freshOfficialIndexSame": true,
+    "indexSHA256": "377bcc1df1216cdf22adcc6a503887f2592a11293182a2ef971ddcfba73dac52",
+    "noRotation": true,
+    "productSource": "47e17f8dff5fe1ec3583e8aab2498c44839857d6"
+  },
+  "taskComplete": false,
+  "goalComplete": false
+}

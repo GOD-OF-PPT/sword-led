@@ -43,6 +43,7 @@
 - 关闭诊断：legacy-close-protocol01原case actual1，临时截图147已回复、root dispose149挂到约3分钟后browser.close才回复，418/82一致；OS sample在首个terminal守卫停止，未发采样。close-minimal01四个固定静态条件实际exit0，421/82一致，各context28–44ms关闭，均自有browser正常清理；没有游戏/SDK/存档/Locks，该组未复现原游戏，不冒称修复或设备根因。
 - [杠精观测审查] 本轮正确音频协议与观测校准通过独立静态/实际核对，所有原门和失败保留；没有生产代码/SDK/美术delta，没有把profiler开销当基线、局部通过当全矩阵或原文不变当API写次数。root实际看当前FF2/1920长档工坊图，报价/风险/控件正常。详见docs/reviews/G4-T03-observation-calibration.md；新增无损档案和推送实际结果随后记录。
 - 本轮无损归档：observation-calibration-archive01实际0，11个明确终态命令／330份原文、原生profile、诊断及原图，gzip往返和输入前后SHA一致；原件与历史失败均保留。不是完整T03档案或目标完成，源与回执推送后另记。
+- 本轮校准交付：source 2fd17e10ec6e96b9280ae15e9878aec96a79ba4a实际提交／push0，fresh远程main与GitHub根tree一致，六个消费者／报告／清单／压缩采样摘录blob原字节一致；330份payload均入Git，见docs/evidence/G4-T03-observation-calibration/source-publication.json。当前82运行字节及正式试玩与build22相同；回执另提交，不提前勾选T03／goal。
 - 待完成：原81ms历史调查、旧v3 Chromium销毁问题与最终整体审计仍明确未闭；正确晚完成协议/当前校准长档及四连锻已取得实际终态，不误列未执行。可选新版金额/交互反馈已询问，尚未收到答复不当接受，也不阻塞独立技术工作。T03保持未勾选，原件/失败保留，测试与兼容最低优先级，不扩范围。
 
 ## T04 — 全目标最终审计与真实H闭环

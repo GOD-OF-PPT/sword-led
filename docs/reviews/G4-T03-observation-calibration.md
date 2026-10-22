@@ -40,3 +40,5 @@
 T03仍未勾选，原81ms历史调查、旧v3关闭与最终整体审计继续保留。可选试玩反馈已询问，未答不当接受。所有原件与失败保留；本轮只提交观测校准和有界诊断，不轮换相同82文件试玩，不改变已批准方案。
 
 [本轮无损清单](../evidence/G4-T03-observation-calibration/manifest.json) 已实际归档11个明确终态命令、330份原文/诊断/本地profile/原图；gzip往返及全部输入前后SHA一致。root仅将实际查看的当前长档工坊图标为已看，另保留两张失败图，其他原件未删除。本档不代表全T03验收；推送以发布回执为准。
+
+本轮源提交 `2fd17e10ec6e96b9280ae15e9878aec96a79ba4a` 已实际push0，fresh远程main及GitHub根tree全等，六个代表性消费者/报告/清单/压缩采样摘录blob原字节一致；[发布回执](../evidence/G4-T03-observation-calibration/source-publication.json) 保留身份。当前82运行文件及正式试玩仍是同一build22，未为纯测试代码轮换预览。
