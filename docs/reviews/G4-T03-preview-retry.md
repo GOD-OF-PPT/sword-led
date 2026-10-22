@@ -22,3 +22,5 @@
 WebKit原复合故障、Firefox DPR2极长档81ms回调和旧v3关闭问题继续保留；T03／原五项目标未勾选完成。本轮先修真实交互，未改变原预算、波形阈值、旧声零补播或完整保存校验门。回滚为新增revert或切回原报价不可变快照，不删除原件/失败，不改钱包或存档。
 
 [新增进度档案](../evidence/G4-T03-preview-retry/manifest.json) 已实际归档五项明确终态运行与78份原文/诊断/原图；逐项压缩往返、SHA及输入前后不变核对完成。纯完成延迟探针以未激活草稿身份保留，不作为实际测试。推送以随后发布回执为准。
+
+本次源提交 `47e17f8dff5fe1ec3583e8aab2498c44839857d6` 已实际push0，fresh远程main及GitHub根tree与本地一致，六个代表性代码/文档/清单blob原字节相同；[发布回执](../evidence/G4-T03-preview-retry/source-publication.json) 记录具体身份。主档78份与静音补档15份共93份payload全部入Git；本轮保留既定余项，未把局部修缮标成目标完成。

@@ -35,6 +35,7 @@
 - 旧v3定向诊断：legacy-clock-cleanup01实际1，原body完成、显式clock.resume4.85ms完成后仍context teardown180秒；排除了“仅补await恢复Clock即可关闭”的具体候选，不能泛化根因。原消费者完整恢复，未奏效候选／原红保留，不重复跑。
 - 新交付：4179切至不可变G4-T03-preview-retry快照（PID4973/session67793），旧快照保留；published01实际0，82个HTTP原字节全等，真实3左键／合格交剑／领手艺／报价说明／导出原文／两次普通试听与原文不变，0页错误。root实际看两PC尺寸设置图。preview-retry-archive01实际0，明确五项运行的78份原文／诊断／原图无损往返，见docs/reviews/G4-T03-preview-retry.md；本次源与证据推送结果随后记录。
 - 计划内静音尾核：preview-retry-mute01另实际3/3通过（C/F/W DPR1），418/82结束全等；与九项是分开的实际批次。新增无损补档有明确run/end指纹，不把静音故障或原138完整范围缩减。构建/正式SDK/规则在两批间未变。
+- 本次修缮交付：source 47e17f8dff5fe1ec3583e8aab2498c44839857d6实际提交／push0，fresh远程main及GitHub根tree一致，六个当前代码／用例／README／报告／清单blob原字节相同；93份进度payload全部入Git，source-publication.json保留身份。试玩为新build22快照，回执另提交；不因此关闭T03或原目标。
 - [杠精修缮审查] 本次明确重试修缮通过：真实首红已复现并最小修，token/epoch/旧finally/新授权只读审查无阻断，九次实际与发布验证有据；未把DPR1/三项当完整138、软件波形当扬声器或API写次数。原defer实际延迟native调用的归因问题已识别，纯完成延迟草稿仍未激活，不用新语义重写旧137/138。
 - 待完成：WebKit原复合故障的正确语义核对、FF2极长档81ms回调根因与旧v3 Chromium关闭问题仍明确未闭。冷首屏／当前native6／资源与可读性／加载／独立原文回放已取得各自实际终态，不再误列未执行。T03保持未勾选，delivered_with_gaps不等于任务或goal完成；原件／失败保留，测试与兼容最低优先级，不扩范围。
 
