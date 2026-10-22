@@ -2,16 +2,19 @@
 import {test,expect} from '@playwright/test';
 import {KeyboardV5,keyToV5,v5Sdk} from './v5-helpers.js';
 import {acceptedByV5,hitPointV5} from './v5-interaction-helpers.js';
+declare global{interface Window{v5InputMenuObservations:{target:string;trusted:boolean;button:number;cancelable:boolean;defaultPrevented:boolean}[]}}
 
 test('v5 input boundary: right button is ignored and native left drag releases only its original strike',async({page},info)=>{
  const h=new KeyboardV5(page,info,'mouse');await h.install();await h.start();await h.command({type:'continue'});
  const before=await h.read(),point=await hitPointV5(page);
+ await page.evaluate(()=>{window.v5InputMenuObservations=[];document.addEventListener('contextmenu',event=>{const target=event.target instanceof Element?event.target.closest('#v4-hit,#v4-strike'):null;if(target)window.v5InputMenuObservations.push({target:target.id,trusted:event.isTrusted,button:event.button,cancelable:event.cancelable,defaultPrevented:event.defaultPrevented});});});
  await h.same('right mouse down/up is not a forge command',async()=>{
   await page.mouse.click(point.x,point.y,{button:'right'});
-  // Dismiss the browser's native context menu before the independent left-drag observation.
-  // Engines that deliver Escape to the page may open its pause sheet; resume it by its real button.
-  await page.keyboard.press('Escape');
-  if(await page.locator('#v4-dialog').isVisible())await h.activate(page.getByRole('button',{name:'继续锻造',exact:true}));
+  expect(await page.evaluate(()=>window.v5InputMenuObservations)).toEqual([{target:'v4-hit',trusted:true,button:2,cancelable:true,defaultPrevented:true}]);
+  await page.locator('#v4-strike').click({button:'right'});
+  expect(await page.evaluate(()=>window.v5InputMenuObservations)).toEqual([{target:'v4-hit',trusted:true,button:2,cancelable:true,defaultPrevented:true},{target:'v4-strike',trusted:true,button:2,cancelable:true,defaultPrevented:true}]);
+  // Synthetic scope check only: ordinary page controls keep their default menu policy.
+  expect(await page.locator('#v4-settings').evaluate(target=>target.dispatchEvent(new MouseEvent('contextmenu',{bubbles:true,cancelable:true,button:2})))).toBe(true);
  });
  const ignored=await h.record('native-right-button-zero-commands');expect(ignored.raw).toEqual(before.raw);expect(ignored.state.revision).toBe(before.state.revision);
  await acceptedByV5(h,{type:'strike',pieceId:'d1-1'},async()=>{
@@ -23,7 +26,7 @@ test('v5 input boundary: right button is ignored and native left drag releases o
  await expect(page.locator('#v4-strike')).toHaveAttribute('aria-busy','false');
  const released=await h.record('native-left-drag-release-no-second-strike');expect(released.state.revision).toBe(before.state.revision+1);expect(released.state.journal.slice(before.state.journal.length)).toEqual([{type:'strike',pieceId:'d1-1'}]);
  expect(released.state.blades.find(blade=>blade.id==='d1-2')).toEqual(before.state.blades.find(blade=>blade.id==='d1-2'));
- await h.capture('right-ignored-left-drag-one-strike');await h.finish({scope:'Fresh opening input boundary only: actual right click and held-left drag; no complete journey claim',ignoredRightCommands:0,leftDragCommands:1});
+ await h.capture('right-ignored-left-drag-one-strike');await h.finish({scope:'Fresh opening boundary: two trusted right contextmenus prevented only at forge surfaces, no Escape/menu-dismiss workaround; actual held-left drag commits once. Separate synthetic settings event checks listener scope only; no complete journey claim',contextmenus:await page.evaluate(()=>window.v5InputMenuObservations),ignoredRightCommands:0,leftDragCommands:1});
 });
 
 test('v5 input boundary: pending Space cannot follow a different sword or a newly confirmed run',async({page},info)=>{

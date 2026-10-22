@@ -179,3 +179,23 @@ FF2实际采样02结束后才执行四个固定最小关闭条件：静态页non
 采样及安装版expect源码另确认：测量中忙碌属性断言尚未满足时会采集可见性/ARIA；原profile有此Juggler工作。只校准消费者完成等待：给既有runtime observer加纯读isIdle（先guard最后input存在，并须acceptedAt/idleAt均非null），使用既有MutationObserver在尾callback之后记录的空闲事实；native普通/连锻Accepted后的等待换成单次page.waitForFunction内50ms读标记、原5秒截止，返回后仍单次读属性并断言false。原contacts/命令/raw/800+500ms闲置/页内response与全部预算不改，不新增noop RAF，不改产品，不改raw采集helper。旧81与profile两红保留，不能称完全零协议测量或已证旧81是test-only。独立静态审查无阻断后，仅原FF2pressure1920无profile预定一次，当前校准结果与所有历史分开。
 
 校准普通长档01实际通过原门（418／82结束一致，p958/7/6，最大接触138），不是旧81根因已修。因为同一新等待也接入原四连锻，只补原FF DPR2／1920四连锻一项（三份独立合法恢复、每份1Accepted／4contacts），验证不会把中间contact误作完成；保持原原文、数量、样本和预算门。本轮之后不再增加试验，提交当前明确结果／诊断与余项。
+
+### 继续T03：真实旧页面的最小关闭分界（2026-10-23，基线a4b622f）
+
+上一轮是实际progress：音频正确完成协议54+3、当前校准长档与四连锻已实际终态通过，源2fd17e1／回执a4b622f已push/fresh远程确认；330份无损诊断归档。原81历史调查和旧v3关闭仍保留，T03未勾选。本轮不重复这些矩阵或声音候选。
+
+已确认静态Clock/Audio四条件均28–44ms关闭，原真实游戏case则在root dispose请求内挂到browser.close。下一步只比较真实已发布v3页面无Clock／有Clock两个固定加载条件：不敲击、不改偏好、不注入领域或nativeAPI；Clock按原install自动运行→加载准备完成→pauseAt/run350。每叶fresh自有headed浏览器，独立4247服务同一build22不可变快照；不碰用户4179标签/档案。原context.close单次Promise/Node5秒pending观察/正常自有browser清理沿用已审方案，清理失败stop；5秒不是原游戏180秒或性能门的替代。
+
+脚本、说明、执行control及SUT运行文件绑定begin/end指纹，所有原完整输入case与失败保持。两叶只是定位页面加载/Clock是否足以复现，不能凭其通过关闭原输入case缺口。独立代理只读核T03当前责任/历史诊断的边界，不实施T04、不改验收标准或把可选再反馈改成审批；实际有新的单一线索再最小推进。当前产品/SDK/美术不改，不扩全矩阵。可选金额/交互反馈仍待回复，先继续独立工作。
+
+执行前发现更单一的线索：原headed旧v3 case实际右击，而shared direct-strike-input没有contextmenu处理；先前静态四条件只有左击，T02右击在headless。默认原生菜单可能留在浏览器窗口中，Playwright官方维护者也区分了派发给页面的Escape与native popup，但这不是本机关闭根因证明。两真实加载草稿暂不执行，原件保留；仅准备过的自有4247服务已正常停止。
+
+优先静态单因素A/B：无Clock/Audio，均同一个真实左键准备、然后真实右击按钮，一叶默认contextmenu，一叶仅该按钮preventDefault；记录trusted/defaultPrevented，保原单次context.close/Node5秒观察/正常自有browser cleanup。不得用Escape、额外left或导航关闭菜单；不改原游戏case。若确有重复关闭差异，再在产品锻造控件范围最小防止默认菜单并核原完整case；否则不凭猜测修shared输入。所有失败与新A/B保持独立身份，不提前归因设备/原生菜单。
+
+两组实际单因素均未复现：contextmenu-close01 default59/prevent52ms，real-v3-close01无Clock86/Clock53ms，均actual0及结束指纹一致。因此不实施contextmenu猜测性产品改动，也不扩静态矩阵。原完整case仍失败；下一仅原未改v3 Chromium headed180秒case一次，捕获dispose请求后未回包的自有主进程2秒OS sample，核精确binary/进程树后才采样，不改页面/关闭/时钟/输入/配置。若原close已返或child结束，则明确skipped不重跑；保原native终态及完整stack。原81ms以当前已有profile/源码/校准证据作有界调查结论，历史CPU细分无法追溯必须明示，不再盲跑求绿。
+
+原完整case的live sample已实际成功（sample exit0，consumer仍live，dispose149未返）：主线程1244个样本在AppKit _popUpContextMenu→NSContextMenuTrackingSession→NSMenuTrackingSession startRunningMenuEventLoop内。此为原case菜单仍存的直接定位，区别于前述不足以复现的静态叶；不将OSsample本身当产品修复/consumer通过。待原consumer真实终态/结束指纹后，保存当前d73a共享输入完整字节，仅现有两个surfaces加同函数contextmenu preventDefault并dispose配对移除，不拦整document/其他控件，不触左键/Space/detail0/计价/音色/档。更新已有input例外/严格保护核，不称113全保持。
+
+最小复验：下一build23及当前源码harness14（编号须无覆盖）；原未改v3完整首case三现代引擎DPR1 headed、原180s关闭门；当前v5既有右键0＋左拖1case移除掩盖菜单的Escape并记录两锻造目标真实contextmenu defaultPrevented、原文零变与后续左锤单次；两PC尺寸旧v4锤面当前Chromium一项；20同realm mount当前harness仅一项增加菜单注册/移除证据，不重复全音频/384/原性能。所有actual终态、独立审查与保护字节有据后，有意发布新82文件不可变4179快照，HTTP与实际三左键/交付/报价/导出小核，原快照和用户档保留。若原关闭仍红保candidate/原红，不提前归因全解决。
+
+本轮修缮actual终态：build23/harness14=0；原V3三引擎＋V4 C两尺寸4/4，V5真实右键／左拖3/3，当前harness14的20mount1/1，三批423/82结束全等。4179已意图切至不可变G4-T03-forge-menu（PID19044/session85963），发布01实际0、505/82结束一致，82HTTP／两右键／三左键／合格交付／手艺／报价零写／原文导出全过，0页错；root看两尺寸当前图及两发布图。原81有界结论、三task联合审查、保护／安全及旧tmp别名限界已写正式review，独立最终审查mustfix=none。final-technical-archive01实际0，9个明确终态命令／171无损payload／4张实际看图，前后SHA与gzip往返一致。source实际提交推送和回执后才勾T03，T04／goal保持未完成。

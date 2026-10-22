@@ -4,9 +4,11 @@
 
 **当前默认版为 v0.8「炉边报价 · 三柄行囊」：[本机试玩](http://127.0.0.1:4179/)**。三章十二天、十二份委托、三次商人、两次炉具改造与三种结局均接真实经营和保存。作品估值与实际酬劳/品质加赏分开，行会有限收购；留剑占次日三柄中的一位，等级至少3的成器可换手艺。[完整操作指南](docs/v0.8-twelve-lights-guide.md)说明流程与取舍。已有v0.8首章档可从第四天收据继续；原v0.7行程从标题“续走旧行程”或[旧炉前](http://127.0.0.1:4179/v4.html)续玩，新旧局内金币和兵器不互迁。
 
-报价现分三处：剑旁是“作品估值”，纸单是“整单酬劳／已领”，交付按钮是“本次实收铜钱”。按钮下列“本柄酬劳＋品质加赏＝实收”，点击“看报价说明”可查看加赏、行会折价和钱袋限制；双剑每柄按实际份额领取。[本次修缮与验证](docs/reviews/G4-T03-payment-progress.md)记录实际范围，完整技术收尾仍在进行。
+报价现分三处：剑旁是“作品估值”，纸单是“整单酬劳／已领”，交付按钮是“本次实收铜钱”。按钮下列“本柄酬劳＋品质加赏＝实收”，点击“看报价说明”可查看加赏、行会折价和钱袋限制；双剑每柄按实际份额领取。[本次修缮与验证](docs/reviews/G4-T03-payment-progress.md)记录实际范围；现代PC专项与历史失败的边界见[联合技术复核](docs/reviews/G4-T03-final-technical-review.md)。
 
 设置中的“试听敲击声”现在每次明确点击都会替换之前等待中的试听，再发起一次尝试；旧请求晚到不会补播。已核对三个现代引擎DPR1的定向重试、连续试听和跨设置请求归属；[修缮记录](docs/reviews/G4-T03-preview-retry.md)保留原失败与具体范围。
+
+落锤区域和落锤按钮现在会阻止默认右键菜单，右键仍不落锤；其他页面控件保留原菜单行为。已核原完整输入、三个现代引擎的右键／左拖及20次装卸监听清理，详见[锻造菜单修缮与技术复核](docs/reviews/G4-T03-final-technical-review.md)。
 
 刷新原标签页可见“v0.8 炉边报价 · 三柄行囊”。单双剑以独立剑位显示，旧剑／新剑明确任选一条；双剑分期收款，改走旧剑路线只补基础酬劳差额，已经交出的新剑仍有真实去向。达标提示可直接交出绑定的合格剑，裂纹提示打开实际差项，切剑后不会残留旧剑消息。连锻身价随真实接触逐记变化；跨阶亮出成器名，交出的原剑送到来客手中，刷新只恢复事实、不补发奖励。铁砧上方显示当前差项与风险，六格火星蓄满后下一锤安全连锻；“明日打算”列出真实纸单和一旧两新／三新坯，取下旧剑不补第四柄。第12天留架只暂存本局，不带入新局。旧契约仍可从“行旅种子与更早旧路”进入[旧版炉前](http://127.0.0.1:4179/v3.html)，旧D细锻和B版入口也保留。
 
@@ -95,7 +97,7 @@ npm run test:browser
 npm run test:art
 ```
 
-现行v5浏览器验证入口为 `npm run test:v5:browser`（或在已冻结构建上运行 `npx playwright test --config playwright.v5-ui.config.ts`）。配置明确Chromium/Firefox/WebKit × DPR1/2；当前[验收映射](docs/v0.8-acceptance-map.md)逐项记录已执行范围，原生窗口、声音和性能另属后续检查。只跑当前键盘链可选择 `v5-keyboard.spec.ts --project chromium-dpr1`。旧v4用例明确进入 `/v4.html`，不会用v5首页去读v4存档。实际case清单以 `--list` 为准。
+现行v5浏览器验证入口为 `npm run test:v5:browser`（或在已冻结构建上运行 `npx playwright test --config playwright.v5-ui.config.ts`）。配置明确Chromium/Firefox/WebKit × DPR1/2；当前[验收映射](docs/v0.8-acceptance-map.md)逐项记录已执行范围，原生窗口、声音和性能的分批结果及历史诊断边界见[联合技术复核](docs/reviews/G4-T03-final-technical-review.md)。只跑当前键盘链可选择 `v5-keyboard.spec.ts --project chromium-dpr1`。旧v4用例明确进入 `/v4.html`，不会用v5首页去读v4存档。实际case清单以 `--list` 为准。
 
 保留的v4页面回归在构建后运行 `npx playwright test --config playwright.v4-ui.config.ts`。forge-v3界面回归可单独运行 `npx playwright test --config playwright.v3.config.ts`（Chromium/Firefox/WebKit须已安装）；这些旧配置不代表当前v5页面验收，不要在浏览器批次运行时重建共用dist。
 

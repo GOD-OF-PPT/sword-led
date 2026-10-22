@@ -73,17 +73,22 @@ test('v5 twenty real title, settings and pause round trips have stable listeners
 
 test('v5 twenty actual same-realm mounts dispose their listeners and pending presentation',async({page},info)=>{
  await installT03Runtime(page);await routeT03Lifecycle(page);const h=await t03Driver(page,info),fixture=v5Envelopes(t03Workshop());await page.goto('/t03-lifecycle/');await page.evaluate(fixture=>{localStorage.setItem('sword-led.save.v5',fixture.run);localStorage.setItem('sword-led.collection.v2',fixture.collection);},fixture);
- const baseline=await page.evaluate(()=>window.t03Runtime.sample()),cycles=[];
+ const baseline=await page.evaluate(()=>window.t03Runtime.sample()),cycles=[],menuBaseline=baseline.listeners.filter(row=>row.type==='contextmenu');
  for(let n=0;n<20;n++){
   await page.evaluate(()=>window.t03Lifecycle.mount());await expect(page.locator('#v4-continue')).toBeEnabled();await page.locator('#v4-continue').click();await page.locator('#v4-settings').click();await page.getByRole('button',{name:'收好',exact:true}).click();
+  const mountedMenus=(await page.evaluate(()=>window.t03Runtime.sample())).listeners.filter(row=>row.type==='contextmenu');
+  expect(mountedMenus).toEqual([...menuBaseline,{target:'button#v4-hit',type:'contextmenu',capture:false,connected:true},{target:'button#v4-strike',type:'contextmenu',capture:false,connected:true}]);
   // A real UI strike schedules the same renderer that dispose must cancel. Every cycle uses its current legal blade.
   const state=(await h.read()).state,piece=v5Sdk.getRunView(state).blades.find(row=>row.canStrike);if(piece){await h.select(piece.blade.id);await page.locator('#v4-hit').click();const result=t03Step(state,{type:'strike',pieceId:piece.blade.id});expect((await h.record(`mount-${n+1}-accepted`)).state).toEqual(result.state);}
   await page.evaluate(()=>window.t03Lifecycle.dispose());await expect(page.locator('#app')).toBeEmpty();await page.waitForTimeout(800);const sample=await page.evaluate(()=>window.t03Runtime.sample());expect(sample.pending).toBe(0);expect(sample.runningAnimations).toBe(0);
+  // These specific new registrations must be explicitly removed even on retained old button identities.
+  // This is a listener-cleanup contract, not evidence about detached-node collectability or heap growth.
+  const remainingMenus=sample.listeners.filter(row=>row.type==='contextmenu');expect(remainingMenus).toEqual(menuBaseline);
   // The inventory itself retains detached targets for reporting. Only global/media/audio or still-connected
   // listeners can establish a retained callback leak; a detached node's own closure is not that proof.
-  expect(sample.listeners.filter(row=>row.connected)).toEqual(baseline.listeners.filter(row=>row.connected));const done=sample.frames.length;await page.waitForTimeout(500);expect((await page.evaluate(()=>window.t03Runtime.sample())).frames.length).toBe(done);cycles.push({n:n+1,sample});
+  expect(sample.listeners.filter(row=>row.connected)).toEqual(baseline.listeners.filter(row=>row.connected));const done=sample.frames.length;await page.waitForTimeout(500);expect((await page.evaluate(()=>window.t03Runtime.sample())).frames.length).toBe(done);cycles.push({n:n+1,sample,contextMenus:{mounted:mountedMenus,afterDispose:remainingMenus}});
  }
- expect(h.pageErrors).toEqual([]);expect(h.resources).toEqual([]);await t03Record(info,'same-realm-lifecycle',{scope:'Separate test-only bundle imports actual mountV5/createV5BrowserSession and exposes only mount/dispose. All economic interactions use actual product UI. It does not replace production-entry coverage.',baseline,cycles});
+ expect(h.pageErrors).toEqual([]);expect(h.resources).toEqual([]);await t03Record(info,'same-realm-lifecycle',{scope:'Separate test-only bundle imports actual mountV5/createV5BrowserSession and exposes only mount/dispose. All economic interactions use actual product UI. Each mount observes exactly two target contextmenu registrations and explicit return to baseline after dispose, including old detached target records; this is not a heap/collectability claim or native OS menu proof. It does not replace production-entry coverage.',baseline,cycles});
 });
 
 test('v5 legitimate 1898 journal reaches soft1900 and keeps export, delivery and settlement exits',async({page},info)=>{

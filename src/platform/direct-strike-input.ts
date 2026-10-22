@@ -28,6 +28,7 @@ export function bindDirectStrikeInput(surfaces:readonly HTMLButtonElement[],host
   const up=(event:PointerEvent)=>{if(event.pointerId===pointer)releasePointer();};
   const move=(event:PointerEvent)=>{if(!disposed&&event.currentTarget===surfaces[0]&&event.pointerType!=='touch')host.aim({clientX:event.clientX,clientY:event.clientY});};
   const leave=()=>host.aim(null);
+  const contextmenu=(event:Event)=>event.preventDefault();
   const click=(event:MouseEvent)=>{
     const surface=event.currentTarget as HTMLButtonElement;
     if(consume===surface&&event.detail!==0){consume=null;event.preventDefault();event.stopImmediatePropagation();return;}
@@ -53,7 +54,7 @@ export function bindDirectStrikeInput(surfaces:readonly HTMLButtonElement[],host
   };
   const hidden=()=>{if(document.hidden)cancel();};
   const blurSurface=()=>{key=null;host.preparing(false);};
-  for(const surface of surfaces){surface.addEventListener('pointerdown',down);surface.addEventListener('pointermove',move);surface.addEventListener('pointerleave',leave);surface.addEventListener('click',click);surface.addEventListener('keydown',keydown);surface.addEventListener('blur',blurSurface);}
+  for(const surface of surfaces){surface.addEventListener('pointerdown',down);surface.addEventListener('pointermove',move);surface.addEventListener('pointerleave',leave);surface.addEventListener('contextmenu',contextmenu);surface.addEventListener('click',click);surface.addEventListener('keydown',keydown);surface.addEventListener('blur',blurSurface);}
   window.addEventListener('pointerup',up,true);window.addEventListener('pointercancel',up,true);window.addEventListener('keyup',keyup,true);window.addEventListener('blur',cancel);document.addEventListener('visibilitychange',hidden);
-  return{cancel,refresh(){if(key?.code==='Space'&&!sameInput(key.identity,key.kind==='forge'?host.context():host.navigationContext())){key=null;host.preparing(false);}},dispose(){disposed=true;cancel();for(const surface of surfaces){surface.removeEventListener('pointerdown',down);surface.removeEventListener('pointermove',move);surface.removeEventListener('pointerleave',leave);surface.removeEventListener('click',click);surface.removeEventListener('keydown',keydown);surface.removeEventListener('blur',blurSurface);}window.removeEventListener('pointerup',up,true);window.removeEventListener('pointercancel',up,true);window.removeEventListener('keyup',keyup,true);window.removeEventListener('blur',cancel);document.removeEventListener('visibilitychange',hidden);}};
+  return{cancel,refresh(){if(key?.code==='Space'&&!sameInput(key.identity,key.kind==='forge'?host.context():host.navigationContext())){key=null;host.preparing(false);}},dispose(){disposed=true;cancel();for(const surface of surfaces){surface.removeEventListener('pointerdown',down);surface.removeEventListener('pointermove',move);surface.removeEventListener('pointerleave',leave);surface.removeEventListener('contextmenu',contextmenu);surface.removeEventListener('click',click);surface.removeEventListener('keydown',keydown);surface.removeEventListener('blur',blurSurface);}window.removeEventListener('pointerup',up,true);window.removeEventListener('pointercancel',up,true);window.removeEventListener('keyup',keyup,true);window.removeEventListener('blur',cancel);document.removeEventListener('visibilitychange',hidden);}};
 }
