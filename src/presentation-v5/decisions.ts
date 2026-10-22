@@ -55,7 +55,7 @@ function nearestRoute(view: ForgeView, item: PublicBlade) {
 function riskCopy(item: PublicBlade) {
  const rate = item.odds.crack / 10;
  if (rate === 0) return item.blade.cracked ? '这一记普通锤不会再裂，已有裂纹仍在。' : '下一记普通锤不会裂，不代表之后也一直安全。';
- return item.blade.cracked ? `下一记普通锤有${rate}%会断；断后只回收${fmt(item.recovery)}金币。` : `下一记普通锤裂损率${rate}%；继续敲要承担这份风险。`;
+ return item.blade.cracked ? `下一记普通锤有${rate}%会断；断后只回收${fmt(item.recovery)}铜钱。` : `下一记普通锤裂损率${rate}%；继续敲要承担这份风险。`;
 }
 function paymentCopy(item: PublicBlade) {
  return item.quote.matched ? `现在交剑实收${fmt(item.quote.amount)}铜钱。` : `行会可收${fmt(item.quote.amount)}铜钱。`;
@@ -145,7 +145,7 @@ export function traitPurpose(traitId: Trait, view: ForgeView): TraitDecision {
  const nowIntact = view.commission.routes.some(route => route.crack === 'intact'), nextIntact = view.next?.commission.routes.some(route => route.crack === 'intact') ?? false;
  let headline: string, copy: string, tone: DecisionTone = equipped ? 'neutral' : 'ready';
  switch (traitId) {
-  case 'steady': headline = '保住首裂的身价，保不住无裂条件'; copy = nowIntact || nextIntact ? '眼前或明日的无裂委托，裂了仍不合格；它只能减轻首裂掉价，不能修好裂纹。' : cracked === view.blades.length && cracked > 0 ? '手里的剑都已裂，不能靠护符治好；它主要照顾下一柄的首次裂损。' : '继续锻时，首次裂损可保住身价；剑仍留裂纹，再裂仍会断。'; if (view.growth.crackGuard) copy += '现有赊护也会在同一次首裂用掉。'; break;
+  case 'steady': headline = '保住首裂的估值，保不住无裂条件'; copy = nowIntact || nextIntact ? '眼前或明日的无裂委托，裂了仍不合格；它只能减轻首裂掉价，不能修好裂纹。' : cracked === view.blades.length && cracked > 0 ? '手里的剑都已裂，不能靠护符治好；它主要照顾下一柄的首次裂损。' : '继续锻时，首次裂损可保住估值；剑仍留裂纹，再裂仍会断。'; if (view.growth.crackGuard) copy += '现有赊护也会在同一次首裂用掉。'; break;
   case 'ember': headline = '把一次连锻里的安全锤做厚'; copy = `${view.blades.some(item => item.blade.charge === 6) ? '已有剑蓄满六格，下一次连锻就可用上。' : '先把六格锤势攒满，连锻时才用得上。'}最多多一记安全锤；一次不会变成两次连锻。`; break;
   case 'inherit': headline = view.next ? '碎剑的余温，留给明日首坯' : '最后一天已没有下一批来料'; copy = view.next ? `以后碎剑可把峰值20%传给明日首坯，最多增加普通底价4倍。${view.next.inheritanceBonus ? `明日已有${fmt(view.next.inheritanceBonus)}余温加料。` : '它不保住碎剑，也不保证冒险更赚。'}` : '这门手艺只给下一天的首坯加料；现在换来，已没有明日首坯可受益。'; if (!view.next) tone = 'risk'; break;
   case 'echo': {const closest = view.blades.filter(item => !item.reserved).map(item => 3 - item.blade.successes % 3).sort((a, b) => a - b)[0]; headline = '让普通成功接成三声回响'; copy = `${closest ? `眼前最近一柄还需${closest}次普通成功。` : '下一柄每第三次普通成功，可额外增值25%。'}安全连锻不计这三次；别为凑回声超过委托的普通锤限制。`; break;}
@@ -159,11 +159,11 @@ export function traitPurpose(traitId: Trait, view: ForgeView): TraitDecision {
 export function upgradePlan(view: ForgeView): UpgradeDecision {
  const market = view.merchant, next = view.next;
  if (!market) return {headline: next?.merchant ? '明日再看看行脚商人的报价' : '先把眼前这炉安排好', copy: next ? `按当前来料，明日普通新坯底价${fmt(next.normalBase)}。商人到场时再看备料选择。` : '已经没有下一批来料。', tone: 'neutral', price: null, canBuy: false, currentBase: next?.normalBase ?? null, afterBase: null, balanceAfter: null};
- if (!market.canUpgrade || !next) return {headline: '这一站暂不能再备料', copy: `本次报价${fmt(market.upgrade)}金币，现有${fmt(view.coins)}。${next ? `按当前准备，明日普通新坯底价${fmt(next.normalBase)}。` : '已经没有明日来料。'}`, tone: 'neutral', price: market.upgrade, canBuy: false, currentBase: next?.normalBase ?? null, afterBase: null, balanceAfter: null};
+ if (!market.canUpgrade || !next) return {headline: '这一站暂不能再备料', copy: `本次报价${fmt(market.upgrade)}铜钱，现有${fmt(view.coins)}。${next ? `按当前准备，明日普通新坯底价${fmt(next.normalBase)}。` : '已经没有明日来料。'}`, tone: 'neutral', price: market.upgrade, canBuy: false, currentBase: next?.normalBase ?? null, afterBase: null, balanceAfter: null};
  const chapter = CHAPTERS.find(item => next.day >= item.days[0]! && next.day <= item.days[1]!);
  const count = view.growth.upgradeCount + 1;
  const projected = chapter && Number.isSafeInteger(count) && count >= 1 && count <= 3 ? Math.floor(chapter.base * 3 ** count / 2 ** count * view.growth.pending.supplyPct / 100) : null;
  const afterBase = projected !== null && Number.isSafeInteger(projected) && projected >= next.normalBase ? projected : null;
  return {headline: afterBase === null ? '为后续来料提高普通底价' : `明日普通新坯 ${fmt(next.normalBase)} → ${fmt(afterBase)}`,
-  copy: `花${fmt(market.upgrade)}，余${fmt(view.coins - market.upgrade)}金币。${afterBase === null ? '后续普通底价提高50%；' : ''}手上已有的剑不会涨价，留剑与修印仍要另作取舍。`, tone: 'ready', price: market.upgrade, canBuy: true, currentBase: next.normalBase, afterBase, balanceAfter: view.coins - market.upgrade};
+  copy: `花${fmt(market.upgrade)}，余${fmt(view.coins - market.upgrade)}铜钱。${afterBase === null ? '后续普通底价提高50%；' : ''}手上已有的剑不会涨价，留剑与修印仍要另作取舍。`, tone: 'ready', price: market.upgrade, canBuy: true, currentBase: next.normalBase, afterBase, balanceAfter: view.coins - market.upgrade};
 }

@@ -30,11 +30,13 @@ import {readRawRunExport} from './raw-run-export.js';
 import {journeyScreen,journeyOutcome,CAMPAIGN_GOAL,isCriticalDay} from './journey.js';
 import {buildJourneyStage} from './stages.js';
 import {collectionBook,collectionWorkPage} from './collection-ui.js';
+import {createArtworkRecovery} from './artwork-recovery.js';
+import {workshopPaymentCopy} from './payment-copy.js';
 import type {ForgeNotice} from './story.js';
 
 const fmt=(v:number)=>v.toLocaleString('zh-CN');
 const AUDIO_COPY:Record<AudioStatus,string>={waiting:'声音尚未启用，可点“试听敲击声”重试；锻造仍可继续。',ready:'声音已就绪。',muted:'当前已静音或音量为零，仍可看见锻造结果。',blocked:'浏览器暂未允许声音，可点“试听敲击声”重试；锻造仍可继续。',unavailable:'当前声音不可用，可重试试听；锻造仍可继续。'};
-const ERRORS:Record<string,string>={market_exhausted:'今日收购钱袋用完了，剑仍在。可留给明天、献成器换手艺，或明确回收。',blade_unworked:'献剑需等级至少3，大成可增加两级，不是必须敲三次。',legacy_changed:'旧炉谱或当前行程已变化，请重新预览后再确认。',legacy_unavailable:'这份旧炉谱暂不可读取，可查看另一份来源；原件仍保留。',readonly:'另一窗口正在保存。关闭占用页后，可在保存详情中读取最新。',not_active:'页面已停用，请重新读取最新进度。',locks_unsupported:'当前无法取得保存锁，可明确选择不保存试玩。',save_conflict:'磁盘进度已变化，请先导出，再读取最新或保留当前局不保存续玩。',save_unavailable:'主档暂不可读取，可检查备份或不保存试玩。',collection_pending:'新取得的成长尚未安全保存。请先重试本局和炉谱，或导出当前成果。',collection_unavailable:'炉谱暂未保存，请在保存详情中查看原因并重试。',insufficient_coins:'金币不足，这次没有扣款。',invalid_replacement:'先选择换下哪门手艺。',at_cap:'这柄剑已经成器，可以交剑或留到明天。',record_limit:'操作记录已到安全上限，仍可交剑、回收和收工。',stale_session:'页面身份已变化，请重新查看这次选择。',stale_revision:'进度已更新，请重新操作。',confirmation_required:'替换当前进度需要明确确认。',recipe_locked:'首锤后配方已经定下。',reserved_piece:'先从剑架取回，再加工或交付。',challenge_locked:'完成完整旅程后才可开启行脚挑战。',session_busy:'本次结果正在收妥，请稍后再试。'};
+const ERRORS:Record<string,string>={market_exhausted:'今日收购钱袋用完了，剑仍在。可留给明天、献成器换手艺，或明确回收。',blade_unworked:'献剑需等级至少3，大成可增加两级，不是必须敲三次。',legacy_changed:'旧炉谱或当前行程已变化，请重新预览后再确认。',legacy_unavailable:'这份旧炉谱暂不可读取，可查看另一份来源；原件仍保留。',readonly:'另一窗口正在保存。关闭占用页后，可在保存详情中读取最新。',not_active:'页面已停用，请重新读取最新进度。',locks_unsupported:'当前无法取得保存锁，可明确选择不保存试玩。',save_conflict:'磁盘进度已变化，请先导出，再读取最新或保留当前局不保存续玩。',save_unavailable:'主档暂不可读取，可检查备份或不保存试玩。',collection_pending:'新取得的成长尚未安全保存。请先重试本局和炉谱，或导出当前成果。',collection_unavailable:'炉谱暂未保存，请在保存详情中查看原因并重试。',insufficient_coins:'铜钱不足，这次没有扣款。',invalid_replacement:'先选择换下哪门手艺。',at_cap:'这柄剑已经成器，可以交剑或留到明天。',record_limit:'操作记录已到安全上限，仍可交剑、回收和收工。',stale_session:'页面身份已变化，请重新查看这次选择。',stale_revision:'进度已更新，请重新操作。',confirmation_required:'替换当前进度需要明确确认。',recipe_locked:'首锤后配方已经定下。',reserved_piece:'先从剑架取回，再加工或交付。',challenge_locked:'完成完整旅程后才可开启行脚挑战。',session_busy:'本次结果正在收妥，请稍后再试。'};
 const SAVE_ERRORS:Record<string,string>={storage_read_failed:'读取被拒绝',storage_write_failed:'写入失败',storage_conflict:'磁盘内容已变化',unsupported_schema:'版本较新或不兼容',unsupported_rules:'使用其他规则',invalid_json:'文件内容损坏',invalid_state:'进度未通过回放校验',invalid_timestamp:'保存时间无效',save_too_large:'存档过大',serialization_failed:'无法生成存档',recovery_required:'发现旧备份，需要明确恢复',run_unsaved:'请先保存当前局，再保存新成长',run_changed:'当前局已被其他窗口更新'};
 interface ModalAction {label:string;run:()=>void;disabled?:boolean;primary?:boolean;id?:string}
 type SceneOverride={kind:'delivery';revision:number;commissionId:number;pieceIds:readonly string[]}|{kind:'intro';revision:number};
@@ -43,7 +45,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
  root.innerHTML=V5_TEMPLATE;enableKeyboardNavigation(root);const ownRoot=root.firstElementChild;
  const find=<T extends HTMLElement>(id:string)=>{const n=root.querySelector<T>('#'+id);if(!n)throw Error('Missing '+id);return n;};
  const button=(id:string)=>find<HTMLButtonElement>(id),dialog=find<HTMLDialogElement>('v4-dialog'),stageArtwork=find<HTMLImageElement>('v4-stage-image');
- const text=(id:string,value:string)=>{const n=find(id);if(n.textContent!==value)n.textContent=value;};
+ const text=(id:string,value:string)=>{const copy=value.replaceAll('身价','估值').replaceAll('金币','铜钱'),n=find(id);if(n.textContent!==copy)n.textContent=copy;};
  const show=(id:string,value:boolean)=>{find(id).hidden=!value;};
  const preferences=createPreferences(()=>localStorage),audio=createForgeAudio(undefined,IMPACT_SOUNDS),motion=matchMedia('(prefers-reduced-motion: reduce)');
  let snapshot=port.getSnapshot(),collection=port.getCollectionSnapshot(),prefs=preferences.getSnapshot();
@@ -60,11 +62,13 @@ export function mountV5(root:HTMLElement,port:V5Session){
  const timers=new Set<ReturnType<typeof setTimeout>>();
  const sceneAnimations=new Set<Animation>();
  const thumbnailBlades=new WeakMap<HTMLCanvasElement,Blade>();
+ const auxiliaryArtwork=createArtworkRecovery(root,{changed:updateArtworkStatus,failed:artworkProblem});
  const reduced=()=>prefs.value.reducedMotion||motion.matches;
  const state=()=>snapshot.state,current=()=>state()?.blades.find(b=>b.id===selectedId)??null;
  const identity=()=>`${state()?.runId??''}/${snapshot.generation}/${epoch}`;
  const canAct=()=>!disposed&&route==='game'&&!modal&&!paused&&snapshot.active&&!snapshot.conflict&&(snapshot.mode==='writer'||snapshot.mode==='memory');
  const setStatus=(value:string)=>text('v4-status',value);
+ function pauseNotice():ForgeNotice{return{title:'炉火还在，已经为你暂停',copy:'刚才未完成的输入与动效已取消，已接受的成果保持。',action:'resume',label:'继续这一炉'};}
  function cancelPresentation(clearScene=true){effectGeneration++;for(const id of timers)clearTimeout(id);timers.clear();for(const a of sceneAnimations)a.cancel();sceneAnimations.clear();renderer?.cancel();input?.cancel();handoff?.cancel();feedback?.cancel();const reading=strikeReadout;strikeReadout=null;busy=false;lastTriggers=[];if(reading){const b=current();text('v4-value',b?fmt(b.value):'—');text('v4-craft-record',b?`等级 ${b.level} · 已完成安全连锻 ${b.bursts}次`:'');const s=state();if(s)renderBelt(s);}if(clearScene){sceneOverride=null;inlineDelivery=null;}audio.silence();}
  function later(fn:()=>void,ms:number){const token=effectGeneration,id=setTimeout(()=>{timers.delete(id);if(!disposed&&token===effectGeneration)fn();},ms);timers.add(id);}
  function nextBlade(){const s=state();selectedId=s?.blades.find(b=>b.status==='active'&&b.id!==s.reserveId)?.id??s?.reserveId??'';}
@@ -111,14 +115,14 @@ export function mountV5(root:HTMLElement,port:V5Session){
    if(!n&&!wasReady&&getRunView(r.state).blades.find(p=>p.blade.id===strike.pieceId)?.willCommission){const view=getRunView(r.state),progress=view.commission.progress,multi=view.commission.routes.some(route=>route.count>1),oneMore=progress.routes.some(route=>route.required>1&&route.count===route.required-1);notice={title:'这柄剑，已经合格了',copy:multi?(view.commission.id===11?'这柄剑符合接力的一条路线；旧剑一柄或新剑两柄分别计数。':oneMore?'交出这一柄，双驿需要的两柄就齐了。':'先交出这一柄，再准备另一柄。两柄各自合格，才算完成。'):'现在交给来客，就能保住这一站。也可以继续锻，承担下一锤的风险。',action:'deliver',label:`交给${view.commission.name}`,subject:{runId:r.state.runId,day:r.state.day,revision:r.state.revision,pieceId:strike.pieceId,generation:snapshot.generation}};}
    busy=true;const token=++effectGeneration,b=r.state.blades.find(b=>b.id===strike.pieceId)!;renderer?.draw(b);
    renderer?.play(strike,lastPoint,()=>{if(disposed||token!==effectGeneration)return;busy=false;strikeReadout=null;if(current()?.status!=='active')nextBlade();render();},before.blades.find(piece=>piece.id===strike.pieceId));
-   const h=strike.hits.at(-1);if(h)setStatus(`${strike.burst?'安全连锻 ×'+strike.hits.length:'落锤'} · ${h.result==='great'?'大成':h.result==='crack'?'出现裂纹':h.result==='broken'?'断剑回收':'锻成'} · 这一记后身价 ${fmt(h.after)}`);
+   const h=strike.hits.at(-1);if(h)setStatus(`${strike.burst?'安全连锻 ×'+strike.hits.length:'落锤'} · ${h.result==='great'?'大成':h.result==='crack'?'出现裂纹':h.result==='broken'?'断剑回收':'锻成'} · 这一记后估值 ${fmt(h.after)}`);
   }else{
    cancelPresentation();if(command.type==='advance'||current()?.status!=='active'||command.type==='reserve'&&r.state.reserveId===selectedId)nextBlade();
    if(command.type==='reserve'&&before.reserveId===command.pieceId&&r.state.reserveId!==command.pieceId)selectedId=command.pieceId;
    const met=r.events.find(e=>e.type==='MainCompleted'),delivered=r.events.find(e=>e.type==='Delivered');
    if(met?.type==='MainCompleted'&&delivered?.type==='Delivered'){
     inlineDelivery={runId:r.state.runId,day:r.state.day,commissionId:met.commissionId,pieceIds:met.pieceIds,amount:delivered.amount,baseFee:delivered.baseFeeDelta,bonus:delivered.qualityBonus};notice=null;audio.acceptedCue('met');
-   }else if(delivered?.type==='Delivered'){if(delivered.matched){const outcome=journeyOutcome(r.state,getRunView(r.state).commission.id);notice={title:'先送到了一柄',copy:`这柄实收${fmt(delivered.amount)}铜钱（酬劳${fmt(delivered.baseFeeDelta)}＋品质${fmt(delivered.qualityBonus)}）。已交${outcome.progressText}，再安排余下的合格剑。`,action:'journey',label:'看看已交的剑'};}audio.acceptedCue('delivery');}
+   }else if(delivered?.type==='Delivered'){if(delivered.matched){const outcome=journeyOutcome(r.state,getRunView(r.state).commission.id);notice={title:'先送到了一柄',copy:`这柄实收${fmt(delivered.amount)}铜钱（酬劳${fmt(delivered.baseFeeDelta)}＋品质加赏${fmt(delivered.qualityBonus)}）。已交${outcome.progressText}，再安排余下的合格剑。`,action:'journey',label:'看看已交的剑'};}audio.acceptedCue('delivery');}
    else if(r.events.some(e=>e.type==='Disposed'))audio.acceptedCue('recycle');
    else if(r.events.some(e=>['Trait','Upgraded','Repaired','Modification'].includes(e.type)))audio.acceptedCue('purchase');
    else if(r.events.some(e=>e.type==='Settled'))audio.acceptedCue(r.state.history.at(-1)?.met?'met':'missed');
@@ -158,7 +162,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
   const node=root.querySelector<HTMLElement>('#v4-audio-status');if(node){node.dataset.state=next;node.textContent=AUDIO_COPY[next];}
   if(changed&&(next==='blocked'||next==='unavailable')&&modalKind!=='settings')setStatus(AUDIO_COPY[next]);
  }
- function artworkStatus(){const forge=renderer?.assetStatus();return{loading:!!forge?.loading||stageLoading,failed:[...(forge?.failed??[]),...(stageFailedSrc?[stageFailedSrc]:[])]};}
+ function artworkStatus(){const forge=renderer?.assetStatus(),auxiliary=auxiliaryArtwork.status();return{loading:!!forge?.loading||stageLoading||auxiliary.loading,failed:[...(forge?.failed??[]),...(stageFailedSrc?[stageFailedSrc]:[]),...auxiliary.failed]};}
  function updateArtworkStatus(){
   if(disposed)return;const status=artworkStatus();if(status.failed.length)artFailureSeen=true;
   const region=root.querySelector<HTMLElement>('#v4-art-status');
@@ -180,7 +184,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
   stageArtwork.src=url;if(stageArtwork.complete&&stageArtwork.naturalWidth>0)ready();updateArtworkStatus();
  }
  function stageImage(src:string){if(stageExpectedSrc===src)return;stageExpectedSrc=src;loadStageImage(src);}
- function retryArtwork(){const status=artworkStatus();if(disposed||status.loading)return;const failedStage=stageFailedSrc;if(failedStage&&failedStage===stageExpectedSrc)loadStageImage(failedStage,true);renderer?.retryAssets();updateArtworkStatus();}
+ function retryArtwork(){const status=artworkStatus();if(disposed||status.loading)return;const failedStage=stageFailedSrc;if(failedStage&&failedStage===stageExpectedSrc)loadStageImage(failedStage,true);renderer?.retryAssets();auxiliaryArtwork.retry();updateArtworkStatus();}
 
  function presentScene(value:SceneOverride){sceneOverride=value;epoch++;syncAudio();if(value.kind==='intro'&&!reduced())later(()=>{sceneOverride=null;epoch++;stageKey='';render();},4200);}
  function renderStage(s:RunState){
@@ -197,8 +201,8 @@ export function mountV5(root:HTMLElement,port:V5Session){
   if(!visible||!receipt)return;const outcome=journeyOutcome(s,receipt.commissionId),image=find<HTMLImageElement>('v4-inline-image');
   text('v4-inline-title',outcome.complete?`${outcome.commission.name}接过了剑`:'先送到了一柄');
   text('v4-inline-copy',outcome.complete?outcome.commission.success:`已经交付${outcome.progressText}，再安排下一柄合格的剑。`);
-  if(image.dataset.source!==outcome.image){image.dataset.source=outcome.image;image.onerror=()=>{image.onerror=null;image.src='/assets/d/forge-backdrop-v2.webp';};image.src=outcome.image;}image.alt=outcome.commission.title+'的实际交付';
-  text('v5-inline-payment',`实收 ${fmt(receipt.amount)} 铜钱 · 酬劳${fmt(receipt.baseFee)}＋品质${fmt(receipt.bonus)}`);
+  if(image.dataset.source!==outcome.image){image.dataset.source=outcome.image;auxiliaryArtwork.image(image,outcome.image,'/assets/d/forge-backdrop-v2.webp');}image.alt=outcome.commission.title+'的实际交付';
+  text('v5-inline-payment',`实收 ${fmt(receipt.amount)} 铜钱 · 酬劳${fmt(receipt.baseFee)}＋品质加赏${fmt(receipt.bonus)}`);
   text('v4-inline-review',s.gift==='available'?'收下第一门手艺':'看看灯路');
  }
  function handoffBlade(token:HandoffToken){
@@ -239,7 +243,6 @@ export function mountV5(root:HTMLElement,port:V5Session){
   text('v5-rack-title',v.next?'留一把，待明日':'本局暂放的剑');find('v4-reserve-zone').setAttribute('aria-label',v.next?'留给明天的剑':'本局暂放的剑');
   text('v5-slot-plan',v.next?(v.next.oldCount?'明日：旧剑1 ＋ 新坯2':'明日：新坯3'):'最后一炉，没有次日来料');
   find('v5-slot-plan').title=v.next?'明日共三柄；留一柄旧剑会少一柄新坯，取下后不补发。':'这是最后一炉，剑架上的剑不会带入新局。';
-  text('v5-order-pay',v.commission.progress.complete?`酬劳已收 ${fmt(v.market.baseFeesPaid)}`:`今日酬劳 ${fmt(v.market.baseFee)} · 已收${fmt(v.market.baseFeesPaid)}`);
   text('v4-day',`${s.mode==='challenge'?'行脚挑战 · ':''}第${s.day}天 · ${v.chapter.title.split(' · ')[1]??v.chapter.title}${isCriticalDay(s.day)?' · 关键约定':''}`);text('v4-goal-name',v.commission.title);paper?.render(v,b?.id??null,`${s.runId}/${snapshot.generation}`);
   text('v4-seals',`${s.seals}/3`);text('v4-coins',fmt(s.coins));text('v4-value',b?fmt(reading?.value??b.value):'—');text('v4-condition',b?`${RECIPES[b.recipe].name} · ${b.status==='broken'?'断裂':b.cracked?'已有裂纹':'无裂纹'}`:'铁砧已空，安排这一炉收工');
   text('v4-craft-record',b?`等级 ${reading?.level??b.level} · 已完成安全连锻 ${b.bursts}次`:'');
@@ -248,9 +251,9 @@ export function mountV5(root:HTMLElement,port:V5Session){
   button('v4-hit').disabled=!canAct();button('v4-hit').setAttribute('aria-busy',String(busy));button('v4-strike').disabled=!canAct();
   const strikeLabel=active?.canStrike?(active.odds.burst?'安全连锻':'落锤'):active?.reserved?'先取回剑':'收工';
   const strikeButton=button('v4-strike');if(strikeButton.dataset.label!==strikeLabel){strikeButton.dataset.label=strikeLabel;strikeButton.replaceChildren(document.createTextNode(strikeLabel),element('span',active?.canStrike?'左键剑身 / 空格':active?.reserved?'到左侧剑架取回':'这一炉已安排好'));}strikeButton.setAttribute('aria-busy',String(busy));
-  const quote=active?.quote;
-  text('v4-deliver',active?.reserved?'先取回剑':quote?.matched?`交给${v.commission.name} · 收${fmt(quote.amount)}`:quote?.allowed?`卖给行会 · 收${fmt(quote.amount)}`:quote?.error==='market_exhausted'?'行会今日歇账':'先选一柄剑');
-  text('v5-delivery-quote',active?.reserved?'从左侧取回，才可交付。':quote?.matched?`酬劳${fmt(quote.baseFeeDelta)} ＋ 品质${fmt(quote.qualityBonus)} · 收购余${fmt(v.market.remaining)}`:quote?.error==='market_exhausted'?'收购钱袋已空。可留剑、换手艺或明确回收。':quote?`作品身价${fmt(quote.pieceValue)} · 收购余${fmt(v.market.remaining)}`:'这柄已安排，换一柄或收工。');
+  const quote=active?.quote,payment=workshopPaymentCopy(v,b?.id??null);text('v5-value-meaning',payment.valueHint);text('v5-order-pay',payment.orderPay);find('v5-order-pay').title=payment.orderExplanation;
+  text('v4-deliver',payment.quote.buttonText);
+  const quoteNode=button('v5-delivery-quote');if(quoteNode.dataset.copy!==payment.quote.breakdown){quoteNode.dataset.copy=payment.quote.breakdown;quoteNode.replaceChildren(element('span',payment.quote.breakdown),element('small','看报价说明 ›'));}quoteNode.title=payment.quote.explanation;
   button('v4-deliver').disabled=!canAct()||busy||!quote?.allowed;
   button('v4-deliver').setAttribute('aria-describedby','v5-delivery-quote');show('v5-arrange',quote?.error==='market_exhausted');button('v5-arrange').disabled=!canAct()||busy;
   text('v4-reserve',s.reserveId===b?.id?'取回留剑':v.next?'留给明天':'暂放本局剑架');button('v4-reserve').disabled=!canAct()||busy||b?.status!=='active';button('v4-scrap').disabled=!canAct()||busy||!active||active.reserved;button('v4-settle').disabled=!canAct()||busy;
@@ -271,8 +274,8 @@ export function mountV5(root:HTMLElement,port:V5Session){
   const effects:{id:EventId;label:string;copy:string;pending:boolean}[]=[];
   const first=s.blades.find(b=>b.suppliedDay===s.day&&b.slot===1),firstName=first?`${RECIPES[first.recipe].name}（第${first.suppliedDay}天来料）`:'本日首柄新坯';
   if(s.upgradeCount)effects.push({id:'donation',label:`备料${s.upgradeCount}次`,copy:`来料升级已累计${s.upgradeCount}次，眼前剑不变。${v.next?`明日普通新坯底价${fmt(v.next.normalBase)}，第一新坯含余温为${fmt(v.next.firstBase)}。`:'已是最后一炉，没有下一批来料。'}`,pending:false});
-  if(s.crackGuard)effects.push({id:'credit',label:'保价待用',copy:'下一次完好剑首裂保住身价，仍会留下裂纹；再次裂损仍会断。首裂时正式消耗。',pending:false});
-  else if(lastTriggers.includes('credit'))effects.push({id:'credit',label:'保价已用',copy:'这记首裂实际用掉保价，保住了本次身价；裂纹仍在，再裂仍会断。这不是一份新的待用资格。',pending:false});
+  if(s.crackGuard)effects.push({id:'credit',label:'保价待用',copy:'下一次完好剑首裂保住估值，仍会留下裂纹；再次裂损仍会断。首裂时正式消耗。',pending:false});
+  else if(lastTriggers.includes('credit'))effects.push({id:'credit',label:'保价已用',copy:'这记首裂实际用掉保价，保住了本次估值；裂纹仍在，再裂仍会断。这不是一份新的待用资格。',pending:false});
   for(const pending of[false,true]){
    const buffs=pending?s.pending:s.dayBuffs,prefix=pending?'明日':'此炉';
    if(buffs.supplyPct===120)effects.push({id:'donation',label:`${prefix}加料`,copy:pending?'护送加料待明日发坯：新坯底价＋20%，留剑则两柄，否则三柄；不作用于旧剑。':'今日新坯已按20%加料发出，底价已包含这份加成；同行旧剑没有额外增值。',pending});
@@ -301,16 +304,16 @@ export function mountV5(root:HTMLElement,port:V5Session){
   button('v4-continue').hidden=!s;button('v4-continue').disabled=!snapshot.active;button('v4-start').disabled=!snapshot.active||snapshot.conflict||!['writer','memory'].includes(snapshot.mode)||snapshot.mode!=='memory'&&collection.pending||snapshot.mode!=='memory'&&snapshot.load?.main.status==='unavailable';text('v4-start',s?'另启一程':'启程');
   show('v4-title-challenge',collection.data.challenge);button('v4-title-challenge').disabled=button('v4-start').disabled||collection.pending||!!collection.problem;
   const problems=saveSummary();show('v4-save-banner',problems.length>0);text('v4-save-summary',problems.join(' · '));text('v4-save-open',problems.length?'保存详情 !':s?'进度已收好':'本机存档');
-  if(work&&s)renderWorkshop(s);else if(route==='game'&&s)renderStage(s);for(const node of root.querySelectorAll<HTMLButtonElement>('#v4-stage [data-economic]'))node.disabled=!canAct()||busy;renderNotice();syncAudio();repaintProps();
+  if(work&&s){const selected=current();if(!selected||selected.finalizedDay!==null&&selected.finalizedDay<s.day)nextBlade();renderWorkshop(s);}else if(route==='game'&&s)renderStage(s);for(const node of root.querySelectorAll<HTMLButtonElement>('#v4-stage [data-economic]'))node.disabled=!canAct()||busy;if(route==='game'&&!modal&&!document.hidden){if(paused)notice=pauseNotice();else if(notice?.action==='resume')notice=null;}renderNotice();syncAudio();repaintProps();
   if(work&&previousMode!=='workshop')queueMicrotask(()=>{if(!disposed&&!modal&&!paused&&stageMode==='workshop'&&route==='game')button('v4-strike').focus({preventScroll:true});});
  }
  function toTitle(){cancelPresentation();epoch++;route='title';paused=false;stageKey='';if(modal)closeModal();render();button('v4-start').focus({preventScroll:true});}
- function continueGame(){if(!state())return;cancelPresentation();epoch++;route='game';paused=false;stageKey='';nextBlade();render();}
+ function continueGame(){if(!state())return;cancelPresentation();epoch++;route='game';paused=false;stageKey='';nextBlade();render();void audio.gesture();}
  function newInput(mode:V5NewGameInput['mode']='story'):V5NewGameInput{return{runId:crypto.randomUUID(),seed:seedDraft.trim()||`灯路-${crypto.randomUUID().slice(0,8)}`,mode};}
  function startNew(mode:V5NewGameInput['mode']='story'){
   if(disposed)return;
   if(mode==='challenge'&&(!collection.data.challenge||collection.pending||collection.problem)){resultError(collection.pending?'collection_pending':'challenge_locked');if(collection.pending||collection.problem)saveDetails();return;}
-  const input=newInput(mode);const execute=(confirmed=false)=>{const r=port.startNewGame(input,{generation:snapshot.generation,confirmed});if(!r.ok){resultError(r.error);if(r.error==='collection_pending')saveDetails();return;}notice=null;continueGame();void audio.gesture();};
+  const input=newInput(mode);const execute=(confirmed=false)=>{const r=port.startNewGame(input,{generation:snapshot.generation,confirmed});if(!r.ok){resultError(r.error);if(r.error==='collection_pending')saveDetails();return;}notice=null;continueGame();};
   const main=snapshot.load?.main;if(state()||main?.status==='invalid'||snapshot.load?.backup.status==='valid')confirm(mode==='challenge'?'带着炉谱，开启行脚挑战？':'另启一程？',`${mode==='challenge'?'挑战会重排章内委托，沿用相同锻造规则。':''}当前新经营行程会被替换，合法旧主档会保留为备份。旧版十二灯行程保持原样，可从旧入口续玩；先导出想保留的进度。${main?.status==='invalid'?' 当前损坏或较新版主档不会自动保留到备份，请先到保存详情导出磁盘局档原文。':''}`,()=>execute(true));else execute();
  }
  function settle(){
@@ -321,19 +324,19 @@ export function mountV5(root:HTMLElement,port:V5Session){
   else if(s.day===12)body.append(element('p','这是最后一站；收工后按沿途关键约定、至少10项完成和剩余契印判定这次结局。'));
   else if(!p.complete)body.append(element('p',`仍可带着${p.sealsAfter}枚契印去下一天；这次失约会保留在灯路回顾里。`));
   body.append(element('p',`余下${p.remaining.length}柄共回收${fmt(p.recovered)}铜钱；今日收购剩余${fmt(getRunView(s).market.remaining)}。`));
-  for(const row of p.recoveries){const blade=s.blades.find(b=>b.id===row.pieceId)!;body.append(element('p',`${RECIPES[blade.recipe].name} · 身价${fmt(blade.value)} → 回收${fmt(row.amount)}${row.amount===0?'（钱袋已空，仍会交出）':''}`));}
+  for(const row of p.recoveries){const blade=s.blades.find(b=>b.id===row.pieceId)!;body.append(element('p',`${RECIPES[blade.recipe].name} · 估值${fmt(blade.value)} → 回收${fmt(row.amount)}${row.amount===0?'（钱袋已空，仍会交出）':''}`));}
   const tomorrow=getRunView(s).next;if(tomorrow)body.append(element('h3',`明日：${tomorrow.commission.title}`),element('p',tomorrow.reserve?`留这柄${RECIPES[tomorrow.reserve.recipe].name}，明日一旧剑＋两新坯；${tomorrow.reserve.assessment.qualifies?'已合一柄要求':'还不合这张纸单，可返回调整'}。`:'没有留剑，明日三柄新坯。'),element('p','取下或处置旧剑后，不会额外补发第四柄。'));
   confirm('收好这一炉',body,()=>send({type:'settle'}));
  }
- function replaceTrait(trait:Trait,command:(old:Trait)=>Action,intro:HTMLElement|string,cancelLabel:string,costCopy='首赠免费，不交剑、不花金币。'){
+ function replaceTrait(trait:Trait,command:(old:Trait)=>Action,intro:HTMLElement|string,cancelLabel:string,costCopy='首赠免费，不交剑、不花铜钱。'){
   const s=state();if(!s)return;const body=element('div');body.append(typeof intro==='string'?element('p',intro):intro,element('h3',`新手艺 · ${TRAITS[trait].name}`),traitArt(trait),element('p',TRAITS[trait].text));
   const grid=element('div',undefined,'v4-choice-grid');for(const old of s.traits){const card=element('article',undefined,'v4-card');card.append(traitArt(old),element('h3',TRAITS[old].name),element('p',TRAITS[old].text),action(`换下${TRAITS[old].name}`,()=>confirm('确定换手艺？',`${costCopy} ${TRAITS[old].name}将离开行囊，换成${TRAITS[trait].name}。已经使用的本局护印不会恢复。`,()=>send(command(old)))));grid.append(card);}body.append(grid);openModal('行囊已满，换下哪一门？',body,[{label:cancelLabel,run:()=>closeModal()}],'replacement');
  }
  function giftModal(){
   const s=state();if(!s||!getRunView(s).gift.canClaim)return;
   const options=(['steady','ember']as const).filter(id=>!s.traits.includes(id));
-  if(!options.length){confirm('赠礼折成旅费','两门赠礼手艺都已学会，领取40金币。',()=>send({type:'claimGift',traitId:null}));return;}
-  const claim=(id:Trait)=>{const now=state();if(!now)return;if(now.traits.length===3)replaceTrait(id,old=>({type:'claimGift',traitId:id,replaceId:old}),'这是一份未领的首赠，换槽不交剑、不花金币，也不会重置本局已用护印。','稍后再领');else{closeModal();send({type:'claimGift',traitId:id});}};
+  if(!options.length){confirm('赠礼折成旅费','两门赠礼手艺都已学会，领取40铜钱。',()=>send({type:'claimGift',traitId:null}));return;}
+  const claim=(id:Trait)=>{const now=state();if(!now)return;if(now.traits.length===3)replaceTrait(id,old=>({type:'claimGift',traitId:id,replaceId:old}),'这是一份未领的首赠，换槽不交剑、不花铜钱，也不会重置本局已用护印。','稍后再领');else{closeModal();send({type:'claimGift',traitId:id});}};
   const body=element('div',undefined,'v4-choice-grid'),view=getRunView(s);for(const id of options){const purpose=traitPurpose(id,view),card=element('article',undefined,'v4-card');card.append(traitArt(id),element('h3',TRAITS[id].name),element('p',TRAITS[id].text),element('b',purpose.headline),element('p',purpose.copy),action(`学会${TRAITS[id].name}`,()=>claim(id),true));body.append(card);}openModal('第一门手艺，自己挑',body,[{label:'稍后再领',run:()=>closeModal()}],'gift');
  }
  function commissionDetails(pieceId=selectedId){
@@ -344,7 +347,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
    if(route.selected&&!model.complete)row.append(element('p',route.selected.matches?route.selected.copy:route.selected.missing.join('、')));body.append(row);
   }
   body.append(element('p',`今日酬劳${fmt(v.market.baseFee)}，已收${fmt(v.market.baseFeesPaid)}；行会收购钱袋还余${fmt(v.market.remaining)}。`));
-  if(piece)body.append(element('h3','当前查看的这柄'),thumb(piece.blade),element('p',`${RECIPES[piece.blade.recipe].name} · 身价${fmt(piece.blade.value)}${piece.reserved?' · 挂在留剑架上':''}`));
+  if(piece)body.append(element('h3','当前查看的这柄'),thumb(piece.blade),element('p',`${RECIPES[piece.blade.recipe].name} · 估值${fmt(piece.blade.value)}${piece.reserved?' · 挂在留剑架上':''}`));
   const choices:ModalAction[]=[{label:'回铁砧',run:()=>closeModal()}];
   if(piece?.willCommission&&!piece.reserved){const ticket={runId:s.runId,revision:s.revision,generation:snapshot.generation};choices.push({label:`交给${v.commission.name} · 实收${fmt(piece.quote.amount)}铜钱`,primary:true,disabled:!snapshot.active||snapshot.conflict||!['writer','memory'].includes(snapshot.mode)||paused,run:()=>{const valid=ticket.runId===state()?.runId&&ticket.revision===state()?.revision&&ticket.generation===snapshot.generation;closeModal();const now=state(),currentPiece=now?getRunView(now).blades.find(p=>p.blade.id===pieceId):null;if(valid&&currentPiece?.willCommission&&!currentPiece.reserved)send({type:'deliver',pieceId});else resultError('stale_session');}});}
   else body.append(element('p',piece?.reserved?'先从剑架取回，才能交付。':'不合委托的剑仍可明确卖给行会，出售不会点亮今天这一站。'));
@@ -353,14 +356,14 @@ export function mountV5(root:HTMLElement,port:V5Session){
  function buyTrait(trait:Trait,pieceId=selectedId){
   const s=state(),b=s?.blades.find(piece=>piece.id===pieceId);if(!s||!b||b.status!=='active'||s.reserveId===b.id){setStatus('先从剑架选一柄未保留的剑。');return;}
   const eligibility=getRunView(s).blades.find(piece=>piece.blade.id===b.id)?.barter;if(!eligibility?.allowed){resultError(eligibility?.error??'blade_unworked');return;}
-  const pay=b.id,purpose=tradePurpose(trait,getRunView(s),b.id),body=element('div');body.append(...tradeOption(getRunView(s),b.id).opportunity.map(copy=>element('p',copy)),thumb(b),element('p',`用这柄${RECIPES[b.recipe].name}（身价${fmt(b.value)}）换${TRAITS[trait].name}，不再兼作交付或留剑。`),element('b',purpose.headline),element('p',purpose.copy));
-  if(s.traits.length===3)replaceTrait(trait,old=>({type:'buy',pieceId:pay,traitId:trait,replaceId:old}),body,'不换，保留剑',`交出这柄${RECIPES[b.recipe].name}（身价${fmt(b.value)}），不能再交差、卖钱或留给明日。`);else confirm('用剑换手艺',body,()=>send({type:'buy',pieceId:pay,traitId:trait}));
+  const pay=b.id,purpose=tradePurpose(trait,getRunView(s),b.id),body=element('div');body.append(...tradeOption(getRunView(s),b.id).opportunity.map(copy=>element('p',copy)),thumb(b),element('p',`用这柄${RECIPES[b.recipe].name}（估值${fmt(b.value)}）换${TRAITS[trait].name}，不再兼作交付或留剑。`),element('b',purpose.headline),element('p',purpose.copy));
+  if(s.traits.length===3)replaceTrait(trait,old=>({type:'buy',pieceId:pay,traitId:trait,replaceId:old}),body,'不换，保留剑',`交出这柄${RECIPES[b.recipe].name}（估值${fmt(b.value)}），不能再交差、卖钱或留给明日。`);else confirm('用剑换手艺',body,()=>send({type:'buy',pieceId:pay,traitId:trait}));
  }
  function journeyPanel(){
   const s=state();if(!s)return;const v=getRunView(s),partialRelay=v.commission.id===11&&!v.commission.progress.complete&&v.commission.progress.routes.some(r=>r.count>0),destination=partialRelay?11:s.day>=9?12:s.day>=5?8:4,outcome=journeyOutcome(s,destination),body=element('div',undefined,'v4-journey-review');
   body.append(element('p',CAMPAIGN_GOAL));
-  const figure=element('figure'),image=element('img');image.src=outcome.image;image.alt=outcome.commission.title+' · '+(outcome.complete?'委托已完成':`实际交付 ${outcome.progressText}`);image.dataset.journeyScene='true';image.className='v4-partial-journey-image';image.onerror=()=>{image.onerror=null;image.src='/assets/d/forge-backdrop-v2.webp';};figure.append(image,element('figcaption',`${outcome.commission.title} · ${outcome.complete?'已完成':outcome.progressText}`));body.append(figure);
-  const works=element('div',undefined,'v4-journey-works');for(const b of outcome.matchedBlades){const card=element('div',undefined,'v4-journey-work');card.append(thumb(b),element('p',`${RECIPES[b.recipe].name} · 身价${fmt(b.value)} · 已交付`));works.append(card);}body.append(works);
+  const figure=element('figure'),image=element('img');auxiliaryArtwork.image(image,outcome.image,'/assets/d/forge-backdrop-v2.webp');image.alt=outcome.commission.title+' · '+(outcome.complete?'委托已完成':`实际交付 ${outcome.progressText}`);image.dataset.journeyScene='true';image.className='v4-partial-journey-image';figure.append(image,element('figcaption',`${outcome.commission.title} · ${outcome.complete?'已完成':outcome.progressText}`));body.append(figure);
+  const works=element('div',undefined,'v4-journey-works');for(const b of outcome.matchedBlades){const card=element('div',undefined,'v4-journey-work');card.append(thumb(b),element('p',`${RECIPES[b.recipe].name} · 估值${fmt(b.value)} · 已交付`));works.append(card);}body.append(works);
   const lamps=element('ol',undefined,'v4-journey-lamps');
   for(let day=1;day<=12;day++){
    const c=COMMISSIONS[s.commissionOrder[day-1]!-1]!,record=s.history.find(h=>h.day===day),today=day===s.day,line=element('li');
@@ -373,7 +376,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
   if(s.day>=3)body.append(element('h3','阿禾捎来的第一封信'),element('p',CHAPTERS[0]!.letter));
   if(s.day>=7)body.append(element('h3','阿禾的雪中来信'),element('p',CHAPTERS[1]!.letter));
   if(s.day>=11)body.append(element('h3','山口送来的最后一封信'),element('p',CHAPTERS[2]!.letter));
-  if(v.next&&s.day<12){body.append(element('h3',`下一天 · ${v.next.commission.title}`),element('p',v.next.commission.request),element('p',`明日${v.next.oldCount}柄旧剑＋${v.next.newCount}柄新坯，共${v.next.totalCount}柄；新坯底价${fmt(v.next.normalBase)}，首柄实际${fmt(v.next.firstBase)}。取下旧剑不补发。`));if(v.next.reserve){const b=s.blades.find(b=>b.id===v.next!.reserve!.id);if(b)body.append(thumb(b),element('p',`留剑届时身价${fmt(v.next.reserve.value)} · ${v.next.reserve.cracked?'仍带裂纹':'无裂纹'} · 锤势${v.next.reserve.charge}/6`));}}
+  if(v.next&&s.day<12){body.append(element('h3',`下一天 · ${v.next.commission.title}`),element('p',v.next.commission.request),element('p',`明日${v.next.oldCount}柄旧剑＋${v.next.newCount}柄新坯，共${v.next.totalCount}柄；新坯底价${fmt(v.next.normalBase)}，首柄实际${fmt(v.next.firstBase)}。取下旧剑不补发。`));if(v.next.reserve){const b=s.blades.find(b=>b.id===v.next!.reserve!.id);if(b)body.append(thumb(b),element('p',`留剑届时估值${fmt(v.next.reserve.value)} · ${v.next.reserve.cracked?'仍带裂纹':'无裂纹'} · 锤势${v.next.reserve.charge}/6`));}}
   if(s.modifications.length)body.append(element('h3','已经装好的炉具'),...s.modifications.map(id=>element('p',`${MODIFICATIONS[id].name} · ${MODIFICATIONS[id].text}`)));
   openModal(`灯路回顾 · ${v.chapter.title}`,body,[{label:'回铁砧',primary:true,run:()=>closeModal()}],'journey');
  }
@@ -394,7 +397,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
    if(carry){const kept=element('div');kept.append(thumb(carry.blade),element('b',`${RECIPES[carry.blade.recipe].name} · 旧剑`),element('span',`${fmt(carry.valueNow)} → ${fmt(carry.valueNext)}`));slots.append(kept);}
    for(let i=0;i<(carry?2:3);i++){const fresh=element('div',undefined,'v5-new-blank');fresh.append(element('b','新坯'),element('span',`底价 ${fmt(i===0?next.firstBase:next.normalBase)}`));slots.append(fresh);}
    preview.append(element('h3',carry?'一柄旧剑 ＋ 两柄新坯':'三柄新坯'),slots,element('p',carry?carry.copy:'不挂留剑，明日领三柄新坯。取下或处置旧剑后也不会补第四柄。'));
-   if(carry)preview.append(element('p',carry.matching?'按确定的次日身价，已经合一柄要求；启程后仍需实际交剑。':`明日尚缺：${carry.missing.join('；')}`));
+   if(carry)preview.append(element('p',carry.matching?'按确定的次日估值，已经合一柄要求；启程后仍需实际交剑。':`明日尚缺：${carry.missing.join('；')}`));
    const commit=root.querySelector<HTMLButtonElement>('#v5-pack-confirm');
    if(commit){commit.hidden=carry?carry.id===s.reserveId:!s.reserveId;commit.textContent=carry?(s.reserveId?'换这柄装箱':'把这柄装箱'):'取下旧剑，改领三新坯';commit.disabled=!!carry&&!carry.canReserve||!snapshot.active||snapshot.conflict||!['writer','memory'].includes(snapshot.mode);}
    if(carry?.id===s.reserveId)preview.append(element('p','这柄已挂架。返回炉边可取回，明日新坯仍共两柄。'));
@@ -418,7 +421,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
  }
  function arrangeBlade(){
   const s=state(),b=current();if(!s||!b)return;const v=getRunView(s),item=v.blades.find(p=>p.blade.id===b.id);if(!item)return;
-  const body=element('div',undefined,'v5-arrange');body.append(thumb(b),element('h3',`${RECIPES[b.recipe].name} · 身价${fmt(b.value)}`),element('p',`今日收购钱袋${fmt(v.market.remaining)}/${fmt(v.market.budget)}铜钱。作品再贵，也只按剩余钱袋付款；主委托基础酬劳独立。`));
+  const body=element('div',undefined,'v5-arrange');body.append(thumb(b),element('h3',`${RECIPES[b.recipe].name} · 估值${fmt(b.value)}`),element('p',`今日收购钱袋${fmt(v.market.remaining)}/${fmt(v.market.budget)}铜钱。作品再贵，也只按剩余钱袋付款；主委托基础酬劳独立。`));
   const options:ModalAction[]=[{label:'先留在铁砧',run:()=>closeModal()}],ticket={runId:s.runId,revision:s.revision,generation:snapshot.generation};
   const use=(run:()=>void)=>{const valid=ticket.runId===state()?.runId&&ticket.revision===state()?.revision&&ticket.generation===snapshot.generation;closeModal();if(valid)run();else resultError('stale_session');};
   if(v.next&&!item.reserved){const carry=carryOption(v,b.id,s.journal.length>=JOURNAL_SOFT_LIMIT);if(carry)body.append(element('p',carry.copy));options.push({label:'看看明日装箱',run:()=>use(()=>tomorrowPlan(b.id))});}
@@ -438,10 +441,10 @@ export function mountV5(root:HTMLElement,port:V5Session){
   const body=element('div');body.append(prop(v.id),element('p',v.request),element('p',`接受后：${v.result}`));
   const choices:ModalAction[]=[{label:'暂不决定',run:()=>closeModal()},{label:'拒绝，保留眼前资源',run:()=>{closeModal();send({type:'chooseEvent',choice:'decline'});}}];
   const accept=(pieceId?:string)=>{
-   const q=eventQuote(s,pieceId);if(!q.allowed){setStatus('当前对象或金币不满足这次选择。');return;}
+   const q=eventQuote(s,pieceId);if(!q.allowed){setStatus('当前对象或铜钱不满足这次选择。');return;}
    const b=pieceId?s.blades.find(blade=>blade.id===pieceId):null,copy=element('div');
-   if(b)copy.append(thumb(b),element('p',`所选${RECIPES[b.recipe].name}身价${fmt(b.value)}。交出后不再兼作交付或留剑。`));
-   copy.append(element('p',v.result+(q.cost?` 支付${fmt(q.cost)}金币。`:'')));
+   if(b)copy.append(thumb(b),element('p',`所选${RECIPES[b.recipe].name}估值${fmt(b.value)}。交出后不再兼作交付或留剑。`));
+   copy.append(element('p',v.result+(q.cost?` 支付${fmt(q.cost)}铜钱。`:'')));
    if(v.id==='salvage'&&view.next?.commission.routes.some(route=>route.age==='old'))copy.append(element('p','明天的纸单含旧剑路线；换出后需另备留剑，或采用纸单上的其他路线。'));
    confirm(v.name,copy,()=>send({type:'chooseEvent',choice:'accept',...(pieceId?{pieceId}:{})}));
   };
@@ -462,8 +465,8 @@ export function mountV5(root:HTMLElement,port:V5Session){
    }
    body.append(grid);
   }else{
-   const q=eventQuote(s);body.append(action(q.cost?`接受 · ${fmt(q.cost)}金币`:'接受这次选择',()=>accept(),true,!q.allowed));
-   if(!q.allowed)body.append(element('p',q.error==='already_owned'?'已有尚未消耗的保价资格。':'金币不足，可以保留当前资源。'));
+   const q=eventQuote(s);body.append(action(q.cost?`接受 · ${fmt(q.cost)}铜钱`:'接受这次选择',()=>accept(),true,!q.allowed));
+   if(!q.allowed)body.append(element('p',q.error==='already_owned'?'已有尚未消耗的保价资格。':'铜钱不足，可以保留当前资源。'));
   }
   openModal(v.name,body,choices,'event');
  }
@@ -473,11 +476,11 @@ export function mountV5(root:HTMLElement,port:V5Session){
   const result=port.previewLegacyImport(source);
   if(!result.ok){resultError(result.error);openModal('这份旧炉谱暂未读到','旧原件仍保留，可以选择另一份来源。',[{label:'回炉谱',run:book},{label:source==='main'?'查看旧备份':'查看旧主册',run:()=>legacyImport(source==='main'?'backup':'main')}],'legacy-unavailable');return;}
   const shown=result.preview,body=element('div',undefined,'v5-import-preview');
-  body.append(element('p',`来源：旧炉谱${shown.source==='main'?'主册':'备份'} · ${new Date(shown.savedAt).toLocaleString('zh-CN')}`),element('h3',`将带回${shown.collection.chapters.length}章见闻、${shown.collection.works.length}件作品`),element('p',`合并后炉谱保留${shown.merged.works.length}/12件最佳作品${shown.merged.challenge?'，行脚挑战已解锁':''}。同一委托只留较高身价，旧作品仍标记旧行程来源。`),element('p','这里只合并解锁与作品，不带入旧金币、契印、来料升级或局内兵器；当前行程的开局资格保持，下一次启程才使用已保存的新资格。'));
+  body.append(element('p',`来源：旧炉谱${shown.source==='main'?'主册':'备份'} · ${new Date(shown.savedAt).toLocaleString('zh-CN')}`),element('h3',`将带回${shown.collection.chapters.length}章见闻、${shown.collection.works.length}件作品`),element('p',`合并后炉谱保留${shown.merged.works.length}/12件最佳作品${shown.merged.challenge?'，行脚挑战已解锁':''}。同一委托只留较高估值，旧作品仍标记旧行程来源。`),element('p','这里只合并解锁与作品，不带入旧铜钱、契印、来料升级或局内兵器；当前行程的开局资格保持，下一次启程才使用已保存的新资格。'));
   const sourceEligibility=collectionEligibility(shown.collection),mergedEligibility=collectionEligibility(shown.merged),unlocks=element('section',undefined,'v5-import-unlocks');
   unlocks.append(element('h3','这份旧册的具体解锁'),element('p','章节：'+(shown.collection.chapters.map(id=>CHAPTERS[id-1]!.title).join('；')||'尚无')),element('p','按此册可用配方：'+sourceEligibility.recipes.map(id=>RECIPES[id].name).join('、')),element('p','配方熟练：'+(shown.collection.mastery.map(id=>RECIPES[id].name).join('、')||'尚无')),element('p','手艺见闻：'+(shown.collection.traits.map(id=>TRAITS[id].name).join('、')||'尚无')),element('p',`这份旧册的行脚挑战：${shown.collection.challenge?'已解锁':'未解锁'}`),element('p',`合并后可用配方：${mergedEligibility.recipes.map(id=>RECIPES[id].name).join('、')}；行脚挑战${mergedEligibility.challenge?'已解锁':'未解锁'}。`));body.append(unlocks);
   const works=element('details');works.append(element('summary','逐件看看将导入的作品'));
-  for(const work of shown.collection.works){const row=element('section',undefined,'v4-commission-detail');row.append(element('h3',`${work.commissionId}. ${COMMISSIONS[work.commissionId-1]!.title}`),element('p','旧行程作品 · '+work.blades.map(b=>`${RECIPES[b.recipe].name} 身价${fmt(b.value)}`).join(' / ')));for(const b of work.blades)row.append(thumb(b));works.append(row);}body.append(works);
+  for(const work of shown.collection.works){const row=element('section',undefined,'v4-commission-detail');row.append(element('h3',`${work.commissionId}. ${COMMISSIONS[work.commissionId-1]!.title}`),element('p','旧行程作品 · '+work.blades.map(b=>`${RECIPES[b.recipe].name} 估值${fmt(b.value)}`).join(' / ')));for(const b of work.blades)row.append(thumb(b));works.append(row);}body.append(works);
   const choices:ModalAction[]=[{label:'暂不导入',run:()=>closeModal()},{label:'确认导入这份炉谱',primary:true,disabled:!collection.writable,run:()=>{
    const accepted=port.importLegacyCollection({generation:shown.generation,confirmed:true,previewId:shown.id});
    closeModal();
@@ -488,7 +491,13 @@ export function mountV5(root:HTMLElement,port:V5Session){
   if(!collection.writable)body.append(element('p',snapshot.dirty?'请先保存当前行程，再确认导入。':'当前不能持久导入，可在保存详情中取得保存权；不保存模式仍可查看。','v4-collection-warning'));
   openModal('把旧炉谱带上路',body,choices,'legacy-import');
  }
- function viewWork(id:number){const work=collection.data.works.find(w=>w.commissionId===id);if(!work){book();return;}openModal(COMMISSIONS[id-1]!.title+' · 留名作品',collectionWorkPage(work,thumb),[{label:'回到炉谱',run:book},{label:'收好作品',run:()=>closeModal()}],'collection-work');}
+ function viewWork(id:number){const work=collection.data.works.find(w=>w.commissionId===id);if(!work){book();return;}openModal(COMMISSIONS[id-1]!.title+' · 留名作品',collectionWorkPage(work,thumb,auxiliaryArtwork.image),[{label:'回到炉谱',run:book},{label:'收好作品',run:()=>closeModal()}],'collection-work');}
+ function paymentDetails(){
+  const s=state();if(!s)return;const copy=workshopPaymentCopy(getRunView(s),current()?.id??null),body=element('div',undefined,'v5-payment-detail');
+  body.append(element('h3',copy.quote.breakdown),element('p',copy.quote.explanation),element('p',copy.orderPay),element('p',copy.orderExplanation));
+  for(const line of copy.quote.details)body.append(element('p',line));
+  openModal('估值与这次收款',body,[{label:'明白了，回炉边',run:()=>closeModal()}],'payment');
+ }
  function settings(){
   const body=element('div'),muted=element('input'),volume=element('input'),less=element('input');
   muted.type='checkbox';muted.checked=prefs.value.muted;volume.type='range';volume.min='0';volume.max='100';volume.value=String(prefs.value.volume);less.type='checkbox';less.checked=prefs.value.reducedMotion;
@@ -510,13 +519,13 @@ export function mountV5(root:HTMLElement,port:V5Session){
   const runSource=readSource(V5_BACKUP_KEY),bookSource=readSource(COLLECTION_BACKUP_KEY);
   const runBackup=runSource.ok?decodeV5Save(runSource.raw):null,bookBackup=bookSource.ok?decodeCollection(bookSource.raw):null;
   const sourceUnchanged=(key:string,shown:string|null)=>{const latest=readSource(key);if(latest.ok&&latest.raw===shown)return true;saveDetails('备份已变化或暂不可读取。请核对现有来源后，再决定恢复。');return false;};
-  body.append(element('h3','当前行程'),element('p',saveSummary().join(' · ')||'这里可以查看本机行程与炉谱。'));if(run?.main.status==='valid')body.append(element('p',`主档：第${run.main.state.day}天 · ${fmt(run.main.state.coins)}金币 · ${new Date(run.main.savedAt).toLocaleString('zh-CN')}`));
+  body.append(element('h3','当前行程'),element('p',saveSummary().join(' · ')||'这里可以查看本机行程与炉谱。'));if(run?.main.status==='valid')body.append(element('p',`主档：第${run.main.state.day}天 · ${fmt(run.main.state.coins)}铜钱 · ${new Date(run.main.savedAt).toLocaleString('zh-CN')}`));
   const writer=snapshot.active&&snapshot.mode==='writer';
   body.append(action('重试保存本局',()=>{const r=port.retrySave(snapshot.generation);if(!r.ok)resultError(r.error);else setStatus('本局已保存。');closeModal();saveDetails();},false,!writer||snapshot.conflict||!s),action('重试保存炉谱',()=>{const r=port.retryCollection(snapshot.generation);if(!r.ok)resultError(r.error);else setStatus('炉谱已保存。');closeModal();saveDetails();},false,!writer));
   body.append(action('重新取得保存权 / 读取最新',()=>confirm('读取磁盘上的最新行程',snapshot.dirty?'尚未保存的本局会被磁盘进度替换，请先导出。':'将重新取得保存权并读取磁盘的最新行程。',()=>{void (async()=>{await port.activate();if(disposed)return;const snap=port.getSnapshot();if(snap.mode==='writer'&&snap.load?.main.status==='valid'){const r=port.resume({generation:snap.generation,confirmed:true});if(!r.ok)resultError(r.error);}render();})();})),action('导出当前行程',exportRun,false,!s),action('导出炉谱和原文',exportCollection));
   const rawStatus=element('p','主档损坏或暂不识别时，也可先导出磁盘上的主档与备份原文，再决定恢复或重开。');rawStatus.id='v5-raw-export-status';rawStatus.setAttribute('role','status');
   const rawButton=action('导出磁盘局档原文（主档与备份）',exportRawRun);rawButton.id='v5-export-raw-run';body.append(rawButton,rawStatus);
-  if(runBackup?.status==='valid'&&runSource.ok){const b=runBackup,shown=runSource.raw;body.append(element('p',`局备份：第${b.state.day}天 · ${fmt(b.state.coins)}金币 · 保存于${new Date(b.savedAt).toLocaleString('zh-CN')}`),action('恢复这份局备份',()=>confirm('恢复局备份',`将用第${b.state.day}天、保存于${new Date(b.savedAt).toLocaleString('zh-CN')}的备份替换当前主档（损坏或本版暂不识别）；原主档原文不会自动备份，可先取消并导出磁盘局档原文。`,()=>{if(!sourceUnchanged(V5_BACKUP_KEY,shown))return;const r=port.recoverBackup({generation:snapshot.generation,confirmed:true});if(!r.ok)resultError(r.error);else continueGame();}),false,!writer||run?.main.status==='valid'));}
+  if(runBackup?.status==='valid'&&runSource.ok){const b=runBackup,shown=runSource.raw;body.append(element('p',`局备份：第${b.state.day}天 · ${fmt(b.state.coins)}铜钱 · 保存于${new Date(b.savedAt).toLocaleString('zh-CN')}`),action('恢复这份局备份',()=>confirm('恢复局备份',`将用第${b.state.day}天、保存于${new Date(b.savedAt).toLocaleString('zh-CN')}的备份替换当前主档（损坏或本版暂不识别）；原主档原文不会自动备份，可先取消并导出磁盘局档原文。`,()=>{if(!sourceUnchanged(V5_BACKUP_KEY,shown))return;const r=port.recoverBackup({generation:snapshot.generation,confirmed:true});if(!r.ok)resultError(r.error);else continueGame();}),false,!writer||run?.main.status==='valid'));}
   if(bookBackup?.status==='valid'&&bookSource.ok){const b=bookBackup,shown=bookSource.raw;body.append(element('p',`炉谱备份：${b.state.works.length}件作品 · 保存于${new Date(b.savedAt).toLocaleString('zh-CN')}`),action('恢复这份炉谱备份',()=>confirm('恢复炉谱备份',`用${b.state.works.length}件作品的合法备份替换当前损坏或不兼容炉谱，并合并已知合法成果。建议先导出原文。`,()=>{if(!sourceUnchanged(COLLECTION_BACKUP_KEY,shown))return;const r=port.recoverCollectionBackup({generation:snapshot.generation,confirmed:true});if(!r.ok)resultError(r.error);else setStatus('炉谱备份已恢复。');}),false,!writer||c?.main.status==='valid'||snapshot.dirty||snapshot.conflict));}
   body.append(element('h3','不保存试玩'),element('p','当前磁盘进度保持原样。明确转为不保存后，关闭/刷新会失去本次内存试玩，请先导出。'),action(s?'保留当前局，不保存续玩':'不保存，开一炉试玩',()=>confirm('本次不保存',s?'保留当前局继续，之后关闭页面会失去未写入磁盘的部分。':'开始临时主线，不写正式局档或炉谱。',()=>{const r=port.useMemory(s?null:newInput(),{generation:snapshot.generation,confirmed:true});if(!r.ok)resultError(r.error);else continueGame();})),action('不保存，另开一炉',()=>confirm('另开临时旅程','当前内存进度会被临时新局替换，磁盘原档仍保留；请先导出。',()=>{const r=port.useMemory(newInput(),{generation:snapshot.generation,confirmed:true});if(!r.ok)resultError(r.error);else continueGame();})));
   openModal('把行程收好',body,[{label:'回到当前页面',primary:true,run:()=>closeModal()}],'save');
@@ -530,7 +539,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
  handoff=createHandoff(root,{capture:pieceId=>{const s=state();if(!s)return null;const token={runId:s.runId,revision:s.revision,generation:snapshot.generation,epoch,pieceId};return handoffBlade(token)?token:null;},preview:handoffPreview,commit:commitHandoff});
  input=bindDirectStrikeInput([button('v4-hit'),button('v4-strike')],{context:forgeIdentity,navigationContext:navigationIdentity,navigate:()=>{const b=current();if(b&&state()?.reserveId===b.id){setStatus(state()?.day===12?'先从剑架取回安排交付、出售或回收；本局剑架不会带入新局。':'先从剑架取回，或选择收工把它留给明天。');button('v4-reserve').focus({preventScroll:true});}else settle();},commit:(captured,point)=>{if(!sameInput(captured,forgeIdentity()))return;lastPoint=point;void audio.gesture();send({type:'strike',pieceId:captured.pieceId});},aim:p=>{if(canAct()&&!busy&&!handoff?.isDragging())renderer?.aim(p);},preparing:v=>renderer?.preparing(v)});
  button('v4-start').onclick=()=>startNew();button('v4-title-challenge').onclick=()=>startNew('challenge');button('v4-continue').onclick=continueGame;find<HTMLInputElement>('v4-seed').value=seedDraft;find<HTMLInputElement>('v4-seed').oninput=e=>{seedDraft=(e.currentTarget as HTMLInputElement).value;};
- for(const id of['v4-title-collection','v4-book'])button(id).onclick=book;for(const id of['v4-title-settings','v4-settings'])button(id).onclick=settings;
+ for(const id of['v4-title-collection','v4-book'])button(id).onclick=book;for(const id of['v4-title-settings','v4-settings'])button(id).onclick=settings;button('v5-delivery-quote').onclick=paymentDetails;
  for(const id of['v4-save-open','v4-save-details'])button(id).onclick=()=>saveDetails();button('v4-menu').onclick=()=>route==='title'?continueGame():pause();button('v4-shop').onclick=()=>shop();button('v4-event-open').onclick=eventModal;
  button('v4-customer-open').onclick=()=>commissionDetails();
  button('v4-deliver').onclick=()=>{const b=current();if(b)send({type:'deliver',pieceId:b.id});};button('v4-reserve').onclick=()=>{const b=current();if(b)reserveBlade(b.id);};button('v4-scrap').onclick=()=>recycleBlade();button('v4-settle').onclick=settle;button('v4-next-plan').onclick=()=>tomorrowPlan();button('v5-arrange').onclick=arrangeBlade;
@@ -546,7 +555,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
   else if(message.action==='book')book();else if(message.action==='shop')shop();else if(message.action==='journey')journeyPanel();
  };
  dialog.addEventListener('cancel',e=>{e.preventDefault();closeModal();});
- const onVisibility=()=>{if(document.hidden){cancelPresentation();epoch++;paused=route==='game';if(modal)closeModal(false);audio.setMode('silent');}else{if(paused)notice={title:'炉火还在，已经为你暂停',copy:'刚才未完成的输入与动效已取消，已接受的成果保持。',action:'resume',label:'继续这一炉'};render();}};
+ const onVisibility=()=>{if(document.hidden){cancelPresentation();epoch++;paused=route==='game';if(modal)closeModal(false);audio.setMode('silent');}else{if(paused)notice=pauseNotice();render();}};
  const onKey=(e:KeyboardEvent)=>{if(e.repeat&&(e.key==='Enter'||e.code==='Space')){e.preventDefault();return;}if(e.key==='Escape'&&!modal&&route==='game'){e.preventDefault();pause();}};
  const onGesture=(event:Event)=>{root.firstElementChild?.setAttribute('data-input-mode',event.type==='pointerdown'?'pointer':'keyboard');if(route==='game'&&!modal)void audio.gesture();};
  const onSettingsStorage=(e:StorageEvent)=>{if(e.key===SETTINGS_KEY||e.key===null)preferences.reload();};
@@ -558,5 +567,5 @@ export function mountV5(root:HTMLElement,port:V5Session){
  const stopBook=port.subscribeCollection(value=>{collection=value;render();});
  const stopAudio=audio.subscribe(updateAudioStatus);
  render();void port.activate();
- return{async dispose(){if(disposed)return;disposed=true;cancelPresentation();stopRun();stopBook();stopPrefs();stopAudio();stageAssetGeneration++;stageArtwork.onload=null;stageArtwork.onerror=null;input?.dispose();handoff?.dispose();feedback?.dispose();paper?.dispose();renderer?.dispose();motion.removeEventListener('change',onMotion);document.removeEventListener('visibilitychange',onVisibility);window.removeEventListener('storage',onSettingsStorage);window.removeEventListener('blur',onBlur);root.removeEventListener('keydown',onKey);root.removeEventListener('pointerdown',onGesture,{capture:true});root.removeEventListener('keydown',onGesture,{capture:true});await Promise.allSettled([port.dispose(),audio.dispose()]);if(root.firstElementChild===ownRoot)root.replaceChildren();}};
+ return{async dispose(){if(disposed)return;disposed=true;cancelPresentation();stopRun();stopBook();stopPrefs();stopAudio();auxiliaryArtwork.dispose();stageAssetGeneration++;stageArtwork.onload=null;stageArtwork.onerror=null;input?.dispose();handoff?.dispose();feedback?.dispose();paper?.dispose();renderer?.dispose();motion.removeEventListener('change',onMotion);document.removeEventListener('visibilitychange',onVisibility);window.removeEventListener('storage',onSettingsStorage);window.removeEventListener('blur',onBlur);root.removeEventListener('keydown',onKey);root.removeEventListener('pointerdown',onGesture,{capture:true});root.removeEventListener('keydown',onGesture,{capture:true});await Promise.allSettled([port.dispose(),audio.dispose()]);if(root.firstElementChild===ownRoot)root.replaceChildren();}};
 }

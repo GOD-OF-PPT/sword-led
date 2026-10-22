@@ -7,6 +7,7 @@ import './presentation-v4/collection.css';
 import './presentation-v5/economy.css';
 import './presentation-v5/market-stall.css';
 import './presentation-v5/growth.css';
+import './presentation-v5/readability.css';
 const root=document.querySelector<HTMLElement>('#app');
 if(!root)throw Error('缺少灯炉入口');
 const app=mountV5(root,createV5BrowserSession(window));

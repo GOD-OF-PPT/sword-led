@@ -1,0 +1,208 @@
+{
+  "config": {
+    "argv": [
+      "/Users/gordon/.nvm/versions/node/v22.12.0/bin/node",
+      "/Users/gordon/githome/sword-led/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "tmp/goal4-T03/drafts/payment-ui/playwright.payment.config.ts",
+      "--project",
+      "payment-chromium-dpr1"
+    ],
+    "configFile": "/Users/gordon/githome/sword-led/tmp/goal4-T03/drafts/payment-ui/playwright.payment.config.ts",
+    "rootDir": "/Users/gordon/githome/sword-led/tmp/goal4-T03/drafts/payment-ui",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/goal4-T03/runs/payment-ui-02/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "payment-chromium-dpr1",
+        "name": "payment-chromium-dpr1",
+        "testDir": "/Users/gordon/githome/sword-led/tmp/goal4-T03/drafts/payment-ui",
+        "testIgnore": [],
+        "testMatch": [
+          "payment-ui.spec.mjs"
+        ],
+        "timeout": 300000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/gordon/githome/sword-led/tmp/goal4-T03/runs/payment-ui-02/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "payment-chromium-dpr1",
+        "testDir": "/Users/gordon/githome/sword-led/tmp/goal4-T03/drafts/payment-ui",
+        "snapshotDir": "/Users/gordon/githome/sword-led/tmp/goal4-T03/drafts/payment-ui",
+        "testIgnore": [],
+        "testMatch": "payment-ui.spec.mjs",
+        "timeout": 300000,
+        "use": {
+          "browserName": "chromium",
+          "baseURL": "http://127.0.0.1:4252",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "deviceScaleFactor": 1,
+          "locale": "zh-CN",
+          "actionTimeout": 15000,
+          "navigationTimeout": 30000,
+          "trace": "off",
+          "video": "off",
+          "screenshot": "only-on-failure",
+          "launchOptions": {
+            "args": [
+              "--no-proxy-server"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "payment-chromium-dpr1"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/Users/gordon/githome/sword-led/tmp/goal4-T03/runs/payment-ui-02/report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "rtk proxy node '/Users/gordon/githome/sword-led/tmp/goal4-T03/drafts/canvas-compare/snapshot-server.mjs' --root '/Users/gordon/githome/sword-led/dist' --port 4252",
+      "cwd": "/Users/gordon/githome/sword-led/",
+      "url": "http://127.0.0.1:4252/",
+      "reuseExistingServer": false,
+      "env": {
+        "NO_PROXY": "127.0.0.1,localhost",
+        "no_proxy": "127.0.0.1,localhost"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "payment-ui.spec.mjs",
+      "file": "payment-ui.spec.mjs",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "actual estimate, commission share and copper received remain clear at both PC sizes",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "payment-chromium-dpr1",
+              "projectName": "payment-chromium-dpr1",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 20374,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#v4-notice-copy')\nExpected substring: \u001b[32m\"这柄实收158铜钱（酬劳125＋品质33）\"\u001b[39m\nReceived string:    \u001b[31m\"这柄实收158铜钱（酬劳125＋品质\u001b[7m加赏\u001b[27m33）\u001b[7m。已交1/2，再安排余下的合格剑。\u001b[27m\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('#v4-notice-copy') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#v4-notice-copy')\u001b[22m\n\u001b[2m    14 × locator resolved to <p id=\"v4-notice-copy\">这柄实收158铜钱（酬劳125＋品质加赏33）。已交1/2，再安排余下的合格剑。</p>\u001b[22m\n\u001b[2m       - unexpected value \"这柄实收158铜钱（酬劳125＋品质加赏33）。已交1/2，再安排余下的合格剑。\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#v4-notice-copy')\nExpected substring: \u001b[32m\"这柄实收158铜钱（酬劳125＋品质33）\"\u001b[39m\nReceived string:    \u001b[31m\"这柄实收158铜钱（酬劳125＋品质\u001b[7m加赏\u001b[27m33）\u001b[7m。已交1/2，再安排余下的合格剑。\u001b[27m\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('#v4-notice-copy') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#v4-notice-copy')\u001b[22m\n\u001b[2m    14 × locator resolved to <p id=\"v4-notice-copy\">这柄实收158铜钱（酬劳125＋品质加赏33）。已交1/2，再安排余下的合格剑。</p>\u001b[22m\n\u001b[2m       - unexpected value \"这柄实收158铜钱（酬劳125＋品质加赏33）。已交1/2，再安排余下的合格剑。\"\u001b[22m\n\n    at KeyboardV5.command (/Users/gordon/githome/sword-led/tests/e2e/v5-helpers.ts:131:61)\n    at paid (/Users/gordon/githome/sword-led/tmp/goal4-T03/drafts/payment-ui/payment-ui.spec.mjs:44:374)\n    at /Users/gordon/githome/sword-led/tmp/goal4-T03/drafts/payment-ui/payment-ui.spec.mjs:50:527",
+                    "location": {
+                      "file": "/Users/gordon/githome/sword-led/tests/e2e/v5-helpers.ts",
+                      "column": 61,
+                      "line": 131
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m../../../../tests/e2e/v5-helpers.ts:131\n\n  129 |    if(quote.matched){const amount=quote.amount.toLocaleString('zh-CN'),fee=quote.baseFeeDelta.toLocaleString('zh-CN'),bonus=quote.qualityBonus.toLocaleString('zh-CN');\n  130 |     if(result.events.some(event=>event.type==='MainCompleted'))await expect(this.page.locator('#v5-inline-payment')).toHaveText(`实收 ${amount} 铜钱 · 酬劳${fee}＋品质加赏${bonus}`);\n> 131 |     else await expect(this.page.locator('#v4-notice-copy')).toContainText(`这柄实收${amount}铜钱（酬劳${fee}＋品质${bonus}）`);\n      |                                                             ^\n  132 |    }\n  133 |   }\n  134 |   this.accepted.push({action,runId:before.runId,mode:before.mode,day:before.day,revision:actual.state.revision,coinsBefore:before.coins,coinsAfter:actual.state.coins,events:result.events});"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/gordon/githome/sword-led/tests/e2e/v5-helpers.ts",
+                        "column": 61,
+                        "line": 131
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#v4-notice-copy')\nExpected substring: \u001b[32m\"这柄实收158铜钱（酬劳125＋品质33）\"\u001b[39m\nReceived string:    \u001b[31m\"这柄实收158铜钱（酬劳125＋品质\u001b[7m加赏\u001b[27m33）\u001b[7m。已交1/2，再安排余下的合格剑。\u001b[27m\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('#v4-notice-copy') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#v4-notice-copy')\u001b[22m\n\u001b[2m    14 × locator resolved to <p id=\"v4-notice-copy\">这柄实收158铜钱（酬劳125＋品质加赏33）。已交1/2，再安排余下的合格剑。</p>\u001b[22m\n\u001b[2m       - unexpected value \"这柄实收158铜钱（酬劳125＋品质加赏33）。已交1/2，再安排余下的合格剑。\"\u001b[22m\n\n\n   at ../../../../tests/e2e/v5-helpers.ts:131\n\n  129 |    if(quote.matched){const amount=quote.amount.toLocaleString('zh-CN'),fee=quote.baseFeeDelta.toLocaleString('zh-CN'),bonus=quote.qualityBonus.toLocaleString('zh-CN');\n  130 |     if(result.events.some(event=>event.type==='MainCompleted'))await expect(this.page.locator('#v5-inline-payment')).toHaveText(`实收 ${amount} 铜钱 · 酬劳${fee}＋品质加赏${bonus}`);\n> 131 |     else await expect(this.page.locator('#v4-notice-copy')).toContainText(`这柄实收${amount}铜钱（酬劳${fee}＋品质${bonus}）`);\n      |                                                             ^\n  132 |    }\n  133 |   }\n  134 |   this.accepted.push({action,runId:before.runId,mode:before.mode,day:before.day,revision:actual.state.revision,coinsBefore:before.coins,coinsAfter:actual.state.coins,events:result.events});\n    at KeyboardV5.command (/Users/gordon/githome/sword-led/tests/e2e/v5-helpers.ts:131:61)\n    at paid (/Users/gordon/githome/sword-led/tmp/goal4-T03/drafts/payment-ui/payment-ui.spec.mjs:44:374)\n    at /Users/gordon/githome/sword-led/tmp/goal4-T03/drafts/payment-ui/payment-ui.spec.mjs:50:527"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-22T03:32:40.306Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/gordon/githome/sword-led/tmp/goal4-T03/runs/payment-ui-02/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/gordon/githome/sword-led/tmp/goal4-T03/runs/payment-ui-02/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/gordon/githome/sword-led/tests/e2e/v5-helpers.ts",
+                    "column": 61,
+                    "line": 131
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "404a2b3846867d060a5c-69cdef974c219330e09b",
+          "file": "payment-ui.spec.mjs",
+          "line": 11,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-22T03:32:39.082Z",
+    "duration": 22235.985999999997,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

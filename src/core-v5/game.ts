@@ -99,7 +99,9 @@ export function applyCommand(state:RunState,command:unknown):CommandResult{
  const phase=a.type==='continue'?'opening':a.type==='chooseModification'?'chapter':a.type==='advance'?'summary':'workshop';if(state.phase!==phase)return fail(state,'wrong_phase');
  if(state.journal.length>=JOURNAL_LIMIT)return fail(state,'record_limit');
  if(state.journal.length>=JOURNAL_SOFT_LIMIT&&(['strike','setRecipe','buy','claimGift','upgrade','repair'].includes(a.type)||a.type==='reserve'&&state.reserveId!==a.pieceId||a.type==='chooseEvent'&&a.choice==='accept'))return fail(state,'record_limit');
- const s=copy(state),events:DomainEvent[]=[],b='pieceId'in a?s.blades.find(b=>b.id===a.pieceId):undefined;
+ // Prior Accepted actions are immutable and never edited; retain them in a new array.
+ // Clone the mutable body as before. freezeDeep still copies any mutable input actions.
+ const s={...copy({...state,journal:[]}),journal:[...state.journal]} as Mutable<RunState>,events:DomainEvent[]=[],b='pieceId'in a?s.blades.find(b=>b.id===a.pieceId):undefined;
  if('pieceId'in a&&a.type!=='chooseEvent'&&(!b||b.status!=='active'))return fail(state,'piece_unavailable');
  if('pieceId'in a&&a.type!=='chooseEvent'&&a.type!=='reserve'&&s.reserveId===a.pieceId)return fail(state,'reserved_piece');
  switch(a.type){

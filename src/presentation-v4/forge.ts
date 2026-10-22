@@ -48,10 +48,33 @@ export function createForgeRenderer(root:HTMLElement,host:ForgeHost){
   let disposed=false,epoch=0,frame:number|null=null,target:Blade|null=null,previous:Blade|null=null,visual:Blade|null=null;
   let playing:{event:Strike;index:number;touched:boolean;done:()=>void;epoch:number}|null=null;
   const animations=new Set<Animation>(),images=new Map<string,HTMLImageElement>();
+  let pixelCache=new WeakMap<HTMLCanvasElement,{key:string;width:number;height:number}>();
   type Asset={name:string;url:string;image:HTMLImageElement;status:'idle'|'loading'|'ready'|'failed';attempt:number;detach:()=>void};
   const assets=new Map<string,Asset>();
   const get=(name:string)=>{const item=images.get(name);return assets.get(name)?.status==='ready'&&item?.complete&&item.naturalWidth>0?item:undefined;};
   const weapon=(blade:Blade|null)=>blade?get(V3_BLADES[FAMILY[blade.recipe]]!):undefined;
+  const assetVersion=(name:string)=>{
+    const asset=assets.get(name),picture=asset?.image;
+    return {name,attempt:asset?.attempt??0,status:asset?.status??'absent',src:picture?.getAttribute('src')??null,currentSrc:picture?.currentSrc??'',complete:picture?.complete??false,width:picture?.naturalWidth??0,height:picture?.naturalHeight??0};
+  };
+  function paintWhenChanged(node:HTMLCanvasElement,input:unknown,paint:()=>void){
+    const width=node.clientWidth,height=node.clientHeight,dpr=devicePixelRatio||1,ratio=Math.min(2,dpr);
+    // Preserve the original painter's zero-size/fallback behavior, but never mark it painted.
+    // A later hidden→visible projection must perform its first real draw at the visible size.
+    if(!width||!height){pixelCache.delete(node);paint();return;}
+    const backingWidth=Math.round(width*ratio),backingHeight=Math.round(height*ratio),key=JSON.stringify([width,height,dpr,ratio,input]),previous=pixelCache.get(node);
+    if(previous?.key===key&&previous.width===backingWidth&&previous.height===backingHeight&&node.width===backingWidth&&node.height===backingHeight)return;
+    // Cache misses keep the existing full resize/context reset, transforms, shadows and source pixels.
+    paint();
+    if(node.width===backingWidth&&node.height===backingHeight&&node.getContext('2d'))pixelCache.set(node,{key,width:backingWidth,height:backingHeight});
+    else pixelCache.delete(node);
+  }
+  function paintBladeProjection(node:HTMLCanvasElement,blade:Blade|null){
+    const projection=blade?painted(blade):null,name=blade?V3_BLADES[FAMILY[blade.recipe]]:null;
+    // Full painted input deliberately favors correctness over a narrower appearance-only key.
+    // Asset attempt and actual src/decode metadata invalidate retries even when the Image is reused.
+    paintWhenChanged(node,['blade',projection,assetVersion('metal-atlas-v1'),name?assetVersion(name):null],()=>paintBlade(node,projection,get('metal-atlas-v1'),weapon(blade)));
+  }
   const animate=(node:HTMLElement,frames:Keyframe[],ms:number,easing='ease-out')=>{
     if(disposed||host.reduced()||document.hidden)return;
     try{const animation=node.animate(frames,{duration:ms,easing});animations.add(animation);void animation.finished.then(()=>animations.delete(animation),()=>animations.delete(animation));}catch{/* Native drawing and the real contact remain available without animation. */}
@@ -117,7 +140,7 @@ export function createForgeRenderer(root:HTMLElement,host:ForgeHost){
     scene.dataset.reduced=String(host.reduced());
     canvas.setAttribute('aria-label',visual?`${look!.name}，${look!.rank}，等级${visual.level}，身价${visual.value}，${visual.status==='broken'?'断裂':visual.cracked?'有裂纹':'完好'}；仅造型展示`:'空铁砧');
     if(!visual)for(const key of ['family','stage','illustrated','condition'])delete canvas.dataset[key];
-    paintBlade(canvas,visual?painted(visual):null,get('metal-atlas-v1'),weapon(visual));impact.refresh();
+    paintBladeProjection(canvas,visual);impact.refresh();
   }
   for(const name of [...V3_BLADES,'metal-atlas-v1','v07/modifications-v1','v07/events-v1']){
     const item=new Image();images.set(name,item);registerAsset(name,item);
@@ -168,21 +191,25 @@ export function createForgeRenderer(root:HTMLElement,host:ForgeHost){
     }
     contact();frame=requestAnimationFrame(watch);
   }
-  function paintThumb(node:HTMLCanvasElement,blade:Blade){if(!disposed)paintBlade(node,painted(blade),get('metal-atlas-v1'),weapon(blade));}
+  function paintThumb(node:HTMLCanvasElement,blade:Blade){if(!disposed)paintBladeProjection(node,blade);}
   function paintProp(node:HTMLCanvasElement,id:Modification|EventId){
-    if(disposed)return;const width=node.clientWidth||96,height=node.clientHeight||96,ratio=Math.min(2,devicePixelRatio||1);node.width=Math.round(width*ratio);node.height=Math.round(height*ratio);
-    const c=node.getContext('2d');if(!c)return;c.clearRect(0,0,node.width,node.height);
-    const unit=Math.min(node.width,node.height)/120;
-    c.translate((node.width-120*unit)/2,(node.height-120*unit)/2);c.scale(unit,unit);
-    const mod=MODS.indexOf(id as Modification),index=mod<0?EVENTS.indexOf(id as EventId):mod,rows=mod<0?2:1,atlas=get(mod<0?'v07/events-v1':'v07/modifications-v1');
+    if(disposed)return;
+    const mod=MODS.indexOf(id as Modification),index=mod<0?EVENTS.indexOf(id as EventId):mod,rows=mod<0?2:1,name=mod<0?'v07/events-v1':'v07/modifications-v1',atlas=get(name);
+    // DOM metadata stays current even when the identical bitmap needs no repaint.
     node.dataset.prop=id;node.dataset.illustrated=String(!!atlas);
-    if(atlas&&index>=0){const sw=atlas.naturalWidth/3,sh=atlas.naturalHeight/rows,scale=Math.min(112/sw,112/sh),dw=sw*scale,dh=sh*scale;c.drawImage(atlas,index%3*sw,Math.floor(index/3)*sh,sw,sh,(120-dw)/2,(120-dh)/2,dw,dh);return;}
-    paintPropFallback(c,id);
+    paintWhenChanged(node,['prop',id,index,rows,assetVersion(name)],()=>{
+      const width=node.clientWidth||96,height=node.clientHeight||96,ratio=Math.min(2,devicePixelRatio||1);node.width=Math.round(width*ratio);node.height=Math.round(height*ratio);
+      const c=node.getContext('2d');if(!c)return;c.clearRect(0,0,node.width,node.height);
+      const unit=Math.min(node.width,node.height)/120;
+      c.translate((node.width-120*unit)/2,(node.height-120*unit)/2);c.scale(unit,unit);
+      if(atlas&&index>=0){const sw=atlas.naturalWidth/3,sh=atlas.naturalHeight/rows,scale=Math.min(112/sw,112/sh),dw=sw*scale,dh=sh*scale;c.drawImage(atlas,index%3*sw,Math.floor(index/3)*sh,sw,sh,(120-dw)/2,(120-dh)/2,dw,dh);return;}
+      paintPropFallback(c,id);
+    });
   }
   return {draw,paintThumb,paintProp,play,retryAssets,assetStatus,
     aim(point:StrikePoint|null){if(!disposed&&!playing)impact.aim(point);},
     preparing(value:boolean){if(!disposed)hammer.classList.toggle('preparing',value&&!playing);},cancel,
-    dispose(){if(disposed)return;cancel();disposed=true;resize?.disconnect();document.removeEventListener('visibilitychange',hidden);for(const asset of assets.values()){asset.detach();asset.attempt++;if(asset.status==='loading')asset.image.removeAttribute('src');}assets.clear();images.clear();fallback.remove();}
+    dispose(){if(disposed)return;cancel();disposed=true;resize?.disconnect();document.removeEventListener('visibilitychange',hidden);for(const asset of assets.values()){asset.detach();asset.attempt++;if(asset.status==='loading')asset.image.removeAttribute('src');}assets.clear();images.clear();pixelCache=new WeakMap();fallback.remove();}
   };
 }
 

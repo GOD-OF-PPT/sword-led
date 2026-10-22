@@ -45,7 +45,7 @@ export function buildJourneyStage(input:RunState,context:JourneyStageContext):Jo
     const works=element('div',undefined,'v4-delivery-works');
     for(const blade of blades){
       const work=element('figure',undefined,'v4-journey-work');work.dataset.piece=blade.id;work.dataset.rulesVersion=state.rulesVersion;
-      work.append(context.thumb(blade),element('figcaption',`${RECIPES[blade.recipe].name} · ${fmt(blade.value)}身价 · 等级${blade.level} · 连锻${blade.bursts}次 · 第${blade.suppliedDay}天来料${blade.suppliedDay<day?'，此前留剑':'，本日新剑'}${blade.cracked?' · 有裂纹':' · 无裂纹'}`));works.append(work);
+      work.append(context.thumb(blade),element('figcaption',`${RECIPES[blade.recipe].name} · ${fmt(blade.value)}估值 · 等级${blade.level} · 连锻${blade.bursts}次 · 第${blade.suppliedDay}天来料${blade.suppliedDay<day?'，此前留剑':'，本日新剑'}${blade.cracked?' · 有裂纹':' · 无裂纹'}`));works.append(work);
     }
     target.append(works);
   };
@@ -60,12 +60,12 @@ export function buildJourneyStage(input:RunState,context:JourneyStageContext):Jo
     if(next.reserve){
       const kept=state.blades.find(b=>b.id===next.reserve!.id);
       if(kept){
-        section.append(context.thumb(kept),element('p',`架上${RECIPES[kept.recipe].name}：当前身价${fmt(kept.value)} → 明日${fmt(next.reserve.value)}；${next.reserve.cracked?'裂纹保留':'无裂纹'}，锤势${next.reserve.charge}/6。留剑少领一柄新坯，明日取下也不补发。`));
+        section.append(context.thumb(kept),element('p',`架上${RECIPES[kept.recipe].name}：当前估值${fmt(kept.value)} → 明日${fmt(next.reserve.value)}；${next.reserve.cracked?'裂纹保留':'无裂纹'}，锤势${next.reserve.charge}/6。留剑少领一柄新坯，明日取下也不补发。`));
         const matching=next.reserve.assessment.routes.filter(route=>route.matches);
         section.append(element('p',matching.length?`这柄留剑已符合明日${matching.map(route=>next.commission.routes.find(item=>item.id===route.id)!.count>1?'其中一柄的要求':'一柄交付要求').join('、')}，明日取回后可交。`:`这柄留剑尚不能交明日的单：${next.reserve.assessment.routes.map(route=>route.missing.join('、')).join('；或')}。`));
       }
     }else section.append(element('p','没有留剑，可领三柄新坯；若现在留一柄，会变成旧剑1＋新坯2。需要旧剑时，纸单上的新剑替代路线仍然可做。'));
-    if(next.merchant)section.append(element('p','行脚商人将到炉边，可用等级≥3、未挂剑架的剑换手艺；金币可准备后续铁料或修补契印。'));
+    if(next.merchant)section.append(element('p','行脚商人将到炉边，可用等级≥3、未挂剑架的剑换手艺；铜钱可准备后续铁料或修补契印。'));
     body.append(section);
   };
   const addGrowth=(target:HTMLElement=body)=>{
@@ -97,14 +97,14 @@ export function buildJourneyStage(input:RunState,context:JourneyStageContext):Jo
     }
     if(c.id===12)paragraph('护灯剑验收完成。回炉边收工后，才会按沿途真实完成的约定判定这次结局。');
     paragraph(`已交给${c.name}。交出的剑不会再回到剑架、回收或换取手艺。`);
-    paragraph(`本日累计交剑实收${fmt(state.daySales)}金币：已领酬劳${fmt(view.market.baseFeesPaid)}，品质奖及余剑出售${fmt(state.daySales-view.market.baseFeesPaid)}。今日收购钱袋还剩${fmt(view.market.remaining)}金币；图中的作品身价不等于入袋收入。`);
+    paragraph(`本日累计交剑实收${fmt(state.daySales)}铜钱：已领酬劳${fmt(view.market.baseFeesPaid)}，品质奖及余剑出售${fmt(state.daySales-view.market.baseFeesPaid)}。今日收购钱袋还剩${fmt(view.market.remaining)}铜钱；图中的作品估值用于验剑，本日收入按实收记录入账。`);
     actions.push(context.action('回到铁砧',context.leaveScene,true));
   }else if(mode==='intro'){
     title=view.chapter.title;image=view.chapter.id===3?CHAPTER_THREE+'mountain-pass-arrival-v1.webp':view.chapter.id===2?CHAPTER_TWO+'twin-stations-dark-v1.webp':'/assets/d/v07/lantern-road-v1.webp';
     paragraph(view.chapter.opening);paragraph(view.commission.request);
     for(const route of view.commission.routes)paragraph(route.description);
     const kept=state.blades.find(b=>b.id===state.reserveId);
-    if(kept){body.append(context.thumb(kept));paragraph(`剑架上同行的${RECIPES[kept.recipe].name}，现在身价${fmt(kept.value)}。先取回，再决定交付还是续锻。`);}
+    if(kept){body.append(context.thumb(kept));paragraph(`剑架上同行的${RECIPES[kept.recipe].name}，现在估值${fmt(kept.value)}。先取回，再决定交付还是续锻。`);}
     else paragraph(view.commission.routes.some(r=>r.age==='new')?'未留旧剑也能继续：可以用纸单上的新剑路线接替这一程。':`这一炉有${view.blades.filter(item=>item.blade.suppliedDay===view.day).length}柄新坯、${view.blades.filter(item=>item.blade.suppliedDay<view.day).length}柄沿途旧剑，共三槽；先看纸单，再决定这一程的打法。`);
     if(view.chapter.id===3)paragraph(`最后一位商人今天到来。炉具与沿途学会的手艺仍在；最终护灯剑需要：${describeRoute(COMMISSIONS[11]!.routes[0]!)}。`);
     actions.push(context.action('回到铁砧',context.leaveScene,true));
@@ -118,10 +118,10 @@ export function buildJourneyStage(input:RunState,context:JourneyStageContext):Jo
     const outcome=journeyOutcome(state,h.commissionId);
     title=state.day===4?'第一程，走完了':state.day===8?'第二程，走完了':h.met?'这一站的约定，做到了':'带着遗憾，继续上路';
     image=outcome.image;paragraph(outcome.commission[h.met?'success':'failure']);
-    paragraph(`交剑 ${fmt(h.sales)}金币 · 回收 ${fmt(h.recovered)}金币 · 契印 ${h.sealsAfter}/3`);
-    paragraph(`交剑实收含酬劳${fmt(h.baseFees)}＋品质奖及余剑出售${fmt(h.sales-h.baseFees)}。当日收购钱袋共支出${fmt(h.marketSpent)}金币，包含品质奖、余剑出售与回收；作品身价不等于金币收入。`);
+    paragraph(`交剑 ${fmt(h.sales)}铜钱 · 回收 ${fmt(h.recovered)}铜钱 · 契印 ${h.sealsAfter}/3`);
+    paragraph(`交剑实收含酬劳${fmt(h.baseFees)}＋品质奖及余剑出售${fmt(h.sales-h.baseFees)}。当日收购钱袋共支出${fmt(h.marketSpent)}铜钱，包含品质奖、余剑出售与回收；作品估值用于验剑，铜钱按回执入账。`);
     if(h.protected)paragraph('护炉契保住了这次契印；本局不会再次保印。');
-    if(h.reserveId){const kept=state.blades.find(b=>b.id===h.reserveId);if(kept){body.append(context.thumb(kept));paragraph(`留下${RECIPES[kept.recipe].name} · 当前身价${fmt(kept.value)}。`);}}
+    if(h.reserveId){const kept=state.blades.find(b=>b.id===h.reserveId);if(kept){body.append(context.thumb(kept));paragraph(`留下${RECIPES[kept.recipe].name} · 当前估值${fmt(kept.value)}。`);}}
     if(state.day===4){paragraph(`第一章委托完成 ${facts.completed}/4；渡口${facts.chapterEndMet?'已恢复巡守':'仍有未竟的约定'}。`);addGrowth();addQualification(1);paragraph(CHAPTERS[1]!.opening);}
     if(state.day===8){paragraph(`双驿实际交付 ${outcome.progressText} · 第二章完成 ${facts.completed}/4。`);addWorks(outcome.matchedBlades,outcome.day);addGrowth();addQualification(2);paragraph(CHAPTERS[2]!.opening);}
     if(outcome.commissionId===11){
@@ -149,7 +149,7 @@ export function buildJourneyStage(input:RunState,context:JourneyStageContext):Jo
     const outcome=journeyOutcome(state,state.commissionOrder[facts.endDay-1]!);title=context.throughDay===4?(facts.chapterEndMet?'第一章，渡口重新亮了':'第一章，炉火仍在'):'第二程，走完了';image=outcome.image;
     paragraph(outcome.commission[facts.chapterEndMet?'success':'failure']);
     paragraph(`${context.throughDay===4?'渡口约定':'双驿实际交付'} ${outcome.progressText} · 第${context.throughDay===4?'一':'二'}章完成 ${facts.completed}/4 · 契印 ${state.seals}/3`);
-    if(h)paragraph(`今天交剑实收${fmt(h.sales)}金币（酬劳${fmt(h.baseFees)}＋品质奖及余剑出售${fmt(h.sales-h.baseFees)}），回收${fmt(h.recovered)}；今日收购钱袋共支出${fmt(h.marketSpent)}。`);
+    if(h)paragraph(`今天交剑实收${fmt(h.sales)}铜钱（酬劳${fmt(h.baseFees)}＋品质奖及余剑出售${fmt(h.sales-h.baseFees)}），回收${fmt(h.recovered)}；今日收购钱袋共支出${fmt(h.marketSpent)}。`);
     paragraph(context.throughDay===4?'本次旅程开放第一章，四天与已选炉具都已留在行程。第二章开放后，可在这里接续。':'前两程已收好。后续灯路开放后，可在这里接续，尚未抵达十二灯结局。');
     addQualification(view.chapter.id);
     if(view.modifications.length)paragraph('已装炉具：'+view.modifications.map(m=>m.name+' · '+m.text).join('；'));
@@ -170,7 +170,7 @@ export function buildJourneyStage(input:RunState,context:JourneyStageContext):Jo
     const growth=element('details',undefined,'v5-journey-details');growth.append(element('summary','这一程的手艺与入袋账'));addGrowth(growth);
     growth.append(element('p',`来料升级${view.growth.upgradeCount}次 · 当前铁坯底价${fmt(view.growth.supplyBase)} · 可用配方：${view.recipes.map(recipe=>recipe.name).join('、')}。`));
     growth.append(element('p',`本次配方熟练：${ending.mastery.length?ending.mastery.map(recipe=>RECIPES[recipe].name).join('、'):'尚未取得'}；手艺见闻：${ending.traits.length?ending.traits.map(trait=>TRAITS[trait].name).join('、'):'尚未取得'}。`));
-    growth.append(element('p',`沿途交剑实收${fmt(state.history.reduce((total,record)=>total+record.sales,0))}金币，其中酬劳${fmt(state.history.reduce((total,record)=>total+record.baseFees,0))}；回收实收${fmt(state.history.reduce((total,record)=>total+record.recovered,0))}。各日收购钱袋合计支出${fmt(state.history.reduce((total,record)=>total+record.marketSpent,0))}，不是额外收入。此刻钱包${fmt(state.coins)}金币，已计入事件收支、备料与修印。`));
+    growth.append(element('p',`沿途交剑实收${fmt(state.history.reduce((total,record)=>total+record.sales,0))}铜钱，其中酬劳${fmt(state.history.reduce((total,record)=>total+record.baseFees,0))}；回收实收${fmt(state.history.reduce((total,record)=>total+record.recovered,0))}。各日收购钱袋合计支出${fmt(state.history.reduce((total,record)=>total+record.marketSpent,0))}，不是额外收入。此刻钱包${fmt(state.coins)}铜钱，已计入事件收支、备料与修印。`));
     growth.append(element('p','这里的作品来自本次v0.8经营行程；旧行程导入的作品在炉谱中保留各自来源，不改成本次打造。'));body.append(growth);
     paragraph(context.temporary?'本次是不保存试玩，新的作品、章节与成长不会写入炉谱；离开前请导出这次行程。已有炉谱记录保持原样。':context.collection.pending||context.collection.problem?'部分新成长还没有安全保存，请先查看保存详情或导出行程。':'安全保存的作品、章节、配方熟练与手艺见闻都留在炉谱，可在下一程查看。');
     memories.append(element('h3','灯下，三人的后话'));
@@ -206,8 +206,8 @@ export function buildJourneyStage(input:RunState,context:JourneyStageContext):Jo
     const card=element('section',undefined,'v4-event-receipt');
     const effect=event.id==='donation'?'明天实际发出的新坯底价增加20%；留剑时两柄，否则三柄，同行旧剑不加这份来料。':event.id==='loan'?'借锤的钱已记清，明日第一柄新坯的前三记普通锤增加正收益；不会施加到同行旧剑。':event.id==='shelter'?'炉棚补好了，明日第一柄新坯在当天少3个百分点裂损率；同行旧剑不额外受益。':EVENTS[event.id].result;
     const result=mode==='defeat'&&['donation','loan','shelter'].includes(event.id)?effect+'这次行程已经停下，原定次日的效果尚未发生；已经交出的剑或花费仍按原收据保留。':effect;
-    card.append(element('h3',EVENTS[event.id].name+' · '+(event.choice==='accept'?'已接受':'已婉拒')),context.prop(event.id),element('p',event.choice==='accept'?result:'保留了眼前的剑与金币，没有追加代价。'));
-    if(event.coins)card.append(element('p',`${event.coins>0?'收入':'花费'} ${fmt(Math.abs(event.coins))}金币`));
+    card.append(element('h3',EVENTS[event.id].name+' · '+(event.choice==='accept'?'已接受':'已婉拒')),context.prop(event.id),element('p',event.choice==='accept'?result:'保留了眼前的剑与铜钱，没有追加代价。'));
+    if(event.coins)card.append(element('p',`${event.coins>0?'收入':'花费'} ${fmt(Math.abs(event.coins))}铜钱`));
     if(event.pieceId){const blade=state.blades.find(b=>b.id===event.pieceId);if(blade)card.append(context.thumb(blade),element('p',`这柄${RECIPES[blade.recipe].name}已换出，不再计入交付或留剑。`));}body.append(card);
   }
   body.dataset.chapter=String(view.chapter.id);

@@ -1,0 +1,25 @@
+{
+  "label": "payment-ui-03",
+  "startedAt": "2026-10-22T03:46:39.055757+00:00",
+  "command": [
+    "rtk",
+    "proxy",
+    "env",
+    "NO_PROXY=127.0.0.1,localhost",
+    "no_proxy=127.0.0.1,localhost",
+    "PAYMENT_OUTPUT=tmp/goal4-T03/runs/payment-ui-03/artifacts",
+    "PAYMENT_REPORT=tmp/goal4-T03/runs/payment-ui-03/report.json",
+    "npx",
+    "playwright",
+    "test",
+    "--config",
+    "tmp/goal4-T03/drafts/payment-ui/playwright.payment.config.ts",
+    "--project",
+    "payment-chromium-dpr1"
+  ],
+  "cwd": "/Users/gordon/githome/sword-led",
+  "status": "terminal",
+  "pid": 11750,
+  "completedAt": "2026-10-22T03:47:10.220735+00:00",
+  "actualExitCode": 0
+}

@@ -1,0 +1,1203 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-22T14:58:38.848Z",
+  "scope": "Payment UI product progress only. Original failures and current success are separate runs; no whole T03 archive, full modern matrix, runtime bundle duplication, new H signoff or goal completion claim.",
+  "goal4T03Complete": false,
+  "finalPayment": "payment-ui-04",
+  "finalBuild": "build-16",
+  "guards": {
+    "build-15": {
+      "label": "build-15",
+      "startedAt": "2026-10-22T03:31:52.899166+00:00",
+      "command": [
+        "rtk",
+        "proxy",
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "/Users/gordon/githome/sword-led",
+      "status": "terminal",
+      "pid": 9498,
+      "completedAt": "2026-10-22T03:31:58.493357+00:00",
+      "actualExitCode": 0
+    },
+    "build-16": {
+      "label": "build-16",
+      "startedAt": "2026-10-22T03:58:43.559838+00:00",
+      "command": [
+        "rtk",
+        "proxy",
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "/Users/gordon/githome/sword-led",
+      "status": "terminal",
+      "pid": 13508,
+      "completedAt": "2026-10-22T03:58:49.771506+00:00",
+      "actualExitCode": 0
+    },
+    "golden-core-allocation-01": {
+      "label": "golden-core-allocation-01",
+      "startedAt": "2026-10-22T02:41:06.296037+00:00",
+      "command": [
+        "rtk",
+        "proxy",
+        "node",
+        "tmp/goal4-T03/drafts/golden-core-allocation.mjs",
+        "--old",
+        "tmp/goal4-T03/runtime-build-11",
+        "--new",
+        "dist",
+        "--out",
+        "tmp/goal4-T03/golden-core-allocation-01-data"
+      ],
+      "cwd": "/Users/gordon/githome/sword-led",
+      "status": "terminal",
+      "pid": 88778,
+      "completedAt": "2026-10-22T02:42:44.089384+00:00",
+      "actualExitCode": 1
+    },
+    "golden-core-allocation-02": {
+      "label": "golden-core-allocation-02",
+      "startedAt": "2026-10-22T03:12:37.183147+00:00",
+      "command": [
+        "rtk",
+        "proxy",
+        "node",
+        "tmp/goal4-T03/drafts/golden-core-allocation-02.mjs",
+        "--old",
+        "tmp/goal4-T03/runtime-build-11",
+        "--new",
+        "dist",
+        "--out",
+        "tmp/goal4-T03/golden-core-allocation-02-data"
+      ],
+      "cwd": "/Users/gordon/githome/sword-led",
+      "status": "terminal",
+      "pid": 99339,
+      "completedAt": "2026-10-22T03:14:29.187347+00:00",
+      "actualExitCode": 0
+    },
+    "payment-ui-01": {
+      "process": {
+        "label": "payment-ui-01",
+        "startedAt": "2026-10-22T03:15:32.787277+00:00",
+        "command": [
+          "rtk",
+          "proxy",
+          "env",
+          "NO_PROXY=127.0.0.1,localhost",
+          "no_proxy=127.0.0.1,localhost",
+          "PAYMENT_OUTPUT=tmp/goal4-T03/runs/payment-ui-01/artifacts",
+          "PAYMENT_REPORT=tmp/goal4-T03/runs/payment-ui-01/report.json",
+          "npx",
+          "playwright",
+          "test",
+          "--config",
+          "tmp/goal4-T03/drafts/payment-ui/playwright.payment.config.ts",
+          "--project",
+          "payment-chromium-dpr1"
+        ],
+        "cwd": "/Users/gordon/githome/sword-led",
+        "status": "terminal",
+        "pid": 2700,
+        "completedAt": "2026-10-22T03:15:48.347080+00:00",
+        "actualExitCode": 1
+      },
+      "results": [
+        {
+          "title": "actual estimate, commission share and copper received remain clear at both PC sizes",
+          "project": "payment-chromium-dpr1",
+          "status": "failed",
+          "retry": 0,
+          "duration": 11155,
+          "errorCount": 1
+        }
+      ],
+      "stats": {
+        "startTime": "2026-10-22T03:15:35.050Z",
+        "duration": 13241.544999999998,
+        "expected": 0,
+        "skipped": 0,
+        "unexpected": 1,
+        "flaky": 0
+      },
+      "sourceFiles": 422,
+      "runtimeFiles": 82,
+      "endFingerprint": {
+        "matches": true,
+        "changed": []
+      }
+    },
+    "payment-ui-02": {
+      "process": {
+        "label": "payment-ui-02",
+        "startedAt": "2026-10-22T03:32:37.128811+00:00",
+        "command": [
+          "rtk",
+          "proxy",
+          "env",
+          "NO_PROXY=127.0.0.1,localhost",
+          "no_proxy=127.0.0.1,localhost",
+          "PAYMENT_OUTPUT=tmp/goal4-T03/runs/payment-ui-02/artifacts",
+          "PAYMENT_REPORT=tmp/goal4-T03/runs/payment-ui-02/report.json",
+          "npx",
+          "playwright",
+          "test",
+          "--config",
+          "tmp/goal4-T03/drafts/payment-ui/playwright.payment.config.ts",
+          "--project",
+          "payment-chromium-dpr1"
+        ],
+        "cwd": "/Users/gordon/githome/sword-led",
+        "status": "terminal",
+        "pid": 9748,
+        "completedAt": "2026-10-22T03:33:01.382984+00:00",
+        "actualExitCode": 1
+      },
+      "results": [
+        {
+          "title": "actual estimate, commission share and copper received remain clear at both PC sizes",
+          "project": "payment-chromium-dpr1",
+          "status": "failed",
+          "retry": 0,
+          "duration": 20374,
+          "errorCount": 1
+        }
+      ],
+      "stats": {
+        "startTime": "2026-10-22T03:32:39.082Z",
+        "duration": 22235.985999999997,
+        "expected": 0,
+        "skipped": 0,
+        "unexpected": 1,
+        "flaky": 0
+      },
+      "sourceFiles": 422,
+      "runtimeFiles": 82,
+      "endFingerprint": {
+        "matches": true,
+        "changed": []
+      }
+    },
+    "payment-ui-03": {
+      "process": {
+        "label": "payment-ui-03",
+        "startedAt": "2026-10-22T03:46:39.055757+00:00",
+        "command": [
+          "rtk",
+          "proxy",
+          "env",
+          "NO_PROXY=127.0.0.1,localhost",
+          "no_proxy=127.0.0.1,localhost",
+          "PAYMENT_OUTPUT=tmp/goal4-T03/runs/payment-ui-03/artifacts",
+          "PAYMENT_REPORT=tmp/goal4-T03/runs/payment-ui-03/report.json",
+          "npx",
+          "playwright",
+          "test",
+          "--config",
+          "tmp/goal4-T03/drafts/payment-ui/playwright.payment.config.ts",
+          "--project",
+          "payment-chromium-dpr1"
+        ],
+        "cwd": "/Users/gordon/githome/sword-led",
+        "status": "terminal",
+        "pid": 11750,
+        "completedAt": "2026-10-22T03:47:10.220735+00:00",
+        "actualExitCode": 0
+      },
+      "results": [
+        {
+          "title": "actual estimate, commission share and copper received remain clear at both PC sizes",
+          "project": "payment-chromium-dpr1",
+          "status": "passed",
+          "retry": 0,
+          "duration": 26810,
+          "errorCount": 0
+        }
+      ],
+      "stats": {
+        "startTime": "2026-10-22T03:46:41.366Z",
+        "duration": 28793.288,
+        "expected": 1,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "sourceFiles": 422,
+      "runtimeFiles": 82,
+      "endFingerprint": {
+        "matches": true,
+        "changed": []
+      }
+    },
+    "payment-ui-04": {
+      "process": {
+        "label": "payment-ui-04",
+        "startedAt": "2026-10-22T04:01:28.350858+00:00",
+        "command": [
+          "rtk",
+          "proxy",
+          "env",
+          "NO_PROXY=127.0.0.1,localhost",
+          "no_proxy=127.0.0.1,localhost",
+          "PAYMENT_OUTPUT=tmp/goal4-T03/runs/payment-ui-04/artifacts",
+          "PAYMENT_REPORT=tmp/goal4-T03/runs/payment-ui-04/report.json",
+          "npx",
+          "playwright",
+          "test",
+          "--config",
+          "tmp/goal4-T03/drafts/payment-ui/playwright.payment.config.ts",
+          "--project",
+          "payment-chromium-dpr1"
+        ],
+        "cwd": "/Users/gordon/githome/sword-led",
+        "status": "terminal",
+        "pid": 14019,
+        "completedAt": "2026-10-22T04:01:59.014084+00:00",
+        "actualExitCode": 0
+      },
+      "results": [
+        {
+          "title": "actual estimate, commission share and copper received remain clear at both PC sizes",
+          "project": "payment-chromium-dpr1",
+          "status": "passed",
+          "retry": 0,
+          "duration": 26168,
+          "errorCount": 0
+        }
+      ],
+      "stats": {
+        "startTime": "2026-10-22T04:01:30.422Z",
+        "duration": 28539.2,
+        "expected": 1,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "sourceFiles": 422,
+      "runtimeFiles": 82,
+      "endFingerprint": {
+        "matches": true,
+        "changed": []
+      }
+    },
+    "golden": {
+      "first": {
+        "ok": false,
+        "stepCount": 4898
+      },
+      "corrected": {
+        "ok": true,
+        "stepCount": 4908,
+        "inputsUnchanged": true
+      },
+      "scope": "Finite old/new semantic/allocation evidence; not current page latency or all T03 completion."
+    },
+    "preservation": {
+      "unchanged": {
+        "oldSource": 110,
+        "coreV5": 6,
+        "protected": 85,
+        "SDK": 8
+      },
+      "exceptions": [
+        {
+          "path": "src/platform/audio.ts",
+          "beforeSha256": "ad6243358fb00b4a21118d52a884260f111cb258281c2aedd3f862d83d7ffb78",
+          "afterSha256": "6d86b2b4d4f4c35f32f8128110d66cb6f94587b870e3e27522d61f576119b263",
+          "reason": "Confirmed crossed-epoch native resume ownership bug. Exact original and patched bytes separately bound; no rules or cue changes.",
+          "original": "tmp/goal4-T03/originals/src/platform/audio.ts"
+        },
+        {
+          "path": "src/platform/direct-strike-input.ts",
+          "beforeSha256": "ce6740b64cc6f977ba70a051900f77820f93234d5d8291eba7deceff3363c3be",
+          "afterSha256": "d73a76c6d29a226dd3593c76d3944707a57b3162aee10d2f7234432c2a4f63aa",
+          "reason": "Confirmed pointercancel/detail0 bug, one-condition UI correction. Core/rules unchanged.",
+          "original": "tmp/goal4-T03/originals/src/platform/direct-strike-input.ts"
+        },
+        {
+          "path": "src/presentation-v4/forge.ts",
+          "beforeSha256": "aba9e1f249f1ee8863a5a6fbcd36d2eefcebe12ced17d6cada0b0f03fa152820",
+          "afterSha256": "91905bd97d60bf57d5bea137836ba7f4a5855e98aa850916d1b09517e76270a2",
+          "reason": "Confirmed repeated paints and actual high-DPR native rendering costs; one renderer last-pixel cache preserves original miss path and every pixel/contact/source/size invalidation.",
+          "original": "tmp/goal4-T03/originals/src/presentation-v4/forge.ts"
+        },
+        {
+          "path": "src/core-v5/game.ts",
+          "beforeSha256": "859c925c7d50054efcfe68ad33b2a90f75f1f848db683bad95f638b8c49d6a7b",
+          "afterSha256": "0d5306cd2dd750c8a90296dcd7fad6862d3ffd6b1bf0c5602059bd6700cdaa59",
+          "reason": "Actual long-journal load overhead; immutable historical-action sharing in a new journal array, full body clone/validation/freeze/semantics retained. Golden old/new parity required.",
+          "original": "tmp/goal4-T03/originals/src/core-v5/game.ts"
+        }
+      ]
+    }
+  },
+  "screenshots": {
+    "reviewer": "root",
+    "reviewedAt": "2026-10-22T14:57:04.564410+00:00",
+    "count": 6
+  },
+  "inputBytesUnchanged": true,
+  "files": [
+    {
+      "source": "tmp/goal4-T03/runs/build-15/process.json",
+      "target": "builds/build-15/process.json",
+      "originalBytes": 314,
+      "originalSHA256": "5deacfffe19aad6a27fc0f90b7b19424e7a60d293d78520f1f4bdd524f6818c2",
+      "storedBytes": 314,
+      "storedSHA256": "5deacfffe19aad6a27fc0f90b7b19424e7a60d293d78520f1f4bdd524f6818c2",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/runs/build-15/stdout.log",
+      "target": "builds/build-15/stdout.log.gz",
+      "originalBytes": 2545,
+      "originalSHA256": "deefc60920aa456172fae10b942522cada5e858559f5675d907c103b1dc2574e",
+      "storedBytes": 825,
+      "storedSHA256": "b91d26de97f5aa917af915aeafc65d8d2b57904505cd9fe856373744de30e4d1",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/build-16/process.json",
+      "target": "builds/build-16/process.json",
+      "originalBytes": 315,
+      "originalSHA256": "a42fd7f19b21af846e725716c5df4bbacb4ce4d1ba5f6c81ed2c446c2cd363e3",
+      "storedBytes": 315,
+      "storedSHA256": "a42fd7f19b21af846e725716c5df4bbacb4ce4d1ba5f6c81ed2c446c2cd363e3",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/runs/build-16/stdout.log",
+      "target": "builds/build-16/stdout.log.gz",
+      "originalBytes": 2545,
+      "originalSHA256": "2f3d3daa82ec86881c70d19d115eb3adf1927b1907e0cbfabb086b952fafb03b",
+      "storedBytes": 830,
+      "storedSHA256": "b6e73bcce339fcf65c86be32ff2ec04498d6a66f881074ea020ff994f26490f1",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/golden-core-allocation-01-data/result.json",
+      "target": "golden/golden-core-allocation-01/result.json.gz",
+      "originalBytes": 70026,
+      "originalSHA256": "a0fe475bf0e128369fc7ff5e4a6ff101913cff8bf19e36e134a2648ea39f06d6",
+      "storedBytes": 9815,
+      "storedSHA256": "69afcc35b5c593ff83026741cb7a9687dea25cf1707a1d06800b7638ec013ad9",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/golden-core-allocation-01-data/checkpoints.json",
+      "target": "golden/golden-core-allocation-01/checkpoints.json.gz",
+      "originalBytes": 13605,
+      "originalSHA256": "f2e1bb2bafedb23a72557c963af248f88f334f6f7c1a3f7808a535be3e4923f7",
+      "storedBytes": 4097,
+      "storedSHA256": "78807124a94eaf166d45da99cb14a629a71621c7004dfbdd52222f9b2bbe965b",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/golden-core-allocation-01-data/command-results.jsonl",
+      "target": "golden/golden-core-allocation-01/command-results.jsonl.gz",
+      "originalBytes": 2353942,
+      "originalSHA256": "38ca4117afdec26ed6988267c2a8dd2e65d61f7f31390697ce52b1510d92c10a",
+      "storedBytes": 480677,
+      "storedSHA256": "b0f55e3e4b58a6c2ed05b3f3b78f528dbd756fd82d9f5d9e27736bf5fef4a343",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/golden-core-allocation-01-data/failure.json",
+      "target": "golden/golden-core-allocation-01/failure.json.gz",
+      "originalBytes": 59178,
+      "originalSHA256": "e1af824423e2d5429d9ee96786d5ab3c67abaf0a1cd6c29cb7737c4bfffc21ad",
+      "storedBytes": 7307,
+      "storedSHA256": "856425e4397ee66673ac334937842562b839cd7e3aabfd2b515c621fdf3e77b6",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/golden-core-allocation-01/process.json",
+      "target": "golden/golden-core-allocation-01/process.json",
+      "originalBytes": 505,
+      "originalSHA256": "d4bf2ee79a18b36d79be9a480c88a94ea536a5f782c500de4be6908b5d0310bb",
+      "storedBytes": 505,
+      "storedSHA256": "d4bf2ee79a18b36d79be9a480c88a94ea536a5f782c500de4be6908b5d0310bb",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/runs/golden-core-allocation-01/stdout.log",
+      "target": "golden/golden-core-allocation-01/stdout.log.gz",
+      "originalBytes": 587,
+      "originalSHA256": "707fd22fd643cd8395212e26674886621d05350d1e5e1913d41207bdd856703b",
+      "storedBytes": 408,
+      "storedSHA256": "a3d0bb8c045d9fb8b870fa1fcfadea72e6196364cd0d38d2e22dc43236543e16",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/golden-core-allocation-02-data/result.json",
+      "target": "golden/golden-core-allocation-02/result.json.gz",
+      "originalBytes": 96934,
+      "originalSHA256": "f9f00643c1d5b1d244697a6a7f64342b8527f58e3b6c0602da16d1a00b32e0ce",
+      "storedBytes": 11039,
+      "storedSHA256": "b1593939a5a37504c7ae55b12e8fa514533fd98c0badc9917723ca8b22b65ced",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/golden-core-allocation-02-data/checkpoints.json",
+      "target": "golden/golden-core-allocation-02/checkpoints.json.gz",
+      "originalBytes": 13985,
+      "originalSHA256": "7d60bef9d0c03b715d7064995b1693a09ed4c54685c1b4396cddd4b98a3aaed7",
+      "storedBytes": 4210,
+      "storedSHA256": "9f508a8c9669113a718cee2c365735940e5b3c05c575513b61f6c6c1e03e81e2",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/golden-core-allocation-02-data/command-results.jsonl",
+      "target": "golden/golden-core-allocation-02/command-results.jsonl.gz",
+      "originalBytes": 2358510,
+      "originalSHA256": "8a043ac66e94db9e7d85832e2c153685e442ba98a89f8419181b535cfcb8da29",
+      "storedBytes": 482291,
+      "storedSHA256": "255a6b1ddf07b7faaa0585061ff6428d741cf7e98f47e18c7a715ffd0155639c",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/golden-core-allocation-02/process.json",
+      "target": "golden/golden-core-allocation-02/process.json",
+      "originalBytes": 508,
+      "originalSHA256": "80491aca9cb41d554905933ef862ca60044e17ad6be286d102522b0669c0c9f6",
+      "storedBytes": 508,
+      "storedSHA256": "80491aca9cb41d554905933ef862ca60044e17ad6be286d102522b0669c0c9f6",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/runs/golden-core-allocation-02/stdout.log",
+      "target": "golden/golden-core-allocation-02/stdout.log.gz",
+      "originalBytes": 200,
+      "originalSHA256": "3f29895aad5fc79c30b6d24f67dc6e5dc9c1691deafcb7ee031adb2ef6fdddf2",
+      "storedBytes": 176,
+      "storedSHA256": "cc39189a67a74b2c4f63d7c3ec25513fec79b81b67d9a320e8aaaf4183e8795f",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/drafts/golden-core-allocation-02.mjs",
+      "target": "golden/consumer/golden-core-allocation-02.mjs",
+      "originalBytes": 24995,
+      "originalSHA256": "66d8c0a356744f621f0ad6ea55205d3389842a0765180b72c2d57788c3844bd9",
+      "storedBytes": 24995,
+      "storedSHA256": "66d8c0a356744f621f0ad6ea55205d3389842a0765180b72c2d57788c3844bd9",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/drafts/golden-core-allocation-02.README.md",
+      "target": "golden/consumer/golden-core-allocation-02.README.md",
+      "originalBytes": 7854,
+      "originalSHA256": "d09470df7f96846bf100babae1e52e9f395505e70826d2e34ff92a1ae2b389a3",
+      "storedBytes": 7854,
+      "storedSHA256": "d09470df7f96846bf100babae1e52e9f395505e70826d2e34ff92a1ae2b389a3",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-01/process.json",
+      "target": "payment/payment-ui-01/process.json",
+      "originalBytes": 670,
+      "originalSHA256": "419eaee6fb709fb5c125f6c1a81e64fb21a3139961c2db05c011c21fee856cd5",
+      "storedBytes": 670,
+      "storedSHA256": "419eaee6fb709fb5c125f6c1a81e64fb21a3139961c2db05c011c21fee856cd5",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-01/report.json",
+      "target": "payment/payment-ui-01/report.json",
+      "originalBytes": 12604,
+      "originalSHA256": "a57166c493942ad822fcd64ff0e7c50ef3c5fe1ea73da49090b198e4d3d22e42",
+      "storedBytes": 12604,
+      "storedSHA256": "a57166c493942ad822fcd64ff0e7c50ef3c5fe1ea73da49090b198e4d3d22e42",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-01/end-fingerprint.json",
+      "target": "payment/payment-ui-01/end-fingerprint.json",
+      "originalBytes": 179,
+      "originalSHA256": "21971e2cdf487b4ecfb9c3f5b4a382a508e7fdd546c45bc6a82578789767fe32",
+      "storedBytes": 179,
+      "storedSHA256": "21971e2cdf487b4ecfb9c3f5b4a382a508e7fdd546c45bc6a82578789767fe32",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-01/stdout.log",
+      "target": "payment/payment-ui-01/stdout.log.gz",
+      "originalBytes": 4120,
+      "originalSHA256": "1fb649e60127f3ecf04c61eccd367781351accfc10bab0fa13362efaed496bae",
+      "storedBytes": 1109,
+      "storedSHA256": "ef06e1799cebe6ead41a33a09b6bdcc295659547be7fb5b6bf61ae0af637c72f",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/payment-ui-01-fingerprint.json",
+      "target": "payment/payment-ui-01/inputs-fingerprint.json.gz",
+      "originalBytes": 77122,
+      "originalSHA256": "0e4c5b12dacf23841f6ddfd2b3c95aea47a96305a1aaea20ed7f33afd2ee8248",
+      "storedBytes": 23179,
+      "storedSHA256": "11767d61045b762d7885d5324760ef619ce7cea3ed806449bbee492944b703e3",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-01/artifacts/.last-run.json",
+      "target": "payment/payment-ui-01/artifacts/.last-run.json.gz",
+      "originalBytes": 96,
+      "originalSHA256": "5c5195337d9826e8931086d17633d097794dac27d9a5d7418577ca10c7b0c7d4",
+      "storedBytes": 106,
+      "storedSHA256": "18989383e1d23cc3201236ab7d58774a0ae453837918a1a18798f836e9cb1112",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-01/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/error-context.md",
+      "target": "payment/payment-ui-01/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/error-context.md.gz",
+      "originalBytes": 20180,
+      "originalSHA256": "006b3b8db9669292077355bfb249f486fe554465d9a3fe32f75d4cad14d5d1cd",
+      "storedBytes": 6949,
+      "storedSHA256": "b2cfdb988b63f380e947cd7e0cf0eecde4eac9267c77bce5efc67e4f846c2a84",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-01/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/payment-input-identity.json",
+      "target": "payment/payment-ui-01/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/payment-input-identity.json.gz",
+      "originalBytes": 14288,
+      "originalSHA256": "e5c2833318f04e5d9da2a68f2ae73037bbb83c13034e313645c66c1d7a0aedfb",
+      "storedBytes": 4795,
+      "storedSHA256": "535cb01d5b0a266a7d2ceec6c49ca3a2a21b9a1f22e99289010b8b2c2b21a156",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-01/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/payment-partial-evidence.json",
+      "target": "payment/payment-ui-01/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/payment-partial-evidence.json.gz",
+      "originalBytes": 52080,
+      "originalSHA256": "d1b0ff69351c40e72a2eb96f8438ebc2b1bb7c734936f1ec49167e02c3065838",
+      "storedBytes": 3354,
+      "storedSHA256": "76685d1183853937444c8a6d053d0f0adfa3d97f437b8a9c8e65809caf7a3909",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-01/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/v5-commands.json",
+      "target": "payment/payment-ui-01/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/v5-commands.json.gz",
+      "originalBytes": 2241,
+      "originalSHA256": "4be6dd6fb7631f2d5a04b17af6a21c50a221064a2aeafa8e3bf306be5dcad37b",
+      "storedBytes": 486,
+      "storedSHA256": "309aa8a9b7747f8d6cd8a596943040dfabbde968741b01235cbe865d9128dc04",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-01/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/v5-states.json",
+      "target": "payment/payment-ui-01/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/v5-states.json.gz",
+      "originalBytes": 43047,
+      "originalSHA256": "a3a92a4a665465aa1523a317dc7d2ecc0655f00f25a9689527aa6f0e9767677a",
+      "storedBytes": 2457,
+      "storedSHA256": "9bfeebde4907ccb9573b2d428d9d0224ff5be16d3b1e0b20be94c966a3ddaf31",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-02/process.json",
+      "target": "payment/payment-ui-02/process.json",
+      "originalBytes": 670,
+      "originalSHA256": "c2d8dd84dc3f25a9daa7d2641d940be68bbab4f7f43ba52492794d9736fbabf7",
+      "storedBytes": 670,
+      "storedSHA256": "c2d8dd84dc3f25a9daa7d2641d940be68bbab4f7f43ba52492794d9736fbabf7",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-02/report.json",
+      "target": "payment/payment-ui-02/report.json",
+      "originalBytes": 11999,
+      "originalSHA256": "221a85222347f1c57437bf49c9166a1185f8e1e9421828e2ed99b6611f818f28",
+      "storedBytes": 11999,
+      "storedSHA256": "221a85222347f1c57437bf49c9166a1185f8e1e9421828e2ed99b6611f818f28",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-02/end-fingerprint.json",
+      "target": "payment/payment-ui-02/end-fingerprint.json",
+      "originalBytes": 179,
+      "originalSHA256": "7ff41126b4f47148032b22918fbcde540f95b2bd33ab694ef24322a599dbc1e7",
+      "storedBytes": 179,
+      "storedSHA256": "7ff41126b4f47148032b22918fbcde540f95b2bd33ab694ef24322a599dbc1e7",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-02/stdout.log",
+      "target": "payment/payment-ui-02/stdout.log.gz",
+      "originalBytes": 3373,
+      "originalSHA256": "dd0a65cc674dd7ebaeb9f1785b003a0b2b4e9a78d5cd3e44544f53540097c9c9",
+      "storedBytes": 1115,
+      "storedSHA256": "cce7b414d9f41d1d19c7fd4dde3ff119690ec9f7b5a67562e1450c86da946088",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/payment-ui-02-fingerprint.json",
+      "target": "payment/payment-ui-02/inputs-fingerprint.json.gz",
+      "originalBytes": 77122,
+      "originalSHA256": "8cbc0c7750848232623f5d5f40b61f5ade70f9e5fb58e427cb761a2b931b7933",
+      "storedBytes": 23177,
+      "storedSHA256": "c10ef82df1099455e9f821717e7ecf83bea9539e62b0f0efe1409b9aa3de393f",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-02/artifacts/.last-run.json",
+      "target": "payment/payment-ui-02/artifacts/.last-run.json.gz",
+      "originalBytes": 96,
+      "originalSHA256": "5c5195337d9826e8931086d17633d097794dac27d9a5d7418577ca10c7b0c7d4",
+      "storedBytes": 106,
+      "storedSHA256": "18989383e1d23cc3201236ab7d58774a0ae453837918a1a18798f836e9cb1112",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-02/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/error-context.md",
+      "target": "payment/payment-ui-02/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/error-context.md.gz",
+      "originalBytes": 18673,
+      "originalSHA256": "dbf3ec73302c6c98ceed45374bc7c6f7bdb743bdaad030b6e1cfa8335366abaf",
+      "storedBytes": 6103,
+      "storedSHA256": "f0cec9308d3d07ef811ce897247a7d5a918dedf2c700e917a774dc1e15aa72ed",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-02/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/payment-input-identity.json",
+      "target": "payment/payment-ui-02/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/payment-input-identity.json.gz",
+      "originalBytes": 14288,
+      "originalSHA256": "5679ebe5fe03fe753eeb4dc58bdd83a6eb869924d48eefdea0d6a60720c49f47",
+      "storedBytes": 4796,
+      "storedSHA256": "b81c00dba6b2605d35db8cc789252bb8d1153e549930bdf2ac92d4166bcc85aa",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-02/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/payment-partial-evidence.json",
+      "target": "payment/payment-ui-02/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/payment-partial-evidence.json.gz",
+      "originalBytes": 97628,
+      "originalSHA256": "55a577bc057a08902a7b33dfdeb8972623716e2fffb6943bcc0255e1496dc489",
+      "storedBytes": 6538,
+      "storedSHA256": "8c86ad3753606cdb83ca06f396ca98bf17ca4f908031f5b737615d3479601950",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-02/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/v5-commands.json",
+      "target": "payment/payment-ui-02/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/v5-commands.json.gz",
+      "originalBytes": 2241,
+      "originalSHA256": "9a1175037fa33e10cdc1430c853cd835e0ebca0205e9a46cfb86642097011098",
+      "storedBytes": 488,
+      "storedSHA256": "12640f40b825ed5b64dac225b0d512f8d3935a8d953e715f46382b5c5c42a328",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-02/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/v5-states.json",
+      "target": "payment/payment-ui-02/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/v5-states.json.gz",
+      "originalBytes": 129589,
+      "originalSHA256": "37273ccb09b6283dabb960c6448f8a2a20b19015eb7b9a15ea3faab1b5d108ab",
+      "storedBytes": 9062,
+      "storedSHA256": "1dd681584fd3dde4ec3bbdb49355251368b321a35bcf00643aeb693b5ffaa209",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-03/process.json",
+      "target": "payment/payment-ui-03/process.json",
+      "originalBytes": 671,
+      "originalSHA256": "1ef249027ad83adb90cf332dd78d14373292cb6410e09f9e23c5da29c2f99d0a",
+      "storedBytes": 671,
+      "storedSHA256": "1ef249027ad83adb90cf332dd78d14373292cb6410e09f9e23c5da29c2f99d0a",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-03/report.json",
+      "target": "payment/payment-ui-03/report.json",
+      "originalBytes": 4994,
+      "originalSHA256": "5fdca6820dbb1ac2c5cc920854b53ff1fe2ee5f85bfaccb1fe734876f53c5cfd",
+      "storedBytes": 4994,
+      "storedSHA256": "5fdca6820dbb1ac2c5cc920854b53ff1fe2ee5f85bfaccb1fe734876f53c5cfd",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-03/end-fingerprint.json",
+      "target": "payment/payment-ui-03/end-fingerprint.json",
+      "originalBytes": 179,
+      "originalSHA256": "e595a989c4603b793fcf9170f9344f35a17d7b272044837b429dcedcb7318942",
+      "storedBytes": 179,
+      "storedSHA256": "e595a989c4603b793fcf9170f9344f35a17d7b272044837b429dcedcb7318942",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-03/stdout.log",
+      "target": "payment/payment-ui-03/stdout.log.gz",
+      "originalBytes": 242,
+      "originalSHA256": "f117aa3615dee08f9aacca89d5d2c423ce9a62aea83a24c72dd47cc07e4d461e",
+      "storedBytes": 209,
+      "storedSHA256": "c734eabda589bc85c42c5f40617549a930b54dffff66f478eb2652697c7e4c77",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/payment-ui-03-fingerprint.json",
+      "target": "payment/payment-ui-03/inputs-fingerprint.json.gz",
+      "originalBytes": 77122,
+      "originalSHA256": "b3af6ffc5c89414e287d9fe8f0d88ea68fe82d7ea6a871c25b89cfc22343aa94",
+      "storedBytes": 23175,
+      "storedSHA256": "5608a206ff382cf13841999353e8cc8b3b97ac2dd2aa0a490791407f7d87bb69",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-03/artifacts/.last-run.json",
+      "target": "payment/payment-ui-03/artifacts/.last-run.json.gz",
+      "originalBytes": 45,
+      "originalSHA256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "storedBytes": 60,
+      "storedSHA256": "891cd7c3ed24e1eb8ee0770e6d3d2544ff30e0338483c5aac9c633da41f090be",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-03/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/payment-input-identity.json",
+      "target": "payment/payment-ui-03/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/payment-input-identity.json.gz",
+      "originalBytes": 14288,
+      "originalSHA256": "5679ebe5fe03fe753eeb4dc58bdd83a6eb869924d48eefdea0d6a60720c49f47",
+      "storedBytes": 4796,
+      "storedSHA256": "b81c00dba6b2605d35db8cc789252bb8d1153e549930bdf2ac92d4166bcc85aa",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-03/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/payment-observations.json",
+      "target": "payment/payment-ui-03/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/payment-observations.json.gz",
+      "originalBytes": 275034,
+      "originalSHA256": "3a463db275ee7f39d87c9564da6de0617593368e0394b09f9c17afae9b34c171",
+      "storedBytes": 15150,
+      "storedSHA256": "f83133bb77e31d81236ef55f396615386a1182007bb75c414c98d3e6933be106",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-03/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/payment-partial-evidence.json",
+      "target": "payment/payment-ui-03/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/payment-partial-evidence.json.gz",
+      "originalBytes": 274649,
+      "originalSHA256": "191cc248c2b8475ae7dc840dc024d598c8d527ae0ea25d3e4d24239a28de883c",
+      "storedBytes": 14888,
+      "storedSHA256": "11027d583265e045c60012989785933b7e54b40e6c3d1ddf2a550095b8fb9571",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-03/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/v5-commands.json",
+      "target": "payment/payment-ui-03/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/v5-commands.json.gz",
+      "originalBytes": 4497,
+      "originalSHA256": "9ad655792f04a07c2ab273e143ae03e1b1898621cf85af8fe3a1f3592fc33d63",
+      "storedBytes": 713,
+      "storedSHA256": "d05311da936bd37859bee53b02d066452d6a194f3f78f85c4af09d36a522ca19",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-03/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/v5-keyboard-result.json",
+      "target": "payment/payment-ui-03/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/v5-keyboard-result.json.gz",
+      "originalBytes": 25527,
+      "originalSHA256": "bd3665c8e1077635355559020e7164b81385d12e7a704c667e64fd6136aca9ec",
+      "storedBytes": 559,
+      "storedSHA256": "41d17d2b8b88e6a91777c801a2d5444e45b2edd8efd8f2ad3c4036b28648f9ed",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-03/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/v5-states.json",
+      "target": "payment/payment-ui-03/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/v5-states.json.gz",
+      "originalBytes": 277774,
+      "originalSHA256": "27e0524ddbe6f24f43bc7f8ad0dbe40a1b9bc1efdb2fd63e9a2e16c59c6f6da6",
+      "storedBytes": 20728,
+      "storedSHA256": "13977c275c9698c1ec3e3d9ea5d1671bbe48136d0cfce74ef5f0624cdd865e3e",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-04/process.json",
+      "target": "payment/payment-ui-04/process.json",
+      "originalBytes": 671,
+      "originalSHA256": "2e3283af14d36f2522cf03875cca0e163ceb687af7fb598912b78275dac889ac",
+      "storedBytes": 671,
+      "storedSHA256": "2e3283af14d36f2522cf03875cca0e163ceb687af7fb598912b78275dac889ac",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-04/report.json",
+      "target": "payment/payment-ui-04/report.json",
+      "originalBytes": 4992,
+      "originalSHA256": "160d94129fb2cf3b2c82151008a1353c1e95b4c6e5612a1a1820b75c3e388d13",
+      "storedBytes": 4992,
+      "storedSHA256": "160d94129fb2cf3b2c82151008a1353c1e95b4c6e5612a1a1820b75c3e388d13",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-04/end-fingerprint.json",
+      "target": "payment/payment-ui-04/end-fingerprint.json",
+      "originalBytes": 179,
+      "originalSHA256": "30c45e4bcab126d114d0f035f54129b93c9c182688db7fc138ebd2433b7ce4cd",
+      "storedBytes": 179,
+      "storedSHA256": "30c45e4bcab126d114d0f035f54129b93c9c182688db7fc138ebd2433b7ce4cd",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-04/stdout.log",
+      "target": "payment/payment-ui-04/stdout.log.gz",
+      "originalBytes": 242,
+      "originalSHA256": "982976b07b0c10af4b5c6fe9f0e96071e49050c8aefa9e9f74efc349502f3abf",
+      "storedBytes": 211,
+      "storedSHA256": "d9aad17fa1f73a4fd469221fecd379107aac0a10b588cccf19a8dea3846c32f1",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/payment-ui-04-fingerprint.json",
+      "target": "payment/payment-ui-04/inputs-fingerprint.json.gz",
+      "originalBytes": 77122,
+      "originalSHA256": "36c292b9e2c3f23e1b23292c930aad92d7cd3513079359f7eba61d7f829a6fb0",
+      "storedBytes": 23182,
+      "storedSHA256": "11bda66ab7acf833ae1af60e1a3e2c757c6edfeb5f9ebad4e500f9335657e62e",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-04/artifacts/.last-run.json",
+      "target": "payment/payment-ui-04/artifacts/.last-run.json.gz",
+      "originalBytes": 45,
+      "originalSHA256": "91d1c43004802cd49950d78eb11c8fa7d05da8ffffe219a8b13b2f561bc00903",
+      "storedBytes": 60,
+      "storedSHA256": "891cd7c3ed24e1eb8ee0770e6d3d2544ff30e0338483c5aac9c633da41f090be",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-04/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/payment-input-identity.json",
+      "target": "payment/payment-ui-04/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/payment-input-identity.json.gz",
+      "originalBytes": 14288,
+      "originalSHA256": "4dcbbaae13b9244f1677eff1ad0f73b61956ee2c8c75a60aff76dd862f8cfada",
+      "storedBytes": 4800,
+      "storedSHA256": "0e3d833641dd8e89d17d132d7ccb0f389281ffeed1ba7b0845b973200b87d9cf",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-04/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/payment-observations.json",
+      "target": "payment/payment-ui-04/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/payment-observations.json.gz",
+      "originalBytes": 275010,
+      "originalSHA256": "1d3a0519038a3dd100db5e4a6c321c4f4720d44df20c9b2c5020ee062b2898ba",
+      "storedBytes": 15145,
+      "storedSHA256": "73779689bca78e6cc8983e135720470a03a54283a35e5d30efe6b007fa80f857",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-04/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/payment-partial-evidence.json",
+      "target": "payment/payment-ui-04/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/payment-partial-evidence.json.gz",
+      "originalBytes": 274625,
+      "originalSHA256": "6ac485fcac3e2dc222d81be0df8cea6e09dbae01e436c35245557334b441fabd",
+      "storedBytes": 14883,
+      "storedSHA256": "125fc4bce68bcd9deb1ac66d3a1a9878176dc8fd764a84ad579d51b6953d1fd0",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-04/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/v5-commands.json",
+      "target": "payment/payment-ui-04/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/v5-commands.json.gz",
+      "originalBytes": 4497,
+      "originalSHA256": "8b4d93caf1ae5272ab180159c48af390393e42ab8b2fbe964ee254a94a32f44f",
+      "storedBytes": 712,
+      "storedSHA256": "b3642744ded7786fd63bd0847db0913c6593403d7f1d478d84f2de9d7a88a126",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-04/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/v5-keyboard-result.json",
+      "target": "payment/payment-ui-04/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/v5-keyboard-result.json.gz",
+      "originalBytes": 25527,
+      "originalSHA256": "bd3665c8e1077635355559020e7164b81385d12e7a704c667e64fd6136aca9ec",
+      "storedBytes": 559,
+      "storedSHA256": "41d17d2b8b88e6a91777c801a2d5444e45b2edd8efd8f2ad3c4036b28648f9ed",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-04/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/v5-states.json",
+      "target": "payment/payment-ui-04/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/v5-states.json.gz",
+      "originalBytes": 277774,
+      "originalSHA256": "e299f9fff0a5bd30aea7bde9aae5fcf251117723fef9349ac8366f6d94a9f5f1",
+      "storedBytes": 20728,
+      "storedSHA256": "e00a0be37167d7e39b1bec7dfc69767307d9044c6a8b94a17f4cc399761c9b2b",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/preserved.json",
+      "target": "preservation/preserved.json",
+      "originalBytes": 1886,
+      "originalSHA256": "da523373bf77708d7fe05a203802e8d24e1c9a5978597a75ac63b5e55dc6dead",
+      "storedBytes": 1886,
+      "storedSHA256": "da523373bf77708d7fe05a203802e8d24e1c9a5978597a75ac63b5e55dc6dead",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/preservation-exception.json",
+      "target": "preservation/direct-input-exception.json",
+      "originalBytes": 786,
+      "originalSHA256": "d1c48a20b249548e1254ff43cf2afeb16ee74b588d89cf7b8e0ce9ea6bed79e5",
+      "storedBytes": 786,
+      "storedSHA256": "d1c48a20b249548e1254ff43cf2afeb16ee74b588d89cf7b8e0ce9ea6bed79e5",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/audio-preservation-exception.json",
+      "target": "preservation/audio-exception.json",
+      "originalBytes": 1232,
+      "originalSHA256": "bb2c0af36ebbd838af3f187036f8ed723f5a9607a076650d0ea242ca4896317c",
+      "storedBytes": 1232,
+      "storedSHA256": "bb2c0af36ebbd838af3f187036f8ed723f5a9607a076650d0ea242ca4896317c",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/forge-preservation-exception.json",
+      "target": "preservation/forge-exception.json",
+      "originalBytes": 526,
+      "originalSHA256": "25be12a88acccf196bfe3fb768da31bd02ad2d52e9f2720bfa36c4ae27c1351f",
+      "storedBytes": 526,
+      "storedSHA256": "25be12a88acccf196bfe3fb768da31bd02ad2d52e9f2720bfa36c4ae27c1351f",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/core-allocation-exception.json",
+      "target": "preservation/core-allocation-exception.json",
+      "originalBytes": 972,
+      "originalSHA256": "4dad4435ff19ff84f21955a6fa5a662ed6f14f2e9c84f2d0e824ac8566a2c7e1",
+      "storedBytes": 972,
+      "storedSHA256": "4dad4435ff19ff84f21955a6fa5a662ed6f14f2e9c84f2d0e824ac8566a2c7e1",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/drafts/payment-ui/playwright.payment.config.ts",
+      "target": "consumer/playwright.payment.config.ts",
+      "originalBytes": 1309,
+      "originalSHA256": "aae897dafeeab7a69debfd4527801ec9df5b6e6a6e0985fa938640a3f6f11e94",
+      "storedBytes": 1309,
+      "storedSHA256": "aae897dafeeab7a69debfd4527801ec9df5b6e6a6e0985fa938640a3f6f11e94",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/drafts/payment-ui/payment-ui.spec.mjs",
+      "target": "consumer/payment-ui.spec.mjs",
+      "originalBytes": 14346,
+      "originalSHA256": "995811cf3ee1e333829fbebb05a8a23c5506a20ab872ea253b5b6992b4728ec0",
+      "storedBytes": 14346,
+      "storedSHA256": "995811cf3ee1e333829fbebb05a8a23c5506a20ab872ea253b5b6992b4728ec0",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/drafts/payment-ui/README.md",
+      "target": "consumer/README.md",
+      "originalBytes": 4066,
+      "originalSHA256": "c0330ca640abf59fccd89db4f54f6311917aef944ed4e8b59355a1137805cbdd",
+      "storedBytes": 4066,
+      "storedSHA256": "c0330ca640abf59fccd89db4f54f6311917aef944ed4e8b59355a1137805cbdd",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/drafts/canvas-compare/snapshot-server.mjs",
+      "target": "consumer/snapshot-server.mjs",
+      "originalBytes": 1447,
+      "originalSHA256": "faef813595db73a7b312e396a9d2c0a45948c3752627003c164ac5e9fa7ce389",
+      "storedBytes": 1447,
+      "storedSHA256": "faef813595db73a7b312e396a9d2c0a45948c3752627003c164ac5e9fa7ce389",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/run-payment-frozen.py",
+      "target": "consumer/run-payment-frozen.py",
+      "originalBytes": 1343,
+      "originalSHA256": "91414056c51066e3fedf5a5c9025a863ba32740cf2e5207490eedfc7d92abd6f",
+      "storedBytes": 1343,
+      "storedSHA256": "91414056c51066e3fedf5a5c9025a863ba32740cf2e5207490eedfc7d92abd6f",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/originals/src/platform/audio.ts",
+      "target": "preservation/originals/src/platform/audio.ts.gz",
+      "originalBytes": 8171,
+      "originalSHA256": "ad6243358fb00b4a21118d52a884260f111cb258281c2aedd3f862d83d7ffb78",
+      "storedBytes": 2703,
+      "storedSHA256": "dab62fb1b262ecaaeb8c5c90b2c4323ec5b50e045251d1995e9a4aa2469bc3ff",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/originals/src/platform/direct-strike-input.ts",
+      "target": "preservation/originals/src/platform/direct-strike-input.ts.gz",
+      "originalBytes": 5397,
+      "originalSHA256": "ce6740b64cc6f977ba70a051900f77820f93234d5d8291eba7deceff3363c3be",
+      "storedBytes": 1559,
+      "storedSHA256": "296990f55cb049195174b2306bc5c96cf65cc24aad3b42c56f552c463feee2dc",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/originals/src/presentation-v4/forge.ts",
+      "target": "preservation/originals/src/presentation-v4/forge.ts.gz",
+      "originalBytes": 16388,
+      "originalSHA256": "aba9e1f249f1ee8863a5a6fbcd36d2eefcebe12ced17d6cada0b0f03fa152820",
+      "storedBytes": 6099,
+      "storedSHA256": "2e0abce2031b5ede265394e4e289c947f70da2cc6dbc9fdbc0274f11c8fdc5aa",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/originals/src/core-v5/game.ts",
+      "target": "preservation/originals/src/core-v5/game.ts.gz",
+      "originalBytes": 17543,
+      "originalSHA256": "859c925c7d50054efcfe68ad33b2a90f75f1f848db683bad95f638b8c49d6a7b",
+      "storedBytes": 5752,
+      "storedSHA256": "8f2728f5b9ad9155c4b223890aa548efb9c58dc0890a1e5c58fe31d3d1841c28",
+      "encoding": "gzip",
+      "gzipVerified": true
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-04/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/qualified-real-commission-1280.png",
+      "target": "screenshots/01-qualified-real-commission-1280.png",
+      "originalBytes": 1325019,
+      "originalSHA256": "6a95bd4e06deb7c795e6aef1dbf6a0b8407a95d76c3e05afe2d49da645c1cf1c",
+      "storedBytes": 1325019,
+      "storedSHA256": "6a95bd4e06deb7c795e6aef1dbf6a0b8407a95d76c3e05afe2d49da645c1cf1c",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-04/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/day8-twin-2-1920.png",
+      "target": "screenshots/02-day8-twin-2-1920.png",
+      "originalBytes": 2641348,
+      "originalSHA256": "bc15bd64fe3111f46b615fd36e9597d0c3a7be99926545c1f69080f65c20d83b",
+      "storedBytes": 2641348,
+      "storedSHA256": "bc15bd64fe3111f46b615fd36e9597d0c3a7be99926545c1f69080f65c20d83b",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-04/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/day8-first-actual-receipt-1280.png",
+      "target": "screenshots/03-day8-first-actual-receipt-1280.png",
+      "originalBytes": 1312800,
+      "originalSHA256": "452cb8f07d9233bb75f068b5c64d3669be4691a8aaad5bffa906d0d5dd24f385",
+      "storedBytes": 1312800,
+      "storedSHA256": "452cb8f07d9233bb75f068b5c64d3669be4691a8aaad5bffa906d0d5dd24f385",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-04/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/qualified-real-commission-details-1920.png",
+      "target": "screenshots/04-qualified-real-commission-details-1920.png",
+      "originalBytes": 663527,
+      "originalSHA256": "6619b376da5535efff17a24a0f3654aa027aa36388990468ba48164d6bce34f3",
+      "storedBytes": 663527,
+      "storedSHA256": "6619b376da5535efff17a24a0f3654aa027aa36388990468ba48164d6bce34f3",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-04/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/fresh-spare-sale-1920.png",
+      "target": "screenshots/05-fresh-spare-sale-1920.png",
+      "originalBytes": 2654890,
+      "originalSHA256": "6e800a12b1df20947c36aacb1b19ceb5ee1fcb4eb59b96b78f08ca3eef440e5d",
+      "storedBytes": 2654890,
+      "storedSHA256": "6e800a12b1df20947c36aacb1b19ceb5ee1fcb4eb59b96b78f08ca3eef440e5d",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/runs/payment-ui-04/artifacts/payment-ui-actual-estimate-8710d-main-clear-at-both-PC-sizes-payment-chromium-dpr1/real-exhausted-purse-1280.png",
+      "target": "screenshots/06-real-exhausted-purse-1280.png",
+      "originalBytes": 1332129,
+      "originalSHA256": "d5fd8cc0db70b9e2ad66d4750f662b32047a66df6e85064d168ebae0433c3af3",
+      "storedBytes": 1332129,
+      "storedSHA256": "d5fd8cc0db70b9e2ad66d4750f662b32047a66df6e85064d168ebae0433c3af3",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/payment-progress-screenshots.json",
+      "target": "screenshots/selection.json",
+      "originalBytes": 1981,
+      "originalSHA256": "ad0bc6523613b0b25526bcc86739907a051a3de674eaef0f9ca3aa4696ca7ead",
+      "storedBytes": 1981,
+      "storedSHA256": "ad0bc6523613b0b25526bcc86739907a051a3de674eaef0f9ca3aa4696ca7ead",
+      "encoding": "original",
+      "gzipVerified": null
+    },
+    {
+      "source": "tmp/goal4-T03/drafts/package-payment-progress-02.mjs",
+      "target": "consumer/package-payment-progress.mjs",
+      "originalBytes": 14508,
+      "originalSHA256": "c0b4145970c698d94fb9da9a49dca396b06191f7f54a6b1cf31fc35a170d55aa",
+      "storedBytes": 14508,
+      "storedSHA256": "c0b4145970c698d94fb9da9a49dca396b06191f7f54a6b1cf31fc35a170d55aa",
+      "encoding": "original",
+      "gzipVerified": null
+    }
+  ],
+  "generatedFiles": [
+    {
+      "path": "README.md",
+      "bytes": 525,
+      "sha256": "6f5808e50ac9e892c6344d096543a812b883fc8ee2e5c1f5f11e4a209a924081"
+    }
+  ]
+}

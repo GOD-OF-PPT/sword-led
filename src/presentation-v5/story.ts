@@ -28,7 +28,7 @@ export function noticeFromEvents(events:readonly DomainEvent[],s:RunState,before
   const last=strike.hits.at(-1),b=s.blades.find(b=>b.id===strike.pieceId);
   const subject={runId:s.runId,day:s.day,revision:s.revision,pieceId:strike.pieceId};
   if(last?.result==='broken')return{title:'剑断了，炉火还在',copy:`断剑实得${last.recoveryAmount}铜钱，受今日钱袋限制。左侧还有兵器可继续，也可保留现有成果收工。`,action:s.blades.some(piece=>piece.status==='active')?'next':'settle',label:s.blades.some(piece=>piece.status==='active')?'回到铁砧':'安排收工',subject};
-  if(last?.result==='crack')return{title:'裂纹出现了',copy:`这一记后身价为${last.after}。再裂会断，先看看这柄是否仍合纸单。`,action:'inspect',label:'看看这柄的差项',subject};
+  if(last?.result==='crack')return{title:'裂纹出现了',copy:`这一记后估值为${last.after}。再裂会断，先看看这柄是否仍合纸单。`,action:'inspect',label:'看看这柄的差项',subject};
   if(b?.charge===6)return{title:'锤势已满',copy:'下一次落锤是安全连锻，不会出现裂损。',action:'none',label:'安全连锻',subject};
  }
  const reserved=events.find(e=>e.type==='Reserved');
@@ -36,7 +36,7 @@ export function noticeFromEvents(events:readonly DomainEvent[],s:RunState,before
  const coins=before?`铜钱 ${before.coins} → ${s.coins}。`:'';
  const event=events.find(e=>e.type==='EventChoice');
  if(event?.type==='EventChoice'){
-  const effect:Record<string,string>={donation:'明日实际新坯底价＋20%；留剑时两柄，不留三柄，旧剑不加料。',loan:'借锤留给明日第一柄新坯，前三记普通锤正收益＋10%。',salvage:'架上的剑已换出，不再带往明日；160铜钱独立入袋。',credit:'保价已待用，下次完好剑首裂保住身价；裂纹仍留下。',shelter:'炉棚照顾明日第一柄新坯，当天裂损率少3个百分点。',rest:'剑和铜钱保持，继续安排这一炉。'};
+  const effect:Record<string,string>={donation:'明日实际新坯底价＋20%；留剑时两柄，不留三柄，旧剑不加料。',loan:'借锤留给明日第一柄新坯，前三记普通锤正收益＋10%。',salvage:'架上的剑已换出，不再带往明日；160铜钱独立入袋。',credit:'保价已待用，下次完好剑首裂保住估值；裂纹仍留下。',shelter:'炉棚照顾明日第一柄新坯，当天裂损率少3个百分点。',rest:'剑和铜钱保持，继续安排这一炉。'};
   return{title:event.record.choice==='accept'?`${EVENTS[event.record.id].name} · 已记妥`:'这一晚，守住手里的剑',copy:event.record.choice==='accept'?coins+effect[event.record.id]:'没有额外扣款，可以继续打造当前委托。',action:'none',label:''};
  }
  const learned=events.find(e=>e.type==='Trait');

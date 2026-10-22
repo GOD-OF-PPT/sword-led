@@ -51,7 +51,7 @@ function requirement(route: RouteCondition, alternative: boolean) {
  if (route.maxHits !== undefined) parts.push(`普通锤≤${route.maxHits}`);
  if (route.minLevel !== undefined) parts.push(`等级≥${route.minLevel}`);
  if (route.minBursts !== undefined) parts.push(`连锻≥${route.minBursts}次`);
- parts.push(`${route.count > 1 ? '每柄' : ''}身价≥${fmt(route.value)}`);
+ parts.push(`${route.count > 1 ? '每柄' : ''}估值≥${fmt(route.value)}`);
  return parts.join(' · ');
 }
 
@@ -69,7 +69,7 @@ function currentMissing(route: RouteCondition, blade: Blade, day: number) {
  if (route.maxHits !== undefined && blade.hits > route.maxHits) {missing.push(`已超过${route.maxHits}次普通锤`);blocked = true;}
  if (route.minLevel !== undefined && blade.level < route.minLevel) missing.push(`还差${route.minLevel - blade.level}级`);
  if (route.minBursts !== undefined && blade.bursts < route.minBursts) missing.push(`还差${route.minBursts - blade.bursts}次连锻`);
- if (blade.value < route.value) missing.push(`还差${fmt(route.value - blade.value)}身价`);
+ if (blade.value < route.value) missing.push(`还差${fmt(route.value - blade.value)}估值`);
  return {missing, blocked};
 }
 

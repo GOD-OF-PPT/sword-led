@@ -3,7 +3,7 @@ export const V5_TEMPLATE = `
 <div class="v4-app v5-app" data-screen="title" data-rules-version="forge-v5">
   <section id="v4-title" class="v4-title-screen" aria-labelledby="v4-main-title">
     <div class="v4-title-copy">
-      <p class="v4-edition">v0.8 炉边交易 · 三柄行囊</p>
+      <p class="v4-edition">v0.8 炉边报价 · 三柄行囊</p>
       <h1 id="v4-main-title">锤下<span>求生</span></h1>
       <p class="v4-title-line">一炉火，一柄剑，一程未熄的灯。</p>
       <div class="v4-title-actions">
@@ -27,7 +27,7 @@ export const V5_TEMPLATE = `
   </section>
 
   <main id="v4-workshop" class="v4-workshop" hidden aria-label="行脚灯炉">
-    <div class="v4-bench-mark" aria-hidden="true"><strong>锤下求生</strong><span>v0.8 炉边交易 · 三柄行囊</span></div>
+    <div class="v4-bench-mark" aria-hidden="true"><strong>锤下求生</strong><span>v0.8 炉边报价 · 三柄行囊</span></div>
     <div class="v4-purse" aria-label="契印与行囊">
       <div class="v4-resource v4-resource-seals"><span>契印</span><strong id="v4-seals"></strong></div>
       <div class="v4-resource v4-resource-coins"><span>铜钱</span><strong id="v4-coins"></strong></div>
@@ -66,8 +66,9 @@ export const V5_TEMPLATE = `
       <p id="v4-plan-copy">敲出身价，也看清下一锤的风险。</p>
     </section>
 
-    <section class="v4-blade-reading" aria-label="当前剑的身价与状况">
-      <p class="v4-value-line"><span>作品身价</span><strong id="v4-value"></strong><span id="v4-condition"></span></p>
+    <section class="v4-blade-reading" aria-label="当前剑的估值与状况">
+      <p class="v4-value-line"><span>作品估值</span><strong id="v4-value"></strong><span id="v4-condition"></span></p>
+      <p id="v5-value-meaning" class="v5-value-meaning">验剑看估值，收款看右侧报价</p>
       <p id="v4-craft-record"></p>
       <div class="v4-next-hit"><p id="v4-risk"></p><p id="v4-charge"></p></div>
       <div id="v4-ember-meter" class="v4-ember-meter" aria-hidden="true">
@@ -103,7 +104,7 @@ export const V5_TEMPLATE = `
         <button id="v4-inline-dismiss" class="v4-close" type="button" aria-label="收好这张回执">×</button>
       </section>
       <button id="v4-deliver" class="v4-primary v4-deliver-button" type="button">把剑交给来客</button>
-      <p id="v5-delivery-quote" class="v5-delivery-quote"></p>
+      <button id="v5-delivery-quote" class="v5-delivery-quote" type="button" aria-haspopup="dialog" aria-label="查看估值与实收说明"></button>
       <button id="v5-arrange" class="v5-arrange-link" type="button" hidden>钱袋已空 · 安排这柄剑</button>
       <div class="v4-visiting-actions">
         <button id="v4-shop" type="button" hidden>行脚商人的摊子</button>

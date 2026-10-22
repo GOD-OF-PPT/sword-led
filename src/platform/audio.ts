@@ -27,16 +27,27 @@ const SOUNDS: Record<Cue, ForgeSound> = {
 };
 
 export function createForgeAudio(createContext: () => AudioContext = () => new AudioContext({ latencyHint: 'interactive' }),palette:Readonly<Partial<Record<Cue,ForgeSound>>> = {}) {
-  let context: AudioContext | null = null, master: GainNode | null = null, pending: Promise<boolean> | null = null;
+  interface Activation {context:AudioContext;epoch:number;serial:number}
+  interface PendingActivation extends Activation {promise:Promise<boolean>}
+  let context: AudioContext | null = null, master: GainNode | null = null, pending: PendingActivation | null = null;
+  let activationSerial=0,latest:Activation|null=null,suspending:{context:AudioContext;promise:Promise<void>}|null=null;
   let mode: AudioMode = 'silent', muted = false, volume = 55, epoch = 0, disposed = false;
   let identity = '';
   let failure: 'blocked' | 'unavailable' | null = null;
+  interface PendingCue {cue:Cue;context:AudioContext;epoch:number;mode:'game'}
+  const waitingCues=new Set<PendingCue>();
   const voices = new Set<{ stop(): void }>(), listeners = new Set<(status: AudioStatus) => void>();
   const enabled = () => !disposed && !muted && volume > 0;
   const status = (): AudioStatus => !enabled() ? 'muted' : failure ?? (context?.state === 'running' && mode !== 'silent' ? 'ready' : 'waiting');
   const publish = () => { if (!disposed) for (const listener of listeners) listener(status()); };
-  const stop = () => { for (const voice of [...voices]) voice.stop(); };
-  const suspend = () => { stop();if (context && context.state !== 'closed') void context.suspend().catch(() => {}); };
+  const stop = () => { waitingCues.clear();for (const voice of [...voices]) voice.stop(); };
+  const suspendContext = (own:AudioContext) => {
+    if(own.state==='closed')return;
+    const operation=own.suspend().catch(()=>{}),ticket={context:own,promise:operation};
+    if(own===context)suspending=ticket;
+    void operation.finally(()=>{if(suspending===ticket)suspending=null;});
+  };
+  const suspend = () => { stop();if(context)suspendContext(context); };
   const gain = () => {
     if (!context || !master) return;
     const now = context.currentTime;master.gain.cancelScheduledValues(now);
@@ -46,7 +57,7 @@ export function createForgeAudio(createContext: () => AudioContext = () => new A
   const onState = () => { if ((!enabled() || mode === 'silent') && context?.state === 'running') suspend();publish(); };
   function gesture(): Promise<boolean> {
     if (!enabled() || mode === 'silent') return Promise.resolve(false);
-    if (pending) return pending;
+    if (pending?.context===context && pending.epoch===epoch) return pending.promise;
     try {
       if (!context || context.state === 'closed') {
         context?.removeEventListener('statechange', onState);master?.disconnect();context = null;master = null;
@@ -56,16 +67,23 @@ export function createForgeAudio(createContext: () => AudioContext = () => new A
           context = created;master = createdMaster;context.addEventListener('statechange', onState);gain();
         } catch { void created.close().catch(() => {});throw new Error('Audio output unavailable'); }
       }
-      if (context.state === 'running') { failure = null;publish();return Promise.resolve(true); }
-      const own = context, token = epoch;
-      pending = own.resume().then(() => {
-        if (disposed || token !== epoch || !enabled() || mode === 'silent' || context !== own) {
-          if (own.state !== 'closed') void own.suspend().catch(() => {});return false;
+      const own=context,activation:Activation={context:own,epoch,serial:++activationSerial};latest=activation;
+      // A native suspend can still be queued while state reports running. A fresh
+      // activation must queue resume after it instead of optimistically succeeding.
+      if (own.state==='running' && suspending?.context!==own && pending?.context!==own) {
+        failure=null;publish();return Promise.resolve(true);
+      }
+      let attempt:PendingActivation;
+      const promise=own.resume().then(()=>{
+        if(disposed||activation.epoch!==epoch||!enabled()||mode==='silent'||context!==own||latest!==activation){
+          const newer=latest?.context===own&&latest.epoch===epoch&&latest.serial>activation.serial&&enabled()&&mode!=='silent'&&context===own;
+          if(!newer)suspendContext(own);
+          return false;
         }
-        failure = own.state === 'running' ? null : 'blocked';publish();return own.state === 'running';
-      }).catch(() => { if (!disposed && token === epoch) { failure = 'blocked';publish(); }return false; })
-        .finally(() => { pending = null; });
-      return pending;
+        failure=own.state==='running'?null:'blocked';publish();return own.state==='running';
+      }).catch(()=>{if(!disposed&&activation.epoch===epoch&&latest===activation){failure='blocked';publish();}return false;})
+        .finally(()=>{if(pending===attempt)pending=null;});
+      attempt={...activation,promise};pending=attempt;return promise;
     } catch { failure = context ? 'blocked' : 'unavailable';publish();return Promise.resolve(false); }
   }
   function play(cue: Cue) {
@@ -93,6 +111,18 @@ export function createForgeAudio(createContext: () => AudioContext = () => new A
       }
     } catch { voice.stop();failure = 'blocked';publish(); }
   }
+  function acceptedCue(cue:Cue){
+    if(!enabled()||mode!=='game'||!context||!master)return;
+    const activation=pending;
+    if(!activation||activation.context!==context||activation.epoch!==epoch){if(context.state==='running')play(cue);return;}
+    const request:PendingCue={cue,context,epoch,mode};
+    while(waitingCues.size>=4){const oldest=waitingCues.values().next().value;if(oldest)waitingCues.delete(oldest);}
+    waitingCues.add(request);
+    void activation.promise.then(ready=>{
+      if(!waitingCues.delete(request)||!ready||!enabled()||mode!==request.mode||epoch!==request.epoch||context!==request.context)return;
+      play(request.cue);
+    }).catch(()=>{waitingCues.delete(request);});
+  }
   return {
     getStatus: status,
     identify(next: string) { if (identity !== next && !disposed) { identity = next;epoch++;stop(); } },
@@ -104,8 +134,8 @@ export function createForgeAudio(createContext: () => AudioContext = () => new A
     setMode(next: AudioMode) { if (mode === next || disposed) return;epoch++;stop();mode = next;if (mode === 'silent') suspend();publish(); },
     gesture,
     silence() { epoch++;stop(); },
-    accepted(events: readonly DomainEvent[]) { if (mode !== 'game') return;const cue = cueFor(events);if (cue) play(cue); },
-    acceptedCue(cue: Cue) { if (mode === 'game') play(cue); },
+    accepted(events: readonly DomainEvent[]) { if (mode !== 'game') return;const cue = cueFor(events);if (cue) acceptedCue(cue); },
+    acceptedCue,
     async preview() { const token = epoch;if (mode === 'preview' && await gesture() && token === epoch) play('standard'); },
     async dispose() {
       if (disposed) return;disposed = true;epoch++;mode = 'silent';stop();listeners.clear();

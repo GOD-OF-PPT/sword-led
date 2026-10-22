@@ -24,7 +24,7 @@ function sourceLabel(work:CollectionWork):HTMLElement {
 export function collectionBook(data:CollectionState,context:BookContext):HTMLElement {
   const body=element('div',undefined,'v4-book');
   body.append(element('p',`已入册 ${data.works.length}/12 件委托作品 · 走完章节 ${data.chapters.length}/3`));
-  if(data.works.length)body.append(element('p','每件作品保留原行程的身价与来源。翻开作品，可以回看当时的打造与交付。','v5-book-provenance'));
+  if(data.works.length)body.append(element('p','每件作品保留原行程的估值与来源。翻开作品，可以回看当时的打造与交付。','v5-book-provenance'));
   if(context.pending||context.problem)body.append(element('p','部分新成果尚待安全保存，请查看保存详情。','v4-collection-warning'));
   const chapters=element('p',data.chapters.length?data.chapters.map(id=>CHAPTERS[id-1]!.title+' · 已走完').join(' / '):'灯路从第一炉开始，真正走完的章节会留在这里。');body.append(chapters);
   const recipes=element('section',undefined,'v4-collection-recipes');recipes.append(element('h3','留下的配方与手艺'));
@@ -39,7 +39,7 @@ export function collectionBook(data:CollectionState,context:BookContext):HTMLEle
   for(const c of COMMISSIONS){
     const work=data.works.find(w=>w.commissionId===c.id),card=element('article',undefined,'v4-card');card.dataset.record=String(c.id);
     card.append(element('h3',`${c.id}. ${c.title}`));
-    if(work){card.dataset.rulesVersion=work.rulesVersion;card.append(sourceLabel(work));for(const b of work.blades)card.append(context.thumb(b));card.append(element('p',work.blades.map(b=>`${RECIPES[b.recipe].name} · 身价 ${fmt(b.value)}`).join(' / ')),element('small',`${c.name}的委托 · 第${work.day}天交付`),context.action('翻看这件作品',()=>context.viewWork(c.id)));}
+    if(work){card.dataset.rulesVersion=work.rulesVersion;card.append(sourceLabel(work));for(const b of work.blades)card.append(context.thumb(b));card.append(element('p',work.blades.map(b=>`${RECIPES[b.recipe].name} · 估值 ${fmt(b.value)}`).join(' / ')),element('small',`${c.name}的委托 · 第${work.day}天交付`),context.action('翻看这件作品',()=>context.viewWork(c.id)));}
     else card.append(element('p','尚未留名'),element('small',c.request.replaceAll('昨日','此前')));grid.append(card);
   }
   body.append(grid,element('h3','下一程，换一种打造计划'));
@@ -48,11 +48,11 @@ export function collectionBook(data:CollectionState,context:BookContext):HTMLEle
   return body;
 }
 
-export function collectionWorkPage(work:CollectionWork,thumb:(blade:Blade)=>HTMLElement):HTMLElement {
+export function collectionWorkPage(work:CollectionWork,thumb:(blade:Blade)=>HTMLElement,loadImage:(image:HTMLImageElement,source:string,fallback:string)=>void):HTMLElement {
   const c=COMMISSIONS[work.commissionId-1]!,route=c.routes.find(r=>r.id===work.routeId)!,body=element('article',undefined,'v4-work-page');
   body.dataset.rulesVersion=work.rulesVersion;
-  const image=element('img');image.src=commissionImage(c.id,{complete:true,routeId:work.routeId,count:work.blades.length,required:route.count});image.alt=c.title+'的用途场景';image.onerror=()=>{image.onerror=null;image.src='/assets/d/v07/lantern-road-v1.webp';};
-  body.append(sourceLabel(work),element('p',work.rulesVersion==='forge-v4'?'这件作品来自旧行程，身价与打造记录按原样入册。':'这件作品来自三柄行囊的经营行程，身价与打造记录按原样入册。','v5-book-provenance'),element('p',c.success),element('h3','这一程的约定'),element('p',describeRoute(route)),element('p',`${c.name} · 第${work.day}天交付 · ${work.blades.length===1?'一柄剑，接住了约定':'两柄剑，各自送到等剑的人手里'}`));
-  for(const blade of work.blades){const card=element('section',undefined,'v4-work-receipt');card.dataset.piece=blade.id;card.append(thumb(blade),element('h3',`${RECIPES[blade.recipe].name} · ${fmt(blade.value)}身价`),element('p',`等级 ${blade.level} · 普通锤 ${blade.hits}次 · 安全连锻 ${blade.bursts}次 · ${blade.cracked?'有裂纹':'无裂纹'}`),element('p',`第${blade.suppliedDay}天来料${blade.suppliedDay<work.day?'，作为旧剑接续这一程':'，当日打造交付'} · 来料底价 ${fmt(blade.base)} · 曾达身价 ${fmt(blade.peak)}`));body.append(card);}
+  const image=element('img');loadImage(image,commissionImage(c.id,{complete:true,routeId:work.routeId,count:work.blades.length,required:route.count}),'/assets/d/v07/lantern-road-v1.webp');image.alt=c.title+'的用途场景';
+  body.append(sourceLabel(work),element('p',work.rulesVersion==='forge-v4'?'这件作品来自旧行程，估值与打造记录按原样入册。':'这件作品来自三柄行囊的经营行程，估值与打造记录按原样入册。','v5-book-provenance'),element('p',c.success),element('h3','这一程的约定'),element('p',describeRoute(route)),element('p',`${c.name} · 第${work.day}天交付 · ${work.blades.length===1?'一柄剑，接住了约定':'两柄剑，各自送到等剑的人手里'}`));
+  for(const blade of work.blades){const card=element('section',undefined,'v4-work-receipt');card.dataset.piece=blade.id;card.append(thumb(blade),element('h3',`${RECIPES[blade.recipe].name} · ${fmt(blade.value)}估值`),element('p',`等级 ${blade.level} · 普通锤 ${blade.hits}次 · 安全连锻 ${blade.bursts}次 · ${blade.cracked?'有裂纹':'无裂纹'}`),element('p',`第${blade.suppliedDay}天来料${blade.suppliedDay<work.day?'，作为旧剑接续这一程':'，当日打造交付'} · 来料底价 ${fmt(blade.base)} · 曾达估值 ${fmt(blade.peak)}`));body.append(card);}
   const scene=element('details',undefined,'v4-work-scene');scene.append(element('summary','看看它去了哪里'),image);body.append(scene,element('small','炉谱记下了各委托的最佳成品。带上沿途学会的配方，再启一程，试试新的打造计划。'));return body;
 }

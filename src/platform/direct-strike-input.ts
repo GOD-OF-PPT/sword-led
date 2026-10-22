@@ -30,7 +30,7 @@ export function bindDirectStrikeInput(surfaces:readonly HTMLButtonElement[],host
   const leave=()=>host.aim(null);
   const click=(event:MouseEvent)=>{
     const surface=event.currentTarget as HTMLButtonElement;
-    if(consume===surface){consume=null;event.preventDefault();event.stopImmediatePropagation();return;}
+    if(consume===surface&&event.detail!==0){consume=null;event.preventDefault();event.stopImmediatePropagation();return;}
     // Accessibility activation has no pointer-down. Native keyboard clicks are prevented below.
     if(event.detail!==0||key||pointer!==null)return;
     const identity=host.context();if(identity){event.preventDefault();event.stopImmediatePropagation();host.commit(identity,null);}

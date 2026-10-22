@@ -39,7 +39,7 @@
   .v5-app .v4-workshop .v4-next-plan { min-height: 40px; padding-block: 5px; }
   .v5-app .v4-workshop .v4-kept-sword { margin-top: 9px; padding-top: 7px; }
   .v5-app .v4-workshop #v4-inline-copy { margin-top: 5px; line-height: 1.5; }
-  .v5-app .v4-workshop #v4-inline-review { min-height: 40px; margin-top: 6px; }
+  .v5-app .v4-workshop #v4-inline-review { min-height: 44px; margin-top: 6px; }
 }
 
 @media (min-width: 1600px) {
@@ -51,3 +51,11 @@
   .v5-app .v4-workshop .v4-person-target { flex-basis: 195px; min-height: 195px; }
   .v5-app .v4-workshop .v4-customer[data-paper-layout=double] .v4-person-target { flex-basis: 154px; min-height: 154px; }
 }
+
+/* Estimates stay by the blade; copper totals and their explanation stay by the handoff. */
+.v5-app .v4-workshop .v5-value-meaning { margin: 1px 0 2px; color: #f2dfb7; font: 12px/1.45 var(--v4-display); }
+.v5-app .v4-workshop button.v5-delivery-quote { display: block; width: 100%; min-height: 44px; margin: 4px 0 0; padding: 4px 7px; border: 0; border-left: 1px solid #ac8c5366; border-radius: 0; box-shadow: none; background: #10252bed; color: #f5e3bc; text-align: left; text-shadow: none; font: 12px/1.45 var(--v4-display); }
+.v5-app .v4-workshop .v5-delivery-quote > span { display: block; font-variant-numeric: tabular-nums; }
+.v5-app .v4-workshop .v5-delivery-quote > small { color: #f5e3bc; font-size: 12px; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 1599px) { .v5-app .v4-workshop .v4-deliver-button { font-size: 18px; } }
+@media (min-width: 1600px) { .v5-app .v4-workshop .v4-deliver-button { font-size: 22px; white-space: nowrap; } .v5-app .v4-workshop .v5-value-meaning, .v5-app .v4-workshop button.v5-delivery-quote { font-size: 14px; } }

@@ -127,8 +127,8 @@ export class KeyboardV5 {
   if(action.type==='deliver'){
    const quote=v5Sdk.deliveryQuote(before,before.blades.find(blade=>blade.id===action.pieceId)!);
    if(quote.matched){const amount=quote.amount.toLocaleString('zh-CN'),fee=quote.baseFeeDelta.toLocaleString('zh-CN'),bonus=quote.qualityBonus.toLocaleString('zh-CN');
-    if(result.events.some(event=>event.type==='MainCompleted'))await expect(this.page.locator('#v5-inline-payment')).toHaveText(`实收 ${amount} 铜钱 · 酬劳${fee}＋品质${bonus}`);
-    else await expect(this.page.locator('#v4-notice-copy')).toContainText(`这柄实收${amount}铜钱（酬劳${fee}＋品质${bonus}）`);
+    if(result.events.some(event=>event.type==='MainCompleted'))await expect(this.page.locator('#v5-inline-payment')).toHaveText(`实收 ${amount} 铜钱 · 酬劳${fee}＋品质加赏${bonus}`);
+    else await expect(this.page.locator('#v4-notice-copy')).toContainText(`这柄实收${amount}铜钱（酬劳${fee}＋品质加赏${bonus}）`);
    }
   }
   this.accepted.push({action,runId:before.runId,mode:before.mode,day:before.day,revision:actual.state.revision,coinsBefore:before.coins,coinsAfter:actual.state.coins,events:result.events});

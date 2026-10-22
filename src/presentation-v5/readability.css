@@ -1,0 +1,76 @@
+/* Keep the existing forge materials and positions; back only visible text. */
+.v5-app {
+  --v5-readable-paper-ink: #58402a;
+  --v5-readable-provenance: #60472e;
+  --v5-readable-warm-text: #f5e3bc;
+  --v5-readable-charcoal: #10252bed;
+}
+
+/* Paper retains the approved parchment gradient and receipt hierarchy. */
+.v5-app .v4-workshop .v4-objective:has(#v4-order-routes) .v4-eyebrow {
+  color: var(--v5-readable-paper-ink);
+  font-size: 12px;
+}
+.v5-app .v4-workshop .v4-objective:has(#v4-order-routes) #v4-goal-condition,
+.v5-app .v4-workshop .v4-order-selected,
+.v5-app .v4-workshop .v4-order-socket[data-received=false] .v4-order-socket-caption {
+  color: var(--v5-readable-paper-ink);
+}
+.v5-app .v4-workshop .v4-order-socket-caption { font-size: 12px; }
+.v5-app .v5-book-provenance { color: var(--v5-readable-provenance); }
+
+/* A small existing top status cluster gets one dark material strip. */
+.v5-app .v4-workshop .v4-purse {
+  padding: 4px 10px 7px;
+  border-bottom: 1px solid #b18d4a70;
+  background: linear-gradient(90deg, #10252bf2, #11252bdd);
+}
+.v5-app .v4-workshop .v4-resource > span,
+.v5-app .v4-workshop .v4-resource strong { color: var(--v5-readable-warm-text); }
+
+/* Back only the existing short wooden-rack notes; keep the three swords visible. */
+.v5-app .v4-workshop #v4-reserve-slot > span { color: var(--v5-readable-warm-text); }
+.v5-app .v4-workshop .v4-rack-hint,
+.v5-app .v4-workshop .v5-slot-plan {
+  width: fit-content;
+  max-width: 100%;
+  padding: 2px 5px;
+  color: var(--v5-readable-warm-text);
+  background: var(--v5-readable-charcoal);
+  border-left: 1px solid #ab8d5466;
+}
+.v5-app .v4-workshop .v4-next-plan { color: #f0dfb4; background: #10252bc9; }
+
+/* The existing plan stays where it is; remove the transparent area beneath its text. */
+.v5-app .v4-workshop .v4-forge-plan {
+  background: linear-gradient(90deg, #10232cf2, #10232bed 94%, #10232be8);
+}
+.v5-app .v4-workshop .v4-forge-plan > p { color: var(--v5-readable-warm-text); }
+
+/* Keep a compact nameplate within the current visitor illustration. */
+.v5-app .v4-workshop .v4-customer-nameplate {
+  background: radial-gradient(ellipse, #1e3430f7, #102329ed 88%);
+  border-bottom: 1px solid #a8874a66;
+}
+.v5-app .v4-workshop .v4-customer-nameplate b,
+.v5-app .v4-workshop .v4-customer-nameplate small { color: var(--v5-readable-warm-text); }
+.v5-app .v4-workshop .v5-delivery-quote,
+.v5-app .v4-workshop .v4-shop-help {
+  padding: 3px 5px;
+  color: var(--v5-readable-warm-text);
+  background: var(--v5-readable-charcoal);
+}
+
+/* Only the text baseline of the existing furnace-prop buttons receives backing. */
+.v5-app .v4-workshop #v4-modifications > button {
+  color: var(--v5-readable-warm-text);
+  background: linear-gradient(0deg, #0a1e24f2, #0a1e24e6 26%, transparent 52%);
+}
+@media (min-width: 1600px) {
+  .v5-app .v4-workshop .v4-objective:has(#v4-order-routes) .v4-eyebrow,
+  .v5-app .v4-workshop .v4-order-socket-caption { font-size: 13px; }
+}
+
+/* Warm lettering on the existing wooden rack, including its return button. */
+.v5-app .v4-workshop #v5-rack-title,
+.v5-app .v4-workshop #v4-reserve-slot > button { color: var(--v5-readable-warm-text); }

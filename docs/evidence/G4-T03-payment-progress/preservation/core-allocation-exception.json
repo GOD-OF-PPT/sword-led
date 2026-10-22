@@ -1,0 +1,12 @@
+{
+  "source": "src/core-v5/game.ts",
+  "originalCopy": "tmp/goal4-T03/originals/src/core-v5/game.ts",
+  "beforeSha256": "859c925c7d50054efcfe68ad33b2a90f75f1f848db683bad95f638b8c49d6a7b",
+  "afterSha256": "0d5306cd2dd750c8a90296dcd7fad6862d3ffd6b1bf0c5602059bd6700cdaa59",
+  "reason": "Actual1900 replay page-ready3029/3234ms. Avoid re-cloning old immutable Accepted action objects, with a new prefix array and unchanged deep-cloned mutable body, append/parse/validation/freeze/RNG/rules. Full replay retained; still quadratic array copying/traversal, no complexity claim.",
+  "review": "tmp/G4-T03-core-journal-clone-review.md",
+  "goldenSDK": "tmp/goal4-T03/runtime-build-11/sword-led-v5.js",
+  "goldenSDKsha256": "77f420f6c1e897f6c6167b636f882f7340a92df81f565b7c7e17d3780cd042cc",
+  "status": "implemented allocation optimization only, strict/build/golden/runtime results pending",
+  "newSDKsha256": "67a65a06214ae89e2c7f44ab379f5f7e403f2ee816a94e76bd8272e23b4a0f05"
+}
