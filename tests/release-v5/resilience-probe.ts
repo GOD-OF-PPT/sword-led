@@ -94,10 +94,11 @@ export function t03Stats(values:readonly number[]){const a=[...values].sort((x,y
 export interface T03InputSample {kind:string;at:number;trusted:boolean;revisionBefore:number|null;acceptedAt:number|null;acceptedRevision:number|null;contactAt:number|null;idleAt:number|null}
 export interface T03Visibility {visibilityState:DocumentVisibilityState;hidden:boolean;hasFocus:boolean}
 export interface T03PageLifecycle extends T03Visibility {type:string;at:number;trusted:boolean|null}
-export interface T03Frame {requestedAt:number;stamp:number;at:number;cost:number;requestedVisibility:T03Visibility;deliveredVisibility:T03Visibility}
+export interface T03CallbackDiagnostic {callbackName:string|null;source:string|null;sourceLength:number|null;sourceTruncated:boolean;recordedAt:number;metadataCostMs:number;error:string|null;method:string}
+export interface T03Frame {requestedAt:number;stamp:number;at:number;cost:number;requestedVisibility:T03Visibility;deliveredVisibility:T03Visibility;callbackDiagnostic:T03CallbackDiagnostic}
 export interface T03Handler {type:string;target:string;key:string;trusted:boolean;cost:number}
-export interface T03RuntimeSample {frames:T03Frame[];handlers:T03Handler[];inputs:T03InputSample[];contacts:{at:number;inputIndex:number}[];pageLifecycle:T03PageLifecycle[];pending:number;requested:number;cancelled:number;runningAnimations:number;listeners:{target:string;type:string;capture:boolean;connected:boolean}[];domNodes:number;longTasks:number[]|null;environment:{width:number;height:number;dpr:number;ua:string;hardwareConcurrency:number;visibilityState:DocumentVisibilityState;hidden:boolean;hasFocus:boolean}}
-interface T03Runtime {sample():T03RuntimeSample;reset():void;cadence(hz:number|null):void;hold(value:boolean):void}
+export interface T03RuntimeSample {frames:T03Frame[];handlers:T03Handler[];inputs:T03InputSample[];contacts:{at:number;inputIndex:number}[];pageLifecycle:T03PageLifecycle[];pending:number;requested:number;cancelled:number;runningAnimations:number;listeners:{target:string;type:string;capture:boolean;connected:boolean}[];domNodes:number;longTasks:number[]|null;environment:{timeOrigin:number;width:number;height:number;dpr:number;ua:string;hardwareConcurrency:number;visibilityState:DocumentVisibilityState;hidden:boolean;hasFocus:boolean}}
+interface T03Runtime {sample():T03RuntimeSample;isIdle():boolean;reset():void;cadence(hz:number|null):void;hold(value:boolean):void}
 declare global {interface Window {t03Runtime:T03Runtime}}
 
 /** Observer/transport/scheduler only. The actual listeners, Canvas work and Storage writes run unchanged. */
@@ -146,14 +147,28 @@ export async function installT03Runtime(page:Page){await page.addInitScript(()=>
   }
   return result;
  };
- const deliver=(id:number,stamp:number)=>{const item=pending.get(id);if(!item)return;if(held){item.native=raf(next=>deliver(id,next));item.timer=false;return;}pending.delete(id);const deliveredVisibility=visibility(),begin=performance.now();const callback=callbacks.get(id);callbacks.delete(id);try{callback?.(stamp);}finally{frames.push({requestedAt:item.requestedAt,stamp,at:begin,cost:performance.now()-begin,requestedVisibility:item.requestedVisibility,deliveredVisibility});}};
+ const deliver=(id:number,stamp:number)=>{
+  const item=pending.get(id);if(!item)return;if(held){item.native=raf(next=>deliver(id,next));item.timer=false;return;}
+  pending.delete(id);const deliveredVisibility=visibility(),begin=performance.now();const callback=callbacks.get(id);callbacks.delete(id);
+  try{callback?.(stamp);}finally{
+   // Take the original callback wall-cost endpoint before any diagnostic metadata work.
+   const endedAt=performance.now(),cost=endedAt-begin,metadataStartedAt=performance.now();
+   const callbackDiagnostic:T03CallbackDiagnostic={callbackName:null,source:null,sourceLength:null,sourceTruncated:false,recordedAt:metadataStartedAt,metadataCostMs:0,error:null,method:'Function identity read only after the original callback cost endpoint; source only for cost>=the unchanged50ms investigation boundary. This is not an executing stack or a CPU profile.'};
+   try{
+    callbackDiagnostic.callbackName=callback?.name??null;
+    if(callback&&cost>=50){const text=Function.prototype.toString.call(callback);callbackDiagnostic.source=text.slice(0,4096);callbackDiagnostic.sourceLength=text.length;callbackDiagnostic.sourceTruncated=text.length>4096;}
+   }catch(error){callbackDiagnostic.error=String(error);}
+   callbackDiagnostic.metadataCostMs=performance.now()-metadataStartedAt;
+   frames.push({requestedAt:item.requestedAt,stamp,at:begin,cost,requestedVisibility:item.requestedVisibility,deliveredVisibility,callbackDiagnostic});
+  }
+ };
  const callbacks=new Map<number,FrameRequestCallback>();
  window.requestAnimationFrame=callback=>{const id=++serial,requestedAt=performance.now(),requestedVisibility=visibility();requested++;callbacks.set(id,callback);const native=hz===null?raf(stamp=>deliver(id,stamp)):timeout(()=>deliver(id,performance.now()),1000/hz);pending.set(id,{native,timer:hz!==null,requestedAt,requestedVisibility});return id;};
  window.cancelAnimationFrame=id=>{const item=pending.get(id);if(item){if(item.timer)clear(item.native);else caf(item.native);pending.delete(id);callbacks.delete(id);cancelled++;}};
  const observer=new MutationObserver(records=>{const last=inputs.at(-1);if(!last||last.acceptedAt===null)return;for(const record of records){const node=record.target;if(!(node instanceof HTMLElement))continue;if(record.attributeName==='data-phase'&&node.id==='v4-hammer'&&node.dataset.phase==='contact'&&record.oldValue!=='contact'){const at=performance.now();if(last.contactAt===null)last.contactAt=at;contacts.push({at,inputIndex:inputs.length-1});}if(node.id==='v4-strike'&&node.getAttribute('aria-busy')==='false')last.idleAt=performance.now();}});
  observer.observe(document,{subtree:true,attributes:true,attributeOldValue:true,attributeFilter:['data-phase','aria-busy']});
  if(typeof PerformanceObserver!=='undefined'&&PerformanceObserver.supportedEntryTypes.includes('longtask')){longTasks=[];new PerformanceObserver(list=>{for(const entry of list.getEntries())longTasks!.push(entry.duration);}).observe({entryTypes:['longtask']});}
- window.t03Runtime={cadence(value){hz=value;},hold(value){held=value;},reset(){frames=[];handlers=[];inputs=[];contacts=[];requested=0;cancelled=0;if(longTasks)longTasks=[];pageLifecycle.push({type:'measurement-reset',at:performance.now(),trusted:null,...visibility()});},sample(){return{frames:[...frames],handlers:[...handlers],inputs:inputs.map(item=>({...item})),contacts:[...contacts],pageLifecycle:pageLifecycle.map(item=>({...item})),pending:pending.size,requested,cancelled,runningAnimations:document.getAnimations().filter(animation=>animation.playState==='running'||animation.pending).length,listeners:registrations.filter(item=>item.active).map(item=>({target:targetName(item.target),type:item.type,capture:item.capture,connected:item.target instanceof Node?item.target.isConnected:true})),domNodes:document.querySelectorAll('*').length,longTasks:longTasks?[...longTasks]:null,environment:{width:innerWidth,height:innerHeight,dpr:devicePixelRatio,ua:navigator.userAgent,hardwareConcurrency:navigator.hardwareConcurrency,...visibility()}};}};
+ window.t03Runtime={isIdle(){const last=inputs.at(-1);return !!last&&last.acceptedAt!==null&&last.idleAt!==null;},cadence(value){hz=value;},hold(value){held=value;},reset(){frames=[];handlers=[];inputs=[];contacts=[];requested=0;cancelled=0;if(longTasks)longTasks=[];pageLifecycle.push({type:'measurement-reset',at:performance.now(),trusted:null,...visibility()});},sample(){return{frames:[...frames],handlers:[...handlers],inputs:inputs.map(item=>({...item})),contacts:[...contacts],pageLifecycle:pageLifecycle.map(item=>({...item})),pending:pending.size,requested,cancelled,runningAnimations:document.getAnimations().filter(animation=>animation.playState==='running'||animation.pending).length,listeners:registrations.filter(item=>item.active).map(item=>({target:targetName(item.target),type:item.type,capture:item.capture,connected:item.target instanceof Node?item.target.isConnected:true})),domNodes:document.querySelectorAll('*').length,longTasks:longTasks?[...longTasks]:null,environment:{timeOrigin:performance.timeOrigin,width:innerWidth,height:innerHeight,dpr:devicePixelRatio,ua:navigator.userAgent,hardwareConcurrency:navigator.hardwareConcurrency,...visibility()}};}};
  });}
 
 /** The harness is a separately built test artifact; it is never the product entry or SDK. */

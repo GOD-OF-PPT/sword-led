@@ -34,6 +34,6 @@ test('v5 explicit preview retry replaces a held preview without replaying the ol
   const final=await releaseAudioSnapshot(page);expect(final.starts).toBe(6);expect(final.sources.every(source=>source.disconnected)).toBe(true);expect(await slots()).toEqual(before);
   phase='complete';
  }finally{
-  await writeFile(info.outputPath('explicit-preview-retry.json'),JSON.stringify({phase,before,after:await slots(),audio:await releaseAudioSnapshot(page),scope:'Real normal preview then a declared test fault holding the next native resume invocation after confirmed suspension. A second actual click must issue a fresh native request; stale preview never sounds and all game/collection bytes remain unchanged. Not the original late-title case or proof of physical speakers.'},null,2)+'\n');
+  await writeFile(info.outputPath('explicit-preview-retry.json'),JSON.stringify({phase,before,after:await slots(),audio:await releaseAudioSnapshot(page),scope:'Real normal preview then a declared test fault invoking native resume in the gesture and holding its completion after confirmed suspension. A second actual click must issue a fresh native request; stale preview never sounds and all game/collection bytes remain unchanged. Not the original late-title case or proof of physical speakers.'},null,2)+'\n');
  }
 });

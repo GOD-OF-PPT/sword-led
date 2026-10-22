@@ -111,7 +111,24 @@ export function initializeReleaseAudioProbe(faults:AudioFaults={}){
     if(probe.faults.rejectResume){operation(this,this.probeId,id,null,'resume','resume-call','fault-rejected');return Promise.reject(new DOMException('Declared release-test native resume rejection','NotAllowedError'));}
     if(probe.faults.defer&&!probe.deferred){
      probe.deferred=true;operation(this,this.probeId,id,null,'resume','resume-call','held');
-     return new Promise<void>((resolve,reject)=>{probe.releaseResume=()=>{const releaseId=++operationSerial;operation(this,this.probeId,releaseId,id,'resume','held-release','request');const result=observeNative(this,this.probeId,releaseId,id,'resume','held-release',()=>super.resume());result.then(resolve,reject);return result;};});
+     // Invoke native resume in this gesture; only its delivery to the caller is held.
+     const native=observeNative(this,this.probeId,id,null,'resume','resume-call',()=>super.resume());
+     let releaseGate:()=>void=()=>{};
+     const gate=new Promise<void>(resolve=>{releaseGate=resolve;});
+     const held=native.then(()=>gate,error=>gate.then(()=>{throw error;}));
+     // Observe a possible native rejection immediately, without changing the returned rejection.
+     void held.catch(()=>{});
+     let releaseTicket:number|null=null;
+     probe.releaseResume=()=>{
+      if(releaseTicket===null){
+       const releaseId=++operationSerial;releaseTicket=releaseId;
+       operation(this,this.probeId,releaseId,id,'resume','held-release','request');
+       void held.then(()=>operation(this,this.probeId,releaseId,id,'resume','held-release','settled'),error=>operation(this,this.probeId,releaseId,id,'resume','held-release','rejected',error));
+       releaseGate();
+      }
+      return held;
+     };
+     return held;
     }
     return observeNative(this,this.probeId,id,null,'resume','resume-call',()=>super.resume());
    }

@@ -1,4 +1,5 @@
 import {test,expect} from '../e2e/fixtures.js';
+import type {Page} from '@playwright/test';
 import type {RunState} from '../../src/core-v5/index.js';
 import {KeyboardV5,v5Envelopes,v5Sdk} from '../e2e/v5-helpers.js';
 import {maximumBurstFixture} from './audio-probe.js';
@@ -12,6 +13,12 @@ const paths=['pointer','space','enter'] as const;
 type Path=typeof paths[number];
 async function nativeInput(h:KeyboardV5,path:Path){
  if(path==='pointer')await h.page.locator('#v4-hit').click();else{await h.page.locator('#v4-strike').focus();await h.page.keyboard.press(path==='space'?'Space':'Enter');}
+}
+// Wait on the existing observer, avoiding repeated busy-matcher visibility/ARIA snapshots.
+// Raw/identity capture still runs; this is reduced measurement intrusion, not zero protocol work.
+async function measuredIdle(page:Page){
+ const idle=await page.waitForFunction(()=>window.t03Runtime.isIdle(),null,{polling:50,timeout:5000});
+ await idle.dispose();expect(await page.locator('#v4-strike').getAttribute('aria-busy')).toBe('false');
 }
 async function recordPageForeground(h:KeyboardV5,label:string){
  const read=()=>h.page.evaluate(()=>({at:performance.now(),visibilityState:document.visibilityState,hidden:document.hidden,hasFocus:document.hasFocus()}));
@@ -79,7 +86,7 @@ for(const size of T03_SIZES)for(const kind of ['short','natural-long','pressure-
   const label=`native-${kind}-${size.width}-${path}`,load=await restoreTimed(h,source,label),observed=createAcceptedObserver(h,source,{name:label});await observed.capture('explicit-timed-restored-boundary');await page.waitForLoadState('networkidle');await page.evaluate(()=>window.t03Runtime.reset());
   try{
    const blades=source.blades.filter(blade=>blade.status==='active'&&blade.id!==source.reserveId&&blade.suppliedDay===source.day&&blade.hits===0).slice(0,2);expect(blades).toHaveLength(2);
-   for(const blade of blades)for(let hit=0;hit<3;hit++){await expect(page.locator('#v4-strike')).toHaveAttribute('aria-busy','false');await h.select(blade.id);await observed.accept({type:'strike',pieceId:blade.id},()=>nativeInput(h,path));await expect(page.locator('#v4-strike')).toHaveAttribute('aria-busy','false');}
+   for(const blade of blades)for(let hit=0;hit<3;hit++){await expect(page.locator('#v4-strike')).toHaveAttribute('aria-busy','false');await h.select(blade.id);await observed.accept({type:'strike',pieceId:blade.id},()=>nativeInput(h,path));await measuredIdle(page);}
    const idle=await t03Idle(page),sample=idle.before,handlers=actualHandlers(sample,path),root=rootHandlers(sample,path),inputs=sample.inputs.filter(row=>row.acceptedAt!==null),callback=t03Stats(sample.frames.map(frame=>frame.cost)),handler=t03Stats(handlers.map(row=>row.cost)),rootHandler=t03Stats(root.paired.map(row=>row.cost));
    const response=inputs.map(row=>({kind:row.kind,inputToAcceptedMs:row.acceptedAt!-row.at,firstContactMs:row.contactAt===null?null:row.contactAt-row.at,busyMs:row.idleAt===null?null:row.idleAt-row.at})),measured={path,load,callback,handler,rootHandler,root,response,sample,idle,callbackInvestigationRequired:(callback.max??0)>=T03_BUDGETS.callbackInvestigateMaxMs};await observed.persist('native-page-measurement-complete');
    await t03Record(info,label,{scope:'Native RAF and trusted listener wall time. Direct and root capture work are retained; Continue cold cost is a separate actual product click. Primary raw snapshots are formally decoded once after idle. Not GPU/compositor/full propagation/physical display certification.',budgets:T03_BUDGETS,source,measured,captures:observed.captures,environment:{browser:page.context().browser()?.version(),node:process.version,platform:process.platform,arch:process.arch}});
@@ -103,7 +110,7 @@ for(const size of T03_SIZES)test(`v5 native four-hit maximum safe burst callback
  for(const sampleIndex of [1,2,3]){
   const sampleLabel=`${label}-sample-${sampleIndex}`,load=await restoreTimed(h,fixture.before,sampleLabel),observed=createAcceptedObserver(h,fixture.before,{name:sampleLabel});await observed.capture('four-hit-restored-boundary');await page.waitForLoadState('networkidle');await h.select(fixture.action.pieceId);await page.evaluate(()=>window.t03Runtime.reset());
   try{
-   await observed.accept(fixture.action,()=>page.locator('#v4-hit').click());await expect(page.locator('#v4-strike')).toHaveAttribute('aria-busy','false');const idle=await t03Idle(page),sample=idle.before,callback=t03Stats(sample.frames.map(frame=>frame.cost)),root=rootHandlers(sample,'pointer'),rootHandler=t03Stats(root.paired.map(row=>row.cost)),direct=actualHandlers(sample,'pointer'),directHandler=t03Stats(direct.map(row=>row.cost));
+   await observed.accept(fixture.action,()=>page.locator('#v4-hit').click());await measuredIdle(page);const idle=await t03Idle(page),sample=idle.before,callback=t03Stats(sample.frames.map(frame=>frame.cost)),root=rootHandlers(sample,'pointer'),rootHandler=t03Stats(root.paired.map(row=>row.cost)),direct=actualHandlers(sample,'pointer'),directHandler=t03Stats(direct.map(row=>row.cost));
    const inputs=sample.inputs.filter(row=>row.acceptedAt!==null),response=inputs.map(row=>({kind:row.kind,inputToAcceptedMs:row.acceptedAt!-row.at,firstContactMs:row.contactAt===null?null:row.contactAt-row.at,busyMs:row.idleAt===null?null:row.idleAt-row.at}));await observed.persist('four-hit-page-idle');
    await t03Record(info,sampleLabel,{scope:'One independent legal restored maximum-burst boundary and one actual four-hit Accepted. Fixed sample1/2/3, including the first cold continuation/input. Real application RAF only; no no-op RAF, timer cadence, trace, geometry sampler or animation extension. Ordinary first-contact200ms is not silently applied as a new burst gate; actual burst response is fully retained.',sampleIndex,fixture,load,callback,root,rootHandler,directHandler,response,sample,idle,captures:observed.captures,budgets:T03_BUDGETS});
    const oracle=await observed.verifyAll();expect(observed.state).toEqual(fixture.after);expect(sample.contacts).toHaveLength(4);expect(inputs).toHaveLength(1);expect(inputs[0]!.trusted).toBe(true);expect(root.paired).toHaveLength(1);expect(direct).toHaveLength(1);

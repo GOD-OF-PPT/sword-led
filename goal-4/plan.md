@@ -155,3 +155,27 @@ legacy18实际14过4红：三项v2 late故障被早期准备手势消费，发�
 必要验证为严格类型/构建、同一新case在三个现代引擎DPR1及既有重复试听/静音/关设置的相关小范围；原波形/旧cue零补播/真实存档零写门保持。若产品字节改变，另建不可变快照后核HTTP与实际基本交互再更新4179，保留旧快照可回退，不碰用户标签页或档案。源/证据提交推送后记录，不冒称WebKit原本复合故障或整体T03都关闭。
 
 旧v3关闭问题由代理只写隔离draft：仅原case用finally恢复已安装假时钟，业务body/断言和原时序不变；实际只消费该原Chromium case一次，保原失败，不能事先称Clock根因。性能本轮优先被新发现的真实交互修缮取代；81ms原红/调查门不变，不为求绿再次扩矩阵。所有消费者运行中保持对应源/测试/dist冻结。
+
+### 当前T03测试前提修正（2026-10-23，基线1ec5c7b，代码前）
+
+上一goal轮是实际progress：试听按钮真实pending重试缺陷已修，build22、九项重试与三项静音分批通过，47e17源／1ec5c7b回执已推送，4179为新82文件不可变快照。此轮不重复这些检查，也不重新请求玩法／美术批准。
+
+原release探针defer直到release/evaluate才调用native resume，并另有constructor suspend，因此旧“只延迟完成”记录不准确。激活已独立静态审过的隔离补丁：原resume手势栈里同步调用真实native resume，仅用门闩延迟其原结果交给产品；release不再发native API，原拒绝理由／先native或先release两种顺序都保留，重复release不重复调用或交付。constructor暂停仍为明确命名的故障，256FFT／8ms／波形与所有原动作／断言／预算不改。旧探针、原137/138及所有失败保留旧身份；只纠正当前运行的机制文字，不追写旧结果。
+
+先严格类型核对，再仅现有WebKit DPR1 late-title预先固定三次实际诊断；源／测试／82产物冻结至真实终态和结束指纹，release/native时序由保存原文另核，不以小批绿冒称整个138或native输出全修。若红，不再做无依据native产品候选；若有直接的新证据，再按最小范围解决。当前生产／SDK／美术不变，不需新build或轮换试玩。
+
+独立代理本轮只读研究FF2 callback81最小身份观测和已排除Clock恢复候选后的v3 Chromium关闭边界；不并行浏览器／SDK／构建。所有新红和未闭责任如实保留，仍只执行T03，原五项／T04和真实体验不提前结束。
+
+pure-completion-title01实际3/3过，418源／82产物结束一致；另读三份原始operation证实held原调用id当场native-start，release零次native API，旧cue0、fresh wave过原门。这项新证据足以推进明确受影响的defer轴，而非盲重复：只现有late三出口、pending试听关闭／静音／零音量／系统动效、新试听跨旧游戏请求及新按钮挂起重试九逻辑×六引擎/DPR=54次，原动作／波形／旧声／原文门保持。非defer旧通过保原身份，不重做完整138或384。当前产品/SDK字节仍不变；54结束前冻结，不用3次标题局部绿代填其余故障轴。
+
+54轴实际全过、418／82结束一致后，旧v3只进行一次安装版关闭边界的真实日志定位：原未改case／配置／180秒／失败截图门全保留，只给该单一Chromium项目打开pw:api/protocol/browser日志。依据Target.disposeBrowserContext的发送、相同id/session回复与fixture前后API分界定位，不再补Clock/静音/导航求绿；日志若未定位也据实保留。另一FF2性能仍不并行浏览器测量；先补回调身份与本地profiler只读准备，不伪造CPU因果或抹81ms原红。
+
+legacy-close-protocol01实际exit1：截图147正常回复，dispose149发送后等待约三分钟，直到runner关闭整个browser才回复成功；已收窄到Chromium销毁请求内部，尚无native资源根因。OS sample尝试在首个terminal前提守卫就停止，没有启动sample。原日志/解析原件保留，不再补Clock方案。
+
+FF2只执行一次原pressure1920的诊断：激活已审after-cost callback身份补丁，并在测量外sample.environment加page timeOrigin用于对齐；先固定原cost终点，后读函数名／仅慢帧文本，单列metadata耗时，不能冒充执行栈或扣除开销。用Mozilla内置STARTUP/FILTERS/SHUTDOWN环境变量保存本地profile（2M entries／1ms，GeckoMain），不安装CLI／上传／远程symbolication。保原headed/bringToFront/全部预算及三个实际输入路径，无noop帧/重试。profile有开销，仅用于因果诊断，不改无profile基线结论；若不重现或数据缺失，保原81ms，不重试求绿。源/SDK/产物冻结至真实终态。另一代理最小四条件关闭草稿暂不执行，避免并发浏览器扰动此测量。
+
+FF2实际采样02结束后才执行四个固定最小关闭条件：静态页none／Clock／nativeAudio／Clock+Audio，每叶新建自有headed浏览器/context，正常实际按钮手势和原生三短source；Clock按原install自动运行→准备完成→pauseAt/run350顺序。无游戏／SDK／存档／WebLocks／替换Audio API。Node5秒只观察原context.close是否pending，不改原游戏180秒门；随后只正常关闭该叶自有browser，保原close Promise后续真实结算，cleanup拒绝或仍pending停止下一叶。独立脚本及说明纳入新begin/end指纹，后绿不冒称原游戏已修。此为已收窄的native销毁请求的最小化，不扩全矩阵。
+
+采样及安装版expect源码另确认：测量中忙碌属性断言尚未满足时会采集可见性/ARIA；原profile有此Juggler工作。只校准消费者完成等待：给既有runtime observer加纯读isIdle（先guard最后input存在，并须acceptedAt/idleAt均非null），使用既有MutationObserver在尾callback之后记录的空闲事实；native普通/连锻Accepted后的等待换成单次page.waitForFunction内50ms读标记、原5秒截止，返回后仍单次读属性并断言false。原contacts/命令/raw/800+500ms闲置/页内response与全部预算不改，不新增noop RAF，不改产品，不改raw采集helper。旧81与profile两红保留，不能称完全零协议测量或已证旧81是test-only。独立静态审查无阻断后，仅原FF2pressure1920无profile预定一次，当前校准结果与所有历史分开。
+
+校准普通长档01实际通过原门（418／82结束一致，p958/7/6，最大接触138），不是旧81根因已修。因为同一新等待也接入原四连锻，只补原FF DPR2／1920四连锻一项（三份独立合法恢复、每份1Accepted／4contacts），验证不会把中间contact误作完成；保持原原文、数量、样本和预算门。本轮之后不再增加试验，提交当前明确结果／诊断与余项。

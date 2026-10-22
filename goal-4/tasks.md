@@ -37,7 +37,13 @@
 - 计划内静音尾核：preview-retry-mute01另实际3/3通过（C/F/W DPR1），418/82结束全等；与九项是分开的实际批次。新增无损补档有明确run/end指纹，不把静音故障或原138完整范围缩减。构建/正式SDK/规则在两批间未变。
 - 本次修缮交付：source 47e17f8dff5fe1ec3583e8aab2498c44839857d6实际提交／push0，fresh远程main及GitHub根tree一致，六个当前代码／用例／README／报告／清单blob原字节相同；93份进度payload全部入Git，source-publication.json保留身份。试玩为新build22快照，回执另提交；不因此关闭T03或原目标。
 - [杠精修缮审查] 本次明确重试修缮通过：真实首红已复现并最小修，token/epoch/旧finally/新授权只读审查无阻断，九次实际与发布验证有据；未把DPR1/三项当完整138、软件波形当扬声器或API写次数。原defer实际延迟native调用的归因问题已识别，纯完成延迟草稿仍未激活，不用新语义重写旧137/138。
-- 待完成：WebKit原复合故障的正确语义核对、FF2极长档81ms回调根因与旧v3 Chromium关闭问题仍明确未闭。冷首屏／当前native6／资源与可读性／加载／独立原文回放已取得各自实际终态，不再误列未执行。T03保持未勾选，delivered_with_gaps不等于任务或goal完成；原件／失败保留，测试与兼容最低优先级，不扩范围。
+- 2026-10-23正确音频协议：已激活纯完成延迟探针（原手势调用native，release只交付原结果，保原拒绝/constructor暂停/全部门）。title01固定WK1三次3/3，fault-axis01九逻辑×六项目54/54实际通过，均418/82结束全等。独立57份operation/SHA复核无阻断，正确晚完成责任在该范围闭环；旧137/138及clock0候选保原复合注入身份，不冒称通过/物理声音。六份retry机制literal过时已外置勘误，未来文字纠正，没有为文字重跑。
+- 本地真实性能采样：profiler01 selector NoTests原红保留，02才首个实际case，实际exit1/418/82一致。53MB原生profile含完整内容GeckoMain/CPU/JS栈，30/31ms有结束重投影与clientWidth同步布局栈；本次pointer p9517/接触228两红保留，原81未重现/未归因。仅本地解析/保存，无安装/上传；trace与原始json前后SHA不变。
+- 观测校准：安装版expect源码与profile都见忙碌属性未满足时的可见性/ARIA工作；native完成等待改成读取既有MO空闲标记，guard last存在/Accepted/idleAt，原5秒/后置属性/全部contacts/原文/800+500ms/数值预算保持，raw采集RPC仍存在。calibrated-observation01原FF2/1920极长档实际通过，p958/7/6，max14/24/21，最慢接触138；calibrated-burst01原同项目四连锻实际通过，三合法恢复/3Accepted/12contacts/原样本门保持，两批418/82结束全等。typecheck21/22/23均0。当前校准结果不等于产品优化或旧81test-only归因。
+- 关闭诊断：legacy-close-protocol01原case actual1，临时截图147已回复、root dispose149挂到约3分钟后browser.close才回复，418/82一致；OS sample在首个terminal守卫停止，未发采样。close-minimal01四个固定静态条件实际exit0，421/82一致，各context28–44ms关闭，均自有browser正常清理；没有游戏/SDK/存档/Locks，该组未复现原游戏，不冒称修复或设备根因。
+- [杠精观测审查] 本轮正确音频协议与观测校准通过独立静态/实际核对，所有原门和失败保留；没有生产代码/SDK/美术delta，没有把profiler开销当基线、局部通过当全矩阵或原文不变当API写次数。root实际看当前FF2/1920长档工坊图，报价/风险/控件正常。详见docs/reviews/G4-T03-observation-calibration.md；新增无损档案和推送实际结果随后记录。
+- 本轮无损归档：observation-calibration-archive01实际0，11个明确终态命令／330份原文、原生profile、诊断及原图，gzip往返和输入前后SHA一致；原件与历史失败均保留。不是完整T03档案或目标完成，源与回执推送后另记。
+- 待完成：原81ms历史调查、旧v3 Chromium销毁问题与最终整体审计仍明确未闭；正确晚完成协议/当前校准长档及四连锻已取得实际终态，不误列未执行。可选新版金额/交互反馈已询问，尚未收到答复不当接受，也不阻塞独立技术工作。T03保持未勾选，原件/失败保留，测试与兼容最低优先级，不扩范围。
 
 ## T04 — 全目标最终审计与真实H闭环
 - [ ] 完成。原五项、全部必需gates、当前来源/交付/真人H和必要修缮有据才完成整个原生goal；不接受旧规则/旧反馈代填。
