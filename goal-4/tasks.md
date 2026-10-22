@@ -29,6 +29,7 @@
 - 本轮联合复核：原五项内容与批准链、C端付款、源码／资源所有权、保存／安全／依赖有界审查完成，未发现新增占位出口或静态必修项；root又实际查看1280工坊与1920极长档图。当前82个dist／不可变快照／4179 HTTP原字节再次一致。总结见docs/reviews/G4-T03-current-progress.md；独立原文回放和本轮新增证据／发布回执执行后另记。按用户优先级本轮不再扩声音／性能／兼容候选循环。
 - 独立回放：replay-current01实际0，对明确选定非声音current02／声音02／系统native04的原文做正式SDK核对；5471个合法state对象、1512次实际保存、828次capture及expected全等，373个不同state／21炉谱，9 SDK及所读输入前后hash不变。未遇2049负样本或collection-export槽，不冒称覆盖它们；原UI非零结果未改。此为留存原文验证，不增加新局或重跑矩阵。
 - 新增进度归档：current-progress-archive01实际0，五项明确终态运行的1274份原文／诊断／所选截图已无损存入docs/evidence/G4-T03-current-progress，gzip往返及输入前后SHA一致；两张root实际查看的当前图及两张旧入口失败图保留，全部其他原件不删。未冒充全T03档案／验收。
+- 本轮交付：source b8016dcf3239b7e74a9d8f8e0c060a9861bc8d30实际提交／push0，fresh远程main与GitHub根tree均一致，五个测试／报告／清单／压缩回放blob原字节全等；见docs/evidence/G4-T03-current-progress/source-publication.json。1274份payload均明确入Git；报价试玩仍是相同82字节产物，无需轮换。回执另提交，T03／goal仍未完成。
 - [杠精审查] 本轮进度可交付，完整T03仍打回：原五项／费用反馈未缩水，测试未松门、没有新规则／占位／生产候选；报价已经实际发布。WebKit声音、FF2真实81ms与旧v3关闭余项未修，不以静态无新问题／有限回放／提交推送给T03[x]或goal complete。
 - 待完成：WebKit原生输出、FF2极长档81ms回调根因与旧v3 Chromium关闭问题仍明确未闭；本轮证据发布正在收尾。冷首屏／当前native6／资源与可读性／加载／独立原文回放已取得各自实际终态，不再误列未执行。T03保持未勾选，delivered_with_gaps不等于任务或goal完成；原件／失败保留，测试与兼容最低优先级，不扩范围。
 
