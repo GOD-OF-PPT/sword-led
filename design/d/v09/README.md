@@ -8,3 +8,7 @@
 - [原件/运行文件/SHA/尺寸清单](manifest.json)。
 
 原图是孤立资产，游戏场景由独立DOM/Canvas合成。它们不包含HUD、文字、剑或锤，动作和结果仍由Accepted事件驱动。兵器另有[四阶段透明图集](originals/sword-stages-v1.png)、[完整prompt](sword-stages-v1.prompt.txt)和[实测alpha帧](sword-stages-v1.frames.json)。原生渐变第一稿经实图认定质感割裂，现以同D手绘阶段为主，正式hits/strength/sealedStrength选阶段、真实裂纹/崩纹/磨损/断裂仍在Canvas独立叠层；不会把图上装饰当实际裂纹。帧分析仅读取alpha，未编辑像素；兵器运行WebP质量92、alpha无损。
+
+2.2实图再次修缮：原CSS木百叶箱被认定像道具卡片，替为[真实手绘工具匣](originals/tool-chest-v1.png) / [prompt](tool-chest-v1.prompt.txt)，两目标以吊绳和铁闩分别呈现，奖励预览仍用独立真实工具图。
+
+护送者从简略SVG符号换成[同D手绘旅人](originals/lantern-traveller-v1.png) / [prompt](lantern-traveller-v1.prompt.txt)，原图完整人物含灯笼；只由正式GateCleared触发通行，恢复显示抵达静态位置。

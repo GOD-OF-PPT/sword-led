@@ -95,16 +95,16 @@ export function resultCopy(events:readonly DomainEvent[]):ResultCopy|null {
  const recap=events.find(event=>event.type==='Recap');
  if(recap?.type==='Recap')return{kicker:'这一段已收好',title:recap.demonstrated?'工具，真正用出来了':'回看这一剑',copy:recapReason(recap.reason)};
  const charge=events.find(event=>event.type==='ChargeRestored');
- if(charge?.type==='ChargeRestored')return{kicker:'崩炉钉应声',title:charge.gained?'手艺次数回来了':'次数本来就是满的',copy:charge.gained?'刚才确实回了一次。换另一柄新坯，用出这次手艺。':'工具已经触发，但没有多得一次；可用的是原本就有的那次。'};
+ if(charge?.type==='ChargeRestored')return{kicker:'崩炉钉应声',title:charge.gained?'炉火，回来了':'次数本来就是满的',copy:charge.gained?'手艺＋1 · 在另一柄上用出来':'工具已触发，没有多得次数。'};
  const cache=events.find(event=>event.type==='CacheTaken');
- if(cache?.type==='CacheTaken')return{kicker:'亲手争来的工具',title:toolName(cache.tool)+'到手',copy:cache.target==='rope'?'吊索已切断；接下来另铸一柄，把这一记回锋真正接出去。':'铁闩已破开；接下来另铸一柄，试着把用掉的手艺接回来。'};
+ if(cache?.type==='CacheTaken')return{kicker:cache.target==='rope'?'吊索，断开了':'铁闩，破开了',title:toolName(cache.tool)+'到手',copy:'下一炉，亲手试试这门新手艺。'};
  const gate=events.find(event=>event.type==='GateCleared');
- if(gate?.type==='GateCleared')return{kicker:'路，开了',title:`开路酬劳 ${fmt(gate.amount)}铜钱`,copy:gate.turnsLeft?'还有试锋余火，可以看看工具，也可就此启程。':'最后一回合击破，仍然开路成功；本次已没有取工具的余火。'};
+ if(gate?.type==='GateCleared')return{kicker:'路，开了',title:'护送人，过关了',copy:`开路钱 ${fmt(gate.amount)}铜钱 · ${gate.turnsLeft?`还余${gate.turnsLeft}火，可争工具`:'最后一火通关，也算开路成功'}`};
  const failed=events.find(event=>event.type==='TrialFailed'||event.type==='Failed');
  if(failed?.type==='Failed')return{kicker:'炉火歇下了',title:'这次还没开路',copy:recapReason(failed.reason)};
  if(failed?.type==='TrialFailed')return{kicker:'这柄没能完成',title:'试锋余火已尽',copy:failed.stage==='main'?'这柄的经过已留下；有未用新坯时，可调整做法再试，手艺次数不会重来。':'这次工具练习结束，开路成果仍在；不会补出一次试锋。'};
  const follow=events.find(event=>event.type==='FollowUpStored');
- if(follow?.type==='FollowUpStored')return{kicker:'回锋留住余力',title:`存下${fmt(follow.damage)}追斩`,copy:'还要你点远处的靶，把这记余力送过去；不会自动选目标。'};
+ if(follow?.type==='FollowUpStored')return{kicker:'回锋留住余力',title:`存下${fmt(follow.damage)}追斩`,copy:'点远处的靶，把余力送过去。'};
  const hit=events.find(event=>event.type==='Forged');
  if(hit?.type==='Forged'){
   const titles={success:'刃锋渐成',crack:'裂纹留下了',broken:'这一柄，断了',steady:'定线落下',fissure:'崩纹刻进剑身'};
@@ -112,8 +112,8 @@ export function resultCopy(events:readonly DomainEvent[]):ResultCopy|null {
   return{kicker:hit.result==='broken'?'上一柄的落锤结果':hit.technique?'这次手艺已用出':'这一锤',title:titles[hit.result],copy:hit.result==='broken'?detail:`强度 ${fmt(hit.before)} → ${fmt(hit.after)}${detail?' · '+detail:''}`};
  }
  const strike=events.find(event=>event.type==='Struck');
- if(strike?.type==='Struck')return{kicker:'这一剑的实际结果',title:`造成${fmt(strike.damage)}伤害`,copy:strike.damage?'目标的耐久已经改变，再看余火决定下一步。':'这一剑没有打穿护甲，仍用掉一回合；可以想想探隙的用法。'};
- if(events.some(event=>event.type==='Guarded'))return{kicker:'架剑，等接缝',title:'下一斩有了破绽',copy:'这次已用一回合；只有下一斩享有探隙，反复架剑不会叠加。'};
+ if(strike?.type==='Struck')return{kicker:'剑落下了',title:strike.damage?`打出${fmt(strike.damage)}伤害`:'木盾挡住了这一剑',copy:strike.damage?`耐久 ${strike.before} → ${strike.after}`:'余火−1 · 可以先架剑找接缝'};
+ if(events.some(event=>event.type==='Guarded'))return{kicker:'架剑，等接缝',title:'破绽，露出来了',copy:'余火−1 · 只照顾下一斩，再架不叠加'};
  const school=events.find(event=>event.type==='SchoolChosen');
  if(school?.type==='SchoolChosen')return{kicker:'手艺已选',title:schoolName(school.school),copy:'选好没有花次数。想用它，先点手艺按钮，再落下一锤；次数看炉边标记。'};
  if(events.some(event=>event.type==='Sealed'))return{kicker:'收锻',title:'把这柄，带去试锋',copy:'强度与裂纹已经定下；试锋中不能换剑或回炉补锤。'};

@@ -13,8 +13,8 @@ export const V6_TEMPLATE=`
   <section class="x6-heading"><p id="x6-stage" class="x6-overline"></p><h1 id="x6-goal"></h1><p id="x6-purpose"></p></section>
   <aside id="x6-supply" class="x6-supply" aria-label="这一炉的铁坯"><h2>此炉三坯</h2><div id="x6-blanks"></div><button id="x6-discard" type="button">换一柄新坯</button></aside>
   <section id="x6-schools" class="x6-schools" aria-label="开炉手艺">
-   <button type="button" data-school="steady" aria-pressed="false"><span class="x6-seal x6-steady">定</span><strong>稳锋 · 定线</strong><small>用出手艺时，只保下一记不添裂纹</small></button>
-   <button type="button" data-school="fissure" aria-pressed="false"><span class="x6-seal x6-fissure">崩</span><strong>裂炉 · 崩纹</strong><small>主动刻裂，换一剑穿甲的爆发</small></button>
+   <button id="x6-school-steady" type="button" data-school="steady" aria-pressed="false"><span class="x6-seal x6-steady">定</span><strong>稳锋 · 定线</strong><small>用出手艺时，只保下一记不添裂纹</small></button>
+   <button id="x6-school-fissure" type="button" data-school="fissure" aria-pressed="false"><span class="x6-seal x6-fissure">崩</span><strong>裂炉 · 崩纹</strong><small>主动刻裂，换一剑穿甲的爆发</small></button>
   </section>
   <div id="x6-forge-scene" class="x6-forge-scene">
    <canvas id="x6-blade" role="img" aria-label="本次打造的剑与裂纹"></canvas>
@@ -23,11 +23,11 @@ export const V6_TEMPLATE=`
    <div id="x6-sparks" aria-hidden="true"></div><div id="x6-impact" aria-hidden="true"></div>
   </div>
   <div id="x6-targets" class="x6-targets" hidden>
-   <button id="x6-primary" class="x6-target x6-primary-target" type="button"><img id="x6-guard-art" src="/assets/d/v09/wood-guardian-v1.webp" alt="" draggable="false"><span class="x6-target-caption"><strong id="x6-primary-name">拦路木卫</strong><span id="x6-primary-health"></span></span></button>
+   <button id="x6-primary" class="x6-target x6-primary-target" type="button"><img id="x6-guard-art" src="/assets/d/v09/wood-guardian-v1.webp" alt="" draggable="false"><span id="x6-primary-caption" class="x6-target-caption"><strong id="x6-primary-name">拦路木卫</strong><span id="x6-primary-health"></span><span id="x6-primary-preview"></span></span></button>
    <button id="x6-secondary" class="x6-target x6-secondary-target" type="button" hidden><span class="x6-practice-target" aria-hidden="true"><i></i><b>✦</b></span><span class="x6-target-caption"><strong>远处的试锋靶</strong><span id="x6-secondary-health"></span></span></button>
    <button id="x6-rope" class="x6-target x6-cache x6-rope" type="button" hidden><span class="x6-hanging-rope" aria-hidden="true"></span><span class="x6-chest" aria-hidden="true"><img src="/assets/d/v09/rebound-tooth-v1.webp" alt=""></span><span class="x6-target-caption"><strong>切绳 · 取回锋齿</strong><span id="x6-rope-need"></span></span></button>
    <button id="x6-latch" class="x6-target x6-cache x6-latch" type="button" hidden><span class="x6-chest" aria-hidden="true"><img src="/assets/d/v09/furnace-nail-v1.webp" alt=""><i class="x6-iron-latch"></i></span><span class="x6-target-caption"><strong>破闩 · 取崩炉钉</strong><span id="x6-latch-need"></span></span></button>
-   <div id="x6-escort" class="x6-escort" aria-hidden="true"><svg viewBox="0 0 80 150"><path d="M30 45q-18 10-13 52l-8 43 21-5 10-35 8 36 20 4-11-46q7-43-14-49Z" fill="#243c41" stroke="#d7b57c" stroke-width="2"/><circle cx="39" cy="28" r="15" fill="#b99062"/><path d="m12 32 27-22 27 22Z" fill="#182c32" stroke="#ba975d"/><path d="m55 60 16 29" stroke="#b89e73" stroke-width="6"/><path d="M70 82v12" stroke="#e4c176" stroke-width="2"/><rect x="62" y="94" width="16" height="24" rx="5" fill="#ffca68"/></svg></div>
+   <div id="x6-escort" class="x6-escort" aria-hidden="true"><img src="/assets/d/v09/lantern-traveller-v1.webp" alt="" draggable="false"></div>
   </div>
   <section id="x6-result" class="x6-result" hidden aria-live="polite" aria-atomic="true"><small id="x6-result-kicker"></small><strong id="x6-result-title"></strong><p id="x6-result-copy"></p></section>
   <aside id="x6-tool" class="x6-tool" hidden><img id="x6-tool-art" alt=""><div><strong id="x6-tool-name"></strong><p id="x6-tool-copy"></p></div></aside>

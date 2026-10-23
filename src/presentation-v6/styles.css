@@ -151,7 +151,7 @@ html, body { margin: 0; min-width: 960px; background: #0b191f; }
 .x6-game #x6-impact { position: absolute; z-index: 2; left: var(--hit-x, 52%); top: var(--hit-y, 56%); width: 180px; height: 90px; opacity: 0; transform: translate(-50%, -50%); pointer-events: none; }
 .x6-game #x6-sparks > i, .x6-game #x6-sparks > span { position: absolute; width: 3px; height: 7px; border-radius: 1px; background: #ffc576; box-shadow: 0 0 8px #f5a44c66; pointer-events: none; }
 .x6-game #x6-impact > * { pointer-events: none; }
-.x6-game[data-forge=false] .x6-forge-scene { left: 8%; right: 8%; top: auto; bottom: -80px; height: clamp(190px, 23vh, 260px); }
+.x6-game[data-forge=false] .x6-forge-scene { left: 8%; right: 8%; top: auto; bottom: 75px; height: clamp(190px, 23vh, 260px); }
 .x6-game[data-forge=false] #x6-hit, .x6-game[data-forge=false] #x6-hammer { display: none; }
 
 .x6-game .x6-readout { position: absolute; z-index: 12; left: 28%; right: 17%; top: 75%; padding: 7px 12px 8px; color: var(--x6-light); background: linear-gradient(90deg, #0d2329e8, #0d2329c9 80%, transparent); border-left: 1px solid #bc9b585e; pointer-events: auto; text-shadow: 0 2px 4px #041116; }
@@ -174,7 +174,7 @@ html, body { margin: 0; min-width: 960px; background: #0b191f; }
 .x6-game #x6-technique { min-width: 173px; color: #f4d7a4; border-color: #c4a367; background: linear-gradient(110deg, #4c3b28e8, #1b3030ee); }
 .x6-game[data-armed=true] #x6-technique { color: #fff0c6; border-color: #ffd18a; background: linear-gradient(110deg, #73502ce8, #26403aee); box-shadow: inset 0 -2px #efbb70, 0 0 16px #e9a5522e; }
 .x6-game[data-busy=true] #x6-hit { cursor: progress; }
-.x6-game[data-forge=false] .x6-readout { top: auto; bottom: 115px; left: var(--x6-edge); right: auto; width: 274px; }
+.x6-game[data-forge=false] .x6-readout { top: auto; bottom: 142px; left: var(--x6-edge); right: auto; width: 242px; }
 .x6-game[data-forge=false] .x6-actions { left: 32%; right: var(--x6-edge); bottom: 24px; }
 
 .x6-game .x6-result { position: absolute; z-index: 14; left: 34%; right: 16%; top: 29%; padding: 8px 13px 10px; color: #ffe2a8; background: linear-gradient(90deg, #10262b00, #10262bdb 9%, #10262bdd 88%, #10262b00); pointer-events: none; text-shadow: 0 2px 4px #020c12; }
@@ -185,19 +185,26 @@ html, body { margin: 0; min-width: 960px; background: #0b191f; }
 .x6-game[data-forge=true] .x6-result > strong { font-size: 24px; line-height: 1.25; }
 .x6-game[data-forge=true] .x6-result > p { margin-top: 3px; font-size: 12px; line-height: 1.45; }
 .x6-game[data-forge=true] .x6-readout { top: 72%; }
-.x6-game[data-forge=false] .x6-result { top: auto; bottom: 138px; left: 34%; right: 19%; }
+.x6-game[data-forge=false] .x6-result { top: 33%; bottom: auto; left: var(--x6-edge); right: auto; width: clamp(230px, 20vw, 340px); max-width: 340px; padding: 7px 11px 9px; background: linear-gradient(90deg, #10262bee, #10262bc9 88%, #10262b00); }
+.x6-game[data-forge=false] .x6-result > strong { font-size: 24px; line-height: 1.3; }
+.x6-game[data-forge=false] .x6-result > small, .x6-game[data-forge=false] .x6-result > p { font-size: 12px; }
 
 /* Road targets are the controls: readable captions sit with the actual objects. */
 .x6-game .x6-targets { position: absolute; z-index: 7; inset: 0; pointer-events: none; }
 .x6-game button.x6-target { position: absolute; display: block; min-width: 80px; min-height: 80px; padding: 0; border: 0; background: transparent; box-shadow: none; pointer-events: auto; color: var(--x6-light); text-shadow: 0 2px 4px #06131b; }
 .x6-game button.x6-target:hover:enabled { background: transparent; border: 0; box-shadow: none; }
 .x6-game button.x6-target:active:enabled { transform: none; }
+.x6-game button.x6-target:disabled { opacity: 1; }
 .x6-game .x6-primary-target { left: 55%; top: 25%; width: clamp(220px, 25vw, 360px); height: clamp(260px, 46vh, 455px); translate: -50% 0; }
-.x6-game #x6-guard-art { display: block; width: 100%; height: calc(100% - 50px); object-fit: contain; object-position: center bottom; filter: drop-shadow(0 9px 6px #0009); pointer-events: none; }
+.x6-game #x6-guard-art { display: block; width: 100%; height: calc(100% - 88px); object-fit: contain; object-position: center bottom; filter: drop-shadow(0 9px 6px #0009); pointer-events: none; }
 .x6-game .x6-target:hover:enabled > img, .x6-game .x6-target:hover:enabled .x6-chest { filter: drop-shadow(0 0 9px #f5c67455) drop-shadow(0 7px 5px #0008); }
 .x6-game .x6-target-caption { position: absolute; bottom: 0; left: 4%; right: 4%; display: block; padding: 6px 8px 8px; color: #f6e2b7; background: linear-gradient(90deg, #10252bd9, #122a2af7 14%, #122a2af7 86%, #10252bd9); border-bottom: 1px solid #af915a9c; }
 .x6-game .x6-target-caption strong { display: block; font: 20px/1.3 var(--x6-display); }
 .x6-game .x6-target-caption > span { display: block; margin-top: 4px; color: #f0ddba; font-size: 13px; line-height: 1.45; }
+.x6-game #x6-primary-preview { color: #ffe0a2; font-weight: 600; }
+.x6-game #x6-primary-preview:empty { display: none; }
+.x6-game #x6-primary[data-opening=true] .x6-target-caption { border-bottom-color: #cbdba3; background: linear-gradient(90deg, #19392ff0, #18352bf7); }
+.x6-game #x6-primary[data-opening=true] #x6-primary-health { color: #e0ecc5; font-weight: 600; }
 .x6-game .x6-secondary-target { left: 76%; top: 34%; width: clamp(130px, 15vw, 220px); height: clamp(210px, 34vh, 320px); translate: -50% 0; }
 .x6-game .x6-practice-target { position: absolute; left: 17%; right: 17%; top: 15%; bottom: 22%; display: grid; place-items: center; border: 7px solid #5c4328; border-radius: 42% 42% 25% 25%; background: repeating-linear-gradient(0deg, #5c492e, #98713f 16px, #51452f 19px, #795a37 22px); box-shadow: inset 0 0 0 4px #aa844b80, 0 6px 13px #0008; }
 .x6-game .x6-practice-target::after { content: ''; position: absolute; width: 12px; top: 90%; bottom: -42%; background: #59442d; box-shadow: 3px 2px 4px #0008; }
@@ -205,14 +212,16 @@ html, body { margin: 0; min-width: 960px; background: #0b191f; }
 .x6-game .x6-cache { top: 29%; width: clamp(175px, 19vw, 278px); height: clamp(245px, 40vh, 365px); }
 .x6-game .x6-rope { left: 31%; translate: -50% 0; }
 .x6-game .x6-latch { left: 73%; translate: -50% 0; }
-.x6-game .x6-chest { position: absolute; left: 12%; right: 12%; top: 21%; bottom: 23%; display: block; border: 3px solid #8d693c; border-radius: 9px 9px 3px 3px; background: repeating-linear-gradient(0deg, #493526, #87613a 17px, #423627 20px); box-shadow: inset 0 0 0 4px #2e332a90, 0 9px 10px #0008; }
-.x6-game .x6-chest::before { content: ''; position: absolute; inset: 12px 9px auto; height: 7px; background: #4c534b; border-block: 1px solid #b2a06b70; }
-.x6-game .x6-chest img { display: block; width: 100%; height: 100%; object-fit: contain; padding: 15px; filter: drop-shadow(0 4px 3px #0008); }
-.x6-game .x6-hanging-rope { position: absolute; left: 50%; top: -13%; height: 42%; width: 5px; background: repeating-linear-gradient(115deg, #684f30, #c19e5d 4px, #765735 7px); box-shadow: 2px 2px 3px #0009; }
-.x6-game .x6-hanging-rope::after { content: ''; position: absolute; left: -5px; bottom: -6px; width: 15px; height: 17px; border: 4px solid #a3834e; border-radius: 35%; }
-.x6-game .x6-iron-latch { position: absolute; left: 43%; top: -6px; width: 23px; height: 64%; border: 2px solid #a09f82; background: linear-gradient(90deg, #34444a, #87918c 40%, #273940); transform: rotate(5deg); box-shadow: 3px 3px 4px #0009; }
-.x6-game .x6-escort { position: absolute; width: 62px; height: 126px; left: 22%; bottom: 24%; opacity: .7; pointer-events: none; }
-.x6-game .x6-escort svg { width: 100%; height: 100%; filter: drop-shadow(0 5px 4px #0008); }
+.x6-game .x6-chest { position: absolute; left: 12%; right: 12%; top: 21%; bottom: 23%; display: block; border: 0; border-radius: 0; background: transparent url('/assets/d/v09/tool-chest-v1.webp') center/contain no-repeat; box-shadow: none; filter: drop-shadow(0 9px 7px #0008); }
+.x6-game .x6-chest img { position: absolute; top: -16px; right: -4px; display: block; width: 60px; height: 60px; object-fit: contain; padding: 4px; filter: drop-shadow(0 3px 3px #000b); }
+.x6-game .x6-hanging-rope { position: absolute; left: calc(50% - 4px); top: -13%; height: calc(42% + 24px); width: 8px; border-inline: 1px solid #71502f; background: repeating-linear-gradient(120deg, #684a2b 0 2px, #c19a59 3px 5px, #7a5832 6px 8px); box-shadow: 2px 2px 3px #0009; }
+.x6-game .x6-hanging-rope::after { content: ''; position: absolute; left: -5px; bottom: -6px; width: 16px; height: 17px; border: 4px solid #a3834e; border-radius: 35%; }
+.x6-game .x6-iron-latch { position: absolute; left: 48%; top: 16%; width: 22px; height: 80px; border: 1px solid #a29c7e; border-radius: 3px; background: linear-gradient(90deg, #373a34, #8c8d77 37%, #555b50 63%, #262e2b); transform: rotate(5deg); box-shadow: 3px 3px 4px #0009; }
+.x6-game .x6-iron-latch::before, .x6-game .x6-iron-latch::after { content: ''; position: absolute; left: 50%; width: 6px; height: 6px; translate: -50% 0; border: 1px solid #a99e7e; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #afa58a, #333b34 72%); }
+.x6-game .x6-iron-latch::before { top: 7px; }
+.x6-game .x6-iron-latch::after { bottom: 7px; }
+.x6-game .x6-escort { position: absolute; width: 94px; height: 126px; left: 22%; bottom: 24%; opacity: .7; pointer-events: none; }
+.x6-game .x6-escort svg, .x6-game .x6-escort img { display: block; width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 5px 4px #0008); }
 .x6-game[data-gate=true] .x6-escort { left: 84%; opacity: 1; }
 .x6-game .x6-turns { position: absolute; z-index: 13; left: 55%; top: 18%; translate: -50% 0; display: flex; gap: 10px; align-items: center; padding: 7px 12px; color: #f6dfb2; background: #10262be8; border-bottom: 1px solid #b7985c7d; }
 .x6-game .x6-turns > i { display: block; width: 20px; height: 25px; border-radius: 45% 25% 45% 30%; border: 1px solid #a1865666; background: #35413a; transform: rotate(9deg); }
@@ -283,16 +292,20 @@ html, body { margin: 0; min-width: 960px; background: #0b191f; }
   .x6-game[data-forge=true] .x6-readout { top: 74%; }
   .x6-game .x6-target-caption strong { font-size: 24px; }
   .x6-game .x6-target-caption > span { font-size: 15px; }
+  .x6-game #x6-guard-art { height: calc(100% - 100px); }
   .x6-game .x6-turns { top: 19%; gap: 14px; padding: 9px 16px; }
   .x6-game .x6-turns > i { width: 24px; height: 30px; }
   .x6-game .x6-turns > span { font-size: 17px; }
-  .x6-game .x6-escort { width: 82px; height: 166px; }
+  .x6-game .x6-escort { width: 124px; height: 166px; }
   .x6-game .x6-tool > img { width: 76px; height: 105px; flex-basis: 76px; }
   .x6-game .x6-tool strong { font-size: 23px; }
   .x6-game .x6-tool p { font-size: 14px; }
-  .x6-game[data-forge=false] .x6-readout { top: auto; bottom: 153px; left: var(--x6-edge); right: auto; width: 329px; }
+  .x6-game[data-forge=false] .x6-forge-scene { bottom: 110px; }
+  .x6-game[data-forge=false] .x6-readout { top: auto; bottom: 174px; left: var(--x6-edge); right: auto; width: 329px; }
   .x6-game[data-forge=false] .x6-actions { bottom: 35px; }
-  .x6-game[data-forge=false] .x6-result { top: auto; bottom: 176px; }
+  .x6-game[data-forge=false] .x6-result { top: 33%; bottom: auto; }
+  .x6-game[data-forge=false] .x6-result > strong { font-size: 28px; }
+  .x6-game[data-forge=false] .x6-result > small, .x6-game[data-forge=false] .x6-result > p { font-size: 14px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

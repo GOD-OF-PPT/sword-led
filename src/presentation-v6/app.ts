@@ -35,6 +35,7 @@ export function mountV6(root:HTMLElement,port:V6Session){
  let disposed=false,busy=false,paused=false,modal=false,epoch=0,sequence=0,lastScreen='',lastPhase='';
  let display:RunState|null=null,armed:Armed|null=null,hasResult=false,origin:HTMLElement|null=null;
  let input:ReturnType<typeof bindDirectStrikeInput>|null=null;
+ const decisionInputs:ReturnType<typeof bindDirectStrikeInput>[]=[];
  let scene:ReturnType<typeof createExpeditionScene>|null=null;
  const reduced=()=>prefs.value.reducedMotion||motion.matches;
  const current=()=>snapshot.state;
@@ -44,9 +45,10 @@ export function mountV6(root:HTMLElement,port:V6Session){
  const canAct=()=>!disposed&&route==='play'&&!busy&&!paused&&!modal&&!document.hidden&&writable();
  const message=(copy:string)=>text('x6-status',copy);
  function armedNow(){const state=current(),blade=view()?.activePiece;return!!armed&&!!state&&!!blade&&armed.runId===state.runId&&armed.revision===state.revision&&armed.generation===snapshot.generation&&armed.pieceId===blade.id&&armed.school===blade.school&&armed.epoch===epoch;}
- function cancelVisuals(){sequence++;epoch++;armed=null;busy=false;display=null;input?.cancel();scene?.cancel();audio.silence();}
+ function cancelVisuals(){sequence++;epoch++;armed=null;busy=false;display=null;input?.cancel();for(const binding of decisionInputs)binding.cancel();scene?.cancel();audio.silence();}
  function clearResult(){hasResult=false;show('x6-result',false);}
  function present(events:readonly DomainEvent[]){
+  if(events.some(event=>event.type==='Sealed')){clearResult();return;}
   const copy=resultCopy(events);hasResult=copy!==null;show('x6-result',hasResult);if(!copy)return;
   text('x6-result-kicker',copy.kicker);text('x6-result-title',copy.title);text('x6-result-copy',copy.copy);
   const forged=events.find(event=>event.type==='Forged');game.dataset.result=forged?.type==='Forged'?forged.result:events.some(event=>event.type==='GateCleared')?'gate':'action';
@@ -68,7 +70,7 @@ export function mountV6(root:HTMLElement,port:V6Session){
   render();scene?.aim(point);void audio.gesture();
   scene?.play(result.events,beforeView,afterView,{
    contact:()=>{if(!valid()||document.hidden||paused||modal)return;display=null;present(result.events);acceptedSound(result.events);render();},
-   done:()=>{if(!valid())return;busy=false;display=null;render();},
+   done:()=>{if(!valid())return;busy=false;display=null;render();queueMicrotask(focusAction);},
   });
   return true;
  }
@@ -99,20 +101,18 @@ export function mountV6(root:HTMLElement,port:V6Session){
   else execute();
  }
  function continueRun(){if(!current())return;cancelVisuals();clearResult();route='play';paused=false;message('');render();void audio.gesture();}
- function chooseSchool(school:School){const blade=view()?.activePiece;if(blade)send({type:'chooseSchool',pieceId:blade.id,school});}
  function toggleTechnique(){
   const value=view(),blade=value?.activePiece;if(!canAct()||!value?.forge||!blade||!blade.school)return;
   if(!value.forge.technique.allowed){message(errorCopy(value.forge.technique.reason??'unavailable'));return;}
   const wasArmed=armedNow();input?.cancel();epoch++;
   armed=wasArmed?null:{runId:current()!.runId,revision:current()!.revision,generation:snapshot.generation,pieceId:blade.id,school:blade.school,epoch};
-  clearResult();message(wasArmed?'这一锤照常锻。':`下一记用${schoolName(blade.school)}，落锤时才会用掉这炉手艺。`);render();
+  clearResult();message(wasArmed?'这一锤照常锻。':`下一记用${schoolName(blade.school)}，落锤时才会用掉这炉手艺。`);render();if(!wasArmed)queueMicrotask(focusAction);
  }
  function forgeIdentity():InputIdentity|null{
   const value=view(),blade=value?.activePiece,preview=value?.forge;
   if(!canAct()||!blade||!preview||!(armedNow()?preview.technique.allowed:preview.ordinary.allowed))return null;
   return{runId:current()!.runId,revision:current()!.revision,generation:snapshot.generation,epoch,pieceId:blade.id,mode:'standard',periodMs:1,rulesVersion:'forge-v6',node:armedNow()?1:0};
  }
- function seal(){const value=view(),blade=value?.activePiece;if(blade&&value?.forge?.seal.allowed)send({type:'seal',pieceId:blade.id});}
  function discard(){const value=view(),blade=value?.activePiece;if(!blade||!canAct())return;confirm('换一柄新坯？','这柄会留下记录，不能再回炉或提交同一门。只换尚未用过的新坯，这炉已用的手艺次数不会回来。',()=>send({type:'discard',pieceId:blade.id}));}
  function cache(target:'rope'|'latch'){
   const value=view(),quote=value?.caches.find(item=>item.target===target);if(!quote||!canAct())return;
@@ -122,7 +122,18 @@ export function mountV6(root:HTMLElement,port:V6Session){
  function focusAction(){
   if(disposed||modal||busy||route!=='play')return;
   const value=view();if(!value)return;
-  const target=value.ended?button('x6-again'):forging(value.phase)?!value.activePiece?.school?root.querySelector<HTMLButtonElement>('[data-school]'):button(value.phase==='echo-recharge'?'x6-technique':'x6-forge'):value.phase==='cache'?value.caches.some(cache=>cache.allowed)?button(value.caches.find(cache=>cache.allowed)!.target==='rope'?'x6-rope':'x6-latch'):button('x6-leave'):value.followUp.allowed?button('x6-secondary'):button('x6-primary');
+  let target:HTMLButtonElement|null=null;
+  if(value.ended)target=button('x6-again');
+  else if(forging(value.phase)){
+   if(!value.activePiece?.school)target=root.querySelector<HTMLButtonElement>('[data-school]');
+   else if(armedNow()&&value.forge?.technique.allowed)target=button('x6-forge');
+   else if(value.phase==='echo-recharge'&&value.forge?.technique.allowed)target=button('x6-technique');
+   else if(value.forge?.ordinary.allowed)target=button('x6-forge');
+   else if(value.forge?.seal.allowed)target=button('x6-seal');
+   else if(value.forge?.discard.allowed)target=button('x6-discard');
+  }else if(value.phase==='cache'){
+   const available=value.caches.find(cache=>cache.allowed);target=available?button(available.target==='rope'?'x6-rope':'x6-latch'):button('x6-leave');
+  }else target=value.followUp.allowed?button('x6-secondary'):button('x6-primary');
   if(target&&!target.hidden&&!target.closest('[hidden]')&&!target.disabled)target.focus({preventScroll:true});
  }
  function saveProblems(){
@@ -166,7 +177,9 @@ export function mountV6(root:HTMLElement,port:V6Session){
    const trial=value.trial,trialPhase=value.phase==='main-trial'||value.phase==='echo-trial',cachePhase=value.phase==='cache';
    show('x6-targets',!isForge&&screen==='play');show('x6-primary',trialPhase||cachePhase);show('x6-secondary',trialPhase&&!!trial?.secondary);show('x6-rope',cachePhase);show('x6-latch',cachePhase);
    button('x6-primary').disabled=!allowed||!value.strike.allowed;button('x6-primary').dataset.defeated=String(trial?.primary.health===0);button('x6-primary').dataset.opening=String(!!trial?.opening);
+   show('x6-primary-caption',!cachePhase&&trial?.primary.health!==0);
    text('x6-primary-name',cachePhase?'木卫已倒，路通了':value.phase==='echo-trial'?'带甲的试锋主靶':'拦路木卫');text('x6-primary-health',trial?`耐久${trial.primary.health} · ${trial.opening?'破绽已开':`护甲${trial.primary.armor}`}`:'');
+   text('x6-primary-preview',value.strike.allowed&&value.strike.preview?`点此出剑 · 可打${value.strike.preview.damage}${value.strike.preview.wear?`，剑磨损${value.strike.preview.wear}`:''}`:'');
    button('x6-primary').setAttribute('aria-label',`斩向${value.phase==='echo-trial'?'主靶':'木卫'}${value.strike.preview?`，预计造成${value.strike.preview.damage}伤害`:''}`);
    button('x6-secondary').disabled=!allowed;button('x6-secondary').dataset.ready=String(value.followUp.allowed);text('x6-secondary-health',trial?.secondary?`耐久${trial.secondary.health}${value.followUp.allowed?` · 可追斩${value.followUp.damage}`:''}`:'');
    for(const quote of value.caches){const id=quote.target==='rope'?'x6-rope':'x6-latch';button(id).disabled=!allowed;button(id).dataset.available=String(quote.allowed);text(id+'-need',quote.target==='rope'?`要完好强度${quote.required} · 当前${quote.actual}${quote.intact?'，完好':'，有裂纹'}`:`要直击伤害${quote.required} · 当前${quote.actual}`);}
@@ -178,7 +191,7 @@ export function mountV6(root:HTMLElement,port:V6Session){
    if(screen==='recap'){const recap=recapCopy(value);text('x6-recap-title',recap.title);text('x6-recap-copy',recap.copy);node('x6-recap-facts').replaceChildren(...recap.facts.map(copy=>el('p',copy)));button('x6-again').disabled=!writable();}
    scene?.render(value);
   }
-  audio.identify(`${current()?.runId??''}/${snapshot.generation}/${epoch}`);audio.configure(prefs.value);audio.setMode(route==='play'&&!paused&&!modal&&!document.hidden&&snapshot.active?'game':'silent');input?.refresh();
+  audio.identify(`${current()?.runId??''}/${snapshot.generation}/${epoch}`);audio.configure(prefs.value);audio.setMode(route==='play'&&!paused&&!modal&&!document.hidden&&snapshot.active?'game':'silent');input?.refresh();for(const binding of decisionInputs)binding.refresh();
   if(changed&&route==='play'&&!busy&&!modal)queueMicrotask(focusAction);
  }
  function download(raw:string,name:string){const url=URL.createObjectURL(new Blob([raw],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
@@ -218,14 +231,26 @@ export function mountV6(root:HTMLElement,port:V6Session){
  function help(){openModal('炉边，只记这几件事','先选稳锋或裂炉，左键点剑身落锤。手艺按钮只备下一记，真正落锤才花这炉的一次；三柄共用，不会换坯就补。收锻后，用这柄剑亲自开路：斩击与架剑各用一火，共三火。工具不是必拿，完好强度5可切绳，崩纹穿甲直击7可破闩；取得后会当场试着用一次。',[{label:'明白了，回炉边',primary:true,run:closeModal}]);}
  function settings(){const body=el('div');for(const kind of ['muted','volume','reducedMotion'] as const){const row=el('label'),control=document.createElement('input');control.type=kind==='volume'?'range':'checkbox';if(kind==='volume'){control.min='0';control.max='100';control.value=String(prefs.value.volume);control.oninput=()=>preferences.update({volume:Number(control.value)});}else{control.checked=prefs.value[kind];control.onchange=()=>preferences.update({[kind]:control.checked});}row.append(el('span',kind==='muted'?'静音':kind==='volume'?'敲击音量':'减弱动效'),control);body.append(row);}openModal('炉火与声音',body,[{label:'收好',primary:true,run:closeModal}]);}
  function pause(){if(route!=='play')return;paused=true;openModal('炉火为你留着','停一停，再想想这柄剑怎么出手。刚才做成的结果已经保留。',[{label:'继续这一剑',primary:true,run:closeModal},{label:'回看这趟走法',run:history},{label:'声音与动效',run:settings},{label:'把行程收好',run:()=>saveDetails()},{label:'回到开炉处',run:()=>{closeModal();route='title';clearResult();render();}}]);}
- scene=createExpeditionScene(root,{reduced,cancelled:()=>{if(disposed)return;sequence++;epoch++;armed=null;busy=false;display=null;input?.cancel();audio.silence();render();}});
+ scene=createExpeditionScene(root,{reduced,cancelled:()=>{if(disposed)return;sequence++;epoch++;armed=null;busy=false;display=null;input?.cancel();for(const binding of decisionInputs)binding.cancel();audio.silence();render();}});
  input=bindDirectStrikeInput([button('x6-hit'),button('x6-forge')],{context:forgeIdentity,navigationContext:()=>null,navigate:()=>{},commit:(identity,point)=>{if(!sameInput(identity,forgeIdentity()))return;scene?.aim(point);void audio.gesture();const blade=view()?.activePiece;if(blade)send({type:'forge',pieceId:blade.id,useTechnique:armedNow()},point);},aim:point=>{if(canAct())scene?.aim(point);},preparing:value=>scene?.preparing(value)});
+ function bindDecision(id:string,index:number,read:()=>Action|null,inspect?:()=>void){
+  const target=button(id);
+  const identity=(inspection=false):InputIdentity|null=>{
+   const state=current(),active=view()?.activePiece,visible=!target.hidden&&!target.closest('[hidden]')&&target.getClientRects().length>0;
+   if(!canAct()||!state||!active||!visible||target.disabled||(!inspection&&!read())||(inspection&&(!inspect||read())))return null;
+   return{runId:state.runId,revision:state.revision,generation:snapshot.generation,epoch,pieceId:active.id,mode:'standard',periodMs:1,rulesVersion:'forge-v6',node:index*2+(inspection?1:0)};
+  };
+  decisionInputs.push(bindDirectStrikeInput([target],{context:()=>identity(),navigationContext:()=>identity(true),navigate:()=>inspect?.(),commit:captured=>{const action=read();if(action&&sameInput(captured,identity()))send(action);},aim:()=>{},preparing:value=>{target.dataset.preparing=String(value);}}));
+ }
+ bindDecision('x6-primary',1,()=>{const value=view();return value?.strike.allowed?{type:'strike',targetId:value.strike.targetId}:null;});
+ bindDecision('x6-guard',2,()=>view()?.guard.allowed?{type:'guard'}:null);
+ bindDecision('x6-secondary',3,()=>view()?.followUp.allowed?{type:'followUp',targetId:'echo-secondary'}:null,()=>message('先让探隙斩留下余力，再把追斩指向远靶。'));
+ for(const [index,target]of (['rope','latch'] as const).entries())bindDecision('x6-'+target,4+index,()=>view()?.phase==='cache'&&view()?.caches.find(quote=>quote.target===target)?.allowed?{type:'takeCache',target}:null,()=>cache(target));
+ bindDecision('x6-leave',6,()=>view()?.leaveCache.allowed?{type:'leaveCache'}:null);
+ bindDecision('x6-seal',7,()=>{const value=view(),blade=value?.activePiece;return blade&&value?.forge?.seal.allowed?{type:'seal',pieceId:blade.id}:null;});
+ for(const [index,school]of (['steady','fissure'] as const).entries())bindDecision('x6-school-'+school,8+index,()=>{const value=view(),blade=value?.activePiece;return blade&&value?.forge?.chooseSchool.allowed&&blade.school!==school?{type:'chooseSchool',pieceId:blade.id,school}:null;});
+ bindDecision('x6-technique',10,()=>null,toggleTechnique);bindDecision('x6-discard',11,()=>null,discard);
  button('x6-start').onclick=start;button('x6-again').onclick=start;button('x6-continue').onclick=continueRun;
- for(const target of root.querySelectorAll<HTMLButtonElement>('[data-school]'))target.onclick=()=>chooseSchool(target.dataset.school as School);
- button('x6-technique').onclick=toggleTechnique;button('x6-seal').onclick=seal;button('x6-discard').onclick=discard;
- button('x6-primary').onclick=()=>{const value=view();if(value?.strike.allowed)send({type:'strike',targetId:value.strike.targetId});};
- button('x6-secondary').onclick=()=>{if(view()?.followUp.allowed)send({type:'followUp',targetId:'echo-secondary'});else message('先让探隙斩留下余力，再把追斩指向远靶。');};
- button('x6-guard').onclick=()=>send({type:'guard'});button('x6-rope').onclick=()=>cache('rope');button('x6-latch').onclick=()=>cache('latch');button('x6-leave').onclick=()=>send({type:'leaveCache'});
  button('x6-menu').onclick=pause;button('x6-help').onclick=help;button('x6-save').onclick=()=>saveDetails();button('x6-history').onclick=history;
  const onCancel=(event:Event)=>{event.preventDefault();closeModal();};dialog.addEventListener('cancel',onCancel);
  const onKey=(event:KeyboardEvent)=>{if(event.repeat&&(event.code==='Space'||event.key==='Enter')){event.preventDefault();return;}if(event.key==='Escape'&&!modal&&route==='play'){event.preventDefault();pause();}};
@@ -236,5 +261,5 @@ export function mountV6(root:HTMLElement,port:V6Session){
  const stopPrefs=preferences.subscribe(value=>{const changed=value.value.reducedMotion!==prefs.value.reducedMotion;prefs=value;if(changed)cancelVisuals();render();});
  const stop=port.subscribe(value=>{const changed=value.generation!==snapshot.generation||value.state?.runId!==snapshot.state?.runId;snapshot=value;if(changed){cancelVisuals();clearResult();}render();});
  render();void port.activate();
- return{async dispose(){if(disposed)return;disposed=true;cancelVisuals();stop();stopPrefs();input?.dispose();scene?.dispose();dialog.removeEventListener('cancel',onCancel);root.removeEventListener('keydown',onKey);root.removeEventListener('pointerdown',onInput,{capture:true});root.removeEventListener('keydown',onInput,{capture:true});document.removeEventListener('visibilitychange',onHidden);window.removeEventListener('blur',onBlur);motion.removeEventListener('change',onMotion);await Promise.allSettled([port.dispose(),audio.dispose()]);if(root.firstElementChild===game)root.replaceChildren();}};
+ return{async dispose(){if(disposed)return;disposed=true;cancelVisuals();stop();stopPrefs();input?.dispose();for(const binding of decisionInputs)binding.dispose();scene?.dispose();dialog.removeEventListener('cancel',onCancel);root.removeEventListener('keydown',onKey);root.removeEventListener('pointerdown',onInput,{capture:true});root.removeEventListener('keydown',onInput,{capture:true});document.removeEventListener('visibilitychange',onHidden);window.removeEventListener('blur',onBlur);motion.removeEventListener('change',onMotion);await Promise.allSettled([port.dispose(),audio.dispose()]);if(root.firstElementChild===game)root.replaceChildren();}};
 }

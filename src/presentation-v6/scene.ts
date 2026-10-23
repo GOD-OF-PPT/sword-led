@@ -17,11 +17,21 @@ export interface ExpeditionScene {
  dispose():void;
 }
 type ForgeEvent=Extract<DomainEvent,{type:'Forged'}>;
+type ActionMotion='forge'|'guard'|'strike'|'cache'|'followUp'|'change';
+interface SwordGhost {readonly node:HTMLCanvasElement;readonly rect:DOMRect;readonly pivot:{x:number;y:number};readonly metal:{x:number;y:number}}
+interface PropMotion {
+ readonly target:HTMLElement|null;readonly targetRect:DOMRect|null;readonly escort:HTMLElement|null;
+ readonly escortRect:DOMRect|null;readonly rope:HTMLElement|null;readonly latch:HTMLElement|null;
+ readonly tool:HTMLElement|null;readonly toolRect:DOMRect|null;readonly sword:SwordGhost|null;
+}
 interface Playing {
  readonly token:number;readonly before:RunView;readonly after:RunView;readonly event:ForgeEvent|null;
  readonly callbacks:{contact():void;done():void};readonly afterBlade:Blade|null;
  readonly point:{readonly x:number;readonly y:number};
- contacted:boolean;
+ readonly events:readonly DomainEvent[];readonly mode:ActionMotion;readonly startedAt:number;
+ readonly contactAt:number;readonly duration:number;
+ props:PropMotion|null;
+ contacted:boolean;contactedAt:number|null;contactFrames:number;rebounded:boolean;contactPose:string|null;
 }
 interface Geometry {readonly width:number;readonly height:number;readonly ratio:number}
 type SwordFrame=typeof SWORD_ART.frames[number];
@@ -33,17 +43,25 @@ export function createExpeditionScene(root:HTMLElement,host:ExpeditionSceneHost)
  };
  const scene=find('x6-forge-scene'),canvas=find<HTMLCanvasElement>('x6-blade'),hammer=find('x6-hammer');
  const sparks=find('x6-sparks'),impact=find('x6-impact');
+ const game=root.querySelector<HTMLElement>('.x6-game')??root;
+ const primary=find('x6-primary'),guardArt=find<HTMLImageElement>('x6-guard-art'),escort=find('x6-escort');
+ const gap=document.createElement('i');gap.setAttribute('aria-hidden','true');gap.dataset.sceneGap='';
+ gap.style.cssText='position:absolute;pointer-events:none;z-index:2;display:none;background:linear-gradient(90deg,#153e42 8%,#9bdccdd9 30%,#fff7df 52%,#adebdbed 72%,#173b40 94%);filter:drop-shadow(0 0 6px #88dfc8);clip-path:polygon(35% 0,100% 10%,60% 43%,85% 65%,30% 100%,0 77%,30% 40%)';
+ primary.append(gap);
  const animations=new Set<Animation>();
+ const concealed=new Map<HTMLElement,string>();
+ let transient:HTMLElement|null=null;
  const swordArt=new Image(),stamp=document.createElement('canvas');
  let artState:'loading'|'ready'|'failed'='loading',artGeneration=0;
  const swordFrames=SWORD_ART.frames;
  let disposed=false,epoch=0,watchFrame:number|null=null,latest:RunView|null=null,visual:Blade|null=null;
  let playing:Playing|null=null,pointer:StrikePoint|null=null,geometry:Geometry|null=null;
 
- function animate(node:HTMLElement,frames:Keyframe[],duration:number,easing='ease-out'){
+ function animate(node:HTMLElement,frames:Keyframe[],duration:number,easing='ease-out',fill:FillMode='none'){
   if(disposed||host.reduced()||typeof node.animate!=='function')return;
-  const animation=node.animate(frames,{duration,easing,fill:'none'});animations.add(animation);
-  void animation.finished.then(()=>animations.delete(animation),()=>animations.delete(animation));
+  const animation=node.animate(frames,{duration,easing,fill});animations.add(animation);
+  // Filled clone poses remain owned until cancel/finish explicitly releases them.
+  void animation.finished.then(()=>{if(fill==='none')animations.delete(animation);},()=>animations.delete(animation));
  }
  const motion=createHammerMotion(hammer,host.reduced,animate);
  function measure():Geometry|null{
@@ -75,6 +93,108 @@ export function createExpeditionScene(root:HTMLElement,host:ExpeditionSceneHost)
   scene.style.setProperty('--hit-x',`${point.x*rect.width}px`);
   scene.style.setProperty('--hit-y',`${point.y*rect.height}px`);
  }
+ function layer(){
+  if(!transient){
+   transient=document.createElement('div');transient.dataset.x6Transient='';transient.setAttribute('aria-hidden','true');transient.inert=true;
+   transient.style.cssText='position:fixed;inset:0;z-index:32;pointer-events:none;overflow:hidden';game.append(transient);
+  }
+  return transient;
+ }
+ function conceal(node:HTMLElement){if(!concealed.has(node))concealed.set(node,node.style.visibility);node.style.visibility='hidden';}
+ function cloneProp(source:HTMLElement|null):HTMLElement|null{
+  if(!source)return null;
+  const rect=source.getBoundingClientRect();if(rect.width<=0||rect.height<=0||source.closest('[hidden]'))return null;
+  const clone=source.cloneNode(true) as HTMLElement;
+  const originals=[source,...source.querySelectorAll('*')],copies=[clone,...clone.querySelectorAll('*')];
+  for(let index=0;index<originals.length;index++){
+   const original=originals[index]!,copy=copies[index]!;
+   if(copy instanceof HTMLElement||copy instanceof SVGElement){
+    const styles=getComputedStyle(original);
+    for(let item=0;item<styles.length;item++){const name=styles.item(item);copy.style.setProperty(name,styles.getPropertyValue(name));}
+   }
+   copy.removeAttribute('id');copy.removeAttribute('name');copy.removeAttribute('hidden');copy.setAttribute('aria-hidden','true');
+   if(copy instanceof HTMLElement)copy.tabIndex=-1;
+  }
+  Object.assign(clone.style,{position:'fixed',left:`${rect.left}px`,top:`${rect.top}px`,right:'auto',bottom:'auto',
+   width:`${rect.width}px`,height:`${rect.height}px`,minWidth:'0',minHeight:'0',maxWidth:'none',maxHeight:'none',margin:'0',
+   translate:'none',rotate:'none',scale:'none',transform:'none',transition:'none',animation:'none',pointerEvents:'none',visibility:'visible'});
+  clone.inert=true;layer().append(clone);return clone;
+ }
+ function fittedRect(image:HTMLImageElement):DOMRect{
+  const rect=image.getBoundingClientRect();
+  if(!image.naturalWidth||!image.naturalHeight)return rect;
+  const scale=Math.min(rect.width/image.naturalWidth,rect.height/image.naturalHeight);
+  const width=image.naturalWidth*scale,height=image.naturalHeight*scale;
+  return new DOMRect(rect.left+(rect.width-width)/2,rect.bottom-height,width,height);
+ }
+ function syncProps(view:RunView){
+  const defeated=!!view.trial&&view.trial.primary.health===0||view.phase==='cache'&&view.gateCleared;
+  guardArt.style.transformOrigin='50% 95%';
+  guardArt.style.transform=defeated?'translate(22px,24px) rotate(68deg) scale(.72)':'';
+  guardArt.style.opacity=defeated?'.38':'';
+  const opening=!!view.trial?.opening&&!defeated;
+  gap.style.display=opening?'block':'none';
+  if(opening){
+   const image=fittedRect(guardArt),parent=primary.getBoundingClientRect();
+   gap.style.left=`${image.left-parent.left+image.width*.49}px`;gap.style.top=`${image.top-parent.top+image.height*.31}px`;
+   gap.style.width=`${Math.max(7.5,image.width*.0375)}px`;gap.style.height=`${image.height*.32}px`;
+  }
+ }
+ function paintGhost(ghost:SwordGhost,blade:Blade|null,view:RunView){
+  const context=ghost.node.getContext('2d');if(!context)return;
+  const ratio=ghost.node.width/Math.max(1,ghost.rect.width);
+  context.setTransform(ratio,0,0,ratio,0,0);context.clearRect(0,0,ghost.rect.width,ghost.rect.height);
+  if(!blade)return;
+  ghost.node.dataset.pieceId=blade.id;ghost.node.dataset.strength=String(blade.strength);
+  const techniqueUsed=view.techniquePieceIds.includes(blade.id);
+  if(artState==='ready')paintIllustratedSword(context,stamp,swordArt,swordFrames[formStage(blade)],blade,ghost.rect.width,ghost.rect.height,techniqueUsed,false);
+  else if(artState==='failed')paintSword(context,blade,ghost.rect.width,ghost.rect.height,techniqueUsed);
+ }
+ function swordGhost(blade:Blade|null,view:RunView):SwordGhost|null{
+  if(!blade)return null;
+  const rect=canvas.getBoundingClientRect();if(rect.width<=0||rect.height<=0)return null;
+  const node=document.createElement('canvas');node.width=canvas.width;node.height=canvas.height;
+  node.dataset.x6MotionSword='';
+  node.style.cssText=`position:fixed;left:${rect.left}px;top:${rect.top}px;width:${rect.width}px;height:${rect.height}px;pointer-events:none`;
+  const frame=swordFrames[formStage(blade)],placement=swordPlacement(frame,blade,rect.width,rect.height);
+  const pivot={x:placement.left+placement.width*(formStage(blade)>=2?.10:.03),y:rect.height*.56};
+  const metal={x:placement.left+placement.width*(frame.bodyStart+(frame.bodyEnd-frame.bodyStart)*.65),y:pivot.y};
+  node.style.transformOrigin=`${pivot.x}px ${pivot.y}px`;
+  layer().append(node);const ghost={node,rect,pivot,metal};paintGhost(ghost,blade,view);conceal(canvas);return ghost;
+ }
+ function prepareProps(own:Playing){
+  const cache=own.events.find(event=>event.type==='CacheTaken');
+  let target:HTMLElement|null=null,targetRect:DOMRect|null=null,rope:HTMLElement|null=null,latch:HTMLElement|null=null;
+  let tool:HTMLElement|null=null,toolRect:DOMRect|null=null;
+  if(cache?.type==='CacheTaken'){
+   const button=find(cache.target==='rope'?'x6-rope':'x6-latch'),chest=button.querySelector<HTMLElement>('.x6-chest');
+   const physical=button.querySelector<HTMLElement>(cache.target==='rope'?'.x6-hanging-rope':'.x6-iron-latch');
+   targetRect=physical?.getBoundingClientRect()??button.getBoundingClientRect();target=cloneProp(chest);
+   if(chest)conceal(chest);
+   if(cache.target==='rope'){rope=cloneProp(physical);if(physical)conceal(physical);}
+   else{latch=cloneProp(physical);const copy=target?.querySelector<HTMLElement>('.x6-iron-latch');if(copy)copy.style.visibility='hidden';}
+   const image=chest?.querySelector<HTMLImageElement>('img')??null;
+   if(image&&image.complete&&image.naturalWidth>0){toolRect=image.getBoundingClientRect();tool=cloneProp(image);if(tool)tool.style.visibility='hidden';}
+  }else{
+   const source=own.mode==='followUp'?find('x6-secondary').querySelector<HTMLElement>('.x6-practice-target'):guardArt;
+   targetRect=source instanceof HTMLImageElement?fittedRect(source):source?.getBoundingClientRect()??null;
+   target=cloneProp(source);if(source)conceal(source);
+  }
+  const gate=own.events.some(event=>event.type==='GateCleared');
+  const escortRect=gate?escort.getBoundingClientRect():null,escortCopy=gate?cloneProp(escort):null;
+  if(escortCopy)escortCopy.style.visibility='hidden';
+  own.props={target,targetRect,rope,latch,tool,toolRect,escort:escortCopy,escortRect,sword:swordGhost(visual,own.before)};
+  const sword=own.props.sword;if(!sword||!targetRect)return;
+  const angle=own.mode==='guard'?-57:-24,radians=angle*Math.PI/180;
+  const mx=sword.pivot.x+(sword.metal.x-sword.pivot.x)*Math.cos(radians),my=sword.pivot.y+(sword.metal.x-sword.pivot.x)*Math.sin(radians);
+  const tx=targetRect.left+targetRect.width*(own.mode==='cache'?.5:.68),ty=targetRect.top+targetRect.height*(own.mode==='cache'?.48:.47);
+  const dx=tx-(sword.rect.left+mx),dy=ty-(sword.rect.top+my);
+  const pose=`translate(${dx}px,${dy}px) rotate(${angle}deg)`;
+  own.contactPose=pose;
+  animate(sword.node,[{transform:'translate(0,0) rotate(0deg)'},
+   {transform:`translate(${dx*.35}px,${dy*.48-12}px) rotate(-66deg)`,offset:.56},
+   {transform:pose}],own.contactAt,'ease-in','forwards');
+ }
  function paint(){
   if(disposed)return;
   const size=measure();if(!size)return;
@@ -104,6 +224,9 @@ export function createExpeditionScene(root:HTMLElement,host:ExpeditionSceneHost)
   motion.reset();
   if(watchFrame!==null)cancelAnimationFrame(watchFrame);watchFrame=null;
   for(const animation of animations)animation.cancel();animations.clear();
+  for(const[node,visibility]of concealed)node.style.visibility=visibility;concealed.clear();
+  if(transient)for(const image of transient.querySelectorAll('img'))image.removeAttribute('src');
+  transient?.remove();transient=null;
   sparks.replaceChildren();hammer.classList.remove('preparing');
   canvas.style.transform='';scene.removeAttribute('data-impact');scene.removeAttribute('data-playing');
   impact.style.opacity='';impact.style.transform='';
@@ -111,12 +234,12 @@ export function createExpeditionScene(root:HTMLElement,host:ExpeditionSceneHost)
  function cancelInternal(notify:boolean){
   const hadPlay=playing!==null;
   epoch++;playing=null;clearTransient();pointer=null;
-  visual=latest?.activePiece??null;paint();
+  visual=latest?.activePiece??null;if(latest)syncProps(latest);paint();
   if(notify&&hadPlay)host.cancelled?.();
  }
  function finish(own:Playing){
   if(disposed||playing!==own||own.token!==epoch)return;
-  playing=null;clearTransient();visual=own.after.activePiece;paint();
+  playing=null;clearTransient();visual=own.after.activePiece;syncProps(own.after);paint();
   own.callbacks.done();
  }
  function feedback(event:ForgeEvent){
@@ -142,9 +265,79 @@ export function createExpeditionScene(root:HTMLElement,host:ExpeditionSceneHost)
  }
  function touch(own:Playing){
   if(disposed||playing!==own||own.token!==epoch||own.contacted||document.hidden)return;
-  own.contacted=true;visual=own.afterBlade;paint();
+  own.contacted=true;own.contactedAt=performance.now();visual=own.afterBlade;paint();
+  if(own.props?.sword&&own.contactPose){
+   for(const animation of own.props.sword.node.getAnimations())animation.cancel();
+   own.props.sword.node.style.transform=own.contactPose;
+  }
+  if(own.props?.sword)paintGhost(own.props.sword,own.afterBlade,own.after);
   if(own.event)feedback(own.event);
   own.callbacks.contact();
+  if(playing!==own||own.token!==epoch)return;
+  // The contact callback may intentionally switch road/forge layout. Adopt that
+  // geometry now; its subsequent ResizeObserver delivery is not a new resize.
+  syncProps(own.after);paint();
+  if(own.mode!=='forge'&&own.mode!=='change')contactProps(own);
+ }
+ function flash(rect:DOMRect,color:string,xFraction:number){
+  const node=document.createElement('i');
+  node.style.cssText=`position:fixed;left:${rect.left+rect.width*xFraction}px;top:${rect.top+rect.height*.48}px;width:90px;height:4px;transform-origin:50% 50%;pointer-events:none;border-radius:100%;background:linear-gradient(90deg,transparent,${color},transparent);opacity:0`;
+  layer().append(node);animate(node,[{opacity:0,transform:'translate(-50%,-50%) rotate(-28deg) scaleX(.15)'},
+   {opacity:1,offset:.15},{opacity:0,transform:'translate(-50%,-50%) rotate(-28deg) scaleX(1.5)'}],210);
+ }
+ function contactProps(own:Playing){
+  const props=own.props;if(!props)return;
+  const remaining=Math.max(1,own.duration-own.contactAt),gate=own.events.some(event=>event.type==='GateCleared');
+  const hit=own.events.find(event=>event.type==='Struck'),cache=own.events.find(event=>event.type==='CacheTaken');
+  const defeated=hit?.type==='Struck'&&hit.after===0;
+  if(props.targetRect&&own.mode!=='guard')flash(props.targetRect,hit?.type==='Struck'&&hit.damage===0?'#d9e0ce':'#ffe1a4',own.mode==='cache'?.5:.68);
+  if(own.mode==='guard'){
+   if(props.target)animate(props.target,[{transform:'rotate(0deg)'},{transform:'translate(8px,0) rotate(-4deg)',offset:.35},{transform:'rotate(0deg)'}],remaining);
+   const opening=cloneProp(gap);if(opening)animate(opening,[{opacity:0,transform:'scaleX(.2)'},{opacity:1,transform:'scaleX(1)'}],remaining,'ease-out','forwards');
+  }else if(props.target&&defeated){
+   props.target.style.transformOrigin='50% 95%';
+   animate(props.target,[{transform:'translate(0,0) rotate(0deg)',opacity:1},
+    {transform:'translate(10px,4px) rotate(10deg)',offset:.18,opacity:1},
+    {transform:'translate(22px,24px) rotate(68deg) scale(.72)',opacity:.38}],Math.min(500,remaining),'ease-in','forwards');
+  }else if(props.target&&own.mode!=='cache'){
+   const amount=hit?.type==='Struck'&&hit.damage===0?5:12;
+   animate(props.target,[{transform:'translate(0,0) rotate(0deg)'},{transform:`translate(${amount}px,3px) rotate(3deg)`,offset:.18},
+    {transform:'translate(-3px,0) rotate(-1deg)',offset:.45},{transform:'translate(0,0) rotate(0deg)'}],remaining);
+  }
+  if(gate&&props.escort&&props.escortRect){
+   const destination=escort.getBoundingClientRect();conceal(escort);props.escort.style.visibility='visible';
+   const dx=destination.left-props.escortRect.left,dy=destination.top-props.escortRect.top;
+   animate(props.escort,[{transform:'translate(0,0)',opacity:.7},
+    {transform:`translate(${dx*.22}px,${dy*.22-3}px)`,offset:.25,opacity:1},
+    {transform:`translate(${dx*.46}px,${dy*.46}px)`,offset:.46},
+    {transform:`translate(${dx*.7}px,${dy*.7-3}px)`,offset:.70},
+    {transform:`translate(${dx}px,${dy}px)`,opacity:1}],remaining,'linear','forwards');
+  }
+  if(cache?.type==='CacheTaken'){
+   if(props.rope){
+    const lower=cloneProp(props.rope);props.rope.style.clipPath='inset(0 0 52% 0)';
+    if(lower){lower.style.clipPath='inset(48% 0 0 0)';animate(lower,[{transform:'translate(0,0)',opacity:1},{transform:'translate(9px,65px) rotate(18deg)',opacity:0}],360,'ease-in','forwards');}
+    animate(props.rope,[{transform:'translateY(0)'},{transform:'translateY(-9px) rotate(-7deg)'}],250,'ease-out','forwards');
+   }
+   if(props.latch)animate(props.latch,[{transform:'rotate(5deg)',opacity:1},{transform:'translate(24px,49px) rotate(48deg)',opacity:0}],360,'ease-in','forwards');
+   if(props.target){
+    const packed=props.target.querySelector<HTMLElement>('img');if(packed)packed.style.visibility='hidden';
+    animate(props.target,[{transform:'translate(0,0)',opacity:1},{transform:'translate(0,29px) rotate(4deg)',offset:.55,opacity:.8},
+     {transform:'translate(0,35px) rotate(4deg)',opacity:0}],remaining,'ease-in','forwards');
+   }
+   if(props.tool&&props.toolRect){
+    const destination=find<HTMLImageElement>('x6-tool-art'),rect=destination.getBoundingClientRect();
+    if(rect.width>0&&rect.height>0){
+     conceal(destination);props.tool.style.visibility='visible';
+     const dx=rect.left+rect.width/2-(props.toolRect.left+props.toolRect.width/2),dy=rect.top+rect.height/2-(props.toolRect.top+props.toolRect.height/2);
+     const scale=Math.min(rect.width/props.toolRect.width,rect.height/props.toolRect.height);
+     animate(props.tool,[{transform:'translate(0,0) scale(1)',opacity:1},
+      {transform:'translate(0,18px) scale(1.05)',offset:.18},
+      {transform:`translate(${dx*.50}px,${dy*.48-55}px) scale(${(1+scale)/2})`,offset:.57},
+      {transform:`translate(${dx}px,${dy}px) scale(${scale})`,opacity:1}],remaining,'ease-in-out','forwards');
+    }
+   }
+  }
  }
  function watch(own:Playing){
   watchFrame=null;
@@ -152,6 +345,24 @@ export function createExpeditionScene(root:HTMLElement,host:ExpeditionSceneHost)
   if(document.hidden||host.reduced()){cancelInternal(true);return;}
   if(own.contacted&&hammer.dataset.phase==='idle'){finish(own);return;}
   watchFrame=requestAnimationFrame(()=>watch(own));
+ }
+ function watchAction(own:Playing){
+  watchFrame=null;
+  if(disposed||playing!==own||own.token!==epoch)return;
+  if(document.hidden||host.reduced()){cancelInternal(true);return;}
+  const elapsed=performance.now()-own.startedAt;
+  if(!own.contacted&&elapsed>=own.contactAt)touch(own);
+  if(playing!==own||own.token!==epoch)return;
+  if(own.contacted){
+   own.contactFrames++;
+   if(own.contactFrames>=3&&!own.rebounded&&own.props?.sword&&own.contactPose){
+    own.rebounded=true;
+    animate(own.props.sword.node,[{transform:own.contactPose},{transform:own.contactPose,offset:.15},
+     {transform:'translate(0,0) rotate(0deg)'}],Math.max(90,own.duration-own.contactAt-32),'ease-out','forwards');
+   }
+   if(own.contactFrames>=3&&own.contactedAt!==null&&performance.now()-own.contactedAt>=own.duration-own.contactAt){finish(own);return;}
+  }
+  watchFrame=requestAnimationFrame(()=>watchAction(own));
  }
  function resized(){
   if(disposed)return;
@@ -185,6 +396,7 @@ export function createExpeditionScene(root:HTMLElement,host:ExpeditionSceneHost)
   render(view){
    if(disposed)return;latest=view;
    if(playing&&(view.runId!==playing.after.runId||view.revision>playing.after.revision))cancelInternal(true);
+   syncProps(view);
    // A session publication can update facts while the Accepted old blade still owns contact.
    if(!playing){visual=view.activePiece;paint();}
   },
@@ -192,15 +404,24 @@ export function createExpeditionScene(root:HTMLElement,host:ExpeditionSceneHost)
    if(disposed)return;
    const aim=pointer;cancelInternal(false);pointer=aim;latest=after;
    const event=events.find((value):value is ForgeEvent=>value.type==='Forged')??null;
-   const beforeBlade=event?before.blades.find(blade=>blade.id===event.pieceId)??null:before.activePiece;
-   const afterBlade=event?after.blades.find(blade=>blade.id===event.pieceId)??null:after.activePiece;
-   const own:Playing={token:++epoch,before,after,event,afterBlade,callbacks,point:projectPoint(beforeBlade,afterBlade),contacted:false};
-   playing=own;visual=beforeBlade;scene.dataset.playing=event?'forge':'change';paint();
+   const strike=events.find(value=>value.type==='Struck'),guard=events.find(value=>value.type==='Guarded');
+   const mode:ActionMotion=event?'forge':guard?'guard':strike?'strike':events.some(value=>value.type==='CacheTaken')?'cache':events.some(value=>value.type==='FollowUpUsed')?'followUp':'change';
+   const pieceId=event?.pieceId??(strike?.type==='Struck'?strike.pieceId:guard?.type==='Guarded'?guard.pieceId:before.trial?.pieceId??before.activePiece?.id);
+   const beforeBlade=before.blades.find(blade=>blade.id===pieceId)??before.activePiece;
+   const afterBlade=after.blades.find(blade=>blade.id===pieceId)??after.activePiece;
+   const major=events.some(value=>value.type==='GateCleared'||value.type==='CacheTaken');
+   const own:Playing={token:++epoch,before,after,event,afterBlade,callbacks,point:projectPoint(beforeBlade,afterBlade),
+    events,mode,startedAt:performance.now(),contactAt:120,duration:major?760:mode==='guard'?380:400,
+    props:null,contacted:false,contactedAt:null,contactFrames:0,rebounded:false,contactPose:null};
+   playing=own;visual=beforeBlade;scene.dataset.playing=mode;syncProps(before);paint();
    if(document.hidden||!measure()){cancelInternal(true);return;}
-   if(!event||host.reduced()){
+   if(mode==='change'||host.reduced()){
     touch(own);queueMicrotask(()=>{if(playing===own&&own.token===epoch)finish(own);});return;
    }
-   positionHammer();motion.strike(event.technique,()=>touch(own));
+   if(mode!=='forge'){
+    prepareProps(own);watchFrame=requestAnimationFrame(()=>watchAction(own));return;
+   }
+   positionHammer();motion.strike(event?.technique??false,()=>touch(own));
    watchFrame=requestAnimationFrame(()=>watch(own));
   },
   aim(point){if(!disposed&&!playing){pointer=point;positionHammer();}},
@@ -212,6 +433,7 @@ export function createExpeditionScene(root:HTMLElement,host:ExpeditionSceneHost)
    artGeneration++;swordArt.removeEventListener('load',loaded);swordArt.removeEventListener('error',failed);
    if(artState==='loading')swordArt.removeAttribute('src');
    stamp.width=0;stamp.height=0;
+   gap.remove();guardArt.style.transform='';guardArt.style.transformOrigin='';guardArt.style.opacity='';
    latest=null;visual=null;geometry=null;
   },
  };
@@ -227,7 +449,7 @@ function swordPlacement(frame:SwordFrame,blade:Blade,width:number,height:number)
  const drawnWidth=frame.width*scale,drawnHeight=frame.height*scale;
  return{left:width*.54-drawnWidth/2,top:height*.56-drawnHeight*frame.axisY,width:drawnWidth,height:drawnHeight};
 }
-function paintIllustratedSword(context:CanvasRenderingContext2D,stamp:HTMLCanvasElement,image:HTMLImageElement,frame:SwordFrame,blade:Blade,width:number,height:number,techniqueUsed:boolean){
+function paintIllustratedSword(context:CanvasRenderingContext2D,stamp:HTMLCanvasElement,image:HTMLImageElement,frame:SwordFrame,blade:Blade,width:number,height:number,techniqueUsed:boolean,grounded=true){
  const stage=formStage(blade),placement=swordPlacement(frame,blade,width,height);
  const{left,top}=placement,drawnWidth=placement.width,drawnHeight=placement.height;
  if(stamp.width!==frame.width)stamp.width=frame.width;if(stamp.height!==frame.height)stamp.height=frame.height;
@@ -255,7 +477,7 @@ function paintIllustratedSword(context:CanvasRenderingContext2D,stamp:HTMLCanvas
  }
  const wear=Math.max(0,(blade.sealedStrength??blade.strength)-blade.strength);
  if(wear>0){
-  ink.fillStyle=`rgba(16,34,39,${Math.min(.5,wear*.075)})`;ink.fillRect(0,0,frame.width,frame.height);
+  ink.fillStyle=`rgba(16,34,39,${Math.min(.5,wear*.075)})`;ink.fillRect(bodyStart,0,bodyEnd-bodyStart,frame.height);
   ink.strokeStyle='#d4b98c99';ink.lineWidth=Math.max(1,frame.height*.01);
   for(let index=0;index<wear*2;index++){
    const x=bodyStart+(bodyEnd-bodyStart)*(.2+index%7*.09);
@@ -264,9 +486,12 @@ function paintIllustratedSword(context:CanvasRenderingContext2D,stamp:HTMLCanvas
  }
  ink.restore();
  context.save();context.imageSmoothingEnabled=true;context.imageSmoothingQuality='high';
- context.fillStyle='#05121969';context.filter='blur(6px)';context.beginPath();
- context.ellipse(left+drawnWidth*.53,height*.56+Math.max(10,drawnHeight*.16),drawnWidth*.47,Math.max(5,drawnHeight*.10),0,0,Math.PI*2);context.fill();
- context.filter='none';context.shadowColor='#0009';context.shadowBlur=5;context.shadowOffsetY=4;
+ if(grounded){
+  context.fillStyle='#05121969';context.filter='blur(6px)';context.beginPath();
+  context.ellipse(left+drawnWidth*.53,height*.56+Math.max(10,drawnHeight*.16),drawnWidth*.47,Math.max(5,drawnHeight*.10),0,0,Math.PI*2);context.fill();
+  context.filter='none';
+ }
+ context.shadowColor='#0009';context.shadowBlur=5;context.shadowOffsetY=4;
  if(blade.status==='broken'){
   const fracture=left+drawnWidth*.59;
   context.save();context.beginPath();context.rect(left-10,0,fracture-left-3,height);context.clip();context.drawImage(stamp,left,top,drawnWidth,drawnHeight);context.restore();
