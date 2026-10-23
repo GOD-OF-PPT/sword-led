@@ -1,23 +1,25 @@
 # 项目上下文：sword-led
 
-## 当前交付索引（2026-10-23）
+## 当前交付索引（2026-10-24）
 
-本日最新：已交付v0.9独立`/v6.html`（forge-v6/schema6）仍被用户实际评价无聊，用户进一步明确“没有完整的游戏主线”。新增[护炉远行完整合同](../docs/v1.0-lantern-expedition-proposal.md)与`add-complete-lantern-expedition`，覆盖三章九节点、跨关剑与工具、人物选择／唯一灯芯、三结局与默认入口切换，当前待具体批准、未实施新规则；[本轮进度](../docs/iterations/2026-10-23-v6-rejection/tasks.md)保研究和独立可点击设计分镜身份。v0.9旧批准不自动覆盖此新增合同，研究／设计／既定UI许可也不因它重复停等。后面的旧阶段按历史阅读。
+用户已具体确认v1.0《护炉远行》完整实施至结局，批准原答与合同SHA在`docs/approvals/v1.0-2026-10-23/approval.json`。已实装三章九节点、跨关双剑/两工具成长、真实人物援手与献剑、唯一灯芯、章初重整和三结局；默认`/`与`/campaign.html`使用forge-v7/schema7。旧v5从`/forge.html`或`/classic.html`继续，旧v6从`/v6.html`继续，存档/钱包不互迁。
 
-默认 `/` 为已实施的forge-v5/schema5三章十二天；规则/保存/炉谱以v0.8当前合同及原批准全文为准。[最终交付审查](../docs/reviews/G4-T04-final-delivery.md)逐条对应原五项、实际内容与来源；现代PC专项完成见G4-T03。以下按日期保留旧实施阶段，历史开放H和旧提案不得读成当前只交三轮/首章，亦不伪标旧版人类认可。该段历史交付不构成对上方新主线提案的批准。
+实际网页两路线、重整/重载/取消新开、三个结局及终章实图修缮见[完整网页核对](../docs/reviews/2026-10-24-v1-complete-browser-routes.md)。[当前执行记录](../docs/iterations/2026-10-23-lantern-expedition/tasks.md)按真实阶段关闭；默认发布与最终审查完成前不提前关闭全任务。[游玩指南](../docs/v1.0-play-guide.md)、[当前架构](../docs/v1.0-architecture.md)、[SDK](../docs/v7-sdk.md)为现版入口。
+
+历史试玩负评、研究和旧版交付保留在[旧README](../README.pre-v1.md)。以下旧阶段按历史阅读，不把旧技术矩阵当作当前真人乐趣结论；交互/美术/玩法优先，测试与低版本兼容最低。
 
 ## 目的
 
-开发暂名《锤下求生》的现代 PC 网页单人锻造游戏。完整用户输入在 `goal-1/input.md`；规则在 `docs/game-design.md`；本项目当前是新建项目，不继承祖先目录中其他 Electron/Next.js 应用的技术栈。
+开发暂名《锤下求生》的现代 PC 网页单人锻造游戏。完整用户输入在 `goal-1/input.md`；规则在 `docs/game-design.md`；本项目是独立网页项目，不继承祖先目录中其他 Electron/Next.js 应用的技术栈。
 
-## 拟采用技术栈
+## 采用的技术栈
 
 - TypeScript、Vite；DOM/CSS 界面和 Canvas 2D 工坊；无第三方运行时框架。
 - Vitest 规则/存档测试；Playwright 浏览器验证；npm 精确版本与 package-lock。
 - 内核纯函数，不依赖 DOM、时钟、Math.random 或存储；网页与模拟用同一正式 Interface。
 - 存档在 localhost/HTTPS 下使用版本化 localStorage，Web Locks 控制同源单写窗口；异常有明确出口。
 
-## 规格与实施流程
+## 历史规格与实施流程
 
 新增能力提案为 `add-forging-game`。2026-10-17 用户已确认实施方案 v0.2 并选择 B「行会手账」，见 `docs/decision-record.md`。按 T04–T06 独立内核、T07 由 B 派生素材、后续完整界面的顺序执行，不再重复请求已获得的确认。
 

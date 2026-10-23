@@ -88,7 +88,7 @@ export class KeyboardV5 {
   }
  }
  async start(seed='v5-economy-0'){
-  await this.page.goto('/');await expect(this.page.locator('.v5-app')).toHaveAttribute('data-rules-version','forge-v5');await this.assertDpr();
+  await this.page.goto('/forge.html');await expect(this.page.locator('.v5-app')).toHaveAttribute('data-rules-version','forge-v5');await this.assertDpr();
   await expect(this.page.locator('#v4-start')).toBeEnabled();if(!await this.page.locator('.v4-journey-options').evaluate(node=>(node as HTMLDetailsElement).open))await this.activate(this.page.locator('.v4-journey-options summary'));
   if(this.inputMode==='mouse')await this.page.locator('#v4-seed').fill(seed);else{await keyToV5(this.page,this.page.locator('#v4-seed'));await this.page.keyboard.type(seed,{delay:1});}await expect(this.page.locator('#v4-seed')).toHaveValue(seed);
   await this.activate(this.page.locator('#v4-start'));const first=await this.record('fresh-real-keyboard-title');
@@ -99,7 +99,7 @@ export class KeyboardV5 {
   // Leave the app and its writer lease before replacing an explicitly labelled recovery fixture.
   this.navigating=true;try{await this.page.goto('/assets/b/manifest.json');}finally{this.navigating=false;}
   await this.page.evaluate(raw=>{for(const key of ['sword-led.save.v5','sword-led.save.backup.v5','sword-led.collection.v2','sword-led.collection.backup.v2'])localStorage.removeItem(key);localStorage.setItem('sword-led.save.v5',raw.run);localStorage.setItem('sword-led.collection.v2',raw.collection);},fixture);
-  this.navigating=true;try{await this.page.goto('/');}finally{this.navigating=false;}
+  this.navigating=true;try{await this.page.goto('/forge.html');}finally{this.navigating=false;}
   await this.assertDpr();await expect(this.page.locator('#v4-continue')).toBeEnabled();await this.activate(this.page.locator('#v4-continue'));
   const restored=await this.record('explicit-legitimate-restored-boundary');expect(restored.state).toEqual(source);await this.leaveIntro();return fixture;
  }

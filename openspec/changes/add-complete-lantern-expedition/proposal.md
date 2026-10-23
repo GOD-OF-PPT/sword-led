@@ -20,4 +20,4 @@
 
 ## Approval
 
-待用户对完整具体合同确认。适用OpenSpec要求提案批准后实施，原用户也要求确认实施文档；不把这项要求扩成研究／设计／既定D风格或左键也须重复批准。
+用户已于2026-10-23具体确认“确认，完整实施至结局”。批准原答、原commit与合同SHA在`docs/approvals/v1.0-2026-10-23/approval.json`；全部范围直接实施，不再重复确认D风格或左键。实际阶段与发布/最终复核见本变更tasks.md及`docs/iterations/2026-10-23-lantern-expedition/tasks.md`。

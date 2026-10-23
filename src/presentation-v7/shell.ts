@@ -1,5 +1,5 @@
 export const CAMPAIGN_SHELL=`
-<main class="c7" data-screen="title" data-phase="prepare">
+<main class="c7" data-rules-version="forge-v7" data-screen="title" data-phase="prepare">
  <div class="c7-world" aria-hidden="true"></div><div class="c7-vignette" aria-hidden="true"></div>
  <header class="c7-hud" hidden>
   <div class="c7-promise"><span id="c7-chapter"></span><h1 id="c7-place"></h1><p id="c7-mission"></p><small id="c7-next"></small><button id="c7-road" class="c7-road" aria-label="查看整条灯路"></button></div>

@@ -103,7 +103,7 @@ export async function externalSlots(page:Page,updates:Record<string,string>){
  finally{await other.close();}
 }
 export async function storageResume(page:Page,info:TestInfo,state:RunState,collection=awards(state)){
- const driver=new KeyboardV5(page,info,'mouse');await driver.install();await installStorageProbe(page,fixtureRaw(state,collection));await page.goto('/');await expect(page.locator('#v4-continue')).toBeEnabled();await driver.activate(page.locator('#v4-continue'));expect((await driver.record('restored-legitimate-storage-boundary')).state).toEqual(state);await driver.leaveIntro();return driver;
+ const driver=new KeyboardV5(page,info,'mouse');await driver.install();await installStorageProbe(page,fixtureRaw(state,collection));await page.goto('/forge.html');await expect(page.locator('#v4-continue')).toBeEnabled();await driver.activate(page.locator('#v4-continue'));expect((await driver.record('restored-legitimate-storage-boundary')).state).toEqual(state);await driver.leaveIntro();return driver;
 }
 export async function recordStorage(page:Page,info:TestInfo,label:string,state?:RunState,extra:Record<string,unknown>={}){
  const snapshot=await storageSnapshot(page);if(state){const checked=v5Sdk.validateRun(state);if(!checked.ok)throw Error(checked.detail);}
