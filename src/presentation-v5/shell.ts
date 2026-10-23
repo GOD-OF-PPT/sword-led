@@ -15,6 +15,7 @@ export const V5_TEMPLATE = `
         <button id="v4-title-challenge" class="v4-text-button" type="button" hidden>行脚挑战</button>
         <button id="v4-title-settings" class="v4-text-button" type="button">炉边设置</button>
       </div>
+      <a class="v5-old-journey" href="/v6.html">一剑开路 · 新玩法<span>把亲手锻的剑带去试锋</span></a>
       <a id="v5-old-v4" class="v5-old-journey" href="/v4.html">续走旧行程<span>保留原来的炉火与进度</span></a>
       <details class="v4-journey-options">
         <summary>行旅种子与更早旧路</summary>

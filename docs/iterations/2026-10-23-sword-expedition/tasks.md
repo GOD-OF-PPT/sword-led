@@ -10,7 +10,7 @@
 
 ## 2. 一段实际体验（不先扩完整章节）
 
-- [ ] 2.1 接真实炉台：左键单意图、两开局技法／取消标记／收锻／换坯、可见强度与裂纹；稳锋／崩纹有不同剑形因果，保键盘／暂停／减弱动效。
+- [x] 2.1 接真实炉台：左键单意图、两开局技法／取消标记／收锻／换坯、可见强度与裂纹；稳锋／崩纹有不同剑形因果，保键盘／暂停／减弱动效。
 - [ ] 2.2 接同剑木盾卫机、探隙／直接斩击、3回合失败调整、最多一工具匣；取匣阶段仅目标／离开，拒绝架剑／换剑旁路；过门／15钱与场景变化都由正式Accepted驱动。
 - [ ] 2.3 **全面review/debug 2**：核2.1–2.2实际动作／失败／回报与可读性，不将静态图／测试入口改值叫玩过；修真实摩擦，不以更多文案／章节代体验。
 
@@ -29,3 +29,5 @@
 1.2回执：复用generic codec/session/lease新增v6适配，schema6、独立主备与writer.v6，exportRun保Accepted，含首次subscribe/publish同步重入保护，不改旧平台/应用。定向保存10tests首跑actual0；统一npm run build actual0，构建SDK对真实Nail完成态codec往返逐字段相同，schema/key/lock正确、v5原文及旧SDK逐字保持，见docs/evidence/v0.9/1.2-persistence/sdk-roundtrip.json。新SDK SHA b5aa0bfeb48b4f619596d2d4c4a6dba2de20d812ba294b21f4886c3f7c1c39cc；该hash与1.1只含纯核包不同，不覆写旧阶段证据。[杠精审查] 通过当前保存适配；UI备份原文exact-confirm/原文导出页面与真人流程仍后续，不把单元当页面。
 
 1.3回执：对1.1/1.2做C端合同、纯核/预览/全回放、取匣旁路/尾声真实收益/唯一出口、保存单写/重入/异步取消/旧解释器来源集中复核。root与独立静态审无新增mustfix，25有限tests与正式SDK/codec/严格build已经消费，不重跑无关矩阵。明确后续UI不得subscribe内dispose、区分Accepted导出与磁盘原文、backup确认绑定所示原文。完整记录docs/reviews/v0.9/1.3-kernel-save-review.md。[杠精审查] 通过第一组三项全面review-debug，真实界面/趣味未完成；继续2.1。
+
+2.1回执：独立/v6.html与v6-main、DOM/Canvas炉台、真实左键/Space、两手艺/仅下一记标记/收锻/换坯、强度风险和当前用途已接正式v6 session/view；标题可续、暂停/设置/行程出口在实际页面，v5标题加显式入口但默认仍v5。手艺光纹用getRunView从accepted journal导出的techniquePieceIds，不从选学校/全炉次数假推，保存state/规则不变。实图打回程序渐变剑/多边形砧座，新增同D手绘4阶段透明atlas+实测alpha帧，原件/prompt/WebP/三新物件来源齐；真实裂/磨/断独立叠层。统一build0，独立4261 Chromium7实际命令与SDK逐对象相等，左键/Space/备手艺不写/暂停撤意图/重载续当前剑/点risk不锤/1280与1920实图均过，见docs/evidence/v0.9/2.1-forge。只读审查修有效音频activation归属、memory伪重获出口、backup替换dirty提示/原文exact、Nail净0旧提示、aim取消丢点；UI备份深边仍2.3定向核。最后缩短普通结果、短显可开路/争工具，1280结果提示再上移避锤（最终布局2.3核）。[杠精审查] 通过炉台任务，先前差画面保本地first证据；不把还未接物件动画和工具尾声体验记完成，继续2.2。

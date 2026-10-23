@@ -1,0 +1,161 @@
+{
+  "passed": true,
+  "scope": "Fresh v6 UI forging only, isolated Chromium origin4261; real left mouse/Space, exact SDK equality, arm cancel, reload and 1280/1920 screenshots. Trial presentation not yet claimed.",
+  "commands": [
+    {
+      "action": {
+        "type": "chooseSchool",
+        "pieceId": "main-1",
+        "school": "steady"
+      },
+      "revision": 1,
+      "events": [
+        {
+          "type": "SchoolChosen",
+          "pieceId": "main-1",
+          "school": "steady"
+        }
+      ]
+    },
+    {
+      "action": {
+        "type": "forge",
+        "pieceId": "main-1",
+        "useTechnique": false
+      },
+      "revision": 2,
+      "events": [
+        {
+          "type": "Forged",
+          "pieceId": "main-1",
+          "technique": false,
+          "school": "steady",
+          "result": "success",
+          "before": 0,
+          "after": 1,
+          "ticket": 974,
+          "crackTickets": 0,
+          "chargeBefore": 1,
+          "chargeAfter": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "type": "forge",
+        "pieceId": "main-1",
+        "useTechnique": false
+      },
+      "revision": 3,
+      "events": [
+        {
+          "type": "Forged",
+          "pieceId": "main-1",
+          "technique": false,
+          "school": "steady",
+          "result": "success",
+          "before": 1,
+          "after": 2,
+          "ticket": 364,
+          "crackTickets": 0,
+          "chargeBefore": 1,
+          "chargeAfter": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "type": "forge",
+        "pieceId": "main-1",
+        "useTechnique": false
+      },
+      "revision": 4,
+      "events": [
+        {
+          "type": "Forged",
+          "pieceId": "main-1",
+          "technique": false,
+          "school": "steady",
+          "result": "success",
+          "before": 2,
+          "after": 3,
+          "ticket": 620,
+          "crackTickets": 0,
+          "chargeBefore": 1,
+          "chargeAfter": 1
+        }
+      ]
+    },
+    {
+      "action": {
+        "type": "forge",
+        "pieceId": "main-1",
+        "useTechnique": true
+      },
+      "revision": 5,
+      "events": [
+        {
+          "type": "Forged",
+          "pieceId": "main-1",
+          "technique": true,
+          "school": "steady",
+          "result": "steady",
+          "before": 3,
+          "after": 4,
+          "ticket": null,
+          "crackTickets": 0,
+          "chargeBefore": 1,
+          "chargeAfter": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "type": "forge",
+        "pieceId": "main-1",
+        "useTechnique": false
+      },
+      "revision": 6,
+      "events": [
+        {
+          "type": "Forged",
+          "pieceId": "main-1",
+          "technique": false,
+          "school": "steady",
+          "result": "success",
+          "before": 4,
+          "after": 5,
+          "ticket": 850,
+          "crackTickets": 200,
+          "chargeBefore": 0,
+          "chargeAfter": 0
+        }
+      ]
+    },
+    {
+      "action": {
+        "type": "forge",
+        "pieceId": "main-1",
+        "useTechnique": false
+      },
+      "revision": 7,
+      "events": [
+        {
+          "type": "Forged",
+          "pieceId": "main-1",
+          "technique": false,
+          "school": "steady",
+          "result": "success",
+          "before": 5,
+          "after": 6,
+          "ticket": 992,
+          "crackTickets": 200,
+          "chargeBefore": 0,
+          "chargeAfter": 0
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "resources": []
+}

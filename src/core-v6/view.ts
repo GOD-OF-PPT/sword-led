@@ -57,6 +57,7 @@ export function getRunView(state:RunState):RunView{
  const currentTrial=state.trial;
  const view:RunView={rulesVersion:state.rulesVersion,runId:state.runId,revision:state.revision,phase:state.phase,
   activePiece:blade,blades:state.blades,unusedBlanks:unusedIds.length,charge:state.charges[stage],
+  techniquePieceIds:[...new Set(state.journal.flatMap(action=>action.type==='forge'&&action.useTechnique?[action.pieceId]:[]))],
   batch:{stage,total:3,unusedIds,charge:state.charges[stage]},
   coins:state.coins,gateCleared:state.gateCleared,gatePaid:state.gatePaid,tool:state.tool,
   forge:blade&&forgePhase?forgePreview(state,blade):null,trial:currentTrial,history:state.trials,

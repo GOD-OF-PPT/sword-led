@@ -1,0 +1,129 @@
+{
+  "date": "2026-10-23",
+  "tool": "image_gen.imagegen built-in",
+  "styleReference": "public/assets/d/reboot/forge-focus-backdrop-v1.webp",
+  "transparentBackground": true,
+  "conversion": "cwebp -q 90 format conversion only, alpha preserved",
+  "assets": [
+    {
+      "name": "wood-guardian-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-307dab67-545d-4530-8808-700288710c7a.png",
+      "dimensions": [
+        1230,
+        1278
+      ],
+      "pngColourType": 6,
+      "prompt": "design/d/v09/wood-guardian-v1.prompt.txt",
+      "files": [
+        {
+          "path": "design/d/v09/originals/wood-guardian-v1.png",
+          "bytes": 2078603,
+          "sha256": "293af5cc198dfb4e7c53cc0e6d9becbc40a73fe1de41ae6057b8202538b227a4"
+        },
+        {
+          "path": "public/assets/d/v09/wood-guardian-v1.webp",
+          "bytes": 488984,
+          "sha256": "3528fceeba74a77ea88f39ae7f6427dfd9a7294bb44451aca2d7b4e52327e67b"
+        },
+        {
+          "path": "design/d/v09/wood-guardian-v1.prompt.txt",
+          "bytes": 1301,
+          "sha256": "a969731317bfe74b209d2bc113389b66ff2168c13c6e07697d6801de616f15e1"
+        }
+      ]
+    },
+    {
+      "name": "furnace-nail-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-454b50f2-18ea-4c8d-9d72-f390e89b02b5.png",
+      "dimensions": [
+        1322,
+        1190
+      ],
+      "pngColourType": 6,
+      "prompt": "design/d/v09/furnace-nail-v1.prompt.txt",
+      "files": [
+        {
+          "path": "design/d/v09/originals/furnace-nail-v1.png",
+          "bytes": 837828,
+          "sha256": "79435fdd664c77034fa09b75fed3c6035ae7f60135dace19f78e680417e21abe"
+        },
+        {
+          "path": "public/assets/d/v09/furnace-nail-v1.webp",
+          "bytes": 207182,
+          "sha256": "7eeed3539d8221bea208e870ea136414351a3e80568345a377b6e9234e8e16ef"
+        },
+        {
+          "path": "design/d/v09/furnace-nail-v1.prompt.txt",
+          "bytes": 1021,
+          "sha256": "1609deca94aa441616ee6b267d19b1374e8d01245b05f86dd004e6e5f339768f"
+        }
+      ]
+    },
+    {
+      "name": "rebound-tooth-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-a5839c0e-5004-46f9-94e8-ca1ba091a168.png",
+      "dimensions": [
+        1433,
+        1098
+      ],
+      "pngColourType": 6,
+      "prompt": "design/d/v09/rebound-tooth-v1.prompt.txt",
+      "files": [
+        {
+          "path": "design/d/v09/originals/rebound-tooth-v1.png",
+          "bytes": 1235234,
+          "sha256": "9ba6961c13d000a17b84282b7dafe19c72ddca7787136f6f285883084c46505f"
+        },
+        {
+          "path": "public/assets/d/v09/rebound-tooth-v1.webp",
+          "bytes": 293614,
+          "sha256": "0e6774ea281fd3318c549cfc727d3f4bdf97e3efbc6524d1e28c482c1d88c84d"
+        },
+        {
+          "path": "design/d/v09/rebound-tooth-v1.prompt.txt",
+          "bytes": 986,
+          "sha256": "94fd1b88d7d75ba892fcc097f767619a743425e8b059d39be8cd80c566f11c27"
+        }
+      ]
+    },
+    {
+      "name": "sword-stages-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-48989023-04f9-4d76-901b-8c4777e3be19.png",
+      "dimensions": [
+        1942,
+        809
+      ],
+      "transparentAlphaExtrema": [
+        0,
+        255
+      ],
+      "references": [
+        "design/d/originals/blade-jian-v2.png",
+        "public/assets/d/reboot/forge-focus-backdrop-v1.webp"
+      ],
+      "conversion": "cwebp -q 92, alpha lossless; no raster editing",
+      "files": [
+        {
+          "path": "design/d/v09/originals/sword-stages-v1.png",
+          "bytes": 1787843,
+          "sha256": "8cb150c852fbd5c9dbbae4bf69afa89d91fdb72ea5ee68e785072f9d9ce7e08d"
+        },
+        {
+          "path": "public/assets/d/v09/sword-stages-v1.webp",
+          "bytes": 448220,
+          "sha256": "ba21afb33f43049015d6e54eebf0853d15391c11b98f45889c1369d5489b53a4"
+        },
+        {
+          "path": "design/d/v09/sword-stages-v1.prompt.txt",
+          "bytes": 2689,
+          "sha256": "612cbc64d65aa67761e9a8d71145aaa9084d3670e77b8bd9abb9d42243eb804c"
+        },
+        {
+          "path": "design/d/v09/sword-stages-v1.frames.json",
+          "bytes": 844,
+          "sha256": "8ba20565265ac069179e0819be6b8239113528650fd1378ce3e01285b2060fb8"
+        }
+      ]
+    }
+  ]
+}

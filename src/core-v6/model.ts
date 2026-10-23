@@ -99,6 +99,7 @@ export interface CachePreview extends Availability {
 export interface RunView {
  readonly rulesVersion:typeof RULES_VERSION;readonly runId:string;readonly revision:number;readonly phase:Phase;
  readonly activePiece:Blade|null;readonly blades:readonly Blade[];readonly unusedBlanks:number;readonly charge:number;
+ readonly techniquePieceIds:readonly PieceId[];
  readonly batch:{readonly stage:ForgeStage;readonly total:3;readonly unusedIds:readonly PieceId[];readonly charge:number};
  readonly coins:number;readonly gateCleared:boolean;readonly gatePaid:boolean;readonly tool:Tool|null;
  readonly forge:ForgePreview|null;
