@@ -61,6 +61,8 @@ export const V5_TEMPLATE = `
       <div id="v4-impact-badge" aria-hidden="true"></div>
     </div>
 
+    <section id="v5-craft-moment" hidden aria-label="落锤结果"></section>
+
     <section class="v4-forge-plan" aria-label="眼前的打造打算">
       <strong id="v4-plan-line">这一锤，自己拿主意</strong>
       <p id="v4-plan-copy">敲出估值，也看清下一锤的风险。</p>

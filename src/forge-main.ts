@@ -1,0 +1,15 @@
+import {createV5BrowserSession} from './application/v5-persistence.js';
+import {mountV5} from './presentation-v5/app.js';
+import './presentation-v4/styles.css';
+import './presentation-v4/forge.css';
+import './presentation-v4/journey.css';
+import './presentation-v4/collection.css';
+import './presentation-v5/economy.css';
+import './presentation-v5/market-stall.css';
+import './presentation-v5/growth.css';
+import './presentation-v5/readability.css';
+import './presentation-v5/focus.css';
+const root=document.querySelector<HTMLElement>('#app');
+if(!root)throw Error('缺少灯炉入口');
+const app=mountV5(root,createV5BrowserSession(window),{presentation:'focus'});
+if(import.meta.hot)import.meta.hot.dispose(()=>{void app.dispose();});

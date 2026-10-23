@@ -1,0 +1,496 @@
+/* The focus entry opts into this layout. The original workshop keeps its styles. */
+.v5-app[data-forge-layout=focus] {
+  --focus-edge: clamp(22px, 2.3vw, 44px);
+  --focus-rack: clamp(158px, 13vw, 194px);
+  --focus-paper: clamp(226px, 17.5vw, 286px);
+  --focus-left: calc(var(--focus-edge) + var(--focus-rack) + 18px);
+  --focus-right: calc(var(--focus-edge) + var(--focus-paper) + 22px);
+  --focus-ivory: #f4dfb6;
+  --focus-quiet: #e2caa2;
+  --focus-charcoal: #102126;
+  --focus-ember: #f0b566;
+}
+
+.v5-app[data-forge-layout=focus] .v4-workshop {
+  --bench-edge: var(--focus-edge);
+  --bench-customer: var(--focus-paper);
+  background-image: url('/assets/d/reboot/forge-focus-backdrop-v1.webp');
+  background-position: center;
+}
+
+/* Local backing separates the blade and paper from the existing forge texture. */
+.v5-app[data-forge-layout=focus] .v4-workshop::before {
+  background:
+    radial-gradient(ellipse at 49% 64%, #f4a13c0a 0, transparent 35%),
+    linear-gradient(90deg, #07171b5c, transparent 24%, transparent 73%, #081a1f36),
+    linear-gradient(180deg, #07171b8c, #07171b12 28%, transparent 61%, #07171b99);
+}
+
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-bench-mark { display: none; }
+.v5-app[data-forge-layout=focus][data-screen=workshop] .v4-tools {
+  top: 17px;
+  right: var(--focus-edge);
+  gap: 1px;
+}
+.v5-app[data-forge-layout=focus][data-screen=workshop] .v4-tools button {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 10px;
+  border-color: transparent;
+  border-bottom-color: #a78e5b42;
+  background: #102329c9;
+  box-shadow: none;
+  color: var(--focus-ivory);
+  font: 13px/1.4 var(--v4-display);
+}
+.v5-app[data-forge-layout=focus][data-screen=workshop] .v4-tools button:hover:enabled {
+  border-color: #c4a56b;
+  background: #243b3b;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-purse {
+  top: 17px;
+  left: var(--focus-edge);
+  right: auto;
+  gap: 18px;
+  padding: 7px 12px;
+  background: #102329dc;
+  border-bottom: 1px solid #b18d4a70;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-resource strong {
+  font-size: 23px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Three real swords remain direct targets; tomorrow's detail stays at its entry. */
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-rack {
+  left: var(--focus-edge);
+  top: 14%;
+  bottom: auto;
+  width: var(--focus-rack);
+  padding: 0 8px;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-rack::before,
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-rack::after {
+  top: 26px;
+  bottom: 2px;
+  width: 7px;
+  opacity: .8;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-rack h2 {
+  padding: 3px 7px 6px;
+  border: 0;
+  background: #192a25d9;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-rack-hint {
+  display: none;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-inventory {
+  gap: 7px;
+  margin-top: 10px;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-inventory > button {
+  min-height: 54px;
+  padding: 3px 4px 5px;
+  color: var(--focus-ivory);
+  background: linear-gradient(0deg, #102329df, #10232918);
+  font-size: 12px;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-inventory > button[aria-pressed=true] {
+  border-color: #e0b46b;
+  background: linear-gradient(90deg, #75553350, #14292ac9);
+  box-shadow: inset 2px 0 #f1c778, 0 2px 12px #080e1266;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-inventory canvas { height: 27px; }
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-kept-sword {
+  margin-top: 12px;
+  padding: 7px 4px 2px;
+  border: 0;
+  border-top: 1px solid #b3955a7a;
+  border-radius: 0;
+  background: #102329bd;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-kept-sword h3 { font-size: 14px; }
+.v5-app[data-forge-layout=focus] .v4-workshop #v4-reserve-slot { margin-top: 3px; }
+.v5-app[data-forge-layout=focus] .v4-workshop #v4-reserve-slot > button { min-height: 44px; }
+.v5-app[data-forge-layout=focus] .v4-workshop #v4-reserve-slot > span { display: none; }
+.v5-app[data-forge-layout=focus] .v4-workshop #v4-reserve-slot:not(:has(button)) { min-height: 0; margin-top: 0; }
+.v5-app[data-forge-layout=focus] .v4-workshop .v5-slot-plan {
+  margin: 4px auto 0;
+  padding: 1px 3px;
+  border: 0;
+  background: transparent;
+  font-size: 12px;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-next-plan {
+  min-height: 44px;
+  padding: 6px 3px;
+  border-top: 0;
+  background: transparent;
+  font-size: 13px;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-rack-actions { margin-top: 6px; }
+.v5-app[data-forge-layout=focus] .v4-workshop #v4-reserve {
+  min-height: 44px;
+  font-size: 14px;
+  background: #1e3730e8;
+  box-shadow: none;
+}
+
+/* Canvas aspect and hammer face/grip geometry are inherited without stretching. */
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-scene {
+  left: var(--focus-left);
+  right: var(--focus-right);
+  top: 30%;
+  bottom: 10%;
+}
+.v5-app[data-forge-layout=focus] #v4-scene::before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  inset: 28% -3% 10%;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 55% 63%, #edb56d14, transparent 64%);
+}
+.v5-app[data-forge-layout=focus] #v4-hammer {
+  --hammer-width: clamp(235px, 28vw, 390px);
+  filter: drop-shadow(0 8px 7px #0008);
+}
+
+/* A result is read above the blade, not in three simultaneous floating labels. */
+.v5-app[data-forge-layout=focus] #v4-float,
+.v5-app[data-forge-layout=focus] #v4-impact-badge { display: none; }
+.v5-app[data-forge-layout=focus] #v5-craft-moment {
+  position: absolute;
+  z-index: 9;
+  top: 44%;
+  left: var(--focus-left);
+  right: auto;
+  width: min(450px, calc(100% - var(--focus-left) - var(--focus-right) - 24px));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 3px 15px;
+  align-items: baseline;
+  padding: 7px 17px 9px;
+  color: var(--focus-ivory);
+  pointer-events: none;
+  text-shadow: 0 2px 4px #051014;
+  background: linear-gradient(90deg, #10232900, #102329e6 7%, #102329e6 88%, #10232900);
+}
+.v5-app[data-forge-layout=focus] .v5-moment-kicker {
+  grid-column: 1 / -1;
+  color: var(--focus-quiet);
+  font: 12px/1.4 var(--v4-display);
+  letter-spacing: 1px;
+}
+.v5-app[data-forge-layout=focus] .v5-moment-title {
+  color: #ffe0a1;
+  font: 700 27px/1.22 var(--v4-display);
+  letter-spacing: 2px;
+}
+.v5-app[data-forge-layout=focus] .v5-moment-delta {
+  color: #f7e5bf;
+  text-align: right;
+  font: 19px/1.4 var(--v4-display);
+  font-variant-numeric: tabular-nums;
+}
+.v5-app[data-forge-layout=focus] .v5-moment-triggers {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px 12px;
+  color: #e8d39e;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.v5-app[data-forge-layout=focus] .v5-moment-triggers > span {
+  padding-left: 7px;
+  border-left: 2px solid #c3914e;
+}
+.v5-app[data-forge-layout=focus] .v5-moment-progress {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 6px;
+  margin: 3px 0;
+}
+.v5-app[data-forge-layout=focus] .v5-moment-progress > span {
+  width: 28px;
+  height: 5px;
+  border: 1px solid #ac8b5680;
+  background: #293b38;
+}
+.v5-app[data-forge-layout=focus] .v5-moment-progress > span[data-contacted=true] {
+  border-color: #e8b25e;
+  background: #e8b25e;
+  box-shadow: 0 0 7px #efb35b45;
+}
+.v5-app[data-forge-layout=focus] .v5-moment-copy {
+  grid-column: 1 / -1;
+  color: var(--focus-ivory);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.v5-app[data-forge-layout=focus] #v5-craft-moment[data-result=great] .v5-moment-title {
+  color: #fff0b5;
+}
+.v5-app[data-forge-layout=focus] #v5-craft-moment[data-result=crack],
+.v5-app[data-forge-layout=focus] #v5-craft-moment[data-result=broken] {
+  background: linear-gradient(90deg, #38241d00, #38241de8 7%, #17262ae8 88%, #17262a00);
+}
+.v5-app[data-forge-layout=focus] #v5-craft-moment[data-result=crack] .v5-moment-title,
+.v5-app[data-forge-layout=focus] #v5-craft-moment[data-result=broken] .v5-moment-title {
+  color: #ffc5a2;
+}
+
+/* The next risk remains visible with the current value, close to the blade. */
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-blade-reading {
+  pointer-events: auto;
+  top: 74%;
+  bottom: auto;
+  left: calc(var(--focus-left) + 6px);
+  right: calc(var(--focus-right) + 6px);
+  width: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, .95fr) 116px;
+  gap: 2px 13px;
+  align-items: center;
+  min-height: 100px;
+  padding: 7px 0 8px 11px;
+  border: 0;
+  border-left: 1px solid #bc955257;
+  background: linear-gradient(90deg, #0d2229eb, #0d2229cc 76%, #0d222900);
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-value-line { grid-column: 1; grid-row: 1; gap: 6px 11px; }
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-value-line > span:first-child { font-size: 14px; }
+.v5-app[data-forge-layout=focus] .v4-workshop #v4-value { font-size: 32px; }
+.v5-app[data-forge-layout=focus] .v4-workshop #v4-condition,
+.v5-app[data-forge-layout=focus] .v4-workshop #v4-craft-record,
+.v5-app[data-forge-layout=focus] .v4-workshop .v5-value-meaning {
+  font-size: 12px;
+  line-height: 1.4;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v5-value-meaning { grid-column: 1; grid-row: 2; }
+.v5-app[data-forge-layout=focus] .v4-workshop #v4-craft-record { grid-column: 1; grid-row: 3; }
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-next-hit {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 3px 13px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop #v4-risk { color: #ffe1b2; }
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-ember-meter {
+  grid-column: 2;
+  grid-row: 3;
+  gap: 7px;
+  margin-top: 5px;
+  padding: 3px 7px 4px;
+  border-bottom-width: 2px;
+  box-shadow: none;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-ember-meter > i { width: 14px; height: 14px; }
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-strike-button {
+  position: static;
+  grid-column: 3;
+  grid-row: 1 / 4;
+  align-self: center;
+  width: 116px;
+  min-height: 58px;
+  padding: 7px;
+  font-size: 22px;
+  box-shadow: inset 0 1px #f2d49d29, 0 3px 8px #0005;
+}
+
+/* The paper is one readable destination, with its real quote kept below it. */
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-customer {
+  top: 12%;
+  right: var(--focus-edge);
+  bottom: 100px;
+  width: var(--focus-paper);
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-person-target {
+  flex: 0 0 103px;
+  min-height: 103px;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-customer[data-paper-layout=double] .v4-person-target {
+  flex-basis: 82px;
+  min-height: 82px;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-customer-figure { inset: -5px 0 26px; }
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-customer-nameplate {
+  left: 18%;
+  right: 18%;
+  padding: 3px 5px;
+  border: 0;
+  background: #142b2be6;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-customer-nameplate b { font-size: 19px; }
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-customer-nameplate small {
+  font-size: 12px;
+  margin-top: 2px;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-objective:has(#v4-order-routes) {
+  flex: 0 1 auto;
+  min-height: 0;
+  padding: 10px 11px 9px;
+  overflow: auto;
+  color: #3e2d20;
+  background: linear-gradient(105deg, #d8bc8c, #e7d0a5 48%, #d6b888);
+  border-color: #a58657;
+  border-top-width: 2px;
+  box-shadow: 0 5px 10px #020b0d4d, inset 0 0 0 2px #a4814d1a;
+  scrollbar-color: #977748 #dac197;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-objective:has(#v4-order-routes) h1 { font-size: 21px; }
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-objective:has(#v4-order-routes) .v4-eyebrow,
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-objective:has(#v4-order-routes) #v4-goal-condition,
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-objective:has(#v4-order-routes) #v4-goal-progress,
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-order-title,
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-order-requirement,
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-order-selected,
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-order-socket-caption,
+.v5-app[data-forge-layout=focus] .v4-workshop .v5-order-pay {
+  font-size: 12px;
+  line-height: 1.4;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-order-label { font-size: 13px; }
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-deliver-button {
+  flex: 0 0 auto;
+  min-height: 50px;
+  margin-top: 9px;
+  padding: 8px 5px;
+  font-size: 18px;
+  white-space: normal;
+  box-shadow: inset 0 0 0 2px #68452729, 0 3px 9px #0005;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop button.v5-delivery-quote {
+  min-height: 44px;
+  margin-top: 3px;
+  padding: 4px 5px;
+  background: #102329eb;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-visiting-actions { gap: 5px; padding-top: 5px; }
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-shop-help { margin-top: 3px; font-size: 12px; }
+.v5-app[data-forge-layout=focus] .v4-workshop #v4-inline-delivery {
+  padding: 10px 35px 11px 11px;
+  background: linear-gradient(105deg, #d8bc8c, #e7d0a5 48%, #d6b888);
+}
+.v5-app[data-forge-layout=focus] .v4-workshop #v4-inline-title { font-size: 20px; }
+.v5-app[data-forge-layout=focus] .v4-workshop #v4-inline-image { width: 77px; height: 50px; }
+.v5-app[data-forge-layout=focus] .v4-workshop #v4-inline-copy { margin-top: 5px; font-size: 12px; line-height: 1.5; }
+.v5-app[data-forge-layout=focus] .v4-workshop .v5-inline-payment { font-size: 13px; }
+.v5-app[data-forge-layout=focus] .v4-workshop #v4-inline-review { min-height: 44px; margin-top: 6px; }
+
+/* Guidance keeps a separate, quieter place; risk and actual consequences stay visible. */
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-forge-plan {
+  top: 72px;
+  left: var(--focus-left);
+  right: var(--focus-right);
+  padding: 4px 9px 5px;
+  border: 0;
+  background: linear-gradient(90deg, #102329ed, #102329bd 84%, transparent);
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-forge-plan > strong { font-size: 15px; line-height: 1.35; }
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-forge-plan > p { margin-top: 2px; font-size: 12px; line-height: 1.4; }
+.v5-app[data-forge-layout=focus]:has(#v5-craft-moment:not([hidden])) .v4-forge-plan { visibility: hidden; }
+.v5-app[data-forge-layout=focus][data-screen=workshop] .v4-notice {
+  top: 70px;
+  left: var(--focus-left);
+  right: var(--focus-right);
+  width: auto;
+  max-height: 105px;
+  padding: 8px 39px 8px 10px;
+  border-color: #ae905868;
+  background: #122a2df5;
+  box-shadow: 0 4px 10px #0005;
+}
+.v5-app[data-forge-layout=focus][data-screen=workshop] .v4-notice h2 { font-size: 16px; }
+.v5-app[data-forge-layout=focus][data-screen=workshop] .v4-notice p { font-size: 12px; line-height: 1.45; }
+.v5-app[data-forge-layout=focus][data-screen=workshop] .v4-notice-content button { max-width: 112px; }
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-travel-props {
+  left: var(--focus-edge);
+  bottom: 13px;
+  width: calc(var(--focus-rack) + 14px);
+  gap: 5px;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-traits button { width: 54px; min-height: 60px; font-size: 12px; }
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-furnishings {
+  left: var(--focus-left);
+  bottom: 10px;
+  max-width: calc(100% - var(--focus-left) - var(--focus-right) - 130px);
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-furnishings button { width: 70px; min-height: 60px; font-size: 12px; }
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-furnishings button canvas { width: 40px; height: 40px; }
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-ground-action {
+  left: auto;
+  right: var(--focus-right);
+  bottom: 18px;
+  min-height: 44px;
+  padding: 6px 9px;
+  background: #11292be3;
+  box-shadow: none;
+  font-size: 12px;
+}
+.v5-app[data-forge-layout=focus] .v4-workshop .v4-settle-button {
+  right: var(--focus-edge);
+  bottom: 18px;
+  width: var(--focus-paper);
+  min-height: 59px;
+  font-size: 20px;
+  box-shadow: none;
+}
+.v5-app[data-forge-layout=focus] .v4-save-banner {
+  top: 68px;
+  right: var(--focus-edge);
+  width: min(322px, 28vw);
+  z-index: 80;
+}
+
+@media (min-width: 1600px) {
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-rack { top: 15%; }
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-rack h2 { font-size: 21px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-inventory { gap: 12px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-inventory > button { min-height: 72px; font-size: 14px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-inventory canvas { height: 42px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-kept-sword { margin-top: 19px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-kept-sword h3 { font-size: 16px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-person-target { flex-basis: 158px; min-height: 158px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-customer[data-paper-layout=double] .v4-person-target { flex-basis: 122px; min-height: 122px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-customer-nameplate b { font-size: 23px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-objective:has(#v4-order-routes) { padding: 13px 14px 11px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-objective:has(#v4-order-routes) h1 { font-size: 25px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-order-title,
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-order-requirement,
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-order-selected,
+  .v5-app[data-forge-layout=focus] .v4-workshop .v5-order-pay { font-size: 13px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-order-label { font-size: 14px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-deliver-button { min-height: 57px; font-size: 20px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop button.v5-delivery-quote { font-size: 13px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-blade-reading { grid-template-columns: minmax(0, 1fr) minmax(250px, .95fr) 133px; min-height: 117px; gap: 3px 20px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop #v4-value { font-size: 39px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-value-line > span:first-child { font-size: 17px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-next-hit { font-size: 14px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-strike-button { width: 133px; min-height: 66px; font-size: 26px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-ember-meter > i { width: 17px; height: 17px; }
+  .v5-app[data-forge-layout=focus] #v5-craft-moment { top: 46%; width: min(540px, calc(100% - var(--focus-left) - var(--focus-right) - 24px)); padding: 10px 23px 12px; gap: 4px 19px; }
+  .v5-app[data-forge-layout=focus] .v5-moment-title { font-size: 34px; }
+  .v5-app[data-forge-layout=focus] .v5-moment-delta { font-size: 23px; }
+  .v5-app[data-forge-layout=focus] .v5-moment-copy,
+  .v5-app[data-forge-layout=focus] .v5-moment-triggers,
+  .v5-app[data-forge-layout=focus] .v5-moment-kicker { font-size: 14px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-forge-plan { top: 82px; }
+  .v5-app[data-forge-layout=focus][data-screen=workshop] .v4-notice { top: 80px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-ground-action { bottom: 29px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-furnishings button { width: 76px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-furnishings button canvas { width: 48px; height: 48px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-travel-props,
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-furnishings { bottom: 29px; }
+  .v5-app[data-forge-layout=focus] .v4-workshop .v4-settle-button { bottom: 29px; min-height: 67px; font-size: 23px; }
+}

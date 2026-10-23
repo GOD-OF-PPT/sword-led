@@ -19,6 +19,7 @@ import {V5_TEMPLATE} from './shell.js';
 import {createForgeRenderer} from '../presentation-v4/forge.js';
 import type {ForgeContactFrame} from '../presentation-v4/forge.js';
 import {createWorkbenchFeedback} from './workbench-feedback.js';
+import {createCraftMoment} from './craft-moment.js';
 import {createCommissionPaper,commissionPaper} from './commission-paper.js';
 import type {FeedbackRect} from './workbench-feedback.js';
 import {createHandoff} from '../presentation-v4/handoff.js';
@@ -42,18 +43,25 @@ const SAVE_ERRORS:Record<string,string>={storage_read_failed:'读取被拒绝',s
 interface ModalAction {label:string;run:()=>void;disabled?:boolean;primary?:boolean;id?:string}
 type SceneOverride={kind:'delivery';revision:number;commissionId:number;pieceIds:readonly string[]}|{kind:'intro';revision:number};
 
-export function mountV5(root:HTMLElement,port:V5Session){
+export interface V5PresentationOptions {presentation?:'classic'|'focus'}
+export function mountV5(root:HTMLElement,port:V5Session,options:V5PresentationOptions={}){
  root.innerHTML=V5_TEMPLATE;enableKeyboardNavigation(root);const ownRoot=root.firstElementChild;
+ const focused=options.presentation==='focus';ownRoot?.setAttribute('data-forge-layout',focused?'focus':'classic');
  const find=<T extends HTMLElement>(id:string)=>{const n=root.querySelector<T>('#'+id);if(!n)throw Error('Missing '+id);return n;};
  const button=(id:string)=>find<HTMLButtonElement>(id),dialog=find<HTMLDialogElement>('v4-dialog'),stageArtwork=find<HTMLImageElement>('v4-stage-image');
  const text=(id:string,value:string)=>{const copy=workshopText(value),n=find(id);if(n.textContent!==copy)n.textContent=copy;};
  const show=(id:string,value:boolean)=>{find(id).hidden=!value;};
+ if(focused){
+  for(const node of root.querySelectorAll('.v4-edition,.v4-bench-mark > span'))node.textContent='炉火试作 · 三柄行囊';
+  const link=find<HTMLAnchorElement>('v5-old-v4');link.href='/classic.html';link.textContent='回到原炉台';
+ }
  const preferences=createPreferences(()=>localStorage),audio=createForgeAudio(undefined,IMPACT_SOUNDS),motion=matchMedia('(prefers-reduced-motion: reduce)');
  let snapshot=port.getSnapshot(),collection=port.getCollectionSnapshot(),prefs=preferences.getSnapshot();
  let disposed=false,route:'title'|'game'='title',modal=false,paused=false,busy=false,epoch=0,selectedId='',stageKey='',inventoryKey='',recipeKey='',beltKey='',stageMode='title';
  let origin:HTMLElement|null=null,modalKind='',seedDraft='',notice:ForgeNotice|null=null,sceneOverride:SceneOverride|null=null;
  let renderer:ReturnType<typeof createForgeRenderer>|null=null,input:ReturnType<typeof bindDirectStrikeInput>|null=null,handoff:ReturnType<typeof createHandoff>|null=null;
  let feedback:ReturnType<typeof createWorkbenchFeedback>|null=null;
+ let craftMoment:ReturnType<typeof createCraftMoment>|null=null;
  let paper:ReturnType<typeof createCommissionPaper>|null=null;
  let strikeReadout:{runId:string;revision:number;generation:number;epoch:number;pieceId:string;value:number;level:number}|null=null;
  let inlineDelivery:{runId:string;day:number;commissionId:number;pieceIds:readonly string[];amount:number;baseFee:number;bonus:number}|null=null;
@@ -70,7 +78,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
  const canAct=()=>!disposed&&route==='game'&&!modal&&!paused&&snapshot.active&&!snapshot.conflict&&(snapshot.mode==='writer'||snapshot.mode==='memory');
  const setStatus=(value:string)=>text('v4-status',value);
  function pauseNotice():ForgeNotice{return{title:'炉火还在，已经为你暂停',copy:'刚才未完成的输入与动效已取消，已接受的成果保持。',action:'resume',label:'继续这一炉'};}
- function cancelPresentation(clearScene=true){effectGeneration++;for(const id of timers)clearTimeout(id);timers.clear();for(const a of sceneAnimations)a.cancel();sceneAnimations.clear();renderer?.cancel();input?.cancel();handoff?.cancel();feedback?.cancel();const reading=strikeReadout;strikeReadout=null;busy=false;lastTriggers=[];if(reading){const b=current();text('v4-value',b?fmt(b.value):'—');text('v4-craft-record',b?`等级 ${b.level} · 已完成安全连锻 ${b.bursts}次`:'');const s=state();if(s)renderBelt(s);}if(clearScene){sceneOverride=null;inlineDelivery=null;}audio.silence();}
+ function cancelPresentation(clearScene=true){effectGeneration++;for(const id of timers)clearTimeout(id);timers.clear();for(const a of sceneAnimations)a.cancel();sceneAnimations.clear();renderer?.cancel();input?.cancel();handoff?.cancel();feedback?.cancel();craftMoment?.cancel();const reading=strikeReadout;strikeReadout=null;busy=false;lastTriggers=[];if(reading){const b=current();text('v4-value',b?fmt(b.value):'—');text('v4-craft-record',b?`等级 ${b.level} · 已完成安全连锻 ${b.bursts}次`:'');const s=state();if(s)renderBelt(s);}if(clearScene){sceneOverride=null;inlineDelivery=null;}audio.silence();}
  function later(fn:()=>void,ms:number){const token=effectGeneration,id=setTimeout(()=>{timers.delete(id);if(!disposed&&token===effectGeneration)fn();},ms);timers.add(id);}
  function nextBlade(){const s=state();selectedId=s?.blades.find(b=>b.status==='active'&&b.id!==s.reserveId)?.id??s?.reserveId??'';}
  function action(label:string,run:()=>void,primary=false,disabled=false){const node=element('button',label,primary?'v4-primary':'v4-secondary');node.type='button';node.disabled=disabled;node.onkeydown=e=>{if(e.repeat&&(e.key==='Enter'||e.code==='Space'))e.preventDefault();};node.onclick=run;return node;}
@@ -115,8 +123,9 @@ export function mountV5(root:HTMLElement,port:V5Session){
    const wasReady=getRunView(before).blades.find(p=>p.blade.id===strike.pieceId)?.willCommission;
    if(!n&&!wasReady&&getRunView(r.state).blades.find(p=>p.blade.id===strike.pieceId)?.willCommission){const view=getRunView(r.state),progress=view.commission.progress,multi=view.commission.routes.some(route=>route.count>1),oneMore=progress.routes.some(route=>route.required>1&&route.count===route.required-1);notice={title:'这柄剑，已经合格了',copy:multi?(view.commission.id===11?'这柄剑符合接力的一条路线；旧剑一柄或新剑两柄分别计数。':oneMore?'交出这一柄，双驿需要的两柄就齐了。':'先交出这一柄，再准备另一柄。两柄各自合格，才算完成。'):'现在交给来客，就能保住这一站。也可以继续锻，承担下一锤的风险。',action:'deliver',label:`交给${view.commission.name}`,subject:{runId:r.state.runId,day:r.state.day,revision:r.state.revision,pieceId:strike.pieceId,generation:snapshot.generation}};}
    busy=true;const token=++effectGeneration,b=r.state.blades.find(b=>b.id===strike.pieceId)!;renderer?.draw(b);
-   renderer?.play(strike,lastPoint,()=>{if(disposed||token!==effectGeneration)return;busy=false;strikeReadout=null;if(current()?.status!=='active')nextBlade();render();},before.blades.find(piece=>piece.id===strike.pieceId));
-   const h=strike.hits.at(-1);if(h)setStatus(`${strike.burst?'安全连锻 ×'+strike.hits.length:'落锤'} · ${h.result==='great'?'大成':h.result==='crack'?'出现裂纹':h.result==='broken'?'断剑回收':'锻成'} · 这一记后估值 ${fmt(h.after)}`);
+   craftMoment?.begin(strike.pieceId,strike.hits,strike.burst);
+   renderer?.play(strike,lastPoint,()=>{if(disposed||token!==effectGeneration)return;craftMoment?.settled();busy=false;strikeReadout=null;if(current()?.status!=='active')nextBlade();render();},before.blades.find(piece=>piece.id===strike.pieceId));
+   const h=strike.hits.at(-1);if(h&&!focused)setStatus(`${strike.burst?'安全连锻 ×'+strike.hits.length:'落锤'} · ${h.result==='great'?'大成':h.result==='crack'?'出现裂纹':h.result==='broken'?'断剑回收':'锻成'} · 这一记后估值 ${fmt(h.after)}`);
   }else{
    cancelPresentation();if(command.type==='advance'||current()?.status!=='active'||command.type==='reserve'&&r.state.reserveId===selectedId)nextBlade();
    if(command.type==='reserve'&&before.reserveId===command.pieceId&&r.state.reserveId!==command.pieceId)selectedId=command.pieceId;
@@ -151,12 +160,13 @@ export function mountV5(root:HTMLElement,port:V5Session){
   if(before.upgradeCount!==after.upgradeCount||before.crackGuard!==after.crackGuard||JSON.stringify(before.pending)!==JSON.stringify(after.pending))nodes.push(find('v4-modifications'));
   for(const node of nodes)try{const animation=node.animate([{filter:'brightness(1)'},{filter:'brightness(1.8)',offset:.3},{filter:'brightness(1)'}],{duration:700,easing:'ease-out'});sceneAnimations.add(animation);void animation.finished.then(()=>sceneAnimations.delete(animation),()=>sceneAnimations.delete(animation));}catch{/* Factual receipts remain available. */}
  }
- function choose(id:string){if(busy||modal||handoff?.isDragging())return;input?.cancel();renderer?.cancel();feedback?.cancel();if(notice?.subject&&notice.subject.pieceId!==id)notice=null;epoch++;selectedId=id;render();button('v4-strike').focus({preventScroll:true});}
+ function choose(id:string){if(busy||modal||handoff?.isDragging())return;input?.cancel();renderer?.cancel();feedback?.cancel();craftMoment?.cancel();if(notice?.subject&&notice.subject.pieceId!==id)notice=null;epoch++;selectedId=id;render();button('v4-strike').focus({preventScroll:true});}
  function contactReadout(frame:ForgeContactFrame){
   const s=state(),reading=strikeReadout;if(!s||!reading||!busy||reading.runId!==s.runId||reading.revision!==s.revision||reading.generation!==snapshot.generation||reading.epoch!==epoch||reading.pieceId!==frame.pieceId)return;
   strikeReadout={...reading,value:frame.hit.after,level:frame.hit.level};lastTriggers=[...new Set(frame.hit.triggers)];
   text('v4-float',find('v4-float').textContent??'');
-  text('v4-value',fmt(frame.hit.after));text('v4-craft-record',`等级 ${frame.hit.level} · 已完成安全连锻 ${frame.after.bursts}次`);renderBelt(s);feedback?.contact(frame);
+  text('v4-value',fmt(frame.hit.after));text('v4-craft-record',`等级 ${frame.hit.level} · 已完成安全连锻 ${frame.after.bursts}次`);renderBelt(s);
+  if(focused){craftMoment?.contact(frame);setStatus(`${frame.burst?'安全连锻 '+(frame.index+1)+'/'+frame.total:'落锤'} · ${frame.hit.result==='great'?'大成':frame.hit.result==='crack'?'出现裂纹':frame.hit.result==='broken'?'断剑回收':'锻成'} · 估值 ${fmt(frame.hit.after)}`);}else feedback?.contact(frame);
  }
  function leaveScene(){cancelPresentation();epoch++;stageKey='';if(current()?.status!=='active')nextBlade();render();}
  function updateAudioStatus(next:AudioStatus=audio.getStatus()){
@@ -292,7 +302,8 @@ export function mountV5(root:HTMLElement,port:V5Session){
  function renderNotice(){
   if(!noticeSubjectCurrent())notice=null;
   if(notice?.action==='deliver'){const piece=state()?getRunView(state()!).blades.find(p=>p.blade.id===notice?.subject?.pieceId):null;if(!piece?.willCommission||piece.reserved)notice=null;}
-  const visible=!!notice&&route==='game'&&(stageMode==='workshop'||paused);show('v4-notice',visible);root.firstElementChild?.setAttribute('data-has-notice',String(visible));if(!notice)return;button('v4-notice-action').disabled=!['book','journey','inspect','resume','none'].includes(notice.action)&&(!canAct()||busy);text('v4-notice-title',notice.title);text('v4-notice-copy',notice.copy);text('v4-notice-action',notice.label);button('v4-notice-action').hidden=notice.action==='none';
+  const hasResult=focused&&!find('v5-craft-moment').hidden;
+  const visible=!!notice&&route==='game'&&(stageMode==='workshop'||paused)&&(!focused||!busy&&!hasResult);show('v4-notice',visible);root.firstElementChild?.setAttribute('data-has-notice',String(visible));if(!notice)return;button('v4-notice-action').disabled=!['book','journey','inspect','resume','none'].includes(notice.action)&&(!canAct()||busy);text('v4-notice-title',notice.title);text('v4-notice-copy',notice.copy);text('v4-notice-action',notice.label);button('v4-notice-action').hidden=notice.action==='none';
  }
  function saveSummary(){
   const problems:string[]=[];if(snapshot.mode==='memory')problems.push('本次不保存，关闭页面会失去当前试玩');else if(snapshot.mode==='readonly')problems.push('另一窗口正在保存，本页只读');else if(snapshot.mode==='unsupported')problems.push('未取得保存锁，可不保存试玩');else if(snapshot.mode==='error')problems.push('保存权获取失败，可重试读取最新，或明确不保存试玩');else if(snapshot.conflict)problems.push('磁盘进度已更新，请先导出');else if(snapshot.dirty)problems.push('当前行程尚未保存');else if(snapshot.load?.main.status==='invalid'||snapshot.load?.main.status==='unavailable')problems.push('主档'+(SAVE_ERRORS[snapshot.load.main.error]??'不可读取'));else if(snapshot.load?.main.status==='empty'&&snapshot.load.backup.status==='valid')problems.push('发现可恢复的局备份');
@@ -302,7 +313,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
  function render(){
   if(disposed)return;
   const oldLink=find<HTMLAnchorElement>('v5-old-v4');
-  try{const old=decodeV4Save(localStorage.getItem(V4_SAVE_KEY));oldLink.textContent=old.status==='valid'?`继续旧版十二灯 · 第${old.state.day}天`:'旧版十二灯行程';}catch{oldLink.textContent='旧版十二灯行程';}const previousMode=stageMode,s=state(),work=route==='game'&&s&&journeyScreen(s,12)==='workshop'&&!sceneOverride;stageMode=route==='title'?'title':work?'workshop':'stage';root.firstElementChild?.setAttribute('data-screen',stageMode);root.firstElementChild?.setAttribute('data-chapter',s?String(getRunView(s).chapter.id):'1');
+  if(!focused)try{const old=decodeV4Save(localStorage.getItem(V4_SAVE_KEY));oldLink.textContent=old.status==='valid'?`继续旧版十二灯 · 第${old.state.day}天`:'旧版十二灯行程';}catch{oldLink.textContent='旧版十二灯行程';}const previousMode=stageMode,s=state(),work=route==='game'&&s&&journeyScreen(s,12)==='workshop'&&!sceneOverride;stageMode=route==='title'?'title':work?'workshop':'stage';root.firstElementChild?.setAttribute('data-screen',stageMode);root.firstElementChild?.setAttribute('data-chapter',s?String(getRunView(s).chapter.id):'1');
   show('v4-title',route==='title');show('v4-workshop',!!work);show('v4-stage',route==='game'&&!work&&!!s);show('v4-tools',true);show('v4-menu',route==='game');show('v4-book',route==='game');show('v4-settings',route==='game');
   button('v4-continue').hidden=!s;button('v4-continue').disabled=!snapshot.active;button('v4-start').disabled=!snapshot.active||snapshot.conflict||!['writer','memory'].includes(snapshot.mode)||snapshot.mode!=='memory'&&collection.pending||snapshot.mode!=='memory'&&snapshot.load?.main.status==='unavailable';text('v4-start',s?'另启一程':'启程');
   show('v4-title-challenge',collection.data.challenge);button('v4-title-challenge').disabled=button('v4-start').disabled||collection.pending||!!collection.problem;
@@ -537,6 +548,7 @@ export function mountV5(root:HTMLElement,port:V5Session){
  function forgeIdentity():InputIdentity|null {const s=state(),b=current();if(!s||!b||!canAct()||busy||handoff?.isDragging()||stageMode!=='workshop'||!getRunView(s).blades.find(p=>p.blade.id===b.id)?.canStrike)return null;return{runId:s.runId,revision:s.revision,generation:snapshot.generation,epoch,pieceId:b.id,mode:'standard',periodMs:1,rulesVersion:s.rulesVersion};}
  function navigationIdentity():InputIdentity|null {const s=state();if(!s||!canAct()||busy||handoff?.isDragging()||stageMode!=='workshop'||forgeIdentity())return null;return{runId:s.runId,revision:s.revision,generation:snapshot.generation,epoch,pieceId:'navigation',mode:'standard',periodMs:1,rulesVersion:s.rulesVersion};}
  renderer=createForgeRenderer(root,{reduced,valueLabel:'估值',cue:cue=>audio.acceptedCue(cue),ready:()=>{render();repaintProps();updateArtworkStatus();},problem:artworkProblem,contact:contactReadout});
+ if(focused)craftMoment=createCraftMoment(root,reduced);
  feedback=createWorkbenchFeedback(root,{reduced,paintBlade:(canvas,blade)=>renderer?.paintThumb(canvas,blade)});
  paper=createCommissionPaper(root,{thumb:id=>{const b=state()?.blades.find(piece=>piece.id===id);return b?thumb(b):null;}});
  handoff=createHandoff(root,{capture:pieceId=>{const s=state();if(!s)return null;const token={runId:s.runId,revision:s.revision,generation:snapshot.generation,epoch,pieceId};return handoffBlade(token)?token:null;},preview:handoffPreview,commit:commitHandoff});
@@ -570,5 +582,5 @@ export function mountV5(root:HTMLElement,port:V5Session){
  const stopBook=port.subscribeCollection(value=>{collection=value;render();});
  const stopAudio=audio.subscribe(updateAudioStatus);
  render();void port.activate();
- return{async dispose(){if(disposed)return;disposed=true;cancelPresentation();stopRun();stopBook();stopPrefs();stopAudio();auxiliaryArtwork.dispose();stageAssetGeneration++;stageArtwork.onload=null;stageArtwork.onerror=null;input?.dispose();handoff?.dispose();feedback?.dispose();paper?.dispose();renderer?.dispose();motion.removeEventListener('change',onMotion);document.removeEventListener('visibilitychange',onVisibility);window.removeEventListener('storage',onSettingsStorage);window.removeEventListener('blur',onBlur);root.removeEventListener('keydown',onKey);root.removeEventListener('pointerdown',onGesture,{capture:true});root.removeEventListener('keydown',onGesture,{capture:true});await Promise.allSettled([port.dispose(),audio.dispose()]);if(root.firstElementChild===ownRoot)root.replaceChildren();}};
+ return{async dispose(){if(disposed)return;disposed=true;cancelPresentation();stopRun();stopBook();stopPrefs();stopAudio();auxiliaryArtwork.dispose();stageAssetGeneration++;stageArtwork.onload=null;stageArtwork.onerror=null;input?.dispose();handoff?.dispose();feedback?.dispose();craftMoment?.dispose();paper?.dispose();renderer?.dispose();motion.removeEventListener('change',onMotion);document.removeEventListener('visibilitychange',onVisibility);window.removeEventListener('storage',onSettingsStorage);window.removeEventListener('blur',onBlur);root.removeEventListener('keydown',onKey);root.removeEventListener('pointerdown',onGesture,{capture:true});root.removeEventListener('keydown',onGesture,{capture:true});await Promise.allSettled([port.dispose(),audio.dispose()]);if(root.firstElementChild===ownRoot)root.replaceChildren();}};
 }

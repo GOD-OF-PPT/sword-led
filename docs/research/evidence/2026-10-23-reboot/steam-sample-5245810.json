@@ -1,0 +1,426 @@
+{
+  "collectedAt": "2026-10-23T01:38:56.643Z",
+  "endpoint": "https://api.steampowered.com/IUserReviewsService/GetAppReviews/v1/",
+  "purchaseType": "Steam purchases only",
+  "sampling": "First page only; 4 English buckets of 3 and 2 Chinese buckets of 2 per game. Helpful day_range=0. Not representative; deduplicate recommendation IDs.",
+  "games": [
+    {
+      "appid": 5245810,
+      "title": "ForgeTax",
+      "store": "https://store.steampowered.com/app/5245810/",
+      "queries": [
+        {
+          "bucket": "en-helpful-positive",
+          "parameters": {
+            "appid": 5245810,
+            "filter": 0,
+            "languages": [
+              "english"
+            ],
+            "review_type": 1,
+            "purchase_type": 0,
+            "num_per_page": 3,
+            "day_range": 0,
+            "filter_offtopic_activity": true,
+            "use_review_quality": true
+          },
+          "fetchedAt": "2026-10-23T01:38:57.464Z",
+          "count": 3,
+          "rawPath": "tmp/research/steam-2026-10-23T01-38-56-641Z-5245810/5245810-en-helpful-positive.json",
+          "sha256": "b98d77cb59cec45ecee3edd1d7261efc7e05ccbd3b3f9c8dae2c3618a8ebe636",
+          "totalMatching": 38,
+          "dayRangeUsed": 0
+        },
+        {
+          "bucket": "en-helpful-negative",
+          "parameters": {
+            "appid": 5245810,
+            "filter": 0,
+            "languages": [
+              "english"
+            ],
+            "review_type": 2,
+            "purchase_type": 0,
+            "num_per_page": 3,
+            "day_range": 0,
+            "filter_offtopic_activity": true,
+            "use_review_quality": true
+          },
+          "fetchedAt": "2026-10-23T01:38:57.698Z",
+          "count": 3,
+          "rawPath": "tmp/research/steam-2026-10-23T01-38-56-641Z-5245810/5245810-en-helpful-negative.json",
+          "sha256": "dbeaa8d916910230098f6bd62e4f72b128030aab27d8a6084f66536ad7e31941",
+          "totalMatching": 13,
+          "dayRangeUsed": 0
+        },
+        {
+          "bucket": "en-recent-positive",
+          "parameters": {
+            "appid": 5245810,
+            "filter": 1,
+            "languages": [
+              "english"
+            ],
+            "review_type": 1,
+            "purchase_type": 0,
+            "num_per_page": 3,
+            "day_range": 0,
+            "filter_offtopic_activity": true,
+            "use_review_quality": true
+          },
+          "fetchedAt": "2026-10-23T01:38:57.946Z",
+          "count": 3,
+          "rawPath": "tmp/research/steam-2026-10-23T01-38-56-641Z-5245810/5245810-en-recent-positive.json",
+          "sha256": "6067c3ea0fc7696139c7ec7463bdcc30d3a59bdcabd3beccc14d0170723d161a",
+          "totalMatching": 38,
+          "dayRangeUsed": null
+        },
+        {
+          "bucket": "en-recent-negative",
+          "parameters": {
+            "appid": 5245810,
+            "filter": 1,
+            "languages": [
+              "english"
+            ],
+            "review_type": 2,
+            "purchase_type": 0,
+            "num_per_page": 3,
+            "day_range": 0,
+            "filter_offtopic_activity": true,
+            "use_review_quality": true
+          },
+          "fetchedAt": "2026-10-23T01:38:58.195Z",
+          "count": 3,
+          "rawPath": "tmp/research/steam-2026-10-23T01-38-56-641Z-5245810/5245810-en-recent-negative.json",
+          "sha256": "41e1da6a624dd1799887802c4f9a76697fa4148fced80d0053857e4519b5a499",
+          "totalMatching": 13,
+          "dayRangeUsed": null
+        },
+        {
+          "bucket": "zh-helpful-positive",
+          "parameters": {
+            "appid": 5245810,
+            "filter": 0,
+            "languages": [
+              "schinese"
+            ],
+            "review_type": 1,
+            "purchase_type": 0,
+            "num_per_page": 2,
+            "day_range": 0,
+            "filter_offtopic_activity": true,
+            "use_review_quality": true
+          },
+          "fetchedAt": "2026-10-23T01:38:58.511Z",
+          "count": 2,
+          "rawPath": "tmp/research/steam-2026-10-23T01-38-56-641Z-5245810/5245810-zh-helpful-positive.json",
+          "sha256": "4a85d8b3dcf2a4041eb26f6cb1d88fd8c397b5f7011f0a03772834080588e3db",
+          "totalMatching": 524,
+          "dayRangeUsed": 0
+        },
+        {
+          "bucket": "zh-helpful-negative",
+          "parameters": {
+            "appid": 5245810,
+            "filter": 0,
+            "languages": [
+              "schinese"
+            ],
+            "review_type": 2,
+            "purchase_type": 0,
+            "num_per_page": 2,
+            "day_range": 0,
+            "filter_offtopic_activity": true,
+            "use_review_quality": true
+          },
+          "fetchedAt": "2026-10-23T01:38:58.829Z",
+          "count": 2,
+          "rawPath": "tmp/research/steam-2026-10-23T01-38-56-641Z-5245810/5245810-zh-helpful-negative.json",
+          "sha256": "de74d53098e5e268aa43a6d15ecade50f6b88eb548ba6e649b1446d344db9e63",
+          "totalMatching": 502,
+          "dayRangeUsed": 0
+        }
+      ],
+      "reviews": [
+        {
+          "id": "237025305",
+          "url": "https://steamcommunity.com/profiles/76561198171342166/recommended/5245810/",
+          "language": "english",
+          "recommended": true,
+          "createdAt": "2026-10-06T05:12:57.000Z",
+          "updatedAt": "2026-10-06T05:12:57.000Z",
+          "playtimeMinutesAtReview": 55,
+          "helpfulVotes": 13,
+          "earlyAccess": false,
+          "receivedFree": false,
+          "refunded": false,
+          "textSha256": "235d989c56b7e5e37438d7b12dafddf1508a540c0c5942388b9af2e556c00397",
+          "buckets": [
+            "en-helpful-positive"
+          ]
+        },
+        {
+          "id": "237631418",
+          "url": "https://steamcommunity.com/profiles/76561198300805671/recommended/5245810/",
+          "language": "english",
+          "recommended": true,
+          "createdAt": "2026-10-13T15:02:18.000Z",
+          "updatedAt": "2026-10-13T15:02:18.000Z",
+          "playtimeMinutesAtReview": 115,
+          "helpfulVotes": 9,
+          "earlyAccess": false,
+          "receivedFree": false,
+          "refunded": false,
+          "textSha256": "eb8c106e7f81c76bcc7f31720760b68792c80b89fb966e5fa4f7a9c293a040f1",
+          "buckets": [
+            "en-helpful-positive"
+          ]
+        },
+        {
+          "id": "237854457",
+          "url": "https://steamcommunity.com/profiles/76561198211640628/recommended/5245810/",
+          "language": "english",
+          "recommended": true,
+          "createdAt": "2026-10-16T14:47:18.000Z",
+          "updatedAt": "2026-10-16T14:47:18.000Z",
+          "playtimeMinutesAtReview": 426,
+          "helpfulVotes": 6,
+          "earlyAccess": false,
+          "receivedFree": false,
+          "refunded": false,
+          "textSha256": "73a0b5864519d2f6814e40c990e658d36f2510e784f85bc0c2b8c49e12f7b2aa",
+          "buckets": [
+            "en-helpful-positive"
+          ]
+        },
+        {
+          "id": "237165600",
+          "url": "https://steamcommunity.com/profiles/76561199108928289/recommended/5245810/",
+          "language": "english",
+          "recommended": false,
+          "createdAt": "2026-10-07T22:40:12.000Z",
+          "updatedAt": "2026-10-07T22:40:12.000Z",
+          "playtimeMinutesAtReview": 7,
+          "helpfulVotes": 16,
+          "earlyAccess": false,
+          "receivedFree": false,
+          "refunded": false,
+          "textSha256": "ed22e1a6637f30d63bda16fb19f6333522a563623196602ab7b29e7611630da1",
+          "buckets": [
+            "en-helpful-negative"
+          ]
+        },
+        {
+          "id": "238139764",
+          "url": "https://steamcommunity.com/profiles/76561198058642804/recommended/5245810/",
+          "language": "english",
+          "recommended": false,
+          "createdAt": "2026-10-20T04:43:42.000Z",
+          "updatedAt": "2026-10-20T04:43:42.000Z",
+          "playtimeMinutesAtReview": 180,
+          "helpfulVotes": 2,
+          "earlyAccess": false,
+          "receivedFree": false,
+          "refunded": false,
+          "textSha256": "b9e5f36864ea62ef7f2c988b04ba3500ab77b7cda0a2195bd9a4fce9b4754d89",
+          "buckets": [
+            "en-helpful-negative"
+          ]
+        },
+        {
+          "id": "237602818",
+          "url": "https://steamcommunity.com/profiles/76561199119587549/recommended/5245810/",
+          "language": "english",
+          "recommended": false,
+          "createdAt": "2026-10-13T03:40:31.000Z",
+          "updatedAt": "2026-10-13T03:40:31.000Z",
+          "playtimeMinutesAtReview": 64,
+          "helpfulVotes": 8,
+          "earlyAccess": false,
+          "receivedFree": false,
+          "refunded": false,
+          "textSha256": "be8bb2df90a5a42f38e2f2c64f4a12bbfae1e0e10c1f58ca57f8df8c59ce4f4f",
+          "buckets": [
+            "en-helpful-negative"
+          ]
+        },
+        {
+          "id": "238277531",
+          "url": "https://steamcommunity.com/profiles/76561198111212340/recommended/5245810/",
+          "language": "english",
+          "recommended": true,
+          "createdAt": "2026-10-22T02:31:31.000Z",
+          "updatedAt": "2026-10-22T02:31:31.000Z",
+          "playtimeMinutesAtReview": 82,
+          "helpfulVotes": 1,
+          "earlyAccess": false,
+          "receivedFree": false,
+          "refunded": false,
+          "textSha256": "786faced0b409868c66fa4fb57d7af0c66dd87ead278986d99d78940a436ae49",
+          "buckets": [
+            "en-recent-positive"
+          ]
+        },
+        {
+          "id": "238264229",
+          "url": "https://steamcommunity.com/profiles/76561198027281404/recommended/5245810/",
+          "language": "english",
+          "recommended": true,
+          "createdAt": "2026-10-21T21:22:30.000Z",
+          "updatedAt": "2026-10-21T21:22:30.000Z",
+          "playtimeMinutesAtReview": 107,
+          "helpfulVotes": 0,
+          "earlyAccess": false,
+          "receivedFree": false,
+          "refunded": false,
+          "textSha256": "1b60c13c8156f20e6863e6458beab64875738e3432e91ca9b50b9ad5d5d9cd61",
+          "buckets": [
+            "en-recent-positive"
+          ]
+        },
+        {
+          "id": "238257194",
+          "url": "https://steamcommunity.com/profiles/76561198055962072/recommended/5245810/",
+          "language": "english",
+          "recommended": true,
+          "createdAt": "2026-10-21T19:16:53.000Z",
+          "updatedAt": "2026-10-21T19:16:53.000Z",
+          "playtimeMinutesAtReview": 56,
+          "helpfulVotes": 0,
+          "earlyAccess": false,
+          "receivedFree": false,
+          "refunded": false,
+          "textSha256": "f017e587eb04775d43967aed5fbc0055d5d29adc688a9718a316ac595472c541",
+          "buckets": [
+            "en-recent-positive"
+          ]
+        },
+        {
+          "id": "238341900",
+          "url": "https://steamcommunity.com/profiles/76561198140428270/recommended/5245810/",
+          "language": "english",
+          "recommended": false,
+          "createdAt": "2026-10-23T00:17:48.000Z",
+          "updatedAt": "2026-10-23T00:17:48.000Z",
+          "playtimeMinutesAtReview": 94,
+          "helpfulVotes": 0,
+          "earlyAccess": false,
+          "receivedFree": false,
+          "refunded": false,
+          "textSha256": "7e3f5e6baf2ccd868bacc359c7f3ecac405be4b0e0d338f5f05ecd7708ff9671",
+          "buckets": [
+            "en-recent-negative"
+          ]
+        },
+        {
+          "id": "238216675",
+          "url": "https://steamcommunity.com/profiles/76561198022258634/recommended/5245810/",
+          "language": "english",
+          "recommended": false,
+          "createdAt": "2026-10-21T04:26:55.000Z",
+          "updatedAt": "2026-10-21T04:29:44.000Z",
+          "playtimeMinutesAtReview": 90,
+          "helpfulVotes": 0,
+          "earlyAccess": false,
+          "receivedFree": false,
+          "refunded": false,
+          "textSha256": "7d8a20d9e46595336d7d821e482d921e715c392c1a6f030d7bb60ae769d0ac8b",
+          "buckets": [
+            "en-recent-negative"
+          ]
+        },
+        {
+          "id": "238151834",
+          "url": "https://steamcommunity.com/profiles/76561199802795966/recommended/5245810/",
+          "language": "english",
+          "recommended": false,
+          "createdAt": "2026-10-20T10:42:31.000Z",
+          "updatedAt": "2026-10-20T10:42:31.000Z",
+          "playtimeMinutesAtReview": 5,
+          "helpfulVotes": 0,
+          "earlyAccess": false,
+          "receivedFree": false,
+          "refunded": false,
+          "textSha256": "794cbc6a2dbb0c114f63e8024251aae0850dd98cb4903eeace6f556758d3659e",
+          "buckets": [
+            "en-recent-negative"
+          ]
+        },
+        {
+          "id": "236969921",
+          "url": "https://steamcommunity.com/profiles/76561199112454838/recommended/5245810/",
+          "language": "schinese",
+          "recommended": true,
+          "createdAt": "2026-10-05T13:54:05.000Z",
+          "updatedAt": "2026-10-05T13:54:05.000Z",
+          "playtimeMinutesAtReview": 265,
+          "helpfulVotes": 96,
+          "earlyAccess": false,
+          "receivedFree": false,
+          "refunded": false,
+          "textSha256": "6ee65e7d14290ed494f26ef798c351e9835a17b505602e9348f4d4f772e98f1c",
+          "buckets": [
+            "zh-helpful-positive"
+          ]
+        },
+        {
+          "id": "237897938",
+          "url": "https://steamcommunity.com/profiles/76561198850723175/recommended/5245810/",
+          "language": "schinese",
+          "recommended": true,
+          "createdAt": "2026-10-17T02:31:39.000Z",
+          "updatedAt": "2026-10-21T18:12:04.000Z",
+          "playtimeMinutesAtReview": 188,
+          "helpfulVotes": 88,
+          "earlyAccess": false,
+          "receivedFree": false,
+          "refunded": false,
+          "textSha256": "85e543e59c129acc30f973e28e27bc803c9d1af0ed820f3d81f73b88a8a14a35",
+          "buckets": [
+            "zh-helpful-positive"
+          ]
+        },
+        {
+          "id": "237830645",
+          "url": "https://steamcommunity.com/profiles/76561199007921258/recommended/5245810/",
+          "language": "schinese",
+          "recommended": false,
+          "createdAt": "2026-10-16T06:22:10.000Z",
+          "updatedAt": "2026-10-16T06:24:48.000Z",
+          "playtimeMinutesAtReview": 911,
+          "helpfulVotes": 537,
+          "earlyAccess": false,
+          "receivedFree": false,
+          "refunded": false,
+          "textSha256": "bf6872538a68458b987a614769455a111edad84d67058bbe79738ed7ecc65e2a",
+          "buckets": [
+            "zh-helpful-negative"
+          ]
+        },
+        {
+          "id": "237609171",
+          "url": "https://steamcommunity.com/profiles/76561198280311936/recommended/5245810/",
+          "language": "schinese",
+          "recommended": false,
+          "createdAt": "2026-10-13T06:41:42.000Z",
+          "updatedAt": "2026-10-13T06:41:42.000Z",
+          "playtimeMinutesAtReview": 154,
+          "helpfulVotes": 248,
+          "earlyAccess": false,
+          "receivedFree": false,
+          "refunded": false,
+          "textSha256": "41ba629b1e415896b1491a5aa35c837056addc0dce26d2a4e99024e324ee92ec",
+          "buckets": [
+            "zh-helpful-negative"
+          ]
+        }
+      ],
+      "uniqueCount": 16
+    }
+  ],
+  "failures": [],
+  "totalRows": 16,
+  "totalUnique": 16,
+  "finishedAt": "2026-10-23T01:38:58.830Z"
+}
