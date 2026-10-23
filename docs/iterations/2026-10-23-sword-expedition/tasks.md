@@ -12,7 +12,7 @@
 
 - [x] 2.1 接真实炉台：左键单意图、两开局技法／取消标记／收锻／换坯、可见强度与裂纹；稳锋／崩纹有不同剑形因果，保键盘／暂停／减弱动效。
 - [x] 2.2 接同剑木盾卫机、探隙／直接斩击、3回合失败调整、最多一工具匣；取匣阶段仅目标／离开，拒绝架剑／换剑旁路；过门／15钱与场景变化都由正式Accepted驱动。
-- [ ] 2.3 **全面review/debug 2**：核2.1–2.2实际动作／失败／回报与可读性，不将静态图／测试入口改值叫玩过；修真实摩擦，不以更多文案／章节代体验。
+- [x] 2.3 **全面review/debug 2**：核2.1–2.2实际动作／失败／回报与可读性，不将静态图／测试入口改值叫玩过；修真实摩擦，不以更多文案／章节代体验。
 
 ## 3. 工具闭环与交付
 
@@ -33,3 +33,5 @@
 2.1回执：独立/v6.html与v6-main、DOM/Canvas炉台、真实左键/Space、两手艺/仅下一记标记/收锻/换坯、强度风险和当前用途已接正式v6 session/view；标题可续、暂停/设置/行程出口在实际页面，v5标题加显式入口但默认仍v5。手艺光纹用getRunView从accepted journal导出的techniquePieceIds，不从选学校/全炉次数假推，保存state/规则不变。实图打回程序渐变剑/多边形砧座，新增同D手绘4阶段透明atlas+实测alpha帧，原件/prompt/WebP/三新物件来源齐；真实裂/磨/断独立叠层。统一build0，独立4261 Chromium7实际命令与SDK逐对象相等，左键/Space/备手艺不写/暂停撤意图/重载续当前剑/点risk不锤/1280与1920实图均过，见docs/evidence/v0.9/2.1-forge。只读审查修有效音频activation归属、memory伪重获出口、backup替换dirty提示/原文exact、Nail净0旧提示、aim取消丢点；UI备份深边仍2.3定向核。最后缩短普通结果、短显可开路/争工具，1280结果提示再上移避锤（最终布局2.3核）。[杠精审查] 通过炉台任务，先前差画面保本地first证据；不把还未接物件动画和工具尾声体验记完成，继续2.2。
 
 2.2回执：同剑试锋/三火/正式下斩伤害与磨损预览/探隙、木卫受力倒下、护送人通过、直切绳/破闩与真实工具飞入已接Accepted。普通380/400ms、重大760ms，contact120ms并保2真实paint；旧piece磨损/克隆归token，恢复只snap事实，reduced不补动作。所有game经济/意图按钮（含seal/school/tech/discard）用现有direct binder+唯一node身份，暂停/隐藏/卸载配对清所有pending；不改共享输入模块。实图修road剑被裁、caption低对比、结果横幅/单字折行、软件百叶匣→同D真实工具匣、平SVG人→同D旅人、绳末接实匣、正式破绽玉青细缝，倒卫去重复caption。统一build0，冻结v09-trial-02/4263；同一有界两fresh Chromium/DPR1共19cmd（steady10/fissure9）逐命令与SDK全state/schema6/fulljournal相等，均15钱+对应tool后停echo-forge，页面/资源错误0，14实际响应逐hash，各4自然motion采集点无额外GUI完成，ghost/main-1结束全清。root实际看新1280/1920/接触图，见docs/evidence/v0.9/2.2-trial。[杠精审查] 通过main/cache任务，旧route-01与基线保本地；破绽仍细提示但正式文案/下斩预览明确，不为颜色再开循环；工具尾声/完整趣味尚未完成，继续2.3。
+
+2.3回执：独立源审复核全部游戏动作身份/取消、旧剑克隆/资源与正常跨场，无新增main/cache必须修复。冻结trial02有界真实PC弱剑三次被挡→次坯崩纹调整开路，15Accepted逐全state与SDK相同；炉锤/收锻/主目标三处持Space暂停恢复旧release均零变更。显式memory后离开只改内存，真Blob导出全state/回放相同，磁盘rev14保持；页面/资源错误0。见docs/reviews/v0.9/2.3-ui-review.md及对应证据。[杠精审查] 通过第二组三项集中review；工具实际使用与末次回炉锤的可见收尾仍属3.1，未宣布fun或完整长篇完成。
