@@ -1,0 +1,788 @@
+{
+  "status": "failed",
+  "scope": "One fresh three-weak-blades failure and one explicitly prepared backup-source recovery boundary. Not a browser matrix or player fun acceptance.",
+  "identity": {
+    "snapshot": "/Users/gordon/githome/sword-led/tmp/previews/v09-tools-04",
+    "url": "http://127.0.0.1:4267/v6.html",
+    "sdkSha256": "a64cb053f824db0c4d7db7dcb2d3a1ada4e762e00be6d17d9539a8df55a0fc4e",
+    "scriptSha256": "0f9fe05241ee68a3b9e31f5b41ea7a0da09b14df7e819b2c35ead73e5d9f9d4c",
+    "browserVersion": "156.0.8078.4"
+  },
+  "failure": {
+    "message": "repo.save is not a function",
+    "stack": "TypeError: repo.save is not a function\n    at encode (file:///Users/gordon/githome/sword-led/scripts/v6-final-boundaries.mjs:48:178)\n    at file:///Users/gordon/githome/sword-led/scripts/v6-final-boundaries.mjs:49:14"
+  },
+  "commands": [
+    {
+      "revision": 1,
+      "action": {
+        "type": "chooseSchool",
+        "pieceId": "main-1",
+        "school": "steady"
+      },
+      "stateSha256": "51f3b0036ff81a2a7e4958eb85d1866f61c58ab2266280e0ece9d946a95ef05d",
+      "eventsFromFormalSdk": [
+        {
+          "type": "SchoolChosen",
+          "pieceId": "main-1",
+          "school": "steady"
+        }
+      ]
+    },
+    {
+      "revision": 2,
+      "action": {
+        "type": "forge",
+        "pieceId": "main-1",
+        "useTechnique": false
+      },
+      "stateSha256": "287d0c65471f202adfb3b84cbe352eaace7b28d282d2d8c11e303fb0a3d6f209",
+      "eventsFromFormalSdk": [
+        {
+          "type": "Forged",
+          "pieceId": "main-1",
+          "technique": false,
+          "school": "steady",
+          "result": "success",
+          "before": 0,
+          "after": 1,
+          "ticket": 974,
+          "crackTickets": 0,
+          "chargeBefore": 1,
+          "chargeAfter": 1
+        }
+      ]
+    },
+    {
+      "revision": 3,
+      "action": {
+        "type": "forge",
+        "pieceId": "main-1",
+        "useTechnique": false
+      },
+      "stateSha256": "90ccc67376da35b5a6bdf4d1b88a15a8c5d90343bdf8e8f6a2ffede6fedc893f",
+      "eventsFromFormalSdk": [
+        {
+          "type": "Forged",
+          "pieceId": "main-1",
+          "technique": false,
+          "school": "steady",
+          "result": "success",
+          "before": 1,
+          "after": 2,
+          "ticket": 364,
+          "crackTickets": 0,
+          "chargeBefore": 1,
+          "chargeAfter": 1
+        }
+      ]
+    },
+    {
+      "revision": 4,
+      "action": {
+        "type": "seal",
+        "pieceId": "main-1"
+      },
+      "stateSha256": "f5555f2de0fe04a2bce2975003bdbbfcc4e27159c7ccfed7ab3dddc616c0ac49",
+      "eventsFromFormalSdk": [
+        {
+          "type": "Sealed",
+          "pieceId": "main-1"
+        }
+      ]
+    },
+    {
+      "revision": 5,
+      "action": {
+        "type": "strike",
+        "targetId": "main-guard"
+      },
+      "stateSha256": "8d52fe03b5310ad49e24f506e8369e92ce3331037f265b3bd224a932f944276d",
+      "eventsFromFormalSdk": [
+        {
+          "type": "Struck",
+          "pieceId": "main-1",
+          "targetId": "main-guard",
+          "damage": 0,
+          "overkill": 0,
+          "before": 6,
+          "after": 6,
+          "usedOpening": false,
+          "turnsLeft": 2
+        }
+      ]
+    },
+    {
+      "revision": 6,
+      "action": {
+        "type": "strike",
+        "targetId": "main-guard"
+      },
+      "stateSha256": "d4f6fc6732734aba7640b07dd18a2a6048895c27fd33c34ff6f2433f96a8f66a",
+      "eventsFromFormalSdk": [
+        {
+          "type": "Struck",
+          "pieceId": "main-1",
+          "targetId": "main-guard",
+          "damage": 0,
+          "overkill": 0,
+          "before": 6,
+          "after": 6,
+          "usedOpening": false,
+          "turnsLeft": 1
+        }
+      ]
+    },
+    {
+      "revision": 7,
+      "action": {
+        "type": "strike",
+        "targetId": "main-guard"
+      },
+      "stateSha256": "95cddd42190eab8fc52c07edfbc71e4420c46dae648aa091ad1e9288a2fe310f",
+      "eventsFromFormalSdk": [
+        {
+          "type": "Struck",
+          "pieceId": "main-1",
+          "targetId": "main-guard",
+          "damage": 0,
+          "overkill": 0,
+          "before": 6,
+          "after": 6,
+          "usedOpening": false,
+          "turnsLeft": 0
+        },
+        {
+          "type": "TrialFailed",
+          "pieceId": "main-1",
+          "stage": "main"
+        }
+      ]
+    },
+    {
+      "revision": 8,
+      "action": {
+        "type": "chooseSchool",
+        "pieceId": "main-2",
+        "school": "steady"
+      },
+      "stateSha256": "066b7b5cf0ebf7095dd3f7c8e8bdc449ccd40977752966b26db57958cdbbf9c2",
+      "eventsFromFormalSdk": [
+        {
+          "type": "SchoolChosen",
+          "pieceId": "main-2",
+          "school": "steady"
+        }
+      ]
+    },
+    {
+      "revision": 9,
+      "action": {
+        "type": "forge",
+        "pieceId": "main-2",
+        "useTechnique": false
+      },
+      "stateSha256": "52e65dc1cd32ad4ba3974e75691d2e5c09d44a8e963adc55feed9abe9b71792e",
+      "eventsFromFormalSdk": [
+        {
+          "type": "Forged",
+          "pieceId": "main-2",
+          "technique": false,
+          "school": "steady",
+          "result": "success",
+          "before": 0,
+          "after": 1,
+          "ticket": 620,
+          "crackTickets": 0,
+          "chargeBefore": 1,
+          "chargeAfter": 1
+        }
+      ]
+    },
+    {
+      "revision": 10,
+      "action": {
+        "type": "forge",
+        "pieceId": "main-2",
+        "useTechnique": false
+      },
+      "stateSha256": "92ede03a4f47a7eb997db2c06429b9ee7034003f6e70e8513ea2e377527ddad5",
+      "eventsFromFormalSdk": [
+        {
+          "type": "Forged",
+          "pieceId": "main-2",
+          "technique": false,
+          "school": "steady",
+          "result": "success",
+          "before": 1,
+          "after": 2,
+          "ticket": 850,
+          "crackTickets": 0,
+          "chargeBefore": 1,
+          "chargeAfter": 1
+        }
+      ]
+    },
+    {
+      "revision": 11,
+      "action": {
+        "type": "seal",
+        "pieceId": "main-2"
+      },
+      "stateSha256": "2581fc96393e40180e91b52420f089670c6796d749177783d25e8e5ce5e4b1ff",
+      "eventsFromFormalSdk": [
+        {
+          "type": "Sealed",
+          "pieceId": "main-2"
+        }
+      ]
+    },
+    {
+      "revision": 12,
+      "action": {
+        "type": "strike",
+        "targetId": "main-guard"
+      },
+      "stateSha256": "6f95cc00e5b0e8463562b307c142b0022ded031186654798727158f6b0b8aff3",
+      "eventsFromFormalSdk": [
+        {
+          "type": "Struck",
+          "pieceId": "main-2",
+          "targetId": "main-guard",
+          "damage": 0,
+          "overkill": 0,
+          "before": 6,
+          "after": 6,
+          "usedOpening": false,
+          "turnsLeft": 2
+        }
+      ]
+    },
+    {
+      "revision": 13,
+      "action": {
+        "type": "strike",
+        "targetId": "main-guard"
+      },
+      "stateSha256": "9b8335e19c97862e3385b4cbc45e556c13beeb0308a75a18f2234f36ffdff17c",
+      "eventsFromFormalSdk": [
+        {
+          "type": "Struck",
+          "pieceId": "main-2",
+          "targetId": "main-guard",
+          "damage": 0,
+          "overkill": 0,
+          "before": 6,
+          "after": 6,
+          "usedOpening": false,
+          "turnsLeft": 1
+        }
+      ]
+    },
+    {
+      "revision": 14,
+      "action": {
+        "type": "strike",
+        "targetId": "main-guard"
+      },
+      "stateSha256": "b65e069465833d323161301c5b4e15c3c8dca9c198ca58b41f27abb89b009f69",
+      "eventsFromFormalSdk": [
+        {
+          "type": "Struck",
+          "pieceId": "main-2",
+          "targetId": "main-guard",
+          "damage": 0,
+          "overkill": 0,
+          "before": 6,
+          "after": 6,
+          "usedOpening": false,
+          "turnsLeft": 0
+        },
+        {
+          "type": "TrialFailed",
+          "pieceId": "main-2",
+          "stage": "main"
+        }
+      ]
+    },
+    {
+      "revision": 15,
+      "action": {
+        "type": "chooseSchool",
+        "pieceId": "main-3",
+        "school": "steady"
+      },
+      "stateSha256": "d3fd7c5d699606e25261784663a801e20176f994ff59de9eb8c88d277c14a440",
+      "eventsFromFormalSdk": [
+        {
+          "type": "SchoolChosen",
+          "pieceId": "main-3",
+          "school": "steady"
+        }
+      ]
+    },
+    {
+      "revision": 16,
+      "action": {
+        "type": "forge",
+        "pieceId": "main-3",
+        "useTechnique": false
+      },
+      "stateSha256": "73229d02f856f6fcfb2386fb6591ff020bc60155500cde3e3eb1217e5738d7a0",
+      "eventsFromFormalSdk": [
+        {
+          "type": "Forged",
+          "pieceId": "main-3",
+          "technique": false,
+          "school": "steady",
+          "result": "success",
+          "before": 0,
+          "after": 1,
+          "ticket": 992,
+          "crackTickets": 0,
+          "chargeBefore": 1,
+          "chargeAfter": 1
+        }
+      ]
+    },
+    {
+      "revision": 17,
+      "action": {
+        "type": "forge",
+        "pieceId": "main-3",
+        "useTechnique": false
+      },
+      "stateSha256": "c8136e4d98a8ed31028ac8b22c5c62d2e004d2281dee654bec1efe9343dabf0d",
+      "eventsFromFormalSdk": [
+        {
+          "type": "Forged",
+          "pieceId": "main-3",
+          "technique": false,
+          "school": "steady",
+          "result": "success",
+          "before": 1,
+          "after": 2,
+          "ticket": 778,
+          "crackTickets": 0,
+          "chargeBefore": 1,
+          "chargeAfter": 1
+        }
+      ]
+    },
+    {
+      "revision": 18,
+      "action": {
+        "type": "seal",
+        "pieceId": "main-3"
+      },
+      "stateSha256": "c855422680e9dd49cb313c3667f56da4ba1d94ad380f2ccc6fb8fc32ebbc7cf9",
+      "eventsFromFormalSdk": [
+        {
+          "type": "Sealed",
+          "pieceId": "main-3"
+        }
+      ]
+    },
+    {
+      "revision": 19,
+      "action": {
+        "type": "strike",
+        "targetId": "main-guard"
+      },
+      "stateSha256": "d8288af2975939ccd3217fa59da0d7b715ff7c6ff8abe7aeec897760746a95dc",
+      "eventsFromFormalSdk": [
+        {
+          "type": "Struck",
+          "pieceId": "main-3",
+          "targetId": "main-guard",
+          "damage": 0,
+          "overkill": 0,
+          "before": 6,
+          "after": 6,
+          "usedOpening": false,
+          "turnsLeft": 2
+        }
+      ]
+    },
+    {
+      "revision": 20,
+      "action": {
+        "type": "strike",
+        "targetId": "main-guard"
+      },
+      "stateSha256": "25d97c461b4a6d419af32d733ffd08816993e4a3ddd189adee5d546658282e62",
+      "eventsFromFormalSdk": [
+        {
+          "type": "Struck",
+          "pieceId": "main-3",
+          "targetId": "main-guard",
+          "damage": 0,
+          "overkill": 0,
+          "before": 6,
+          "after": 6,
+          "usedOpening": false,
+          "turnsLeft": 1
+        }
+      ]
+    },
+    {
+      "revision": 21,
+      "action": {
+        "type": "strike",
+        "targetId": "main-guard"
+      },
+      "stateSha256": "51339e8d9262510517607935d86ab4dcdd8f5fcda1d9569e110bb547f9be232b",
+      "eventsFromFormalSdk": [
+        {
+          "type": "Struck",
+          "pieceId": "main-3",
+          "targetId": "main-guard",
+          "damage": 0,
+          "overkill": 0,
+          "before": 6,
+          "after": 6,
+          "usedOpening": false,
+          "turnsLeft": 0
+        },
+        {
+          "type": "TrialFailed",
+          "pieceId": "main-3",
+          "stage": "main"
+        },
+        {
+          "type": "Failed",
+          "reason": "main-blanks-exhausted"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "threeBlades": {
+    "final": {
+      "rulesVersion": "forge-v6",
+      "runId": "a16093ee-b7b1-4a59-90f1-71c58036bc54",
+      "seed": "v6-contract",
+      "revision": 21,
+      "phase": "failed",
+      "coins": 0,
+      "gateCleared": false,
+      "gatePaid": false,
+      "tool": null,
+      "blades": [
+        {
+          "id": "main-1",
+          "stage": "main",
+          "school": "steady",
+          "status": "failed",
+          "strength": 2,
+          "cracked": false,
+          "fissureMarked": false,
+          "hits": 2,
+          "sealedStrength": 2,
+          "sealedCracked": false,
+          "sealedHits": 2
+        },
+        {
+          "id": "main-2",
+          "stage": "main",
+          "school": "steady",
+          "status": "failed",
+          "strength": 2,
+          "cracked": false,
+          "fissureMarked": false,
+          "hits": 2,
+          "sealedStrength": 2,
+          "sealedCracked": false,
+          "sealedHits": 2
+        },
+        {
+          "id": "main-3",
+          "stage": "main",
+          "school": "steady",
+          "status": "failed",
+          "strength": 2,
+          "cracked": false,
+          "fissureMarked": false,
+          "hits": 2,
+          "sealedStrength": 2,
+          "sealedCracked": false,
+          "sealedHits": 2
+        }
+      ],
+      "activePieceId": null,
+      "charges": {
+        "main": 1,
+        "echo": 0
+      },
+      "trial": null,
+      "trials": [
+        {
+          "kind": "main",
+          "pieceId": "main-1",
+          "turnsLeft": 0,
+          "opening": false,
+          "primary": {
+            "id": "main-guard",
+            "health": 6,
+            "armor": 2
+          },
+          "secondary": null,
+          "storedOverkill": 0,
+          "reboundTriggered": false,
+          "followUpUsed": false,
+          "steps": [
+            {
+              "action": "strike",
+              "targetId": "main-guard",
+              "strengthBefore": 2,
+              "strengthAfter": 2,
+              "damage": 0,
+              "targetBefore": 6,
+              "targetAfter": 6,
+              "usedOpening": false,
+              "turn": 1
+            },
+            {
+              "action": "strike",
+              "targetId": "main-guard",
+              "strengthBefore": 2,
+              "strengthAfter": 2,
+              "damage": 0,
+              "targetBefore": 6,
+              "targetAfter": 6,
+              "usedOpening": false,
+              "turn": 2
+            },
+            {
+              "action": "strike",
+              "targetId": "main-guard",
+              "strengthBefore": 2,
+              "strengthAfter": 2,
+              "damage": 0,
+              "targetBefore": 6,
+              "targetAfter": 6,
+              "usedOpening": false,
+              "turn": 3
+            }
+          ]
+        },
+        {
+          "kind": "main",
+          "pieceId": "main-2",
+          "turnsLeft": 0,
+          "opening": false,
+          "primary": {
+            "id": "main-guard",
+            "health": 6,
+            "armor": 2
+          },
+          "secondary": null,
+          "storedOverkill": 0,
+          "reboundTriggered": false,
+          "followUpUsed": false,
+          "steps": [
+            {
+              "action": "strike",
+              "targetId": "main-guard",
+              "strengthBefore": 2,
+              "strengthAfter": 2,
+              "damage": 0,
+              "targetBefore": 6,
+              "targetAfter": 6,
+              "usedOpening": false,
+              "turn": 1
+            },
+            {
+              "action": "strike",
+              "targetId": "main-guard",
+              "strengthBefore": 2,
+              "strengthAfter": 2,
+              "damage": 0,
+              "targetBefore": 6,
+              "targetAfter": 6,
+              "usedOpening": false,
+              "turn": 2
+            },
+            {
+              "action": "strike",
+              "targetId": "main-guard",
+              "strengthBefore": 2,
+              "strengthAfter": 2,
+              "damage": 0,
+              "targetBefore": 6,
+              "targetAfter": 6,
+              "usedOpening": false,
+              "turn": 3
+            }
+          ]
+        },
+        {
+          "kind": "main",
+          "pieceId": "main-3",
+          "turnsLeft": 0,
+          "opening": false,
+          "primary": {
+            "id": "main-guard",
+            "health": 6,
+            "armor": 2
+          },
+          "secondary": null,
+          "storedOverkill": 0,
+          "reboundTriggered": false,
+          "followUpUsed": false,
+          "steps": [
+            {
+              "action": "strike",
+              "targetId": "main-guard",
+              "strengthBefore": 2,
+              "strengthAfter": 2,
+              "damage": 0,
+              "targetBefore": 6,
+              "targetAfter": 6,
+              "usedOpening": false,
+              "turn": 1
+            },
+            {
+              "action": "strike",
+              "targetId": "main-guard",
+              "strengthBefore": 2,
+              "strengthAfter": 2,
+              "damage": 0,
+              "targetBefore": 6,
+              "targetAfter": 6,
+              "usedOpening": false,
+              "turn": 2
+            },
+            {
+              "action": "strike",
+              "targetId": "main-guard",
+              "strengthBefore": 2,
+              "strengthAfter": 2,
+              "damage": 0,
+              "targetBefore": 6,
+              "targetAfter": 6,
+              "usedOpening": false,
+              "turn": 3
+            }
+          ]
+        }
+      ],
+      "echo": {
+        "started": false,
+        "submitted": false,
+        "toolTriggered": false,
+        "rechargeGained": 0,
+        "returnedToForge": false,
+        "techniqueUsedAfterRecharge": false,
+        "demonstrated": false,
+        "outcome": "not-started",
+        "reason": null
+      },
+      "rng": {
+        "forge": {
+          "state": 2343726711,
+          "draws": 6
+        }
+      },
+      "journal": [
+        {
+          "type": "chooseSchool",
+          "pieceId": "main-1",
+          "school": "steady"
+        },
+        {
+          "type": "forge",
+          "pieceId": "main-1",
+          "useTechnique": false
+        },
+        {
+          "type": "forge",
+          "pieceId": "main-1",
+          "useTechnique": false
+        },
+        {
+          "type": "seal",
+          "pieceId": "main-1"
+        },
+        {
+          "type": "strike",
+          "targetId": "main-guard"
+        },
+        {
+          "type": "strike",
+          "targetId": "main-guard"
+        },
+        {
+          "type": "strike",
+          "targetId": "main-guard"
+        },
+        {
+          "type": "chooseSchool",
+          "pieceId": "main-2",
+          "school": "steady"
+        },
+        {
+          "type": "forge",
+          "pieceId": "main-2",
+          "useTechnique": false
+        },
+        {
+          "type": "forge",
+          "pieceId": "main-2",
+          "useTechnique": false
+        },
+        {
+          "type": "seal",
+          "pieceId": "main-2"
+        },
+        {
+          "type": "strike",
+          "targetId": "main-guard"
+        },
+        {
+          "type": "strike",
+          "targetId": "main-guard"
+        },
+        {
+          "type": "strike",
+          "targetId": "main-guard"
+        },
+        {
+          "type": "chooseSchool",
+          "pieceId": "main-3",
+          "school": "steady"
+        },
+        {
+          "type": "forge",
+          "pieceId": "main-3",
+          "useTechnique": false
+        },
+        {
+          "type": "forge",
+          "pieceId": "main-3",
+          "useTechnique": false
+        },
+        {
+          "type": "seal",
+          "pieceId": "main-3"
+        },
+        {
+          "type": "strike",
+          "targetId": "main-guard"
+        },
+        {
+          "type": "strike",
+          "targetId": "main-guard"
+        },
+        {
+          "type": "strike",
+          "targetId": "main-guard"
+        }
+      ],
+      "endReason": "main-blanks-exhausted"
+    },
+    "actualCommands": 21,
+    "realFreshRun": true
+  },
+  "finishedAt": "2026-10-23T07:39:00.534Z"
+}
