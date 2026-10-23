@@ -155,6 +155,19 @@ const NODES:Readonly<Record<NodeId,{readonly title:string;readonly mission:strin
  9:{title:'山口护灯',mission:'断传动、停逆转轮、放妥灯芯，架稳后嵌入亲手打造的剑。',next:'让母灯复明，或带人和灯芯返回山下'},
 };
 const PHASE_LABELS:Readonly<Record<Phase,string>>={prepare:'炉车整备',forging:'亲手锻剑',encounter:'道路行动',choice:'眼前的选择',failed:'暂且止步',ending:'旅程终章'};
+const TARGET_ASSETS:Partial<Record<TargetId,string>>={
+ 'wood-guard':'/assets/d/v09/wood-guardian-v1.webp',
+ 'bridge-latch':'/assets/d/v1-campaign/bridge-winch-v1.webp',
+ 'north-latch':'/assets/d/v1-campaign/bridge-winch-v1.webp',
+ 'south-latch':'/assets/d/v1-campaign/bridge-winch-v1.webp',
+ 'relay-latch':'/assets/d/v1-campaign/bridge-winch-v1.webp',
+ charger:'/assets/d/v1-campaign/charger-v1.webp',
+ flanker:'/assets/d/v1-campaign/flanker-v1.webp',
+ rammer:'/assets/d/v1-campaign/charger-v1.webp',
+ 'roof-lock':'/assets/d/v1-campaign/shelter-lock-v1.webp',
+ 'drive-lock':'/assets/d/v1-campaign/drive-lock-v1.webp',
+ 'reverse-wheel':'/assets/d/v1-campaign/mother-wheel-v1.webp',
+};
 const CHOICES:Readonly<Record<ChoiceKind,readonly ChoiceId[]>>={
  'first-road':['escort','salvage'],'bridge-rescue':['rescue-ferryman','save-cargo'],'bridge-tool':['take-rebound','take-furnace'],
  'crossing-extra':['leave-crossing','hold-crossing'],'camp-old-sword':['keep-old','dismantle-old','pay-upgrade'],
@@ -433,7 +446,7 @@ export function getRunView(state:RunState):RunView {
   const dependency=e.targets.find(value=>value.id===target.requiresDestroyed);
   return{id:target.id,name:target.name,role:target.role,health:target.health,maxHealth:target.maxHealth,armor:target.armor,pressure,
    intent:target.health===0?'已完成':target.role==='threat'?`本轮施加${pressure}压力`:'道路机关；环境压力另计',requiresDestroyed:target.requiresDestroyed,
-   dependency:dependency&&dependency.health>0?`先破除${dependency.name}`:null,asset:target.id==='wood-guard'?'/assets/d/v09/wood-guardian-v1.webp':null,
+   dependency:dependency&&dependency.health>0?`先破除${dependency.name}`:null,asset:TARGET_ASSETS[target.id]??null,
    preview:hit?{...hit,healthAfter:Math.max(0,target.health-hit.damage),breaksWeapon:hit.strengthAfter===0}:null,strike,followUp,blockedReason:strike.reason};
  }):[];
  const eligibleWeaponIds=[state.handId,state.reserveId].filter((id):id is string=>id!==null&&finalEligible(state,id));

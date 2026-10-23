@@ -195,6 +195,13 @@ body > #app { min-height: 100dvh; }
 .c7 .c7-tool small, .c7 .c7-tool p { display: block; margin-top: 3px; color: #cbd2bd; font-size: 14px; line-height: 1.45; }
 .c7 .c7-tool button { display: flex; align-items: flex-start; width: 100%; min-height: 44px; margin-top: 5px; padding: 5px 7px; border: 0; border-bottom: 1px solid #d1b5768c; background: transparent; color: #f0d9a7; font-size: 14px; text-align: left; white-space: normal; }
 .c7 .c7-tool[data-stored="true"] > img, .c7 .c7-tool[data-ready="true"] > img { filter: drop-shadow(0 0 8px #f5c17766) drop-shadow(0 4px 3px #0008); }
+.c7 .c7-tool[data-ready="true"] { border-left: 2px solid #ebc07f; padding-left: 8px; background: linear-gradient(90deg, #244338df, #0b202a66 85%, transparent); }
+.c7 .c7-tool .c7-tool-status { color: #e0d5b3; }
+.c7 .c7-tool[data-ready="true"] .c7-tool-status { color: #ffe1a4; font-weight: 600; }
+.c7 .c7-tool .c7-button.is-primary { border: 1px solid #d5b67a; background: linear-gradient(105deg, #e4bc7f, #bf864b); color: #32281e; text-shadow: none; font: 17px/1.4 var(--c7-display); }
+.c7 .c7-tool .c7-button .c7-action-detail { margin: 2px 0 0; color: inherit; font-size: 13px; white-space: normal; }
+.c7 .c7-tool .c7-button:disabled { opacity: .7; }
+.c7 .c7-turn .c7-next-hit { flex-basis: 100%; color: #ffe1a6; }
 .c7 .c7-rack { position: absolute; z-index: 13; left: var(--c7-edge); bottom: 24px; display: flex; align-items: flex-end; gap: 10px; max-width: 256px; }
 .c7 .c7-rack-slot { position: relative; display: flex; flex: 0 0 116px; flex-direction: column; align-items: flex-start; justify-content: flex-end; width: 116px; min-height: 117px; padding: 6px 9px 8px; border: 0; border-bottom: 2px solid #a784527d; border-radius: 2px; background: linear-gradient(0deg, #102831d9, #10283188 56%, transparent); color: #e6d9b8; text-align: left; box-shadow: none; font-size: 14px; }
 .c7 .c7-rack-slot::before { content: ''; position: absolute; z-index: -1; left: 6px; right: 6px; bottom: 55px; height: 5px; border: 1px solid #6c634b; background: #3e4438; box-shadow: 0 3px 4px #0006; }
@@ -207,6 +214,7 @@ body > #app { min-height: 100dvh; }
 .c7 .c7-rack-slot[data-slot="reserve"]::after { content: '备用'; position: absolute; top: 0; left: 7px; color: #b7c5b2; font: 14px/1.5 var(--c7-display); }
 .c7 .c7-rack-slot[data-condition="broken"] { border-bottom-color: #b0806b; color: #d6ae98; }
 .c7 .c7-rack-slot[data-condition="broken"] img { opacity: .58; filter: grayscale(.6) drop-shadow(0 3px 3px #0009); }
+.c7 .c7-rack-slot[data-condition="broken"] .c7-mini-blade, .c7 .c7-weapon-figure[data-condition="broken"] .c7-weapon-art { opacity: .55; filter: grayscale(.75) drop-shadow(0 3px 3px #0005); }
 .c7 .c7-rack-slot:hover:enabled { background: linear-gradient(0deg, #244236ec, #183632aa 56%, transparent); }
 
 .c7 .c7-forge-readout { position: absolute; z-index: 12; left: 50%; bottom: 132px; transform: translateX(-50%); width: min(520px, 40vw); padding: 7px 18px 10px; background: linear-gradient(90deg, transparent, #0b202acf 13%, #0b202adb 85%, transparent); color: #e8dfc4; text-shadow: 0 2px 3px #04121d; text-align: center; }
@@ -255,6 +263,12 @@ body > #app { min-height: 100dvh; }
 .c7 .c7-arrival span { display: block; color: #dcc494; font: 16px/1.5 var(--c7-display); letter-spacing: .18em; }
 .c7 .c7-arrival strong { display: block; margin-top: 9px; font: 700 43px/1.4 var(--c7-display); letter-spacing: .08em; }
 .c7 .c7-notice { position: absolute; z-index: 40; left: 50%; top: 12%; transform: translateX(-50%); width: max-content; max-width: min(480px, 44vw); padding: 11px 18px 12px; border-bottom: 1px solid #d4b275; background: linear-gradient(90deg, #0b202ac9, #102b32ed 15%, #102b32ed 85%, #0b202ac9); color: #f3dfb2; box-shadow: 0 5px 20px #0004; font-size: 16px; line-height: 1.55; text-align: center; pointer-events: none; animation: c7-notice-in 220ms ease both; }
+.c7 .c7-notice strong, .c7 .c7-notice span { display: block; }
+.c7 .c7-notice strong { margin-bottom: 5px; color: #ffe0a1; font: 700 24px/1.35 var(--c7-display); letter-spacing: .025em; }
+.c7 .c7-notice[data-tone="story"], .c7 .c7-notice[data-tone="reward"], .c7 .c7-notice[data-tone="danger"] { max-width: min(570px, 48vw); padding: 15px 23px 17px; border-top: 1px solid #bda16b70; border-bottom-width: 2px; background: linear-gradient(100deg, #0b202af2, #183638f7 50%, #0b202af2); }
+.c7 .c7-notice[data-tone="reward"] { border-bottom-color: #f2cd84; box-shadow: 0 7px 24px #0006, inset 0 -12px 30px #b7802520; }
+.c7 .c7-notice[data-tone="danger"] { border-color: #dd9c7a; background: linear-gradient(100deg, #2b2828f5, #3a302bf7 50%, #20272af5); color: #f0d8c4; }
+.c7 .c7-notice[data-tone="danger"] strong { color: #ffbc9b; }
 .c7 .c7-save-warning { position: absolute; z-index: 43; top: 84px; right: var(--c7-edge); width: 248px; max-height: 138px; overflow: auto; padding: 10px 13px; border: 1px solid #e4b36a8a; border-left: 3px solid #e5ac65; border-radius: 2px; background: #173039f5; color: #ffe0ac; box-shadow: 0 4px 19px #0006; font-size: 14px; line-height: 1.55; text-align: left; }
 
 /* Long information has one readable, scrollable paper surface. */
@@ -309,6 +323,41 @@ body > #app { min-height: 100dvh; }
 .c7 .c7-shop-item strong { display: block; font: 22px/1.4 var(--c7-display); }
 .c7 .c7-shop-item p { margin-top: 4px; }
 .c7 .c7-shop-item .c7-button { flex-shrink: 0; min-width: 115px; }
+
+/* Du lays out real things beside the cart; every price still belongs to its action. */
+.c7 .c7-camp-host { display: flex; align-items: center; gap: 20px; min-height: 136px; }
+.c7 .c7-camp-portrait { flex: 0 0 91px; width: 91px; height: 136px; background-repeat: no-repeat; filter: drop-shadow(0 5px 4px #6b45254d); }
+.c7 #c7-dialog-body .c7-camp-host h3 { margin: 0 0 8px; font-size: 25px; }
+.c7 .c7-camp-host p { max-width: 470px; color: #625038; font: 19px/1.7 var(--c7-display); }
+.c7 .c7-camp-purse { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 16px; margin-top: 12px; padding: 10px 0; border-block: 1px solid #93774666; }
+.c7 .c7-camp-purse strong { font: 22px/1.5 var(--c7-display); }
+.c7 .c7-camp-purse span { color: #69583f; font-size: 14px; }
+.c7 .c7-camp-goods { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 28px; margin-top: 4px; }
+.c7 .c7-camp-goods .c7-shop-item { display: flex; align-items: flex-start; gap: 12px; min-width: 0; padding: 20px 0 19px; border-bottom: 1px solid #94784f66; }
+.c7 .c7-goods-art { position: relative; display: block; flex: 0 0 78px; width: 78px; height: 108px; align-self: center; }
+.c7 .c7-goods-art::after { content: ''; position: absolute; left: 3px; right: 3px; bottom: 4px; height: 5px; border-radius: 50%; background: #50382540; filter: blur(3px); }
+.c7 .c7-goods-art > img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 5px 3px #5a3a2945); }
+.c7 .c7-goods-coal i { position: absolute; z-index: 1; left: 5px; bottom: 13px; width: 44px; height: 39px; clip-path: polygon(16% 5%, 64% 0, 100% 32%, 88% 88%, 26% 100%, 0 59%); background: linear-gradient(135deg, #606464 0 25%, #30393c 27% 53%, #1d2529 55% 78%, #453e37 80%); }
+.c7 .c7-goods-coal i:nth-child(2) { left: 32px; bottom: 11px; width: 41px; height: 34px; transform: rotate(15deg); }
+.c7 .c7-goods-coal i:nth-child(3) { left: 21px; bottom: 36px; width: 38px; height: 34px; transform: rotate(-15deg); background: linear-gradient(135deg, #6b6c65 0 24%, #3d4342 26% 55%, #252d30 58%); }
+.c7 .c7-goods-blank::before { content: ''; position: absolute; z-index: 1; left: 11px; bottom: 17px; width: 56px; height: 78px; clip-path: polygon(12% 0, 94% 0, 100% 88%, 87% 100%, 0 100%, 0 12%); background: linear-gradient(90deg, #566368 0 12%, #a9b2ac 14% 24%, #d0d0b9 26% 31%, #7a8988 34% 88%, #3e4d55 90%); transform: rotate(-14deg); box-shadow: inset 0 4px #e4dec4; }
+.c7 .c7-goods-copy { flex: 1 1 0; min-width: 0; }
+.c7 #c7-dialog-body .c7-goods-copy > strong { font-size: 21px; }
+.c7 .c7-goods-copy > p { min-height: 62px; color: #64533c; font-size: 14px; line-height: 1.65; }
+.c7 #c7-dialog-body .c7-goods-copy > .c7-button { width: 100%; min-width: 0; margin-top: 10px; padding: 9px 12px; font-size: 18px; }
+.c7 .c7-goods-copy .c7-shop-reason { display: block; margin-top: 8px; color: #855038; font-size: 13px; line-height: 1.5; }
+.c7 .c7-camp-goods [data-available="false"] .c7-goods-art { opacity: .65; }
+.c7 #c7-dialog-body .c7-camp-footer { display: block; margin-top: 17px; color: #705c40; }
+.c7 .c7-weapon-figure { display: flex; align-items: center; gap: 25px; padding: 9px 0 22px; border-bottom: 1px solid #94784f66; }
+.c7 .c7-weapon-art { display: block; flex: 0 0 230px; width: 230px; height: 104px; background-repeat: no-repeat; filter: drop-shadow(0 6px 4px #5a3a2945); }
+.c7 .c7-weapon-facts > strong { display: block; font: 26px/1.5 var(--c7-display); }
+.c7 .c7-weapon-facts > p { color: #67533b; }
+.c7 .c7-weapon-controls { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+.c7 #c7-dialog-body .c7-weapon-controls > .c7-button { align-items: flex-start; padding: 13px 17px; text-align: left; }
+.c7 #c7-dialog-body .c7-weapon-controls > .c7-button p { margin-top: 5px; font: 15px/1.65 var(--c7-body); }
+.c7 .c7-menu-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-block: 18px 24px; }
+.c7 #c7-dialog-body .c7-menu-links > .c7-button { align-items: flex-start; padding: 15px 17px; text-align: left; font-size: 22px; }
+.c7 .c7-menu-links .c7-action-detail { margin-top: 5px; color: #6f5c41; font-size: 14px; }
 
 @keyframes c7-title-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes c7-lantern-breath { 0%, 100% { box-shadow: 0 0 7px #f4c17166; } 50% { box-shadow: 0 0 14px #f4c171a3; } }
@@ -469,6 +518,17 @@ body > #app { min-height: 100dvh; }
   .c7 .c7-facts { grid-template-columns: 1fr; }
   .c7 .c7-shop-item { flex-wrap: wrap; gap: 9px; }
   .c7 .c7-shop-item .c7-button { margin-left: auto; }
+  .c7 .c7-camp-host { gap: 13px; min-height: 114px; }
+  .c7 .c7-camp-portrait { flex-basis: 76px; width: 76px; height: 114px; }
+  .c7 #c7-dialog-body .c7-camp-host h3 { font-size: 22px; }
+  .c7 .c7-camp-host p { font-size: 17px; }
+  .c7 .c7-camp-goods, .c7 .c7-menu-links { grid-template-columns: 1fr; }
+  .c7 .c7-camp-goods .c7-shop-item { flex-wrap: nowrap; }
+  .c7 .c7-goods-copy > p { min-height: 0; }
+  .c7 .c7-weapon-figure { flex-wrap: wrap; gap: 10px 20px; }
+  .c7 .c7-weapon-art { margin-inline: auto; }
+  .c7 .c7-notice[data-tone] { max-width: 88vw; padding: 12px 17px 14px; }
+  .c7 .c7-notice strong { font-size: 22px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
