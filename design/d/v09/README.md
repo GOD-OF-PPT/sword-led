@@ -12,3 +12,5 @@
 2.2实图再次修缮：原CSS木百叶箱被认定像道具卡片，替为[真实手绘工具匣](originals/tool-chest-v1.png) / [prompt](tool-chest-v1.prompt.txt)，两目标以吊绳和铁闩分别呈现，奖励预览仍用独立真实工具图。
 
 护送者从简略SVG符号换成[同D手绘旅人](originals/lantern-traveller-v1.png) / [prompt](lantern-traveller-v1.prompt.txt)，原图完整人物含灯笼；只由正式GateCleared触发通行，恢复显示抵达静态位置。
+
+3.1工具尾声的远靶替换为[同D无甲木靶](originals/practice-target-v1.png) / [prompt](practice-target-v1.prompt.txt)，图像仅为完整道具，存伤、追斩与倒靶仍来自Accepted，避免用CSS圈和符号代替实物。

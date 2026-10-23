@@ -24,18 +24,18 @@ export const V6_TEMPLATE=`
   </div>
   <div id="x6-targets" class="x6-targets" hidden>
    <button id="x6-primary" class="x6-target x6-primary-target" type="button"><img id="x6-guard-art" src="/assets/d/v09/wood-guardian-v1.webp" alt="" draggable="false"><span id="x6-primary-caption" class="x6-target-caption"><strong id="x6-primary-name">拦路木卫</strong><span id="x6-primary-health"></span><span id="x6-primary-preview"></span></span></button>
-   <button id="x6-secondary" class="x6-target x6-secondary-target" type="button" hidden><span class="x6-practice-target" aria-hidden="true"><i></i><b>✦</b></span><span class="x6-target-caption"><strong>远处的试锋靶</strong><span id="x6-secondary-health"></span></span></button>
+   <button id="x6-secondary" class="x6-target x6-secondary-target" type="button" hidden><img class="x6-practice-target" src="/assets/d/v09/practice-target-v1.webp" alt="" draggable="false"><span class="x6-target-caption"><strong>远处的试锋靶</strong><span id="x6-secondary-health"></span></span></button>
    <button id="x6-rope" class="x6-target x6-cache x6-rope" type="button" hidden><span class="x6-hanging-rope" aria-hidden="true"></span><span class="x6-chest" aria-hidden="true"><img src="/assets/d/v09/rebound-tooth-v1.webp" alt=""></span><span class="x6-target-caption"><strong>切绳 · 取回锋齿</strong><span id="x6-rope-need"></span></span></button>
    <button id="x6-latch" class="x6-target x6-cache x6-latch" type="button" hidden><span class="x6-chest" aria-hidden="true"><img src="/assets/d/v09/furnace-nail-v1.webp" alt=""><i class="x6-iron-latch"></i></span><span class="x6-target-caption"><strong>破闩 · 取崩炉钉</strong><span id="x6-latch-need"></span></span></button>
    <div id="x6-escort" class="x6-escort" aria-hidden="true"><img src="/assets/d/v09/lantern-traveller-v1.webp" alt="" draggable="false"></div>
   </div>
   <section id="x6-result" class="x6-result" hidden aria-live="polite" aria-atomic="true"><small id="x6-result-kicker"></small><strong id="x6-result-title"></strong><p id="x6-result-copy"></p></section>
-  <aside id="x6-tool" class="x6-tool" hidden><img id="x6-tool-art" alt=""><div><strong id="x6-tool-name"></strong><p id="x6-tool-copy"></p></div></aside>
+  <aside id="x6-tool" class="x6-tool" hidden><img id="x6-tool-art" alt=""><div><strong id="x6-tool-name"></strong><b id="x6-tool-pulse" hidden></b><p id="x6-tool-copy"></p></div></aside>
   <section id="x6-readout" class="x6-readout" aria-label="手中剑的状况"><p><strong id="x6-strength">0</strong><span>强度</span><b id="x6-condition">粗铁坯</b></p><div id="x6-hit-count" class="x6-hit-count"></div><p id="x6-risk"></p><p id="x6-uses"></p></section>
   <div id="x6-turns" class="x6-turns" hidden aria-label="试锋余火"></div>
   <section class="x6-actions" aria-label="当前可以做的事"><button id="x6-technique" type="button" aria-pressed="false" hidden></button><button id="x6-forge" type="button" class="x6-primary" hidden>落锤 <small>左键剑身 / 空格</small></button><button id="x6-seal" type="button" class="x6-primary" hidden>收锻，携剑试锋</button><button id="x6-guard" type="button" hidden>架剑探隙</button><button id="x6-leave" type="button" hidden>路已通，就此启程</button></section>
  </main>
- <section id="x6-recap" class="x6-recap" hidden><p class="x6-overline">这一剑，留下的故事</p><h1 id="x6-recap-title" tabindex="-1"></h1><p id="x6-recap-copy"></p><div id="x6-recap-facts"></div><div class="x6-title-actions"><button id="x6-again" type="button" class="x6-primary">再铸一剑，换个走法</button><button id="x6-history" type="button">回看刚才的剑</button></div><a class="x6-back" href="/">回到十二灯行旅</a></section>
+ <section id="x6-recap" class="x6-recap" hidden><img id="x6-recap-tool" alt="" hidden><p class="x6-overline">这一剑，留下的故事</p><h1 id="x6-recap-title" tabindex="-1"></h1><p id="x6-recap-copy"></p><div id="x6-recap-facts"></div><div class="x6-title-actions"><button id="x6-again" type="button" class="x6-primary">再铸一剑，换个走法</button><button id="x6-history" type="button">回看刚才的剑</button></div><a class="x6-back" href="/">回到十二灯行旅</a></section>
  <div id="x6-save-warning" class="x6-save-warning" hidden></div><p id="x6-status" class="x6-status" role="status" aria-live="polite"></p>
  <dialog id="x6-dialog" aria-labelledby="x6-dialog-title"><h2 id="x6-dialog-title"></h2><div id="x6-dialog-body"></div><div id="x6-dialog-actions"></div></dialog>
 </div>`;

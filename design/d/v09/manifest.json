@@ -179,6 +179,37 @@
           "sha256": "c93ae4ada4debc17c622690362253689579cffb2488f965454891a1e0087297b"
         }
       ]
+    },
+    {
+      "name": "practice-target-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-a1742d3e-1d5e-42ee-8e75-1f5f2796058d.png",
+      "dimensions": [
+        1230,
+        1278
+      ],
+      "transparentAlphaExtrema": [
+        0,
+        255
+      ],
+      "reference": "design/d/v09/originals/wood-guardian-v1.png",
+      "conversion": "cwebp -q 90, alpha preserved; no raster editing",
+      "files": [
+        {
+          "path": "design/d/v09/originals/practice-target-v1.png",
+          "bytes": 1463161,
+          "sha256": "e288b0271e710312f6cd70dc0a5c40e94702ff767286716815161a1ad9be0fc6"
+        },
+        {
+          "path": "public/assets/d/v09/practice-target-v1.webp",
+          "bytes": 334176,
+          "sha256": "b205abe3e8893848765d38ac461d7c124664b55db46491e61866de74daf2c97c"
+        },
+        {
+          "path": "design/d/v09/practice-target-v1.prompt.txt",
+          "bytes": 1241,
+          "sha256": "4d4168635ff4d62a46f6f3d751c02ada092ae7f1a050ad32b25823ebb96c0f27"
+        }
+      ]
     }
   ]
 }

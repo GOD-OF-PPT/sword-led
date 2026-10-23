@@ -23,6 +23,7 @@ interface PropMotion {
  readonly target:HTMLElement|null;readonly targetRect:DOMRect|null;readonly escort:HTMLElement|null;
  readonly escortRect:DOMRect|null;readonly rope:HTMLElement|null;readonly latch:HTMLElement|null;
  readonly tool:HTMLElement|null;readonly toolRect:DOMRect|null;readonly sword:SwordGhost|null;
+ readonly toolOrigin:DOMRect|null;
 }
 interface Playing {
  readonly token:number;readonly before:RunView;readonly after:RunView;readonly event:ForgeEvent|null;
@@ -57,7 +58,7 @@ export function createExpeditionScene(root:HTMLElement,host:ExpeditionSceneHost)
  let disposed=false,epoch=0,watchFrame:number|null=null,latest:RunView|null=null,visual:Blade|null=null;
  let playing:Playing|null=null,pointer:StrikePoint|null=null,geometry:Geometry|null=null;
 
- function animate(node:HTMLElement,frames:Keyframe[],duration:number,easing='ease-out',fill:FillMode='none'){
+ function animate(node:HTMLElement|SVGElement,frames:Keyframe[],duration:number,easing='ease-out',fill:FillMode='none'){
   if(disposed||host.reduced()||typeof node.animate!=='function')return;
   const animation=node.animate(frames,{duration,easing,fill});animations.add(animation);
   // Filled clone poses remain owned until cancel/finish explicitly releases them.
@@ -125,10 +126,16 @@ export function createExpeditionScene(root:HTMLElement,host:ExpeditionSceneHost)
   if(!image.naturalWidth||!image.naturalHeight)return rect;
   const scale=Math.min(rect.width/image.naturalWidth,rect.height/image.naturalHeight);
   const width=image.naturalWidth*scale,height=image.naturalHeight*scale;
-  return new DOMRect(rect.left+(rect.width-width)/2,rect.bottom-height,width,height);
+  const positions=getComputedStyle(image).objectPosition.split(/\s+/);
+  const fraction=(value:string|undefined)=>value==='left'||value==='top'?0:value==='right'||value==='bottom'?1:
+   value?.endsWith('%')?Number.parseFloat(value)/100:.5;
+  return new DOMRect(rect.left+(rect.width-width)*fraction(positions[0]),rect.top+(rect.height-height)*fraction(positions[1]),width,height);
  }
  function syncProps(view:RunView){
-  const defeated=!!view.trial&&view.trial.primary.health===0||view.phase==='cache'&&view.gateCleared;
+  // Terminal results archive the actual trial. Its defeated pose must survive
+  // the last contact; a null current trial does not mean a new living guard.
+  const trial=view.trial??(view.ended?view.history.at(-1):null);
+  const defeated=trial?.primary.health===0||view.phase==='cache'&&view.gateCleared;
   guardArt.style.transformOrigin='50% 95%';
   guardArt.style.transform=defeated?'translate(22px,24px) rotate(68deg) scale(.72)':'';
   guardArt.style.opacity=defeated?'.38':'';
@@ -183,7 +190,9 @@ export function createExpeditionScene(root:HTMLElement,host:ExpeditionSceneHost)
   const gate=own.events.some(event=>event.type==='GateCleared');
   const escortRect=gate?escort.getBoundingClientRect():null,escortCopy=gate?cloneProp(escort):null;
   if(escortCopy)escortCopy.style.visibility='hidden';
-  own.props={target,targetRect,rope,latch,tool,toolRect,escort:escortCopy,escortRect,sword:swordGhost(visual,own.before)};
+  const toolElement=find('x6-tool-art'),toolBox=toolElement.getBoundingClientRect();
+  const toolOrigin=toolBox.width>0&&toolBox.height>0&&!toolElement.closest('[hidden]')?toolBox:null;
+  own.props={target,targetRect,rope,latch,tool,toolRect,toolOrigin,escort:escortCopy,escortRect,sword:swordGhost(visual,own.before)};
   const sword=own.props.sword;if(!sword||!targetRect)return;
   const angle=own.mode==='guard'?-57:-24,radians=angle*Math.PI/180;
   const mx=sword.pivot.x+(sword.metal.x-sword.pivot.x)*Math.cos(radians),my=sword.pivot.y+(sword.metal.x-sword.pivot.x)*Math.sin(radians);
@@ -285,12 +294,62 @@ export function createExpeditionScene(root:HTMLElement,host:ExpeditionSceneHost)
   layer().append(node);animate(node,[{opacity:0,transform:'translate(-50%,-50%) rotate(-28deg) scaleX(.15)'},
    {opacity:1,offset:.15},{opacity:0,transform:'translate(-50%,-50%) rotate(-28deg) scaleX(1.5)'}],210);
  }
+ function toolPulse(own:Playing,kind:'stored'|'used'|'recharged'|'full',fallback:string){
+  const source=find('x6-tool-pulse'),sourceBox=source.getBoundingClientRect();
+  let pulse=cloneProp(source);
+  if(pulse)conceal(source);
+  else{
+   const anchor=own.props?.toolOrigin;if(!anchor)return;
+   pulse=document.createElement('span');pulse.textContent=fallback;
+   pulse.style.cssText=`position:fixed;left:${Math.max(12,anchor.left-12)}px;top:${anchor.bottom+5}px;padding:5px 8px;color:#f6e4bd;background:#102a2de8;border:1px solid #ad9a6b88;font:600 16px/1.4 STKaiti,KaiTi,serif;pointer-events:none`;
+   layer().append(pulse);
+  }
+  pulse.dataset.x6ToolEvent=kind;
+  if(kind==='used')pulse.textContent=fallback;
+  const remaining=Math.max(1,own.duration-own.contactAt);
+  if(kind==='used'){
+   animate(pulse,[{opacity:1,transform:'translate(0,0)'},{opacity:0,transform:'translate(8px,-12px)'}],Math.min(360,remaining),'ease-out','forwards');
+  }else{
+   const glow=kind==='full'?'#c7cbb75c':kind==='stored'?'#97dec89c':'#f0bb6ba6';
+   pulse.style.color=kind==='full'?'#dbddcd':kind==='stored'?'#d7f4e5':'#ffe2ac';
+   pulse.style.transformOrigin='50% 50%';
+   animate(pulse,[{opacity:.45,transform:'scale(.96)',filter:'drop-shadow(0 0 0 transparent)'},
+    {opacity:1,transform:'scale(1.035)',filter:`drop-shadow(0 0 7px ${glow})`,offset:.32},
+    {opacity:1,transform:'scale(1)',filter:'drop-shadow(0 0 0 transparent)'}],remaining,'ease-out','forwards');
+  }
+  // Record the real source rectangle for this transient, without moving the UI.
+  if(sourceBox.width>0)pulse.dataset.source='formal-tool-pulse';
+ }
+ function traceEnergy(from:{x:number;y:number},to:{x:number;y:number},duration:number,kind:'stored'|'recharged'){
+  const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg'),path=document.createElementNS(ns,'path');
+  svg.setAttribute('viewBox',`0 0 ${window.innerWidth} ${window.innerHeight}`);
+  svg.style.cssText='position:fixed;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none';svg.dataset.x6Energy=kind;
+  const control={x:(from.x+to.x)/2,y:Math.min(from.y,to.y)-45};
+  path.setAttribute('d',`M${from.x} ${from.y} Q${control.x} ${control.y} ${to.x} ${to.y}`);
+  path.setAttribute('fill','none');path.setAttribute('stroke',kind==='stored'?'#9ee2ca':'#f4c47f');path.setAttribute('stroke-width','2');
+  path.style.filter=`drop-shadow(0 0 5px ${kind==='stored'?'#70bcaa':'#ea9e4f'})`;
+  svg.append(path);layer().append(svg);
+  const length=path.getTotalLength();path.style.strokeDasharray=String(length);path.style.strokeDashoffset=String(length);
+  animate(path,[{opacity:0,strokeDashoffset:String(length)},{opacity:.8,offset:.10},
+   {opacity:.8,strokeDashoffset:'0',offset:.77},{opacity:0,strokeDashoffset:'0'}],duration,'ease-in-out');
+  const ember=document.createElement('i');
+  ember.style.cssText=`position:fixed;left:${from.x-3}px;top:${from.y-3}px;width:6px;height:6px;border-radius:50%;background:${kind==='stored'?'#d9fae4':'#fff0c5'};box-shadow:0 0 9px ${kind==='stored'?'#93dbc3':'#efa952'};pointer-events:none;opacity:0`;
+  layer().append(ember);
+  const frames:Keyframe[]=[];
+  for(let index=0;index<=8;index++){
+   const t=index/8,x=(1-t)*(1-t)*from.x+2*(1-t)*t*control.x+t*t*to.x,y=(1-t)*(1-t)*from.y+2*(1-t)*t*control.y+t*t*to.y;
+   frames.push({transform:`translate(${x-from.x}px,${y-from.y}px) scale(${index===8?.7:1})`,opacity:index===0||index===8?0:1,offset:t});
+  }
+  animate(ember,frames,duration,'linear');
+ }
  function contactProps(own:Playing){
   const props=own.props;if(!props)return;
   const remaining=Math.max(1,own.duration-own.contactAt),gate=own.events.some(event=>event.type==='GateCleared');
   const hit=own.events.find(event=>event.type==='Struck'),cache=own.events.find(event=>event.type==='CacheTaken');
-  const defeated=hit?.type==='Struck'&&hit.after===0;
-  if(props.targetRect&&own.mode!=='guard')flash(props.targetRect,hit?.type==='Struck'&&hit.damage===0?'#d9e0ce':'#ffe1a4',own.mode==='cache'?.5:.68);
+  const follow=own.events.find(event=>event.type==='FollowUpUsed'),stored=own.events.find(event=>event.type==='FollowUpStored');
+  const restored=own.events.find(event=>event.type==='ChargeRestored');
+  const defeated=hit?.type==='Struck'&&hit.after===0||follow?.type==='FollowUpUsed'&&follow.healthAfter===0;
+  if(props.targetRect&&own.mode!=='guard')flash(props.targetRect,own.mode==='followUp'?'#c9f4df':hit?.type==='Struck'&&hit.damage===0?'#d9e0ce':'#ffe1a4',own.mode==='cache'?.5:.68);
   if(own.mode==='guard'){
    if(props.target)animate(props.target,[{transform:'rotate(0deg)'},{transform:'translate(8px,0) rotate(-4deg)',offset:.35},{transform:'rotate(0deg)'}],remaining);
    const opening=cloneProp(gap);if(opening)animate(opening,[{opacity:0,transform:'scaleX(.2)'},{opacity:1,transform:'scaleX(1)'}],remaining,'ease-out','forwards');
@@ -312,6 +371,24 @@ export function createExpeditionScene(root:HTMLElement,host:ExpeditionSceneHost)
     {transform:`translate(${dx*.46}px,${dy*.46}px)`,offset:.46},
     {transform:`translate(${dx*.7}px,${dy*.7-3}px)`,offset:.70},
     {transform:`translate(${dx}px,${dy}px)`,opacity:1}],remaining,'linear','forwards');
+  }
+  if(stored?.type==='FollowUpStored'&&stored.damage>0){
+   toolPulse(own,'stored',`余力 ${stored.damage}`);
+   if(props.toolOrigin&&props.targetRect)traceEnergy(
+    {x:props.targetRect.left+props.targetRect.width*.68,y:props.targetRect.top+props.targetRect.height*.47},
+    {x:props.toolOrigin.left+props.toolOrigin.width/2,y:props.toolOrigin.top+props.toolOrigin.height/2},Math.min(520,remaining),'stored');
+  }
+  if(follow?.type==='FollowUpUsed')toolPulse(own,'used','余力已用');
+  if(restored?.type==='ChargeRestored'){
+   toolPulse(own,restored.gained===1?'recharged':'full',restored.gained===1?'手艺＋1':'次数已满');
+   const destination=find('x6-technique'),rect=destination.getBoundingClientRect();
+   if(restored.gained===1&&own.after.phase==='echo-recharge'&&props.toolOrigin&&rect.width>0&&rect.height>0&&!destination.closest('[hidden]')){
+    traceEnergy({x:props.toolOrigin.left+props.toolOrigin.width/2,y:props.toolOrigin.top+props.toolOrigin.height/2},
+     {x:rect.left+rect.width/2,y:rect.top+rect.height/2},Math.min(560,remaining),'recharged');
+    const rim=document.createElement('i');rim.dataset.x6ChargeTarget='1';
+    rim.style.cssText=`position:fixed;left:${rect.left}px;top:${rect.top}px;width:${rect.width}px;height:${rect.height}px;border:1px solid #f0c181;border-radius:3px;box-sizing:border-box;pointer-events:none;opacity:0`;
+    layer().append(rim);animate(rim,[{opacity:0},{opacity:0,offset:.50},{opacity:1,boxShadow:'0 0 11px #edb66b8c',offset:.80},{opacity:0}],remaining);
+   }
   }
   if(cache?.type==='CacheTaken'){
    if(props.rope){
@@ -343,7 +420,8 @@ export function createExpeditionScene(root:HTMLElement,host:ExpeditionSceneHost)
   watchFrame=null;
   if(disposed||playing!==own||own.token!==epoch)return;
   if(document.hidden||host.reduced()){cancelInternal(true);return;}
-  if(own.contacted&&hammer.dataset.phase==='idle'){finish(own);return;}
+  const terminalHold=own.after.ended?own.duration-120:0;
+  if(own.contacted&&hammer.dataset.phase==='idle'&&own.contactedAt!==null&&performance.now()-own.contactedAt>=terminalHold){finish(own);return;}
   watchFrame=requestAnimationFrame(()=>watch(own));
  }
  function watchAction(own:Playing){
@@ -410,8 +488,9 @@ export function createExpeditionScene(root:HTMLElement,host:ExpeditionSceneHost)
    const beforeBlade=before.blades.find(blade=>blade.id===pieceId)??before.activePiece;
    const afterBlade=after.blades.find(blade=>blade.id===pieceId)??after.activePiece;
    const major=events.some(value=>value.type==='GateCleared'||value.type==='CacheTaken');
+   const toolMajor=events.some(value=>value.type==='FollowUpStored'||value.type==='FollowUpUsed'||value.type==='ChargeRestored')||after.ended;
    const own:Playing={token:++epoch,before,after,event,afterBlade,callbacks,point:projectPoint(beforeBlade,afterBlade),
-    events,mode,startedAt:performance.now(),contactAt:120,duration:major?760:mode==='guard'?380:400,
+    events,mode,startedAt:performance.now(),contactAt:120,duration:major?760:toolMajor?720:mode==='guard'?380:400,
     props:null,contacted:false,contactedAt:null,contactFrames:0,rebounded:false,contactPose:null};
    playing=own;visual=beforeBlade;scene.dataset.playing=mode;syncProps(before);paint();
    if(document.hidden||!measure()){cancelInternal(true);return;}

@@ -1,0 +1,397 @@
+{
+  "status": "passed",
+  "startedAt": "2026-10-23T07:27:48.504Z",
+  "finishedAt": "2026-10-23T07:27:51.657Z",
+  "scope": "ONE explicit save-restoration boundary from tool03 actual steady revision18, then ONE real followUp; this is not a fresh run or another full route.",
+  "identity": {
+    "snapshot": "/Users/gordon/githome/sword-led/tmp/previews/v09-tools-04",
+    "url": "http://127.0.0.1:4267/v6.html",
+    "sdkSha256": "a64cb053f824db0c4d7db7dcb2d3a1ada4e762e00be6d17d9539a8df55a0fc4e",
+    "scriptSha256": "c2453ada454b60b68282efa6aa887a5bd67c065066945370e438165c62df2ea9",
+    "snapshotFingerprint": "61b8d712ecfe235cfa1ca3166a2d5ecfa531e092a78dc6464fd0cd308312f24b",
+    "sourcePath": "/Users/gordon/githome/sword-led/tmp/v09-tools-check/tool-routes-03/result.json",
+    "sourceSha256": "61d7d95492c88a65ec8b585f7fa83998b4ee19b6d09ec5e4e856ec2cc766366c",
+    "sourceStateSha256": "184dbd104e7bf1e9301f79304897fcbd3dc15baaf96de70bfdd7b91caca57725",
+    "browserVersion": "156.0.8078.4",
+    "snapshotAfterFingerprint": "61b8d712ecfe235cfa1ca3166a2d5ecfa531e092a78dc6464fd0cd308312f24b",
+    "snapshotUnchanged": true
+  },
+  "restoredPose": {
+    "at": 1309.7999999523163,
+    "phase": "echo-trial",
+    "screen": "play",
+    "busy": "false",
+    "ending": "false",
+    "playVisible": true,
+    "guard": {
+      "transform": "translate(22px, 24px) rotate(68deg) scale(0.72)",
+      "opacity": "0.38",
+      "visibility": ""
+    },
+    "transientCount": 0
+  },
+  "contact": {
+    "at": 1505,
+    "phase": "echo-trial",
+    "screen": "play",
+    "busy": "true",
+    "ending": "true",
+    "playing": "followUp",
+    "playVisible": true,
+    "guard": {
+      "transform": "translate(22px, 24px) rotate(68deg) scale(0.72)",
+      "opacity": "0.38",
+      "visibility": ""
+    },
+    "ghost": {
+      "x6MotionSword": "",
+      "pieceId": "echo-1",
+      "strength": "4"
+    }
+  },
+  "afterContactScreenshot": {
+    "at": 1900.2999999523163,
+    "phase": "echo-trial",
+    "screen": "play",
+    "busy": "true",
+    "ending": "true",
+    "playing": "followUp",
+    "playVisible": true,
+    "guard": {
+      "transform": "translate(22px, 24px) rotate(68deg) scale(0.72)",
+      "opacity": "0.38",
+      "visibility": ""
+    },
+    "transientCount": 1
+  },
+  "actualCommands": 1,
+  "action": {
+    "type": "followUp",
+    "targetId": "echo-secondary"
+  },
+  "eventsFromFormalSdk": [
+    {
+      "type": "FollowUpUsed",
+      "targetId": "echo-secondary",
+      "damage": 4,
+      "healthAfter": 0
+    },
+    {
+      "type": "Recap",
+      "demonstrated": true,
+      "reason": "rebound-demonstrated"
+    }
+  ],
+  "actualStateSha256": "84c121a79b927eb074333a0cad3c3d79093ee9a22e4be9b344b65e6386062e65",
+  "final": {
+    "rulesVersion": "forge-v6",
+    "runId": "ef983bd7-124c-4c26-9e80-024db67ed207",
+    "seed": "v6-contract",
+    "revision": 19,
+    "phase": "recap",
+    "coins": 15,
+    "gateCleared": true,
+    "gatePaid": true,
+    "tool": "rebound",
+    "blades": [
+      {
+        "id": "main-1",
+        "stage": "main",
+        "school": "steady",
+        "status": "used",
+        "strength": 5,
+        "cracked": false,
+        "fissureMarked": false,
+        "hits": 5,
+        "sealedStrength": 5,
+        "sealedCracked": false,
+        "sealedHits": 5
+      },
+      {
+        "id": "main-2",
+        "stage": "main",
+        "school": null,
+        "status": "blank",
+        "strength": 0,
+        "cracked": false,
+        "fissureMarked": false,
+        "hits": 0,
+        "sealedStrength": null,
+        "sealedCracked": null,
+        "sealedHits": null
+      },
+      {
+        "id": "main-3",
+        "stage": "main",
+        "school": null,
+        "status": "blank",
+        "strength": 0,
+        "cracked": false,
+        "fissureMarked": false,
+        "hits": 0,
+        "sealedStrength": null,
+        "sealedCracked": null,
+        "sealedHits": null
+      },
+      {
+        "id": "echo-1",
+        "stage": "echo",
+        "school": "steady",
+        "status": "used",
+        "strength": 4,
+        "cracked": false,
+        "fissureMarked": false,
+        "hits": 4,
+        "sealedStrength": 4,
+        "sealedCracked": false,
+        "sealedHits": 4
+      },
+      {
+        "id": "echo-2",
+        "stage": "echo",
+        "school": null,
+        "status": "blank",
+        "strength": 0,
+        "cracked": false,
+        "fissureMarked": false,
+        "hits": 0,
+        "sealedStrength": null,
+        "sealedCracked": null,
+        "sealedHits": null
+      },
+      {
+        "id": "echo-3",
+        "stage": "echo",
+        "school": null,
+        "status": "blank",
+        "strength": 0,
+        "cracked": false,
+        "fissureMarked": false,
+        "hits": 0,
+        "sealedStrength": null,
+        "sealedCracked": null,
+        "sealedHits": null
+      }
+    ],
+    "activePieceId": null,
+    "charges": {
+      "main": 0,
+      "echo": 0
+    },
+    "trial": null,
+    "trials": [
+      {
+        "kind": "main",
+        "pieceId": "main-1",
+        "turnsLeft": 0,
+        "opening": false,
+        "primary": {
+          "id": "main-guard",
+          "health": 0,
+          "armor": 2
+        },
+        "secondary": null,
+        "storedOverkill": 0,
+        "reboundTriggered": false,
+        "followUpUsed": false,
+        "steps": [
+          {
+            "action": "guard",
+            "targetId": "main-guard",
+            "strengthBefore": 5,
+            "strengthAfter": 5,
+            "damage": 0,
+            "targetBefore": 6,
+            "targetAfter": 6,
+            "usedOpening": false,
+            "turn": 1
+          },
+          {
+            "action": "strike",
+            "targetId": "main-guard",
+            "strengthBefore": 5,
+            "strengthAfter": 5,
+            "damage": 7,
+            "targetBefore": 6,
+            "targetAfter": 0,
+            "usedOpening": true,
+            "turn": 2
+          },
+          {
+            "action": "rope",
+            "targetId": "rope",
+            "strengthBefore": 5,
+            "strengthAfter": 5,
+            "damage": 0,
+            "targetBefore": null,
+            "targetAfter": null,
+            "usedOpening": false,
+            "turn": 3
+          }
+        ]
+      },
+      {
+        "kind": "rebound",
+        "pieceId": "echo-1",
+        "turnsLeft": 0,
+        "opening": false,
+        "primary": {
+          "id": "echo-primary",
+          "health": 0,
+          "armor": 2
+        },
+        "secondary": {
+          "id": "echo-secondary",
+          "health": 0,
+          "armor": 0
+        },
+        "storedOverkill": 0,
+        "reboundTriggered": true,
+        "followUpUsed": true,
+        "steps": [
+          {
+            "action": "guard",
+            "targetId": "echo-primary",
+            "strengthBefore": 4,
+            "strengthAfter": 4,
+            "damage": 0,
+            "targetBefore": 2,
+            "targetAfter": 2,
+            "usedOpening": false,
+            "turn": 1
+          },
+          {
+            "action": "strike",
+            "targetId": "echo-primary",
+            "strengthBefore": 4,
+            "strengthAfter": 4,
+            "damage": 6,
+            "targetBefore": 2,
+            "targetAfter": 0,
+            "usedOpening": true,
+            "turn": 2
+          },
+          {
+            "action": "followUp",
+            "targetId": "echo-secondary",
+            "strengthBefore": 4,
+            "strengthAfter": 4,
+            "damage": 4,
+            "targetBefore": 4,
+            "targetAfter": 0,
+            "usedOpening": false,
+            "turn": 3
+          }
+        ]
+      }
+    ],
+    "echo": {
+      "started": true,
+      "submitted": true,
+      "toolTriggered": true,
+      "rechargeGained": 0,
+      "returnedToForge": false,
+      "techniqueUsedAfterRecharge": false,
+      "demonstrated": true,
+      "outcome": "demonstrated",
+      "reason": "rebound-demonstrated"
+    },
+    "rng": {
+      "forge": {
+        "state": 4175292524,
+        "draws": 7
+      }
+    },
+    "journal": [
+      {
+        "type": "chooseSchool",
+        "pieceId": "main-1",
+        "school": "steady"
+      },
+      {
+        "type": "forge",
+        "pieceId": "main-1",
+        "useTechnique": false
+      },
+      {
+        "type": "forge",
+        "pieceId": "main-1",
+        "useTechnique": false
+      },
+      {
+        "type": "forge",
+        "pieceId": "main-1",
+        "useTechnique": false
+      },
+      {
+        "type": "forge",
+        "pieceId": "main-1",
+        "useTechnique": false
+      },
+      {
+        "type": "forge",
+        "pieceId": "main-1",
+        "useTechnique": true
+      },
+      {
+        "type": "seal",
+        "pieceId": "main-1"
+      },
+      {
+        "type": "guard"
+      },
+      {
+        "type": "strike",
+        "targetId": "main-guard"
+      },
+      {
+        "type": "takeCache",
+        "target": "rope"
+      },
+      {
+        "type": "chooseSchool",
+        "pieceId": "echo-1",
+        "school": "steady"
+      },
+      {
+        "type": "forge",
+        "pieceId": "echo-1",
+        "useTechnique": false
+      },
+      {
+        "type": "forge",
+        "pieceId": "echo-1",
+        "useTechnique": false
+      },
+      {
+        "type": "forge",
+        "pieceId": "echo-1",
+        "useTechnique": false
+      },
+      {
+        "type": "forge",
+        "pieceId": "echo-1",
+        "useTechnique": true
+      },
+      {
+        "type": "seal",
+        "pieceId": "echo-1"
+      },
+      {
+        "type": "guard"
+      },
+      {
+        "type": "strike",
+        "targetId": "echo-primary"
+      },
+      {
+        "type": "followUp",
+        "targetId": "echo-secondary"
+      }
+    ],
+    "endReason": "rebound-demonstrated"
+  },
+  "cleanupPassed": true,
+  "pageErrors": [],
+  "resourceErrors": []
+}

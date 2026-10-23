@@ -1,0 +1,2198 @@
+{
+  "status": "passed",
+  "startedAt": "2026-10-23T07:13:33.374Z",
+  "finishedAt": "2026-10-23T07:14:01.566Z",
+  "scope": {
+    "task": "v0.9 / 3.1 actual first use of both earned tools",
+    "engine": "one headless Chromium, DPR1; two fresh contexts",
+    "seed": "v6-contract",
+    "routes": "main ordinary4 + technique; earned tool; echo ordinary3 + technique; steady manual stored follow-up, fissure restored charge actually used on echo-2",
+    "acceptedBudget": {
+      "steady": 19,
+      "fissure": 18,
+      "total": 37
+    },
+    "reloads": "once at steady stored follow-up; once at fissure echo-recharge; exact saved bytes and no scene replay",
+    "sizes": [
+      {
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "width": 1920,
+        "height": 1080
+      }
+    ],
+    "motion": "one follow-up contact, one net-charge flow, one final returned-technique contact; natural animations, no fast-forward",
+    "authority": "real UI inputs; frozen formal SDK events/state oracle; actual schema6 save/full-journal validation",
+    "limits": "one fixed finite route per tool; no fault/browser matrix, speaker proof or player fun approval"
+  },
+  "identity": {
+    "snapshot": "/Users/gordon/githome/sword-led/tmp/previews/v09-tools-03",
+    "url": "http://127.0.0.1:4266/v6.html",
+    "sdkSha256": "a64cb053f824db0c4d7db7dcb2d3a1ada4e762e00be6d17d9539a8df55a0fc4e",
+    "snapshotFingerprint": "3ddfd3e537710dd070c034398f68c27af4f489da1b686fc3c6c0422dddb2736c",
+    "scriptSha256": "c3828155be36b17eb709ff3c47ecd53c87d52f08419b1bcba631343ec31a3d32",
+    "browserVersion": "156.0.8078.4",
+    "snapshotAfterFingerprint": "3ddfd3e537710dd070c034398f68c27af4f489da1b686fc3c6c0422dddb2736c",
+    "snapshotUnchanged": true
+  },
+  "firstFailure": null,
+  "eventAuthority": "Events below are expected events from the frozen formal SDK, not an independent browser event tap.",
+  "routes": [
+    {
+      "school": "steady",
+      "status": "passed",
+      "commands": [
+        {
+          "label": "chooseSchool",
+          "action": {
+            "type": "chooseSchool",
+            "pieceId": "main-1",
+            "school": "steady"
+          },
+          "events": [
+            {
+              "type": "SchoolChosen",
+              "pieceId": "main-1",
+              "school": "steady"
+            }
+          ],
+          "revision": 1,
+          "stateSha256": "759b18e1bd9a9a111a5d51fa4a9e527c010f7d253de464196ef827088c720eb9",
+          "passed": true
+        },
+        {
+          "label": "main ordinary 1",
+          "action": {
+            "type": "forge",
+            "pieceId": "main-1",
+            "useTechnique": false
+          },
+          "events": [
+            {
+              "type": "Forged",
+              "pieceId": "main-1",
+              "technique": false,
+              "school": "steady",
+              "result": "success",
+              "before": 0,
+              "after": 1,
+              "ticket": 974,
+              "crackTickets": 0,
+              "chargeBefore": 1,
+              "chargeAfter": 1
+            }
+          ],
+          "revision": 2,
+          "stateSha256": "78c066c1ddaf28a32c9f14896f02bf83d9971da056ca670772e96932d77aa013",
+          "passed": true
+        },
+        {
+          "label": "main ordinary 2",
+          "action": {
+            "type": "forge",
+            "pieceId": "main-1",
+            "useTechnique": false
+          },
+          "events": [
+            {
+              "type": "Forged",
+              "pieceId": "main-1",
+              "technique": false,
+              "school": "steady",
+              "result": "success",
+              "before": 1,
+              "after": 2,
+              "ticket": 364,
+              "crackTickets": 0,
+              "chargeBefore": 1,
+              "chargeAfter": 1
+            }
+          ],
+          "revision": 3,
+          "stateSha256": "c4790153260c84bc45e3a98631b9c717d4ae28494c43eb4ebe53e533b1fede89",
+          "passed": true
+        },
+        {
+          "label": "main ordinary 3",
+          "action": {
+            "type": "forge",
+            "pieceId": "main-1",
+            "useTechnique": false
+          },
+          "events": [
+            {
+              "type": "Forged",
+              "pieceId": "main-1",
+              "technique": false,
+              "school": "steady",
+              "result": "success",
+              "before": 2,
+              "after": 3,
+              "ticket": 620,
+              "crackTickets": 0,
+              "chargeBefore": 1,
+              "chargeAfter": 1
+            }
+          ],
+          "revision": 4,
+          "stateSha256": "e138b168488175e9f553b40aa1c1e869e3615db1a55bd27f356af6c0a7dabc03",
+          "passed": true
+        },
+        {
+          "label": "main ordinary 4",
+          "action": {
+            "type": "forge",
+            "pieceId": "main-1",
+            "useTechnique": false
+          },
+          "events": [
+            {
+              "type": "Forged",
+              "pieceId": "main-1",
+              "technique": false,
+              "school": "steady",
+              "result": "success",
+              "before": 3,
+              "after": 4,
+              "ticket": 850,
+              "crackTickets": 200,
+              "chargeBefore": 1,
+              "chargeAfter": 1
+            }
+          ],
+          "revision": 5,
+          "stateSha256": "d379b290460ce2f2ccd227cf236fc3327f8d61869de0187ace5f5bd30c23ee7a",
+          "passed": true
+        },
+        {
+          "label": "main technique",
+          "action": {
+            "type": "forge",
+            "pieceId": "main-1",
+            "useTechnique": true
+          },
+          "events": [
+            {
+              "type": "Forged",
+              "pieceId": "main-1",
+              "technique": true,
+              "school": "steady",
+              "result": "steady",
+              "before": 4,
+              "after": 5,
+              "ticket": null,
+              "crackTickets": 0,
+              "chargeBefore": 1,
+              "chargeAfter": 0
+            }
+          ],
+          "revision": 6,
+          "stateSha256": "1baa5bf6123cf1006fc409206622ffd1d4d4ab9667673f1f2e140faf57c15986",
+          "passed": true
+        },
+        {
+          "label": "main seal",
+          "action": {
+            "type": "seal",
+            "pieceId": "main-1"
+          },
+          "events": [
+            {
+              "type": "Sealed",
+              "pieceId": "main-1"
+            }
+          ],
+          "revision": 7,
+          "stateSha256": "6022305fca460e29e51eff5f9a56baa2c8df92584522196b8cee3957004e5114",
+          "passed": true
+        },
+        {
+          "label": "main guard",
+          "action": {
+            "type": "guard"
+          },
+          "events": [
+            {
+              "type": "Guarded",
+              "pieceId": "main-1",
+              "turnsLeft": 2
+            }
+          ],
+          "revision": 8,
+          "stateSha256": "47ebdc610650d8878e5380b08ca2079b4ddc72d4f209b870639db9114b00d3d5",
+          "passed": true
+        },
+        {
+          "label": "main actual clear",
+          "action": {
+            "type": "strike",
+            "targetId": "main-guard"
+          },
+          "events": [
+            {
+              "type": "Struck",
+              "pieceId": "main-1",
+              "targetId": "main-guard",
+              "damage": 7,
+              "overkill": 1,
+              "before": 6,
+              "after": 0,
+              "usedOpening": true,
+              "turnsLeft": 1
+            },
+            {
+              "type": "GateCleared",
+              "amount": 15,
+              "turnsLeft": 1
+            }
+          ],
+          "revision": 9,
+          "stateSha256": "b50cef86e3fa58206e908310cc0ec9f74de2791811cb7fa8dde1d16497c2ce1e",
+          "passed": true
+        },
+        {
+          "label": "actual earned tool",
+          "action": {
+            "type": "takeCache",
+            "target": "rope"
+          },
+          "events": [
+            {
+              "type": "CacheTaken",
+              "target": "rope",
+              "tool": "rebound",
+              "damage": 0,
+              "strengthAfter": 5
+            },
+            {
+              "type": "EchoStarted",
+              "tool": "rebound"
+            }
+          ],
+          "revision": 10,
+          "stateSha256": "ea710535c5c30c3dff64c09e9b45d8ed27356355a98a99dc0dfb1037237a6cf3",
+          "passed": true
+        },
+        {
+          "label": "echo school",
+          "action": {
+            "type": "chooseSchool",
+            "pieceId": "echo-1",
+            "school": "steady"
+          },
+          "events": [
+            {
+              "type": "SchoolChosen",
+              "pieceId": "echo-1",
+              "school": "steady"
+            }
+          ],
+          "revision": 11,
+          "stateSha256": "4ede3b9441edae797390ae9d3a0b35a0f5b073ccab4c64c0001c109bbcca824f",
+          "passed": true
+        },
+        {
+          "label": "echo ordinary 1",
+          "action": {
+            "type": "forge",
+            "pieceId": "echo-1",
+            "useTechnique": false
+          },
+          "events": [
+            {
+              "type": "Forged",
+              "pieceId": "echo-1",
+              "technique": false,
+              "school": "steady",
+              "result": "success",
+              "before": 0,
+              "after": 1,
+              "ticket": 992,
+              "crackTickets": 0,
+              "chargeBefore": 1,
+              "chargeAfter": 1
+            }
+          ],
+          "revision": 12,
+          "stateSha256": "4d246bd6211a716099f1cba577506bb083253ff3f8b77b690397c863a2e6e2a5",
+          "passed": true
+        },
+        {
+          "label": "echo ordinary 2",
+          "action": {
+            "type": "forge",
+            "pieceId": "echo-1",
+            "useTechnique": false
+          },
+          "events": [
+            {
+              "type": "Forged",
+              "pieceId": "echo-1",
+              "technique": false,
+              "school": "steady",
+              "result": "success",
+              "before": 1,
+              "after": 2,
+              "ticket": 778,
+              "crackTickets": 0,
+              "chargeBefore": 1,
+              "chargeAfter": 1
+            }
+          ],
+          "revision": 13,
+          "stateSha256": "2c3a649ca0dbf183808112492ce03ba1ffda18980f30fa9843d6db0e05f95934",
+          "passed": true
+        },
+        {
+          "label": "echo ordinary 3",
+          "action": {
+            "type": "forge",
+            "pieceId": "echo-1",
+            "useTechnique": false
+          },
+          "events": [
+            {
+              "type": "Forged",
+              "pieceId": "echo-1",
+              "technique": false,
+              "school": "steady",
+              "result": "success",
+              "before": 2,
+              "after": 3,
+              "ticket": 198,
+              "crackTickets": 0,
+              "chargeBefore": 1,
+              "chargeAfter": 1
+            }
+          ],
+          "revision": 14,
+          "stateSha256": "1c4b14f1a0ba4ca62487ef5af04828447a346b71b8a8dcffe40ee81248b44cab",
+          "passed": true
+        },
+        {
+          "label": "echo technique",
+          "action": {
+            "type": "forge",
+            "pieceId": "echo-1",
+            "useTechnique": true
+          },
+          "events": [
+            {
+              "type": "Forged",
+              "pieceId": "echo-1",
+              "technique": true,
+              "school": "steady",
+              "result": "steady",
+              "before": 3,
+              "after": 4,
+              "ticket": null,
+              "crackTickets": 0,
+              "chargeBefore": 1,
+              "chargeAfter": 0
+            }
+          ],
+          "revision": 15,
+          "stateSha256": "7ea44926df49cfe7d614bd2545d3afbfaf39963c738efce05193cae00b333a2d",
+          "passed": true
+        },
+        {
+          "label": "echo seal",
+          "action": {
+            "type": "seal",
+            "pieceId": "echo-1"
+          },
+          "events": [
+            {
+              "type": "Sealed",
+              "pieceId": "echo-1"
+            }
+          ],
+          "revision": 16,
+          "stateSha256": "8464be080f030380a19e714490c7955740dd1d8349db5f88f9834a2c446f9c63",
+          "passed": true
+        },
+        {
+          "label": "echo real opening",
+          "action": {
+            "type": "guard"
+          },
+          "events": [
+            {
+              "type": "Guarded",
+              "pieceId": "echo-1",
+              "turnsLeft": 2
+            }
+          ],
+          "revision": 17,
+          "stateSha256": "ee1c473131f2f46443c78b73ebef7bb1e935f1f5358d40e2a3d59612ec5b4376",
+          "passed": true
+        },
+        {
+          "label": "actual stored overkill",
+          "action": {
+            "type": "strike",
+            "targetId": "echo-primary"
+          },
+          "events": [
+            {
+              "type": "Struck",
+              "pieceId": "echo-1",
+              "targetId": "echo-primary",
+              "damage": 6,
+              "overkill": 4,
+              "before": 2,
+              "after": 0,
+              "usedOpening": true,
+              "turnsLeft": 1
+            },
+            {
+              "type": "FollowUpStored",
+              "damage": 4
+            }
+          ],
+          "revision": 18,
+          "stateSha256": "184dbd104e7bf1e9301f79304897fcbd3dc15baaf96de70bfdd7b91caca57725",
+          "passed": true
+        },
+        {
+          "label": "manual secondary follow-up",
+          "action": {
+            "type": "followUp",
+            "targetId": "echo-secondary"
+          },
+          "events": [
+            {
+              "type": "FollowUpUsed",
+              "targetId": "echo-secondary",
+              "damage": 4,
+              "healthAfter": 0
+            },
+            {
+              "type": "Recap",
+              "demonstrated": true,
+              "reason": "rebound-demonstrated"
+            }
+          ],
+          "revision": 19,
+          "stateSha256": "84c121a79b927eb074333a0cad3c3d79093ee9a22e4be9b344b65e6386062e65",
+          "passed": true
+        }
+      ],
+      "controls": [
+        {
+          "label": "open seed details",
+          "exactMainAndBackupUnchanged": true
+        },
+        {
+          "label": "enter declared fixed seed",
+          "exactMainAndBackupUnchanged": true
+        },
+        {
+          "label": "arm main technique without a command",
+          "exactMainAndBackupUnchanged": true
+        },
+        {
+          "label": "arm first echo technique without a command",
+          "exactMainAndBackupUnchanged": true
+        }
+      ],
+      "reloads": [
+        {
+          "label": "reload stored follow-up once",
+          "phase": "echo-trial",
+          "revision": 18,
+          "stateSha256": "184dbd104e7bf1e9301f79304897fcbd3dc15baaf96de70bfdd7b91caca57725",
+          "exactMainAndBackupUnchanged": true,
+          "noSceneReplayAtRestoredObservation": true,
+          "observation": {
+            "at": 839,
+            "viewport": {
+              "width": 1280,
+              "height": 720
+            },
+            "phase": "echo-trial",
+            "screen": "play",
+            "busy": "false",
+            "ending": "false",
+            "playVisible": true,
+            "canvas": {
+              "art": "ready",
+              "pieceId": "echo-1",
+              "strength": "4",
+              "hits": "4",
+              "formStrength": "4",
+              "condition": "intact",
+              "stage": "2"
+            },
+            "tool": {
+              "state": "stored"
+            },
+            "pulse": "已存 4 追斩 · 点远靶",
+            "energy": [],
+            "toolEvents": [],
+            "chargeTargets": [],
+            "transientCount": 0
+          }
+        }
+      ],
+      "images": [
+        {
+          "file": "steady-actual-stored-follow-up-1280.png",
+          "observation": {
+            "at": 10808,
+            "viewport": {
+              "width": 1280,
+              "height": 720
+            },
+            "phase": "echo-trial",
+            "screen": "play",
+            "busy": "false",
+            "ending": "false",
+            "playVisible": true,
+            "canvas": {
+              "art": "ready",
+              "pieceId": "echo-1",
+              "strength": "4",
+              "hits": "4",
+              "formStrength": "4",
+              "condition": "intact",
+              "stage": "2"
+            },
+            "tool": {
+              "state": "stored"
+            },
+            "pulse": "已存 4 追斩 · 点远靶",
+            "energy": [],
+            "toolEvents": [],
+            "chargeTargets": [],
+            "transientCount": 0
+          }
+        },
+        {
+          "file": "steady-actual-stored-follow-up-1920.png",
+          "observation": {
+            "at": 12061.699999988079,
+            "viewport": {
+              "width": 1920,
+              "height": 1080
+            },
+            "phase": "echo-trial",
+            "screen": "play",
+            "busy": "false",
+            "ending": "false",
+            "playVisible": true,
+            "canvas": {
+              "art": "ready",
+              "pieceId": "echo-1",
+              "strength": "4",
+              "hits": "4",
+              "formStrength": "4",
+              "condition": "intact",
+              "stage": "2"
+            },
+            "tool": {
+              "state": "stored"
+            },
+            "pulse": "已存 4 追斩 · 点远靶",
+            "energy": [],
+            "toolEvents": [],
+            "chargeTargets": [],
+            "transientCount": 0
+          }
+        },
+        {
+          "file": "steady-actual-tool-demonstrated-recap-1280.png",
+          "observation": {
+            "at": 2274.800000011921,
+            "viewport": {
+              "width": 1280,
+              "height": 720
+            },
+            "phase": "recap",
+            "screen": "recap",
+            "busy": "false",
+            "ending": "false",
+            "playVisible": false,
+            "canvas": {
+              "art": "ready",
+              "pieceId": "",
+              "strength": "0",
+              "hits": "0",
+              "formStrength": "0",
+              "condition": "intact",
+              "stage": "0"
+            },
+            "tool": {
+              "state": "idle"
+            },
+            "pulse": "",
+            "energy": [],
+            "toolEvents": [],
+            "chargeTargets": [],
+            "transientCount": 0
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "kind": "follow-up",
+          "file": "steady-follow-up-natural-contact-1280.png",
+          "before": {
+            "at": 1097.5,
+            "viewport": {
+              "width": 1280,
+              "height": 720
+            },
+            "phase": "echo-trial",
+            "screen": "play",
+            "busy": "true",
+            "ending": "true",
+            "playing": "followUp",
+            "playVisible": true,
+            "canvas": {
+              "art": "ready",
+              "pieceId": "echo-1",
+              "strength": "4",
+              "hits": "4",
+              "formStrength": "4",
+              "condition": "intact",
+              "stage": "2"
+            },
+            "ghost": {
+              "x6MotionSword": "",
+              "pieceId": "echo-1",
+              "strength": "4"
+            },
+            "tool": {
+              "state": "stored"
+            },
+            "pulse": "已存 4 追斩 · 点远靶",
+            "energy": [],
+            "toolEvents": [
+              "used"
+            ],
+            "chargeTargets": [],
+            "transientCount": 1
+          },
+          "after": {
+            "at": 1678.5,
+            "viewport": {
+              "width": 1280,
+              "height": 720
+            },
+            "phase": "echo-trial",
+            "screen": "play",
+            "busy": "true",
+            "ending": "true",
+            "playing": "followUp",
+            "playVisible": true,
+            "canvas": {
+              "art": "ready",
+              "pieceId": "echo-1",
+              "strength": "4",
+              "hits": "4",
+              "formStrength": "4",
+              "condition": "intact",
+              "stage": "2"
+            },
+            "ghost": {
+              "x6MotionSword": "",
+              "pieceId": "echo-1",
+              "strength": "4"
+            },
+            "tool": {
+              "state": "stored"
+            },
+            "pulse": "已存 4 追斩 · 点远靶",
+            "energy": [],
+            "toolEvents": [
+              "used"
+            ],
+            "chargeTargets": [],
+            "transientCount": 1
+          },
+          "windowHeldThroughScreenshot": true
+        }
+      ],
+      "final": {
+        "rulesVersion": "forge-v6",
+        "runId": "ef983bd7-124c-4c26-9e80-024db67ed207",
+        "seed": "v6-contract",
+        "revision": 19,
+        "phase": "recap",
+        "coins": 15,
+        "gateCleared": true,
+        "gatePaid": true,
+        "tool": "rebound",
+        "blades": [
+          {
+            "id": "main-1",
+            "stage": "main",
+            "school": "steady",
+            "status": "used",
+            "strength": 5,
+            "cracked": false,
+            "fissureMarked": false,
+            "hits": 5,
+            "sealedStrength": 5,
+            "sealedCracked": false,
+            "sealedHits": 5
+          },
+          {
+            "id": "main-2",
+            "stage": "main",
+            "school": null,
+            "status": "blank",
+            "strength": 0,
+            "cracked": false,
+            "fissureMarked": false,
+            "hits": 0,
+            "sealedStrength": null,
+            "sealedCracked": null,
+            "sealedHits": null
+          },
+          {
+            "id": "main-3",
+            "stage": "main",
+            "school": null,
+            "status": "blank",
+            "strength": 0,
+            "cracked": false,
+            "fissureMarked": false,
+            "hits": 0,
+            "sealedStrength": null,
+            "sealedCracked": null,
+            "sealedHits": null
+          },
+          {
+            "id": "echo-1",
+            "stage": "echo",
+            "school": "steady",
+            "status": "used",
+            "strength": 4,
+            "cracked": false,
+            "fissureMarked": false,
+            "hits": 4,
+            "sealedStrength": 4,
+            "sealedCracked": false,
+            "sealedHits": 4
+          },
+          {
+            "id": "echo-2",
+            "stage": "echo",
+            "school": null,
+            "status": "blank",
+            "strength": 0,
+            "cracked": false,
+            "fissureMarked": false,
+            "hits": 0,
+            "sealedStrength": null,
+            "sealedCracked": null,
+            "sealedHits": null
+          },
+          {
+            "id": "echo-3",
+            "stage": "echo",
+            "school": null,
+            "status": "blank",
+            "strength": 0,
+            "cracked": false,
+            "fissureMarked": false,
+            "hits": 0,
+            "sealedStrength": null,
+            "sealedCracked": null,
+            "sealedHits": null
+          }
+        ],
+        "activePieceId": null,
+        "charges": {
+          "main": 0,
+          "echo": 0
+        },
+        "trial": null,
+        "trials": [
+          {
+            "kind": "main",
+            "pieceId": "main-1",
+            "turnsLeft": 0,
+            "opening": false,
+            "primary": {
+              "id": "main-guard",
+              "health": 0,
+              "armor": 2
+            },
+            "secondary": null,
+            "storedOverkill": 0,
+            "reboundTriggered": false,
+            "followUpUsed": false,
+            "steps": [
+              {
+                "action": "guard",
+                "targetId": "main-guard",
+                "strengthBefore": 5,
+                "strengthAfter": 5,
+                "damage": 0,
+                "targetBefore": 6,
+                "targetAfter": 6,
+                "usedOpening": false,
+                "turn": 1
+              },
+              {
+                "action": "strike",
+                "targetId": "main-guard",
+                "strengthBefore": 5,
+                "strengthAfter": 5,
+                "damage": 7,
+                "targetBefore": 6,
+                "targetAfter": 0,
+                "usedOpening": true,
+                "turn": 2
+              },
+              {
+                "action": "rope",
+                "targetId": "rope",
+                "strengthBefore": 5,
+                "strengthAfter": 5,
+                "damage": 0,
+                "targetBefore": null,
+                "targetAfter": null,
+                "usedOpening": false,
+                "turn": 3
+              }
+            ]
+          },
+          {
+            "kind": "rebound",
+            "pieceId": "echo-1",
+            "turnsLeft": 0,
+            "opening": false,
+            "primary": {
+              "id": "echo-primary",
+              "health": 0,
+              "armor": 2
+            },
+            "secondary": {
+              "id": "echo-secondary",
+              "health": 0,
+              "armor": 0
+            },
+            "storedOverkill": 0,
+            "reboundTriggered": true,
+            "followUpUsed": true,
+            "steps": [
+              {
+                "action": "guard",
+                "targetId": "echo-primary",
+                "strengthBefore": 4,
+                "strengthAfter": 4,
+                "damage": 0,
+                "targetBefore": 2,
+                "targetAfter": 2,
+                "usedOpening": false,
+                "turn": 1
+              },
+              {
+                "action": "strike",
+                "targetId": "echo-primary",
+                "strengthBefore": 4,
+                "strengthAfter": 4,
+                "damage": 6,
+                "targetBefore": 2,
+                "targetAfter": 0,
+                "usedOpening": true,
+                "turn": 2
+              },
+              {
+                "action": "followUp",
+                "targetId": "echo-secondary",
+                "strengthBefore": 4,
+                "strengthAfter": 4,
+                "damage": 4,
+                "targetBefore": 4,
+                "targetAfter": 0,
+                "usedOpening": false,
+                "turn": 3
+              }
+            ]
+          }
+        ],
+        "echo": {
+          "started": true,
+          "submitted": true,
+          "toolTriggered": true,
+          "rechargeGained": 0,
+          "returnedToForge": false,
+          "techniqueUsedAfterRecharge": false,
+          "demonstrated": true,
+          "outcome": "demonstrated",
+          "reason": "rebound-demonstrated"
+        },
+        "rng": {
+          "forge": {
+            "state": 4175292524,
+            "draws": 7
+          }
+        },
+        "journal": [
+          {
+            "type": "chooseSchool",
+            "pieceId": "main-1",
+            "school": "steady"
+          },
+          {
+            "type": "forge",
+            "pieceId": "main-1",
+            "useTechnique": false
+          },
+          {
+            "type": "forge",
+            "pieceId": "main-1",
+            "useTechnique": false
+          },
+          {
+            "type": "forge",
+            "pieceId": "main-1",
+            "useTechnique": false
+          },
+          {
+            "type": "forge",
+            "pieceId": "main-1",
+            "useTechnique": false
+          },
+          {
+            "type": "forge",
+            "pieceId": "main-1",
+            "useTechnique": true
+          },
+          {
+            "type": "seal",
+            "pieceId": "main-1"
+          },
+          {
+            "type": "guard"
+          },
+          {
+            "type": "strike",
+            "targetId": "main-guard"
+          },
+          {
+            "type": "takeCache",
+            "target": "rope"
+          },
+          {
+            "type": "chooseSchool",
+            "pieceId": "echo-1",
+            "school": "steady"
+          },
+          {
+            "type": "forge",
+            "pieceId": "echo-1",
+            "useTechnique": false
+          },
+          {
+            "type": "forge",
+            "pieceId": "echo-1",
+            "useTechnique": false
+          },
+          {
+            "type": "forge",
+            "pieceId": "echo-1",
+            "useTechnique": false
+          },
+          {
+            "type": "forge",
+            "pieceId": "echo-1",
+            "useTechnique": true
+          },
+          {
+            "type": "seal",
+            "pieceId": "echo-1"
+          },
+          {
+            "type": "guard"
+          },
+          {
+            "type": "strike",
+            "targetId": "echo-primary"
+          },
+          {
+            "type": "followUp",
+            "targetId": "echo-secondary"
+          }
+        ],
+        "endReason": "rebound-demonstrated"
+      },
+      "finalStateSha256": "84c121a79b927eb074333a0cad3c3d79093ee9a22e4be9b344b65e6386062e65",
+      "pageErrors": [],
+      "resourceErrors": [],
+      "verifiedResponses": [
+        {
+          "path": "/v6.html",
+          "sha256": "debcc34ec706ad7a194261749a043830937c679602912cdf51dbf76b85e5ead3",
+          "bytes": 849
+        },
+        {
+          "path": "/assets/v6-BCoGnu87.css",
+          "sha256": "3962ff28aa01957b694e9126afd88290c226b2ac0aab1fe61da77aaf18bbb0d5",
+          "bytes": 27278
+        },
+        {
+          "path": "/assets/dom-UdOu9fij.js",
+          "sha256": "91acc1c6f830d88a7028fed8ecc07641a4b5b7f974035ab41a5f299c2f2794cc",
+          "bytes": 32306
+        },
+        {
+          "path": "/assets/v6-CJWD0xK1.js",
+          "sha256": "2f57fbad1c01c38157cddd98955d38a2e60fe3d42e12522f54f44ed129337a26",
+          "bytes": 88177
+        },
+        {
+          "path": "/assets/impact-4TS5AN9h.js",
+          "sha256": "7e3046e932eca8210f9049bf9ffdc96389f5cd4273be52428dc9f3caa2554ded",
+          "bytes": 8086
+        },
+        {
+          "path": "/assets/d/hammer-forge-v2.webp",
+          "sha256": "174462711969925c8bc6a3a27a043ddb69d8d4f0c4f543ed83be0cad8134186e",
+          "bytes": 142696
+        },
+        {
+          "path": "/assets/d/v09/rebound-tooth-v1.webp",
+          "sha256": "0e6774ea281fd3318c549cfc727d3f4bdf97e3efbc6524d1e28c482c1d88c84d",
+          "bytes": 293614
+        },
+        {
+          "path": "/assets/d/v09/practice-target-v1.webp",
+          "sha256": "b205abe3e8893848765d38ac461d7c124664b55db46491e61866de74daf2c97c",
+          "bytes": 334176
+        },
+        {
+          "path": "/assets/d/v09/wood-guardian-v1.webp",
+          "sha256": "3528fceeba74a77ea88f39ae7f6427dfd9a7294bb44451aca2d7b4e52327e67b",
+          "bytes": 488984
+        },
+        {
+          "path": "/assets/d/v09/furnace-nail-v1.webp",
+          "sha256": "7eeed3539d8221bea208e870ea136414351a3e80568345a377b6e9234e8e16ef",
+          "bytes": 207182
+        },
+        {
+          "path": "/assets/d/v09/lantern-traveller-v1.webp",
+          "sha256": "4a87812c1376132c421a223fc81b08bc3b916dc90dafb6dad7e9ad7241b4c626",
+          "bytes": 341392
+        },
+        {
+          "path": "/assets/d/v09/sword-stages-v1.webp",
+          "sha256": "ba21afb33f43049015d6e54eebf0853d15391c11b98f45889c1369d5489b53a4",
+          "bytes": 448220
+        },
+        {
+          "path": "/assets/d/v07/lantern-road-v1.webp",
+          "sha256": "e3e3cb3a6b32c0b8fb8315fa4fa724a2facc09a7da153fdbe1153115734fa95a",
+          "bytes": 283948
+        },
+        {
+          "path": "/assets/d/reboot/forge-focus-backdrop-v1.webp",
+          "sha256": "c13e3ef6af6e84c839724c2fe53a7f3d9e3013773ea9dd9830cd722a2a02b525",
+          "bytes": 346850
+        },
+        {
+          "path": "/assets/d/v09/tool-chest-v1.webp",
+          "sha256": "c8e90236942a32d3cb44a2c532516e035c75fe1ac6bd609d112a444f09a7be80",
+          "bytes": 510660
+        }
+      ]
+    },
+    {
+      "school": "fissure",
+      "status": "passed",
+      "commands": [
+        {
+          "label": "chooseSchool",
+          "action": {
+            "type": "chooseSchool",
+            "pieceId": "main-1",
+            "school": "fissure"
+          },
+          "events": [
+            {
+              "type": "SchoolChosen",
+              "pieceId": "main-1",
+              "school": "fissure"
+            }
+          ],
+          "revision": 1,
+          "stateSha256": "8c83d54f6d9204185c40484484db4d2b8aa5c6fcb293f10464b40addd9d8234c",
+          "passed": true
+        },
+        {
+          "label": "main ordinary 1",
+          "action": {
+            "type": "forge",
+            "pieceId": "main-1",
+            "useTechnique": false
+          },
+          "events": [
+            {
+              "type": "Forged",
+              "pieceId": "main-1",
+              "technique": false,
+              "school": "fissure",
+              "result": "success",
+              "before": 0,
+              "after": 1,
+              "ticket": 974,
+              "crackTickets": 0,
+              "chargeBefore": 1,
+              "chargeAfter": 1
+            }
+          ],
+          "revision": 2,
+          "stateSha256": "45f9d7e82b8f746a64e7b578e944744142258c0e3eb2cc6fc9c1cfc3b4f488ea",
+          "passed": true
+        },
+        {
+          "label": "main ordinary 2",
+          "action": {
+            "type": "forge",
+            "pieceId": "main-1",
+            "useTechnique": false
+          },
+          "events": [
+            {
+              "type": "Forged",
+              "pieceId": "main-1",
+              "technique": false,
+              "school": "fissure",
+              "result": "success",
+              "before": 1,
+              "after": 2,
+              "ticket": 364,
+              "crackTickets": 0,
+              "chargeBefore": 1,
+              "chargeAfter": 1
+            }
+          ],
+          "revision": 3,
+          "stateSha256": "36f13df02898ce9292ecde4fff0a2bc63a08c37ee4f410e0f8a3c973fdb9cfa2",
+          "passed": true
+        },
+        {
+          "label": "main ordinary 3",
+          "action": {
+            "type": "forge",
+            "pieceId": "main-1",
+            "useTechnique": false
+          },
+          "events": [
+            {
+              "type": "Forged",
+              "pieceId": "main-1",
+              "technique": false,
+              "school": "fissure",
+              "result": "success",
+              "before": 2,
+              "after": 3,
+              "ticket": 620,
+              "crackTickets": 0,
+              "chargeBefore": 1,
+              "chargeAfter": 1
+            }
+          ],
+          "revision": 4,
+          "stateSha256": "868a792062a7b64b20606e20da7926a3360933b47a7b500ee228a77214f97232",
+          "passed": true
+        },
+        {
+          "label": "main ordinary 4",
+          "action": {
+            "type": "forge",
+            "pieceId": "main-1",
+            "useTechnique": false
+          },
+          "events": [
+            {
+              "type": "Forged",
+              "pieceId": "main-1",
+              "technique": false,
+              "school": "fissure",
+              "result": "success",
+              "before": 3,
+              "after": 4,
+              "ticket": 850,
+              "crackTickets": 200,
+              "chargeBefore": 1,
+              "chargeAfter": 1
+            }
+          ],
+          "revision": 5,
+          "stateSha256": "78ae5f1c05d1af1c8bbf6bc2d57f64adb7995daa0a7ec89d450c03f7ad59e882",
+          "passed": true
+        },
+        {
+          "label": "main technique",
+          "action": {
+            "type": "forge",
+            "pieceId": "main-1",
+            "useTechnique": true
+          },
+          "events": [
+            {
+              "type": "Forged",
+              "pieceId": "main-1",
+              "technique": true,
+              "school": "fissure",
+              "result": "fissure",
+              "before": 4,
+              "after": 7,
+              "ticket": null,
+              "crackTickets": 0,
+              "chargeBefore": 1,
+              "chargeAfter": 0
+            }
+          ],
+          "revision": 6,
+          "stateSha256": "238755b2341095384717654b614076674adf841a514bd2d552f1e68fc5cc1b59",
+          "passed": true
+        },
+        {
+          "label": "main seal",
+          "action": {
+            "type": "seal",
+            "pieceId": "main-1"
+          },
+          "events": [
+            {
+              "type": "Sealed",
+              "pieceId": "main-1"
+            }
+          ],
+          "revision": 7,
+          "stateSha256": "ee159719bc64657323896bef99ab7291d497b5d74ef174061809f62282ae6e2d",
+          "passed": true
+        },
+        {
+          "label": "main actual clear",
+          "action": {
+            "type": "strike",
+            "targetId": "main-guard"
+          },
+          "events": [
+            {
+              "type": "Struck",
+              "pieceId": "main-1",
+              "targetId": "main-guard",
+              "damage": 9,
+              "overkill": 3,
+              "before": 6,
+              "after": 0,
+              "usedOpening": false,
+              "turnsLeft": 2
+            },
+            {
+              "type": "GateCleared",
+              "amount": 15,
+              "turnsLeft": 2
+            }
+          ],
+          "revision": 8,
+          "stateSha256": "211329a08b325a6e7b240a2bd1865869c849cccf28534e0884c3c9544689f2b9",
+          "passed": true
+        },
+        {
+          "label": "actual earned tool",
+          "action": {
+            "type": "takeCache",
+            "target": "latch"
+          },
+          "events": [
+            {
+              "type": "CacheTaken",
+              "target": "latch",
+              "tool": "furnace",
+              "damage": 7,
+              "strengthAfter": 3
+            },
+            {
+              "type": "EchoStarted",
+              "tool": "furnace"
+            }
+          ],
+          "revision": 9,
+          "stateSha256": "bb3dffd75bfb579b29be8dfe9acb667d6e20cb7ddf4bea7cbb73e0e59513e4ac",
+          "passed": true
+        },
+        {
+          "label": "echo school",
+          "action": {
+            "type": "chooseSchool",
+            "pieceId": "echo-1",
+            "school": "fissure"
+          },
+          "events": [
+            {
+              "type": "SchoolChosen",
+              "pieceId": "echo-1",
+              "school": "fissure"
+            }
+          ],
+          "revision": 10,
+          "stateSha256": "c6a8cb4396a9303ab6548a6e32d113ddf20f87eca9018ba82737741716219f35",
+          "passed": true
+        },
+        {
+          "label": "echo ordinary 1",
+          "action": {
+            "type": "forge",
+            "pieceId": "echo-1",
+            "useTechnique": false
+          },
+          "events": [
+            {
+              "type": "Forged",
+              "pieceId": "echo-1",
+              "technique": false,
+              "school": "fissure",
+              "result": "success",
+              "before": 0,
+              "after": 1,
+              "ticket": 992,
+              "crackTickets": 0,
+              "chargeBefore": 1,
+              "chargeAfter": 1
+            }
+          ],
+          "revision": 11,
+          "stateSha256": "2b5f0f8b364590a432120335ac7494bf0d69b24a526129ccda3bf55bc2bd06e4",
+          "passed": true
+        },
+        {
+          "label": "echo ordinary 2",
+          "action": {
+            "type": "forge",
+            "pieceId": "echo-1",
+            "useTechnique": false
+          },
+          "events": [
+            {
+              "type": "Forged",
+              "pieceId": "echo-1",
+              "technique": false,
+              "school": "fissure",
+              "result": "success",
+              "before": 1,
+              "after": 2,
+              "ticket": 778,
+              "crackTickets": 0,
+              "chargeBefore": 1,
+              "chargeAfter": 1
+            }
+          ],
+          "revision": 12,
+          "stateSha256": "cfcef8b3224db39d8fc7218b84b43e44297b6a8f06abaef479ba524485d346a4",
+          "passed": true
+        },
+        {
+          "label": "echo ordinary 3",
+          "action": {
+            "type": "forge",
+            "pieceId": "echo-1",
+            "useTechnique": false
+          },
+          "events": [
+            {
+              "type": "Forged",
+              "pieceId": "echo-1",
+              "technique": false,
+              "school": "fissure",
+              "result": "success",
+              "before": 2,
+              "after": 3,
+              "ticket": 198,
+              "crackTickets": 0,
+              "chargeBefore": 1,
+              "chargeAfter": 1
+            }
+          ],
+          "revision": 13,
+          "stateSha256": "9b2f9a5141b65525ccf1dd8cbd265f26cb64cd9d8a28102cdd9e7545f2c24483",
+          "passed": true
+        },
+        {
+          "label": "echo technique",
+          "action": {
+            "type": "forge",
+            "pieceId": "echo-1",
+            "useTechnique": true
+          },
+          "events": [
+            {
+              "type": "Forged",
+              "pieceId": "echo-1",
+              "technique": true,
+              "school": "fissure",
+              "result": "fissure",
+              "before": 3,
+              "after": 6,
+              "ticket": null,
+              "crackTickets": 0,
+              "chargeBefore": 1,
+              "chargeAfter": 0
+            }
+          ],
+          "revision": 14,
+          "stateSha256": "9aeba38ff839d1dff33ff74b1d6829008a3c61bc9857969c1844d5ef6a029f2d",
+          "passed": true
+        },
+        {
+          "label": "echo seal",
+          "action": {
+            "type": "seal",
+            "pieceId": "echo-1"
+          },
+          "events": [
+            {
+              "type": "Sealed",
+              "pieceId": "echo-1"
+            }
+          ],
+          "revision": 15,
+          "stateSha256": "d75482f6b1832f4b739cf3bb9144053918a47b1f8e25bdd2741740e09c1d06d4",
+          "passed": true
+        },
+        {
+          "label": "net one charge restored",
+          "action": {
+            "type": "strike",
+            "targetId": "echo-primary"
+          },
+          "events": [
+            {
+              "type": "Struck",
+              "pieceId": "echo-1",
+              "targetId": "echo-primary",
+              "damage": 8,
+              "overkill": 6,
+              "before": 2,
+              "after": 0,
+              "usedOpening": false,
+              "turnsLeft": 2
+            },
+            {
+              "type": "ChargeRestored",
+              "before": 0,
+              "after": 1,
+              "gained": 1
+            }
+          ],
+          "revision": 16,
+          "stateSha256": "db64cf42d45fd26b1fedd91559d098cbbdb4d81b140173ae1b94baf36b354ee5",
+          "passed": true
+        },
+        {
+          "label": "new blank school for returned technique",
+          "action": {
+            "type": "chooseSchool",
+            "pieceId": "echo-2",
+            "school": "fissure"
+          },
+          "events": [
+            {
+              "type": "SchoolChosen",
+              "pieceId": "echo-2",
+              "school": "fissure"
+            }
+          ],
+          "revision": 17,
+          "stateSha256": "c8d8cbe3ecd33accd3844718f690ef7d77c5049654c90de77abb459e777f9826",
+          "passed": true
+        },
+        {
+          "label": "actually use returned technique",
+          "action": {
+            "type": "forge",
+            "pieceId": "echo-2",
+            "useTechnique": true
+          },
+          "events": [
+            {
+              "type": "Forged",
+              "pieceId": "echo-2",
+              "technique": true,
+              "school": "fissure",
+              "result": "fissure",
+              "before": 0,
+              "after": 3,
+              "ticket": null,
+              "crackTickets": 0,
+              "chargeBefore": 1,
+              "chargeAfter": 0
+            },
+            {
+              "type": "Recap",
+              "demonstrated": true,
+              "reason": "furnace-demonstrated"
+            }
+          ],
+          "revision": 18,
+          "stateSha256": "8747ea5fc6d4d5b073c1f62a0753c08a6fb1f90fa0a18066de05101d942881da",
+          "passed": true
+        }
+      ],
+      "controls": [
+        {
+          "label": "open seed details",
+          "exactMainAndBackupUnchanged": true
+        },
+        {
+          "label": "enter declared fixed seed",
+          "exactMainAndBackupUnchanged": true
+        },
+        {
+          "label": "arm main technique without a command",
+          "exactMainAndBackupUnchanged": true
+        },
+        {
+          "label": "arm first echo technique without a command",
+          "exactMainAndBackupUnchanged": true
+        },
+        {
+          "label": "arm returned technique on the new blank",
+          "exactMainAndBackupUnchanged": true
+        }
+      ],
+      "reloads": [
+        {
+          "label": "reload returned charge once",
+          "phase": "echo-recharge",
+          "revision": 16,
+          "stateSha256": "db64cf42d45fd26b1fedd91559d098cbbdb4d81b140173ae1b94baf36b354ee5",
+          "exactMainAndBackupUnchanged": true,
+          "noSceneReplayAtRestoredObservation": true,
+          "observation": {
+            "at": 703.1999999880791,
+            "viewport": {
+              "width": 1280,
+              "height": 720
+            },
+            "phase": "echo-recharge",
+            "screen": "play",
+            "busy": "false",
+            "ending": "false",
+            "playVisible": true,
+            "canvas": {
+              "art": "ready",
+              "pieceId": "echo-2",
+              "strength": "0",
+              "hits": "0",
+              "formStrength": "0",
+              "condition": "intact",
+              "stage": "0"
+            },
+            "tool": {
+              "state": "recharged"
+            },
+            "pulse": "手艺 0 → 1 · 接到新坯",
+            "energy": [],
+            "toolEvents": [],
+            "chargeTargets": [],
+            "transientCount": 0
+          }
+        }
+      ],
+      "images": [
+        {
+          "file": "fissure-actual-returned-charge-1280.png",
+          "observation": {
+            "at": 8805,
+            "viewport": {
+              "width": 1280,
+              "height": 720
+            },
+            "phase": "echo-recharge",
+            "screen": "play",
+            "busy": "false",
+            "ending": "false",
+            "playVisible": true,
+            "canvas": {
+              "art": "ready",
+              "pieceId": "echo-2",
+              "strength": "0",
+              "hits": "0",
+              "formStrength": "0",
+              "condition": "intact",
+              "stage": "0"
+            },
+            "tool": {
+              "state": "recharged"
+            },
+            "pulse": "手艺 0 → 1 · 接到新坯",
+            "energy": [],
+            "toolEvents": [],
+            "chargeTargets": [],
+            "transientCount": 0
+          }
+        },
+        {
+          "file": "fissure-actual-returned-charge-1920.png",
+          "observation": {
+            "at": 10244.300000011921,
+            "viewport": {
+              "width": 1920,
+              "height": 1080
+            },
+            "phase": "echo-recharge",
+            "screen": "play",
+            "busy": "false",
+            "ending": "false",
+            "playVisible": true,
+            "canvas": {
+              "art": "ready",
+              "pieceId": "echo-2",
+              "strength": "0",
+              "hits": "0",
+              "formStrength": "0",
+              "condition": "intact",
+              "stage": "0"
+            },
+            "tool": {
+              "state": "recharged"
+            },
+            "pulse": "手艺 0 → 1 · 接到新坯",
+            "energy": [],
+            "toolEvents": [],
+            "chargeTargets": [],
+            "transientCount": 0
+          }
+        },
+        {
+          "file": "fissure-actual-tool-demonstrated-recap-1280.png",
+          "observation": {
+            "at": 2286.400000035763,
+            "viewport": {
+              "width": 1280,
+              "height": 720
+            },
+            "phase": "recap",
+            "screen": "recap",
+            "busy": "false",
+            "ending": "false",
+            "playVisible": false,
+            "canvas": {
+              "art": "ready",
+              "pieceId": "",
+              "strength": "0",
+              "hits": "0",
+              "formStrength": "0",
+              "condition": "intact",
+              "stage": "0"
+            },
+            "tool": {
+              "state": "idle"
+            },
+            "pulse": "",
+            "energy": [],
+            "toolEvents": [],
+            "chargeTargets": [],
+            "transientCount": 0
+          }
+        }
+      ],
+      "contacts": [
+        {
+          "kind": "net-charge",
+          "file": "fissure-net-charge-natural-contact-1280.png",
+          "before": {
+            "at": 7528.100000023842,
+            "viewport": {
+              "width": 1280,
+              "height": 720
+            },
+            "phase": "echo-recharge",
+            "screen": "play",
+            "busy": "true",
+            "ending": "false",
+            "playing": "strike",
+            "playVisible": true,
+            "canvas": {
+              "art": "ready",
+              "pieceId": "echo-1",
+              "strength": "4",
+              "hits": "4",
+              "formStrength": "6",
+              "condition": "fissure",
+              "stage": "3"
+            },
+            "ghost": {
+              "x6MotionSword": "",
+              "pieceId": "echo-1",
+              "strength": "4"
+            },
+            "tool": {
+              "state": "recharged"
+            },
+            "pulse": "手艺 0 → 1 · 接到新坯",
+            "energy": [
+              "recharged"
+            ],
+            "toolEvents": [
+              "recharged"
+            ],
+            "chargeTargets": [
+              "1"
+            ],
+            "transientCount": 1
+          },
+          "after": {
+            "at": 8209.699999988079,
+            "viewport": {
+              "width": 1280,
+              "height": 720
+            },
+            "phase": "echo-recharge",
+            "screen": "play",
+            "busy": "false",
+            "ending": "false",
+            "playVisible": true,
+            "canvas": {
+              "art": "ready",
+              "pieceId": "echo-2",
+              "strength": "0",
+              "hits": "0",
+              "formStrength": "0",
+              "condition": "intact",
+              "stage": "0"
+            },
+            "tool": {
+              "state": "recharged"
+            },
+            "pulse": "手艺 0 → 1 · 接到新坯",
+            "energy": [],
+            "toolEvents": [],
+            "chargeTargets": [],
+            "transientCount": 0
+          },
+          "windowHeldThroughScreenshot": false
+        },
+        {
+          "kind": "last-technique",
+          "file": "fissure-last-technique-natural-contact-1280.png",
+          "before": {
+            "at": 1089.300000011921,
+            "viewport": {
+              "width": 1280,
+              "height": 720
+            },
+            "phase": "echo-recharge",
+            "screen": "play",
+            "busy": "true",
+            "ending": "true",
+            "playing": "forge",
+            "playVisible": true,
+            "canvas": {
+              "art": "ready",
+              "pieceId": "echo-2",
+              "strength": "3",
+              "hits": "1",
+              "formStrength": "3",
+              "condition": "fissure",
+              "stage": "2"
+            },
+            "tool": {
+              "state": "recharged"
+            },
+            "pulse": "手艺 0 → 1 · 接到新坯",
+            "energy": [],
+            "toolEvents": [],
+            "chargeTargets": [],
+            "transientCount": 0
+          },
+          "after": {
+            "at": 1646.6000000238419,
+            "viewport": {
+              "width": 1280,
+              "height": 720
+            },
+            "phase": "echo-recharge",
+            "screen": "play",
+            "busy": "true",
+            "ending": "true",
+            "playing": "forge",
+            "playVisible": true,
+            "canvas": {
+              "art": "ready",
+              "pieceId": "echo-2",
+              "strength": "3",
+              "hits": "1",
+              "formStrength": "3",
+              "condition": "fissure",
+              "stage": "2"
+            },
+            "tool": {
+              "state": "recharged"
+            },
+            "pulse": "手艺 0 → 1 · 接到新坯",
+            "energy": [],
+            "toolEvents": [],
+            "chargeTargets": [],
+            "transientCount": 0
+          },
+          "windowHeldThroughScreenshot": true
+        }
+      ],
+      "final": {
+        "rulesVersion": "forge-v6",
+        "runId": "6f1a30f8-377a-4266-b0a6-cdf723356ce3",
+        "seed": "v6-contract",
+        "revision": 18,
+        "phase": "recap",
+        "coins": 15,
+        "gateCleared": true,
+        "gatePaid": true,
+        "tool": "furnace",
+        "blades": [
+          {
+            "id": "main-1",
+            "stage": "main",
+            "school": "fissure",
+            "status": "used",
+            "strength": 3,
+            "cracked": true,
+            "fissureMarked": true,
+            "hits": 5,
+            "sealedStrength": 7,
+            "sealedCracked": true,
+            "sealedHits": 5
+          },
+          {
+            "id": "main-2",
+            "stage": "main",
+            "school": null,
+            "status": "blank",
+            "strength": 0,
+            "cracked": false,
+            "fissureMarked": false,
+            "hits": 0,
+            "sealedStrength": null,
+            "sealedCracked": null,
+            "sealedHits": null
+          },
+          {
+            "id": "main-3",
+            "stage": "main",
+            "school": null,
+            "status": "blank",
+            "strength": 0,
+            "cracked": false,
+            "fissureMarked": false,
+            "hits": 0,
+            "sealedStrength": null,
+            "sealedCracked": null,
+            "sealedHits": null
+          },
+          {
+            "id": "echo-1",
+            "stage": "echo",
+            "school": "fissure",
+            "status": "used",
+            "strength": 4,
+            "cracked": true,
+            "fissureMarked": true,
+            "hits": 4,
+            "sealedStrength": 6,
+            "sealedCracked": true,
+            "sealedHits": 4
+          },
+          {
+            "id": "echo-2",
+            "stage": "echo",
+            "school": "fissure",
+            "status": "used",
+            "strength": 3,
+            "cracked": true,
+            "fissureMarked": true,
+            "hits": 1,
+            "sealedStrength": null,
+            "sealedCracked": null,
+            "sealedHits": null
+          },
+          {
+            "id": "echo-3",
+            "stage": "echo",
+            "school": null,
+            "status": "blank",
+            "strength": 0,
+            "cracked": false,
+            "fissureMarked": false,
+            "hits": 0,
+            "sealedStrength": null,
+            "sealedCracked": null,
+            "sealedHits": null
+          }
+        ],
+        "activePieceId": null,
+        "charges": {
+          "main": 0,
+          "echo": 0
+        },
+        "trial": null,
+        "trials": [
+          {
+            "kind": "main",
+            "pieceId": "main-1",
+            "turnsLeft": 1,
+            "opening": false,
+            "primary": {
+              "id": "main-guard",
+              "health": 0,
+              "armor": 2
+            },
+            "secondary": null,
+            "storedOverkill": 0,
+            "reboundTriggered": false,
+            "followUpUsed": false,
+            "steps": [
+              {
+                "action": "strike",
+                "targetId": "main-guard",
+                "strengthBefore": 7,
+                "strengthAfter": 5,
+                "damage": 9,
+                "targetBefore": 6,
+                "targetAfter": 0,
+                "usedOpening": false,
+                "turn": 1
+              },
+              {
+                "action": "latch",
+                "targetId": "latch",
+                "strengthBefore": 5,
+                "strengthAfter": 3,
+                "damage": 7,
+                "targetBefore": null,
+                "targetAfter": null,
+                "usedOpening": false,
+                "turn": 2
+              }
+            ]
+          },
+          {
+            "kind": "furnace",
+            "pieceId": "echo-1",
+            "turnsLeft": 2,
+            "opening": false,
+            "primary": {
+              "id": "echo-primary",
+              "health": 0,
+              "armor": 2
+            },
+            "secondary": null,
+            "storedOverkill": 0,
+            "reboundTriggered": false,
+            "followUpUsed": false,
+            "steps": [
+              {
+                "action": "strike",
+                "targetId": "echo-primary",
+                "strengthBefore": 6,
+                "strengthAfter": 4,
+                "damage": 8,
+                "targetBefore": 2,
+                "targetAfter": 0,
+                "usedOpening": false,
+                "turn": 1
+              }
+            ]
+          }
+        ],
+        "echo": {
+          "started": true,
+          "submitted": true,
+          "toolTriggered": true,
+          "rechargeGained": 1,
+          "returnedToForge": true,
+          "techniqueUsedAfterRecharge": true,
+          "demonstrated": true,
+          "outcome": "demonstrated",
+          "reason": "furnace-demonstrated"
+        },
+        "rng": {
+          "forge": {
+            "state": 4175292524,
+            "draws": 7
+          }
+        },
+        "journal": [
+          {
+            "type": "chooseSchool",
+            "pieceId": "main-1",
+            "school": "fissure"
+          },
+          {
+            "type": "forge",
+            "pieceId": "main-1",
+            "useTechnique": false
+          },
+          {
+            "type": "forge",
+            "pieceId": "main-1",
+            "useTechnique": false
+          },
+          {
+            "type": "forge",
+            "pieceId": "main-1",
+            "useTechnique": false
+          },
+          {
+            "type": "forge",
+            "pieceId": "main-1",
+            "useTechnique": false
+          },
+          {
+            "type": "forge",
+            "pieceId": "main-1",
+            "useTechnique": true
+          },
+          {
+            "type": "seal",
+            "pieceId": "main-1"
+          },
+          {
+            "type": "strike",
+            "targetId": "main-guard"
+          },
+          {
+            "type": "takeCache",
+            "target": "latch"
+          },
+          {
+            "type": "chooseSchool",
+            "pieceId": "echo-1",
+            "school": "fissure"
+          },
+          {
+            "type": "forge",
+            "pieceId": "echo-1",
+            "useTechnique": false
+          },
+          {
+            "type": "forge",
+            "pieceId": "echo-1",
+            "useTechnique": false
+          },
+          {
+            "type": "forge",
+            "pieceId": "echo-1",
+            "useTechnique": false
+          },
+          {
+            "type": "forge",
+            "pieceId": "echo-1",
+            "useTechnique": true
+          },
+          {
+            "type": "seal",
+            "pieceId": "echo-1"
+          },
+          {
+            "type": "strike",
+            "targetId": "echo-primary"
+          },
+          {
+            "type": "chooseSchool",
+            "pieceId": "echo-2",
+            "school": "fissure"
+          },
+          {
+            "type": "forge",
+            "pieceId": "echo-2",
+            "useTechnique": true
+          }
+        ],
+        "endReason": "furnace-demonstrated"
+      },
+      "finalStateSha256": "8747ea5fc6d4d5b073c1f62a0753c08a6fb1f90fa0a18066de05101d942881da",
+      "pageErrors": [],
+      "resourceErrors": [],
+      "verifiedResponses": [
+        {
+          "path": "/v6.html",
+          "sha256": "debcc34ec706ad7a194261749a043830937c679602912cdf51dbf76b85e5ead3",
+          "bytes": 849
+        },
+        {
+          "path": "/assets/v6-BCoGnu87.css",
+          "sha256": "3962ff28aa01957b694e9126afd88290c226b2ac0aab1fe61da77aaf18bbb0d5",
+          "bytes": 27278
+        },
+        {
+          "path": "/assets/dom-UdOu9fij.js",
+          "sha256": "91acc1c6f830d88a7028fed8ecc07641a4b5b7f974035ab41a5f299c2f2794cc",
+          "bytes": 32306
+        },
+        {
+          "path": "/assets/impact-4TS5AN9h.js",
+          "sha256": "7e3046e932eca8210f9049bf9ffdc96389f5cd4273be52428dc9f3caa2554ded",
+          "bytes": 8086
+        },
+        {
+          "path": "/assets/v6-CJWD0xK1.js",
+          "sha256": "2f57fbad1c01c38157cddd98955d38a2e60fe3d42e12522f54f44ed129337a26",
+          "bytes": 88177
+        },
+        {
+          "path": "/assets/d/hammer-forge-v2.webp",
+          "sha256": "174462711969925c8bc6a3a27a043ddb69d8d4f0c4f543ed83be0cad8134186e",
+          "bytes": 142696
+        },
+        {
+          "path": "/assets/d/v09/practice-target-v1.webp",
+          "sha256": "b205abe3e8893848765d38ac461d7c124664b55db46491e61866de74daf2c97c",
+          "bytes": 334176
+        },
+        {
+          "path": "/assets/d/v09/wood-guardian-v1.webp",
+          "sha256": "3528fceeba74a77ea88f39ae7f6427dfd9a7294bb44451aca2d7b4e52327e67b",
+          "bytes": 488984
+        },
+        {
+          "path": "/assets/d/v09/rebound-tooth-v1.webp",
+          "sha256": "0e6774ea281fd3318c549cfc727d3f4bdf97e3efbc6524d1e28c482c1d88c84d",
+          "bytes": 293614
+        },
+        {
+          "path": "/assets/d/v09/sword-stages-v1.webp",
+          "sha256": "ba21afb33f43049015d6e54eebf0853d15391c11b98f45889c1369d5489b53a4",
+          "bytes": 448220
+        },
+        {
+          "path": "/assets/d/v09/lantern-traveller-v1.webp",
+          "sha256": "4a87812c1376132c421a223fc81b08bc3b916dc90dafb6dad7e9ad7241b4c626",
+          "bytes": 341392
+        },
+        {
+          "path": "/assets/d/v09/furnace-nail-v1.webp",
+          "sha256": "7eeed3539d8221bea208e870ea136414351a3e80568345a377b6e9234e8e16ef",
+          "bytes": 207182
+        },
+        {
+          "path": "/assets/d/v07/lantern-road-v1.webp",
+          "sha256": "e3e3cb3a6b32c0b8fb8315fa4fa724a2facc09a7da153fdbe1153115734fa95a",
+          "bytes": 283948
+        },
+        {
+          "path": "/assets/d/reboot/forge-focus-backdrop-v1.webp",
+          "sha256": "c13e3ef6af6e84c839724c2fe53a7f3d9e3013773ea9dd9830cd722a2a02b525",
+          "bytes": 346850
+        },
+        {
+          "path": "/assets/d/v09/tool-chest-v1.webp",
+          "sha256": "c8e90236942a32d3cb44a2c532516e035c75fe1ac6bd609d112a444f09a7be80",
+          "bytes": 510660
+        }
+      ]
+    }
+  ]
+}

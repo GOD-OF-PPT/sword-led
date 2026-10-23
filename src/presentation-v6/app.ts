@@ -32,7 +32,7 @@ export function mountV6(root:HTMLElement,port:V6Session){
  const el=(tag:string,value?:string)=>{const target=document.createElement(tag);if(value!==undefined)target.textContent=value;return target;};
  const preferences=createPreferences(()=>localStorage),audio=createForgeAudio(undefined,IMPACT_SOUNDS),motion=matchMedia('(prefers-reduced-motion: reduce)');
  let snapshot=port.getSnapshot(),prefs=preferences.getSnapshot(),route:'title'|'play'='title';
- let disposed=false,busy=false,paused=false,modal=false,epoch=0,sequence=0,lastScreen='',lastPhase='';
+ let disposed=false,busy=false,paused=false,modal=false,ending=false,epoch=0,sequence=0,lastScreen='',lastPhase='';
  let display:RunState|null=null,armed:Armed|null=null,hasResult=false,origin:HTMLElement|null=null;
  let input:ReturnType<typeof bindDirectStrikeInput>|null=null;
  const decisionInputs:ReturnType<typeof bindDirectStrikeInput>[]=[];
@@ -45,7 +45,7 @@ export function mountV6(root:HTMLElement,port:V6Session){
  const canAct=()=>!disposed&&route==='play'&&!busy&&!paused&&!modal&&!document.hidden&&writable();
  const message=(copy:string)=>text('x6-status',copy);
  function armedNow(){const state=current(),blade=view()?.activePiece;return!!armed&&!!state&&!!blade&&armed.runId===state.runId&&armed.revision===state.revision&&armed.generation===snapshot.generation&&armed.pieceId===blade.id&&armed.school===blade.school&&armed.epoch===epoch;}
- function cancelVisuals(){sequence++;epoch++;armed=null;busy=false;display=null;input?.cancel();for(const binding of decisionInputs)binding.cancel();scene?.cancel();audio.silence();}
+ function cancelVisuals(){sequence++;epoch++;armed=null;busy=false;ending=false;display=null;input?.cancel();for(const binding of decisionInputs)binding.cancel();scene?.cancel();audio.silence();}
  function clearResult(){hasResult=false;show('x6-result',false);}
  function present(events:readonly DomainEvent[]){
   if(events.some(event=>event.type==='Sealed')){clearResult();return;}
@@ -69,8 +69,10 @@ export function mountV6(root:HTMLElement,port:V6Session){
   const afterView=getRunView(result.state),valid=()=>!disposed&&own===sequence&&snapshot.generation===generation&&current()?.runId===result.state.runId&&current()?.revision===result.state.revision;
   render();scene?.aim(point);void audio.gesture();
   scene?.play(result.events,beforeView,afterView,{
-   contact:()=>{if(!valid()||document.hidden||paused||modal)return;display=null;present(result.events);acceptedSound(result.events);render();},
-   done:()=>{if(!valid())return;busy=false;display=null;render();queueMicrotask(focusAction);},
+   // The Accepted result is already saved. Keep its physical stage visible until
+   // the terminal contact finishes, especially the last returned technique.
+   contact:()=>{if(!valid()||document.hidden||paused||modal)return;ending=afterView.ended;display=ending?before:null;present(result.events);acceptedSound(result.events);render();},
+   done:()=>{if(!valid())return;busy=false;ending=false;display=null;render();queueMicrotask(focusAction);},
   });
   return true;
  }
@@ -152,7 +154,7 @@ export function mountV6(root:HTMLElement,port:V6Session){
   const state=display??current(),value=state?getRunView(state):null,isForge=!!value&&forging(value.phase);
   const screen=route==='title'?'title':value?.ended?'recap':'play',changed=screen!==lastScreen||value?.phase!==lastPhase;
   lastScreen=screen;lastPhase=value?.phase??'';
-  game.dataset.screen=screen;game.dataset.phase=value?.phase??'main-forge';game.dataset.forge=String(isForge);game.dataset.busy=String(busy);game.dataset.paused=String(paused);game.dataset.armed=String(armedNow());game.dataset.gate=String(!!value?.gateCleared);
+  game.dataset.screen=screen;game.dataset.phase=value?.phase??'main-forge';game.dataset.forge=String(isForge);game.dataset.busy=String(busy);game.dataset.ending=String(ending);game.dataset.paused=String(paused);game.dataset.armed=String(armedNow());game.dataset.gate=String(!!value?.gateCleared);
   show('x6-title',screen==='title');show('x6-play',screen==='play');show('x6-recap',screen==='recap');show('x6-menu',route==='play');show('x6-wallet',route==='play'&&!!value);
   text('x6-coins',fmt(value?.coins??0));show('x6-continue',!!current());button('x6-continue').disabled=!snapshot.active;
   button('x6-start').disabled=!writable();text('x6-start',current()?'另起炉火':'点火，铸第一剑');
@@ -187,8 +189,14 @@ export function mountV6(root:HTMLElement,port:V6Session){
    show('x6-leave',cachePhase);button('x6-leave').disabled=!allowed||!value.leaveCache.allowed;
    show('x6-turns',trialPhase||cachePhase);node('x6-turns').replaceChildren(...Array.from({length:3},(_,index)=>{const ember=el('i');ember.dataset.lit=String(index<(trial?.turnsLeft??0));return ember;}),el('span',`余火 ${trial?.turnsLeft??0}/3`));
    node('x6-turns').setAttribute('aria-label',`试锋余火${trial?.turnsLeft??0}/3，每次斩击或探隙用一回合`);
-   show('x6-tool',!!value.tool&&screen==='play');if(value.tool){node<HTMLImageElement>('x6-tool-art').src=toolImage(value.tool);text('x6-tool-name',toolName(value.tool));text('x6-tool-copy',value.tool==='rebound'?'探隙斩留下的余力，可以亲手追向另一个目标。':value.echo.rechargeGained?'刚回的一次手艺，还要在另一柄上用出。':value.phase==='echo-recharge'?'用现有的这次手艺，不能再回去试锋。':'先用手艺，再击破甲靶，试着把炉火接回来。');}
-   if(screen==='recap'){const recap=recapCopy(value);text('x6-recap-title',recap.title);text('x6-recap-copy',recap.copy);node('x6-recap-facts').replaceChildren(...recap.facts.map(copy=>el('p',copy)));button('x6-again').disabled=!writable();}
+   show('x6-tool',!!value.tool&&screen==='play');if(value.tool){
+    node<HTMLImageElement>('x6-tool-art').src=toolImage(value.tool);text('x6-tool-name',toolName(value.tool));
+    const stored=value.tool==='rebound'&&value.followUp.allowed,recharged=value.tool==='furnace'&&value.phase==='echo-recharge'&&!!value.echo.rechargeGained,full=value.tool==='furnace'&&value.phase==='echo-recharge'&&!value.echo.rechargeGained;
+    node('x6-tool').dataset.state=stored?'stored':recharged?'recharged':full?'full':'idle';
+    text('x6-tool-pulse',stored?`已存 ${fmt(value.followUp.damage)} 追斩 · 点远靶`:recharged?'手艺 0 → 1 · 接到新坯':full?'次数已满 · 没有多得':'' );show('x6-tool-pulse',stored||recharged||full);
+    text('x6-tool-copy',value.tool==='rebound'?stored?'余力已留下，亲手选择远靶追斩。':'探隙斩留下的余力，可以亲手追向另一个目标。':value.echo.rechargeGained?'刚回的一次手艺，还要在另一柄上用出。':value.phase==='echo-recharge'?'用现有的这次手艺，不能再回去试锋。':'先用手艺，再击破甲靶，试着把炉火接回来。');
+   }
+   if(screen==='recap'){const recap=recapCopy(value);text('x6-recap-title',recap.title);text('x6-recap-copy',recap.copy);node('x6-recap-facts').replaceChildren(...recap.facts.map(copy=>el('p',copy)));show('x6-recap-tool',!!value.tool);if(value.tool)node<HTMLImageElement>('x6-recap-tool').src=toolImage(value.tool);button('x6-again').disabled=!writable();}
    scene?.render(value);
   }
   audio.identify(`${current()?.runId??''}/${snapshot.generation}/${epoch}`);audio.configure(prefs.value);audio.setMode(route==='play'&&!paused&&!modal&&!document.hidden&&snapshot.active?'game':'silent');input?.refresh();for(const binding of decisionInputs)binding.refresh();
@@ -231,7 +239,7 @@ export function mountV6(root:HTMLElement,port:V6Session){
  function help(){openModal('炉边，只记这几件事','先选稳锋或裂炉，左键点剑身落锤。手艺按钮只备下一记，真正落锤才花这炉的一次；三柄共用，不会换坯就补。收锻后，用这柄剑亲自开路：斩击与架剑各用一火，共三火。工具不是必拿，完好强度5可切绳，崩纹穿甲直击7可破闩；取得后会当场试着用一次。',[{label:'明白了，回炉边',primary:true,run:closeModal}]);}
  function settings(){const body=el('div');for(const kind of ['muted','volume','reducedMotion'] as const){const row=el('label'),control=document.createElement('input');control.type=kind==='volume'?'range':'checkbox';if(kind==='volume'){control.min='0';control.max='100';control.value=String(prefs.value.volume);control.oninput=()=>preferences.update({volume:Number(control.value)});}else{control.checked=prefs.value[kind];control.onchange=()=>preferences.update({[kind]:control.checked});}row.append(el('span',kind==='muted'?'静音':kind==='volume'?'敲击音量':'减弱动效'),control);body.append(row);}openModal('炉火与声音',body,[{label:'收好',primary:true,run:closeModal}]);}
  function pause(){if(route!=='play')return;paused=true;openModal('炉火为你留着','停一停，再想想这柄剑怎么出手。刚才做成的结果已经保留。',[{label:'继续这一剑',primary:true,run:closeModal},{label:'回看这趟走法',run:history},{label:'声音与动效',run:settings},{label:'把行程收好',run:()=>saveDetails()},{label:'回到开炉处',run:()=>{closeModal();route='title';clearResult();render();}}]);}
- scene=createExpeditionScene(root,{reduced,cancelled:()=>{if(disposed)return;sequence++;epoch++;armed=null;busy=false;display=null;input?.cancel();for(const binding of decisionInputs)binding.cancel();audio.silence();render();}});
+ scene=createExpeditionScene(root,{reduced,cancelled:()=>{if(disposed)return;sequence++;epoch++;armed=null;busy=false;ending=false;display=null;input?.cancel();for(const binding of decisionInputs)binding.cancel();audio.silence();render();}});
  input=bindDirectStrikeInput([button('x6-hit'),button('x6-forge')],{context:forgeIdentity,navigationContext:()=>null,navigate:()=>{},commit:(identity,point)=>{if(!sameInput(identity,forgeIdentity()))return;scene?.aim(point);void audio.gesture();const blade=view()?.activePiece;if(blade)send({type:'forge',pieceId:blade.id,useTechnique:armedNow()},point);},aim:point=>{if(canAct())scene?.aim(point);},preparing:value=>scene?.preparing(value)});
  function bindDecision(id:string,index:number,read:()=>Action|null,inspect?:()=>void){
   const target=button(id);

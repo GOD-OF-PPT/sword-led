@@ -43,13 +43,13 @@ export function stageCopy(view:RunView):StageCopy {
   case'echo-trial':{
    if(view.tool==='rebound')return{
     eyebrow:'回锋齿 · 实际试锋',title:view.followUp.allowed?'指向远靶，把余力送过去':'这一斩，留得出余力吗？',
-    purpose:view.followUp.allowed?'点远处的靶，主动送出刚才存下的那一记追斩。':'先探隙，再斩主靶；超过主靶所需的伤害，才能留作追斩。',uses:view.followUp.allowed?'追斩只用已存下的余力，不再叠一遍剑的强度。':'这次试锋只有三回合；先看清剑与目标，再决定出手。',
+    purpose:view.followUp.allowed?`点远靶，送出存下的${fmt(view.followUp.damage)}伤害。`:'先探隙，再斩主靶；超出的伤害才能留作追斩。',uses:view.followUp.allowed?'只用这份余力，不再加剑的强度。':'三回合只试一次，余力还要亲手追出。',
    };
    return{eyebrow:'崩炉钉 · 实际试锋',title:'击破护甲，把手艺接回来',purpose:'点主靶出剑；击破后看这炉手艺次数的真实变化。',uses:view.charge?'现在次数已满；触发工具也不会额外赚一次。':'刚才用掉的次数，等这次真正击破后才会回来。'};
   }
   case'echo-recharge':return{
    eyebrow:'崩炉钉 · 接上新坯',title:view.echo.rechargeGained?'把刚回的手艺，用在另一柄':'没有多得次数，仍可用现有手艺',
-   purpose:'在眼前这柄新坯先选手艺，再点手艺按钮、左键落锤。这里只用一次手艺，不再回去试锋。',
+   purpose:'这柄新坯先选手艺，再备下一记、左键落锤；用完就收好。',
    uses:view.echo.rechargeGained?'刚才确实回了一次；在另一柄上用出来，才算接成。':'击破时次数本来就是满的，没有净增加；这次不能算成功回充。',
   };
   case'recap':case'failed':{
@@ -78,14 +78,14 @@ export function forgeCopy(view:RunView,armed:boolean):ForgeCopy {
 function recapReason(reason:string):string {
  switch(reason){
   case'main-blanks-exhausted':return'这炉的三柄铁坯都已用过。回看刚才的剑，再开新炉调整做法。';
-  case'echo-blanks-exhausted':return'这炉余坯已经用尽，工具练习没有完成；先前开出的路和所得工具仍保留。';
-  case'echo-turns-exhausted':return'试锋余火已尽，这次没有把工具用成；不会补回合重试，也不会收回已开出的路。';
-  case'rebound-no-overkill':return'主靶虽已击破，这一斩没有存下可追向远靶的余力；回锋还没有接成。';
-  case'echo-no-blank-after-recharge':return'工具已经触发，但没有另一柄未锻新坯可接着用；这次练习尚未完成。';
-  case'furnace-charge-was-full':return'工具触发时次数本来已满，没有多得一次；后来用出手艺，也不能算净回充成功。';
+  case'echo-blanks-exhausted':return'这炉余坯已尽，工具没试成；开出的路和所得工具仍保留。';
+  case'echo-turns-exhausted':return'试锋余火已尽，工具没试成；开出的路和所得工具仍保留。';
+  case'rebound-no-overkill':return'主靶已倒，没有存下追斩余力；回锋还没接成。';
+  case'echo-no-blank-after-recharge':return'工具已触发，余坯已尽，没能在另一柄上用出。';
+  case'furnace-charge-was-full':return'触发时次数已满；用掉原有次数，仍不算净回充。';
   case'gate-cleared-without-tool':return'这一剑已经开路，本次没有带走额外工具。';
-  case'furnace-demonstrated':return'击破护甲回来了真正用掉的一次手艺，又在另一柄新坯上用出了它。';
-  case'rebound-demonstrated':return'你把探隙斩击留下的余力，亲手送到了远靶。';
+  case'furnace-demonstrated':return'击破甲靶回充＋1，并在另一柄新坯用出了这次手艺。';
+  case'rebound-demonstrated':return'存下的余力，已亲手追斩并击破远靶。';
   default:return'开出的路、用过的剑和所得工具，都留在这次回顾里。';
  }
 }
@@ -95,7 +95,7 @@ export function resultCopy(events:readonly DomainEvent[]):ResultCopy|null {
  const recap=events.find(event=>event.type==='Recap');
  if(recap?.type==='Recap')return{kicker:'这一段已收好',title:recap.demonstrated?'工具，真正用出来了':'回看这一剑',copy:recapReason(recap.reason)};
  const charge=events.find(event=>event.type==='ChargeRestored');
- if(charge?.type==='ChargeRestored')return{kicker:'崩炉钉应声',title:charge.gained?'炉火，回来了':'次数本来就是满的',copy:charge.gained?'手艺＋1 · 在另一柄上用出来':'工具已触发，没有多得次数。'};
+ if(charge?.type==='ChargeRestored')return{kicker:'崩炉钉应声',title:charge.gained?'炉火，回来了':'次数本来就是满的',copy:charge.gained?'手艺＋1 · 新坯选手艺、备下一记，再落锤。':'工具已触发，没有多得次数。'};
  const cache=events.find(event=>event.type==='CacheTaken');
  if(cache?.type==='CacheTaken')return{kicker:cache.target==='rope'?'吊索，断开了':'铁闩，破开了',title:toolName(cache.tool)+'到手',copy:'下一炉，亲手试试这门新手艺。'};
  const gate=events.find(event=>event.type==='GateCleared');
@@ -104,7 +104,7 @@ export function resultCopy(events:readonly DomainEvent[]):ResultCopy|null {
  if(failed?.type==='Failed')return{kicker:'炉火歇下了',title:'这次还没开路',copy:recapReason(failed.reason)};
  if(failed?.type==='TrialFailed')return{kicker:'这柄没能完成',title:'试锋余火已尽',copy:failed.stage==='main'?'这柄的经过已留下；有未用新坯时，可调整做法再试，手艺次数不会重来。':'这次工具练习结束，开路成果仍在；不会补出一次试锋。'};
  const follow=events.find(event=>event.type==='FollowUpStored');
- if(follow?.type==='FollowUpStored')return{kicker:'回锋留住余力',title:`存下${fmt(follow.damage)}追斩`,copy:'点远处的靶，把余力送过去。'};
+ if(follow?.type==='FollowUpStored')return{kicker:'回锋留住余力',title:`存下${fmt(follow.damage)}追斩`,copy:'点远靶，只打出这份余力，不再加剑的强度。'};
  const hit=events.find(event=>event.type==='Forged');
  if(hit?.type==='Forged'){
   const titles={success:'刃锋渐成',crack:'裂纹留下了',broken:'这一柄，断了',steady:'定线落下',fissure:'崩纹刻进剑身'};
@@ -124,7 +124,10 @@ export function resultCopy(events:readonly DomainEvent[]):ResultCopy|null {
 export function recapCopy(view:RunView):RecapCopy {
  const facts=[view.gateCleared?'主路已开':'主路未开',`本次开路钱 ${fmt(view.coins)}铜钱`,view.tool?`带回工具：${toolName(view.tool)}`:'本次没有带回工具'];
  if(view.tool==='furnace'&&view.echo.toolTriggered)facts.push(view.echo.rechargeGained?view.echo.techniqueUsedAfterRecharge?'回来的一次，已在另一柄上用出':'确实回了一次，尚未在另一柄上用出':'触发时次数已满，没有净增加');
- if(view.tool==='rebound')facts.push(view.echo.demonstrated?'回锋已亲手接到远靶':'这次没有完成回锋追斩');
+ if(view.tool==='rebound'){
+  const sent=view.trial?.followUpUsed||view.history.some(trial=>trial.kind==='rebound'&&trial.followUpUsed);
+  facts.push(view.echo.demonstrated?'回锋追斩已击破远靶':sent?'追斩已送出，远靶未击破':'这次还没有送出回锋追斩');
+ }
  if(view.phase==='failed')return{title:'这次还没开路',copy:recapReason(view.endReason??'main-blanks-exhausted'),facts};
  if(!view.tool)return{title:view.gateCleared?'一剑开路，先到这里':'这一剑，先收好',copy:view.gateCleared?'路已通，酬劳已按实际结果留下；这次没有带走额外工具。':'回看这次真实经过，再决定下一炉的做法。',facts};
  return{title:view.echo.demonstrated?view.tool==='rebound'?'回锋，接到了远处':'炉火，接到了下一柄':'工具带回了，还没有用开',copy:recapReason(view.echo.reason??view.endReason??''),facts};
