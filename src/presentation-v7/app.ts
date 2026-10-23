@@ -37,7 +37,8 @@ export function mountCampaign(root:HTMLElement,port:V7Session){
  function notice(copy:string,tone:NoticeTone='quiet',title?:string){
   if(noticeTimer)clearTimeout(noticeTimer);const e=node('c7-notice');e.dataset.tone=tone;
   e.replaceChildren(...(title?[elem('strong',title),elem('span',copy)]:[elem('span',copy)]));show('c7-notice',!!copy);
-  if(copy)noticeTimer=setTimeout(()=>{show('c7-notice',false);noticeTimer=null;},tone==='quiet'?4600:tone==='danger'?8500:7200);
+  game.dataset.notice=String(!!copy);
+  if(copy)noticeTimer=setTimeout(()=>{show('c7-notice',false);game.dataset.notice='false';noticeTimer=null;},tone==='quiet'?4600:tone==='danger'?8500:7200);
  }
  function cancelVisuals(){sequence++;scene?.cancel();busy=false;display=null;audio.silence();}
  function appError(code:string):string{
@@ -179,6 +180,7 @@ export function mountCampaign(root:HTMLElement,port:V7Session){
   node('c7-companion').style.height=`${height}px`;node('c7-companion').style.minHeight=`${height}px`;
  }
  function inspectWeapon(value:WeaponView){
+  cancelVisuals();
   const v=current()?getRunView(current()!):null;if(!v)return;
   const body=elem('div',undefined,'c7-weapon-sheet'),figure=elem('div',undefined,'c7-weapon-figure'),art=elem('span',undefined,'c7-weapon-art'),f=SWORD_ART.frames[3],scale=230/f.width;
   art.setAttribute('aria-hidden','true');art.style.height=`${f.height*scale}px`;art.style.backgroundImage=`url("${SWORD_ART.src}")`;art.style.backgroundSize=`${SWORD_ART.width*scale}px ${SWORD_ART.height*scale}px`;art.style.backgroundPosition=`${-f.x*scale}px ${-f.y*scale}px`;figure.dataset.condition=value.status;figure.append(art);
@@ -265,7 +267,7 @@ export function mountCampaign(root:HTMLElement,port:V7Session){
   const screen=route==='title'?'title':v?.ending?'ending':'play';game.dataset.screen=screen;game.dataset.phase=v?.phase??'prepare';game.dataset.busy=String(busy);game.dataset.choice=String(!!v?.choice);game.dataset.reduced=String(reduced());
   show('c7-title',screen==='title');show('c7-play',screen==='play');show('c7-ending',screen==='ending');game.querySelector<HTMLElement>('.c7-hud')!.hidden=screen==='title';
   const world=game.querySelector<HTMLElement>('.c7-world')!;world.style.backgroundImage=`url("${screen==='title'?'/assets/d/v07/lantern-road-v1.webp':v?.scene.background??'/assets/d/v07/lantern-road-v1.webp'}")`;
-  const warning=saveWarning();show('c7-save-warning',!!warning);text('c7-save-warning',warning);
+  const warning=saveWarning();game.dataset.warning=String(!!warning);show('c7-save-warning',!!warning);text('c7-save-warning',warning);
   audio.configure(prefs.value);audio.identify(current()?.runId??'title');audio.setMode(route==='play'&&!modal&&!document.hidden?'game':'silent');
   if(screen==='title'){
    const a=node('c7-title-actions');a.replaceChildren();if(current()){const b=button(v?.ending?'回看旅程终章':`继续 · ${v?.title??'灯路'}`,continueRun,true);b.disabled=!snapshot.active;a.append(b);}
@@ -290,6 +292,7 @@ export function mountCampaign(root:HTMLElement,port:V7Session){
   openDialog('山口之前，灯路之上',body,[{label:'回到眼前',primary:true,run:closeDialog}]);
  }
  function shop(){
+  cancelVisuals();
   if(!current())return;const v=getRunView(current()!),body=elem('div',undefined,'c7-camp'),host=elem('div',undefined,'c7-camp-host'),face=elem('span',undefined,'c7-camp-portrait'),greeting=elem('div');
   portrait(face,{id:'du',name:'杜伯',line:'',portrait:{path:'/assets/d/customers-atlas-v2.webp',x:836,y:627,width:418,height:627}});face.setAttribute('aria-hidden','true');
   greeting.append(elem('h3','杜伯把炉车停在风背处'),elem('p','“煤和铁坯都在这儿。挑需要的，别把钱白花了。”'));host.append(face,greeting);body.append(host);
@@ -304,7 +307,7 @@ export function mountCampaign(root:HTMLElement,port:V7Session){
   }
   body.append(goods,elem('small','买好就收回炉车，仍从眼前这段路继续。','c7-camp-footer'));openDialog('杜伯的炉边摊',body,[{label:'回到炉车旁',primary:true,run:closeDialog}]);
  }
- function talk(){if(!current())return;const v=getRunView(current()!),body=elem('div');body.append(elem('p',v.speaker.line),elem('h3','眼前的约定'),elem('p',v.mission),elem('p',v.nextPlace));if(v.finale){body.append(elem('h3','母灯还差哪些步骤'));for(const f of v.finale.requirements)body.append(elem('p',`${f.met?'✓':'○'} ${f.label} · ${f.detail}`));}for(const a of v.actions.filter(a=>a.group==='mechanism'))body.append(actionButton(a,false,true));openDialog(`和${v.speaker.name}说几句`,body,[{label:'我记住了',primary:true,run:closeDialog}]);}
+ function talk(){if(!current())return;cancelVisuals();const v=getRunView(current()!),body=elem('div');body.append(elem('p',v.speaker.line),elem('h3','眼前的约定'),elem('p',v.mission),elem('p',v.nextPlace));if(v.finale){body.append(elem('h3','母灯还差哪些步骤'));for(const f of v.finale.requirements)body.append(elem('p',`${f.met?'✓':'○'} ${f.label} · ${f.detail}`));}for(const a of v.actions.filter(a=>a.group==='mechanism'))body.append(actionButton(a,false,true));openDialog(`和${v.speaker.name}说几句`,body,[{label:'我记住了',primary:true,run:closeDialog}]);}
  function download(name:string,value:string){const url=URL.createObjectURL(new Blob([value],{type:'application/json'})),a=elem('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),0);}
  function raw(key:string):string|null{try{return window.localStorage.getItem(key);}catch{return null;}}
  function save(){
@@ -323,6 +326,7 @@ export function mountCampaign(root:HTMLElement,port:V7Session){
  }
  function settings(){const body=elem('div');for(const kind of ['muted','volume','reducedMotion'] as const){const row=elem('label'),control=elem('input');control.type=kind==='volume'?'range':'checkbox';if(kind==='volume'){control.min='0';control.max='100';control.value=String(prefs.value.volume);control.oninput=()=>preferences.update({volume:Number(control.value)});}else{control.checked=prefs.value[kind];control.onchange=()=>preferences.update({[kind]:control.checked});}row.append(elem('span',kind==='muted'?'静音':kind==='volume'?'炉火与敲击音量':'减弱动效'),control);body.append(row);}openDialog('炉火与声音',body);}
  function pause(){
+  cancelVisuals();
   const body=elem('div',undefined,'c7-menu-sheet'),v=current()?getRunView(current()!):null;body.append(elem('p','炉火为你留着，读信和歇脚都不推进回合。'));
   const links=elem('div',undefined,'c7-menu-links');for(const [label,detail,run]of [['看整条灯路','走过的站、做过的选择和作品去向',road],['收好行囊','保存、导出与恢复这趟旅程',save],['声音与动效','炉火音量、静音和减弱动效',settings],['炉边口诀','想不起来时，翻一眼就好',()=>openDialog('只记这几件事','普通左键锻造前三记安全；定线稳，崩纹猛但每斩磨损2。每轮只有两步，架剑能护火并让下一斩无视甲、伤害加2；点结束才结算压力。两柄剑和工具会陪你走下去，交出去的剑就留在别人手里。')]] as const){const b=button(label,run);b.append(elem('span',detail,'c7-action-detail'));links.append(b);}body.append(links);
   for(const a of v?.actions.filter(a=>a.group==='journey')??[])body.append(actionButton(a,false,true));
@@ -332,7 +336,7 @@ export function mountCampaign(root:HTMLElement,port:V7Session){
  node('c7-road').onclick=road;node('c7-menu').onclick=pause;node('c7-companion').onclick=talk;node('c7-title-save').onclick=save;node('c7-save-warning').onclick=save;node('c7-dialog-close').onclick=closeDialog;
  const onCancel=(e:Event)=>{e.preventDefault();closeDialog();};dialog.addEventListener('cancel',onCancel);
  const onKey=(e:KeyboardEvent)=>{if(e.repeat&&(e.code==='Space'||e.key==='Enter'))e.preventDefault();if(e.key==='Escape'&&!modal&&route==='play'){e.preventDefault();pause();}};
- const onHidden=()=>{if(document.hidden){cancelVisuals();render();}};
+ const onHidden=()=>{if(document.hidden)cancelVisuals();render();};
  const onMotion=()=>{cancelVisuals();render();};
  const onResize=()=>{cancelVisuals();render();};
  root.addEventListener('keydown',onKey);document.addEventListener('visibilitychange',onHidden);motion.addEventListener('change',onMotion);window.addEventListener('resize',onResize);

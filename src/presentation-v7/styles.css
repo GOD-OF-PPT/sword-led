@@ -269,6 +269,12 @@ body > #app { min-height: 100dvh; }
 .c7 .c7-notice[data-tone="reward"] { border-bottom-color: #f2cd84; box-shadow: 0 7px 24px #0006, inset 0 -12px 30px #b7802520; }
 .c7 .c7-notice[data-tone="danger"] { border-color: #dd9c7a; background: linear-gradient(100deg, #2b2828f5, #3a302bf7 50%, #20272af5); color: #f0d8c4; }
 .c7 .c7-notice[data-tone="danger"] strong { color: #ffbc9b; }
+@media(min-width:1000px){
+ .c7 .c7-notice[data-tone]{left:auto;right:var(--c7-edge);top:88px;transform:none;width:320px;max-width:27vw;padding:12px 17px;text-align:left;font-size:14px;}
+ .c7 .c7-notice strong{font-size:21px;}
+ .c7[data-warning="true"] .c7-notice[data-tone]{top:180px;}
+ .c7[data-notice="true"] .c7-speech{opacity:0;}
+}
 .c7 .c7-save-warning { position: absolute; z-index: 43; top: 84px; right: var(--c7-edge); width: 248px; max-height: 138px; overflow: auto; padding: 10px 13px; border: 1px solid #e4b36a8a; border-left: 3px solid #e5ac65; border-radius: 2px; background: #173039f5; color: #ffe0ac; box-shadow: 0 4px 19px #0006; font-size: 14px; line-height: 1.55; text-align: left; }
 
 /* Long information has one readable, scrollable paper surface. */
