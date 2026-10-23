@@ -5,3 +5,5 @@
 正式完整规则、数值和保存／发布合同见[实施提案](../../docs/v1.0-lantern-expedition-proposal.md)。[同行炉台候选](../../docs/design/v1-campaign-ui-candidate.md)保留布局与可复用资产边界；[主线骨架](../../docs/design/v1-campaign-spine-candidate.md)是早期候选，正式合同有调整时以实施提案为准。
 
 预览会使用独立本机地址，当前游戏4179入口与旧存档保持。资源是已有D包的19份运行WebP，本目录没有重新生成、编辑或复制Steam美术。路谱是原生SVG示意；全亮结局图只用于结局设计，不冒充早期进度地图。
+
+[主线人物短句](../../docs/design/v1-campaign-dialogue.md)补九节点与三结局分支，仍是未接入游戏的内容设计。
