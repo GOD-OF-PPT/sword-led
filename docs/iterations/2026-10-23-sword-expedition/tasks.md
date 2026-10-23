@@ -6,7 +6,7 @@
 
 - [x] 1.1 新增forge-v6纯核／正式SDK：三坯、6记上限、强度／裂纹、两流派、每炉1次主动技法、回合／耐久／工具／15钱一次结算；明确基础过门与强度5吊索／伤害7铁闩额外风险，用有限正式命令逐项核场景，不扫seed造结果。
 - [x] 1.2 接schema6独立主备、完整journal重建、单写／generation、原文导出／拒读写恢复与取消；核v5全部旧解释器／SDK／key／原画保持，首段不迁资源。
-- [ ] 1.3 **全面review/debug 1**：核1.1–1.2及批准合同，含普通／技法RNG、首裂／二裂、跨坯充能、试锋优先顺序、阶段拒绝、奖励一次／重载；修真实问题并留首红。
+- [x] 1.3 **全面review/debug 1**：核1.1–1.2及批准合同，含普通／技法RNG、首裂／二裂、跨坯充能、试锋优先顺序、阶段拒绝、奖励一次／重载；修真实问题并留首红。
 
 ## 2. 一段实际体验（不先扩完整章节）
 
@@ -27,3 +27,5 @@
 1.1回执：core-v6五模块及独立sword-led-v6.js已实装。包含完整main/cache/echo/recap/failed、正式风险/三回合用途预览、严格命令/500journal与200KiB/全字段回放；cache记录用null而非虚构HP，回锋无溢出/余turn直接未演示回顾，Nail净回充0不假称成功。定向15tests最终actual0（首红为消费者把6cap同时失效误要求already_cracked，修单一边界后再过）；独立只读审无mustfix，统一npm run build actual0。正式SDK固定v6-contract回锋19命令/崩炉18命令均15钱且工具实际演示，弱剑三坯21命令failed/0钱，每步全回放核对，见docs/evidence/v0.9/1.1-kernel；非浏览器/fun。SDK SHA 2f1c382810ee42d5da86e73c19504943996f9e1d7b805162caced14d3dad9a87。[杠精审查] 通过当前纯核任务，保存/UI/真人乐趣仍未完成。
 
 1.2回执：复用generic codec/session/lease新增v6适配，schema6、独立主备与writer.v6，exportRun保Accepted，含首次subscribe/publish同步重入保护，不改旧平台/应用。定向保存10tests首跑actual0；统一npm run build actual0，构建SDK对真实Nail完成态codec往返逐字段相同，schema/key/lock正确、v5原文及旧SDK逐字保持，见docs/evidence/v0.9/1.2-persistence/sdk-roundtrip.json。新SDK SHA b5aa0bfeb48b4f619596d2d4c4a6dba2de20d812ba294b21f4886c3f7c1c39cc；该hash与1.1只含纯核包不同，不覆写旧阶段证据。[杠精审查] 通过当前保存适配；UI备份原文exact-confirm/原文导出页面与真人流程仍后续，不把单元当页面。
+
+1.3回执：对1.1/1.2做C端合同、纯核/预览/全回放、取匣旁路/尾声真实收益/唯一出口、保存单写/重入/异步取消/旧解释器来源集中复核。root与独立静态审无新增mustfix，25有限tests与正式SDK/codec/严格build已经消费，不重跑无关矩阵。明确后续UI不得subscribe内dispose、区分Accepted导出与磁盘原文、backup确认绑定所示原文。完整记录docs/reviews/v0.9/1.3-kernel-save-review.md。[杠精审查] 通过第一组三项全面review-debug，真实界面/趣味未完成；继续2.1。
