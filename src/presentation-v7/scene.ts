@@ -399,7 +399,9 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
   if(active!==play)return;
   const elapsed=now-play.start;
   // Hammer contact owns its physical face landing. A hidden tab is cancelled, never advanced.
-  if(play.contacted&&elapsed>=play.duration){finish(play);return;}
+  // A delayed first frame must still paint the pinned face and its rebound before reset.
+  const contactSettled=play.mode!=='forge'||(hammer.dataset.phase!=='contact'&&play.contactTime!==null&&now-play.contactTime>=play.duration-play.contactAt);
+  if(play.contacted&&elapsed>=play.duration&&contactSettled){finish(play);return;}
   draw(now);frame=requestAnimationFrame(tick);
  }
  function clearMotion():void{
