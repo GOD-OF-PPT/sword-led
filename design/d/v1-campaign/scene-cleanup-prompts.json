@@ -1,0 +1,23 @@
+{
+  "mode": "built-in image_gen",
+  "reason": "Actual full-route screenshots exposed duplicated baked-in actors and a flat rock hazard",
+  "jobs": [
+    {
+      "name": "snow-pass-clean-v1",
+      "reference": "/Users/gordon/githome/sword-led/public/assets/d/v07-chapter3/mountain-pass-arrival-v1.webp",
+      "transparent": false,
+      "prompt": "Use case: precise-object-edit. Production background clean plate for the same illustrated Chinese mountain adventure game. Remove ONLY the two foreground travellers from this image, including their backpacks, bedrolls and cast shadows. Seamlessly reconstruct the snowy stone path, wooden fence and rock faces behind them. Preserve the existing exact viewpoint, composition, mountain silhouettes, hut, leaf shapes, every fixed lantern, indigo dusk sky and intricate painterly ink texture. Keep the whole 16:9 landscape frame and opaque background. No people anywhere, no character silhouettes, no added figures, no text, no UI, no weapon. The foreground path must remain empty for independently rendered game actors and hazards. Do not redesign the scene or add new objects."
+    },
+    {
+      "name": "mother-gate-clean-v1",
+      "reference": "/Users/gordon/githome/sword-led/public/assets/d/v07-chapter3/last-lantern-delivered-v1.webp",
+      "transparent": false,
+      "prompt": "Use case: precise-object-edit. Production background clean plate for the same illustrated Chinese mountain adventure game. Remove ONLY all three foreground people and their carried items and cast shadows. Reconstruct the snowy stone steps, gate timbers, wall surfaces and gaps behind them in exactly the existing richly painted style. Preserve the viewpoint, composition, fixed hanging warm lantern and its mount, warm light falling across the wood, dark blue night beyond the gateway, snow, rocks, rail, and all architecture. Keep the whole 16:9 landscape frame and opaque background. No people anywhere, no silhouettes, no new props, no weapon, no text or UI. The foreground must be empty to receive independently rendered mechanical targets and one companion; do not redesign the scene."
+    },
+    {
+      "name": "snow-rock-v1",
+      "transparent": true,
+      "prompt": "Use case: stylized-concept. Production isolated 2D game hazard sprite for a dark indigo Chinese hand-painted mountain adventure. One substantial jagged fallen mountain boulder: richly weathered charcoal-grey stone, layered facets, deep irregular cracks and chipped edges, thin patches of powder snow on upper ledges, cold blue-violet ambient shadows with tiny warm amber lantern reflections along one edge. Detailed painterly gouache and confident dark ink outlines matching a richly illustrated travelling forge game, NOT a flat vector polygon, NOT low-poly, NOT photorealistic. Three-quarter frontal viewpoint, strong irregular silhouette, full object visible with clear 10 percent transparent margin on all sides. Genuinely transparent alpha background, no scenery, no ground plane, no pedestal, no writing, no markings, no characters, no UI. Readable at 230 pixels tall."
+    }
+  ]
+}

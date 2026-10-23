@@ -11,7 +11,12 @@
 | drive-lock-v1 | 母灯传动锁与链条 |
 | mother-wheel-v1 | 母灯逆转轮、固定底座和中央灯芯座 |
 | companions-fullbody-v1 | 保留阿岚／阿禾／杜伯原面貌服装的全身随行姿态；旧半身图仍用于手札与后话 |
+| snow-rock-v1 | 有纹理、积雪与真实断面的落石；替换终章过于平面的几何石块 |
+| snow-pass-clean-v1 | 移除烘焙人物的雪路舞台，供缺口与接力的独立角色／目标使用 |
+| mother-gate-clean-v1 | 移除烘焙人物的母灯门庭，避免同一位杜伯出现两次 |
 
 完整最终提示词在[prompts.json](prompts.json)；原PNG在[originals/](originals/)，尺寸、alpha和SHA在[manifest.json](manifest.json)。运行资源在 `/public/assets/d/v1-campaign/`，只做 `cwebp -q 90 -alpha_q 100` 格式转换，透明边缘保留，没有程序抠图或像素改画。
 
 母轮位图含固定底座，因此用轮缘金色流线表现运转，停轮后收敛；不把整幅带底座的图旋转。自然锤沿用用户已认可的原件、方向、比例与接触锚点。剑仍使用原真实图集帧，裂纹、磨损和断口按正式状态绘制。
+
+网页全路线捕图发现终章旧叙事背景自带人物，与新独立演员叠加。两张干净舞台和手绘落石据此修缮，新增最终提示词在[scene-cleanup-prompts.json](scene-cleanup-prompts.json)。原背景保留，修改通过内置image_gen完成，未用程序抠人或改画。

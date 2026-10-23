@@ -141,8 +141,9 @@ export function mountCampaign(root:HTMLElement,port:V7Session){
   return{copy:''};
  }
  function cue(events:readonly DomainEvent[]){
-  const f=events.find(e=>e.type==='Forged');
-  audio.acceptedCue(events.some(e=>e.type==='EndingReached')?'victory':f?.type==='Forged'?f.result==='broken'?'broken':f.result==='crack'?'damage':f.kind==='ordinary'?'standard':'heavy':events.some(e=>e.type==='Struck')?'heavy':events.some(e=>e.type==='Failed')?'defeat':events.some(e=>e.type==='RoundEnded'&&e.loss>0)?'damage':events.some(e=>e.type==='Guarded')?'light':'purchase');
+  const f=events.find(e=>e.type==='Forged'),ending=events.find(e=>e.type==='EndingReached');
+  const endingCue=ending?ending.kind==='relit'?'victory':ending.kind==='homeward'?'delivery':'defeat':null;
+  audio.acceptedCue(endingCue??(f?.type==='Forged'?f.result==='broken'?'broken':f.result==='crack'?'damage':f.kind==='ordinary'?'standard':'heavy':events.some(e=>e.type==='Struck')?'heavy':events.some(e=>e.type==='Failed')?'defeat':events.some(e=>e.type==='RoundEnded'&&e.loss>0)?'damage':events.some(e=>e.type==='Guarded')?'light':'purchase'));
  }
  function arrive(view:RunView){
   if(arrivalTimer)clearTimeout(arrivalTimer);

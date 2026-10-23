@@ -36,6 +36,7 @@ const SCENE_STYLE=`
 .scene7-target:disabled{cursor:default}
 .scene7-target-art{display:block;height:clamp(122px,26vh,240px);width:100%;transform-origin:50% 86%;transition:filter .15s}
 .scene7-target-art>img,.scene7-target-art>svg{display:block;width:100%;height:100%;object-fit:contain;overflow:visible}
+.scene7-target[data-kind=loose-rock] .scene7-target-art>img{transform:scale(.72)}
 .scene7-target:hover:not(:disabled) .scene7-target-art{filter:drop-shadow(0 0 8px #f3d19b88)}
 .scene7-target[data-dead=true] .scene7-target-art{transform:translate(14px,20px) rotate(64deg) scale(.73);opacity:.3}
 .scene7-target[data-mechanism=true][data-dead=true] .scene7-target-art{transform:translate(0,13px) rotate(13deg) scale(.86);opacity:.34}

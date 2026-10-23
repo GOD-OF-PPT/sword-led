@@ -164,6 +164,8 @@ const TARGET_ASSETS:Partial<Record<TargetId,string>>={
  charger:'/assets/d/v1-campaign/charger-v1.webp',
  flanker:'/assets/d/v1-campaign/flanker-v1.webp',
  rammer:'/assets/d/v1-campaign/charger-v1.webp',
+ 'main-rock':'/assets/d/v1-campaign/snow-rock-v1.webp',
+ 'loose-rock':'/assets/d/v1-campaign/snow-rock-v1.webp',
  'roof-lock':'/assets/d/v1-campaign/shelter-lock-v1.webp',
  'drive-lock':'/assets/d/v1-campaign/drive-lock-v1.webp',
  'reverse-wheel':'/assets/d/v1-campaign/mother-wheel-v1.webp',
@@ -362,9 +364,8 @@ function placeBackground(state:RunState):string {
   case 3:return'/assets/d/v07/bridge-lit-v1.webp';
   case 4:case 6:return'/assets/d/v07-chapter2/winter-forge-v1.webp';
   case 5:return`/assets/d/v07-chapter2/twin-stations-${state.flags.northSaved&&state.flags.southSaved?'lit':state.flags.northSaved||state.flags.southSaved?'one':'dark'}-v1.webp`;
-  case 7:return'/assets/d/v07-chapter3/mountain-pass-arrival-v1.webp';
-  case 8:return state.flags.carrier===null?'/assets/d/v07-chapter3/mountain-pass-arrival-v1.webp':'/assets/d/v07-chapter3/relay-one-v1.webp';
-  case 9:return state.flags.coreOwner==='socket'?'/assets/d/v07-chapter3/last-lantern-delivered-v1.webp':'/assets/d/v07-chapter3/mountain-pass-arrival-v1.webp';
+  case 7:case 8:return'/assets/d/v1-campaign/snow-pass-clean-v1.webp';
+  case 9:return state.flags.coreOwner==='socket'?'/assets/d/v1-campaign/mother-gate-clean-v1.webp':'/assets/d/v1-campaign/snow-pass-clean-v1.webp';
  }
 }
 function buildActions(state:RunState):ActionView[] {

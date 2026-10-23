@@ -168,6 +168,57 @@
       "originalSHA256": "7828be08ef936d35eb5cfc00a820ba95efea06ade1026da1863897d1b832945a",
       "runtimeSHA256": "d368c4d459cd1b7cdeb7dffa3817b121b41e28f6b6535a948d789d6185c2fc4b",
       "runtimeBytes": 450036
+    },
+    {
+      "id": "snow-pass-clean-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-01ccb718-4ccf-433a-8de2-9ad5df05a680.png",
+      "original": "design/d/v1-campaign/originals/snow-pass-clean-v1.png",
+      "runtime": "/assets/d/v1-campaign/snow-pass-clean-v1.webp",
+      "promptSet": "design/d/v1-campaign/scene-cleanup-prompts.json",
+      "width": 1672,
+      "height": 941,
+      "alpha": [
+        255,
+        255
+      ],
+      "originalSHA256": "e16f16120e3e8cc79723ff50858f4c97f838fbfc09fd1b0ee0877a59fdb740b7",
+      "runtimeSHA256": "1391a2be84f0efb0dd5d8d8cfdc2dba778653922dea44acb1f8faf8aaf481c3b",
+      "runtimeBytes": 485978
+    },
+    {
+      "id": "mother-gate-clean-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-d55bb90b-7ed7-48f8-8c5f-d0ce2071debd.png",
+      "original": "design/d/v1-campaign/originals/mother-gate-clean-v1.png",
+      "runtime": "/assets/d/v1-campaign/mother-gate-clean-v1.webp",
+      "promptSet": "design/d/v1-campaign/scene-cleanup-prompts.json",
+      "width": 1673,
+      "height": 940,
+      "alpha": [
+        255,
+        255
+      ],
+      "originalSHA256": "36d14807bcd3b082d79ea2d60c5026a1cfa1003d89305b0223a80af0b7c97f11",
+      "runtimeSHA256": "fc83d5f05f14b5f418a7a1058cef4a0fa2e0d964706e5c519a1ebc42ccbdb424",
+      "runtimeBytes": 509108
+    },
+    {
+      "id": "snow-rock-v1",
+      "source": "/Users/gordon/.codex/generated_images/01a148e3-fc6f-7801-88e5-8481f4fc2a67/exec-6e6e299d-e60b-499b-aa5a-721d2c9f2fdb.png",
+      "original": "design/d/v1-campaign/originals/snow-rock-v1.png",
+      "runtime": "/assets/d/v1-campaign/snow-rock-v1.webp",
+      "promptSet": "design/d/v1-campaign/scene-cleanup-prompts.json",
+      "width": 1374,
+      "height": 1145,
+      "alpha": [
+        0,
+        255
+      ],
+      "originalSHA256": "a07ebe3f864a842993d6ff3b1594ff8a180eb1c48f65c234144f9e04e23eba1d",
+      "runtimeSHA256": "066374d46c8160fa7d7b2d31fb3f68e7cd99fd3a7e9d75ae43aab4d514d9c65c",
+      "runtimeBytes": 435596
     }
+  ],
+  "additionalPromptSets": [
+    "design/d/v1-campaign/scene-cleanup-prompts.json"
   ]
 }
