@@ -32,7 +32,7 @@ npm run dev
 - [架构与模块](docs/v1.0-architecture.md)：纯规则、正式视图、持久会话、场景与DOM。
 - [v7 SDK](docs/v7-sdk.md)：`createRun / applyCommand / getRunView / validateRun`，forge-v7/schema7独立保存。
 - [美术原件、提示词与清单](design/d/v1-campaign/README.md)：内置image_gen生成，运行位图已实际绑定对象。
-- [完整网页两路线与三结局](docs/reviews/2026-10-24-v1-complete-browser-routes.md)、[界面修缮](docs/reviews/2026-10-24-v1-ui-review-3.md)及[执行记录](docs/iterations/2026-10-23-lantern-expedition/tasks.md)。
+- [完整网页两路线与三结局](docs/reviews/2026-10-24-v1-complete-browser-routes.md)、[界面修缮](docs/reviews/2026-10-24-v1-ui-review-3.md)、[最终审查](docs/reviews/2026-10-24-v1-final-review.md)及[发布回执](docs/reviews/2026-10-24-v1-release.md)。
 - [产品研究与指导](docs/research/2026-10-23-v6-rejection-guidance.md)：ForgeTax等产品的官方玩法与玩家反馈，回应旧版缺少完整主线的问题。
 
 两条实际网页路线均完成九站并复明，另核对归途与败退。流程核对、实际玩家反馈和设计节奏目标均按证据记录；15～25分钟尚不是实测结论。
