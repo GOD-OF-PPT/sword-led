@@ -1,6 +1,6 @@
 ## Context
 
-当前正式版为forge-v5/schema5三章十二天，保留旧版本解释器与图源。用户最新反馈明确认为游戏无聊、视觉缺乏吸引力；本变更从“剑的制造选择→使用后果”重做短循环，而不是再只换文案或补订单。完整待确认合同见[方案](../../../docs/v0.9-sword-expedition-proposal.md)。本文件尚未实施，数值／流程算例为手算。
+默认首页仍为forge-v5/schema5三章十二天，保留旧版本解释器与图源。用户此前反馈明确认为游戏无聊、视觉缺乏吸引力；本变更从“剑的制造选择→使用后果”重做短循环，而不是再只换文案或补订单。完整合同见[方案](../../../docs/v0.9-sword-expedition-proposal.md)，已于2026-10-23[具体批准](../../../docs/approvals/v0.9-2026-10-23/approval.json)。core-v6、schema6、独立v6入口及短段已实施，待本轮发布回执；实际证据见[工具闭环](../../../docs/reviews/v0.9/3.1-tools-review.md)与[必要边界](../../../docs/reviews/v0.9/3.2-bounded-checks.md)。本文件原数值／流程算例仍保留历史手算身份。
 
 ## Goals / Non-Goals
 
@@ -11,7 +11,7 @@
 
 ### One new capability and isolated rule identity
 
-拟core-v6纯核、rulesVersion`forge-v6`、schema6、独立主备key／SDK／`/v6.html`；v5继续原合同，首段不导旧资格／金币／剑／炉谱。保现有TS/Vite、DOM/Canvas、session/repository边界；不迁引擎。新随机流只服务普通锤，每次普通锤抽一次，主动确定技法不抽。整数与全journal重建约束沿现有安全模式，新核不信任存档快照。
+已采用core-v6纯核、rulesVersion`forge-v6`、schema6、独立主备key／SDK／`/v6.html`；v5继续原合同，首段不导旧资格／金币／剑／炉谱。保现有TS/Vite、DOM/Canvas、session/repository边界；不迁引擎。新随机流只服务普通锤，每次普通锤抽一次，主动确定技法不抽。整数与全journal重建约束沿现有安全模式，新核不信任存档快照。
 
 ### Finite state machine
 
@@ -57,7 +57,7 @@
 
 ## Migration Plan
 
-批准前只有文档。批准后独立新入口／新存储key，保旧v5和所有旧解释器／SDK／存档／原画／失败证据。新开段明确确认并保取消零副作用；不读旧钱包作初始资源。共享单写／generation机制可复用，具体适配不得更改旧codec语义。默认入口切换不在本提案范围。回滚为新增revert／旧不可变预览，不删除新旧档或强推历史。
+批准前只有文档；具体批准后已实施独立新入口／新存储key，保旧v5和所有旧解释器／SDK／存档／原画／失败证据，隔离核查见上述必要边界复核。新开段明确确认并保取消零副作用；不读旧钱包作初始资源。共享单写／generation机制可复用，具体适配不得更改旧codec语义。默认入口切换不在本提案范围。回滚为新增revert／旧不可变预览，不删除新旧档或强推历史。
 
 ## Verification boundary
 
@@ -65,4 +65,4 @@
 
 ## Approval
 
-完整新玩法合同待用户确认；原依据是用户“然后确认实施文档”及适用OpenSpec批准门。现版已授权视觉／因果反馈修补不因此重复请示；不得把本规则批准需求泛化为全部UI工作需要停等。
+完整新玩法合同已于2026-10-23具体批准，见上述批准记录；短段实施及必要验证已完成，待本轮发布回执。批准不包含默认首页切换、旧资源迁移、长期fun认可或完整长篇扩展。

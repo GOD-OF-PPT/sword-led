@@ -1,0 +1,98 @@
+{
+  "status": "passed",
+  "scope": "Restore the actually observed failed 21-command run, then cancel and confirm an explicit restart; not another fresh full campaign.",
+  "identity": {
+    "snapshot": "/Users/gordon/githome/sword-led/tmp/previews/v09-release-01",
+    "url": "http://127.0.0.1:4268/v6.html",
+    "sdkSha256": "a64cb053f824db0c4d7db7dcb2d3a1ada4e762e00be6d17d9539a8df55a0fc4e",
+    "sourcePath": "tmp/v09-tools-check/final-boundaries-01/result.json",
+    "sourceSha256": "fa0d86f729e4167da76b7caf6f0158463186bdb28b63e4fe01449f06838f0483",
+    "scriptSha256": "f97de3a059a0647f34147f755b2d9f0f64bbc60127491ee6ba7f6469836b915b",
+    "browserVersion": "156.0.8078.4"
+  },
+  "errors": [],
+  "failure": null,
+  "cancelPreservedBothRawSlots": true,
+  "confirmCreatedNewRun": true,
+  "previousRunId": "a16093ee-b7b1-4a59-90f1-71c58036bc54",
+  "fresh": {
+    "rulesVersion": "forge-v6",
+    "runId": "28e13d57-8075-4806-8b1c-9a4fd2f39e1f",
+    "seed": "开路-00339c44-165",
+    "revision": 0,
+    "phase": "main-forge",
+    "coins": 0,
+    "gateCleared": false,
+    "gatePaid": false,
+    "tool": null,
+    "blades": [
+      {
+        "id": "main-1",
+        "stage": "main",
+        "school": null,
+        "status": "blank",
+        "strength": 0,
+        "cracked": false,
+        "fissureMarked": false,
+        "hits": 0,
+        "sealedStrength": null,
+        "sealedCracked": null,
+        "sealedHits": null
+      },
+      {
+        "id": "main-2",
+        "stage": "main",
+        "school": null,
+        "status": "blank",
+        "strength": 0,
+        "cracked": false,
+        "fissureMarked": false,
+        "hits": 0,
+        "sealedStrength": null,
+        "sealedCracked": null,
+        "sealedHits": null
+      },
+      {
+        "id": "main-3",
+        "stage": "main",
+        "school": null,
+        "status": "blank",
+        "strength": 0,
+        "cracked": false,
+        "fissureMarked": false,
+        "hits": 0,
+        "sealedStrength": null,
+        "sealedCracked": null,
+        "sealedHits": null
+      }
+    ],
+    "activePieceId": "main-1",
+    "charges": {
+      "main": 1,
+      "echo": 0
+    },
+    "trial": null,
+    "trials": [],
+    "echo": {
+      "started": false,
+      "submitted": false,
+      "toolTriggered": false,
+      "rechargeGained": 0,
+      "returnedToForge": false,
+      "techniqueUsedAfterRecharge": false,
+      "demonstrated": false,
+      "outcome": "not-started",
+      "reason": null
+    },
+    "rng": {
+      "forge": {
+        "state": 3308845055,
+        "draws": 0
+      }
+    },
+    "journal": [],
+    "endReason": null
+  },
+  "priorRunKeptAsBackup": true,
+  "finishedAt": "2026-10-23T07:57:45.216Z"
+}

@@ -99,7 +99,7 @@ export function mountV6(root:HTMLElement,port:V6Session){
  function start(){
   const execute=()=>{const result=port.startNewGame(freshInput(),{generation:snapshot.generation,confirmed:true});if(!result.ok){message(errorCopy(result.error));saveDetails();return;}route='play';paused=false;clearResult();message('');render();void audio.gesture();};
   const state=current(),main=snapshot.load?.main,backup=snapshot.load?.backup;
-  if(state&&(!getRunView(state).ended||snapshot.dirty)||!savedCurrent()&&(main?.status==='invalid'||main?.status==='empty'&&backup?.status==='valid'))confirm('另起一炉？','这会替换当前开路行程。想保留的进度可先在“行程”导出；旧版十二灯行旅另有自己的保存。磁盘原文损坏或来自较新版时，请先导出原文，替换不会自动保留它。',execute);
+  if(state||!savedCurrent()&&(main?.status==='invalid'||main?.status==='empty'&&backup?.status==='valid'))confirm('另起一炉？','这会替换当前开路行程。想保留的进度可先在“行程”导出；旧版十二灯行旅另有自己的保存。磁盘原文损坏或来自较新版时，请先导出原文，替换不会自动保留它。',execute);
   else execute();
  }
  function continueRun(){if(!current())return;cancelVisuals();clearResult();route='play';paused=false;message('');render();void audio.gesture();}

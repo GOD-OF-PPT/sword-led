@@ -4,7 +4,7 @@
 
 **当前默认版为 v0.8规则的「炉火试作」：[本机试玩](http://127.0.0.1:4179/)**。本轮按Game Studio重做近景炉台、剑旁逐锤结果与信息焦点；[原炉台比较](http://127.0.0.1:4179/classic.html)和[显式新界面](http://127.0.0.1:4179/forge.html)沿用同一合法v5存档。三章十二天、十二份委托、三次商人、两次炉具改造与三种结局均接真实经营和保存。作品估值与实际酬劳/品质加赏分开，行会有限收购；留剑占次日三柄中的一位，等级至少3的成器可换手艺。[完整操作指南](docs/v0.8-twelve-lights-guide.md)说明流程与取舍。已有v0.8首章档可从第四天收据继续；原v0.7行程从[旧炉前](http://127.0.0.1:4179/v4.html)续玩，新旧局内金币和兵器不互迁。
 
-**最新产品结论（2026-10-23）：用户明确评价游戏无聊、视觉不出众、缺乏可玩性；这项否定仍成立，原技术交付不代表趣味成功。** [五产品80评研究与八条指导](docs/research/2026-10-23-forging-gameplay-guidance.md)区分官方功能、玩家建议、旧评更新和反例。[本轮实装回执](docs/reviews/2026-10-23-research-reboot.md)含真实两尺寸画面和有限PC流程；它改善呈现，未改变敲到门槛的v0.8规则。新的[《一剑开路》v0.9提案](docs/v0.9-sword-expedition-proposal.md)让剑进入实际试锋、两种主动技法和可用工具闭环，**仍待具体确认，尚未实现**。
+**最新产品结论（2026-10-23）：用户明确评价游戏无聊、视觉不出众、缺乏可玩性；这项否定仍成立，原技术交付不代表趣味成功。** [五产品80评研究与八条指导](docs/research/2026-10-23-forging-gameplay-guidance.md)区分官方功能、玩家建议、旧评更新和反例。[本轮实装回执](docs/reviews/2026-10-23-research-reboot.md)含真实两尺寸画面和有限PC流程；它改善呈现，未改变敲到门槛的v0.8规则。已具体批准并实装[《一剑开路》v0.9短段](docs/v0.9-sword-expedition-proposal.md)：**[点此进入新玩法](http://127.0.0.1:4179/v6.html)**，左键短锻造、一次主动技法、同剑三回合开路、风险取工具，并当场用出追斩或回充。[操作指南](docs/v0.9-play-guide.md)与[实际工具闭环](docs/reviews/v0.9/3.1-tools-review.md)记录当前范围；这是完整的一段新核心，不是新的十二天长篇，也没有替玩家预先判定有趣。
 
 报价现分三处：剑旁是“作品估值”，纸单是“整单酬劳／已领”，交付按钮是“本次实收铜钱”。按钮下列“本柄酬劳＋品质加赏＝实收”，点击“看报价说明”可查看加赏、行会折价和钱袋限制；双剑每柄按实际份额领取。[本次修缮与验证](docs/reviews/G4-T03-payment-progress.md)记录实际范围；现代PC专项与历史失败的边界见[联合技术复核](docs/reviews/G4-T03-final-technical-review.md)。
 
@@ -75,7 +75,7 @@ npm ci --registry=https://registry.npmjs.org/
 npm run dev
 ```
 
-打开终端显示的地址，默认`/`为v0.8三章十二天（forge-v5规则），`/v4.html`为原v0.7三章十二天（forge-v4规则），`/v3.html`为旧版炉前，`/v2.html`为旧D细锻，`/legacy.html`为B版旧契约。生产版本用`npm run build`后`npm run preview`，默认端口4173。构建包含五个HTML、网页资源与core/session/v2/v3/v4 SDK及共享chunk，并独立追加forge-v5 SDK，应整体保留dist，不提交dist或node_modules。新版独立局档/炉谱、显式旧册导入与续玩API见[保存合同](docs/v0.8-persistence-contract.md)，旧v4会话和原件保持。需要通过localhost或HTTPS运行。
+打开终端显示的地址，新玩法`/v6.html`为v0.9一剑开路（forge-v6/schema6，独立保存），默认`/`仍为v0.8三章十二天（forge-v5规则），`/v4.html`为原v0.7三章十二天（forge-v4规则），`/v3.html`为旧版炉前，`/v2.html`为旧D细锻，`/legacy.html`为B版旧契约。生产版本用`npm run build`后`npm run preview`，默认端口4173。构建包含所有HTML入口、网页资源与core/session/v2/v3/v4 SDK及共享chunk，并独立追加forge-v5和forge-v6 SDK，应整体保留dist，不提交dist或node_modules。新版独立局档/炉谱、显式旧册导入与续玩API见[保存合同](docs/v0.8-persistence-contract.md)，旧v4会话和原件保持。需要通过localhost或HTTPS运行。
 
 | 操作 | 用法 |
 | --- | --- |
