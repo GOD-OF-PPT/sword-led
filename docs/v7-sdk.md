@@ -25,3 +25,9 @@ if (created.ok) {
 存档键为 `sword-led.save.v7` 与 `sword-led.save.backup.v7`，写锁为 `sword-led.writer.v7`。封套 schemaVersion 为7，rulesVersion 为forge-v7。v5／v6使用原键与原解释器；无自动迁钱或清档。
 
 画面可以短暂保留动作前场景以播放接触、磨损和转场，接受结果应立即交会话保存。动画不生成第二次命令，也不延迟主线事实。读取视图、打开旅程和取消确认不推进回合。
+# 炉路交互修订的只读预测
+
+`getRunView`新增`briefing`：整备/锻造时提供下一程目标、耐久、护甲、当前手中或在锻剑的直斩/架剑后伤害，以及已成立的特殊开路和工具用途。预测直接复用场次定义与伤害函数，不生成随机结果、不执行动作。
+
+`TargetView.forecast`提供当前轮到公开轮限的压力数组，首项即本轮压力。已破除目标各项为0。两项都只存在于view，不进入schema7保存或journal；旧v7旅程不需迁移。
+
