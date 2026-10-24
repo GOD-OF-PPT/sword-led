@@ -147,7 +147,7 @@ export function mountCampaign(root:HTMLElement,port:V7Session){
   const slots=node('c7-rack');slots.replaceChildren();
   for(const [kind,value]of Object.entries(v.slots)){
    const e=elem('button',undefined,'c7-rack-slot');e.type='button';e.dataset.slot=kind;e.dataset.condition=value?.kind??'empty';
-   e.append(elem('small',kind==='hand'?'手中 · 用来出剑':'备用 · 点此换手'),elem('b',value?`${value.name} · ${value.strength}`:'空剑位'));
+   e.append(elem('small',kind==='hand'?'手中':'备用 · 换手'),elem('b',value?`${value.name} · ${value.strength}`:'空剑位'));
    if(value){const art=elem('span',undefined,'c7-mini-blade'),f=SWORD_ART.frames[3],scale=98/f.width;art.setAttribute('aria-hidden','true');art.style.height=`${f.height*scale}px`;art.style.marginBlock='16px';art.style.backgroundImage=`url("${SWORD_ART.src}")`;art.style.backgroundSize=`${SWORD_ART.width*scale}px ${SWORD_ART.height*scale}px`;art.style.backgroundPosition=`${-f.x*scale}px ${-f.y*scale}px`;e.prepend(art);e.title=`${value.condition}；${kind==='reserve'?'点此换手':'点此查看这柄剑'}`;
     e.onclick=()=>{const equip=v.actions.find(a=>a.action.type==='equip'&&a.action.weaponId===value.id);if(kind==='reserve'&&equip?.allowed&&writable())take(equip);else inspectWeapon(value);};
    }else{e.disabled=true;e.title='空位可在收锻时放入一柄新剑。';}

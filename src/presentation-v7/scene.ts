@@ -199,7 +199,7 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
  }
  function floatAt(x:number,y:number,title:string,detail='',tone:'hit'|'forge'|'armor'|'guard'|'danger'='hit',duration=610):void{
   if(options.reduced()||disposed)return;
-  const label=document.createElement('span'),strong=document.createElement('strong');label.className='scene7-float';label.dataset.tone=tone;label.dataset.feedback=title;label.style.opacity='0';label.style.left=`${Math.max(70,Math.min(width-70,x))}px`;label.style.top=`${Math.max(height*.34,Math.min(height-115,y))}px`;strong.textContent=title;label.append(strong);
+  const label=document.createElement('span'),strong=document.createElement('strong');label.className='scene7-float';label.dataset.tone=tone;label.dataset.feedback=title;label.style.opacity='0';label.style.left=`${Math.max(70,Math.min(width-70,x))}px`;label.style.top=`${Math.max(height*.40,Math.min(height-115,y))}px`;strong.textContent=title;label.append(strong);
   if(detail){const small=document.createElement('small');small.textContent=detail;label.append(small);}
   floats.append(label);animate(label,[{opacity:0,transform:'translate(-50%,-20%) scale(.85)'},{opacity:1,transform:'translate(-50%,-50%) scale(1.05)',offset:.12},{opacity:1,transform:'translate(-50%,-74%) scale(1)',offset:.65},{opacity:0,transform:'translate(-50%,-110%) scale(.98)'}],duration);
  }
