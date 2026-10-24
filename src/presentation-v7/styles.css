@@ -197,6 +197,7 @@ body > #app { min-height: 100dvh; }
 .c7[data-phase="forging"] .c7-forge-readout > small { margin-top: 2px; font-size: 12px; }
 .c7[data-phase="forging"] .c7-forge-readout .c7-forge-purpose { margin-top: 3px; font-size: 14px; line-height: 1.45; }
 .c7[data-phase="forging"] .c7-context { display: none; }
+.c7[data-phase="forging"] .scene7-forge span { display: none; }
 .c7 .c7-ending { overflow: auto; }
 .c7 .c7-ending-consequences { width: min(760px, 90%); max-height: 140px; overflow: auto; padding-block: 8px 12px; color: #d9dcc6; font-size: 14px; }
 .c7 .c7-ending-consequences summary { min-height: 32px; cursor: pointer; color: #f1d199; }

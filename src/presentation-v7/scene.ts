@@ -84,7 +84,7 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
  const floats=document.createElement('div');floats.className='scene7-floats';floats.setAttribute('aria-hidden','true');
  root.append(style,targets,canvas,forge,hammer,empty,sigil,message,floats,fade);host.append(root);
  const context=canvas.getContext('2d'),stamp=document.createElement('canvas'),swordArt=new Image();
- const animations=new Set<Animation>(),targetNodes=new Map<TargetId,HTMLButtonElement>();
+ const animations=new Set<Animation>(),targetNodes=new Map<TargetId,HTMLButtonElement>(),pressureNodes=new Set<HTMLElement>();
  let artReady=false,disposed=false,epoch=0,latest:RunView|null=null,visual:RunView|null=null,active:Playback|null=null;
  let frame:number|null=null,ambientFrame:number|null=null,width=0,height=0,ratio=1,aimX=.58,lastTime=0;
  let particles:Particle[]=[];
@@ -383,12 +383,22 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
   if(options.reduced()){message.style.opacity='1';return;}
   animate(message,[{opacity:0,transform:'translate(-50%,-40%)'},{opacity:1,transform:'translate(-50%,-50%)',offset:.16},{opacity:1,offset:.70},{opacity:0,transform:'translate(-50%,-62%)'}],600);
  }
- function pressureWindup(play:Playback):void{
+ function pressurePose(play:Playback,now:number):void{
+  if(play.mode!=='pressure'||options.reduced())return;
   for(const target of play.before.encounter?.targets??[]){
    if(target.health<=0||target.pressure<=0||target.role!=='threat')continue;
    const art=targetNodes.get(target.id)?.querySelector<HTMLElement>('.scene7-target-art');if(!art)continue;
    const rock=target.id==='main-rock'||target.id==='loose-rock',side=target.id==='flanker';
-   animate(art,[{transform:'translate(0,0) rotate(0deg)'},{transform:rock?'translate(0,-16px) rotate(-3deg)':side?'translate(20px,-5px) rotate(4deg)':'translate(12px,-4px) rotate(5deg)',offset:.12},{transform:rock?'translate(-25px,70px) rotate(-9deg)':side?'translate(-105px,65px) rotate(-17deg)':'translate(-75px,45px) rotate(-13deg)',offset:play.contactAt/play.duration},{transform:rock?'translate(-10px,8px) rotate(-3deg)':'translate(-12px,5px) rotate(-3deg)',offset:.62},{transform:'translate(0,0) rotate(0deg)'}],play.duration,'linear');
+   const anticipation=rock?{x:0,y:-16,r:-3}:side?{x:20,y:-5,r:4}:{x:12,y:-4,r:5},impact=rock?{x:-25,y:70,r:-9}:side?{x:-105,y:65,r:-17}:{x:-75,y:45,r:-13};
+   let x:number,y:number,r:number;
+   if(play.contactTime!==null){
+    const recovery=ease(Math.max(0,Math.min(1,(now-play.contactTime-60)/Math.max(1,play.duration-play.contactAt-60))));
+    x=lerp(impact.x,0,recovery);y=lerp(impact.y,0,recovery);r=lerp(impact.r,0,recovery);art.dataset.pressurePhase=now-play.contactTime<60?'contact':'return';
+   }else{
+    const progress=Math.max(0,Math.min(1,(now-play.start)/play.contactAt)),preparing=progress<.4,amount=ease(preparing?progress/.4:(progress-.4)/.6);
+    x=preparing?lerp(0,anticipation.x,amount):lerp(anticipation.x,impact.x,amount);y=preparing?lerp(0,anticipation.y,amount):lerp(anticipation.y,impact.y,amount);r=preparing?lerp(0,anticipation.r,amount):lerp(anticipation.r,impact.r,amount);art.dataset.pressurePhase=progress===1?'contact':'windup';
+   }
+   art.style.transform=`translate(${x}px,${y}px) rotate(${r}deg)`;pressureNodes.add(art);
   }
  }
  function touched(play:Playback):void{
@@ -468,6 +478,7 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
   frame=null;const play=active;if(disposed||!play)return;
   if(document.hidden){cancel();return;}
   if(options.reduced()){touched(play);finish(play);return;}
+  pressurePose(play,now);
   if(!play.contacted&&play.mode!=='forge'&&now-play.start>=play.contactAt)touched(play);
   if(active!==play)return;
   const elapsed=now-play.start;
@@ -482,6 +493,7 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
   hammerMotion.reset();if(frame!==null)cancelAnimationFrame(frame);frame=null;
   if(ambientFrame!==null)window.clearTimeout(ambientFrame);ambientFrame=null;
   for(const a of animations)a.cancel();animations.clear();particles=[];message.textContent='';message.style.opacity='0';fade.style.opacity='0';root.removeAttribute('data-playing');
+  for(const node of pressureNodes){node.style.removeProperty('transform');delete node.dataset.pressurePhase;}pressureNodes.clear();
   floats.replaceChildren();
  }
  function cancel():void{
@@ -523,7 +535,7 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
     active=play;root.dataset.playing=mode;forge.disabled=true;for(const node of targetNodes.values())node.disabled=true;
     if(document.hidden||width<=0||height<=0){cancel();return;}
     if(options.reduced()){touched(play);finish(play);return;}
-    if(mode==='pressure')pressureWindup(play);
+    pressurePose(play,play.start);
     if(transition)animate(fade,[{opacity:0},{opacity:.68,offset:.42},{opacity:.68,offset:.65},{opacity:0}],duration,'ease-in-out');
     if(mode==='forge')hammerMotion.strike(forged?.type==='Forged'&&forged.kind!=='ordinary',()=>touched(play));
     lastTime=performance.now();draw();frame=requestAnimationFrame(tick);

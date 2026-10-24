@@ -174,7 +174,7 @@ export function mountCampaign(root:HTMLElement,port:V7Session){
  }
  function renderForgeReadout(v:RunView){
   show('c7-forge-readout',!!v.forge);if(!v.forge)return;
-  const f=v.forge,e=node('c7-forge-readout');e.replaceChildren(elem('strong',`强度 ${f.weapon.strength}`),elem('p',`${f.weapon.condition} · ${f.weapon.hits}/6记`),elem('small',`铁坯 ${v.blanks} · 手艺 ${v.charge}次 · ${f.ordinary.crackTickets===0?'下一锤安全':`下一锤${f.ordinary.crackTickets/10}%${f.ordinary.breaksOnCrack?'再裂即碎':'首裂，强度−1'}`}`),elem('p',forecastLine(v),'c7-forge-purpose'));
+  const f=v.forge,e=node('c7-forge-readout');e.replaceChildren(elem('strong',`左键锻打 · 强度 ${f.weapon.strength}`),elem('p',`${f.weapon.condition} · ${f.weapon.hits}/6记`),elem('small',`铁坯 ${v.blanks} · 手艺 ${v.charge}次 · ${f.hitsLeft===0?'六记已满，请收锻':f.ordinary.crackTickets===0?'下一锤安全':`下一锤${f.ordinary.crackTickets/10}%${f.ordinary.breaksOnCrack?'再裂即碎':'首裂，强度−1'}`}`),elem('p',forecastLine(v),'c7-forge-purpose'));
   if(v.briefing?.alternative)e.append(elem('small',v.briefing.alternative));
  }
  function renderBriefing(v:RunView){
