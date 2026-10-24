@@ -388,7 +388,7 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
    if(target.health<=0||target.pressure<=0||target.role!=='threat')continue;
    const art=targetNodes.get(target.id)?.querySelector<HTMLElement>('.scene7-target-art');if(!art)continue;
    const rock=target.id==='main-rock'||target.id==='loose-rock',side=target.id==='flanker';
-   animate(art,[{transform:'translate(0,0) rotate(0deg)'},{transform:rock?'translate(0,-16px) rotate(-3deg)':side?'translate(20px,-5px) rotate(4deg)':'translate(12px,-4px) rotate(5deg)',offset:.12},{transform:rock?'translate(-25px,70px) rotate(-9deg)':side?'translate(-105px,65px) rotate(-17deg)':'translate(-75px,45px) rotate(-13deg)',offset:play.contactAt/play.duration},{transform:rock?'translate(-10px,8px) rotate(-3deg)':'translate(-12px,5px) rotate(-3deg)',offset:.62},{transform:'translate(0,0) rotate(0deg)'}],play.duration,'ease-in-out');
+   animate(art,[{transform:'translate(0,0) rotate(0deg)'},{transform:rock?'translate(0,-16px) rotate(-3deg)':side?'translate(20px,-5px) rotate(4deg)':'translate(12px,-4px) rotate(5deg)',offset:.12},{transform:rock?'translate(-25px,70px) rotate(-9deg)':side?'translate(-105px,65px) rotate(-17deg)':'translate(-75px,45px) rotate(-13deg)',offset:play.contactAt/play.duration},{transform:rock?'translate(-10px,8px) rotate(-3deg)':'translate(-12px,5px) rotate(-3deg)',offset:.62},{transform:'translate(0,0) rotate(0deg)'}],play.duration,'linear');
   }
  }
  function touched(play:Playback):void{
