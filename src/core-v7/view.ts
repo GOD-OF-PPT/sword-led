@@ -1,7 +1,8 @@
 import {freezeDeep} from '../core/immutable.js';
 import {damagePreview} from './combat.js';
 import type {DamagePreview} from './combat.js';
-import {pressurePreview} from './encounters.js';
+import {createEncounter,pressurePreview} from './encounters.js';
+import {cutStrength} from './mechanisms.js';
 import {actionError} from './game.js';
 import {OLD_SWORD_ID} from './initial.js';
 import {handWeapon,usable,weapon} from './inventory.js';
@@ -59,6 +60,7 @@ export interface TargetView {
  readonly maxHealth:number;
  readonly armor:number;
  readonly pressure:number;
+ readonly forecast:readonly number[];
  readonly intent:string;
  readonly requiresDestroyed:TargetId|null;
  readonly dependency:string|null;
@@ -106,6 +108,12 @@ export interface EndingView {
  readonly epilogues:readonly CharacterView[];
  readonly consequences:readonly string[];
 }
+export interface BriefingView {
+ readonly targets:readonly {readonly id:TargetId;readonly name:string;readonly health:number;readonly armor:number;readonly asset:string|null;readonly damage:number|null;readonly guardedDamage:number|null}[];
+ readonly bladeName:string|null;
+ readonly alternative:string|null;
+ readonly toolHint:string|null;
+}
 export interface RunView {
  readonly rulesVersion:RunState['rulesVersion'];
  readonly runId:string;
@@ -128,6 +136,7 @@ export interface RunView {
  readonly slots:{readonly hand:WeaponView|null;readonly reserve:WeaponView|null};
  readonly works:readonly WeaponView[];
  readonly forge:ForgeView|null;
+ readonly briefing:BriefingView|null;
  readonly tool:{readonly kind:'rebound'|'furnace';readonly name:string;readonly level:1|2;readonly stored:number;readonly description:string;readonly asset:string;readonly upgradeUsed:boolean}|null;
  readonly storyFlags:StoryFlags;
  readonly worldChanges:readonly string[];
@@ -446,6 +455,7 @@ export function getRunView(state:RunState):RunView {
   const hit=hand&&usable(state,hand.id)?damagePreview(hand,target.armor,e.opening):null,pressure=target.health>0?currentPressure(target.pressures,e.round):0;
   const dependency=e.targets.find(value=>value.id===target.requiresDestroyed);
   return{id:target.id,name:target.name,role:target.role,health:target.health,maxHealth:target.maxHealth,armor:target.armor,pressure,
+   forecast:Array.from({length:Math.max(0,e.roundLimit-e.round+1)},(_,index)=>target.health>0?currentPressure(target.pressures,e.round+index):0),
    intent:target.health===0?'已完成':target.role==='threat'?`本轮施加${pressure}压力`:'道路机关；环境压力另计',requiresDestroyed:target.requiresDestroyed,
    dependency:dependency&&dependency.health>0?`先破除${dependency.name}`:null,asset:TARGET_ASSETS[target.id]??null,
    preview:hit?{...hit,healthAfter:Math.max(0,target.health-hit.damage),breaksWeapon:hit.strengthAfter===0}:null,strike,followUp,blockedReason:strike.reason};
@@ -463,6 +473,17 @@ export function getRunView(state:RunState):RunView {
  const tool=state.tool?{...state.tool,name:state.tool.kind==='rebound'?'回锋齿':'崩炉钉',upgradeUsed:state.upgradeUsed,
   asset:`/assets/d/v09/${state.tool.kind==='rebound'?'rebound-tooth':'furnace-nail'}-v1.webp`,
   description:state.tool.kind==='rebound'?`首次斩击击破且有正溢出时存余力，每场免费追斩一次；${state.tool.level===2?'未用余力可跨节点，新的溢出只保较大值。':'场末清除未用余力。'}`:`每场首次亲手击破带甲目标，将技法次数补至1（已满则净增0）；续炉恢复${state.tool.level===2?4:2}强度至原收锻值${state.tool.level===2?'，并清意外裂纹，真正崩纹保留':''}。`}:null;
+ const briefIds:Readonly<Record<NodeId,readonly EncounterId[]>>={1:['n1'],2:['n2'],3:['n3-main'],4:['n5-north','n5-south'],5:['n5-north','n5-south'],6:['n6'],7:['n7'],8:['n8'],9:['n9']};
+ const briefBlade=state.phase==='forging'?forge:hand;
+ const previewTargets=briefIds[state.node].flatMap(id=>createEncounter(state,id).targets).filter(t=>t.health>0);
+ const briefing:BriefingView|null=state.phase==='prepare'||state.phase==='forging'?{
+  bladeName:briefBlade?weaponName(briefBlade):null,
+  targets:previewTargets.map(t=>({id:t.id,name:t.name,health:t.health,armor:t.armor,asset:TARGET_ASSETS[t.id]??null,
+   damage:briefBlade&&briefBlade.strength>0?damagePreview(briefBlade,t.armor,false).damage:null,
+   guardedDamage:briefBlade&&briefBlade.strength>0?damagePreview(briefBlade,t.armor,true).damage:null})),
+  alternative:state.node===2?`完好剑强度≥${cutStrength('bridge-rope')}可直接切索，不磨剑。`:state.node===5||state.node===4?`南驿可用完好剑强度≥${cutStrength('south-rope')}切索；${state.flags.ferrymanSaved?'摆渡人整段可免费牵索一次。':'也可斩开门闩。'}`:state.node===6?'也可留一柄强度≥3的剑撑梁；留下的剑不会回架。':state.node===7?`${state.flags.northSaved&&state.flags.ring==='left'?'北驿巡守已清掉散石。':''}可把强度≥3的备用剑交给阿岚，本场每轮减2压力。`:state.node===8?`完好剑强度≥${cutStrength('relay-rope')}可切索；${state.flags.crossingHeld||state.flags.southSaved&&state.flags.ring==='left'?'上次留下的接应也能直接开路。':'也可斩开山口铁闩。'}`:state.node===9?'先断传动锁，再停逆转轮。母灯最终需要手中自制剑：完好强度≥3或真正崩纹≥1。':null,
+  toolHint:state.tool?.kind==='rebound'?`击破时有溢出才能存追斩${previewTargets.length>1?'；本程有多个目标，可比较先手。':state.tool.level===2?'；二阶余力可带往下一程。':'；一级余力在场末清掉。'}`:state.tool?.kind==='furnace'?`本场首次亲手击破带甲目标可回充；${state.charge?'现有手艺可先用于续炉或新剑。':'先找一处可击破的带甲目标。'}`:null,
+ }:null;
  const view:RunView={rulesVersion:state.rulesVersion,runId:state.runId,revision:state.revision,chapter:state.chapter,chapterTitle:CHAPTER_TITLES[state.chapter],node:state.node,title:NODES[state.node].title,
   mission:ending?ending.summary:failure?failure.text:state.phase==='forging'?`${NODES[state.node].mission} 先在随身炉车打出一柄剑，再继续这一站。`:e&&state.phase==='encounter'?encounterObjective(e.id):NODES[state.node].mission,
   nextPlace:ending?ending.kind==='relit'?'母灯已复明 · 回看这趟灯路':'旅程已结束 · 回看后可另开新旅程':NODES[state.node].next,phase:state.phase,phaseLabel:PHASE_LABELS[state.phase],
@@ -472,7 +493,7 @@ export function getRunView(state:RunState):RunView {
   forge:forge&&state.phase==='forging'?{weapon:weaponView(state,forge),hitsLeft:Math.max(0,6-forge.hits),
    ordinary:{crackTickets:forge.hits<3?0:forge.cracked?350:200,totalTickets:1000,successStrength:forge.strength+1,crackStrength:forge.cracked?forge.strength:Math.max(0,forge.strength-1),breaksOnCrack:forge.cracked,draws:1},
    steady:{strengthAfter:forge.strength+1,crackedAfter:forge.cracked,chargeCost:1,draws:0},fissure:{strengthAfter:forge.strength+(forge.cracked?1:3),crackedAfter:true,chargeCost:1,draws:0}}:null,
-  tool,storyFlags:{...state.flags},worldChanges:worldChanges(state),
+  briefing,tool,storyFlags:{...state.flags},worldChanges:worldChanges(state),
   progress:([1,2,3,4,5,6,7,8,9] as const).map(node=>{
    const record=state.nodes.find(value=>value.node===node);
    return{node,chapter:Math.ceil(node/3) as Chapter,title:NODES[node].title,status:record?.completed?'completed':node===state.node?'current':record?'visited':'unreached',coinsEarned:record?.coinsEarned??0,choices:(record?.choices??[]).map(id=>({id,label:CHOICE_COPY[id].label}))};

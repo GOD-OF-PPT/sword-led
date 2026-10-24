@@ -6,6 +6,8 @@ const CUTS:Readonly<Record<CutTarget,{readonly node:NodeId;readonly encounter:En
  'south-rope':{node:5,encounter:'n5-south',strength:4},
  'relay-rope':{node:8,encounter:'n8',strength:4},
 };
+/** Public forecast uses the same requirement as the command owner. */
+export function cutStrength(target:CutTarget):number{return CUTS[target].strength;}
 
 function destroyed(state:RunState,id:TargetId):boolean{
  return state.encounter?.targets.some(target=>target.id===id&&target.health===0)??false;

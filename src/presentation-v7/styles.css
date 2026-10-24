@@ -171,6 +171,29 @@ body > #app { min-height: 100dvh; }
 .c7-stage { z-index: 1; }
 .c7-stage > canvas { display: block; width: 100%; height: 100%; }
 .c7-play > :not(.c7-stage) { pointer-events: auto; }
+.c7-curtain { position: absolute; inset: 0; z-index: 80; background: #06121c; opacity: 0; pointer-events: none; }
+.c7 .c7-briefing { position: absolute; left: 34%; top: 28%; z-index: 8; width: min(530px, 42vw); padding: 12px 0; color: var(--c7-light); text-shadow: 0 2px 5px #03121d, 0 0 15px #03121d; }
+.c7 .c7-briefing > small { color: #d9c59b; letter-spacing: .05em; }
+.c7 .c7-briefing-targets { display: flex; gap: 20px; margin-block: 10px; }
+.c7 .c7-briefing-target { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0; }
+.c7 .c7-briefing-target img { width: 76px; height: 104px; object-fit: contain; filter: drop-shadow(0 5px 7px #000b); }
+.c7 .c7-briefing-target b { font: 23px/1.4 var(--c7-display); color: #f2d39f; }
+.c7 .c7-briefing-target small { display: block; }
+.c7 .c7-briefing-target p { margin-top: 5px; font-size: 14px; color: #f3e5c7; }
+.c7 .c7-briefing-route { margin-bottom: 7px; color: #d7dbc4; font-size: 14px; }
+.c7 .c7-mechanisms { position: absolute; left: var(--c7-edge); top: 27%; z-index: 15; width: min(265px, 23vw); display: flex; flex-direction: column; gap: 7px; }
+.c7 .c7-mechanisms > small { color: #e4ca96; font: 15px/1.4 var(--c7-display); text-shadow: 0 2px 5px #000; }
+.c7 .c7-mechanisms .c7-button { align-items: flex-start; padding: 9px 12px; min-height: 46px; font-size: 17px; text-align: left; }
+.c7 .c7-mechanisms .c7-action-detail { font-size: 12px; white-space: normal; }
+.c7[data-mechanisms="true"] .c7-tool { top: 54%; }
+.c7[data-phase="encounter"] #c7-next { display: none; }
+.c7 .c7-technique-tradeoff { display: block; color: #f1dcad; font-size: 13px; line-height: 1.5; }
+.c7 .c7-tool .is-primary .c7-technique-tradeoff { color: #533820; }
+.c7 .c7-forge-readout .c7-forge-purpose { color: #ffe4ae; font-size: 15px; }
+.c7 .c7-ending { overflow: auto; }
+.c7 .c7-ending-consequences { width: min(760px, 90%); max-height: 140px; overflow: auto; padding-block: 8px 12px; color: #d9dcc6; font-size: 14px; }
+.c7 .c7-ending-consequences summary { min-height: 32px; cursor: pointer; color: #f1d199; }
+.c7 .c7-ending-consequences p { margin-block: 4px; }
 
 /* One companion stands on the road; the short line stays above their shoulders. */
 .c7 .c7-companion { position: absolute; z-index: 9; right: clamp(38px, 6.5vw, 120px); bottom: 131px; width: 210px; height: 315px; min-height: 315px; padding: 0; border: 0; background: transparent; box-shadow: none; color: #ede5cc; text-align: left; }

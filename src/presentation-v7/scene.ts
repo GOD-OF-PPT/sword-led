@@ -9,8 +9,8 @@ interface SceneOptions {
  readonly onStrike:(targetId:TargetId)=>void;
 }
 interface Particle {x:number;y:number;vx:number;vy:number;life:number;color:string;size:number;angle:number}
-type SparkKind='hammer'|'steady'|'fissure'|'break'|'hit'|'kill'|'followUp'|'warm';
-type Motion='forge'|'strike'|'followUp'|'guard'|'pressure'|'warm'|'donate'|'mechanism'|'change';
+type SparkKind='hammer'|'steady'|'fissure'|'break'|'hit'|'kill'|'followUp'|'warm'|'armor';
+type Motion='forge'|'strike'|'followUp'|'guard'|'pressure'|'warm'|'donate'|'mechanism'|'startForge'|'seal'|'equip'|'discard'|'change';
 interface Playback {
  readonly epoch:number;readonly events:readonly DomainEvent[];readonly before:RunView;readonly after:RunView;
  readonly mode:Motion;readonly start:number;readonly duration:number;readonly contactAt:number;
@@ -57,6 +57,7 @@ const SCENE_STYLE=`
 .scene7-empty{position:absolute;left:21%;top:79%;color:#c9c8ba;font-size:12px;letter-spacing:.1em;text-shadow:0 2px 8px #000;z-index:2}
 .scene7-message{position:absolute;left:50%;top:36%;transform:translate(-50%,-50%);color:#ffedbf;text-align:center;white-space:pre-line;font-size:clamp(17px,2vw,26px);letter-spacing:.1em;line-height:1.7;text-shadow:0 3px 10px #000;z-index:7;pointer-events:none;opacity:0}
 .scene7-fade{position:absolute;inset:0;background:#031014;z-index:8;opacity:0;pointer-events:none}
+.scene7-floats{position:absolute;inset:0;z-index:7;pointer-events:none}.scene7-float{position:absolute;display:flex;flex-direction:column;align-items:center;max-width:230px;padding:6px 10px;border-radius:4px;background:radial-gradient(ellipse,#071218c9,transparent 75%);transform:translate(-50%,-50%);text-align:center;white-space:nowrap;text-shadow:0 2px 4px #000,0 0 12px #000;line-height:1.4;color:#fff0b9}.scene7-float strong{font-size:clamp(18px,2vw,28px);font-weight:600;letter-spacing:.03em}.scene7-float small{font-size:12px;letter-spacing:.03em;color:#efe3c6}.scene7-float[data-tone=armor]{color:#b9d3d9}.scene7-float[data-tone=danger]{color:#f6b19b}.scene7-float[data-tone=guard]{color:#b6e2dc}.scene7-float[data-tone=forge]{color:#ffd78e}
 .scene7-sigil{position:absolute;left:20%;top:79%;color:#d5d2bb;font-size:11px;letter-spacing:.1em;z-index:2;text-shadow:0 2px 6px #000}
 @media(max-width:760px){.scene7-target{width:clamp(116px,25vw,170px);top:42%}.scene7-target-art{height:clamp(120px,24vh,195px)}.scene7-target[data-kind=reverse-wheel]{width:clamp(145px,31.25vw,212px)}.scene7-target[data-kind=reverse-wheel] .scene7-target-art{height:clamp(150px,30vh,244px)}.scene7-target-copy>b{font-size:16px}.scene7-target-copy small,.scene7-target-copy em{font-size:12px}.scene7-target-copy{padding:5px 5px 7px}.scene7-forge{left:14%;width:74%;top:57%}.scene7-forge span{font-size:10px;letter-spacing:.03em}.scene7-sigil{left:13%;top:78%}.scene7-empty{left:13%;top:79%}}
 @media(max-height:600px){.scene7-target{top:46%}.scene7-target-art{height:25vh;min-height:95px}.scene7-target-copy small{line-height:1.4}.scene7-target-copy{padding:4px}.scene7-sigil{top:82%}.scene7-forge span{top:90%}}
@@ -80,7 +81,8 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
  const sigil=document.createElement('span');sigil.className='scene7-sigil';
  const message=document.createElement('div');message.className='scene7-message';message.setAttribute('aria-hidden','true');
  const fade=document.createElement('div');fade.className='scene7-fade';
- root.append(style,targets,canvas,forge,hammer,empty,sigil,message,fade);host.append(root);
+ const floats=document.createElement('div');floats.className='scene7-floats';floats.setAttribute('aria-hidden','true');
+ root.append(style,targets,canvas,forge,hammer,empty,sigil,message,floats,fade);host.append(root);
  const context=canvas.getContext('2d'),stamp=document.createElement('canvas'),swordArt=new Image();
  const animations=new Set<Animation>(),targetNodes=new Map<TargetId,HTMLButtonElement>();
  let artReady=false,disposed=false,epoch=0,latest:RunView|null=null,visual:RunView|null=null,active:Playback|null=null;
@@ -95,7 +97,7 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
  function currentWeapon(view:RunView):WeaponView|null{return view.phase==='forging'?view.forge?.weapon??null:view.slots.hand;}
  function findWeapon(view:RunView,id:string|null):WeaponView|null{return id===null?null:view.works.find(w=>w.id===id)??null;}
  function liveWeapon():WeaponView|null{
-  if(active?.weaponId){return findWeapon(active.contacted?active.after:active.before,active.weaponId)??findWeapon(active.before,active.weaponId);}
+  if(active?.weaponId){return findWeapon(active.contacted?active.after:active.before,active.weaponId)??findWeapon(active.after,active.weaponId)??findWeapon(active.before,active.weaponId);}
   return visual?currentWeapon(visual):null;
  }
  function setGeometry():void{
@@ -144,7 +146,8 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
    }
    const multiple=shown.length>1;
    const x=multiple?(width<760?[.49,.73][index]??.61:[.49,.67][index]??.61):.61;
-   node.style.left=`${x*100}%`;node.style.top=`${multiple?(index%2===0?43:49):43}%`;
+   const groundedTop=target.role==='threat'?(multiple?(index%2===0?52:58):53):(multiple?(index%2===0?43:49):43);
+   node.style.left=`${x*100}%`;node.style.top=`${groundedTop}%`;
    node.dataset.kind=target.id;node.dataset.dead=String(target.health===0);node.dataset.mechanism=String(target.role==='mechanism');node.dataset.blocked=String(!target.strike.allowed);
    node.dataset.open=String(!!view.encounter?.routeOpened&&target.role==='mechanism'&&target.id!=='reverse-wheel'&&target.id!=='drive-lock');
    for(const rotor of art.querySelectorAll<HTMLElement|SVGElement>('.scene7-rotor'))rotor.style.animationPlayState=options.reduced()||target.health===0?'paused':'running';
@@ -153,6 +156,8 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
    node.querySelector('.scene7-health')!.textContent=target.health===0?'已破除':`${target.health} / ${target.maxHealth}`;
    (node.querySelector('.scene7-hp-fill') as HTMLElement).style.width=`${target.health/Math.max(1,target.maxHealth)*100}%`;
    node.querySelector('small')!.textContent=target.intent;
+   const forecast=target.forecast;
+   if(target.role==='threat'&&forecast.length>1)node.querySelector('small')!.textContent=`本轮${forecast[0]} → 下轮${forecast[1]}压力`;
    const preview=target.preview;
    node.querySelector('.scene7-preview')!.textContent=target.health===0?'道路已打开':preview?`斩后余 ${preview.healthAfter} · 剑 ${preview.strengthBefore}→${preview.strengthAfter}${preview.breaksWeapon?'，此击剑断':''}${target.armor?` · 甲${target.armor}`:''}`:'手中没有可用剑';
    node.querySelector('em')!.textContent=target.health===0?'':target.blockedReason??'';
@@ -188,9 +193,19 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
   const w=image?.naturalWidth?image.naturalWidth*scale:art.offsetWidth,h=image?.naturalHeight?image.naturalHeight*scale:art.offsetHeight;
   return{x:r.left-base.left+art.offsetLeft+art.offsetWidth*.5,y:r.top-base.top+art.offsetTop+(art.offsetHeight-h)*.5+h*.42,radius:Math.min(w,h)*.34};
  }
- function paintSword(weapon:WeaponView,view:RunView,now:number,settled?:'shelter'|'alan'|'lamp'):void{
+ function rackAnchor(slot:'hand'|'reserve'):{x:number;y:number;width:number}{
+  const element=host.closest('.c7')?.querySelector<HTMLElement>(`.c7-rack-slot[data-slot="${slot}"]`),r=element?.getBoundingClientRect(),base=root.getBoundingClientRect();
+  return r&&r.width>0?{x:r.left-base.left+14,y:r.top-base.top+r.height*.37,width:Math.min(110,r.width*.86)}:{x:width*(slot==='hand'?.04:.14),y:height*.87,width:100};
+ }
+ function floatAt(x:number,y:number,title:string,detail='',tone:'hit'|'forge'|'armor'|'guard'|'danger'='hit',duration=610):void{
+  if(options.reduced()||disposed)return;
+  const label=document.createElement('span'),strong=document.createElement('strong');label.className='scene7-float';label.dataset.tone=tone;label.dataset.feedback=title;label.style.opacity='0';label.style.left=`${Math.max(70,Math.min(width-70,x))}px`;label.style.top=`${Math.max(height*.34,Math.min(height-115,y))}px`;strong.textContent=title;label.append(strong);
+  if(detail){const small=document.createElement('small');small.textContent=detail;label.append(small);}
+  floats.append(label);animate(label,[{opacity:0,transform:'translate(-50%,-20%) scale(.85)'},{opacity:1,transform:'translate(-50%,-50%) scale(1.05)',offset:.12},{opacity:1,transform:'translate(-50%,-74%) scale(1)',offset:.65},{opacity:0,transform:'translate(-50%,-110%) scale(.98)'}],duration);
+ }
+ function paintSword(weapon:WeaponView,view:RunView,now:number,settled?:'shelter'|'alan'|'lamp',outgoing=false):void{
   if(!context)return;
-  const f=SWORD_ART.frames[stageOf(weapon)],p=pose(weapon,view),play=settled?null:active;
+  const f=SWORD_ART.frames[stageOf(weapon)],play=settled?null:active,p=pose(weapon,play?.mode==='startForge'&&!outgoing?play.after:view);
   let pivotX=p.left+p.width*.10,pivotY=p.axis,angle=p.angle,opacity=1;
   if(settled){const target=worldAnchor(settled);pivotX=target.x;pivotY=target.y;angle=target.angle;p.width=width*(settled==='shelter'?.29:.20);p.height=p.width*f.height/f.width;opacity=.9;}
   if(play?.mode==='forge'&&play.contactTime!==null&&!options.reduced()){
@@ -198,7 +213,22 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
   }
   if(play&&play.mode!=='forge'&&play.weaponId){
    const elapsed=now-play.start,t=elapsed/play.contactAt,returnT=play.contacted?Math.min(1,(now-(play.contactTime??now))/Math.max(1,play.duration-play.contactAt)):0;
-   if(play.mode==='strike'){
+   if(play.mode==='startForge'){
+    const amount=ease(Math.min(1,t));
+    if(outgoing){pivotX-=width*.24*amount;pivotY+=height*.10*amount;opacity=1-amount;}
+    else{pivotX=lerp(width*.14,pivotX,amount);pivotY=lerp(height*.88,pivotY,amount);angle=lerp(-.28,0,amount);opacity=amount;}
+   }else if(play.mode==='seal'){
+    const event=play.events.find(e=>e.type==='Sealed'),slot=event?.type==='Sealed'?event.slot:'hand',destination=rackAnchor(slot),amount=ease(Math.min(1,t));
+    pivotX=lerp(pivotX,destination.x,amount);pivotY=lerp(pivotY,destination.y,amount);angle=lerp(0,-.03,amount);p.width=lerp(p.width,destination.width,amount);p.height=p.width*f.height/f.width;
+    if(play.contacted)opacity=1-ease(returnT);
+   }else if(play.mode==='equip'){
+    const rack=rackAnchor('reserve'),amount=ease(Math.min(1,t));
+    if(outgoing){pivotX=lerp(pivotX,rack.x,amount);pivotY=lerp(pivotY,rack.y,amount);angle=lerp(p.angle,0,amount);p.width=lerp(p.width,rack.width,amount);if(play.contacted)opacity=1-ease(returnT);}
+    else{pivotX=lerp(rack.x,pivotX,amount);pivotY=lerp(rack.y,pivotY,amount);angle=lerp(.14,p.angle,amount);p.width=lerp(rack.width,p.width,amount);}
+    p.height=p.width*f.height/f.width;
+   }else if(play.mode==='discard'){
+    const amount=ease(Math.min(1,t));pivotX-=width*.13*amount;pivotY+=height*.23*amount;angle+=.45*amount;opacity=1-amount;
+   }else if(play.mode==='strike'){
     const target=targetPoint(play.targetId),contactAngle=-.42,metal=p.width*.65;
     const tx=target.x-Math.cos(contactAngle)*metal,ty=target.y-Math.sin(contactAngle)*metal;
     if(!play.contacted){const approach=ease(Math.min(1,t));pivotX=lerp(pivotX,tx,approach);pivotY=lerp(pivotY,ty,approach);angle=t<.45?lerp(p.angle,-1.12,t/.45):lerp(-1.12,contactAngle,(t-.45)/.55);}
@@ -217,7 +247,11 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
     ink.clearRect(0,0,f.width,f.height);
     if(artReady)ink.drawImage(swordArt,f.x,f.y,f.width,f.height,0,0,f.width,f.height);else drawNativeSword(ink,weapon,f.width,f.height);
     ink.save();ink.globalCompositeOperation='source-atop';
-    decorateBlade(ink,f,weapon);ink.restore();
+    decorateBlade(ink,f,weapon);
+    if(play?.mode==='forge'&&play.contactTime!==null){
+     const heat=Math.max(0,1-(now-play.contactTime)/340),x=(play.forgeX-p.left)/Math.max(1,p.width)*f.width,r=f.width*.12,glow=ink.createRadialGradient(x,f.height*.5,1,x,f.height*.5,r);glow.addColorStop(0,`rgba(255,239,182,${heat*.8})`);glow.addColorStop(.20,`rgba(255,158,69,${heat*.6})`);glow.addColorStop(1,'#e26c2500');ink.fillStyle=glow;ink.fillRect(x-r,0,r*2,f.height);
+    }
+    ink.restore();
     const warming=play?.mode==='warm';context.shadowColor=warming?'#edb465':'#02080dcc';context.shadowBlur=warming?20:8;context.shadowOffsetY=warming?0:6;
     if(weapon.status==='broken'){
      const split=p.width*.58,drop=options.reduced()?1:play?.contactTime?Math.min(1,(now-play.contactTime)/300):1;
@@ -237,6 +271,11 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
   if(worldView){
    const moving=active?.mode==='donate'?active.weaponId:null;
    for(const weapon of worldView.works)if(weapon.id!==moving&&weapon.status==='donated'&&((weapon.owner==='shelter'&&worldView.node===6)||(weapon.owner==='alan'&&worldView.node===7)||(weapon.owner==='lamp'&&worldView.node===9)))paintSword(weapon,worldView,now,weapon.owner as 'shelter'|'alan'|'lamp');
+  }
+  if(active?.mode==='startForge'&&active.before.slots.hand)paintSword(active.before.slots.hand,active.before,now,undefined,true);
+  if(active?.mode==='equip'){
+   const swapped=active.events.find(e=>e.type==='Equipped'),old=swapped?.type==='Equipped'?findWeapon(active.before,swapped.previousId):null;
+   if(old)paintSword(old,active.before,now,undefined,true);
   }
   if(blade&&view)paintSword(blade,view,now);
   canvas.dataset.weaponId=blade?.id??'';canvas.dataset.strength=String(blade?.strength??0);canvas.dataset.sealedStrength=String(blade?.sealedStrength??0);canvas.dataset.hits=String(blade?.hits??0);
@@ -276,11 +315,15 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
    if(play.mode==='pressure'){
     const event=play.events.find(e=>e.type==='RoundEnded');
     if(event?.type==='RoundEnded'){
-     context.save();context.globalAlpha=Math.sin(progress*Math.PI)*.38;const warm=play.before.chapter===1?'#cf8c50':'#b8dae4';context.strokeStyle=warm;context.lineWidth=2;
-     for(let i=0;i<16;i++){const y=height*(.2+(i*.047)% .65),x=width*((i*.173+progress*.75)%1);context.beginPath();context.moveTo(x,y);context.lineTo(x+width*.15,y-height*.045);context.stroke();}
-     const light=lerp(event.before,event.after,progress),radius=height*(.12+light*.021);const glow=context.createRadialGradient(width*.19,height*.74,0,width*.19,height*.74,radius);glow.addColorStop(0,'#f3b75b70');glow.addColorStop(1,'#f3b75b00');context.fillStyle=glow;context.beginPath();context.arc(width*.19,height*.74,radius,0,Math.PI*2);context.fill();
-     if(event.block>0){context.globalAlpha=Math.sin(progress*Math.PI)*.75;context.strokeStyle='#c6eee0';context.lineWidth=3;context.shadowColor='#b3e8e2';context.shadowBlur=12;context.beginPath();context.ellipse(width*.39,height*.73,width*.21,height*.30,-.15,-2.9,-.25);context.stroke();}
-     if(event.loss>0){context.globalAlpha=Math.sin(progress*Math.PI)*Math.min(.22,event.loss*.035);context.fillStyle='#132330';context.fillRect(0,0,width,height);}context.restore();
+     const environment=play.before.encounter?.environmentPressure??0,impact=play.contacted?Math.min(1,afterContact/Math.max(1,play.duration-play.contactAt)):0;
+     context.save();context.globalAlpha=Math.sin(progress*Math.PI)*(environment>0?.40:.12);const warm=play.before.chapter===1?'#cf8c50':'#b8dae4';context.strokeStyle=warm;context.lineWidth=2;
+     for(let i=0;i<(environment>0?18:5);i++){const y=height*(.2+(i*.047)% .65),x=width*((i*.173+progress*.75)%1);context.beginPath();context.moveTo(x,y);context.lineTo(x+width*.15,y-height*.045);context.stroke();}
+     if(play.contacted){
+      const light=lerp(event.before,event.after,Math.min(1,impact*2)),radius=height*(.12+light*.021);const glow=context.createRadialGradient(width*.19,height*.74,0,width*.19,height*.74,radius);glow.addColorStop(0,'#f3b75b70');glow.addColorStop(1,'#f3b75b00');context.fillStyle=glow;context.beginPath();context.arc(width*.19,height*.74,radius,0,Math.PI*2);context.fill();
+      if(event.reduction>0){const ring=play.before.encounter?.id==='n9';context.globalAlpha=Math.sin(impact*Math.PI)*.80;context.strokeStyle=ring?'#edcd8d':'#a4d0c7';context.lineWidth=3;context.shadowColor=context.strokeStyle;context.shadowBlur=12;context.beginPath();if(ring)context.ellipse(width*.19,height*.74,width*.07,height*.13,-.1,0,Math.PI*2);else{context.moveTo(width*.84,height*.65);context.quadraticCurveTo(width*.61,height*.47,width*.27,height*.72);}context.stroke();}
+      if(event.block>0){context.globalAlpha=Math.sin(impact*Math.PI)*.8;context.strokeStyle='#c6eee0';context.lineWidth=3;context.shadowColor='#b3e8e2';context.shadowBlur=12;context.beginPath();context.ellipse(width*.39,height*.73,width*.21,height*.30,-.15,-2.9,-.25);context.stroke();}
+      if(event.loss>0){context.globalAlpha=Math.sin(impact*Math.PI)*Math.min(.19,event.loss*.035);context.fillStyle='#132330';context.fillRect(0,0,width,height);}
+     }context.restore();
     }
    }
   }
@@ -331,7 +374,7 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
   const broken=kind==='break',heavy=kind==='kill'||broken,warm=kind==='warm',count=kind==='steady'?9:kind==='hammer'?18:heavy?34:kind==='fissure'?28:22;
   for(let i=0;i<count&&particles.length<120;i++){
    const angle=-Math.PI+(i/(count-1))*Math.PI,speed=(warm?24:kind==='hammer'?90:55)+(i*31%(heavy?165:110));
-   const color=broken?'#8fadb0':kind==='kill'?i%2?'#baa57d':'#ced7c0':kind==='followUp'?'#f9e3a4':kind==='fissure'?i%2?'#fb8d46':'#ffd18a':kind==='steady'?'#fff3cb':i%3?'#f4bb67':'#fff3bd';
+   const color=kind==='armor'?'#a8c1c9':broken?'#8fadb0':kind==='kill'?i%2?'#baa57d':'#ced7c0':kind==='followUp'?'#f9e3a4':kind==='fissure'?i%2?'#fb8d46':'#ffd18a':kind==='steady'?'#fff3cb':i%3?'#f4bb67':'#fff3bd';
    particles.push({x,y,vx:Math.cos(angle)*speed,vy:Math.sin(angle)*speed-(warm?44:25),life:kind==='hammer'?.18+(i%3)*.035:heavy?.42+(i%4)*.08:.25+(i%4)*.06,color,size:heavy?2.5+i%4:kind==='steady'?1:1.2+i%2,angle:i});
   }
  }
@@ -340,9 +383,19 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
   if(options.reduced()){message.style.opacity='1';return;}
   animate(message,[{opacity:0,transform:'translate(-50%,-40%)'},{opacity:1,transform:'translate(-50%,-50%)',offset:.16},{opacity:1,offset:.70},{opacity:0,transform:'translate(-50%,-62%)'}],600);
  }
+ function pressureWindup(play:Playback):void{
+  for(const target of play.before.encounter?.targets??[]){
+   if(target.health<=0||target.pressure<=0||target.role!=='threat')continue;
+   const art=targetNodes.get(target.id)?.querySelector<HTMLElement>('.scene7-target-art');if(!art)continue;
+   const rock=target.id==='main-rock'||target.id==='loose-rock',side=target.id==='flanker';
+   animate(art,[{transform:'translate(0,0) rotate(0deg)'},{transform:rock?'translate(0,-16px) rotate(-3deg)':side?'translate(20px,-5px) rotate(4deg)':'translate(12px,-4px) rotate(5deg)',offset:.12},{transform:rock?'translate(-25px,70px) rotate(-9deg)':side?'translate(-105px,65px) rotate(-17deg)':'translate(-75px,45px) rotate(-13deg)',offset:play.contactAt/play.duration},{transform:rock?'translate(-10px,8px) rotate(-3deg)':'translate(-12px,5px) rotate(-3deg)',offset:.62},{transform:'translate(0,0) rotate(0deg)'}],play.duration,'ease-in-out');
+  }
+ }
  function touched(play:Playback):void{
   if(disposed||active!==play||play.epoch!==epoch||play.contacted)return;
   play.contacted=true;play.contactTime=performance.now();visual=play.after;
+  if(play.mode==='seal'||play.mode==='discard'){hammer.hidden=true;forge.hidden=true;}
+  if(play.mode==='startForge'){hammer.hidden=false;placeHammer();}
   // Entity identity survives a lethal contact even when the accepted hand slot is now empty.
   const selected=play.after.encounter?.targets??[];
   for(const target of play.before.encounter?.targets??[]){
@@ -352,14 +405,20 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
   const forged=play.events.find(e=>e.type==='Forged'),struck=play.events.find(e=>e.type==='Struck');
   if(forged?.type==='Forged'){
    const broken=forged.result==='broken',bad=broken||forged.result==='crack';spark(play.forgeX,height*.64,broken?'break':forged.kind==='steady'?'steady':forged.kind==='fissure'?'fissure':'hammer');
+   floatAt(play.forgeX,height*.56,broken?'铁坯碎裂':forged.after>forged.before?`强度 +${forged.after-forged.before}`:`强度 ${forged.after-forged.before}`,forged.kind==='steady'?'定线 · 不添裂':forged.kind==='fissure'?'崩纹 · 穿甲，每斩磨损2':forged.result==='crack'?'第一道裂纹':`${forged.before} → ${forged.after}`,bad?'danger':'forge',340);
    if(broken||forged.result==='crack')announce(broken?'剑身断开':'刃上添了一道裂',bad);
   }
   if(struck?.type==='Struck'){
-   const point=targetPoint(struck.targetId);spark(point.x,point.y,struck.source==='followUp'?'followUp':struck.after===0?'kill':'hit');
+   const point=targetPoint(struck.targetId),target=play.before.encounter?.targets.find(t=>t.id===struck.targetId),weapon=findWeapon(play.before,struck.weaponId),pierced=struck.opening||!!weapon?.fissureMarked;
+   spark(point.x,point.y,struck.damage===0?'armor':struck.source==='followUp'?'followUp':struck.after===0?'kill':'hit');
+   const armor=struck.source==='followUp'?'回锋余力':pierced?`${struck.opening?'破绽':'崩纹'} · 穿甲${target?.armor??0}`:target?.armor?`护甲抵住${Math.min(target.armor,struck.strengthBefore??0)}`:'';
+   const hitDisplay=Math.max(300,play.duration-play.contactAt-20);
+   floatAt(point.x,point.y-height*.16,struck.damage===0?'未穿甲':`${struck.source==='followUp'?'追斩 ':''}${struck.damage}伤害`,`${armor}${armor?' · ':''}${struck.after===0?'已击破':`还余${struck.after}`}`,struck.damage===0?'armor':'hit',hitDisplay);
+   if(struck.strengthBefore!==null&&struck.strengthAfter!==null&&struck.strengthAfter<struck.strengthBefore)floatAt(width*.29,height*.74,struck.strengthAfter===0?'剑已断裂':`剑 ${struck.strengthBefore} → ${struck.strengthAfter}`,'崩纹磨损2',struck.strengthAfter===0?'danger':'forge',hitDisplay);
    if(play.events.some(e=>e.type==='Broken'))spark(point.x-width*.06,point.y+12,'break');
    const node=targetNodes.get(struck.targetId)?.querySelector<HTMLElement>('.scene7-target-art');
    const mechanism=play.before.encounter?.targets.find(t=>t.id===struck.targetId)?.role==='mechanism';
-   if(node)animate(node,struck.after===0?struck.targetId==='reverse-wheel'?[{filter:'brightness(1.7)'},{filter:'brightness(.8)'}]:mechanism?[{transform:'translate(0,0)',opacity:1},{transform:'translate(0,16px) rotate(13deg) scale(.86)',opacity:.34}]:[{transform:'translate(0,0)',opacity:1},{transform:'translate(18px,22px) rotate(64deg) scale(.73)',opacity:.3}]:[{transform:'translate(0,0)'},{transform:'translate(9px,-2px) rotate(3deg)',offset:.2},{transform:'translate(0,0)'}],struck.after===0?360:170);
+   if(node)animate(node,struck.after===0?struck.targetId==='reverse-wheel'?[{filter:'brightness(1.7)'},{filter:'brightness(.8)'}]:mechanism?[{transform:'translate(0,0)',opacity:1},{transform:'translate(0,16px) rotate(13deg) scale(.86)',opacity:.34}]:[{transform:'translate(0,0)',opacity:1},{transform:'translate(18px,22px) rotate(64deg) scale(.73)',opacity:.3}]:[{transform:'translate(0,0)'},{transform:`translate(${struck.damage===0?2:9}px,-2px) rotate(${struck.damage===0?1:3}deg)`,offset:.2},{transform:'translate(0,0)'}],struck.after===0?360:170);
   }
   const mechanism=play.events.find(e=>e.type==='MechanismUsed');
   if(mechanism?.type==='MechanismUsed'){
@@ -370,7 +429,21 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
    }
    if(mechanism.mechanism==='brace-assist'){const node=targetNodes.get('reverse-wheel')?.querySelector<HTMLElement>('.scene7-target-art');if(node)animate(node,[{filter:'drop-shadow(0 0 0 #e5d59c)'},{filter:'drop-shadow(0 0 13px #e5d59c)',offset:.45},{filter:'drop-shadow(0 0 0 #e5d59c)'}],430);}
   }
-  const pressure=play.events.find(e=>e.type==='RoundEnded');if(pressure?.type==='RoundEnded'&&pressure.loss===0)announce('这一轮，护住了');
+  const pressure=play.events.find(e=>e.type==='RoundEnded');
+  if(pressure?.type==='RoundEnded'){
+   for(const target of play.before.encounter?.targets??[])if(target.health>0&&target.role==='threat'&&target.pressure>0){const p=targetPoint(target.id);floatAt(p.x,p.y-height*.14,`${target.pressure}压力`,target.id==='main-rock'||target.id==='loose-rock'?'落石压来':target.name,'danger',550);}
+   const environment=play.before.encounter?.environmentPressure??0;
+   if(environment>0)floatAt(width*.58,height*.39,`风雪 ${environment}`,'环境压力','armor',550);
+   const blocked=Math.min(pressure.block,Math.max(0,pressure.pressure-pressure.reduction));
+   if(pressure.block>0)floatAt(width*.37,height*.68,`挡住 ${blocked}`,`护势 ${pressure.block}`,'guard',600);
+   if(pressure.reduction>0){const e=play.before.encounter,ring=e?.id==='n9',source=e?.alanGuard?'阿岚挡护':ring?'恒温环护火':'同行人接应';floatAt(width*(ring?.19:.83),height*(ring?.49:.65),`${ring?'炉环':'援手'} −${pressure.reduction}`,source,'guard',600);}
+   floatAt(width*.19,height*.64,pressure.loss?`灯火 −${pressure.loss}`:'灯火守住',`${pressure.before} → ${pressure.after}`,pressure.loss?'danger':'guard',620);
+  }
+  if(play.events.some(e=>e.type==='Guarded'))floatAt(width*.38,height*.59,play.after.encounter?.braced?'母灯架稳':'护势 +3',play.after.encounter?.braced?'下一步嵌剑':'下一斩破甲 +2','guard',430);
+  const started=play.events.find(e=>e.type==='ForgeStarted');if(started)floatAt(width*.56,height*.56,'新坯就位','这一炉从0起锻','forge',390);
+  const sealed=play.events.find(e=>e.type==='Sealed');if(sealed?.type==='Sealed'){const p=rackAnchor(sealed.slot);floatAt(p.x+p.width*.4,p.y-height*.09,sealed.slot==='hand'?'收至手中':'收入备用','这柄剑已收锻','forge',370);}
+  const equipped=play.events.find(e=>e.type==='Equipped');if(equipped?.type==='Equipped')floatAt(width*.27,height*.66,'换剑就绪',findWeapon(play.after,equipped.weaponId)?.name??'','guard',350);
+  if(play.mode==='discard')floatAt(width*.34,height*.72,'已放下','剑与铁坯不返还','armor',300);
   const temper=play.events.find(e=>e.type==='Tempered');if(temper?.type==='Tempered'){spark(width*.36,height*.78,'warm');if(temper.crackCleared)announce('裂痕在炉光里合拢');}
   if(play.events.some(e=>e.type==='Guarded')&&play.after.encounter?.braced)announce('母灯已架稳');
   if(play.events.some(e=>e.type==='Recharged'))spark(width*.25,height*.70,'warm');
@@ -400,14 +473,16 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
   const elapsed=now-play.start;
   // Hammer contact owns its physical face landing. A hidden tab is cancelled, never advanced.
   // A delayed first frame must still paint the pinned face and its rebound before reset.
-  const contactSettled=play.mode!=='forge'||(hammer.dataset.phase!=='contact'&&play.contactTime!==null&&now-play.contactTime>=play.duration-play.contactAt);
+  const recoveryPainted=play.contactTime!==null&&now-play.contactTime>=play.duration-play.contactAt;
+  const contactSettled=recoveryPainted&&(play.mode!=='forge'||hammer.dataset.phase!=='contact');
   if(play.contacted&&elapsed>=play.duration&&contactSettled){finish(play);return;}
   draw(now);frame=requestAnimationFrame(tick);
  }
  function clearMotion():void{
   hammerMotion.reset();if(frame!==null)cancelAnimationFrame(frame);frame=null;
   if(ambientFrame!==null)window.clearTimeout(ambientFrame);ambientFrame=null;
-  for(const a of animations)a.cancel();animations.clear();particles=[];message.style.opacity='0';fade.style.opacity='0';root.removeAttribute('data-playing');
+  for(const a of animations)a.cancel();animations.clear();particles=[];message.textContent='';message.style.opacity='0';fade.style.opacity='0';root.removeAttribute('data-playing');
+  floats.replaceChildren();
  }
  function cancel():void{
   epoch++;const old=active;active=null;clearMotion();
@@ -436,18 +511,19 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
   render(view){if(disposed)return;latest=view;if(active)return;visual=view;sync(view);draw();queueAmbient();},
   play(events,before,after,contact){
    if(disposed)return Promise.resolve();cancel();latest=before;visual=before;sync(before);
-   const forged=events.find(e=>e.type==='Forged'),struck=events.find(e=>e.type==='Struck'),donated=events.find(e=>e.type==='Donated'),tempered=events.find(e=>e.type==='Tempered'),mechanism=events.find(e=>e.type==='MechanismUsed');
+   const forged=events.find(e=>e.type==='Forged'),struck=events.find(e=>e.type==='Struck'),donated=events.find(e=>e.type==='Donated'),tempered=events.find(e=>e.type==='Tempered'),mechanism=events.find(e=>e.type==='MechanismUsed'),started=events.find(e=>e.type==='ForgeStarted'),sealed=events.find(e=>e.type==='Sealed'),equipped=events.find(e=>e.type==='Equipped'),discarded=events.find(e=>e.type==='Discarded');
    const cut=events.some(e=>e.type==='MechanismUsed'&&(e.mechanism==='bridge-rope'||e.mechanism==='south-rope'||e.mechanism==='relay-rope'));
-   const mode:Motion=forged?'forge':struck?(struck.source==='followUp'?'followUp':'strike'):events.some(e=>e.type==='Guarded')?'guard':events.some(e=>e.type==='RoundEnded')?'pressure':donated?'donate':events.some(e=>e.type==='Tempered'||e.type==='Recharged'||e.type==='ToolChanged'||e.type==='ShopUsed')?'warm':cut?'strike':mechanism?'mechanism':'change';
-   const weaponId=forged?.type==='Forged'?forged.weaponId:struck?.type==='Struck'?struck.weaponId:donated?.type==='Donated'?donated.weaponId:tempered?.type==='Tempered'?tempered.weaponId:cut?before.slots.hand?.id??null:mode==='guard'?before.slots.hand?.id??null:null;
+   const mode:Motion=forged?'forge':struck?(struck.source==='followUp'?'followUp':'strike'):events.some(e=>e.type==='Guarded')?'guard':events.some(e=>e.type==='RoundEnded')?'pressure':donated?'donate':started?'startForge':sealed?'seal':equipped?'equip':discarded?'discard':events.some(e=>e.type==='Tempered'||e.type==='Recharged'||e.type==='ToolChanged'||e.type==='ShopUsed')?'warm':cut?'strike':mechanism?'mechanism':'change';
+   const weaponId=forged?.type==='Forged'?forged.weaponId:struck?.type==='Struck'?struck.weaponId:donated?.type==='Donated'?donated.weaponId:tempered?.type==='Tempered'?tempered.weaponId:started?.type==='ForgeStarted'?started.weaponId:sealed?.type==='Sealed'?sealed.weaponId:equipped?.type==='Equipped'?equipped.weaponId:discarded?.type==='Discarded'?discarded.weaponId:cut?before.slots.hand?.id??null:mode==='guard'?before.slots.hand?.id??null:null;
    const targetId=struck?.type==='Struck'?struck.targetId:cut?before.encounter?.targets[0]?.id??null:mechanism?.type==='MechanismUsed'&&before.encounter?.targets.some(t=>t.id===mechanism.targetId)?mechanism.targetId as TargetId:null;
    const relighting=donated?.type==='Donated'&&donated.recipient==='lamp',transition=!relighting&&events.some(e=>e.type==='ChapterStarted'||e.type==='ChoiceMade'||e.type==='EncounterStarted'||e.type==='EndingReached');
-   const duration=mode==='forge'?forged?.type==='Forged'&&forged.result==='broken'?650:440:mode==='strike'?680:mode==='pressure'?720:mode==='donate'?(relighting?1250:760):mode==='mechanism'?660:mode==='change'?(transition?620:280):580;
+   const duration=mode==='forge'?forged?.type==='Forged'&&forged.result==='broken'?650:440:mode==='strike'?740:mode==='pressure'?940:mode==='donate'?(relighting?1250:760):mode==='startForge'||mode==='seal'?730:mode==='equip'?650:mode==='discard'?640:mode==='mechanism'?660:mode==='change'?(transition?620:280):580;
    return new Promise<void>(resolve=>{
-    const play:Playback={epoch:++epoch,events,before,after,mode,start:performance.now(),duration,contactAt:mode==='forge'?55:mode==='donate'?430:mode==='strike'?235:mode==='followUp'?180:mode==='mechanism'?300:transition?240:120,weaponId,targetId,forgeX:projectedAim(),contact,resolve,contacted:false,contactTime:null};
+    const play:Playback={epoch:++epoch,events,before,after,mode,start:performance.now(),duration,contactAt:mode==='forge'?55:mode==='donate'?430:mode==='strike'?235:mode==='followUp'?180:mode==='pressure'?280:mode==='startForge'||mode==='seal'?320:mode==='equip'?280:mode==='discard'?300:mode==='mechanism'?300:transition?240:120,weaponId,targetId,forgeX:projectedAim(),contact,resolve,contacted:false,contactTime:null};
     active=play;root.dataset.playing=mode;forge.disabled=true;for(const node of targetNodes.values())node.disabled=true;
     if(document.hidden||width<=0||height<=0){cancel();return;}
     if(options.reduced()){touched(play);finish(play);return;}
+    if(mode==='pressure')pressureWindup(play);
     if(transition)animate(fade,[{opacity:0},{opacity:.68,offset:.42},{opacity:.68,offset:.65},{opacity:0}],duration,'ease-in-out');
     if(mode==='forge')hammerMotion.strike(forged?.type==='Forged'&&forged.kind!=='ordinary',()=>touched(play));
     lastTime=performance.now();draw();frame=requestAnimationFrame(tick);

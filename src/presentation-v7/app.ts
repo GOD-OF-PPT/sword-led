@@ -9,11 +9,10 @@ import {SWORD_ART} from '../presentation-v6/sword-art.js';
 import {STANDING_ART} from './standing-art.js';
 import {CAMPAIGN_SHELL} from './shell.js';
 import {createCampaignScene} from './scene.js';
+import {choiceTitles,resultFeedback} from './feedback.js';
+import type {NoticeTone} from './feedback.js';
 
 interface DialogChoice {label:string;run:()=>void;primary?:boolean;disabled?:boolean}
-type NoticeTone='quiet'|'story'|'reward'|'danger';
-interface ResultFeedback {copy:string;title?:string;tone?:NoticeTone}
-const choiceTitles:Record<string,string>={'first-road':'巡路开了，先顾哪一边？','bridge-rescue':'桥下还有人在等','bridge-tool':'挑一件带上路的手艺','crossing-extra':'灯车已能走，还要再守吗？','camp-old-sword':'杜伯的老伙计','station-first':'风里传来两处求救','station-second':'另一驿还亮着求救灯','shelter-ring':'一只环，两处炉火','relay-carrier':'最后一段，谁来送灯？'};
 const elem=<K extends keyof HTMLElementTagNameMap>(tag:K,text?:string,className?:string)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(className)e.className=className;return e;};
 
 /** The session owns facts. This layer owns focus, scenes and short-lived presentation. */
@@ -26,6 +25,7 @@ export function mountCampaign(root:HTMLElement,port:V7Session){
  let snapshot=port.getSnapshot(),prefs=preferences.getSnapshot(),route:'title'|'play'='title';
  let disposed=false,busy=false,modal=false,sequence=0,display:RunState|null=null,origin:HTMLElement|null=null;
  let noticeTimer:ReturnType<typeof setTimeout>|null=null,arrivalTimer:ReturnType<typeof setTimeout>|null=null;
+ const covers=new Set<Animation>();
  let scene:ReturnType<typeof createCampaignScene>|null=null;
  const reduced=()=>prefs.value.reducedMotion||motion.matches;
  const current=()=>snapshot.state;
@@ -40,7 +40,7 @@ export function mountCampaign(root:HTMLElement,port:V7Session){
   game.dataset.notice=String(!!copy);
   if(copy)noticeTimer=setTimeout(()=>{show('c7-notice',false);game.dataset.notice='false';noticeTimer=null;},tone==='quiet'?4600:tone==='danger'?8500:7200);
  }
- function cancelVisuals(){sequence++;scene?.cancel();busy=false;display=null;audio.silence();}
+ function cancelVisuals(){sequence++;scene?.cancel();for(const cover of covers)cover.cancel();covers.clear();busy=false;display=null;audio.silence();}
  function appError(code:string):string{
   const known=errorText(code as Parameters<typeof errorText>[0]);
   return known??({confirmation_required:'先确认是否替换当前旅程。',readonly:'另一个页面正在收好旅程；本页暂时只能查看。',stale_session:'旅程已变化，请重新查看后操作。',save_conflict:'本机进度有变化，请在行囊中核对。',save_unavailable:'这次没有写入磁盘，可重试保存或导出当前旅程。',not_active:'旅程正在重新取得保存权，请稍候。',locks_unsupported:'本页暂未取得保存权，可在行囊中选择不保存继续。',session_busy:'上一件事正在落定，请稍候。'} as Record<string,string>)[code]??'这一步暂时没有完成，请查看行囊或重试。';
@@ -80,70 +80,10 @@ export function mountCampaign(root:HTMLElement,port:V7Session){
   if(detail){e.replaceChildren(elem('strong',value.label),elem('p',value.detail));if(value.reason)e.append(elem('small',value.reason));}
   return e;
  }
- function resultFeedback(events:readonly DomainEvent[],before:RunView,after:RunView):ResultFeedback{
-  if(after.ending)return{title:after.ending.title,copy:after.ending.summary,tone:after.ending.kind==='relit'?'reward':'story'};
-  if(events.some(e=>e.type==='Failed'))return{title:'先护住同行的人',copy:after.failure?.text??'暂且止步，可以重整或带着记忆收炉。',tone:'danger'};
-  const purchase=events.find(e=>e.type==='ShopUsed');
-  if(purchase?.type==='ShopUsed'){
-   const received=purchase.item==='coal'?`灯火 ${before.lamp} → ${after.lamp}，实际添了${after.lamp-before.lamp}点。`:purchase.item==='blank'?`铁坯 ${before.blanks} → ${after.blanks}，手艺次数仍是${after.charge}。`:purchase.item==='upgrade'?`${after.tool?.name??'工具'}已到二阶；本趟升阶资格已用。`:`换得一级${after.tool?.name??'工具'}，原工具已交给杜伯。${before.tool?.stored?'原有追斩余力已清。':''}`;
-   return{title:`杜伯收下${purchase.price}钱`,copy:`${received} 手里还余${after.coins}钱。`,tone:'reward'};
-  }
-  const choice=events.find(e=>e.type==='ChoiceMade');
-  if(choice?.type==='ChoiceMade'){
-   const outcomes:Record<typeof choice.choice,{title:string;copy:string}>={
-    escort:{title:'同行的人先上路',copy:'没有耗灯火。到了渡口，他们会替你减轻首轮压力。'},
-    salvage:{title:'从旧路捎回3钱',copy:`这次用了1点灯火。现有${after.coins}钱、${after.lamp}点灯火，下一程去断桥。`},
-    'rescue-ferryman':{title:'摆渡人被拉上岸',copy:'双驿赶路时他会带路，还能替你牵索一次。先挑一件带上路的工具。'},
-    'save-cargo':{title:'货物保住了 · 5钱入袋',copy:`现有${after.coins}钱。摆渡人没能随队，双驿要靠自己开路。`},
-    'take-rebound':{title:'回锋齿扣在剑鞘边',copy:'击破时溢出的力能存成一次免费追斩。下一程，去守住渡口灯车。'},
-    'take-furnace':{title:'崩炉钉收进炉车',copy:'每场首次亲手击破带甲目标，手艺次数补到1；已满时不会多存一次。'},
-    'leave-crossing':{title:'带着炉火上雪线',copy:`已到杜伯的冬炉。先点清${after.lamp}点灯火、${after.blanks}枚铁坯，再决定旧剑的去留。`},
-    'hold-crossing':{title:'渡口还要你再守一轮',copy:'撞桩者已经逼近。守住这一阵，才会留下额外报酬与山口接应。'},
-    'keep-old':{title:'杜伯旧剑留在架上',copy:'这次没花钱，也没升阶。修整好后，就能带它继续上雪线。'},
-    'dismantle-old':{title:`旧剑卸下 · ${after.tool?.name??'工具'}二阶`,copy:'没有花钱。旧剑已离开剑架，本趟唯一升阶资格也已用掉。'},
-    'pay-upgrade':{title:`付4钱 · ${after.tool?.name??'工具'}二阶`,copy:`杜伯旧剑仍在架上。余${after.coins}钱，本趟唯一升阶资格已用。`},
-    'north-first':{title:'炉车转向北驿',copy:'巡守还困在门后。两轮内破开门闩；摆渡人的牵索若可用，也能直接开路。'},
-    'south-first':{title:'炉车转向南驿',copy:'信使在拦索后等你。两轮内切索或破锁，把人接出来。'},
-    'leave-station':{title:'带已救的人离开',copy:'另一处驿站没有记作救援成功。下一程，去最后一座避难炉。'},
-    'continue-station':{title:'转身去接另一驿的人',copy:`${after.storyFlags.ferrymanSaved?'摆渡人带路，没耗赶路灯火。':'已用1点灯火赶路。'}这一处每轮风雪3，两轮内开路。`},
-    'take-ring':{title:'恒温环随你上山',copy:'终局每轮压力减2。避难炉已冷，双驿援手会留去撤离居民。'},
-    'leave-ring':{title:'把暖意留在避难炉',copy:after.storyFlags.northSaved||after.storyFlags.southSaved?'炉火继续保温，已救的驿站援手也能继续帮你开路。':'炉火继续保温。后面的山路，仍要靠手中的剑与队伍。'},
-    'courier-carries':{title:'阿禾接过唯一灯芯',copy:'先替她打开山口。送达后，母灯开场会有2护势。'},
-    'player-carries':{title:'唯一灯芯仍在你手里',copy:'终局要用1行动放灯。停轮后，阿禾可免费扶稳底座一次。'},
-   };
-   return{...outcomes[choice.choice],tone:events.some(e=>e.type==='ToolChanged')?'reward':'story'};
-  }
-  const donation=events.find(e=>e.type==='Donated');if(donation?.type==='Donated')return{title:donation.recipient==='alan'?'阿岚接过了备用剑':donation.recipient==='shelter'?'剑撑住了避难炉梁':'旧剑卸下，手艺上路',copy:donation.recipient==='alan'?'剑已离开你的剑架。这段落石，他每轮替队伍减2压力。':donation.recipient==='shelter'?'剑留在这里，屋里的人稳住了。它不会再回到你的剑架。':'工具已经升阶。',tone:'story'};
-  const completed=events.find(e=>e.type==='EncounterCompleted');
-  if(completed?.type==='EncounterCompleted'){
-   const earned=events.reduce((total,e)=>total+(e.type==='CoinsChanged'&&e.amount>0?e.amount:0),0);
-   const recharge=events.find(e=>e.type==='Recharged'),notes=[events.some(e=>e.type==='Broken')?'剑也断在这一击。':'',recharge?.type==='Recharged'?recharge.gained>0?'炉钉把手艺补到1次。':'回充已触发，次数原本已满。':'',after.tool?.stored?`仍留有${after.tool.stored}点追斩余力。`:''].filter(Boolean).join('');
-   return{title:`${completed.encounterId==='n3-extra'?'渡口接应留下了':'这段路打开了'}${earned?` · ${earned}钱入袋`:''}`,copy:`${notes}${after.choice?choiceTitles[after.choice]??after.mission:after.mission}`,tone:'reward'};
-  }
-  const forged=events.find(e=>e.type==='Forged');if(forged?.type==='Forged')return forged.result==='broken'?{title:'铁坯碎了',copy:'第二道裂纹贯穿。已用的铁坯和手艺次数不会返还。',tone:'danger'}:forged.result==='crack'?{title:'锤声发闷 · 添了一道裂纹',copy:`强度 ${forged.before} → ${forged.after}。再冒险落锤前，先看清剑身。`,tone:'danger'}:forged.result==='fissure'?{title:'崩纹刻入，锋芒亮起',copy:`强度 ${forged.before} → ${forged.after}。这道纹会穿甲，也会让每次斩击磨损2。`,tone:'reward'}:{copy:`${forged.result==='steady'?'这一线打稳了':'落锤成形'} · 强度 ${forged.before} → ${forged.after}`};
-  const hit=events.find(e=>e.type==='Struck');if(hit?.type==='Struck'){
-   const target=before.encounter?.targets.find(t=>t.id===hit.targetId)?.name??'机关';
-   const recharge=events.find(e=>e.type==='Recharged'),stored=events.find(e=>e.type==='ReboundStored');
-   const extra=events.some(e=>e.type==='Broken')?' · 剑也断在这一击':'';
-   const copy=`${hit.source==='followUp'?'余力追斩':'出剑'} ${hit.damage} · ${target}${hit.after===0?'已破开':`还余${hit.after}`}${extra}`;
-   if(recharge?.type==='Recharged')return{title:recharge.gained>0?'炉钉回充 · 手艺补到1次':'回充已触发 · 次数原本已满',copy:`${copy}。${recharge.gained>0?'现在可以把这次手艺用于续炉。':'本场回充机会已用，不会再额外累加。'}`,tone:'reward'};
-   if(stored?.type==='ReboundStored')return{title:`留住${stored.after}点余力`,copy:`${copy}。可选另一目标，0行动追斩一次。`,tone:'reward'};
-   return{copy,tone:events.some(e=>e.type==='Broken')?'danger':'quiet'};
-  }
-  const round=events.find(e=>e.type==='RoundEnded');if(round?.type==='RoundEnded')return{copy:round.loss?`风雪压来，灯火 ${round.before} → ${round.after}`:'这一阵挡住了，灯火未损。',tone:round.loss?'danger':'quiet'};
-  if(events.some(e=>e.type==='Guarded')){const embed=after.actions.find(a=>a.action.type==='ignite');return after.encounter?.braced?{title:'母灯架稳了',copy:`${embed?.allowed?'接下来可紧接嵌剑。':embed?.reason??'下一步请查看母灯还缺的条件。'}换剑、续炉、放灯或斩击会解除架稳。`,tone:'story'}:{copy:'挡在灯车前 · 本轮护势 +3，下一斩无视甲并加2'};}
-  if(events.some(e=>e.type==='Retried'))return{title:'炉火重新点清',copy:`回到${after.chapterTitle}的起点。本章重整机会已用。`,tone:'story'};
-  const tempered=events.find(e=>e.type==='Tempered');if(tempered?.type==='Tempered')return{title:'炉钉亮起 · 已用1次手艺',copy:`强度 ${tempered.before} → ${tempered.after}${tempered.crackCleared?'，意外裂纹已抚平':''}。剩余${after.charge}次。`,tone:'reward'};
-  if(events.some(e=>e.type==='MechanismUsed')){const embed=after.actions.find(a=>a.action.type==='ignite');return after.encounter?.braced?{title:'阿禾扶稳了底座',copy:`这次援手不耗行动。${embed?.allowed?'现在可紧接嵌剑。':embed?.reason??'请查看母灯还缺的条件。'}`,tone:'story'}:{title:'灯芯已放妥',copy:'它已进入灯座；停轮并架稳后，就能嵌剑。',tone:'story'};}
-  if(events.some(e=>e.type==='Sealed'))return{title:'剑已收好',copy:'它会留在真实剑架。带它上路，或再备一柄。',tone:'story'};
-  if(events.some(e=>e.type==='ToolChanged'))return{title:`${after.tool?.name??'工具'}已${after.tool?.level===2?'升阶':'带上'}`,copy:'它会跟你走完这趟路。',tone:'reward'};
-  if(events.some(e=>e.type==='Equipped'))return{copy:`手中换成${after.slots.hand?.name??'这柄剑'}。`};
-  return{copy:''};
- }
  function cue(events:readonly DomainEvent[]){
-  const f=events.find(e=>e.type==='Forged'),ending=events.find(e=>e.type==='EndingReached');
+  const f=events.find(e=>e.type==='Forged'),ending=events.find(e=>e.type==='EndingReached'),strike=events.find(e=>e.type==='Struck'),mechanism=events.find(e=>e.type==='MechanismUsed');
   const endingCue=ending?ending.kind==='relit'?'victory':ending.kind==='homeward'?'delivery':'defeat':null;
-  audio.acceptedCue(endingCue??(f?.type==='Forged'?f.result==='broken'?'broken':f.result==='crack'?'damage':f.kind==='ordinary'?'standard':'heavy':events.some(e=>e.type==='Struck')?'heavy':events.some(e=>e.type==='Failed')?'defeat':events.some(e=>e.type==='RoundEnded'&&e.loss>0)?'damage':events.some(e=>e.type==='Guarded')?'light':'purchase'));
+  audio.acceptedCue(endingCue??(f?.type==='Forged'?f.result==='broken'?'broken':f.result==='crack'?'damage':f.kind==='ordinary'?'standard':'heavy':events.some(e=>e.type==='Failed')?'defeat':strike?strike.damage===0?'light':'heavy':events.some(e=>e.type==='RoundEnded'&&e.loss>0)?'damage':events.some(e=>e.type==='Guarded'||e.type==='Equipped'||e.type==='Sealed')?'light':events.some(e=>e.type==='ForgeStarted'||e.type==='Tempered')?'heat':mechanism?mechanism.mechanism==='core'?'delivery':mechanism.mechanism.includes('rope')?'heavy':'met':events.some(e=>e.type==='ShopUsed'||e.type==='ToolChanged')?'purchase':'met'));
  }
  function arrive(view:RunView){
   if(arrivalTimer)clearTimeout(arrivalTimer);
@@ -159,9 +99,21 @@ export function mountCampaign(root:HTMLElement,port:V7Session){
   if(!result.ok){busy=false;display=null;notice(appError(result.error));render();return;}
   const after=getRunView(result.state),valid=()=>!disposed&&own===sequence&&snapshot.generation===generation&&current()?.runId===result.state.runId&&current()?.revision===result.state.revision;
   render();
-  const contact=()=>{if(!valid())return;const feedback=resultFeedback(result.events,beforeView,after);notice(feedback.copy,feedback.tone,feedback.title);cue(result.events);};
+  const forgeShift=beforeView.phase!==after.phase&&result.events.some(e=>e.type==='ForgeStarted'||e.type==='Sealed'||e.type==='Discarded');
+  const transition=!result.events.some(e=>e.type==='Donated'&&e.recipient==='lamp')&&(forgeShift||result.events.some(e=>e.type==='ChoiceMade'||e.type==='EncounterStarted'||e.type==='ChapterStarted'||e.type==='Retried'||e.type==='EndingReached'));
+  let covered:Promise<unknown>=Promise.resolve();
+  if(transition&&!forgeShift&&!reduced()){
+   const cover=node('c7-curtain').animate([{opacity:0},{opacity:1,offset:.34},{opacity:1,offset:.60},{opacity:0}],{duration:620,easing:'ease-in-out'});covers.add(cover);covered=cover.finished.catch(()=>{}).finally(()=>covers.delete(cover));
+  }
+  const contact=()=>{if(!valid())return;
+   if(transition){display=result.state;render();if(forgeShift&&!reduced()){const reveal=game.querySelector<HTMLElement>('.c7-world')!.animate([{opacity:.35},{opacity:1}],{duration:180});covers.add(reveal);void reveal.finished.catch(()=>{}).finally(()=>covers.delete(reveal));}}else{renderVitals(after);renderRack(after);renderTool(after);renderForgeReadout(after);}
+   const round=result.events.find(e=>e.type==='RoundEnded');
+   if(round?.type==='RoundEnded'&&after.phase==='encounter')node('c7-turn').replaceChildren(elem('strong',`第${round.round}轮 · 敌方行动`),elem('span',`灯火 ${round.before} → ${round.after}`),elem('small','这一轮正在落定，随后恢复两次行动'));
+   game.dataset.contactRevision=String(after.revision);
+   const feedback=resultFeedback(result.events,beforeView,after);notice(feedback.copy,feedback.tone,feedback.title);cue(result.events);
+  };
   const playing=scene?scene.play(result.events,beforeView,after,contact):Promise.resolve().then(contact);
-  void playing.then(()=>{if(!valid())return;busy=false;display=null;render();if(after.chapter!==beforeView.chapter)arrive(after);}).catch(()=>{if(valid()){busy=false;display=null;render();}});
+  void Promise.all([playing,covered]).then(()=>{if(!valid())return;busy=false;display=null;render();if(after.chapter!==beforeView.chapter)arrive(after);}).catch(()=>{if(valid()){busy=false;display=null;render();}});
  }
  function fresh(){return{runId:crypto.randomUUID(),seed:`护炉-${crypto.randomUUID().slice(0,12)}`};}
  function start(confirmed=false){
@@ -195,11 +147,70 @@ export function mountCampaign(root:HTMLElement,port:V7Session){
   const slots=node('c7-rack');slots.replaceChildren();
   for(const [kind,value]of Object.entries(v.slots)){
    const e=elem('button',undefined,'c7-rack-slot');e.type='button';e.dataset.slot=kind;e.dataset.condition=value?.kind??'empty';
-   e.append(elem('small',kind==='hand'?'手中':'备用'),elem('b',value?`${value.name} · ${value.strength}`:'空剑位'));
+   e.append(elem('small',kind==='hand'?'手中 · 用来出剑':'备用 · 点此换手'),elem('b',value?`${value.name} · ${value.strength}`:'空剑位'));
    if(value){const art=elem('span',undefined,'c7-mini-blade'),f=SWORD_ART.frames[3],scale=98/f.width;art.setAttribute('aria-hidden','true');art.style.height=`${f.height*scale}px`;art.style.marginBlock='16px';art.style.backgroundImage=`url("${SWORD_ART.src}")`;art.style.backgroundSize=`${SWORD_ART.width*scale}px ${SWORD_ART.height*scale}px`;art.style.backgroundPosition=`${-f.x*scale}px ${-f.y*scale}px`;e.prepend(art);e.title=`${value.condition}；${kind==='reserve'?'点此换手':'点此查看这柄剑'}`;
     e.onclick=()=>{const equip=v.actions.find(a=>a.action.type==='equip'&&a.action.weaponId===value.id);if(kind==='reserve'&&equip?.allowed&&writable())take(equip);else inspectWeapon(value);};
    }else{e.disabled=true;e.title='空位可在收锻时放入一柄新剑。';}
    e.disabled||=busy;slots.append(e);
+  }
+ }
+ function renderTool(v:RunView){
+  show('c7-tool',!!v.tool||v.phase==='forging');
+  if(v.phase==='forging'){
+   const tool=node('c7-tool'),img=elem('img'),info=elem('div');img.src='/assets/d/hammer-standard-v1.webp';img.alt='';info.append(elem('strong','这一炉手艺'),elem('small',v.charge?`可用 ${v.charge} 次`:'次数已用完','c7-tool-status'));
+   const techniques=v.actions.filter(a=>a.action.type==='forge'&&a.action.kind!=='ordinary');tool.dataset.ready=String(techniques.some(a=>a.allowed));tool.dataset.stored='false';
+   for(const kind of ['steady','fissure'] as const){const a=techniques.find(a=>a.action.type==='forge'&&a.action.kind===kind),projected=v.forge?.[kind];if(a&&projected){const b=actionButton({...a,label:kind==='steady'?'用定线':'刻崩纹'},a.allowed);b.append(elem('span',a.reason??`强度 → ${projected.strengthAfter} · 用1次`,'c7-action-detail'));b.append(elem('small',kind==='fissure'?'斩击穿甲＋2 · 每斩磨损2':'不添新裂 · 成器后不磨损','c7-technique-tradeoff'));info.append(b);}}
+   tool.replaceChildren(img,info);tool.title='普通锤点剑身；这两种手艺点击就用出一记，共享一次机会。';
+  }else if(v.tool){const tool=node('c7-tool'),img=elem('img'),info=elem('div');img.src=v.tool.asset;img.alt='';info.append(elem('strong',`${v.tool.name}${v.tool.level===2?' · 二阶':''}`));tool.replaceChildren(img,info);tool.title=v.tool.description;tool.dataset.stored=String(v.tool.stored>0);
+   const active=v.actions.filter(a=>a.action.type==='temper'||a.action.type==='followUp'&&a.allowed);tool.dataset.ready=String(active.some(a=>a.allowed));
+   if(v.tool.kind==='furnace')info.append(elem('small',v.charge?'手艺 1 次可用':'手艺次数已用完','c7-tool-status'));
+   for(const a of active){const cost=a.action.type==='followUp'||v.phase==='prepare'?0:1,b=actionButton({...a,label:`${a.action.type==='temper'?'续炉':a.label} · ${cost}行动`},a.allowed);if(a.action.type==='temper')b.append(elem('span',a.reason??'用1次手艺，修复手中剑','c7-action-detail'));info.append(b);}
+   if(v.tool.kind==='rebound')info.append(elem('small',v.encounter?.followUpUsed?'本场追斩已用完':v.tool.stored?`余力 ${v.tool.stored} · ${active.some(a=>a.allowed)?'可免费追斩':'已留住，带往下一战'}`:'击破时有溢出，才会存下余力','c7-tool-status'));
+   else info.append(elem('small',v.encounter?.furnaceTriggered?'本场回充已触发，不会再补':v.encounter?'本场首次击破带甲目标，可补到1次':'击破带甲目标才回充；买坯不补次数'));
+  }
+ }
+ function forecastLine(v:RunView):string{
+  return v.briefing?.targets.map(t=>`${t.name} ${t.health}耐久 / 甲${t.armor}${t.damage!==null?`：直斩${t.damage} · 架剑后${t.guardedDamage}`:'：落锤后看伤害'}`).join('；')??'';
+ }
+ function renderForgeReadout(v:RunView){
+  show('c7-forge-readout',!!v.forge);if(!v.forge)return;
+  const f=v.forge,e=node('c7-forge-readout');e.replaceChildren(elem('strong',`强度 ${f.weapon.strength}`),elem('p',`${f.weapon.condition} · ${f.weapon.hits}/6记`),elem('small',`铁坯 ${v.blanks} · 手艺 ${v.charge}次 · ${f.ordinary.crackTickets===0?'下一锤安全':`下一锤${f.ordinary.crackTickets/10}%${f.ordinary.breaksOnCrack?'再裂即碎':'首裂，强度−1'}`}`),elem('p',forecastLine(v),'c7-forge-purpose'));
+  if(v.briefing?.alternative)e.append(elem('small',v.briefing.alternative));
+ }
+ function renderBriefing(v:RunView){
+  const panel=node('c7-briefing');show('c7-briefing',v.phase==='prepare'&&!v.choice&&!!v.briefing);if(v.phase!=='prepare'||!v.briefing)return;
+  panel.replaceChildren(elem('small',v.node===4?'雪线上，下一程的消息':'前路已探明 · 先为这一程备剑'));
+  const targets=elem('div',undefined,'c7-briefing-targets');
+  for(const t of v.briefing.targets){const row=elem('div',undefined,'c7-briefing-target'),info=elem('div');if(t.asset){const img=elem('img');img.src=t.asset;img.alt='';row.append(img);}info.append(elem('b',t.name),elem('small',`${t.health}耐久 · 护甲${t.armor}`),elem('p',t.damage===null?'手中还没有可用剑':`${v.briefing.bladeName}：直斩 ${t.damage} / 架剑后 ${t.guardedDamage}`));row.append(info);targets.append(row);}panel.append(targets);
+  if(v.briefing.alternative)panel.append(elem('p',v.briefing.alternative,'c7-briefing-route'));
+  if(v.briefing.toolHint)panel.append(elem('small',v.briefing.toolHint));
+ }
+ function renderTurn(v:RunView){
+  show('c7-turn',v.phase==='encounter');if(!v.encounter)return;
+  const e=v.encounter,t=node('c7-turn');t.dataset.empty=String(e.actions===0);t.replaceChildren(elem('strong',`第${e.round}/${e.roundLimit}轮`),elem('span',`行动 ${'◆'.repeat(e.actions)}${'◇'.repeat(2-e.actions)}`),elem('small',`压力${e.pressure.pressure} − 援手${e.pressure.reduction} − 护势${e.block}${e.braced?' · 已架稳':''}`));
+  const cost=elem('small',`现在结束：${e.pressure.loss?`灯火−${e.pressure.loss}`:'灯火无损'}`);cost.dataset.danger=String(e.pressure.loss>0);t.append(cost);
+  const next=e.opening?e.targets.find(target=>target.health>0&&!target.dependency&&target.preview):null;if(next?.preview)t.append(elem('small',`下一斩 · ${next.name}可受${next.preview.damage}伤害`,'c7-next-hit'));
+ }
+ function renderVitals(v:RunView){
+  node('c7-lamp').replaceChildren(...Array.from({length:8},(_,i)=>{const e=elem('i');e.dataset.lit=String(i<v.lamp);e.setAttribute('aria-hidden','true');return e;}),elem('strong',`${v.lamp}/8`));node('c7-lamp').setAttribute('aria-label',`灯火${v.lamp}/8`);text('c7-coins',`◉ ${v.coins}钱`);renderTurn(v);
+ }
+ function projectWorld(v:RunView){
+  game.querySelector<HTMLElement>('.c7-world')!.style.backgroundImage=`url("${v.scene.background}")`;
+  standing(node('c7-companion').querySelector<HTMLElement>('.c7-person')!,v.speaker);text('c7-speaker',v.speaker.name);text('c7-line',v.speaker.line);
+  show('c7-companion',v.phase!=='forging');
+ }
+ function renderMechanisms(v:RunView){
+  const panel=node('c7-mechanisms'),actions=v.phase==='encounter'?v.actions.filter(a=>a.group==='mechanism'):[];
+  panel.replaceChildren();show('c7-mechanisms',actions.length>0);game.dataset.mechanisms=String(actions.length>0);
+  if(!actions.length)return;panel.append(elem('small',v.node===9?'修复母灯 · 每一步都要落定':'这段路的其他办法'));
+  for(const a of actions){
+   const weaponId='weaponId'in a.action?a.action.weaponId:null,w=v.works.find(value=>value.id===weaponId);
+   const isDone=a.action.type==='placeCore'&&v.storyFlags.coreOwner==='socket'||a.action.type==='assistBrace'&&!!v.encounter?.braceAssistUsed;
+   const label=a.action.type==='donate'?(a.action.recipient==='shelter'?'留剑撑梁':'交剑给阿岚'):isDone&&a.action.type==='placeCore'?'灯芯已放妥':a.label;
+   const missing=a.action.type==='ignite'?v.finale?.requirements.filter(r=>!r.met).slice(0,2).map(r=>r.label).join('、'):null;
+   const reason=missing?`还需：${missing}`:a.reason;
+   const detail=isDone?'已经完成':reason??(w?`${w.name} · 强度${w.strength} · 用1行动${a.action.type==='donate'?'，剑会留下':''}`:['ferryAssist','assistBrace'].includes(a.action.type)?'不耗行动 · 本段一次':'用1行动');
+   const b=actionButton({...a,label},a.allowed);b.append(elem('span',detail,'c7-action-detail'));panel.append(b);
   }
  }
  function renderActions(v:RunView){
@@ -221,36 +232,17 @@ export function mountCampaign(root:HTMLElement,port:V7Session){
    const discard=v.actions.find(a=>a.action.type==='discardForge');if(discard){const e=actionButton({...discard,label:'放弃此坯'});e.classList.add('c7-quiet');area.append(e);}
   }else if(v.phase==='encounter'){
    const mechanisms=v.actions.filter(a=>a.group==='mechanism');
-   let contextual=mechanisms.filter(a=>a.action.type!=='ignite'&&a.action.type!=='placeCore'&&a.action.type!=='assistBrace');
-   if(v.encounter?.id==='n9'){
-    const next=mechanisms.find(a=>a.action.type==='placeCore'&&a.allowed)??mechanisms.find(a=>a.action.type==='assistBrace'&&a.allowed&&!v.encounter?.braced)??mechanisms.find(a=>a.action.type==='ignite');
-    contextual=next?[next]:[];
-   }
-   // Give the route operation a place beside the object; rarely usable alternatives stay inspectable.
-   const preferred=contextual.find(a=>a.allowed&&a.action.type==='donate'&&'weaponId'in a.action&&a.action.weaponId===v.slots.reserve?.id)??contextual.find(a=>a.allowed)??contextual[0];
-   if(preferred){const cost=['ferryAssist','assistBrace'].includes(preferred.action.type)?0:1;area.append(actionButton({...preferred,label:`${preferred.label} · ${cost}行动`},preferred.allowed));}
-   const guard=v.actions.find(a=>a.action.type==='guard'),end=v.actions.find(a=>a.action.type==='endRound');if(guard){const b=actionButton({...guard,label:`${guard.label} · 1行动`},contextual.every(a=>!a.allowed));b.append(elem('span',guard.reason??'护势＋3 · 下一斩无视甲并加2','c7-action-detail'));area.append(b);}if(end)area.append(actionButton({...end,label:`结束本轮${v.encounter?.pressure.loss?` · 灯火−${v.encounter.pressure.loss}`:' · 无损'}`}));
+   const guard=v.actions.find(a=>a.action.type==='guard'),end=v.actions.find(a=>a.action.type==='endRound');if(guard){const b=actionButton({...guard,label:`${guard.label} · 1行动`},!mechanisms.some(a=>a.allowed));b.append(elem('span',guard.reason??'护势＋3 · 下一斩无视甲并加2','c7-action-detail'));area.append(b);}if(end){const free=v.actions.some(a=>a.allowed&&(a.action.type==='followUp'||a.action.type==='ferryAssist'||a.action.type==='assistBrace'));const b=actionButton({...end,label:`${v.encounter?.actions===0?'敌方行动':'结束本轮'}${v.encounter?.pressure.loss?` · 灯火−${v.encounter.pressure.loss}`:' · 无损'}`},v.encounter?.actions===0);if(free)b.append(elem('span','还有免费追斩 / 援手可用','c7-action-detail'));area.append(b);}
   }
-  show('c7-tool',!!v.tool||v.phase==='forging');
-  if(v.phase==='forging'){
-   const tool=node('c7-tool'),img=elem('img'),info=elem('div');img.src='/assets/d/hammer-standard-v1.webp';img.alt='';info.append(elem('strong','这一炉手艺'),elem('small',v.charge?`可用 ${v.charge} 次`:'次数已用完','c7-tool-status'));
-   const techniques=v.actions.filter(a=>a.action.type==='forge'&&a.action.kind!=='ordinary');tool.dataset.ready=String(techniques.some(a=>a.allowed));tool.dataset.stored='false';
-   for(const kind of ['steady','fissure'] as const){const a=techniques.find(a=>a.action.type==='forge'&&a.action.kind===kind),projected=v.forge?.[kind];if(a&&projected){const b=actionButton({...a,label:kind==='steady'?'用定线':'刻崩纹'},a.allowed);b.append(elem('span',a.reason??`强度 → ${projected.strengthAfter} · 用1次`,'c7-action-detail'));info.append(b);}}
-   tool.replaceChildren(img,info);tool.title='普通锤点剑身；这两种手艺点击就用出一记，共享一次机会。';
-  }else if(v.tool){const tool=node('c7-tool'),img=elem('img'),info=elem('div');img.src=v.tool.asset;img.alt='';info.append(elem('strong',`${v.tool.name}${v.tool.level===2?' · 二阶':''}`));tool.replaceChildren(img,info);tool.title=v.tool.description;tool.dataset.stored=String(v.tool.stored>0);
-   const active=v.actions.filter(a=>a.action.type==='temper'||a.action.type==='followUp'&&a.allowed);tool.dataset.ready=String(active.some(a=>a.allowed));
-   if(v.tool.kind==='furnace')info.append(elem('small',v.charge?'手艺 1 次可用':'手艺次数已用完','c7-tool-status'));
-   for(const a of active){const cost=a.action.type==='followUp'||v.phase==='prepare'?0:1,b=actionButton({...a,label:`${a.action.type==='temper'?'续炉':a.label} · ${cost}行动`},a.allowed);if(a.action.type==='temper')b.append(elem('span',a.reason??'用1次手艺，修复手中剑','c7-action-detail'));info.append(b);}
-   if(v.tool.kind==='rebound')info.append(elem('small',v.encounter?.followUpUsed?'本场追斩已用完':v.tool.stored?`余力 ${v.tool.stored} · ${active.some(a=>a.allowed)?'可免费追斩':'已留住，带往下一战'}`:'击破时有溢出，才会存下余力','c7-tool-status'));
-   else info.append(elem('small',v.encounter?.furnaceTriggered?'本场回充已触发，不会再补':v.encounter?'本场首次击破带甲目标，可补到1次':'击破带甲目标才回充；买坯不补次数'));
-  }
-  show('c7-forge-readout',!!v.forge);if(v.forge){const f=v.forge,e=node('c7-forge-readout');e.replaceChildren(elem('strong',`强度 ${f.weapon.strength}`),elem('p',`${f.weapon.condition} · ${f.weapon.hits}/6记`),elem('small',`铁坯 ${v.blanks} · 手艺 ${v.charge}次 · ${f.ordinary.crackTickets===0?'下一锤安全':`下一锤${f.ordinary.crackTickets/10}%${f.ordinary.breaksOnCrack?'再裂即碎':'首裂，强度−1'}`}`));}
-  const context=v.phase==='forging'?'左键剑身，亲手落锤。三记安全锤后可以收手，也可以用手艺继续打。':v.phase==='encounter'?v.encounter?.actions===0?'本轮行动已用完；若有可用的免费援手或追斩，还能先用，再结束本轮。':'点道路上的目标出剑。读信息不耗行动；只有“结束本轮”才结算风雪。':v.phase==='prepare'?'这两柄剑会随你上路，不必每站重新打造。':v.phase==='choice'?'选择会留在后面的路上。':'可以从本章起点重整一次，或记下这次止步。';
+  renderMechanisms(v);
+  renderTool(v);
+  renderForgeReadout(v);renderBriefing(v);
+  const context=v.phase==='forging'?'左键剑身，亲手落锤。三记安全锤后可以收手，也可以用手艺继续打。':v.phase==='encounter'?v.encounter?.actions===0?'本轮行动已用完；若有可用的免费援手或追斩，还能先用，再结束本轮。':'点道路上的目标出剑。读信息不耗行动；只有“结束本轮”才结算风雪。':v.phase==='prepare'?'先看前路和手中两剑，再决定上路或开炉。':v.phase==='choice'?'选择会留在后面的路上。':'可以从本章起点重整一次，或记下这次止步。';
   text('c7-context',v.phase==='prepare'&&v.node===9?`母灯只收自制剑：完好强度≥3，或真正崩纹≥1。${v.finale?.handEligible?'手中这柄已经合格。':v.finale?.eligibleWeaponIds.length?'备用剑合格，可先换到手中。':'可用剩余铁坯重锻，或从章初重整。'}`:context);
  }
  function renderEnding(v:RunView){
   const e=v.ending;if(!e)return;const area=node('c7-ending');area.replaceChildren(elem('small',`护炉远行 · ${e.stoppedAt}`),elem('h1',e.title),elem('p',e.summary));
-  const people=elem('div',undefined,'c7-ending-people');for(const p of e.epilogues){const card=elem('article',undefined,'c7-epilogue'),face=elem('span',undefined,'c7-portrait');portrait(face,p);card.append(face,elem('b',p.name),elem('p',p.line));people.append(card);}area.append(people);
+  const people=elem('div',undefined,'c7-ending-people');for(const p of e.epilogues){const card=elem('article',undefined,'c7-epilogue'),face=elem('span',undefined,'c7-portrait');portrait(face,p);card.append(face,elem('b',p.name),elem('p',p.line));people.append(card);}area.append(people);const consequences=elem('details',undefined,'c7-ending-consequences');consequences.append(elem('summary','这趟路实际留下了什么'));for(const line of e.consequences)consequences.append(elem('p',line));area.append(consequences);
   const controls=elem('div',undefined,'c7-ending-actions');controls.append(button('回看这趟灯路',road),button('再走一趟',()=>start(),true));area.append(controls);
  }
  function saveWarning():string{
@@ -277,10 +269,9 @@ export function mountCampaign(root:HTMLElement,port:V7Session){
   }
   if(!v)return;
   text('c7-chapter',`第${v.chapter}章 · ${v.chapterTitle}`);text('c7-place',v.title);text('c7-mission',v.mission);text('c7-next',`下一程 · ${v.nextPlace}`);
-  node('c7-lamp').replaceChildren(...Array.from({length:8},(_,i)=>{const e=elem('i');e.dataset.lit=String(i<v.lamp);e.setAttribute('aria-hidden','true');return e;}),elem('strong',`${v.lamp}/8`));node('c7-lamp').setAttribute('aria-label',`灯火${v.lamp}/8`);text('c7-coins',`◉ ${v.coins}钱`);
+  renderVitals(v);
   const roadButton=node('c7-road');roadButton.replaceChildren(...v.progress.map(p=>{const e=elem('i',undefined,'c7-road-dot');e.dataset.state=p.status;e.title=p.title;e.setAttribute('aria-hidden','true');return e;}));
-  standing(node('c7-companion').querySelector<HTMLElement>('.c7-person')!,v.speaker);text('c7-speaker',v.speaker.name);text('c7-line',v.speaker.line);
-  show('c7-turn',v.phase==='encounter');if(v.encounter){const e=v.encounter,t=node('c7-turn');t.replaceChildren(elem('strong',`第${e.round}/${e.roundLimit}轮`),elem('span',`行动 ${'◆'.repeat(e.actions)}${'◇'.repeat(2-e.actions)}`),elem('small',`压力${e.pressure.pressure} · 援手−${e.pressure.reduction} · 护势${e.block}${e.braced?' · 已架稳':''}`));const next=e.opening?e.targets.find(target=>target.health>0&&!target.dependency&&target.preview):null;if(next?.preview)t.append(elem('small',`下一斩 · ${next.name}可受${next.preview.damage}伤害`,'c7-next-hit'));}
+  projectWorld(v);
   if(screen==='ending'){renderEnding(v);return;}renderRack(v);renderActions(v);scene?.render(v);
   if(!canAct())for(const e of root.querySelectorAll<HTMLButtonElement>('.scene7 button'))e.disabled=true;
  }
