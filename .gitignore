@@ -11,3 +11,30 @@ test-results/
 tmp/
 .cache/
 .vitest/
+
+# Historical evidence lives on the backup branch. Keep notes and executable fixtures.
+/docs/evidence/**
+!/docs/evidence/**/
+!/docs/evidence/**/*.md
+!/docs/evidence/T06/**
+!/docs/evidence/T11-4-2-3i1/witness-fixed/**
+!/docs/evidence/T12-v3/**
+!/docs/evidence/v0.9/1.1-kernel/**
+!/docs/evidence/T11-2/simulation/victory.json
+!/docs/evidence/T11-2/simulation/summary.json
+!/docs/evidence/T11-3/polish-runtime/ui/d-keyboard-campaign.json
+!/docs/evidence/T11-3/polish-runtime/ui/v2-three-round-contract.json
+!/docs/evidence/T11-4-2-3l1/journeys/victory.json
+!/docs/evidence/T11-4-2-3f/inherit.json
+!/docs/evidence/T11-4-2-3f/crackedEdge.json
+!/docs/evidence/T11-4-2-3d/route.json
+!/docs/evidence/T11-4-2-3d/repair-route.json
+!/docs/evidence/T09/summary.json
+!/docs/evidence/T11-4-2/model-terminal-observation.json
+!/docs/evidence/T12/run.json
+
+# Retain current campaign originals and the inputs required by test:art.
+/design/**/*.png
+!/design/b/**/*.png
+!/design/d/v1-campaign/**/*.png
+!/design/concepts/main-b-v3.png

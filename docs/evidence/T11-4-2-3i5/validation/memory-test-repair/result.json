@@ -1,7 +1,0 @@
-{
-  "beforeSha256": "0f7cb4f1aa64f9c90c3f834b02552b379e973bbfbf63a0f6eb998db4f49df250",
-  "afterSha256": "af3d659c4433d50b3c673d10635873a90ffb77bcbc57455c4f6f0904f2decc9f",
-  "old": "await temporary.getByRole('button',{name:'导出这次行程',exact:true}).click();const exportDownload=temporary.waitForEvent('download');await temporary.getByRole('button',{name:'导出当前行程',exact:true}).click();",
-  "new": "const exportDownload=temporary.waitForEvent('download');await temporary.getByRole('button',{name:'导出这次行程',exact:true}).click();",
-  "scope": "Test-only correction: wait for the actual direct export download before clicking its action; the old script incorrectly waited for an unrelated save-modal button. No production, assertion, timeout or command-economy change. Three former boundary failures retained; nine other cases remain valid on the same runtime."
-}

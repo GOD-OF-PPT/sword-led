@@ -1,6 +1,0 @@
-{
-  "at": "2026-10-20T09:16:24.593Z",
-  "initialCollectorExit": 1,
-  "reason": "Comparison snapshot omitted the earlier batch extraInputs (runner and temporary config), so missing map entries were incorrectly reported as changes. No actual source/build drift. Recomputed with each original extraInputs below; original partial copies retained.",
-  "productFailure": false
-}

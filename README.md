@@ -15,6 +15,8 @@ npm run dev
 
 使用 `.nvmrc` 的Node 22.12.0或package.json允许的版本，打开终端显示的地址。生产构建用 `npm run build`，再 `npm run preview`；部署时保留整个dist，包括独立SDK与共享chunk。
 
+main 的追踪文件保持在 100 MB 以内；历史大体积证据与旧版设计原图见[备份分支及恢复方法](docs/repository-size.md)。
+
 | 操作 | 做什么 |
 | --- | --- |
 | 左键点剑身 | 普通落锤；前三记安全，之后公开首裂20%／再裂35%；每柄最多六记 |

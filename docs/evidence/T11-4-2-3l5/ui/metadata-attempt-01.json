@@ -1,7 +1,0 @@
-{
-  "actualExitCode": 1,
-  "scope": "Post-run metadata assembly only; all browser batches already actual exit0",
-  "reason": "Collector tried to hash absent actions.json in the intentionally zero-command day-nine-unaffordable-benefit window.",
-  "correction": "Retain zero-command result and no actions file; report actionsSha256=null instead of inventing a file or altering a browser producer.",
-  "productOrBrowserInputsChanged": false
-}

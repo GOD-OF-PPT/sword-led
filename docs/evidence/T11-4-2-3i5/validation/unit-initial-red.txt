@@ -1,8 +1,0 @@
-Initial unified verification, as reported by root on 2026-10-20:
-- Strict typecheck session 42844: exit 0.
-- Unit session 95151: exit 1; 355 passed, 2 failed.
-- Both failures are new final-journey tests expecting the modified complete journal to return despite making the final sword.
-- The test replaced deliver d8-2 with scrap, but the later deliver d8-3 then became the second qualifying light blade, so commission 8 still completed and the actual core phase correctly remained victory.
-- Read-only fixture inspection confirms original day-8 receipt pieceIds [d8-1,d8-2] and a later deliver d8-3. No production rule defect is claimed.
-- Repair: retain only the first accepted day-8 delivery; change the other day-8 delivery commands to legal scrap actions, without changing strikes, RNG, rule data or persisted fixtures. The core must still accept and validate the resulting full journal.
-This is a compact failure receipt, not a replacement for any original root tool output.
