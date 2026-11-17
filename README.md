@@ -49,7 +49,7 @@ main 的追踪文件保持在 100 MB 以内；历史大体积证据与旧版设�
 | `/v6.html` | v0.9雾松关试锋短段，forge-v6/schema6，原存档继续 |
 | `/v4.html`、`/v3.html`、`/v2.html`、`/legacy.html` | 更早版本与原解释器 |
 
-新主线不迁入旧钱包、工具或兵器。旧版设计、技术记录和用户负评在[历史README](README.pre-v1.md)保留；原始需求在[goal-1/input.md](goal-1/input.md)。
+新主线不迁入旧钱包、工具或兵器。旧版设计、技术记录和用户负评在[历史README](README.pre-v1.md)保留；原始需求在[备份中的 goal-1/input.md](https://github.com/GOD-OF-PPT/sword-led/blob/backup/main-before-size-cleanup-20261117-203734/goal-1/input.md)保留。
 
 ## 有界工程检查
 

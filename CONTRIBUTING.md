@@ -1,6 +1,6 @@
 # 开发与验证约定
 
-默认`/`为已批准v0.7的三章十二天主线（forge-v4/schema4）；`/v3.html`保留旧炉前契约，`/v2.html`为旧D细锻，`/legacy.html`为B版。新旧独立key、同一个writer锁；不得用新解释器改写旧journal或自动转换旧档。见[终章界面](docs/v0.7-final-chapter-interface.md)、[核心](docs/v0.7-core-contract.md)和[保存合同](docs/v0.7-persistence-contract.md)。按[goal任务](goal-1/tasks.md)一次执行一项；最终浏览器广矩阵、真人体验和最大复核继续保留责任。
+默认`/`为已批准v0.7的三章十二天主线（forge-v4/schema4）；`/v3.html`保留旧炉前契约，`/v2.html`为旧D细锻，`/legacy.html`为B版。新旧独立key、同一个writer锁；不得用新解释器改写旧journal或自动转换旧档。见[终章界面](docs/v0.7-final-chapter-interface.md)、[核心](docs/v0.7-core-contract.md)和[保存合同](docs/v0.7-persistence-contract.md)。历史任务见[备份中的 goal 任务](https://github.com/GOD-OF-PPT/sword-led/blob/backup/main-before-size-cleanup-20261117-203734/goal-1/tasks.md)；最终浏览器广矩阵、真人体验和最大复核继续保留责任。
 
 安装使用`npm ci --registry=https://registry.npmjs.org/`，版本来自package-lock；不随手更新依赖，当前无运行时第三方依赖。`npm run dev`用于开发，生产检查运行`npm run check`。单元/严格类型/构建通过只证明相应工程条件，真人乐趣单独记录。
 

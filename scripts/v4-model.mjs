@@ -13,7 +13,7 @@ import {PROFILES,observe,decide} from './v4-model-policy.mjs';
 import {createMetrics,recordStep,finishRow,summarizeRows} from './v4-model-metrics.mjs';
 import {captureFingerprint,changedInputs} from './release-fingerprint.mjs';
 
-export const EXTRA_INPUTS=Object.freeze(['v3.html','legacy.html','goal-1/input.md','docs/v0.7-balance-validation-contract.md','docs/v0.7-balance-profiles.json','docs/evidence/v07-approval/approved-proposal.md','docs/evidence/T11-4-2-3i1/witness-fixed/complete.json']);
+export const EXTRA_INPUTS=Object.freeze(['v3.html','legacy.html','docs/v0.7-balance-validation-contract.md','docs/v0.7-balance-profiles.json','docs/evidence/v07-approval/approved-proposal.md','docs/evidence/T11-4-2-3i1/witness-fixed/complete.json']);
 export const sha=value=>createHash('sha256').update(typeof value==='string'||value instanceof Uint8Array?value:JSON.stringify(value)).digest('hex');
 export const terminal=state=>['victory','return','defeat'].includes(state.phase);
 export const seedAt=(index,prefix='v4-balance')=>{

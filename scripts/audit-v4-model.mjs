@@ -233,7 +233,7 @@ async function* gzipLines(path,maxBytes=4_000_000_000){
 }
 
 const QUALIFICATION='docs/evidence/T11-4-2-3i1/witness-fixed/complete.json';
-const EXTRA_INPUTS=['v3.html','legacy.html','goal-1/input.md','docs/v0.7-balance-validation-contract.md','docs/v0.7-balance-profiles.json','docs/evidence/v07-approval/approved-proposal.md',QUALIFICATION];
+const EXTRA_INPUTS=['v3.html','legacy.html','docs/v0.7-balance-validation-contract.md','docs/v0.7-balance-profiles.json','docs/evidence/v07-approval/approved-proposal.md',QUALIFICATION];
 export function parseArgs(args){
  const found=new Map();assert(args.length>0&&args.length%2===0,'Use --input <batch> --out <new audit.json> --seeds <1..1000> [--prefix v4-balance|v4-pilot] [--workers 1..8]');
  for(let i=0;i<args.length;i+=2){const key=args[i],value=args[i+1];assert(['--input','--out','--seeds','--prefix','--workers'].includes(key)&&value&&!value.startsWith('--')&&!found.has(key),'Unknown, duplicate or missing argument');found.set(key,value);}

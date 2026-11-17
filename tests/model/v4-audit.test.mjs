@@ -13,7 +13,7 @@ import {captureFingerprint} from '../../scripts/release-fingerprint.mjs';
 const qualificationSource='docs/evidence/T11-4-2-3i1/witness-fixed/complete.json';
 const qualificationState=JSON.parse(await readFile(qualificationSource,'utf8'));
 const qualification=earnedQualification(qualificationState);
-const extraInputs=['v3.html','legacy.html','goal-1/input.md','docs/v0.7-balance-validation-contract.md','docs/v0.7-balance-profiles.json','docs/evidence/v07-approval/approved-proposal.md',qualificationSource];
+const extraInputs=['v3.html','legacy.html','docs/v0.7-balance-validation-contract.md','docs/v0.7-balance-profiles.json','docs/evidence/v07-approval/approved-proposal.md',qualificationSource];
 
 function negativeRecord(profile='balanced-ember',index=0){
  const seed=`v4-pilot-${String(index).padStart(4,'0')}`,mode=profile==='qualified-challenge'?'challenge':'story';
