@@ -1,3 +1,5 @@
+import { packageUrl } from '../security/package-url.mjs';
+import { sanitizeHtml } from '../security/sanitize-html.mjs';
 import {decodeV4Save,V4_SAVE_KEY} from '../application/v4-persistence.js';
 import {collectionEligibility,COLLECTION_BACKUP_KEY,decodeCollection} from '../application/v5-collection.js';
 import {V5_BACKUP_KEY,decodeV5Save} from '../application/v5-persistence.js';
@@ -45,7 +47,7 @@ type SceneOverride={kind:'delivery';revision:number;commissionId:number;pieceIds
 
 export interface V5PresentationOptions {presentation?:'classic'|'focus'}
 export function mountV5(root:HTMLElement,port:V5Session,options:V5PresentationOptions={}){
- root.innerHTML=V5_TEMPLATE;enableKeyboardNavigation(root);const ownRoot=root.firstElementChild;
+ root.innerHTML=sanitizeHtml(V5_TEMPLATE);enableKeyboardNavigation(root);const ownRoot=root.firstElementChild;
  const focused=options.presentation==='focus';ownRoot?.setAttribute('data-forge-layout',focused?'focus':'classic');
  const find=<T extends HTMLElement>(id:string)=>{const n=root.querySelector<T>('#'+id);if(!n)throw Error('Missing '+id);return n;};
  const button=(id:string)=>find<HTMLButtonElement>(id),dialog=find<HTMLDialogElement>('v4-dialog'),stageArtwork=find<HTMLImageElement>('v4-stage-image');
@@ -53,7 +55,7 @@ export function mountV5(root:HTMLElement,port:V5Session,options:V5PresentationOp
  const show=(id:string,value:boolean)=>{find(id).hidden=!value;};
  if(focused){
   for(const node of root.querySelectorAll('.v4-edition,.v4-bench-mark > span'))node.textContent='炉火试作 · 三柄行囊';
-  const link=find<HTMLAnchorElement>('v5-old-v4');link.href='/classic.html';link.textContent='回到原炉台';
+  const link=find<HTMLAnchorElement>('v5-old-v4');link.href=packageUrl('/classic.html');link.textContent='回到原炉台';
  }
  const preferences=createPreferences(()=>localStorage),audio=createForgeAudio(undefined,IMPACT_SOUNDS),motion=matchMedia('(prefers-reduced-motion: reduce)');
  let snapshot=port.getSnapshot(),collection=port.getCollectionSnapshot(),prefs=preferences.getSnapshot();
@@ -93,7 +95,7 @@ export function mountV5(root:HTMLElement,port:V5Session,options:V5PresentationOp
  }
  function confirm(title:string,copy:HTMLElement|string,run:()=>void){const ticket={generation:snapshot.generation,runId:state()?.runId,revision:state()?.revision};openModal(title,copy,[{label:'再想想',run:()=>closeModal()},{label:'确认',primary:true,run:()=>{const valid=ticket.generation===snapshot.generation&&ticket.runId===state()?.runId&&ticket.revision===state()?.revision;closeModal();if(valid)run();else setStatus(ERRORS.stale_session!);}}],'confirm');}
  function resultError(error:string){setStatus(ERRORS[error]??'这次选择没有成立，请查看当前目标与保存状态。');}
- function download(value:string,name:string){const blob=new Blob([value],{type:'application/json'}),url=URL.createObjectURL(blob),a=element('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+ function download(value:string,name:string){const blob=new Blob([value],{type:'application/json'}),url=URL.createObjectURL(blob),a=element('a');a.href=packageUrl(url);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
  function exportRun(){const value=port.exportRun();if(value)download(value,`灯炉行程-${state()!.runId}.json`);else setStatus('尚未启程，没有当前局可导出。');}
  function exportCollection(){download(port.exportCollection(),'灯炉炉谱.json');}
  function exportRawRun(){
@@ -192,8 +194,8 @@ export function mountV5(root:HTMLElement,port:V5Session,options:V5PresentationOp
   if(disposed)return;const token=++stageAssetGeneration;stageLoading=true;stageFailedSrc=null;
   const url=retry?`${src}${src.includes('?')?'&':'?'}retry=${++stageRetries}`:src;
   const ready=()=>{if(disposed||token!==stageAssetGeneration||!stageLoading)return;stageLoading=false;stageFailedSrc=null;updateArtworkStatus();};
-  stageArtwork.onload=ready;stageArtwork.onerror=()=>{if(disposed||token!==stageAssetGeneration)return;stageLoading=false;stageFailedSrc=src;stageArtwork.onload=null;stageArtwork.onerror=null;stageArtwork.src='/assets/d/forge-backdrop-v2.webp';artworkProblem();};
-  stageArtwork.src=url;if(stageArtwork.complete&&stageArtwork.naturalWidth>0)ready();updateArtworkStatus();
+  stageArtwork.onload=ready;stageArtwork.onerror=()=>{if(disposed||token!==stageAssetGeneration)return;stageLoading=false;stageFailedSrc=src;stageArtwork.onload=null;stageArtwork.onerror=null;stageArtwork.src=packageUrl('/assets/d/forge-backdrop-v2.webp');artworkProblem();};
+  stageArtwork.src=packageUrl(url);if(stageArtwork.complete&&stageArtwork.naturalWidth>0)ready();updateArtworkStatus();
  }
  function stageImage(src:string){if(stageExpectedSrc===src)return;stageExpectedSrc=src;loadStageImage(src);}
  function retryArtwork(){const status=artworkStatus();if(disposed||status.loading)return;const failedStage=stageFailedSrc;if(failedStage&&failedStage===stageExpectedSrc)loadStageImage(failedStage,true);renderer?.retryAssets();auxiliaryArtwork.retry();updateArtworkStatus();}

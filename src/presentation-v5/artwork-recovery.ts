@@ -1,3 +1,4 @@
+import { packageUrl } from '../security/package-url.mjs';
 interface ArtworkHost {changed():void;failed():void}
 interface ArtworkSource {canonical:string;source:string;failed:boolean}
 interface ImageBinding {source:ArtworkSource;fallback:string;expected:string;loading:boolean}
@@ -7,7 +8,7 @@ interface ArtworkProbe {clear():void}
 export function createArtworkRecovery(root:HTMLElement,host:ArtworkHost){
  const sources=new Map<string,ArtworkSource>(),probes=new Map<string,ArtworkProbe>();
  let bindings=new WeakMap<HTMLImageElement,ImageBinding>(),disposed=false,retries=0;
- const absolute=(source:string)=>new URL(source,root.ownerDocument.baseURI).href;
+ const absolute=(source:string)=>new URL(packageUrl(source),root.ownerDocument.baseURI).href;
  const changed=()=>{if(!disposed)host.changed();};
  const images=()=>root.querySelectorAll<HTMLImageElement>('img[data-artwork-source]');
  const owns=(image:HTMLImageElement,binding:ImageBinding)=>!disposed&&bindings.get(image)===binding&&absolute(image.getAttribute('src')??'')===binding.expected;
@@ -29,9 +30,9 @@ export function createArtworkRecovery(root:HTMLElement,host:ArtworkHost){
     // Fallback loading is deliberately outside the canonical source's success path.
     display(image,source,fallback);if(first&&!disposed)host.failed();changed();
    };
-   image.onload=ready;image.onerror=failed;image.src=source.source;
+   image.onload=ready;image.onerror=failed;image.src=packageUrl(source.source);
    if(image.complete)queueMicrotask(()=>{if(image.naturalWidth>0)ready();else failed();});
-  }else image.src=fallback;
+  }else image.src=packageUrl(fallback);
  }
 
  function image(node:HTMLImageElement,canonical:string,fallback:string){
@@ -48,7 +49,7 @@ export function createArtworkRecovery(root:HTMLElement,host:ArtworkHost){
   if(disposed)return;
   for(const [key,source]of sources){
    if(!source.failed||probes.has(key))continue;
-   const picture=new Image(),url=new URL(source.canonical,root.ownerDocument.baseURI);
+   const picture=new Image(),url=new URL(packageUrl(source.canonical),root.ownerDocument.baseURI);
    url.searchParams.set('artRetry',`${Date.now()}-${++retries}`);const requested=url.href;
    let timer:ReturnType<typeof setTimeout>|null=null,finished=false;
    const job:ArtworkProbe={clear(){picture.onload=null;picture.onerror=null;if(timer!==null)clearTimeout(timer);timer=null;picture.removeAttribute('src');}};
@@ -65,7 +66,7 @@ export function createArtworkRecovery(root:HTMLElement,host:ArtworkHost){
    };
    picture.onload=()=>{if(picture.complete&&picture.naturalWidth>0)finish(true);};
    picture.onerror=()=>{if(picture.complete&&picture.naturalWidth===0)finish(false);};
-   probes.set(key,job);timer=setTimeout(()=>finish(false),8000);picture.src=requested;
+   probes.set(key,job);timer=setTimeout(()=>finish(false),8000);picture.src=packageUrl(requested);
    if(picture.complete)queueMicrotask(()=>{if(picture.naturalWidth>0)finish(true);else finish(false);});
   }
   changed();

@@ -1,3 +1,5 @@
+import { packageUrl } from '../security/package-url.mjs';
+import { sanitizeHtml } from '../security/sanitize-html.mjs';
 import type {V3Session} from '../application/v3-persistence.js';
 import type {Action,DomainEvent,Trait,RunState} from '../core-v3/index.js';
 import {TRAITS,quotaFor,strikeOdds,atCap,recovery,settlementPreview,merchantPresent,upgradePrice} from '../core-v3/index.js';
@@ -42,7 +44,7 @@ function ledgerFor(s:RunState){
  for(const b of s.blades){const label=({active:'挂剑保留',delivered:'交差',recycled:'回收',broken:'断剑回收',traded:'换手艺'}as const)[b.status];list.append(element('li',`${b.id} ${bladeAppearance(b).name} · ${label} · ${b.status==='broken'?`曾达${fmt(b.peak)}`:`身价${fmt(b.value)}`}`));}pieces.append(list);ledger.append(pieces);return ledger;
 }
 export function mountV3(root:HTMLElement,port:V3Session){
-  root.innerHTML=TEMPLATE;
+  root.innerHTML=sanitizeHtml(TEMPLATE);
   enableKeyboardNavigation(root);
   const ownRoot=root.firstElementChild;
   const find=<T extends HTMLElement>(id:string)=>{const n=root.querySelector<T>(`#${id}`);if(!n)throw Error(`Missing ${id}`);return n;};
@@ -80,7 +82,7 @@ export function mountV3(root:HTMLElement,port:V3Session){
   function animate(node:HTMLElement,frames:Keyframe[],ms:number,easing='ease-out'){if(reduced()||document.hidden)return;const a=node.animate(frames,{duration:ms,easing});animations.add(a);void a.finished.catch(()=>{}).finally(()=>animations.delete(a));}
   function select(id:string){input?.cancel();cancelEffects();epoch++;selectedId=id;render();button('v3-strike').focus({preventScroll:true});}
   function chooseNext(){const s=snapshot.state;if(!s)return;selectedId=s.blades.find(b=>b.status==='active'&&b.id!==s.reserveId)?.id??s.reserveId??'';}
-  function exportSave(){const s=snapshot.state;if(!s){note('没有可导出的当前局。');return;}const blob=new Blob([JSON.stringify({schemaVersion:3,rulesVersion:'forge-v3',savedAt:new Date().toISOString(),state:s},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),link=element('a');link.href=url;link.download=`sword-led-${s.runId}.json`;link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+  function exportSave(){const s=snapshot.state;if(!s){note('没有可导出的当前局。');return;}const blob=new Blob([JSON.stringify({schemaVersion:3,rulesVersion:'forge-v3',savedAt:new Date().toISOString(),state:s},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),link=element('a');link.href=packageUrl(url);link.download=`sword-led-${s.runId}.json`;link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
   function closeModal(){if(dialog.open)dialog.close();modal=false;epoch++;input?.cancel();cancelEffects();render();const target=origin;origin=null;queueMicrotask(()=>{if(disposed||modal)return;if(target?.isConnected&&!target.matches(':disabled'))target.focus({preventScroll:true});else button(snapshot.state?.phase==='workshop'?'v3-strike':'v3-menu').focus({preventScroll:true});});}
   function openModal(title:string,body:HTMLElement|string,actions:{label:string;run:()=>void}[]){
     if(dialog.open)closeModal();origin=document.activeElement instanceof HTMLElement?document.activeElement:null;input?.cancel();cancelEffects();epoch++;modal=true;syncAudio();dialog.dataset.kind=typeof body==='string'?'confirm':body.classList.contains('v3-shop-grid')?'merchant':body.classList.contains('v3-help-story')?'help':body.classList.contains('v3-notebook-body')?'notebook':'choice';text('v3-dialog-title',title);
@@ -167,7 +169,7 @@ export function mountV3(root:HTMLElement,port:V3Session){
       const modeLabel=element('label','契约长度'),mode=element('select');mode.id='v3-mode';for(const length of [12,3]as const){const option=element('option',contractName(length));option.value=String(length);mode.append(option);}mode.value=String(modeDraft);const hint=element('p',modeDraft===12?'完成十二轮；商人在第3、6、9轮到场。':'第三轮结束即练手结束，不计十二轮通关。');mode.onchange=()=>{modeDraft=mode.value==='3'?3:12;hint.textContent=modeDraft===12?'完成十二轮；商人在第3、6、9轮到场。':'第三轮结束即练手结束，不计十二轮通关。';};modeLabel.append(mode);body.append(modeLabel,hint);
       const actions:HTMLButtonElement[]=[];if(s)actions.push(actionButton('返回当前进度',()=>{menu=false;render();}),actionButton('回顾本炉手札',showNotebook));
       const create=actionButton('开一炉新契约',()=>start());create.disabled=!snapshot.active||snapshot.mode!=='writer'||main?.status==='unavailable';actions.push(create,actionButton('不保存开一炉',()=>start(false,true)));
-      const links=element('p');for(const [href,label] of [['/v2.html','继续旧版D细锻'],['/legacy.html','继续B版旧契约']]){const a=element('a',label);a.href=href??'';links.append(a,document.createTextNode('　'));}body.append(links);screen('锤下求生 · 行脚灯炉',body,actions);
+      const links=element('p');for(const [href,label] of [['/v2.html','继续旧版D细锻'],['/legacy.html','继续B版旧契约']]){const a=element('a',label);a.href=packageUrl(href??'');links.append(a,document.createTextNode('　'));}body.append(links);screen('锤下求生 · 行脚灯炉',body,actions);
     }else if(paused){body.append(element('p','准备中的锤击已取消，已经接受的身价和风险保留。'));screen('炉火暂歇',body,[actionButton('继续锻造',()=>togglePause()),actionButton('回顾本炉手札',showNotebook)]);}
     else{const last=s.history.at(-1);if(s.phase==='summary')body.append(element('p',last?`第${last.round}轮：交差${fmt(last.delivered)}/${fmt(last.quota)}，${last.met?'达标':last.protected?'护炉契保护':'未达标'}；印记${last.sealsBefore}→${last.sealsAfter}。`:'这轮结束了。'));
       if(last&&s.phase==='summary'){body.append(element('p',`回收${last.recovered}金币；${last.reserveId?`挂剑${last.reserveId}保留`:'未留挂剑'}。`));}

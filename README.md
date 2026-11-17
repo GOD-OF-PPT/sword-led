@@ -25,6 +25,8 @@ npm run dev
 
 main 的追踪文件保持在 100 MB 以内；历史大体积证据与旧版设计原图见[备份分支及恢复方法](docs/repository-size.md)。
 
+生产部署使用整个 `dist/`，支持任意静态托管子目录；离线试玩可直接打开 `public/playable-v8.html`。`npm run build` 会从同一份源码重新生成单文件版并内嵌图片，无需下载外部脚本。安全修复范围与复扫结果见[Web Zip 安全扫描报告](docs/security/web-zip-security-2026-11-18.md)。
+
 | 操作 | 做什么 |
 | --- | --- |
 | 左键点剑身 | 普通落锤；前三记安全，之后公开首裂20%／再裂35%；每柄最多六记 |

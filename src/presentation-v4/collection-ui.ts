@@ -1,3 +1,4 @@
+import { packageUrl } from '../security/package-url.mjs';
 import {CHAPTERS,COMMISSIONS,RECIPES,RECIPE_IDS,TRAITS,TRAIT_IDS,describeRoute} from '../core-v4/index.js';
 import type {Blade} from '../core-v4/index.js';
 import type {CollectionState,CollectionWork} from '../application/v4-collection.js';
@@ -45,7 +46,7 @@ export function collectionBook(data:CollectionState,context:BookContext):HTMLEle
 
 export function collectionWorkPage(work:CollectionWork,thumb:(blade:Blade)=>HTMLElement):HTMLElement {
   const c=COMMISSIONS[work.commissionId-1]!,route=c.routes.find(r=>r.id===work.routeId)!,body=element('article',undefined,'v4-work-page');
-  const image=element('img');image.src=commissionImage(c.id,{complete:true,routeId:work.routeId,count:work.blades.length,required:route.count});image.alt=c.title+'的用途场景';image.onerror=()=>{image.onerror=null;image.src='/assets/d/v07/lantern-road-v1.webp';};
+  const image=element('img');image.src=packageUrl(commissionImage(c.id,{complete:true,routeId:work.routeId,count:work.blades.length,required:route.count}));image.alt=c.title+'的用途场景';image.onerror=()=>{image.onerror=null;image.src=packageUrl('/assets/d/v07/lantern-road-v1.webp');};
   body.append(element('p',c.success),element('h3','这一程的约定'),element('p',describeRoute(route)),element('p',`${c.name} · 第${work.day}天交付 · ${work.blades.length===1?'一柄剑，接住了约定':'两柄剑，各自送到等剑的人手里'}`));
   for(const blade of work.blades){const card=element('section',undefined,'v4-work-receipt');card.dataset.piece=blade.id;card.append(thumb(blade),element('h3',`${RECIPES[blade.recipe].name} · ${fmt(blade.value)}身价`),element('p',`等级 ${blade.level} · 普通锤 ${blade.hits}次 · 安全连锻 ${blade.bursts}次 · ${blade.cracked?'有裂纹':'无裂纹'}`),element('p',`第${blade.suppliedDay}天来料${blade.suppliedDay<work.day?'，作为旧剑接续这一程':'，当日打造交付'} · 来料底价 ${fmt(blade.base)} · 曾达身价 ${fmt(blade.peak)}`));body.append(card);}
   const scene=element('details',undefined,'v4-work-scene');scene.append(element('summary','看看它去了哪里'),image);body.append(scene,element('small','炉谱记下了各委托的最佳成品。带上沿途学会的配方，再启一程，试试新的打造计划。'));return body;

@@ -1,3 +1,4 @@
+import { packageUrl, packageCssUrls } from '../security/package-url.mjs';
 import type {Blade,DomainEvent,RunView} from '../core-v6/index.js';
 import type {StrikePoint} from '../platform/direct-strike-input.js';
 import {createHammerMotion} from '../presentation-v3/hammer.js';
@@ -257,7 +258,7 @@ export function createExpeditionScene(root:HTMLElement,host:ExpeditionSceneHost)
   if(host.reduced())return;
   animate(canvas,[{transform:'translate(0,0)'},{transform:`translate(${bad?-4:2}px,3px)`,offset:.22},
    {transform:'translate(-1px,-1px)',offset:.5},{transform:'translate(0,0)'}],bad?230:160);
-  impact.style.background=bad?'radial-gradient(ellipse,#ff6f484f,transparent 68%)':'radial-gradient(ellipse,#ffd48b69,transparent 68%)';
+  impact.style.background=packageCssUrls(bad?'radial-gradient(ellipse,#ff6f484f,transparent 68%)':'radial-gradient(ellipse,#ffd48b69,transparent 68%)');
   animate(impact,[{opacity:0,transform:'translate(-50%,-50%) scale(.3)'},{opacity:1,offset:.16},
    {opacity:0,transform:'translate(-50%,-50%) scale(1.25)'}],bad?340:250);
   const count=event.result==='broken'?18:event.technique?18:12;
@@ -468,7 +469,7 @@ export function createExpeditionScene(root:HTMLElement,host:ExpeditionSceneHost)
   if(disposed||artToken!==artGeneration||!swordArt.complete||swordArt.naturalWidth!==0)return;
   artState='failed';paint();
  };
- swordArt.addEventListener('load',loaded);swordArt.addEventListener('error',failed);swordArt.src=SWORD_ART.src;
+ swordArt.addEventListener('load',loaded);swordArt.addEventListener('error',failed);swordArt.src=packageUrl(SWORD_ART.src);
 
  return{
   render(view){

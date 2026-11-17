@@ -1,3 +1,5 @@
+import { packageUrl } from '../security/package-url.mjs';
+import { sanitizeHtml } from '../security/sanitize-html.mjs';
 import {getRunView} from '../core-v6/index.js';
 import type {Action,DomainEvent,RunState,RunView,School} from '../core-v6/index.js';
 import {decodeV6Save,V6_SAVE_KEY,V6_BACKUP_KEY} from '../application/v6-persistence.js';
@@ -23,7 +25,7 @@ const forging=(phase:string)=>phase==='main-forge'||phase==='echo-forge'||phase=
 
 /** Intent and disposable presentation only; all accepted facts belong to the v6 session. */
 export function mountV6(root:HTMLElement,port:V6Session){
- root.innerHTML=V6_TEMPLATE;
+ root.innerHTML=sanitizeHtml(V6_TEMPLATE);
  const game=root.firstElementChild as HTMLElement;
  const node=<T extends HTMLElement>(id:string)=>{const found=root.querySelector<T>('#'+id);if(!found)throw Error('Missing '+id);return found;};
  const button=(id:string)=>node<HTMLButtonElement>(id),dialog=node<HTMLDialogElement>('x6-dialog');
@@ -190,19 +192,19 @@ export function mountV6(root:HTMLElement,port:V6Session){
    show('x6-turns',trialPhase||cachePhase);node('x6-turns').replaceChildren(...Array.from({length:3},(_,index)=>{const ember=el('i');ember.dataset.lit=String(index<(trial?.turnsLeft??0));return ember;}),el('span',`余火 ${trial?.turnsLeft??0}/3`));
    node('x6-turns').setAttribute('aria-label',`试锋余火${trial?.turnsLeft??0}/3，每次斩击或探隙用一回合`);
    show('x6-tool',!!value.tool&&screen==='play');if(value.tool){
-    node<HTMLImageElement>('x6-tool-art').src=toolImage(value.tool);text('x6-tool-name',toolName(value.tool));
+    node<HTMLImageElement>('x6-tool-art').src=packageUrl(toolImage(value.tool));text('x6-tool-name',toolName(value.tool));
     const stored=value.tool==='rebound'&&value.followUp.allowed,recharged=value.tool==='furnace'&&value.phase==='echo-recharge'&&!!value.echo.rechargeGained,full=value.tool==='furnace'&&value.phase==='echo-recharge'&&!value.echo.rechargeGained;
     node('x6-tool').dataset.state=stored?'stored':recharged?'recharged':full?'full':'idle';
     text('x6-tool-pulse',stored?`已存 ${fmt(value.followUp.damage)} 追斩 · 点远靶`:recharged?'手艺 0 → 1 · 接到新坯':full?'次数已满 · 没有多得':'' );show('x6-tool-pulse',stored||recharged||full);
     text('x6-tool-copy',value.tool==='rebound'?stored?'余力已留下，亲手选择远靶追斩。':'探隙斩留下的余力，可以亲手追向另一个目标。':value.echo.rechargeGained?'刚回的一次手艺，还要在另一柄上用出。':value.phase==='echo-recharge'?'用现有的这次手艺，不能再回去试锋。':'先用手艺，再击破甲靶，试着把炉火接回来。');
    }
-   if(screen==='recap'){const recap=recapCopy(value);text('x6-recap-title',recap.title);text('x6-recap-copy',recap.copy);node('x6-recap-facts').replaceChildren(...recap.facts.map(copy=>el('p',copy)));show('x6-recap-tool',!!value.tool);if(value.tool)node<HTMLImageElement>('x6-recap-tool').src=toolImage(value.tool);button('x6-again').disabled=!writable();}
+   if(screen==='recap'){const recap=recapCopy(value);text('x6-recap-title',recap.title);text('x6-recap-copy',recap.copy);node('x6-recap-facts').replaceChildren(...recap.facts.map(copy=>el('p',copy)));show('x6-recap-tool',!!value.tool);if(value.tool)node<HTMLImageElement>('x6-recap-tool').src=packageUrl(toolImage(value.tool));button('x6-again').disabled=!writable();}
    scene?.render(value);
   }
   audio.identify(`${current()?.runId??''}/${snapshot.generation}/${epoch}`);audio.configure(prefs.value);audio.setMode(route==='play'&&!paused&&!modal&&!document.hidden&&snapshot.active?'game':'silent');input?.refresh();for(const binding of decisionInputs)binding.refresh();
   if(changed&&route==='play'&&!busy&&!modal)queueMicrotask(focusAction);
  }
- function download(raw:string,name:string){const url=URL.createObjectURL(new Blob([raw],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+ function download(raw:string,name:string){const url=URL.createObjectURL(new Blob([raw],{type:'application/json'})),a=document.createElement('a');a.href=packageUrl(url);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
  function exportCurrent(){const raw=port.exportRun();if(raw)download(raw,'一剑开路-当前成果.json');else message('尚未开炉，没有当前成果可导出。');}
  function rawSlot(key:string){try{return{ok:true as const,raw:localStorage.getItem(key)};}catch{return{ok:false as const,error:'读取被拒绝'};}}
  function exportRaw(){const slots={main:rawSlot(V6_SAVE_KEY),backup:rawSlot(V6_BACKUP_KEY)};download(JSON.stringify({kind:'sword-led-v6-raw-sources',slots},null,2),'一剑开路-磁盘主备原文.json');message(slots.main.ok&&slots.backup.ok?'两份磁盘原文已导出；这不是当前手中成果。':'已导出可读取的原文；读取失败的位置已明确标记。');}

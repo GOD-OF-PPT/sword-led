@@ -1,3 +1,5 @@
+import { packageUrl } from '../security/package-url.mjs';
+import { sanitizeHtml } from '../security/sanitize-html.mjs';
 import type {DomainEvent,TargetId} from '../core-v7/model.js';
 import type {RunView,TargetView,WeaponView} from '../core-v7/view.js';
 import {createHammerMotion,HAMMER_ART} from '../presentation-v3/hammer.js';
@@ -74,9 +76,9 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
  const style=document.createElement('style');style.textContent=SCENE_STYLE;
  const canvas=document.createElement('canvas');canvas.dataset.scene7Blade='';canvas.setAttribute('role','img');
  const targets=document.createElement('div');targets.className='scene7-targets';
- const forge=document.createElement('button');forge.type='button';forge.className='scene7-forge';forge.dataset.scene7Forge='';forge.innerHTML='<span>落下普通锤 · 点击剑面，或 Enter / 空格</span>';
+ const forge=document.createElement('button');forge.type='button';forge.className='scene7-forge';forge.dataset.scene7Forge='';forge.innerHTML=sanitizeHtml('<span>落下普通锤 · 点击剑面，或 Enter / 空格</span>');
  const hammer=document.createElement('div');hammer.className='scene7-hammer';hammer.setAttribute('aria-hidden','true');
- const hammerImage=new Image();hammerImage.src='/assets/d/hammer-forge-v2.webp';hammerImage.alt='';hammer.append(hammerImage);
+ const hammerImage=new Image();hammerImage.src=packageUrl('/assets/d/hammer-forge-v2.webp');hammerImage.alt='';hammer.append(hammerImage);
  const empty=document.createElement('span');empty.className='scene7-empty';empty.textContent='手中无剑 · 可从剑架换手，或开炉锻造';
  const sigil=document.createElement('span');sigil.className='scene7-sigil';
  const message=document.createElement('div');message.className='scene7-message';message.setAttribute('aria-hidden','true');
@@ -131,7 +133,7 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
    if(!node){
     node=document.createElement('button');node.type='button';node.className='scene7-target';node.dataset.scene7Target=target.id;
     const art=document.createElement('span');art.className='scene7-target-art';art.setAttribute('aria-hidden','true');
-    const copy=document.createElement('span');copy.className='scene7-target-copy';copy.innerHTML='<b></b><span class="scene7-health"></span><span class="scene7-hp-track"><span class="scene7-hp-fill"></span></span><small></small><small class="scene7-preview"></small><em></em>';
+    const copy=document.createElement('span');copy.className='scene7-target-copy';copy.innerHTML=sanitizeHtml('<b></b><span class="scene7-health"></span><span class="scene7-hp-track"><span class="scene7-hp-fill"></span></span><small></small><small class="scene7-preview"></small><em></em>');
     node.append(art,copy);const id=target.id;
     node.addEventListener('click',()=>{if(!active&&!disposed&&latest?.phase==='encounter'&&latest.encounter?.targets.find(t=>t.id===id)?.strike.allowed)options.onStrike(id);});
     targetNodes.set(target.id,node);targets.append(node);
@@ -140,9 +142,9 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
    if(art.dataset.source!==artKey){
     art.replaceChildren();art.dataset.source=artKey;
     if(target.asset){
-     const image=new Image();image.src=target.asset;image.alt='';image.draggable=false;
-     image.addEventListener('error',()=>{if(!disposed&&art.dataset.source===artKey)art.innerHTML=targetArt(target.id);},{once:true});art.append(image);
-    }else art.innerHTML=targetArt(target.id);
+     const image=new Image();image.src=packageUrl(target.asset);image.alt='';image.draggable=false;
+     image.addEventListener('error',()=>{if(!disposed&&art.dataset.source===artKey)art.innerHTML=sanitizeHtml(targetArt(target.id));},{once:true});art.append(image);
+    }else art.innerHTML=sanitizeHtml(targetArt(target.id));
    }
    const multiple=shown.length>1;
    const x=multiple?(width<760?[.49,.73][index]??.61:[.49,.67][index]??.61):.61;
@@ -512,7 +514,7 @@ export function createCampaignScene(host:HTMLElement,options:SceneOptions):{
  const resize=typeof ResizeObserver==='undefined'?null:new ResizeObserver(resized);resize?.observe(root);window.addEventListener('resize',resized);
  const visibility=():void=>{if(document.hidden)cancel();else{draw();queueAmbient();}};document.addEventListener('visibilitychange',visibility);
  const loaded=():void=>{if(disposed)return;artReady=swordArt.naturalWidth===SWORD_ART.width&&swordArt.naturalHeight===SWORD_ART.height;draw();};
- swordArt.addEventListener('load',loaded);swordArt.src=SWORD_ART.src;
+ swordArt.addEventListener('load',loaded);swordArt.src=packageUrl(SWORD_ART.src);
  const forgeClick=(event:MouseEvent):void=>{
   if(disposed||active||latest?.phase!=='forging'||forge.disabled)return;
   const rect=root.getBoundingClientRect();if(event.detail!==0)aimX=Math.max(0,Math.min(1,(event.clientX-rect.left)/Math.max(1,rect.width)));

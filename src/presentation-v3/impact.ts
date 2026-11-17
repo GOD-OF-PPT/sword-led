@@ -1,3 +1,4 @@
+import { packageCssUrls } from '../security/package-url.mjs';
 import type {Hit} from '../core-v3/index.js';
 import type {Cue,ForgeSound} from '../platform/audio.js';
 import type {StrikePoint} from '../platform/direct-strike-input.js';
@@ -49,7 +50,7 @@ export function createImpactFeedback(nodes:Nodes,host:Host){
       if(i>=count)continue;
       const angle=-Math.PI+(i/(count-1))*Math.PI,reach=35+(i*29%100)+(great?38:0);
       const x=Math.cos(angle)*reach,y=Math.sin(angle)*reach+(broken?60:0);
-      particle.style.background=broken?i%2?'#66808b':'#e1a76e':bad?'#ef865e':i%3?'#ffca77':'#fff3bf';
+      particle.style.background=packageCssUrls(broken?i%2?'#66808b':'#e1a76e':bad?'#ef865e':i%3?'#ffca77':'#fff3bf');
       particle.style.width=`${broken?5+i%7:2+i%3}px`;particle.style.height=`${broken?5+i%9:5+i%8}px`;
       host.animate(particle,[{opacity:0,transform:'translate(0,0) rotate(0deg)'},{opacity:1,offset:.08},{opacity:1,offset:.55},{opacity:0,transform:`translate(${x}px,${y}px) rotate(${i*73}deg)`}],broken?600:270+i%4*50);
     }

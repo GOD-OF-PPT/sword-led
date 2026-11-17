@@ -1,3 +1,4 @@
+import { packageUrl } from '../security/package-url.mjs';
 import type { RequestKind, HammerMode } from '../core-v2/index.js';
 import { element } from '../presentation/dom.js';
 
@@ -17,7 +18,7 @@ export function loadDArt(ready: () => void, problem: (name: string) => void) {
     const image = new Image();images.set(name,image);
     image.onload = () => { if (!disposed) ready(); };
     image.onerror = () => { if (!disposed) problem(name); };
-    image.src = artPath(name);
+    image.src = packageUrl(artPath(name));
   }
   return {
     texture: () => { const image = images.get('metal-atlas-v1');return image?.complete && image.naturalWidth > 0 ? image : undefined; },

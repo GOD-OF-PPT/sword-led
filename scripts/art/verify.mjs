@@ -36,6 +36,10 @@ for (const image of provenance.images) {
   routes.set(`/${image.path}`, bytes);
 }
 assert.equal(hash(await read(provenance.reference)), provenance.referenceSha256);
+// Repository previews use paths relative to their source HTML, including public/.
+for (const [url, bytes] of [...routes]) {
+  if (url.startsWith('/assets/')) routes.set(`/public${url}`, bytes);
+}
 const server = createServer((request, response) => {
   let path;
   try { path = decodeURIComponent(new URL(request.url, 'http://localhost').pathname); }

@@ -1,3 +1,4 @@
+import { packageUrl } from '../security/package-url.mjs';
 export interface Point { readonly x: number; readonly y: number }
 export interface Rect extends Point { readonly w: number; readonly h: number }
 export type ArtId = 'workshop' | 'anvil' | 'hammer-light' | 'hammer-standard' | 'hammer-heavy' | 'iron' | 'steel' | 'meteorite' | 'merchant-kit';
@@ -63,11 +64,11 @@ export async function loadArt(base = new URL('.', document.baseURI)): Promise<Ar
   const images = new Map<ArtId, HTMLImageElement>();
   try {
     await Promise.all([...assets.values()].map(async asset => {
-      const image = new Image();images.set(asset.id, image);image.src = asset.src;
+      const image = new Image();images.set(asset.id, image);image.src = packageUrl(asset.src);
       try { await image.decode(); } catch { throw new Error('有一张工坊图片未能载入，请重试'); }
       if (image.naturalWidth !== asset.width || image.naturalHeight !== asset.height) throw new Error('工坊图片尺寸与清单不匹配');
     }));
-  } catch (error) { for (const image of images.values()) image.src = '';throw error; }
+  } catch (error) { for (const image of images.values()) image.src = packageUrl('');throw error; }
   return { stage, assets, images };
 }
 

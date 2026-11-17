@@ -1,3 +1,4 @@
+import { sanitizeHtml } from '../security/sanitize-html.mjs';
 import { createGameSession, explainError } from '../application/session.js';
 import type { GameSnapshot, Ticket } from '../application/session.js';
 import type { PersistentSession } from '../application/persistent-session.js';
@@ -22,7 +23,7 @@ const STATUS = { active: '加工中', delivered: '已交货', recycled: '已回�
 function newIdentity(): string { return [...crypto.getRandomValues(new Uint32Array(4))].map(value => value.toString(16).padStart(8, '0')).join(''); }
 
 export function mountGame(root: HTMLElement, port: PersistentSession) {
-  root.innerHTML = APP_TEMPLATE;
+  root.innerHTML = sanitizeHtml(APP_TEMPLATE);
   enableKeyboardNavigation(root);
   const required = <T extends HTMLElement>(selector: string): T => { const node = root.querySelector<T>(selector);if (!node) throw new Error(`Missing view: ${selector}`);return node; };
   const text = (selector: string, value: string | number) => { const node = required(selector);const next = String(value);if (node.textContent !== next) node.textContent = next; };

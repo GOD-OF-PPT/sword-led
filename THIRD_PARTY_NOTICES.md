@@ -12,3 +12,7 @@ Project text is encoded as UTF-8; values are kept unsigned modulo 2^32.
 
 Build and test dependencies are recorded with exact versions and resolved package
 integrity in `package-lock.json`; their own licenses remain with their packages.
+
+HTML rendering uses [js-xss](https://github.com/leizongmin/js-xss) 1.0.17 and
+cssfilter 0.0.10 under the MIT License. Full license notices ship in
+`public/third-party-licenses.txt` and are embedded in the offline v8 HTML.

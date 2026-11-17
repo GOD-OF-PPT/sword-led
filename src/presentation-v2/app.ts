@@ -1,3 +1,5 @@
+import { packageUrl } from '../security/package-url.mjs';
+import { sanitizeHtml } from '../security/sanitize-html.mjs';
 import type { V2Session } from '../application/v2-persistence.js';
 import { V2_SAVE_KEY } from '../application/v2-persistence.js';
 import { SAVE_KEY } from '../platform/storage.js';
@@ -32,7 +34,7 @@ const ticketOf=(state:RunState,generation:number):Ticket=>({runId:state.runId,re
 const quenchQuote=(view:ReturnType<typeof getRunView>,piece:Workpiece)=>marketValue(piece)+(view.request&&view.fulfilledRequestId===null?requestBonus(piece,view.request,view.condition):0);
 
 export function mountV2(root:HTMLElement,port:V2Session){
-  root.innerHTML=TEMPLATE;enableKeyboardNavigation(root);
+  root.innerHTML=sanitizeHtml(TEMPLATE);enableKeyboardNavigation(root);
   const find=<T extends HTMLElement>(id:string):T=>{const node=root.querySelector<T>(`#${id}`);if(!node)throw Error(`Missing v2 view ${id}`);return node;};
   const button=(id:string)=>find<HTMLButtonElement>(id),field=(id:string)=>find<HTMLInputElement>(id);
   const text=(id:string,value:string)=>{const node=find(id);if(node.textContent!==value)node.textContent=value;};
@@ -160,7 +162,7 @@ export function mountV2(root:HTMLElement,port:V2Session){
       find('v2-workshop').dataset.step=remaining?step:'settle';
       for(const label of find('v2-flow').querySelectorAll<HTMLElement>('[data-step]')){const active=label.dataset.step===step&&remaining;label.classList.toggle('current',active);if(active)label.setAttribute('aria-current','step');else label.removeAttribute('aria-current');}
       text('v2-next-step',!remaining?'三件已处置 → 收工，核对本轮订单':p.status!=='active'?'这件已处置 → 选左侧另一件来料':p.quench!==null?'已淬火 → 试剑看成品，满意后交货':!p.strikes?'选剑身落点，再按住空格蓄力、松开落锤':!p.outcomes[0]?.allowed?'余热或容量不足 → 换点、回火，或选水 / 油淬火':'继续连纹，或选水 / 油淬火收手');
-      const anchor=find('v2-hammer-anchor');anchor.style.left=`${(NODE_X[node%5]??160)/10}%`;anchor.style.top=`${nodeY(node)/3.4}%`;find<HTMLImageElement>('v2-hammer').src=hammerPath(mode);anchor.hidden=p.status!=='active'||p.quench!==null;
+      const anchor=find('v2-hammer-anchor');anchor.style.left=`${(NODE_X[node%5]??160)/10}%`;anchor.style.top=`${nodeY(node)/3.4}%`;find<HTMLImageElement>('v2-hammer').src=packageUrl(hammerPath(mode));anchor.hidden=p.status!=='active'||p.quench!==null;
       text('v2-piece-name',p.name);text('v2-condition',view.conditionLabel);text('v2-piece-stats',`锋 ${p.ratings.edge}　韧 ${p.ratings.toughness}　衡 ${p.ratings.balance}　｜完整 ${p.integrity}/${p.maxIntegrity} · 已锻 ${p.strikes}锤`);
       const bars=find('v2-heat-bars');bars.replaceChildren();for(const[label,value,max,kind]of[['热度',p.heat,120,'heat'],['应力',p.stress,p.threshold,'stress']]as const){const box=element('label',`${label} ${value}/${max}`),meter=element('meter');meter.min=0;meter.max=max;meter.value=value;meter.className=kind;meter.setAttribute('aria-label',`${label}${value}，阈值${max}`);box.append(meter);bars.append(box);}
       text('v2-price-preview',p.quench!==null?`当前交货 ${p.value+p.requestBonus}（市价${p.value} + 委托${p.requestBonus}）`:p.strikes?`现在按原坯交 ${p.value}；${p.quenches.map(q=>`${q.medium==='water'?'水淬':'油淬'}后${q.piece.status==='broken'?'会破碎':`可交${quenchQuote(view,q.piece)}`}`).join(' / ')}`:'落锤增加性能，淬火后成为能交货的成品。');
@@ -188,13 +190,13 @@ export function mountV2(root:HTMLElement,port:V2Session){
 
   for(let i=0;i<3;i++){const b=element('button'),stone=element('i',undefined,'material-stone');stone.setAttribute('aria-hidden','true');b.append(stone,element('span'));b.id=`v2-piece-${i}`;b.addEventListener('click',()=>{input?.cancel();epoch++;selectedId=snapshot.state?.pieces[i]?.id??selectedId;render();if(!button('v2-strike').disabled)button('v2-strike').focus({preventScroll:true});});find('v2-tray').append(b);}
   for(let i=0;i<10;i++){const b=element('button');b.id=`v2-node-${i}`;b.style.left=`${(NODE_X[i%5]??0)/10}%`;b.style.top=`${nodeY(i)/3.4}%`;b.setAttribute('aria-label',`${SECTION_NAMES[i%5]}${i<5?'刃':'脊'}落点`);b.addEventListener('click',()=>{input?.cancel();epoch++;node=i;render();if(!button('v2-strike').disabled)button('v2-strike').focus({preventScroll:true});});find('v2-nodes').append(b);}
-  for(const m of['light','standard','heavy']as const){const h=HAMMERS[m],b=element('button'),img=element('img');img.src=hammerPath(m);img.alt='';b.append(img,element('span',`${h.label} · 力${h.force} / 热${h.heat}`));b.id=`v2-mode-${m}`;b.addEventListener('click',()=>{input?.cancel();epoch++;mode=m;render();if(!button('v2-strike').disabled)button('v2-strike').focus({preventScroll:true});});find('v2-modes').append(b);}
+  for(const m of['light','standard','heavy']as const){const h=HAMMERS[m],b=element('button'),img=element('img');img.src=packageUrl(hammerPath(m));img.alt='';b.append(img,element('span',`${h.label} · 力${h.force} / 热${h.heat}`));b.id=`v2-mode-${m}`;b.addEventListener('click',()=>{input?.cancel();epoch++;mode=m;render();if(!button('v2-strike').disabled)button('v2-strike').focus({preventScroll:true});});find('v2-modes').append(b);}
   input=bindStrikeInput(button('v2-strike'),{
     context:()=>{const s=snapshot.state;if(!s||!canOperate()||document.hidden||s.phase!=='workshop'||button('v2-strike').disabled)return null;return{rulesVersion:s.rulesVersion,runId:s.runId,revision:s.revision,generation:snapshot.generation,epoch,pieceId:selectedId,node,mode,periodMs:HAMMERS[mode].periodMs*(prefs.value.slow?1.5:1)};},
     release:attempt=>{if(send({type:'strike',pieceId:attempt.identity.pieceId,node:attempt.identity.node??0,mode:attempt.identity.mode,timingMark:attempt.timingMark},{runId:attempt.identity.runId,revision:attempt.identity.revision,generation:attempt.identity.generation})){const target=button('v2-strike').disabled?button('v2-settle'):button('v2-strike');target.focus({preventScroll:true});}},
     visual:visual=>{find('v2-cursor').style.left=`${visual.preparing?visual.mark/100:0}%`;find('v2-hammer-anchor').classList.toggle('preparing',visual.preparing);},
   });
-  for(const medium of['water','oil']as const){const b=button(`v2-${medium}`),image=element('img');image.src=artPath(`${medium}-v1`);image.alt='';b.replaceChildren(image,element('span',medium==='water'?'水淬':'油淬'));}
+  for(const medium of['water','oil']as const){const b=button(`v2-${medium}`),image=element('img');image.src=packageUrl(artPath(`${medium}-v1`));image.alt='';b.replaceChildren(image,element('span',medium==='water'?'水淬':'油淬'));}
   button('v2-tutorial').addEventListener('click',()=>{const lesson=createTutorial(art.texture,prefs.value.slow);openDialog('练习炉 · 学会第一道锻纹',lesson.body,[{label:'合上练习',run:closeDialog}]);dialogCleanup=lesson.dispose;});
   function newGame(memory=false){
     const seed=field('v2-seed').value,input={runId:crypto.randomUUID(),seed},generation=snapshot.generation;
@@ -203,7 +205,7 @@ export function mountV2(root:HTMLElement,port:V2Session){
       if(!result.ok){note(error(result.error));return;}selectedId='1:1';node=0;route='play';paused=false;epoch++;phaseKey='';render();note('三件来料就位，先选一门本局手艺。');find('v2-starter-panel').querySelector<HTMLButtonElement>('button')?.focus();};
     if(snapshot.state||snapshot.load?.main.status==='invalid')openDialog('重新开炉？','新版当前契约将被替换；旧版契约不受影响。',[{label:'保留当前',run:closeDialog},{label:memory?'不保存新试玩':'确认开新炉',run:()=>{closeDialog();start(true);}}]);else start(false);
   }
-  function exportSave(legacy=false){try{const raw=legacy?localStorage.getItem(SAVE_KEY):snapshot.state?JSON.stringify({schemaVersion:2,rulesVersion:'forge-v2',savedAt:new Date().toISOString(),state:snapshot.state}):localStorage.getItem(V2_SAVE_KEY);if(!raw){note('这里还没有可导出的契约。');return;}const url=URL.createObjectURL(new Blob([raw],{type:'application/json'})),a=element('a');a.href=url;a.download=legacy?'sword-led-legacy.json':'sword-led-v2.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}catch{note('浏览器未允许读取或导出存档。');}}
+  function exportSave(legacy=false){try{const raw=legacy?localStorage.getItem(SAVE_KEY):snapshot.state?JSON.stringify({schemaVersion:2,rulesVersion:'forge-v2',savedAt:new Date().toISOString(),state:snapshot.state}):localStorage.getItem(V2_SAVE_KEY);if(!raw){note('这里还没有可导出的契约。');return;}const url=URL.createObjectURL(new Blob([raw],{type:'application/json'})),a=element('a');a.href=packageUrl(url);a.download=legacy?'sword-led-legacy.json':'sword-led-v2.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}catch{note('浏览器未允许读取或导出存档。');}}
   find<HTMLFormElement>('v2-new-form').addEventListener('submit',event=>{event.preventDefault();newGame();});button('v2-memory').addEventListener('click',()=>newGame(true));
   button('v2-continue').addEventListener('click',()=>{if(!snapshot.state)return;route='play';paused=false;epoch++;render();});
   const goMenu=()=>{input?.cancel();stopEffects();epoch++;paused=false;route='menu';if(dialog.open)closeDialog();render();};button('v2-menu-button').addEventListener('click',goMenu);button('v2-home').addEventListener('click',goMenu);

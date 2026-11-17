@@ -1,3 +1,4 @@
+import { packageUrl } from '../security/package-url.mjs';
 import type { Action, RunView } from '../core/index.js';
 import { getRunLedger } from '../core/index.js';
 import type { ArtBundle } from './assets.js';
@@ -54,7 +55,7 @@ export function renderPhase(panel: HTMLElement, view: RunView, canOperate: boole
   } else if (view.phase === 'merchant') {
     title.textContent = '行会商人';description.textContent = '每种商品本次限购一次。升级随契约保留；风箱从下一轮增加煤配给。';
     const heading = node('div', undefined, 'merchant-heading'), illustration = node('img');
-    illustration.src = artAsset(art, 'merchant-kit').src;illustration.alt = '';illustration.className = 'merchant-illustration';
+    illustration.src = packageUrl(artAsset(art, 'merchant-kit').src);illustration.alt = '';illustration.className = 'merchant-illustration';
     heading.append(facts([['可用金币', view.coins], ['可用废料', view.scrap], ['契约印记', `${view.seals} / 3`]]), illustration);content.append(heading);
     const offers = node('div', undefined, 'merchant-offers');
     for (const offer of view.merchant.offers) {

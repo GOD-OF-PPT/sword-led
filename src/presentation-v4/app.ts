@@ -1,3 +1,5 @@
+import { packageUrl } from '../security/package-url.mjs';
+import { sanitizeHtml } from '../security/sanitize-html.mjs';
 import type {V4Session,V4NewGameInput} from '../application/v4-persistence.js';
 import type {Action,Blade,RunState,Trait,Modification,EventId} from '../core-v4/index.js';
 import {getRunView,RECIPES,TRAITS,MODIFICATIONS,CHAPTERS,COMMISSIONS,eventQuote} from '../core-v4/index.js';
@@ -34,7 +36,7 @@ interface ModalAction {label:string;run:()=>void;disabled?:boolean;primary?:bool
 type SceneOverride={kind:'delivery';revision:number;commissionId:number;pieceIds:readonly string[]}|{kind:'intro';revision:number};
 
 export function mountV4(root:HTMLElement,port:V4Session){
- root.innerHTML=V4_TEMPLATE;enableKeyboardNavigation(root);const ownRoot=root.firstElementChild;
+ root.innerHTML=sanitizeHtml(V4_TEMPLATE);enableKeyboardNavigation(root);const ownRoot=root.firstElementChild;
  const find=<T extends HTMLElement>(id:string)=>{const n=root.querySelector<T>('#'+id);if(!n)throw Error('Missing '+id);return n;};
  const button=(id:string)=>find<HTMLButtonElement>(id),dialog=find<HTMLDialogElement>('v4-dialog'),stageArtwork=find<HTMLImageElement>('v4-stage-image');
  const text=(id:string,value:string)=>{const n=find(id);if(n.textContent!==value)n.textContent=value;};
@@ -74,7 +76,7 @@ export function mountV4(root:HTMLElement,port:V4Session){
  }
  function confirm(title:string,copy:HTMLElement|string,run:()=>void){const ticket={generation:snapshot.generation,runId:state()?.runId,revision:state()?.revision};openModal(title,copy,[{label:'再想想',run:()=>closeModal()},{label:'确认',primary:true,run:()=>{const valid=ticket.generation===snapshot.generation&&ticket.runId===state()?.runId&&ticket.revision===state()?.revision;closeModal();if(valid)run();else setStatus(ERRORS.stale_session!);}}],'confirm');}
  function resultError(error:string){setStatus(ERRORS[error]??'这次选择没有成立，请查看当前目标与保存状态。');}
- function download(value:string,name:string){const blob=new Blob([value],{type:'application/json'}),url=URL.createObjectURL(blob),a=element('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+ function download(value:string,name:string){const blob=new Blob([value],{type:'application/json'}),url=URL.createObjectURL(blob),a=element('a');a.href=packageUrl(url);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
  function exportRun(){const value=port.exportRun();if(value)download(value,`灯炉行程-${state()!.runId}.json`);else setStatus('尚未启程，没有当前局可导出。');}
  function exportCollection(){download(port.exportCollection(),'灯炉炉谱.json');}
  function transferOrigin(pieceId:string):FeedbackRect|null{
@@ -154,8 +156,8 @@ export function mountV4(root:HTMLElement,port:V4Session){
   if(disposed)return;const token=++stageAssetGeneration;stageLoading=true;stageFailedSrc=null;
   const url=retry?`${src}${src.includes('?')?'&':'?'}retry=${++stageRetries}`:src;
   const ready=()=>{if(disposed||token!==stageAssetGeneration||!stageLoading)return;stageLoading=false;stageFailedSrc=null;updateArtworkStatus();};
-  stageArtwork.onload=ready;stageArtwork.onerror=()=>{if(disposed||token!==stageAssetGeneration)return;stageLoading=false;stageFailedSrc=src;stageArtwork.onload=null;stageArtwork.onerror=null;stageArtwork.src='/assets/d/forge-backdrop-v2.webp';artworkProblem();};
-  stageArtwork.src=url;if(stageArtwork.complete&&stageArtwork.naturalWidth>0)ready();updateArtworkStatus();
+  stageArtwork.onload=ready;stageArtwork.onerror=()=>{if(disposed||token!==stageAssetGeneration)return;stageLoading=false;stageFailedSrc=src;stageArtwork.onload=null;stageArtwork.onerror=null;stageArtwork.src=packageUrl('/assets/d/forge-backdrop-v2.webp');artworkProblem();};
+  stageArtwork.src=packageUrl(url);if(stageArtwork.complete&&stageArtwork.naturalWidth>0)ready();updateArtworkStatus();
  }
  function stageImage(src:string){if(stageExpectedSrc===src)return;stageExpectedSrc=src;loadStageImage(src);}
  function retryArtwork(){const status=artworkStatus();if(disposed||status.loading)return;const failedStage=stageFailedSrc;if(failedStage&&failedStage===stageExpectedSrc)loadStageImage(failedStage,true);renderer?.retryAssets();updateArtworkStatus();}
@@ -175,7 +177,7 @@ export function mountV4(root:HTMLElement,port:V4Session){
   if(!visible||!receipt)return;const outcome=journeyOutcome(s,receipt.commissionId),image=find<HTMLImageElement>('v4-inline-image');
   text('v4-inline-title',outcome.complete?`${outcome.commission.name}接过了剑`:'先送到了一柄');
   text('v4-inline-copy',outcome.complete?outcome.commission.success:`已经交付${outcome.progressText}，再安排下一柄合格的剑。`);
-  if(image.dataset.source!==outcome.image){image.dataset.source=outcome.image;image.onerror=()=>{image.onerror=null;image.src='/assets/d/forge-backdrop-v2.webp';};image.src=outcome.image;}image.alt=outcome.commission.title+'的实际交付';
+  if(image.dataset.source!==outcome.image){image.dataset.source=outcome.image;image.onerror=()=>{image.onerror=null;image.src=packageUrl('/assets/d/forge-backdrop-v2.webp');};image.src=packageUrl(outcome.image);}image.alt=outcome.commission.title+'的实际交付';
   text('v4-inline-review',s.gift==='available'?'收下第一门手艺':'看看灯路');
  }
  function handoffBlade(token:HandoffToken){
@@ -308,7 +310,7 @@ export function mountV4(root:HTMLElement,port:V4Session){
  function journeyPanel(){
   const s=state();if(!s)return;const v=getRunView(s),partialRelay=v.commission.id===11&&!v.commission.progress.complete&&v.commission.progress.routes.some(r=>r.count>0),destination=partialRelay?11:s.day>=9?12:s.day>=5?8:4,outcome=journeyOutcome(s,destination),body=element('div',undefined,'v4-journey-review');
   body.append(element('p',CAMPAIGN_GOAL));
-  const figure=element('figure'),image=element('img');image.src=outcome.image;image.alt=outcome.commission.title+' · '+(outcome.complete?'委托已完成':`实际交付 ${outcome.progressText}`);image.dataset.journeyScene='true';image.className='v4-partial-journey-image';image.onerror=()=>{image.onerror=null;image.src='/assets/d/forge-backdrop-v2.webp';};figure.append(image,element('figcaption',`${outcome.commission.title} · ${outcome.complete?'已完成':outcome.progressText}`));body.append(figure);
+  const figure=element('figure'),image=element('img');image.src=packageUrl(outcome.image);image.alt=outcome.commission.title+' · '+(outcome.complete?'委托已完成':`实际交付 ${outcome.progressText}`);image.dataset.journeyScene='true';image.className='v4-partial-journey-image';image.onerror=()=>{image.onerror=null;image.src=packageUrl('/assets/d/forge-backdrop-v2.webp');};figure.append(image,element('figcaption',`${outcome.commission.title} · ${outcome.complete?'已完成':outcome.progressText}`));body.append(figure);
   const works=element('div',undefined,'v4-journey-works');for(const b of outcome.matchedBlades){const card=element('div',undefined,'v4-journey-work');card.append(thumb(b),element('p',`${RECIPES[b.recipe].name} · 身价${fmt(b.value)} · 已交付`));works.append(card);}body.append(works);
   const lamps=element('ol',undefined,'v4-journey-lamps');
   for(let day=1;day<=12;day++){

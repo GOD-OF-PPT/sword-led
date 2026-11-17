@@ -1,3 +1,5 @@
+import { packageUrl, packageCssUrls } from '../security/package-url.mjs';
+import { sanitizeHtml } from '../security/sanitize-html.mjs';
 import {getRunView,errorText} from '../core-v7/index.js';
 import type {Action,ActionView,CharacterView,DomainEvent,RunState,RunView,WeaponView} from '../core-v7/index.js';
 import {V7_SAVE_KEY,V7_BACKUP_KEY} from '../application/v7-persistence.js';
@@ -17,7 +19,7 @@ const elem=<K extends keyof HTMLElementTagNameMap>(tag:K,text?:string,className?
 
 /** The session owns facts. This layer owns focus, scenes and short-lived presentation. */
 export function mountCampaign(root:HTMLElement,port:V7Session){
- root.innerHTML=CAMPAIGN_SHELL;
+ root.innerHTML=sanitizeHtml(CAMPAIGN_SHELL);
  const game=root.firstElementChild as HTMLElement;
  const node=<T extends HTMLElement=HTMLElement>(id:string):T=>{const e=root.querySelector<T>('#'+id);if(!e)throw Error('Missing '+id);return e;};
  const dialog=node<HTMLDialogElement>('c7-dialog');
@@ -123,20 +125,20 @@ export function mountCampaign(root:HTMLElement,port:V7Session){
  }
  function continueRun(){if(!current())return;route='play';cancelVisuals();render();void audio.gesture();}
  function portrait(target:HTMLElement,value:CharacterView){
-  const p=value.portrait;target.style.backgroundImage=`url("${p.path}")`;target.style.backgroundSize='300% 200%';target.style.backgroundPosition=`${p.x===0?0:p.x===418?50:100}% ${p.y===0?0:100}%`;
+  const p=value.portrait;target.style.backgroundImage=packageCssUrls(`url("${p.path}")`);target.style.backgroundSize='300% 200%';target.style.backgroundPosition=`${p.x===0?0:p.x===418?50:100}% ${p.y===0?0:100}%`;
  }
  function standing(target:HTMLElement,value:CharacterView){
   const frame=STANDING_ART.frames.find(f=>f.id===value.id)!;
   const height=Math.min(360,game.clientHeight*.4),scale=height/frame.height;
   target.style.width=`${frame.width*scale}px`;target.style.height=`${height}px`;target.style.marginInline='auto';
-  target.style.backgroundImage=`url("${STANDING_ART.src}")`;target.style.backgroundSize=`${STANDING_ART.width*scale}px ${STANDING_ART.height*scale}px`;target.style.backgroundPosition=`${-frame.x*scale}px ${-frame.y*scale}px`;
+  target.style.backgroundImage=packageCssUrls(`url("${STANDING_ART.src}")`);target.style.backgroundSize=`${STANDING_ART.width*scale}px ${STANDING_ART.height*scale}px`;target.style.backgroundPosition=`${-frame.x*scale}px ${-frame.y*scale}px`;
   node('c7-companion').style.height=`${height}px`;node('c7-companion').style.minHeight=`${height}px`;
  }
  function inspectWeapon(value:WeaponView){
   cancelVisuals();
   const v=current()?getRunView(current()!):null;if(!v)return;
   const body=elem('div',undefined,'c7-weapon-sheet'),figure=elem('div',undefined,'c7-weapon-figure'),art=elem('span',undefined,'c7-weapon-art'),f=SWORD_ART.frames[3],scale=230/f.width;
-  art.setAttribute('aria-hidden','true');art.style.height=`${f.height*scale}px`;art.style.backgroundImage=`url("${SWORD_ART.src}")`;art.style.backgroundSize=`${SWORD_ART.width*scale}px ${SWORD_ART.height*scale}px`;art.style.backgroundPosition=`${-f.x*scale}px ${-f.y*scale}px`;figure.dataset.condition=value.status;figure.append(art);
+  art.setAttribute('aria-hidden','true');art.style.height=`${f.height*scale}px`;art.style.backgroundImage=packageCssUrls(`url("${SWORD_ART.src}")`);art.style.backgroundSize=`${SWORD_ART.width*scale}px ${SWORD_ART.height*scale}px`;art.style.backgroundPosition=`${-f.x*scale}px ${-f.y*scale}px`;figure.dataset.condition=value.status;figure.append(art);
   const facts=elem('div',undefined,'c7-weapon-facts');facts.append(elem('strong',`当前强度 ${value.strength}`),elem('p',value.sealedStrength!==null?`收锻时强度 ${value.sealedStrength}`:'仍在锻造中'),elem('p',value.condition),elem('small',value.ownerLabel));figure.append(facts);body.append(figure);
   if(value.kind==='inherited')body.append(elem('p','杜伯留下的旧剑能开路、挡护；母灯最后需要你亲手打造的剑。'));
   else if(value.finalEligible)body.append(elem('p','这柄剑已符合母灯的用剑条件。先留住它，走到山口还要停轮、放灯、架稳。'));
@@ -148,7 +150,7 @@ export function mountCampaign(root:HTMLElement,port:V7Session){
   for(const [kind,value]of Object.entries(v.slots)){
    const e=elem('button',undefined,'c7-rack-slot');e.type='button';e.dataset.slot=kind;e.dataset.condition=value?.kind??'empty';
    e.append(elem('small',kind==='hand'?'手中':'备用 · 换手'),elem('b',value?`${value.name} · ${value.strength}`:'空剑位'));
-   if(value){const art=elem('span',undefined,'c7-mini-blade'),f=SWORD_ART.frames[3],scale=98/f.width;art.setAttribute('aria-hidden','true');art.style.height=`${f.height*scale}px`;art.style.marginBlock='16px';art.style.backgroundImage=`url("${SWORD_ART.src}")`;art.style.backgroundSize=`${SWORD_ART.width*scale}px ${SWORD_ART.height*scale}px`;art.style.backgroundPosition=`${-f.x*scale}px ${-f.y*scale}px`;e.prepend(art);e.title=`${value.condition}；${kind==='reserve'?'点此换手':'点此查看这柄剑'}`;
+   if(value){const art=elem('span',undefined,'c7-mini-blade'),f=SWORD_ART.frames[3],scale=98/f.width;art.setAttribute('aria-hidden','true');art.style.height=`${f.height*scale}px`;art.style.marginBlock='16px';art.style.backgroundImage=packageCssUrls(`url("${SWORD_ART.src}")`);art.style.backgroundSize=`${SWORD_ART.width*scale}px ${SWORD_ART.height*scale}px`;art.style.backgroundPosition=`${-f.x*scale}px ${-f.y*scale}px`;e.prepend(art);e.title=`${value.condition}；${kind==='reserve'?'点此换手':'点此查看这柄剑'}`;
     e.onclick=()=>{const equip=v.actions.find(a=>a.action.type==='equip'&&a.action.weaponId===value.id);if(kind==='reserve'&&equip?.allowed&&writable())take(equip);else inspectWeapon(value);};
    }else{e.disabled=true;e.title='空位可在收锻时放入一柄新剑。';}
    e.disabled||=busy;slots.append(e);
@@ -157,11 +159,11 @@ export function mountCampaign(root:HTMLElement,port:V7Session){
  function renderTool(v:RunView){
   show('c7-tool',!!v.tool||v.phase==='forging');
   if(v.phase==='forging'){
-   const tool=node('c7-tool'),img=elem('img'),info=elem('div');img.src='/assets/d/hammer-standard-v1.webp';img.alt='';info.append(elem('strong','这一炉手艺'),elem('small',v.charge?`可用 ${v.charge} 次`:'次数已用完','c7-tool-status'));
+   const tool=node('c7-tool'),img=elem('img'),info=elem('div');img.src=packageUrl('/assets/d/hammer-standard-v1.webp');img.alt='';info.append(elem('strong','这一炉手艺'),elem('small',v.charge?`可用 ${v.charge} 次`:'次数已用完','c7-tool-status'));
    const techniques=v.actions.filter(a=>a.action.type==='forge'&&a.action.kind!=='ordinary');tool.dataset.ready=String(techniques.some(a=>a.allowed));tool.dataset.stored='false';
    for(const kind of ['steady','fissure'] as const){const a=techniques.find(a=>a.action.type==='forge'&&a.action.kind===kind),projected=v.forge?.[kind];if(a&&projected){const b=actionButton({...a,label:kind==='steady'?'用定线':'刻崩纹'},a.allowed);b.append(elem('span',a.reason??`强度 → ${projected.strengthAfter} · 用1次`,'c7-action-detail'));b.append(elem('small',kind==='fissure'?'斩击穿甲＋2 · 每斩磨损2':'不添新裂 · 成器后不磨损','c7-technique-tradeoff'));info.append(b);}}
    tool.replaceChildren(img,info);tool.title='普通锤点剑身；这两种手艺点击就用出一记，共享一次机会。';
-  }else if(v.tool){const tool=node('c7-tool'),img=elem('img'),info=elem('div');img.src=v.tool.asset;img.alt='';info.append(elem('strong',`${v.tool.name}${v.tool.level===2?' · 二阶':''}`));tool.replaceChildren(img,info);tool.title=v.tool.description;tool.dataset.stored=String(v.tool.stored>0);
+  }else if(v.tool){const tool=node('c7-tool'),img=elem('img'),info=elem('div');img.src=packageUrl(v.tool.asset);img.alt='';info.append(elem('strong',`${v.tool.name}${v.tool.level===2?' · 二阶':''}`));tool.replaceChildren(img,info);tool.title=v.tool.description;tool.dataset.stored=String(v.tool.stored>0);
    const active=v.actions.filter(a=>a.action.type==='temper'||a.action.type==='followUp'&&a.allowed);tool.dataset.ready=String(active.some(a=>a.allowed));
    if(v.tool.kind==='furnace')info.append(elem('small',v.charge?'手艺 1 次可用':'手艺次数已用完','c7-tool-status'));
    for(const a of active){const cost=a.action.type==='followUp'||v.phase==='prepare'?0:1,b=actionButton({...a,label:`${a.action.type==='temper'?'续炉':a.label} · ${cost}行动`},a.allowed);if(a.action.type==='temper')b.append(elem('span',a.reason??'用1次手艺，修复手中剑','c7-action-detail'));info.append(b);}
@@ -181,7 +183,7 @@ export function mountCampaign(root:HTMLElement,port:V7Session){
   const panel=node('c7-briefing');show('c7-briefing',v.phase==='prepare'&&!v.choice&&!!v.briefing);if(v.phase!=='prepare'||!v.briefing)return;
   panel.replaceChildren(elem('small',v.node===4?'雪线上，下一程的消息':'前路已探明 · 先为这一程备剑'));
   const targets=elem('div',undefined,'c7-briefing-targets');
-  for(const t of v.briefing.targets){const row=elem('div',undefined,'c7-briefing-target'),info=elem('div');if(t.asset){const img=elem('img');img.src=t.asset;img.alt='';row.append(img);}info.append(elem('b',t.name),elem('small',`${t.health}耐久 · 护甲${t.armor}`),elem('p',t.damage===null?'手中还没有可用剑':`${v.briefing.bladeName}：直斩 ${t.damage} / 架剑后 ${t.guardedDamage}`));row.append(info);targets.append(row);}panel.append(targets);
+  for(const t of v.briefing.targets){const row=elem('div',undefined,'c7-briefing-target'),info=elem('div');if(t.asset){const img=elem('img');img.src=packageUrl(t.asset);img.alt='';row.append(img);}info.append(elem('b',t.name),elem('small',`${t.health}耐久 · 护甲${t.armor}`),elem('p',t.damage===null?'手中还没有可用剑':`${v.briefing.bladeName}：直斩 ${t.damage} / 架剑后 ${t.guardedDamage}`));row.append(info);targets.append(row);}panel.append(targets);
   if(v.briefing.alternative)panel.append(elem('p',v.briefing.alternative,'c7-briefing-route'));
   if(v.briefing.toolHint)panel.append(elem('small',v.briefing.toolHint));
  }
@@ -195,7 +197,7 @@ export function mountCampaign(root:HTMLElement,port:V7Session){
   node('c7-lamp').replaceChildren(...Array.from({length:8},(_,i)=>{const e=elem('i');e.dataset.lit=String(i<v.lamp);e.setAttribute('aria-hidden','true');return e;}),elem('strong',`${v.lamp}/8`));node('c7-lamp').setAttribute('aria-label',`灯火${v.lamp}/8`);text('c7-coins',`◉ ${v.coins}钱`);renderTurn(v);
  }
  function projectWorld(v:RunView){
-  game.querySelector<HTMLElement>('.c7-world')!.style.backgroundImage=`url("${v.scene.background}")`;
+  game.querySelector<HTMLElement>('.c7-world')!.style.backgroundImage=packageCssUrls(`url("${v.scene.background}")`);
   standing(node('c7-companion').querySelector<HTMLElement>('.c7-person')!,v.speaker);text('c7-speaker',v.speaker.name);text('c7-line',v.speaker.line);
   show('c7-companion',v.phase!=='forging');
  }
@@ -259,7 +261,7 @@ export function mountCampaign(root:HTMLElement,port:V7Session){
   if(disposed)return;const state=display??current(),v=state?getRunView(state):null;
   const screen=route==='title'?'title':v?.ending?'ending':'play';game.dataset.screen=screen;game.dataset.phase=v?.phase??'prepare';game.dataset.busy=String(busy);game.dataset.choice=String(!!v?.choice);game.dataset.reduced=String(reduced());
   show('c7-title',screen==='title');show('c7-play',screen==='play');show('c7-ending',screen==='ending');game.querySelector<HTMLElement>('.c7-hud')!.hidden=screen==='title';
-  const world=game.querySelector<HTMLElement>('.c7-world')!;world.style.backgroundImage=`url("${screen==='title'?'/assets/d/v07/lantern-road-v1.webp':v?.scene.background??'/assets/d/v07/lantern-road-v1.webp'}")`;
+  const world=game.querySelector<HTMLElement>('.c7-world')!;world.style.backgroundImage=packageCssUrls(`url("${screen==='title'?'/assets/d/v07/lantern-road-v1.webp':v?.scene.background??'/assets/d/v07/lantern-road-v1.webp'}")`);
   const warning=saveWarning();game.dataset.warning=String(!!warning);show('c7-save-warning',!!warning);text('c7-save-warning',warning);
   audio.configure(prefs.value);audio.identify(current()?.runId??'title');audio.setMode(route==='play'&&!modal&&!document.hidden?'game':'silent');
   if(screen==='title'){
@@ -293,14 +295,14 @@ export function mountCampaign(root:HTMLElement,port:V7Session){
   for(const a of v.actions.filter(a=>a.group==='camp'&&(v.tool||a.action.type==='shop'&&['coal','blank'].includes(a.action.item)))){
    if(a.action.type!=='shop')continue;const item=a.action.item,row=elem('article',undefined,'c7-shop-item'),art=elem('span',undefined,`c7-goods-art c7-goods-${item}`),copy=elem('div',undefined,'c7-goods-copy');row.dataset.goods=item;row.dataset.available=String(a.allowed&&writable());art.setAttribute('aria-hidden','true');
    if(item==='coal')art.append(elem('i'),elem('i'),elem('i'));
-   if(item==='upgrade'||item==='exchange'){const img=elem('img');img.src=item==='exchange'?`/assets/d/v09/${v.tool?.kind==='rebound'?'furnace-nail':'rebound-tooth'}-v1.webp`:v.tool!.asset;img.alt='';art.append(img);}
+   if(item==='upgrade'||item==='exchange'){const img=elem('img');img.src=packageUrl(item==='exchange'?`/assets/d/v09/${v.tool?.kind==='rebound'?'furnace-nail':'rebound-tooth'}-v1.webp`:v.tool!.asset);img.alt='';art.append(img);}
    copy.append(elem('strong',item==='coal'?'一包炉煤':item==='blank'?'一枚新铁坯':item==='upgrade'?`${v.tool?.name??'工具'} · 升到二阶`:`换成${v.tool?.kind==='rebound'?'崩炉钉':'回锋齿'}`),elem('p',a.detail));
    const b=actionButton(a,true);copy.append(b);const reason=a.reason??(!writable()?'本页暂时只能查看，取得保存权后再交易。':null);if(reason)copy.append(elem('small',reason,'c7-shop-reason'));row.append(art,copy);goods.append(row);
   }
   body.append(goods,elem('small','买好就收回炉车，仍从眼前这段路继续。','c7-camp-footer'));openDialog('杜伯的炉边摊',body,[{label:'回到炉车旁',primary:true,run:closeDialog}]);
  }
  function talk(){if(!current())return;cancelVisuals();const v=getRunView(current()!),body=elem('div');body.append(elem('p',v.speaker.line),elem('h3','眼前的约定'),elem('p',v.mission),elem('p',v.nextPlace));if(v.finale){body.append(elem('h3','母灯还差哪些步骤'));for(const f of v.finale.requirements)body.append(elem('p',`${f.met?'✓':'○'} ${f.label} · ${f.detail}`));}for(const a of v.actions.filter(a=>a.group==='mechanism'))body.append(actionButton(a,false,true));openDialog(`和${v.speaker.name}说几句`,body,[{label:'我记住了',primary:true,run:closeDialog}]);}
- function download(name:string,value:string){const url=URL.createObjectURL(new Blob([value],{type:'application/json'})),a=elem('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),0);}
+ function download(name:string,value:string){const url=URL.createObjectURL(new Blob([value],{type:'application/json'})),a=elem('a');a.href=packageUrl(url);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),0);}
  function raw(key:string):string|null{try{return window.localStorage.getItem(key);}catch{return null;}}
  function save(){
   const body=elem('div',undefined,'c7-facts'),warning=saveWarning();body.append(elem('p',warning||'旅程会在每次行动后收好；旧版行程放在各自的行囊里。'));

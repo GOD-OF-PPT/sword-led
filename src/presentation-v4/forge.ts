@@ -1,3 +1,4 @@
+import { packageUrl } from '../security/package-url.mjs';
 import type {Blade,DomainEvent,EventId,Hit,Modification,Recipe} from '../core-v4/index.js';
 import type {Blade as PaintedBlade,Hit as PaintedHit} from '../core-v3/index.js';
 import type {Cue} from '../platform/audio.js';
@@ -117,7 +118,7 @@ export function createForgeRenderer(root:HTMLElement,host:ForgeHost){
     asset.image.addEventListener('load',ready);asset.image.addEventListener('error',failed);
     asset.detach=()=>{asset.image.removeEventListener('load',ready);asset.image.removeEventListener('error',failed);};
     // Failed HTTP responses may be cached. The source path and original image remain unchanged.
-    asset.image.src=asset.url+(retry?`?retry=${attempt-1}`:'');
+    asset.image.src=packageUrl(asset.url+(retry?`?retry=${attempt-1}`:''));
   }
   function registerAsset(name:string,item:HTMLImageElement){
     const asset:Asset={name,url:`/assets/d/${name}.webp`,image:item,status:'idle',attempt:0,detach:()=>{}};

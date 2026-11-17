@@ -1,3 +1,5 @@
+import { packageUrl, packageCssUrls } from '../security/package-url.mjs';
+import { sanitizeHtml } from '../security/sanitize-html.mjs';
 // V8.2 Competition Edition Interactive UI: Damped Heat Gauge, 12-Sword Compendium, Secret Ending & Multi-Track Audio Mixer
 import { BGM_TRACKS, createV8Audio } from './v8-audio.mjs';
 import { JUDGE_PRESETS } from './v8-data.mjs';
@@ -131,7 +133,7 @@ export function mountV8App(root, artMap, options = {}) {
   }
 
   // Keep every existing ID and button label intact while adding Compendium & Sound Mixer
-  root.innerHTML = `
+  root.innerHTML = sanitizeHtml(`
     <div class="v8-root" id="v8-root">
       <header class="v8-topbar" id="v8-topbar">
         <div class="v8-brand-cluster">
@@ -177,7 +179,7 @@ export function mountV8App(root, artMap, options = {}) {
         </div>
       </div>
     </div>
-  `;
+  `);
 
   const elRoot = root.querySelector('#v8-root');
   const elTopbar = root.querySelector('#v8-topbar');
@@ -214,7 +216,7 @@ export function mountV8App(root, artMap, options = {}) {
   function openModal(title, html) {
     audio.sfx('scroll');
     elModalTitle.textContent = title;
-    elModalBody.innerHTML = html;
+    elModalBody.innerHTML = sanitizeHtml(html);
     elModalWrap.hidden = false;
   }
 
@@ -429,15 +431,15 @@ export function mountV8App(root, artMap, options = {}) {
         `<button type="button" class="v8-step-node" data-act="inspect-node" data-node="${n}" data-status="${st}" title="第${n}站 · ${esc(info.title)}：${esc(info.mission)}">${st === 'done' ? '✓' : n}</button>`
       );
     }
-    elStepper.innerHTML = parts.join('');
+    elStepper.innerHTML = sanitizeHtml(parts.join(''));
     elCompassBtn.textContent = `🧭 ${computeCompassText()}`;
 
     const pips = [];
     for (let i = 0; i < state.lampMax; i++) {
       pips.push(`<i class="v8-lamp-pip ${i < state.lamp ? 'is-lit' : ''}"></i>`);
     }
-    elLampPill.innerHTML = `<span>🔥 灯火</span><span class="v8-lamp-pips">${pips.join('')}</span><strong>${state.lamp}/${state.lampMax}</strong>`;
-    elResPill.innerHTML = `🪙 <b>${state.coins}</b>钱 · 🧱 坯<b>${state.blanks}</b> · ⚡ 技<b>${state.charge}</b>`;
+    elLampPill.innerHTML = sanitizeHtml(`<span>🔥 灯火</span><span class="v8-lamp-pips">${pips.join('')}</span><strong>${state.lamp}/${state.lampMax}</strong>`);
+    elResPill.innerHTML = sanitizeHtml(`🪙 <b>${state.coins}</b>钱 · 🧱 坯<b>${state.blanks}</b> · ⚡ 技<b>${state.charge}</b>`);
     elMuteBtn.textContent = audio.isMuted() ? '🔇 静音' : `🎵 琴音·${audio.getTrackTitle().slice(0, 2)}`;
   }
 
@@ -464,10 +466,10 @@ export function mountV8App(root, artMap, options = {}) {
     ).join('');
 
     const classicLink = options.showClassicLink
-      ? `<a href="/campaign.html" class="v8-icon-btn" style="text-decoration:none;display:inline-flex;align-items:center;">切回 v1.0 经典版</a>`
+      ? `<a href="./campaign.html" class="v8-icon-btn" style="text-decoration:none;display:inline-flex;align-items:center;">切回 v1.0 经典版</a>`
       : '';
 
-    elStageBody.innerHTML = `
+    elStageBody.innerHTML = sanitizeHtml(`
       <div class="v8-title-screen">
         <div class="v8-title-hero">
           <div class="v8-kicker">锤下求生 · 三章九站铸剑战棋 · V8.2 薪火参赛版</div>
@@ -515,11 +517,11 @@ export function mountV8App(root, artMap, options = {}) {
           ${perkCards}
         </aside>
       </div>
-    `;
+    `);
   }
 
   function renderPrologueOverlay() {
-    elStageBody.innerHTML = `
+    elStageBody.innerHTML = sanitizeHtml(`
       <div class="v8-choice-stage">
         <div class="v8-scroll-box">
           <h2>📜 护炉立誓 · 三章远行要诀</h2>
@@ -543,7 +545,7 @@ export function mountV8App(root, artMap, options = {}) {
           </button>
         </div>
       </div>
-    `;
+    `);
   }
 
   function renderPrepareStage() {
@@ -616,7 +618,7 @@ export function mountV8App(root, artMap, options = {}) {
       state.node === 9 && ![state.handId, state.reserveId].some((id) => isFinalEligible(getWeapon(state, id)));
     const sec = getSecretEndingStatus(state);
 
-    elStageBody.innerHTML = `
+    elStageBody.innerHTML = sanitizeHtml(`
       <div class="v8-prepare-view">
         <div class="v8-companion-stage">
           <img class="v8-companion-img" src="${art(comp.fullArt)}" alt="${esc(comp.name)}">
@@ -654,7 +656,7 @@ export function mountV8App(root, artMap, options = {}) {
           ${campStrip}
         </div>
       </div>
-    `;
+    `);
   }
 
   function computePreviewHit(w, t, guarded) {
@@ -742,7 +744,7 @@ export function mountV8App(root, artMap, options = {}) {
       </div>
     `;
 
-    elStageBody.innerHTML = `
+    elStageBody.innerHTML = sanitizeHtml(`
       <div class="v8-forge-view">
         <div class="v8-heat-hud">
           <div class="v8-heat-top">
@@ -778,7 +780,7 @@ export function mountV8App(root, artMap, options = {}) {
 
         ${quenchBar}
       </div>
-    `;
+    `);
   }
 
   function renderEncounterStage() {
@@ -909,7 +911,7 @@ export function mountV8App(root, artMap, options = {}) {
       })
       .join('');
 
-    elStageBody.innerHTML = `
+    elStageBody.innerHTML = sanitizeHtml(`
       <div class="v8-encounter-view">
         ${topBanner}
         <div class="v8-arena-grid">
@@ -933,7 +935,7 @@ export function mountV8App(root, artMap, options = {}) {
           </div>
         </div>
       </div>
-    `;
+    `);
   }
 
   function renderChoiceStage() {
@@ -954,7 +956,7 @@ export function mountV8App(root, artMap, options = {}) {
       )
       .join('');
 
-    elStageBody.innerHTML = `
+    elStageBody.innerHTML = sanitizeHtml(`
       <div class="v8-choice-stage">
         <div class="v8-scroll-box">
           <small style="color:#7c582b;font-weight:700;">第${state.node}站 · ${esc(NODES_DATA[state.node].title)} · 因果抉择</small>
@@ -963,12 +965,12 @@ export function mountV8App(root, artMap, options = {}) {
           ${optsHtml}
         </div>
       </div>
-    `;
+    `);
   }
 
   function renderFailedStage() {
     const canRetry = state.retries[state.chapter] === 0;
-    elStageBody.innerHTML = `
+    elStageBody.innerHTML = sanitizeHtml(`
       <div class="v8-choice-stage">
         <div class="v8-scroll-box">
           <small style="color:#963d28;font-weight:700;">止步于 第${state.node}站 · ${esc(NODES_DATA[state.node].title)}</small>
@@ -988,7 +990,7 @@ export function mountV8App(root, artMap, options = {}) {
           </button>
         </div>
       </div>
-    `;
+    `);
   }
 
   function buildRadarSvg(axes, isSecret = false) {
@@ -1071,7 +1073,7 @@ export function mountV8App(root, artMap, options = {}) {
       )
       .join('');
 
-    elStageBody.innerHTML = `
+    elStageBody.innerHTML = sanitizeHtml(`
       <div class="v8-ending-view">
         <div class="v8-ending-left ${end.isSecret ? 'is-celestial' : ''}">
           <span class="v8-ch-badge">${esc(end.difficultyName)} · 止于 ${esc(end.stoppedAt)}</span>
@@ -1108,7 +1110,7 @@ export function mountV8App(root, artMap, options = {}) {
           </div>
         </div>
       </div>
-    `;
+    `);
   }
 
   function renderDeck() {
@@ -1189,7 +1191,7 @@ export function mountV8App(root, artMap, options = {}) {
         </div>
       `;
     }
-    elColRack.innerHTML = `<div class="v8-rack-row">${slotCard(hand, true)}${slotCard(reserve, false)}</div>${toolHtml}`;
+    elColRack.innerHTML = sanitizeHtml(`<div class="v8-rack-row">${slotCard(hand, true)}${slotCard(reserve, false)}</div>${toolHtml}`);
 
     renderCenterCommands();
 
@@ -1214,16 +1216,16 @@ export function mountV8App(root, artMap, options = {}) {
       .map((l) => `<div>${esc(l)}</div>`)
       .join('');
 
-    elColAssist.innerHTML = `
+    elColAssist.innerHTML = sanitizeHtml(`
       <div class="v8-assist-row">${assistHtml}</div>
       <div class="v8-log-box">${logsHtml}</div>
-    `;
+    `);
   }
 
   function renderCenterCommands() {
     if (state.phase === 'prepare') {
       const firstForge = state.node === 1 && state.stats.totalForged === 0;
-      elColCmd.innerHTML = `
+      elColCmd.innerHTML = sanitizeHtml(`
         <div class="v8-ap-row">
           <span>📍 当前阶段：<b>炉车整备</b>（阅读、调音与换剑不耗回合）</span>
         </div>
@@ -1237,7 +1239,7 @@ export function mountV8App(root, artMap, options = {}) {
             <small>${esc(NODES_DATA[state.node].title)}</small>
           </button>
         </div>
-      `;
+      `);
       return;
     }
 
@@ -1245,7 +1247,7 @@ export function mountV8App(root, artMap, options = {}) {
       const fw = getWeapon(state, state.forgeId);
       const canTech = fw && fw.hits < 6 && state.charge > 0;
       const canSeal = fw && fw.hits > 0 && fw.strength > 0;
-      elColCmd.innerHTML = `
+      elColCmd.innerHTML = sanitizeHtml(`
         <div class="v8-ap-row">
           <span>🔥 瞄准上方<b>金焰甜区</b>落锤 · 技火剩余 <b>${state.charge}</b> 次</span>
         </div>
@@ -1271,7 +1273,7 @@ export function mountV8App(root, artMap, options = {}) {
             <small>留作双剑切换</small>
           </button>
         </div>
-      `;
+      `);
       return;
     }
 
@@ -1377,7 +1379,7 @@ export function mountV8App(root, artMap, options = {}) {
         }
       }
 
-      elColCmd.innerHTML = `
+      elColCmd.innerHTML = sanitizeHtml(`
         <div class="v8-ap-row">
           <span>行动火印：<b style="color:var(--v8-gold);letter-spacing:2px;">${'◆'.repeat(e.actions)}${'◇'.repeat(Math.max(0, 2 - e.actions))}</b> (${e.actions}/2)</span>
           <span style="font-size:12px;color:var(--v8-muted);">快捷键：[1]挥斩 [2]架剑 [Q]0行动易剑 [Space]结束本轮</span>
@@ -1403,11 +1405,11 @@ export function mountV8App(root, artMap, options = {}) {
             <small>${p.loss > 0 ? `结算风雪 · 灯火-${p.loss}` : '无损进入下一轮'}</small>
           </button>
         </div>
-      `;
+      `);
       return;
     }
 
-    elColCmd.innerHTML = `<div class="v8-ap-row"><span>请在上方卷轴中作出选择以继续远行</span></div>`;
+    elColCmd.innerHTML = sanitizeHtml(`<div class="v8-ap-row"><span>请在上方卷轴中作出选择以继续远行</span></div>`);
   }
 
   function openCompendiumModal() {
@@ -1654,7 +1656,7 @@ export function mountV8App(root, artMap, options = {}) {
   }
 
   function render() {
-    elBackdrop.style.backgroundImage = `url("${art(getSceneBgKey())}")`;
+    elBackdrop.style.backgroundImage = packageCssUrls(`url("${art(getSceneBgKey())}")`);
     renderTopbar();
 
     if (screen === 'title') {
@@ -1909,7 +1911,7 @@ export function mountV8App(root, artMap, options = {}) {
         const blob = new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
-        a.href = url;
+        a.href = packageUrl(url);
         a.download = `护炉远行-V8.2-${state.seed}.json`;
         a.click();
         setTimeout(() => URL.revokeObjectURL(url), 200);
