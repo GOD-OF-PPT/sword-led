@@ -1,11 +1,11 @@
-// V8.2 Multi-Track Chinese Pentatonic BGM Sequencer & 16-Cue Physical SFX Synthesizer (100% Web Audio API)
+// V9.0 Multi-Track Chinese Pentatonic BGM Sequencer & 20-Cue Physical Action SFX Engine (100% Web Audio API)
 
 export const BGM_TRACKS = [
-  { id: 'ch1', title: '山夜引灯', subtitle: '羽调 · 古筝夜溪（标题与河谷篇）' },
-  { id: 'forge', title: '千锤百炼', subtitle: '徵调 · 炉火羯鼓（观火铸剑篇）' },
-  { id: 'ch2', title: '风雪孤驿', subtitle: '商调 · 洞箫寒山（雪线双驿篇）' },
-  { id: 'ch3', title: '绝顶护炉', subtitle: '宫调 · 战鼓编钟（山口母灯篇）' },
-  { id: 'ending', title: '万家灯明', subtitle: '合奏 · 流水钟磬（终章凯旋篇）' },
+  { id: 'ch1', title: '山夜引灯', subtitle: '羽调 · 古筝夜溪（河谷篇）' },
+  { id: 'forge', title: '千锤百炼', subtitle: '徵调 · 炉火羯鼓（铸剑篇）' },
+  { id: 'ch2', title: '风雪孤驿', subtitle: '商调 · 洞箫寒山（雪线篇）' },
+  { id: 'ch3', title: '绝顶护炉', subtitle: '宫调 · 战鼓编钟（山口篇）' },
+  { id: 'ending', title: '万家灯明', subtitle: '合奏 · 流水钟磬（终章篇）' },
 ];
 
 export function createV8Audio() {
@@ -20,16 +20,14 @@ export function createV8Audio() {
 
   let muted = false;
   let bgmVol = 0.58;
-  let sfxVol = 0.82;
+  let sfxVol = 0.85;
   let currentMood = 'ch1';
-  let manualTrack = null; // null = auto follow scene
+  let manualTrack = null;
   let bgmTimer = null;
   let stepIdx = 0;
   let lastHoverAt = 0;
 
-  // 16-step polyphonic score tables (frequencies in Hz, 0 = rest)
   const SCORES = {
-    // 1. 山夜引灯 (A Yu pentatonic: A3=220, C4=261.6, D4=293.7, E4=329.6, G4=392, A4=440, C5=523.3, D5=587.3, E5=659.3)
     ch1: {
       stepMs: 280,
       lead: [440, 0, 523.25, 587.33, 659.25, 0, 587.33, 523.25, 440, 392, 329.63, 0, 293.66, 329.63, 440, 0],
@@ -40,7 +38,6 @@ export function createV8Audio() {
       ambFreq: 420,
       ambLevel: 0.025,
     },
-    // 2. 千锤百炼 (G Zhi pentatonic: G3=196, A3=220, C4=261.6, D4=293.7, E4=329.6, G4=392, A4=440, C5=523.3, D5=587.3)
     forge: {
       stepMs: 225,
       lead: [392, 440, 523.25, 0, 587.33, 523.25, 440, 392, 293.66, 392, 440, 523.25, 587.33, 0, 392, 0],
@@ -51,7 +48,6 @@ export function createV8Audio() {
       ambFreq: 680,
       ambLevel: 0.032,
     },
-    // 3. 风雪孤驿 (D Shang mode: D4=293.7, F4=349.2, G4=392, A4=440, C5=523.3, D5=587.3, F5=698.5)
     ch2: {
       stepMs: 320,
       lead: [440, 0, 0, 523.25, 587.33, 0, 523.25, 440, 392, 0, 349.23, 392, 293.66, 0, 0, 0],
@@ -62,7 +58,6 @@ export function createV8Audio() {
       ambFreq: 920,
       ambLevel: 0.048,
     },
-    // 4. 绝顶护炉 (C Gong epic summit: C4=261.6, D4=293.7, E4=329.6, G4=392, A4=440, C5=523.3, D5=587.3, E5=659.3, G5=784)
     ch3: {
       stepMs: 215,
       lead: [523.25, 0, 587.33, 659.25, 783.99, 0, 659.25, 587.33, 523.25, 440, 392, 523.25, 587.33, 0, 523.25, 0],
@@ -73,7 +68,6 @@ export function createV8Audio() {
       ambFreq: 540,
       ambLevel: 0.036,
     },
-    // 5. 万家灯明 (Grand Pentatonic Celebration in F/C: C4=261.6, D4=293.7, E4=329.6, G4=392, A4=440, C5=523.3, E5=659.3, G5=784, A5=880)
     ending: {
       stepMs: 260,
       lead: [523.25, 659.25, 783.99, 880, 783.99, 659.25, 523.25, 659.25, 587.33, 523.25, 440, 523.25, 392, 523.25, 659.25, 0],
@@ -104,7 +98,7 @@ export function createV8Audio() {
 
         master.gain.value = 0.92;
         bgmGain.gain.value = bgmVol * 0.52;
-        sfxGain.gain.value = sfxVol * 0.9;
+        sfxGain.gain.value = sfxVol * 0.92;
         ambGain.gain.value = 0.02;
 
         bgmGain.connect(master);
@@ -127,7 +121,6 @@ export function createV8Audio() {
   function startAmbienceBed() {
     if (!ctx || ambNode) return;
     try {
-      // Looping 3-second soft filtered noise bed for wind / river / hearth atmosphere
       const len = ctx.sampleRate * 3;
       const buf = ctx.createBuffer(1, len, ctx.sampleRate);
       const ch = buf.getChannelData(0);
@@ -158,7 +151,7 @@ export function createV8Audio() {
       ambNode.start();
       ambLfo.start();
     } catch (_e) {
-      // Ignore ambience init failure
+      // Ignore
     }
   }
 
@@ -170,7 +163,6 @@ export function createV8Audio() {
     ambGain.gain.setTargetAtTime(muted ? 0 : sc.ambLevel, now, 0.4);
   }
 
-  // Synthesize Guzheng / Pipa plucked string
   function synthPluck(freq, dur, vol, bright = 4.5, dest = bgmGain) {
     if (!ctx || muted || !dest || freq <= 0) return;
     try {
@@ -213,7 +205,6 @@ export function createV8Audio() {
     }
   }
 
-  // Synthesize Chinese Xiao flute with breathy vibrato
   function synthXiao(freq, dur, vol, dest = bgmGain) {
     if (!ctx || muted || !dest || freq <= 0) return;
     try {
@@ -256,7 +247,6 @@ export function createV8Audio() {
     }
   }
 
-  // Synthesize Bronze Bianzhong Bell
   function synthBell(freq, dur, vol, dest = bgmGain) {
     if (!ctx || muted || !dest || freq <= 0) return;
     try {
@@ -280,13 +270,11 @@ export function createV8Audio() {
     }
   }
 
-  // Synthesize War Drum / Woodblock / Chime Percussion
   function synthPerc(kind, dest = bgmGain) {
     if (!ctx || muted || !dest || !kind) return;
     try {
       const now = ctx.currentTime;
       if (kind === 1) {
-        // Deep Taiko / Gehu Drum
         const osc = ctx.createOscillator();
         const g = ctx.createGain();
         osc.type = 'sine';
@@ -299,7 +287,6 @@ export function createV8Audio() {
         osc.start(now);
         osc.stop(now + 0.28);
       } else if (kind === 2) {
-        // Crisp Woodblock / Forge Tap
         const osc = ctx.createOscillator();
         const g = ctx.createGain();
         osc.type = 'triangle';
@@ -312,7 +299,6 @@ export function createV8Audio() {
         osc.start(now);
         osc.stop(now + 0.07);
       } else if (kind === 3) {
-        // Bronze Shimmer Chime
         synthBell(1046.5, 0.75, 0.12, dest);
       }
     } catch (_e) {
@@ -360,29 +346,14 @@ export function createV8Audio() {
     const percKind = score.perc[i] || 0;
 
     if (leadFreq > 0) {
-      if (score.leadInstrument === 'xiao') {
-        synthXiao(leadFreq, 0.85, 0.22, bgmGain);
-      } else if (score.leadInstrument === 'bell_lead') {
-        synthBell(leadFreq, 0.65, 0.2, bgmGain);
-      } else if (score.leadInstrument === 'pipa') {
-        synthPluck(leadFreq, 0.42, 0.21, 5.5, bgmGain);
-      } else {
-        synthPluck(leadFreq, 0.72, 0.22, 4.2, bgmGain);
-      }
+      if (score.leadInstrument === 'xiao') synthXiao(leadFreq, 0.85, 0.22, bgmGain);
+      else if (score.leadInstrument === 'bell_lead') synthBell(leadFreq, 0.65, 0.2, bgmGain);
+      else if (score.leadInstrument === 'pipa') synthPluck(leadFreq, 0.42, 0.21, 5.5, bgmGain);
+      else synthPluck(leadFreq, 0.72, 0.22, 4.2, bgmGain);
     }
-
-    if (arpFreq > 0) {
-      synthPluck(arpFreq, 0.36, 0.1, 3.0, bgmGain);
-    }
-
-    if (bassFreq > 0) {
-      synthPluck(bassFreq, 0.82, 0.18, 2.1, bgmGain);
-    }
-
-    if (percKind > 0) {
-      synthPerc(percKind, bgmGain);
-    }
-
+    if (arpFreq > 0) synthPluck(arpFreq, 0.36, 0.1, 3.0, bgmGain);
+    if (bassFreq > 0) synthPluck(bassFreq, 0.82, 0.18, 2.1, bgmGain);
+    if (percKind > 0) synthPerc(percKind, bgmGain);
     stepIdx++;
   }
 
@@ -401,9 +372,7 @@ export function createV8Audio() {
     const target = SCORES[mood] ? mood : 'ch1';
     if (currentMood === target && bgmTimer) return;
     currentMood = target;
-    if (!manualTrack && ctx) {
-      restartSequencer();
-    }
+    if (!manualTrack && ctx) restartSequencer();
   }
 
   function setManualTrack(trackId) {
@@ -415,9 +384,7 @@ export function createV8Audio() {
 
   function unlock() {
     const ok = ensureContext();
-    if (ok && !bgmTimer && !muted) {
-      restartSequencer();
-    }
+    if (ok && !bgmTimer && !muted) restartSequencer();
   }
 
   function sfx(kind) {
@@ -427,7 +394,7 @@ export function createV8Audio() {
       case 'hover': {
         if (now - lastHoverAt < 0.06) return;
         lastHoverAt = now;
-        synthPluck(987.77, 0.045, 0.045, 2.5, sfxGain);
+        synthPluck(987.77, 0.045, 0.04, 2.5, sfxGain);
         break;
       }
       case 'click': {
@@ -446,12 +413,11 @@ export function createV8Audio() {
         break;
       }
       case 'hammer_perfect': {
-        // Anvil strike + Dragon-cry harmonic shimmer!
         synthBell(880, 0.65, 0.36, sfxGain);
         synthBell(1760, 0.55, 0.28, sfxGain);
         playNoiseBurst(0.1, 3600, 0.24, 'highpass', 1.5);
         [1174.66, 1318.51, 1760, 2349.32].forEach((f, idx) => {
-          setTimeout(() => synthPluck(f, 0.32, 0.14, 4.5, sfxGain), 45 + idx * 38);
+          setTimeout(() => synthPluck(f, 0.32, 0.14, 4.5, sfxGain), 45 + idx * 36);
         });
         break;
       }
@@ -473,22 +439,47 @@ export function createV8Audio() {
         break;
       }
       case 'quench': {
-        // Boiling water/oil steam hiss + forged blade resonance
-        playNoiseBurst(0.65, 2800, 0.32, 'bandpass', 1.1);
+        playNoiseBurst(0.68, 2800, 0.34, 'bandpass', 1.1);
         setTimeout(() => {
-          synthBell(1046.5, 0.85, 0.26, sfxGain);
-          synthBell(1567.98, 0.75, 0.2, sfxGain);
+          synthBell(1046.5, 0.85, 0.28, sfxGain);
+          synthBell(1567.98, 0.75, 0.22, sfxGain);
         }, 110);
         break;
       }
       case 'slash': {
-        playNoiseBurst(0.15, 2100, 0.28, 'bandpass', 1.4);
-        synthPluck(440, 0.22, 0.28, 5.5, sfxGain);
-        synthPluck(659.25, 0.18, 0.22, 4.5, sfxGain);
+        playNoiseBurst(0.15, 2200, 0.3, 'bandpass', 1.4);
+        synthPluck(440, 0.22, 0.3, 5.5, sfxGain);
+        synthPluck(659.25, 0.18, 0.24, 4.5, sfxGain);
+        break;
+      }
+      case 'sword_art': {
+        // Signature Sword Art: twin whoosh + harmonic ring!
+        playNoiseBurst(0.22, 3100, 0.34, 'bandpass', 1.3);
+        synthBell(659.25, 0.55, 0.32, sfxGain);
+        setTimeout(() => {
+          synthBell(987.77, 0.65, 0.3, sfxGain);
+          synthPluck(1318.5, 0.45, 0.24, 5.5, sfxGain);
+        }, 70);
+        break;
+      }
+      case 'dual_ult': {
+        // Dual-Blade Celestial Cross Ultimate!
+        synthPerc(1, sfxGain);
+        playNoiseBurst(0.35, 2600, 0.36, 'bandpass', 1.2);
+        [523.25, 659.25, 783.99, 1046.5, 1567.98].forEach((f, idx) => {
+          setTimeout(() => synthBell(f, 0.95, 0.28, sfxGain), idx * 45);
+        });
+        break;
+      }
+      case 'parry_perfect': {
+        // Razor-sharp Sekiro/Wukong metallic riposte ring!
+        playNoiseBurst(0.08, 4800, 0.34, 'highpass', 2.2);
+        synthBell(1174.66, 0.85, 0.4, sfxGain);
+        synthBell(1760.0, 0.75, 0.32, sfxGain);
+        synthPerc(1, sfxGain);
         break;
       }
       case 'stagger': {
-        // Heavy bronze gong + sub impact!
         synthBell(196, 0.95, 0.42, sfxGain);
         synthBell(587.33, 0.75, 0.32, sfxGain);
         synthPerc(1, sfxGain);
@@ -506,16 +497,16 @@ export function createV8Audio() {
         synthBell(1318.5, 0.28, 0.18, sfxGain);
         break;
       }
-      case 'assist': {
-        [523.25, 659.25, 783.99].forEach((f, idx) => {
-          setTimeout(() => synthPluck(f, 0.36, 0.22, 4.0, sfxGain), idx * 45);
+      case 'assist':
+      case 'relic': {
+        [523.25, 659.25, 783.99, 1046.5].forEach((f, idx) => {
+          setTimeout(() => synthPluck(f, 0.4, 0.22, 4.2, sfxGain), idx * 42);
         });
         break;
       }
       case 'compendium': {
-        // Legendary Sword Compendium Unlocked chime!
         [523.25, 659.25, 783.99, 1046.5, 1318.51].forEach((f, idx) => {
-          setTimeout(() => synthBell(f, 0.75, 0.22, sfxGain), idx * 65);
+          setTimeout(() => synthBell(f, 0.75, 0.24, sfxGain), idx * 60);
         });
         break;
       }
@@ -552,9 +543,7 @@ export function createV8Audio() {
 
   function toggleMute() {
     muted = !muted;
-    if (master && ctx) {
-      master.gain.setValueAtTime(muted ? 0 : 0.92, ctx.currentTime);
-    }
+    if (master && ctx) master.gain.setValueAtTime(muted ? 0 : 0.92, ctx.currentTime);
     if (muted && bgmTimer) {
       clearInterval(bgmTimer);
       bgmTimer = null;
@@ -568,16 +557,12 @@ export function createV8Audio() {
 
   function setBgmVolume(v) {
     bgmVol = Math.max(0, Math.min(1, v));
-    if (bgmGain && ctx) {
-      bgmGain.gain.setTargetAtTime(bgmVol * 0.52, ctx.currentTime, 0.04);
-    }
+    if (bgmGain && ctx) bgmGain.gain.setTargetAtTime(bgmVol * 0.52, ctx.currentTime, 0.04);
   }
 
   function setSfxVolume(v) {
     sfxVol = Math.max(0, Math.min(1, v));
-    if (sfxGain && ctx) {
-      sfxGain.gain.setTargetAtTime(sfxVol * 0.9, ctx.currentTime, 0.04);
-    }
+    if (sfxGain && ctx) sfxGain.gain.setTargetAtTime(sfxVol * 0.92, ctx.currentTime, 0.04);
   }
 
   function getTrackTitle() {

@@ -5,7 +5,8 @@ import { build } from 'vite';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const assetSource = await readFile(resolve(root, 'src/v8/assets.ts'), 'utf8');
-const assets = JSON.parse(assetSource.slice(assetSource.indexOf('{'), assetSource.lastIndexOf('}') + 1));
+const assetObject = assetSource.slice(assetSource.indexOf('{'), assetSource.lastIndexOf('}') + 1);
+const assets = JSON.parse(assetObject.replace(/,\s*}/g, '}'));
 for (const [key, path] of Object.entries(assets)) {
   if (!/^\.\/assets\/v8\/[a-z0-9_]+\.webp$/.test(path)) throw Error(`Unexpected standalone asset: ${path}`);
   assets[key] = 'data:image/webp;base64,' + (await readFile(resolve(root, 'public', path))).toString('base64');
@@ -36,13 +37,16 @@ const css = (await readFile(resolve(root, 'src/v8/styles.css'), 'utf8')).replace
 const js = chunks[0].code.replace(/<\/script/gi, '<\\/script');
 const licenses = await readFile(resolve(root, 'public/third-party-licenses.txt'), 'utf8');
 if (licenses.includes('-->')) throw Error('License notice cannot terminate an HTML comment');
+const entryHtml = await readFile(resolve(root, 'index.html'), 'utf8');
+const title = entryHtml.match(/<title>([^<]+)<\/title>/i)?.[1];
+if (!title) throw Error('Missing current game title');
 const html = `<!DOCTYPE html>
 <!-- Third-party licenses\n${licenses}-->
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>锤下求生 · 护炉远行（V8.2 薪火铸魂参赛版）</title>
+  <title>${title}</title>
   <style>${css}</style>
 </head>
 <body><div id="app"></div><noscript>请启用JavaScript后推起炉车。</noscript>

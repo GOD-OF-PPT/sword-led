@@ -1,8 +1,15 @@
-export interface V8AppHandle {
-  dispose(): void;
+export interface MountV8Options {
+  showClassicLink?: boolean;
 }
+
+export interface MountedV8Handle {
+  getState: () => unknown;
+  dispatch: (action: Record<string, unknown>) => boolean;
+  dispose: () => void;
+}
+
 export function mountV8App(
-  root: HTMLElement,
-  artMap: Readonly<Record<string, string>>,
-  options?: { readonly showClassicLink?: boolean }
-): V8AppHandle;
+  rootEl: HTMLElement,
+  artMap?: Record<string, string>,
+  options?: MountV8Options
+): MountedV8Handle;
